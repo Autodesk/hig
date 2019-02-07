@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`project-account-switcher/ProjectAccountSwitcher integration renders with controlled active account/project 1`] = `
-.emotion-7 {
+.emotion-36 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-0 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-6 {
+.emotion-35 {
   position: absolute;
   display: none;
   width: 100%;
@@ -33,7 +33,87 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   transform: none;
 }
 
-.emotion-3 {
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-4 {
+  margin: 0;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 34px;
+  line-height: 34px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inline-block;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  overflow: hidden;
+  height: 32px;
+  width: 32px;
+  border-radius: 2px;
+  border: 1px solid #bec8d2;
+  color: #485366;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.emotion-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  cursor: pointer;
+  color: transparent;
+}
+
+.emotion-0[src=''] {
+  display: none;
+}
+
+.emotion-6 {
+  margin: 0 12px;
+}
+
+.emotion-1 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-5 {
+  fill: #808080;
+}
+
+.emotion-5 > * {
+  fill: #808080;
+}
+
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -44,68 +124,136 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   transform: rotate(0deg);
 }
 
-.emotion-1 {
+.emotion-9 {
   fill: #D4DBE1;
 }
 
-.emotion-2 {
+.emotion-10 {
   fill: #ffffff;
 }
 
-.emotion-5 {
+.emotion-32 {
+  margin: 0;
+  width: 200px;
+  padding: 0 10px 10px 10px;
+}
+
+.emotion-34 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-4 {
+.emotion-33 {
   position: relative;
 }
 
+.emotion-21 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.emotion-21:first-of-type {
+  margin-top: 10px;
+}
+
+.emotion-16 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 34px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 8px;
+}
+
+.emotion-14 {
+  display: inline-block;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  overflow: hidden;
+  height: 30px;
+  width: 60px;
+  border-radius: 2px;
+  border: 1px solid #bec8d2;
+  color: #485366;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.emotion-15 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  font-family: ArtifaktElement,sans-serif;
+  margin: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #0696D7;
+  outline: none;
+}
+
 <div
-  className="emotion-7"
+  className="emotion-36"
 >
   <div
-    className="emotion-0"
+    className="emotion-8"
   >
     <div
-      className="hig__project-account-switcher__target"
+      className="emotion-7"
       onClick={[Function]}
       onKeyDown={[Function]}
       role="button"
       tabIndex="0"
     >
       <div
-        className="hig__project-account-switcher__target__item hig__project-account-switcher__item"
+        className="emotion-4"
       >
         <span
-          className="hig__project-account-switcher__item__image-wrapper"
+          className="emotion-2"
         >
           <img
             alt="Account 2 / Project 1"
-            className="hig__project-account-switcher__item__image"
+            className="emotion-0"
             src=""
           />
           <span
-            className="hig__project-account-switcher__item__image-placeholder"
+            className="emotion-1"
+            style={
+              Object {
+                "lineHeight": "32px",
+                "textAlign": "center",
+              }
+            }
           >
             A2/P1
           </span>
         </span>
-        <span
-          className="hig__project-account-switcher__item__label"
+        <p
+          className="emotion-1"
         >
           Account 2 / Project 1
-        </span>
+        </p>
       </div>
       <div
-        className="hig__project-account-switcher__target__caret"
+        className="emotion-6"
       >
         <svg
-          height="10"
+          className="emotion-5"
+          height="10px"
           viewBox="0 0 10 10"
-          width="10"
+          width="10px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -119,7 +267,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
     </div>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-35"
     style={
       Object {
         "left": "0px",
@@ -129,7 +277,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   >
     <div
       aria-hidden="true"
-      className="emotion-3"
+      className="emotion-11"
       role="presentation"
       style={
         Object {
@@ -144,17 +292,17 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
         width="24"
       >
         <polygon
-          className="emotion-1"
+          className="emotion-9"
           points="0,12 12,0 24,12"
         />
         <polygon
-          className="emotion-2"
+          className="emotion-10"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="emotion-5"
+      className="emotion-34"
       style={
         Object {
           "maxHeight": undefined,
@@ -162,115 +310,181 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       }
     >
       <div
-        className="emotion-4"
+        className="emotion-33"
       >
         <div
-          className="hig__project-account-switcher__panel"
+          className="emotion-32"
         >
-          <div
-            className="hig__project-account-switcher__lists"
-          >
+          <div>
             <ul
-              className="hig__project-account-switcher__list"
+              className="emotion-21"
             >
               <span
-                className="hig__project-account-switcher__list__title"
+                className="emotion-1"
+                style={
+                  Object {
+                    "fontSize": "11px",
+                    "textTransform": "uppercase",
+                  }
+                }
               >
                 Accounts
               </span>
               <li
-                className="hig__project-account-switcher__item hig__project-account-switcher__item--account hig__project-account-switcher__item--active"
+                className="emotion-16"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
                 <span
-                  className="hig__project-account-switcher__item__image-wrapper"
+                  className="emotion-14"
                 >
                   <span
-                    className="hig__project-account-switcher__item__image-placeholder"
+                    className="emotion-1"
+                    style={
+                      Object {
+                        "lineHeight": "32px",
+                        "textAlign": "center",
+                      }
+                    }
                   >
                     A1
                   </span>
                 </span>
                 <span
-                  className="hig__project-account-switcher__item__label"
+                  className="emotion-15"
+                  onBlur={[Function]}
+                  onClick={undefined}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
                 >
                   Account 1
                 </span>
               </li>
               <li
-                className="hig__project-account-switcher__item hig__project-account-switcher__item--account hig__project-account-switcher__item--active"
+                className="emotion-16"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
                 <span
-                  className="hig__project-account-switcher__item__image-wrapper"
+                  className="emotion-14"
                 >
                   <span
-                    className="hig__project-account-switcher__item__image-placeholder"
+                    className="emotion-1"
+                    style={
+                      Object {
+                        "lineHeight": "32px",
+                        "textAlign": "center",
+                      }
+                    }
                   >
                     A2
                   </span>
                 </span>
                 <span
-                  className="hig__project-account-switcher__item__label"
+                  className="emotion-15"
+                  onBlur={[Function]}
+                  onClick={undefined}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
                 >
                   Account 2
                 </span>
               </li>
             </ul>
             <ul
-              className="hig__project-account-switcher__list"
+              className="emotion-21"
             >
               <span
-                className="hig__project-account-switcher__list__title"
+                className="emotion-1"
+                style={
+                  Object {
+                    "fontSize": "11px",
+                    "textTransform": "uppercase",
+                  }
+                }
               >
                 Projects
               </span>
               <li
-                className="hig__project-account-switcher__item hig__project-account-switcher__item--project hig__project-account-switcher__item--active"
+                className="emotion-16"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
                 <span
-                  className="hig__project-account-switcher__item__image-wrapper"
+                  className="emotion-2"
                 >
                   <span
-                    className="hig__project-account-switcher__item__image-placeholder"
+                    className="emotion-1"
+                    style={
+                      Object {
+                        "lineHeight": "32px",
+                        "textAlign": "center",
+                      }
+                    }
                   >
                     P1
                   </span>
                 </span>
                 <span
-                  className="hig__project-account-switcher__item__label"
+                  className="emotion-15"
+                  onBlur={[Function]}
+                  onClick={undefined}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
                 >
                   Project 1
                 </span>
               </li>
               <li
-                className="hig__project-account-switcher__item hig__project-account-switcher__item--project hig__project-account-switcher__item--active"
+                className="emotion-16"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
                 <span
-                  className="hig__project-account-switcher__item__image-wrapper"
+                  className="emotion-2"
                 >
                   <span
-                    className="hig__project-account-switcher__item__image-placeholder"
+                    className="emotion-1"
+                    style={
+                      Object {
+                        "lineHeight": "32px",
+                        "textAlign": "center",
+                      }
+                    }
                   >
                     P2
                   </span>
                 </span>
                 <span
-                  className="hig__project-account-switcher__item__label"
+                  className="emotion-15"
+                  onBlur={[Function]}
+                  onClick={undefined}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
                 >
                   Project 2
                 </span>
@@ -285,19 +499,19 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 `;
 
 exports[`project-account-switcher/ProjectAccountSwitcher integration renders with default account/project 1`] = `
-.emotion-7 {
+.emotion-36 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-0 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-6 {
+.emotion-35 {
   position: absolute;
   display: none;
   width: 100%;
@@ -317,7 +531,87 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   transform: none;
 }
 
-.emotion-3 {
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-4 {
+  margin: 0;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 34px;
+  line-height: 34px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inline-block;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  overflow: hidden;
+  height: 32px;
+  width: 32px;
+  border-radius: 2px;
+  border: 1px solid #bec8d2;
+  color: #485366;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.emotion-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  cursor: pointer;
+  color: transparent;
+}
+
+.emotion-0[src=''] {
+  display: none;
+}
+
+.emotion-6 {
+  margin: 0 12px;
+}
+
+.emotion-1 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-5 {
+  fill: #808080;
+}
+
+.emotion-5 > * {
+  fill: #808080;
+}
+
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -328,68 +622,136 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   transform: rotate(0deg);
 }
 
-.emotion-1 {
+.emotion-9 {
   fill: #D4DBE1;
 }
 
-.emotion-2 {
+.emotion-10 {
   fill: #ffffff;
 }
 
-.emotion-5 {
+.emotion-32 {
+  margin: 0;
+  width: 200px;
+  padding: 0 10px 10px 10px;
+}
+
+.emotion-34 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-4 {
+.emotion-33 {
   position: relative;
 }
 
+.emotion-21 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.emotion-21:first-of-type {
+  margin-top: 10px;
+}
+
+.emotion-16 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 34px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 8px;
+}
+
+.emotion-14 {
+  display: inline-block;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  overflow: hidden;
+  height: 30px;
+  width: 60px;
+  border-radius: 2px;
+  border: 1px solid #bec8d2;
+  color: #485366;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.emotion-15 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  font-family: ArtifaktElement,sans-serif;
+  margin: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #0696D7;
+  outline: none;
+}
+
 <div
-  className="emotion-7"
+  className="emotion-36"
 >
   <div
-    className="emotion-0"
+    className="emotion-8"
   >
     <div
-      className="hig__project-account-switcher__target"
+      className="emotion-7"
       onClick={[Function]}
       onKeyDown={[Function]}
       role="button"
       tabIndex="0"
     >
       <div
-        className="hig__project-account-switcher__target__item hig__project-account-switcher__item"
+        className="emotion-4"
       >
         <span
-          className="hig__project-account-switcher__item__image-wrapper"
+          className="emotion-2"
         >
           <img
             alt="Account 1 / Project 2"
-            className="hig__project-account-switcher__item__image"
+            className="emotion-0"
             src=""
           />
           <span
-            className="hig__project-account-switcher__item__image-placeholder"
+            className="emotion-1"
+            style={
+              Object {
+                "lineHeight": "32px",
+                "textAlign": "center",
+              }
+            }
           >
             A1/P2
           </span>
         </span>
-        <span
-          className="hig__project-account-switcher__item__label"
+        <p
+          className="emotion-1"
         >
           Account 1 / Project 2
-        </span>
+        </p>
       </div>
       <div
-        className="hig__project-account-switcher__target__caret"
+        className="emotion-6"
       >
         <svg
-          height="10"
+          className="emotion-5"
+          height="10px"
           viewBox="0 0 10 10"
-          width="10"
+          width="10px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
@@ -403,7 +765,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
     </div>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-35"
     style={
       Object {
         "left": "0px",
@@ -413,7 +775,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   >
     <div
       aria-hidden="true"
-      className="emotion-3"
+      className="emotion-11"
       role="presentation"
       style={
         Object {
@@ -428,17 +790,17 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
         width="24"
       >
         <polygon
-          className="emotion-1"
+          className="emotion-9"
           points="0,12 12,0 24,12"
         />
         <polygon
-          className="emotion-2"
+          className="emotion-10"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="emotion-5"
+      className="emotion-34"
       style={
         Object {
           "maxHeight": undefined,
@@ -446,115 +808,181 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       }
     >
       <div
-        className="emotion-4"
+        className="emotion-33"
       >
         <div
-          className="hig__project-account-switcher__panel"
+          className="emotion-32"
         >
-          <div
-            className="hig__project-account-switcher__lists"
-          >
+          <div>
             <ul
-              className="hig__project-account-switcher__list"
+              className="emotion-21"
             >
               <span
-                className="hig__project-account-switcher__list__title"
+                className="emotion-1"
+                style={
+                  Object {
+                    "fontSize": "11px",
+                    "textTransform": "uppercase",
+                  }
+                }
               >
                 Accounts
               </span>
               <li
-                className="hig__project-account-switcher__item hig__project-account-switcher__item--account hig__project-account-switcher__item--active"
+                className="emotion-16"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
                 <span
-                  className="hig__project-account-switcher__item__image-wrapper"
+                  className="emotion-14"
                 >
                   <span
-                    className="hig__project-account-switcher__item__image-placeholder"
+                    className="emotion-1"
+                    style={
+                      Object {
+                        "lineHeight": "32px",
+                        "textAlign": "center",
+                      }
+                    }
                   >
                     A1
                   </span>
                 </span>
                 <span
-                  className="hig__project-account-switcher__item__label"
+                  className="emotion-15"
+                  onBlur={[Function]}
+                  onClick={undefined}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
                 >
                   Account 1
                 </span>
               </li>
               <li
-                className="hig__project-account-switcher__item hig__project-account-switcher__item--account hig__project-account-switcher__item--active"
+                className="emotion-16"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
                 <span
-                  className="hig__project-account-switcher__item__image-wrapper"
+                  className="emotion-14"
                 >
                   <span
-                    className="hig__project-account-switcher__item__image-placeholder"
+                    className="emotion-1"
+                    style={
+                      Object {
+                        "lineHeight": "32px",
+                        "textAlign": "center",
+                      }
+                    }
                   >
                     A2
                   </span>
                 </span>
                 <span
-                  className="hig__project-account-switcher__item__label"
+                  className="emotion-15"
+                  onBlur={[Function]}
+                  onClick={undefined}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
                 >
                   Account 2
                 </span>
               </li>
             </ul>
             <ul
-              className="hig__project-account-switcher__list"
+              className="emotion-21"
             >
               <span
-                className="hig__project-account-switcher__list__title"
+                className="emotion-1"
+                style={
+                  Object {
+                    "fontSize": "11px",
+                    "textTransform": "uppercase",
+                  }
+                }
               >
                 Projects
               </span>
               <li
-                className="hig__project-account-switcher__item hig__project-account-switcher__item--project hig__project-account-switcher__item--active"
+                className="emotion-16"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
                 <span
-                  className="hig__project-account-switcher__item__image-wrapper"
+                  className="emotion-2"
                 >
                   <span
-                    className="hig__project-account-switcher__item__image-placeholder"
+                    className="emotion-1"
+                    style={
+                      Object {
+                        "lineHeight": "32px",
+                        "textAlign": "center",
+                      }
+                    }
                   >
                     P1
                   </span>
                 </span>
                 <span
-                  className="hig__project-account-switcher__item__label"
+                  className="emotion-15"
+                  onBlur={[Function]}
+                  onClick={undefined}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
                 >
                   Project 1
                 </span>
               </li>
               <li
-                className="hig__project-account-switcher__item hig__project-account-switcher__item--project hig__project-account-switcher__item--active"
+                className="emotion-16"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
                 <span
-                  className="hig__project-account-switcher__item__image-wrapper"
+                  className="emotion-2"
                 >
                   <span
-                    className="hig__project-account-switcher__item__image-placeholder"
+                    className="emotion-1"
+                    style={
+                      Object {
+                        "lineHeight": "32px",
+                        "textAlign": "center",
+                      }
+                    }
                   >
                     P2
                   </span>
                 </span>
                 <span
-                  className="hig__project-account-switcher__item__label"
+                  className="emotion-15"
+                  onBlur={[Function]}
+                  onClick={undefined}
+                  onFocus={[Function]}
+                  onMouseDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  onMouseUp={[Function]}
+                  role="button"
                 >
                   Project 2
                 </span>

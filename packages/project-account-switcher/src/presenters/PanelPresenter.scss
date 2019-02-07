@@ -1,7 +1,0 @@
-@import "~@hig/styles/mixins/typography.scss";
-
-.hig__project-account-switcher__panel {
-  @include typography-base;
-  width: 200px;
-  padding: 0px 10px 10px 10px;
-}
