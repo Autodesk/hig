@@ -110,9 +110,8 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
       <span
         className="emotion-2"
       >
-        <p
+        <span
           className="emotion-0"
-          elemenType="span"
           style={
             Object {
               "lineHeight": "32px",
@@ -121,7 +120,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
           }
         >
           A1
-        </p>
+        </span>
       </span>
       <span
         className="emotion-3"
@@ -147,9 +146,8 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
       <span
         className="emotion-2"
       >
-        <p
+        <span
           className="emotion-0"
-          elemenType="span"
           style={
             Object {
               "lineHeight": "32px",
@@ -158,7 +156,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
           }
         >
           A2
-        </p>
+        </span>
       </span>
       <span
         className="emotion-3"

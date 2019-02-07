@@ -340,9 +340,8 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-14"
                 >
-                  <p
+                  <span
                     className="emotion-1"
-                    elemenType="span"
                     style={
                       Object {
                         "lineHeight": "32px",
@@ -351,7 +350,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                     }
                   >
                     A1
-                  </p>
+                  </span>
                 </span>
                 <span
                   className="emotion-15"
@@ -377,9 +376,8 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-14"
                 >
-                  <p
+                  <span
                     className="emotion-1"
-                    elemenType="span"
                     style={
                       Object {
                         "lineHeight": "32px",
@@ -388,7 +386,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                     }
                   >
                     A2
-                  </p>
+                  </span>
                 </span>
                 <span
                   className="emotion-15"
@@ -840,9 +838,8 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-14"
                 >
-                  <p
+                  <span
                     className="emotion-1"
-                    elemenType="span"
                     style={
                       Object {
                         "lineHeight": "32px",
@@ -851,7 +848,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                     }
                   >
                     A1
-                  </p>
+                  </span>
                 </span>
                 <span
                   className="emotion-15"
@@ -877,9 +874,8 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-14"
                 >
-                  <p
+                  <span
                     className="emotion-1"
-                    elemenType="span"
                     style={
                       Object {
                         "lineHeight": "32px",
@@ -888,7 +884,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                     }
                   >
                     A2
-                  </p>
+                  </span>
                 </span>
                 <span
                   className="emotion-15"
