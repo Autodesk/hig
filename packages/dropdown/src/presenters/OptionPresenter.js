@@ -9,35 +9,35 @@ import stylesheet from "./OptionPresenter.stylesheet";
 function OptionWrapper(props) {
   const {
     children,
-    highlighted,
     id,
     onClick,
     onMouseDown,
     onMouseMove,
-    selected
+    selected,
+    highlighted
   } = props;
 
   const { handleClick, handleKeyDown } = createButtonEventHandlers(onClick);
 
   return (
     <ThemeContext.Consumer>
-      {({ resolvedRoles }) => {
-        return (
-          <div
-            aria-selected={selected}
-            className={css(stylesheet(props, resolvedRoles))}
-            id={id}
-            onClick={handleClick}
-            onKeyDown={handleKeyDown}
-            onMouseDown={onMouseDown}
-            onMouseMove={onMouseMove}
-            role="option"
-            tabIndex="0"
-          >
-            {children}
-          </div>
-        );
-      }}
+      {({ resolvedRoles }) => (
+        <div
+          aria-selected={selected}
+          className={css(
+            stylesheet({ selected, highlighted, ...props }, resolvedRoles)
+          )}
+          id={id}
+          onClick={handleClick}
+          onKeyDown={handleKeyDown}
+          onMouseDown={onMouseDown}
+          onMouseMove={onMouseMove}
+          role="option"
+          tabIndex="0"
+        >
+          {children}
+        </div>
+      )}
     </ThemeContext.Consumer>
   );
 }

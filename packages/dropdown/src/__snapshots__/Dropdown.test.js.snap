@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown renders non-undefined values as options 1`] = `
-.emotion-0 {
+.emotion-8 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -17,6 +17,60 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   border-bottom-right-radius: 2px;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.emotion-0 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: transparent;
+}
+
+.emotion-4 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: rgb(230,244,251);
 }
 
 <div
@@ -85,13 +139,13 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   </div>
   <div
     aria-labelledby="downshift-2-label"
-    className="emotion-0"
+    className="emotion-8"
     id="downshift-2-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-2-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -108,7 +162,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-2-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -125,7 +179,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-2-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -142,7 +196,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-2-item-3"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -159,7 +213,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="hig__dropdown-option hig__dropdown-option--selected"
+      className="emotion-4"
       id="downshift-2-item-4"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -192,7 +246,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-2-item-5"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -209,7 +263,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-2-item-6"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -226,7 +280,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-2-item-7"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -246,7 +300,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 `;
 
 exports[`Dropdown renders with a controlled value 1`] = `
-.emotion-0 {
+.emotion-3 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -262,6 +316,60 @@ exports[`Dropdown renders with a controlled value 1`] = `
   border-bottom-right-radius: 2px;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.emotion-0 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: transparent;
+}
+
+.emotion-2 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: rgb(230,244,251);
 }
 
 <div
@@ -330,13 +438,13 @@ exports[`Dropdown renders with a controlled value 1`] = `
   </div>
   <div
     aria-labelledby="downshift-9-label"
-    className="emotion-0"
+    className="emotion-3"
     id="downshift-9-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-9-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -353,7 +461,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-9-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -370,7 +478,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="hig__dropdown-option hig__dropdown-option--selected"
+      className="emotion-2"
       id="downshift-9-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -507,7 +615,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
 `;
 
 exports[`Dropdown renders with custom option formatting 1`] = `
-.emotion-0 {
+.emotion-3 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -523,6 +631,33 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   border-bottom-right-radius: 2px;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.emotion-0 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: transparent;
 }
 
 <div
@@ -591,13 +726,13 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   </div>
   <div
     aria-labelledby="downshift-1-label"
-    className="emotion-0"
+    className="emotion-3"
     id="downshift-1-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-1-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -614,7 +749,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-1-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -631,7 +766,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-1-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -762,7 +897,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
 `;
 
 exports[`Dropdown renders with default value 1`] = `
-.emotion-0 {
+.emotion-3 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -778,6 +913,60 @@ exports[`Dropdown renders with default value 1`] = `
   border-bottom-right-radius: 2px;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.emotion-0 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: transparent;
+}
+
+.emotion-2 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: rgb(230,244,251);
 }
 
 <div
@@ -846,13 +1035,13 @@ exports[`Dropdown renders with default value 1`] = `
   </div>
   <div
     aria-labelledby="downshift-7-label"
-    className="emotion-0"
+    className="emotion-3"
     id="downshift-7-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-7-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -869,7 +1058,7 @@ exports[`Dropdown renders with default value 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-7-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -886,7 +1075,7 @@ exports[`Dropdown renders with default value 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="hig__dropdown-option hig__dropdown-option--selected"
+      className="emotion-2"
       id="downshift-7-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -922,7 +1111,7 @@ exports[`Dropdown renders with default value 1`] = `
 `;
 
 exports[`Dropdown renders with multiple selection 1`] = `
-.emotion-0 {
+.emotion-3 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -938,6 +1127,33 @@ exports[`Dropdown renders with multiple selection 1`] = `
   border-bottom-right-radius: 2px;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.emotion-0 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: transparent;
 }
 
 <div
@@ -1006,13 +1222,13 @@ exports[`Dropdown renders with multiple selection 1`] = `
   </div>
   <div
     aria-labelledby="downshift-8-label"
-    className="emotion-0"
+    className="emotion-3"
     id="downshift-8-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-8-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1029,7 +1245,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-8-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1046,7 +1262,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-0"
       id="downshift-8-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1066,7 +1282,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
 `;
 
 exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
-.emotion-0 {
+.emotion-3 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -1082,6 +1298,60 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   border-bottom-right-radius: 2px;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+.emotion-1 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: transparent;
+}
+
+.emotion-0 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: rgb(230,244,251);
 }
 
 <div
@@ -1150,13 +1420,13 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   </div>
   <div
     aria-labelledby="downshift-10-label"
-    className="emotion-0"
+    className="emotion-3"
     id="downshift-10-menu"
     role="listbox"
   >
     <div
       aria-selected={true}
-      className="hig__dropdown-option hig__dropdown-option--selected"
+      className="emotion-0"
       id="downshift-10-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1189,7 +1459,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="hig__dropdown-option"
+      className="emotion-1"
       id="downshift-10-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1206,7 +1476,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="hig__dropdown-option hig__dropdown-option--selected"
+      className="emotion-0"
       id="downshift-10-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}

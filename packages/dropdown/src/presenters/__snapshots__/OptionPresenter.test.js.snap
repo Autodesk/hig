@@ -1,9 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown/presenters/OptionPresenter renders with all props 1`] = `
+.emotion-0 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: rgb(230,244,251);
+}
+
 <div
   aria-selected={true}
-  className="hig__dropdown-option hig__dropdown-option--selected hig__dropdown-option--highlighted"
+  className="emotion-0"
   id={undefined}
   onClick={[Function]}
   onKeyDown={[Function]}
@@ -39,9 +66,36 @@ exports[`Dropdown/presenters/OptionPresenter renders with all props 1`] = `
 `;
 
 exports[`Dropdown/presenters/OptionPresenter renders without props 1`] = `
+.emotion-0 {
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 36px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 8px;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  background-color: transparent;
+}
+
 <div
   aria-selected={undefined}
-  className="hig__dropdown-option"
+  className="emotion-0"
   id={undefined}
   onClick={undefined}
   onKeyDown={undefined}
