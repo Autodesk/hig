@@ -5,7 +5,12 @@ import { ControlBehavior } from "@hig/behaviors";
 import InputPresenter from "./presenters/InputPresenter";
 import InputHaloPresenter from "./presenters/InputHaloPresenter";
 
-import { variants, availableVariants } from "./constants";
+import {
+  availableTagNames,
+  availableVariants,
+  tagNames,
+  variants
+} from "./constants";
 
 function Wrapper(props) {
   if (props.variant === variants.PLAIN) {
@@ -17,6 +22,7 @@ function Wrapper(props) {
 
 Wrapper.propTypes = {
   children: PropTypes.node,
+  tagName: PropTypes.oneOf(availableTagNames),
   variant: PropTypes.oneOf(availableVariants)
 };
 
@@ -27,9 +33,12 @@ function Input(props) {
     onMouseEnter: onMouseEnterProp,
     onMouseLeave: onMouseLeaveProp,
     disabled: disabledProp,
+    stylesheet,
+    tagName,
     variant,
     ...otherProps
   } = props;
+
   return (
     <ControlBehavior
       onFocus={onFocusProp}
@@ -49,6 +58,8 @@ function Input(props) {
           isDisabled={disabledProp}
           hasFocus={hasFocus}
           hasHover={hasHover}
+          stylesheet={stylesheet}
+          tagName={tagName}
           variant={variant}
         >
           <InputPresenter
@@ -59,6 +70,8 @@ function Input(props) {
             onFocus={onFocus}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
+            stylesheet={stylesheet}
+            tagName={tagName}
             variant={variant}
             {...otherProps}
           />
@@ -94,6 +107,14 @@ Input.propTypes = {
    */
   onMouseLeave: PropTypes.func,
   /**
+   * Adds custom/overriding styles
+   */
+  stylesheet: PropTypes.func,
+  /**
+   * Renders the HTML element that is passed in
+   */
+  tagName: PropTypes.oneOf(availableTagNames),
+  /**
    * The value of the control
    */
   value: PropTypes.string,
@@ -104,6 +125,7 @@ Input.propTypes = {
 };
 
 Input.defaultProps = {
+  tagName: tagNames.INPUT,
   variant: variants.LINE
 };
 

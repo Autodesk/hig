@@ -1,51 +1,95 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TextArea integration renders correctly 1`] = `
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: rgba(128,128,128,0.2);
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.2);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  display: block;
+  resize: none;
+  padding: 4px 12px;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.6);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
 <div
-  className="hig__text-area hig__text-area--required"
+  className="emotion-2"
 >
   <textarea
-    className="hig__text-area__field hig__text-area__field--no-value"
-    defaultValue={undefined}
+    className="emotion-0"
     disabled={undefined}
-    id="text-area-1"
-    maxLength={undefined}
-    minLength={undefined}
-    name={undefined}
-    onBlur={undefined}
-    onChange={[Function]}
-    onFocus={undefined}
-    onInput={undefined}
-    placeholder="Enter your comments here."
-    readOnly={undefined}
-    required="This field is required."
-    type={undefined}
-    value={undefined}
+    onBlur={[Function]}
+    onFocus={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
   />
-  <label
-    className="hig__text-area__label hig__text-area__label--visible"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "HIG Text Area",
-      }
-    }
-    htmlFor="text-area-1"
-  />
-  <p
-    className="hig__text-area__instructions"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": undefined,
-      }
-    }
-  />
-  <p
-    className="hig__text-area__required-notice"
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "This field is required.",
-      }
-    }
+  <div
+    className="emotion-1"
   />
 </div>
 `;

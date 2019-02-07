@@ -12,19 +12,16 @@ Read more about when and how to use the Text Area component [on the website](htt
 yarn add @hig/text-area
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import TextArea from '@hig/text-area';
-import '@hig/text-area/build/index.css';
 ```
 
 ## Basic usage
 
 ```jsx
 <TextArea
-  label="Tab title"
   placeholder="Foo"
-  required="This field is required."
 />
 ```
