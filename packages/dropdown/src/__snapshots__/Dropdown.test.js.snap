@@ -1,6 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown renders non-undefined values as options 1`] = `
+.emotion-0 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 43px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -67,7 +85,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   </div>
   <div
     aria-labelledby="downshift-2-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-0"
     id="downshift-2-menu"
     role="listbox"
   >
@@ -228,6 +246,24 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 `;
 
 exports[`Dropdown renders with a controlled value 1`] = `
+.emotion-0 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 43px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -294,7 +330,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   </div>
   <div
     aria-labelledby="downshift-9-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-0"
     id="downshift-9-menu"
     role="listbox"
   >
@@ -370,6 +406,24 @@ exports[`Dropdown renders with a controlled value 1`] = `
 `;
 
 exports[`Dropdown renders with a label and an ID 1`] = `
+.emotion-0 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 43px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -445,7 +499,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
   </div>
   <div
     aria-labelledby="whoaBuddy-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-0"
     id="whoaBuddy-menu"
     role="listbox"
   />
@@ -453,6 +507,24 @@ exports[`Dropdown renders with a label and an ID 1`] = `
 `;
 
 exports[`Dropdown renders with custom option formatting 1`] = `
+.emotion-0 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 43px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -519,7 +591,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   </div>
   <div
     aria-labelledby="downshift-1-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-0"
     id="downshift-1-menu"
     role="listbox"
   >
@@ -579,6 +651,24 @@ exports[`Dropdown renders with custom option formatting 1`] = `
 `;
 
 exports[`Dropdown renders with custom option render function 1`] = `
+.emotion-0 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 43px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -645,7 +735,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
   </div>
   <div
     aria-labelledby="downshift-3-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-0"
     id="downshift-3-menu"
     role="listbox"
   >
@@ -672,6 +762,24 @@ exports[`Dropdown renders with custom option render function 1`] = `
 `;
 
 exports[`Dropdown renders with default value 1`] = `
+.emotion-0 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 43px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -738,7 +846,7 @@ exports[`Dropdown renders with default value 1`] = `
   </div>
   <div
     aria-labelledby="downshift-7-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-0"
     id="downshift-7-menu"
     role="listbox"
   >
@@ -814,6 +922,24 @@ exports[`Dropdown renders with default value 1`] = `
 `;
 
 exports[`Dropdown renders with multiple selection 1`] = `
+.emotion-0 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 43px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -880,7 +1006,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
   </div>
   <div
     aria-labelledby="downshift-8-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-0"
     id="downshift-8-menu"
     role="listbox"
   >
@@ -940,6 +1066,24 @@ exports[`Dropdown renders with multiple selection 1`] = `
 `;
 
 exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
+.emotion-0 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 43px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -1006,7 +1150,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   </div>
   <div
     aria-labelledby="downshift-10-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-0"
     id="downshift-10-menu"
     role="listbox"
   >
@@ -1098,6 +1242,24 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 `;
 
 exports[`Dropdown renders with option specific and general option render function 1`] = `
+.emotion-0 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 43px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -1164,7 +1326,7 @@ exports[`Dropdown renders with option specific and general option render functio
   </div>
   <div
     aria-labelledby="downshift-5-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-0"
     id="downshift-5-menu"
     role="listbox"
   >
@@ -1200,6 +1362,24 @@ exports[`Dropdown renders with option specific and general option render functio
 `;
 
 exports[`Dropdown renders with option specific render function 1`] = `
+.emotion-0 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 43px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -1266,7 +1446,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
   </div>
   <div
     aria-labelledby="downshift-4-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-0"
     id="downshift-4-menu"
     role="listbox"
   >
@@ -1338,6 +1518,24 @@ exports[`Dropdown renders with option specific render function 1`] = `
 `;
 
 exports[`Dropdown renders with option specific, general and format rendering 1`] = `
+.emotion-0 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 43px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -1404,7 +1602,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   </div>
   <div
     aria-labelledby="downshift-6-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-0"
     id="downshift-6-menu"
     role="listbox"
   >
@@ -1440,6 +1638,24 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
 `;
 
 exports[`Dropdown renders without props 1`] = `
+.emotion-0 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 43px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
@@ -1506,7 +1722,7 @@ exports[`Dropdown renders without props 1`] = `
   </div>
   <div
     aria-labelledby="downshift-0-label"
-    className="hig__dropdown-v1__menu"
+    className="emotion-0"
     id="downshift-0-menu"
     role="listbox"
   />
