@@ -1,19 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`project-account-switcher/presenters/PanelPresenter  1`] = `
-.emotion-1 {
+.emotion-0 {
+  margin: 0;
+  width: 200px;
+  padding: 0 10px 10px 10px;
+}
+
+.emotion-2 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-0 {
+.emotion-1 {
   position: relative;
 }
 
 <div
-  className="emotion-1"
+  className="emotion-2"
   style={
     Object {
       "maxHeight": undefined,
@@ -21,29 +27,35 @@ exports[`project-account-switcher/presenters/PanelPresenter  1`] = `
   }
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     <div
-      className="hig__project-account-switcher__panel"
+      className="emotion-0"
     />
   </div>
 </div>
 `;
 
 exports[`project-account-switcher/presenters/PanelPresenter  2`] = `
-.emotion-1 {
+.emotion-0 {
+  margin: 0;
+  width: 200px;
+  padding: 0 10px 10px 10px;
+}
+
+.emotion-2 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-0 {
+.emotion-1 {
   position: relative;
 }
 
 <div
-  className="emotion-1"
+  className="emotion-2"
   style={
     Object {
       "maxHeight": undefined,
@@ -51,10 +63,10 @@ exports[`project-account-switcher/presenters/PanelPresenter  2`] = `
   }
 >
   <div
-    className="emotion-0"
+    className="emotion-1"
   >
     <div
-      className="hig__project-account-switcher__panel"
+      className="emotion-0"
     >
       hello
     </div>

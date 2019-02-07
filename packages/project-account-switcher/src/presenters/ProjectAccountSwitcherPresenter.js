@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
 import { Caret24 } from "@hig/icons";
+import Typography from "@hig/typography";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 
 import constructPlaceholder from "./constructPlaceholder";
-import "./ProjectAccountSwitcherPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default class ProjectAccountSwitcherPresenter extends Component {
   static propTypes = {
@@ -106,31 +108,33 @@ export default class ProjectAccountSwitcherPresenter extends Component {
       handleClick: handleTargetClick,
       handleKeyDown: handleTargetKeyDown
     } = this.createTargetHandlers(onTargetClick);
+    const styles = stylesheet();
 
     return (
       <div
-        className="hig__project-account-switcher__target"
+        className={css(styles.target)}
         onClick={handleTargetClick}
         onKeyDown={handleTargetKeyDown}
         role="button"
         tabIndex="0"
       >
-        <div className="hig__project-account-switcher__target__item hig__project-account-switcher__item">
-          <span className="hig__project-account-switcher__item__image-wrapper">
+        <div className={css(styles.targetItem)}>
+          <span className={css(styles.imageWrapper)}>
             <img
-              className="hig__project-account-switcher__item__image"
+              className={css(styles.image)}
               alt={label}
               src={this.activeImage()}
             />
-            <span className="hig__project-account-switcher__item__image-placeholder">
+            <Typography
+              elementType="span"
+              style={{ textAlign: "center", lineHeight: "32px" }}
+            >
               {this.constructLabelPlaceholder()}
-            </span>
+            </Typography>
           </span>
-          <span className="hig__project-account-switcher__item__label">
-            {label}
-          </span>
+          <Typography>{label}</Typography>
         </div>
-        <div className="hig__project-account-switcher__target__caret">
+        <div className={css(styles.targetCaret)}>
           <Caret24 />
         </div>
       </div>

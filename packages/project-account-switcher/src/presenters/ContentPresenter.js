@@ -1,13 +1,20 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { css } from "emotion";
 import memoize from "lodash.memoize";
+import TextLink from "@hig/text-link";
+import Typography from "@hig/typography";
 import { createButtonEventHandlers } from "@hig/utils";
-import "@hig/styles/build/fonts.css";
 
 import constructPlaceholder from "./constructPlaceholder";
+import stylesheet from "./stylesheet";
 
-import "./ContentPresenter.scss";
+function getTypographyPlaceholderStyles() {
+  return {
+    textAlign: `center`,
+    lineHeight: `32px`
+  };
+}
 
 export default class ContentPresenter extends Component {
   static propTypes = {
@@ -63,11 +70,7 @@ export default class ContentPresenter extends Component {
   );
 
   renderAccountsList() {
-    const classes = cx(
-      "hig__project-account-switcher__item",
-      "hig__project-account-switcher__item--account",
-      "hig__project-account-switcher__item--active"
-    );
+    const styles = stylesheet();
 
     return this.props.accounts.map(({ id, label }) => {
       const { handleClick, handleKeyDown } = this.createAccountListItemHandlers(
@@ -77,32 +80,29 @@ export default class ContentPresenter extends Component {
       /** @todo Move this block into it's own component & module */
       return (
         <li
-          className={classes}
+          className={css(styles.switcherItem)}
           key={`account-${id}`}
           onClick={handleClick}
           onKeyDown={handleKeyDown}
           role="menuitem"
           tabIndex="0"
         >
-          <span className="hig__project-account-switcher__item__image-wrapper">
-            <span className="hig__project-account-switcher__item__image-placeholder">
+          <span className={css(styles.switcherAccountImageWrapper)}>
+            <Typography
+              elementType="span"
+              style={getTypographyPlaceholderStyles()}
+            >
               {constructPlaceholder(label)}
-            </span>
+            </Typography>
           </span>
-          <span className="hig__project-account-switcher__item__label">
-            {label}
-          </span>
+          <TextLink>{label}</TextLink>
         </li>
       );
     });
   }
 
   renderProjectsList() {
-    const classes = cx(
-      "hig__project-account-switcher__item",
-      "hig__project-account-switcher__item--project",
-      "hig__project-account-switcher__item--active"
-    );
+    const styles = stylesheet();
 
     return this.props.projects.map(({ id, label }) => {
       const { handleClick, handleKeyDown } = this.createProjectListItemHandlers(
@@ -113,20 +113,21 @@ export default class ContentPresenter extends Component {
       return (
         <li
           key={`project-${id}`}
-          className={classes}
+          className={css(styles.switcherItem)}
           role="menuitem"
           tabIndex="0"
           onClick={handleClick}
           onKeyDown={handleKeyDown}
         >
-          <span className="hig__project-account-switcher__item__image-wrapper">
-            <span className="hig__project-account-switcher__item__image-placeholder">
+          <span className={css(styles.imageWrapper)}>
+            <Typography
+              elementType="span"
+              style={getTypographyPlaceholderStyles()}
+            >
               {constructPlaceholder(label)}
-            </span>
+            </Typography>
           </span>
-          <span className="hig__project-account-switcher__item__label">
-            {label}
-          </span>
+          <TextLink>{label}</TextLink>
         </li>
       );
     });
@@ -134,22 +135,27 @@ export default class ContentPresenter extends Component {
 
   render() {
     const { accounts, accountTitle, projects, projectTitle } = this.props;
+    const styles = stylesheet();
+    const typographyTitleStyles = {
+      textTransform: `uppercase`,
+      fontSize: `11px`
+    };
 
     return (
-      <div className="hig__project-account-switcher__lists">
+      <div>
         {accounts && (
-          <ul className="hig__project-account-switcher__list">
-            <span className="hig__project-account-switcher__list__title">
+          <ul className={css(styles.switcherList)}>
+            <Typography elementType="span" style={typographyTitleStyles}>
               {accountTitle}
-            </span>
+            </Typography>
             {this.renderAccountsList()}
           </ul>
         )}
         {projects && (
-          <ul className="hig__project-account-switcher__list">
-            <span className="hig__project-account-switcher__list__title">
+          <ul className={css(styles.switcherList)}>
+            <Typography elementType="span" style={typographyTitleStyles}>
               {projectTitle}
-            </span>
+            </Typography>
             {this.renderProjectsList()}
           </ul>
         )}

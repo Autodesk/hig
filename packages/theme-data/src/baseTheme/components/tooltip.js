@@ -1,4 +1,4 @@
-import { BORDER_RADIUS, COLOR, FONT_WEIGHT, LENGTH } from "../../consts/types";
+import { BORDER_RADIUS, COLOR, LENGTH } from "../../consts/types";
 
 export default {
   "tooltip.backgroundColor": {
@@ -35,12 +35,6 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.surfaceLevel200Color"
-    }
-  },
-  "tooltip.fontWeight": {
-    type: FONT_WEIGHT,
-    value: {
-      ref: "basics.fontWeights.bold"
     }
   },
   "tooltip.nub.hypotenuseLength": {
