@@ -1,20 +1,15 @@
-import { object, select } from "@storybook/addon-knobs/react";
-import { makeSelectOptions } from "@hig/storybook/utils";
-import { sizes } from "../sizes";
-
-const sizeOptions = makeSelectOptions(sizes);
+import { object } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
   basic: "Basic"
 };
 
 const knobLabels = {
-  dangerouslySetInnerHTML: "Inner HTML",
-  size: "Size"
+  dangerouslySetInnerHTML: "Inner HTML"
 };
 
 export default function getKnobs(props) {
-  const { dangerouslySetInnerHTML, size, ...otherProps } = props;
+  const { dangerouslySetInnerHTML, ...otherProps } = props;
 
   return {
     ...otherProps,
@@ -22,7 +17,6 @@ export default function getKnobs(props) {
       knobLabels.dangerouslySetInnerHTML,
       dangerouslySetInnerHTML,
       knobGroupIds.basic
-    ),
-    size: select(knobLabels.size, sizeOptions, size, knobGroupIds.basic)
+    )
   };
 }

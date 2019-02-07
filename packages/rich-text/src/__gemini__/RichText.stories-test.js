@@ -2,9 +2,8 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import TextLink from "@hig/text-link";
 import ProgressBar from "@hig/progress-bar";
-import "@hig/text-link/build/index.css";
 
-import RichText, { sizes } from "../index";
+import RichText from "../index";
 
 function Content() {
   return (
@@ -15,7 +14,7 @@ function Content() {
       </p>
       <a href="https://autodesk.com">Anchors</a>
       <hr />
-      <TextLink>A text link</TextLink>
+      <TextLink link="http://www.example.com">A text link</TextLink>
       <ul key="ul">
         <li>
           <strong>Any old HTML tag</strong>
@@ -94,19 +93,8 @@ function Content() {
   );
 }
 
-storiesOf("RichText", module)
-  .add("default", () => (
-    <RichText>
-      <Content />
-    </RichText>
-  ))
-  .add("small", () => (
-    <RichText size={sizes.SMALL}>
-      <Content />
-    </RichText>
-  ))
-  .add("large", () => (
-    <RichText size={sizes.LARGE}>
-      <Content />
-    </RichText>
-  ));
+storiesOf("RichText", module).add("default", () => (
+  <RichText>
+    <Content />
+  </RichText>
+));
