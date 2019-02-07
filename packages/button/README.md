@@ -10,7 +10,7 @@ Read more about when and how to use the Button components [on the HIG website](h
 yarn add @hig/button
 ```
 
-## Import the component and CSS
+## Import the component
 
 ```
 import Button from '@hig/button';

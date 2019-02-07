@@ -12,7 +12,7 @@ Read more about when and how to use the Checkbox component [on the website](http
 yarn add @hig/checkbox
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import Checkbox from '@hig/checkbox';

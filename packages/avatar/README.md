@@ -14,7 +14,7 @@ Read more about when and how to use the Avatar component [on the internal wiki](
 yarn add @hig/avatar
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import Avatar, { sizes } from '@hig/avatar';

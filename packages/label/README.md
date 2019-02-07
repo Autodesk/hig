@@ -10,11 +10,10 @@ Label represents a caption for an item in a user interface
 yarn add @hig/label
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import Label from '@hig/label';
-import '@hig/label/build/index.css';
 ```
 
 ## Basic usage

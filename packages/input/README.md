@@ -12,11 +12,10 @@ Read more about when and how to use the Input component [on the website](https:/
 yarn add @hig/input
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import Input from '@hig/input';
-import '@hig/input/build/index.css';
 ```
 
 ## Basic usage

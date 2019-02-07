@@ -2,6 +2,7 @@
 
 This package retains the source of the library of HIG icons.
 You can import individual icons to render on your app.
+
 ```jsx
 import { Assets24 } from "@hig/icons";
 
