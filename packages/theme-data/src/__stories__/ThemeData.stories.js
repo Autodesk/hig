@@ -5,7 +5,6 @@ import { withInfo } from "@storybook/addon-info";
 import RichText from "@hig/rich-text";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import { ThemeContext } from "@hig/theme-context";
-import "@hig/rich-text/build/index.css";
 
 import overallReadme from "../../README.md";
 import stories from "./stories";

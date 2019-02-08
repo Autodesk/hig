@@ -1,6 +1,5 @@
 import React from "react";
 import RichText from "@hig/rich-text";
-import "@hig/rich-text/build/index.css";
 
 import Tabs, { Tab } from "../index";
 import readme from "../../README.md";

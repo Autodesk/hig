@@ -18,6 +18,7 @@
     "build/*"
   ],
   "dependencies": {
+    "@hig/avatar": "1.0.4",
     "@hig/flyout": "^1.0.1",
     "@hig/icon-button": "^1.0.1",
     "@hig/icons": "^1.0.0",
@@ -31,6 +32,7 @@
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
+    "@hig/rich-text": "^1.0.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
     "@hig/styles": "^0.3.0"
