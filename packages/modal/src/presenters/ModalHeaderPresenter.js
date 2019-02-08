@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import IconButton from "@hig/icon-button";
 import { XCloseGray24 } from "@hig/icons";
 import "@hig/icon-button/build/index.css";
-
-import "./ModalHeaderPresenter.scss";
+import { css } from "emotion";
+import stylesheet from "./ModalHeaderPresenter.stylesheet";
 
 export default class ModalHeaderPresenter extends Component {
   static propTypes = {
@@ -28,16 +28,20 @@ export default class ModalHeaderPresenter extends Component {
     /**
      * Title of the modal
      */
-    title: PropTypes.string
+    title: PropTypes.string,
+    /**
+     * Style of the modal shell
+     */
+    type: PropTypes.string
   };
 
   static defaultProps = {
     closeButtonAriaLabel: "close"
   };
 
-  renderChildren() {
+  renderChildren(styles) {
     return (
-      <header className="hig__modal-V1__header" id={this.props.id}>
+      <header className={css(styles.modalHeader)} id={this.props.id}>
         {this.props.children}
       </header>
     );
@@ -49,20 +53,23 @@ export default class ModalHeaderPresenter extends Component {
       closeButtonAriaLabel,
       id,
       onCloseClick,
-      title
+      title,
+      type
     } = this.props;
 
+    const styles = stylesheet({ type });
+
     return children ? (
-      this.renderChildren()
+      this.renderChildren(styles)
     ) : (
-      <header className="hig__modal-V1__header" id={id}>
+      <header className={css(styles.modalHeader)} id={id}>
         <IconButton
           aria-label={closeButtonAriaLabel}
           icon={<XCloseGray24 />}
           onClick={onCloseClick}
           title="Close"
         />
-        <span className="hig__modal-V1__header-title">{title}</span>
+        <span>{title}</span>
       </header>
     );
   }

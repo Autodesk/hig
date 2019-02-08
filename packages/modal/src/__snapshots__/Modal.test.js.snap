@@ -1,23 +1,163 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`modal/Modal integration renders correctly 1`] = `
+.emotion-5 {
+  color: #2A3B4D;
+  opacity: 1;
+  pointer-events: visible;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.emotion-4 {
+  background-color: rgba(0,0,0,0.4);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10001;
+}
+
+.emotion-3 {
+  background: #FFF;
+  border: 3px solid #0671A1;
+  border-radius: 4px;
+  box-shadow: 0 0 8px 0 rgba(190,200,210,0.4);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  left: 50%;
+  max-height: calc(100vh - 256px);
+  max-width: calc(100vw - 32px);
+  opacity: 1;
+  outline: none;
+  position: fixed;
+  top: 128px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 500px;
+  z-index: 1001;
+  -webkit-animation: none;
+  animation: none;
+  -webkit-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+@media screen {
+  .emotion-3 {
+    width: 500px;
+  }
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  z-index: 1001;
+}
+
+.emotion-1 {
+  border: none;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow-x: auto;
+  overflow-y: scroll;
+  padding: 0 32px;
+}
+
+.emotion-1::before {
+  background-image: linear-gradient(to bottom,rgba(255,255,255,1),rgba(255,255,255,0));
+  content: '';
+  display: block;
+  height: 16px;
+  margin: 0 -16px;
+  position: relative;
+  z-index: 1003;
+}
+
+.emotion-1::after {
+  background-image: linear-gradient(to top,rgba(255,255,255,1),rgba(255,255,255,0));
+  content: '';
+  display: block;
+  height: 16px;
+  margin: 0 -16px;
+  position: relative;
+  z-index: 1003;
+}
+
+.emotion-0 {
+  border-bottom: 1px solid #D4DBE1;
+  font-family: ArtifaktElement;
+  font-size: 24px;
+  margin: 0 32px;
+  min-height: 33px;
+  padding: 16px 0;
+  position: relative;
+  z-index: 1002;
+}
+
+.emotion-0 .hig__icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 16px;
+  z-index: 1003;
+}
+
+.emotion-0 .hig__icon-button:hover,
+.emotion-0 .hig__icon-button:focus {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.emotion-0 .hig__icon-button:hover svg *,
+.emotion-0 .hig__icon-button:focus svg * {
+  fill: rgba(59,68,84,1);
+}
+
+.emotion-0 .hig__icon-button:focus {
+  outline: none;
+}
+
 <div
-  className="hig__modal-V1 hig__modal-V1--open"
+  className="emotion-5"
 >
   <div
     aria-labelledby="modal-title-1"
-    className="hig__modal-V1__overlay"
+    className="emotion-4"
     onClick={[Function]}
     role="dialog"
     tabIndex="-1"
   >
     <article
-      className="hig__modal-V1__window hig__modal-V1__window--standard"
+      className="emotion-3"
       onClick={[Function]}
       role="document"
     >
       <header
-        className="hig__modal-V1__header"
+        className="emotion-0"
         id="modal-title-1"
       >
         <button
@@ -52,17 +192,15 @@ exports[`modal/Modal integration renders correctly 1`] = `
             </g>
           </svg>
         </button>
-        <span
-          className="hig__modal-V1__header-title"
-        >
+        <span>
           HIG Modal
         </span>
       </header>
       <section
-        className="hig__modal-V1__body"
+        className="emotion-2"
       >
         <div
-          className="hig__modal-V1__slot"
+          className="emotion-1"
         />
       </section>
     </article>

@@ -1,7 +1,6 @@
 import { mount } from "enzyme";
 import React from "react";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
-
 import Modal from "./Modal";
 
 describe("modal/Modal", () => {
@@ -41,7 +40,7 @@ describe("modal/Modal", () => {
       });
 
       it("is triggered on change", () => {
-        wrapper.find(".hig__modal-V1__overlay").simulate("click");
+        wrapper.find("ModalPresenter").simulate("click");
 
         expect(eventHandler).toHaveBeenCalled();
       });
