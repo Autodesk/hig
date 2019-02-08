@@ -1,3 +1,10 @@
+# [@hig/spacer-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/spacer@1.0.4...@hig/spacer@1.0.5) (2019-02-08)
+
+
+### Bug Fixes
+
+* bump up theme-context dependency ([b068dab](https://github.com/Autodesk/hig/commit/b068dab))
+
 # [@hig/spacer-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/spacer@1.0.3...@hig/spacer@1.0.4) (2019-01-23)
 
 
