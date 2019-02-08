@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { ThemeContext } from "@hig/themes";
-
-import "./docked.scss";
+import { css } from "emotion";
+import ThemeContext from "@hig/theme-context";
+import stylesheet from "./stylesheet";
 
 export default class Docked extends Component {
   static propTypes = {
@@ -23,14 +22,12 @@ export default class Docked extends Component {
   render() {
     const { children, onMouseLeave, onMouseEnter } = this.props;
 
-    const classes = themeClass =>
-      cx(themeClass, "hig__side-nav-container--docked");
-
     return (
       <ThemeContext.Consumer>
-        {({ themeClass }) => (
+        {({ resolvedRoles }) => (
           <div
-            className={classes(themeClass)}
+            id="surface"
+            className={css(stylesheet(this.props, resolvedRoles).docked)}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >

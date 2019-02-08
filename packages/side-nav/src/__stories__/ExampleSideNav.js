@@ -2,6 +2,7 @@ import React from "react";
 import { action } from "@storybook/addon-actions";
 import { boolean, text } from "@storybook/addon-knobs/react";
 import { Insight24, ProductsAndServices24, Collaboration24 } from "@hig/icons";
+import Typography from "@hig/typography";
 
 import SideNav from "../index";
 
@@ -56,7 +57,7 @@ const ExampleSideNav = () => (
       />
     ]}
     search={<SideNav.Search />}
-    copyright="© 2018 Autodesk Inc."
+    copyright={<Typography>© 2018 Autodesk Inc.</Typography>}
   />
 );
 

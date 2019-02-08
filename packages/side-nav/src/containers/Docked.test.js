@@ -3,6 +3,8 @@ import renderer from "react-test-renderer";
 
 import Docked from "./Docked";
 
+jest.mock("./stylesheet");
+
 describe("side-nav/containers/Docked", () => {
   describe("snapshot tests", () => {
     const cases = [

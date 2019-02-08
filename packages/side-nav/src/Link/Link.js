@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
 import { sizes as iconSizes } from "@hig/icons";
-import { ThemeContext } from "@hig/themes";
+import ThemeContext from "@hig/theme-context";
+import Typography from "@hig/typography";
+import { css } from "emotion";
 
 import { AVAILABLE_TARGETS } from "../targets";
 import ExternalLinkIcon from "../presenters/ExternalLinkIcon";
-import "./link.scss";
+import stylesheet from "./stylesheet";
 
 /** @todo Consider extending TextLink */
 export default class Link extends Component {
@@ -30,32 +31,37 @@ export default class Link extends Component {
     onMouseOver: () => {}
   };
 
-  _renderExternalLinkIcon = () =>
+  _renderExternalLinkIcon = styles =>
     this.props.target === "_blank" && (
-      <ExternalLinkIcon size={iconSizes.PX_16} />
+      <div className={css(styles.externalIcon)}>
+        <ExternalLinkIcon size={iconSizes.PX_24} />
+      </div>
     );
 
   render() {
     const { title, link, onClick, onFocus, onMouseOver, target } = this.props;
-    const classes = themeClass => cx(themeClass, "hig__side-nav__link");
-
     const Wrapper = link ? "a" : "div";
 
     return (
       <ThemeContext.Consumer>
-        {({ themeClass }) => (
-          <Wrapper
-            className={classes(themeClass)}
-            href={link}
-            target={target}
-            onClick={onClick}
-            onFocus={onFocus}
-            onMouseOver={onMouseOver}
-          >
-            {title}
-            {this._renderExternalLinkIcon()}
-          </Wrapper>
-        )}
+        {({ resolvedRoles }) => {
+          const styles = stylesheet(this.props, resolvedRoles);
+          return (
+            <Wrapper
+              className={css(styles.wrapper)}
+              href={link}
+              target={target}
+              onClick={onClick}
+              onFocus={onFocus}
+              onMouseOver={onMouseOver}
+            >
+              <Typography elementType="span" style={styles.typography}>
+                {title}
+              </Typography>
+              {this._renderExternalLinkIcon(styles)}
+            </Wrapper>
+          );
+        }}
       </ThemeContext.Consumer>
     );
   }

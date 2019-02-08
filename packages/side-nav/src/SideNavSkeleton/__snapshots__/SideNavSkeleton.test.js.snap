@@ -1,8 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`side-nav/SideNavSkeleton snapshot tests renders with no props 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  padding-left: 24px;
+  padding-top: 48px;
+  width: 280px;
+}
+
 <div
-  className="hig__side-nav-skeleton hig--light-theme"
+  className="emotion-0"
 >
   <div
     className="hig__skeleton-item hig--light-theme"

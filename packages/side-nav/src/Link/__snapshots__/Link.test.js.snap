@@ -1,12 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`side-nav/Link snapshot tests renders with no props 1`] = `
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  padding: 0 16px;
+}
+
+.emotion-1:hover span {
+  color: #0696d7;
+}
+
+.emotion-1 svg * {
+  fill: #3c3c3c;
+}
+
+.emotion-1:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
 <div
-  className="hig--light-theme hig__side-nav__link"
+  className="emotion-1"
   href={undefined}
   onClick={[Function]}
   onFocus={undefined}
   onMouseOver={[Function]}
   target={undefined}
-/>
+>
+  <span
+    className="emotion-0"
+    style={
+      Object {
+        "lineHeight": "26px",
+      }
+    }
+  />
+</div>
 `;

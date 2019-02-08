@@ -1,8 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`side-nav/Submodule snapshot tests renders a link 1`] = `
+.emotion-0 {
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-right: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #3c3c3c;
+}
+
+.emotion-0:first-of-type {
+  margin-top: 8px;
+}
+
+.emotion-0:last-of-type {
+  margin-bottom: 16px;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-0 externalIcon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 6px 10px;
+}
+
+.emotion-0 externalIcon svg {
+  fill: #3c3c3c;
+}
+
+.emotion-0 externalIcon:hover svg * {
+  fill: #0696d7;
+}
+
 <a
-  className="hig--light-theme hig__side-nav__submodule"
+  className="emotion-0"
   href="http://example.com"
   onClick={undefined}
   onFocus={undefined}
@@ -17,8 +81,80 @@ exports[`side-nav/Submodule snapshot tests renders a link 1`] = `
 `;
 
 exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
+.emotion-2 {
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-right: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #3c3c3c;
+}
+
+.emotion-2:first-of-type {
+  margin-top: 8px;
+}
+
+.emotion-2:last-of-type {
+  margin-bottom: 16px;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-2 externalIcon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 6px 10px;
+}
+
+.emotion-2 externalIcon svg {
+  fill: #3c3c3c;
+}
+
+.emotion-2 externalIcon:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
 <a
-  className="hig--light-theme hig__side-nav__submodule"
+  className="emotion-2"
   href="http://example.com"
   onClick={undefined}
   onFocus={undefined}
@@ -29,24 +165,95 @@ exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
   target="_blank"
 >
   Module
-  <svg
-    height="8"
-    viewBox="0 0 9 8"
-    width="9"
-    xmlns="http://www.w3.org/2000/svg"
+  <div
+    className="emotion-1"
   >
-    <path
-      d="M7.707 6.43V.5H1.79m-.704 6.61l6.6-6.6"
-      fill="none"
-      stroke="#2E4258"
-    />
-  </svg>
+    <svg
+      className="emotion-0"
+      color={undefined}
+      height="8px"
+      viewBox="0 0 9 8"
+      width="9px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        eternal-link
+      </title>
+      <path
+        d="M7 0H2v2h3.54L1 6.54 2.46 8 7 3.46V7h2V0H7z"
+      />
+    </svg>
+  </div>
 </a>
 `;
 
 exports[`side-nav/Submodule snapshot tests renders with a click handler 1`] = `
+.emotion-0 {
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-right: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #3c3c3c;
+}
+
+.emotion-0:first-of-type {
+  margin-top: 8px;
+}
+
+.emotion-0:last-of-type {
+  margin-bottom: 16px;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-0 externalIcon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 6px 10px;
+}
+
+.emotion-0 externalIcon svg {
+  fill: #3c3c3c;
+}
+
+.emotion-0 externalIcon:hover svg * {
+  fill: #0696d7;
+}
+
 <div
-  className="hig--light-theme hig__side-nav__submodule"
+  className="emotion-0"
   href={undefined}
   onClick={[Function]}
   onFocus={undefined}
@@ -59,8 +266,72 @@ exports[`side-nav/Submodule snapshot tests renders with a click handler 1`] = `
 `;
 
 exports[`side-nav/Submodule snapshot tests renders with minimal props 1`] = `
+.emotion-0 {
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-right: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #3c3c3c;
+}
+
+.emotion-0:first-of-type {
+  margin-top: 8px;
+}
+
+.emotion-0:last-of-type {
+  margin-bottom: 16px;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-0 externalIcon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 6px 10px;
+}
+
+.emotion-0 externalIcon svg {
+  fill: #3c3c3c;
+}
+
+.emotion-0 externalIcon:hover svg * {
+  fill: #0696d7;
+}
+
 <div
-  className="hig--light-theme hig__side-nav__submodule"
+  className="emotion-0"
   href={undefined}
   onClick={undefined}
   onFocus={undefined}
@@ -75,8 +346,72 @@ exports[`side-nav/Submodule snapshot tests renders with minimal props 1`] = `
 `;
 
 exports[`side-nav/Submodule snapshot tests renders with no props 1`] = `
+.emotion-0 {
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-right: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #3c3c3c;
+}
+
+.emotion-0:first-of-type {
+  margin-top: 8px;
+}
+
+.emotion-0:last-of-type {
+  margin-bottom: 16px;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-0 externalIcon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 6px 10px;
+}
+
+.emotion-0 externalIcon svg {
+  fill: #3c3c3c;
+}
+
+.emotion-0 externalIcon:hover svg * {
+  fill: #0696d7;
+}
+
 <div
-  className="hig--light-theme hig__side-nav__submodule"
+  className="emotion-0"
   href={undefined}
   onClick={undefined}
   onFocus={undefined}

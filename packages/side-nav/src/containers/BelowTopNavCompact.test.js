@@ -3,6 +3,8 @@ import renderer from "react-test-renderer";
 
 import BelowTopNavCompact from "./BelowTopNavCompact";
 
+jest.mock("./stylesheet");
+
 describe("side-nav/containers/BelowTopNavCompact", () => {
   describe("snapshot tests", () => {
     const cases = [

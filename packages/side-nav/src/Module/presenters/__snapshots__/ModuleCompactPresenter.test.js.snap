@@ -1,28 +1,121 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`side-nav/Module/presenters/ModuleCompactPresenter snapshot tests renders with minimal props 1`] = `
+.emotion-4 {
+  outline: none;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  position: relative;
+  margin: 8px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 32px;
+  margin-right: 8px;
+}
+
+.emotion-3:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-2 {
+  outline: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding-left: 2px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-2:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-2:hover:before,
+.emotion-2:focus:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  color: #0696d7;
+  border-left: 2px solid #0696d7;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 38px;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
 <div
-  className="hig--light-theme hig__side-nav__module"
+  className="emotion-4"
   onFocus={undefined}
   onMouseOver={undefined}
 >
   <div
-    className="hig__side-nav__module__row"
+    className="emotion-3"
   >
     <div
-      className="hig--light-theme hig__side-nav__module__link"
+      className="emotion-2"
       onClick={undefined}
       onKeyDown={undefined}
       role="button"
       tabIndex={0}
     >
       <div
-        className="hig__side-nav__module__link__icon"
+        className="emotion-1"
       >
         <svg
-          height="24"
+          className="emotion-0"
+          height="24px"
           viewBox="0 0 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>

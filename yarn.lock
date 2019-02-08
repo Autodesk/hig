@@ -156,7 +156,7 @@
     classnames "^2.2.5"
     prop-types "^15.6.1"
 
-"@hig/skeleton-item@^0.3.0":
+"@hig/skeleton-item@^0.3.0", "@hig/skeleton-item@^0.3.1":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@hig/skeleton-item/-/skeleton-item-0.3.1.tgz#9729eb499d40ff61996558a179608862338193b7"
   dependencies:

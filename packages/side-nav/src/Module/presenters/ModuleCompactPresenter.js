@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { ThemeContext } from "@hig/themes";
+import { css } from "emotion";
+import ThemeContext from "@hig/theme-context";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
-
-import "./module.scss";
+import stylesheet from "./stylesheet";
 
 export default class ModuleCompact extends Component {
   static propTypes = {
     /** Indicates this module is currently active */
+    /* eslint-disable react/no-unused-prop-types */
     active: PropTypes.bool,
     /** Indicates a nested submodule is currently active */
+    /* eslint-disable react/no-unused-prop-types */
     activeChildren: PropTypes.bool,
     /** An instance of @hig/icon */
     icon: PropTypes.node.isRequired,
@@ -25,46 +26,36 @@ export default class ModuleCompact extends Component {
   createEventHandlers = memoizeCreateButtonEventHandlers();
 
   render() {
-    const {
-      active,
-      activeChildren,
-      icon,
-      onClickTitle,
-      onFocus,
-      onMouseOver
-    } = this.props;
-    const classes = themeClass => cx(themeClass, "hig__side-nav__module");
+    const { icon, onClickTitle, onFocus, onMouseOver } = this.props;
     const { handleClick, handleKeyDown } = this.createEventHandlers(
       onClickTitle
     );
 
-    const linkClasses = themeClass =>
-      cx(themeClass, "hig__side-nav__module__link", {
-        "hig__side-nav__module__link--active": active,
-        "hig__side-nav__module__link--active-children": activeChildren
-      });
-
     return (
       <ThemeContext.Consumer>
-        {({ themeClass }) => (
-          <div
-            className={classes(themeClass)}
-            onFocus={onFocus}
-            onMouseOver={onMouseOver}
-          >
-            <div className="hig__side-nav__module__row">
-              <div
-                className={linkClasses(themeClass)}
-                onClick={handleClick}
-                onKeyDown={handleKeyDown}
-                role="button"
-                tabIndex={0}
-              >
-                <div className="hig__side-nav__module__link__icon">{icon}</div>
+        {({ resolvedRoles }) => {
+          const styles = stylesheet(this.props, resolvedRoles);
+
+          return (
+            <div
+              className={css(styles.module)}
+              onFocus={onFocus}
+              onMouseOver={onMouseOver}
+            >
+              <div className={css(styles.row)}>
+                <div
+                  className={css(styles.link)}
+                  onClick={handleClick}
+                  onKeyDown={handleKeyDown}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <div className={css(styles.icon)}>{icon}</div>
+                </div>
               </div>
             </div>
-          </div>
-        )}
+          );
+        }}
       </ThemeContext.Consumer>
     );
   }
