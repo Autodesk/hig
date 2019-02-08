@@ -20,7 +20,7 @@
   "dependencies": {
     "@hig/icon-button": "^1.0.1",
     "@hig/icons": "^1.0.0",
-    "@hig/rich-text": "^0.1.4",
+    "@hig/rich-text": "^1.0.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1",
     "react-flip-move": "^3.0.1"
