@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Avatar, { sizes } from "@hig/avatar";
-import "@hig/avatar/build/index.css";
 
 import "./ProfileButtonPresenter.scss";
 
