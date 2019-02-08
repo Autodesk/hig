@@ -1,3 +1,10 @@
+# [@hig/label-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/label@1.0.1...@hig/label@1.0.2) (2019-02-08)
+
+
+### Bug Fixes
+
+* bump up theme-context dependency ([b068dab](https://github.com/Autodesk/hig/commit/b068dab))
+
 # [@hig/label-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/label@1.0.0...@hig/label@1.0.1) (2019-01-23)
 
 
