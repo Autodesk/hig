@@ -1,3 +1,18 @@
+# [@hig/text-area-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/text-area@0.2.0...@hig/text-area@1.0.0) (2019-02-08)
+
+
+### Features
+
+* make text-area themeable ([65ea3bb](https://github.com/Autodesk/hig/commit/65ea3bb))
+
+
+### BREAKING CHANGES
+
+* * Removed the following props: instructions, label, defaultValue
+* Allow all native text-area html attributes to pass down
+* The web light default look now looks like the updated designs but with the legacy colors
+* The text-area component is now composed from an input component
+
 # [@hig/text-area-v0.2.0](https://github.com/Autodesk/hig/compare/@hig/text-area@0.1.2...@hig/text-area@0.2.0) (2018-10-31)
 
 

@@ -1,3 +1,10 @@
+# [@hig/components-v1.0.10](https://github.com/Autodesk/hig/compare/@hig/components@1.0.9...@hig/components@1.0.10) (2019-02-08)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/project-account-switcher to version 2.0.0 ([acb3528](https://github.com/Autodesk/hig/commit/acb3528))
+
 # [@hig/components-v1.0.9](https://github.com/Autodesk/hig/compare/@hig/components@1.0.8...@hig/components@1.0.9) (2019-02-07)
 
 

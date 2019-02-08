@@ -1,3 +1,15 @@
+# [@hig/input-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/input@1.0.4...@hig/input@1.1.0) (2019-02-08)
+
+
+### Bug Fixes
+
+* bump up theme-context dependency ([b068dab](https://github.com/Autodesk/hig/commit/b068dab))
+
+
+### Features
+
+* add tagname prop to input ([3b91917](https://github.com/Autodesk/hig/commit/3b91917))
+
 # [@hig/input-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/input@1.0.3...@hig/input@1.0.4) (2019-01-29)
 
 

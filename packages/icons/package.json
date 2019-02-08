@@ -1,6 +1,6 @@
 {
   "name": "@hig/icons",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "HIG icon assets",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -24,7 +24,7 @@
     "@hig/rich-text": "^0.1.4",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/typography": "^1.0.1",
+    "@hig/typography": "^1.0.2",
     "svgo": "^1.0.5"
   },
   "peerDependencies": {

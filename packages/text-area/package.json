@@ -1,6 +1,6 @@
 {
   "name": "@hig/text-area",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "HIG Text Area",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -17,7 +17,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/input": "^1.0.4",
+    "@hig/input": "^1.1.0",
     "prop-types": "^15.6.1"
   },
   "peerDependencies": {
