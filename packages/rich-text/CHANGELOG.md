@@ -1,3 +1,49 @@
+# [@hig/rich-text-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/rich-text@0.1.4...@hig/rich-text@1.0.0) (2019-02-08)
+
+
+### Features
+
+* a new API and theming for RichText ([f9c3d16](https://github.com/Autodesk/hig/commit/f9c3d16))
+
+
+### BREAKING CHANGES
+
+* * rm size prop for small and large sizes in favor of theme density
+* use stylesheet function for RichText that generates new CSS classes,
+eliminating the need for `hig__rich-text`
+* consume `ThemeContext`, enabling theming with the new styles
+
+Migration steps:
+
+If you were previously using the `size` prop to change the sizes and
+spacings rendered, you can achieve the same behavior with theme density.
+For instance, if you previously used...
+
+```
+function MyApp() {
+  <RichText size="large">
+    <h1>Heading</h1>
+    <p>This is a paragraph.</p>
+  </RichText>
+}
+```
+
+...
+
+```
+import MediumDensityTheme from '@hig/theme-data/build/esm/lightGrayMediumDensityTheme';
+import ThemeContext from '@hig/theme-context';
+
+function MyApp() {
+  <ThemeContext.Provider value={MediumDensityTheme}>
+    <RichText>
+      <h1>Heading</h1>
+      <p>This is a paragraph.</p>
+    </RichText>
+  </ThemeContext.Provider>
+}
+```
+
 # [@hig/rich-text-v0.1.4](https://github.com/Autodesk/hig/compare/@hig/rich-text@0.1.3...@hig/rich-text@0.1.4) (2018-10-08)
 
 
