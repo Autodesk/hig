@@ -1,3 +1,10 @@
+# [@hig/tooltip-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.0...@hig/tooltip@1.0.1) (2019-02-08)
+
+
+### Bug Fixes
+
+* bump up theme-context dependency ([b068dab](https://github.com/Autodesk/hig/commit/b068dab))
+
 # [@hig/tooltip-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@0.4.2...@hig/tooltip@1.0.0) (2019-01-28)
 
 
