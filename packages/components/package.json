@@ -1,6 +1,6 @@
 {
   "name": "@hig/components",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "HIG Components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,20 +18,20 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/avatar": "^1.0.3",
+    "@hig/avatar": "^1.0.4",
     "@hig/banner": "^1.0.2",
-    "@hig/button": "^1.2.1",
-    "@hig/checkbox": "^2.0.1",
+    "@hig/button": "^1.2.2",
+    "@hig/checkbox": "^2.0.2",
     "@hig/dropdown": "^1.0.2",
-    "@hig/flyout": "^1.0.2",
+    "@hig/flyout": "^1.0.3",
     "@hig/icon-button": "^1.0.1",
-    "@hig/icons": "^2.0.1",
+    "@hig/icons": "^2.0.2",
     "@hig/modal": "^1.0.2",
     "@hig/notifications-flyout": "^1.0.4",
     "@hig/notifications-toast": "^1.0.4",
-    "@hig/profile-flyout": "^2.0.0",
-    "@hig/progress-bar": "^1.0.1",
-    "@hig/progress-ring": "^1.0.0",
+    "@hig/profile-flyout": "^2.0.1",
+    "@hig/progress-bar": "^1.0.2",
+    "@hig/progress-ring": "^1.0.1",
     "@hig/project-account-switcher": "^2.0.0",
     "@hig/radio-button": "^1.0.2",
     "@hig/rich-text": "^0.1.4",
@@ -47,9 +47,9 @@
     "@hig/theme-data": "^2.1.1",
     "@hig/themes": "^0.3.0",
     "@hig/timestamp": "^0.1.4",
-    "@hig/tooltip": "^1.0.0",
+    "@hig/tooltip": "^1.0.1",
     "@hig/top-nav": "^2.0.2",
-    "@hig/typography": "^1.0.1"
+    "@hig/typography": "^1.0.2"
   },
   "peerDependencies": {
     "react": "^15.4.1 || ^16.3.2"
