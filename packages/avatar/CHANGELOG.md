@@ -1,3 +1,10 @@
+# [@hig/avatar-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.3...@hig/avatar@1.0.4) (2019-02-08)
+
+
+### Bug Fixes
+
+* bump up theme-context dependency ([b068dab](https://github.com/Autodesk/hig/commit/b068dab))
+
 # [@hig/avatar-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.2...@hig/avatar@1.0.3) (2019-01-23)
 
 
