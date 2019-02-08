@@ -25,14 +25,12 @@ import '@hig/modal/build/index.css';
 <Modal
   title="Are you sure?"
   open
-  body="This is the text body of my modal"
-  type="alternate"
 >
-  <h1>
+  <Typography>
     <u>This is my HTML title</u>
-  </h1>
-  <p>
+  </Typography>
+  <Typography>
     <i>This is my HTML content.</i>
-  </p>
+  </Typography>
 </Modal>
 ```

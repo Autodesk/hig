@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`modal/Modal integration renders correctly 1`] = `
-.emotion-5 {
-  color: #2A3B4D;
+.emotion-8 {
+  color: #2c3e53;
   opacity: 1;
   pointer-events: visible;
   -webkit-transition: all ease 0.2s;
@@ -11,8 +11,8 @@ exports[`modal/Modal integration renders correctly 1`] = `
   transition-delay: 0s;
 }
 
-.emotion-4 {
-  background-color: rgba(0,0,0,0.4);
+.emotion-7 {
+  background-color: rgba(0,0,0,0.5);
   bottom: 0;
   left: 0;
   position: fixed;
@@ -21,11 +21,10 @@ exports[`modal/Modal integration renders correctly 1`] = `
   z-index: 10001;
 }
 
-.emotion-3 {
-  background: #FFF;
-  border: 3px solid #0671A1;
+.emotion-6 {
+  background: #ffffff;
   border-radius: 4px;
-  box-shadow: 0 0 8px 0 rgba(190,200,210,0.4);
+  box-shadow: 0 0 8px 0 #BEC8D2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -34,8 +33,8 @@ exports[`modal/Modal integration renders correctly 1`] = `
   -ms-flex-direction: column;
   flex-direction: column;
   left: 50%;
-  max-height: calc(100vh - 256px);
-  max-width: calc(100vw - 32px);
+  height: 300px;
+  width: 400px;
   opacity: 1;
   outline: none;
   position: fixed;
@@ -43,7 +42,6 @@ exports[`modal/Modal integration renders correctly 1`] = `
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 500px;
   z-index: 1001;
   -webkit-animation: none;
   animation: none;
@@ -53,13 +51,7 @@ exports[`modal/Modal integration renders correctly 1`] = `
   transition-delay: 0.2s;
 }
 
-@media screen {
-  .emotion-3 {
-    width: 500px;
-  }
-}
-
-.emotion-2 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -72,135 +64,181 @@ exports[`modal/Modal integration renders correctly 1`] = `
   flex-direction: column;
   overflow: hidden;
   position: relative;
-  z-index: 1001;
+  min-height: 152px;
 }
 
-.emotion-1 {
+.emotion-5::before {
+  background-color: #ffffff;
+  content: '';
+  display: block;
+  height: 16px;
+  position: relative;
+  margin: 0 32px;
+  z-index: 1003;
+}
+
+.emotion-5::after {
+  background-color: #ffffff;
+  content: '';
+  display: block;
+  height: 16px;
+  position: relative;
+  margin: 0 32px;
+  z-index: 1003;
+}
+
+.emotion-4 {
   border: none;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   overflow-x: auto;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: 0 32px;
 }
 
-.emotion-1::before {
-  background-image: linear-gradient(to bottom,rgba(255,255,255,1),rgba(255,255,255,0));
-  content: '';
-  display: block;
-  height: 16px;
-  margin: 0 -16px;
-  position: relative;
-  z-index: 1003;
-}
-
-.emotion-1::after {
-  background-image: linear-gradient(to top,rgba(255,255,255,1),rgba(255,255,255,0));
-  content: '';
-  display: block;
-  height: 16px;
-  margin: 0 -16px;
-  position: relative;
-  z-index: 1003;
-}
-
-.emotion-0 {
-  border-bottom: 1px solid #D4DBE1;
-  font-family: ArtifaktElement;
-  font-size: 24px;
-  margin: 0 32px;
-  min-height: 33px;
-  padding: 16px 0;
-  position: relative;
+.emotion-3 {
+  font-size: 20px;
+  line-height: 1.66666;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(60,60,60,0.25);
+  min-height: 60px;
   z-index: 1002;
 }
 
-.emotion-0 .hig__icon-button.hig__icon-button--primary {
+.emotion-2 {
+  margin: 0 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.emotion-2 .hig__icon-button.hig__icon-button--primary {
   background: transparent;
   border: none;
   cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 16px;
-  z-index: 1003;
+  padding: 0;
+  height: calc(20px * 1.66666);
+  min-width: 16px;
 }
 
-.emotion-0 .hig__icon-button.hig__icon-button--primary:hover,
-.emotion-0 .hig__icon-button.hig__icon-button--primary:focus {
+.emotion-2 .hig__icon-button.hig__icon-button--primary svg * {
+  fill: #2c3e53;
+}
+
+.emotion-2 .hig__icon-button.hig__icon-button--primary:hover,
+.emotion-2 .hig__icon-button.hig__icon-button--primary:focus {
   border-color: transparent;
   background-color: transparent;
 }
 
-.emotion-0 .hig__icon-button.hig__icon-button--primary:hover svg *,
-.emotion-0 .hig__icon-button.hig__icon-button--primary:focus svg * {
-  fill: rgba(59,68,84,1);
+.emotion-2 .hig__icon-button.hig__icon-button--primary:hover svg *,
+.emotion-2 .hig__icon-button.hig__icon-button--primary:focus svg * {
+  fill: #2c3e53;
 }
 
-.emotion-0 .hig__icon-button.hig__icon-button--primary:focus {
+.emotion-2 .hig__icon-button.hig__icon-button--primary:focus {
   outline: none;
 }
 
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-1 {
+  fill: #808080;
+}
+
+.emotion-1 > * {
+  fill: #808080;
+}
+
 <div
-  className="emotion-5"
+  className="emotion-8"
 >
   <div
     aria-labelledby="modal-title-1"
-    className="emotion-4"
+    className="emotion-7"
     onClick={[Function]}
     role="dialog"
     tabIndex="-1"
   >
     <article
-      className="emotion-3"
+      className="emotion-6"
       onClick={[Function]}
       role="document"
     >
       <header
-        className="emotion-0"
+        className="emotion-3"
         id="modal-title-1"
       >
-        <button
-          className="hig__icon-button hig__icon-button--primary"
-          onBlur={undefined}
-          onClick={[Function]}
-          onFocus={undefined}
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
-          title="Close"
+        <div
+          className="emotion-2"
         >
-          <svg
-            className="hig__icon-button__icon"
-            height="19"
-            viewBox="0 0 19 19"
-            width="19"
-            xmlns="http://www.w3.org/2000/svg"
+          <p
+            className="emotion-0"
+            style={
+              Object {
+                "fontSize": "20px",
+                "lineHeight": 1.66666,
+              }
+            }
           >
-            <title>
-              x-close-gray
-            </title>
-            <g
-              fill="#949DA2"
-              fillRule="evenodd"
+            HIG Modal
+          </p>
+          <button
+            className="hig__icon-button hig__icon-button--primary"
+            onBlur={undefined}
+            onClick={[Function]}
+            onFocus={undefined}
+            onMouseEnter={undefined}
+            onMouseLeave={undefined}
+            title="Close"
+          >
+            <svg
+              className="emotion-1 hig__icon-button__icon"
+              height="16px"
+              viewBox="0 0 16 16"
+              width="16px"
+              xmlns="http://www.w3.org/2000/svg"
             >
+              <title>
+                hig-icons/common/16/close-16
+              </title>
               <path
-                d="M1.414 0l16.97 16.97-1.413 1.414L0 1.414z"
+                d="M8 6.08l5.3-5.3 1.414 1.414-5.3 5.3L14.72 12.8l-1.414 1.414L8 8.908l-5.307 5.307-1.414-1.414 5.307-5.307-5.301-5.3L2.699.778 8 6.079z"
               />
-              <path
-                d="M18.385 1.414l-16.97 16.97L0 16.972 16.97 0z"
-              />
-            </g>
-          </svg>
-        </button>
-        <span>
-          HIG Modal
-        </span>
+            </svg>
+          </button>
+        </div>
       </header>
       <section
-        className="emotion-2"
+        className="emotion-5"
       >
         <div
-          className="emotion-1"
+          className="emotion-4"
         />
       </section>
     </article>

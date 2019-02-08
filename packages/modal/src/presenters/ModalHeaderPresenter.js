@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import IconButton from "@hig/icon-button";
-import { XCloseGray24 } from "@hig/icons";
+import Typography from "@hig/typography";
+import "@hig/fonts/build/ArtifaktElement.css";
+import { Close16 } from "@hig/icons";
 import "@hig/icon-button/build/index.css";
 import { css } from "emotion";
 
@@ -60,14 +62,23 @@ export default class ModalHeaderPresenter extends Component {
     return children ? (
       this.renderChildren()
     ) : (
-      <header className={css(styles)} id={id}>
-        <IconButton
-          aria-label={closeButtonAriaLabel}
-          icon={<XCloseGray24 />}
-          onClick={onCloseClick}
-          title="Close"
-        />
-        <span>{title}</span>
+      <header className={css(styles.header)} id={id}>
+        <div className={css(styles.headerContent)}>
+          <Typography
+            style={{
+              fontSize: styles.header.fontSize,
+              lineHeight: styles.header.lineHeight
+            }}
+          >
+            {title}
+          </Typography>
+          <IconButton
+            aria-label={closeButtonAriaLabel}
+            icon={<Close16 />}
+            onClick={onCloseClick}
+            title="Close"
+          />
+        </div>
       </header>
     );
   }

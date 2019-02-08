@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import { generateId } from "@hig/utils";
+import ThemeContext from "@hig/theme-context";
 import stylesheet from "./ModalPresenter.stylesheet";
 import ModalHeaderPresenter from "./ModalHeaderPresenter";
 import { types } from "../types";
@@ -77,36 +78,46 @@ export default class ModalPresenter extends Component {
       jsx-a11y/no-noninteractive-element-interactions,
       jsx-a11y/click-events-have-key-events
     */
-    const styles = stylesheet({ open, type });
+
     return (
-      <div className={css(styles.modal.wrapper)}>
-        <div
-          aria-labelledby={this.titleId}
-          className={css(styles.modal.overlay)}
-          onClick={onOverlayClick}
-          role="dialog"
-          tabIndex="-1"
-        >
-          <article
-            className={css(styles.modal.window)}
-            onClick={onWindowClick}
-            role="document"
-          >
-            <ModalHeaderPresenter
-              id={this.titleId}
-              closeButtonAriaLabel={closeButtonAriaLabel}
-              onCloseClick={onCloseClick}
-              styles={styles.modal.header}
-              title={title}
-            >
-              {headerChildren}
-            </ModalHeaderPresenter>
-            <section className={css(styles.modal.body)}>
-              <div className={css(styles.modal.bodyContent)}>{children}</div>
-            </section>
-          </article>
-        </div>
-      </div>
+      <ThemeContext.Consumer>
+        {({ resolvedRoles }) => {
+          const styles = stylesheet({ open, type }, resolvedRoles);
+
+          return (
+            <div className={css(styles.modal.wrapper)}>
+              <div
+                aria-labelledby={this.titleId}
+                className={css(styles.modal.overlay)}
+                onClick={onOverlayClick}
+                role="dialog"
+                tabIndex="-1"
+              >
+                <article
+                  className={css(styles.modal.window)}
+                  onClick={onWindowClick}
+                  role="document"
+                >
+                  <ModalHeaderPresenter
+                    id={this.titleId}
+                    closeButtonAriaLabel={closeButtonAriaLabel}
+                    onCloseClick={onCloseClick}
+                    styles={styles.modal}
+                    title={title}
+                  >
+                    {headerChildren}
+                  </ModalHeaderPresenter>
+                  <section className={css(styles.modal.body)}>
+                    <div className={css(styles.modal.bodyContent)}>
+                      {children}
+                    </div>
+                  </section>
+                </article>
+              </div>
+            </div>
+          );
+        }}
+      </ThemeContext.Consumer>
     );
     /*
       eslint-enable

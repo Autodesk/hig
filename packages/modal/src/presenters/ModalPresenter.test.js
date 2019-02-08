@@ -3,8 +3,12 @@ import { generateId } from "@hig/utils";
 import { takeSnapshotsOf } from "../../../jest-preset/helpers";
 import ModalHeaderPresenter from "./ModalHeaderPresenter";
 
-describe("checkbox/presenters/ModalPresenter", () => {
-  const styles = { backgroundColor: "aliceblue" };
+describe("modal/presenters/ModalPresenter", () => {
+  const styles = {
+    backgroundColor: "aliceblue",
+    header: {},
+    headerContent: {}
+  };
 
   afterEach(() => {
     generateId.mockReset();
@@ -13,7 +17,7 @@ describe("checkbox/presenters/ModalPresenter", () => {
   [
     {
       description: "renders without props",
-      props: {}
+      props: { styles }
     },
     {
       description: "renders with header children",

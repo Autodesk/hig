@@ -3,31 +3,32 @@ import { types } from "../types";
 
 const MODAL_BODY_LAYER = 1001;
 const MODAL_HEADER_LAYER = 1002;
-const MODAL_CLOSE_BUTTON_LAYER = 1003;
 const MODAL_SHADOW_MASK_LAYER = 1003;
 const MODAL_LAYER = 10001;
-
-const HIG_BLUE_10 = "rgba(230, 244, 251, 1)";
-const HIG_COOL_GRAY_60 = "rgba(59, 68, 84, 1)";
 
 const WindowClosing = keyframes`
   0% { top: 131px; }
   30% { top: 125px; }
 `;
 
-export default function stylesheet(props) {
+export default function stylesheet(props, themeData) {
   const { open, type } = props;
+
+  const headerFontSize = themeData["density.fontSizes.large"];
+  const headerLinHeight = 1.66666;
+
   return {
     modal: {
       wrapper: {
-        color: "#2A3B4D",
+        color: themeData["modal.textColor"],
         opacity: open ? 1.0 : 0,
         pointerEvents: open ? "visible" : "none",
         transition: "all ease 0.2s",
         transitionDelay: open ? "0s" : "0.2s"
       },
+
       overlay: {
-        backgroundColor: "rgba(0, 0, 0, 0.4)",
+        backgroundColor: themeData["modal.overlay.color"],
         bottom: 0,
         left: 0,
         position: "fixed",
@@ -35,62 +36,66 @@ export default function stylesheet(props) {
         top: 0,
         zIndex: MODAL_LAYER
       },
+
       window: {
-        background: "#FFF",
-        border: "3px solid #0671A1",
-        borderRadius: "4px",
-        boxShadow: `0 0 8px 0 rgba(190, 200, 210, 0.4)`,
+        background: themeData["modal.window.backgroundColor"],
+        borderRadius: themeData["modal.window.borderRadius"],
+        boxShadow: `0 0 8px 0 ${themeData["modal.window.shadowColor"]}`,
         display: "flex",
         flexDirection: "column",
         left: "50%",
-        maxHeight: "calc(100vh - 256px)",
-        maxWidth: "calc(100vw - 32px)",
+        height: themeData["modal.window.height"],
+        width: themeData["modal.window.width"],
         opacity: open ? 1.0 : 0,
         outline: "none",
         position: "fixed",
         top: "128px",
         transform: "translateX(-50%)",
-        width: "500px",
         zIndex: MODAL_BODY_LAYER,
-
-        "@media screen": { width: "500px" },
 
         animation: open ? "none" : `${WindowClosing} 0.4s`,
         transition: "all ease 0.2s",
         transitionDelay: "0.2s"
       },
+
       header: {
-        borderBottom: "1px solid #D4DBE1",
-        // can I use Typography instead?
-        fontFamily: "ArtifaktElement",
-        fontSize: "24px",
-        margin: "0 32px",
-        minHeight: "33px",
-        padding: "16px 0",
-        position: "relative",
+        fontSize: headerFontSize,
+        lineHeight: headerLinHeight,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        borderBottom: `1px solid ${themeData["modal.header.borderColor"]}`,
+        minHeight: themeData["modal.header.height"],
         zIndex: MODAL_HEADER_LAYER,
 
         ...(type === types.ALTERNATE && {
-          backgroundColor: HIG_BLUE_10,
-          margin: 0,
-          padding: "16px 32px"
-        }),
+          backgroundColor: themeData["modal.header.backgroundColor"]
+        })
+      },
+
+      headerContent: {
+        margin: `0 ${themeData["modal.horizontalPadding"]}`,
+        display: "flex",
+        justifyContent: "space-between",
 
         ".hig__icon-button.hig__icon-button--primary": {
           background: "transparent",
           border: "none",
           cursor: "pointer",
-          position: "absolute",
-          right: 0,
-          top: "16px",
-          zIndex: MODAL_CLOSE_BUTTON_LAYER,
+          padding: 0,
+          height: `calc(${headerFontSize} * ${headerLinHeight})`,
+          minWidth: "16px",
+
+          "svg *": {
+            fill: themeData["modal.textColor"]
+          },
 
           "&:hover, &:focus": {
             borderColor: "transparent",
             backgroundColor: "transparent",
 
             "svg *": {
-              fill: HIG_COOL_GRAY_60
+              fill: themeData["modal.textColor"]
             }
           },
 
@@ -99,49 +104,46 @@ export default function stylesheet(props) {
           },
 
           ...(type === types.ALTERNATE && {
-            backgroundColor: HIG_BLUE_10,
-            right: "16px",
-            top: "16px"
+            backgroundColor: themeData["modal.header.backgroundColor"]
           })
         }
       },
+
       body: {
         display: "flex",
         flex: "1 1 auto",
         flexDirection: "column",
         overflow: "hidden",
         position: "relative",
-        // is this necessary, notice there's another use of this same # z-index above
-        zIndex: MODAL_BODY_LAYER
-      },
-      bodyContent: {
-        border: "none",
-        flex: "1 1 auto",
-        overflowX: "auto",
-        overflowY: "scroll",
-        padding: "0 32px",
+        minHeight: themeData["modal.body.height"],
 
         "&::before": {
-          backgroundImage:
-            "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))",
+          backgroundColor: themeData["modal.window.backgroundColor"],
           content: "''",
           display: "block",
           height: "16px",
-          margin: "0 -16px",
           position: "relative",
+          margin: `0 ${themeData["modal.horizontalPadding"]}`,
           zIndex: MODAL_SHADOW_MASK_LAYER
         },
 
         "&::after": {
-          backgroundImage:
-            "linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))",
+          backgroundColor: themeData["modal.window.backgroundColor"],
           content: "''",
           display: "block",
           height: "16px",
-          margin: "0 -16px",
           position: "relative",
+          margin: `0 ${themeData["modal.horizontalPadding"]}`,
           zIndex: MODAL_SHADOW_MASK_LAYER
         }
+      },
+
+      bodyContent: {
+        border: "none",
+        flex: "1 1 auto",
+        overflowX: "auto",
+        overflowY: "auto",
+        padding: `0 ${themeData["modal.horizontalPadding"]}`
       }
     }
   };
