@@ -23,7 +23,7 @@
     "@hig/icon-button": "^1.0.1",
     "@hig/icons": "^1.0.0",
     "@hig/progress-ring": "^0.1.1",
-    "@hig/rich-text": "^0.1.4",
+    "@hig/rich-text": "^1.0.0",
     "@hig/typography": "^0.1.4",
     "@hig/utils": "^0.3.0",
     "classnames": "^2.2.5",
