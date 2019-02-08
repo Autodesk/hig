@@ -22,7 +22,7 @@
     "@hig/icon-button": "^1.0.1",
     "@hig/icons": "^1.0.0",
     "@hig/notifications-flyout": "^1.0.4",
-    "@hig/profile-flyout": "^1.0.1",
+    "@hig/profile-flyout": "^2.0.1",
     "@hig/utils": "^0.3.0",
     "classnames": "^2.2.5",
     "prop-types": "^15.6.1"
