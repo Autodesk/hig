@@ -1018,12 +1018,13 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/rich-text@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@hig/rich-text/-/rich-text-0.1.4.tgz#f30d0c4ab7322dc02593493b34dfb64921a435c9"
-  integrity sha512-OaysMEJe4JjYESQDv/DXx7rQyY9UPmxpgCJkRA1neiFHRXM10ptdZInMm6Ea6KNeIdXRIhtbuLeVHpYgkUwm6Q==
+"@hig/rich-text@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@hig/rich-text/-/rich-text-1.0.0.tgz#c63b0c2f49cf64b10c0ccfd68fc9e3df29918b07"
+  integrity sha512-5+ENT9h+Qb1KI4o1MaOd1oo75gZGS/AQ8pFt5/oGxc9bncWoZHXHVgTuSuiXlN4utS10G2tnz9UhMU8ZscIJgw==
   dependencies:
-    classnames "^2.2.5"
+    "@hig/theme-context" "^2.1.0"
+    emotion "^10.0.0"
     prop-types "^15.6.1"
 
 "@hig/slider@^1.0.0":

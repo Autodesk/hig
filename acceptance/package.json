@@ -10,7 +10,7 @@
     "@hig/fonts": "^1.0.1",
     "@hig/input": "^1.0.4",
     "@hig/label": "^1.0.1",
-    "@hig/rich-text": "^0.1.4",
+    "@hig/rich-text": "^1.0.0",
     "@hig/radio-button": "^1.0.2",
     "@hig/slider": "^1.0.0",
     "@hig/spacer": "^1.0.4",
