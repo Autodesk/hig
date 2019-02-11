@@ -20,7 +20,7 @@
   "dependencies": {
     "@hig/theme-context": "^2.1.0",
     "emotion": "^10.0.0",
-    "prop-types": "^15.6.1"
+    "prop-types": "^15.7.1"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.1",
