@@ -27,7 +27,7 @@
     "@hig/typography": "^0.1.4",
     "@hig/utils": "^0.3.0",
     "classnames": "^2.2.5",
-    "prop-types": "^15.6.1",
+    "prop-types": "^15.7.1",
     "react-transition-group": "^2.3.0"
   },
   "devDependencies": {
