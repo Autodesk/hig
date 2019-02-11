@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdown uses) 1`] = `
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
 <div
   className="hig__dropdown__input-wrapper"
 >
@@ -54,9 +62,10 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
     className="hig__dropdown__input-caret"
   >
     <svg
-      height="10"
+      className="emotion-0"
+      height="10px"
       viewBox="0 0 10 10"
-      width="10"
+      width="10px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
@@ -71,6 +80,14 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
 `;
 
 exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
 <div
   className="hig__dropdown__input-wrapper"
 >
@@ -102,9 +119,10 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
     className="hig__dropdown__input-caret"
   >
     <svg
-      height="10"
+      className="emotion-0"
+      height="10px"
       viewBox="0 0 10 10"
-      width="10"
+      width="10px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>

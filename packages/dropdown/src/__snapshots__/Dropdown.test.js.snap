@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown renders non-undefined values as options 1`] = `
-.emotion-8 {
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-10 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -19,7 +27,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -46,7 +54,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   background-color: transparent;
 }
 
-.emotion-4 {
+.emotion-6 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -123,9 +131,10 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       className="hig__dropdown__input-caret"
     >
       <svg
-        height="10"
+        className="emotion-0"
+        height="10px"
         viewBox="0 0 10 10"
-        width="10"
+        width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -139,13 +148,13 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   </div>
   <div
     aria-labelledby="downshift-2-label"
-    className="emotion-8"
+    className="emotion-10"
     id="downshift-2-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-2-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -162,7 +171,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-2-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -179,7 +188,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-2-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -196,7 +205,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-2-item-3"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -213,7 +222,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="emotion-4"
+      className="emotion-6"
       id="downshift-2-item-4"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -231,9 +240,10 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
         className="hig__dropdown-option__checkmark"
       >
         <svg
-          height="24"
+          className="emotion-0"
+          height="24px"
           viewBox="0 0 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -246,7 +256,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-2-item-5"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -263,7 +273,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-2-item-6"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -280,7 +290,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-2-item-7"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -300,7 +310,15 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 `;
 
 exports[`Dropdown renders with a controlled value 1`] = `
-.emotion-3 {
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-5 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -318,7 +336,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -345,7 +363,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   background-color: transparent;
 }
 
-.emotion-2 {
+.emotion-4 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -422,9 +440,10 @@ exports[`Dropdown renders with a controlled value 1`] = `
       className="hig__dropdown__input-caret"
     >
       <svg
-        height="10"
+        className="emotion-0"
+        height="10px"
         viewBox="0 0 10 10"
-        width="10"
+        width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -438,13 +457,13 @@ exports[`Dropdown renders with a controlled value 1`] = `
   </div>
   <div
     aria-labelledby="downshift-9-label"
-    className="emotion-3"
+    className="emotion-5"
     id="downshift-9-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-9-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -461,7 +480,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-9-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -478,7 +497,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="emotion-2"
+      className="emotion-4"
       id="downshift-9-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -496,9 +515,10 @@ exports[`Dropdown renders with a controlled value 1`] = `
         className="hig__dropdown-option__checkmark"
       >
         <svg
-          height="24"
+          className="emotion-0"
+          height="24px"
           viewBox="0 0 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -515,6 +535,14 @@ exports[`Dropdown renders with a controlled value 1`] = `
 
 exports[`Dropdown renders with a label and an ID 1`] = `
 .emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-1 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -591,9 +619,10 @@ exports[`Dropdown renders with a label and an ID 1`] = `
       className="hig__dropdown__input-caret"
     >
       <svg
-        height="10"
+        className="emotion-0"
+        height="10px"
         viewBox="0 0 10 10"
-        width="10"
+        width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -607,7 +636,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
   </div>
   <div
     aria-labelledby="whoaBuddy-label"
-    className="emotion-0"
+    className="emotion-1"
     id="whoaBuddy-menu"
     role="listbox"
   />
@@ -615,7 +644,15 @@ exports[`Dropdown renders with a label and an ID 1`] = `
 `;
 
 exports[`Dropdown renders with custom option formatting 1`] = `
-.emotion-3 {
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-4 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -633,7 +670,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -710,9 +747,10 @@ exports[`Dropdown renders with custom option formatting 1`] = `
       className="hig__dropdown__input-caret"
     >
       <svg
-        height="10"
+        className="emotion-0"
+        height="10px"
         viewBox="0 0 10 10"
-        width="10"
+        width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -726,13 +764,13 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   </div>
   <div
     aria-labelledby="downshift-1-label"
-    className="emotion-3"
+    className="emotion-4"
     id="downshift-1-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-1-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -749,7 +787,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-1-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -766,7 +804,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-1-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -787,6 +825,14 @@ exports[`Dropdown renders with custom option formatting 1`] = `
 
 exports[`Dropdown renders with custom option render function 1`] = `
 .emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-1 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -854,9 +900,10 @@ exports[`Dropdown renders with custom option render function 1`] = `
       className="hig__dropdown__input-caret"
     >
       <svg
-        height="10"
+        className="emotion-0"
+        height="10px"
         viewBox="0 0 10 10"
-        width="10"
+        width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -870,7 +917,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
   </div>
   <div
     aria-labelledby="downshift-3-label"
-    className="emotion-0"
+    className="emotion-1"
     id="downshift-3-menu"
     role="listbox"
   >
@@ -897,7 +944,15 @@ exports[`Dropdown renders with custom option render function 1`] = `
 `;
 
 exports[`Dropdown renders with default value 1`] = `
-.emotion-3 {
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-5 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -915,7 +970,7 @@ exports[`Dropdown renders with default value 1`] = `
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -942,7 +997,7 @@ exports[`Dropdown renders with default value 1`] = `
   background-color: transparent;
 }
 
-.emotion-2 {
+.emotion-4 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1019,9 +1074,10 @@ exports[`Dropdown renders with default value 1`] = `
       className="hig__dropdown__input-caret"
     >
       <svg
-        height="10"
+        className="emotion-0"
+        height="10px"
         viewBox="0 0 10 10"
-        width="10"
+        width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -1035,13 +1091,13 @@ exports[`Dropdown renders with default value 1`] = `
   </div>
   <div
     aria-labelledby="downshift-7-label"
-    className="emotion-3"
+    className="emotion-5"
     id="downshift-7-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-7-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1058,7 +1114,7 @@ exports[`Dropdown renders with default value 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-7-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1075,7 +1131,7 @@ exports[`Dropdown renders with default value 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="emotion-2"
+      className="emotion-4"
       id="downshift-7-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1093,9 +1149,10 @@ exports[`Dropdown renders with default value 1`] = `
         className="hig__dropdown-option__checkmark"
       >
         <svg
-          height="24"
+          className="emotion-0"
+          height="24px"
           viewBox="0 0 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -1111,7 +1168,15 @@ exports[`Dropdown renders with default value 1`] = `
 `;
 
 exports[`Dropdown renders with multiple selection 1`] = `
-.emotion-3 {
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-4 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -1129,7 +1194,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
 
-.emotion-0 {
+.emotion-1 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1206,9 +1271,10 @@ exports[`Dropdown renders with multiple selection 1`] = `
       className="hig__dropdown__input-caret"
     >
       <svg
-        height="10"
+        className="emotion-0"
+        height="10px"
         viewBox="0 0 10 10"
-        width="10"
+        width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -1222,13 +1288,13 @@ exports[`Dropdown renders with multiple selection 1`] = `
   </div>
   <div
     aria-labelledby="downshift-8-label"
-    className="emotion-3"
+    className="emotion-4"
     id="downshift-8-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-8-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1245,7 +1311,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-8-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1262,7 +1328,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-0"
+      className="emotion-1"
       id="downshift-8-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1282,7 +1348,15 @@ exports[`Dropdown renders with multiple selection 1`] = `
 `;
 
 exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
-.emotion-3 {
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-6 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -1300,7 +1374,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
 
-.emotion-1 {
+.emotion-3 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1327,7 +1401,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   background-color: transparent;
 }
 
-.emotion-0 {
+.emotion-2 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1404,9 +1478,10 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       className="hig__dropdown__input-caret"
     >
       <svg
-        height="10"
+        className="emotion-0"
+        height="10px"
         viewBox="0 0 10 10"
-        width="10"
+        width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -1420,13 +1495,13 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   </div>
   <div
     aria-labelledby="downshift-10-label"
-    className="emotion-3"
+    className="emotion-6"
     id="downshift-10-menu"
     role="listbox"
   >
     <div
       aria-selected={true}
-      className="emotion-0"
+      className="emotion-2"
       id="downshift-10-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1444,9 +1519,10 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
         className="hig__dropdown-option__checkmark"
       >
         <svg
-          height="24"
+          className="emotion-0"
+          height="24px"
           viewBox="0 0 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -1459,7 +1535,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-1"
+      className="emotion-3"
       id="downshift-10-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1476,7 +1552,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="emotion-0"
+      className="emotion-2"
       id="downshift-10-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -1494,9 +1570,10 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
         className="hig__dropdown-option__checkmark"
       >
         <svg
-          height="24"
+          className="emotion-0"
+          height="24px"
           viewBox="0 0 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -1513,6 +1590,14 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 
 exports[`Dropdown renders with option specific and general option render function 1`] = `
 .emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-1 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -1580,9 +1665,10 @@ exports[`Dropdown renders with option specific and general option render functio
       className="hig__dropdown__input-caret"
     >
       <svg
-        height="10"
+        className="emotion-0"
+        height="10px"
         viewBox="0 0 10 10"
-        width="10"
+        width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -1596,7 +1682,7 @@ exports[`Dropdown renders with option specific and general option render functio
   </div>
   <div
     aria-labelledby="downshift-5-label"
-    className="emotion-0"
+    className="emotion-1"
     id="downshift-5-menu"
     role="listbox"
   >
@@ -1633,6 +1719,14 @@ exports[`Dropdown renders with option specific and general option render functio
 
 exports[`Dropdown renders with option specific render function 1`] = `
 .emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-1 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -1700,9 +1794,10 @@ exports[`Dropdown renders with option specific render function 1`] = `
       className="hig__dropdown__input-caret"
     >
       <svg
-        height="10"
+        className="emotion-0"
+        height="10px"
         viewBox="0 0 10 10"
-        width="10"
+        width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -1716,7 +1811,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
   </div>
   <div
     aria-labelledby="downshift-4-label"
-    className="emotion-0"
+    className="emotion-1"
     id="downshift-4-menu"
     role="listbox"
   >
@@ -1789,6 +1884,14 @@ exports[`Dropdown renders with option specific render function 1`] = `
 
 exports[`Dropdown renders with option specific, general and format rendering 1`] = `
 .emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-1 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -1856,9 +1959,10 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
       className="hig__dropdown__input-caret"
     >
       <svg
-        height="10"
+        className="emotion-0"
+        height="10px"
         viewBox="0 0 10 10"
-        width="10"
+        width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -1872,7 +1976,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   </div>
   <div
     aria-labelledby="downshift-6-label"
-    className="emotion-0"
+    className="emotion-1"
     id="downshift-6-menu"
     role="listbox"
   >
@@ -1909,6 +2013,14 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
 
 exports[`Dropdown renders without props 1`] = `
 .emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-1 {
   display: none;
   position: absolute;
   min-width: 240px;
@@ -1976,9 +2088,10 @@ exports[`Dropdown renders without props 1`] = `
       className="hig__dropdown__input-caret"
     >
       <svg
-        height="10"
+        className="emotion-0"
+        height="10px"
         viewBox="0 0 10 10"
-        width="10"
+        width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
@@ -1992,7 +2105,7 @@ exports[`Dropdown renders without props 1`] = `
   </div>
   <div
     aria-labelledby="downshift-0-label"
-    className="emotion-0"
+    className="emotion-1"
     id="downshift-0-menu"
     role="listbox"
   />
