@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import MockDate from "mockdate";
 import Timestamp from "./Timestamp";
 
@@ -20,7 +20,7 @@ describe("timestamp", () => {
       const tenSecondsAgo = new Date(mayFifth);
       tenSecondsAgo.setSeconds(mayFifth.getSeconds() - 10);
 
-      const wrapper = shallow(
+      const wrapper = mount(
         <Timestamp timestamp={tenSecondsAgo.toISOString()} />
       );
       expect(wrapper).toHaveText("10 seconds ago");
@@ -32,7 +32,7 @@ describe("timestamp", () => {
       const tenMinutesAgo = new Date(mayFifth);
       tenMinutesAgo.setMinutes(mayFifth.getMinutes() - 10);
 
-      const wrapper = shallow(
+      const wrapper = mount(
         <Timestamp timestamp={tenMinutesAgo.toISOString()} />
       );
       expect(wrapper).toHaveText("10 minutes ago");
@@ -44,7 +44,7 @@ describe("timestamp", () => {
       const tenHoursAgo = new Date(mayFifth);
       tenHoursAgo.setHours(mayFifth.getHours() - 10);
 
-      const wrapper = shallow(
+      const wrapper = mount(
         <Timestamp timestamp={tenHoursAgo.toISOString()} />
       );
       expect(wrapper).toHaveText("10 hours ago");
@@ -56,7 +56,7 @@ describe("timestamp", () => {
       const threeDaysAgo = new Date(mayFifth);
       threeDaysAgo.setDate(mayFifth.getDate() - 3);
 
-      const wrapper = shallow(
+      const wrapper = mount(
         <Timestamp timestamp={threeDaysAgo.toISOString()} />
       );
       expect(wrapper).toHaveText("3 days ago");
@@ -68,7 +68,7 @@ describe("timestamp", () => {
       const thirtyDaysAgo = new Date(mayFifth);
       thirtyDaysAgo.setDate(mayFifth.getDate() - 30);
 
-      const wrapper = shallow(
+      const wrapper = mount(
         <Timestamp timestamp={thirtyDaysAgo.toISOString()} />
       );
       expect(wrapper).toHaveText("4 weeks ago");
@@ -80,7 +80,7 @@ describe("timestamp", () => {
       const tenMonthsAgo = new Date(mayFifth);
       tenMonthsAgo.setMonth(mayFifth.getMonth() - 10);
 
-      const wrapper = shallow(
+      const wrapper = mount(
         <Timestamp timestamp={tenMonthsAgo.toISOString()} />
       );
       expect(wrapper).toHaveText("10 months ago");

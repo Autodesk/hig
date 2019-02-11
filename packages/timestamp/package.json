@@ -14,12 +14,12 @@
   },
   "main": "build/index.js",
   "module": "build/index.es.js",
-  "style": "build/index.css",
   "files": [
     "build/*"
   ],
   "dependencies": {
-    "classnames": "^2.2.5",
+    "@hig/theme-context": "^2.1.0",
+    "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
   "devDependencies": {
@@ -29,7 +29,6 @@
     "@hig/rich-text": "^1.0.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.3.0",
     "mockdate": "^2.0.2"
   },
   "peerDependencies": {
