@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import { anchorPoints } from "@hig/flyout";
 import { generateId } from "@hig/utils";
 import Button from "@hig/button";
@@ -53,14 +54,16 @@ class App extends Component {
     const { buttonText } = this.props;
 
     return (
-      <NotificationsFlyoutLayout>
-        <Button title={buttonText} onClick={handleButtonClick} />
-        <div style={{ width: "50px" }} />
-        <NotificationsFlyout
-          anchorPoint={anchorPoints.TOP_CENTER}
-          notifications={notifications}
-        />
-      </NotificationsFlyoutLayout>
+      <KnobbedThemeProvider>
+        <NotificationsFlyoutLayout>
+          <Button title={buttonText} onClick={handleButtonClick} />
+          <div style={{ width: "50px" }} />
+          <NotificationsFlyout
+            anchorPoint={anchorPoints.TOP_CENTER}
+            notifications={notifications}
+          />
+        </NotificationsFlyoutLayout>
+      </KnobbedThemeProvider>
     );
   }
 }
