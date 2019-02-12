@@ -28,7 +28,7 @@
     "@hig/rich-text": "^1.0.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/typography": "^1.0.1"
+    "@hig/typography": "^1.0.2"
   },
   "peerDependencies": {
     "react": "^15.4.1 || ^16.3.2"
