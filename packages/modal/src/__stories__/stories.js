@@ -6,7 +6,7 @@ export default [
     getProps: () => ({
       title: "Default Modal",
       open: true,
-      style: "standard",
+      type: "standard",
       children: [
         <p key="p">
           Curabitur id auctor leo, ut posuere felis. Aliquam erat volutpat.
@@ -20,7 +20,7 @@ export default [
     getProps: () => ({
       title: "Scrolling Demo",
       open: true,
-      style: "alternate",
+      type: "alternate",
       children: [
         <p key="p">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
@@ -76,7 +76,7 @@ export default [
     getProps: () => ({
       headerChildren: [<p key="p1">HI</p>],
       open: true,
-      style: "alternate",
+      type: "alternate",
       children: [
         <p key="p2">
           Etiam ac diam vel ex imperdiet blandit. Cras enim leo, consectetur ut

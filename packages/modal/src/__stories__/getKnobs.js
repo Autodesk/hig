@@ -14,7 +14,7 @@ const knobLabels = {
   onOverlayClick: "onOverlayClick",
   open: "Open",
   title: "Title",
-  type: "Variant"
+  type: "Type"
 };
 
 export default function getKnobs(props) {

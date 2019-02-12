@@ -26,7 +26,7 @@ import '@hig/modal/build/index.css';
   title="Are you sure?"
   open
   body="This is the text body of my modal"
-  style="alternate"
+  type="alternate"
 >
   <h1>
     <u>This is my HTML title</u>
