@@ -1,44 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`checkbox/presenters/ModalHeaderPresenter  1`] = `
-.emotion-0 {
-  border-bottom: 1px solid #D4DBE1;
-  font-family: ArtifaktElement;
-  font-size: 24px;
-  margin: 0 32px;
-  min-height: 33px;
-  padding: 16px 0;
-  position: relative;
-  z-index: 1002;
-}
-
-.emotion-0 .hig__icon-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 16px;
-  z-index: 1003;
-}
-
-.emotion-0 .hig__icon-button:hover,
-.emotion-0 .hig__icon-button:focus {
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.emotion-0 .hig__icon-button:hover svg *,
-.emotion-0 .hig__icon-button:focus svg * {
-  fill: rgba(59,68,84,1);
-}
-
-.emotion-0 .hig__icon-button:focus {
-  outline: none;
-}
-
 <header
-  className="emotion-0"
+  className="css-0"
   id={undefined}
 >
   <button
@@ -78,44 +42,8 @@ exports[`checkbox/presenters/ModalHeaderPresenter  1`] = `
 `;
 
 exports[`checkbox/presenters/ModalHeaderPresenter  2`] = `
-.emotion-0 {
-  border-bottom: 1px solid #D4DBE1;
-  font-family: ArtifaktElement;
-  font-size: 24px;
-  margin: 0 32px;
-  min-height: 33px;
-  padding: 16px 0;
-  position: relative;
-  z-index: 1002;
-}
-
-.emotion-0 .hig__icon-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 16px;
-  z-index: 1003;
-}
-
-.emotion-0 .hig__icon-button:hover,
-.emotion-0 .hig__icon-button:focus {
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.emotion-0 .hig__icon-button:hover svg *,
-.emotion-0 .hig__icon-button:focus svg * {
-  fill: rgba(59,68,84,1);
-}
-
-.emotion-0 .hig__icon-button:focus {
-  outline: none;
-}
-
 <header
-  className="emotion-0"
+  className="css-0"
   id={undefined}
 >
   <p>
@@ -125,44 +53,8 @@ exports[`checkbox/presenters/ModalHeaderPresenter  2`] = `
 `;
 
 exports[`checkbox/presenters/ModalHeaderPresenter  3`] = `
-.emotion-0 {
-  border-bottom: 1px solid #D4DBE1;
-  font-family: ArtifaktElement;
-  font-size: 24px;
-  margin: 0 32px;
-  min-height: 33px;
-  padding: 16px 0;
-  position: relative;
-  z-index: 1002;
-}
-
-.emotion-0 .hig__icon-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 16px;
-  z-index: 1003;
-}
-
-.emotion-0 .hig__icon-button:hover,
-.emotion-0 .hig__icon-button:focus {
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.emotion-0 .hig__icon-button:hover svg *,
-.emotion-0 .hig__icon-button:focus svg * {
-  fill: rgba(59,68,84,1);
-}
-
-.emotion-0 .hig__icon-button:focus {
-  outline: none;
-}
-
 <header
-  className="emotion-0"
+  className="css-0"
   id={undefined}
 >
   <button

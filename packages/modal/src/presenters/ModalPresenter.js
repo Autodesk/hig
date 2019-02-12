@@ -66,8 +66,6 @@ export default class ModalPresenter extends Component {
       type
     } = this.props;
 
-    const styles = stylesheet({ open });
-
     /*
      * The "no-noninteractive-element-interactions" rule is disabled for this block.
      * This is due to the modal being is a special case where its containers are to be considered
@@ -79,6 +77,7 @@ export default class ModalPresenter extends Component {
       jsx-a11y/no-noninteractive-element-interactions,
       jsx-a11y/click-events-have-key-events
     */
+    const styles = stylesheet({ open, type });
     return (
       <div className={css(styles.modal.wrapper)}>
         <div
@@ -97,8 +96,8 @@ export default class ModalPresenter extends Component {
               id={this.titleId}
               closeButtonAriaLabel={closeButtonAriaLabel}
               onCloseClick={onCloseClick}
+              styles={styles.modal.header}
               title={title}
-              type={type}
             >
               {headerChildren}
             </ModalHeaderPresenter>
