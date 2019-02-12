@@ -57,10 +57,6 @@ export default class ModalPresenter extends Component {
     type: types.STANDARD
   };
 
-  setScrolling = element => {
-    this.hasScrolling = element.scrollHeight > element.clientHeight;
-  };
-
   titleId = generateId("modal-title");
 
   render() {
