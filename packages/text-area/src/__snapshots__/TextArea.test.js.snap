@@ -54,23 +54,23 @@ exports[`TextArea integration renders correctly 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
