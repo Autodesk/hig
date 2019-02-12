@@ -2,7 +2,7 @@
 
 exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdown uses) 1`] = `
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-0 {
@@ -31,23 +31,23 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
@@ -133,7 +133,7 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
 
 exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-2 {
@@ -186,23 +186,23 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {

@@ -6,7 +6,7 @@ exports[`Dropdown/presenters/MenuPresenter renders with all props 1`] = `
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;
@@ -34,7 +34,7 @@ exports[`Dropdown/presenters/MenuPresenter renders with only required props 1`] 
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;

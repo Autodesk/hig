@@ -6,9 +6,7 @@ export default function stylesheet(props, themeData) {
     position: "absolute",
     minWidth: "240px",
     maxHeight: constants.menuMaxHeight,
-    top: `calc(${constants.menuTopOffset} + ${
-      themeData["density.spacings.extraExtraSmall"]
-    })`,
+    top: constants.menuTopOffset,
     overflow: "auto",
     zIndex: constants.dropdownLayer,
 

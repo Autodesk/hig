@@ -1,8 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown renders non-undefined values as options 1`] = `
+.emotion-15 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-2 {
@@ -55,23 +61,23 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
@@ -91,7 +97,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;
@@ -171,7 +177,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-2-label"
   aria-owns={null}
-  className="hig__dropdown"
+  className="emotion-15"
   role="combobox"
 >
   <div
@@ -394,8 +400,14 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 `;
 
 exports[`Dropdown renders with a controlled value 1`] = `
+.emotion-10 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-2 {
@@ -448,23 +460,23 @@ exports[`Dropdown renders with a controlled value 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
@@ -484,7 +496,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;
@@ -564,7 +576,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-9-label"
   aria-owns={null}
-  className="hig__dropdown"
+  className="emotion-10"
   role="combobox"
 >
   <div
@@ -702,8 +714,14 @@ exports[`Dropdown renders with a controlled value 1`] = `
 `;
 
 exports[`Dropdown renders with a label and an ID 1`] = `
+.emotion-6 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-2 {
@@ -756,23 +774,23 @@ exports[`Dropdown renders with a label and an ID 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
@@ -792,7 +810,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;
@@ -810,7 +828,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="whoaBuddy-label"
   aria-owns={null}
-  className="hig__dropdown"
+  className="emotion-6"
   role="combobox"
 >
   <div
@@ -878,8 +896,14 @@ exports[`Dropdown renders with a label and an ID 1`] = `
 `;
 
 exports[`Dropdown renders with custom option formatting 1`] = `
+.emotion-9 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-2 {
@@ -932,23 +956,23 @@ exports[`Dropdown renders with custom option formatting 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
@@ -968,7 +992,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;
@@ -1013,7 +1037,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-1-label"
   aria-owns={null}
-  className="hig__dropdown"
+  className="emotion-9"
   role="combobox"
 >
   <div
@@ -1133,8 +1157,14 @@ exports[`Dropdown renders with custom option formatting 1`] = `
 `;
 
 exports[`Dropdown renders with custom option render function 1`] = `
+.emotion-6 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-2 {
@@ -1187,23 +1217,23 @@ exports[`Dropdown renders with custom option render function 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
@@ -1223,7 +1253,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;
@@ -1241,7 +1271,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-3-label"
   aria-owns={null}
-  className="hig__dropdown"
+  className="emotion-6"
   role="combobox"
 >
   <div
@@ -1328,8 +1358,14 @@ exports[`Dropdown renders with custom option render function 1`] = `
 `;
 
 exports[`Dropdown renders with default value 1`] = `
+.emotion-10 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-2 {
@@ -1382,23 +1418,23 @@ exports[`Dropdown renders with default value 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
@@ -1418,7 +1454,7 @@ exports[`Dropdown renders with default value 1`] = `
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;
@@ -1498,7 +1534,7 @@ exports[`Dropdown renders with default value 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-7-label"
   aria-owns={null}
-  className="hig__dropdown"
+  className="emotion-10"
   role="combobox"
 >
   <div
@@ -1636,8 +1672,14 @@ exports[`Dropdown renders with default value 1`] = `
 `;
 
 exports[`Dropdown renders with multiple selection 1`] = `
+.emotion-9 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-2 {
@@ -1690,23 +1732,23 @@ exports[`Dropdown renders with multiple selection 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
@@ -1726,7 +1768,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;
@@ -1771,7 +1813,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-8-label"
   aria-owns={null}
-  className="hig__dropdown"
+  className="emotion-9"
   role="combobox"
 >
   <div
@@ -1891,8 +1933,14 @@ exports[`Dropdown renders with multiple selection 1`] = `
 `;
 
 exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
+.emotion-11 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-2 {
@@ -1945,23 +1993,23 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
@@ -1981,7 +2029,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;
@@ -2061,7 +2109,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-10-label"
   aria-owns={null}
-  className="hig__dropdown"
+  className="emotion-11"
   role="combobox"
 >
   <div
@@ -2217,8 +2265,14 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 `;
 
 exports[`Dropdown renders with option specific and general option render function 1`] = `
+.emotion-6 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-2 {
@@ -2271,23 +2325,23 @@ exports[`Dropdown renders with option specific and general option render functio
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
@@ -2307,7 +2361,7 @@ exports[`Dropdown renders with option specific and general option render functio
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;
@@ -2325,7 +2379,7 @@ exports[`Dropdown renders with option specific and general option render functio
   aria-haspopup="listbox"
   aria-labelledby="downshift-5-label"
   aria-owns={null}
-  className="hig__dropdown"
+  className="emotion-6"
   role="combobox"
 >
   <div
@@ -2421,8 +2475,14 @@ exports[`Dropdown renders with option specific and general option render functio
 `;
 
 exports[`Dropdown renders with option specific render function 1`] = `
+.emotion-6 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-2 {
@@ -2475,23 +2535,23 @@ exports[`Dropdown renders with option specific render function 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
@@ -2511,7 +2571,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;
@@ -2529,7 +2589,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-4-label"
   aria-owns={null}
-  className="hig__dropdown"
+  className="emotion-6"
   role="combobox"
 >
   <div
@@ -2661,8 +2721,14 @@ exports[`Dropdown renders with option specific render function 1`] = `
 `;
 
 exports[`Dropdown renders with option specific, general and format rendering 1`] = `
+.emotion-6 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-2 {
@@ -2715,23 +2781,23 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
@@ -2751,7 +2817,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;
@@ -2769,7 +2835,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   aria-haspopup="listbox"
   aria-labelledby="downshift-6-label"
   aria-owns={null}
-  className="hig__dropdown"
+  className="emotion-6"
   role="combobox"
 >
   <div
@@ -2865,8 +2931,14 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
 `;
 
 exports[`Dropdown renders without props 1`] = `
+.emotion-6 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 .emotion-4 {
-  display: relative;
+  position: relative;
 }
 
 .emotion-2 {
@@ -2919,23 +2991,23 @@ exports[`Dropdown renders without props 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.6);
+  color: rgba(60,60,60,0.7);
 }
 
 .emotion-0::selection {
@@ -2955,7 +3027,7 @@ exports[`Dropdown renders without props 1`] = `
   position: absolute;
   min-width: 240px;
   max-height: 360px;
-  top: calc(32px + 4px);
+  top: 32px;
   overflow: auto;
   z-index: 9996;
   border: 1px solid #ffffff;
@@ -2973,7 +3045,7 @@ exports[`Dropdown renders without props 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-0-label"
   aria-owns={null}
-  className="hig__dropdown"
+  className="emotion-6"
   role="combobox"
 >
   <div

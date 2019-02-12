@@ -3,7 +3,7 @@ import constants from "./constants";
 export default function stylesheet(props, themeData) {
   return {
     wrapper: {
-      display: "relative"
+      position: "relative"
     },
 
     input: styles => Object.assign(styles, { fontWeight: 600 }),

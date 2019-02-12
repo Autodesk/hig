@@ -1,8 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown/presenters/WrapperPresenter renders with all props 1`] = `
+.emotion-0 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 <div
-  className="hig__dropdown hig__dropdown--disabled"
+  className="emotion-0"
 >
   <p>
     hi
@@ -11,7 +17,13 @@ exports[`Dropdown/presenters/WrapperPresenter renders with all props 1`] = `
 `;
 
 exports[`Dropdown/presenters/WrapperPresenter renders without props 1`] = `
+.emotion-0 {
+  position: relative;
+  min-width: 300px;
+  max-width: 450px;
+}
+
 <div
-  className="hig__dropdown"
+  className="emotion-0"
 />
 `;
