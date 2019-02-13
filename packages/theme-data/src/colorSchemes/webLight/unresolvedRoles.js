@@ -5,6 +5,7 @@ import checkbox from "./components/checkbox";
 import flyout from "./components/flyout";
 import input from "./components/input";
 import label from "./components/label";
+import modal from "./components/modal";
 import menu from "./components/menu";
 import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
@@ -21,6 +22,7 @@ const webLightThemeConfig = extendTheme(
     flyout,
     input,
     label,
+    modal,
     menu,
     progressBar,
     progressRing,
