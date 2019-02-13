@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
 import { Panel } from "@hig/flyout";
-import cx from "classnames";
 import ProgressRing from "@hig/progress-ring";
+import ThemeContext from "@hig/theme-context";
+import Typography from "@hig/typography";
 import {
   UNMOUNTED,
   EXITED,
@@ -11,12 +13,7 @@ import {
   EXITING
 } from "react-transition-group/Transition";
 
-import "./PanelPresenter.scss";
-
-const loadingModifiersByTransitionState = {
-  [ENTERED]: "hig__notifications-flyout__panel__loading--open",
-  [ENTERING]: "hig__notifications-flyout__panel__loading--open"
-};
+import stylesheet from "./stylesheet";
 
 export default function PanelPresenter({
   children,
@@ -27,29 +24,34 @@ export default function PanelPresenter({
   onScroll,
   refListWrapper
 }) {
-  const loadingClasses = cx(
-    "hig__notifications-flyout__panel__loading",
-    loadingModifiersByTransitionState[loadingTransitionState]
-  );
-
   return (
-    <Panel innerRef={innerRef}>
-      <header className="hig__notifications-flyout__panel__title">
-        {heading}
-      </header>
-      <section
-        className="hig__notifications-flyout__panel__container"
-        ref={refListWrapper}
-        style={{ maxHeight: listMaxHeight }}
-      >
-        <div role="list" onScroll={onScroll}>
-          {children}
-        </div>
-      </section>
-      <footer className={loadingClasses}>
-        <ProgressRing size="s" />
-      </footer>
-    </Panel>
+    <ThemeContext.Consumer>
+      {({ resolvedRoles }) => {
+        const styles = stylesheet(resolvedRoles, {
+          transitionState: null,
+          loadingTransitionState
+        });
+        return (
+          <Panel innerRef={innerRef}>
+            <Typography elementType="header" style={styles.panelTitle}>
+              {heading}
+            </Typography>
+            <section
+              className={css(styles.panelContainer)}
+              ref={refListWrapper}
+              style={{ maxHeight: listMaxHeight }}
+            >
+              <div role="list" onScroll={onScroll}>
+                {children}
+              </div>
+            </section>
+            <footer className={css(styles.panelLoading)}>
+              <ProgressRing size="s" />
+            </footer>
+          </Panel>
+        );
+      }}
+    </ThemeContext.Consumer>
   );
 }
 

@@ -9,11 +9,17 @@ import notificationsFlyoutInteractive from "./notificationsFlyoutInteractive";
 const infoOptions = createNotificationsFlyoutInfoOptions();
 
 storiesOf("Notifications|Flyout", module)
-  .add("default", withInfo({
-    ...infoOptions,
-    propTablesExclude: [KnobbedThemeProvider]
-  })(notificationsFlyoutDefault()))
-  .add("interactive", withInfo({
-    ...infoOptions,
-    propTablesExclude: [KnobbedThemeProvider]
-  })(notificationsFlyoutInteractive()));
+  .add(
+    "default",
+    withInfo({
+      ...infoOptions,
+      propTablesExclude: [KnobbedThemeProvider]
+    })(notificationsFlyoutDefault())
+  )
+  .add(
+    "interactive",
+    withInfo({
+      ...infoOptions,
+      propTablesExclude: [KnobbedThemeProvider]
+    })(notificationsFlyoutInteractive())
+  );

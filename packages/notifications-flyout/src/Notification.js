@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
+import { ControlBehavior } from "@hig/behaviors";
 
 import NotificationBehavior from "./behaviors/NotificationBehavior";
 import NotificationPresenter from "./presenters/NotificationPresenter";
@@ -16,6 +17,14 @@ export default class Notification extends Component {
     image: PropTypes.node,
     /** A callback called when user dismisses a featured notification */
     onDismiss: PropTypes.func,
+    /**
+     * Triggers when the user's mouse is over the notification
+     */
+    onMouseEnter: PropTypes.func,
+    /**
+     * Triggers when the user's mouse is no longer over the notification
+     */
+    onMouseLeave: PropTypes.func,
     /** Determines whether the dismiss button is shown */
     showDismissButton: PropTypes.bool,
     /** Timestamp component */
@@ -53,6 +62,8 @@ export default class Notification extends Component {
       featured,
       image,
       onDismiss,
+      onMouseEnter,
+      onMouseLeave,
       // Featured notifications show the dismiss button by default
       showDismissButton = featured,
       timestamp,
@@ -63,20 +74,34 @@ export default class Notification extends Component {
     return (
       <NotificationBehavior onDismiss={onDismiss}>
         {({ handleDismissButtonClick, height, innerRef, transitionStatus }) => (
-          <NotificationPresenter
-            featured={featured}
-            height={height}
-            image={image}
-            innerRef={innerRef}
-            onDismissButtonClick={handleDismissButtonClick}
-            showDismissButton={showDismissButton}
-            timestamp={timestamp}
-            transitionStatus={transitionStatus}
-            type={type}
-            unread={unread}
+          <ControlBehavior
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
           >
-            {this.renderChildren()}
-          </NotificationPresenter>
+            {({
+              hasHover,
+              onMouseEnter: handleMouseEnter,
+              onMouseLeave: handleMouseLeave
+            }) => (
+              <NotificationPresenter
+                featured={featured}
+                hasHover={hasHover}
+                height={height}
+                image={image}
+                innerRef={innerRef}
+                onDismissButtonClick={handleDismissButtonClick}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                showDismissButton={showDismissButton}
+                timestamp={timestamp}
+                transitionStatus={transitionStatus}
+                type={type}
+                unread={unread}
+              >
+                {this.renderChildren()}
+              </NotificationPresenter>
+            )}
+          </ControlBehavior>
         )}
       </NotificationBehavior>
     );
