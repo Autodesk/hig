@@ -1,9 +1,0 @@
-@import '~@hig/styles/mixins/colors.scss';
-@import '~@hig/styles/mixins/typography.scss';
-
-/** @todo use Typography component */
-.hig__timestamp {
-  @include typography-base;
-  @include typography-small;
-  color: color(hig-slate-50);
-}

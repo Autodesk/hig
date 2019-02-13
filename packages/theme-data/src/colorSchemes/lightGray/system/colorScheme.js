@@ -68,7 +68,7 @@ export default {
       ref: "basics.colors.textAgainstLight"
     },
     transform: {
-      alpha: 0.6
+      alpha: 0.7
     }
   }
 };
