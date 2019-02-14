@@ -1,3 +1,11 @@
+# [@hig/components-v1.0.11](https://github.com/Autodesk/hig/compare/@hig/components@1.0.10...@hig/components@1.0.11) (2019-02-14)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/rich-text to version 1.0.0 ([c0722ab](https://github.com/Autodesk/hig/commit/c0722ab))
+* **package:** update [@hig](https://github.com/hig)/text-area to version 1.0.0 ([c6f1d89](https://github.com/Autodesk/hig/commit/c6f1d89))
+
 # [@hig/components-v1.0.10](https://github.com/Autodesk/hig/compare/@hig/components@1.0.9...@hig/components@1.0.10) (2019-02-08)
 
 
