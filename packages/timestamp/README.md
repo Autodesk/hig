@@ -12,7 +12,7 @@ yarn add @hig/timestamp
 
 ```
 import Timestamp from '@hig/timestamp';
-import '@hig/timestamp/build/index.css';
+import "@hig/fonts/build/ArtifaktElement.css";
 ```
 
 ## Basic usage

@@ -1,7 +1,6 @@
 import React from "react";
 import RichText from "@hig/rich-text";
 import Button, { types } from "@hig/button";
-import "@hig/rich-text/build/index.css";
 
 import { Tab } from "../index";
 

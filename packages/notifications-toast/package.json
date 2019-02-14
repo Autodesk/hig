@@ -22,7 +22,7 @@
     "@hig/icons": "^1.0.0",
     "@hig/rich-text": "^0.1.4",
     "classnames": "^2.2.5",
-    "prop-types": "^15.6.1",
+    "prop-types": "^15.7.1",
     "react-flip-move": "^3.0.1"
   },
   "peerDependencies": {

@@ -7,6 +7,7 @@ import avatar from "./components/avatar";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
 import component from "./components/component";
+import divider from "./components/divider";
 import flyout from "./components/flyout";
 import formField from "./components/formField";
 import input from "./components/input";
@@ -40,6 +41,7 @@ const baseThemeConfig = extendTheme(
     button,
     checkbox,
     component,
+    divider,
     flyout,
     formField,
     input,

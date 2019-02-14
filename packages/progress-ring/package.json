@@ -19,7 +19,7 @@
   "dependencies": {
     "@hig/theme-context": "^2.1.0",
     "@hig/theme-data": "^2.1.1",
-    "prop-types": "^15.6.1",
+    "prop-types": "^15.7.1",
     "react-lifecycles-compat": "^3.0.4",
     "react-transition-group": "^2.4.0"
   },
@@ -30,6 +30,7 @@
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
+    "@hig/rich-text": "^1.0.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0"
   },

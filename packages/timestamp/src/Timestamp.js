@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
+import ThemeContext from "@hig/theme-context";
 
-import "./timestamp.scss";
+import stylesheet from "./stylesheet";
 
 const pluralize = (word, count) => (count === 1 ? word : `${word}s`);
 
@@ -51,9 +53,16 @@ export default class Timestamp extends Component {
 
   render() {
     return (
-      <div className="hig__timestamp">
-        {this.humanizeTimestamp(this.props.timestamp)}
-      </div>
+      <ThemeContext.Consumer>
+        {({ resolvedRoles, metadata }) => {
+          const styles = stylesheet(resolvedRoles, metadata.colorSchemeId);
+          return (
+            <div className={css(styles.timestamp)}>
+              {this.humanizeTimestamp(this.props.timestamp)}
+            </div>
+          );
+        }}
+      </ThemeContext.Consumer>
     );
   }
 }

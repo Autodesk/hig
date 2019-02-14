@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "@hig/button";
 import RichText from "@hig/rich-text";
-import "@hig/rich-text/build/index.css";
 
 import { anchorPoints } from "../anchorPoints";
 

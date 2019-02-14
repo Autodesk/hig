@@ -19,7 +19,7 @@
   "dependencies": {
     "@hig/theme-context": "^2.1.0",
     "emotion": "^10.0.0",
-    "prop-types": "^15.6.1"
+    "prop-types": "^15.7.1"
   },
   "peerDependencies": {
     "react": "^15.4.1 || ^16.3.2"
@@ -28,6 +28,7 @@
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
+    "@hig/rich-text": "^1.0.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0"
   },
