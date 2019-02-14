@@ -148,9 +148,33 @@ export default {
   textAgainstLight: { value: "#3c3c3c", type: COLOR },
 
   // Alert colors
-  error: { value: "#ec4a41", type: COLOR },
-  success: { value: "#87b340", type: COLOR },
-  warning: { value: "#faa21b", type: COLOR },
+  error: {
+    value: {
+      ref: "colorScheme.errorColor"
+    },
+    metadata: {
+      deprecated: { equivalent: "colorScheme.errorColor" }
+    },
+    type: COLOR
+  },
+  success: {
+    value: {
+      ref: "colorScheme.successColor"
+    },
+    metadata: {
+      deprecated: { equivalent: "colorScheme.successColor" }
+    },
+    type: COLOR
+  },
+  warning: {
+    value: {
+      ref: "colorScheme.warningColor"
+    },
+    metadata: {
+      deprecated: { equivalent: "colorScheme.warningColor" }
+    },
+    type: COLOR
+  },
 
   textLinkAgainstLight: { value: "#006EAF", type: COLOR },
   textLinkAgainstDark: { value: "#6DD2FF", type: COLOR }
