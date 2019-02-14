@@ -36,14 +36,6 @@ export default class Dropdown extends Component {
      */
     id: PropTypes.string,
     /**
-     * Instructional text for the field
-     */
-    instructions: PropTypes.string,
-    /**
-     * Text describing what the field represents
-     */
-    label: PropTypes.string,
-    /**
      * Enables multiple selection
      */
     multiple: PropTypes.bool,
@@ -158,20 +150,10 @@ export default class Dropdown extends Component {
    */
   renderInput(downshift) {
     const { id, toggleMenu, getInputProps } = downshift;
-    const {
-      label,
-      instructions,
-      placeholder,
-      disabled,
-      required,
-      onBlur,
-      onFocus
-    } = this.props;
+    const { placeholder, disabled, required, onBlur, onFocus } = this.props;
 
     const inputProps = getInputProps({
       id,
-      label,
-      instructions,
       placeholder,
       disabled,
       required,

@@ -2,6 +2,7 @@ import AvatarPage from "./pages/AvatarPage";
 import ButtonsPage from "./pages/ButtonsPage";
 import FlyoutPage from "./pages/FlyoutPage";
 import CheckboxPage from "./pages/CheckboxPage";
+import DropdownPage from "./pages/DropdownPage";
 import IconsPage from "./pages/IconsPage";
 import InputPage from "./pages/InputPage";
 import ProgressBarPage from "./pages/ProgressBarPage";
@@ -16,6 +17,7 @@ import TypographyPage from "./pages/TypographyPage";
 export default [
   { path: "/avatar/", component: AvatarPage, label: "Avatar" },
   { path: "/button/", component: ButtonsPage, label: "Button" },
+  { path: "/dropdown/", component: DropdownPage, label: "Dropdown" },
   { path: "/flyout/", component: FlyoutPage, label: "Flyout" },
   { path: "/checkbox/", component: CheckboxPage, label: "Checkbox" },
   { path: "/icons/", component: IconsPage, label: "Icons" },

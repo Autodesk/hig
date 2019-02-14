@@ -13,15 +13,15 @@
   },
   "main": "build/index.js",
   "module": "build/index.es.js",
-  "style": "build/index.css",
   "files": [
     "build/*"
   ],
   "dependencies": {
-    "@hig/icons": "^1.0.0",
+    "@hig/icons": "^2.0.1",
     "@hig/multi-downshift": "^0.1.1",
-    "@hig/text-field": "^1.0.2",
-    "classnames": "^2.2.5",
+    "@hig/input": "^1.1.0",
+    "@hig/theme-context": "^2.1.0",
+    "emotion": "^10.0.0",
     "downshift": "^3.2.0",
     "prop-types": "^15.7.1",
     "react-lifecycles-compat": "^3.0.4"

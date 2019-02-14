@@ -1,8 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown/presenters/MenuPresenter renders with all props 1`] = `
+.emotion-0 {
+  display: block;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 32px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
-  className="hig__dropdown-v1__menu hig__dropdown-v1__menu--open"
+  className="emotion-0"
 >
   <p>
     hi
@@ -11,7 +29,25 @@ exports[`Dropdown/presenters/MenuPresenter renders with all props 1`] = `
 `;
 
 exports[`Dropdown/presenters/MenuPresenter renders with only required props 1`] = `
+.emotion-0 {
+  display: none;
+  position: absolute;
+  min-width: 240px;
+  max-height: 360px;
+  top: 32px;
+  overflow: auto;
+  z-index: 9996;
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 <div
-  className="hig__dropdown-v1__menu"
+  className="emotion-0"
 />
 `;

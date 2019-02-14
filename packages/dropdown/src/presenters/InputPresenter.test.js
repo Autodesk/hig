@@ -18,8 +18,6 @@ describe("Dropdown/presenters/InputPresenter", () => {
         type: "button",
         readOnly: true,
         id: "id",
-        label: "label",
-        instructions: "instructions",
         placeholder: "placeholder",
         disabled: true,
         required: "this is required",
