@@ -3,6 +3,7 @@ import mapKeys from "../../utils/mapKeys";
 import system from "./system";
 import baseTheme from "../../baseTheme";
 import mediumDensityTheme from "../../densities/mediumDensity";
+import banner from "./components/banner";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
 import formField from "./components/formField";
@@ -21,6 +22,7 @@ const darkBlueThemeConfig = extendTheme(
     {},
     mediumDensityTheme.unresolvedRoles,
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
+    banner,
     button,
     checkbox,
     formField,
