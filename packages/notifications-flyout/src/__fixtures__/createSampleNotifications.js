@@ -6,8 +6,6 @@ import TextLink from "@hig/text-link";
 import Timestamp from "@hig/timestamp";
 import avatarImagePath from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 import thumbnailImagePath from "@hig/storybook/storybook-support/fixtures/thumbnail/greenhouse.png";
-import "@hig/text-link/build/index.css";
-import "@hig/timestamp/build/index.css";
 
 import ImagePresenter from "../presenters/ImagePresenter";
 
