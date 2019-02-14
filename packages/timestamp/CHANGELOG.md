@@ -1,3 +1,16 @@
+# [@hig/timestamp-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/timestamp@0.1.4...@hig/timestamp@1.0.0) (2019-02-14)
+
+
+### Features
+
+* make timestamp themeable ([3d51d31](https://github.com/Autodesk/hig/commit/3d51d31))
+
+
+### BREAKING CHANGES
+
+* * Remove css classes
+* No longer using an imported css file
+
 # [@hig/timestamp-v0.1.4](https://github.com/Autodesk/hig/compare/@hig/timestamp@0.1.3...@hig/timestamp@0.1.4) (2018-10-08)
 
 
