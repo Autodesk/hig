@@ -29,7 +29,7 @@
     "@hig/rich-text": "^1.0.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/theme-data": "^2.1.1"
+    "@hig/theme-data": "^2.2.0"
   },
   "peerDependencies": {
     "react": "^15.4.1 || ^16.3.2"

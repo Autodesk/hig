@@ -1,3 +1,15 @@
+# [@hig/theme-data-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.1.1...@hig/theme-data@2.2.0) (2019-02-14)
+
+
+### Bug Fixes
+
+* adjust textColorDim to designs ([3a25613](https://github.com/Autodesk/hig/commit/3a25613))
+
+
+### Features
+
+* **theme-data:** add divider ([758f84f](https://github.com/Autodesk/hig/commit/758f84f))
+
 # [@hig/theme-data-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.1.0...@hig/theme-data@2.1.1) (2019-02-07)
 
 
