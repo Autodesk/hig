@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`notifications-flyout/NotificationsFlyout renders a notification with the \`children\` prop 1`] = `
-.emotion-7 {
+.emotion-17 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-0 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-6 {
+.emotion-16 {
   position: absolute;
   display: none;
   width: 100%;
@@ -33,7 +33,23 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
   transform: none;
 }
 
-.emotion-3 {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -44,33 +60,236 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
   transform: rotate(0deg);
 }
 
-.emotion-1 {
+.emotion-4 {
   fill: #D4DBE1;
 }
 
-.emotion-2 {
+.emotion-5 {
   fill: #ffffff;
 }
 
-.emotion-5 {
+.emotion-12 {
+  width: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+  background-color: transparent;
+  opacity: 0;
+  -webkit-transition-property: height,opacity;
+  transition-property: height,opacity;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  pointer-events: none;
+}
+
+.emotion-15 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-4 {
+.emotion-14 {
   position: relative;
 }
 
+.emotion-7 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 13px;
+  padding: 0 3px;
+  font-size: 11px;
+  line-height: 13px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: #0696d7;
+  border-radius: 4px;
+  pointer-events: none;
+  font-weight: 400;
+  font-family: ArtifaktElement,sans-serif;
+  margin: 0;
+  display: block;
+}
+
+.emotion-11 {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition-property: height,opacity;
+  transition-property: height,opacity;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.emotion-11:last-child {
+  border-bottom: none;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(60,60,60,0.25);
+  border-left: 3px solid #bec8d2;
+  border-left-color: #0696d7;
+}
+
+.emotion-9 {
+  margin: 14px;
+}
+
+.emotion-8 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-8 ul,
+.emotion-8 ol {
+  padding-left: 24px;
+}
+
+.emotion-8 ul li {
+  list-style: none;
+}
+
+.emotion-8 ul li:before {
+  content: '\\B7';
+  vertical-align: middle;
+  font-size: 20px;
+  padding-right: 12px;
+  margin-left: -14px;
+}
+
+.emotion-8 h1 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.285714286;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-8 h2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-8 h3 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-8 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #0696D7;
+  outline: none;
+}
+
+.emotion-8 a:hover {
+  color: #0671A1;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-color: transparent;
+  text-decoration-color: transparent;
+}
+
+.emotion-8 a:focus {
+  color: #024B6C;
+  outline: solid 0 #BAE6F6;
+}
+
+.emotion-8 p {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-8 h1 + p,
+.emotion-8 h2 + p,
+.emotion-8 h3 + p {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 16px 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-8 b,
+.emotion-8 strong {
+  font-weight: 700;
+}
+
 <div
-  className="emotion-7"
+  className="emotion-17"
 >
   <div
-    className="emotion-0"
+    className="emotion-3"
   >
     <div
-      className="hig__notifications-flyout__indicator"
+      className="emotion-2"
     >
       <button
         className="hig__icon-button hig__icon-button--transparent"
@@ -82,10 +301,10 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
         title="View notifications"
       >
         <svg
-          className="hig__icon-button__icon"
-          height="24"
+          className="emotion-0 hig__icon-button__icon"
+          height="24px"
           viewBox="4651 1106 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -94,14 +313,14 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
         </svg>
       </button>
       <div
-        className="hig__notifications-flyout__indicator__count"
+        className="emotion-1"
       >
         1
       </div>
     </div>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-16"
     style={
       Object {
         "left": "0px",
@@ -111,7 +330,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
   >
     <div
       aria-hidden="true"
-      className="emotion-3"
+      className="emotion-6"
       role="presentation"
       style={
         Object {
@@ -126,17 +345,17 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
         width="24"
       >
         <polygon
-          className="emotion-1"
+          className="emotion-4"
           points="0,12 12,0 24,12"
         />
         <polygon
-          className="emotion-2"
+          className="emotion-5"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="emotion-5"
+      className="emotion-15"
       style={
         Object {
           "maxHeight": undefined,
@@ -144,15 +363,21 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
       }
     >
       <div
-        className="emotion-4"
+        className="emotion-14"
       >
         <header
-          className="hig__notifications-flyout__panel__title"
+          className="emotion-7"
+          style={
+            Object {
+              "borderBottom": "1px solid rgba(60, 60, 60, 0.25)",
+              "padding": "12px 24px",
+            }
+          }
         >
           Notifications
         </header>
         <section
-          className="hig__notifications-flyout__panel__container"
+          className="emotion-12"
           style={
             Object {
               "maxHeight": "",
@@ -164,7 +389,9 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
             role="list"
           >
             <div
-              className="hig__notification-v1"
+              className="emotion-11"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
               role="listitem"
               style={
                 Object {
@@ -173,13 +400,13 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
               }
             >
               <div
-                className="hig__notification-v1__content hig__notification-v1__content--unread"
+                className="emotion-10"
               >
                 <div
-                  className="hig__notification-v1__content-text"
+                  className="emotion-9"
                 >
                   <div
-                    className="hig__rich-text hig__rich-text--small"
+                    className="emotion-8"
                     dangerouslySetInnerHTML={undefined}
                   />
                 </div>
@@ -188,7 +415,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
           </div>
         </section>
         <footer
-          className="hig__notifications-flyout__panel__loading"
+          className="emotion-13"
         >
           <div
             data-props="{
@@ -203,19 +430,19 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 `;
 
 exports[`notifications-flyout/NotificationsFlyout renders a notification with the \`notifications\` prop 1`] = `
-.emotion-7 {
+.emotion-17 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-0 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-6 {
+.emotion-16 {
   position: absolute;
   display: none;
   width: 100%;
@@ -235,7 +462,23 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
   transform: none;
 }
 
-.emotion-3 {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -246,33 +489,236 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
   transform: rotate(0deg);
 }
 
-.emotion-1 {
+.emotion-4 {
   fill: #D4DBE1;
 }
 
-.emotion-2 {
+.emotion-5 {
   fill: #ffffff;
 }
 
-.emotion-5 {
+.emotion-12 {
+  width: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+  background-color: transparent;
+  opacity: 0;
+  -webkit-transition-property: height,opacity;
+  transition-property: height,opacity;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  pointer-events: none;
+}
+
+.emotion-15 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-4 {
+.emotion-14 {
   position: relative;
 }
 
+.emotion-7 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 13px;
+  padding: 0 3px;
+  font-size: 11px;
+  line-height: 13px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: #0696d7;
+  border-radius: 4px;
+  pointer-events: none;
+  font-weight: 400;
+  font-family: ArtifaktElement,sans-serif;
+  margin: 0;
+  display: block;
+}
+
+.emotion-11 {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition-property: height,opacity;
+  transition-property: height,opacity;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.emotion-11:last-child {
+  border-bottom: none;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(60,60,60,0.25);
+  border-left: 3px solid #bec8d2;
+  border-left-color: #0696d7;
+}
+
+.emotion-9 {
+  margin: 14px;
+}
+
+.emotion-8 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-8 ul,
+.emotion-8 ol {
+  padding-left: 24px;
+}
+
+.emotion-8 ul li {
+  list-style: none;
+}
+
+.emotion-8 ul li:before {
+  content: '\\B7';
+  vertical-align: middle;
+  font-size: 20px;
+  padding-right: 12px;
+  margin-left: -14px;
+}
+
+.emotion-8 h1 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.285714286;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-8 h2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-8 h3 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-8 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #0696D7;
+  outline: none;
+}
+
+.emotion-8 a:hover {
+  color: #0671A1;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-color: transparent;
+  text-decoration-color: transparent;
+}
+
+.emotion-8 a:focus {
+  color: #024B6C;
+  outline: solid 0 #BAE6F6;
+}
+
+.emotion-8 p {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-8 h1 + p,
+.emotion-8 h2 + p,
+.emotion-8 h3 + p {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 16px 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-8 b,
+.emotion-8 strong {
+  font-weight: 700;
+}
+
 <div
-  className="emotion-7"
+  className="emotion-17"
 >
   <div
-    className="emotion-0"
+    className="emotion-3"
   >
     <div
-      className="hig__notifications-flyout__indicator"
+      className="emotion-2"
     >
       <button
         className="hig__icon-button hig__icon-button--transparent"
@@ -284,10 +730,10 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
         title="View notifications"
       >
         <svg
-          className="hig__icon-button__icon"
-          height="24"
+          className="emotion-0 hig__icon-button__icon"
+          height="24px"
           viewBox="4651 1106 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -296,14 +742,14 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
         </svg>
       </button>
       <div
-        className="hig__notifications-flyout__indicator__count"
+        className="emotion-1"
       >
         1
       </div>
     </div>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-16"
     style={
       Object {
         "left": "0px",
@@ -313,7 +759,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
   >
     <div
       aria-hidden="true"
-      className="emotion-3"
+      className="emotion-6"
       role="presentation"
       style={
         Object {
@@ -328,17 +774,17 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
         width="24"
       >
         <polygon
-          className="emotion-1"
+          className="emotion-4"
           points="0,12 12,0 24,12"
         />
         <polygon
-          className="emotion-2"
+          className="emotion-5"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="emotion-5"
+      className="emotion-15"
       style={
         Object {
           "maxHeight": undefined,
@@ -346,15 +792,21 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
       }
     >
       <div
-        className="emotion-4"
+        className="emotion-14"
       >
         <header
-          className="hig__notifications-flyout__panel__title"
+          className="emotion-7"
+          style={
+            Object {
+              "borderBottom": "1px solid rgba(60, 60, 60, 0.25)",
+              "padding": "12px 24px",
+            }
+          }
         >
           Notifications
         </header>
         <section
-          className="hig__notifications-flyout__panel__container"
+          className="emotion-12"
           style={
             Object {
               "maxHeight": "",
@@ -366,7 +818,9 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
             role="list"
           >
             <div
-              className="hig__notification-v1"
+              className="emotion-11"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
               role="listitem"
               style={
                 Object {
@@ -375,13 +829,13 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
               }
             >
               <div
-                className="hig__notification-v1__content hig__notification-v1__content--unread"
+                className="emotion-10"
               >
                 <div
-                  className="hig__notification-v1__content-text"
+                  className="emotion-9"
                 >
                   <div
-                    className="hig__rich-text hig__rich-text--small"
+                    className="emotion-8"
                     dangerouslySetInnerHTML={undefined}
                   />
                 </div>
@@ -390,7 +844,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
           </div>
         </section>
         <footer
-          className="hig__notifications-flyout__panel__loading"
+          className="emotion-13"
         >
           <div
             data-props="{
@@ -405,19 +859,35 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 `;
 
 exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
-.emotion-7 {
+.emotion-21 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-0 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-3 {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -428,26 +898,202 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-1 {
+.emotion-4 {
   fill: #D4DBE1;
 }
 
-.emotion-2 {
+.emotion-5 {
   fill: #ffffff;
 }
 
-.emotion-5 {
+.emotion-16 {
+  width: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.emotion-19 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-4 {
+.emotion-18 {
   position: relative;
 }
 
-.emotion-6 {
+.emotion-7 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 13px;
+  padding: 0 3px;
+  font-size: 11px;
+  line-height: 13px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: #0696d7;
+  border-radius: 4px;
+  pointer-events: none;
+  font-weight: 400;
+  font-family: ArtifaktElement,sans-serif;
+  margin: 0;
+  display: block;
+}
+
+.emotion-11 {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition-property: height,opacity;
+  transition-property: height,opacity;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.emotion-11:last-child {
+  border-bottom: none;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(60,60,60,0.25);
+  border-left: 3px solid #bec8d2;
+  border-left-color: #0696d7;
+}
+
+.emotion-9 {
+  margin: 14px;
+}
+
+.emotion-8 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-8 ul,
+.emotion-8 ol {
+  padding-left: 24px;
+}
+
+.emotion-8 ul li {
+  list-style: none;
+}
+
+.emotion-8 ul li:before {
+  content: '\\B7';
+  vertical-align: middle;
+  font-size: 20px;
+  padding-right: 12px;
+  margin-left: -14px;
+}
+
+.emotion-8 h1 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.285714286;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-8 h2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-8 h3 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-8 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #0696D7;
+  outline: none;
+}
+
+.emotion-8 a:hover {
+  color: #0671A1;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-color: transparent;
+  text-decoration-color: transparent;
+}
+
+.emotion-8 a:focus {
+  color: #024B6C;
+  outline: solid 0 #BAE6F6;
+}
+
+.emotion-8 p {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-8 h1 + p,
+.emotion-8 h2 + p,
+.emotion-8 h3 + p {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 16px 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-8 b,
+.emotion-8 strong {
+  font-weight: 700;
+}
+
+.emotion-20 {
   position: absolute;
   display: table;
   width: 100%;
@@ -467,14 +1113,41 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
   transform: none;
 }
 
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 44px;
+  overflow: hidden;
+  background-color: transparent;
+  opacity: 1;
+  -webkit-transition-property: height,opacity;
+  transition-property: height,opacity;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  pointer-events: none;
+}
+
 <div
-  className="emotion-7"
+  className="emotion-21"
 >
   <div
-    className="emotion-0"
+    className="emotion-3"
   >
     <div
-      className="hig__notifications-flyout__indicator"
+      className="emotion-2"
     >
       <button
         className="hig__icon-button hig__icon-button--transparent"
@@ -486,10 +1159,10 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
         title="World"
       >
         <svg
-          className="hig__icon-button__icon"
-          height="24"
+          className="emotion-0 hig__icon-button__icon"
+          height="24px"
           viewBox="4651 1106 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -498,14 +1171,14 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
         </svg>
       </button>
       <div
-        className="hig__notifications-flyout__indicator__count"
+        className="emotion-1"
       >
         44
       </div>
     </div>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-20"
     style={
       Object {
         "left": "0px",
@@ -515,7 +1188,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
   >
     <div
       aria-hidden="true"
-      className="emotion-3"
+      className="emotion-6"
       role="presentation"
       style={
         Object {
@@ -530,17 +1203,17 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
         width="24"
       >
         <polygon
-          className="emotion-1"
+          className="emotion-4"
           points="0,12 12,0 24,12"
         />
         <polygon
-          className="emotion-2"
+          className="emotion-5"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="emotion-5"
+      className="emotion-19"
       style={
         Object {
           "maxHeight": undefined,
@@ -548,15 +1221,21 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
       }
     >
       <div
-        className="emotion-4"
+        className="emotion-18"
       >
         <header
-          className="hig__notifications-flyout__panel__title"
+          className="emotion-7"
+          style={
+            Object {
+              "borderBottom": "1px solid rgba(60, 60, 60, 0.25)",
+              "padding": "12px 24px",
+            }
+          }
         >
           Hello
         </header>
         <section
-          className="hig__notifications-flyout__panel__container"
+          className="emotion-16"
           style={
             Object {
               "maxHeight": "",
@@ -568,7 +1247,9 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
             role="list"
           >
             <div
-              className="hig__notification-v1"
+              className="emotion-11"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
               role="listitem"
               style={
                 Object {
@@ -577,20 +1258,22 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
               }
             >
               <div
-                className="hig__notification-v1__content hig__notification-v1__content--unread"
+                className="emotion-10"
               >
                 <div
-                  className="hig__notification-v1__content-text"
+                  className="emotion-9"
                 >
                   <div
-                    className="hig__rich-text hig__rich-text--small"
+                    className="emotion-8"
                     dangerouslySetInnerHTML={undefined}
                   />
                 </div>
               </div>
             </div>
             <div
-              className="hig__notification-v1"
+              className="emotion-11"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
               role="listitem"
               style={
                 Object {
@@ -599,13 +1282,13 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
               }
             >
               <div
-                className="hig__notification-v1__content hig__notification-v1__content--unread"
+                className="emotion-10"
               >
                 <div
-                  className="hig__notification-v1__content-text"
+                  className="emotion-9"
                 >
                   <div
-                    className="hig__rich-text hig__rich-text--small"
+                    className="emotion-8"
                     dangerouslySetInnerHTML={undefined}
                   />
                 </div>
@@ -614,7 +1297,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
           </div>
         </section>
         <footer
-          className="hig__notifications-flyout__panel__loading hig__notifications-flyout__panel__loading--open"
+          className="emotion-17"
         >
           <div
             data-props="{
@@ -629,19 +1312,19 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
 `;
 
 exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
-.emotion-7 {
+.emotion-16 {
   position: relative;
   display: inline-block;
 }
 
-.emotion-0 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.emotion-6 {
+.emotion-15 {
   position: absolute;
   display: none;
   width: 100%;
@@ -661,7 +1344,42 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
   transform: none;
 }
 
-.emotion-3 {
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 13px;
+  padding: 0 3px;
+  font-size: 11px;
+  line-height: 13px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: #0696d7;
+  border-radius: 4px;
+  pointer-events: none;
+  font-weight: 400;
+  font-family: ArtifaktElement,sans-serif;
+  margin: 0;
+  display: none;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -672,33 +1390,95 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
   transform: rotate(0deg);
 }
 
-.emotion-1 {
+.emotion-4 {
   fill: #D4DBE1;
 }
 
-.emotion-2 {
+.emotion-5 {
   fill: #ffffff;
 }
 
-.emotion-5 {
+.emotion-11 {
+  width: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+  background-color: transparent;
+  opacity: 0;
+  -webkit-transition-property: height,opacity;
+  transition-property: height,opacity;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  pointer-events: none;
+}
+
+.emotion-14 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-4 {
+.emotion-13 {
   position: relative;
 }
 
+.emotion-7 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-8 {
+  margin-top: 20px;
+}
+
 <div
-  className="emotion-7"
+  className="emotion-16"
 >
   <div
-    className="emotion-0"
+    className="emotion-3"
   >
     <div
-      className="hig__notifications-flyout__indicator"
+      className="emotion-2"
     >
       <button
         className="hig__icon-button hig__icon-button--transparent"
@@ -710,10 +1490,10 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
         title="View notifications"
       >
         <svg
-          className="hig__icon-button__icon"
-          height="24"
+          className="emotion-0 hig__icon-button__icon"
+          height="24px"
           viewBox="4651 1106 24 24"
-          width="24"
+          width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -722,14 +1502,14 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
         </svg>
       </button>
       <div
-        className="hig__notifications-flyout__indicator__count hig__notifications-flyout__indicator__count--hide"
+        className="emotion-1"
       >
         0
       </div>
     </div>
   </div>
   <div
-    className="emotion-6"
+    className="emotion-15"
     style={
       Object {
         "left": "0px",
@@ -739,7 +1519,7 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
   >
     <div
       aria-hidden="true"
-      className="emotion-3"
+      className="emotion-6"
       role="presentation"
       style={
         Object {
@@ -754,17 +1534,17 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
         width="24"
       >
         <polygon
-          className="emotion-1"
+          className="emotion-4"
           points="0,12 12,0 24,12"
         />
         <polygon
-          className="emotion-2"
+          className="emotion-5"
           points="2.5,12 12,2.5 21.5,12"
         />
       </svg>
     </div>
     <div
-      className="emotion-5"
+      className="emotion-14"
       style={
         Object {
           "maxHeight": undefined,
@@ -772,15 +1552,21 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
       }
     >
       <div
-        className="emotion-4"
+        className="emotion-13"
       >
         <header
-          className="hig__notifications-flyout__panel__title"
+          className="emotion-7"
+          style={
+            Object {
+              "borderBottom": "1px solid rgba(60, 60, 60, 0.25)",
+              "padding": "12px 24px",
+            }
+          }
         >
           Notifications
         </header>
         <section
-          className="hig__notifications-flyout__panel__container"
+          className="emotion-11"
           style={
             Object {
               "maxHeight": "",
@@ -792,14 +1578,19 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
             role="list"
           >
             <div
-              className="hig__notification-flyout-v1__empty-state"
+              className="emotion-10"
             >
               <test-file-stub
-                className="hig__notification-flyout-v1__empty-state-image"
+                className="emotion-8"
                 role="presentation"
               />
               <p
-                className="hig__notification-flyout-v1__empty-state-message"
+                className="emotion-7"
+                style={
+                  Object {
+                    "margin": "20px 0 37px",
+                  }
+                }
               >
                 You currently have no notifications
               </p>
@@ -807,7 +1598,7 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
           </div>
         </section>
         <footer
-          className="hig__notifications-flyout__panel__loading"
+          className="emotion-12"
         >
           <div
             data-props="{
