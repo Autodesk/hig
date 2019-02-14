@@ -46,7 +46,7 @@
     "@hig/theme-context": "^2.1.0",
     "@hig/theme-data": "^2.2.0",
     "@hig/themes": "^0.3.0",
-    "@hig/timestamp": "^0.1.4",
+    "@hig/timestamp": "^1.0.0",
     "@hig/tooltip": "^1.0.1",
     "@hig/top-nav": "^2.0.2",
     "@hig/typography": "^1.0.2"
