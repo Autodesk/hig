@@ -78,8 +78,8 @@ function ThemeRepeater({ children, column }) {
                                   key={level}
                                   level={level}
                                   style={styles.level}
-                                  horizontalPadding="large"
-                                  verticalPadding="large"
+                                  horizontalPadding="l"
+                                  verticalPadding="l"
                                 >
                                   {children({
                                     theme,
