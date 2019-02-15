@@ -11,6 +11,7 @@
     "@hig/fonts": "^1.0.1",
     "@hig/input": "^1.0.4",
     "@hig/label": "^1.0.1",
+    "@hig/modal": "^1.0.2",
     "@hig/radio-button": "^1.0.2",
     "@hig/rich-text": "^1.0.0",
     "@hig/slider": "^1.0.0",
@@ -45,5 +46,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "lodash.merge": "^4.4.0"
+  }
 }
