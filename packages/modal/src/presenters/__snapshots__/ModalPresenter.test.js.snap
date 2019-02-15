@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`checkbox/presenters/ModalPresenter  1`] = `
+exports[`modal/presenters/ModalPresenter  1`] = `
 .emotion-0 {
   color: #3c3c3c;
   display: block;
@@ -64,7 +64,7 @@ exports[`checkbox/presenters/ModalPresenter  1`] = `
 </header>
 `;
 
-exports[`checkbox/presenters/ModalPresenter  2`] = `
+exports[`modal/presenters/ModalPresenter  2`] = `
 .emotion-0 {
   background-color: aliceblue;
 }
@@ -79,7 +79,7 @@ exports[`checkbox/presenters/ModalPresenter  2`] = `
 </header>
 `;
 
-exports[`checkbox/presenters/ModalPresenter  3`] = `
+exports[`modal/presenters/ModalPresenter  3`] = `
 .emotion-0 {
   background-color: aliceblue;
 }

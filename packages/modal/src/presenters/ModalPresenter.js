@@ -39,6 +39,10 @@ export default class ModalPresenter extends Component {
      */
     open: PropTypes.bool,
     /**
+     * Enables modification of Modal Styles
+     */
+    stylesheet: PropTypes.func,
+    /**
      * Title of the modal
      */
     title: PropTypes.string,
@@ -63,6 +67,7 @@ export default class ModalPresenter extends Component {
       onOverlayClick,
       onWindowClick,
       open,
+      stylesheet: customizeStyles,
       title,
       type
     } = this.props;
@@ -81,20 +86,29 @@ export default class ModalPresenter extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles }) => {
+        {({ resolvedRoles, metadata }) => {
           const styles = stylesheet({ open, type }, resolvedRoles);
 
+          const cssStyles = customizeStyles
+            ? customizeStyles(
+                styles,
+                this.props,
+                resolvedRoles,
+                metadata.colorSchemeId
+              )
+            : styles;
+
           return (
-            <div className={css(styles.modal.wrapper)}>
+            <div className={css(cssStyles.modal.wrapper)}>
               <div
                 aria-labelledby={this.titleId}
-                className={css(styles.modal.overlay)}
+                className={css(cssStyles.modal.overlay)}
                 onClick={onOverlayClick}
                 role="dialog"
                 tabIndex="-1"
               >
                 <article
-                  className={css(styles.modal.window)}
+                  className={css(cssStyles.modal.window)}
                   onClick={onWindowClick}
                   role="document"
                 >
@@ -107,8 +121,8 @@ export default class ModalPresenter extends Component {
                   >
                     {headerChildren}
                   </ModalHeaderPresenter>
-                  <section className={css(styles.modal.body)}>
-                    <div className={css(styles.modal.bodyContent)}>
+                  <section className={css(cssStyles.modal.body)}>
+                    <div className={css(cssStyles.modal.bodyContent)}>
                       {children}
                     </div>
                   </section>
