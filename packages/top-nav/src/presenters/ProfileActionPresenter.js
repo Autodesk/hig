@@ -1,19 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
 
 import ActionPresenter from "./ActionPresenter";
 import SeparatorPresenter from "./SeparatorPresenter";
-import "./ProfileActionPresenter.scss";
+import stylesheet from "./stylesheet";
 
 /**
  * @todo Remove the <SeparatorPresenter /> and wrapping <div /> component
  */
 export default function ProfileActionPresenter({ children }) {
+  const styles = stylesheet();
   return (
-    <div className="hig__top-nav__profile-action">
+    <div className={css(styles.topNavProfileAction)}>
       <SeparatorPresenter />
       <ActionPresenter>
-        <div className="hig__top-nav__profile-action__button-wrapper">
+        <div className={css(styles.topNavProfileActionButtonWrapper)}>
           {children}
         </div>
       </ActionPresenter>

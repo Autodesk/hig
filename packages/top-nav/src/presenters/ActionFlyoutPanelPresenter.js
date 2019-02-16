@@ -1,18 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
 import { Panel } from "@hig/flyout";
 
-import "./ActionFlyoutPanelPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default function ActionFlyoutPanelPresenter({
   children,
   handleScroll,
   innerRef
 }) {
+  const styles = stylesheet();
   return (
     <Panel innerRef={innerRef}>
       <div
-        className="hig__top-nav__action-flyout-panel"
+        className={css(styles.topNavActionFlyoutPanel)}
         onScroll={handleScroll}
       >
         {children}

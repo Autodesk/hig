@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { offsetContainerVertical, offsetPanelHorizontal } from "@hig/flyout";
 import NotificationsFlyout, { anchorPoints } from "@hig/notifications-flyout";
-import "@hig/notifications-flyout/build/index.css";
 
 import ActionPresenter from "./presenters/ActionPresenter";
 

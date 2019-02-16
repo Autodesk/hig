@@ -1,16 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
+import ThemeContext from "@hig/theme-context";
 
-import "./TopNavPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default function TopNav({ leftActions, rightActions, logo }) {
   return (
-    <div className="hig__top-nav">
-      {leftActions}
-      <div className="hig__top-nav__logo-wrapper">{logo}</div>
-      <div role="presentation" aria-hidden className="hig__top-nav__spacer" />
-      {rightActions}
-    </div>
+    <ThemeContext.Consumer>
+      {({ resolvedRoles }) => {
+        const styles = stylesheet(resolvedRoles);
+        return (
+          <div className={css(styles.topNav)}>
+            {leftActions}
+            <div className={css(styles.topNavLogoWrapper)}>{logo}</div>
+            <div
+              role="presentation"
+              aria-hidden
+              className={css(styles.topNavSpacer)}
+            />
+            {rightActions}
+          </div>
+        );
+      }}
+    </ThemeContext.Consumer>
   );
 }
 
