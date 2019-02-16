@@ -23,7 +23,6 @@ exports[`top-nav/presenters/ProfileButtonPresenter  1`] = `
 }
 
 <button
-  className="hig__top-nav__profile-action__button"
   onClick={undefined}
   type="button"
 >
@@ -65,7 +64,6 @@ exports[`top-nav/presenters/ProfileButtonPresenter  2`] = `
 }
 
 <button
-  className="hig__top-nav__profile-action__button"
   onClick={undefined}
   type="button"
 >
@@ -123,7 +121,6 @@ exports[`top-nav/presenters/ProfileButtonPresenter  3`] = `
 }
 
 <button
-  className="hig__top-nav__profile-action__button"
   onClick={[Function]}
   type="button"
 >

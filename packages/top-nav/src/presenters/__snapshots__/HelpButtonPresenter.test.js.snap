@@ -1,6 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`top-nav/presenters/HelpButtonPresenter  1`] = `
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
 <button
   className="hig__icon-button hig__icon-button--transparent"
   onBlur={undefined}
@@ -11,10 +19,10 @@ exports[`top-nav/presenters/HelpButtonPresenter  1`] = `
   title="View help"
 >
   <svg
-    className="hig__icon-button__icon"
-    height="24"
+    className="emotion-0 hig__icon-button__icon"
+    height="24px"
     viewBox="0 0 24 24"
-    width="24"
+    width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>
@@ -43,6 +51,14 @@ exports[`top-nav/presenters/HelpButtonPresenter  1`] = `
 `;
 
 exports[`top-nav/presenters/HelpButtonPresenter  2`] = `
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
 <button
   className="hig__icon-button hig__icon-button--transparent"
   onBlur={undefined}
@@ -53,10 +69,10 @@ exports[`top-nav/presenters/HelpButtonPresenter  2`] = `
   title="View help"
 >
   <svg
-    className="hig__icon-button__icon"
-    height="24"
+    className="emotion-0 hig__icon-button__icon"
+    height="24px"
     viewBox="0 0 24 24"
-    width="24"
+    width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>
@@ -85,6 +101,14 @@ exports[`top-nav/presenters/HelpButtonPresenter  2`] = `
 `;
 
 exports[`top-nav/presenters/HelpButtonPresenter  3`] = `
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
 <button
   className="hig__icon-button hig__icon-button--transparent"
   onBlur={undefined}
@@ -95,10 +119,10 @@ exports[`top-nav/presenters/HelpButtonPresenter  3`] = `
   title="View help"
 >
   <svg
-    className="hig__icon-button__icon"
-    height="24"
+    className="emotion-0 hig__icon-button__icon"
+    height="24px"
     viewBox="0 0 24 24"
-    width="24"
+    width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>
