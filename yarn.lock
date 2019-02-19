@@ -169,16 +169,6 @@
     classnames "^2.2.5"
     prop-types "^15.6.1"
 
-"@hig/progress-ring@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@hig/progress-ring/-/progress-ring-0.1.1.tgz#1dd9fca6bf49780c1cea2b2348f5c6511ba38eef"
-  integrity sha512-TPDmkEx5Pgkmywe5PCBSh3GLyeqd6xmB/MT1EwN83p10Hpgkv1Vr3NrRSAOoz4CSmY0o2WFoV2NNVGOp3OX5FA==
-  dependencies:
-    classnames "^2.2.5"
-    prop-types "^15.6.1"
-    react-lifecycles-compat "^3.0.4"
-    react-transition-group "^2.4.0"
-
 "@hig/rich-text@^0.1.4":
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@hig/rich-text/-/rich-text-0.1.4.tgz#f30d0c4ab7322dc02593493b34dfb64921a435c9"
@@ -198,16 +188,6 @@
 "@hig/styles@^0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.3.tgz#675631d008c1861921d6148ecf15b140c04cc5b4"
-
-"@hig/text-link@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@hig/text-link/-/text-link-0.2.0.tgz#1557d5ce502555205620280477b92c851b0ec3a2"
-  integrity sha512-JZWl+dJpKW8uVlloCYIsVd0gM/mHmXYHqTD0NCbHKQcirGxKuAfJQvls9A5lg8fsEfebywjRY6rQN/iWHISUzw==
-  dependencies:
-    "@hig/themes" "^0.3.0"
-    classnames "^2.2.5"
-    prop-types "^15.6.1"
-    react-lifecycles-compat "^3.0.4"
 
 "@hig/theme-context@^1.0.1":
   version "1.0.1"

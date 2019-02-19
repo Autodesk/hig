@@ -1,105 +1,75 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { css } from "emotion";
 import RichText from "@hig/rich-text";
-import {
-  UNMOUNTED,
-  EXITED,
-  ENTERING,
-  ENTERED,
-  EXITING
-} from "react-transition-group/Transition";
-import "@hig/rich-text/build/index.css";
+import ThemeContext from "@hig/theme-context";
 
-import { types, AVAILABLE_TYPES } from "../types";
 import DismissButtonPresenter from "./DismissButtonPresenter";
-import "./NotificationPresenter.scss";
-
-const modifiersByType = {
-  [types.ERROR]: "hig__notification-v1__content--error",
-  [types.PRIMARY]: "hig__notification-v1__content--primary",
-  [types.SUCCESS]: "hig__notification-v1__content--success",
-  [types.WARNING]: "hig__notification-v1__content--warning"
-};
-
-const modifiersByTransitionStatus = {
-  [EXITED]: "hig__notification-v1--exited",
-  [EXITING]: "hig__notification-v1--exiting"
-};
+import stylesheet from "./stylesheet";
 
 export default function NotificationPresenter(props) {
   const {
     children,
     dismissButtonTitle,
-    featured,
+    hasHover,
     height,
     image,
     innerRef,
     onDismissButtonClick,
+    onMouseEnter,
+    onMouseLeave,
     showDismissButton,
-    timestamp,
-    transitionStatus,
-    type,
-    unread
+    timestamp
   } = props;
 
-  const notificationClasses = cx(
-    "hig__notification-v1",
-    modifiersByTransitionStatus[transitionStatus]
-  );
-
-  const contentClasses = cx(
-    "hig__notification-v1__content",
-    modifiersByType[type],
-    {
-      "hig__notification-v1__content--featured": featured,
-      "hig__notification-v1__content--unread": unread
-    }
-  );
-
   return (
-    <div
-      className={notificationClasses}
-      ref={innerRef}
-      role="listitem"
-      style={{ height }}
-    >
-      <div className={contentClasses}>
-        {image ? (
-          <div className="hig__notification-v1__content-image">{image}</div>
-        ) : null}
-        <div className="hig__notification-v1__content-text">
-          <RichText size="small">{children}</RichText>
-          {timestamp}
-          {showDismissButton ? (
-            <DismissButtonPresenter
-              onClick={onDismissButtonClick}
-              title={dismissButtonTitle}
-            />
-          ) : null}
-        </div>
-      </div>
-    </div>
+    <ThemeContext.Consumer>
+      {({ resolvedRoles, metadata }) => {
+        const styles = stylesheet(resolvedRoles, props, metadata.colorSchemeId);
+        return (
+          <div
+            className={css(styles.notification)}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            ref={innerRef}
+            role="listitem"
+            style={{ height }}
+          >
+            <div className={css(styles.notificationContent)}>
+              {image ? (
+                <div className={css(styles.notificationContentImage)}>
+                  {image}
+                </div>
+              ) : null}
+              <div className={css(styles.notificationContentText)}>
+                <RichText size="small">{children}</RichText>
+                {timestamp}
+                {showDismissButton ? (
+                  <DismissButtonPresenter
+                    hasHover={hasHover}
+                    onClick={onDismissButtonClick}
+                    title={dismissButtonTitle}
+                  />
+                ) : null}
+              </div>
+            </div>
+          </div>
+        );
+      }}
+    </ThemeContext.Consumer>
   );
 }
 
 NotificationPresenter.propTypes = {
   children: PropTypes.node,
   dismissButtonTitle: PropTypes.string,
-  featured: PropTypes.bool,
+  hasHover: PropTypes.bool,
   height: PropTypes.string,
   image: PropTypes.node,
   innerRef: PropTypes.func,
   onDismissButtonClick: PropTypes.func,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func,
   showDismissButton: PropTypes.bool,
-  timestamp: PropTypes.node,
-  transitionStatus: PropTypes.oneOf([
-    UNMOUNTED,
-    EXITED,
-    ENTERING,
-    ENTERED,
-    EXITING
-  ]),
-  type: PropTypes.oneOf(AVAILABLE_TYPES),
-  unread: PropTypes.bool
+  timestamp: PropTypes.node
 };

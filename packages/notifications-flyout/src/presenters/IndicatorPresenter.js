@@ -1,29 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { css } from "emotion";
 import IconButton, { types } from "@hig/icon-button";
 import { Notification24 } from "@hig/icons";
+import ThemeContext from "@hig/theme-context";
 import "@hig/icon-button/build/index.css";
-import "@hig/styles/build/fonts.css";
 
-import "./IndicatorPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default function IndicatorPresenter(props) {
-  const { count, onClick, showCount, title } = props;
-  const countClasses = cx("hig__notifications-flyout__indicator__count", {
-    "hig__notifications-flyout__indicator__count--hide": !showCount
-  });
+  const { count, onClick, title } = props;
 
   return (
-    <div className="hig__notifications-flyout__indicator">
-      <IconButton
-        onClick={onClick}
-        icon={<Notification24 />}
-        title={title}
-        type={types.TRANSPARENT}
-      />
-      <div className={countClasses}>{count}</div>
-    </div>
+    <ThemeContext.Consumer>
+      {({ resolvedRoles }) => {
+        const styles = stylesheet(resolvedRoles, props);
+        return (
+          <div className={css(styles.indicator)}>
+            <IconButton
+              onClick={onClick}
+              icon={<Notification24 />}
+              title={title}
+              type={types.TRANSPARENT}
+            />
+            <div className={css(styles.indicatorCount)}>{count}</div>
+          </div>
+        );
+      }}
+    </ThemeContext.Consumer>
   );
 }
 
@@ -34,6 +38,5 @@ IndicatorPresenter.defaultProps = {
 IndicatorPresenter.propTypes = {
   count: PropTypes.number,
   onClick: PropTypes.func,
-  showCount: PropTypes.bool,
   title: PropTypes.string
 };
