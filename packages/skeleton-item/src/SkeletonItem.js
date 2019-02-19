@@ -1,4 +1,4 @@
-import { css, cx } from "emotion";
+import { css } from "emotion";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { ThemeContext } from "@hig/theme-context";
@@ -29,11 +29,7 @@ export default class SkeletonItem extends Component {
             },
             resolvedRoles
           );
-          const classNames = cx([
-            "hig__skeleton-itemV1",
-            css(styles.skeletonItem)
-          ]);
-          return <div className={classNames} />;
+          return <div className={css(styles.skeletonItem)} />;
         }}
       </ThemeContext.Consumer>
     );
