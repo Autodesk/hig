@@ -16,6 +16,7 @@
     "@hig/slider": "^1.0.0",
     "@hig/spacer": "^1.0.4",
     "@hig/styles": "^0.3.0",
+    "@hig/surface": "^1.0.0",
     "@hig/text-area": "^0.2.0",
     "@hig/text-link": "^1.0.0",
     "@hig/theme-context": "^2.1.0",
