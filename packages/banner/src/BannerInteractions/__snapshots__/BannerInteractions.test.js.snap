@@ -1,27 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[
-  `banner/BannerInteractions/BannerInteractions renders while wrapping actions 1`
-] = `
+exports[`banner/BannerInteractions/BannerInteractions renders while wrapping actions 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 <div
-  className="hig__banner__interactions hig__banner__interactions--wrap-actions"
+  className="emotion-0"
 />
 `;
 
-exports[
-  `banner/BannerInteractions/BannerInteractions renders with children 1`
-] = `
+exports[`banner/BannerInteractions/BannerInteractions renders with children 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <div
-  className="hig__banner__interactions"
+  className="emotion-0"
 >
   foo
 </div>
 `;
 
-exports[
-  `banner/BannerInteractions/BannerInteractions renders without props 1`
-] = `
+exports[`banner/BannerInteractions/BannerInteractions renders without props 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 <div
-  className="hig__banner__interactions"
+  className="emotion-0"
 />
 `;

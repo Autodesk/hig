@@ -1,8 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`banner/BannerAction/BannerAction renders with children 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 24px 4px 0;
+  border-right-width: 1px;
+  border-right-style: solid;
+  margin-left: 24px;
+}
+
+.emotion-0:first-of-type {
+  margin-left: 0;
+}
+
 <div
-  className="hig__banner__action"
+  className="emotion-0"
 >
   Hello
 </div>

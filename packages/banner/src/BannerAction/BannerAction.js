@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-
-import "./banner-action.scss";
+import { css } from "emotion";
+import ThemeContext from "@hig/theme-context";
+import stylesheet from "./stylesheet";
 
 /**
  * @typedef {Object} BannerActionProps
@@ -13,7 +14,13 @@ import "./banner-action.scss";
  * @returns {JSX.Element}
  */
 export default function BannerAction({ children }) {
-  return <div className="hig__banner__action">{children}</div>;
+  return (
+    <ThemeContext.Consumer>
+      {({ resolvedRoles }) => (
+        <div className={css(stylesheet({}, resolvedRoles))}>{children}</div>
+      )}
+    </ThemeContext.Consumer>
+  );
 }
 
 BannerAction.propTypes = {
