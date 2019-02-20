@@ -5,7 +5,6 @@ import ProfileFlyout, {
   anchorPoints,
   AVAILABLE_ANCHOR_POINTS
 } from "@hig/profile-flyout";
-import "@hig/profile-flyout/build/index.css";
 
 import { renderActionFlyoutPanel } from "./presenters/ActionFlyoutPanelPresenter";
 import ProfileActionPresenter from "./presenters/ProfileActionPresenter";

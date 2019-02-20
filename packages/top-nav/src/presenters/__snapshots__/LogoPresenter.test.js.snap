@@ -1,9 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`top-nav/presenters/LogoPresenter dangerously sets inner HTML 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 <div
   aria-label={undefined}
-  className="hig__top-nav__logo"
+  className="emotion-0"
   dangerouslySetInnerHTML={
     Object {
       "__html": "hi",
@@ -16,9 +26,19 @@ exports[`top-nav/presenters/LogoPresenter dangerously sets inner HTML 1`] = `
 `;
 
 exports[`top-nav/presenters/LogoPresenter renders as a link when a link is provided 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 <a
   aria-label={undefined}
-  className="hig__top-nav__logo"
+  className="emotion-0"
   dangerouslySetInnerHTML={undefined}
   href="https://autodesk.com"
   onClick={undefined}
@@ -27,9 +47,19 @@ exports[`top-nav/presenters/LogoPresenter renders as a link when a link is provi
 `;
 
 exports[`top-nav/presenters/LogoPresenter renders attributes for a11y 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 <div
   aria-label="a11y label"
-  className="hig__top-nav__logo"
+  className="emotion-0"
   dangerouslySetInnerHTML={undefined}
   href={undefined}
   onClick={undefined}
@@ -38,16 +68,46 @@ exports[`top-nav/presenters/LogoPresenter renders attributes for a11y 1`] = `
 `;
 
 exports[`top-nav/presenters/LogoPresenter renders children that are strings with semantic markup 1`] = `
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.285714286;
+  margin: 0;
+  text-align: initial;
+}
+
 <div
   aria-label={undefined}
-  className="hig__top-nav__logo"
+  className="emotion-1"
   dangerouslySetInnerHTML={undefined}
   href={undefined}
   onClick={undefined}
   title={undefined}
 >
   <h1
-    className="hig__top-nav__logo-text"
+    className="emotion-0"
+    style={
+      Object {
+        "display": "inline-block",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "lineHeight": "16px",
+        "margin": 0,
+      }
+    }
   >
     Autodesk HIG
   </h1>
@@ -55,9 +115,19 @@ exports[`top-nav/presenters/LogoPresenter renders children that are strings with
 `;
 
 exports[`top-nav/presenters/LogoPresenter renders with child components 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 <div
   aria-label={undefined}
-  className="hig__top-nav__logo"
+  className="emotion-0"
   dangerouslySetInnerHTML={undefined}
   href={undefined}
   onClick={undefined}
@@ -70,9 +140,19 @@ exports[`top-nav/presenters/LogoPresenter renders with child components 1`] = `
 `;
 
 exports[`top-nav/presenters/LogoPresenter renders without props 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 <div
   aria-label={undefined}
-  className="hig__top-nav__logo"
+  className="emotion-0"
   dangerouslySetInnerHTML={undefined}
   href={undefined}
   onClick={undefined}
