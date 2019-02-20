@@ -1,8 +1,9 @@
 import React from "react";
-import cx from "classnames";
 import PropTypes from "prop-types";
-
-import "./TabPresenter.scss";
+import Typography from "@hig/typography";
+import "@hig/fonts/build/ArtifaktElement.css";
+import { css } from "emotion";
+import stylesheet from "./TabPresenter.stylesheet";
 
 /**
  * @typedef {Object} TabPresenterProps
@@ -17,20 +18,20 @@ import "./TabPresenter.scss";
  * @returns {JSX.Element}
  */
 export default function TabPresenter({ active, label, onClick, onKeyDown }) {
-  const classes = cx("hig__tabs__tab", {
-    "hig__tabs__tab--active": active
-  });
+  const styles = stylesheet({ active });
 
   return (
-    <li className={classes}>
+    <li className={css(styles.tab)}>
       <span
-        className="hig__tabs__tab-label"
+        className={css(styles.tabLabel)}
         onClick={onClick}
         onKeyDown={onKeyDown}
         role="button"
         tabIndex="0"
       >
-        {label}
+        <Typography fontWeight="bold" style={styles.tabLabelText}>
+          {label}
+        </Typography>
       </span>
     </li>
   );

@@ -1,34 +1,165 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tabs/Tabs renders tabs 1`] = `
+.emotion-6 {
+  font-family: ArtifaktElement;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 16px;
+  padding: 4px 0 8px 0;
+  margin: 0;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 12px;
+  margin: 0;
+  border-top: 2px solid transparent;
+  cursor: pointer;
+  color: rgba(0,0,0,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 700;
+  text-align: center;
+}
+
+.emotion-2:before {
+  position: absolute;
+  content: '';
+  top: 6px;
+  bottom: 8px;
+  left: 0;
+  border-left: 1px solid rgba(212,219,225,1);
+}
+
+.emotion-2:first-of-type {
+  padding-left: 0;
+}
+
+.emotion-2:first-of-type:before {
+  border: none;
+}
+
+.emotion-2:last-child {
+  padding-right: 0;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+}
+
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  border-bottom-color: rgba(6,150,215,1);
+  padding: 4px 0;
+}
+
 <div>
   <ul
-    className="hig__tabs hig__tabs--align-right"
+    className="emotion-6"
   >
     <li
-      className="hig__tabs__tab"
+      className="emotion-2"
     >
       <span
-        className="hig__tabs__tab-label"
+        className="emotion-1"
         onClick={[Function]}
         onKeyDown={[Function]}
         role="button"
         tabIndex="0"
       >
-        foo
+        <p
+          className="emotion-0"
+          style={
+            Object {
+              "fontSize": "16px",
+            }
+          }
+        >
+          foo
+        </p>
       </span>
     </li>
     <li
-      className="hig__tabs__tab hig__tabs__tab--active"
+      className="emotion-2"
     >
       <span
-        className="hig__tabs__tab-label"
+        className="emotion-4"
         onClick={[Function]}
         onKeyDown={[Function]}
         role="button"
         tabIndex="0"
       >
-        hello
+        <p
+          className="emotion-0"
+          style={
+            Object {
+              "color": "rgba(6, 150, 215, 1)",
+              "fontSize": "16px",
+            }
+          }
+        >
+          hello
+        </p>
       </span>
     </li>
     <button />

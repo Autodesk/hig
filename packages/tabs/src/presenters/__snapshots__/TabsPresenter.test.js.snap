@@ -1,27 +1,107 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tabs/TabsPresenter renders aligned left 1`] = `
+.emotion-0 {
+  font-family: ArtifaktElement;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 16px;
+  padding: 4px 0 8px 0;
+  margin: 0;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
 <ul
-  className="hig__tabs hig__tabs--align-left"
+  className="emotion-0"
 />
 `;
 
 exports[`tabs/TabsPresenter renders aligned right 1`] = `
+.emotion-0 {
+  font-family: ArtifaktElement;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 16px;
+  padding: 4px 0 8px 0;
+  margin: 0;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
 <ul
-  className="hig__tabs hig__tabs--align-right"
+  className="emotion-0"
 />
 `;
 
 exports[`tabs/TabsPresenter renders with all props 1`] = `
+.emotion-0 {
+  font-family: ArtifaktElement;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 16px;
+  padding: 4px 0 8px 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 <ul
-  className="hig__tabs hig__tabs--align-center"
+  className="emotion-0"
 >
   Hello World
 </ul>
 `;
 
 exports[`tabs/TabsPresenter renders without props 1`] = `
+.emotion-0 {
+  font-family: ArtifaktElement;
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 16px;
+  padding: 4px 0 8px 0;
+  margin: 0;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 <ul
-  className="hig__tabs hig__tabs--align-center"
+  className="emotion-0"
 />
 `;

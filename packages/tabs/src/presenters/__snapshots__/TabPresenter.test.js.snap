@@ -1,31 +1,200 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tabs/TabPresenter renders with all props 1`] = `
+.emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 12px;
+  margin: 0;
+  border-top: 2px solid transparent;
+  cursor: pointer;
+  color: rgba(0,0,0,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 700;
+  text-align: center;
+}
+
+.emotion-2:before {
+  position: absolute;
+  content: '';
+  top: 6px;
+  bottom: 8px;
+  left: 0;
+  border-left: 1px solid rgba(212,219,225,1);
+}
+
+.emotion-2:first-of-type {
+  padding-left: 0;
+}
+
+.emotion-2:first-of-type:before {
+  border: none;
+}
+
+.emotion-2:last-child {
+  padding-right: 0;
+}
+
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  border-bottom-color: rgba(6,150,215,1);
+  padding: 4px 0;
+}
+
 <li
-  className="hig__tabs__tab hig__tabs__tab--active"
+  className="emotion-2"
 >
   <span
-    className="hig__tabs__tab-label"
+    className="emotion-1"
     onClick={[Function]}
     onKeyDown={[Function]}
     role="button"
     tabIndex="0"
   >
-    Hello World
+    <p
+      className="emotion-0"
+      style={
+        Object {
+          "color": "rgba(6, 150, 215, 1)",
+          "fontSize": "16px",
+        }
+      }
+    >
+      Hello World
+    </p>
   </span>
 </li>
 `;
 
 exports[`tabs/TabPresenter renders without props 1`] = `
+.emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 12px;
+  margin: 0;
+  border-top: 2px solid transparent;
+  cursor: pointer;
+  color: rgba(0,0,0,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-weight: 700;
+  text-align: center;
+}
+
+.emotion-2:before {
+  position: absolute;
+  content: '';
+  top: 6px;
+  bottom: 8px;
+  left: 0;
+  border-left: 1px solid rgba(212,219,225,1);
+}
+
+.emotion-2:first-of-type {
+  padding-left: 0;
+}
+
+.emotion-2:first-of-type:before {
+  border: none;
+}
+
+.emotion-2:last-child {
+  padding-right: 0;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+}
+
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
 <li
-  className="hig__tabs__tab"
+  className="emotion-2"
 >
   <span
-    className="hig__tabs__tab-label"
+    className="emotion-1"
     onClick={undefined}
     onKeyDown={undefined}
     role="button"
     tabIndex="0"
-  />
+  >
+    <p
+      className="emotion-0"
+      style={
+        Object {
+          "fontSize": "16px",
+        }
+      }
+    />
+  </span>
 </li>
 `;
