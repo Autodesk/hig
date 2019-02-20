@@ -13,6 +13,7 @@ import formField from "./components/formField";
 import input from "./components/input";
 import label from "./components/label";
 import menu from "./components/menu";
+import modal from "./components/modal";
 import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
 import skeletonItem from "./components/skeletonItem";
@@ -47,6 +48,7 @@ const baseThemeConfig = extendTheme(
     input,
     label,
     menu,
+    modal,
     progressBar,
     progressRing,
     skeletonItem,

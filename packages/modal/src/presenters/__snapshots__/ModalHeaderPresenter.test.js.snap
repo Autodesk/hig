@@ -1,51 +1,72 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`checkbox/presenters/ModalHeaderPresenter  1`] = `
+exports[`modal/presenters/ModalHeaderPresenter  1`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-1 {
+  fill: #808080;
+}
+
+.emotion-1 > * {
+  fill: #808080;
+}
+
 <header
-  className="hig__modal-V1__header"
+  className="emotion-2"
   id={undefined}
 >
-  <button
-    className="hig__icon-button hig__icon-button--primary"
-    onBlur={undefined}
-    onClick={undefined}
-    onFocus={undefined}
-    onMouseEnter={undefined}
-    onMouseLeave={undefined}
-    title="Close"
+  <div
+    className="emotion-2"
   >
-    <svg
-      className="hig__icon-button__icon"
-      height="19"
-      viewBox="0 0 19 19"
-      width="19"
-      xmlns="http://www.w3.org/2000/svg"
+    <p
+      className="emotion-0"
+      style={
+        Object {
+          "fontSize": undefined,
+          "lineHeight": undefined,
+        }
+      }
+    />
+    <button
+      className="hig__icon-button hig__icon-button--primary"
+      onBlur={undefined}
+      onClick={undefined}
+      onFocus={undefined}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      title="Close"
     >
-      <title>
-        x-close-gray
-      </title>
-      <g
-        fill="#949DA2"
-        fillRule="evenodd"
+      <svg
+        className="emotion-1 hig__icon-button__icon"
+        height="16px"
+        viewBox="0 0 16 16"
+        width="16px"
+        xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          hig-icons/common/16/close-16
+        </title>
         <path
-          d="M1.414 0l16.97 16.97-1.413 1.414L0 1.414z"
+          d="M8 6.08l5.3-5.3 1.414 1.414-5.3 5.3L14.72 12.8l-1.414 1.414L8 8.908l-5.307 5.307-1.414-1.414 5.307-5.307-5.301-5.3L2.699.778 8 6.079z"
         />
-        <path
-          d="M18.385 1.414l-16.97 16.97L0 16.972 16.97 0z"
-        />
-      </g>
-    </svg>
-  </button>
-  <span
-    className="hig__modal-V1__header-title"
-  />
+      </svg>
+    </button>
+  </div>
 </header>
 `;
 
-exports[`checkbox/presenters/ModalHeaderPresenter  2`] = `
+exports[`modal/presenters/ModalHeaderPresenter  2`] = `
 <header
-  className="hig__modal-V1__header"
+  className="emotion-0"
   id={undefined}
 >
   <p>
@@ -54,47 +75,68 @@ exports[`checkbox/presenters/ModalHeaderPresenter  2`] = `
 </header>
 `;
 
-exports[`checkbox/presenters/ModalHeaderPresenter  3`] = `
+exports[`modal/presenters/ModalHeaderPresenter  3`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-1 {
+  fill: #808080;
+}
+
+.emotion-1 > * {
+  fill: #808080;
+}
+
 <header
-  className="hig__modal-V1__header"
+  className="emotion-2"
   id={undefined}
 >
-  <button
-    className="hig__icon-button hig__icon-button--primary"
-    onBlur={undefined}
-    onClick={[Function]}
-    onFocus={undefined}
-    onMouseEnter={undefined}
-    onMouseLeave={undefined}
-    title="Close"
+  <div
+    className="emotion-2"
   >
-    <svg
-      className="hig__icon-button__icon"
-      height="19"
-      viewBox="0 0 19 19"
-      width="19"
-      xmlns="http://www.w3.org/2000/svg"
+    <p
+      className="emotion-0"
+      style={
+        Object {
+          "fontSize": undefined,
+          "lineHeight": undefined,
+        }
+      }
     >
-      <title>
-        x-close-gray
-      </title>
-      <g
-        fill="#949DA2"
-        fillRule="evenodd"
+      HELLO
+    </p>
+    <button
+      className="hig__icon-button hig__icon-button--primary"
+      onBlur={undefined}
+      onClick={[Function]}
+      onFocus={undefined}
+      onMouseEnter={undefined}
+      onMouseLeave={undefined}
+      title="Close"
+    >
+      <svg
+        className="emotion-1 hig__icon-button__icon"
+        height="16px"
+        viewBox="0 0 16 16"
+        width="16px"
+        xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          hig-icons/common/16/close-16
+        </title>
         <path
-          d="M1.414 0l16.97 16.97-1.413 1.414L0 1.414z"
+          d="M8 6.08l5.3-5.3 1.414 1.414-5.3 5.3L14.72 12.8l-1.414 1.414L8 8.908l-5.307 5.307-1.414-1.414 5.307-5.307-5.301-5.3L2.699.778 8 6.079z"
         />
-        <path
-          d="M18.385 1.414l-16.97 16.97L0 16.972 16.97 0z"
-        />
-      </g>
-    </svg>
-  </button>
-  <span
-    className="hig__modal-V1__header-title"
-  >
-    HELLO
-  </span>
+      </svg>
+    </button>
+  </div>
 </header>
 `;

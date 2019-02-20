@@ -32,6 +32,10 @@ export default class Modal extends Component {
      */
     open: PropTypes.bool,
     /**
+     * Enables modification of Modal Styles
+     */
+    stylesheet: PropTypes.func,
+    /**
      * Title of the modal
      */
     title: PropTypes.string,
@@ -49,6 +53,7 @@ export default class Modal extends Component {
       onCloseClick,
       onOverlayClick,
       open,
+      stylesheet,
       title,
       type
     } = this.props;
@@ -67,6 +72,7 @@ export default class Modal extends Component {
             onOverlayClick={handleOverlayClick}
             onWindowClick={handleWindowClick}
             open={open}
+            stylesheet={stylesheet}
             title={title}
             type={type}
           >

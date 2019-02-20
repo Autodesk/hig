@@ -1032,6 +1032,18 @@
     "@hig/theme-context" "^2.0.0"
     prop-types "^15.6.1"
 
+"@hig/modal@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@hig/modal/-/modal-1.0.2.tgz#8527f90a2889a25ce0347de23f47b1d08c942759"
+  integrity sha512-5xncU+fFw/IfiWgzMpbEV8VVlyhvv5dS5OSxrOHB3erS1qHy8dPlMYNxH3nUXw7j7ojhl4gqrg6IvwPXduVtLw==
+  dependencies:
+    "@hig/icon-button" "^1.0.1"
+    "@hig/icons" "^1.0.0"
+    "@hig/utils" "^0.3.0"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
+
 "@hig/multi-downshift@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@hig/multi-downshift/-/multi-downshift-0.1.1.tgz#831f57da40ddfca46291b4d72f7aa8621431b058"
@@ -6299,6 +6311,11 @@ lodash.memoize@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/lodash.memoize/-/lodash.memoize-4.1.2.tgz#bcc6c49a42a2840ed997f323eada5ecd182e0bfe"
   integrity sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=
+
+lodash.merge@^4.4.0:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
+  integrity sha512-AOYza4+Hf5z1/0Hztxpm2/xiPZgi/cjMqdnKTUWTBSKchJlxXXuUSxCCl8rJlf4g6yww/j6mA8nC8Hw/EZWxKQ==
 
 lodash.sortby@^4.7.0:
   version "4.7.0"

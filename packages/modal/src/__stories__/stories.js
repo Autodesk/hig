@@ -1,4 +1,6 @@
 import React from "react";
+import Typography from "@hig/typography";
+import "@hig/fonts/build/ArtifaktElement.css";
 
 export default [
   {
@@ -6,12 +8,12 @@ export default [
     getProps: () => ({
       title: "Default Modal",
       open: true,
-      style: "standard",
+      type: "standard",
       children: [
-        <p key="p">
+        <Typography>
           Curabitur id auctor leo, ut posuere felis. Aliquam erat volutpat.
           Nullam id lorem in metus fermentum aliquam.
-        </p>
+        </Typography>
       ]
     })
   },
@@ -20,9 +22,9 @@ export default [
     getProps: () => ({
       title: "Scrolling Demo",
       open: true,
-      style: "alternate",
+      type: "alternate",
       children: [
-        <p key="p">
+        <Typography>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
           mattis neque. Proin ipsum ex, hendrerit ac egestas at, consectetur nec
           lorem. Donec finibus eu est in pretium. Praesent id sollicitudin
@@ -67,7 +69,7 @@ export default [
           rutrum ligula, vel imperdiet est urna in tellus. Curabitur id auctor
           leo, ut posuere felis. Aliquam erat volutpat. Nullam id lorem in metus
           fermentum aliquam.
-        </p>
+        </Typography>
       ]
     })
   },
@@ -76,16 +78,16 @@ export default [
     getProps: () => ({
       headerChildren: [<p key="p1">HI</p>],
       open: true,
-      style: "alternate",
+      type: "alternate",
       children: [
-        <p key="p2">
+        <Typography>
           Etiam ac diam vel ex imperdiet blandit. Cras enim leo, consectetur ut
           turpis ac, ultricies suscipit neque. Duis sit amet feugiat quam.
           Nullam mi eros, tempus id interdum rutrum, gravida nec urna. Integer
           volutpat, velit et vulputate blandit, libero turpis rutrum ligula, vel
           imperdiet est urna in tellus. Curabitur id auctor leo, ut posuere
           felis.
-        </p>
+        </Typography>
       ]
     })
   }
