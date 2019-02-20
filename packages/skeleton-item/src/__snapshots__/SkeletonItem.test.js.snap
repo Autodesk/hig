@@ -22,7 +22,7 @@ exports[`skeleton-item/SkeletonItem snapshot tests  1`] = `
 }
 
 <div
-  className="hig__skeleton-itemV1 emotion-0"
+  className="emotion-0"
 />
 `;
 
@@ -50,6 +50,6 @@ exports[`skeleton-item/SkeletonItem snapshot tests  2`] = `
 }
 
 <div
-  className="hig__skeleton-itemV1 emotion-0"
+  className="emotion-0"
 />
 `;
