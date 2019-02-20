@@ -19,9 +19,10 @@ import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
+import tabs from "./components/tabs";
 import textarea from "./components/textarea";
-import tooltip from "./components/tooltip";
 import textLink from "./components/textLink";
+import tooltip from "./components/tooltip";
 import typography from "./components/typography";
 
 const baseThemeConfig = extendTheme(
@@ -55,9 +56,10 @@ const baseThemeConfig = extendTheme(
     progressRing,
     skeletonItem,
     slider,
+    tabs,
     textarea,
-    tooltip,
     textLink,
+    tooltip,
     typography
   )
 );
