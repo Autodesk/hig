@@ -48,7 +48,7 @@ export default class NotificationsToast extends Component {
     const iconFill =
       status === "primary"
         ? themeData["basics.colors.autodeskBlue500"]
-        : themeData[`basics.colors.${status}`];
+        : themeData[`colorScheme.${status}Color`];
     if (image) {
       return <div className={css(styles.toastImageContainer)}>{image}</div>;
     }

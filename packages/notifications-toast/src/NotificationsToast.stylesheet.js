@@ -1,11 +1,11 @@
 function getRulesByStatus(themeData, status) {
   switch (status) {
     case "error":
-      return { borderLeftColor: themeData["basics.colors.error"] };
+      return { borderLeftColor: themeData["colorScheme.errorColor"] };
     case "warning":
-      return { borderLeftColor: themeData["basics.colors.warning"] };
+      return { borderLeftColor: themeData["colorScheme.warningColor"] };
     case "success":
-      return { borderLeftColor: themeData["basics.colors.success"] };
+      return { borderLeftColor: themeData["colorScheme.successColor"] };
     default:
       return { borderLeftColor: themeData["basics.colors.autodeskBlue500"] };
   }
