@@ -1,17 +1,14 @@
-export default function stylesheet({ active }) {
+export default function stylesheet({ active }, themeData) {
   return {
     tab: {
       position: "relative",
       display: "flex",
       alignContent: "center",
       justifyContent: "center",
-      padding: "0 12px",
+      padding: `0 ${themeData["density.spacings.small"]}`,
       margin: 0,
-      borderTop: "2px solid transparent",
       cursor: "pointer",
-      color: "rgba(0, 0, 0, 1)",
       userSelect: "none",
-      fontWeight: 700,
       textAlign: "center",
 
       "&:before": {
@@ -20,7 +17,7 @@ export default function stylesheet({ active }) {
         top: "6px",
         bottom: "8px",
         left: 0,
-        borderLeft: "1px solid rgba(212, 219, 225, 1)"
+        borderLeft: "1px solid rgba(212, 219, 225, 1)" // hig-cool-gray-20
       },
 
       "&:first-of-type": {
@@ -39,18 +36,21 @@ export default function stylesheet({ active }) {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      borderBottom: "2px solid transparent",
+      borderBottom: `${
+        themeData["tabs.general.borderBottomWidth"]
+      } solid transparent`,
 
       ...(active && {
-        borderBottomColor: "rgba(6, 150, 215, 1)",
-        padding: "4px 0"
+        borderBottomColor:
+          themeData["tabs.general.tab.selected.borderBottomColor"],
+        padding: `${themeData["tabs.general.gutter"]} 0`
       })
     },
     tabLabelText: {
-      fontSize: "16px",
+      fontSize: themeData["tabs.general.tab.fontSize"],
 
       ...(active && {
-        color: "rgba(6, 150, 215, 1)"
+        color: themeData["tabs.general.tab.selected.borderBottomColor"]
       })
     }
   };

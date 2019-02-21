@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Typography from "@hig/typography";
+import ThemeContext from "@hig/theme-context";
 import "@hig/fonts/build/ArtifaktElement.css";
 import { css } from "emotion";
 import stylesheet from "./TabPresenter.stylesheet";
@@ -18,22 +19,28 @@ import stylesheet from "./TabPresenter.stylesheet";
  * @returns {JSX.Element}
  */
 export default function TabPresenter({ active, label, onClick, onKeyDown }) {
-  const styles = stylesheet({ active });
-
   return (
-    <li className={css(styles.tab)}>
-      <span
-        className={css(styles.tabLabel)}
-        onClick={onClick}
-        onKeyDown={onKeyDown}
-        role="button"
-        tabIndex="0"
-      >
-        <Typography fontWeight="bold" style={styles.tabLabelText}>
-          {label}
-        </Typography>
-      </span>
-    </li>
+    <ThemeContext.Consumer>
+      {({ resolvedRoles }) => {
+        const styles = stylesheet({ active }, resolvedRoles);
+
+        return (
+          <li className={css(styles.tab)}>
+            <span
+              className={css(styles.tabLabel)}
+              onClick={onClick}
+              onKeyDown={onKeyDown}
+              role="button"
+              tabIndex="0"
+            >
+              <Typography fontWeight="bold" style={styles.tabLabelText}>
+                {label}
+              </Typography>
+            </span>
+          </li>
+        );
+      }}
+    </ThemeContext.Consumer>
   );
 }
 

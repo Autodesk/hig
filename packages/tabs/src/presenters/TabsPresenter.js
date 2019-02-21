@@ -1,13 +1,20 @@
 import React from "react";
 import { css } from "emotion";
 import PropTypes from "prop-types";
+import ThemeContext from "@hig/theme-context";
 import stylesheet from "./TabsPresenter.stylesheet";
 import { alignments, AVAILABLE_ALIGNMENTS } from "../alignments";
 
 export default function TabsPresenter({ align, children }) {
-  const styles = stylesheet({ align });
+  return (
+    <ThemeContext.Consumer>
+      {({ resolvedRoles }) => {
+        const styles = stylesheet({ align }, resolvedRoles);
 
-  return <ul className={css(styles.tabs)}>{children}</ul>;
+        return <ul className={css(styles.tabs)}>{children}</ul>;
+      }}
+    </ThemeContext.Consumer>
+  );
 }
 
 TabsPresenter.propTypes = {

@@ -2,7 +2,6 @@
 
 exports[`tabs/Tabs renders tabs 1`] = `
 .emotion-6 {
-  font-family: ArtifaktElement;
   box-sizing: border-box;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -12,7 +11,6 @@ exports[`tabs/Tabs renders tabs 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  line-height: 16px;
   padding: 4px 0 8px 0;
   margin: 0;
   -webkit-box-pack: end;
@@ -36,14 +34,11 @@ exports[`tabs/Tabs renders tabs 1`] = `
   justify-content: center;
   padding: 0 12px;
   margin: 0;
-  border-top: 2px solid transparent;
   cursor: pointer;
-  color: rgba(0,0,0,1);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-weight: 700;
   text-align: center;
 }
 
@@ -109,8 +104,8 @@ exports[`tabs/Tabs renders tabs 1`] = `
   -ms-flex-align: center;
   align-items: center;
   border-bottom: 2px solid transparent;
-  border-bottom-color: rgba(6,150,215,1);
-  padding: 4px 0;
+  border-bottom-color: #0696d7;
+  padding: 8px 0;
 }
 
 <div>
@@ -131,7 +126,7 @@ exports[`tabs/Tabs renders tabs 1`] = `
           className="emotion-0"
           style={
             Object {
-              "fontSize": "16px",
+              "fontSize": "14px",
             }
           }
         >
@@ -153,8 +148,8 @@ exports[`tabs/Tabs renders tabs 1`] = `
           className="emotion-0"
           style={
             Object {
-              "color": "rgba(6, 150, 215, 1)",
-              "fontSize": "16px",
+              "color": "#0696d7",
+              "fontSize": "14px",
             }
           }
         >
