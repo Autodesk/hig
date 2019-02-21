@@ -22,21 +22,19 @@ export default function TabPresenter({ active, label, onClick, onKeyDown }) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
-        const styles = stylesheet({ active }, resolvedRoles);
+        const styles = stylesheet({ active, label }, resolvedRoles);
 
         return (
           <li className={css(styles.tab)}>
-            <span
+            <div
               className={css(styles.tabLabel)}
               onClick={onClick}
               onKeyDown={onKeyDown}
               role="button"
               tabIndex="0"
             >
-              <Typography fontWeight="bold" style={styles.tabLabelText}>
-                {label}
-              </Typography>
-            </span>
+              <Typography style={styles.tabLabelText}>{label}</Typography>
+            </div>
           </li>
         );
       }}

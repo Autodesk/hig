@@ -1,6 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tabs/TabPresenter renders with all props 1`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
 .emotion-2 {
   position: relative;
   display: -webkit-box;
@@ -22,38 +33,33 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
   -ms-user-select: none;
   user-select: none;
   text-align: center;
-}
-
-.emotion-2:before {
-  position: absolute;
-  content: '';
-  top: 6px;
-  bottom: 8px;
-  left: 0;
-  border-left: 1px solid rgba(212,219,225,1);
+  border-bottom: 1px solid rgba(128,128,128,0.1);
 }
 
 .emotion-2:first-of-type {
   padding-left: 0;
 }
 
-.emotion-2:first-of-type:before {
-  border: none;
-}
-
-.emotion-2:last-child {
+.emotion-2:last-of-type {
   padding-right: 0;
 }
 
-.emotion-0 {
-  color: #3c3c3c;
-  display: block;
-  font-family: ArtifaktElement,sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1.428571429;
-  margin: 0;
-  text-align: initial;
+.emotion-2:before {
+  position: absolute;
+  content: '';
+  bottom: -1px;
+  left: 12px;
+  width: calc(100% - (2 * 12px));
+  border-bottom: 2px solid #0696d7;
+}
+
+.emotion-2:first-of-type:before {
+  left: 0;
+  width: calc(100% - 12px);
+}
+
+.emotion-2:last-of-type:before {
+  width: calc(100% - 12px);
 }
 
 .emotion-1 {
@@ -61,6 +67,9 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -69,15 +78,29 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 2px solid transparent;
-  border-bottom-color: #0696d7;
   padding: 8px 0;
+}
+
+.emotion-1:focus {
+  outline: none;
+}
+
+.emotion-1:before {
+  display: block;
+  content: "Hello World";
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  height: 0;
+  color: transparent;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 <li
   className="emotion-2"
 >
-  <span
+  <div
     className="emotion-1"
     onClick={[Function]}
     onKeyDown={[Function]}
@@ -88,14 +111,14 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
       className="emotion-0"
       style={
         Object {
-          "color": "#0696d7",
-          "fontSize": "14px",
+          "fontSize": "20px",
+          "fontWeight": 700,
         }
       }
     >
       Hello World
     </p>
-  </span>
+  </div>
 </li>
 `;
 
@@ -121,26 +144,14 @@ exports[`tabs/TabPresenter renders without props 1`] = `
   -ms-user-select: none;
   user-select: none;
   text-align: center;
-}
-
-.emotion-2:before {
-  position: absolute;
-  content: '';
-  top: 6px;
-  bottom: 8px;
-  left: 0;
-  border-left: 1px solid rgba(212,219,225,1);
+  border-bottom: 1px solid rgba(128,128,128,0.1);
 }
 
 .emotion-2:first-of-type {
   padding-left: 0;
 }
 
-.emotion-2:first-of-type:before {
-  border: none;
-}
-
-.emotion-2:last-child {
+.emotion-2:last-of-type {
   padding-right: 0;
 }
 
@@ -149,6 +160,9 @@ exports[`tabs/TabPresenter renders without props 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -157,7 +171,11 @@ exports[`tabs/TabPresenter renders without props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border-bottom: 2px solid transparent;
+  padding: 8px 0;
+}
+
+.emotion-1:focus {
+  outline: none;
 }
 
 .emotion-0 {
@@ -165,7 +183,7 @@ exports[`tabs/TabPresenter renders without props 1`] = `
   display: block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 400;
   line-height: 1.428571429;
   margin: 0;
   text-align: initial;
@@ -174,7 +192,7 @@ exports[`tabs/TabPresenter renders without props 1`] = `
 <li
   className="emotion-2"
 >
-  <span
+  <div
     className="emotion-1"
     onClick={undefined}
     onKeyDown={undefined}
@@ -185,10 +203,10 @@ exports[`tabs/TabPresenter renders without props 1`] = `
       className="emotion-0"
       style={
         Object {
-          "fontSize": "14px",
+          "fontSize": "20px",
         }
       }
     />
-  </span>
+  </div>
 </li>
 `;
