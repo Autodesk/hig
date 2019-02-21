@@ -8,7 +8,7 @@ import Label from "../index";
 import infoOptions from "./infoOptions";
 import withThemeProvider from "./withThemeProvider";
 
-const storybook = storiesOf("Theming|Themable Label", module);
+const storybook = storiesOf("Forms|Label", module);
 
 storybook.add(
   "default",
