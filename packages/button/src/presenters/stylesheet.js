@@ -77,7 +77,7 @@ function getButtonRulesByType(type, themeData) {
 
 function getButtonRulesByDisabled(type, themeData) {
   return {
-    opacity: themeData["button.disabled.opacity"],
+    opacity: themeData["component.disabled.opacity"],
     cursor: "default"
   };
 }

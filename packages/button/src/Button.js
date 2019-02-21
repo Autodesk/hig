@@ -97,7 +97,8 @@ export default class Button extends Component {
       target,
       title,
       type,
-      width
+      width,
+      ...otherProps
     } = this.props;
 
     return (
@@ -139,6 +140,7 @@ export default class Button extends Component {
             title={title}
             type={type}
             width={width}
+            {...otherProps}
           />
         )}
       </ControlBehavior>
