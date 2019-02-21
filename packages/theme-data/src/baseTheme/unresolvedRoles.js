@@ -4,6 +4,7 @@ import basics from "../basics";
 import system from "./system";
 
 import avatar from "./components/avatar";
+import banner from "./components/banner";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
 import component from "./components/component";
@@ -39,6 +40,7 @@ const baseThemeConfig = extendTheme(
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     mapKeys(system.density, key => `density.${key}`),
     avatar,
+    banner,
     button,
     checkbox,
     component,
