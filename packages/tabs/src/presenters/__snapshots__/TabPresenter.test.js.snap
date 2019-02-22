@@ -50,7 +50,9 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
   bottom: -1px;
   left: 12px;
   width: calc(100% - (2 * 12px));
-  border-bottom: 2px solid #0696d7;
+  border-bottom-color: #0696d7;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
 }
 
 .emotion-2:first-of-type:before {
@@ -59,6 +61,23 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
 }
 
 .emotion-2:last-of-type:before {
+  width: calc(100% - 12px);
+}
+
+.emotion-2:after {
+  position: absolute;
+  content: '';
+  bottom: -4px;
+  left: 12px;
+  width: calc(100% - (2 * 12px));
+}
+
+.emotion-2:first-of-type:after {
+  left: 0;
+  width: calc(100% - 12px);
+}
+
+.emotion-2:last-of-type:after {
   width: calc(100% - 12px);
 }
 
@@ -102,8 +121,12 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
 >
   <div
     className="emotion-1"
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     role="button"
     tabIndex="0"
   >
@@ -155,6 +178,43 @@ exports[`tabs/TabPresenter renders without props 1`] = `
   padding-right: 0;
 }
 
+.emotion-2:before {
+  position: absolute;
+  content: '';
+  bottom: -1px;
+  left: 12px;
+  width: calc(100% - (2 * 12px));
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 0;
+}
+
+.emotion-2:first-of-type:before {
+  left: 0;
+  width: calc(100% - 12px);
+}
+
+.emotion-2:last-of-type:before {
+  width: calc(100% - 12px);
+}
+
+.emotion-2:after {
+  position: absolute;
+  content: '';
+  bottom: -4px;
+  left: 12px;
+  width: calc(100% - (2 * 12px));
+}
+
+.emotion-2:first-of-type:after {
+  left: 0;
+  width: calc(100% - 12px);
+}
+
+.emotion-2:last-of-type:after {
+  width: calc(100% - 12px);
+}
+
 .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -194,8 +254,12 @@ exports[`tabs/TabPresenter renders without props 1`] = `
 >
   <div
     className="emotion-1"
+    onBlur={undefined}
     onClick={undefined}
+    onFocus={undefined}
     onKeyDown={undefined}
+    onMouseEnter={undefined}
+    onMouseLeave={undefined}
     role="button"
     tabIndex="0"
   >

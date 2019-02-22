@@ -18,20 +18,38 @@ import stylesheet from "./TabPresenter.stylesheet";
  * @param {TabPresenterProps} props
  * @returns {JSX.Element}
  */
-export default function TabPresenter({ active, label, onClick, onKeyDown }) {
+export default function TabPresenter({
+  active,
+  hasFocus,
+  hasHover,
+  label,
+  onBlur,
+  onFocus,
+  onClick,
+  onKeyDown,
+  onMouseEnter,
+  onMouseLeave
+}) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
-        const styles = stylesheet({ active, label }, resolvedRoles);
+        const styles = stylesheet(
+          { active, hasFocus, hasHover, label },
+          resolvedRoles
+        );
 
         return (
           <li className={css(styles.tab)}>
             <div
-              className={css(styles.tabLabel)}
+              onBlur={onBlur}
+              onFocus={onFocus}
               onClick={onClick}
               onKeyDown={onKeyDown}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
               role="button"
               tabIndex="0"
+              className={css(styles.tabLabel)}
             >
               <Typography style={styles.tabLabelText}>{label}</Typography>
             </div>
@@ -45,6 +63,12 @@ export default function TabPresenter({ active, label, onClick, onKeyDown }) {
 TabPresenter.propTypes = {
   active: PropTypes.bool,
   label: PropTypes.string,
+  hasFocus: PropTypes.bool,
+  hasHover: PropTypes.bool,
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
   onClick: PropTypes.func,
-  onKeyDown: PropTypes.func
+  onKeyDown: PropTypes.func,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func
 };

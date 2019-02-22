@@ -9,6 +9,10 @@ describe("TabPresenter/stylesheet", () => {
     "tabs.general.tab.fontFamily": "CurlzMT",
     "tabs.general.tab.fontSize": "4px",
     "tabs.general.tab.fontWeight": "100",
+    "tabs.general.tab.focus.halo.color": "burlywood",
+    "tabs.general.tab.focus.halo.width": "9px",
+    "tabs.general.tab.hover.borderBottomColor": "pink",
+    "tabs.general.tab.hover.borderBottomWidth": "7px",
     "tabs.general.tab.selected.borderBottomColor": "aliceblue",
     "tabs.general.tab.selected.borderBottomWidth": "5px",
     "tabs.general.tab.selected.fontWeight": "700"
@@ -37,19 +41,73 @@ describe("TabPresenter/stylesheet", () => {
       expect(styles.tab).toEqual(
         expect.objectContaining({
           "&:before": expect.objectContaining({
-            borderBottom: "5px solid aliceblue"
+            borderBottomColor: "aliceblue",
+            borderBottomWidth: "5px"
           })
         })
       );
     });
   });
 
-  describe("not active", () => {
+  describe("hasHover", () => {
     it("returns an object with correct rules", () => {
-      const styles = stylesheet({ active: false }, themeData);
+      const styles = stylesheet({ hasHover: true }, themeData);
 
       expect(styles.tab).toEqual(
-        expect.objectContaining({ borderBottom: "2px solid orange" })
+        expect.objectContaining({
+          "&:before": expect.objectContaining({
+            borderBottomColor: "pink",
+            borderBottomWidth: "7px"
+          })
+        })
+      );
+    });
+  });
+
+  describe("active and hasHover", () => {
+    it("returns an object with correct rules", () => {
+      const styles = stylesheet({ active: true, hasHover: true }, themeData);
+
+      expect(styles.tab).toEqual(
+        expect.objectContaining({
+          "&:before": expect.objectContaining({
+            borderBottomColor: "aliceblue",
+            borderBottomWidth: "5px"
+          })
+        })
+      );
+    });
+  });
+
+  describe("active and hasFocus", () => {
+    it("returns an object with correct rules", () => {
+      const styles = stylesheet({ active: true, hasFocus: true }, themeData);
+
+      expect(styles.tab).toEqual(
+        expect.objectContaining({
+          "&:before": expect.objectContaining({
+            borderBottomColor: "aliceblue",
+            borderBottomWidth: "5px"
+          }),
+          "&:after": expect.objectContaining({
+            borderBottom: "9px solid burlywood"
+          })
+        })
+      );
+    });
+  });
+
+  describe("not active or hasHover", () => {
+    it("returns an object with correct rules", () => {
+      const styles = stylesheet({}, themeData);
+
+      expect(styles.tab).toEqual(
+        expect.objectContaining({
+          borderBottom: "2px solid orange",
+          "&:before": expect.objectContaining({
+            borderBottomColor: "transparent"
+          })
+        })
       );
     });
   });

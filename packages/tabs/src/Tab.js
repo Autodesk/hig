@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import { ControlBehavior } from "@hig/behaviors";
 import TabPresenter from "./presenters/TabPresenter";
 
 /**
@@ -37,13 +37,31 @@ Tab.defaultProps = {
    * @param {RenderTabPayload} props
    * @returns {JSX.Element}
    */
-  render({ handleClick, handleKeyDown, ...otherProps }) {
+  render({ handleClick, handleKeyDown, label, ...otherProps }) {
     return (
-      <TabPresenter
-        onClick={handleClick}
-        onKeyDown={handleKeyDown}
-        {...otherProps}
-      />
+      <ControlBehavior key={label}>
+        {({
+          hasFocus,
+          hasHover,
+          onBlur,
+          onFocus,
+          onMouseEnter,
+          onMouseLeave
+        }) => (
+          <TabPresenter
+            hasFocus={hasFocus}
+            hasHover={hasHover}
+            label={label}
+            onBlur={onBlur}
+            onFocus={onFocus}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onClick={handleClick}
+            onKeyDown={handleKeyDown}
+            {...otherProps}
+          />
+        )}
+      </ControlBehavior>
     );
   }
 };
@@ -52,6 +70,8 @@ Tab.propTypes = {
   active: PropTypes.bool,
   children: PropTypes.node,
   label: PropTypes.string,
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
   onClick: PropTypes.func,
   render: PropTypes.func.isRequired
 };

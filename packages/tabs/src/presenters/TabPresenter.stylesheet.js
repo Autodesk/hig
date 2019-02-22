@@ -1,4 +1,7 @@
-export default function stylesheet({ active, label }, themeData) {
+export default function stylesheet(
+  { active, hasFocus, hasHover, label },
+  themeData
+) {
   return {
     tab: {
       position: "relative",
@@ -22,27 +25,62 @@ export default function stylesheet({ active, label }, themeData) {
         paddingRight: 0
       },
 
-      ...(active && {
-        "&:before": {
-          position: "absolute",
-          content: "''",
-          bottom: `-${themeData["tabs.general.borderBottomWidth"]}`,
-          left: themeData["density.spacings.small"],
-          width: `calc(100% - (2 * ${themeData["density.spacings.small"]}))`,
-          borderBottom: `${
+      "&:before": {
+        position: "absolute",
+        content: "''",
+        bottom: `-${themeData["tabs.general.borderBottomWidth"]}`,
+        left: themeData["density.spacings.small"],
+        width: `calc(100% - (2 * ${themeData["density.spacings.small"]}))`,
+        borderBottomColor: "transparent",
+        borderBottomStyle: "solid",
+        borderBottomWidth: 0,
+
+        ...(hasHover && {
+          borderBottomColor:
+            themeData["tabs.general.tab.hover.borderBottomColor"],
+          borderBottomWidth:
+            themeData["tabs.general.tab.hover.borderBottomWidth"]
+        }),
+
+        ...(active && {
+          borderBottomColor:
+            themeData["tabs.general.tab.selected.borderBottomColor"],
+          borderBottomWidth:
             themeData["tabs.general.tab.selected.borderBottomWidth"]
-          } solid ${themeData["tabs.general.tab.selected.borderBottomColor"]}`
-        },
+        })
+      },
 
-        "&:first-of-type:before": {
-          left: 0,
-          width: `calc(100% - ${themeData["density.spacings.small"]})`
-        },
+      "&:first-of-type:before": {
+        left: 0,
+        width: `calc(100% - ${themeData["density.spacings.small"]})`
+      },
 
-        "&:last-of-type:before": {
-          width: `calc(100% - ${themeData["density.spacings.small"]})`
-        }
-      })
+      "&:last-of-type:before": {
+        width: `calc(100% - ${themeData["density.spacings.small"]})`
+      },
+
+      "&:after": {
+        position: "absolute",
+        content: "''",
+        bottom: `-${themeData["tabs.general.tab.focus.halo.width"]}`,
+        left: themeData["density.spacings.small"],
+        width: `calc(100% - (2 * ${themeData["density.spacings.small"]}))`,
+
+        ...(hasFocus && {
+          borderBottom: `${
+            themeData["tabs.general.tab.focus.halo.width"]
+          } solid ${themeData["tabs.general.tab.focus.halo.color"]}`
+        })
+      },
+
+      "&:first-of-type:after": {
+        left: 0,
+        width: `calc(100% - ${themeData["density.spacings.small"]})`
+      },
+
+      "&:last-of-type:after": {
+        width: `calc(100% - ${themeData["density.spacings.small"]})`
+      }
     },
     tabLabel: {
       display: "flex",
