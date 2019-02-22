@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 
-import { ThemeContext } from "@hig/theme-context";
+import ThemeContext from "@hig/theme-context";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 
 import { targets, AVAILABLE_TARGETS } from "../../targets";
@@ -52,11 +52,11 @@ export default class TitlePresenter extends Component {
             >
               <div className={css(styles.icon)}>{icon}</div>
               <div className={css(styles.title)}>{title}</div>
-              {isExternalLink ? (
+              {isExternalLink && (
                 <div className={css(styles.externalIcon)}>
                   <ExternalLinkIcon active={active} />
                 </div>
-              ) : null}
+              )}
             </Wrapper>
           );
         }}

@@ -34,6 +34,7 @@ export default class ModuleCompact extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
+          console.log("props", this.props);
           const styles = stylesheet(this.props, resolvedRoles);
 
           return (

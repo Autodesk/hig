@@ -1,6 +1,6 @@
 import { reset } from "../constants";
 
-export default function stylesheet() {
+export default function stylesheet(props, themeData) {
   return {
     search: {
       display: "flex",
@@ -24,7 +24,7 @@ export default function stylesheet() {
     },
 
     input: reset({
-      border: `1px solid rgba(190, 200, 210, 1)`,
+      border: `1px solid ${themeData["basics.colors.slate400"]}`,
       borderRadius: "4px",
       fontSize: "14px",
       padding: "6px 35px",
@@ -33,7 +33,7 @@ export default function stylesheet() {
 
       "&:placeholder": {
         fontWeight: "normal",
-        color: `rgba(72, 83, 102, 1)`
+        color: themeData["basics.colors.slate700"]
       },
 
       "&:focus": {

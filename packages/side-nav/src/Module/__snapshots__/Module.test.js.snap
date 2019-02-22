@@ -459,6 +459,10 @@ exports[`side-nav/Module snapshot tests renders an active button 1`] = `
   border-left: 2px solid #0696d7;
 }
 
+.emotion-2 svg * {
+  fill: #0696d7;
+}
+
 <div
   className="emotion-5"
   onFocus={undefined}

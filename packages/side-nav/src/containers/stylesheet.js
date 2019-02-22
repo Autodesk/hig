@@ -1,14 +1,8 @@
-import { constants } from "../constants";
-
-const reset = {
-  lineHeight: "1.6",
-  boxSizing: "border-box"
-};
+import { constants, reset } from "../constants";
 
 export default function stylesheet(props, themeData) {
   return {
-    belowTop: {
-      ...reset,
+    belowTop: reset({
       position: "absolute",
       top: "56px",
       bottom: "0",
@@ -16,10 +10,9 @@ export default function stylesheet(props, themeData) {
       width: constants.sideNavMaxWidth,
       zIndex: "2",
       overflowX: "hidden"
-    },
+    }),
 
-    belowTopCompact: {
-      ...reset,
+    belowTopCompact: reset({
       position: "absolute",
       top: "56px",
       bottom: "0",
@@ -27,10 +20,9 @@ export default function stylesheet(props, themeData) {
       maxWidth: constants.sideNavMaxWidth,
       zIndex: "2",
       overflowX: "hidden"
-    },
+    }),
 
-    docked: {
-      ...reset,
+    docked: reset({
       transition: `left 150ms cubic-bezier(0.000, 0.775, 0.775, 0.680)`,
       boxShadow: `inset -5px 0px 8px -5px ${
         themeData["colorScheme.lowShadowColor"]
@@ -44,6 +36,6 @@ export default function stylesheet(props, themeData) {
       paddingRight: "4px",
       zIndex: "2",
       overflowX: "hidden"
-    }
+    })
   };
 }

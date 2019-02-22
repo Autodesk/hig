@@ -38,16 +38,14 @@ export default function stylesheet(props, themeData) {
 
       "&:focus:before, &:hover:before": activeBorderBefore(true),
 
-      ...(props.active ||
-        (props.activeChildren && {
-          "& svg *": {
-            fill: themeData["colorScheme.accentColor"]
-          }
-        }))
+      ...((props.active || props.activeChildren) && {
+        "& svg *": {
+          fill: themeData["colorScheme.accentColor"]
+        }
+      })
     },
 
     title: {
-      // color: themeData[`typography.body.color`],
       fontWeight: "700",
       fontSize: "14px",
       paddingLeft: themeData["density.spacings.extraExtraSmall"],
@@ -97,9 +95,7 @@ export default function stylesheet(props, themeData) {
     },
 
     submodule: {
-      ...(props.icon
-        ? { paddingLeft: "46px" }
-        : { paddingLeft: themeData["density.spacings.medium"] })
+      paddingLeft: props.icon ? "46px" : themeData["density.spacings.medium"]
     },
 
     link: {
@@ -114,6 +110,13 @@ export default function stylesheet(props, themeData) {
       "&:hover svg *": {
         fill: themeData["colorScheme.accentColor"]
       },
+
+      ...((props.active || props.activeChildren) && {
+        "&:before": activeBorderBefore(true),
+        "& svg *": {
+          fill: themeData["colorScheme.accentColor"]
+        }
+      }),
 
       "&:hover:before, &:focus:before": activeBorderBefore(true)
     }
