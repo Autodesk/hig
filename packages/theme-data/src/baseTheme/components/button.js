@@ -6,7 +6,6 @@ import {
   FONT_WEIGHT,
   LENGTH,
   LINE_HEIGHT,
-  OPACITY,
   COLOR
 } from "../../consts/types";
 
@@ -144,14 +143,6 @@ export default {
     transform: {
       alpha: 0.15
     }
-  },
-
-  /**
-   * ### Disabled
-   */
-  "button.disabled.opacity": {
-    type: OPACITY,
-    value: "0.5"
   },
 
   /**

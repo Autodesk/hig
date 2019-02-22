@@ -52,7 +52,8 @@ export default class ButtonPresenter extends Component {
       target,
       title,
       type,
-      width
+      width,
+      ...otherProps
     } = this.props;
 
     const href = link || undefined;
@@ -82,6 +83,7 @@ export default class ButtonPresenter extends Component {
               onMouseOver={onHover}
               onMouseUp={onMouseUp}
               disabled={disabled}
+              {...otherProps}
             >
               {icon && <span className={css(styles.icon)}>{icon}</span>}
               <span className="hig__button__title">{title}</span>
