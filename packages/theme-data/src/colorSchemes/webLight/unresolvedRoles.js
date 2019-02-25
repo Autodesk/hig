@@ -1,5 +1,6 @@
 import extendTheme from "../../utils/extendTheme";
 import lightGrayTheme from "../lightGray";
+import banner from "./components/banner";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
 import flyout from "./components/flyout";
@@ -17,6 +18,7 @@ const webLightThemeConfig = extendTheme(
   lightGrayTheme.unresolvedRoles,
   Object.assign(
     {},
+    banner,
     button,
     checkbox,
     flyout,
