@@ -1,8 +1,10 @@
 import React from "react";
-import cx from "classnames";
 import PropTypes from "prop-types";
-
-import "./TabPresenter.scss";
+import Typography from "@hig/typography";
+import ThemeContext from "@hig/theme-context";
+import "@hig/fonts/build/ArtifaktElement.css";
+import { css } from "emotion";
+import stylesheet from "./TabPresenter.stylesheet";
 
 /**
  * @typedef {Object} TabPresenterProps
@@ -16,29 +18,57 @@ import "./TabPresenter.scss";
  * @param {TabPresenterProps} props
  * @returns {JSX.Element}
  */
-export default function TabPresenter({ active, label, onClick, onKeyDown }) {
-  const classes = cx("hig__tabs__tab", {
-    "hig__tabs__tab--active": active
-  });
-
+export default function TabPresenter({
+  active,
+  hasFocus,
+  hasHover,
+  label,
+  onBlur,
+  onFocus,
+  onClick,
+  onKeyDown,
+  onMouseEnter,
+  onMouseLeave
+}) {
   return (
-    <li className={classes}>
-      <span
-        className="hig__tabs__tab-label"
-        onClick={onClick}
-        onKeyDown={onKeyDown}
-        role="button"
-        tabIndex="0"
-      >
-        {label}
-      </span>
-    </li>
+    <ThemeContext.Consumer>
+      {({ resolvedRoles }) => {
+        const styles = stylesheet(
+          { active, hasFocus, hasHover, label },
+          resolvedRoles
+        );
+
+        return (
+          <li className={css(styles.tab)}>
+            <div
+              onBlur={onBlur}
+              onFocus={onFocus}
+              onClick={onClick}
+              onKeyDown={onKeyDown}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+              role="button"
+              tabIndex="0"
+              className={css(styles.tabLabel)}
+            >
+              <Typography style={styles.tabLabelText}>{label}</Typography>
+            </div>
+          </li>
+        );
+      }}
+    </ThemeContext.Consumer>
   );
 }
 
 TabPresenter.propTypes = {
   active: PropTypes.bool,
   label: PropTypes.string,
+  hasFocus: PropTypes.bool,
+  hasHover: PropTypes.bool,
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
   onClick: PropTypes.func,
-  onKeyDown: PropTypes.func
+  onKeyDown: PropTypes.func,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func
 };
