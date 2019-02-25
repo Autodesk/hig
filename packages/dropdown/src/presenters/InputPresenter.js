@@ -1,9 +1,8 @@
 import React from "react";
-import { Caret24 } from "@hig/icons";
-import { TextFieldPresenter } from "@hig/text-field";
 import { css } from "emotion";
-import ThemeContext from "@hig/theme-context";
+import { Caret24 } from "@hig/icons";
 import Input from "@hig/input";
+import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./InputPresenter.stylesheet";
 
@@ -23,11 +22,3 @@ export default function InputPresenter(props) {
     </ThemeContext.Consumer>
   );
 }
-
-function createPropTypes() {
-  const { type, readOnly, ...otherPropTypes } = TextFieldPresenter.propTypes;
-
-  return otherPropTypes;
-}
-
-InputPresenter.propTypes = createPropTypes();

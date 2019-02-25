@@ -32,7 +32,6 @@
         "packages/table/package.json",
         "packages/tabs/package.json",
         "packages/text-area/package.json",
-        "packages/text-field/package.json",
         "packages/text-link/package.json",
         "packages/theme-data/package.json",
         "packages/themes/package.json",
