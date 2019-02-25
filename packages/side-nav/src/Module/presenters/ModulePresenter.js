@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { ThemeContext } from "@hig/themes";
+import { css } from "emotion";
+import ThemeContext from "@hig/theme-context";
 
 import CollapseButton from "../../CollapseButton";
 import TitlePresenter from "./TitlePresenter";
 import { targets, AVAILABLE_TARGETS } from "../../targets";
-
-import "./module.scss";
+import stylesheet from "./stylesheet";
 
 export default class Module extends Component {
   static propTypes = {
@@ -57,11 +56,6 @@ export default class Module extends Component {
       target,
       title
     } = this.props;
-    const classes = themeClass => cx(themeClass, "hig__side-nav__module");
-
-    const submodulesClasses = cx("hig__side-nav__module__submodules", {
-      "hig__side-nav__module__submodules--no-icon": !icon
-    });
 
     const isCollapsible = !!children;
     /**
@@ -72,33 +66,39 @@ export default class Module extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ themeClass }) => (
-          <div
-            className={classes(themeClass)}
-            onFocus={onFocus}
-            onMouseOver={onMouseOver}
-          >
-            <div className="hig__side-nav__module__row">
-              <TitlePresenter
-                active={active}
-                activeChildren={activeChildren}
-                icon={icon}
-                link={link}
-                onClick={onClickTitle}
-                tabIndex={titleTabIndex}
-                target={target}
-                title={title}
-              />
-              {isCollapsible && (
-                <CollapseButton
-                  minimized={minimized}
-                  onClick={onClickCollapseButton}
+        {({ resolvedRoles }) => {
+          const styles = stylesheet(this.props, resolvedRoles);
+
+          return (
+            <div
+              className={css(styles.module)}
+              onFocus={onFocus}
+              onMouseOver={onMouseOver}
+            >
+              <div className={css(styles.row)}>
+                <TitlePresenter
+                  active={active}
+                  activeChildren={activeChildren}
+                  icon={icon}
+                  link={link}
+                  onClick={onClickTitle}
+                  tabIndex={titleTabIndex}
+                  target={target}
+                  title={title}
                 />
+                {isCollapsible && (
+                  <CollapseButton
+                    minimized={minimized}
+                    onClick={onClickCollapseButton}
+                  />
+                )}
+              </div>
+              {!minimized && (
+                <div className={css(styles.submodule)}>{children}</div>
               )}
             </div>
-            {!minimized && <div className={submodulesClasses}>{children}</div>}
-          </div>
-        )}
+          );
+        }}
       </ThemeContext.Consumer>
     );
   }

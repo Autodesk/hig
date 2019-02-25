@@ -14,5 +14,4 @@ yarn add @hig/side-nav
 
 ```
 import SideNav from '@hig/side-nav';
-import '@hig/side-nav/build/index.css';
 ```

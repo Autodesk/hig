@@ -1,46 +1,163 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`side-nav/presenters/SideNav snapshot tests renders with headers 1`] = `
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  height: 100%;
+  margin: 4px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.emotion-2::-webkit-scrollbar {
+  width: 4px;
+}
+
+.emotion-2::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 200px;
+  border-radius: 2px;
+}
+
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
 <nav
-  className="hig--light-theme hig__side-nav"
+  className="emotion-3"
 >
   <div
-    className="hig__side-nav__overflow"
+    className="emotion-2"
   >
-    <div
-      className="hig__side-nav__headers"
-    >
-      <h3
-        className="hig__side-nav__super-header"
+    <div>
+      <p
+        className="emotion-0"
+        style={
+          Object {
+            "&:after": Object {
+              "@media (min-width: 769px)": Object {
+                "left": "16px",
+                "right": "12px",
+              },
+              "borderTop": "1px solid #808080",
+              "bottom": 0,
+              "content": "\\"\\"",
+              "display": "block",
+              "height": "1px",
+              "left": "8px",
+              "position": "absolute",
+              "right": "8px",
+              "top": "auto",
+            },
+            "color": "#3c3c3c",
+            "display": "block",
+            "fontSize": "12px",
+            "padding": "12px 0",
+            "position": "relative",
+          }
+        }
       >
-        <div
-          className="hig__side-nav__super-header-link"
-          href={undefined}
-        >
-          HIG
-        </div>
-      </h3>
-      <h4
-        className="hig__side-nav__header"
+        HIG
+      </p>
+      <p
+        className="emotion-0"
+        style={
+          Object {
+            "&:after": Object {
+              "@media (min-width: 769px)": Object {
+                "left": "16px",
+                "right": "12px",
+              },
+              "borderTop": "1px solid #808080",
+              "bottom": 0,
+              "content": "\\"\\"",
+              "display": "block",
+              "height": "1px",
+              "left": "8px",
+              "position": "absolute",
+              "right": "8px",
+              "top": "auto",
+            },
+            "color": "#3c3c3c",
+            "display": "block",
+            "fontSize": "20px",
+            "padding": "12px 0",
+            "position": "relative",
+          }
+        }
       >
-        <div
-          className="hig__side-nav__header-link"
-          href={undefined}
-        >
-          Storybook
-        </div>
-      </h4>
+        Storybook
+      </p>
     </div>
   </div>
 </nav>
 `;
 
 exports[`side-nav/presenters/SideNav snapshot tests renders without props 1`] = `
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  height: 100%;
+  margin: 4px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.emotion-0::-webkit-scrollbar {
+  width: 4px;
+}
+
+.emotion-0::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 200px;
+  border-radius: 2px;
+}
+
 <nav
-  className="hig--light-theme hig__side-nav"
+  className="emotion-1"
 >
   <div
-    className="hig__side-nav__overflow"
+    className="emotion-0"
   />
 </nav>
 `;

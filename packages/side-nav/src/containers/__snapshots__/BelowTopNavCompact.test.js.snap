@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`side-nav/containers/BelowTopNavCompact snapshot tests renders without props 1`] = `
+.emotion-0 {
+  background-color: #ffffff;
+  padding: 0 0;
+  border-radius: 0;
+}
+
 <div
-  className="hig--light-theme hig__side-nav-container--below-top-nav-compact"
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
+  className="emotion-0"
 />
 `;
