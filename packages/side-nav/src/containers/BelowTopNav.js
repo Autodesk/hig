@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { ThemeContext } from "@hig/themes";
-
-import "./below-top-nav.scss";
+import Surface from "@hig/surface";
+import ThemeContext from "@hig/theme-context";
+import stylesheet from "./stylesheet";
 
 export default class BelowTopNav extends Component {
   static propTypes = {
@@ -18,19 +17,16 @@ export default class BelowTopNav extends Component {
   render() {
     const { children, onMouseLeave, onMouseEnter } = this.props;
 
-    const classes = themeClass =>
-      cx(themeClass, "hig__side-nav-container--below-top-nav");
-
     return (
       <ThemeContext.Consumer>
-        {({ themeClass }) => (
-          <div
-            className={classes(themeClass)}
+        {({ resolvedRoles }) => (
+          <Surface
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
+            style={stylesheet(this.props, resolvedRoles).belowTop}
           >
             {children}
-          </div>
+          </Surface>
         )}
       </ThemeContext.Consumer>
     );

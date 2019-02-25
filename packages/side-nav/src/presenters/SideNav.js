@@ -1,18 +1,20 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { ThemeContext } from "@hig/themes";
+import { css } from "emotion";
+import { ThemeContext } from "@hig/theme-context";
 import { Back24 } from "@hig/icons";
+import Typography from "@hig/typography";
+import TextLink from "@hig/text-link";
 import IconButton, { types as iconButtonTypes } from "@hig/icon-button";
 
-import "./side-nav.scss";
+import stylesheet from "./stylesheet";
 
 export default class SideNav extends Component {
   static propTypes = {
     /** Additional content to include below navigation items */
     children: PropTypes.node,
     /** Copyright text to include  */
-    copyright: PropTypes.string,
+    copyright: PropTypes.node,
     /** 0 or more SideNav Groups */
     groups: PropTypes.node,
     /** Subtitle at the top of the SideNav */
@@ -38,7 +40,23 @@ export default class SideNav extends Component {
     showMinimizeButton: false
   };
 
-  _renderHeaders = () => {
+  _renderHeader = (link, label, styles) => {
+    if (!label) {
+      return null;
+    }
+
+    if (link) {
+      return (
+        <TextLink link={link} style={styles}>
+          {label}
+        </TextLink>
+      );
+    }
+
+    return <Typography style={styles}>{label}</Typography>;
+  };
+
+  _renderHeaders = resolvedRoles => {
     const {
       headerLabel,
       headerLink,
@@ -50,30 +68,19 @@ export default class SideNav extends Component {
       return null;
     }
 
-    const SuperHeaderWrapper = superHeaderLink ? "a" : "div";
-    const HeaderWrapper = headerLink ? "a" : "div";
-
     return (
-      <div className="hig__side-nav__headers">
-        {superHeaderLabel && (
-          <h3 className="hig__side-nav__super-header">
-            <SuperHeaderWrapper
-              className="hig__side-nav__super-header-link"
-              href={superHeaderLink}
-            >
-              {superHeaderLabel}
-            </SuperHeaderWrapper>
-          </h3>
+      <div>
+        {this._renderHeader(
+          superHeaderLink,
+          superHeaderLabel,
+          stylesheet({ isLink: superHeaderLink, ...this.props }, resolvedRoles)
+            .headers.super
         )}
-        {headerLabel && (
-          <h4 className="hig__side-nav__header">
-            <HeaderWrapper
-              className="hig__side-nav__header-link"
-              href={headerLink}
-            >
-              {headerLabel}
-            </HeaderWrapper>
-          </h4>
+        {this._renderHeader(
+          headerLink,
+          headerLabel,
+          stylesheet({ isLink: headerLink, ...this.props }, resolvedRoles)
+            .headers.normal
         )}
       </div>
     );
@@ -90,43 +97,43 @@ export default class SideNav extends Component {
       showMinimizeButton
     } = this.props;
 
-    const classes = themeClass => cx(themeClass, "hig__side-nav");
-
     return (
       <ThemeContext.Consumer>
-        {({ themeClass }) => (
-          <nav className={classes(themeClass)}>
-            <div className="hig__side-nav__overflow">
-              {this._renderHeaders()}
+        {({ resolvedRoles }) => {
+          const styles = stylesheet(this.props, resolvedRoles);
 
-              {groups && <div className="hig__side-nav__groups">{groups}</div>}
+          return (
+            <nav className={css(styles.sideNav)}>
+              <div className={css(styles.overflow)}>
+                {this._renderHeaders(resolvedRoles)}
 
-              {children && (
-                <div className="hig__side-nav__slot">{children}</div>
-              )}
+                {groups && <div>{groups}</div>}
 
-              {links && <div className="hig__side-nav__links">{links}</div>}
+                {children && <div className={css(styles.slot)}>{children}</div>}
 
-              {copyright && (
-                <div className="hig__side-nav__copyright">{copyright}</div>
-              )}
-            </div>
+                {links && <div className={css(styles.links)}>{links}</div>}
 
-            {search}
-
-            {showMinimizeButton && (
-              <div className="hig__side-nav__minimize">
-                <IconButton
-                  type={iconButtonTypes.TRANSPARENT}
-                  icon={<Back24 />}
-                  title="Minimize"
-                  aria-label="Minimize"
-                  onClick={onMinimize}
-                />
+                {copyright && (
+                  <div className={css(styles.copyright)}>{copyright}</div>
+                )}
               </div>
-            )}
-          </nav>
-        )}
+
+              {search}
+
+              {showMinimizeButton && (
+                <div className={css(styles.minimize)}>
+                  <IconButton
+                    type={iconButtonTypes.TRANSPARENT}
+                    icon={<Back24 />}
+                    title="Minimize"
+                    aria-label="Minimize"
+                    onClick={onMinimize}
+                  />
+                </div>
+              )}
+            </nav>
+          );
+        }}
       </ThemeContext.Consumer>
     );
   }

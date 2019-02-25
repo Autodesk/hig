@@ -1,7 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`side-nav/Group snapshot tests renders with no props 1`] = `
+.emotion-0 {
+  padding: 8px 0;
+  position: relative;
+}
+
+.emotion-0:after {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  height: 1px;
+  display: block;
+  content: "";
+  left: 8px;
+  right: 8px;
+  border-top: 1px solid #808080;
+}
+
+@media (min-width:769px) {
+  .emotion-0:after {
+    left: 16px;
+    right: 12px;
+  }
+}
+
+.emotion-0:empty:after {
+  display: none;
+}
+
 <section
-  className="hig--light-theme hig__side-nav__group"
+  className="emotion-0"
 />
 `;

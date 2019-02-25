@@ -14,10 +14,12 @@ storiesOf("GlobalNav|SideNav.CollapseButton", module).add(
   "default",
   withInfo(infoOptions)(() => (
     <KnobbedThemeProvider>
-      <SideNav.CollapseButton
-        onClick={action("onClick")}
-        minimized={boolean("Minimized", false)}
-      />
+      <div style={{ width: "30px" }}>
+        <SideNav.CollapseButton
+          onClick={action("onClick")}
+          minimized={boolean("Minimized", false)}
+        />
+      </div>
     </KnobbedThemeProvider>
   ))
 );
@@ -43,7 +45,6 @@ storiesOf("GlobalNav|SideNav.Submodule", module).add(
   withInfo(infoOptions)(() => (
     <KnobbedThemeProvider>
       <SideNav.Submodule
-        active={boolean("Active", true)}
         onClick={action("onClick")}
         onFocus={action("onFocus")}
         onMouseOver={action("onMouseOver")}

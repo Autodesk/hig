@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { ThemeContext } from "@hig/themes";
-
-import "./group.scss";
+import { css } from "emotion";
+import ThemeContext from "@hig/theme-context";
+import stylesheet from "./stylesheet";
 
 export default class Group extends Component {
   static propTypes = {
@@ -15,18 +14,18 @@ export default class Group extends Component {
 
   render() {
     const { intro, children } = this.props;
-    const classes = themeClass => cx(themeClass, "hig__side-nav__group");
 
     return (
       <ThemeContext.Consumer>
-        {({ themeClass }) => (
-          <section className={classes(themeClass)}>
-            {intro && (
-              <div className="hig__side-nav__group__intro">{intro}</div>
-            )}
-            {children}
-          </section>
-        )}
+        {({ resolvedRoles }) => {
+          const styles = stylesheet(this.props, resolvedRoles);
+          return (
+            <section className={css(styles.group)}>
+              {intro && <div className={css(styles.intro)}>{intro}</div>}
+              {children}
+            </section>
+          );
+        }}
       </ThemeContext.Consumer>
     );
   }

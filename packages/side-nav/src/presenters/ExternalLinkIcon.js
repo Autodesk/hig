@@ -5,7 +5,9 @@ import { ExternalLink16, ExternalLink24, sizes as iconSizes } from "@hig/icons";
 export default class ExternalLinkIcon extends Component {
   static propTypes = {
     /** Size of the icon */
-    size: PropTypes.oneOf(Object.values(iconSizes))
+    size: PropTypes.oneOf(Object.values(iconSizes)),
+    /** Color of the icon */
+    color: PropTypes.string
   };
 
   static defaultProps = {
@@ -13,8 +15,10 @@ export default class ExternalLinkIcon extends Component {
   };
 
   render() {
-    if (this.props.size === iconSizes.PX_24) return <ExternalLink24 />;
-    if (this.props.size === iconSizes.PX_16) return <ExternalLink16 />;
-    return <ExternalLink24 />;
+    if (this.props.size === iconSizes.PX_24) {
+      return <ExternalLink24 color={this.props.color} />;
+    }
+
+    return <ExternalLink16 color={this.props.color} />;
   }
 }

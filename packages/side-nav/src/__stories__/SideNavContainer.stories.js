@@ -16,12 +16,14 @@ storiesOf("GlobalNav|SideNav/containers", module)
       propTablesExclude: [KnobbedThemeProvider]
     })(() => (
       <KnobbedThemeProvider>
-        <Docked
-          onMouseEnter={action("Docked onMouseEnter")}
-          onMouseLeave={action("Docked onMouseLeave")}
-        >
-          {ExampleSideNav()}
-        </Docked>
+        <div style={{ minHeight: "100vh" }}>
+          <Docked
+            onMouseEnter={action("Docked onMouseEnter")}
+            onMouseLeave={action("Docked onMouseLeave")}
+          >
+            {ExampleSideNav()}
+          </Docked>
+        </div>
       </KnobbedThemeProvider>
     ))
   )

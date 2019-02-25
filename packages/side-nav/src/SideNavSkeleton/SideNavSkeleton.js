@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import cx from "classnames";
-import { ThemeContext } from "@hig/themes";
+import { css } from "emotion";
 import SkeletonItem from "@hig/skeleton-item";
-import "@hig/skeleton-item/build/index.css";
-
-import "./side-nav-skeleton.scss";
+import stylesheet from "./stylesheet";
 
 const skeletonItemStyles = Object.freeze([
   {
@@ -47,16 +44,12 @@ const skeletonItemStyles = Object.freeze([
 export default class SideNavSkeleton extends Component {
   render() {
     return (
-      <ThemeContext.Consumer>
-        {({ themeClass }) => (
-          <div className={cx("hig__side-nav-skeleton", themeClass)}>
-            {skeletonItemStyles.map((style, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <SkeletonItem key={index} {...style} />
-            ))}
-          </div>
-        )}
-      </ThemeContext.Consumer>
+      <div className={css(stylesheet())}>
+        {skeletonItemStyles.map((style, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <SkeletonItem key={index} {...style} />
+        ))}
+      </div>
     );
   }
 }
