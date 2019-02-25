@@ -1,21 +1,20 @@
 import React from "react";
-import cx from "classnames";
+import { css } from "emotion";
 import PropTypes from "prop-types";
-
+import ThemeContext from "@hig/theme-context";
+import stylesheet from "./TabsPresenter.stylesheet";
 import { alignments, AVAILABLE_ALIGNMENTS } from "../alignments";
 
-import "./TabsPresenter.scss";
-
-const modifiersByAlignment = {
-  [alignments.LEFT]: "hig__tabs--align-left",
-  [alignments.CENTER]: "hig__tabs--align-center",
-  [alignments.RIGHT]: "hig__tabs--align-right"
-};
-
 export default function TabsPresenter({ align, children }) {
-  const classes = cx("hig__tabs", modifiersByAlignment[align]);
+  return (
+    <ThemeContext.Consumer>
+      {({ resolvedRoles }) => {
+        const styles = stylesheet({ align }, resolvedRoles);
 
-  return <ul className={classes}>{children}</ul>;
+        return <ul className={css(styles.tabs)}>{children}</ul>;
+      }}
+    </ThemeContext.Consumer>
+  );
 }
 
 TabsPresenter.propTypes = {

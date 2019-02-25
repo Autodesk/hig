@@ -14,8 +14,12 @@ describe("tabs/TabPresenter", () => {
       props: {
         active: true,
         label: "Hello World",
+        onBlur: function onBlur() {},
         onClick: function handleClick() {},
-        onKeyDown: function handleKeyDown() {}
+        onFocus: function onFocus() {},
+        onKeyDown: function handleKeyDown() {},
+        onMouseEnter: function onMouseEnter() {},
+        onMouseLeave: function onMouseLeave() {}
       }
     }
   ];

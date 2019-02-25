@@ -11,11 +11,12 @@ export default {
   // General
   "tabs.general.borderBottomColor": {
     type: COLOR,
-    value: { ref: "colorScheme.baseColor" }
+    value: { ref: "colorScheme.baseColor" },
+    transform: { alpha: 0.1 }
   },
   "tabs.general.borderBottomWidth": {
     type: BORDER_WIDTH,
-    value: { ref: "basics.borderWidths.medium" }
+    value: { ref: "basics.borderWidths.small" }
   },
   "tabs.general.gutter": {
     type: SPACING,
@@ -29,7 +30,7 @@ export default {
   },
   "tabs.general.tab.fontSize": {
     type: FONT_SIZE,
-    value: { ref: "density.fontSizes.medium" }
+    value: { ref: "typography.h3.fontSize" }
   },
   "tabs.general.tab.fontWeight": {
     type: FONT_WEIGHT,
@@ -43,7 +44,7 @@ export default {
   },
   "tabs.general.tab.selected.borderBottomWidth": {
     type: BORDER_WIDTH,
-    value: { ref: "basics.borderWidths.large" }
+    value: { ref: "basics.borderWidths.medium" }
   },
   "tabs.general.tab.selected.fontWeight": {
     type: FONT_WEIGHT,

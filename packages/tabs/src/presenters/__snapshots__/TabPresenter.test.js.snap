@@ -1,31 +1,276 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tabs/TabPresenter renders with all props 1`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 12px;
+  margin: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  border-bottom: 1px solid rgba(128,128,128,0.1);
+}
+
+.emotion-2:first-of-type {
+  padding-left: 0;
+}
+
+.emotion-2:last-of-type {
+  padding-right: 0;
+}
+
+.emotion-2:before {
+  position: absolute;
+  content: '';
+  bottom: -1px;
+  left: 12px;
+  width: calc(100% - (2 * 12px));
+  border-bottom-color: #0696d7;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+
+.emotion-2:first-of-type:before {
+  left: 0;
+  width: calc(100% - 12px);
+}
+
+.emotion-2:last-of-type:before {
+  width: calc(100% - 12px);
+}
+
+.emotion-2:after {
+  position: absolute;
+  content: '';
+  bottom: -4px;
+  left: 12px;
+  width: calc(100% - (2 * 12px));
+}
+
+.emotion-2:first-of-type:after {
+  left: 0;
+  width: calc(100% - 12px);
+}
+
+.emotion-2:last-of-type:after {
+  width: calc(100% - 12px);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.emotion-1:focus {
+  outline: none;
+}
+
+.emotion-1:before {
+  display: block;
+  content: "Hello World";
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  height: 0;
+  color: transparent;
+  overflow: hidden;
+  visibility: hidden;
+}
+
 <li
-  className="hig__tabs__tab hig__tabs__tab--active"
+  className="emotion-2"
 >
-  <span
-    className="hig__tabs__tab-label"
+  <div
+    className="emotion-1"
+    onBlur={[Function]}
     onClick={[Function]}
+    onFocus={[Function]}
     onKeyDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
     role="button"
     tabIndex="0"
   >
-    Hello World
-  </span>
+    <p
+      className="emotion-0"
+      style={
+        Object {
+          "fontSize": "20px",
+          "fontWeight": 700,
+        }
+      }
+    >
+      Hello World
+    </p>
+  </div>
 </li>
 `;
 
 exports[`tabs/TabPresenter renders without props 1`] = `
+.emotion-2 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 12px;
+  margin: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  border-bottom: 1px solid rgba(128,128,128,0.1);
+}
+
+.emotion-2:first-of-type {
+  padding-left: 0;
+}
+
+.emotion-2:last-of-type {
+  padding-right: 0;
+}
+
+.emotion-2:before {
+  position: absolute;
+  content: '';
+  bottom: -1px;
+  left: 12px;
+  width: calc(100% - (2 * 12px));
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 0;
+}
+
+.emotion-2:first-of-type:before {
+  left: 0;
+  width: calc(100% - 12px);
+}
+
+.emotion-2:last-of-type:before {
+  width: calc(100% - 12px);
+}
+
+.emotion-2:after {
+  position: absolute;
+  content: '';
+  bottom: -4px;
+  left: 12px;
+  width: calc(100% - (2 * 12px));
+}
+
+.emotion-2:first-of-type:after {
+  left: 0;
+  width: calc(100% - 12px);
+}
+
+.emotion-2:last-of-type:after {
+  width: calc(100% - 12px);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.emotion-1:focus {
+  outline: none;
+}
+
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
 <li
-  className="hig__tabs__tab"
+  className="emotion-2"
 >
-  <span
-    className="hig__tabs__tab-label"
+  <div
+    className="emotion-1"
+    onBlur={undefined}
     onClick={undefined}
+    onFocus={undefined}
     onKeyDown={undefined}
+    onMouseEnter={undefined}
+    onMouseLeave={undefined}
     role="button"
     tabIndex="0"
-  />
+  >
+    <p
+      className="emotion-0"
+      style={
+        Object {
+          "fontSize": "20px",
+        }
+      }
+    />
+  </div>
 </li>
 `;

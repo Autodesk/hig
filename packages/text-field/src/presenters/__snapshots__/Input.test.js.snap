@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Input renders correctly without a value 1`] = `
-<input
-  className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
-/>
-`;
