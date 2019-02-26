@@ -1,3 +1,16 @@
+# [@hig/top-nav-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@2.0.2...@hig/top-nav@3.0.0) (2019-02-26)
+
+
+### Features
+
+* make top-nav themeable ([c283118](https://github.com/Autodesk/hig/commit/c283118))
+
+
+### BREAKING CHANGES
+
+* * Removed all css clasnames
+* Removed all css stylesheets
+
 # [@hig/top-nav-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/top-nav@2.0.1...@hig/top-nav@2.0.2) (2019-01-23)
 
 
