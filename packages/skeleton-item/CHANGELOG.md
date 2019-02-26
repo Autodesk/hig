@@ -1,3 +1,20 @@
+# [@hig/skeleton-item-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@0.3.1...@hig/skeleton-item@1.0.0) (2019-02-26)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/theme-context to version 2.0.0 ([ce34ca4](https://github.com/Autodesk/hig/commit/ce34ca4))
+* **package:** update emotion to version 10.0.0 ([abecf80](https://github.com/Autodesk/hig/commit/abecf80))
+* bump up theme-context dependency ([b068dab](https://github.com/Autodesk/hig/commit/b068dab))
+* combined greenkeeper prs for version updates see pr 1392 ([d0a017a](https://github.com/Autodesk/hig/commit/d0a017a))
+* release skeleton-item ([d4a1c78](https://github.com/Autodesk/hig/commit/d4a1c78))
+* Update theme data package ([dc5178a](https://github.com/Autodesk/hig/commit/dc5178a))
+
+
+### BREAKING CHANGES
+
+* * Remove CSS classname
+
 # [@hig/skeleton-item-v0.3.1](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@0.3.0...@hig/skeleton-item@0.3.1) (2018-10-08)
 
 
