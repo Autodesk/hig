@@ -19,9 +19,10 @@
   ],
   "dependencies": {
     "@hig/icon-button": "^1.0.1",
-    "@hig/icons": "^1.0.0",
-    "@hig/rich-text": "^0.1.4",
-    "classnames": "^2.2.5",
+    "@hig/icons": "^2.0.2",
+    "@hig/rich-text": "^1.0.0",
+    "@hig/theme-context": "^2.1.0",
+    "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
     "react-flip-move": "^3.0.1"
   },
@@ -33,8 +34,7 @@
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
-    "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.3.0"
+    "@hig/semantic-release-config": "^0.1.0"
   },
   "scripts": {
     "build": "hig-scripts-build",
