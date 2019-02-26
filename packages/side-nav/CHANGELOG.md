@@ -1,3 +1,17 @@
+# [@hig/side-nav-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/side-nav@1.0.2...@hig/side-nav@2.0.0) (2019-02-26)
+
+
+### Features
+
+* **side-nav:** make side nav themable ([dfe1dc7](https://github.com/Autodesk/hig/commit/dfe1dc7))
+* **side-nav:** updates for pr comments ([aeba41c](https://github.com/Autodesk/hig/commit/aeba41c))
+* make side-nav themeable ([037600f](https://github.com/Autodesk/hig/commit/037600f))
+
+
+### BREAKING CHANGES
+
+* * CSS stylesheets no longer used
+
 # [@hig/side-nav-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/side-nav@1.0.1...@hig/side-nav@1.0.2) (2019-01-23)
 
 

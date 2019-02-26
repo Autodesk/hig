@@ -1,3 +1,15 @@
+# [@hig/notifications-flyout-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@1.0.4...@hig/notifications-flyout@2.0.0) (2019-02-26)
+
+
+### Features
+
+* make notifications-flyout themeable ([857fcaf](https://github.com/Autodesk/hig/commit/857fcaf))
+
+
+### BREAKING CHANGES
+
+* * Removed all css classnames
+
 # [@hig/notifications-flyout-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@1.0.3...@hig/notifications-flyout@1.0.4) (2019-01-23)
 
 

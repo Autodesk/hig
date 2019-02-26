@@ -1,3 +1,15 @@
+# [@hig/notifications-toast-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@1.0.4...@hig/notifications-toast@2.0.0) (2019-02-26)
+
+
+### Features
+
+* make notifications-toast themeable ([6c24f27](https://github.com/Autodesk/hig/commit/6c24f27))
+
+
+### BREAKING CHANGES
+
+* * Remove all CSS classnames
+
 # [@hig/notifications-toast-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@1.0.3...@hig/notifications-toast@1.0.4) (2019-01-23)
 
 

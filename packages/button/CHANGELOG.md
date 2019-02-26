@@ -1,3 +1,10 @@
+# [@hig/button-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/button@1.2.2...@hig/button@1.3.0) (2019-02-26)
+
+
+### Features
+
+* pass down arbitrary props ([ea5ac17](https://github.com/Autodesk/hig/commit/ea5ac17))
+
 # [@hig/button-v1.2.2](https://github.com/Autodesk/hig/compare/@hig/button@1.2.1...@hig/button@1.2.2) (2019-02-08)
 
 
