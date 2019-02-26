@@ -1,3 +1,21 @@
+# [@hig/theme-data-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.2.0...@hig/theme-data@2.3.0) (2019-02-26)
+
+
+### Bug Fixes
+
+* remove button disabled role ([d024ab0](https://github.com/Autodesk/hig/commit/d024ab0))
+
+
+### Features
+
+* **theme-data:** add colors for dropdown menu ([29844da](https://github.com/Autodesk/hig/commit/29844da))
+* adds status colors to colorScheme ([ed247a1](https://github.com/Autodesk/hig/commit/ed247a1))
+* adds theme data for the Banner component ([e0563fc](https://github.com/Autodesk/hig/commit/e0563fc))
+* adds theme data roles for tabs ([790a52e](https://github.com/Autodesk/hig/commit/790a52e))
+* modal theme data ([31bce3f](https://github.com/Autodesk/hig/commit/31bce3f))
+* update Tab theme data ([0a9eeea](https://github.com/Autodesk/hig/commit/0a9eeea))
+* **theme-data:** update for themable banners ([c806cc8](https://github.com/Autodesk/hig/commit/c806cc8))
+
 # [@hig/theme-data-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.1.1...@hig/theme-data@2.2.0) (2019-02-14)
 
 
