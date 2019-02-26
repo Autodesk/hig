@@ -1,10 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
 
-import "./ActionPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default function ActionPresenter({ children }) {
-  return <div className="hig__top-nav__action">{children}</div>;
+  const styles = stylesheet();
+  return <div className={css(styles.topNavAction)}>{children}</div>;
 }
 
 ActionPresenter.propTypes = {

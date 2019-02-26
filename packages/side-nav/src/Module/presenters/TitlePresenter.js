@@ -1,23 +1,18 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { css } from "emotion";
 
-import { ThemeContext } from "@hig/themes";
+import ThemeContext from "@hig/theme-context";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 
 import { targets, AVAILABLE_TARGETS } from "../../targets";
 import ExternalLinkIcon from "../../presenters/ExternalLinkIcon";
-
-function getClassName({ active, activeChildren, themeClass }) {
-  return cx(themeClass, "hig__side-nav__module__link", {
-    "hig__side-nav__module__link--active": active,
-    "hig__side-nav__module__link--active-children": activeChildren
-  });
-}
+import stylesheet from "./stylesheet";
 
 export default class TitlePresenter extends Component {
   static propTypes = {
     active: PropTypes.bool,
+    /* eslint-disable react/no-unused-prop-types */
     activeChildren: PropTypes.bool,
     icon: PropTypes.node,
     link: PropTypes.string,
@@ -30,16 +25,7 @@ export default class TitlePresenter extends Component {
   createEventHandlers = memoizeCreateButtonEventHandlers();
 
   render() {
-    const {
-      active,
-      activeChildren,
-      icon,
-      link,
-      onClick,
-      tabIndex,
-      target,
-      title
-    } = this.props;
+    const { active, icon, link, onClick, tabIndex, target, title } = this.props;
     const { handleClick, handleKeyDown } = this.createEventHandlers(onClick, {
       // Allow default on hyperlinks to trigger navigation
       preventDefault: !link
@@ -51,25 +37,29 @@ export default class TitlePresenter extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ themeClass }) => (
-          <Wrapper
-            className={getClassName({ active, activeChildren, themeClass })}
-            href={link}
-            onClick={handleClick}
-            onKeyDown={handleKeyDown}
-            role={role}
-            tabIndex={tabIndex}
-            target={wrapperTarget}
-          >
-            <div className="hig__side-nav__module__link__icon">{icon}</div>
-            <div className="hig__side-nav__module__link__title">{title}</div>
-            {isExternalLink ? (
-              <div className="hig__side-nav__module__link__external-link-icon">
-                <ExternalLinkIcon />
-              </div>
-            ) : null}
-          </Wrapper>
-        )}
+        {({ resolvedRoles }) => {
+          const styles = stylesheet(this.props, resolvedRoles);
+
+          return (
+            <Wrapper
+              href={link}
+              className={css(styles.wrapper)}
+              onClick={handleClick}
+              onKeyDown={handleKeyDown}
+              role={role}
+              tabIndex={tabIndex}
+              target={wrapperTarget}
+            >
+              <div className={css(styles.icon)}>{icon}</div>
+              <div className={css(styles.title)}>{title}</div>
+              {isExternalLink && (
+                <div className={css(styles.externalIcon)}>
+                  <ExternalLinkIcon active={active} />
+                </div>
+              )}
+            </Wrapper>
+          );
+        }}
       </ThemeContext.Consumer>
     );
   }

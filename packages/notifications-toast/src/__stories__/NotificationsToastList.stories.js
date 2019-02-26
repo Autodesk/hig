@@ -2,6 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { select } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
+import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import Avatar from "@hig/avatar";
 import sampleAvatar from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 
@@ -36,11 +37,13 @@ storiesOf("Notifications|ToastList", module)
       ...infoOptions,
       propTablesExclude: [NotificationsToastListInteractions]
     })(() => (
-      <NotificationsToastList
-        placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}
-      >
-        {exampleToasts}
-      </NotificationsToastList>
+      <KnobbedThemeProvider>
+        <NotificationsToastList
+          placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}
+        >
+          {exampleToasts}
+        </NotificationsToastList>
+      </KnobbedThemeProvider>
     ))
   )
   .add(
@@ -49,8 +52,10 @@ storiesOf("Notifications|ToastList", module)
       ...infoOptions,
       propTablesExclude: [NotificationsToastListInteractions]
     })(() => (
-      <NotificationsToastListInteractions
-        placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}
-      />
+      <KnobbedThemeProvider>
+        <NotificationsToastListInteractions
+          placement={select("Placement", AVAILABLE_PLACEMENTS, "top")}
+        />
+      </KnobbedThemeProvider>
     ))
   );

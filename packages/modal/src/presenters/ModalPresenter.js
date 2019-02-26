@@ -1,18 +1,13 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { css } from "emotion";
 import { generateId } from "@hig/utils";
-
+import ThemeContext from "@hig/theme-context";
+import stylesheet from "./ModalPresenter.stylesheet";
 import ModalHeaderPresenter from "./ModalHeaderPresenter";
 import { types } from "../types";
-import "./ModalPresenter.scss";
 
 export default class ModalPresenter extends Component {
-  static modifiersByType = {
-    [types.STANDARD]: "hig__modal-V1__window--standard",
-    [types.ALTERNATE]: "hig__modal-V1__window--alternate"
-  };
-
   static propTypes = {
     /**
      * Supports adding any dom content to the body of the modal
@@ -44,6 +39,10 @@ export default class ModalPresenter extends Component {
      */
     open: PropTypes.bool,
     /**
+     * Enables modification of Modal Styles
+     */
+    stylesheet: PropTypes.func,
+    /**
      * Title of the modal
      */
     title: PropTypes.string,
@@ -57,10 +56,6 @@ export default class ModalPresenter extends Component {
     type: types.STANDARD
   };
 
-  setScrolling = element => {
-    this.hasScrolling = element.scrollHeight > element.clientHeight;
-  };
-
   titleId = generateId("modal-title");
 
   render() {
@@ -72,61 +67,71 @@ export default class ModalPresenter extends Component {
       onOverlayClick,
       onWindowClick,
       open,
+      stylesheet: customizeStyles,
       title,
       type
     } = this.props;
 
-    const windowClasses = cx(
-      "hig__modal-V1__window",
-      ModalPresenter.modifiersByType[type]
-    );
-
-    const wrapperClasses = cx([
-      "hig__modal-V1",
-      {
-        "hig__modal-V1--open": open
-      }
-    ]);
-
     /*
      * The "no-noninteractive-element-interactions" rule is disabled for this block.
      * This is due to the modal being is a special case where its containers are to be considered
-     * as non-interactive, static content by screen-readers, but must also respond to `click` events.
-     * Additionally, even though they respond to `click` events, they're not focusable.
+     * as non-interactive, static content by screen-readers, but must also respond to `click`
+     * events. Additionally, even though they respond to `click` events, they're not focusable.
      */
     /*
       eslint-disable
       jsx-a11y/no-noninteractive-element-interactions,
       jsx-a11y/click-events-have-key-events
     */
+
     return (
-      <div className={wrapperClasses}>
-        <div
-          aria-labelledby={this.titleId}
-          className="hig__modal-V1__overlay"
-          onClick={onOverlayClick}
-          role="dialog"
-          tabIndex="-1"
-        >
-          <article
-            className={windowClasses}
-            onClick={onWindowClick}
-            role="document"
-          >
-            <ModalHeaderPresenter
-              id={this.titleId}
-              closeButtonAriaLabel={closeButtonAriaLabel}
-              onCloseClick={onCloseClick}
-              title={title}
-            >
-              {headerChildren}
-            </ModalHeaderPresenter>
-            <section className="hig__modal-V1__body">
-              <div className="hig__modal-V1__slot">{children}</div>
-            </section>
-          </article>
-        </div>
-      </div>
+      <ThemeContext.Consumer>
+        {({ resolvedRoles, metadata }) => {
+          const styles = stylesheet({ open, type }, resolvedRoles);
+
+          const cssStyles = customizeStyles
+            ? customizeStyles(
+                styles,
+                this.props,
+                resolvedRoles,
+                metadata.colorSchemeId
+              )
+            : styles;
+
+          return (
+            <div className={css(cssStyles.modal.wrapper)}>
+              <div
+                aria-labelledby={this.titleId}
+                className={css(cssStyles.modal.overlay)}
+                onClick={onOverlayClick}
+                role="dialog"
+                tabIndex="-1"
+              >
+                <article
+                  className={css(cssStyles.modal.window)}
+                  onClick={onWindowClick}
+                  role="document"
+                >
+                  <ModalHeaderPresenter
+                    id={this.titleId}
+                    closeButtonAriaLabel={closeButtonAriaLabel}
+                    onCloseClick={onCloseClick}
+                    styles={styles.modal}
+                    title={title}
+                  >
+                    {headerChildren}
+                  </ModalHeaderPresenter>
+                  <section className={css(cssStyles.modal.body)}>
+                    <div className={css(cssStyles.modal.bodyContent)}>
+                      {children}
+                    </div>
+                  </section>
+                </article>
+              </div>
+            </div>
+          );
+        }}
+      </ThemeContext.Consumer>
     );
     /*
       eslint-enable

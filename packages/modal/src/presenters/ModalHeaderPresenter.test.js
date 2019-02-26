@@ -3,7 +3,9 @@ import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import { generateId } from "@hig/utils";
 import ModalHeaderPresenter from "./ModalHeaderPresenter";
 
-describe("checkbox/presenters/ModalHeaderPresenter", () => {
+describe("modal/presenters/ModalHeaderPresenter", () => {
+  const styles = { header: {}, headerContent: {} };
+
   afterEach(() => {
     generateId.mockReset();
   });
@@ -11,19 +13,21 @@ describe("checkbox/presenters/ModalHeaderPresenter", () => {
   [
     {
       description: "renders without props",
-      props: {}
+      props: { styles }
     },
     {
       description: "renders with children",
       props: {
-        children: [<p key="p">Title</p>]
+        children: [<p key="p">Title</p>],
+        styles
       }
     },
     {
       description: "renders with all props",
       props: {
         title: "HELLO",
-        onCloseClick: function onCloseClick() {}
+        onCloseClick: function onCloseClick() {},
+        styles
       }
     }
   ].forEach(({ desc, props }) => {

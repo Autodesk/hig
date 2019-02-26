@@ -10,30 +10,32 @@ import infoOptions from "./infoOptions";
 const compactSideNav = () => (
   <SideNav
     groups={
-      <SideNav.Group>
-        <SideNav.ModuleCompact
-          title="Module 1"
-          icon={<Insight24 />}
-          activeChildren
-        >
-          <SideNav.Submodule title="Submodule 1" />
-          <SideNav.Submodule title="Submodule 2" active />
-        </SideNav.ModuleCompact>
-        <SideNav.ModuleCompact
-          title="Module 2"
-          icon={<ProductsAndServices24 />}
-          minimized
-        >
-          <SideNav.Submodule title="Submodule 1" />
-          <SideNav.Submodule title="Submodule 2" />
-        </SideNav.ModuleCompact>
-        <SideNav.ModuleCompact
-          title="Module 3"
-          icon={<Collaboration24 />}
-          link="https://www.autodesk.com"
-          target="_blank"
-        />
-      </SideNav.Group>
+      <KnobbedThemeProvider>
+        <SideNav.Group>
+          <SideNav.ModuleCompact
+            title="Module 1"
+            icon={<Insight24 />}
+            activeChildren
+          >
+            <SideNav.Submodule title="Submodule 1" />
+            <SideNav.Submodule title="Submodule 2" active />
+          </SideNav.ModuleCompact>
+          <SideNav.ModuleCompact
+            title="Module 2"
+            icon={<ProductsAndServices24 />}
+            minimized
+          >
+            <SideNav.Submodule title="Submodule 1" />
+            <SideNav.Submodule title="Submodule 2" />
+          </SideNav.ModuleCompact>
+          <SideNav.ModuleCompact
+            title="Module 3"
+            icon={<Collaboration24 />}
+            link="https://www.autodesk.com"
+            target="_blank"
+          />
+        </SideNav.Group>
+      </KnobbedThemeProvider>
     }
   />
 );

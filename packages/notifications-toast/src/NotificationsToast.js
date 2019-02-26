@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { css } from "emotion";
 import IconButton from "@hig/icon-button";
 import { CloseNotification24 } from "@hig/icons";
 import RichText from "@hig/rich-text";
+import ThemeContext from "@hig/theme-context";
 import "@hig/icon-button/build/index.css";
-import "@hig/rich-text/build/index.css";
 
 import { STATUS_ICONS, AVAILABLE_STATUSES } from "./statuses";
 
-import "./notificationsToast.scss";
+import stylesheet from "./NotificationsToast.stylesheet";
 
 export default class NotificationsToast extends Component {
   static propTypes = {
@@ -42,17 +42,22 @@ export default class NotificationsToast extends Component {
     status: "primary"
   };
 
-  _renderImage = () => {
+  _renderImage = themeData => {
     const { showStatusIcon, image, status } = this.props;
+    const styles = stylesheet(themeData, status);
+    const iconFill =
+      status === "primary"
+        ? themeData["basics.colors.autodeskBlue500"]
+        : themeData[`colorScheme.${status}Color`];
     if (image) {
-      return <div className="hig__toast__image-container">{image}</div>;
+      return <div className={css(styles.toastImageContainer)}>{image}</div>;
     }
 
     if (showStatusIcon && STATUS_ICONS[status]) {
       const Icon = STATUS_ICONS[status];
       return (
-        <div className="hig__toast__image-container">
-          <Icon />
+        <div className={css(styles.toastImageContainer)}>
+          <Icon color={iconFill} />
         </div>
       );
     }
@@ -61,27 +66,32 @@ export default class NotificationsToast extends Component {
   };
 
   render() {
-    const toastClasses = cx("hig__toast", {
-      [`hig__toast--${this.props.status}`]: this.props.status
-    });
-
     return (
-      <div className={toastClasses}>
-        {this._renderImage()}
-        <div className="hig__toast__body">
-          <div className="hig__toast__message">
-            <RichText size="small">{this.props.children}</RichText>
-            <div className="hig__toast__dismiss">
-              <IconButton
-                title="Dismiss"
-                icon={<CloseNotification24 />}
-                type="transparent"
-                onClick={this.props.onDismiss}
-              />
+      <ThemeContext.Consumer>
+        {({ resolvedRoles }) => {
+          const { status } = this.props;
+          const styles = stylesheet(resolvedRoles, status);
+
+          return (
+            <div className={css(styles.toast)}>
+              {this._renderImage(resolvedRoles)}
+              <div className={css(styles.toastBody)}>
+                <div className={css(styles.toastMessage)}>
+                  <RichText size="small">{this.props.children}</RichText>
+                  <div className={css(styles.toastDismiss)}>
+                    <IconButton
+                      title="Dismiss"
+                      icon={<CloseNotification24 />}
+                      type="transparent"
+                      onClick={this.props.onDismiss}
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
+          );
+        }}
+      </ThemeContext.Consumer>
     );
   }
 }

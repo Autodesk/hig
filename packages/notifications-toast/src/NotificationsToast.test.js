@@ -33,11 +33,9 @@ describe("NotificationsToast", () => {
         </NotificationsToast>
       );
 
-      expect(
-        wrapper.containsMatchingElement(
-          <div className="hig__toast__image-container">{thumbnail}</div>
-        )
-      ).toBe(true);
+      expect(wrapper.containsMatchingElement(<div>{thumbnail}</div>)).toBe(
+        true
+      );
     });
 
     it("prefers rendering an image over a status icon", () => {
@@ -50,11 +48,9 @@ describe("NotificationsToast", () => {
         </NotificationsToast>
       );
 
-      expect(
-        wrapper.containsMatchingElement(
-          <div className="hig__toast__image-container">{thumbnail}</div>
-        )
-      ).toBe(true);
+      expect(wrapper.containsMatchingElement(<div>{thumbnail}</div>)).toBe(
+        true
+      );
     });
   });
 
@@ -65,24 +61,6 @@ describe("NotificationsToast", () => {
       );
       expect(wrapper).toHaveProp("status", "primary");
     });
-
-    it("adds the appropriate style to the component", () => {
-      const withoutStatus = mount(
-        <NotificationsToast>Who wants toast?</NotificationsToast>
-      );
-      expect(withoutStatus.find(".hig__toast")).not.toHaveClassName(
-        "hig__toast--success"
-      );
-
-      const withStatus = mount(
-        <NotificationsToast status="success">
-          Who wants toast?
-        </NotificationsToast>
-      );
-      expect(withStatus.find(".hig__toast")).toHaveClassName(
-        "hig__toast--success"
-      );
-    });
   });
 
   describe("status icons", () => {
@@ -91,22 +69,6 @@ describe("NotificationsToast", () => {
         <NotificationsToast>Who wants toast?</NotificationsToast>
       );
       expect(wrapper).toHaveProp("showStatusIcon", true);
-    });
-
-    it("renders an icon into the expected container", () => {
-      const withoutIcon = mount(
-        <NotificationsToast status="success" showStatusIcon={false}>
-          Who wants toast?
-        </NotificationsToast>
-      );
-      expect(withoutIcon.find(".hig__toast__image-container")).toHaveLength(0);
-
-      const withIcon = mount(
-        <NotificationsToast status="success" showStatusIcon>
-          Who wants toast?
-        </NotificationsToast>
-      );
-      expect(withIcon.find(".hig__toast__image-container")).toHaveLength(1);
     });
   });
 });

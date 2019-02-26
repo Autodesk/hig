@@ -3,12 +3,28 @@ import { shallow } from "enzyme";
 import NotificationsToastListAnimator from "./NotificationsToastListAnimator";
 
 describe("NotificationsToastListAnimator", () => {
-  it("adds classes based on provided placement", () => {
+  it("use proper animation objects based on provided placement", () => {
+    const topPlacementAnimation = {
+      from: {
+        transform: "translateY(-36px)",
+        opacity: 0
+      },
+      to: { transform: "" }
+    };
+    const bottomPlacementAnimation = {
+      from: {
+        transform: "translateY(36px)",
+        opacity: 0
+      },
+      to: { transform: "" }
+    };
     expect(
-      shallow(<NotificationsToastListAnimator placement="top" />)
-    ).toHaveClassName("hig__toast-list--placement-top");
+      shallow(<NotificationsToastListAnimator placement="top" />).props()
+        .appearAnimation
+    ).toEqual(topPlacementAnimation);
     expect(
-      shallow(<NotificationsToastListAnimator placement="bottom" />)
-    ).toHaveClassName("hig__toast-list--placement-bottom");
+      shallow(<NotificationsToastListAnimator placement="bottom" />).props()
+        .appearAnimation
+    ).toEqual(bottomPlacementAnimation);
   });
 });

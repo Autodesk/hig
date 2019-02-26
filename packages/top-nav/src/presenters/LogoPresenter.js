@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
 
 import LogoTextPresenter from "./LogoTextPresenter";
-import "./LogoPresenter.scss";
+import stylesheet from "./stylesheet";
 
 function renderChildren(children) {
   if (typeof children === "string") {
@@ -21,10 +22,11 @@ export default function LogoPresenter({
   dangerouslySetInnerHTML
 }) {
   const Wrapper = link ? "a" : "div";
+  const styles = stylesheet();
 
   return (
     <Wrapper
-      className="hig__top-nav__logo"
+      className={css(styles.topNavLogo)}
       href={link}
       title={title}
       aria-label={label}

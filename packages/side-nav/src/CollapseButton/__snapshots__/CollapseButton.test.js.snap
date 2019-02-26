@@ -1,18 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`side-nav/CollapseButton snapshot tests renders minimized 1`] = `
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-1 {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  height: 100%;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
 <div
   aria-pressed={false}
-  className="hig--light-theme hig__side-nav__module__collapse-button hig__side-nav__module__collapse-button--collapsed"
+  className="emotion-1"
   onClick={undefined}
   onKeyDown={undefined}
   role="button"
   tabIndex={0}
 >
   <svg
-    height="10"
+    className="emotion-0"
+    height="10px"
     viewBox="0 0 10 10"
-    width="10"
+    width="10px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>
@@ -26,18 +44,36 @@ exports[`side-nav/CollapseButton snapshot tests renders minimized 1`] = `
 `;
 
 exports[`side-nav/CollapseButton snapshot tests renders with event handlers 1`] = `
+.emotion-1 {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  height: 100%;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
 <div
   aria-pressed={true}
-  className="hig--light-theme hig__side-nav__module__collapse-button"
+  className="emotion-1"
   onClick={[Function]}
   onKeyDown={[Function]}
   role="button"
   tabIndex={0}
 >
   <svg
-    height="10"
+    className="emotion-0"
+    height="10px"
     viewBox="0 0 10 10"
-    width="10"
+    width="10px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>
@@ -51,18 +87,36 @@ exports[`side-nav/CollapseButton snapshot tests renders with event handlers 1`] 
 `;
 
 exports[`side-nav/CollapseButton snapshot tests renders with no props 1`] = `
+.emotion-1 {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  height: 100%;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
 <div
   aria-pressed={true}
-  className="hig--light-theme hig__side-nav__module__collapse-button"
+  className="emotion-1"
   onClick={undefined}
   onKeyDown={undefined}
   role="button"
   tabIndex={0}
 >
   <svg
-    height="10"
+    className="emotion-0"
+    height="10px"
     viewBox="0 0 10 10"
-    width="10"
+    width="10px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>

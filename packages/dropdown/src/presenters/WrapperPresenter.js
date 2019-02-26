@@ -1,14 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { css } from "emotion";
 
-import "./WrapperPresenter.scss";
+import stylesheet from "./WrapperPresenter.stylesheet";
 
 /**
  * @typedef {Object} WrapperProps
  * @property {JSX.Element} [input]
  * @property {JSX.Element} [menu]
- * @property {boolean} [disabled]
  * @property {boolean} [isOpen]
  */
 
@@ -22,16 +21,11 @@ import "./WrapperPresenter.scss";
  * @see https://github.com/paypal/downshift#getrootprops
  */
 export default function WrapperPresenter(props) {
-  const { children, disabled } = props;
+  const { children } = props;
 
-  const containerClasses = cx("hig__dropdown", {
-    "hig__dropdown--disabled": disabled
-  });
-
-  return <div className={containerClasses}>{children}</div>;
+  return <div className={css(stylesheet(props))}>{children}</div>;
 }
 
 WrapperPresenter.propTypes = {
-  disabled: PropTypes.bool,
   children: PropTypes.node
 };

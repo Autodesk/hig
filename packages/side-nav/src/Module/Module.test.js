@@ -9,10 +9,14 @@ describe("side-nav/Module", () => {
     it("adds click handler to title", () => {
       const onClickTitle = jest.fn();
       const wrapper = mount(
-        <Module title="Module" onClickTitle={onClickTitle} />
+        <Module
+          title="Module"
+          link="https://www.google.com"
+          onClickTitle={onClickTitle}
+        />
       );
 
-      wrapper.find(".hig__side-nav__module__link__title").simulate("click");
+      wrapper.find("TitlePresenter").simulate("click");
       expect(onClickTitle).toHaveBeenCalled();
     });
   });
@@ -26,7 +30,7 @@ describe("side-nav/Module", () => {
         </Module>
       );
 
-      wrapper.find(".hig__side-nav__module__collapse-button").simulate("click");
+      wrapper.find("CollapseButton").simulate("click");
       expect(onClickCollapseButton).toHaveBeenCalled();
     });
   });

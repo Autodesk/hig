@@ -1,119 +1,263 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdown uses) 1`] = `
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.7);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.7);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.7);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.7);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.7);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  opacity: 0.5;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+}
+
 <div
-  className="hig__dropdown__input-wrapper"
+  className="emotion-4"
 >
   <div
-    className="hig__text-field-v1 hig__text-field-v1--button hig__text-field-v1--required hig__text-field-v1--disabled"
+    className="emotion-2"
   >
+    <input
+      className="emotion-0"
+      disabled={true}
+      id="id"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      placeholder="placeholder"
+      readOnly={true}
+      required="this is required"
+      type="button"
+    />
     <div
-      className="hig__text-field-v1__content"
-    >
-      <div
-        className="hig__text-field-v1__input-wrapper hig__text-field-v1__input-wrapper--disabled"
-      >
-        <span
-          className="hig__text-field-v1__label-spacer"
-        />
-        <label
-          className="hig__text-field-v1__label hig__text-field-v1__label--required"
-          htmlFor="id"
-        >
-          label
-        </label>
-        <div
-          className="hig__text-field-v1__input-row"
-        >
-          <input
-            className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
-            disabled={true}
-            id="id"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            placeholder="placeholder"
-            readOnly={true}
-            type="button"
-          />
-        </div>
-      </div>
-      <p
-        className="hig__text-field-v1__instructions"
-      >
-        instructions
-      </p>
-      <p
-        className="hig__text-field-v1__required-notice"
-      >
-        this is required
-      </p>
-    </div>
+      className="emotion-1"
+    />
   </div>
-  <span
-    className="hig__dropdown__input-caret"
+  <svg
+    className="emotion-3"
+    height="10px"
+    style={
+      Object {
+        "opacity": "0.5",
+        "padding": "0 10px",
+        "position": "absolute",
+        "right": "7px",
+        "top": "calc(32px / 2 - 4px)",
+      }
+    }
+    viewBox="0 0 10 10"
+    width="10px"
+    xmlns="http://www.w3.org/2000/svg"
   >
-    <svg
-      height="10"
-      viewBox="0 0 10 10"
-      width="10"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>
-        caret-down-m
-      </title>
-      <path
-        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-      />
-    </svg>
-  </span>
+    <title>
+      caret-down-m
+    </title>
+    <path
+      d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+    />
+  </svg>
 </div>
 `;
 
 exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-2 {
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(14,211,190,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: 28px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.7);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.7);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.7);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.7);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.7);
+}
+
+.emotion-0::selection {
+  background-color: #0696d7;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
 <div
-  className="hig__dropdown__input-wrapper"
+  className="emotion-4"
 >
   <div
-    className="hig__text-field-v1 hig__text-field-v1--button"
+    className="emotion-2"
   >
+    <input
+      className="emotion-0"
+      disabled={undefined}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      readOnly={true}
+    />
     <div
-      className="hig__text-field-v1__content"
-    >
-      <div
-        className="hig__text-field-v1__input-wrapper"
-      >
-        <div
-          className="hig__text-field-v1__input-row"
-        >
-          <input
-            className="hig__text-field-v1__input hig__text-field-v1__input--no-value"
-            id="text-field-1"
-            onBlur={[Function]}
-            onFocus={[Function]}
-            readOnly={true}
-            type="button"
-          />
-        </div>
-      </div>
-    </div>
+      className="emotion-1"
+    />
   </div>
-  <span
-    className="hig__dropdown__input-caret"
+  <svg
+    className="emotion-3"
+    height="10px"
+    style={
+      Object {
+        "opacity": 1,
+        "padding": "0 10px",
+        "position": "absolute",
+        "right": "7px",
+        "top": "calc(32px / 2 - 4px)",
+      }
+    }
+    viewBox="0 0 10 10"
+    width="10px"
+    xmlns="http://www.w3.org/2000/svg"
   >
-    <svg
-      height="10"
-      viewBox="0 0 10 10"
-      width="10"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>
-        caret-down-m
-      </title>
-      <path
-        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
-      />
-    </svg>
-  </span>
+    <title>
+      caret-down-m
+    </title>
+    <path
+      d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+    />
+  </svg>
 </div>
 `;

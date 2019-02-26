@@ -4,6 +4,7 @@ import basics from "../basics";
 import system from "./system";
 
 import avatar from "./components/avatar";
+import banner from "./components/banner";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
 import component from "./components/component";
@@ -13,13 +14,15 @@ import formField from "./components/formField";
 import input from "./components/input";
 import label from "./components/label";
 import menu from "./components/menu";
+import modal from "./components/modal";
 import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
+import tabs from "./components/tabs";
 import textarea from "./components/textarea";
-import tooltip from "./components/tooltip";
 import textLink from "./components/textLink";
+import tooltip from "./components/tooltip";
 import typography from "./components/typography";
 
 const baseThemeConfig = extendTheme(
@@ -38,6 +41,7 @@ const baseThemeConfig = extendTheme(
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     mapKeys(system.density, key => `density.${key}`),
     avatar,
+    banner,
     button,
     checkbox,
     component,
@@ -47,13 +51,15 @@ const baseThemeConfig = extendTheme(
     input,
     label,
     menu,
+    modal,
     progressBar,
     progressRing,
     skeletonItem,
     slider,
+    tabs,
     textarea,
-    tooltip,
     textLink,
+    tooltip,
     typography
   )
 );

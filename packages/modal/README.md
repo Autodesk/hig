@@ -23,16 +23,46 @@ import '@hig/modal/build/index.css';
 
 ```jsx
 <Modal
-  title="Are you sure?"
+  title="Remove your item?"
   open
-  body="This is the text body of my modal"
-  style="alternate"
 >
-  <h1>
-    <u>This is my HTML title</u>
-  </h1>
-  <p>
-    <i>This is my HTML content.</i>
-  </p>
+  <Typography>This action is irreversible.</Typography>
+  
+  <Button title="Cancel" type="outline" />
+  <Button title="Remove" type="outline" />
 </Modal>
+```
+
+## Styling
+
+You will likely want to provide your own styles for the Modal body content, including positioning for Typography and Button elements. Modal has a `stylesheet` prop that accepts a function wherein you can modify Modal's styles. For instance
+
+```js
+import Modal from "@hig/modal";
+import Typography from "@hig/typography";
+import Button from "@hig/button";
+import merge from "lodash.merge";
+
+function YourComponent() {
+  // ...
+  const modalStyles = styles =>
+    merge(styles, {
+      modal: {
+        bodyContent: {
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between"
+        }
+      }
+    })
+                                      
+  return (
+    <Modal open title="Your title" stylesheet={modalStyles}>
+      <Typography>Modal content</Typography>
+      <div style={{ alignSelf: "flex-end" }}>
+        <Button title="Ok" type="outline" />
+      </div>
+    </Modal>
+  )
+}
 ```

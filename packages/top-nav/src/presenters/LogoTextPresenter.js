@@ -1,10 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Typography from "@hig/typography";
 
-import "./LogoTextPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default function LogoTextPresenter({ children }) {
-  return <h1 className="hig__top-nav__logo-text">{children}</h1>;
+  const styles = stylesheet();
+  return (
+    <Typography variant="h1" style={styles.topNavLogoTextPresenter}>
+      {children}
+    </Typography>
+  );
 }
 
 LogoTextPresenter.propTypes = {

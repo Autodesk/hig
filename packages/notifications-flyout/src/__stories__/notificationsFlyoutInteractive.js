@@ -1,11 +1,10 @@
 import React, { Component } from "react";
+import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import { anchorPoints } from "@hig/flyout";
 import { generateId } from "@hig/utils";
 import Button from "@hig/button";
 import TextLink from "@hig/text-link";
-import { Text } from "@hig/typography";
-import "@hig/text-link/build/index.css";
-import "@hig/typography/build/index.css";
+import Typography from "@hig/typography";
 
 import NotificationsFlyout from "../NotificationsFlyout";
 import NotificationsFlyoutLayout from "./NotificationsFlyoutLayout";
@@ -23,7 +22,9 @@ function createNotification() {
         <p>
           <TextLink>Learn how to switch</TextLink>
           &ensp;
-          <Text size="large">or</Text>
+          <Typography elementType="span" style={{ display: "inline-block" }}>
+            or
+          </Typography>
           &ensp;
           <TextLink type="secondary">Assign users</TextLink>
         </p>
@@ -53,14 +54,16 @@ class App extends Component {
     const { buttonText } = this.props;
 
     return (
-      <NotificationsFlyoutLayout>
-        <Button title={buttonText} onClick={handleButtonClick} />
-        <div style={{ width: "50px" }} />
-        <NotificationsFlyout
-          anchorPoint={anchorPoints.TOP_CENTER}
-          notifications={notifications}
-        />
-      </NotificationsFlyoutLayout>
+      <KnobbedThemeProvider>
+        <NotificationsFlyoutLayout>
+          <Button title={buttonText} onClick={handleButtonClick} />
+          <div style={{ width: "50px" }} />
+          <NotificationsFlyout
+            anchorPoint={anchorPoints.TOP_CENTER}
+            notifications={notifications}
+          />
+        </NotificationsFlyoutLayout>
+      </KnobbedThemeProvider>
     );
   }
 }

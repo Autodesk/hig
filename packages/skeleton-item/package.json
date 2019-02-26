@@ -1,6 +1,6 @@
 {
   "name": "@hig/skeleton-item",
-  "version": "0.4.0-alpha",
+  "version": "0.4.0",
   "description": "HIG SkeletonItem component",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -26,7 +26,6 @@
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
-    "@hig/rich-text": "^1.0.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0"
   },

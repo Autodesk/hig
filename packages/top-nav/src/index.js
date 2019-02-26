@@ -1,5 +1,4 @@
 import { ProfileContent } from "@hig/profile-flyout";
-import "@hig/styles/build/fonts.css";
 
 import ActionPresenter from "./presenters/ActionPresenter";
 import HelpAction from "./HelpAction";

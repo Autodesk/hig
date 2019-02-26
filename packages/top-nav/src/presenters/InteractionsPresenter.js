@@ -1,11 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
 
-import "./InteractionsPresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default function InteractionsPresenter({ children, innerRef }) {
+  const styles = stylesheet();
   return (
-    <div className="hig__top-nav__interactions" ref={innerRef}>
+    <div className={css(styles.topNavInteractions)} ref={innerRef}>
       {children}
     </div>
   );

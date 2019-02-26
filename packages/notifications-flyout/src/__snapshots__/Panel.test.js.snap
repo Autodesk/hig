@@ -2,18 +2,62 @@
 
 exports[`notifications-flyout/Panel renders with all props 1`] = `
 .emotion-1 {
+  width: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.emotion-4 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-0 {
+.emotion-3 {
   position: relative;
 }
 
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 44px;
+  overflow: hidden;
+  background-color: transparent;
+  opacity: 1;
+  -webkit-transition-property: height,opacity;
+  transition-property: height,opacity;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  pointer-events: none;
+}
+
 <div
-  className="emotion-1"
+  className="emotion-4"
   style={
     Object {
       "maxHeight": undefined,
@@ -21,15 +65,21 @@ exports[`notifications-flyout/Panel renders with all props 1`] = `
   }
 >
   <div
-    className="emotion-0"
+    className="emotion-3"
   >
     <header
-      className="hig__notifications-flyout__panel__title"
+      className="emotion-0"
+      style={
+        Object {
+          "borderBottom": "1px solid rgba(60, 60, 60, 0.25)",
+          "padding": "12px 24px",
+        }
+      }
     >
       hello
     </header>
     <section
-      className="hig__notifications-flyout__panel__container"
+      className="emotion-1"
       style={
         Object {
           "maxHeight": "",
@@ -44,7 +94,7 @@ exports[`notifications-flyout/Panel renders with all props 1`] = `
       </div>
     </section>
     <footer
-      className="hig__notifications-flyout__panel__loading hig__notifications-flyout__panel__loading--open"
+      className="emotion-2"
     >
       <div
         data-props="{
@@ -58,18 +108,62 @@ exports[`notifications-flyout/Panel renders with all props 1`] = `
 
 exports[`notifications-flyout/Panel renders without props 1`] = `
 .emotion-1 {
+  width: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+  background-color: transparent;
+  opacity: 0;
+  -webkit-transition-property: height,opacity;
+  transition-property: height,opacity;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  pointer-events: none;
+}
+
+.emotion-4 {
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #D4DBE1;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-0 {
+.emotion-3 {
   position: relative;
 }
 
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
 <div
-  className="emotion-1"
+  className="emotion-4"
   style={
     Object {
       "maxHeight": undefined,
@@ -77,15 +171,21 @@ exports[`notifications-flyout/Panel renders without props 1`] = `
   }
 >
   <div
-    className="emotion-0"
+    className="emotion-3"
   >
     <header
-      className="hig__notifications-flyout__panel__title"
+      className="emotion-0"
+      style={
+        Object {
+          "borderBottom": "1px solid rgba(60, 60, 60, 0.25)",
+          "padding": "12px 24px",
+        }
+      }
     >
       Notifications
     </header>
     <section
-      className="hig__notifications-flyout__panel__container"
+      className="emotion-1"
       style={
         Object {
           "maxHeight": "",
@@ -98,7 +198,7 @@ exports[`notifications-flyout/Panel renders without props 1`] = `
       />
     </section>
     <footer
-      className="hig__notifications-flyout__panel__loading"
+      className="emotion-2"
     >
       <div
         data-props="{

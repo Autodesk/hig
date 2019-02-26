@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { css } from "emotion";
 import { Caret24 } from "@hig/icons";
-import { ThemeContext } from "@hig/themes";
+import ThemeContext from "@hig/theme-context";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
-
-import "./collapse-button.scss";
+import stylesheet from "./stylesheet";
 
 /**
  * @todo Replace with an `IconButton` once it's themeable
@@ -29,17 +28,15 @@ export default class CollapseButton extends Component {
   render() {
     const { minimized, onClick } = this.props;
     const { handleClick, handleKeyDown } = this.createEventHandlers(onClick);
-    const classes = themeClass =>
-      cx(themeClass, "hig__side-nav__module__collapse-button", {
-        "hig__side-nav__module__collapse-button--collapsed": minimized
-      });
 
     return (
       <ThemeContext.Consumer>
-        {({ themeClass }) => (
+        {({ resolvedRoles }) => (
           <div
             aria-pressed={!minimized}
-            className={classes(themeClass)}
+            className={css(
+              stylesheet({ minimized, ...this.props }, resolvedRoles)
+            )}
             onClick={handleClick}
             onKeyDown={handleKeyDown}
             role="button"

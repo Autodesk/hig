@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { ThemeContext } from "@hig/themes";
+import { css } from "emotion";
+import ThemeContext from "@hig/theme-context";
 import { Search24, ClearSmall24 } from "@hig/icons";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
-
-import "./search.scss";
+import stylesheet from "./stylesheet";
 
 export default class Search extends Component {
   static propTypes = {
@@ -66,40 +65,41 @@ export default class Search extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ themeClass }) => (
-          <div className={cx(themeClass, "hig__side-nav__search")}>
-            <div className={cx(themeClass, "hig__side-nav__search__icon")}>
-              <Search24 />
-            </div>
+        {({ resolvedRoles }) => {
+          const styles = stylesheet(this.props, resolvedRoles);
+          return (
+            <div className={css(styles.search)}>
+              <div className={css(styles.icon)}>
+                <Search24 />
+              </div>
 
-            <div
-              className={cx(themeClass, "hig__side-nav__search__input-wrapper")}
-            >
-              <input
-                className={cx(themeClass, "hig__side-nav__search__input")}
-                type="text"
-                onBlur={onBlur}
-                onFocus={onFocus}
-                onChange={this.handleChange}
-                placeholder={placeholder}
-                value={this.state.value}
-              />
-            </div>
+              <div className={css(styles.inputWrapper)}>
+                <input
+                  className={css(styles.input)}
+                  type="text"
+                  onBlur={onBlur}
+                  onFocus={onFocus}
+                  onChange={this.handleChange}
+                  placeholder={placeholder}
+                  value={this.state.value}
+                />
+              </div>
 
-            {this.state.value &&
-              this.state.value.length > 0 && (
-                <div
-                  className={cx(themeClass, "hig__side-nav__search__clear")}
-                  onClick={handleClick}
-                  onKeyDown={handleKeyDown}
-                  role="button"
-                  tabIndex={0}
-                >
-                  <ClearSmall24 />
-                </div>
-              )}
-          </div>
-        )}
+              {this.state.value &&
+                this.state.value.length > 0 && (
+                  <div
+                    className={css(styles.clear)}
+                    onClick={handleClick}
+                    onKeyDown={handleKeyDown}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <ClearSmall24 />
+                  </div>
+                )}
+            </div>
+          );
+        }}
       </ThemeContext.Consumer>
     );
   }

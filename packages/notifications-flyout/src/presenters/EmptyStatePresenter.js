@@ -1,19 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { css } from "emotion";
+import Typography from "@hig/typography";
 
 import Bell from "./Bell.svg";
-import "./EmptyStatePresenter.scss";
+import stylesheet from "./stylesheet";
 
 export default function EmptyStatePresenter({ message }) {
+  const styles = stylesheet({}, {});
   return (
-    <div className="hig__notification-flyout-v1__empty-state">
-      <Bell
-        role="presentation"
-        className="hig__notification-flyout-v1__empty-state-image"
-      />
-      <p className="hig__notification-flyout-v1__empty-state-message">
-        {message}
-      </p>
+    <div className={css(styles.emptyState)}>
+      <Bell role="presentation" className={css(styles.emptyStateImage)} />
+      <Typography style={styles.emptyStateMessage}>{message}</Typography>
     </div>
   );
 }

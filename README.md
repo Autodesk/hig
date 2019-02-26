@@ -79,7 +79,6 @@ Each HIG pattern is implemented as a set of React components. Each pattern is pu
 - [`<Table>`](./packages/table/README.md) - Represents tabular data in columns and rows
 - [`<Tabs>`](./packages/tabs/README.md) - Keeps related content in a single container
 - [`<TextArea>`](./packages/text-area/README.md) - A control to provide a large amount of freeform text
-- [`<TextField>`](./packages/text-field/README.md) - A control to provide a small amount of freeform text
 - [`<TextLink>`](./packages/text-link/README.md) - Directs visitors to another location
 - [`<Timestamp>`](./packages/timestamp/README.md) - Presents a date with humanized phrasing
 - [`<Tooltip>`](./packages/tooltip/README.md) - Provides context in a small popup container

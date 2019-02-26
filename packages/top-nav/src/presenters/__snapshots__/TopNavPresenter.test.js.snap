@@ -1,29 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`top-nav/presenters/TopNavPresenter  1`] = `
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 56px;
+  min-height: 56px;
+  padding-left: 7px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  z-index: 9998;
+  line-height: 1.6;
+  box-sizing: border-box;
+  background: #ffffff;
+  font-family: ArtifaktElement,sans-serif;
+  box-shadow: 0 4px 4px -4px rgba(0,0,0,0.25);
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 12px 0 5px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 0;
+}
+
+.emotion-1 {
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
+}
+
 <div
-  className="hig__top-nav"
+  className="emotion-2"
 >
   <div
-    className="hig__top-nav__logo-wrapper"
+    className="emotion-0"
   />
   <div
     aria-hidden={true}
-    className="hig__top-nav__spacer"
+    className="emotion-1"
     role="presentation"
   />
 </div>
 `;
 
 exports[`top-nav/presenters/TopNavPresenter  2`] = `
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  height: 56px;
+  min-height: 56px;
+  padding-left: 7px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  z-index: 9998;
+  line-height: 1.6;
+  box-sizing: border-box;
+  background: #ffffff;
+  font-family: ArtifaktElement,sans-serif;
+  box-shadow: 0 4px 4px -4px rgba(0,0,0,0.25);
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 12px 0 5px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 0;
+}
+
+.emotion-1 {
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
+}
+
 <div
-  className="hig__top-nav"
+  className="emotion-2"
 >
   <div
     className="leftActions"
   />
   <div
-    className="hig__top-nav__logo-wrapper"
+    className="emotion-0"
   >
     <div
       className="logo"
@@ -31,7 +119,7 @@ exports[`top-nav/presenters/TopNavPresenter  2`] = `
   </div>
   <div
     aria-hidden={true}
-    className="hig__top-nav__spacer"
+    className="emotion-1"
     role="presentation"
   />
   <div

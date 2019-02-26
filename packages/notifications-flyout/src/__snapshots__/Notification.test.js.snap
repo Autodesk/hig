@@ -1,8 +1,166 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`notifications-flyout/Notification renders correctly with the featured prop 1`] = `
+.emotion-3 {
+  margin: 14px;
+}
+
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-0 ul,
+.emotion-0 ol {
+  padding-left: 24px;
+}
+
+.emotion-0 ul li {
+  list-style: none;
+}
+
+.emotion-0 ul li:before {
+  content: '\\B7';
+  vertical-align: middle;
+  font-size: 20px;
+  padding-right: 12px;
+  margin-left: -14px;
+}
+
+.emotion-0 h1 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.285714286;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-0 h2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-0 h3 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-0 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #0696D7;
+  outline: none;
+}
+
+.emotion-0 a:hover {
+  color: #0671A1;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-color: transparent;
+  text-decoration-color: transparent;
+}
+
+.emotion-0 a:focus {
+  color: #024B6C;
+  outline: solid 0 #BAE6F6;
+}
+
+.emotion-0 p {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-0 h1 + p,
+.emotion-0 h2 + p,
+.emotion-0 h3 + p {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 16px 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-0 b,
+.emotion-0 strong {
+  font-weight: 700;
+}
+
+.emotion-5 {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition-property: height,opacity;
+  transition-property: height,opacity;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background-color: #e2f9f7;
+}
+
+.emotion-5:last-child {
+  border-bottom: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(60,60,60,0.25);
+  border-left: 3px solid #bec8d2;
+  border-left-color: rgba(128,128,128,0.4);
+}
+
+.emotion-2 {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.emotion-1 {
+  fill: #808080;
+}
+
+.emotion-1 > * {
+  fill: #808080;
+}
+
 <div
-  className="hig__notification-v1"
+  className="emotion-5"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
   role="listitem"
   style={
     Object {
@@ -11,13 +169,13 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
   }
 >
   <div
-    className="hig__notification-v1__content hig__notification-v1__content--featured"
+    className="emotion-4"
   >
     <div
-      className="hig__notification-v1__content-text"
+      className="emotion-3"
     >
       <div
-        className="hig__rich-text hig__rich-text--small"
+        className="emotion-0"
       >
         <div>
           <p>
@@ -37,7 +195,7 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
         </div>
       </div>
       <div
-        className="hig__notification-v1__dismiss-button"
+        className="emotion-2"
       >
         <button
           className="hig__icon-button hig__icon-button--transparent"
@@ -49,8 +207,10 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
           title="Dismiss featured notification"
         >
           <svg
-            className="hig__icon-button__icon"
+            className="emotion-1 hig__icon-button__icon"
+            height="16px"
             viewBox="0 0 16 16"
+            width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -65,8 +225,150 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
 `;
 
 exports[`notifications-flyout/Notification renders correctly with the unread prop 1`] = `
+.emotion-3 {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition-property: height,opacity;
+  transition-property: height,opacity;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.emotion-3:last-child {
+  border-bottom: none;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(60,60,60,0.25);
+  border-left: 3px solid #bec8d2;
+  border-left-color: #0696d7;
+}
+
+.emotion-1 {
+  margin: 14px;
+}
+
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-0 ul,
+.emotion-0 ol {
+  padding-left: 24px;
+}
+
+.emotion-0 ul li {
+  list-style: none;
+}
+
+.emotion-0 ul li:before {
+  content: '\\B7';
+  vertical-align: middle;
+  font-size: 20px;
+  padding-right: 12px;
+  margin-left: -14px;
+}
+
+.emotion-0 h1 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1.285714286;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-0 h2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-0 h3 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-0 a {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #0696D7;
+  outline: none;
+}
+
+.emotion-0 a:hover {
+  color: #0671A1;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-text-decoration-color: transparent;
+  text-decoration-color: transparent;
+}
+
+.emotion-0 a:focus {
+  color: #024B6C;
+  outline: solid 0 #BAE6F6;
+}
+
+.emotion-0 p {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-0 h1 + p,
+.emotion-0 h2 + p,
+.emotion-0 h3 + p {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 16px 0 12px 0;
+  text-align: initial;
+}
+
+.emotion-0 b,
+.emotion-0 strong {
+  font-weight: 700;
+}
+
 <div
-  className="hig__notification-v1"
+  className="emotion-3"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
   role="listitem"
   style={
     Object {
@@ -75,13 +377,13 @@ exports[`notifications-flyout/Notification renders correctly with the unread pro
   }
 >
   <div
-    className="hig__notification-v1__content hig__notification-v1__content--unread"
+    className="emotion-2"
   >
     <div
-      className="hig__notification-v1__content-text"
+      className="emotion-1"
     >
       <div
-        className="hig__rich-text hig__rich-text--small"
+        className="emotion-0"
       >
         <div>
           <p>
