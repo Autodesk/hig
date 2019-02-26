@@ -1,3 +1,11 @@
+# [@hig/components-v1.0.12](https://github.com/Autodesk/hig/compare/@hig/components@1.0.11...@hig/components@1.0.12) (2019-02-26)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/timestamp to version 1.0.0 ([ce4fdc5](https://github.com/Autodesk/hig/commit/ce4fdc5))
+* remove text-field ([c3a1e5e](https://github.com/Autodesk/hig/commit/c3a1e5e))
+
 # [@hig/components-v1.0.11](https://github.com/Autodesk/hig/compare/@hig/components@1.0.10...@hig/components@1.0.11) (2019-02-14)
 
 
