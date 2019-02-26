@@ -1,3 +1,10 @@
+# [@hig/top-nav-v3.0.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.0...@hig/top-nav@3.0.1) (2019-02-26)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/notifications-flyout to version 2.0.0 ([2b065f7](https://github.com/Autodesk/hig/commit/2b065f7))
+
 # [@hig/top-nav-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@2.0.2...@hig/top-nav@3.0.0) (2019-02-26)
 
 

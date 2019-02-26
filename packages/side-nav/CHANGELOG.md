@@ -1,3 +1,10 @@
+# [@hig/side-nav-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.0.0...@hig/side-nav@2.0.1) (2019-02-26)
+
+
+### Bug Fixes
+
+* update [@hig](https://github.com/hig)/skeleton-item to version 1.0.0 ([437c1be](https://github.com/Autodesk/hig/commit/437c1be))
+
 # [@hig/side-nav-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/side-nav@1.0.2...@hig/side-nav@2.0.0) (2019-02-26)
 
 

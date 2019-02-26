@@ -1,3 +1,17 @@
+# [@hig/components-v1.0.13](https://github.com/Autodesk/hig/compare/@hig/components@1.0.12...@hig/components@1.0.13) (2019-02-26)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/dropdown to version 2.0.0 ([dbbc5af](https://github.com/Autodesk/hig/commit/dbbc5af))
+* **package:** update [@hig](https://github.com/hig)/modal to version 2.0.0 ([4480bd7](https://github.com/Autodesk/hig/commit/4480bd7))
+* **package:** update [@hig](https://github.com/hig)/notifications-flyout to version 2.0.0 ([258b7e8](https://github.com/Autodesk/hig/commit/258b7e8))
+* **package:** update [@hig](https://github.com/hig)/notifications-toast to version 2.0.0 ([b9bb696](https://github.com/Autodesk/hig/commit/b9bb696))
+* **package:** update [@hig](https://github.com/hig)/side-nav to version 2.0.0 ([812970a](https://github.com/Autodesk/hig/commit/812970a))
+* **package:** update [@hig](https://github.com/hig)/skeleton-item to version 1.0.0 ([ed99766](https://github.com/Autodesk/hig/commit/ed99766))
+* **package:** update [@hig](https://github.com/hig)/tabs to version 1.0.0 ([0a5f85e](https://github.com/Autodesk/hig/commit/0a5f85e))
+* **package:** update [@hig](https://github.com/hig)/top-nav to version 3.0.0 ([84d71ad](https://github.com/Autodesk/hig/commit/84d71ad))
+
 # [@hig/components-v1.0.12](https://github.com/Autodesk/hig/compare/@hig/components@1.0.11...@hig/components@1.0.12) (2019-02-26)
 
 
