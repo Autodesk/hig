@@ -965,17 +965,18 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/dropdown@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@hig/dropdown/-/dropdown-1.0.2.tgz#b7241503c6347d1cc40900a508b9ee70cc473787"
-  integrity sha512-KjPbztsPblUcjSjWk0KhV9rY/F9YkGi5XDB9W+ylu/NBlTPPP6UPa5lr22pHk+jJV4p88z7+yAmFnBJmw4RMHg==
+"@hig/dropdown@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@hig/dropdown/-/dropdown-2.0.0.tgz#1aa8193f1109d13b16a06a4ebf3db2bdcf06b049"
+  integrity sha512-2xwKVHhpxi7Zwm/WIP5nfR84VONYGyHuqDahF9TJkJcCbAXTcI9p4iDDxIfdzkJ0qY00jl2eh0YDxaEQIjOKbA==
   dependencies:
-    "@hig/icons" "^1.0.0"
+    "@hig/icons" "^2.0.1"
+    "@hig/input" "^1.1.0"
     "@hig/multi-downshift" "^0.1.1"
-    "@hig/text-field" "^1.0.2"
-    classnames "^2.2.5"
-    downshift "^3.1.7"
-    prop-types "^15.6.1"
+    "@hig/theme-context" "^2.1.0"
+    downshift "^3.2.0"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
 
 "@hig/flyout@^1.0.2":
@@ -1001,17 +1002,20 @@
     classnames "^2.2.5"
     prop-types "^15.6.1"
 
-"@hig/icons@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-1.0.0.tgz#b2e023887beae46934a919816a56f4c9f995a9bc"
-  integrity sha512-5cxrts555oxLT+4+iKFe1emb3tajSZAxrcNiXnmYcWi+atkMWWM7e6wGc5+cv45HyM6MCZqEaaS/nEW5avgv3w==
-
 "@hig/icons@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-2.0.1.tgz#eefe3552746577226bab22a427c78ab4dcc6b0db"
   integrity sha512-HX9nrKhYnk88yBEzAWixLSoC00OIS3+uJROBX4UVIxAkN6AO/whmpyZd1l0RzME/bKduWFZnsY7RLfzjb/Hu2Q==
   dependencies:
     "@hig/theme-context" "^2.0.0"
+    emotion "^10.0.0"
+
+"@hig/icons@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-2.0.2.tgz#1caeb93d27412c3cef2f9550397dbaf4b2374e00"
+  integrity sha512-ed3dLuAx8ahTQ39GQUrGpKY3T79QGlHtXGyxeQQV5DqupyJsNDJpGXFTePqSFXMieBXHtY0h25XzWwcQF36ezA==
+  dependencies:
+    "@hig/theme-context" "^2.1.0"
     emotion "^10.0.0"
 
 "@hig/input@^1.0.4":
@@ -1024,6 +1028,16 @@
     emotion "^10.0.0"
     prop-types "^15.6.1"
 
+"@hig/input@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/input/-/input-1.1.0.tgz#cdd6c0f4b8ba559a0309dcf292f485ed9a847854"
+  integrity sha512-j6EZxXSyjeWwhUBLabIcXgHhcVZMnHDbHbZikVDCLLLBxi3oF2MBfu3J1Ah2lBh1PO9zM2BS15MAux1FNYYTDQ==
+  dependencies:
+    "@hig/behaviors" "1.1.1"
+    "@hig/theme-context" "^2.1.0"
+    emotion "^10.0.0"
+    prop-types "^15.6.1"
+
 "@hig/label@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@hig/label/-/label-1.0.1.tgz#6d226b9f78aba9e2c7b0fb24eb82ed6290bddea8"
@@ -1032,16 +1046,19 @@
     "@hig/theme-context" "^2.0.0"
     prop-types "^15.6.1"
 
-"@hig/modal@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@hig/modal/-/modal-1.0.2.tgz#8527f90a2889a25ce0347de23f47b1d08c942759"
-  integrity sha512-5xncU+fFw/IfiWgzMpbEV8VVlyhvv5dS5OSxrOHB3erS1qHy8dPlMYNxH3nUXw7j7ojhl4gqrg6IvwPXduVtLw==
+"@hig/modal@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@hig/modal/-/modal-2.0.0.tgz#96ee89fa5c49d93afd78a38d909f0bf704dd22a9"
+  integrity sha512-wWMuI9BvvhZYUmsyltvsJxc09xWLHMNIgVkZFoHEfelCtgQrO41QILfKYGHXT7njorURKC6Gtl8aPo3Qh343GQ==
   dependencies:
+    "@hig/fonts" "^1.0.1"
     "@hig/icon-button" "^1.0.1"
-    "@hig/icons" "^1.0.0"
+    "@hig/icons" "^2.0.2"
+    "@hig/theme-context" "^2.1.0"
+    "@hig/typography" "^1.0.2"
     "@hig/utils" "^0.3.0"
-    classnames "^2.2.5"
-    prop-types "^15.6.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
 
 "@hig/multi-downshift@^0.1.1":
@@ -1108,15 +1125,18 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
-"@hig/tabs@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@hig/tabs/-/tabs-0.1.3.tgz#f79fa904bfc816d2310dc2d296360d6bbc171227"
-  integrity sha512-5BOQx98i20FIurrHovCDJwlGtvvSEm/fuWVA9mNw2eEP0vk1SdjVqJ1NIxHZsMhOr0yRPDhouwYRbfJJLVaFYA==
+"@hig/tabs@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@hig/tabs/-/tabs-1.0.0.tgz#ff634c597015e95673223e88a1e045f5bdff47cc"
+  integrity sha512-0dma1MhMPjjtKgoEXpQkK9h1v2BBIFQTGl1+kEzicMGzBssb6eEgptQTIU9GDfSxO8YCzqRRgEjdQE0i7zYlQg==
   dependencies:
-    "@hig/typography" "^0.1.4"
-    classnames "^2.2.5"
+    "@hig/behaviors" "^1.1.1"
+    "@hig/fonts" "^1.0.1"
+    "@hig/theme-context" "^2.1.0"
+    "@hig/typography" "^1.0.2"
+    emotion "^10.0.0"
     lodash.memoize "^4.1.2"
-    prop-types "^15.6.1"
+    prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
     render-fragment "^0.1.1"
 
@@ -1128,18 +1148,6 @@
     "@hig/utils" "^0.3.0"
     classnames "^2.2.5"
     prop-types "^15.6.1"
-
-"@hig/text-field@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@hig/text-field/-/text-field-1.0.2.tgz#f8f16a233a0f981d8007955705bea0cbf81b899b"
-  integrity sha512-2cuj51lNj1/MbvwOPcvYdVzWgKgtmWlxChU1qJjaw4ZjBuS7t0DEGIo2PKqBIVWMEYAzm9jIpnAG1sOsUKemxA==
-  dependencies:
-    "@hig/icon-button" "^1.0.1"
-    "@hig/icons" "^1.0.0"
-    "@hig/utils" "^0.3.0"
-    classnames "^2.2.5"
-    prop-types "^15.6.1"
-    react-lifecycles-compat "^3.0.4"
 
 "@hig/text-link@^1.0.0":
   version "1.0.0"
@@ -1176,10 +1184,17 @@
   dependencies:
     tinycolor2 "^1.4.1"
 
-"@hig/theme-data@^2.1.0", "@hig/theme-data@^2.1.1":
+"@hig/theme-data@^2.1.0":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.1.1.tgz#a6baab0eb4e6ca93b3fb54796f89ccbda48a70f5"
   integrity sha512-QBdMk0fI+Do33xMEq8DIzetGofXuFG3QQHjvlGGqfGEotDy3bdufOFhdcF/+jvHQQzmTbQDXRyeYlPsikuYl/Q==
+  dependencies:
+    tinycolor2 "^1.4.1"
+
+"@hig/theme-data@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.3.0.tgz#a51883f1fca649c5d8b1227df7e5b5427f8fab3c"
+  integrity sha512-bZ0Ry2IP4/9RIRDPl5/UDnTaIddGiT0TRETJkMZCOkyFWEDgeMSfK+ZcP1GohTnCklD4VbnvjD+mkKxvTVq0zA==
   dependencies:
     tinycolor2 "^1.4.1"
 
@@ -1194,20 +1209,21 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/typography@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-0.1.4.tgz#5609094a480d803482d3ddc3cf237d77d96027a3"
-  integrity sha512-wfHWgNMaDEYJns1oT+0nRYCgBMmanRhuIBOnmLAbjTY+JGwoWJeR7Nw3b8acQM2PzOjNMIU9PDCJy7sWuViP9A==
-  dependencies:
-    classnames "^2.2.5"
-    prop-types "^15.6.1"
-
 "@hig/typography@^1.0.0", "@hig/typography@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-1.0.1.tgz#6ff9a1f12f9a19781993ebda91a39a01cda9461a"
   integrity sha512-9JPLBUbjs0rwHamEhX7FJeErAXtPCxbCOydr3lmn6mvy9WcfWC7lsIKgRgf32N+9eSFnuFGQrO/67qqDOZiZ8Q==
   dependencies:
     "@hig/theme-context" "^2.0.0"
+    emotion "^10.0.0"
+    prop-types "^15.6.1"
+
+"@hig/typography@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-1.0.2.tgz#018dd8942fb26cf1d00dba07e661612766b9faf0"
+  integrity sha512-BrYdpcU60Dn04iuLGEyKxwDHVJu9vpdH9+DnrM7AU9yNbK70e5e3h7IfHz76aOj8z83JGNnGta4hy7r+lLdl3Q==
+  dependencies:
+    "@hig/theme-context" "^2.1.0"
     emotion "^10.0.0"
     prop-types "^15.6.1"
 
@@ -3537,10 +3553,10 @@ downshift@^2.0.12:
     compute-scroll-into-view "^1.0.2"
     prop-types "^15.6.0"
 
-downshift@^3.1.7:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/downshift/-/downshift-3.2.2.tgz#5a51112cb19c4d2d611c27d5d27ff4d6fcdb1f69"
-  integrity sha512-z4rkPnfC/ax1LnZkipQOlEu8WSDKduPudRjurlU85Qxy39eeY1ArAi0xU24qXcxd27bMS81mBMgkH7X/pEH2GA==
+downshift@^3.2.0:
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/downshift/-/downshift-3.2.6.tgz#dee518a17dfe28ab9ab38fc8261d06ee87cd4589"
+  integrity sha512-g9K3W7D5yS9gnJhPFzfGcABs/Fb01+TON+Eks4gJf3Q+3CnJNzWl+oJeJOiKzB8EnHhttZSy3RhTRgKRzG/Tqg==
   dependencies:
     "@babel/runtime" "^7.1.2"
     compute-scroll-into-view "^1.0.9"
