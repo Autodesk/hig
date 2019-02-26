@@ -1,3 +1,20 @@
+# [@hig/modal-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/modal@1.0.2...@hig/modal@2.0.0) (2019-02-26)
+
+
+### Features
+
+* add stylesheet prop for Modal customization ([7034cea](https://github.com/Autodesk/hig/commit/7034cea))
+* themable Modal ([0c71121](https://github.com/Autodesk/hig/commit/0c71121))
+* use emotion and stylesheet function in Modal ([057d56f](https://github.com/Autodesk/hig/commit/057d56f))
+
+
+### BREAKING CHANGES
+
+* A new look for Modal with theming options and a new `stylesheet` prop
+for customizing styles.
+* DOM classNames like hig__modal-V1* replaced with
+emotion-generated class names
+
 # [@hig/modal-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/modal@1.0.1...@hig/modal@1.0.2) (2019-01-23)
 
 
