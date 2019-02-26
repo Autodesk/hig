@@ -1,3 +1,24 @@
+# [@hig/dropdown-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@1.0.2...@hig/dropdown@2.0.0) (2019-02-26)
+
+
+### Bug Fixes
+
+* remove leftover text-field code ([bcce416](https://github.com/Autodesk/hig/commit/bcce416))
+
+
+### Features
+
+* **dropdown:** make dropdown menu themable ([b1da361](https://github.com/Autodesk/hig/commit/b1da361))
+* **dropdown:** replace dropdown text field with input ([5d527fb](https://github.com/Autodesk/hig/commit/5d527fb))
+* **dropdown:** tweak styles ([7d0410f](https://github.com/Autodesk/hig/commit/7d0410f))
+
+
+### BREAKING CHANGES
+
+* **dropdown:** * CSS class names have been dropped.
+* The label and instructions props are deprecated.
+* @hig/input replaces the input element.
+
 # [@hig/dropdown-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/dropdown@1.0.1...@hig/dropdown@1.0.2) (2019-01-23)
 
 
