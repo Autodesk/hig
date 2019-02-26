@@ -36,7 +36,7 @@
     "@hig/radio-button": "^1.0.2",
     "@hig/rich-text": "^1.0.0",
     "@hig/side-nav": "^1.0.2",
-    "@hig/skeleton-item": "^0.3.0",
+    "@hig/skeleton-item": "^1.0.0",
     "@hig/slider": "^1.0.0",
     "@hig/table": "^0.3.3",
     "@hig/tabs": "^0.1.3",
