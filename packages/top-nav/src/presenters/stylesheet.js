@@ -77,7 +77,6 @@ export default function stylesheet(themeData) {
     topNavActionFlyoutPanel: {
       width: `276px`,
       maxHeight: `360px`,
-      padding: `12px`,
       overflowY: `auto`,
       "-ms-overflow-style": `-ms-autohiding-scrollbar`
     }
