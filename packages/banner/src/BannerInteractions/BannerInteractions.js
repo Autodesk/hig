@@ -1,13 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-
-import "./banner-interactions.scss";
-
-const classNames = {
-  component: "hig__banner__interactions",
-  wrapActions: "hig__banner__interactions--wrap-actions"
-};
+import { css } from "emotion";
+import stylesheet from "./stylesheet";
 
 /**
  * @typedef {Object} BannerInteractionsProps
@@ -20,13 +14,9 @@ const classNames = {
  * @returns {JSX.Element}
  */
 export default function BannerInteractions(props) {
-  const { isWrappingActions, children } = props;
-  const classes = cx(
-    classNames.component,
-    isWrappingActions ? classNames.wrapActions : undefined
-  );
+  const { children } = props;
 
-  return <div className={classes}>{children}</div>;
+  return <div className={css(stylesheet())}>{children}</div>;
 }
 
 BannerInteractions.defaultProps = {
@@ -34,6 +24,7 @@ BannerInteractions.defaultProps = {
 };
 
 BannerInteractions.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
   isWrappingActions: PropTypes.bool,
   children: PropTypes.node
 };

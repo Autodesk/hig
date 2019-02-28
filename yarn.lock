@@ -143,6 +143,19 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
 
+"@hig/banner@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@hig/banner/-/banner-1.0.2.tgz#2175eb334866d306960f3ffb3110afae30b654ad"
+  integrity sha512-5qZUn2EktazFp/UdHbHp5UQ1raSCyq13M+vGtApf5dhsUTgv+mhc0jd5jdmjRFa5OPqc+ya/V7vAVRWmBkCfbw==
+  dependencies:
+    "@hig/icon-button" "^1.0.1"
+    "@hig/icons" "^1.0.0"
+    "@hig/themes" "^0.3.0"
+    "@hig/typography" "^0.1.4"
+    classnames "^2.2.5"
+    prop-types "^15.6.1"
+    react-lifecycles-compat "^3.0.4"
+
 "@hig/icons@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-1.0.0.tgz#b2e023887beae46934a919816a56f4c9f995a9bc"

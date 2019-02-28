@@ -14,7 +14,6 @@ yarn add @hig/banner
 
 ```
 import Banner from '@hig/banner';
-import '@hig/banner/build/index.css';
 ```
 
 ## Basic usage

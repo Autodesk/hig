@@ -1,4 +1,5 @@
 import AvatarPage from "./pages/AvatarPage";
+import BannerPage from "./pages/BannerPage";
 import ButtonsPage from "./pages/ButtonsPage";
 import FlyoutPage from "./pages/FlyoutPage";
 import CheckboxPage from "./pages/CheckboxPage";
@@ -19,6 +20,7 @@ import TypographyPage from "./pages/TypographyPage";
 export default [
   { path: "/avatar/", component: AvatarPage, label: "Avatar" },
   { path: "/button/", component: ButtonsPage, label: "Button" },
+  { path: "/banner/", component: BannerPage, label: "Banner" },
   { path: "/dropdown/", component: DropdownPage, label: "Dropdown" },
   { path: "/flyout/", component: FlyoutPage, label: "Flyout" },
   { path: "/checkbox/", component: CheckboxPage, label: "Checkbox" },

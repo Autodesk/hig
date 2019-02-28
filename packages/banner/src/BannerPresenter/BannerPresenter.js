@@ -16,8 +16,6 @@ import IconBackground from "../presenters/IconBackground";
 /**
  * @typedef {Object} BannerPresenterProps
  * @property {string} [type]
- * @property {string} [label]
- * @property {string} [labelledBy]
  * @property {any} [actions]
  * @property {string} [dismissButtonTitle]
  * @property {Function} [onDismiss]
@@ -36,8 +34,6 @@ import IconBackground from "../presenters/IconBackground";
 export default function BannerPresenter(props) {
   const {
     type,
-    label,
-    labelledBy,
     actions,
     dismissButtonTitle,
     onDismiss,
@@ -55,11 +51,9 @@ export default function BannerPresenter(props) {
       type={type}
       hasActions={hasActions}
       isWrappingContent={isWrappingContent}
-      label={label}
-      labelledBy={labelledBy}
     >
       <IconBackground type={type} />
-      <Content innerRef={refContent}>
+      <Content isWrappingContent innerRef={refContent}>
         <Notification innerRef={refNotification}>
           <Message>{message}</Message>
         </Notification>
@@ -85,10 +79,6 @@ BannerPresenter.defaultProps = {
 BannerPresenter.propTypes = {
   /** Indicates the style of banner */
   type: PropTypes.oneOf(AVAILABLE_TYPES),
-  /** The label of the message displayed */
-  label: PropTypes.string,
-  /** The ID used for ARIA labeling */
-  labelledBy: PropTypes.string,
   /** Banner actions */
   actions: PropTypes.node,
   /** Accessibility text for the dismiss button */

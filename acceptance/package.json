@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@hig/avatar": "^1.0.3",
+    "@hig/banner": "^2.0.0",
     "@hig/button": "^1.2.1",
     "@hig/checkbox": "^2.0.1",
     "@hig/dropdown": "^2.0.0",
