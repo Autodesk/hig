@@ -1,3 +1,17 @@
+# [@hig/banner-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/banner@1.0.2...@hig/banner@2.0.0) (2019-02-28)
+
+
+### Features
+
+* **banner:** themable banners ([42b6d60](https://github.com/Autodesk/hig/commit/42b6d60))
+* allow children to be node ([30343a7](https://github.com/Autodesk/hig/commit/30343a7))
+
+
+### BREAKING CHANGES
+
+* **banner:** * CSS class names have been removed
+* `label` and `labeledBy` props are no longer supported
+
 # [@hig/banner-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/banner@1.0.1...@hig/banner@1.0.2) (2019-01-23)
 
 
