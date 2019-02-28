@@ -6,9 +6,6 @@ exports[`banner/BannerInteractions/BannerInteractions renders while wrapping act
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
 }
 
 <div
