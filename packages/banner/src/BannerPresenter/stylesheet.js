@@ -36,7 +36,7 @@ export default function stylesheet(props, themeData) {
       margin: `${vars.bannerMessagePaddingY} 0 0 ${vars.bannerContentPaddingX}`,
       overflow: "hidden",
 
-      ...(props.isWrappingContent && {
+      ...(!props.isWrappingContent && {
         flexDirection: "column",
         alignItems: "flex-start"
       })

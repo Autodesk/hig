@@ -11,6 +11,7 @@ export default function stylesheet(props, themeData) {
     } 0`,
     borderRightWidth: "1px",
     borderRightStyle: "solid",
+    borderRightColor: themeData["divider.lightColor"],
     marginLeft: vars.bannerActionSpacingX,
 
     "&:first-of-type": {

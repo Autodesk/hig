@@ -1,9 +1,5 @@
-export default function stylesheet(props) {
+export default function stylesheet() {
   return {
-    display: "flex",
-
-    ...(props.isWrappingActions && {
-      flexDirection: "column"
-    })
+    display: "flex"
   };
 }

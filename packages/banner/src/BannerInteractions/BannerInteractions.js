@@ -16,7 +16,7 @@ import stylesheet from "./stylesheet";
 export default function BannerInteractions(props) {
   const { children } = props;
 
-  return <div className={css(stylesheet(props))}>{children}</div>;
+  return <div className={css(stylesheet())}>{children}</div>;
 }
 
 BannerInteractions.defaultProps = {
