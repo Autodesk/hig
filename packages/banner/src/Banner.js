@@ -52,7 +52,7 @@ export default class Banner extends Component {
     /** Animation; Determines the visibility of the banner */
     isVisible: PropTypes.bool,
     /** The displayed message */
-    children: PropTypes.string
+    children: PropTypes.node
   };
 
   /** @type {BannerProps | any} */

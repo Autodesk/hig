@@ -1,4 +1,5 @@
 import React from "react";
+import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 
 import Banner from "../Banner";
 import getKnobs from "./getKnobs";
@@ -31,8 +32,10 @@ export default function renderBannerStory(props) {
   const bannerWrapperStyle = getBannerWrapperStyle(placement);
 
   return (
-    <div style={bannerWrapperStyle}>
-      <Banner {...otherProps}>{children}</Banner>
-    </div>
+    <KnobbedThemeProvider>
+      <div style={bannerWrapperStyle}>
+        <Banner {...otherProps}>{children}</Banner>
+      </div>
+    </KnobbedThemeProvider>
   );
 }

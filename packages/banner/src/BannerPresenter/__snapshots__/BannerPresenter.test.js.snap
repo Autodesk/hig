@@ -1,383 +1,1042 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actions 1`] = `
+.emotion-9 {
+  background-color: #ffffff;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 50px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: rgba(56,171,223,0.5);
+  background-color: rgba(56,171,223,0.1);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50px;
+  min-height: 50px;
+  margin: 0;
+  background-color: #38abdf;
+}
+
+.emotion-1 svg * {
+  fill: white;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: calc((50px - 20px) / 2) 0 0 16px;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  min-width: 200px;
+  max-width: 900px;
+  padding-bottom: calc((50px - 20px) / 2);
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+
+.emotion-2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: calc(50px - calc((36px - 10px) / 2));
+}
+
+.emotion-7 svg {
+  cursor: pointer;
+}
+
+.emotion-7 svg * {
+  fill: #808080;
+}
+
+.emotion-7:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-4 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: 24px;
+  padding-bottom: calc(calc((50px - 14px) / 2) - 4px);
+}
+
 <div
-  aria-label={undefined}
-  aria-labelledby={undefined}
-  aria-live="polite"
-  className="hig__banner hig__banner--primary hig__banner--interactive hig--light-theme"
-  role="alert"
+  className="emotion-9"
 >
-  <figure
-    className="hig__banner__icon-background hig--light-theme"
-  >
-    <svg
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>
-        info-24
-      </title>
-      <path
-        d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
-      />
-      <path
-        d="M11 11h2v6h-2z"
-      />
-      <circle
-        cx="12"
-        cy="8"
-        r="1.25"
-      />
-    </svg>
-  </figure>
   <div
-    className="hig__banner__content"
+    aria-live="polite"
+    className="emotion-8"
+    role="alert"
   >
-    <p
-      className="hig__banner__message"
-    >
-      <span
-        className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
-        style={Object {}}
-      >
-        Message
-      </span>
-    </p>
-    <div
-      className="hig__banner__interactions-wrapper"
-    >
-      <span>
-        bar
-      </span>
-      <div>
-        baz
-      </div>
-    </div>
-  </div>
-  <div
-    className="hig__banner__dismiss-button"
-  >
-    <button
-      className="hig__icon-button hig__icon-button--transparent"
-      onBlur={undefined}
-      onClick={undefined}
-      onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
-      title="Dismiss"
+    <figure
+      className="emotion-1"
     >
       <svg
-        className="hig__icon-button__icon"
-        viewBox="0 0 16 16"
+        className="emotion-0"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          info-24
+        </title>
         <path
-          d="M11.4 5.4l-.8-.8L8 7.3 5.4 4.6l-.8.8L7.3 8l-2.7 2.6.8.8L8 8.7l2.6 2.7.8-.8L8.7 8z"
+          d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
+        />
+        <path
+          d="M11 11h2v6h-2z"
+        />
+        <circle
+          cx="12"
+          cy="8"
+          r="1.25"
         />
       </svg>
-    </button>
+    </figure>
+    <div
+      className="emotion-5"
+    >
+      <div
+        className="emotion-3"
+      >
+        <p
+          className="emotion-2"
+        >
+          Message
+        </p>
+      </div>
+      <div
+        className="emotion-4"
+      >
+        <span>
+          bar
+        </span>
+        <div>
+          baz
+        </div>
+      </div>
+    </div>
+    <div
+      className="emotion-7"
+    >
+      <svg
+        className="emotion-0"
+        height="24px"
+        onClick={undefined}
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          hig-icons/common/24/close-24
+        </title>
+        <path
+          d="M12 12.68l-7.61 7.61-.68-.68L11.32 12 3.71 4.38l.68-.67L12 11.32l7.61-7.61.68.67L12.68 12l7.61 7.61-.68.68z"
+        />
+      </svg>
+    </div>
   </div>
 </div>
 `;
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
+.emotion-8 {
+  background-color: #ffffff;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: calc((50px - 20px) / 2) 0 0 16px;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  min-width: 200px;
+  max-width: 900px;
+  padding-bottom: calc((50px - 20px) / 2);
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+
+.emotion-2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: calc(50px - calc((36px - 10px) / 2));
+}
+
+.emotion-6 svg {
+  cursor: pointer;
+}
+
+.emotion-6 svg * {
+  fill: #808080;
+}
+
+.emotion-6:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 50px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: rgba(236,74,65,0.5);
+  background-color: rgba(236,74,65,0.1);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50px;
+  min-height: 50px;
+  margin: 0;
+  background-color: #ec4a41;
+}
+
+.emotion-1 svg * {
+  fill: white;
+}
+
 <div
-  aria-label="HELLO"
-  aria-labelledby={undefined}
-  aria-live="assertive"
-  className="hig__banner hig__banner--urgent hig--light-theme"
-  role="alert"
+  className="emotion-8"
 >
-  <figure
-    className="hig__banner__icon-background hig--light-theme"
-  >
-    <svg
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>
-        error-24
-      </title>
-      <path
-        d="M16.74 7.96l-.7-.7L12 11.29 7.96 7.26l-.7.7L11.29 12l-4.03 4.04.7.7L12 12.71l4.04 4.03.7-.7L12.71 12l4.03-4.04z"
-      />
-      <path
-        d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
-      />
-    </svg>
-  </figure>
   <div
-    className="hig__banner__content"
+    aria-live="assertive"
+    className="emotion-7"
+    role="alert"
   >
-    <p
-      className="hig__banner__message"
-    >
-      <span
-        className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
-        style={Object {}}
-      >
-        World
-      </span>
-    </p>
-  </div>
-  <div
-    className="hig__banner__dismiss-button"
-  >
-    <button
-      className="hig__icon-button hig__icon-button--transparent"
-      onBlur={undefined}
-      onClick={undefined}
-      onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
-      title="Dismiss"
+    <figure
+      className="emotion-1"
     >
       <svg
-        className="hig__icon-button__icon"
-        viewBox="0 0 16 16"
+        className="emotion-0"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          error-24
+        </title>
         <path
-          d="M11.4 5.4l-.8-.8L8 7.3 5.4 4.6l-.8.8L7.3 8l-2.7 2.6.8.8L8 8.7l2.6 2.7.8-.8L8.7 8z"
+          d="M16.74 7.96l-.7-.7L12 11.29 7.96 7.26l-.7.7L11.29 12l-4.03 4.04.7.7L12 12.71l4.04 4.03.7-.7L12.71 12l4.03-4.04z"
+        />
+        <path
+          d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
         />
       </svg>
-    </button>
+    </figure>
+    <div
+      className="emotion-4"
+    >
+      <div
+        className="emotion-3"
+      >
+        <p
+          className="emotion-2"
+        >
+          World
+        </p>
+      </div>
+    </div>
+    <div
+      className="emotion-6"
+    >
+      <svg
+        className="emotion-0"
+        height="24px"
+        onClick={undefined}
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          hig-icons/common/24/close-24
+        </title>
+        <path
+          d="M12 12.68l-7.61 7.61-.68-.68L11.32 12 3.71 4.38l.68-.67L12 11.32l7.61-7.61.68.67L12.68 12l7.61 7.61-.68.68z"
+        />
+      </svg>
+    </div>
   </div>
 </div>
 `;
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1`] = `
+.emotion-9 {
+  background-color: #ffffff;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 50px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: rgba(56,171,223,0.5);
+  background-color: rgba(56,171,223,0.1);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50px;
+  min-height: 50px;
+  margin: 0;
+  background-color: #38abdf;
+}
+
+.emotion-1 svg * {
+  fill: white;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: calc((50px - 20px) / 2) 0 0 16px;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  min-width: 200px;
+  max-width: 900px;
+  padding-bottom: calc((50px - 20px) / 2);
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+
+.emotion-2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: calc(50px - calc((36px - 10px) / 2));
+}
+
+.emotion-7 svg {
+  cursor: pointer;
+}
+
+.emotion-7 svg * {
+  fill: #808080;
+}
+
+.emotion-7:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-4 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: 24px;
+  padding-bottom: calc(calc((50px - 14px) / 2) - 4px);
+}
+
 <div
-  aria-label={undefined}
-  aria-labelledby={undefined}
-  aria-live="polite"
-  className="hig__banner hig__banner--primary hig__banner--interactive hig--light-theme"
-  role="alert"
+  className="emotion-9"
 >
-  <figure
-    className="hig__banner__icon-background hig--light-theme"
-  >
-    <svg
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>
-        info-24
-      </title>
-      <path
-        d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
-      />
-      <path
-        d="M11 11h2v6h-2z"
-      />
-      <circle
-        cx="12"
-        cy="8"
-        r="1.25"
-      />
-    </svg>
-  </figure>
   <div
-    className="hig__banner__content"
+    aria-live="polite"
+    className="emotion-8"
+    role="alert"
   >
-    <p
-      className="hig__banner__message"
-    >
-      <span
-        className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
-        style={Object {}}
-      >
-        Message
-      </span>
-    </p>
-    <div
-      className="hig__banner__interactions-wrapper"
-    >
-      <span>
-        foo
-      </span>
-    </div>
-  </div>
-  <div
-    className="hig__banner__dismiss-button"
-  >
-    <button
-      className="hig__icon-button hig__icon-button--transparent"
-      onBlur={undefined}
-      onClick={undefined}
-      onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
-      title="boom"
+    <figure
+      className="emotion-1"
     >
       <svg
-        className="hig__icon-button__icon"
-        viewBox="0 0 16 16"
+        className="emotion-0"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          info-24
+        </title>
         <path
-          d="M11.4 5.4l-.8-.8L8 7.3 5.4 4.6l-.8.8L7.3 8l-2.7 2.6.8.8L8 8.7l2.6 2.7.8-.8L8.7 8z"
+          d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
+        />
+        <path
+          d="M11 11h2v6h-2z"
+        />
+        <circle
+          cx="12"
+          cy="8"
+          r="1.25"
         />
       </svg>
-    </button>
+    </figure>
+    <div
+      className="emotion-5"
+    >
+      <div
+        className="emotion-3"
+      >
+        <p
+          className="emotion-2"
+        >
+          Message
+        </p>
+      </div>
+      <div
+        className="emotion-4"
+      >
+        <span>
+          foo
+        </span>
+      </div>
+    </div>
+    <div
+      className="emotion-7"
+    >
+      <svg
+        className="emotion-0"
+        height="24px"
+        onClick={undefined}
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          hig-icons/common/24/close-24
+        </title>
+        <path
+          d="M12 12.68l-7.61 7.61-.68-.68L11.32 12 3.71 4.38l.68-.67L12 11.32l7.61-7.61.68.67L12.68 12l7.61 7.61-.68.68z"
+        />
+      </svg>
+    </div>
   </div>
 </div>
 `;
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions 1`] = `
+.emotion-9 {
+  background-color: #ffffff;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 50px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: rgba(56,171,223,0.5);
+  background-color: rgba(56,171,223,0.1);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50px;
+  min-height: 50px;
+  margin: 0;
+  background-color: #38abdf;
+}
+
+.emotion-1 svg * {
+  fill: white;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: calc((50px - 20px) / 2) 0 0 16px;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  min-width: 200px;
+  max-width: 900px;
+  padding-bottom: calc((50px - 20px) / 2);
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+
+.emotion-2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: calc(50px - calc((36px - 10px) / 2));
+}
+
+.emotion-7 svg {
+  cursor: pointer;
+}
+
+.emotion-7 svg * {
+  fill: #808080;
+}
+
+.emotion-7:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-4 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: 24px;
+  padding-bottom: calc(calc((50px - 14px) / 2) - 4px);
+}
+
 <div
-  aria-label={undefined}
-  aria-labelledby={undefined}
-  aria-live="polite"
-  className="hig__banner hig__banner--primary hig__banner--interactive hig--light-theme"
-  role="alert"
+  className="emotion-9"
 >
-  <figure
-    className="hig__banner__icon-background hig--light-theme"
-  >
-    <svg
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>
-        info-24
-      </title>
-      <path
-        d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
-      />
-      <path
-        d="M11 11h2v6h-2z"
-      />
-      <circle
-        cx="12"
-        cy="8"
-        r="1.25"
-      />
-    </svg>
-  </figure>
   <div
-    className="hig__banner__content"
+    aria-live="polite"
+    className="emotion-8"
+    role="alert"
   >
-    <p
-      className="hig__banner__message"
-    >
-      <span
-        className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
-        style={Object {}}
-      >
-        Message
-      </span>
-    </p>
-    <div
-      className="hig__banner__interactions-wrapper"
-    >
-      foobar
-    </div>
-  </div>
-  <div
-    className="hig__banner__dismiss-button"
-  >
-    <button
-      className="hig__icon-button hig__icon-button--transparent"
-      onBlur={undefined}
-      onClick={undefined}
-      onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
-      title="Dismiss"
+    <figure
+      className="emotion-1"
     >
       <svg
-        className="hig__icon-button__icon"
-        viewBox="0 0 16 16"
+        className="emotion-0"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          info-24
+        </title>
         <path
-          d="M11.4 5.4l-.8-.8L8 7.3 5.4 4.6l-.8.8L7.3 8l-2.7 2.6.8.8L8 8.7l2.6 2.7.8-.8L8.7 8z"
+          d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
+        />
+        <path
+          d="M11 11h2v6h-2z"
+        />
+        <circle
+          cx="12"
+          cy="8"
+          r="1.25"
         />
       </svg>
-    </button>
+    </figure>
+    <div
+      className="emotion-5"
+    >
+      <div
+        className="emotion-3"
+      >
+        <p
+          className="emotion-2"
+        >
+          Message
+        </p>
+      </div>
+      <div
+        className="emotion-4"
+      >
+        foobar
+      </div>
+    </div>
+    <div
+      className="emotion-7"
+    >
+      <svg
+        className="emotion-0"
+        height="24px"
+        onClick={undefined}
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          hig-icons/common/24/close-24
+        </title>
+        <path
+          d="M12 12.68l-7.61 7.61-.68-.68L11.32 12 3.71 4.38l.68-.67L12 11.32l7.61-7.61.68.67L12.68 12l7.61 7.61-.68.68z"
+        />
+      </svg>
+    </div>
   </div>
 </div>
 `;
 
 exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
+.emotion-8 {
+  background-color: #ffffff;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 50px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: rgba(56,171,223,0.5);
+  background-color: rgba(56,171,223,0.1);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50px;
+  min-height: 50px;
+  margin: 0;
+  background-color: #38abdf;
+}
+
+.emotion-1 svg * {
+  fill: white;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: calc((50px - 20px) / 2) 0 0 16px;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  min-width: 200px;
+  max-width: 900px;
+  padding-bottom: calc((50px - 20px) / 2);
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+
+.emotion-2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  padding-right: calc(50px - calc((36px - 10px) / 2));
+}
+
+.emotion-6 svg {
+  cursor: pointer;
+}
+
+.emotion-6 svg * {
+  fill: #808080;
+}
+
+.emotion-6:hover svg * {
+  fill: #0696d7;
+}
+
 <div
-  aria-label={undefined}
-  aria-labelledby={undefined}
-  aria-live="polite"
-  className="hig__banner hig__banner--primary hig--light-theme"
-  role="alert"
+  className="emotion-8"
 >
-  <figure
-    className="hig__banner__icon-background hig--light-theme"
-  >
-    <svg
-      height="24"
-      viewBox="0 0 24 24"
-      width="24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>
-        info-24
-      </title>
-      <path
-        d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
-      />
-      <path
-        d="M11 11h2v6h-2z"
-      />
-      <circle
-        cx="12"
-        cy="8"
-        r="1.25"
-      />
-    </svg>
-  </figure>
   <div
-    className="hig__banner__content"
+    aria-live="polite"
+    className="emotion-7"
+    role="alert"
   >
-    <p
-      className="hig__banner__message"
-    >
-      <span
-        className="hig__typography hig__typography__text hig__typography--hig-cool-gray-70"
-        style={Object {}}
-      >
-        Message
-      </span>
-    </p>
-  </div>
-  <div
-    className="hig__banner__dismiss-button"
-  >
-    <button
-      className="hig__icon-button hig__icon-button--transparent"
-      onBlur={undefined}
-      onClick={undefined}
-      onFocus={undefined}
-      onMouseEnter={undefined}
-      onMouseLeave={undefined}
-      title="Dismiss"
+    <figure
+      className="emotion-1"
     >
       <svg
-        className="hig__icon-button__icon"
-        viewBox="0 0 16 16"
+        className="emotion-0"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <title>
+          info-24
+        </title>
         <path
-          d="M11.4 5.4l-.8-.8L8 7.3 5.4 4.6l-.8.8L7.3 8l-2.7 2.6.8.8L8 8.7l2.6 2.7.8-.8L8.7 8z"
+          d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
+        />
+        <path
+          d="M11 11h2v6h-2z"
+        />
+        <circle
+          cx="12"
+          cy="8"
+          r="1.25"
         />
       </svg>
-    </button>
+    </figure>
+    <div
+      className="emotion-4"
+    >
+      <div
+        className="emotion-3"
+      >
+        <p
+          className="emotion-2"
+        >
+          Message
+        </p>
+      </div>
+    </div>
+    <div
+      className="emotion-6"
+    >
+      <svg
+        className="emotion-0"
+        height="24px"
+        onClick={undefined}
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          hig-icons/common/24/close-24
+        </title>
+        <path
+          d="M12 12.68l-7.61 7.61-.68-.68L11.32 12 3.71 4.38l.68-.67L12 11.32l7.61-7.61.68.67L12.68 12l7.61 7.61-.68.68z"
+        />
+      </svg>
+    </div>
   </div>
 </div>
 `;

@@ -1,11 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
-import { ThemeContext } from "@hig/themes";
+import { css } from "emotion";
+import ThemeContext from "@hig/theme-context";
 import { Info24, Complete24, Issue24, Error24 } from "@hig/icons";
-
-import "./icon-background.scss";
-import classNames from "../classNames";
+import stylesheet from "./stylesheet";
 import { types } from "../../types";
 
 /** @type {Object.<string, string>} */
@@ -29,8 +27,8 @@ export function IconBackground({ type }) {
   const Icon = iconNamesByType[type];
   return (
     <ThemeContext.Consumer>
-      {({ themeClass }) => (
-        <figure className={cx(classNames.iconBackground, themeClass)}>
+      {({ resolvedRoles }) => (
+        <figure className={css(stylesheet({ type }, resolvedRoles))}>
           <Icon />
         </figure>
       )}

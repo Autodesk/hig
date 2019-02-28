@@ -1,6 +1,6 @@
 {
   "name": "@hig/banner",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "HIG Banner",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -13,16 +13,14 @@
   },
   "main": "build/index.js",
   "module": "build/index.es.js",
-  "style": "build/index.css",
   "files": [
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon-button": "^1.0.1",
-    "@hig/icons": "^1.0.0",
-    "@hig/themes": "^0.3.0",
-    "@hig/typography": "^0.1.4",
-    "classnames": "^2.2.5",
+    "@hig/icons": "^2.0.2",
+    "@hig/typography": "^1.0.2",
+    "@hig/theme-context": "^2.1.0",
+    "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
     "react-lifecycles-compat": "^3.0.4"
   },
