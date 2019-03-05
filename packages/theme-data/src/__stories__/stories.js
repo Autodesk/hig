@@ -69,8 +69,9 @@ export default [
     readme: densityReadme
   },
   {
-    description: "Component - Button",
-    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^button./)
+    description: "Component",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^component./),
+    readme: undefined
   },
   {
     description: "Component - Avatar",
@@ -78,8 +79,23 @@ export default [
     readme: undefined
   },
   {
+    description: "Component - Banner",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^banner./),
+    readme: undefined
+  },
+  {
+    description: "Component - Button",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^button./),
+    readme: undefined
+  },
+  {
     description: "Component - Checkbox",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^checkbox./),
+    readme: undefined
+  },
+  {
+    description: "Component - Divider",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^divider./),
     readme: undefined
   },
   {
@@ -108,13 +124,53 @@ export default [
     readme: undefined
   },
   {
+    description: "Component - Modal",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^modal./),
+    readme: undefined
+  },
+  {
+    description: "Component - Progress bar",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^progressBar./),
+    readme: undefined
+  },
+  {
+    description: "Component - Progress ring",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^progressRing./),
+    readme: undefined
+  },
+  {
     description: "Component - Skeleton item",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^skeletonItem./),
     readme: undefined
   },
   {
+    description: "Component - Slider",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^slider./),
+    readme: undefined
+  },
+  {
+    description: "Component - Tabs",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^tabs./),
+    readme: undefined
+  },
+  {
     description: "Component - Text area",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^textArea./),
+    readme: undefined
+  },
+  {
+    description: "Component - Text link",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^textLink./),
+    readme: undefined
+  },
+  {
+    description: "Component - Tooltip",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^tooltip./),
+    readme: undefined
+  },
+  {
+    description: "Component - Typography",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^typography./),
     readme: undefined
   }
 ];
