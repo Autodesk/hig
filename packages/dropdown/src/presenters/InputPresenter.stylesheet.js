@@ -1,5 +1,3 @@
-import constants from "./constants";
-
 export default function stylesheet(props, themeData) {
   return {
     wrapper: {
@@ -10,10 +8,12 @@ export default function stylesheet(props, themeData) {
 
     caret: {
       position: "absolute",
-      top: `calc(${constants.menuTopOffset} / 2 - 4px)`,
+      top: "50%",
+      transform: "translateY(-50%)",
       right: "7px",
       padding: "0 10px",
-      opacity: props.disabled ? themeData["component.disabled.opacity"] : 1
+      opacity: props.disabled ? themeData["component.disabled.opacity"] : 1,
+      pointerEvents: "none"
     }
   };
 }

@@ -11,6 +11,8 @@ import renderOptions from "./presenters/renderOptions";
 /** @typedef {import("./presenters/renderOptions").OptionMeta} OptionMeta */
 /** @typedef {import("downshift").ControllerStateAndHelpers} DownshiftHelpers */
 
+const variantTypes = ["line", "box"];
+
 export default class Dropdown extends Component {
   static propTypes = {
     /**
@@ -79,7 +81,11 @@ export default class Dropdown extends Component {
     value: PropTypes.oneOfType([
       PropTypes.any,
       PropTypes.arrayOf(PropTypes.any)
-    ])
+    ]),
+    /**
+     * The visual variant of the textarea
+     */
+    variant: PropTypes.oneOf(variantTypes)
   };
 
   static defaultProps = {
@@ -150,7 +156,14 @@ export default class Dropdown extends Component {
    */
   renderInput(downshift) {
     const { id, toggleMenu, getInputProps } = downshift;
-    const { placeholder, disabled, required, onBlur, onFocus } = this.props;
+    const {
+      placeholder,
+      disabled,
+      required,
+      onBlur,
+      onFocus,
+      variant
+    } = this.props;
 
     const inputProps = getInputProps({
       id,
@@ -159,7 +172,8 @@ export default class Dropdown extends Component {
       required,
       onBlur,
       onFocus,
-      onClick: toggleMenu
+      onClick: toggleMenu,
+      variant
     });
 
     return <InputPresenter key="input" {...inputProps} />;

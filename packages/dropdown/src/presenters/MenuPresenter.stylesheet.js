@@ -4,13 +4,12 @@ export default function stylesheet(props, themeData) {
   return {
     display: props.isOpen ? "block" : "none",
     position: "absolute",
-    minWidth: "240px",
+    width: "100%",
     maxHeight: constants.menuMaxHeight,
-    top: constants.menuTopOffset,
+    top: themeData["input.height"],
     overflow: "auto",
     zIndex: constants.dropdownLayer,
 
-    border: `1px solid ${themeData["menu.backgroundColor"]}`,
     borderTop: "none",
     borderTopLeftRadius: themeData["menu.topFlushBorderTopRadius"],
     borderTopRightRadius: themeData["menu.topFlushBorderTopRadius"],

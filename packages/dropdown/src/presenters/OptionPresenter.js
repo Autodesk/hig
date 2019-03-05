@@ -85,9 +85,9 @@ export default class OptionPresenter extends Component {
 
     return (
       <OptionWrapper selected={selected} {...otherProps}>
-        <span className="hig__dropdown-option__label">{children}</span>
+        <span>{children}</span>
         {selected && (
-          <div className="hig__dropdown-option__checkmark">
+          <div>
             <CheckmarkBlueDark24 color="#087AAD" />
           </div>
         )}
