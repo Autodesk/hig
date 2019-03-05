@@ -1,3 +1,10 @@
+# [@hig/components-v1.0.14](https://github.com/Autodesk/hig/compare/@hig/components@1.0.13...@hig/components@1.0.14) (2019-03-05)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/banner to version 2.0.0 ([eebbed1](https://github.com/Autodesk/hig/commit/eebbed1))
+
 # [@hig/components-v1.0.13](https://github.com/Autodesk/hig/compare/@hig/components@1.0.12...@hig/components@1.0.13) (2019-02-26)
 
 
