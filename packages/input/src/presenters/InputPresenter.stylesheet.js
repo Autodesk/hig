@@ -3,7 +3,7 @@ import { variants } from "../constants";
 function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
     color: themeData["input.fontColor"],
-    height: themeData["input.height"],
+    height: `calc(${themeData["input.height"]} - 2px)`,
     transitionProperty: "color",
     transitionDuration: "0.3s"
   };

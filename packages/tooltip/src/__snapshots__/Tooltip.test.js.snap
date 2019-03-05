@@ -233,9 +233,7 @@ exports[`tooltip/Tooltip  2`] = `
       tabIndex="0"
       target={undefined}
     >
-      <span
-        className="hig__button__title"
-      >
+      <span>
         Click Me
       </span>
     </button>
