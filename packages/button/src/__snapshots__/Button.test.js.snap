@@ -54,9 +54,7 @@ exports[`Button  1`] = `
   tabIndex="0"
   target={undefined}
 >
-  <span
-    className="hig__button__title"
-  >
+  <span>
     Settings
   </span>
 </button>
@@ -116,9 +114,7 @@ exports[`Button  2`] = `
   tabIndex="0"
   target={undefined}
 >
-  <span
-    className="hig__button__title"
-  >
+  <span>
     Settings
   </span>
 </button>
@@ -178,9 +174,7 @@ exports[`Button  3`] = `
   tabIndex="0"
   target={undefined}
 >
-  <span
-    className="hig__button__title"
-  >
+  <span>
     Settings
   </span>
 </button>
@@ -240,9 +234,7 @@ exports[`Button  4`] = `
   tabIndex="0"
   target={undefined}
 >
-  <span
-    className="hig__button__title"
-  >
+  <span>
     Settings
   </span>
 </button>
@@ -316,9 +308,7 @@ exports[`Button  5`] = `
   >
     &lt;Icon /&gt;
   </span>
-  <span
-    className="hig__button__title"
-  >
+  <span>
     Settings
   </span>
 </button>
@@ -378,9 +368,7 @@ exports[`Button  6`] = `
   tabIndex="0"
   target={undefined}
 >
-  <span
-    className="hig__button__title"
-  >
+  <span>
     Settings
   </span>
 </a>

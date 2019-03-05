@@ -12,13 +12,15 @@ import Role from "./components/Role";
 import Header from "./components/Header";
 import lightGrayTheme from "../colorSchemes/lightGray/unresolvedRoles";
 import darkBlueTheme from "../colorSchemes/darkBlue/unresolvedRoles";
+import darkGrayTheme from "../colorSchemes/darkGray/unresolvedRoles";
 import webLightTheme from "../colorSchemes/webLight/unresolvedRoles";
 import basics from "../basics";
 
 const themeConfigs = {
   "hig-light": webLightTheme,
   "hig-light-gray": lightGrayTheme,
-  "hig-dark-blue": darkBlueTheme
+  "hig-dark-blue": darkBlueTheme,
+  "hig-dark-gray": darkGrayTheme
 };
 
 const storybook = storiesOf("Theming|Theme data", module);

@@ -54,6 +54,9 @@ export default {
   "input.highlightColor": {
     value: {
       ref: "basics.colors.autodeskBlue400"
+    },
+    transform: {
+      alpha: 0.35
     }
   }
 };

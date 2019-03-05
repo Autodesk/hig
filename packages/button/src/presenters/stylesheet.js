@@ -197,8 +197,8 @@ export default function stylesheet(props, themeData) {
       ...(disabled
         ? getButtonRulesByDisabled(type, themeData)
         : {
-            ...(hasHover ? getButtonHoverRulesByType(type, themeData) : {}),
             ...(hasFocus ? getButtonFocusRulesByType(type, themeData) : {}),
+            ...(hasHover ? getButtonHoverRulesByType(type, themeData) : {}),
             ...(isPressed ? getButtonPressedRulesByType(type, themeData) : {})
           }),
       ...getButtonRulesByWidth(width)

@@ -11,6 +11,9 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
+    },
+    transform: {
+      alpha: 0.5
     }
   },
   "checkbox.borderWidth": {

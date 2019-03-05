@@ -19,7 +19,7 @@ exports[`InputPresenter renders by default 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: 28px;
+  height: calc(28px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -27,27 +27,27 @@ exports[`InputPresenter renders by default 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::selection {
-  background-color: #0696d7;
+  background-color: rgba(6,150,215,0.25);
 }
 
 <input
@@ -79,7 +79,7 @@ exports[`InputPresenter renders when disabled 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: 28px;
+  height: calc(28px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -87,27 +87,27 @@ exports[`InputPresenter renders when disabled 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::selection {
-  background-color: #0696d7;
+  background-color: rgba(6,150,215,0.25);
 }
 
 <input
@@ -140,7 +140,7 @@ exports[`InputPresenter renders with focus 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: 28px;
+  height: calc(28px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.1s;
@@ -148,27 +148,27 @@ exports[`InputPresenter renders with focus 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::selection {
-  background-color: #0696d7;
+  background-color: rgba(6,150,215,0.25);
 }
 
 <input
@@ -200,7 +200,7 @@ exports[`InputPresenter renders with hover 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: 28px;
+  height: calc(28px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.1s;
@@ -208,27 +208,27 @@ exports[`InputPresenter renders with hover 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::selection {
-  background-color: #0696d7;
+  background-color: rgba(6,150,215,0.25);
 }
 
 <input
@@ -260,7 +260,7 @@ exports[`InputPresenter renders with id 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: 28px;
+  height: calc(28px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -268,27 +268,27 @@ exports[`InputPresenter renders with id 1`] = `
 }
 
 .emotion-0::-webkit-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::-moz-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0:-ms-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::-ms-input-placeholder {
-  color: rgba(60,60,60,0.7);
+  color: rgba(60,60,60,0.4);
 }
 
 .emotion-0::selection {
-  background-color: #0696d7;
+  background-color: rgba(6,150,215,0.25);
 }
 
 <input
