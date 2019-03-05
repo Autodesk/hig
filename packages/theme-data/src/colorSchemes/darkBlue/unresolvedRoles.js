@@ -6,6 +6,7 @@ import mediumDensityTheme from "../../densities/mediumDensity";
 import banner from "./components/banner";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
+import divider from "./components/divider";
 import formField from "./components/formField";
 import input from "./components/input";
 import label from "./components/label";
@@ -25,6 +26,7 @@ const darkBlueThemeConfig = extendTheme(
     banner,
     button,
     checkbox,
+    divider,
     formField,
     input,
     label,

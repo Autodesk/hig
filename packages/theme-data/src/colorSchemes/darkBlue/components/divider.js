@@ -1,7 +1,7 @@
 export default {
   "divider.lightColor": {
     value: {
-      ref: "basics.colors.white"
+      ref: "basics.colors.darkBlue200"
     }
   }
 };
