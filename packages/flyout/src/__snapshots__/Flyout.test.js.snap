@@ -177,9 +177,7 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
       tabIndex="0"
       target={undefined}
     >
-      <span
-        className="hig__button__title"
-      >
+      <span>
         Click Me
       </span>
     </button>
@@ -362,9 +360,7 @@ exports[`flyout/Flyout snapshots renders children from the given render function
       tabIndex="0"
       target={undefined}
     >
-      <span
-        className="hig__button__title"
-      >
+      <span>
         Render prop
       </span>
     </button>
@@ -558,9 +554,7 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
       tabIndex="0"
       target={undefined}
     >
-      <span
-        className="hig__button__title"
-      >
+      <span>
         Click Me
       </span>
     </button>
@@ -868,9 +862,7 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
       tabIndex="0"
       target={undefined}
     >
-      <span
-        className="hig__button__title"
-      >
+      <span>
         Click Me
       </span>
     </button>
@@ -1039,9 +1031,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
       tabIndex="0"
       target={undefined}
     >
-      <span
-        className="hig__button__title"
-      >
+      <span>
         Render prop
       </span>
     </button>
@@ -1240,9 +1230,7 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
       tabIndex="0"
       target={undefined}
     >
-      <span
-        className="hig__button__title"
-      >
+      <span>
         Click Me
       </span>
     </button>

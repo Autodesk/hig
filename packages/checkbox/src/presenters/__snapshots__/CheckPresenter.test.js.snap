@@ -18,7 +18,7 @@ exports[`checkbox/presenters/CheckPresenter renders with all props 1`] = `
   display: block;
   box-sizing: border-box;
   color: transparent;
-  border: 1px solid #BEC8D2;
+  border: 1px solid rgba(190,200,210,0.5);
   background-color: #ffffff;
   text-align: center;
   font-size: 25px;
@@ -105,7 +105,7 @@ exports[`checkbox/presenters/CheckPresenter renders without props 1`] = `
   display: block;
   box-sizing: border-box;
   color: transparent;
-  border: 1px solid #BEC8D2;
+  border: 1px solid rgba(190,200,210,0.5);
   background-color: #ffffff;
   text-align: center;
   font-size: 25px;
