@@ -1,3 +1,10 @@
+# [@hig/button-v1.3.1](https://github.com/Autodesk/hig/compare/@hig/button@1.3.0...@hig/button@1.3.1) (2019-03-05)
+
+
+### Bug Fixes
+
+* button design tweak ([6848aed](https://github.com/Autodesk/hig/commit/6848aed))
+
 # [@hig/button-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/button@1.2.2...@hig/button@1.3.0) (2019-02-26)
 
 
