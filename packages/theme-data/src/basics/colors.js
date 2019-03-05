@@ -127,21 +127,39 @@ export default {
   surfaceDarkBlueLevel250: { value: "#2e3440", type: COLOR },
   surfaceDarkBlueLevel300: { value: "#222933", type: COLOR },
   surfaceDarkBlueLevel350: { value: "#1a1f25", type: COLOR },
-  surfaceDarkBlueShadow: { value: "#1a1f26", type: COLOR },
+  surfaceDarkBlueShadow: {
+    value: "#1a1f26",
+    type: COLOR,
+    transform: {
+      alpha: 0.5
+    }
+  },
 
   surfaceDarkGrayLevel100: { value: "#535353", type: COLOR },
   surfaceDarkGrayLevel200: { value: "#474747", type: COLOR },
   surfaceDarkGrayLevel250: { value: "#373737", type: COLOR },
   surfaceDarkGrayLevel300: { value: "#2a2a2a", type: COLOR },
   surfaceDarkGrayLevel350: { value: "#202020", type: COLOR },
-  surfaceDarkGrayShadow: { value: "#000000", type: COLOR },
+  surfaceDarkGrayShadow: {
+    value: "#000000",
+    type: COLOR,
+    transform: {
+      alpha: 0.3
+    }
+  },
 
   surfaceLightGrayLevel100: { value: "#ffffff", type: COLOR },
   surfaceLightGrayLevel200: { value: "#f5f5f5", type: COLOR },
   surfaceLightGrayLevel250: { value: "#eeeeee", type: COLOR },
   surfaceLightGrayLevel300: { value: "#d9d9d9", type: COLOR },
   surfaceLightGrayLevel350: { value: "#cccccc", type: COLOR },
-  surfaceLightGrayShadow: { value: "#000000", type: COLOR },
+  surfaceLightGrayShadow: {
+    value: "#000000",
+    type: COLOR,
+    transform: {
+      alpha: 0.2
+    }
+  },
 
   // Text colors
   textAgainstDark: { value: "#f5f5f5", type: COLOR },

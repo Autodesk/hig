@@ -118,6 +118,9 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.textColorDim"
+    },
+    transform: {
+      alpha: 0.4
     }
   },
   "input.highlightColor": {
