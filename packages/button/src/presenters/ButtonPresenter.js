@@ -86,7 +86,7 @@ export default class ButtonPresenter extends Component {
               {...otherProps}
             >
               {icon && <span className={css(styles.icon)}>{icon}</span>}
-              <span className="hig__button__title">{title}</span>
+              <span>{title}</span>
             </Wrapper>
           );
         }}
