@@ -1,3 +1,11 @@
+# [@hig/theme-data-v2.3.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.3.0...@hig/theme-data@2.3.1) (2019-03-05)
+
+
+### Bug Fixes
+
+* design updates ([f164857](https://github.com/Autodesk/hig/commit/f164857))
+* update divider theme-data ([3449e28](https://github.com/Autodesk/hig/commit/3449e28))
+
 # [@hig/theme-data-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.2.0...@hig/theme-data@2.3.0) (2019-02-26)
 
 
