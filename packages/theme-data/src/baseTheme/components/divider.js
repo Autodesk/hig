@@ -17,7 +17,7 @@ export default {
   "divider.heavyColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.charcoal900"
+      ref: "divider.lightColor"
     },
     transform: {
       alpha: 0.25
