@@ -1,3 +1,10 @@
+# [@hig/theme-context-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/theme-context@2.1.0...@hig/theme-context@2.1.1) (2019-03-05)
+
+
+### Bug Fixes
+
+* manually bump version ([169213d](https://github.com/Autodesk/hig/commit/169213d))
+
 # [@hig/theme-context-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/theme-context@2.0.0...@hig/theme-context@2.1.0) (2019-02-05)
 
 
