@@ -1,3 +1,10 @@
+# [@hig/top-nav-v3.0.2](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.1...@hig/top-nav@3.0.2) (2019-03-05)
+
+
+### Bug Fixes
+
+* remove extra profile-flyout padding ([493a03e](https://github.com/Autodesk/hig/commit/493a03e))
+
 # [@hig/top-nav-v3.0.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.0...@hig/top-nav@3.0.1) (2019-02-26)
 
 
