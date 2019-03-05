@@ -1,3 +1,10 @@
+# [@hig/input-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/input@1.1.0...@hig/input@1.1.1) (2019-03-05)
+
+
+### Bug Fixes
+
+* input design tweak ([b741e6a](https://github.com/Autodesk/hig/commit/b741e6a))
+
 # [@hig/input-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/input@1.0.4...@hig/input@1.1.0) (2019-02-08)
 
 
