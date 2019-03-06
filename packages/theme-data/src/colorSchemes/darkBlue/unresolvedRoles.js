@@ -10,6 +10,7 @@ import divider from "./components/divider";
 import formField from "./components/formField";
 import input from "./components/input";
 import label from "./components/label";
+import menu from "./components/menu";
 import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
 import skeletonItem from "./components/skeletonItem";
@@ -30,6 +31,7 @@ const darkBlueThemeConfig = extendTheme(
     formField,
     input,
     label,
+    menu,
     progressBar,
     progressRing,
     skeletonItem,
