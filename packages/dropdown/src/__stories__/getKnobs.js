@@ -1,5 +1,5 @@
 import { action } from "@storybook/addon-actions";
-import { boolean, object, text } from "@storybook/addon-knobs/react";
+import { boolean, object, select, text } from "@storybook/addon-knobs/react";
 import { controlledObject } from "@hig/storybook/utils";
 
 const knobGroupIds = {
@@ -8,6 +8,7 @@ const knobGroupIds = {
 };
 
 const knobLabels = {
+  variant: "Variant",
   placeholder: "Placeholder",
   disabled: "Disabled",
   required: "Required",
@@ -20,6 +21,11 @@ const knobLabels = {
   value: "Value"
 };
 
+const variantOptions = {
+  line: "Line",
+  box: "Box"
+};
+
 export default function getKnobs(props) {
   const {
     placeholder = "",
@@ -28,6 +34,7 @@ export default function getKnobs(props) {
     multiple = false,
     options = [],
     value,
+    variant,
     ...otherProps
   } = props;
 
@@ -38,6 +45,12 @@ export default function getKnobs(props) {
 
   return {
     ...otherProps,
+    variant: select(
+      knobLabels.variant,
+      variantOptions,
+      variant,
+      knobGroupIds.basic
+    ),
     value: controlledObject(knobLabels.value, value, knobGroupIds.advanced),
     placeholder: text(knobLabels.placeholder, placeholder, knobGroupIds.basic),
     disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
