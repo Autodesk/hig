@@ -2,7 +2,7 @@ export default function stylesheet(themeData) {
   return {
     content: {
       minHeight: `32px`,
-      padding: `12px`,
+      padding: `8px 12px`,
       boxSizing: `border-box`
     },
     panel: {
