@@ -7,7 +7,7 @@ exports[`tooltip/presenters/TextPresenter renders with children 1`] = `
 
 .emotion-2 {
   min-height: 32px;
-  padding: 12px;
+  padding: 8px 12px;
   box-sizing: border-box;
 }
 
@@ -49,7 +49,7 @@ exports[`tooltip/presenters/TextPresenter renders without props 1`] = `
 
 .emotion-2 {
   min-height: 32px;
-  padding: 12px;
+  padding: 8px 12px;
   box-sizing: border-box;
 }
 
