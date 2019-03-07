@@ -27,7 +27,12 @@ export default {
   },
   "textLink.focus.halo.color": {
     type: COLOR,
-    value: "#BAE6F6"
+    value: {
+      ref: "colorScheme.accentColor"
+    },
+    transform: {
+      alpha: 0.25
+    }
   },
   "textLink.focus.halo.width": {
     type: LENGTH,
