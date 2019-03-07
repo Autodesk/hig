@@ -8,6 +8,7 @@ import IconsPage from "./pages/IconsPage";
 import InputPage from "./pages/InputPage";
 import ModalPage from "./pages/ModalPage";
 import ProgressBarPage from "./pages/ProgressBarPage";
+import ProgressRingPage from "./pages/ProgressRingPage";
 import RadioButtonPage from "./pages/RadioButtonPage";
 import RichTextPage from "./pages/RichTextPage";
 import SliderPage from "./pages/SliderPage";
@@ -27,7 +28,8 @@ export default [
   { path: "/icons/", component: IconsPage, label: "Icons" },
   { path: "/input/", component: InputPage, label: "Input" },
   { path: "/modal/", component: ModalPage, label: "Modal" },
-  { path: "/progress-bar/", component: ProgressBarPage, label: "ProgressBar" },
+  { path: "/progress-bar/", component: ProgressBarPage, label: "Progress Bar" },
+  { path: "/progress-ring/", component: ProgressRingPage, label: "Progress Ring" },
   { path: "/radio-button/", component: RadioButtonPage, label: "Radio Button" },
   { path: "/rich-text/", component: RichTextPage, label: "Rich Text" },
   { path: "/slider/", component: SliderPage, label: "Slider" },

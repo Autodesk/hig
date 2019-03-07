@@ -13,6 +13,8 @@
     "@hig/input": "^1.0.4",
     "@hig/label": "^1.0.1",
     "@hig/modal": "^2.0.0",
+    "@hig/progress-bar": "^1.0.2",
+    "@hig/progress-ring": "^1.0.1",
     "@hig/radio-button": "^1.0.2",
     "@hig/rich-text": "^1.0.0",
     "@hig/slider": "^1.0.0",
