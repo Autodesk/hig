@@ -112,9 +112,11 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
       Object {
         "opacity": "0.5",
         "padding": "0 10px",
+        "pointerEvents": "none",
         "position": "absolute",
         "right": "7px",
-        "top": "calc(32px / 2 - 4px)",
+        "top": "50%",
+        "transform": "translateY(-50%)",
       }
     }
     viewBox="0 0 10 10"
@@ -243,9 +245,11 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
       Object {
         "opacity": 1,
         "padding": "0 10px",
+        "pointerEvents": "none",
         "position": "absolute",
         "right": "7px",
-        "top": "calc(32px / 2 - 4px)",
+        "top": "50%",
+        "transform": "translateY(-50%)",
       }
     }
     viewBox="0 0 10 10"

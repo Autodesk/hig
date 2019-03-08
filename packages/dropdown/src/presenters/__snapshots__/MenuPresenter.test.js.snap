@@ -4,17 +4,16 @@ exports[`Dropdown/presenters/MenuPresenter renders with all props 1`] = `
 .emotion-0 {
   display: block;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
@@ -32,17 +31,16 @@ exports[`Dropdown/presenters/MenuPresenter renders with only required props 1`] 
 .emotion-0 {
   display: none;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }

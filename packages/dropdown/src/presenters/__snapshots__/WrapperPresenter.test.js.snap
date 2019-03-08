@@ -3,8 +3,7 @@
 exports[`Dropdown/presenters/WrapperPresenter renders with all props 1`] = `
 .emotion-0 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 <div
@@ -19,8 +18,7 @@ exports[`Dropdown/presenters/WrapperPresenter renders with all props 1`] = `
 exports[`Dropdown/presenters/WrapperPresenter renders without props 1`] = `
 .emotion-0 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 <div
