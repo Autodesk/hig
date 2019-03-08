@@ -21,7 +21,7 @@
     "@hig/avatar": "1.0.4",
     "@hig/flyout": "^1.0.3",
     "@hig/icon-button": "^1.0.1",
-    "@hig/icons": "^2.0.2",
+    "@hig/icons": "^2.1.0",
     "@hig/notifications-flyout": "^2.0.0",
     "@hig/profile-flyout": "^2.0.1",
     "@hig/theme-context": "^2.1.1",
