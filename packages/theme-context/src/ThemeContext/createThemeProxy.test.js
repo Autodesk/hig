@@ -5,14 +5,14 @@ describe("ThemeContext/createThemeProxy", () => {
   const theme = {
     metadata: {
       __deprecated__: {
-        navyBlue: true,
-        icyBlue: { equivalent: "aliceBlue" }
+        "colors.navyBlue": true,
+        "colors.icyBlue": { equivalent: "colors.aliceBlue" }
       }
     },
     resolvedRoles: {
-      black: "#000000",
-      navyBlue: "#000080",
-      icyBlue: "#f0f8ff"
+      "colors.black": "#000000",
+      "colors.navyBlue": "#000080",
+      "colors.icyBlue": "#f0f8ff"
     },
     otherData: {}
   };
@@ -67,7 +67,7 @@ describe("ThemeContext/createThemeProxy", () => {
       describe("when a resolved role exists on the theme", () => {
         describe("and the role is not included in deprecated roles", () => {
           it("returns the value without a console warn", () => {
-            expect(resolvedRoles.black).toEqual("#000000");
+            expect(resolvedRoles["colors.black"]).toEqual("#000000");
             expect(console.warn).not.toHaveBeenCalled();
           });
         });
@@ -75,20 +75,20 @@ describe("ThemeContext/createThemeProxy", () => {
         describe("and the role is included in deprecated roles", () => {
           describe("and has an equivalent", () => {
             it("prints a console warn with equivalency info and returns as usual", () => {
-              expect(resolvedRoles.icyBlue).toEqual("#f0f8ff");
+              expect(resolvedRoles["colors.icyBlue"]).toEqual("#f0f8ff");
 
               expect(console.warn).toHaveBeenCalledWith(
-                "Role icyBlue is deprecated and has been renamed to aliceBlue."
+                "Role colors.icyBlue is deprecated and has been renamed to colors.aliceBlue."
               );
             });
           });
 
           describe("and has no equivalent", () => {
             it("prints a console warn and returns as usual", () => {
-              expect(resolvedRoles.navyBlue).toEqual("#000080");
+              expect(resolvedRoles["colors.navyBlue"]).toEqual("#000080");
 
               expect(console.warn).toHaveBeenCalledWith(
-                "Role navyBlue is deprecated."
+                "Role colors.navyBlue is deprecated."
               );
             });
           });
@@ -97,10 +97,20 @@ describe("ThemeContext/createThemeProxy", () => {
 
       describe("when a resolved role does not exist", () => {
         it("console logs an error and returns as usual", () => {
-          expect(resolvedRoles.blue).toBe(undefined);
+          expect(resolvedRoles["colors.blackestBlack"]).toBe(undefined);
 
           expect(console.error).toHaveBeenCalledWith(
-            "Role blue does not exist"
+            "Role colors.blackestBlack does not exist"
+          );
+        });
+      });
+
+      describe("when accessing a non-role value", () => {
+        it("does not log a console error and returns as usual", () => {
+          expect(resolvedRoles.hasOwnProperty).toBeDefined();
+
+          expect(console.error).not.toHaveBeenCalledWith(
+            "Role hasOwnProperty does not exist"
           );
         });
       });

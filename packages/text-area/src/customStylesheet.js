@@ -35,13 +35,17 @@ export default function stylesheetOverride(
   const textArea = {
     ...stylesheet.input,
     display: `block`,
-    resize: `none`,
+    resize: `vertical`,
     padding: `${themeData["input.verticalPadding"]}
-      ${themeData["input.boxType.horizontalPadding"]}`
+      ${themeData["input.boxType.horizontalPadding"]}`,
+    height: `calc((${themeData["input.height"]} - 2px) * 2)`
   };
   return {
     ...stylesheet,
-    wrapper: textAreaWrapper,
+    wrapper: {
+      ...textAreaWrapper,
+      position: `static`
+    },
     input: textArea
   };
 }

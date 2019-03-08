@@ -20,6 +20,8 @@ export default {
     }
   },
   "textLink.focus.halo.color": {
-    value: "#407385"
+    transform: {
+      alpha: 0.35
+    }
   }
 };

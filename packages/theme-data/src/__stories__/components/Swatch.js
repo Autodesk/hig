@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import { ThemeContext } from "@hig/theme-context";
 
 export default function Swatch({
   color,
   borderWidth,
   borderRadius,
-  boxShadow
+  boxShadowBlur,
+  boxShadowColor
 }) {
   return (
     <ThemeContext.Consumer>
@@ -18,7 +18,10 @@ export default function Swatch({
           borderWidth || resolvedRoles["basics.borderWidths.small"];
         const renderedBorderRadius =
           borderRadius || resolvedRoles["basics.borderRadii.medium"];
-        const renderedBoxShadow = boxShadow || "0 0 0 rgba(0, 0, 0, 0)";
+        const renderedBoxShadow =
+          boxShadowBlur && boxShadowColor
+            ? `0 0 ${boxShadowBlur} ${boxShadowColor}`
+            : "0 0 0 rgba(0, 0, 0, 0)";
         return (
           <div
             style={{
@@ -44,5 +47,6 @@ Swatch.propTypes = {
   color: PropTypes.string,
   borderWidth: PropTypes.string,
   borderRadius: PropTypes.string,
-  boxShadow: PropTypes.string
+  boxShadowBlur: PropTypes.string,
+  boxShadowColor: PropTypes.string
 };

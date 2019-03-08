@@ -3,7 +3,7 @@
 exports[`tooltip/presenters/ContentPresenter renders with children 1`] = `
 .emotion-0 {
   min-height: 32px;
-  padding: 12px;
+  padding: 8px 12px;
   box-sizing: border-box;
 }
 
@@ -19,7 +19,7 @@ exports[`tooltip/presenters/ContentPresenter renders with children 1`] = `
 exports[`tooltip/presenters/ContentPresenter renders without props 1`] = `
 .emotion-0 {
   min-height: 32px;
-  padding: 12px;
+  padding: 8px 12px;
   box-sizing: border-box;
 }
 

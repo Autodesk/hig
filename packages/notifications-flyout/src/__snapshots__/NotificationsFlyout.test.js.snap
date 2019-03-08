@@ -250,7 +250,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 
 .emotion-8 a:focus {
   color: #024B6C;
-  outline: solid 0 #BAE6F6;
+  outline: solid 0 rgba(6,150,215,0.25);
 }
 
 .emotion-8 p {
@@ -679,7 +679,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 
 .emotion-8 a:focus {
   color: #024B6C;
-  outline: solid 0 #BAE6F6;
+  outline: solid 0 rgba(6,150,215,0.25);
 }
 
 .emotion-8 p {
@@ -1061,7 +1061,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
 
 .emotion-8 a:focus {
   color: #024B6C;
-  outline: solid 0 #BAE6F6;
+  outline: solid 0 rgba(6,150,215,0.25);
 }
 
 .emotion-8 p {

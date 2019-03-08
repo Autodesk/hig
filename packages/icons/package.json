@@ -55,7 +55,7 @@
     }
   },
   "dependencies": {
-    "@hig/theme-context": "^2.1.0",
+    "@hig/theme-context": "^2.1.1",
     "emotion": "^10.0.0"
   }
 }
