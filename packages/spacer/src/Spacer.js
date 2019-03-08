@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { ThemeContext } from "@hig/theme-context";
 
-import { cx, css } from "emotion";
+import { css } from "emotion";
 
 import stylesheet from "./Spacer.stylesheet";
 import { AVAILABLE_SIZES } from "./availableSizes";
@@ -25,7 +25,7 @@ export default class Spacer extends Component {
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
           const styles = stylesheet({ size, spacing }, resolvedRoles);
-          return <div className={cx(css(styles.spacer), "hig__spacer-v1")} />;
+          return <div className={css(styles.spacer)} />;
         }}
       </ThemeContext.Consumer>
     );

@@ -7,7 +7,7 @@ exports[`spacer/Spacer  1`] = `
 }
 
 <div
-  className="emotion-0 hig__spacer-v1"
+  className="emotion-0"
 />
 `;
 
@@ -18,7 +18,7 @@ exports[`spacer/Spacer  2`] = `
 }
 
 <div
-  className="emotion-0 hig__spacer-v1"
+  className="emotion-0"
 />
 `;
 
@@ -29,7 +29,7 @@ exports[`spacer/Spacer  3`] = `
 }
 
 <div
-  className="emotion-0 hig__spacer-v1"
+  className="emotion-0"
 />
 `;
 
@@ -40,6 +40,6 @@ exports[`spacer/Spacer  4`] = `
 }
 
 <div
-  className="emotion-0 hig__spacer-v1"
+  className="emotion-0"
 />
 `;
