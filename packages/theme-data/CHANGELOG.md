@@ -1,3 +1,11 @@
+# [@hig/theme-data-v2.3.3](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.3.2...@hig/theme-data@2.3.3) (2019-03-08)
+
+
+### Bug Fixes
+
+* update dark blue surface level 1 color ([4801629](https://github.com/Autodesk/hig/commit/4801629))
+* update menu theme-data ([86458f5](https://github.com/Autodesk/hig/commit/86458f5))
+
 # [@hig/theme-data-v2.3.2](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.3.1...@hig/theme-data@2.3.2) (2019-03-08)
 
 
