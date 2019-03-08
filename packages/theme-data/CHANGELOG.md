@@ -1,3 +1,11 @@
+# [@hig/theme-data-v2.3.2](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.3.1...@hig/theme-data@2.3.2) (2019-03-08)
+
+
+### Bug Fixes
+
+* text-link theme-data design updates ([0776833](https://github.com/Autodesk/hig/commit/0776833))
+* update input hover halo theme-data ([542f30d](https://github.com/Autodesk/hig/commit/542f30d))
+
 # [@hig/theme-data-v2.3.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.3.0...@hig/theme-data@2.3.1) (2019-03-05)
 
 
