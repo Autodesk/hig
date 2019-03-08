@@ -21,7 +21,7 @@
     "@hig/icon-button": "^1.0.1",
     "@hig/icons": "^2.1.0",
     "@hig/rich-text": "^1.0.0",
-    "@hig/theme-context": "^2.1.1",
+    "@hig/theme-context": "^2.1.2",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
     "react-flip-move": "^3.0.1"
