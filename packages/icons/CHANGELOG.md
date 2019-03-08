@@ -1,3 +1,10 @@
+# [@hig/icons-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/icons@2.0.2...@hig/icons@2.1.0) (2019-03-08)
+
+
+### Features
+
+* add ui control icons ([5465341](https://github.com/Autodesk/hig/commit/5465341))
+
 # [@hig/icons-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/icons@2.0.1...@hig/icons@2.0.2) (2019-02-08)
 
 
