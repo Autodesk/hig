@@ -24,7 +24,7 @@
     "@hig/icons": "^2.0.2",
     "@hig/notifications-flyout": "^2.0.0",
     "@hig/profile-flyout": "^2.0.1",
-    "@hig/theme-context": "^2.1.1",
+    "@hig/theme-context": "^2.1.2",
     "@hig/typography": "^1.0.2",
     "@hig/utils": "^0.3.0",
     "emotion": "^10.0.0",
