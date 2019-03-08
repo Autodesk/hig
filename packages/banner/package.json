@@ -17,7 +17,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icons": "^2.0.2",
+    "@hig/icons": "^2.1.0",
     "@hig/typography": "^1.0.2",
     "@hig/theme-context": "^2.1.1",
     "emotion": "^10.0.0",
