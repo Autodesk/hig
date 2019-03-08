@@ -54,6 +54,7 @@ function writeBundle(svgs, filePath) {
     let density;
     if (svg.size === '16') density = 'information-dense';
     if (svg.size === '24') density = 'regular';
+    if (svg.size === 'UI') density = 'ui-controls';
     if (!density) throw new Error(`Invalid size: ${svg.size}`);
     const viewBox = findViewBox(svg.data);
     const width = getWidth(viewBox);
