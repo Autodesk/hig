@@ -1,6 +1,6 @@
 {
   "name": "@hig/icons",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "HIG icon assets",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -55,7 +55,7 @@
     }
   },
   "dependencies": {
-    "@hig/theme-context": "^2.1.1",
+    "@hig/theme-context": "^2.1.2",
     "emotion": "^10.0.0"
   }
 }
