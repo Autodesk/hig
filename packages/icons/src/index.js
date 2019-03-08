@@ -3,6 +3,31 @@ import { cx, css } from "emotion";
 import React from "react";
 import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./icon.stylesheet";
+import OperatorPlusXsUISVG from "./icons/ui-controls/operator-plus-xs.svg";
+import OperatorPlusSUISVG from "./icons/ui-controls/operator-plus-s.svg";
+import OperatorMinusXsUISVG from "./icons/ui-controls/operator-minus-xs.svg";
+import OperatorMinusSUISVG from "./icons/ui-controls/operator-minus-s.svg";
+import HamburgerDefaultUISVG from "./icons/ui-controls/hamburger-default.svg";
+import HamburgerCloseUISVG from "./icons/ui-controls/hamburger-close.svg";
+import ExternalLinkUISVG from "./icons/ui-controls/external-link.svg";
+import CloseXsUISVG from "./icons/ui-controls/close-xs.svg";
+import CloseSUISVG from "./icons/ui-controls/close-s.svg";
+import CloseMUISVG from "./icons/ui-controls/close-m.svg";
+import CloseLUISVG from "./icons/ui-controls/close-l.svg";
+import CheckmarkXsUISVG from "./icons/ui-controls/checkmark-xs.svg";
+import CheckmarkSUISVG from "./icons/ui-controls/checkmark-s.svg";
+import CaretUpXsUISVG from "./icons/ui-controls/caret-up-xs.svg";
+import CaretUpSUISVG from "./icons/ui-controls/caret-up-s.svg";
+import CaretUpMUISVG from "./icons/ui-controls/caret-up-m.svg";
+import CaretRightXsUISVG from "./icons/ui-controls/caret-right-xs.svg";
+import CaretRightSUISVG from "./icons/ui-controls/caret-right-s.svg";
+import CaretRightMUISVG from "./icons/ui-controls/caret-right-m.svg";
+import CaretLeftXsUISVG from "./icons/ui-controls/caret-left-xs.svg";
+import CaretLeftSUISVG from "./icons/ui-controls/caret-left-s.svg";
+import CaretLeftMUISVG from "./icons/ui-controls/caret-left-m.svg";
+import CaretDownXsUISVG from "./icons/ui-controls/caret-down-xs.svg";
+import CaretDownSUISVG from "./icons/ui-controls/caret-down-s.svg";
+import CaretDownMUISVG from "./icons/ui-controls/caret-down-m.svg";
 import ZoomOut16SVG from "./icons/information-dense/zoom-out.svg";
 import ZoomIn16SVG from "./icons/information-dense/zoom-in.svg";
 import Volume16SVG from "./icons/information-dense/volume.svg";
@@ -4805,6 +4830,381 @@ export const ZoomOut16 = props => (
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <ZoomOut16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CaretDownMUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "10px",
+        height: "10px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CaretDownMUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CaretDownSUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "7px",
+        height: "4px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CaretDownSUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CaretDownXsUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "5px",
+        height: "3px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CaretDownXsUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CaretLeftMUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "10px",
+        height: "10px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CaretLeftMUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CaretLeftSUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "4px",
+        height: "7px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CaretLeftSUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CaretLeftXsUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "3px",
+        height: "5px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CaretLeftXsUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CaretRightMUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "10px",
+        height: "10px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CaretRightMUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CaretRightSUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "4px",
+        height: "7px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CaretRightSUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CaretRightXsUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "3px",
+        height: "5px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CaretRightXsUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CaretUpMUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "10px",
+        height: "10px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CaretUpMUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CaretUpSUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "7px",
+        height: "4px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CaretUpSUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CaretUpXsUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "5px",
+        height: "3px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CaretUpXsUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CheckmarkSUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CheckmarkSUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CheckmarkXsUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CheckmarkXsUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CloseLUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CloseLUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CloseMUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CloseMUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CloseSUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CloseSUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const CloseXsUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <CloseXsUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const ExternalLinkUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "9px",
+        height: "8px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <ExternalLinkUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const HamburgerCloseUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <HamburgerCloseUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const HamburgerDefaultUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <HamburgerDefaultUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const OperatorMinusSUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <OperatorMinusSUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const OperatorMinusXsUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <OperatorMinusXsUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const OperatorPlusSUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <OperatorPlusSUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const OperatorPlusXsUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <OperatorPlusXsUISVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>

@@ -12,5 +12,11 @@ export default [
     getProps: () => ({
       size: sizes.PX_16
     })
+  },
+  {
+    description: "UI",
+    getProps: () => ({
+      size: sizes.PX_UI
+    })
   }
 ];
