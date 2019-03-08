@@ -1,3 +1,10 @@
+# [@hig/text-area-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/text-area@1.0.0...@hig/text-area@1.1.0) (2019-03-08)
+
+
+### Features
+
+* resizeable text-area ([a1f406f](https://github.com/Autodesk/hig/commit/a1f406f))
+
 # [@hig/text-area-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/text-area@0.2.0...@hig/text-area@1.0.0) (2019-02-08)
 
 
