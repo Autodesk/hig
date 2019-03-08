@@ -47,16 +47,12 @@ exports[`Dropdown/presenters/OptionPresenter renders with all props 1`] = `
   role="option"
   tabIndex="0"
 >
-  <span
-    className="hig__dropdown-option__label"
-  >
+  <span>
     <p>
       hi
     </p>
   </span>
-  <div
-    className="hig__dropdown-option__checkmark"
-  >
+  <div>
     <svg
       className="emotion-0"
       color="#087AAD"
@@ -114,8 +110,6 @@ exports[`Dropdown/presenters/OptionPresenter renders without props 1`] = `
   role="option"
   tabIndex="0"
 >
-  <span
-    className="hig__dropdown-option__label"
-  />
+  <span />
 </div>
 `;
