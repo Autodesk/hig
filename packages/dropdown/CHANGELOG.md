@@ -1,3 +1,10 @@
+# [@hig/dropdown-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.0...@hig/dropdown@2.0.1) (2019-03-08)
+
+
+### Bug Fixes
+
+* dropdown design tweaks ([f16bd20](https://github.com/Autodesk/hig/commit/f16bd20))
+
 # [@hig/dropdown-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@1.0.2...@hig/dropdown@2.0.0) (2019-02-26)
 
 
