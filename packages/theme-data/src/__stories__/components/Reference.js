@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import Text from "./Text";
 import InlineCode from "./InlineCode";
 
@@ -12,7 +13,7 @@ export default function Reference({ children }) {
       lineHeight={Text.LINE_HEIGHTS.M}
       color={Text.DEFAULT_TEXT_COLOR}
     >
-      Reference to: <InlineCode>{children}</InlineCode>
+      <InlineCode>{children}</InlineCode>
     </Text>
   );
 }

@@ -59,12 +59,19 @@ TypeExample.propTypes = {
 };
 
 function Example(props) {
-  const { ref } = props.themeConfig[props.role];
+  const role = props.themeConfig[props.role];
+  const { ref } = role.value;
 
   return (
     <div>
       <TypeExample {...props} />
-      {ref ? <Reference>{ref}</Reference> : null}
+      {ref ? (
+        <Reference>
+          {role.transform && role.transform.alpha
+            ? `${ref} at ${role.transform.alpha} opacity`
+            : ref}
+        </Reference>
+      ) : null}
     </div>
   );
 }

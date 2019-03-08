@@ -2,12 +2,16 @@ function isPresent(obj, prop) {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 
+function hasRoleFormat(prop) {
+  return prop.search(/\./) > 0;
+}
+
 function resolvedRolesProxy(roles, theme) {
   if (typeof roles !== "object") return roles;
 
   return new Proxy(roles, {
     get: (obj, prop) => {
-      if (!isPresent(obj, prop)) {
+      if (hasRoleFormat(prop) && !isPresent(obj, prop)) {
         /* eslint-disable-next-line no-console */
         console.error(`Role ${prop.toString()} does not exist`);
         return obj[prop];

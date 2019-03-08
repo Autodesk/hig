@@ -3,16 +3,14 @@ import PropTypes from "prop-types";
 
 import { ThemeContext } from "@hig/theme-context";
 
-import basics from "../../basics";
-
 export default function FontSample({ fontWeight, fontSize, fontFamily }) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
         const style = {
-          fontWeight: fontWeight || basics.fontWeights.regular,
-          fontSize: fontSize || basics.fontSizes.medium,
-          fontFamily: fontFamily || basics.fontFamilies.main,
+          fontWeight: fontWeight || resolvedRoles["basics.fontWeights.regular"],
+          fontSize: fontSize || resolvedRoles["density.fontSizes.medium"],
+          fontFamily: fontFamily || resolvedRoles["basics.fontFamilies.main"],
           marginBottom: resolvedRoles["density.spacings.extraSmall"]
         };
         return (
