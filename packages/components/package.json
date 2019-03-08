@@ -38,6 +38,8 @@
     "@hig/side-nav": "^2.0.1",
     "@hig/skeleton-item": "^1.0.0",
     "@hig/slider": "^1.0.0",
+    "@hig/spacer": "^1.0.6",
+    "@hig/surface": "^1.0.0",
     "@hig/table": "^0.3.3",
     "@hig/tabs": "^1.0.0",
     "@hig/text-area": "^1.1.0",
