@@ -42,7 +42,7 @@
     "@hig/tabs": "^1.0.0",
     "@hig/text-area": "^1.0.0",
     "@hig/text-link": "^1.0.0",
-    "@hig/theme-context": "^2.1.1",
+    "@hig/theme-context": "^2.1.2",
     "@hig/theme-data": "^2.3.2",
     "@hig/themes": "^0.3.0",
     "@hig/timestamp": "^1.0.0",
