@@ -143,11 +143,6 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
 
-"@hig/icons@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-1.0.0.tgz#b2e023887beae46934a919816a56f4c9f995a9bc"
-  integrity sha512-5cxrts555oxLT+4+iKFe1emb3tajSZAxrcNiXnmYcWi+atkMWWM7e6wGc5+cv45HyM6MCZqEaaS/nEW5avgv3w==
-
 "@hig/styles@^0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.3.tgz#675631d008c1861921d6148ecf15b140c04cc5b4"
