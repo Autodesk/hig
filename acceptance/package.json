@@ -52,6 +52,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "lodash.merge": "^4.4.0"
+    "lodash.merge": "^4.4.0",
+    "surge": "^0.20.1"
   }
 }
