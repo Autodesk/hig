@@ -1,3 +1,10 @@
+# [@hig/spacer-v1.0.6](https://github.com/Autodesk/hig/compare/@hig/spacer@1.0.5...@hig/spacer@1.0.6) (2019-03-08)
+
+
+### Bug Fixes
+
+* remove spacer classname ([e44dfd3](https://github.com/Autodesk/hig/commit/e44dfd3))
+
 # [@hig/spacer-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/spacer@1.0.4...@hig/spacer@1.0.5) (2019-02-08)
 
 
