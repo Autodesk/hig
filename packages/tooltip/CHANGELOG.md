@@ -1,3 +1,10 @@
+# [@hig/tooltip-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.1...@hig/tooltip@1.0.2) (2019-03-08)
+
+
+### Bug Fixes
+
+* tooltip design tweak ([ad68abd](https://github.com/Autodesk/hig/commit/ad68abd))
+
 # [@hig/tooltip-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.0...@hig/tooltip@1.0.1) (2019-02-08)
 
 
