@@ -58,5 +58,10 @@ export default {
     transform: {
       alpha: 0.35
     }
+  },
+  "input.halo.color": {
+    value: {
+      ref: "basics.colors.darkBlue200"
+    }
   }
 };

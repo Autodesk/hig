@@ -2,7 +2,7 @@
 
 exports[`TextArea integration renders correctly 1`] = `
 .emotion-2 {
-  position: relative;
+  position: static;
   border-style: solid;
   border-color: rgba(128,128,128,0.2);
   border-width: 1px;
@@ -43,13 +43,13 @@ exports[`TextArea integration renders correctly 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc((28px - 2px) * 2);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   display: block;
-  resize: none;
+  resize: vertical;
   padding: 4px 12px;
 }
 
