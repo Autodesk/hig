@@ -10,7 +10,7 @@ export default {
   "menu.borderRadius": {
     type: BORDER_RADIUS,
     value: {
-      ref: "basics.borderRadii.medium"
+      ref: "basics.borderRadii.none"
     }
   },
   "menu.topFlushBorderTopRadius": {

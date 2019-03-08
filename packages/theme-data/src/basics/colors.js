@@ -122,7 +122,7 @@ export default {
   slate900: { value: "#2c3e53", type: COLOR },
 
   // Surface colors
-  surfaceDarkBlueLevel100: { value: "#464e61", type: COLOR },
+  surfaceDarkBlueLevel100: { value: "#454f61", type: COLOR },
   surfaceDarkBlueLevel200: { value: "#3b4453", type: COLOR },
   surfaceDarkBlueLevel250: { value: "#2e3440", type: COLOR },
   surfaceDarkBlueLevel300: { value: "#222933", type: COLOR },

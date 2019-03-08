@@ -3,8 +3,7 @@
 exports[`Dropdown renders non-undefined values as options 1`] = `
 .emotion-15 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 .emotion-4 {
@@ -95,17 +94,16 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 .emotion-14 {
   display: none;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
@@ -218,9 +216,11 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
         Object {
           "opacity": 1,
           "padding": "0 10px",
+          "pointerEvents": "none",
           "position": "absolute",
           "right": "7px",
-          "top": "calc(32px / 2 - 4px)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
         }
       }
       viewBox="0 0 10 10"
@@ -252,9 +252,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         foo
       </span>
     </div>
@@ -269,9 +267,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         1
       </span>
     </div>
@@ -286,9 +282,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         true
       </span>
     </div>
@@ -303,9 +297,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         
       </span>
     </div>
@@ -320,14 +312,10 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         
       </span>
-      <div
-        className="hig__dropdown-option__checkmark"
-      >
+      <div>
         <svg
           className="emotion-9"
           color="#087AAD"
@@ -355,9 +343,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         
       </span>
     </div>
@@ -372,9 +358,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         [object Object]
       </span>
     </div>
@@ -389,9 +373,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         [object Map]
       </span>
     </div>
@@ -402,8 +384,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 exports[`Dropdown renders with a controlled value 1`] = `
 .emotion-10 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 .emotion-4 {
@@ -494,17 +475,16 @@ exports[`Dropdown renders with a controlled value 1`] = `
 .emotion-9 {
   display: none;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
@@ -617,9 +597,11 @@ exports[`Dropdown renders with a controlled value 1`] = `
         Object {
           "opacity": 1,
           "padding": "0 10px",
+          "pointerEvents": "none",
           "position": "absolute",
           "right": "7px",
-          "top": "calc(32px / 2 - 4px)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
         }
       }
       viewBox="0 0 10 10"
@@ -651,9 +633,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         bar
       </span>
     </div>
@@ -668,9 +648,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         baz
       </span>
     </div>
@@ -685,14 +663,10 @@ exports[`Dropdown renders with a controlled value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         foo
       </span>
-      <div
-        className="hig__dropdown-option__checkmark"
-      >
+      <div>
         <svg
           className="emotion-7"
           color="#087AAD"
@@ -716,8 +690,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
 exports[`Dropdown renders with a label and an ID 1`] = `
 .emotion-6 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 .emotion-4 {
@@ -808,17 +781,16 @@ exports[`Dropdown renders with a label and an ID 1`] = `
 .emotion-5 {
   display: none;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
@@ -869,9 +841,11 @@ exports[`Dropdown renders with a label and an ID 1`] = `
         Object {
           "opacity": 1,
           "padding": "0 10px",
+          "pointerEvents": "none",
           "position": "absolute",
           "right": "7px",
-          "top": "calc(32px / 2 - 4px)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
         }
       }
       viewBox="0 0 10 10"
@@ -898,8 +872,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
 exports[`Dropdown renders with custom option formatting 1`] = `
 .emotion-9 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 .emotion-4 {
@@ -990,17 +963,16 @@ exports[`Dropdown renders with custom option formatting 1`] = `
 .emotion-8 {
   display: none;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
@@ -1078,9 +1050,11 @@ exports[`Dropdown renders with custom option formatting 1`] = `
         Object {
           "opacity": 1,
           "padding": "0 10px",
+          "pointerEvents": "none",
           "position": "absolute",
           "right": "7px",
-          "top": "calc(32px / 2 - 4px)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
         }
       }
       viewBox="0 0 10 10"
@@ -1112,9 +1086,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         Bar
       </span>
     </div>
@@ -1129,9 +1101,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         Baz
       </span>
     </div>
@@ -1146,9 +1116,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         Foo
       </span>
     </div>
@@ -1159,8 +1127,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
 exports[`Dropdown renders with custom option render function 1`] = `
 .emotion-6 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 .emotion-4 {
@@ -1251,17 +1218,16 @@ exports[`Dropdown renders with custom option render function 1`] = `
 .emotion-5 {
   display: none;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
@@ -1312,9 +1278,11 @@ exports[`Dropdown renders with custom option render function 1`] = `
         Object {
           "opacity": 1,
           "padding": "0 10px",
+          "pointerEvents": "none",
           "position": "absolute",
           "right": "7px",
-          "top": "calc(32px / 2 - 4px)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
         }
       }
       viewBox="0 0 10 10"
@@ -1360,8 +1328,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
 exports[`Dropdown renders with default value 1`] = `
 .emotion-10 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 .emotion-4 {
@@ -1452,17 +1419,16 @@ exports[`Dropdown renders with default value 1`] = `
 .emotion-9 {
   display: none;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
@@ -1575,9 +1541,11 @@ exports[`Dropdown renders with default value 1`] = `
         Object {
           "opacity": 1,
           "padding": "0 10px",
+          "pointerEvents": "none",
           "position": "absolute",
           "right": "7px",
-          "top": "calc(32px / 2 - 4px)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
         }
       }
       viewBox="0 0 10 10"
@@ -1609,9 +1577,7 @@ exports[`Dropdown renders with default value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         bar
       </span>
     </div>
@@ -1626,9 +1592,7 @@ exports[`Dropdown renders with default value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         baz
       </span>
     </div>
@@ -1643,14 +1607,10 @@ exports[`Dropdown renders with default value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         foo
       </span>
-      <div
-        className="hig__dropdown-option__checkmark"
-      >
+      <div>
         <svg
           className="emotion-7"
           color="#087AAD"
@@ -1674,8 +1634,7 @@ exports[`Dropdown renders with default value 1`] = `
 exports[`Dropdown renders with multiple selection 1`] = `
 .emotion-9 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 .emotion-4 {
@@ -1766,17 +1725,16 @@ exports[`Dropdown renders with multiple selection 1`] = `
 .emotion-8 {
   display: none;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
@@ -1854,9 +1812,11 @@ exports[`Dropdown renders with multiple selection 1`] = `
         Object {
           "opacity": 1,
           "padding": "0 10px",
+          "pointerEvents": "none",
           "position": "absolute",
           "right": "7px",
-          "top": "calc(32px / 2 - 4px)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
         }
       }
       viewBox="0 0 10 10"
@@ -1888,9 +1848,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         bar
       </span>
     </div>
@@ -1905,9 +1863,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         baz
       </span>
     </div>
@@ -1922,9 +1878,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         foo
       </span>
     </div>
@@ -1935,8 +1889,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
 exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 .emotion-11 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 .emotion-4 {
@@ -2027,17 +1980,16 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 .emotion-10 {
   display: none;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
@@ -2150,9 +2102,11 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
         Object {
           "opacity": 1,
           "padding": "0 10px",
+          "pointerEvents": "none",
           "position": "absolute",
           "right": "7px",
-          "top": "calc(32px / 2 - 4px)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
         }
       }
       viewBox="0 0 10 10"
@@ -2184,14 +2138,10 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         bar
       </span>
-      <div
-        className="hig__dropdown-option__checkmark"
-      >
+      <div>
         <svg
           className="emotion-5"
           color="#087AAD"
@@ -2219,9 +2169,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         baz
       </span>
     </div>
@@ -2236,14 +2184,10 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span
-        className="hig__dropdown-option__label"
-      >
+      <span>
         foo
       </span>
-      <div
-        className="hig__dropdown-option__checkmark"
-      >
+      <div>
         <svg
           className="emotion-5"
           color="#087AAD"
@@ -2267,8 +2211,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 exports[`Dropdown renders with option specific and general option render function 1`] = `
 .emotion-6 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 .emotion-4 {
@@ -2359,17 +2302,16 @@ exports[`Dropdown renders with option specific and general option render functio
 .emotion-5 {
   display: none;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
@@ -2420,9 +2362,11 @@ exports[`Dropdown renders with option specific and general option render functio
         Object {
           "opacity": 1,
           "padding": "0 10px",
+          "pointerEvents": "none",
           "position": "absolute",
           "right": "7px",
-          "top": "calc(32px / 2 - 4px)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
         }
       }
       viewBox="0 0 10 10"
@@ -2477,8 +2421,7 @@ exports[`Dropdown renders with option specific and general option render functio
 exports[`Dropdown renders with option specific render function 1`] = `
 .emotion-6 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 .emotion-4 {
@@ -2569,17 +2512,16 @@ exports[`Dropdown renders with option specific render function 1`] = `
 .emotion-5 {
   display: none;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
@@ -2630,9 +2572,11 @@ exports[`Dropdown renders with option specific render function 1`] = `
         Object {
           "opacity": 1,
           "padding": "0 10px",
+          "pointerEvents": "none",
           "position": "absolute",
           "right": "7px",
-          "top": "calc(32px / 2 - 4px)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
         }
       }
       viewBox="0 0 10 10"
@@ -2723,8 +2667,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
 exports[`Dropdown renders with option specific, general and format rendering 1`] = `
 .emotion-6 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 .emotion-4 {
@@ -2815,17 +2758,16 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
 .emotion-5 {
   display: none;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
@@ -2876,9 +2818,11 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
         Object {
           "opacity": 1,
           "padding": "0 10px",
+          "pointerEvents": "none",
           "position": "absolute",
           "right": "7px",
-          "top": "calc(32px / 2 - 4px)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
         }
       }
       viewBox="0 0 10 10"
@@ -2933,8 +2877,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
 exports[`Dropdown renders without props 1`] = `
 .emotion-6 {
   position: relative;
-  min-width: 300px;
-  max-width: 450px;
+  width: 100%;
 }
 
 .emotion-4 {
@@ -3025,17 +2968,16 @@ exports[`Dropdown renders without props 1`] = `
 .emotion-5 {
   display: none;
   position: absolute;
-  min-width: 240px;
+  width: 100%;
   max-height: 360px;
-  top: 32px;
+  top: 28px;
   overflow: auto;
   z-index: 9996;
-  border: 1px solid #ffffff;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.25);
 }
@@ -3086,9 +3028,11 @@ exports[`Dropdown renders without props 1`] = `
         Object {
           "opacity": 1,
           "padding": "0 10px",
+          "pointerEvents": "none",
           "position": "absolute",
           "right": "7px",
-          "top": "calc(32px / 2 - 4px)",
+          "top": "50%",
+          "transform": "translateY(-50%)",
         }
       }
       viewBox="0 0 10 10"
