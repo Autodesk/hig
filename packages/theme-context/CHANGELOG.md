@@ -1,3 +1,10 @@
+# [@hig/theme-context-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/theme-context@2.1.1...@hig/theme-context@2.1.2) (2019-03-08)
+
+
+### Bug Fixes
+
+* throws role missing warning when getting roles only ([2c4bbf6](https://github.com/Autodesk/hig/commit/2c4bbf6))
+
 # [@hig/theme-context-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/theme-context@2.1.0...@hig/theme-context@2.1.1) (2019-03-05)
 
 
