@@ -11,7 +11,7 @@ Read more about when and how to use the Avatar component [on the internal wiki](
 ### Install the package
 
 ```bash
-yarn add @hig/avatar
+yarn add @hig/avatar @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component
