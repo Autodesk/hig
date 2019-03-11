@@ -9,7 +9,7 @@ Read more about when and how to use the Text Area component [on the website](htt
 ### Install the package
 
 ```bash
-yarn add @hig/text-area
+yarn add @hig/text-area @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component
