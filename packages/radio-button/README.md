@@ -9,10 +9,10 @@ Read more about when and how to use the Radio Button component [on the website](
 ### Install the package
 
 ```bash
-yarn add @hig/radio-button
+yarn add @hig/radio-button @hig/theme-context @hig/theme-data
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import RadioButton from '@hig/radio-button';
