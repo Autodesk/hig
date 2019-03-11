@@ -9,7 +9,7 @@ Read more about when and how to use the Checkbox component [on the website](http
 ### Install the package
 
 ```bash
-yarn add @hig/checkbox
+yarn add @hig/checkbox @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component
