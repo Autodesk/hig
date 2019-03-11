@@ -15,7 +15,7 @@ Themable HIG components within a `ThemeContext.Provider` will have access to the
 ## Getting started
 
 ```bash
-yarn add @hig/themes
+yarn add @hig/theme-context @hig/theme-data
 ```
 
 ## Provide a theme to components
