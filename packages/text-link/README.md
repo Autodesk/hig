@@ -7,7 +7,7 @@ Read more about when and how to use the Text Link components [on the HIG website
 ## Getting started
 
 ```
-yarn add @hig/text-link
+yarn add @hig/text-link @hig/theme-context @hig/theme-data
 ```
 
 ## Import the component and CSS
