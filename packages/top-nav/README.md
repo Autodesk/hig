@@ -11,7 +11,7 @@ Read more about when and how to use the TopNav component [on the internal wiki](
 Install with [Yarn](https://yarnpkg.com/)
 
 ```bash
-yarn add @hig/top-nav
+yarn add @hig/top-nav @hig/theme-context @hig/theme-data
 ```
 
 Or with [npm](https://www.npmjs.com/)
