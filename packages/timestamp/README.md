@@ -5,7 +5,7 @@ The timestamp component presents a date in the past with humanized phrasing in E
 ## Getting started
 
 ```
-yarn add @hig/timestamp
+yarn add @hig/timestamp @hig/theme-context @hig/theme-data
 ```
 
 ## Import the component and CSS
