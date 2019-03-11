@@ -9,7 +9,7 @@ Read more about when and how to use the Tabs component [on the website](https://
 ### Install the package
 
 ```bash
-yarn add @hig/tabs
+yarn add @hig/tabs @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component and CSS

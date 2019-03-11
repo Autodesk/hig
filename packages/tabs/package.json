@@ -20,7 +20,6 @@
   "dependencies": {
     "@hig/behaviors": "^1.1.1",
     "@hig/fonts": "^1.0.1",
-    "@hig/theme-context": "^2.1.2",
     "@hig/typography": "^1.0.2",
     "emotion": "^10.0.0",
     "lodash.memoize": "^4.1.2",
@@ -29,6 +28,8 @@
     "render-fragment": "^0.1.1"
   },
   "peerDependencies": {
+    "@hig/theme-context": "^2.1.2",
+    "@hig/theme-data": "^2.3.3",
     "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {
