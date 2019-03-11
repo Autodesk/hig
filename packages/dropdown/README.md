@@ -9,7 +9,7 @@ Read more about when and how to use the Dropdown component [on the website](http
 ### Install the package
 
 ```bash
-yarn add @hig/dropdown
+yarn add @hig/dropdown @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component
