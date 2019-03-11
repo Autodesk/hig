@@ -9,7 +9,7 @@ Read more about when and how to use the Modal component [on the internal wiki](h
 ### Install the package
 
 ```bash
-yarn add @hig/modal
+yarn add @hig/modal @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component and CSS
