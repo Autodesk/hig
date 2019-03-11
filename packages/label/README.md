@@ -7,7 +7,7 @@ Label represents a caption for an item in a user interface
 ### Install the package
 
 ```bash
-yarn add @hig/label
+yarn add @hig/label @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component
