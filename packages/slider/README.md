@@ -9,7 +9,7 @@ Read more about when and how to use the Slider component [on the website](https:
 ### Install the package
 
 ```bash
-yarn add @hig/slider
+yarn add @hig/slider @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component
