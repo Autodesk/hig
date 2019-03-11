@@ -7,7 +7,7 @@ Read more about when and how to use the Typography components [on the HIG websit
 ## Getting started
 
 ```
-yarn add @hig/typography 
+yarn add @hig/typography @hig/theme-context @hig/theme-data
 yarn add @hig/fonts
 ```
 
