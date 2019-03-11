@@ -5,7 +5,7 @@ The Surface component renders a themable container with the appropriate backgrou
 ## Getting started
 
 ```
-yarn add @hig/surface
+yarn add @hig/surface @hig/theme-context @hig/theme-data
 ```
 
 ## Import the component
