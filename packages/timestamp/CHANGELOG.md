@@ -1,3 +1,10 @@
+# [@hig/timestamp-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/timestamp@1.0.0...@hig/timestamp@1.0.1) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([465f12b](https://github.com/Autodesk/hig/commit/465f12b))
+
 # [@hig/timestamp-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/timestamp@0.1.4...@hig/timestamp@1.0.0) (2019-02-14)
 
 
