@@ -9,7 +9,7 @@ Read more about when and how to use the Input component [on the website](https:/
 ### Install the package
 
 ```bash
-yarn add @hig/input
+yarn add @hig/input @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component

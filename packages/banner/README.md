@@ -7,10 +7,10 @@ Read more about when and how to use the Banner component [on the internal wiki](
 ## Getting started
 
 ```
-yarn add @hig/banner
+yarn add @hig/banner @hig/theme-context @hig/theme-data
 ```
 
-## Import the component and CSS
+## Import the component
 
 ```
 import Banner from '@hig/banner';

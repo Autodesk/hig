@@ -5,7 +5,7 @@ The Skeleton Item component renders a rectangular loading indicator, meant to se
 ## Getting started
 
 ```
-yarn add @hig/skeleton-item
+yarn add @hig/skeleton-item @hig/theme-context @hig/theme-data
 ```
 
 ## Import the component

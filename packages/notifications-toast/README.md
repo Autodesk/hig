@@ -9,7 +9,7 @@ Read more about when and how to use the Toast component [on the internal wiki](h
 ### Install the package
 
 ```bash
-yarn add @hig/notifications-toast
+yarn add @hig/notifications-toast @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component and CSS

@@ -17,6 +17,14 @@ export default MyComponent
 
 Read more about where and how to use icons on [the website](https://hig.autodesk.com/web/basics/icons).
 
+## Getting started
+
+### Install the package
+
+```bash
+yarn add @hig/icons @hig/theme-context @hig/theme-data
+```
+
 # Developing
 
 ## Adding a New Icon

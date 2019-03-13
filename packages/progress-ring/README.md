@@ -9,7 +9,7 @@ Read more about when and how to use the Progress Ring component [on the website]
 ### Install the package
 
 ```bash
-yarn add @hig/progress-ring
+yarn add @hig/progress-ring @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component

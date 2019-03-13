@@ -7,7 +7,7 @@ Read more about when and how to use the Notifications Flyout [on the internal wi
 ## Getting started
 
 ```bash
-yarn add @hig/notifications-flyout
+yarn add @hig/notifications-flyout @hig/theme-context @hig/theme-data
 ```
 
 ## Import the component and CSS

@@ -9,7 +9,7 @@ Read more about when and how to use the Tooltip component [on the internal wiki]
 ### Install the package
 
 ```bash
-yarn add @hig/tooltip
+yarn add @hig/tooltip @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component
