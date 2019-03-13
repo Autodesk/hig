@@ -1,3 +1,10 @@
+# [@hig/avatar-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.4...@hig/avatar@1.0.5) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([7c7d2db](https://github.com/Autodesk/hig/commit/7c7d2db))
+
 # [@hig/avatar-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.3...@hig/avatar@1.0.4) (2019-02-08)
 
 
