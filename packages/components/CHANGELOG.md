@@ -1,3 +1,10 @@
+# [@hig/components-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/components@1.0.14...@hig/components@1.1.0) (2019-03-13)
+
+
+### Features
+
+* add spacer and surface packages ([a83dfb3](https://github.com/Autodesk/hig/commit/a83dfb3))
+
 # [@hig/components-v1.0.14](https://github.com/Autodesk/hig/compare/@hig/components@1.0.13...@hig/components@1.0.14) (2019-03-05)
 
 
