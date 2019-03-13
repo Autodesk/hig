@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.0.0...@hig/notifications-flyout@2.0.1) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([3524211](https://github.com/Autodesk/hig/commit/3524211))
+
 # [@hig/notifications-flyout-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@1.0.4...@hig/notifications-flyout@2.0.0) (2019-02-26)
 
 
