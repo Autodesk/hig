@@ -5,7 +5,7 @@ The Spacer component renders a square of empty space, meant to add space around 
 ## Getting started
 
 ```
-yarn add @hig/spacer
+yarn add @hig/spacer @hig/theme-context @hig/theme-data
 ```
 
 ## Import the component

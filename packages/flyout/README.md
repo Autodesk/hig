@@ -9,7 +9,7 @@ Read more about when and how to use the Flyout component [on the website](https:
 ### Install the package
 
 ```bash
-yarn add @hig/flyout
+yarn add @hig/flyout @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component

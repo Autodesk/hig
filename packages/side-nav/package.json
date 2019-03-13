@@ -23,7 +23,6 @@
     "@hig/skeleton-item": "^1.0.0",
     "@hig/surface": "^1.0.0",
     "@hig/text-link": "^1.0.0",
-    "@hig/theme-context": "^2.1.2",
     "@hig/typography": "^1.0.2",
     "@hig/utils": "^0.3.0",
     "emotion": "^10.0.0",
@@ -37,6 +36,8 @@
     "@hig/semantic-release-config": "^0.1.0"
   },
   "peerDependencies": {
+    "@hig/theme-context": "^2.1.3",
+    "@hig/theme-data": "^2.3.3",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {

@@ -9,7 +9,7 @@ Read more about when and how to use the Progress Bar component [on the website](
 ### Install the package
 
 ```bash
-yarn add @hig/progress-bar
+yarn add @hig/progress-bar @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component

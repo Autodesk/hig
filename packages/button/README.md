@@ -7,7 +7,7 @@ Read more about when and how to use the Button components [on the HIG website](h
 ## Getting started
 
 ```
-yarn add @hig/button
+yarn add @hig/button @hig/theme-context @hig/theme-data
 ```
 
 ## Import the component

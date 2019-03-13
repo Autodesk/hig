@@ -7,7 +7,7 @@ Read more about when and how to use the SideNav component [on the internal wiki]
 ## Getting started
 
 ```bash
-yarn add @hig/side-nav
+yarn add @hig/side-nav @hig/theme-context @hig/theme-data
 ```
 
 ### Import

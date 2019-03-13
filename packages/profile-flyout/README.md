@@ -9,7 +9,7 @@ Read more about when and how to use the Profile Flyout component [on the website
 ### Install the package
 
 ```bash
-yarn add @hig/profile-flyout
+yarn add @hig/profile-flyout @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component
