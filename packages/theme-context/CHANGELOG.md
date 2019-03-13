@@ -1,3 +1,10 @@
+# [@hig/theme-context-v2.1.3](https://github.com/Autodesk/hig/compare/@hig/theme-context@2.1.2...@hig/theme-context@2.1.3) (2019-03-13)
+
+
+### Bug Fixes
+
+* move theme-data to peer dependency ([151e178](https://github.com/Autodesk/hig/commit/151e178))
+
 # [@hig/theme-context-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/theme-context@2.1.1...@hig/theme-context@2.1.2) (2019-03-08)
 
 
