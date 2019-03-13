@@ -1,3 +1,10 @@
+# [@hig/label-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/label@1.0.2...@hig/label@1.0.3) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([47e6905](https://github.com/Autodesk/hig/commit/47e6905))
+
 # [@hig/label-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/label@1.0.1...@hig/label@1.0.2) (2019-02-08)
 
 
