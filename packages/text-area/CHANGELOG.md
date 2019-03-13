@@ -1,3 +1,10 @@
+# [@hig/text-area-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/text-area@1.1.0...@hig/text-area@1.1.1) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([fe9267f](https://github.com/Autodesk/hig/commit/fe9267f))
+
 # [@hig/text-area-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/text-area@1.0.0...@hig/text-area@1.1.0) (2019-03-08)
 
 
