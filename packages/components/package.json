@@ -50,7 +50,7 @@
     "@hig/timestamp": "^1.0.0",
     "@hig/tooltip": "^1.0.2",
     "@hig/top-nav": "^3.0.2",
-    "@hig/typography": "^1.0.2"
+    "@hig/typography": "^1.0.3"
   },
   "peerDependencies": {
     "react": "^15.4.1 || ^16.3.2"
