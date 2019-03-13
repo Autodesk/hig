@@ -1,3 +1,10 @@
+# [@hig/button-v1.3.2](https://github.com/Autodesk/hig/compare/@hig/button@1.3.1...@hig/button@1.3.2) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([b6e1f4d](https://github.com/Autodesk/hig/commit/b6e1f4d))
+
 # [@hig/button-v1.3.1](https://github.com/Autodesk/hig/compare/@hig/button@1.3.0...@hig/button@1.3.1) (2019-03-05)
 
 

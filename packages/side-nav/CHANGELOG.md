@@ -1,3 +1,10 @@
+# [@hig/side-nav-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.0.1...@hig/side-nav@2.0.2) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([65e9039](https://github.com/Autodesk/hig/commit/65e9039))
+
 # [@hig/side-nav-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.0.0...@hig/side-nav@2.0.1) (2019-02-26)
 
 

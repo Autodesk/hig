@@ -1,3 +1,10 @@
+# [@hig/checkbox-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.2...@hig/checkbox@2.0.3) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([dbd2d1e](https://github.com/Autodesk/hig/commit/dbd2d1e))
+
 # [@hig/checkbox-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.1...@hig/checkbox@2.0.2) (2019-02-08)
 
 

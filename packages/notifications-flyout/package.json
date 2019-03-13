@@ -1,6 +1,6 @@
 {
   "name": "@hig/notifications-flyout",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "HIG NotificationsFlyout",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -20,25 +20,25 @@
   ],
   "dependencies": {
     "@hig/behaviors": "^1.1.1",
-    "@hig/flyout": "^1.0.3",
+    "@hig/flyout": "^1.0.4",
     "@hig/icon-button": "^1.0.1",
-    "@hig/icons": "^2.1.0",
-    "@hig/progress-ring": "^1.0.1",
-    "@hig/rich-text": "^1.0.0",
-    "@hig/typography": "^1.0.2",
+    "@hig/icons": "^2.1.1",
+    "@hig/progress-ring": "^1.0.2",
+    "@hig/rich-text": "^1.0.1",
+    "@hig/typography": "^1.0.3",
     "@hig/utils": "^0.3.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
     "react-transition-group": "^2.3.0"
   },
   "devDependencies": {
-    "@hig/avatar": "^1.0.4",
+    "@hig/avatar": "^1.0.5",
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/text-link": "^1.0.0"
+    "@hig/text-link": "^1.0.1"
   },
   "peerDependencies": {
     "@hig/theme-context": "^2.1.3",

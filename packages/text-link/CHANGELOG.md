@@ -1,3 +1,10 @@
+# [@hig/text-link-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/text-link@1.0.0...@hig/text-link@1.0.1) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([c2ea6a5](https://github.com/Autodesk/hig/commit/c2ea6a5))
+
 # [@hig/text-link-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/text-link@0.2.0...@hig/text-link@1.0.0) (2019-02-05)
 
 

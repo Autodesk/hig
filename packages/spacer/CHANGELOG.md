@@ -1,3 +1,10 @@
+# [@hig/spacer-v1.0.7](https://github.com/Autodesk/hig/compare/@hig/spacer@1.0.6...@hig/spacer@1.0.7) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([d16a2e7](https://github.com/Autodesk/hig/commit/d16a2e7))
+
 # [@hig/spacer-v1.0.6](https://github.com/Autodesk/hig/compare/@hig/spacer@1.0.5...@hig/spacer@1.0.6) (2019-03-08)
 
 

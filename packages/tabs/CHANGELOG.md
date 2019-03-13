@@ -1,3 +1,10 @@
+# [@hig/tabs-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/tabs@1.0.0...@hig/tabs@1.0.1) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([19fe5de](https://github.com/Autodesk/hig/commit/19fe5de))
+
 # [@hig/tabs-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/tabs@0.1.3...@hig/tabs@1.0.0) (2019-02-26)
 
 

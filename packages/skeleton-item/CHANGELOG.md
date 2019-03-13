@@ -1,3 +1,10 @@
+# [@hig/skeleton-item-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@1.0.0...@hig/skeleton-item@1.0.1) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([bdeaa4a](https://github.com/Autodesk/hig/commit/bdeaa4a))
+
 # [@hig/skeleton-item-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@0.3.1...@hig/skeleton-item@1.0.0) (2019-02-26)
 
 

@@ -1,3 +1,10 @@
+# [@hig/rich-text-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/rich-text@1.0.0...@hig/rich-text@1.0.1) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([0d268eb](https://github.com/Autodesk/hig/commit/0d268eb))
+
 # [@hig/rich-text-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/rich-text@0.1.4...@hig/rich-text@1.0.0) (2019-02-08)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@hig/surface",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HIG Surface component",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -26,7 +26,7 @@
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/typography": "^1.0.2"
+    "@hig/typography": "^1.0.3"
   },
   "peerDependencies": {
     "@hig/theme-context": "^2.1.3",

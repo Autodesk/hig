@@ -1,3 +1,10 @@
+# [@hig/notifications-toast-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.0.0...@hig/notifications-toast@2.0.1) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([6e9e3d8](https://github.com/Autodesk/hig/commit/6e9e3d8))
+
 # [@hig/notifications-toast-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@1.0.4...@hig/notifications-toast@2.0.0) (2019-02-26)
 
 

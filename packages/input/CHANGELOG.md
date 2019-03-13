@@ -1,3 +1,10 @@
+# [@hig/input-v1.1.2](https://github.com/Autodesk/hig/compare/@hig/input@1.1.1...@hig/input@1.1.2) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([ff141ec](https://github.com/Autodesk/hig/commit/ff141ec))
+
 # [@hig/input-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/input@1.1.0...@hig/input@1.1.1) (2019-03-05)
 
 

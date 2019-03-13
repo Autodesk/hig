@@ -1,3 +1,10 @@
+# [@hig/icons-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/icons@2.1.0...@hig/icons@2.1.1) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([34cd334](https://github.com/Autodesk/hig/commit/34cd334))
+
 # [@hig/icons-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/icons@2.0.2...@hig/icons@2.1.0) (2019-03-08)
 
 

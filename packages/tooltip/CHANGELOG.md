@@ -1,3 +1,10 @@
+# [@hig/tooltip-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.2...@hig/tooltip@1.0.3) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([90cd401](https://github.com/Autodesk/hig/commit/90cd401))
+
 # [@hig/tooltip-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.1...@hig/tooltip@1.0.2) (2019-03-08)
 
 

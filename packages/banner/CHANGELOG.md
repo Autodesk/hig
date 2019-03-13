@@ -1,3 +1,10 @@
+# [@hig/banner-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/banner@2.0.0...@hig/banner@2.0.1) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([75d3573](https://github.com/Autodesk/hig/commit/75d3573))
+
 # [@hig/banner-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/banner@1.0.2...@hig/banner@2.0.0) (2019-02-28)
 
 

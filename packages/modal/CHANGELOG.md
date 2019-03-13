@@ -1,3 +1,10 @@
+# [@hig/modal-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/modal@2.0.0...@hig/modal@2.0.1) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([676136d](https://github.com/Autodesk/hig/commit/676136d))
+
 # [@hig/modal-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/modal@1.0.2...@hig/modal@2.0.0) (2019-02-26)
 
 

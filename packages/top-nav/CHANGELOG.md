@@ -1,3 +1,10 @@
+# [@hig/top-nav-v3.0.3](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.2...@hig/top-nav@3.0.3) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([aa49f92](https://github.com/Autodesk/hig/commit/aa49f92))
+
 # [@hig/top-nav-v3.0.2](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.1...@hig/top-nav@3.0.2) (2019-03-05)
 
 

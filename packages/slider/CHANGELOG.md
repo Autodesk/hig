@@ -1,3 +1,10 @@
+# [@hig/slider-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/slider@1.0.0...@hig/slider@1.0.1) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([928520d](https://github.com/Autodesk/hig/commit/928520d))
+
 # [@hig/slider-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/slider@0.1.3...@hig/slider@1.0.0) (2019-02-05)
 
 

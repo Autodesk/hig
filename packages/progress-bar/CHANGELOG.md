@@ -1,3 +1,10 @@
+# [@hig/progress-bar-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/progress-bar@1.0.2...@hig/progress-bar@1.0.3) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([ce3c3c3](https://github.com/Autodesk/hig/commit/ce3c3c3))
+
 # [@hig/progress-bar-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/progress-bar@1.0.1...@hig/progress-bar@1.0.2) (2019-02-08)
 
 
