@@ -1,3 +1,10 @@
+# [@hig/radio-button-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.2...@hig/radio-button@1.0.3) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([9586aad](https://github.com/Autodesk/hig/commit/9586aad))
+
 # [@hig/radio-button-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.1...@hig/radio-button@1.0.2) (2019-02-05)
 
 
