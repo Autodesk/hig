@@ -1,3 +1,10 @@
+# [@hig/dropdown-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.1...@hig/dropdown@2.0.2) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([832fe94](https://github.com/Autodesk/hig/commit/832fe94))
+
 # [@hig/dropdown-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.0...@hig/dropdown@2.0.1) (2019-03-08)
 
 
