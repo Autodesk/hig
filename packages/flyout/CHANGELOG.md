@@ -1,3 +1,10 @@
+# [@hig/flyout-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/flyout@1.0.3...@hig/flyout@1.0.4) (2019-03-13)
+
+
+### Bug Fixes
+
+* theme-context and theme-data as peer dependencies ([3b606be](https://github.com/Autodesk/hig/commit/3b606be))
+
 # [@hig/flyout-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/flyout@1.0.2...@hig/flyout@1.0.3) (2019-02-08)
 
 
