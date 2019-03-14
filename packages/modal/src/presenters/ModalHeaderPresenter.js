@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import IconButton from "@hig/icon-button";
+import ThemeContext from "@hig/theme-context";
 import Typography from "@hig/typography";
 import "@hig/fonts/build/ArtifaktElement.css";
-import { Close16 } from "@hig/icons";
+import { CloseSUI, CloseMUI } from "@hig/icons";
 import "@hig/icon-button/build/index.css";
 import { css } from "emotion";
 
@@ -62,24 +63,33 @@ export default class ModalHeaderPresenter extends Component {
     return children ? (
       this.renderChildren()
     ) : (
-      <header className={css(styles.header)} id={id}>
-        <div className={css(styles.headerContent)}>
-          <Typography
-            style={{
-              fontSize: styles.header.fontSize,
-              lineHeight: styles.header.lineHeight
-            }}
-          >
-            {title}
-          </Typography>
-          <IconButton
-            aria-label={closeButtonAriaLabel}
-            icon={<Close16 />}
-            onClick={onCloseClick}
-            title="Close"
-          />
-        </div>
-      </header>
+      <ThemeContext.Consumer>
+        {({ resolvedRoles, metadata }) => {
+          console.log(metadata.densityId);
+          const closeIcon = metadata.densityId === "medium-density"
+            ? <CloseMUI /> : <CloseSUI />;
+          return (
+            <header className={css(styles.header)} id={id}>
+              <div className={css(styles.headerContent)}>
+                <Typography
+                  style={{
+                    fontSize: styles.header.fontSize,
+                    lineHeight: styles.header.lineHeight
+                  }}
+                >
+                  {title}
+                </Typography>
+                <IconButton
+                  aria-label={closeButtonAriaLabel}
+                  icon={closeIcon}
+                  onClick={onCloseClick}
+                  title="Close"
+                />
+              </div>
+            </header>
+          );
+        }}
+      </ThemeContext.Consumer>
     );
   }
 }
