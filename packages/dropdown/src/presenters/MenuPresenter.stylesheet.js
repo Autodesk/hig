@@ -9,7 +9,7 @@ export default function stylesheet(props, themeData) {
     top: themeData["input.height"],
     overflow: "auto",
     zIndex: constants.dropdownLayer,
-
+    boxSizing: "border-box",
     borderTop: "none",
     borderTopLeftRadius: themeData["menu.topFlushBorderTopRadius"],
     borderTopRightRadius: themeData["menu.topFlushBorderTopRadius"],
