@@ -10,8 +10,7 @@ export default function stylesheet(props, themeData) {
       position: "absolute",
       top: "50%",
       transform: "translateY(-50%)",
-      right: "7px",
-      padding: "0 10px",
+      right: themeData["input.boxType.horizontalPadding"],
       opacity: props.disabled ? themeData["component.disabled.opacity"] : 1,
       pointerEvents: "none"
     }
