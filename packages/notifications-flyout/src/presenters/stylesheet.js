@@ -80,13 +80,13 @@ export default function stylesheet(themeData, props, theme) {
         : { borderLeftColor: `rgba(128, 128, 128, 0.4)` })
     },
     notificationContentImage: {
-      margin: `14px 0 14px 14px`
+      margin: `${themeData["density.spacings.small"]} 0 ${themeData["density.spacings.small"]} ${themeData["density.spacings.small"]}`
     },
     notificationContentText: {
-      margin: `14px`
+      margin: `${themeData["density.spacings.small"]}`
     },
     panelTitle: {
-      padding: `12px 24px`,
+      padding: `${themeData["density.spacings.small"]} ${themeData["density.spacings.large"]}`,
       borderBottom: `1px solid ${themeData["divider.heavyColor"]}`
     },
     panelContainer: {
