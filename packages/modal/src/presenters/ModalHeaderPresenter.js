@@ -64,10 +64,13 @@ export default class ModalHeaderPresenter extends Component {
       this.renderChildren()
     ) : (
       <ThemeContext.Consumer>
-        {({ resolvedRoles, metadata }) => {
-          console.log(metadata.densityId);
-          const closeIcon = metadata.densityId === "medium-density"
-            ? <CloseMUI /> : <CloseSUI />;
+        {({ metadata }) => {
+          const closeIcon =
+            metadata.densityId === "medium-density" ? (
+              <CloseMUI />
+            ) : (
+              <CloseSUI />
+            );
           return (
             <header className={css(styles.header)} id={id}>
               <div className={css(styles.headerContent)}>

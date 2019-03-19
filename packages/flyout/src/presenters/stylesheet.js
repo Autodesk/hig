@@ -62,7 +62,9 @@ export default function(props, themeData, themeId) {
   const shadowColor = themeData
     ? getStyle(themeData, `flyout.shadowColor`)
     : `transparent`;
-  const densitySmall = themeData ? getStyle(themeData, `density.spacings.small`) : 0;
+  const densitySmall = themeData
+    ? getStyle(themeData, `density.spacings.small`)
+    : 0;
 
   return {
     flyoutWrapper: {
@@ -93,7 +95,10 @@ export default function(props, themeData, themeId) {
     panelContainer: {
       backgroundColor,
       borderRadius,
-      border: themeId && themeId === `hig-light` ? `1px solid ${borderColor}` : `none`,
+      border:
+        themeId && themeId === `hig-light`
+          ? `1px solid ${borderColor}`
+          : `none`,
       boxShadow: `0 0 ${shadowBlur} ${shadowColor}`
     },
     panelContainerInner: {

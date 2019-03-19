@@ -1,6 +1,9 @@
 export default function stylesheet(props, themeData) {
-  const padding = props.variant === "box" ? themeData["input.boxType.horizontalPadding"] : themeData["input.horizontalPadding"];
-  
+  const padding =
+    props.variant === "box"
+      ? themeData["input.boxType.horizontalPadding"]
+      : themeData["input.horizontalPadding"];
+
   return {
     wrapper: {
       position: "relative"

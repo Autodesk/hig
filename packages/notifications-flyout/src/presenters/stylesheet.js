@@ -80,13 +80,16 @@ export default function stylesheet(themeData, props, theme) {
         : { borderLeftColor: `rgba(128, 128, 128, 0.4)` })
     },
     notificationContentImage: {
-      margin: `${themeData["density.spacings.small"]} 0 ${themeData["density.spacings.small"]} ${themeData["density.spacings.small"]}`
+      margin: `${themeData["density.spacings.small"]} 0 ${
+        themeData["density.spacings.small"]
+      } ${themeData["density.spacings.small"]}`
     },
     notificationContentText: {
       margin: `${themeData["density.spacings.small"]}`
     },
     panelTitle: {
-      padding: `${themeData["density.spacings.small"]} ${themeData["density.spacings.large"]}`,
+      padding: `${themeData["density.spacings.small"]}
+        ${themeData["density.spacings.large"]}`,
       borderBottom: `1px solid ${themeData["divider.heavyColor"]}`
     },
     panelContainer: {
