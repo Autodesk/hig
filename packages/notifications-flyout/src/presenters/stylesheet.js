@@ -13,11 +13,11 @@ function getRulesByTransitionStatus(transitionStatus) {
 function getRulesByType(type, themeData) {
   switch (type) {
     case types.ERROR:
-      return { borderLeftColor: themeData["basics.colors.error"] };
+      return { borderLeftColor: themeData["colorScheme.errorColor"] };
     case types.WARNING:
-      return { borderLeftColor: themeData["basics.colors.warning"] };
+      return { borderLeftColor: themeData["colorScheme.warningColor"] };
     case types.SUCCESS:
-      return { borderLeftColor: themeData["basics.colors.success"] };
+      return { borderLeftColor: themeData["colorScheme.successColor"] };
     default:
       return { borderLeftColor: themeData["basics.colors.autodeskBlue500"] };
   }
@@ -121,7 +121,7 @@ export default function stylesheet(themeData, props, theme) {
       padding: `0 3px`,
       fontSize: `11px`,
       lineHeight: `13px`,
-      border: `1px solid ${themeData["basics.colors.white"]}`,
+      border: `1px solid ${themeData["colorScheme.surfaceLevel100Color"]}`,
       color: themeData["basics.colors.white"],
       backgroundColor: `#0696d7`,
       borderRadius: `4px`,
