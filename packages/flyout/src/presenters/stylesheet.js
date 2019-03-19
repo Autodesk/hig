@@ -44,7 +44,7 @@ function getAnchorPointTransformRotate(anchorPoint) {
   }
 }
 
-export default function(props, themeData) {
+export default function(props, themeData, themeId) {
   const { transitionStatus, anchorPoint } = props;
   const isExiting = transitionStatus === `exiting`;
   const isExited = transitionStatus === `exited`;
@@ -62,6 +62,7 @@ export default function(props, themeData) {
   const shadowColor = themeData
     ? getStyle(themeData, `flyout.shadowColor`)
     : `transparent`;
+  const densitySmall = themeData ? getStyle(themeData, `density.spacings.small`) : 0;
 
   return {
     flyoutWrapper: {
@@ -92,7 +93,7 @@ export default function(props, themeData) {
     panelContainer: {
       backgroundColor,
       borderRadius,
-      border: `1px solid ${borderColor}`,
+      border: themeId && themeId === `hig-light` ? `1px solid ${borderColor}` : `none`,
       boxShadow: `0 0 ${shadowBlur} ${shadowColor}`
     },
     panelContainerInner: {
@@ -102,7 +103,7 @@ export default function(props, themeData) {
       minWidth: `200px`,
       maxWidth: `400px`,
       maxHeight: `360px`,
-      padding: `12px`,
+      padding: densitySmall,
       overflowY: `auto`,
       msOverflowStyle: `-ms-autohiding-scrollbar`
     },
