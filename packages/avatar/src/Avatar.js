@@ -155,7 +155,10 @@ class Avatar extends Component {
     const { size, name } = this.props;
     const { imageUrl, hasImageError } = this.state;
     const { handleImageError } = this;
-    const backgroundId = backgroundIdFromName(name);
+    const backgroundId =
+      backgroundIdFromName(name) <= COLOR_VARIANT_COUNT
+        ? backgroundIdFromName(name)
+        : COLOR_VARIANT_COUNT;
     const label = `Avatar for ${name}`;
     const showImage = imageUrl && !hasImageError;
     const styles = roles => stylesheet({ size, backgroundId }, roles);

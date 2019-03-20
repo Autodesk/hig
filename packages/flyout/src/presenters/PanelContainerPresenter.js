@@ -11,13 +11,15 @@ export default function PanelContainerPresenter(props) {
 
   return (
     <ThemeContext.Consumer>
-      {({ resolvedRoles }) => {
+      {({ resolvedRoles, metadata }) => {
+        const themeId = metadata.colorSchemeId;
         const styles = stylesheet(
           {
             transitionStatus: null,
             anchorPoint: null
           },
-          resolvedRoles
+          resolvedRoles,
+          themeId
         );
 
         return (

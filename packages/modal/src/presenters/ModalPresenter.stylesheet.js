@@ -60,6 +60,7 @@ export default function stylesheet(props, themeData) {
 
       header: {
         fontSize: headerFontSize,
+        fontWeight: 400,
         lineHeight: headerLinHeight,
         display: "flex",
         flexDirection: "column",

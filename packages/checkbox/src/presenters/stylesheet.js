@@ -148,8 +148,8 @@ export default function stylesheet(props, themeData, theme) {
           fill: `${themeData["checkbox.iconColor"]}`
         }
       },
-      ...(hasHover ? getCheckboxRulesByHover(themeData) : {}),
       ...(hasFocus ? getCheckboxRulesByFocus(themeData) : {}),
+      ...(hasHover ? getCheckboxRulesByHover(themeData) : {}),
       ...(isPressed ? getCheckboxRulesByPressed(themeData) : {}),
       ...(disabled ? getCheckboxRulesByDisabled(themeData) : {}),
       ...(checked ? getCheckboxRulesByChecked(themeData) : {}),

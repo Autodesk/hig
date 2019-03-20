@@ -53,10 +53,10 @@ exports[`modal/presenters/ModalPresenter  1`] = `
         xmlns="http://www.w3.org/2000/svg"
       >
         <title>
-          hig-icons/common/16/close-16
+          close-m
         </title>
         <path
-          d="M8 6.08l5.3-5.3 1.414 1.414-5.3 5.3L14.72 12.8l-1.414 1.414L8 8.908l-5.307 5.307-1.414-1.414 5.307-5.307-5.301-5.3L2.699.778 8 6.079z"
+          d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
         />
       </svg>
     </button>

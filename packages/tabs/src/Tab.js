@@ -37,25 +37,50 @@ Tab.defaultProps = {
    * @param {RenderTabPayload} props
    * @returns {JSX.Element}
    */
-  render({ handleClick, handleKeyDown, label, ...otherProps }) {
+  render({
+    handleClick,
+    handleKeyDown,
+    label,
+    onBlur,
+    onFocus,
+    onMouseDown,
+    onMouseEnter,
+    onMouseLeave,
+    onMouseUp,
+    ...otherProps
+  }) {
     return (
-      <ControlBehavior key={label}>
+      <ControlBehavior
+        key={label}
+        onBlur={onBlur}
+        onFocus={onFocus}
+        onMouseDown={onMouseDown}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onMouseUp={onMouseUp}
+      >
         {({
           hasFocus,
           hasHover,
-          onBlur,
-          onFocus,
-          onMouseEnter,
-          onMouseLeave
+          isPressed,
+          onBlur: handleBlur,
+          onFocus: handleFocus,
+          onMouseDown: handleMouseDown,
+          onMouseEnter: handleMouseEnter,
+          onMouseLeave: handleMouseLeave,
+          onMouseUp: handleMouseUp
         }) => (
           <TabPresenter
             hasFocus={hasFocus}
             hasHover={hasHover}
+            isPressed={isPressed}
             label={label}
-            onBlur={onBlur}
-            onFocus={onFocus}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
+            onBlur={handleBlur}
+            onFocus={handleFocus}
+            onMouseDown={handleMouseDown}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
             onClick={handleClick}
             onKeyDown={handleKeyDown}
             {...otherProps}

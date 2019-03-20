@@ -32,7 +32,7 @@ export default function stylesheet(themeData, theme) {
       fontFamily: `ArtifaktElement`,
       lineHeight: 1.6,
       boxSizing: `border-box`,
-      padding: `10px`
+      padding: themeData ? themeData["density.spacings.small"] : 0
     },
     profileName: {
       display: `block`,

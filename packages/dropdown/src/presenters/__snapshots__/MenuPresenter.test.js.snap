@@ -9,6 +9,7 @@ exports[`Dropdown/presenters/MenuPresenter renders with all props 1`] = `
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -36,6 +37,7 @@ exports[`Dropdown/presenters/MenuPresenter renders with only required props 1`] 
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
