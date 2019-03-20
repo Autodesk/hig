@@ -35,12 +35,14 @@ export default class TextArea extends Component {
     const { variant, ...otherProps } = this.props;
 
     return (
-      <Input
-        stylesheet={customStylesheet}
-        tagName="textarea"
-        variant={variant}
-        {...otherProps}
-      />
+      <div style={{ position: "relative" }}>
+        <Input
+          stylesheet={customStylesheet}
+          tagName="textarea"
+          variant={variant}
+          {...otherProps}
+        />
+      </div>
     );
   }
 }

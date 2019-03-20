@@ -46,6 +46,11 @@ export default function stylesheetOverride(
       ...textAreaWrapper,
       position: `static`
     },
-    input: textArea
+    input: textArea,
+    halo: {
+      ...stylesheet.halo,
+      width: `100%`,
+      left: 0
+    }
   };
 }

@@ -1,5 +1,5 @@
 export default function stylesheet(
-  { active, hasFocus, hasHover, label },
+  { active, hasHover, isPressed, label },
   themeData
 ) {
   return {
@@ -42,7 +42,7 @@ export default function stylesheet(
             themeData["tabs.general.tab.hover.borderBottomWidth"]
         }),
 
-        ...(active && {
+        ...((active || isPressed) && {
           borderBottomColor:
             themeData["tabs.general.tab.selected.borderBottomColor"],
           borderBottomWidth:
@@ -64,13 +64,7 @@ export default function stylesheet(
         content: "''",
         bottom: `-${themeData["tabs.general.tab.focus.halo.width"]}`,
         left: themeData["density.spacings.small"],
-        width: `calc(100% - (2 * ${themeData["density.spacings.small"]}))`,
-
-        ...(hasFocus && {
-          borderBottom: `${
-            themeData["tabs.general.tab.focus.halo.width"]
-          } solid ${themeData["tabs.general.tab.focus.halo.color"]}`
-        })
+        width: `calc(100% - (2 * ${themeData["density.spacings.small"]}))`
       },
 
       "&:first-of-type:after": {

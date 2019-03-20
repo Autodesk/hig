@@ -72,7 +72,8 @@ exports[`notifications-flyout/Panel renders with all props 1`] = `
       style={
         Object {
           "borderBottom": "1px solid rgba(60, 60, 60, 0.25)",
-          "padding": "12px 24px",
+          "padding": "12px
+        24px",
         }
       }
     >
@@ -178,7 +179,8 @@ exports[`notifications-flyout/Panel renders without props 1`] = `
       style={
         Object {
           "borderBottom": "1px solid rgba(60, 60, 60, 0.25)",
-          "padding": "12px 24px",
+          "padding": "12px
+        24px",
         }
       }
     >

@@ -95,13 +95,13 @@ export default function stylesheet(props, themeData, theme) {
     outerShadow = `0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${
       themeData["checkbox.focus.halo.color"]
     }`;
-  } else if (hasFocus) {
-    outerShadow = `0 0 0 ${themeData["checkbox.focus.halo.width"]} ${
-      themeData["checkbox.focus.halo.color"]
-    }`;
   } else if (hasHover) {
     outerShadow = `0 0 0 ${themeData["checkbox.hover.halo.width"]} ${
       themeData["checkbox.hover.halo.color"]
+    }`;
+  } else if (hasFocus) {
+    outerShadow = `0 0 0 ${themeData["checkbox.focus.halo.width"]} ${
+      themeData["checkbox.focus.halo.color"]
     }`;
   }
 

@@ -5,7 +5,7 @@ exports[`profile-flyout/presenters/ProfileContentPresenter  1`] = `
   font-family: ArtifaktElement;
   line-height: 1.6;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 12px;
 }
 
 <div
@@ -18,7 +18,7 @@ exports[`profile-flyout/presenters/ProfileContentPresenter  2`] = `
   font-family: ArtifaktElement;
   line-height: 1.6;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 12px;
 }
 
 .emotion-0 {
@@ -48,7 +48,7 @@ exports[`profile-flyout/presenters/ProfileContentPresenter  3`] = `
   font-family: ArtifaktElement;
   line-height: 1.6;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 12px;
 }
 
 .emotion-0 {
@@ -77,7 +77,7 @@ exports[`profile-flyout/presenters/ProfileContentPresenter  4`] = `
   font-family: ArtifaktElement;
   line-height: 1.6;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 12px;
 }
 
 .emotion-0 {

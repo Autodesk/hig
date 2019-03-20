@@ -99,6 +99,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -215,10 +216,9 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       style={
         Object {
           "opacity": 1,
-          "padding": "0 10px",
           "pointerEvents": "none",
           "position": "absolute",
-          "right": "7px",
+          "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
         }
@@ -480,6 +480,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -596,10 +597,9 @@ exports[`Dropdown renders with a controlled value 1`] = `
       style={
         Object {
           "opacity": 1,
-          "padding": "0 10px",
           "pointerEvents": "none",
           "position": "absolute",
-          "right": "7px",
+          "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
         }
@@ -786,6 +786,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -840,10 +841,9 @@ exports[`Dropdown renders with a label and an ID 1`] = `
       style={
         Object {
           "opacity": 1,
-          "padding": "0 10px",
           "pointerEvents": "none",
           "position": "absolute",
-          "right": "7px",
+          "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
         }
@@ -968,6 +968,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -1049,10 +1050,9 @@ exports[`Dropdown renders with custom option formatting 1`] = `
       style={
         Object {
           "opacity": 1,
-          "padding": "0 10px",
           "pointerEvents": "none",
           "position": "absolute",
-          "right": "7px",
+          "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
         }
@@ -1223,6 +1223,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -1277,10 +1278,9 @@ exports[`Dropdown renders with custom option render function 1`] = `
       style={
         Object {
           "opacity": 1,
-          "padding": "0 10px",
           "pointerEvents": "none",
           "position": "absolute",
-          "right": "7px",
+          "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
         }
@@ -1424,6 +1424,7 @@ exports[`Dropdown renders with default value 1`] = `
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -1540,10 +1541,9 @@ exports[`Dropdown renders with default value 1`] = `
       style={
         Object {
           "opacity": 1,
-          "padding": "0 10px",
           "pointerEvents": "none",
           "position": "absolute",
-          "right": "7px",
+          "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
         }
@@ -1730,6 +1730,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -1811,10 +1812,9 @@ exports[`Dropdown renders with multiple selection 1`] = `
       style={
         Object {
           "opacity": 1,
-          "padding": "0 10px",
           "pointerEvents": "none",
           "position": "absolute",
-          "right": "7px",
+          "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
         }
@@ -1985,6 +1985,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -2101,10 +2102,9 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       style={
         Object {
           "opacity": 1,
-          "padding": "0 10px",
           "pointerEvents": "none",
           "position": "absolute",
-          "right": "7px",
+          "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
         }
@@ -2307,6 +2307,7 @@ exports[`Dropdown renders with option specific and general option render functio
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -2361,10 +2362,9 @@ exports[`Dropdown renders with option specific and general option render functio
       style={
         Object {
           "opacity": 1,
-          "padding": "0 10px",
           "pointerEvents": "none",
           "position": "absolute",
-          "right": "7px",
+          "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
         }
@@ -2517,6 +2517,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -2571,10 +2572,9 @@ exports[`Dropdown renders with option specific render function 1`] = `
       style={
         Object {
           "opacity": 1,
-          "padding": "0 10px",
           "pointerEvents": "none",
           "position": "absolute",
-          "right": "7px",
+          "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
         }
@@ -2763,6 +2763,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -2817,10 +2818,9 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
       style={
         Object {
           "opacity": 1,
-          "padding": "0 10px",
           "pointerEvents": "none",
           "position": "absolute",
-          "right": "7px",
+          "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
         }
@@ -2973,6 +2973,7 @@ exports[`Dropdown renders without props 1`] = `
   top: 28px;
   overflow: auto;
   z-index: 9996;
+  box-sizing: border-box;
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
@@ -3027,10 +3028,9 @@ exports[`Dropdown renders without props 1`] = `
       style={
         Object {
           "opacity": 1,
-          "padding": "0 10px",
           "pointerEvents": "none",
           "position": "absolute",
-          "right": "7px",
+          "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
         }

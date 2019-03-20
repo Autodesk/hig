@@ -251,8 +251,10 @@ exports[`tabs/Tabs renders tabs 1`] = `
         onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
+        onMouseUp={[Function]}
         role="button"
         tabIndex="0"
       >
@@ -277,8 +279,10 @@ exports[`tabs/Tabs renders tabs 1`] = `
         onClick={[Function]}
         onFocus={[Function]}
         onKeyDown={[Function]}
+        onMouseDown={[Function]}
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
+        onMouseUp={[Function]}
         role="button"
         tabIndex="0"
       >

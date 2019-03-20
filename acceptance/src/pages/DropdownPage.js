@@ -8,6 +8,7 @@ const states = [
   { label: "with placeholder", props: { placeholder: "example content" } },
   { label: "disabled", props: { disabled: true } }
 ];
+const variants = ["line", "box"];
 
 function DropdownPage() {
   const options = ["Option 1", "Option 2"];
@@ -15,18 +16,24 @@ function DropdownPage() {
   return (
     <ThemeRepeater>
       {({ id }) => {
-        return states.map(({ label, props }) => {
-          const key = id + label;
-          return (
-            <div key={key}>
-              <Label htmlFor={key} disabled={props.disabled}>
-                {label}
-              </Label>
-              <Dropdown id={key} options={options} {...props} ></Dropdown>
-              <Spacer spacing="l" />
-            </div>
-          );
-        });
+        return (
+          <div>
+            {variants.map(variant => {
+              return states.map(({ label, props }) => {
+                const key = id + label;
+                return (
+                  <div key={key}>
+                    <Label htmlFor={key} disabled={props.disabled}>
+                      {label}
+                    </Label>
+                    <Dropdown id={key} options={options} variant={variant} {...props} ></Dropdown>
+                    <Spacer spacing="l" />
+                  </div>
+                );
+              });
+            })}
+          </div>
+        );
       }}
     </ThemeRepeater>
   );

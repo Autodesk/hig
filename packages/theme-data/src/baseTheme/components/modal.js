@@ -12,7 +12,8 @@ export default {
   },
   "modal.body.height": { type: LENGTH },
   "modal.horizontalPadding": {
-    type: SPACING
+    type: SPACING,
+    value: { ref: "density.spacings.large" }
   },
   "modal.header.backgroundColor": {
     type: COLOR,

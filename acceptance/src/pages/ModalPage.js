@@ -39,8 +39,8 @@ function ModalPage() {
                 <Typography>When you see a modal...</Typography>
                 <Typography>...you take notice.</Typography>
               </div>
-              <div style={{ alignSelf: "flex-end" }}>
-                <div style={{ marginRight: "15px", display: "inline" }}>
+              <div style={{ alignSelf: "flex-end", paddingBottom: "4px" }}>
+                <div style={{ marginRight: "8px", display: "inline" }}>
                   <Button title="Label" type="outline" />
                 </div>
 
