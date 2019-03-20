@@ -1,6 +1,6 @@
 {
   "name": "@hig/checkbox",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "HIG Checkbox",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -25,7 +25,7 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^2.1.3",
-    "@hig/theme-data": "^2.3.3",
+    "@hig/theme-data": "^2.3.4",
     "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {

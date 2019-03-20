@@ -1,3 +1,10 @@
+# [@hig/dropdown-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.2...@hig/dropdown@2.0.3) (2019-03-20)
+
+
+### Bug Fixes
+
+* update caret icon padding ([f7ca4a0](https://github.com/Autodesk/hig/commit/f7ca4a0))
+
 # [@hig/dropdown-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.1...@hig/dropdown@2.0.2) (2019-03-13)
 
 

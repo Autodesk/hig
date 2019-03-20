@@ -1,3 +1,10 @@
+# [@hig/tabs-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/tabs@1.0.1...@hig/tabs@1.0.2) (2019-03-20)
+
+
+### Bug Fixes
+
+* use active underline for pressed state ([8f9885a](https://github.com/Autodesk/hig/commit/8f9885a))
+
 # [@hig/tabs-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/tabs@1.0.0...@hig/tabs@1.0.1) (2019-03-13)
 
 

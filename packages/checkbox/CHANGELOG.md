@@ -1,3 +1,10 @@
+# [@hig/checkbox-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.3...@hig/checkbox@2.0.4) (2019-03-20)
+
+
+### Bug Fixes
+
+* hover/focus halo adjustment ([fd4884d](https://github.com/Autodesk/hig/commit/fd4884d))
+
 # [@hig/checkbox-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.2...@hig/checkbox@2.0.3) (2019-03-13)
 
 

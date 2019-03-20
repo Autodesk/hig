@@ -1,3 +1,11 @@
+# [@hig/notifications-flyout-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.0.1...@hig/notifications-flyout@2.0.2) (2019-03-20)
+
+
+### Bug Fixes
+
+* notification badge border color ([edd04ba](https://github.com/Autodesk/hig/commit/edd04ba))
+* use theme-data for padding ([2125101](https://github.com/Autodesk/hig/commit/2125101))
+
 # [@hig/notifications-flyout-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.0.0...@hig/notifications-flyout@2.0.1) (2019-03-13)
 
 

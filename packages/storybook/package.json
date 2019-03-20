@@ -52,7 +52,7 @@
   "dependencies": {
     "@hig/rich-text": "^1.0.0",
     "@hig/theme-context": "^2.1.0",
-    "@hig/theme-data": "^2.3.3",
+    "@hig/theme-data": "^2.3.4",
     "@hig/typography": "^1.0.2",
     "faker": "^4.1.0",
     "prop-types": "^15.6.1",
