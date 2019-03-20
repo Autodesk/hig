@@ -1,3 +1,10 @@
+# [@hig/flyout-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/flyout@1.0.4...@hig/flyout@1.0.5) (2019-03-20)
+
+
+### Bug Fixes
+
+* remove transparent border ([5a01bd9](https://github.com/Autodesk/hig/commit/5a01bd9))
+
 # [@hig/flyout-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/flyout@1.0.3...@hig/flyout@1.0.4) (2019-03-13)
 
 
