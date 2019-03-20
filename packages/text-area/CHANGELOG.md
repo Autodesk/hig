@@ -1,3 +1,10 @@
+# [@hig/text-area-v1.1.2](https://github.com/Autodesk/hig/compare/@hig/text-area@1.1.1...@hig/text-area@1.1.2) (2019-03-20)
+
+
+### Bug Fixes
+
+* restore focus/hover halos ([fcf06a2](https://github.com/Autodesk/hig/commit/fcf06a2))
+
 # [@hig/text-area-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/text-area@1.1.0...@hig/text-area@1.1.1) (2019-03-13)
 
 
