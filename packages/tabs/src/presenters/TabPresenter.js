@@ -22,19 +22,22 @@ export default function TabPresenter({
   active,
   hasFocus,
   hasHover,
+  isPressed,
   label,
   onBlur,
   onFocus,
   onClick,
   onKeyDown,
+  onMouseDown,
   onMouseEnter,
-  onMouseLeave
+  onMouseLeave,
+  onMouseUp
 }) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
         const styles = stylesheet(
-          { active, hasFocus, hasHover, label },
+          { active, hasFocus, hasHover, isPressed, label },
           resolvedRoles
         );
 
@@ -45,8 +48,10 @@ export default function TabPresenter({
               onFocus={onFocus}
               onClick={onClick}
               onKeyDown={onKeyDown}
+              onMouseDown={onMouseDown}
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
+              onMouseUp={onMouseUp}
               role="button"
               tabIndex="0"
               className={css(styles.tabLabel)}
@@ -65,10 +70,13 @@ TabPresenter.propTypes = {
   label: PropTypes.string,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
+  isPressed: PropTypes.bool,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
   onClick: PropTypes.func,
   onKeyDown: PropTypes.func,
+  onMouseDown: PropTypes.func,
   onMouseEnter: PropTypes.func,
-  onMouseLeave: PropTypes.func
+  onMouseLeave: PropTypes.func,
+  onMouseUp: PropTypes.func
 };
