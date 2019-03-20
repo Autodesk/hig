@@ -111,10 +111,9 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
     style={
       Object {
         "opacity": "0.5",
-        "padding": "0 10px",
         "pointerEvents": "none",
         "position": "absolute",
-        "right": "7px",
+        "right": "0",
         "top": "50%",
         "transform": "translateY(-50%)",
       }
@@ -244,10 +243,9 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
     style={
       Object {
         "opacity": 1,
-        "padding": "0 10px",
         "pointerEvents": "none",
         "position": "absolute",
-        "right": "7px",
+        "right": "0",
         "top": "50%",
         "transform": "translateY(-50%)",
       }

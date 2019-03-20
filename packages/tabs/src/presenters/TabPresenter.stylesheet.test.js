@@ -79,18 +79,15 @@ describe("TabPresenter/stylesheet", () => {
     });
   });
 
-  describe("active and hasFocus", () => {
+  describe("active and isPressed", () => {
     it("returns an object with correct rules", () => {
-      const styles = stylesheet({ active: true, hasFocus: true }, themeData);
+      const styles = stylesheet({ active: true, isPressed: true }, themeData);
 
       expect(styles.tab).toEqual(
         expect.objectContaining({
           "&:before": expect.objectContaining({
             borderBottomColor: "aliceblue",
             borderBottomWidth: "5px"
-          }),
-          "&:after": expect.objectContaining({
-            borderBottom: "9px solid burlywood"
           })
         })
       );

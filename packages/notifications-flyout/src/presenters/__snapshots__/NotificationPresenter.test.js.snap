@@ -2,7 +2,7 @@
 
 exports[`notifications-flyout/presenters/NotificationPresenter renders with all props 1`] = `
 .emotion-3 {
-  margin: 14px;
+  margin: 12px;
 }
 
 .emotion-0 {
@@ -237,7 +237,7 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders without p
 }
 
 .emotion-1 {
-  margin: 14px;
+  margin: 12px;
 }
 
 .emotion-0 {

@@ -125,8 +125,10 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
     onClick={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
+    onMouseDown={undefined}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
+    onMouseUp={undefined}
     role="button"
     tabIndex="0"
   >
@@ -258,8 +260,10 @@ exports[`tabs/TabPresenter renders without props 1`] = `
     onClick={undefined}
     onFocus={undefined}
     onKeyDown={undefined}
+    onMouseDown={undefined}
     onMouseEnter={undefined}
     onMouseLeave={undefined}
+    onMouseUp={undefined}
     role="button"
     tabIndex="0"
   >
