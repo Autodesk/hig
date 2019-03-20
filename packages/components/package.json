@@ -49,7 +49,7 @@
     "@hig/themes": "^0.3.0",
     "@hig/timestamp": "^1.0.0",
     "@hig/tooltip": "^1.0.3",
-    "@hig/top-nav": "^3.0.3",
+    "@hig/top-nav": "^3.0.4",
     "@hig/typography": "^1.0.3"
   },
   "peerDependencies": {
