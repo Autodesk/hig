@@ -1,3 +1,10 @@
+# [@hig/radio-button-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.3...@hig/radio-button@1.0.4) (2019-03-20)
+
+
+### Bug Fixes
+
+* update hover/focus halo hierarchy ([89a3fb9](https://github.com/Autodesk/hig/commit/89a3fb9))
+
 # [@hig/radio-button-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.2...@hig/radio-button@1.0.3) (2019-03-13)
 
 

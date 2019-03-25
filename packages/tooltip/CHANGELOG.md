@@ -1,3 +1,10 @@
+# [@hig/tooltip-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.3...@hig/tooltip@1.0.4) (2019-03-20)
+
+
+### Bug Fixes
+
+* make density agnostic ([aa6169e](https://github.com/Autodesk/hig/commit/aa6169e))
+
 # [@hig/tooltip-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.2...@hig/tooltip@1.0.3) (2019-03-13)
 
 

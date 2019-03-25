@@ -1,3 +1,10 @@
+# [@hig/profile-flyout-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@2.0.2...@hig/profile-flyout@2.0.3) (2019-03-20)
+
+
+### Bug Fixes
+
+* use theme-data for padding ([eb23c1c](https://github.com/Autodesk/hig/commit/eb23c1c))
+
 # [@hig/profile-flyout-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@2.0.1...@hig/profile-flyout@2.0.2) (2019-03-13)
 
 

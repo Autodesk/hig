@@ -1,3 +1,10 @@
+# [@hig/avatar-v1.0.6](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.5...@hig/avatar@1.0.6) (2019-03-20)
+
+
+### Bug Fixes
+
+* backgroundId to account for lowercase name ([4c0ac9d](https://github.com/Autodesk/hig/commit/4c0ac9d))
+
 # [@hig/avatar-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.4...@hig/avatar@1.0.5) (2019-03-13)
 
 

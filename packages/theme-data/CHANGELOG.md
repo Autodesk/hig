@@ -1,3 +1,11 @@
+# [@hig/theme-data-v2.3.4](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.3.3...@hig/theme-data@2.3.4) (2019-03-20)
+
+
+### Bug Fixes
+
+* modal theme-data update ([3b8d715](https://github.com/Autodesk/hig/commit/3b8d715))
+* update theme-data for input ([8ceb4fb](https://github.com/Autodesk/hig/commit/8ceb4fb))
+
 # [@hig/theme-data-v2.3.3](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.3.2...@hig/theme-data@2.3.3) (2019-03-08)
 
 
