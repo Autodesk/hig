@@ -3,7 +3,6 @@ import { types } from "../types";
 
 const MODAL_BODY_LAYER = 1001;
 const MODAL_HEADER_LAYER = 1002;
-const MODAL_SHADOW_MASK_LAYER = 1003;
 const MODAL_LAYER = 10001;
 
 const WindowClosing = keyframes`
@@ -116,27 +115,7 @@ export default function stylesheet(props, themeData) {
         flexDirection: "column",
         overflow: "hidden",
         position: "relative",
-        minHeight: themeData["modal.body.height"],
-
-        "&::before": {
-          backgroundColor: themeData["modal.window.backgroundColor"],
-          content: "''",
-          display: "block",
-          height: "16px",
-          position: "relative",
-          margin: `0 ${themeData["modal.horizontalPadding"]}`,
-          zIndex: MODAL_SHADOW_MASK_LAYER
-        },
-
-        "&::after": {
-          backgroundColor: themeData["modal.window.backgroundColor"],
-          content: "''",
-          display: "block",
-          height: "16px",
-          position: "relative",
-          margin: `0 ${themeData["modal.horizontalPadding"]}`,
-          zIndex: MODAL_SHADOW_MASK_LAYER
-        }
+        minHeight: themeData["modal.body.height"]
       },
 
       bodyContent: {
@@ -144,7 +123,7 @@ export default function stylesheet(props, themeData) {
         flex: "1 1 auto",
         overflowX: "auto",
         overflowY: "auto",
-        padding: `0 ${themeData["modal.horizontalPadding"]}`
+        padding: themeData["modal.horizontalPadding"]
       }
     }
   };

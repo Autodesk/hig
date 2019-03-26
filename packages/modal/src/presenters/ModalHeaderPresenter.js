@@ -64,7 +64,7 @@ export default class ModalHeaderPresenter extends Component {
       this.renderChildren()
     ) : (
       <ThemeContext.Consumer>
-        {({ metadata }) => {
+        {({ resolvedRoles, metadata }) => {
           const closeIcon =
             metadata.densityId === "medium-density" ? (
               <CloseMUI />
@@ -77,7 +77,8 @@ export default class ModalHeaderPresenter extends Component {
                 <Typography
                   style={{
                     fontSize: styles.header.fontSize,
-                    lineHeight: styles.header.lineHeight
+                    fontWeight: resolvedRoles["basics.fontWeights.medium"],
+                    lineHeight: `inherit`
                   }}
                 >
                   {title}
