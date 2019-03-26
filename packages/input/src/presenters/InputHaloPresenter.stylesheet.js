@@ -81,7 +81,7 @@ export default function(props, themeData) {
     },
     halo: {
       position: "absolute",
-      top: "100%",
+      top: "calc(100% + 1px)",
       left: "-1px",
       right: 0,
       width: "calc(100% + 2px)",
