@@ -22,7 +22,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
@@ -403,7 +403,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
@@ -709,7 +709,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
@@ -891,7 +891,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
@@ -1146,7 +1146,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
@@ -1347,7 +1347,7 @@ exports[`Dropdown renders with default value 1`] = `
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
@@ -1653,7 +1653,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
@@ -1908,7 +1908,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
@@ -2230,7 +2230,7 @@ exports[`Dropdown renders with option specific and general option render functio
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
@@ -2440,7 +2440,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
@@ -2686,7 +2686,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
@@ -2896,7 +2896,7 @@ exports[`Dropdown renders without props 1`] = `
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
