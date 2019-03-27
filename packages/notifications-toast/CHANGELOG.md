@@ -1,3 +1,10 @@
+# [@hig/notifications-toast-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.0.1...@hig/notifications-toast@2.0.2) (2019-03-27)
+
+
+### Bug Fixes
+
+* design tweaks ([0d18c68](https://github.com/Autodesk/hig/commit/0d18c68))
+
 # [@hig/notifications-toast-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.0.0...@hig/notifications-toast@2.0.1) (2019-03-13)
 
 
