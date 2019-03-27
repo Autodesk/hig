@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.3.5](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.3.4...@hig/theme-data@2.3.5) (2019-03-27)
+
+
+### Bug Fixes
+
+* update icon colors for themes ([c458f78](https://github.com/Autodesk/hig/commit/c458f78))
+
 # [@hig/theme-data-v2.3.4](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.3.3...@hig/theme-data@2.3.4) (2019-03-20)
 
 

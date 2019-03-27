@@ -1,3 +1,10 @@
+# [@hig/modal-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/modal@2.0.2...@hig/modal@2.0.3) (2019-03-27)
+
+
+### Bug Fixes
+
+* header font-weight, line height & body padding ([828d5d7](https://github.com/Autodesk/hig/commit/828d5d7))
+
 # [@hig/modal-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/modal@2.0.1...@hig/modal@2.0.2) (2019-03-20)
 
 

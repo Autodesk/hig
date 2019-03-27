@@ -1,3 +1,10 @@
+# [@hig/input-v1.1.3](https://github.com/Autodesk/hig/compare/@hig/input@1.1.2...@hig/input@1.1.3) (2019-03-27)
+
+
+### Bug Fixes
+
+* halo top position ([9ab6941](https://github.com/Autodesk/hig/commit/9ab6941))
+
 # [@hig/input-v1.1.2](https://github.com/Autodesk/hig/compare/@hig/input@1.1.1...@hig/input@1.1.2) (2019-03-13)
 
 
