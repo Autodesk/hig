@@ -1,3 +1,10 @@
+# [@hig/side-nav-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.0.2...@hig/side-nav@2.0.3) (2019-03-27)
+
+
+### Bug Fixes
+
+* update divider colors ([5814aa8](https://github.com/Autodesk/hig/commit/5814aa8))
+
 # [@hig/side-nav-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.0.1...@hig/side-nav@2.0.2) (2019-03-13)
 
 
