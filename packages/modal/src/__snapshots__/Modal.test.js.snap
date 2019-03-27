@@ -67,26 +67,6 @@ exports[`modal/Modal integration renders correctly 1`] = `
   min-height: 152px;
 }
 
-.emotion-5::before {
-  background-color: #ffffff;
-  content: '';
-  display: block;
-  height: 16px;
-  position: relative;
-  margin: 0 24px;
-  z-index: 1003;
-}
-
-.emotion-5::after {
-  background-color: #ffffff;
-  content: '';
-  display: block;
-  height: 16px;
-  position: relative;
-  margin: 0 24px;
-  z-index: 1003;
-}
-
 .emotion-4 {
   border: none;
   -webkit-flex: 1 1 auto;
@@ -94,7 +74,7 @@ exports[`modal/Modal integration renders correctly 1`] = `
   flex: 1 1 auto;
   overflow-x: auto;
   overflow-y: auto;
-  padding: 0 24px;
+  padding: 24px;
 }
 
 .emotion-3 {
@@ -203,7 +183,8 @@ exports[`modal/Modal integration renders correctly 1`] = `
             style={
               Object {
                 "fontSize": "20px",
-                "lineHeight": 1.66666,
+                "fontWeight": 600,
+                "lineHeight": "inherit",
               }
             }
           >
@@ -304,26 +285,6 @@ exports[`modal/Modal integration renders with styles customized 1`] = `
   min-height: 152px;
 }
 
-.emotion-5::before {
-  background-color: #ffffff;
-  content: '';
-  display: block;
-  height: 16px;
-  position: relative;
-  margin: 0 24px;
-  z-index: 1003;
-}
-
-.emotion-5::after {
-  background-color: #ffffff;
-  content: '';
-  display: block;
-  height: 16px;
-  position: relative;
-  margin: 0 24px;
-  z-index: 1003;
-}
-
 .emotion-4 {
   border: none;
   -webkit-flex: 1 1 auto;
@@ -331,7 +292,7 @@ exports[`modal/Modal integration renders with styles customized 1`] = `
   flex: 1 1 auto;
   overflow-x: auto;
   overflow-y: auto;
-  padding: 0 24px;
+  padding: 24px;
 }
 
 .emotion-3 {
@@ -450,7 +411,8 @@ exports[`modal/Modal integration renders with styles customized 1`] = `
             style={
               Object {
                 "fontSize": "20px",
-                "lineHeight": 1.66666,
+                "fontWeight": 600,
+                "lineHeight": "inherit",
               }
             }
           >

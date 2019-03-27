@@ -143,6 +143,14 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
 
+"@hig/avatar@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-1.0.5.tgz#2be63bbd70034ef335a7a81d9a42d190c08bccf7"
+  integrity sha512-2RZ/oHRhPjlWNA6/Yvk8iymhLBhYdFQJrc7gL/QnXUnhXKuvm3eF8Dymw+XpmCELQN8tVh5ruMzL2NX7GpDPsg==
+  dependencies:
+    prop-types "^15.7.1"
+    react-lifecycles-compat "^3.0.4"
+
 "@hig/icons@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-1.0.0.tgz#b2e023887beae46934a919816a56f4c9f995a9bc"

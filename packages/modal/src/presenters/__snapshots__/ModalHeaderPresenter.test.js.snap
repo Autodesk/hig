@@ -32,7 +32,8 @@ exports[`modal/presenters/ModalHeaderPresenter  1`] = `
       style={
         Object {
           "fontSize": undefined,
-          "lineHeight": undefined,
+          "fontWeight": 600,
+          "lineHeight": "inherit",
         }
       }
     />
@@ -107,7 +108,8 @@ exports[`modal/presenters/ModalHeaderPresenter  3`] = `
       style={
         Object {
           "fontSize": undefined,
-          "lineHeight": undefined,
+          "fontWeight": 600,
+          "lineHeight": "inherit",
         }
       }
     >

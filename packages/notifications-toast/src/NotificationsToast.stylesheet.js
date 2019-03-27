@@ -23,7 +23,9 @@ export default function stylesheet(themeData, status) {
       boxShadow: `0 0 ${
         themeData["basics.shadows.lowBlur"]
       } 0 rgba(0, 0, 0, 0.25)`,
-      borderRadius: themeData["basics.borderRadii.large"],
+      borderRadius: `3px ${themeData["basics.borderRadii.large"]} ${
+        themeData["basics.borderRadii.large"]
+      } 3px`,
       borderLeft: `3px solid transparent`,
       backgroundColor: themeData["colorScheme.surfaceLevel100Color"],
       ...(status ? getRulesByStatus(themeData, status) : {})
@@ -57,8 +59,10 @@ export default function stylesheet(themeData, status) {
       right: 0,
       // eslint-disable-next-line prettier/prettier
       "svg": {
-        height: `30px`,
-        width: `30px`
+        // eslint-disable-next-line prettier/prettier
+        "path": {
+          fill: themeData["colorScheme.iconColor"]
+        }
       }
     }
   };

@@ -2,6 +2,7 @@ import React from "react";
 import Button from "@hig/button";
 import Modal from "@hig/modal";
 import Typography from "@hig/typography";
+import Spacer from "@hig/spacer";
 import merge from "lodash.merge";
 import ThemeRepeater from "../components/ThemeRepeater";
 
@@ -39,11 +40,9 @@ function ModalPage() {
                 <Typography>When you see a modal...</Typography>
                 <Typography>...you take notice.</Typography>
               </div>
-              <div style={{ alignSelf: "flex-end", paddingBottom: "4px" }}>
-                <div style={{ marginRight: "8px", display: "inline" }}>
-                  <Button title="Label" type="outline" />
-                </div>
-
+              <div style={{ display: "flex", alignSelf: "flex-end" }}>
+                <Button title="Label" type="outline" />
+                <Spacer spacing="s" />
                 <Button title="Label" type="outline" />
               </div>
             </Modal>

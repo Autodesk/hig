@@ -75,7 +75,7 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
@@ -149,7 +149,7 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
 
 .emotion-1 {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 1px);
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
