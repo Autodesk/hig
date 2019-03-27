@@ -47,8 +47,8 @@ export default {
   green900: { value: "#445e20", type: COLOR },
 
   iconLightGrayColor: { value: "#808080", type: COLOR },
-  iconDarkBlueColor: { value: "#a2a6b0", type: COLOR },
-  iconDarkGrayColor: { value: "#b0b0b0", type: COLOR },
+  iconDarkBlueColor: { value: "#d1deee", type: COLOR },
+  iconDarkGrayColor: { value: "#cccccc", type: COLOR },
 
   red100: { value: "#ffd9d9", type: COLOR },
   red200: { value: "#f8d3d3", type: COLOR },

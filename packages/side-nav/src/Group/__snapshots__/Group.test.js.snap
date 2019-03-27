@@ -15,7 +15,7 @@ exports[`side-nav/Group snapshot tests renders with no props 1`] = `
   content: "";
   left: 8px;
   right: 8px;
-  border-top: 1px solid #808080;
+  border-top: 1px solid rgba(60,60,60,0.25);
 }
 
 @media (min-width:769px) {

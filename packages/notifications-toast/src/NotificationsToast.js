@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import IconButton from "@hig/icon-button";
-import { CloseNotification24 } from "@hig/icons";
+import { CloseSUI } from "@hig/icons";
 import RichText from "@hig/rich-text";
 import ThemeContext from "@hig/theme-context";
+import Typography from "@hig/typography";
 import "@hig/icon-button/build/index.css";
 
 import { STATUS_ICONS, AVAILABLE_STATUSES } from "./statuses";
@@ -77,11 +78,15 @@ export default class NotificationsToast extends Component {
               {this._renderImage(resolvedRoles)}
               <div className={css(styles.toastBody)}>
                 <div className={css(styles.toastMessage)}>
-                  <RichText size="small">{this.props.children}</RichText>
+                  <RichText>
+                    <Typography style={{ fontSize: "12px" }}>
+                      {this.props.children}
+                    </Typography>
+                  </RichText>
                   <div className={css(styles.toastDismiss)}>
                     <IconButton
                       title="Dismiss"
-                      icon={<CloseNotification24 />}
+                      icon={<CloseSUI />}
                       type="transparent"
                       onClick={this.props.onDismiss}
                     />
