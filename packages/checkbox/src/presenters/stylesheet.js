@@ -144,6 +144,7 @@ export default function stylesheet(props, themeData, theme) {
         left: `50%`,
         top: `50%`,
         transform: `translateX(-50%) translateY(-50%)`,
+        pointerEvents: `none`,
         "*": {
           fill: `${themeData["checkbox.iconColor"]}`
         }
