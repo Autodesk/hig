@@ -1,3 +1,10 @@
+# [@hig/checkbox-v2.0.5](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.4...@hig/checkbox@2.0.5) (2019-04-01)
+
+
+### Bug Fixes
+
+* no tooltip in checked state ([635b81e](https://github.com/Autodesk/hig/commit/635b81e))
+
 # [@hig/checkbox-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.3...@hig/checkbox@2.0.4) (2019-03-20)
 
 
