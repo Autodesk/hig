@@ -41,6 +41,7 @@ exports[`checkbox/presenters/CheckPresenter renders with all props 1`] = `
   -webkit-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
 }
 
 .emotion-4 svg * {
@@ -123,6 +124,7 @@ exports[`checkbox/presenters/CheckPresenter renders without props 1`] = `
   -webkit-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
 }
 
 .emotion-4 svg * {

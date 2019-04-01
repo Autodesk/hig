@@ -44,6 +44,7 @@ exports[`checkbox/Checkbox integration renders correctly 1`] = `
   -webkit-transform: translateX(-50%) translateY(-50%);
   -ms-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
 }
 
 .emotion-5 svg * {
