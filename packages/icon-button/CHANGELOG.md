@@ -1,3 +1,10 @@
+# [@hig/icon-button-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/icon-button@1.0.1...@hig/icon-button@1.0.2) (2019-04-01)
+
+
+### Bug Fixes
+
+* don't show icon tooltip ([d8d3a3f](https://github.com/Autodesk/hig/commit/d8d3a3f))
+
 # [@hig/icon-button-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@1.0.0...@hig/icon-button@1.0.1) (2018-12-06)
 
 

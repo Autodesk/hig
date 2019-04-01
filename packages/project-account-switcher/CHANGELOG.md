@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.0...@hig/project-account-switcher@2.0.1) (2019-04-01)
+
+
+### Bug Fixes
+
+* caret positioning for non-web-light themes ([4ab34fa](https://github.com/Autodesk/hig/commit/4ab34fa))
+
 # [@hig/project-account-switcher-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@1.0.5...@hig/project-account-switcher@2.0.0) (2019-02-07)
 
 
