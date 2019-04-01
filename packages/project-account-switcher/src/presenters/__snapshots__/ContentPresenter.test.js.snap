@@ -11,7 +11,8 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
 }
 
 .emotion-9:first-of-type {
-  margin-top: 10px;
+  margin-top: 0;
+  padding-top: 10px;
 }
 
 .emotion-4 {

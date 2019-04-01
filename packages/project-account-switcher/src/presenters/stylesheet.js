@@ -43,7 +43,8 @@ export default function stylesheet() {
       listStyle: `none`,
       padding: 0,
       "&:first-of-type": {
-        marginTop: `10px`
+        marginTop: `0`,
+        paddingTop: `10px`
       }
     },
     switcherItem: {
