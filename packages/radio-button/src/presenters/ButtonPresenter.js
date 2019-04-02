@@ -1,5 +1,3 @@
-/* eslint react/forbid-prop-types: 0 */
-
 import React, { Component } from "react";
 import { ThemeContext } from "@hig/theme-context";
 import { css } from "emotion";
