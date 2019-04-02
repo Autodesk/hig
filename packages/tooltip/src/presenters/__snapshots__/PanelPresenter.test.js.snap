@@ -2,9 +2,9 @@
 
 exports[`tooltip/presenters/PanelPresenter renders with all props 1`] = `
 .emotion-1 {
-  border: 1px solid #393939;
-  background-color: #393939;
-  border-radius: 4px;
+  border: 1px solid #535353;
+  background-color: #535353;
+  border-radius: 2px;
 }
 
 .emotion-0 {
@@ -30,9 +30,9 @@ exports[`tooltip/presenters/PanelPresenter renders with all props 1`] = `
 
 exports[`tooltip/presenters/PanelPresenter renders without props 1`] = `
 .emotion-1 {
-  border: 1px solid #393939;
-  background-color: #393939;
-  border-radius: 4px;
+  border: 1px solid #535353;
+  background-color: #535353;
+  border-radius: 2px;
 }
 
 .emotion-0 {
