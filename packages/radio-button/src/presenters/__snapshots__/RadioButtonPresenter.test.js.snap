@@ -54,7 +54,6 @@ exports[`radio-button/presenters/RadioButtonPresenter renders with all props 1`]
   <input
     checked={true}
     className="emotion-0"
-    defaultChecked={false}
     disabled={true}
     label="HELLO"
     name="RadioButton"
@@ -125,11 +124,8 @@ exports[`radio-button/presenters/RadioButtonPresenter renders without props 1`] 
 >
   <input
     className="emotion-0"
-    defaultChecked={false}
-    disabled={false}
-    name="radiobutton"
+    disabled={undefined}
     type="radio"
-    value="value"
   />
   <span
     className="emotion-1"

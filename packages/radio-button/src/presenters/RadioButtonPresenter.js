@@ -9,26 +9,6 @@ import stylesheet from "./stylesheet";
 export default class RadioButtonPresenter extends Component {
   static propTypes = {
     /**
-     * HTML id of the element
-     */
-    id: PropTypes.string,
-    /**
-     * Checks the radio button
-     */
-    checked: PropTypes.bool,
-    /**
-     * Initially checks the radio button, but allows user action to change it
-     */
-    defaultChecked: PropTypes.bool,
-    /**
-     * Prevents user actions on the radio button
-     */
-    disabled: PropTypes.bool,
-    /**
-     * The name of the radio button as submitted with a form
-     */
-    name: PropTypes.string,
-    /**
      * Called when user moves focus from the field
      */
     onBlur: PropTypes.func,
@@ -45,10 +25,6 @@ export default class RadioButtonPresenter extends Component {
      */
     onFocus: PropTypes.func,
     /**
-     * Value submitted with a form if checked
-     */
-    value: PropTypes.string,
-    /**
      * Returns whether or not the button is currently focused
      */
     hasFocus: PropTypes.bool,
@@ -60,13 +36,6 @@ export default class RadioButtonPresenter extends Component {
      * Returns whether or not the button is currently pressed
      */
     isPressed: PropTypes.bool
-  };
-
-  static defaultProps = {
-    disabled: false,
-    name: "radiobutton",
-    value: "value",
-    defaultChecked: false
   };
 
   render() {
