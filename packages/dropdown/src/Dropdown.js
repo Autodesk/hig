@@ -155,7 +155,7 @@ export default class Dropdown extends Component {
    * @returns {JSX.Element}
    */
   renderInput(downshift) {
-    const { id, toggleMenu, getInputProps } = downshift;
+    const { id, isOpen, toggleMenu, getInputProps } = downshift;
     const {
       placeholder,
       disabled,
@@ -169,6 +169,7 @@ export default class Dropdown extends Component {
       id,
       placeholder,
       disabled,
+      isOpen,
       required,
       onBlur,
       onFocus,
