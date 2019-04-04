@@ -1,7 +1,7 @@
 import { mount } from "enzyme";
 import React from "react";
 
-import WebLightTheme from "@hig/theme-data/build/json/webLightMediumDensityTheme/theme.json";
+import LightGrayTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
 
 import * as createThemeProxy from "./createThemeProxy";
 import ThemeContext from "./index";
@@ -63,7 +63,7 @@ describe("ThemeContext", () => {
       it("provides the default theme without a provider", () => {
         mount(<ThemeContext.Consumer>{renderFunction}</ThemeContext.Consumer>);
 
-        expect(renderFunction).toHaveBeenCalledWith(WebLightTheme);
+        expect(renderFunction).toHaveBeenCalledWith(LightGrayTheme);
       });
     });
   });

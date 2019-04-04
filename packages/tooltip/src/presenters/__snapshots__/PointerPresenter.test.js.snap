@@ -2,7 +2,7 @@
 
 exports[`tooltip/presenters/PointerPresenter renders 1`] = `
 .emotion-0 {
-  fill: #393939;
+  fill: #535353;
 }
 
 <svg

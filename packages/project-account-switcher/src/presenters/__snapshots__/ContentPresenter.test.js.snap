@@ -82,7 +82,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #0696D7;
+  color: #006EAF;
   outline: none;
 }
 

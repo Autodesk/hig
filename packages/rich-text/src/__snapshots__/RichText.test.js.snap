@@ -66,21 +66,21 @@ exports[`RichText renders 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #0696D7;
+  color: #006EAF;
   outline: none;
 }
 
 .emotion-0 a:hover {
-  color: #0671A1;
+  color: #006EAF;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: transparent;
-  text-decoration-color: transparent;
+  -webkit-text-decoration-color: #006EAF;
+  text-decoration-color: #006EAF;
 }
 
 .emotion-0 a:focus {
-  color: #024B6C;
-  outline: solid 0 rgba(6,150,215,0.25);
+  color: #006EAF;
+  outline: solid 2px rgba(6,150,215,0.25);
 }
 
 .emotion-0 p {
@@ -184,21 +184,21 @@ exports[`RichText renders with children 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #0696D7;
+  color: #006EAF;
   outline: none;
 }
 
 .emotion-0 a:hover {
-  color: #0671A1;
+  color: #006EAF;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: transparent;
-  text-decoration-color: transparent;
+  -webkit-text-decoration-color: #006EAF;
+  text-decoration-color: #006EAF;
 }
 
 .emotion-0 a:focus {
-  color: #024B6C;
-  outline: solid 0 rgba(6,150,215,0.25);
+  color: #006EAF;
+  outline: solid 2px rgba(6,150,215,0.25);
 }
 
 .emotion-0 p {
@@ -305,21 +305,21 @@ exports[`RichText renders with dangerouslySetInnerHTML 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #0696D7;
+  color: #006EAF;
   outline: none;
 }
 
 .emotion-0 a:hover {
-  color: #0671A1;
+  color: #006EAF;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: transparent;
-  text-decoration-color: transparent;
+  -webkit-text-decoration-color: #006EAF;
+  text-decoration-color: #006EAF;
 }
 
 .emotion-0 a:focus {
-  color: #024B6C;
-  outline: solid 0 rgba(6,150,215,0.25);
+  color: #006EAF;
+  outline: solid 2px rgba(6,150,215,0.25);
 }
 
 .emotion-0 p {

@@ -154,7 +154,7 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
