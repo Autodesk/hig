@@ -27,7 +27,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -160,7 +160,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   font-weight: 400;
   font-size: 14px;
   line-height: 1.428571429;
-  background-color: rgb(230,244,251);
+  background-color: rgba(128,128,128,0.1);
 }
 
 .emotion-9 {
@@ -212,6 +212,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <svg
       className="emotion-3"
+      color="#808080"
       height="10px"
       style={
         Object {
@@ -221,6 +222,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
           "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
+          "transition": "transform 0.3s, color 0.3s",
         }
       }
       viewBox="0 0 10 10"
@@ -408,7 +410,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -541,7 +543,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   font-weight: 400;
   font-size: 14px;
   line-height: 1.428571429;
-  background-color: rgb(230,244,251);
+  background-color: rgba(128,128,128,0.1);
 }
 
 .emotion-7 {
@@ -593,6 +595,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
     </div>
     <svg
       className="emotion-3"
+      color="#808080"
       height="10px"
       style={
         Object {
@@ -602,6 +605,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
           "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
+          "transition": "transform 0.3s, color 0.3s",
         }
       }
       viewBox="0 0 10 10"
@@ -714,7 +718,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -837,6 +841,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
     </div>
     <svg
       className="emotion-3"
+      color="#808080"
       height="10px"
       style={
         Object {
@@ -846,6 +851,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
           "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
+          "transition": "transform 0.3s, color 0.3s",
         }
       }
       viewBox="0 0 10 10"
@@ -896,7 +902,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -1046,6 +1052,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
     </div>
     <svg
       className="emotion-3"
+      color="#808080"
       height="10px"
       style={
         Object {
@@ -1055,6 +1062,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
           "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
+          "transition": "transform 0.3s, color 0.3s",
         }
       }
       viewBox="0 0 10 10"
@@ -1151,7 +1159,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -1274,6 +1282,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
     </div>
     <svg
       className="emotion-3"
+      color="#808080"
       height="10px"
       style={
         Object {
@@ -1283,6 +1292,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
           "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
+          "transition": "transform 0.3s, color 0.3s",
         }
       }
       viewBox="0 0 10 10"
@@ -1352,7 +1362,7 @@ exports[`Dropdown renders with default value 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -1485,7 +1495,7 @@ exports[`Dropdown renders with default value 1`] = `
   font-weight: 400;
   font-size: 14px;
   line-height: 1.428571429;
-  background-color: rgb(230,244,251);
+  background-color: rgba(128,128,128,0.1);
 }
 
 .emotion-7 {
@@ -1537,6 +1547,7 @@ exports[`Dropdown renders with default value 1`] = `
     </div>
     <svg
       className="emotion-3"
+      color="#808080"
       height="10px"
       style={
         Object {
@@ -1546,6 +1557,7 @@ exports[`Dropdown renders with default value 1`] = `
           "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
+          "transition": "transform 0.3s, color 0.3s",
         }
       }
       viewBox="0 0 10 10"
@@ -1658,7 +1670,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -1808,6 +1820,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
     </div>
     <svg
       className="emotion-3"
+      color="#808080"
       height="10px"
       style={
         Object {
@@ -1817,6 +1830,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
           "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
+          "transition": "transform 0.3s, color 0.3s",
         }
       }
       viewBox="0 0 10 10"
@@ -1913,7 +1927,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -2046,7 +2060,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   font-weight: 400;
   font-size: 14px;
   line-height: 1.428571429;
-  background-color: rgb(230,244,251);
+  background-color: rgba(128,128,128,0.1);
 }
 
 .emotion-5 {
@@ -2098,6 +2112,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     </div>
     <svg
       className="emotion-3"
+      color="#808080"
       height="10px"
       style={
         Object {
@@ -2107,6 +2122,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
           "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
+          "transition": "transform 0.3s, color 0.3s",
         }
       }
       viewBox="0 0 10 10"
@@ -2235,7 +2251,7 @@ exports[`Dropdown renders with option specific and general option render functio
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -2358,6 +2374,7 @@ exports[`Dropdown renders with option specific and general option render functio
     </div>
     <svg
       className="emotion-3"
+      color="#808080"
       height="10px"
       style={
         Object {
@@ -2367,6 +2384,7 @@ exports[`Dropdown renders with option specific and general option render functio
           "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
+          "transition": "transform 0.3s, color 0.3s",
         }
       }
       viewBox="0 0 10 10"
@@ -2445,7 +2463,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -2568,6 +2586,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
     </div>
     <svg
       className="emotion-3"
+      color="#808080"
       height="10px"
       style={
         Object {
@@ -2577,6 +2596,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
           "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
+          "transition": "transform 0.3s, color 0.3s",
         }
       }
       viewBox="0 0 10 10"
@@ -2691,7 +2711,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -2814,6 +2834,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
     </div>
     <svg
       className="emotion-3"
+      color="#808080"
       height="10px"
       style={
         Object {
@@ -2823,6 +2844,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
           "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
+          "transition": "transform 0.3s, color 0.3s",
         }
       }
       viewBox="0 0 10 10"
@@ -2901,7 +2923,7 @@ exports[`Dropdown renders without props 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -3024,6 +3046,7 @@ exports[`Dropdown renders without props 1`] = `
     </div>
     <svg
       className="emotion-3"
+      color="#808080"
       height="10px"
       style={
         Object {
@@ -3033,6 +3056,7 @@ exports[`Dropdown renders without props 1`] = `
           "right": "0",
           "top": "50%",
           "transform": "translateY(-50%)",
+          "transition": "transform 0.3s, color 0.3s",
         }
       }
       viewBox="0 0 10 10"

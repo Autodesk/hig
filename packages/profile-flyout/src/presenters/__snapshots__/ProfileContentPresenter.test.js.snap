@@ -29,7 +29,7 @@ exports[`profile-flyout/presenters/ProfileContentPresenter  2`] = `
   font-size: 16px;
   font-weight: bold;
   line-height: 24px;
-  color: #222934;
+  color: #3c3c3c;
 }
 
 <div
@@ -58,7 +58,7 @@ exports[`profile-flyout/presenters/ProfileContentPresenter  3`] = `
   text-overflow: ellipsis;
   font-size: 12px;
   line-height: 16px;
-  color: #666;
+  color: rgba(60,60,60,0.7);
 }
 
 <div
@@ -88,7 +88,7 @@ exports[`profile-flyout/presenters/ProfileContentPresenter  4`] = `
   font-size: 16px;
   font-weight: bold;
   line-height: 24px;
-  color: #222934;
+  color: #3c3c3c;
 }
 
 .emotion-1 {
@@ -98,7 +98,7 @@ exports[`profile-flyout/presenters/ProfileContentPresenter  4`] = `
   text-overflow: ellipsis;
   font-size: 12px;
   line-height: 16px;
-  color: #666;
+  color: rgba(60,60,60,0.7);
 }
 
 <div

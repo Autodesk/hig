@@ -32,7 +32,7 @@ const densityOptions = {
   "medium-density": "Medium"
 };
 
-const DEFAULT_THEME_ID = "hig-light";
+const DEFAULT_THEME_ID = "hig-light-gray";
 const DEFAULT_DENSITY_ID = "medium-density";
 
 const COLOR_THEME_IDS = {

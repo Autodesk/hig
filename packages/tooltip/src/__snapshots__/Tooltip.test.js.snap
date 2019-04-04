@@ -45,13 +45,13 @@ exports[`tooltip/Tooltip  1`] = `
 }
 
 .emotion-1 {
-  fill: #393939;
+  fill: #535353;
 }
 
 .emotion-5 {
-  border: 1px solid #393939;
-  background-color: #393939;
-  border-radius: 4px;
+  border: 1px solid #535353;
+  background-color: #535353;
+  border-radius: 2px;
 }
 
 .emotion-4 {
@@ -141,13 +141,13 @@ exports[`tooltip/Tooltip  2`] = `
 }
 
 .emotion-2 {
-  fill: #393939;
+  fill: #535353;
 }
 
 .emotion-6 {
-  border: 1px solid #393939;
-  background-color: #393939;
-  border-radius: 4px;
+  border: 1px solid #535353;
+  background-color: #535353;
+  border-radius: 2px;
 }
 
 .emotion-5 {
@@ -178,14 +178,14 @@ exports[`tooltip/Tooltip  2`] = `
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
-  border-radius: 4px;
+  border-radius: 2px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #f5f5f5;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 18px;
   margin: 0;
   overflow: hidden;
@@ -205,7 +205,7 @@ exports[`tooltip/Tooltip  2`] = `
 }
 
 .emotion-0:visited {
-  color: #ffffff;
+  color: #f5f5f5;
 }
 
 .emotion-0 svg * {

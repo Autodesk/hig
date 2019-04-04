@@ -81,7 +81,7 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
 .emotion-5 {
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D4DBE1;
+  border: none;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
@@ -122,14 +122,14 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
-  border-radius: 4px;
+  border-radius: 2px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #f5f5f5;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 18px;
   margin: 0;
   overflow: hidden;
@@ -149,7 +149,7 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
 }
 
 .emotion-0:visited {
-  color: #ffffff;
+  color: #f5f5f5;
 }
 
 .emotion-0 svg * {
@@ -254,7 +254,7 @@ exports[`flyout/Flyout snapshots renders children from the given render function
 }
 
 .emotion-2 {
-  fill: #D4DBE1;
+  fill: transparent;
 }
 
 .emotion-3 {
@@ -264,7 +264,7 @@ exports[`flyout/Flyout snapshots renders children from the given render function
 .emotion-7 {
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D4DBE1;
+  border: none;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
@@ -305,14 +305,14 @@ exports[`flyout/Flyout snapshots renders children from the given render function
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
-  border-radius: 4px;
+  border-radius: 2px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #f5f5f5;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 18px;
   margin: 0;
   overflow: hidden;
@@ -332,7 +332,7 @@ exports[`flyout/Flyout snapshots renders children from the given render function
 }
 
 .emotion-0:visited {
-  color: #ffffff;
+  color: #f5f5f5;
 }
 
 .emotion-0 svg * {
@@ -448,7 +448,7 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
 }
 
 .emotion-2 {
-  fill: #D4DBE1;
+  fill: transparent;
 }
 
 .emotion-3 {
@@ -458,7 +458,7 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
 .emotion-7 {
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D4DBE1;
+  border: none;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
@@ -499,14 +499,14 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
-  border-radius: 4px;
+  border-radius: 2px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #f5f5f5;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 18px;
   margin: 0;
   overflow: hidden;
@@ -526,7 +526,7 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
 }
 
 .emotion-0:visited {
-  color: #ffffff;
+  color: #f5f5f5;
 }
 
 .emotion-0 svg * {
@@ -642,7 +642,7 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
 }
 
 .emotion-1 {
-  fill: #D4DBE1;
+  fill: transparent;
 }
 
 .emotion-2 {
@@ -652,7 +652,7 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
 .emotion-6 {
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D4DBE1;
+  border: none;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
@@ -776,7 +776,7 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
 }
 
 .emotion-2 {
-  fill: #D4DBE1;
+  fill: transparent;
 }
 
 .emotion-3 {
@@ -807,14 +807,14 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
-  border-radius: 4px;
+  border-radius: 2px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #f5f5f5;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 18px;
   margin: 0;
   overflow: hidden;
@@ -834,7 +834,7 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
 }
 
 .emotion-0:visited {
-  color: #ffffff;
+  color: #f5f5f5;
 }
 
 .emotion-0 svg * {
@@ -934,7 +934,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
 }
 
 .emotion-2 {
-  fill: #D4DBE1;
+  fill: transparent;
 }
 
 .emotion-3 {
@@ -944,7 +944,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
 .emotion-6 {
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D4DBE1;
+  border: none;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
@@ -976,14 +976,14 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
-  border-radius: 4px;
+  border-radius: 2px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #f5f5f5;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 18px;
   margin: 0;
   overflow: hidden;
@@ -1003,7 +1003,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
 }
 
 .emotion-0:visited {
-  color: #ffffff;
+  color: #f5f5f5;
 }
 
 .emotion-0 svg * {
@@ -1124,7 +1124,7 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
 }
 
 .emotion-2 {
-  fill: #D4DBE1;
+  fill: transparent;
 }
 
 .emotion-3 {
@@ -1134,7 +1134,7 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
 .emotion-7 {
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D4DBE1;
+  border: none;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
@@ -1175,14 +1175,14 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
-  border-radius: 4px;
+  border-radius: 2px;
   box-sizing: border-box;
-  color: #ffffff;
+  color: #f5f5f5;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 18px;
   margin: 0;
   overflow: hidden;
@@ -1202,7 +1202,7 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
 }
 
 .emotion-0:visited {
-  color: #ffffff;
+  color: #f5f5f5;
 }
 
 .emotion-0 svg * {
@@ -1338,7 +1338,7 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
 }
 
 .emotion-1 {
-  fill: #D4DBE1;
+  fill: transparent;
 }
 
 .emotion-2 {
@@ -1348,7 +1348,7 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
 .emotion-6 {
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D4DBE1;
+  border: none;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
