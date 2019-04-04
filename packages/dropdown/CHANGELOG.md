@@ -1,3 +1,10 @@
+# [@hig/dropdown-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.3...@hig/dropdown@2.0.4) (2019-04-04)
+
+
+### Bug Fixes
+
+* match menu open caret to designs ([aba3bf9](https://github.com/Autodesk/hig/commit/aba3bf9))
+
 # [@hig/dropdown-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.2...@hig/dropdown@2.0.3) (2019-03-20)
 
 

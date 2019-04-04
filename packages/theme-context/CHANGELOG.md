@@ -1,3 +1,15 @@
+# [@hig/theme-context-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/theme-context@2.1.3...@hig/theme-context@3.0.0) (2019-04-04)
+
+
+### Features
+
+* make light gray the default theme ([21b9da2](https://github.com/Autodesk/hig/commit/21b9da2))
+
+
+### BREAKING CHANGES
+
+* web light replaced as the default theme, to get that theme back pass that theme from theme-data as via the value prop with ThemeContext.Provider
+
 # [@hig/theme-context-v2.1.3](https://github.com/Autodesk/hig/compare/@hig/theme-context@2.1.2...@hig/theme-context@2.1.3) (2019-03-13)
 
 
