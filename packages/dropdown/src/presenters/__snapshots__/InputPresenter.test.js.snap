@@ -107,6 +107,7 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
   </div>
   <svg
     className="emotion-3"
+    color="#808080"
     height="10px"
     style={
       Object {
@@ -116,6 +117,7 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
         "right": "0",
         "top": "50%",
         "transform": "translateY(-50%)",
+        "transition": "transform 0.3s, color 0.3s",
       }
     }
     viewBox="0 0 10 10"
@@ -239,6 +241,7 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
   </div>
   <svg
     className="emotion-3"
+    color="#808080"
     height="10px"
     style={
       Object {
@@ -248,6 +251,7 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
         "right": "0",
         "top": "50%",
         "transform": "translateY(-50%)",
+        "transition": "transform 0.3s, color 0.3s",
       }
     }
     viewBox="0 0 10 10"
