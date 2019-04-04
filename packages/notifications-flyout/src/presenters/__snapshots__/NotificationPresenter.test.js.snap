@@ -1,6 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`notifications-flyout/presenters/NotificationPresenter renders with all props 1`] = `
+.emotion-5 {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition-property: height,opacity;
+  transition-property: height,opacity;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.emotion-5:last-child {
+  border-bottom: none;
+}
+
 .emotion-3 {
   margin: 12px;
 }
@@ -70,21 +85,21 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #0696D7;
+  color: #006EAF;
   outline: none;
 }
 
 .emotion-0 a:hover {
-  color: #0671A1;
+  color: #006EAF;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: transparent;
-  text-decoration-color: transparent;
+  -webkit-text-decoration-color: #006EAF;
+  text-decoration-color: #006EAF;
 }
 
 .emotion-0 a:focus {
-  color: #024B6C;
-  outline: solid 0 rgba(6,150,215,0.25);
+  color: #006EAF;
+  outline: solid 2px rgba(6,150,215,0.25);
 }
 
 .emotion-0 p {
@@ -114,22 +129,6 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
 .emotion-0 b,
 .emotion-0 strong {
   font-weight: 700;
-}
-
-.emotion-5 {
-  position: relative;
-  overflow: hidden;
-  -webkit-transition-property: height,opacity;
-  transition-property: height,opacity;
-  -webkit-transition-duration: 300ms;
-  transition-duration: 300ms;
-  -webkit-transition-timing-function: ease;
-  transition-timing-function: ease;
-  background-color: #e2f9f7;
-}
-
-.emotion-5:last-child {
-  border-bottom: none;
 }
 
 .emotion-4 {
@@ -305,21 +304,21 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders without p
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #0696D7;
+  color: #006EAF;
   outline: none;
 }
 
 .emotion-0 a:hover {
-  color: #0671A1;
+  color: #006EAF;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: transparent;
-  text-decoration-color: transparent;
+  -webkit-text-decoration-color: #006EAF;
+  text-decoration-color: #006EAF;
 }
 
 .emotion-0 a:focus {
-  color: #024B6C;
-  outline: solid 0 rgba(6,150,215,0.25);
+  color: #006EAF;
+  outline: solid 2px rgba(6,150,215,0.25);
 }
 
 .emotion-0 p {

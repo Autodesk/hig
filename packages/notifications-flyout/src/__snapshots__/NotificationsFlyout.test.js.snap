@@ -61,7 +61,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 }
 
 .emotion-4 {
-  fill: #D4DBE1;
+  fill: transparent;
 }
 
 .emotion-5 {
@@ -104,7 +104,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 .emotion-15 {
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D4DBE1;
+  border: none;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
@@ -236,21 +236,21 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #0696D7;
+  color: #006EAF;
   outline: none;
 }
 
 .emotion-8 a:hover {
-  color: #0671A1;
+  color: #006EAF;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: transparent;
-  text-decoration-color: transparent;
+  -webkit-text-decoration-color: #006EAF;
+  text-decoration-color: #006EAF;
 }
 
 .emotion-8 a:focus {
-  color: #024B6C;
-  outline: solid 0 rgba(6,150,215,0.25);
+  color: #006EAF;
+  outline: solid 2px rgba(6,150,215,0.25);
 }
 
 .emotion-8 p {
@@ -491,7 +491,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 }
 
 .emotion-4 {
-  fill: #D4DBE1;
+  fill: transparent;
 }
 
 .emotion-5 {
@@ -534,7 +534,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 .emotion-15 {
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D4DBE1;
+  border: none;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
@@ -666,21 +666,21 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #0696D7;
+  color: #006EAF;
   outline: none;
 }
 
 .emotion-8 a:hover {
-  color: #0671A1;
+  color: #006EAF;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: transparent;
-  text-decoration-color: transparent;
+  -webkit-text-decoration-color: #006EAF;
+  text-decoration-color: #006EAF;
 }
 
 .emotion-8 a:focus {
-  color: #024B6C;
-  outline: solid 0 rgba(6,150,215,0.25);
+  color: #006EAF;
+  outline: solid 2px rgba(6,150,215,0.25);
 }
 
 .emotion-8 p {
@@ -901,7 +901,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
 }
 
 .emotion-4 {
-  fill: #D4DBE1;
+  fill: transparent;
 }
 
 .emotion-5 {
@@ -917,7 +917,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
 .emotion-19 {
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D4DBE1;
+  border: none;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
@@ -1049,21 +1049,21 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #0696D7;
+  color: #006EAF;
   outline: none;
 }
 
 .emotion-8 a:hover {
-  color: #0671A1;
+  color: #006EAF;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: transparent;
-  text-decoration-color: transparent;
+  -webkit-text-decoration-color: #006EAF;
+  text-decoration-color: #006EAF;
 }
 
 .emotion-8 a:focus {
-  color: #024B6C;
-  outline: solid 0 rgba(6,150,215,0.25);
+  color: #006EAF;
+  outline: solid 2px rgba(6,150,215,0.25);
 }
 
 .emotion-8 p {
@@ -1394,7 +1394,7 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
 }
 
 .emotion-4 {
-  fill: #D4DBE1;
+  fill: transparent;
 }
 
 .emotion-5 {
@@ -1437,7 +1437,7 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
 .emotion-14 {
   background-color: #ffffff;
   border-radius: 4px;
-  border: 1px solid #D4DBE1;
+  border: none;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 

@@ -32,11 +32,11 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders with all props 1
 }
 
 .emotion-1:nth-of-type(even) {
-  fill: rgb(14,211,190);
+  fill: #0696d7;
 }
 
 .emotion-1:nth-of-type(odd) {
-  fill: rgb(12,168,153);
+  fill: rgba(6,150,215,0.6);
 }
 
 .emotion-17 {
@@ -205,11 +205,11 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders without props 1`
 }
 
 .emotion-1:nth-of-type(even) {
-  fill: rgb(14,211,190);
+  fill: #0696d7;
 }
 
 .emotion-1:nth-of-type(odd) {
-  fill: rgb(12,168,153);
+  fill: rgba(6,150,215,0.6);
 }
 
 .emotion-21 {

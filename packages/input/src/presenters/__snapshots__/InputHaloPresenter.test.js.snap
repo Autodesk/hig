@@ -18,7 +18,7 @@ exports[`InputHaloPresenter renders by default 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(14,211,190,0.15);
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -80,7 +80,7 @@ exports[`InputHaloPresenter renders with focus 1`] = `
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
-  height: 1px;
+  height: 4px;
   background-color: rgba(6,150,215,0.25);
   -webkit-transition-duration: 0.1s,0.1s;
   transition-duration: 0.1s,0.1s;
@@ -101,7 +101,7 @@ exports[`InputHaloPresenter renders with hover 1`] = `
   border-style: solid;
   border-color: transparent;
   border-width: 1px;
-  border-bottom-color: #0ED3BE;
+  border-bottom-color: #808080;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
@@ -112,8 +112,8 @@ exports[`InputHaloPresenter renders with hover 1`] = `
   left: -1px;
   right: 0;
   width: calc(100% + 2px);
-  height: 1px;
-  background-color: rgba(14,211,190,0.15);
+  height: 4px;
+  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.1s,0.1s;

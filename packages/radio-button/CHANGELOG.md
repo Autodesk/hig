@@ -1,3 +1,10 @@
+# [@hig/radio-button-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.4...@hig/radio-button@1.0.5) (2019-04-02)
+
+
+### Bug Fixes
+
+* remove defaultChecked and other unused default props ([de364d1](https://github.com/Autodesk/hig/commit/de364d1))
+
 # [@hig/radio-button-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.3...@hig/radio-button@1.0.4) (2019-03-20)
 
 

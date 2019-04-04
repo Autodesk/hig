@@ -4,7 +4,7 @@ exports[`Label renders with all props 1`] = `
 <label
   style={
     Object {
-      "color": "rgba(60, 60, 60, 0.6)",
+      "color": "rgba(60, 60, 60, 0.9)",
       "fontFamily": "ArtifaktElement, sans-serif",
       "fontSize": "14px",
       "fontWeight": 400,
@@ -21,7 +21,7 @@ exports[`Label renders without props 1`] = `
 <label
   style={
     Object {
-      "color": "rgba(60, 60, 60, 0.6)",
+      "color": "rgba(60, 60, 60, 0.9)",
       "fontFamily": "ArtifaktElement, sans-serif",
       "fontSize": "14px",
       "fontWeight": 400,

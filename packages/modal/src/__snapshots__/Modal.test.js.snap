@@ -2,7 +2,7 @@
 
 exports[`modal/Modal integration renders correctly 1`] = `
 .emotion-8 {
-  color: #2c3e53;
+  color: #3c3c3c;
   opacity: 1;
   pointer-events: visible;
   -webkit-transition: all ease 0.2s;
@@ -24,7 +24,7 @@ exports[`modal/Modal integration renders correctly 1`] = `
 .emotion-6 {
   background: #ffffff;
   border-radius: 4px;
-  box-shadow: 0 0 8px 0 #BEC8D2;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -119,7 +119,7 @@ exports[`modal/Modal integration renders correctly 1`] = `
 }
 
 .emotion-2 .hig__icon-button.hig__icon-button--primary svg * {
-  fill: #2c3e53;
+  fill: #3c3c3c;
 }
 
 .emotion-2 .hig__icon-button.hig__icon-button--primary:hover,
@@ -130,7 +130,7 @@ exports[`modal/Modal integration renders correctly 1`] = `
 
 .emotion-2 .hig__icon-button.hig__icon-button--primary:hover svg *,
 .emotion-2 .hig__icon-button.hig__icon-button--primary:focus svg * {
-  fill: #2c3e53;
+  fill: #3c3c3c;
 }
 
 .emotion-2 .hig__icon-button.hig__icon-button--primary:focus {
@@ -242,7 +242,7 @@ exports[`modal/Modal integration renders with styles customized 1`] = `
 .emotion-6 {
   background: #ffffff;
   border-radius: 4px;
-  box-shadow: 0 0 8px 0 #BEC8D2;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -337,7 +337,7 @@ exports[`modal/Modal integration renders with styles customized 1`] = `
 }
 
 .emotion-2 .hig__icon-button.hig__icon-button--primary svg * {
-  fill: #2c3e53;
+  fill: #3c3c3c;
 }
 
 .emotion-2 .hig__icon-button.hig__icon-button--primary:hover,
@@ -348,7 +348,7 @@ exports[`modal/Modal integration renders with styles customized 1`] = `
 
 .emotion-2 .hig__icon-button.hig__icon-button--primary:hover svg *,
 .emotion-2 .hig__icon-button.hig__icon-button--primary:focus svg * {
-  fill: #2c3e53;
+  fill: #3c3c3c;
 }
 
 .emotion-2 .hig__icon-button.hig__icon-button--primary:focus {

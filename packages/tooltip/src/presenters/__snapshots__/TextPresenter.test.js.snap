@@ -32,7 +32,7 @@ exports[`tooltip/presenters/TextPresenter renders with children 1`] = `
       className="emotion-0"
       style={
         Object {
-          "color": "#ffffff",
+          "color": "#f5f5f5",
           "fontSize": "12px",
         }
       }
@@ -75,7 +75,7 @@ exports[`tooltip/presenters/TextPresenter renders without props 1`] = `
       className="emotion-0"
       style={
         Object {
-          "color": "#ffffff",
+          "color": "#f5f5f5",
           "fontSize": "12px",
         }
       }
