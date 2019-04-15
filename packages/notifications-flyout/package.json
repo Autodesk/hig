@@ -29,7 +29,7 @@
     "@hig/utils": "^0.3.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
-    "react-transition-group": "^2.3.0"
+    "react-transition-group": "^3.0.0"
   },
   "devDependencies": {
     "@hig/avatar": "^1.0.6",
