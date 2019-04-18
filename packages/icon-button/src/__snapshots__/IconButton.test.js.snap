@@ -1,20 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`IconButton renders correctly 1`] = `
+.emotion-1 {
+  border: 2px solid transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.emotion-1 svg * {
+  fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
+
+.emotion-0 {
+  fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
 <button
-  className="hig__icon-button hig__icon-button--primary"
-  onBlur={undefined}
+  className="emotion-1"
+  disabled={undefined}
+  hasFocus={false}
+  hasHover={false}
+  isPressed={false}
+  onBlur={[Function]}
   onClick={undefined}
-  onFocus={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
   title="Settings"
 >
   <svg
-    className="hig__icon-button__icon"
-    height="24"
+    className="emotion-0"
+    height="24px"
     viewBox="0 0 24 24"
-    width="24"
+    width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>
@@ -31,22 +82,73 @@ exports[`IconButton renders correctly 1`] = `
 `;
 
 exports[`IconButton renders correctly with a link 1`] = `
+.emotion-1 {
+  border: 2px solid transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.emotion-1 svg * {
+  fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
+
+.emotion-0 {
+  fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
 <a
-  className="hig__icon-button hig__icon-button--primary"
+  className="emotion-1"
+  disabled={undefined}
+  hasFocus={false}
+  hasHover={false}
   href="//example.com"
-  onBlur={undefined}
+  isPressed={false}
+  onBlur={[Function]}
   onClick={undefined}
-  onFocus={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
   tabIndex="0"
   title="Settings"
 >
   <svg
-    className="hig__icon-button__icon"
-    height="24"
+    className="emotion-0"
+    height="24px"
     viewBox="0 0 24 24"
-    width="24"
+    width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>
