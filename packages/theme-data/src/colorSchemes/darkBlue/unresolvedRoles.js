@@ -8,6 +8,7 @@ import button from "./components/button";
 import checkbox from "./components/checkbox";
 import divider from "./components/divider";
 import formField from "./components/formField";
+import iconButton from "./components/iconButton";
 import input from "./components/input";
 import label from "./components/label";
 import menu from "./components/menu";
@@ -29,6 +30,7 @@ const darkBlueThemeConfig = extendTheme(
     checkbox,
     divider,
     formField,
+    iconButton,
     input,
     label,
     menu,
