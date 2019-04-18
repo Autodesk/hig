@@ -1,5 +1,5 @@
 import { action } from "@storybook/addon-actions";
-import { boolean, select, text } from "@storybook/addon-knobs/react";
+import { boolean, text } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
   basic: "Basic",
