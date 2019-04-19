@@ -151,10 +151,13 @@
     prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/icons@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-1.0.0.tgz#b2e023887beae46934a919816a56f4c9f995a9bc"
-  integrity sha512-5cxrts555oxLT+4+iKFe1emb3tajSZAxrcNiXnmYcWi+atkMWWM7e6wGc5+cv45HyM6MCZqEaaS/nEW5avgv3w==
+"@hig/icon-button@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-1.0.2.tgz#bc6f482a7896d37aa3dd70d8511acd2db6ee0133"
+  integrity sha512-iulFV46duvhdN+2HeNmFTotPKS3+XGtaD2Pw/pL/dO4QVr+4mKmRDC4H4ai/VKDIpFtANHoMBgs9WCBC0J0Jsg==
+  dependencies:
+    classnames "^2.2.5"
+    prop-types "^15.7.1"
 
 "@hig/styles@^0.2.3":
   version "0.2.3"

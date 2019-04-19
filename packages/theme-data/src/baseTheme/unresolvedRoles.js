@@ -11,6 +11,7 @@ import component from "./components/component";
 import divider from "./components/divider";
 import flyout from "./components/flyout";
 import formField from "./components/formField";
+import iconButton from "./components/iconButton";
 import input from "./components/input";
 import label from "./components/label";
 import menu from "./components/menu";
@@ -48,6 +49,7 @@ const baseThemeConfig = extendTheme(
     divider,
     flyout,
     formField,
+    iconButton,
     input,
     label,
     menu,

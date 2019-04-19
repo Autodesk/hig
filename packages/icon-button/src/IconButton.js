@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import cx from "classnames";
+import { ControlBehavior } from "@hig/behaviors";
 
-import { types, AVAILABLE_TYPES } from "./types";
-import "./icon-button.scss";
+import IconButtonPresenter from "./presenters/IconButtonPresenter";
 
 export default class IconButton extends Component {
   static propTypes = {
@@ -20,10 +19,6 @@ export default class IconButton extends Component {
      */
     link: PropTypes.string,
     /**
-     * Deprecated; use `icon` instead
-     */
-    name: PropTypes.oneOf([]),
-    /**
      * Called when user moves focus away from the button
      */
     onBlur: PropTypes.func,
@@ -36,6 +31,10 @@ export default class IconButton extends Component {
      */
     onFocus: PropTypes.func,
     /**
+     * Called when mouse is pressed over the button
+     */
+    onMouseDown: PropTypes.func,
+    /**
      * Called when mouse begins to move over the button
      */
     onMouseEnter: PropTypes.func,
@@ -44,64 +43,60 @@ export default class IconButton extends Component {
      */
     onMouseLeave: PropTypes.func,
     /**
-     * Deprecated; use `icon` instead
+     * Called when mouse is released over the button
      */
-    svg: PropTypes.string,
+    onMouseUp: PropTypes.func,
     /**
      * Title of the button for accessibility purposes
      */
-    title: PropTypes.string.isRequired,
-    /**
-     * 'primary' or 'flat'; the style of the button
-     */
-    type: PropTypes.oneOf(AVAILABLE_TYPES)
-  };
-
-  static defaultProps = {
-    type: types.PRIMARY
+    title: PropTypes.string.isRequired
   };
 
   render() {
     const {
-      disabled,
-      link,
-      onClick,
       onBlur,
       onFocus,
+      onMouseDown,
       onMouseEnter,
       onMouseLeave,
-      title
+      onMouseUp,
+      ...props
     } = this.props;
 
-    const iconButtonClasses = cx(
-      "hig__icon-button",
-      `hig__icon-button--${this.props.type}`,
-      { "hig__icon-button--disabled": this.props.disabled }
+    return (
+      <ControlBehavior
+        onBlur={onBlur}
+        onFocus={onFocus}
+        onMouseDown={onMouseDown}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onMouseUp={onMouseUp}
+      >
+        {({
+          hasFocus,
+          hasHover,
+          isPressed,
+          onBlur: handleBlur,
+          onFocus: handleFocus,
+          onMouseDown: handleMouseDown,
+          onMouseEnter: handleMouseEnter,
+          onMouseLeave: handleMouseLeave,
+          onMouseUp: handleMouseUp
+        }) => (
+          <IconButtonPresenter
+            hasFocus={hasFocus}
+            hasHover={hasHover}
+            isPressed={isPressed}
+            onBlur={handleBlur}
+            onFocus={handleFocus}
+            onMouseDown={handleMouseDown}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            {...props}
+          />
+        )}
+      </ControlBehavior>
     );
-
-    const linkProps = link
-      ? {
-          tabIndex: disabled ? "-1" : "0",
-          href: link
-        }
-      : {};
-
-    const props = {
-      className: iconButtonClasses,
-      ...linkProps,
-      onClick,
-      onBlur,
-      onFocus,
-      onMouseEnter,
-      onMouseLeave,
-      title
-    };
-
-    const Element = this.props.link ? "a" : "button";
-
-    const icon = React.cloneElement(this.props.icon, {
-      className: cx(this.props.icon.props.className, "hig__icon-button__icon")
-    });
-    return <Element {...props}>{icon}</Element>;
   }
 }

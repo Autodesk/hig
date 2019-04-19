@@ -36,7 +36,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.5
+      alpha: 0.35
     }
   },
   /* outline */
@@ -55,7 +55,7 @@ export default {
       ref: "basics.colors.white"
     },
     transform: {
-      alpha: 0.5
+      alpha: 0.35
     }
   },
   "button.outline.hover.halo.color": {
@@ -76,7 +76,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.5
+      alpha: 0.35
     }
   },
   "button.outline.pressed.borderColor": {
@@ -89,7 +89,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.5
+      alpha: 0.35
     }
   },
   /* flat */
@@ -112,7 +112,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.5
+      alpha: 0.35
     }
   },
   "button.flat.pressed.halo.color": {
@@ -120,7 +120,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.5
+      alpha: 0.35
     }
   }
 };

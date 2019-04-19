@@ -124,7 +124,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.15
+      alpha: 0.25
     }
   },
 
@@ -141,7 +141,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.15
+      alpha: 0.25
     }
   },
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IconButton renders correctly 1`] = `
+exports[`IconButtonPresenter renders correctly 1`] = `
 .emotion-1 {
   border: 2px solid transparent;
   display: inline-block;
@@ -49,16 +49,16 @@ exports[`IconButton renders correctly 1`] = `
 <button
   className="emotion-1"
   disabled={undefined}
-  hasFocus={false}
-  hasHover={false}
-  isPressed={false}
-  onBlur={[Function]}
+  hasFocus={undefined}
+  hasHover={undefined}
+  isPressed={undefined}
+  onBlur={undefined}
   onClick={undefined}
-  onFocus={[Function]}
-  onMouseDown={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  onMouseUp={[Function]}
+  onFocus={undefined}
+  onMouseDown={undefined}
+  onMouseEnter={undefined}
+  onMouseLeave={undefined}
+  onMouseUp={undefined}
   title="Settings"
 >
   <svg
@@ -81,7 +81,7 @@ exports[`IconButton renders correctly 1`] = `
 </button>
 `;
 
-exports[`IconButton renders correctly with a link 1`] = `
+exports[`IconButtonPresenter renders correctly with a link 1`] = `
 .emotion-1 {
   border: 2px solid transparent;
   display: inline-block;
@@ -130,17 +130,17 @@ exports[`IconButton renders correctly with a link 1`] = `
 <a
   className="emotion-1"
   disabled={undefined}
-  hasFocus={false}
-  hasHover={false}
+  hasFocus={undefined}
+  hasHover={undefined}
   href="//example.com"
-  isPressed={false}
-  onBlur={[Function]}
+  isPressed={undefined}
+  onBlur={undefined}
   onClick={undefined}
-  onFocus={[Function]}
-  onMouseDown={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  onMouseUp={[Function]}
+  onFocus={undefined}
+  onMouseDown={undefined}
+  onMouseEnter={undefined}
+  onMouseLeave={undefined}
+  onMouseUp={undefined}
   tabIndex="0"
   title="Settings"
 >
