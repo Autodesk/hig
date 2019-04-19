@@ -1,3 +1,15 @@
+# [@hig/theme-data-v2.4.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.3.5...@hig/theme-data@2.4.0) (2019-04-19)
+
+
+### Bug Fixes
+
+* button halo opacities ([a70465e](https://github.com/Autodesk/hig/commit/a70465e))
+
+
+### Features
+
+* add icon-button theme-data ([efe11c8](https://github.com/Autodesk/hig/commit/efe11c8))
+
 # [@hig/theme-data-v2.3.5](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.3.4...@hig/theme-data@2.3.5) (2019-03-27)
 
 
