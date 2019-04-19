@@ -4,6 +4,7 @@ import banner from "./components/banner";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
 import flyout from "./components/flyout";
+import iconButton from "./components/iconButton";
 import input from "./components/input";
 import label from "./components/label";
 import modal from "./components/modal";
@@ -22,6 +23,7 @@ const webLightThemeConfig = extendTheme(
     button,
     checkbox,
     flyout,
+    iconButton,
     input,
     label,
     modal,

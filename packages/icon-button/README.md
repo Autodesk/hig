@@ -10,11 +10,10 @@ Read more about where and how to use IconButton on [the website](https://hig.aut
 yarn add @hig/icon-button
 ```
 
-## Import the component and CSS
+## Import the component
 
 ```
-import IconButton from '@hig/icon-button';
-import '@hig/icon-button/build/index.css';
+import IconButton from '@hig/icon-button @hig/theme-context @hig/theme-data';
 ```
 
 ## Typical usage
