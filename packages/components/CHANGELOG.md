@@ -1,3 +1,10 @@
+# [@hig/components-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/components@1.1.0...@hig/components@1.1.1) (2019-04-19)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/theme-context to version 3.0.0 ([568fb8e](https://github.com/Autodesk/hig/commit/568fb8e))
+
 # [@hig/components-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/components@1.0.14...@hig/components@1.1.0) (2019-03-13)
 
 

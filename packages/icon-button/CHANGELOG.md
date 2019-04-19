@@ -1,3 +1,18 @@
+# [@hig/icon-button-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@1.0.2...@hig/icon-button@2.0.0) (2019-04-19)
+
+
+### Features
+
+* make icon-button themable ([9f829d2](https://github.com/Autodesk/hig/commit/9f829d2))
+
+
+### BREAKING CHANGES
+
+* * deprecated props are now removed (name, svg)
+* also removed and deprecated type prop - there are no longer different types with the new design
+* removed all css classnames
+* removed css stylesheets
+
 # [@hig/icon-button-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/icon-button@1.0.1...@hig/icon-button@1.0.2) (2019-04-01)
 
 
