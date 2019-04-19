@@ -1,5 +1,6 @@
 import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
+import Spacer from "@hig/spacer";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 
 import infoOptions from "./infoOptions";
@@ -13,7 +14,7 @@ stories.forEach(({ description, getProps }) => {
     description,
     withInfo({
       ...infoOptions,
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider, Spacer]
     })(() => {
       const props = getProps();
       return renderStory(props);

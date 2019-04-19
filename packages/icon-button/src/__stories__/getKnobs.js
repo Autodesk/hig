@@ -12,13 +12,15 @@ const knobLabels = {
   onBlur: "onBlur",
   onClick: "onClick",
   onFocus: "onFocus",
+  onMouseDown: "onMouseDown",
   onMouseEnter: "onMouseEnter",
   onMouseLeave: "onMouseLeave",
+  onMouseUp: "onMouseUp",
   title: "Title"
 };
 
 export default function getKnobs(props) {
-  const { disabled, link, name, svg, title, ...otherProps } = props;
+  const { disabled, link, title, ...otherProps } = props;
 
   return {
     ...otherProps,
@@ -27,8 +29,10 @@ export default function getKnobs(props) {
     onBlur: action(knobLabels.onBlur),
     onClick: action(knobLabels.onClick),
     onFocus: action(knobLabels.onFocus),
+    onMouseDown: action(knobLabels.onMouseDown),
     onMouseEnter: action(knobLabels.onMouseEnter),
     onMouseLeave: action(knobLabels.onMouseLeave),
+    onMouseUp: action(knobLabels.onMouseUp),
     title: text(knobLabels.title, title, knobGroupIds.basic)
   };
 }
