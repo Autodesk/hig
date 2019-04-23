@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.0.0...@hig/icon-button@2.0.1) (2019-04-23)
+
+
+### Bug Fixes
+
+* console errors for invalid props ([608c207](https://github.com/Autodesk/hig/commit/608c207))
+
 # [@hig/icon-button-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@1.0.2...@hig/icon-button@2.0.0) (2019-04-19)
 
 
