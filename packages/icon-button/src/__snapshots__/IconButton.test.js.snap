@@ -48,10 +48,6 @@ exports[`IconButton renders correctly 1`] = `
 
 <button
   className="emotion-1"
-  disabled={undefined}
-  hasFocus={false}
-  hasHover={false}
-  isPressed={false}
   onBlur={[Function]}
   onClick={undefined}
   onFocus={[Function]}
@@ -129,11 +125,7 @@ exports[`IconButton renders correctly with a link 1`] = `
 
 <a
   className="emotion-1"
-  disabled={undefined}
-  hasFocus={false}
-  hasHover={false}
   href="//example.com"
-  isPressed={false}
   onBlur={[Function]}
   onClick={undefined}
   onFocus={[Function]}

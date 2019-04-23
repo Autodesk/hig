@@ -71,7 +71,18 @@ export default class IconButtonPresenter extends Component {
           });
 
           return (
-            <Element className={css(styles.iconButton)} {...props}>
+            <Element
+              className={css(styles.iconButton)}
+              onClick={onClick}
+              onBlur={onBlur}
+              onFocus={onFocus}
+              onMouseDown={onMouseDown}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+              onMouseUp={onMouseUp}
+              title={title}
+              {...linkProps}
+            >
               {icon}
             </Element>
           );
