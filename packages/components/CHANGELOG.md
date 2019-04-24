@@ -1,3 +1,10 @@
+# [@hig/components-v1.1.2](https://github.com/Autodesk/hig/compare/@hig/components@1.1.1...@hig/components@1.1.2) (2019-04-24)
+
+
+### Bug Fixes
+
+* update icon-button version ([2b97ab6](https://github.com/Autodesk/hig/commit/2b97ab6))
+
 # [@hig/components-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/components@1.1.0...@hig/components@1.1.1) (2019-04-19)
 
 
