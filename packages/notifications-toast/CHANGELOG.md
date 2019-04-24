@@ -1,3 +1,10 @@
+# [@hig/notifications-toast-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.0.2...@hig/notifications-toast@2.0.3) (2019-04-24)
+
+
+### Bug Fixes
+
+* update icon-button dependency ([cf5518b](https://github.com/Autodesk/hig/commit/cf5518b))
+
 # [@hig/notifications-toast-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.0.1...@hig/notifications-toast@2.0.2) (2019-03-27)
 
 
