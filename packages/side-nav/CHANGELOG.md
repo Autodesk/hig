@@ -1,3 +1,10 @@
+# [@hig/side-nav-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.0.3...@hig/side-nav@2.0.4) (2019-04-24)
+
+
+### Bug Fixes
+
+* update icon-button dependency ([82c6f06](https://github.com/Autodesk/hig/commit/82c6f06))
+
 # [@hig/side-nav-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.0.2...@hig/side-nav@2.0.3) (2019-03-27)
 
 
