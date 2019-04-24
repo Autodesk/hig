@@ -143,22 +143,6 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
 
-"@hig/avatar@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-1.0.5.tgz#2be63bbd70034ef335a7a81d9a42d190c08bccf7"
-  integrity sha512-2RZ/oHRhPjlWNA6/Yvk8iymhLBhYdFQJrc7gL/QnXUnhXKuvm3eF8Dymw+XpmCELQN8tVh5ruMzL2NX7GpDPsg==
-  dependencies:
-    prop-types "^15.7.1"
-    react-lifecycles-compat "^3.0.4"
-
-"@hig/icon-button@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-1.0.2.tgz#bc6f482a7896d37aa3dd70d8511acd2db6ee0133"
-  integrity sha512-iulFV46duvhdN+2HeNmFTotPKS3+XGtaD2Pw/pL/dO4QVr+4mKmRDC4H4ai/VKDIpFtANHoMBgs9WCBC0J0Jsg==
-  dependencies:
-    classnames "^2.2.5"
-    prop-types "^15.7.1"
-
 "@hig/styles@^0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.3.tgz#675631d008c1861921d6148ecf15b140c04cc5b4"
