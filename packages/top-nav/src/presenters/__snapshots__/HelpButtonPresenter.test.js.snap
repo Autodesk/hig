@@ -1,8 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`top-nav/presenters/HelpButtonPresenter  1`] = `
+.emotion-1 {
+  border: 2px solid transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.emotion-1 svg * {
+  fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
+
 .emotion-0 {
   fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .emotion-0 > * {
@@ -10,16 +47,18 @@ exports[`top-nav/presenters/HelpButtonPresenter  1`] = `
 }
 
 <button
-  className="hig__icon-button hig__icon-button--transparent"
-  onBlur={undefined}
+  className="emotion-1"
+  onBlur={[Function]}
   onClick={undefined}
-  onFocus={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
   title="View help"
 >
   <svg
-    className="emotion-0 hig__icon-button__icon"
+    className="emotion-0"
     height="24px"
     viewBox="0 0 24 24"
     width="24px"
@@ -51,8 +90,45 @@ exports[`top-nav/presenters/HelpButtonPresenter  1`] = `
 `;
 
 exports[`top-nav/presenters/HelpButtonPresenter  2`] = `
+.emotion-1 {
+  border: 2px solid transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.emotion-1 svg * {
+  fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
+
 .emotion-0 {
   fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .emotion-0 > * {
@@ -60,16 +136,18 @@ exports[`top-nav/presenters/HelpButtonPresenter  2`] = `
 }
 
 <button
-  className="hig__icon-button hig__icon-button--transparent"
-  onBlur={undefined}
+  className="emotion-1"
+  onBlur={[Function]}
   onClick={undefined}
-  onFocus={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
   title="View help"
 >
   <svg
-    className="emotion-0 hig__icon-button__icon"
+    className="emotion-0"
     height="24px"
     viewBox="0 0 24 24"
     width="24px"
@@ -101,8 +179,45 @@ exports[`top-nav/presenters/HelpButtonPresenter  2`] = `
 `;
 
 exports[`top-nav/presenters/HelpButtonPresenter  3`] = `
+.emotion-1 {
+  border: 2px solid transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.emotion-1 svg * {
+  fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
+
 .emotion-0 {
   fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .emotion-0 > * {
@@ -110,16 +225,18 @@ exports[`top-nav/presenters/HelpButtonPresenter  3`] = `
 }
 
 <button
-  className="hig__icon-button hig__icon-button--transparent"
-  onBlur={undefined}
+  className="emotion-1"
+  onBlur={[Function]}
   onClick={[Function]}
-  onFocus={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
   title="View help"
 >
   <svg
-    className="emotion-0 hig__icon-button__icon"
+    className="emotion-0"
     height="24px"
     viewBox="0 0 24 24"
     width="24px"
