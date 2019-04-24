@@ -6,7 +6,6 @@ import { CloseSUI } from "@hig/icons";
 import RichText from "@hig/rich-text";
 import ThemeContext from "@hig/theme-context";
 import Typography from "@hig/typography";
-import "@hig/icon-button/build/index.css";
 
 import { STATUS_ICONS, AVAILABLE_STATUSES } from "./statuses";
 
