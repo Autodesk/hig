@@ -5,7 +5,7 @@ import { ThemeContext } from "@hig/theme-context";
 import { Back24 } from "@hig/icons";
 import Typography from "@hig/typography";
 import TextLink from "@hig/text-link";
-import IconButton, { types as iconButtonTypes } from "@hig/icon-button";
+import IconButton from "@hig/icon-button";
 
 import stylesheet from "./stylesheet";
 
@@ -123,7 +123,6 @@ export default class SideNav extends Component {
               {showMinimizeButton && (
                 <div className={css(styles.minimize)}>
                   <IconButton
-                    type={iconButtonTypes.TRANSPARENT}
                     icon={<Back24 />}
                     title="Minimize"
                     aria-label="Minimize"
