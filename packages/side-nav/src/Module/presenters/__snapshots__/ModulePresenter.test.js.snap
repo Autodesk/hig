@@ -33,6 +33,7 @@ exports[`side-nav/Module/presenters/ModulePresenter snapshot tests renders with 
 
 .emotion-3:hover svg * {
   fill: #0696d7;
+  pointer-events: none;
 }
 
 .emotion-4 {
@@ -103,6 +104,10 @@ exports[`side-nav/Module/presenters/ModulePresenter snapshot tests renders with 
   -ms-flex-pack: center;
   justify-content: center;
   width: 38px;
+}
+
+.emotion-0 svg {
+  pointer-events: none;
 }
 
 .emotion-1 {

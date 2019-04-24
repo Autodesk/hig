@@ -33,6 +33,7 @@ exports[`side-nav/Module snapshot tests renders a expanded menu with active chil
 
 .emotion-5:hover svg * {
   fill: #0696d7;
+  pointer-events: none;
 }
 
 .emotion-0 {
@@ -49,6 +50,10 @@ exports[`side-nav/Module snapshot tests renders a expanded menu with active chil
   -ms-flex-pack: center;
   justify-content: center;
   width: 38px;
+}
+
+.emotion-0 svg {
+  pointer-events: none;
 }
 
 .emotion-1 {
@@ -232,6 +237,7 @@ exports[`side-nav/Module snapshot tests renders a link 1`] = `
 
 .emotion-3:hover svg * {
   fill: #0696d7;
+  pointer-events: none;
 }
 
 .emotion-4 {
@@ -302,6 +308,10 @@ exports[`side-nav/Module snapshot tests renders a link 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 38px;
+}
+
+.emotion-0 svg {
+  pointer-events: none;
 }
 
 .emotion-1 {
@@ -378,6 +388,7 @@ exports[`side-nav/Module snapshot tests renders an active button 1`] = `
 
 .emotion-3:hover svg * {
   fill: #0696d7;
+  pointer-events: none;
 }
 
 .emotion-0 {
@@ -394,6 +405,10 @@ exports[`side-nav/Module snapshot tests renders an active button 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 38px;
+}
+
+.emotion-0 svg {
+  pointer-events: none;
 }
 
 .emotion-1 {
@@ -533,6 +548,7 @@ exports[`side-nav/Module snapshot tests renders an external link 1`] = `
 
 .emotion-5:hover svg * {
   fill: #0696d7;
+  pointer-events: none;
 }
 
 .emotion-6 {
@@ -603,6 +619,10 @@ exports[`side-nav/Module snapshot tests renders an external link 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 38px;
+}
+
+.emotion-0 svg {
+  pointer-events: none;
 }
 
 .emotion-1 {
@@ -723,6 +743,7 @@ exports[`side-nav/Module snapshot tests renders with a click handlers 1`] = `
 
 .emotion-3:hover svg * {
   fill: #0696d7;
+  pointer-events: none;
 }
 
 .emotion-4 {
@@ -793,6 +814,10 @@ exports[`side-nav/Module snapshot tests renders with a click handlers 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 38px;
+}
+
+.emotion-0 svg {
+  pointer-events: none;
 }
 
 .emotion-1 {
@@ -869,6 +894,7 @@ exports[`side-nav/Module snapshot tests renders with minimal props 1`] = `
 
 .emotion-3:hover svg * {
   fill: #0696d7;
+  pointer-events: none;
 }
 
 .emotion-4 {
@@ -939,6 +965,10 @@ exports[`side-nav/Module snapshot tests renders with minimal props 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   width: 38px;
+}
+
+.emotion-0 svg {
+  pointer-events: none;
 }
 
 .emotion-1 {
