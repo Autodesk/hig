@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 import IconButton from "@hig/icon-button";
 import ThemeContext from "@hig/theme-context";
 import Typography from "@hig/typography";
-import "@hig/fonts/build/ArtifaktElement.css";
 import { CloseSUI, CloseMUI } from "@hig/icons";
-import "@hig/icon-button/build/index.css";
 import { css } from "emotion";
 
 export default class ModalHeaderPresenter extends Component {

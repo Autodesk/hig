@@ -77,36 +77,17 @@ export default function stylesheet(props, themeData) {
         margin: `0 ${themeData["modal.horizontalPadding"]}`,
         display: "flex",
         justifyContent: "space-between",
-
-        ".hig__icon-button.hig__icon-button--primary": {
-          background: "transparent",
-          border: "none",
-          cursor: "pointer",
-          padding: 0,
-          height: `calc(${headerFontSize} * ${headerLinHeight})`,
-          minWidth: "16px",
-
+        "svg *": {
+          fill: themeData["modal.textColor"]
+        },
+        "&:hover, &:focus": {
           "svg *": {
             fill: themeData["modal.textColor"]
-          },
-
-          "&:hover, &:focus": {
-            borderColor: "transparent",
-            backgroundColor: "transparent",
-
-            "svg *": {
-              fill: themeData["modal.textColor"]
-            }
-          },
-
-          "&:focus": {
-            outline: "none"
-          },
-
-          ...(type === types.ALTERNATE && {
-            backgroundColor: themeData["modal.header.backgroundColor"]
-          })
-        }
+          }
+        },
+        ...(type === types.ALTERNATE && {
+          backgroundColor: themeData["modal.header.backgroundColor"]
+        })
       },
 
       body: {
