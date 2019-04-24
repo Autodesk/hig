@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.0.2...@hig/notifications-flyout@2.0.3) (2019-04-24)
+
+
+### Bug Fixes
+
+* update icon-button dependency ([d48bc40](https://github.com/Autodesk/hig/commit/d48bc40))
+
 # [@hig/notifications-flyout-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.0.1...@hig/notifications-flyout@2.0.2) (2019-03-20)
 
 
