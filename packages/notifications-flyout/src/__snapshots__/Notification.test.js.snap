@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`notifications-flyout/Notification renders correctly with the featured prop 1`] = `
-.emotion-5 {
+.emotion-6 {
   position: relative;
   overflow: hidden;
   -webkit-transition-property: height,opacity;
@@ -12,11 +12,11 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
   transition-timing-function: ease;
 }
 
-.emotion-5:last-child {
+.emotion-6:last-child {
   border-bottom: none;
 }
 
-.emotion-3 {
+.emotion-4 {
   margin: 12px;
 }
 
@@ -131,7 +131,7 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
   font-weight: 700;
 }
 
-.emotion-4 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -141,15 +141,52 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
   border-left-color: rgba(128,128,128,0.4);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: none;
   position: absolute;
   top: 0;
   right: 0;
 }
 
+.emotion-2 {
+  border: 2px solid transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.emotion-2 svg * {
+  fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
+
 .emotion-1 {
   fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .emotion-1 > * {
@@ -157,7 +194,7 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
 }
 
 <div
-  className="emotion-5"
+  className="emotion-6"
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   role="listitem"
@@ -168,10 +205,10 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
   }
 >
   <div
-    className="emotion-4"
+    className="emotion-5"
   >
     <div
-      className="emotion-3"
+      className="emotion-4"
     >
       <div
         className="emotion-0"
@@ -194,26 +231,31 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
         </div>
       </div>
       <div
-        className="emotion-2"
+        className="emotion-3"
       >
         <button
-          className="hig__icon-button hig__icon-button--transparent"
-          onBlur={undefined}
+          className="emotion-2"
+          onBlur={[Function]}
           onClick={[Function]}
-          onFocus={undefined}
-          onMouseEnter={undefined}
-          onMouseLeave={undefined}
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
           title="Dismiss featured notification"
         >
           <svg
-            className="emotion-1 hig__icon-button__icon"
+            className="emotion-1"
             height="16px"
             viewBox="0 0 16 16"
             width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
+            <title>
+              close-s
+            </title>
             <path
-              d="M11.4 5.4l-.8-.8L8 7.3 5.4 4.6l-.8.8L7.3 8l-2.7 2.6.8.8L8 8.7l2.6 2.7.8-.8L8.7 8z"
+              d="M13.4 3.4l-.8-.8L8 7.3 3.4 2.6l-.8.8L7.3 8l-4.7 4.6.8.8L8 8.7l4.6 4.7.8-.8L8.7 8l4.7-4.6z"
             />
           </svg>
         </button>

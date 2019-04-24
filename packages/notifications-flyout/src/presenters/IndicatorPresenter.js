@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
-import IconButton, { types } from "@hig/icon-button";
-import { Notification24 } from "@hig/icons";
+import IconButton from "@hig/icon-button";
+import { Notification16, Notification24 } from "@hig/icons";
 import ThemeContext from "@hig/theme-context";
-import "@hig/icon-button/build/index.css";
 
 import stylesheet from "./stylesheet";
 
@@ -13,15 +12,18 @@ export default function IndicatorPresenter(props) {
 
   return (
     <ThemeContext.Consumer>
-      {({ resolvedRoles }) => {
+      {({ resolvedRoles, metadata }) => {
         const styles = stylesheet(resolvedRoles, props);
+        const NotificationIcon =
+          metadata.densityId === "high-density"
+            ? Notification16
+            : Notification24;
         return (
           <div className={css(styles.indicator)}>
             <IconButton
               onClick={onClick}
-              icon={<Notification24 />}
+              icon={<NotificationIcon />}
               title={title}
-              type={types.TRANSPARENT}
             />
             <div className={css(styles.indicatorCount)}>{count}</div>
           </div>

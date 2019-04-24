@@ -57,7 +57,10 @@ export default function stylesheet(props, themeData) {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      width: "38px"
+      width: "38px",
+      "& svg": {
+        pointerEvents: "none"
+      }
     },
 
     externalIcon: {
@@ -65,7 +68,6 @@ export default function stylesheet(props, themeData) {
       alignItems: "center",
       marginLeft: "auto",
       padding: "6px 10px",
-
       "& svg *": {
         fill: themeData["typography.body.color"]
       }
@@ -79,7 +81,8 @@ export default function stylesheet(props, themeData) {
       marginRight: themeData["density.spacings.extraSmall"],
 
       "&:hover svg *": {
-        fill: themeData["colorScheme.accentColor"]
+        fill: themeData["colorScheme.accentColor"],
+        pointerEvents: "none"
       }
     },
 
