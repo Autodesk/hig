@@ -13,16 +13,15 @@
   },
   "main": "build/index.js",
   "module": "build/index.es.js",
-  "style": "build/index.css",
   "files": [
     "build/*"
   ],
   "dependencies": {
-    "@hig/avatar": "1.0.5",
+    "@hig/avatar": "1.0.6",
     "@hig/flyout": "^1.0.5",
-    "@hig/icon-button": "^1.0.2",
+    "@hig/icon-button": "^2.0.1",
     "@hig/icons": "^2.1.1",
-    "@hig/notifications-flyout": "^2.0.2",
+    "@hig/notifications-flyout": "^2.0.3",
     "@hig/profile-flyout": "^2.0.3",
     "@hig/typography": "^1.0.3",
     "@hig/utils": "^0.3.0",

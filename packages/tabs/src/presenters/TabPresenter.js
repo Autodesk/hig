@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import Typography from "@hig/typography";
 import ThemeContext from "@hig/theme-context";
-import "@hig/fonts/build/ArtifaktElement.css";
 import { css } from "emotion";
 import stylesheet from "./TabPresenter.stylesheet";
 
