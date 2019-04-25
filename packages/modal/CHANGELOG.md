@@ -1,3 +1,10 @@
+# [@hig/modal-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/modal@2.0.3...@hig/modal@2.0.4) (2019-04-25)
+
+
+### Bug Fixes
+
+* update icon-button dependency ([1526394](https://github.com/Autodesk/hig/commit/1526394))
+
 # [@hig/modal-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/modal@2.0.2...@hig/modal@2.0.3) (2019-03-27)
 
 
