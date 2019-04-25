@@ -41,7 +41,7 @@
     "@hig/spacer": "^1.0.7",
     "@hig/surface": "^1.0.0",
     "@hig/table": "^0.3.3",
-    "@hig/tabs": "^1.0.2",
+    "@hig/tabs": "^1.0.3",
     "@hig/text-area": "^1.1.0",
     "@hig/text-link": "^1.0.0",
     "@hig/theme-context": "^3.0.0",
