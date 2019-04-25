@@ -1,3 +1,10 @@
+# [@hig/tabs-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/tabs@1.0.2...@hig/tabs@1.0.3) (2019-04-25)
+
+
+### Bug Fixes
+
+* remove fonts package as a dependency ([5ebb31d](https://github.com/Autodesk/hig/commit/5ebb31d))
+
 # [@hig/tabs-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/tabs@1.0.1...@hig/tabs@1.0.2) (2019-03-20)
 
 
