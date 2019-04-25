@@ -1,3 +1,10 @@
+# [@hig/top-nav-v3.0.5](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.4...@hig/top-nav@3.0.5) (2019-04-25)
+
+
+### Bug Fixes
+
+* update icon-button dependency ([e1addf7](https://github.com/Autodesk/hig/commit/e1addf7))
+
 # [@hig/top-nav-v3.0.4](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.3...@hig/top-nav@3.0.4) (2019-03-20)
 
 
