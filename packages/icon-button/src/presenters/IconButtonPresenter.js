@@ -20,6 +20,7 @@ export default class IconButtonPresenter extends Component {
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
     onMouseUp: PropTypes.func,
+    surface: PropTypes.number,
     title: PropTypes.string.isRequired
   };
 
@@ -37,6 +38,7 @@ export default class IconButtonPresenter extends Component {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
+      surface,
       title
     } = this.props;
 
@@ -62,6 +64,7 @@ export default class IconButtonPresenter extends Component {
             onMouseEnter,
             onMouseLeave,
             onMouseUp,
+            surface,
             title
           };
           const Element = this.props.link ? "a" : "button";
@@ -69,7 +72,7 @@ export default class IconButtonPresenter extends Component {
           const icon = React.cloneElement(this.props.icon, {
             className: css(styles.iconButtonIcon)
           });
-
+console.log(props);
           return (
             <Element
               className={css(styles.iconButton)}

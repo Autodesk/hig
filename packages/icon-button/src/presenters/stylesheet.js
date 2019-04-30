@@ -41,25 +41,22 @@ function getStylesByDisabled(themeData, disabled) {
   return {};
 }
 
-function getStylesByPressed(themeData, isPressed) {
-  if (isPressed) {
-    return {
-      backgroundColor: themeData["iconButton.pressed.backgroundColor"],
-      transitionDuration: `0.1s, 0.1s`,
-      "& svg *": {
-        fill: themeData["iconButton.pressed.iconColor"],
-        transitionDuration: `0.3s`,
-        transitionProperty: `fill`
-      }
-    };
-  }
+function getStylesByPressed(themeData, surface) {
+  const surfaceLevel = Number(surface);
+
   return {
-    backgroundColor: `transparent`
+    backgroundColor: surfaceLevel <= 2.5 ? themeData["iconButton.pressed.level100To250.backgroundColor"] : themeData["iconButton.pressed.level300To350.backgroundColor"],
+    transitionDuration: `0.1s, 0.1s`,
+    "& svg *": {
+      fill: themeData["iconButton.pressed.iconColor"],
+      transitionDuration: `0.3s`,
+      transitionProperty: `fill`
+    }
   };
 }
 
 export default function stylesheet(props, themeData, density) {
-  const { disabled, hasFocus, hasHover, isPressed } = props;
+  const { disabled, hasFocus, hasHover, isPressed, surface } = props;
   const contentHeight = density === `medium-density` ? `20px` : `16px`;
 
   return {
@@ -90,7 +87,8 @@ export default function stylesheet(props, themeData, density) {
       },
       ...getStylesByFocus(themeData, hasFocus),
       ...getStylesByHover(themeData, hasHover),
-      ...getStylesByPressed(themeData, isPressed),
+      // ...getStylesByPressed(themeData, isPressed, surface),
+      ...(isPressed ? getStylesByPressed(themeData, surface) : { backgroundColor: `transparent` }),
       ...getStylesByDisabled(themeData, disabled)
     },
     iconSpacer: {

@@ -47,6 +47,10 @@ export default class IconButton extends Component {
      */
     onMouseUp: PropTypes.func,
     /**
+     * Surface color level that the icon-button will be sitting on
+     */
+    surface: PropTypes.number,
+    /**
      * Title of the button for accessibility purposes
      */
     title: PropTypes.string.isRequired
