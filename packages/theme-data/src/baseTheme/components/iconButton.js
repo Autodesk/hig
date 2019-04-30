@@ -51,5 +51,20 @@ export default {
     transform: {
       alpha: 0.2
     }
+  },
+  "iconButton.pressed.level100To250.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "iconButton.pressed.backgroundColor"
+    }
+  },
+  "iconButton.pressed.level300To350.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.component.backgroundColor"
+    },
+    transform: {
+      alpha: 0.5
+    }
   }
 };
