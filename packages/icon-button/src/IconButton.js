@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
 
+import { surfaces, AVAILABLE_SURFACES } from "./surfaces";
 import IconButtonPresenter from "./presenters/IconButtonPresenter";
 
 export default class IconButton extends Component {
@@ -18,6 +19,10 @@ export default class IconButton extends Component {
      * Url button will navigate to when clicked
      */
     link: PropTypes.string,
+    /**
+     * The icon-button is toggled to on when this is set
+     */
+    on: PropTypes.bool,
     /**
      * Called when user moves focus away from the button
      */
@@ -49,11 +54,15 @@ export default class IconButton extends Component {
     /**
      * Surface color level that the icon-button will be sitting on
      */
-    surface: PropTypes.number,
+    surface: PropTypes.oneOf(AVAILABLE_SURFACES),
     /**
      * Title of the button for accessibility purposes
      */
     title: PropTypes.string.isRequired
+  };
+
+  static defaultProps = {
+    surface: surfaces.SURFACELEVEL100
   };
 
   render() {

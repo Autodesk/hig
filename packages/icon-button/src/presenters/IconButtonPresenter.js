@@ -4,6 +4,7 @@ import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
+import { AVAILABLE_SURFACES } from "../surfaces";
 
 export default class IconButtonPresenter extends Component {
   static propTypes = {
@@ -13,6 +14,7 @@ export default class IconButtonPresenter extends Component {
     icon: PropTypes.element,
     isPressed: PropTypes.bool,
     link: PropTypes.string,
+    on: PropTypes.bool,
     onBlur: PropTypes.func,
     onClick: PropTypes.func,
     onFocus: PropTypes.func,
@@ -20,7 +22,7 @@ export default class IconButtonPresenter extends Component {
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
     onMouseUp: PropTypes.func,
-    surface: PropTypes.number,
+    surface: PropTypes.oneOf(AVAILABLE_SURFACES),
     title: PropTypes.string.isRequired
   };
 
@@ -31,6 +33,7 @@ export default class IconButtonPresenter extends Component {
       hasHover,
       isPressed,
       link,
+      on,
       onClick,
       onBlur,
       onFocus,
@@ -57,6 +60,7 @@ export default class IconButtonPresenter extends Component {
             hasFocus,
             hasHover,
             isPressed,
+            on,
             onClick,
             onBlur,
             onFocus,
@@ -72,7 +76,7 @@ export default class IconButtonPresenter extends Component {
           const icon = React.cloneElement(this.props.icon, {
             className: css(styles.iconButtonIcon)
           });
-console.log(props);
+
           return (
             <Element
               className={css(styles.iconButton)}

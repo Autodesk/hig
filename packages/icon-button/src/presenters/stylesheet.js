@@ -1,54 +1,52 @@
-function getStylesByHover(themeData, hasHover) {
-  if (hasHover) {
-    return {
-      boxShadow: `none`,
-      "& svg *": {
-        fill: themeData["iconButton.hover.iconColor"],
-        transitionDuration: `0.3s`,
-        transitionProperty: `fill`
-      }
-    };
-  }
-  return {};
-}
-
-function getStylesByFocus(themeData, hasFocus) {
-  if (hasFocus) {
-    return {
-      boxShadow: `0 0 0 ${themeData["iconButton.focus.halo.width"]} ${
-        themeData["iconButton.focus.halo.color"]
-      }`,
-      transitionDuration: `0.1s, 0.1s`,
-      "& svg *": {
-        fill: themeData["iconButton.focus.iconColor"],
-        transitionDuration: `0.3s`,
-        transitionProperty: `fill`
-      }
-    };
-  }
+function getStylesByHover(themeData, on) {
   return {
-    boxShadow: `none`
+    boxShadow: `none`,
+    "& svg *": {
+      fill: on
+        ? themeData["iconButton.hover.on.iconColor"]
+        : themeData["iconButton.hover.iconColor"],
+      transitionDuration: `0.3s`,
+      transitionProperty: `fill`
+    }
   };
 }
 
-function getStylesByDisabled(themeData, disabled) {
-  if (disabled) {
-    return {
-      opacity: themeData["component.disabled.opacity"],
-      pointerEvents: `none`
-    };
-  }
-  return {};
+function getStylesByFocus(themeData, on) {
+  return {
+    boxShadow: `0 0 0 ${themeData["iconButton.focus.halo.width"]} ${
+      themeData["iconButton.focus.halo.color"]
+    }`,
+    transitionDuration: `0.1s, 0.1s`,
+    "& svg *": {
+      fill: on
+        ? themeData["iconButton.focus.on.iconColor"]
+        : themeData["iconButton.focus.iconColor"],
+      transitionDuration: `0.3s`,
+      transitionProperty: `fill`
+    }
+  };
 }
 
-function getStylesByPressed(themeData, surface) {
+function getStylesByDisabled(themeData) {
+  return {
+    opacity: themeData["component.disabled.opacity"],
+    pointerEvents: `none`
+  };
+}
+
+function getStylesByPressed(themeData, surface, on) {
   const surfaceLevel = Number(surface);
 
   return {
-    backgroundColor: surfaceLevel <= 2.5 ? themeData["iconButton.pressed.level100To250.backgroundColor"] : themeData["iconButton.pressed.level300To350.backgroundColor"],
+    backgroundColor:
+      surfaceLevel <= 2.5
+        ? themeData["iconButton.pressed.level100To250.backgroundColor"]
+        : themeData["iconButton.pressed.level300To350.backgroundColor"],
     transitionDuration: `0.1s, 0.1s`,
     "& svg *": {
-      fill: themeData["iconButton.pressed.iconColor"],
+      fill: on
+        ? themeData["iconButton.pressed.on.iconColor"]
+        : themeData["iconButton.pressed.iconColor"],
       transitionDuration: `0.3s`,
       transitionProperty: `fill`
     }
@@ -56,7 +54,7 @@ function getStylesByPressed(themeData, surface) {
 }
 
 export default function stylesheet(props, themeData, density) {
-  const { disabled, hasFocus, hasHover, isPressed, surface } = props;
+  const { disabled, hasFocus, hasHover, isPressed, on, surface } = props;
   const contentHeight = density === `medium-density` ? `20px` : `16px`;
 
   return {
@@ -81,15 +79,18 @@ export default function stylesheet(props, themeData, density) {
       transitionProperty: `box-shadow, background-color`,
       transitionDuration: `0.3s, 0.3s`,
       "& svg *": {
-        fill: themeData["iconButton.iconColor"],
+        fill: on
+          ? themeData["iconButton.on.iconColor"]
+          : themeData["iconButton.iconColor"],
         transitionDuration: `0.3s`,
         transitionProperty: `fill`
       },
-      ...getStylesByFocus(themeData, hasFocus),
-      ...getStylesByHover(themeData, hasHover),
-      // ...getStylesByPressed(themeData, isPressed, surface),
-      ...(isPressed ? getStylesByPressed(themeData, surface) : { backgroundColor: `transparent` }),
-      ...getStylesByDisabled(themeData, disabled)
+      ...(hasFocus ? getStylesByFocus(themeData, on) : { boxShadow: `none` }),
+      ...(hasHover ? getStylesByHover(themeData, on) : {}),
+      ...(isPressed
+        ? getStylesByPressed(themeData, surface, on)
+        : { backgroundColor: `transparent` }),
+      ...(disabled ? getStylesByDisabled(themeData) : {})
     },
     iconSpacer: {
       width: `24px`
