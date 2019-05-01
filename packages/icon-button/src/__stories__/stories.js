@@ -7,8 +7,8 @@ export default [
     getProps: () => ({
       disabled: false,
       icon: <Settings24 />,
-      title: "Icon Button",
-      type: "primary"
+      on: false,
+      title: "Icon Button"
     })
   }
 ];
