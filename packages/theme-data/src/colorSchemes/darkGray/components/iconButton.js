@@ -16,5 +16,10 @@ export default {
     transform: {
       alpha: 0.4
     }
+  },
+  "iconButton.pressed.level300To350.backgroundColor": {
+    value: {
+      ref: "basics.colors.surfaceLightGrayLevel300"
+    }
   }
 };

@@ -7,6 +7,12 @@ export default {
       ref: "colorScheme.baseColor"
     }
   },
+  "iconButton.on.iconColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.accentColor"
+    }
+  },
   "iconButton.borderRadius": {
     type: BORDER_RADIUS,
     value: {
@@ -19,10 +25,22 @@ export default {
       ref: "colorScheme.textColor"
     }
   },
+  "iconButton.hover.on.iconColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.autodeskBlue700"
+    }
+  },
   "iconButton.focus.iconColor": {
     type: COLOR,
     value: {
       ref: "iconButton.iconColor"
+    }
+  },
+  "iconButton.focus.on.iconColor": {
+    type: COLOR,
+    value: {
+      ref: "iconButton.on.iconColor"
     }
   },
   "iconButton.focus.halo.color": {
@@ -41,6 +59,12 @@ export default {
     type: COLOR,
     value: {
       ref: "iconButton.hover.iconColor"
+    }
+  },
+  "iconButton.pressed.on.iconColor": {
+    type: COLOR,
+    value: {
+      ref: "iconButton.hover.on.iconColor"
     }
   },
   "iconButton.pressed.backgroundColor": {
