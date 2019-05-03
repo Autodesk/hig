@@ -4,6 +4,7 @@ import ButtonsPage from "./pages/ButtonsPage";
 import FlyoutPage from "./pages/FlyoutPage";
 import CheckboxPage from "./pages/CheckboxPage";
 import DropdownPage from "./pages/DropdownPage";
+import IconnButtonsPage from "./pages/IconButtonsPage";
 import IconsPage from "./pages/IconsPage";
 import InputPage from "./pages/InputPage";
 import ModalPage from "./pages/ModalPage";
@@ -26,6 +27,7 @@ export default [
   { path: "/flyout/", component: FlyoutPage, label: "Flyout" },
   { path: "/checkbox/", component: CheckboxPage, label: "Checkbox" },
   { path: "/icons/", component: IconsPage, label: "Icons" },
+  { path: "/icon-button/", component: IconnButtonsPage, label: "Icon Button" },
   { path: "/input/", component: InputPage, label: "Input" },
   { path: "/modal/", component: ModalPage, label: "Modal" },
   { path: "/progress-bar/", component: ProgressBarPage, label: "Progress Bar" },
