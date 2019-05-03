@@ -12,11 +12,10 @@ Read more about when and how to use the Modal component [on the internal wiki](h
 yarn add @hig/modal @hig/theme-context @hig/theme-data
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import Modal from '@hig/modal';
-import '@hig/modal/build/index.css';
 ```
 
 ## Basic usage

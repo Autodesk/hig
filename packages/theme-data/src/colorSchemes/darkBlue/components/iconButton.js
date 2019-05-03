@@ -5,6 +5,11 @@ export default {
   "iconButton.hover.iconColor": {
     value: "#d0d2d7"
   },
+  "iconButton.hover.on.iconColor": {
+    value: {
+      ref: "basics.colors.autodeskBlue300"
+    }
+  },
   "iconButton.focus.halo.color": {
     transform: {
       alpha: 0.35
@@ -16,6 +21,14 @@ export default {
     },
     transform: {
       alpha: 0.7
+    }
+  },
+  "iconButton.pressed.level300To350.backgroundColor": {
+    value: {
+      ref: "basics.colors.darkBlue200"
+    },
+    transform: {
+      alpha: 0.2
     }
   }
 };
