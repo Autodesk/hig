@@ -1,3 +1,11 @@
+# [@hig/theme-data-v2.5.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.4.0...@hig/theme-data@2.5.0) (2019-05-03)
+
+
+### Features
+
+* add theme-data for icon-button on ([28e153a](https://github.com/Autodesk/hig/commit/28e153a))
+* add theme-data for icon-button surface ([1116cbc](https://github.com/Autodesk/hig/commit/1116cbc))
+
 # [@hig/theme-data-v2.4.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.3.5...@hig/theme-data@2.4.0) (2019-04-19)
 
 
