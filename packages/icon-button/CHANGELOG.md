@@ -1,3 +1,11 @@
+# [@hig/icon-button-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.0.1...@hig/icon-button@2.1.0) (2019-05-03)
+
+
+### Features
+
+* add on prop and styles for it ([89be8db](https://github.com/Autodesk/hig/commit/89be8db))
+* add surface prop and styles for it ([db4ae52](https://github.com/Autodesk/hig/commit/db4ae52))
+
 # [@hig/icon-button-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.0.0...@hig/icon-button@2.0.1) (2019-04-23)
 
 
