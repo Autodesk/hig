@@ -143,6 +143,15 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
 
+"@hig/icon-button@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-2.1.0.tgz#01168d4209d1b4cfe471e0a643a8d98e27b1ffd4"
+  integrity sha512-KcC8MteIlRN2KiG7asVOlW1E5oAacBe2SrmD2sFFt9VVWciGcqbYhwvrLbyTOpA95bw1o/XVpz/930M9RRIY+A==
+  dependencies:
+    "@hig/behaviors" "^1.1.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
 "@hig/styles@^0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@hig/styles/-/styles-0.2.3.tgz#675631d008c1861921d6148ecf15b140c04cc5b4"
