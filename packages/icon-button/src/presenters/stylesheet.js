@@ -39,7 +39,7 @@ function getStylesByPressed(themeData, surface, on) {
 
   return {
     backgroundColor:
-      surfaceLevel <= 2.5
+      surfaceLevel <= 250
         ? themeData["iconButton.pressed.level100To250.backgroundColor"]
         : themeData["iconButton.pressed.level300To350.backgroundColor"],
     transitionDuration: `0.1s, 0.1s`,

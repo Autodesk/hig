@@ -17,7 +17,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon-button": "^2.0.1",
+    "@hig/icon-button": "^2.1.0",
     "@hig/icons": "^2.1.1",
     "@hig/utils": "^0.3.0",
     "@hig/typography": "^1.0.3",
