@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.1.0...@hig/icon-button@2.1.1) (2019-05-07)
+
+
+### Bug Fixes
+
+* need correct surface level values ([500dffc](https://github.com/Autodesk/hig/commit/500dffc))
+
 # [@hig/icon-button-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.0.1...@hig/icon-button@2.1.0) (2019-05-03)
 
 
