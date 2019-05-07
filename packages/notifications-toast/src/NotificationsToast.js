@@ -78,7 +78,14 @@ export default class NotificationsToast extends Component {
               <div className={css(styles.toastBody)}>
                 <div className={css(styles.toastMessage)}>
                   <RichText>
-                    <Typography style={{ fontSize: "12px" }}>
+                    <Typography
+                      style={{
+                        fontSize: "12px",
+                        maxWidth: "220px",
+                        textOverflow: "ellipsis",
+                        overflow: "hidden"
+                      }}
+                    >
                       {this.props.children}
                     </Typography>
                   </RichText>
