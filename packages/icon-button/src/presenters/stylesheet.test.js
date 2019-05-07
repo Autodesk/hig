@@ -82,11 +82,11 @@ describe("stylesheet", () => {
   describe("surface level options", () => {
     it("surface levels should match values in theme data", () => {
       const lightLevel = stylesheet(
-        { isPressed: true, surface: "1" },
+        { isPressed: true, surface: 100 },
         themeData
       );
       const darkLevel = stylesheet(
-        { isPressed: true, surface: "3" },
+        { isPressed: true, surface: "300" },
         themeData
       );
       expect(lightLevel.iconButton.backgroundColor).toEqual("orange");
