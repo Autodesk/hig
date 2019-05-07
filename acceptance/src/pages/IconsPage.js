@@ -12,8 +12,6 @@ const mediumDensityIcons = [
   Assets24, AddFolder24, Calendar24, Location24, Tag24
 ];
 
-console.log(Assets16.size)
-
 function IconsPage() {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
