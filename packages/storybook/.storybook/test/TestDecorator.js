@@ -1,4 +1,5 @@
 import React from "react";
+import "@hig/fonts/build/ArtifaktElementAll.css";
 
 /**
  * Wraps each storybook component in a predictable class

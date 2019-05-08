@@ -1,5 +1,3 @@
-import "@hig/styles/build/fonts.css";
-
 import Image from "./presenters/ImagePresenter";
 import NotificationsFlyout from "./NotificationsFlyout";
 import Notification from "./Notification";
