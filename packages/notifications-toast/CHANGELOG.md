@@ -1,3 +1,10 @@
+# [@hig/notifications-toast-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.0.3...@hig/notifications-toast@2.0.4) (2019-05-10)
+
+
+### Bug Fixes
+
+* disapperance of x-button due to long text overflow ([98e2396](https://github.com/Autodesk/hig/commit/98e2396))
+
 # [@hig/notifications-toast-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.0.2...@hig/notifications-toast@2.0.3) (2019-04-24)
 
 
