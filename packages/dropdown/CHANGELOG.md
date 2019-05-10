@@ -1,3 +1,10 @@
+# [@hig/dropdown-v2.0.5](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.4...@hig/dropdown@2.0.5) (2019-05-10)
+
+
+### Bug Fixes
+
+* remove unused styles dependency ([708554b](https://github.com/Autodesk/hig/commit/708554b))
+
 # [@hig/dropdown-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.3...@hig/dropdown@2.0.4) (2019-04-04)
 
 
