@@ -1,3 +1,10 @@
+# [@hig/side-nav-v2.0.5](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.0.4...@hig/side-nav@2.0.5) (2019-05-10)
+
+
+### Bug Fixes
+
+* remove unused styles dependency ([60d20f3](https://github.com/Autodesk/hig/commit/60d20f3))
+
 # [@hig/side-nav-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.0.3...@hig/side-nav@2.0.4) (2019-04-24)
 
 
