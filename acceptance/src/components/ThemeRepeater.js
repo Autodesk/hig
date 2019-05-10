@@ -85,7 +85,8 @@ function ThemeRepeater({ children, column }) {
                                     theme,
                                     id: `${
                                       colorSchemeTheme.metadata.colorSchemeId
-                                    }-${theme.metadata.densityId}-${level}`
+                                    }-${theme.metadata.densityId}-${level}`,
+                                    level
                                   })}
                                 </Surface>
                               ))}

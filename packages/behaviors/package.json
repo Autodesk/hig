@@ -24,8 +24,7 @@
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
-    "@hig/semantic-release-config": "^0.1.0",
-    "@hig/styles": "^0.2.3"
+    "@hig/semantic-release-config": "^0.1.0"
   },
   "peerDependencies": {
     "react": "^15.4.1 || ^16.3.2"
