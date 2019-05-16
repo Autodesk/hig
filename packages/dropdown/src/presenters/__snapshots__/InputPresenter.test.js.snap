@@ -71,6 +71,10 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
   border-bottom-style: solid;
   border-bottom-width: 1px;
   opacity: 0.5;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
 }
 
 .emotion-1 {
@@ -147,6 +151,10 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
   border-bottom-color: rgba(128,128,128,0.35);
   border-bottom-style: solid;
   border-bottom-width: 1px;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
 }
 
 .emotion-1 {

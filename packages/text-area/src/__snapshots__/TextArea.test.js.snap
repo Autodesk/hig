@@ -9,6 +9,10 @@ exports[`TextArea integration renders correctly 1`] = `
   border-bottom-color: rgba(128,128,128,0.35);
   border-bottom-style: solid;
   border-bottom-width: 1px;
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   border-left-color: rgba(128,128,128,0.2);
   border-right-color: rgba(128,128,128,0.2);
   border-top-color: rgba(128,128,128,0.2);
