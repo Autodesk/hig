@@ -75,6 +75,7 @@ function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
 export default function(props, themeData) {
   return {
     wrapper: {
+      flexGrow: 2,
       position: "relative",
       ...borderStyles(props, themeData),
       ...borderBottomStyles(props, themeData)

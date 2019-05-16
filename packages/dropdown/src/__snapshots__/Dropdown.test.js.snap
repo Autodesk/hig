@@ -11,6 +11,10 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 }
 
 .emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -394,6 +398,10 @@ exports[`Dropdown renders with a controlled value 1`] = `
 }
 
 .emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -702,6 +710,10 @@ exports[`Dropdown renders with a label and an ID 1`] = `
 }
 
 .emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -886,6 +898,10 @@ exports[`Dropdown renders with custom option formatting 1`] = `
 }
 
 .emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -1143,6 +1159,10 @@ exports[`Dropdown renders with custom option render function 1`] = `
 }
 
 .emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -1346,6 +1366,10 @@ exports[`Dropdown renders with default value 1`] = `
 }
 
 .emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -1654,6 +1678,10 @@ exports[`Dropdown renders with multiple selection 1`] = `
 }
 
 .emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -1911,6 +1939,10 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 }
 
 .emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -2235,6 +2267,10 @@ exports[`Dropdown renders with option specific and general option render functio
 }
 
 .emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -2447,6 +2483,10 @@ exports[`Dropdown renders with option specific render function 1`] = `
 }
 
 .emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -2695,6 +2735,10 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
 }
 
 .emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -2907,6 +2951,10 @@ exports[`Dropdown renders without props 1`] = `
 }
 
 .emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;

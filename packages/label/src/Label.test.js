@@ -12,7 +12,8 @@ describe("Label", () => {
       description: "renders with all props",
       props: {
         children: "I am a label",
-        disabled: true
+        disabled: true,
+        variant: "side"
       }
     }
   ].forEach(({ description, props: { children, ...otherProps } }) => {

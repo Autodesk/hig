@@ -2,6 +2,10 @@
 
 exports[`InputHaloPresenter renders by default 1`] = `
 .emotion-1 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -36,6 +40,10 @@ exports[`InputHaloPresenter renders by default 1`] = `
 
 exports[`InputHaloPresenter renders when disabled 1`] = `
 .emotion-1 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -65,6 +73,10 @@ exports[`InputHaloPresenter renders when disabled 1`] = `
 
 exports[`InputHaloPresenter renders with focus 1`] = `
 .emotion-1 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
@@ -97,6 +109,10 @@ exports[`InputHaloPresenter renders with focus 1`] = `
 
 exports[`InputHaloPresenter renders with hover 1`] = `
 .emotion-1 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: relative;
   border-style: solid;
   border-color: transparent;
