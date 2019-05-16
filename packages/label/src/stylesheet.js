@@ -1,7 +1,11 @@
 export default function stylesheet(props, themeData) {
+  const { variant } = props;
   return {
     label: {
-      fontSize: themeData["label.fontSize"],
+      fontSize:
+        variant === "side"
+          ? themeData["label.fontSize"]
+          : themeData["label.top.fontSize"],
       fontFamily: themeData["label.fontFamily"],
       fontWeight: themeData["label.fontWeight"],
       lineHeight: themeData["label.lineHeight"],
