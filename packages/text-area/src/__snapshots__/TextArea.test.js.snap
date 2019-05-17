@@ -2,6 +2,10 @@
 
 exports[`TextArea integration renders correctly 1`] = `
 .emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
   position: static;
   border-style: solid;
   border-color: transparent;

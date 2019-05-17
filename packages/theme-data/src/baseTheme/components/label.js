@@ -13,6 +13,10 @@ export default {
       ref: "density.fontSizes.medium"
     }
   },
+  "label.top.fontSize": {
+    type: FONT_SIZE,
+    value: "12px"
+  },
   "label.fontWeight": {
     type: FONT_WEIGHT,
     value: {

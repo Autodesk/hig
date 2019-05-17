@@ -2,6 +2,7 @@ import Input from "@hig/input";
 import React from "react";
 import { withInfo } from "@storybook/addon-info";
 import { storiesOf } from "@storybook/react";
+import Spacer from "@hig/spacer";
 
 import getKnobs from "./getKnobs";
 import Label from "../index";
@@ -23,7 +24,7 @@ storybook.add(
 );
 
 storybook.add(
-  "with reference to form element",
+  "top label",
   withInfo(infoOptions)(() => {
     const props = {
       children: "Input Field"
@@ -32,10 +33,31 @@ storybook.add(
 
     return withThemeProvider(
       <form id="a_form">
-        <Label form="a_form" htmlFor="an_input" {...otherProps}>
+        <Label form="a_form" htmlFor="an_input" variant="top" {...otherProps}>
           {children}
         </Label>
-        <Input id="an_input" variant="line" />
+        <Spacer spacing="s" />
+        <Input id="an_input" variant="box" />
+      </form>
+    );
+  })
+);
+
+storybook.add(
+  "side label",
+  withInfo(infoOptions)(() => {
+    const props = {
+      children: "Input Field"
+    };
+    const { children, theme, ...otherProps } = getKnobs(props);
+
+    return withThemeProvider(
+      <form id="a_form" style={{ display: "flex", alignItems: "center" }}>
+        <Label form="a_form" htmlFor="an_input" variant="side" {...otherProps}>
+          {children}
+        </Label>
+        <Spacer spacing="s" />
+        <Input id="an_input" variant="box" />
       </form>
     );
   })
