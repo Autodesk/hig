@@ -1,3 +1,10 @@
+# [@hig/label-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/label@1.0.3...@hig/label@1.1.0) (2019-05-17)
+
+
+### Features
+
+* add variant prop ([49f35de](https://github.com/Autodesk/hig/commit/49f35de))
+
 # [@hig/label-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/label@1.0.2...@hig/label@1.0.3) (2019-03-13)
 
 

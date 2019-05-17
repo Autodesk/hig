@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.6.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.5.0...@hig/theme-data@2.6.0) (2019-05-17)
+
+
+### Features
+
+* add label variant theme-data ([7591477](https://github.com/Autodesk/hig/commit/7591477))
+
 # [@hig/theme-data-v2.5.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.4.0...@hig/theme-data@2.5.0) (2019-05-03)
 
 
