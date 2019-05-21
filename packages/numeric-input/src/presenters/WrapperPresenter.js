@@ -4,10 +4,10 @@ import { css } from "emotion";
 
 import { ThemeContext } from "@hig/theme-context";
 
-import stylesheet from "./InputHaloPresenter.stylesheet";
+import stylesheet from "./WrapperPresenter.stylesheet";
 import { availableVariants } from "../constants";
 
-function InputHaloPresenter(props) {
+function WrapperPresenter(props) {
   const {
     children,
     hasFocus,
@@ -33,18 +33,13 @@ function InputHaloPresenter(props) {
             )
           : styles;
 
-        return (
-          <div className={css(cssStyles.wrapper)}>
-            {children}
-            <div className={css(cssStyles.halo)} />
-          </div>
-        );
+        return <div className={css(cssStyles.wrapper)}>{children}</div>;
       }}
     </ThemeContext.Consumer>
   );
 }
 
-InputHaloPresenter.propTypes = {
+WrapperPresenter.propTypes = {
   children: PropTypes.node,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
@@ -53,4 +48,4 @@ InputHaloPresenter.propTypes = {
   variant: PropTypes.oneOf(availableVariants)
 };
 
-export default InputHaloPresenter;
+export default WrapperPresenter;

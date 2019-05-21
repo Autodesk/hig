@@ -44,34 +44,6 @@ function borderBottomStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   return defaults;
 }
 
-function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
-  const defaults = {
-    height: 0,
-    backgroundColor: themeData["input.halo.color"],
-    transitionProperty: "height, color",
-    transitionDuration: "0.3s, 0.3s"
-  };
-
-  if (isDisabled) {
-    return {};
-  }
-  if (hasHover) {
-    return {
-      ...defaults,
-      height: themeData["input.hover.halo.width"],
-      transitionDuration: "0.1s, 0.1s"
-    };
-  }
-  if (hasFocus) {
-    return {
-      height: themeData["input.focus.halo.width"],
-      backgroundColor: themeData["input.focus.halo.color"],
-      transitionDuration: "0.1s, 0.1s"
-    };
-  }
-  return defaults;
-}
-
 export default function(props, themeData) {
   return {
     wrapper: {
@@ -79,14 +51,6 @@ export default function(props, themeData) {
       position: "relative",
       ...borderStyles(props, themeData),
       ...borderBottomStyles(props, themeData)
-    },
-    halo: {
-      position: "absolute",
-      top: "calc(100% + 1px)",
-      left: "-1px",
-      right: 0,
-      width: "calc(100% + 2px)",
-      ...haloStyles(props, themeData)
     }
   };
 }

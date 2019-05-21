@@ -3,19 +3,17 @@ import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
 
 import NumericInputPresenter from "./presenters/NumericInputPresenter";
-import InputHaloPresenter from "./presenters/InputHaloPresenter";
+import IncrementDecrementPresenter from "./presenters/IncrementDecrementPresenter";
+import WrapperPresenter from "./presenters/WrapperPresenter";
 
-import {
-  availableVariants,
-  variants
-} from "./constants";
+import { availableVariants, variants } from "./constants";
 
 function Wrapper(props) {
   if (props.variant === variants.PLAIN) {
     return props.children;
   }
 
-  return <InputHaloPresenter {...props} />;
+  return <WrapperPresenter {...props} />;
 }
 
 Wrapper.propTypes = {
@@ -31,7 +29,6 @@ function NumericInput(props) {
     onMouseLeave: onMouseLeaveProp,
     disabled: disabledProp,
     stylesheet,
-    tagName,
     variant,
     ...otherProps
   } = props;
@@ -51,28 +48,40 @@ function NumericInput(props) {
         onFocus,
         onBlur
       }) => (
-        <Wrapper
-          isDisabled={disabledProp}
-          hasFocus={hasFocus}
-          hasHover={hasHover}
-          stylesheet={stylesheet}
-          tagName={tagName}
-          variant={variant}
-        >
-          <NumericInputPresenter
-            disabled={disabledProp}
+        <div>
+          <Wrapper
+            isDisabled={disabledProp}
             hasFocus={hasFocus}
             hasHover={hasHover}
-            onBlur={onBlur}
-            onFocus={onFocus}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
             stylesheet={stylesheet}
-            tagName={tagName}
             variant={variant}
-            {...otherProps}
-          />
-        </Wrapper>
+          >
+            <NumericInputPresenter
+              disabled={disabledProp}
+              hasFocus={hasFocus}
+              hasHover={hasHover}
+              onBlur={onBlur}
+              onFocus={onFocus}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+              stylesheet={stylesheet}
+              variant={variant}
+              {...otherProps}
+            />
+            <IncrementDecrementPresenter
+              disabled={disabledProp}
+              hasFocus={hasFocus}
+              hasHover={hasHover}
+              onBlur={onBlur}
+              onFocus={onFocus}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+              stylesheet={stylesheet}
+              variant={variant}
+              {...otherProps}
+            />
+          </Wrapper>
+        </div>
       )}
     </ControlBehavior>
   );

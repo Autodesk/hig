@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 
+import { CaretUp24, CaretDown24, CaretDownSUI, CaretUpSUI } from "@hig/icons";
 import { ThemeContext } from "@hig/theme-context";
 
-import stylesheet from "./NumericInputPresenter.stylesheet";
+import stylesheet from "./IncrementDecrementPresenter.stylesheet";
 import { availableVariants } from "../constants";
 
 export default function NumericInputPresenter(props) {
@@ -12,13 +13,13 @@ export default function NumericInputPresenter(props) {
     disabled,
     hasFocus,
     hasHover,
-    onBlur,
-    onFocus,
-    onMouseEnter,
-    onMouseLeave,
+    // TODO
+    // onBlur,
+    // onFocus,
+    // onMouseEnter,
+    // onMouseLeave,
     stylesheet: customStylesheet,
-    variant,
-    ...otherProps
+    variant
   } = props;
   return (
     <ThemeContext.Consumer>
@@ -36,18 +37,16 @@ export default function NumericInputPresenter(props) {
             )
           : styles;
 
+        const CaretUpIcon =
+          metadata.densityId === "medium-density" ? CaretUp24 : CaretUpSUI;
+
+        const CaretDownIcon =
+          metadata.densityId === "medium-density" ? CaretDown24 : CaretDownSUI;
+
         return (
           <div>
-            <input
-              className={css(cssStyles.input)}
-              disabled={disabled}
-              onBlur={onBlur}
-              onFocus={onFocus}
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-              {...otherProps}
-            />
-            <div className={css(cssStyles.halo)} />
+            <CaretUpIcon className={css(cssStyles.caretUp)} />
+            <CaretDownIcon className={css(cssStyles.caretDown)} />
           </div>
         );
       }}
@@ -59,10 +58,11 @@ NumericInputPresenter.propTypes = {
   disabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
-  onBlur: PropTypes.func,
-  onFocus: PropTypes.func,
-  onMouseEnter: PropTypes.func,
-  onMouseLeave: PropTypes.func,
+  // TODO
+  //   onBlur: PropTypes.func,
+  //   onFocus: PropTypes.func,
+  //   onMouseEnter: PropTypes.func,
+  //   onMouseLeave: PropTypes.func,
   stylesheet: PropTypes.func,
   variant: PropTypes.oneOf(availableVariants)
 };
