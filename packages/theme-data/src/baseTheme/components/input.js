@@ -85,7 +85,7 @@ export default {
   },
   "input.height": {
     type: LENGTH,
-    value: "28px"
+    value: "36px"
   },
   "input.lineHeight": {
     type: LINE_HEIGHT,
