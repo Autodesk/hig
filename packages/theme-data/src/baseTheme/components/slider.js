@@ -35,7 +35,7 @@ export default {
   "slider.focused.halo.color": {
     type: COLOR,
     value: { ref: "colorScheme.accentColor" },
-    transform: { alpha: 0.25 }
+    transform: { alpha: 0.35 }
   },
   "slider.focused.halo.width": {
     type: LENGTH,

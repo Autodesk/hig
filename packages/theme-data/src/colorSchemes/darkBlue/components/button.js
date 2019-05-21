@@ -73,10 +73,7 @@ export default {
   },
   "button.outline.focus.halo.color": {
     value: {
-      ref: "colorScheme.accentColor"
-    },
-    transform: {
-      alpha: 0.35
+      ref: "button.solid.focus.halo.color"
     }
   },
   "button.outline.pressed.borderColor": {
@@ -109,10 +106,7 @@ export default {
   },
   "button.flat.focus.halo.color": {
     value: {
-      ref: "colorScheme.accentColor"
-    },
-    transform: {
-      alpha: 0.35
+      ref: "button.solid.focus.halo.color"
     }
   },
   "button.flat.pressed.halo.color": {

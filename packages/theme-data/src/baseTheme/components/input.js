@@ -125,7 +125,12 @@ export default {
   },
   "input.highlightColor": {
     type: COLOR,
-    value: "default"
+    value: {
+      ref: "basics.colors.autodeskBlue500"
+    },
+    transform: {
+      alpha: 0.25
+    }
   },
 
   // Hover
@@ -161,7 +166,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.25
+      alpha: 0.35
     }
   },
 
