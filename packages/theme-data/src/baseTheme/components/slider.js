@@ -64,7 +64,7 @@ export default {
   // Pressed
   "slider.pressed.halo.color": {
     type: COLOR,
-    value: { ref: "colorScheme.accentColor" },
+    value: { ref: "colorScheme.baseColor" },
     transform: { alpha: 0.25 }
   },
   "slider.pressed.halo.width": {

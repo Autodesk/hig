@@ -49,16 +49,6 @@ export default {
     }
   },
 
-  // Pressed
-  "checkbox.pressed.halo.color": {
-    value: {
-      ref: "basics.colors.autodeskBlue400"
-    },
-    transform: {
-      alpha: 0.35
-    }
-  },
-
   // Checked
   "checkbox.checked.backgroundColor": {
     value: {

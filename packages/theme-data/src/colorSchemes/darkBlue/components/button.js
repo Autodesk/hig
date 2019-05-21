@@ -31,14 +31,6 @@ export default {
       alpha: 0.35
     }
   },
-  "button.solid.pressed.halo.color": {
-    value: {
-      ref: "colorScheme.accentColor"
-    },
-    transform: {
-      alpha: 0.35
-    }
-  },
   /* outline */
   "button.outline.textColor": {
     value: {
@@ -81,14 +73,6 @@ export default {
       ref: "colorScheme.accentColor"
     }
   },
-  "button.outline.pressed.halo.color": {
-    value: {
-      ref: "colorScheme.accentColor"
-    },
-    transform: {
-      alpha: 0.35
-    }
-  },
   /* flat */
   "button.flat.textColor": {
     value: "#6DD2FF"
@@ -107,14 +91,6 @@ export default {
   "button.flat.focus.halo.color": {
     value: {
       ref: "button.solid.focus.halo.color"
-    }
-  },
-  "button.flat.pressed.halo.color": {
-    value: {
-      ref: "colorScheme.accentColor"
-    },
-    transform: {
-      alpha: 0.35
     }
   }
 };

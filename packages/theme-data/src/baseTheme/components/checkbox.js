@@ -114,7 +114,7 @@ export default {
   "checkbox.pressed.halo.color": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "colorScheme.baseColor"
     },
     transform: {
       alpha: 0.25
