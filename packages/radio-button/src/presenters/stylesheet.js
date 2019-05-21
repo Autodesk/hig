@@ -93,7 +93,7 @@ export default function stylesheet(props, themeData, theme) {
     // do nothing
   } else if (isPressed) {
     outerShadow = `0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${
-      themeData["checkbox.focus.halo.color"]
+      themeData["checkbox.pressed.halo.color"]
     }`;
   } else if (hasHover) {
     outerShadow = `0 0 0 ${themeData["checkbox.hover.halo.width"]} ${
