@@ -26,6 +26,9 @@ export default {
   },
 
   // Pressed
+  "slider.pressed.halo.color": {
+    transform: { alpha: 0.125 }
+  },
   "slider.pressed.thumb.color": {
     value: { ref: "basics.colors.charcoal100" }
   }

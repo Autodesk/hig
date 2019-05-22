@@ -2,7 +2,7 @@
 
 exports[`radio-button/presenters/ButtonPresenter renders with all props 1`] = `
 .emotion-0 {
-  opacity: 0.5;
+  opacity: 0.4;
   position: relative;
   color: transparent;
   border: none;

@@ -31,7 +31,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.25
+      alpha: 0.35
     }
   },
   "textLink.focus.halo.width": {
