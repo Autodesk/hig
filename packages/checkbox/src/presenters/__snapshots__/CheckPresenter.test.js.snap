@@ -27,7 +27,7 @@ exports[`checkbox/presenters/CheckPresenter renders with all props 1`] = `
   width: 16px;
   border-radius: 0;
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.4;
   box-shadow: none;
   pointer-events: none;
 }

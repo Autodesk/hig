@@ -188,7 +188,7 @@ exports[`slider/Slider renders disabled 1`] = `
   position: relative;
   top: 50%;
   -webkit-appearance: none;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .emotion-0::-webkit-slider-thumb {
@@ -214,7 +214,7 @@ exports[`slider/Slider renders disabled 1`] = `
   background-color: rgba(128,128,128,0.2);
   color: transparent;
   outline: none;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .emotion-0::-moz-range-track {
@@ -224,7 +224,7 @@ exports[`slider/Slider renders disabled 1`] = `
   background-color: rgba(128,128,128,0.2);
   color: transparent;
   outline: none;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .emotion-0::-webkit-slider-runnable-track {
@@ -234,7 +234,7 @@ exports[`slider/Slider renders disabled 1`] = `
   background-color: rgba(128,128,128,0.2);
   color: transparent;
   outline: none;
-  opacity: 0.5;
+  opacity: 0.4;
   background-image: linear-gradient(#808080,#808080);
   background-position: 0;
   background-size: calc((0.5 * 12px)  + (0.5 * (100% - 12px))) 100%;
@@ -249,7 +249,7 @@ exports[`slider/Slider renders disabled 1`] = `
 .emotion-0::-moz-range-progress {
   border: none;
   background-color: #808080;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 <div

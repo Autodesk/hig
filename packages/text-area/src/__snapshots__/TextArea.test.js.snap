@@ -20,7 +20,7 @@ exports[`TextArea integration renders correctly 1`] = `
 
 .emotion-1 {
   position: absolute;
-  top: calc(100% + 1px);
+  top: 100%;
   left: 0;
   right: 0;
   width: 100%;
@@ -50,7 +50,7 @@ exports[`TextArea integration renders correctly 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc((28px - 2px) * 2);
+  height: calc((36px - 2px) * 2);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
