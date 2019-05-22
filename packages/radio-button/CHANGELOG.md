@@ -1,3 +1,10 @@
+# [@hig/radio-button-v1.0.6](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.5...@hig/radio-button@1.0.6) (2019-05-22)
+
+
+### Bug Fixes
+
+* use proper theme-data role for hover halo ([77a5e3d](https://github.com/Autodesk/hig/commit/77a5e3d))
+
 # [@hig/radio-button-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.4...@hig/radio-button@1.0.5) (2019-04-02)
 
 
