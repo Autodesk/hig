@@ -37,7 +37,7 @@ export default function NumericInputPresenter(props) {
           : styles;
 
         return (
-          <div>
+          <div className={css(cssStyles.inputAndHalo)}>
             <input
               className={css(cssStyles.input)}
               disabled={disabled}

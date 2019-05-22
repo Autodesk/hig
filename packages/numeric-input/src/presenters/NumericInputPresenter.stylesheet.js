@@ -39,6 +39,13 @@ function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   if (isDisabled) {
     return {};
   }
+  if (hasFocus) {
+    return {
+      height: themeData["input.focus.halo.width"],
+      backgroundColor: themeData["input.focus.halo.color"],
+      transitionDuration: "0.1s, 0.1s"
+    };
+  }
   if (hasHover) {
     return {
       ...defaults,
@@ -46,11 +53,48 @@ function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
       transitionDuration: "0.1s, 0.1s"
     };
   }
+  return defaults;
+}
+
+function borderStyles({ variant }, themeData) {
+  const defaults = {
+    borderStyle: "solid",
+    borderColor: "transparent",
+    borderWidth: themeData["input.borderWidth"],
+    borderBottomColor: themeData["input.borderBottomColor"]
+  };
+
+  return variant === variants.BOX
+    ? {
+        ...defaults,
+        borderColor: themeData["input.borderColor"],
+        borderBottomColor: themeData["input.box.borderBottomColor"]
+      }
+    : defaults;
+}
+
+function borderBottomStyles({ isDisabled, hasFocus, hasHover }, themeData) {
+  const defaults = {
+    borderBottomStyle: "solid",
+    borderBottomWidth: themeData["input.borderBottomWidth"]
+  };
+
+  if (isDisabled) {
+    return {
+      ...defaults,
+      opacity: themeData["input.disabled.opacity"]
+    };
+  }
   if (hasFocus) {
     return {
-      height: themeData["input.focus.halo.width"],
-      backgroundColor: themeData["input.focus.halo.color"],
-      transitionDuration: "0.1s, 0.1s"
+      ...defaults,
+      borderBottomColor: themeData["input.focus.borderBottomColor"]
+    };
+  }
+  if (hasHover) {
+    return {
+      ...defaults,
+      borderBottomColor: themeData["input.hover.borderBottomColor"]
     };
   }
   return defaults;
@@ -80,7 +124,6 @@ export default function stylesheet(props, themeData) {
       fontFamily: themeData["input.fontFamily"],
       fontWeight: themeData["input.fontWeight"],
       lineHeight: themeData["input.lineHeight"],
-      width: "100%",
       "&::placeholder": {
         color: themeData["input.placeholder.fontColor"]
       },
@@ -90,16 +133,23 @@ export default function stylesheet(props, themeData) {
       "::selection": {
         backgroundColor: themeData["input.highlightColor"]
       },
-      ...inputStyles(props, themeData)
+      width: "100%",
+      ...inputStyles(props, themeData),
+      ...borderStyles(props, themeData),
+      ...borderBottomStyles(props, themeData)
     },
 
     halo: {
-      position: "absolute",
-      top: "calc(100% + 1px)",
+      position: "relative",
+      top: 0,
       left: "-1px",
       right: 0,
       width: "calc(100% + 2px)",
       ...haloStyles(props, themeData)
+    },
+
+    inputAndHalo: {
+      flexGrow: 1
     }
   };
 }

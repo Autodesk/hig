@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 
-import { CaretUp24, CaretDown24, CaretDownSUI, CaretUpSUI } from "@hig/icons";
+import { CaretUp24, CaretDown24 } from "@hig/icons";
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./IncrementDecrementPresenter.stylesheet";
 import { availableVariants } from "../constants";
 
-export default function NumericInputPresenter(props) {
+export default function IncrementDecrementPresenter(props) {
   const {
     disabled,
     hasFocus,
@@ -18,6 +18,8 @@ export default function NumericInputPresenter(props) {
     // onFocus,
     // onMouseEnter,
     // onMouseLeave,
+    increment,
+    decrement,
     stylesheet: customStylesheet,
     variant
   } = props;
@@ -37,16 +39,14 @@ export default function NumericInputPresenter(props) {
             )
           : styles;
 
-        const CaretUpIcon =
-          metadata.densityId === "medium-density" ? CaretUp24 : CaretUpSUI;
-
-        const CaretDownIcon =
-          metadata.densityId === "medium-density" ? CaretDown24 : CaretDownSUI;
-
         return (
-          <div>
-            <CaretUpIcon className={css(cssStyles.caretUp)} />
-            <CaretDownIcon className={css(cssStyles.caretDown)} />
+          <div className={css(cssStyles.scrollers)}>
+            <button onClick={increment} className={css(cssStyles.button)}>
+              <CaretUp24 className={css(cssStyles.caret)} />
+            </button>
+            <button onClick={decrement} className={css(cssStyles.button)}>
+              <CaretDown24 className={css(cssStyles.caret)} />
+            </button>
           </div>
         );
       }}
@@ -54,7 +54,7 @@ export default function NumericInputPresenter(props) {
   );
 }
 
-NumericInputPresenter.propTypes = {
+IncrementDecrementPresenter.propTypes = {
   disabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
@@ -63,6 +63,8 @@ NumericInputPresenter.propTypes = {
   //   onFocus: PropTypes.func,
   //   onMouseEnter: PropTypes.func,
   //   onMouseLeave: PropTypes.func,
+  increment: PropTypes.func,
+  decrement: PropTypes.func,
   stylesheet: PropTypes.func,
   variant: PropTypes.oneOf(availableVariants)
 };

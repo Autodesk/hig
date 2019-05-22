@@ -1,32 +1,28 @@
-import { variants } from "../constants";
-
 export default function stylesheet(props, themeData) {
-  const padding =
-    props.variant === variants.BOX
-      ? themeData["input.boxType.horizontalPadding"]
-      : themeData["input.horizontalPadding"];
-
-  const caret = {
-    position: "absolute",
-    width: 10,
-    height: 10,
-    right: padding,
-    opacity: props.disabled ? themeData["component.disabled.opacity"] : 1,
-    pointerEvents: "none",
-    transition: "transform 0.3s, color 0.3s"
-  };
-
   return {
-    caretUp: {
-      ...caret,
-      top: "40%",
-      transform: "translateY(-60%)"
+    scrollers: {
+      display: "flex",
+      flexDirection: "column",
+      justifySelf: "flex-end"
     },
 
-    caretDown: {
-      ...caret,
-      top: "60%",
-      transform: "translateY(-40%)"
+    button: {
+      backgroundColor: "transparent",
+      zIndex: 1,
+      border: "none",
+      height: 10,
+      width: 10,
+      position: "relative"
+    },
+
+    caret: {
+      position: "absolute",
+      zIndex: 0,
+      left: 0,
+      top: 0,
+      width: "100%",
+      height: "100%",
+      opacity: props.disabled ? themeData["component.disabled.opacity"] : 1
     }
   };
 }

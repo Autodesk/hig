@@ -2,9 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
 
+import WrapperPresenter from "./presenters/WrapperPresenter";
 import NumericInputPresenter from "./presenters/NumericInputPresenter";
 import IncrementDecrementPresenter from "./presenters/IncrementDecrementPresenter";
-import WrapperPresenter from "./presenters/WrapperPresenter";
+import NumericInputBehaviour from "./behaviours/NumericInputBehaviour";
 
 import { availableVariants, variants } from "./constants";
 
@@ -25,11 +26,15 @@ function NumericInput(props) {
   const {
     onFocus: onFocusProp,
     onBlur: onBlurProp,
+    onChange: onChangeProp,
     onMouseEnter: onMouseEnterProp,
     onMouseLeave: onMouseLeaveProp,
     disabled: disabledProp,
     stylesheet,
     variant,
+    initialValue,
+    value,
+    step,
     ...otherProps
   } = props;
 
@@ -49,38 +54,50 @@ function NumericInput(props) {
         onBlur
       }) => (
         <div>
-          <Wrapper
-            isDisabled={disabledProp}
-            hasFocus={hasFocus}
-            hasHover={hasHover}
-            stylesheet={stylesheet}
-            variant={variant}
+          <NumericInputBehaviour
+            value={value}
+            initialValue={initialValue}
+            onChange={onChangeProp}
           >
-            <NumericInputPresenter
-              disabled={disabledProp}
-              hasFocus={hasFocus}
-              hasHover={hasHover}
-              onBlur={onBlur}
-              onFocus={onFocus}
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-              stylesheet={stylesheet}
-              variant={variant}
-              {...otherProps}
-            />
-            <IncrementDecrementPresenter
-              disabled={disabledProp}
-              hasFocus={hasFocus}
-              hasHover={hasHover}
-              onBlur={onBlur}
-              onFocus={onFocus}
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-              stylesheet={stylesheet}
-              variant={variant}
-              {...otherProps}
-            />
-          </Wrapper>
+            {({ increment, decrement, value: controlledValue }) => (
+              <Wrapper
+                isDisabled={disabledProp}
+                hasFocus={hasFocus}
+                hasHover={hasHover}
+                stylesheet={stylesheet}
+                variant={variant}
+              >
+                <NumericInputPresenter
+                  disabled={disabledProp}
+                  hasFocus={hasFocus}
+                  hasHover={hasHover}
+                  onFocus={onFocus}
+                  onBlur={onBlur}
+                  onMouseEnter={onMouseEnter}
+                  onMouseLeave={onMouseLeave}
+                  stylesheet={stylesheet}
+                  variant={variant}
+                  value={controlledValue}
+                  {...otherProps}
+                />
+                <IncrementDecrementPresenter
+                  disabled={disabledProp}
+                  hasFocus={hasFocus}
+                  hasHover={hasHover}
+                  onFocus={onFocus}
+                  onBlur={onBlur}
+                  onMouseEnter={onMouseEnter}
+                  onMouseLeave={onMouseLeave}
+                  stylesheet={stylesheet}
+                  variant={variant}
+                  value={controlledValue}
+                  increment={increment}
+                  decrement={decrement}
+                  {...otherProps}
+                />
+              </Wrapper>
+            )}
+          </NumericInputBehaviour>
         </div>
       )}
     </ControlBehavior>
@@ -91,7 +108,7 @@ NumericInput.propTypes = {
   /**
    * The initial value of the control
    */
-  defaultValue: PropTypes.string,
+  defaultValue: PropTypes.number,
   /**
    * Prevents the user from interacting with the input
    */
@@ -117,17 +134,24 @@ NumericInput.propTypes = {
    */
   stylesheet: PropTypes.func,
   /**
+   * The initial value of the control
+   */
+  initialValue: PropTypes.number,
+  /**
    * The value of the control
    */
-  value: PropTypes.string,
+  value: PropTypes.number,
   /**
    * The visual variant of the input
    */
-  variant: PropTypes.oneOf(availableVariants)
+  variant: PropTypes.oneOf(availableVariants),
+  step: PropTypes.number,
+  onChange: PropTypes.func
 };
 
 NumericInput.defaultProps = {
-  variant: variants.LINE
+  variant: variants.LINE,
+  step: 1
 };
 
 export default NumericInput;
