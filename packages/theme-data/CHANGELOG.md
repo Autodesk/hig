@@ -1,3 +1,19 @@
+# [@hig/theme-data-v2.7.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.6.0...@hig/theme-data@2.7.0) (2019-05-22)
+
+
+### Bug Fixes
+
+* use correct input height ([02af709](https://github.com/Autodesk/hig/commit/02af709))
+
+
+### Features
+
+* new disabled opacity ([2e9e88d](https://github.com/Autodesk/hig/commit/2e9e88d))
+* new focus state border color for checkbox and radio-button ([07c6310](https://github.com/Autodesk/hig/commit/07c6310))
+* new opacity for focus state halos ([a4830ef](https://github.com/Autodesk/hig/commit/a4830ef))
+* new pressed state halo colors ([dc6e337](https://github.com/Autodesk/hig/commit/dc6e337))
+* new text-link focus halo color ([97d8761](https://github.com/Autodesk/hig/commit/97d8761))
+
 # [@hig/theme-data-v2.6.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.5.0...@hig/theme-data@2.6.0) (2019-05-17)
 
 
