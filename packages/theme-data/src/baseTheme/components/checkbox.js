@@ -79,7 +79,7 @@ export default {
   "checkbox.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
+      ref: "colorScheme.accentColor"
     },
     transform: {
       alpha: 0.5

@@ -15,9 +15,6 @@ export default {
 
   // Focus
   "checkbox.focus.borderColor": {
-    value: {
-      ref: "basics.colors.white"
-    },
     transform: {
       alpha: 0.5
     }
