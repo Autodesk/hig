@@ -50,7 +50,8 @@ export default function stylesheetOverride(
     halo: {
       ...stylesheet.halo,
       width: `100%`,
-      left: 0
+      left: 0,
+      top: `100%`
     }
   };
 }

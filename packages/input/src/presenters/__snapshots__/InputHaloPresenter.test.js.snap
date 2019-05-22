@@ -93,7 +93,7 @@ exports[`InputHaloPresenter renders with focus 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 4px;
-  background-color: rgba(6,150,215,0.25);
+  background-color: rgba(6,150,215,0.35);
   -webkit-transition-duration: 0.1s,0.1s;
   transition-duration: 0.1s,0.1s;
 }

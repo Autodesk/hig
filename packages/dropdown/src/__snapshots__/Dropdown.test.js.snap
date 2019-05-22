@@ -56,7 +56,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -100,7 +100,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -443,7 +443,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -487,7 +487,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -755,7 +755,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -799,7 +799,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -943,7 +943,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -987,7 +987,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -1204,7 +1204,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -1248,7 +1248,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -1411,7 +1411,7 @@ exports[`Dropdown renders with default value 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -1455,7 +1455,7 @@ exports[`Dropdown renders with default value 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -1723,7 +1723,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -1767,7 +1767,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -1984,7 +1984,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -2028,7 +2028,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -2312,7 +2312,7 @@ exports[`Dropdown renders with option specific and general option render functio
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -2356,7 +2356,7 @@ exports[`Dropdown renders with option specific and general option render functio
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -2528,7 +2528,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -2572,7 +2572,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -2780,7 +2780,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -2824,7 +2824,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -2996,7 +2996,7 @@ exports[`Dropdown renders without props 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -3040,7 +3040,7 @@ exports[`Dropdown renders without props 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
