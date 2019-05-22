@@ -1,7 +1,7 @@
 export default {
   "checkbox.pressed.halo.color": {
-      transform: {
-        alpha: 0.125
-      }
+    transform: {
+      alpha: 0.125
     }
+  }
 };
