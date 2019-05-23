@@ -13,11 +13,6 @@ export default function IncrementDecrementPresenter(props) {
     disabled,
     hasFocus,
     hasHover,
-    // TODO
-    // onBlur,
-    // onFocus,
-    // onMouseEnter,
-    // onMouseLeave,
     increment,
     decrement,
     stylesheet: customStylesheet,
@@ -58,11 +53,6 @@ IncrementDecrementPresenter.propTypes = {
   disabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
-  // TODO
-  //   onBlur: PropTypes.func,
-  //   onFocus: PropTypes.func,
-  //   onMouseEnter: PropTypes.func,
-  //   onMouseLeave: PropTypes.func,
   increment: PropTypes.func,
   decrement: PropTypes.func,
   stylesheet: PropTypes.func,
