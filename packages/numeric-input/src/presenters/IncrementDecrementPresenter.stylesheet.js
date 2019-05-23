@@ -3,7 +3,8 @@ export default function stylesheet(props, themeData) {
     scrollers: {
       display: "flex",
       flexDirection: "column",
-      justifySelf: "flex-end"
+      justifySelf: "flex-end",
+      opacity: props.disabled ? themeData["component.disabled.opacity"] : 1
     },
 
     button: {
@@ -12,7 +13,8 @@ export default function stylesheet(props, themeData) {
       border: "none",
       height: 10,
       width: 10,
-      position: "relative"
+      position: "relative",
+      outline: "none"
     },
 
     caret: {
