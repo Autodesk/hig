@@ -1,26 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
+import Input from "@hig/input";
 
-import WrapperPresenter from "./presenters/WrapperPresenter";
 import NumericInputPresenter from "./presenters/NumericInputPresenter";
 import IncrementDecrementPresenter from "./presenters/IncrementDecrementPresenter";
 import NumericInputBehaviour from "./behaviours/NumericInputBehaviour";
 
 import { availableVariants, variants } from "./constants";
-
-function Wrapper(props) {
-  if (props.variant === variants.PLAIN) {
-    return props.children;
-  }
-
-  return <WrapperPresenter {...props} />;
-}
-
-Wrapper.propTypes = {
-  children: PropTypes.node,
-  variant: PropTypes.oneOf(availableVariants)
-};
 
 function NumericInput(props) {
   const {
@@ -60,14 +47,14 @@ function NumericInput(props) {
             onChange={onChangeProp}
           >
             {({ increment, decrement, value: controlledValue }) => (
-              <Wrapper
+              <NumericInputPresenter
                 isDisabled={disabledProp}
                 hasFocus={hasFocus}
                 hasHover={hasHover}
                 stylesheet={stylesheet}
                 variant={variant}
               >
-                <NumericInputPresenter
+                <Input
                   disabled={disabledProp}
                   hasFocus={hasFocus}
                   hasHover={hasHover}
@@ -95,7 +82,7 @@ function NumericInput(props) {
                   decrement={decrement}
                   {...otherProps}
                 />
-              </Wrapper>
+              </NumericInputPresenter>
             )}
           </NumericInputBehaviour>
         </div>

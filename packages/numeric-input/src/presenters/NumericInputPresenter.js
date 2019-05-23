@@ -7,24 +7,21 @@ import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./NumericInputPresenter.stylesheet";
 import { availableVariants } from "../constants";
 
-export default function NumericInputPresenter(props) {
+function NumericInputPresenter(props) {
   const {
-    disabled,
+    children,
     hasFocus,
     hasHover,
-    onBlur,
-    onFocus,
-    onMouseEnter,
-    onMouseLeave,
+    isDisabled,
     stylesheet: customStylesheet,
-    variant,
-    ...otherProps
+    variant
   } = props;
+
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
         const styles = stylesheet(
-          { isDisabled: disabled, hasFocus, hasHover, variant },
+          { isDisabled, hasFocus, hasHover, variant },
           resolvedRoles
         );
         const cssStyles = customStylesheet
@@ -36,33 +33,19 @@ export default function NumericInputPresenter(props) {
             )
           : styles;
 
-        return (
-          <div className={css(cssStyles.inputAndHalo)}>
-            <input
-              className={css(cssStyles.input)}
-              disabled={disabled}
-              onBlur={onBlur}
-              onFocus={onFocus}
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-              {...otherProps}
-            />
-            <div className={css(cssStyles.halo)} />
-          </div>
-        );
+        return <div className={css(cssStyles.wrapper)}>{children}</div>;
       }}
     </ThemeContext.Consumer>
   );
 }
 
 NumericInputPresenter.propTypes = {
-  disabled: PropTypes.bool,
+  children: PropTypes.node,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
-  onBlur: PropTypes.func,
-  onFocus: PropTypes.func,
-  onMouseEnter: PropTypes.func,
-  onMouseLeave: PropTypes.func,
+  isDisabled: PropTypes.bool,
   stylesheet: PropTypes.func,
   variant: PropTypes.oneOf(availableVariants)
 };
+
+export default NumericInputPresenter;
