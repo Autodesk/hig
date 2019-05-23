@@ -7,11 +7,13 @@ export default class NumericInputBehaviour extends Component {
     step: PropTypes.number,
     value: PropTypes.number,
     initialValue: PropTypes.number,
-    onChange: PropTypes.func
+    onChange: PropTypes.func,
+    isDisabled: PropTypes.bool
   };
 
   static defaultProps = {
-    step: 1
+    step: 1,
+    isDisabled: false
   };
 
   constructor(props) {
@@ -37,6 +39,11 @@ export default class NumericInputBehaviour extends Component {
   }
 
   updateValue(value) {
+    // Do nothing if the input is currently disabled
+    if (this.props.isDisabled) {
+      return;
+    }
+
     this.props.onChange(value);
     if (!this.isValueControlled()) {
       this.setState({ value });
