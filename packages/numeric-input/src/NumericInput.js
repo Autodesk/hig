@@ -45,6 +45,7 @@ function NumericInput(props) {
             value={value}
             initialValue={initialValue}
             onChange={onChangeProp}
+            isDisabled={disabledProp}
           >
             {({ increment, decrement, value: controlledValue }) => (
               <NumericInputPresenter

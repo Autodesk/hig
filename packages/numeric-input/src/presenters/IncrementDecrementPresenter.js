@@ -6,25 +6,19 @@ import { CaretUp24, CaretDown24 } from "@hig/icons";
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./IncrementDecrementPresenter.stylesheet";
-import { availableVariants } from "../constants";
 
 export default function IncrementDecrementPresenter(props) {
   const {
-    disabled,
+    isDisabled,
     hasFocus,
-    hasHover,
     increment,
     decrement,
-    stylesheet: customStylesheet,
-    variant
+    stylesheet: customStylesheet
   } = props;
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
-        const styles = stylesheet(
-          { isDisabled: disabled, hasFocus, hasHover, variant },
-          resolvedRoles
-        );
+        const styles = stylesheet({ isDisabled, hasFocus }, resolvedRoles);
         const cssStyles = customStylesheet
           ? customStylesheet(
               styles,
@@ -50,11 +44,9 @@ export default function IncrementDecrementPresenter(props) {
 }
 
 IncrementDecrementPresenter.propTypes = {
-  disabled: PropTypes.bool,
+  isDisabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
-  hasHover: PropTypes.bool,
   increment: PropTypes.func,
   decrement: PropTypes.func,
-  stylesheet: PropTypes.func,
-  variant: PropTypes.oneOf(availableVariants)
+  stylesheet: PropTypes.func
 };
