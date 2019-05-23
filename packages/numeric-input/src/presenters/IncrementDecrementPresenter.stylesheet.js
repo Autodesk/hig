@@ -1,4 +1,8 @@
 export default function stylesheet(props, themeData) {
+  const caretColour = props.hasFocus
+    ? themeData["colorScheme.accentColor"]
+    : themeData["colorScheme.iconColor"];
+
   return {
     scrollers: {
       display: "flex",
@@ -24,7 +28,8 @@ export default function stylesheet(props, themeData) {
       top: 0,
       width: "100%",
       height: "100%",
-      opacity: props.disabled ? themeData["component.disabled.opacity"] : 1
+      opacity: props.disabled ? themeData["component.disabled.opacity"] : 1,
+      color: caretColour
     }
   };
 }
