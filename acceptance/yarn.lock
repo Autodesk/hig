@@ -1033,15 +1033,6 @@
   dependencies:
     emotion "^10.0.0"
 
-"@hig/input@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@hig/input/-/input-1.1.2.tgz#ed006a73a88f9902d454029fcf42aa7a14c30d4f"
-  integrity sha512-wqxwsmFw5KS7397FDzDoJoB6s6yFOyceoDQDGyhx86bCoC07EGamddrfD9tmKziVANh3iG90sc+URq7EznEcVw==
-  dependencies:
-    "@hig/behaviors" "1.1.1"
-    emotion "^10.0.0"
-    prop-types "^15.7.1"
-
 "@hig/input@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@hig/input/-/input-1.1.3.tgz#5dcb24745c31ac155da1976d1b0d3603aa471b09"
@@ -1051,10 +1042,19 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
-"@hig/label@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@hig/label/-/label-1.0.3.tgz#9bd5c0914ef65b55ae75d2e2e92c59c599664fd6"
-  integrity sha512-T0Q5LKkEhK6gQFzDIrhW0G+INe1hX/9ybdQCFiiftf2R4TxdhdoL8VQnPRgxVKAFR6FvkqFR8vXMh/cWK/JQ3g==
+"@hig/input@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@hig/input/-/input-1.1.4.tgz#99ca0656f50b66acaf6c3d17a508d49115394e46"
+  integrity sha512-80wEx8JdWuUT7cF0U12GeFN4TkMRARYmUMJqHbUjzDfCCv4LZZN7ajtigaaSGvwEJsuXKZF/emoZRd28u1wgeQ==
+  dependencies:
+    "@hig/behaviors" "1.1.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
+"@hig/label@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/label/-/label-1.1.0.tgz#fa31dbb4129503361d66626783448d46c85876ab"
+  integrity sha512-S5ocopyI+WZgRBTDifpxmokR7xwOj1nJ9ipImW2sWJreypR5CHZGWyYJElBWnSvHSI+u/PH70S+TKarNTZeHwQ==
   dependencies:
     prop-types "^15.7.1"
 
@@ -1097,10 +1097,10 @@
     react-lifecycles-compat "^3.0.4"
     react-transition-group "^2.4.0"
 
-"@hig/radio-button@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@hig/radio-button/-/radio-button-1.0.5.tgz#68206b7765122b3cec371bb525a69301f862c9c9"
-  integrity sha512-QrTO0fdOFzfbVAWb/RFNp2NZQIG5WMGN1cl01VShSe2xzi6YMJWwENgjGW/vt5ZnszrM3RN5pQxtHN/1q/0A3g==
+"@hig/radio-button@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@hig/radio-button/-/radio-button-1.0.6.tgz#c59cf5fe53fc5f9f8719f95a29aacb8f0df46b61"
+  integrity sha512-OsdCtVrY5S7/5WkV6jXWc4LQs4Deh1qGEGAIS7YhQUutHXKrTgZ10xJn7CexQ70OkP8qdJhkzd9DSQisD+kRyQ==
   dependencies:
     "@hig/behaviors" "^1.1.1"
     emotion "^10.0.0"
@@ -1154,12 +1154,12 @@
     react-lifecycles-compat "^3.0.4"
     render-fragment "^0.1.1"
 
-"@hig/text-area@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@hig/text-area/-/text-area-1.1.2.tgz#9ec26fedfa9f16834f550a695b7330d8ef3a6678"
-  integrity sha512-K/OQClobU8/gCn2HrPcHX01HN7CQ3kh+FHeOUmqoGrSQvsKHIwWe7OBC4Z68VSS1NjkNn9t48cm5eDk867Db6Q==
+"@hig/text-area@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@hig/text-area/-/text-area-1.1.3.tgz#a75f4bdad942f70b225762753b160f2c7ca56323"
+  integrity sha512-pq3BsyQ89jA+FDwTlFza6QtPZ+j0BWBLNV0YvEfxDdhmh3znxaapcZI9jjkFUtcGm05DEe76BFkppy1VrBHsNw==
   dependencies:
-    "@hig/input" "^1.1.2"
+    "@hig/input" "^1.1.4"
     prop-types "^15.7.1"
 
 "@hig/text-link@^1.0.1":
@@ -1179,10 +1179,10 @@
     create-react-context "^0.2.3"
     prop-types "^15.6.1"
 
-"@hig/theme-data@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.5.0.tgz#71428472957f768db48d5c467a03dc1971c673ea"
-  integrity sha512-VMgt/sHQ9NjRZLnIZetYHDK5g6hu/uhjrngNK9Brk+OgfwH2Wfgmv2h5XoZFZhOmYJaD2KkY9RJbzon7sOlynA==
+"@hig/theme-data@^2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.7.0.tgz#a52570ac6c1ebe83c31c20923c357dddf9c30e63"
+  integrity sha512-Lc4QYVbLVBNsOd5GT1Rouy++mRgUEF2GGKTR6L2drRg6IMccAOkS3zbXpYEqrGUlQ5Rg3lZGpPh2or12IzfGzA==
   dependencies:
     tinycolor2 "^1.4.1"
 
