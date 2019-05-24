@@ -134,6 +134,7 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -177,7 +178,9 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Click Me
       </span>
     </button>
@@ -317,6 +320,7 @@ exports[`flyout/Flyout snapshots renders children from the given render function
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -360,7 +364,9 @@ exports[`flyout/Flyout snapshots renders children from the given render function
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Render prop
       </span>
     </button>
@@ -511,6 +517,7 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -554,7 +561,9 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Click Me
       </span>
     </button>
@@ -819,6 +828,7 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -862,7 +872,9 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Click Me
       </span>
     </button>
@@ -988,6 +1000,7 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1031,7 +1044,9 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Render prop
       </span>
     </button>
@@ -1187,6 +1202,7 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -1230,7 +1246,9 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Click Me
       </span>
     </button>

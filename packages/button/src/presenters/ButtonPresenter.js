@@ -63,10 +63,11 @@ export default class ButtonPresenter extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles }) => {
+        {({ resolvedRoles, metadata }) => {
           const styles = stylesheet(
             { disabled, hasFocus, hasHover, isPressed, type, width },
-            resolvedRoles
+            resolvedRoles,
+            metadata
           );
           return (
             <Wrapper
@@ -86,7 +87,7 @@ export default class ButtonPresenter extends Component {
               {...otherProps}
             >
               {icon && <span className={css(styles.icon)}>{icon}</span>}
-              <span>{title}</span>
+              <span className={icon ? css(styles.iconText) : ""}>{title}</span>
             </Wrapper>
           );
         }}

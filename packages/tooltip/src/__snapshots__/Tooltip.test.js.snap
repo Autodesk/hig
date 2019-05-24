@@ -190,6 +190,7 @@ exports[`tooltip/Tooltip  2`] = `
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -233,7 +234,9 @@ exports[`tooltip/Tooltip  2`] = `
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Click Me
       </span>
     </button>
