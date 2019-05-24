@@ -1,3 +1,10 @@
+# [@hig/button-v1.3.3](https://github.com/Autodesk/hig/compare/@hig/button@1.3.2...@hig/button@1.3.3) (2019-05-24)
+
+
+### Bug Fixes
+
+* button height is incorrect when using an icon ([0dea7c6](https://github.com/Autodesk/hig/commit/0dea7c6))
+
 # [@hig/button-v1.3.2](https://github.com/Autodesk/hig/compare/@hig/button@1.3.1...@hig/button@1.3.2) (2019-03-13)
 
 
