@@ -18,6 +18,7 @@ function getButtonDefaultButtonRules(themeData) {
     overflow: "hidden",
     padding: `${themeData["button.verticalPadding"]}
       ${themeData["button.horizontalPadding"]}`,
+    position: "relative",
     textAlign: "center",
     textDecoration: "none",
     textOverflow: "ellipsis",
@@ -187,8 +188,9 @@ function getButtonPressedRulesByType(type, themeData) {
   }
 }
 
-export default function stylesheet(props, themeData) {
+export default function stylesheet(props, themeData, theme) {
   const { disabled, hasFocus, hasHover, isPressed, type, width } = props;
+  const iconSize = theme.densityId === "medium-density" ? "24px" : "16px";
 
   return {
     button: {
@@ -205,11 +207,14 @@ export default function stylesheet(props, themeData) {
     },
     icon: {
       display: "inline-block",
-      position: "relative",
-      height: "24px",
-      verticalAlign: "middle",
+      position: "absolute",
+      height: iconSize,
       marginRight: themeData["button.gutter"],
-      marginBottom: "1px"
+      top: "50%",
+      transform: "translateY(-50%)"
+    },
+    iconText: {
+      marginLeft: `calc(${iconSize} + ${themeData["button.gutter"]})`
     }
   };
 }
