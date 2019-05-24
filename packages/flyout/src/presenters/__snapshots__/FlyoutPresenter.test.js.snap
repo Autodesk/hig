@@ -60,6 +60,7 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -103,7 +104,9 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Hello
       </span>
     </button>
