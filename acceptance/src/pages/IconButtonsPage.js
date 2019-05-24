@@ -13,7 +13,7 @@ const mediumDensityIcons = [
   Assets24, AddFolder24, Calendar24, Location24, Tag24
 ];
 
-function IconsPage() {
+function IconButtonsPage() {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
       <ThemeRepeater>
@@ -59,4 +59,4 @@ function IconsPage() {
   );
 }
 
-export default IconsPage;
+export default IconButtonsPage;
