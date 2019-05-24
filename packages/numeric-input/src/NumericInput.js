@@ -63,6 +63,7 @@ function NumericInput(props) {
                   onBlur={onBlur}
                   onMouseEnter={onMouseEnter}
                   onMouseLeave={onMouseLeave}
+                  onChange={onChangeProp}
                   stylesheet={stylesheet}
                   variant={variant}
                   value={controlledValue}
@@ -133,7 +134,17 @@ NumericInput.propTypes = {
    * The visual variant of the input
    */
   variant: PropTypes.oneOf(availableVariants),
+  /**
+   * The quantity to increment/decrement the current value by when clicking
+   * on the increment decrement buttons.
+   *
+   * Default value is 1
+   */
   step: PropTypes.number,
+  /**
+   * Callback will be called when the input is changed either via the
+   * buttons or direct user input
+   */
   onChange: PropTypes.func
 };
 
