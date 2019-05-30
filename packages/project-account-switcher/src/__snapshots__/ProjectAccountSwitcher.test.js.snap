@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`project-account-switcher/ProjectAccountSwitcher integration renders with controlled active account/project 1`] = `
-.emotion-36 {
+.emotion-40 {
   position: relative;
   display: inline-block;
 }
@@ -13,7 +13,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   display: flex;
 }
 
-.emotion-35 {
+.emotion-39 {
   position: absolute;
   display: none;
   width: 100%;
@@ -132,36 +132,36 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   fill: #ffffff;
 }
 
-.emotion-32 {
+.emotion-36 {
   margin: 0;
   width: 200px;
   padding: 0 10px 10px 10px;
 }
 
-.emotion-34 {
+.emotion-38 {
   background-color: #ffffff;
   border-radius: 4px;
   border: none;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-33 {
+.emotion-37 {
   position: relative;
 }
 
-.emotion-21 {
+.emotion-23 {
   margin-top: 30px;
   margin-bottom: 10px;
   list-style: none;
   padding: 0;
 }
 
-.emotion-21:first-of-type {
+.emotion-23:first-of-type {
   margin-top: 0;
   padding-top: 10px;
 }
 
-.emotion-16 {
+.emotion-17 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -176,7 +176,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   padding-top: 8px;
 }
 
-.emotion-14 {
+.emotion-15 {
   display: inline-block;
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -192,7 +192,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   margin-right: 10px;
 }
 
-.emotion-15 {
+.emotion-16 {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.428571429;
@@ -206,7 +206,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 }
 
 <div
-  className="emotion-36"
+  className="emotion-40"
 >
   <div
     className="emotion-8"
@@ -268,7 +268,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
     </div>
   </div>
   <div
-    className="emotion-35"
+    className="emotion-39"
     style={
       Object {
         "left": "0px",
@@ -303,7 +303,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       </svg>
     </div>
     <div
-      className="emotion-34"
+      className="emotion-38"
       style={
         Object {
           "maxHeight": undefined,
@@ -311,14 +311,14 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       }
     >
       <div
-        className="emotion-33"
+        className="emotion-37"
       >
         <div
-          className="emotion-32"
+          className="emotion-36"
         >
           <div>
             <ul
-              className="emotion-21"
+              className="emotion-23"
             >
               <span
                 className="emotion-1"
@@ -332,15 +332,20 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 Accounts
               </span>
               <li
-                className="emotion-16"
+                className="emotion-17"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
                 <span
-                  className="emotion-14"
+                  className="emotion-15"
                 >
+                  <img
+                    alt="Account 1"
+                    className="emotion-0"
+                    src=""
+                  />
                   <span
                     className="emotion-1"
                     style={
@@ -354,7 +359,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                   </span>
                 </span>
                 <span
-                  className="emotion-15"
+                  className="emotion-16"
                   onBlur={[Function]}
                   onClick={undefined}
                   onFocus={[Function]}
@@ -368,15 +373,20 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 </span>
               </li>
               <li
-                className="emotion-16"
+                className="emotion-17"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
                 <span
-                  className="emotion-14"
+                  className="emotion-15"
                 >
+                  <img
+                    alt="Account 2"
+                    className="emotion-0"
+                    src=""
+                  />
                   <span
                     className="emotion-1"
                     style={
@@ -390,7 +400,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                   </span>
                 </span>
                 <span
-                  className="emotion-15"
+                  className="emotion-16"
                   onBlur={[Function]}
                   onClick={undefined}
                   onFocus={[Function]}
@@ -405,7 +415,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
               </li>
             </ul>
             <ul
-              className="emotion-21"
+              className="emotion-23"
             >
               <span
                 className="emotion-1"
@@ -419,7 +429,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 Projects
               </span>
               <li
-                className="emotion-16"
+                className="emotion-17"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
@@ -428,6 +438,11 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-2"
                 >
+                  <img
+                    alt="Project 1"
+                    className="emotion-0"
+                    src=""
+                  />
                   <span
                     className="emotion-1"
                     style={
@@ -441,7 +456,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                   </span>
                 </span>
                 <span
-                  className="emotion-15"
+                  className="emotion-16"
                   onBlur={[Function]}
                   onClick={undefined}
                   onFocus={[Function]}
@@ -455,7 +470,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 </span>
               </li>
               <li
-                className="emotion-16"
+                className="emotion-17"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
@@ -464,6 +479,11 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-2"
                 >
+                  <img
+                    alt="Project 2"
+                    className="emotion-0"
+                    src=""
+                  />
                   <span
                     className="emotion-1"
                     style={
@@ -477,7 +497,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                   </span>
                 </span>
                 <span
-                  className="emotion-15"
+                  className="emotion-16"
                   onBlur={[Function]}
                   onClick={undefined}
                   onFocus={[Function]}
@@ -500,7 +520,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 `;
 
 exports[`project-account-switcher/ProjectAccountSwitcher integration renders with default account/project 1`] = `
-.emotion-36 {
+.emotion-40 {
   position: relative;
   display: inline-block;
 }
@@ -512,7 +532,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   display: flex;
 }
 
-.emotion-35 {
+.emotion-39 {
   position: absolute;
   display: none;
   width: 100%;
@@ -631,36 +651,36 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   fill: #ffffff;
 }
 
-.emotion-32 {
+.emotion-36 {
   margin: 0;
   width: 200px;
   padding: 0 10px 10px 10px;
 }
 
-.emotion-34 {
+.emotion-38 {
   background-color: #ffffff;
   border-radius: 4px;
   border: none;
   box-shadow: 0 0 16px rgba(0,0,0,0.25);
 }
 
-.emotion-33 {
+.emotion-37 {
   position: relative;
 }
 
-.emotion-21 {
+.emotion-23 {
   margin-top: 30px;
   margin-bottom: 10px;
   list-style: none;
   padding: 0;
 }
 
-.emotion-21:first-of-type {
+.emotion-23:first-of-type {
   margin-top: 0;
   padding-top: 10px;
 }
 
-.emotion-16 {
+.emotion-17 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -675,7 +695,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   padding-top: 8px;
 }
 
-.emotion-14 {
+.emotion-15 {
   display: inline-block;
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -691,7 +711,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   margin-right: 10px;
 }
 
-.emotion-15 {
+.emotion-16 {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.428571429;
@@ -705,7 +725,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 }
 
 <div
-  className="emotion-36"
+  className="emotion-40"
 >
   <div
     className="emotion-8"
@@ -767,7 +787,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
     </div>
   </div>
   <div
-    className="emotion-35"
+    className="emotion-39"
     style={
       Object {
         "left": "0px",
@@ -802,7 +822,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       </svg>
     </div>
     <div
-      className="emotion-34"
+      className="emotion-38"
       style={
         Object {
           "maxHeight": undefined,
@@ -810,14 +830,14 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
       }
     >
       <div
-        className="emotion-33"
+        className="emotion-37"
       >
         <div
-          className="emotion-32"
+          className="emotion-36"
         >
           <div>
             <ul
-              className="emotion-21"
+              className="emotion-23"
             >
               <span
                 className="emotion-1"
@@ -831,15 +851,20 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 Accounts
               </span>
               <li
-                className="emotion-16"
+                className="emotion-17"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
                 <span
-                  className="emotion-14"
+                  className="emotion-15"
                 >
+                  <img
+                    alt="Account 1"
+                    className="emotion-0"
+                    src=""
+                  />
                   <span
                     className="emotion-1"
                     style={
@@ -853,7 +878,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                   </span>
                 </span>
                 <span
-                  className="emotion-15"
+                  className="emotion-16"
                   onBlur={[Function]}
                   onClick={undefined}
                   onFocus={[Function]}
@@ -867,15 +892,20 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 </span>
               </li>
               <li
-                className="emotion-16"
+                className="emotion-17"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
                 tabIndex="0"
               >
                 <span
-                  className="emotion-14"
+                  className="emotion-15"
                 >
+                  <img
+                    alt="Account 2"
+                    className="emotion-0"
+                    src=""
+                  />
                   <span
                     className="emotion-1"
                     style={
@@ -889,7 +919,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                   </span>
                 </span>
                 <span
-                  className="emotion-15"
+                  className="emotion-16"
                   onBlur={[Function]}
                   onClick={undefined}
                   onFocus={[Function]}
@@ -904,7 +934,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
               </li>
             </ul>
             <ul
-              className="emotion-21"
+              className="emotion-23"
             >
               <span
                 className="emotion-1"
@@ -918,7 +948,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 Projects
               </span>
               <li
-                className="emotion-16"
+                className="emotion-17"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
@@ -927,6 +957,11 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-2"
                 >
+                  <img
+                    alt="Project 1"
+                    className="emotion-0"
+                    src=""
+                  />
                   <span
                     className="emotion-1"
                     style={
@@ -940,7 +975,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                   </span>
                 </span>
                 <span
-                  className="emotion-15"
+                  className="emotion-16"
                   onBlur={[Function]}
                   onClick={undefined}
                   onFocus={[Function]}
@@ -954,7 +989,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 </span>
               </li>
               <li
-                className="emotion-16"
+                className="emotion-17"
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 role="menuitem"
@@ -963,6 +998,11 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-2"
                 >
+                  <img
+                    alt="Project 2"
+                    className="emotion-0"
+                    src=""
+                  />
                   <span
                     className="emotion-1"
                     style={
@@ -976,7 +1016,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                   </span>
                 </span>
                 <span
-                  className="emotion-15"
+                  className="emotion-16"
                   onBlur={[Function]}
                   onClick={undefined}
                   onFocus={[Function]}

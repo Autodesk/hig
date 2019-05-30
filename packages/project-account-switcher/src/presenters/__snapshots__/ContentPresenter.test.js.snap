@@ -3,19 +3,19 @@
 exports[`project-account-switcher/presenters/ContentPresenter  1`] = `<div />`;
 
 exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
-.emotion-9 {
+.emotion-11 {
   margin-top: 30px;
   margin-bottom: 10px;
   list-style: none;
   padding: 0;
 }
 
-.emotion-9:first-of-type {
+.emotion-11:first-of-type {
   margin-top: 0;
   padding-top: 10px;
 }
 
-.emotion-4 {
+.emotion-5 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -30,7 +30,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
   padding-top: 8px;
 }
 
-.emotion-2 {
+.emotion-3 {
   display: inline-block;
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -46,7 +46,20 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
   margin-right: 10px;
 }
 
-.emotion-12 {
+.emotion-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  cursor: pointer;
+  color: transparent;
+}
+
+.emotion-1[src=''] {
+  display: none;
+}
+
+.emotion-15 {
   display: inline-block;
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -73,7 +86,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
   text-align: initial;
 }
 
-.emotion-3 {
+.emotion-4 {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.428571429;
@@ -88,7 +101,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
 
 <div>
   <ul
-    className="emotion-9"
+    className="emotion-11"
   >
     <span
       className="emotion-0"
@@ -102,15 +115,20 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
       Accounts
     </span>
     <li
-      className="emotion-4"
+      className="emotion-5"
       onClick={[Function]}
       onKeyDown={[Function]}
       role="menuitem"
       tabIndex="0"
     >
       <span
-        className="emotion-2"
+        className="emotion-3"
       >
+        <img
+          alt="Account 1"
+          className="emotion-1"
+          src=""
+        />
         <span
           className="emotion-0"
           style={
@@ -124,7 +142,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
         </span>
       </span>
       <span
-        className="emotion-3"
+        className="emotion-4"
         onBlur={[Function]}
         onClick={undefined}
         onFocus={[Function]}
@@ -138,15 +156,20 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
       </span>
     </li>
     <li
-      className="emotion-4"
+      className="emotion-5"
       onClick={[Function]}
       onKeyDown={[Function]}
       role="menuitem"
       tabIndex="0"
     >
       <span
-        className="emotion-2"
+        className="emotion-3"
       >
+        <img
+          alt="Account 2"
+          className="emotion-1"
+          src=""
+        />
         <span
           className="emotion-0"
           style={
@@ -160,7 +183,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
         </span>
       </span>
       <span
-        className="emotion-3"
+        className="emotion-4"
         onBlur={[Function]}
         onClick={undefined}
         onFocus={[Function]}
@@ -175,7 +198,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
     </li>
   </ul>
   <ul
-    className="emotion-9"
+    className="emotion-11"
   >
     <span
       className="emotion-0"
@@ -189,15 +212,20 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
       Projects
     </span>
     <li
-      className="emotion-4"
+      className="emotion-5"
       onClick={[Function]}
       onKeyDown={[Function]}
       role="menuitem"
       tabIndex="0"
     >
       <span
-        className="emotion-12"
+        className="emotion-15"
       >
+        <img
+          alt="Project 1"
+          className="emotion-1"
+          src=""
+        />
         <span
           className="emotion-0"
           style={
@@ -211,7 +239,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
         </span>
       </span>
       <span
-        className="emotion-3"
+        className="emotion-4"
         onBlur={[Function]}
         onClick={undefined}
         onFocus={[Function]}
@@ -225,15 +253,20 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
       </span>
     </li>
     <li
-      className="emotion-4"
+      className="emotion-5"
       onClick={[Function]}
       onKeyDown={[Function]}
       role="menuitem"
       tabIndex="0"
     >
       <span
-        className="emotion-12"
+        className="emotion-15"
       >
+        <img
+          alt="Project 2"
+          className="emotion-1"
+          src=""
+        />
         <span
           className="emotion-0"
           style={
@@ -247,7 +280,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
         </span>
       </span>
       <span
-        className="emotion-3"
+        className="emotion-4"
         onBlur={[Function]}
         onClick={undefined}
         onFocus={[Function]}

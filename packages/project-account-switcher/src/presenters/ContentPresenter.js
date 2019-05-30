@@ -72,7 +72,7 @@ export default class ContentPresenter extends Component {
   renderAccountsList() {
     const styles = stylesheet();
 
-    return this.props.accounts.map(({ id, label }) => {
+    return this.props.accounts.map(({ id, image, label }) => {
       const { handleClick, handleKeyDown } = this.createAccountListItemHandlers(
         id
       );
@@ -88,6 +88,7 @@ export default class ContentPresenter extends Component {
           tabIndex="0"
         >
           <span className={css(styles.switcherAccountImageWrapper)}>
+            <img className={css(styles.image)} src={image || ""} alt={label} />
             <Typography
               elementType="span"
               style={getTypographyPlaceholderStyles()}
@@ -104,7 +105,7 @@ export default class ContentPresenter extends Component {
   renderProjectsList() {
     const styles = stylesheet();
 
-    return this.props.projects.map(({ id, label }) => {
+    return this.props.projects.map(({ id, image, label }) => {
       const { handleClick, handleKeyDown } = this.createProjectListItemHandlers(
         id
       );
@@ -120,6 +121,7 @@ export default class ContentPresenter extends Component {
           onKeyDown={handleKeyDown}
         >
           <span className={css(styles.imageWrapper)}>
+            <img className={css(styles.image)} src={image || ""} alt={label} />
             <Typography
               elementType="span"
               style={getTypographyPlaceholderStyles()}
