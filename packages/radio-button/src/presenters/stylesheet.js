@@ -79,13 +79,17 @@ export default function stylesheet(props, themeData, theme) {
   const opacity = disabled ? themeData["component.disabled.opacity"] : "1.0";
   // because we don't have access to the checked status in react, we need to
   // write css rules to handle both cases
+  const borderColor =
+    hasFocus && !isPressed
+      ? themeData["checkbox.focus.borderColor"]
+      : themeData["checkbox.borderColor"];
   const checkedInnerShadow = `inset 0 0 0 ${
     themeData["checkbox.pressed.halo.width"]
   } ${themeData["checkbox.checked.backgroundColor"]}`;
   const uncheckedInnerShadow = `inset 0 0 0 ${
     themeData["checkbox.borderWidth"]
   } 
-    ${themeData["checkbox.borderColor"]}
+    ${borderColor}
   `;
   let outerShadow = "0 0 0 0px transparent";
 
