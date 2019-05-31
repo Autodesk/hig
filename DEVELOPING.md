@@ -74,7 +74,7 @@ This project is structured as a [monorepo][], with each package residing within 
 
 The monorepo uses [Yarn workspaces][] and [Lerna][] to manage the interdependencies between packages.
 
-[Lerna]: https://lernajs.io/
+[Lerna]: https://lerna.js.org/
 [monorepo]: https://github.com/babel/babel/blob/master/doc/design/monorepo.md
 [Yarn workspaces]: https://yarnpkg.com/lang/en/docs/workspaces/
 
