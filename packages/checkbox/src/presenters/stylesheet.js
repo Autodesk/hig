@@ -1,6 +1,6 @@
 function getCheckboxRulesByFocus(themeData) {
   return {
-    borderColor: `${themeData["checkbox.focus.borderColor"]}`,
+    borderColor: themeData["checkbox.focus.borderColor"],
     boxShadow: `0 0 0 ${themeData["checkbox.focus.halo.width"]}
       ${themeData["checkbox.focus.halo.color"]}`
   };
@@ -8,6 +8,7 @@ function getCheckboxRulesByFocus(themeData) {
 
 function getCheckboxRulesByHover(themeData) {
   return {
+    borderColor: themeData["checkbox.borderColor"],
     boxShadow: `0 0 0 ${themeData["checkbox.hover.halo.width"]} ${
       themeData["checkbox.hover.halo.color"]
     }`
@@ -16,6 +17,7 @@ function getCheckboxRulesByHover(themeData) {
 
 function getCheckboxRulesByPressed(themeData) {
   return {
+    borderColor: themeData["checkbox.borderColor"],
     boxShadow: `0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${
       themeData["checkbox.pressed.halo.color"]
     }`
@@ -32,6 +34,7 @@ function getCheckboxRulesByDisabled(themeData) {
 
 function getCheckboxRulesByChecked(themeData) {
   return {
+    border: `none`,
     backgroundColor: `${themeData["checkbox.checked.backgroundColor"]}`
   };
 }
