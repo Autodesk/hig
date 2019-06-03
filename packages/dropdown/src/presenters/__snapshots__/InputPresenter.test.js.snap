@@ -28,6 +28,7 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -194,6 +195,7 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
