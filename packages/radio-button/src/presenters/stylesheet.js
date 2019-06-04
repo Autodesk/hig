@@ -80,7 +80,7 @@ export default function stylesheet(props, themeData, theme) {
   // because we don't have access to the checked status in react, we need to
   // write css rules to handle both cases
   const borderColor =
-    hasFocus && !isPressed
+    hasFocus && !hasHover
       ? themeData["checkbox.focus.borderColor"]
       : themeData["checkbox.borderColor"];
   const checkedInnerShadow = `inset 0 0 0 ${
