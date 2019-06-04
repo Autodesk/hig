@@ -41,6 +41,7 @@ function getCheckboxRulesByChecked(themeData) {
 
 function getCheckboxRulesByIndeterminate(themeData) {
   return {
+    border: `none`,
     backgroundColor: `${themeData["checkbox.indeterminate.backgroundColor"]}`
   };
 }
