@@ -35,14 +35,14 @@ function getCheckboxRulesByDisabled(themeData) {
 function getCheckboxRulesByChecked(themeData) {
   return {
     border: `none`,
-    backgroundColor: `${themeData["checkbox.checked.backgroundColor"]}`
+    backgroundColor: themeData["checkbox.checked.backgroundColor"]
   };
 }
 
 function getCheckboxRulesByIndeterminate(themeData) {
   return {
     border: `none`,
-    backgroundColor: `${themeData["checkbox.indeterminate.backgroundColor"]}`
+    backgroundColor: themeData["checkbox.indeterminate.backgroundColor"]
   };
 }
 
@@ -52,41 +52,35 @@ function getCheckboxRulesByLegacyTheme(themeData, props) {
   return {
     ...(!checked && !hasFocus && !indeterminate
       ? {
-          backgroundColor: `${themeData["checkbox.backgroundColor"]}`
+          backgroundColor: themeData["checkbox.backgroundColor"]
         }
       : {}),
     ...(hasFocus
       ? {
-          backgroundColor: `${themeData["checkbox.backgroundColor"]}`
+          backgroundColor: themeData["checkbox.backgroundColor"]
         }
       : {}),
     ...(checked
       ? {
-          backgroundColor: `${themeData["checkbox.checked.backgroundColor"]}`,
-          borderColor: `${themeData["checkbox.checked.borderColor"]}`
+          backgroundColor: themeData["checkbox.checked.backgroundColor"],
+          borderColor: themeData["checkbox.checked.borderColor"]
         }
       : {}),
     ...(checked && hasFocus
       ? {
-          backgroundColor: `${
-            themeData["checkbox.focus.checked.backgroundColor"]
-          }`,
-          borderColor: `${themeData["checkbox.focus.checked.borderColor"]}`
+          backgroundColor: themeData["checkbox.focus.checked.backgroundColor"],
+          borderColor: themeData["checkbox.focus.checked.borderColor"]
         }
       : {}),
     ...(indeterminate
       ? {
-          backgroundColor: `${
-            themeData["checkbox.indeterminate.backgroundColor"]
-          }`,
-          borderColor: `${themeData["checkbox.indeterminate.borderColor"]}`
+          backgroundColor: themeData["checkbox.indeterminate.backgroundColor"],
+          borderColor: themeData["checkbox.indeterminate.borderColor"]
         }
       : {}),
     ...(indeterminate && hasFocus
       ? {
-          borderColor: `${
-            themeData["checkbox.focus.indeterminate.borderColor"]
-          }`
+          borderColor: themeData["checkbox.focus.indeterminate.borderColor"]
         }
       : {}),
     ...(disabled
@@ -102,7 +96,7 @@ function getCheckboxRulesByLegacyTheme(themeData, props) {
       : {}),
     ...(disabled && checked && !indeterminate
       ? {
-          backgroundColor: `${themeData["checkbox.backgroundColor"]}`,
+          backgroundColor: themeData["checkbox.backgroundColor"],
           opacity: themeData["component.disabled.opacity"]
         }
       : {})
@@ -124,8 +118,8 @@ export default function stylesheet(props, themeData, theme) {
       boxSizing: `border-box`,
       display: `inline-block`,
       position: `relative`,
-      height: `${themeData["checkbox.height"]}`,
-      width: `${themeData["checkbox.width"]}`
+      height: themeData["checkbox.height"],
+      width: themeData["checkbox.width"]
     },
     checkboxCheckWrapper: {
       position: `relative`,
@@ -138,9 +132,9 @@ export default function stylesheet(props, themeData, theme) {
       textAlign: `center`,
       fontSize: `25px`,
       lineHeight: `14px`,
-      height: `${themeData["checkbox.height"]}`,
-      width: `${themeData["checkbox.width"]}`,
-      borderRadius: `${themeData["checkbox.borderRadius"]}`,
+      height: themeData["checkbox.height"],
+      width: themeData["checkbox.width"],
+      borderRadius: themeData["checkbox.borderRadius"],
       cursor: hasHover ? `pointer` : `default`,
       // eslint-disable-next-line prettier/prettier
       "svg": {
@@ -150,7 +144,7 @@ export default function stylesheet(props, themeData, theme) {
         transform: `translateX(-50%) translateY(-50%)`,
         pointerEvents: `none`,
         "*": {
-          fill: `${themeData["checkbox.iconColor"]}`
+          fill: themeData["checkbox.iconColor"]
         }
       },
       ...(hasFocus ? getCheckboxRulesByFocus(themeData) : {}),
