@@ -57,6 +57,10 @@ describe("Typography", () => {
       description:
         "renders h3 variant Typography with any arbitrary semantic element",
       props: props({ variant: "h3", elementType: "figcaption" })
+    },
+    {
+      description: "renders Typography with className props",
+      props: props({ className: "additonal-class" })
     }
   ]);
 });
