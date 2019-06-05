@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
 import {
@@ -36,7 +36,11 @@ export default class Typography extends Component {
     /**
      * Indicates the initial Typography style
      */
-    variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
+    variant: PropTypes.oneOf(AVAILABLE_VARIANTS),
+    /**
+     * Specifies the additional css class to be added on the component
+     */
+    className: PropTypes.string
   };
 
   elementType = () => {
@@ -55,6 +59,7 @@ export default class Typography extends Component {
       children,
       fontWeight,
       variant,
+      className,
       elementType, // we don't want this included in the otherProps that appear in the DOM
       ...otherProps
     } = this.props;
@@ -70,7 +75,10 @@ export default class Typography extends Component {
           const ElementType = this.elementType();
 
           return (
-            <ElementType className={css(styles.typography)} {...otherProps}>
+            <ElementType
+              className={cx(css(styles.typography), className)}
+              {...otherProps}
+            >
               {children}
             </ElementType>
           );
