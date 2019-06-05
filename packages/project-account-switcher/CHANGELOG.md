@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.1...@hig/project-account-switcher@2.0.2) (2019-06-05)
+
+
+### Bug Fixes
+
+* project switcher not show image in dropdown ([f59668b](https://github.com/Autodesk/hig/commit/f59668b))
+
 # [@hig/project-account-switcher-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.0...@hig/project-account-switcher@2.0.1) (2019-04-01)
 
 
