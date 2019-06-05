@@ -3,14 +3,14 @@
 exports[`project-account-switcher/presenters/ContentPresenter  1`] = `<div />`;
 
 exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
-.emotion-9 {
+.emotion-10 {
   margin-top: 30px;
   margin-bottom: 10px;
   list-style: none;
   padding: 0;
 }
 
-.emotion-9:first-of-type {
+.emotion-10:first-of-type {
   margin-top: 0;
   padding-top: 10px;
 }
@@ -46,7 +46,20 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
   margin-right: 10px;
 }
 
-.emotion-12 {
+.emotion-5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  cursor: pointer;
+  color: transparent;
+}
+
+.emotion-5[src=''] {
+  display: none;
+}
+
+.emotion-13 {
   display: inline-block;
   position: relative;
   -webkit-flex: 0 0 auto;
@@ -88,7 +101,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
 
 <div>
   <ul
-    className="emotion-9"
+    className="emotion-10"
   >
     <span
       className="emotion-0"
@@ -147,6 +160,11 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
       <span
         className="emotion-2"
       >
+        <img
+          alt="Account 2"
+          className="emotion-5"
+          src="http://placekitten.com/g/60/32"
+        />
         <span
           className="emotion-0"
           style={
@@ -175,7 +193,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
     </li>
   </ul>
   <ul
-    className="emotion-9"
+    className="emotion-10"
   >
     <span
       className="emotion-0"
@@ -196,7 +214,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
       tabIndex="0"
     >
       <span
-        className="emotion-12"
+        className="emotion-13"
       >
         <span
           className="emotion-0"
@@ -232,8 +250,13 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
       tabIndex="0"
     >
       <span
-        className="emotion-12"
+        className="emotion-13"
       >
+        <img
+          alt="Project 2"
+          className="emotion-5"
+          src="http://placekitten.com/g/32/32"
+        />
         <span
           className="emotion-0"
           style={
