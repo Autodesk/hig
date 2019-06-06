@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumbs renders with two Typography children 1`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+<ul
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexWrap": "wrap",
+      "fontFamily": "ArtifaktElement, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": 400,
+      "lineHeight": "1.428571429",
+      "listStyle": "none",
+      "margin": 0,
+      "padding": 0,
+    }
+  }
+>
+  <li
+    style={
+      Object {
+        "margin": 0,
+        "padding": 0,
+      }
+    }
+  >
+    <p
+      className="emotion-0"
+    >
+      A
+    </p>
+  </li>
+  <li
+    style={
+      Object {
+        "color": "#3c3c3c",
+        "cursor": "default",
+        "margin": "0 8px",
+        "opacity": 0.5,
+        "padding": 0,
+      }
+    }
+  >
+    /
+  </li>
+  <li
+    style={
+      Object {
+        "margin": 0,
+        "padding": 0,
+      }
+    }
+  >
+    <p
+      className="emotion-0"
+    >
+      B
+    </p>
+  </li>
+</ul>
+`;
