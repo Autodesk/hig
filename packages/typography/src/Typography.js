@@ -36,11 +36,7 @@ export default class Typography extends Component {
     /**
      * Indicates the initial Typography style
      */
-    variant: PropTypes.oneOf(AVAILABLE_VARIANTS),
-    /**
-     * Specifies the additional css class to be added on the component
-     */
-    className: PropTypes.string
+    variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
   };
 
   elementType = () => {
@@ -59,10 +55,11 @@ export default class Typography extends Component {
       children,
       fontWeight,
       variant,
-      className,
       elementType, // we don't want this included in the otherProps that appear in the DOM
       ...otherProps
     } = this.props;
+
+    const { className } = otherProps;
 
     return (
       <ThemeContext.Consumer>
@@ -76,8 +73,8 @@ export default class Typography extends Component {
 
           return (
             <ElementType
-              className={cx(css(styles.typography), className)}
               {...otherProps}
+              className={cx(css(styles.typography), className)}
             >
               {children}
             </ElementType>
