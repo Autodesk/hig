@@ -20,9 +20,6 @@ export default function stylesheet(props, themeData) {
     wrapper: {
       position: "relative"
     },
-
-    input: styles => Object.assign(styles, { fontWeight: 600 }),
-
     caret: {
       position: "absolute",
       top: "50%",

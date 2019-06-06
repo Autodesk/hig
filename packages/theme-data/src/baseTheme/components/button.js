@@ -265,7 +265,7 @@ export default {
   "button.outline.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "button.outline.borderColor"
     }
   },
   "button.outline.pressed.halo.color": {

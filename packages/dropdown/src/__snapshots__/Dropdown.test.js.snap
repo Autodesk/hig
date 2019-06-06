@@ -61,6 +61,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -448,6 +449,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -760,6 +762,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -948,6 +951,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -1209,6 +1213,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -1416,6 +1421,7 @@ exports[`Dropdown renders with default value 1`] = `
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -1728,6 +1734,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -1989,6 +1996,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -2317,6 +2325,7 @@ exports[`Dropdown renders with option specific and general option render functio
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -2533,6 +2542,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -2785,6 +2795,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -3001,6 +3012,7 @@ exports[`Dropdown renders without props 1`] = `
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {

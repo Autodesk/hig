@@ -80,9 +80,6 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.accentColor"
-    },
-    transform: {
-      alpha: 0.5
     }
   },
   "checkbox.focus.halo.color": {

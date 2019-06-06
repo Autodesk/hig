@@ -12,7 +12,8 @@ const TEMP_DIRECTORY = path.resolve(__dirname, "../.temp");
 
 /** Style Dictionary requires paths with trailing slashes */
 const buildPathByPlatform = {
-  scss: `${BUILD_DIRECTORY}/scss/variables/`
+  scss: `${BUILD_DIRECTORY}/scss/variables/`,
+  less: `${BUILD_DIRECTORY}/less/variables/`
 };
 
 function handleError(error) {
@@ -89,6 +90,15 @@ function createArtifactBuilder(tempFile, themeName) {
           {
             destination: `_${themeName}.scss`,
             format: "scss/variables"
+          }
+        ]
+      },
+      less: {
+        buildPath: buildPathByPlatform.less,
+        files: [
+          {
+            destination: `_${themeName}.less`,
+            format: "less/variables"
           }
         ]
       }

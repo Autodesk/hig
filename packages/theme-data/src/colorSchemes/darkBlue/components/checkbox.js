@@ -14,11 +14,6 @@ export default {
   },
 
   // Focus
-  "checkbox.focus.borderColor": {
-    transform: {
-      alpha: 0.5
-    }
-  },
   "checkbox.focus.halo.color": {
     value: {
       ref: "basics.colors.autodeskBlue400"

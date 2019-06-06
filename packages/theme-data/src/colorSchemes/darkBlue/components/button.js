@@ -68,11 +68,6 @@ export default {
       ref: "button.solid.focus.halo.color"
     }
   },
-  "button.outline.pressed.borderColor": {
-    value: {
-      ref: "colorScheme.accentColor"
-    }
-  },
   /* flat */
   "button.flat.textColor": {
     value: "#6DD2FF"
