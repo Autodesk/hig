@@ -1,3 +1,11 @@
+# [@hig/radio-button-v1.0.7](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.6...@hig/radio-button@1.0.7) (2019-06-07)
+
+
+### Bug Fixes
+
+* use correct border color for focused unselected state ([b3d9d7d](https://github.com/Autodesk/hig/commit/b3d9d7d))
+* use proper border color in focus state ([c539639](https://github.com/Autodesk/hig/commit/c539639))
+
 # [@hig/radio-button-v1.0.6](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.5...@hig/radio-button@1.0.6) (2019-05-22)
 
 
