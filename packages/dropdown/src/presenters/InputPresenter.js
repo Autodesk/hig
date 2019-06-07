@@ -6,6 +6,16 @@ import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./InputPresenter.stylesheet";
 
+function customStyles(inputStylesheet) {
+  return {
+    ...inputStylesheet,
+    input: {
+      ...inputStylesheet.input,
+      cursor: "pointer"
+    }
+  };
+}
+
 export default function InputPresenter(props) {
   const { isOpen, ...otherProps } = props;
 
@@ -20,11 +30,7 @@ export default function InputPresenter(props) {
 
         return (
           <div className={css(stylesheet(props, resolvedRoles).wrapper)}>
-            <Input
-              {...otherProps}
-              stylesheet={stylesheet(props, resolvedRoles).input}
-              readOnly
-            />
+            <Input {...otherProps} stylesheet={customStyles} readOnly />
             <CaretIcon
               style={stylesheet(props, resolvedRoles).caret}
               color={iconColor}

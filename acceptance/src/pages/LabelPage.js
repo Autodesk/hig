@@ -32,7 +32,7 @@ function LabelPage() {
                           <Label htmlFor={key} disabled={props.disabled} variant={variant}>
                             {label}
                           </Label>
-                          <Spacer spacing="s" />
+                          <Spacer spacing="xs" />
                           <Input id={key} {...props} variant="box" />
                           <Spacer spacing="xs" />
                         </div>
