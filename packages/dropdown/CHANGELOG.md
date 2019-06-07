@@ -1,3 +1,10 @@
+# [@hig/dropdown-v2.0.6](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.5...@hig/dropdown@2.0.6) (2019-06-07)
+
+
+### Bug Fixes
+
+* cursor should be pointer and not text ([0751d13](https://github.com/Autodesk/hig/commit/0751d13))
+
 # [@hig/dropdown-v2.0.5](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.4...@hig/dropdown@2.0.5) (2019-05-10)
 
 
