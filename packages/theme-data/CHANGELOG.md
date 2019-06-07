@@ -1,3 +1,18 @@
+# [@hig/theme-data-v2.8.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.7.0...@hig/theme-data@2.8.0) (2019-06-07)
+
+
+### Bug Fixes
+
+* correct base color for dark blue theme ([7bea1bf](https://github.com/Autodesk/hig/commit/7bea1bf))
+* correct button hover/focus colors ([302e984](https://github.com/Autodesk/hig/commit/302e984))
+* correct checkbox hover/focus colors ([7c56ed7](https://github.com/Autodesk/hig/commit/7c56ed7))
+* correct slider hover/focus colors ([fab82c9](https://github.com/Autodesk/hig/commit/fab82c9))
+
+
+### Features
+
+* export theme-data as less variables ([307112d](https://github.com/Autodesk/hig/commit/307112d))
+
 # [@hig/theme-data-v2.7.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.6.0...@hig/theme-data@2.7.0) (2019-05-22)
 
 
