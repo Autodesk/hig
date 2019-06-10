@@ -10,10 +10,12 @@ const ExampleSideNav = () => (
   <SideNav
     headerLabel={text("Header Label", "Storybook")}
     headerLink={text("Header Link", "https://www.autodesk.com")}
+    onClickHeader={action("onClick")}
     onMinimize={action("onMinimize")}
     showMinimizeButton={boolean("Show Minimize Button", false)}
     superHeaderLabel={text("Superheader Label", "HIG")}
     superHeaderLink={text("Superheader Link", "https://www.autodesk.com")}
+    onClickSuperHeader={action("onClick")}
     groups={
       <SideNav.Group>
         <SideNav.Module title="Module 1" icon={<Insight24 />} activeChildren>
