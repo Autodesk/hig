@@ -57,6 +57,9 @@
     }
   },
   "dependencies": {
+    "@hig/icons": "^2.1.1",
+    "@hig/theme-context": "^3.0.0",
+    "@hig/theme-data": "^2.8.0",
     "emotion": "^10.0.0"
   }
 }

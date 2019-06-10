@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#2E4258;}
+	.st1{display:none;}
+	.st2{display:inline;}
+</style>
+<g id="Layer_1">
+	<title>authoring-collaboratino-24</title>
+	<path class="st0" d="M20,3H9C8.4,3,8,3.4,8,4v3h1V4h11v11h-3v1h3c0.6,0,1-0.4,1-1V4C21,3.4,20.6,3,20,3z"/>
+	<path class="st0" d="M15,8H4C3.4,8,3,8.4,3,9v11c0,0.6,0.4,1,1,1h11c0.6,0,1-0.4,1-1V9C16,8.4,15.6,8,15,8z M15,20H4V9h11V20z"/>
+	<rect x="9" y="11" class="st0" width="1" height="7"/>
+	<rect x="6" y="14" class="st0" width="7" height="1"/>
+</g>
+<g id="Layer_2" class="st1">
+	<g id="final_1_" class="st2">
+		<g>
+			<path class="st0" d="M8,9v6c0,0.6,0.4,1,1,1h7V9c0-0.6-0.4-1-1-1H8V9z M9,9h6v6H9V9z"/>
+			<path class="st0" d="M20,3H9C8.4,3,8,3.4,8,4v3h1V4h11v11h-3v1h3c0.6,0,1-0.4,1-1V4C21,3.4,20.6,3,20,3z"/>
+			<path class="st0" d="M15,17v3H4V9h3V8H4C3.4,8,3,8.4,3,9v11c0,0.6,0.4,1,1,1h11c0.6,0,1-0.4,1-1v-3H15z"/>
+		</g>
+	</g>
+	<rect x="6.5" y="8" class="st2" width="2.5" height="1"/>
+</g>
+</svg>
