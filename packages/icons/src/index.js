@@ -125,6 +125,7 @@ import ExpandPanel16SVG from "./icons/information-dense/expand-panel.svg";
 import Error16SVG from "./icons/information-dense/error.svg";
 import Education16SVG from "./icons/information-dense/education.svg";
 import Edit16SVG from "./icons/information-dense/edit.svg";
+import Duplicate16SVG from "./icons/information-dense/duplicate.svg";
 import DropdownCaretUp16SVG from "./icons/information-dense/dropdown-caret-up.svg";
 import DropdownCaretRight16SVG from "./icons/information-dense/dropdown-caret-right.svg";
 import DropdownCaretLeft16SVG from "./icons/information-dense/dropdown-caret-left.svg";
@@ -3375,6 +3376,21 @@ export const DropdownCaretUp16 = props => (
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <DropdownCaretUp16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const Duplicate16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Duplicate16SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
