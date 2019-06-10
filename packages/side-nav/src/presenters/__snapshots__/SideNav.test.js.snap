@@ -1,5 +1,144 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`side-nav/presenters/SideNav snapshot tests renders headers with onClick 1`] = `
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  box-sizing: border-box;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  height: 100%;
+  margin: 4px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.emotion-2::-webkit-scrollbar {
+  width: 4px;
+}
+
+.emotion-2::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 200px;
+  border-radius: 2px;
+}
+
+.emotion-0 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  font-family: ArtifaktElement,sans-serif;
+  margin: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #006EAF;
+  outline: none;
+}
+
+<nav
+  className="emotion-3"
+>
+  <div
+    className="emotion-2"
+  >
+    <div>
+      <a
+        className="emotion-0"
+        href="/"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        style={
+          Object {
+            "&:after": Object {
+              "@media (min-width: 769px)": Object {
+                "left": "16px",
+                "right": "12px",
+              },
+              "borderTop": "1px solid rgba(60, 60, 60, 0.25)",
+              "bottom": 0,
+              "content": "\\"\\"",
+              "display": "block",
+              "height": "1px",
+              "left": "8px",
+              "position": "absolute",
+              "right": "8px",
+              "top": "auto",
+            },
+            "color": "#3c3c3c",
+            "cursor": "pointer",
+            "display": "block",
+            "fontSize": "12px",
+            "fontWeight": "600",
+            "padding": "0 12px 0 16px",
+            "position": "relative",
+            "textDecoration": "none",
+          }
+        }
+        target={undefined}
+      >
+        HIG
+      </a>
+      <span
+        className="emotion-0"
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        role="button"
+        style={
+          Object {
+            "&:after": Object {
+              "@media (min-width: 769px)": Object {
+                "left": "16px",
+                "right": "12px",
+              },
+              "borderTop": "1px solid rgba(60, 60, 60, 0.25)",
+              "bottom": 0,
+              "content": "\\"\\"",
+              "display": "block",
+              "height": "1px",
+              "left": "8px",
+              "position": "absolute",
+              "right": "8px",
+              "top": "auto",
+            },
+            "color": "#3c3c3c",
+            "display": "block",
+            "fontSize": "20px",
+            "padding": "12px 0",
+            "position": "relative",
+          }
+        }
+      >
+        Storybook
+      </span>
+    </div>
+  </div>
+</nav>
+`;
+
 exports[`side-nav/presenters/SideNav snapshot tests renders with headers 1`] = `
 .emotion-3 {
   display: -webkit-box;
