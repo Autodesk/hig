@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.2...@hig/project-account-switcher@2.0.3) (2019-06-12)
+
+
+### Bug Fixes
+
+* dropdown list to be sized based on text width ([670cc3b](https://github.com/Autodesk/hig/commit/670cc3b))
+
 # [@hig/project-account-switcher-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.1...@hig/project-account-switcher@2.0.2) (2019-06-05)
 
 
