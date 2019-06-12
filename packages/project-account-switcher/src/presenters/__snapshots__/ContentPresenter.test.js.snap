@@ -28,6 +28,7 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
   align-items: center;
   width: 100%;
   padding-top: 8px;
+  white-space: nowrap;
 }
 
 .emotion-2 {

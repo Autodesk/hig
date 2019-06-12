@@ -134,7 +134,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 
 .emotion-32 {
   margin: 0;
-  width: 200px;
   padding: 0 10px 10px 10px;
 }
 
@@ -174,6 +173,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   align-items: center;
   width: 100%;
   padding-top: 8px;
+  white-space: nowrap;
 }
 
 .emotion-14 {
@@ -633,7 +633,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 
 .emotion-32 {
   margin: 0;
-  width: 200px;
   padding: 0 10px 10px 10px;
 }
 
@@ -673,6 +672,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
   align-items: center;
   width: 100%;
   padding-top: 8px;
+  white-space: nowrap;
 }
 
 .emotion-14 {

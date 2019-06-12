@@ -3,7 +3,6 @@
 exports[`project-account-switcher/presenters/PanelPresenter  1`] = `
 .emotion-0 {
   margin: 0;
-  width: 200px;
   padding: 0 10px 10px 10px;
 }
 
@@ -39,7 +38,6 @@ exports[`project-account-switcher/presenters/PanelPresenter  1`] = `
 exports[`project-account-switcher/presenters/PanelPresenter  2`] = `
 .emotion-0 {
   margin: 0;
-  width: 200px;
   padding: 0 10px 10px 10px;
 }
 
