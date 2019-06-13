@@ -168,7 +168,7 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   position: relative;
   top: 50%;
   -webkit-appearance: none;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .emotion-0::-webkit-slider-thumb {
@@ -194,7 +194,7 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   background-color: rgba(128,128,128,0.2);
   color: transparent;
   outline: none;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .emotion-0::-moz-range-track {
@@ -204,7 +204,7 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   background-color: rgba(128,128,128,0.2);
   color: transparent;
   outline: none;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .emotion-0::-webkit-slider-runnable-track {
@@ -214,7 +214,7 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   background-color: rgba(128,128,128,0.2);
   color: transparent;
   outline: none;
-  opacity: 0.5;
+  opacity: 0.4;
   background-image: linear-gradient(#808080,#808080);
   background-position: 0;
   background-size: calc((0.5 * 12px)  + (NaN * (100% - 12px))) 100%;
@@ -229,7 +229,7 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
 .emotion-0::-moz-range-progress {
   border: none;
   background-color: #808080;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 <input
@@ -276,7 +276,7 @@ exports[`Slider/presenters/SliderPresenter renders focused 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.25);
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.35);
   position: relative;
   top: 50%;
   -webkit-appearance: none;
@@ -289,7 +289,7 @@ exports[`Slider/presenters/SliderPresenter renders focused 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.25);
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.35);
   position: relative;
   top: 50%;
   -webkit-appearance: none;
@@ -302,7 +302,7 @@ exports[`Slider/presenters/SliderPresenter renders focused 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px rgba(6,150,215,0.25);
+  box-shadow: 0 0 0 2px rgba(6,150,215,0.35);
   position: relative;
   top: 50%;
   -webkit-appearance: none;
@@ -516,7 +516,7 @@ exports[`Slider/presenters/SliderPresenter renders pressed 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.25);
+  box-shadow: 0 0 0 4px rgba(128,128,128,0.25);
   position: relative;
   top: 50%;
   -webkit-appearance: none;
@@ -529,7 +529,7 @@ exports[`Slider/presenters/SliderPresenter renders pressed 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.25);
+  box-shadow: 0 0 0 4px rgba(128,128,128,0.25);
   position: relative;
   top: 50%;
   -webkit-appearance: none;
@@ -542,7 +542,7 @@ exports[`Slider/presenters/SliderPresenter renders pressed 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(6,150,215,0.25);
+  box-shadow: 0 0 0 4px rgba(128,128,128,0.25);
   position: relative;
   top: 50%;
   -webkit-appearance: none;

@@ -17,6 +17,7 @@ exports[`Button  1`] = `
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -54,7 +55,9 @@ exports[`Button  1`] = `
   tabIndex="0"
   target={undefined}
 >
-  <span>
+  <span
+    className=""
+  >
     Settings
   </span>
 </button>
@@ -77,6 +80,7 @@ exports[`Button  2`] = `
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -114,7 +118,9 @@ exports[`Button  2`] = `
   tabIndex="0"
   target={undefined}
 >
-  <span>
+  <span
+    className=""
+  >
     Settings
   </span>
 </button>
@@ -137,6 +143,7 @@ exports[`Button  3`] = `
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -174,7 +181,9 @@ exports[`Button  3`] = `
   tabIndex="0"
   target={undefined}
 >
-  <span>
+  <span
+    className=""
+  >
     Settings
   </span>
 </button>
@@ -197,6 +206,7 @@ exports[`Button  4`] = `
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -234,14 +244,16 @@ exports[`Button  4`] = `
   tabIndex="0"
   target={undefined}
 >
-  <span>
+  <span
+    className=""
+  >
     Settings
   </span>
 </button>
 `;
 
 exports[`Button  5`] = `
-.emotion-1 {
+.emotion-2 {
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
@@ -257,6 +269,7 @@ exports[`Button  5`] = `
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -271,25 +284,31 @@ exports[`Button  5`] = `
   background: #0696d7;
 }
 
-.emotion-1:visited {
+.emotion-2:visited {
   color: #f5f5f5;
 }
 
-.emotion-1 svg * {
+.emotion-2 svg * {
   fill: #f5f5f5;
 }
 
 .emotion-0 {
   display: inline-block;
-  position: relative;
+  position: absolute;
   height: 24px;
-  vertical-align: middle;
   margin-right: 4px;
-  margin-bottom: 1px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-1 {
+  margin-left: calc(24px + 4px);
 }
 
 <button
-  className="emotion-1"
+  className="emotion-2"
   disabled={false}
   href={undefined}
   onBlur={[Function]}
@@ -308,7 +327,9 @@ exports[`Button  5`] = `
   >
     &lt;Icon /&gt;
   </span>
-  <span>
+  <span
+    className="emotion-1"
+  >
     Settings
   </span>
 </button>
@@ -331,6 +352,7 @@ exports[`Button  6`] = `
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
@@ -368,7 +390,9 @@ exports[`Button  6`] = `
   tabIndex="0"
   target={undefined}
 >
-  <span>
+  <span
+    className=""
+  >
     Settings
   </span>
 </a>

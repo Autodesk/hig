@@ -7,7 +7,12 @@ describe("stylesheet", () => {
       disabled: false,
       type: "solid"
     };
-    expect(stylesheet(props, lightGrayTheme)).toEqual(expect.any(Object));
+    const theme = {
+      themeId: "medium-density"
+    };
+    expect(stylesheet(props, lightGrayTheme, theme)).toEqual(
+      expect.any(Object)
+    );
   });
 
   describe("when disabled", () => {
@@ -17,7 +22,10 @@ describe("stylesheet", () => {
         hasFocus: true,
         type: "solid"
       };
-      const styles = stylesheet(props, lightGrayTheme);
+      const theme = {
+        themeId: "medium-density"
+      };
+      const styles = stylesheet(props, lightGrayTheme, theme);
       expect(styles.button.boxShadow).not.toBeDefined();
     });
   });

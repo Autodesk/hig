@@ -5,7 +5,6 @@ import mediumDensityTheme from "../../densities/mediumDensity";
 import system from "./system";
 import banner from "./components/banner";
 import formField from "./components/formField";
-import input from "./components/input";
 import skeletonItem from "./components/skeletonItem";
 
 const lightGrayThemeConfig = extendTheme(
@@ -16,7 +15,6 @@ const lightGrayThemeConfig = extendTheme(
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     banner,
     formField,
-    input,
     skeletonItem
   )
 );

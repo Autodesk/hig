@@ -31,14 +31,6 @@ export default {
       alpha: 0.35
     }
   },
-  "button.solid.pressed.halo.color": {
-    value: {
-      ref: "colorScheme.accentColor"
-    },
-    transform: {
-      alpha: 0.35
-    }
-  },
   /* outline */
   "button.outline.textColor": {
     value: {
@@ -73,23 +65,7 @@ export default {
   },
   "button.outline.focus.halo.color": {
     value: {
-      ref: "colorScheme.accentColor"
-    },
-    transform: {
-      alpha: 0.35
-    }
-  },
-  "button.outline.pressed.borderColor": {
-    value: {
-      ref: "colorScheme.accentColor"
-    }
-  },
-  "button.outline.pressed.halo.color": {
-    value: {
-      ref: "colorScheme.accentColor"
-    },
-    transform: {
-      alpha: 0.35
+      ref: "button.solid.focus.halo.color"
     }
   },
   /* flat */
@@ -109,18 +85,7 @@ export default {
   },
   "button.flat.focus.halo.color": {
     value: {
-      ref: "colorScheme.accentColor"
-    },
-    transform: {
-      alpha: 0.35
-    }
-  },
-  "button.flat.pressed.halo.color": {
-    value: {
-      ref: "colorScheme.accentColor"
-    },
-    transform: {
-      alpha: 0.35
+      ref: "button.solid.focus.halo.color"
     }
   }
 };

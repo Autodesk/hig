@@ -124,7 +124,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.25
+      alpha: 0.35
     }
   },
 
@@ -138,7 +138,7 @@ export default {
   "button.pressed.halo.color": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "colorScheme.baseColor"
     },
     transform: {
       alpha: 0.25
@@ -265,7 +265,7 @@ export default {
   "button.outline.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "button.outline.borderColor"
     }
   },
   "button.outline.pressed.halo.color": {

@@ -1,3 +1,10 @@
+# [@hig/side-nav-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.0.5...@hig/side-nav@2.1.0) (2019-06-12)
+
+
+### Features
+
+* Enable onClick events for sideNav headerLink and superHeaderLink ([a2c1d22](https://github.com/Autodesk/hig/commit/a2c1d22))
+
 # [@hig/side-nav-v2.0.5](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.0.4...@hig/side-nav@2.0.5) (2019-05-10)
 
 

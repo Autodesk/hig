@@ -38,7 +38,7 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
   display: block;
   box-sizing: border-box;
   color: transparent;
-  border: 1px solid rgba(128,128,128,0.5);
+  border: none;
   background-color: #808080;
   text-align: center;
   font-size: 25px;
@@ -47,7 +47,7 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
   width: 16px;
   border-radius: 0;
   cursor: default;
-  opacity: 0.5;
+  opacity: 0.4;
   box-shadow: none;
   pointer-events: none;
 }

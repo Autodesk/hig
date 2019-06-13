@@ -1,6 +1,6 @@
 {
   "name": "@hig/side-nav",
-  "version": "2.0.5",
+  "version": "2.1.0",
   "description": "HIG SideNav components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -37,7 +37,7 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.0",
-    "@hig/theme-data": "^2.6.0",
+    "@hig/theme-data": "^2.8.0",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {

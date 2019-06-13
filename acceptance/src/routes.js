@@ -7,6 +7,7 @@ import DropdownPage from "./pages/DropdownPage";
 import IconnButtonsPage from "./pages/IconButtonsPage";
 import IconsPage from "./pages/IconsPage";
 import InputPage from "./pages/InputPage";
+import LabelPage from "./pages/LabelPage";
 import ModalPage from "./pages/ModalPage";
 import MuiAvatarPage from "./pages/material-ui/AvatarPage";
 import MuiButtonsPage from "./pages/material-ui/ButtonsPage";
@@ -31,6 +32,7 @@ export default [
   { path: "/icons/", component: IconsPage, label: "Icons" },
   { path: "/icon-button/", component: IconnButtonsPage, label: "Icon Button" },
   { path: "/input/", component: InputPage, label: "Input" },
+  { path: "/label/", component: LabelPage, label: "Label"},
   { path: "/modal/", component: ModalPage, label: "Modal" },
   { path: "/progress-bar/", component: ProgressBarPage, label: "Progress Bar" },
   { path: "/progress-ring/", component: ProgressRingPage, label: "Progress Ring" },

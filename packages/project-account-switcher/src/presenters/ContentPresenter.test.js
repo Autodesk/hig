@@ -13,7 +13,11 @@ describe("project-account-switcher/presenters/ContentPresenter", () => {
         accountTitle: "Accounts",
         accounts: [
           { id: "1", label: "Account 1" },
-          { id: "2", label: "Account 2" }
+          {
+            id: "2",
+            label: "Account 2",
+            image: "http://placekitten.com/g/60/32"
+          }
         ],
         activeAccountObj: { id: "1", label: "Account 1" },
         activeProjectObj: { id: "2", label: "Project 2" },
@@ -22,7 +26,11 @@ describe("project-account-switcher/presenters/ContentPresenter", () => {
         projectTitle: "Projects",
         projects: [
           { id: "1", label: "Project 1" },
-          { id: "2", label: "Project 2" }
+          {
+            id: "2",
+            label: "Project 2",
+            image: "http://placekitten.com/g/32/32"
+          }
         ]
       }
     }

@@ -6,7 +6,7 @@ export default {
   },
   baseColor: {
     value: {
-      ref: "basics.colors.charcoal600"
+      ref: "basics.colors.darkBlue200"
     }
   },
   "component.backgroundColor": {

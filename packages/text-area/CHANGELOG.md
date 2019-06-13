@@ -1,3 +1,10 @@
+# [@hig/text-area-v1.1.3](https://github.com/Autodesk/hig/compare/@hig/text-area@1.1.2...@hig/text-area@1.1.3) (2019-05-22)
+
+
+### Bug Fixes
+
+* remove gap between halo and textarea ([190cf36](https://github.com/Autodesk/hig/commit/190cf36))
+
 # [@hig/text-area-v1.1.2](https://github.com/Autodesk/hig/compare/@hig/text-area@1.1.1...@hig/text-area@1.1.2) (2019-03-20)
 
 

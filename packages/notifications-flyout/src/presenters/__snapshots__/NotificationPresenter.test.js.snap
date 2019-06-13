@@ -99,7 +99,7 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
 
 .emotion-0 a:focus {
   color: #006EAF;
-  outline: solid 2px rgba(6,150,215,0.25);
+  outline: solid 2px rgba(6,150,215,0.35);
 }
 
 .emotion-0 p {
@@ -360,7 +360,7 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders without p
 
 .emotion-0 a:focus {
   color: #006EAF;
-  outline: solid 2px rgba(6,150,215,0.25);
+  outline: solid 2px rgba(6,150,215,0.35);
 }
 
 .emotion-0 p {

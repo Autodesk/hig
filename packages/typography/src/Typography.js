@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
 import {
@@ -59,6 +59,8 @@ export default class Typography extends Component {
       ...otherProps
     } = this.props;
 
+    const { className } = otherProps;
+
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
@@ -70,7 +72,10 @@ export default class Typography extends Component {
           const ElementType = this.elementType();
 
           return (
-            <ElementType className={css(styles.typography)} {...otherProps}>
+            <ElementType
+              {...otherProps}
+              className={cx(css(styles.typography), className)}
+            >
               {children}
             </ElementType>
           );

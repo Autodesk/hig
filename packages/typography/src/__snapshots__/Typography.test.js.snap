@@ -151,3 +151,22 @@ exports[`Typography  8`] = `
   h3 variant should render nicely with figcaption.
 </figcaption>
 `;
+
+exports[`Typography  9`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+<p
+  className="emotion-0 additonal-class"
+>
+  Default should render nicely.
+</p>
+`;
