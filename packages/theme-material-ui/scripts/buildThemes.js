@@ -16,7 +16,7 @@ import generateAllThemes from "@hig/theme-data/src/utils/generateAllThemes";
 
 const buildMuiConfigPath = path.join(process.cwd(), "build/material-ui");
 
-function writeMuiConfigFile(dirPath, metadata, theme) {
+function writeMaterialUiConfigFile(dirPath, metadata, theme) {
   let themeBackground;
   let paperBackground;
 
@@ -41,7 +41,7 @@ function writeMuiConfigFile(dirPath, metadata, theme) {
       break;
   }
 
-  const muiTheme = dedent`export default {
+  const MaterialUITheme = dedent`export default {
     metadata: ${JSON.stringify(metadata, null, 4)},
     resolvedRoles: ${JSON.stringify(theme, null, 4)},
     props: {
@@ -257,12 +257,12 @@ function writeMuiConfigFile(dirPath, metadata, theme) {
   `;
 
   mkdirp.sync(dirPath);
-  fs.writeFileSync(path.join(dirPath, `${metadata.fileName}.js`), muiTheme);
+  fs.writeFileSync(path.join(dirPath, `${metadata.fileName}.js`), MaterialUITheme);
 }
 
 function writeTheme(theme) {
   const { metadata, resolvedRoles } = theme;
-  writeMuiConfigFile(buildMuiConfigPath, metadata, resolvedRoles);
+  writeMaterialUiConfigFile(buildMuiConfigPath, metadata, resolvedRoles);
 }
 
 generateAllThemes(colorSchemes, densities).forEach(writeTheme);
