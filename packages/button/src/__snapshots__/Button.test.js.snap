@@ -375,6 +375,69 @@ exports[`Button  6`] = `
   fill: #f5f5f5;
 }
 
+<button
+  className="emotion-0 custom-class"
+  disabled={false}
+  href={undefined}
+  onBlur={[Function]}
+  onClick={undefined}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseOver={undefined}
+  onMouseUp={[Function]}
+  tabIndex="0"
+  target={undefined}
+>
+  <span
+    className=""
+  >
+    Button Class
+  </span>
+</button>
+`;
+
+exports[`Button  7`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  position: relative;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #f5f5f5;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
 <a
   className="emotion-0"
   disabled={false}

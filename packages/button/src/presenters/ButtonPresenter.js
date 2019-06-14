@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
@@ -56,6 +56,8 @@ export default class ButtonPresenter extends Component {
       ...otherProps
     } = this.props;
 
+    const { className } = otherProps;
+
     const href = link || undefined;
     const tabIndex = disabled ? "-1" : "0";
     const Wrapper = link ? "a" : "button";
@@ -71,7 +73,8 @@ export default class ButtonPresenter extends Component {
           );
           return (
             <Wrapper
-              className={css(styles.button)}
+              {...otherProps}
+              className={cx(css(styles.button), className)}
               href={href}
               tabIndex={tabIndex}
               target={wrapperTarget}
@@ -84,7 +87,6 @@ export default class ButtonPresenter extends Component {
               onMouseOver={onHover}
               onMouseUp={onMouseUp}
               disabled={disabled}
-              {...otherProps}
             >
               {icon && <span className={css(styles.icon)}>{icon}</span>}
               <span className={icon ? css(styles.iconText) : ""}>{title}</span>
