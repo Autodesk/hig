@@ -58,6 +58,10 @@ export default class Button extends Component {
      */
     onMouseUp: PropTypes.func,
     /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func,
+    /**
      * Specifies where to display the linked URL
      */
     target: PropTypes.oneOf(availableTargets),
@@ -94,6 +98,7 @@ export default class Button extends Component {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
+      stylesheet,
       target,
       title,
       type,
@@ -136,6 +141,7 @@ export default class Button extends Component {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
+            stylesheet={stylesheet}
             target={target}
             title={title}
             type={type}
