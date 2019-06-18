@@ -10,6 +10,7 @@ HIG theme data is a representation of the HIG visual design language in the form
   - [Access theme data as ECMAScript module](#access-theme-data-as-ecmascript-module)
   - [Access theme data as JSON](#access-theme-data-as-json)
   - [Access theme data as SCSS variables](#access-theme-data-as-scss-variables)
+  - [Access theme data as LESS variables](#access-theme-data-as-less-variables)
 - [Available themes](#available-themes)
 - [Structure of a theme](#structure-of-a-theme)
   - [Types of roles](#types-of-roles)
@@ -63,7 +64,7 @@ console.log(lightGrayMediumDensityTheme);
 
 ### Access theme data as SCSS variables
 ```scss
-@import "@hig/theme-data/build/scss/_lightGrayMediumDensityTheme.scss";
+@import "@hig/theme-data/build/scss/variables/_lightGrayMediumDensityTheme.scss";
 
 .my-component {
     background-color: $colorScheme-surfaceLevel10Color;
@@ -71,9 +72,19 @@ console.log(lightGrayMediumDensityTheme);
 }
 ```
 
+### Access theme data as LESS variables
+```less
+@import "@hig/theme-data/build/less/variables/_lightGrayMediumDensityTheme.less";
+
+.my-component {
+    background-color: @colorScheme-surfaceLevel10Color;
+    color: @colorScheme-textColor;
+}
+```
+
 ## Available themes
 
-There are eight themes made up of four color schemes a two densities each. These themes are importable in three formats from respective folders in the build folder: [ESM](./build/esm), [JSON](./build/json), and [SCSS](./build/scss) 
+There are eight themes made up of four color schemes a two densities each. These themes are importable in three formats from respective folders in the build folder: [ESM](./build/esm), [JSON](./build/json), [SCSS](./build/scss), and [LESS](./build/less) 
 
 * Light gray, medium and high density 
 * Dark gray, medium and high density 
