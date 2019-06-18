@@ -27,6 +27,7 @@ export default class ButtonPresenter extends Component {
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
     onMouseUp: PropTypes.func,
+    stylesheet: PropTypes.func,
     target: PropTypes.oneOf(availableTargets),
     title: PropTypes.string.isRequired,
     type: PropTypes.oneOf(availableTypes),
@@ -49,6 +50,7 @@ export default class ButtonPresenter extends Component {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
+      stylesheet: customStylesheet,
       target,
       title,
       type,
@@ -71,10 +73,14 @@ export default class ButtonPresenter extends Component {
             resolvedRoles,
             metadata
           );
+          const cssStyles = customStylesheet
+            ? customStylesheet(styles, this.props, resolvedRoles, metadata)
+            : styles;
+
           return (
             <Wrapper
               {...otherProps}
-              className={cx(css(styles.button), className)}
+              className={cx(css(cssStyles.button), className)}
               href={href}
               tabIndex={tabIndex}
               target={wrapperTarget}
@@ -88,8 +94,10 @@ export default class ButtonPresenter extends Component {
               onMouseUp={onMouseUp}
               disabled={disabled}
             >
-              {icon && <span className={css(styles.icon)}>{icon}</span>}
-              <span className={icon ? css(styles.iconText) : ""}>{title}</span>
+              {icon && <span className={css(cssStyles.icon)}>{icon}</span>}
+              <span className={icon ? css(cssStyles.iconText) : ""}>
+                {title}
+              </span>
             </Wrapper>
           );
         }}
