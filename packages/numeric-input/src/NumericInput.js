@@ -46,46 +46,59 @@ function NumericInput(props) {
             initialValue={initialValue}
             onChange={onChangeProp}
             isDisabled={disabledProp}
+            step={step}
           >
-            {({ increment, decrement, value: controlledValue }) => (
-              <NumericInputPresenter
-                isDisabled={disabledProp}
-                hasFocus={hasFocus}
-                hasHover={hasHover}
-                stylesheet={stylesheet}
-                variant={variant}
-              >
-                <Input
-                  disabled={disabledProp}
+            {({ increment, decrement, value: controlledValue, setValue }) => {
+              // We let the behaviour component be responsible for the ultimate
+              // onChange event.
+              const onDirectChange = event => {
+                const newValue = event.target.value;
+
+                // The onChange event from the Input is a full event but we just
+                // want to return the changed value.
+                setValue(newValue);
+              };
+
+              return (
+                <NumericInputPresenter
+                  isDisabled={disabledProp}
                   hasFocus={hasFocus}
                   hasHover={hasHover}
-                  onFocus={onFocus}
-                  onBlur={onBlur}
-                  onMouseEnter={onMouseEnter}
-                  onMouseLeave={onMouseLeave}
-                  onChange={onChangeProp}
                   stylesheet={stylesheet}
                   variant={variant}
-                  value={controlledValue}
-                  {...otherProps}
-                />
-                <IncrementDecrementPresenter
-                  disabled={disabledProp}
-                  hasFocus={hasFocus}
-                  hasHover={hasHover}
-                  onFocus={onFocus}
-                  onBlur={onBlur}
-                  onMouseEnter={onMouseEnter}
-                  onMouseLeave={onMouseLeave}
-                  stylesheet={stylesheet}
-                  variant={variant}
-                  value={controlledValue}
-                  increment={increment}
-                  decrement={decrement}
-                  {...otherProps}
-                />
-              </NumericInputPresenter>
-            )}
+                >
+                  <Input
+                    disabled={disabledProp}
+                    hasFocus={hasFocus}
+                    hasHover={hasHover}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                    onChange={onDirectChange}
+                    stylesheet={stylesheet}
+                    variant={variant}
+                    value={controlledValue}
+                    {...otherProps}
+                  />
+                  <IncrementDecrementPresenter
+                    disabled={disabledProp}
+                    hasFocus={hasFocus}
+                    hasHover={hasHover}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onMouseEnter={onMouseEnter}
+                    onMouseLeave={onMouseLeave}
+                    stylesheet={stylesheet}
+                    variant={variant}
+                    value={controlledValue}
+                    increment={increment}
+                    decrement={decrement}
+                    {...otherProps}
+                  />
+                </NumericInputPresenter>
+              );
+            }}
           </NumericInputBehaviour>
         </div>
       )}
@@ -129,7 +142,7 @@ NumericInput.propTypes = {
   /**
    * The value of the control
    */
-  value: PropTypes.number,
+  value: PropTypes.string,
   /**
    * The visual variant of the input
    */

@@ -6,13 +6,11 @@ import {
   composesLikeControlBehavior
 } from "@hig/behaviors/test";
 
-import NumericInput from "./NumericInput";
-import InputPresenter from "./presenters/InputPresenter";
-import InputHaloPresenter from "./presenters/InputHaloPresenter";
+import Spinner from "./Spinner";
 
-describe("NumericInput", () => {
-  behavesLikeFocusBehavior(<NumericInput />);
-  behavesLikeHoverBehavior(<NumericInput />);
+describe("Spinner", () => {
+  behavesLikeFocusBehavior(<Spinner />);
+  behavesLikeHoverBehavior(<Spinner />);
   composesLikeControlBehavior({
     Subject: Input,
     Receiver: InputPresenter
@@ -21,7 +19,7 @@ describe("NumericInput", () => {
   describe("rendering variants", () => {
     describe("when variant='line'", () => {
       it("renders the line-style input", () => {
-        const wrapper = mount(<NumericInput variant="line" />);
+        const wrapper = mount(<Spinner variant="line" />);
 
         const decoration = wrapper.find(InputHaloPresenter);
         expect(decoration).toHaveProp("variant", "line");
@@ -30,7 +28,7 @@ describe("NumericInput", () => {
 
     describe("when variant='box'", () => {
       it("renders the box-style  input", () => {
-        const wrapper = mount(<NumericInput variant="box" />);
+        const wrapper = mount(<Spinner variant="box" />);
 
         const decoration = wrapper.find(InputHaloPresenter);
         expect(decoration).toHaveProp("variant", "box");
@@ -39,7 +37,7 @@ describe("NumericInput", () => {
 
     describe("when variant='plain'", () => {
       it("renders a plain input", () => {
-        const wrapper = mount(<NumericInput variant="plain" />);
+        const wrapper = mount(<Spinner variant="plain" />);
 
         expect(wrapper).not.toContain(InputHaloPresenter);
       });
@@ -53,7 +51,7 @@ describe("NumericInput", () => {
 
     beforeEach(() => {
       onChangeSpy = jest.fn();
-      wrapper = mount(<NumericInput value="foo" onChange={onChangeSpy} />);
+      wrapper = mount(<Spinner value="foo" onChange={onChangeSpy} />);
       interactiveElement = wrapper.find("input");
     });
 
@@ -86,9 +84,7 @@ describe("NumericInput", () => {
 
     beforeEach(() => {
       onChangeSpy = jest.fn();
-      wrapper = mount(
-        <NumericInput defaultValue="foo" onChange={onChangeSpy} />
-      );
+      wrapper = mount(<Spinner defaultValue="foo" onChange={onChangeSpy} />);
       interactiveElement = wrapper.find("input");
     });
 
@@ -115,7 +111,7 @@ describe("NumericInput", () => {
   });
 
   it("passes arbitrary props to input element", () => {
-    const wrapper = mount(<NumericInput data-my-attr="foo" />);
+    const wrapper = mount(<Spinner data-my-attr="foo" />);
     expect(wrapper.find("input")).toHaveProp("data-my-attr", "foo");
   });
 });

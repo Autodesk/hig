@@ -5,15 +5,18 @@ export default class NumericInputBehaviour extends Component {
   static propTypes = {
     children: PropTypes.func.isRequired,
     step: PropTypes.number,
-    value: PropTypes.number,
-    initialValue: PropTypes.number,
+    value: PropTypes.string,
+    initialValue: PropTypes.string,
     onChange: PropTypes.func,
     isDisabled: PropTypes.bool
   };
 
   static defaultProps = {
     step: 1,
-    isDisabled: false
+    isDisabled: false,
+    initialValue: undefined,
+    value: undefined,
+    onChange: undefined
   };
 
   constructor(props) {
@@ -30,12 +33,33 @@ export default class NumericInputBehaviour extends Component {
     }
   }
 
+  getNumericValue() {
+    if (!this.valueIsNumeric()) {
+      throw new Error("Can't get numeric value if value is not a number");
+    }
+
+    return +this.getValue();
+  }
+
   getValue() {
     return this.isValueControlled() ? this.props.value : this.state.value;
   }
 
+  setValue(value) {
+    this.props.onChange(value);
+    if (!this.isValueControlled()) {
+      this.setState({ value });
+    }
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  isNumeric(value) {
+    // eslint-disable-next-line no-restricted-globals
+    return !isNaN(value);
+  }
+
   isValueControlled() {
-    return this.props.value !== undefined;
+    return this.props.value !== undefined && this.props.value !== null;
   }
 
   updateValue(value) {
@@ -44,25 +68,31 @@ export default class NumericInputBehaviour extends Component {
       return;
     }
 
-    this.props.onChange(value);
-    if (!this.isValueControlled()) {
-      this.setState({ value });
-    }
+    this.setValue(value);
   }
 
   increment() {
-    this.updateValue(this.getValue() + this.props.step);
+    if (this.valueIsNumeric()) {
+      this.updateValue(this.getNumericValue() + this.props.step);
+    }
   }
 
   decrement() {
-    this.updateValue(this.getValue() - this.props.step);
+    if (this.valueIsNumeric()) {
+      this.updateValue(this.getNumericValue() - this.props.step);
+    }
+  }
+
+  valueIsNumeric() {
+    return this.isNumeric(this.getValue());
   }
 
   render() {
     return this.props.children({
       increment: this.increment,
       decrement: this.decrement,
-      value: this.getValue()
+      value: this.getValue(),
+      setValue: this.setValue
     });
   }
 }
