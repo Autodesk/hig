@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 
 import stylesheet from "./WrapperPresenter.stylesheet";
 
@@ -21,9 +21,14 @@ import stylesheet from "./WrapperPresenter.stylesheet";
  * @see https://github.com/paypal/downshift#getrootprops
  */
 export default function WrapperPresenter(props) {
-  const { children } = props;
+  const { disabled, children, ...otherProps } = props;
+  const { className } = otherProps;
 
-  return <div className={css(stylesheet(props))}>{children}</div>;
+  return (
+    <div {...otherProps} className={cx(css(stylesheet(props)), className)}>
+      {children}
+    </div>
+  );
 }
 
 WrapperPresenter.propTypes = {
