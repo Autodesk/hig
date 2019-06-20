@@ -35,7 +35,7 @@ For information on customizing a theme or importing theme data in different form
 
 ## Consume theme values in a component
 ```jsx
-import ThemeContext from '@hig/themes';
+import ThemeContext from '@hig/theme-context';
 
 function MyThemedComponent() {
   <ThemeContext.Consumer>{({ resolvedRoles, metadata }) => (
