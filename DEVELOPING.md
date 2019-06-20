@@ -151,7 +151,7 @@ Package versioning is automated via [Semantic Release][] and determined by commi
 
 In general you don't have to worry about maintaining the version number of the package because Semantic Release will automate the process for you. However there may be situations where you are developing a package and don't want its changes to be pushed to other dependent packages (either for local development or via [Greenkeeper](https://github.com/greenkeeperio/greenkeeper)). In such cases you may want to assign an explicit version and append an `"-alpha"` tag to indicate that the package is still in development.
 
-Using the [example package documentation][package-example] as a reference, create a new package with the version `1.0.0-alpha`.
+Using the [sample component documentation][sample-component] as a reference, create a new package with the version `1.0.0-alpha`.
 
 Per [Semantic Versioning 2.0.0][semver], the `"-alpha"` portion of the version labels the package as pre-release. Packages labeled as pre-release are ignored during deployment and when building dependent packages while in development. In other words, using "-alpha" on your package version will allow you to merge changes into the git development branch without impacting deployment or developers working on their local machines.
 
@@ -165,7 +165,7 @@ Combined with Semantic Release and Greenkeeper, this ensures that non-breaking (
 * In the commit that contains the breaking changes for a package–and any commit should only contain changes for one package–manually change the package version in `package.json` to the next major version and append "-alpha". For example, if the `package.json` looked like this
     ```json
     {
-      "name": "@hig/package-example",
+      "name": "@hig/sample-component",
       "version": "1.0.0",
       "description": "",
       "author": "Autodesk Inc.",
@@ -180,7 +180,7 @@ Combined with Semantic Release and Greenkeeper, this ensures that non-breaking (
 * When you're ready to release your package, manually remove "-alpha" from the version. For example, if the `package.json` looked like this
     ```json
     {
-      "name": "@hig/package-example",
+      "name": "@hig/sample-component",
       "version": "2.0.0-alpha",
       "description": "",
       "author": "Autodesk Inc.",
@@ -190,7 +190,7 @@ Combined with Semantic Release and Greenkeeper, this ensures that non-breaking (
     Manually change the version to `2.0.0`.
     
 * `yarn && yarn build` at the project root. Expect that `yarn.lock` will be unchanged, indicating that none of your dependent packages pulled in the breaking, major-version-bump changes. If a dependent package did pull in the breaking change, this might indicate that your package is not explicitly listed as a dependency or that the version compatibility listed in the dependent's `package.json` is not pinned to restrict updates to only minor and patch levels (e.g. `^1.0.0`). Our convention is to list dependencies allowing only minor and patch updates with `^`. 
-* On your development branch locally, run `yarn release:dry-run`. Assuming your breaking change commit message follows [Angular Git Commit Guidelines][], expect that Semantic Release will output something like `Create tag @hig/package-example@2.0.0`. This indicates that it would bump the version to `2.0.0` and publish it to NPM if this were not a dry run. If you don't see that, double check your previous steps.
+* On your development branch locally, run `yarn release:dry-run`. Assuming your breaking change commit message follows [Angular Git Commit Guidelines][], expect that Semantic Release will output something like `Create tag @hig/sample-component@2.0.0`. This indicates that it would bump the version to `2.0.0` and publish it to NPM if this were not a dry run. If you don't see that, double check your previous steps.
 * Proceed with posting a PR and merging your work into the development branch.
 * Your breaking changes under the new major version should not impact other packages without explicitly updating their `package.json` files.
 * Once your changes make it to master and CI, Semantic Release should properly bump the version to `2.0.0` and publish to NPM.
@@ -205,7 +205,7 @@ Subsequent pre-releases can be made by further changing the package version, e.g
 > A larger set of pre-release fields has a higher precedence than a smaller set, if all of the preceding identifiers are equal. Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 > - https://semver.org/#spec-item-11
 
-[package-example]: ./docs/package-example
+[sample-component]: ./docs/sample-component
 [npm-publish]: https://docs.npmjs.com/cli/publish
 [semver]: https://semver.org/
 [Angular Git Commit Guidelines][]

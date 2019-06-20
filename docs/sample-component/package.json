@@ -1,20 +1,20 @@
 {
   "private": true,
-  "name": "@hig/package-example",
+  "name": "@hig/sample-component-breadcrumbs",
   "version": "1.0.0-alpha",
-  "description": "",
+  "description": "hig sample component with breadcrumbs style",
   "author": "Autodesk Inc.",
+  "homepage": "https://hig.autodesk.com/packages/breadcrumbs",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Autodesk/hig.git"
+    "url": "git+https://github.com/garyps/hig.git"
   },
   "publishConfig": {
     "access": "public"
   },
   "main": "build/index.js",
   "module": "build/index.es.js",
-  "style": "build/index.css",
   "files": [
     "build/*"
   ],
@@ -30,6 +30,8 @@
     "@hig/semantic-release-config": "^0.1.0"
   },
   "peerDependencies": {
+    "@hig/theme-context": "^3.0.0",
+    "@hig/theme-data": "^2.4.0",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
