@@ -50,10 +50,12 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -160,6 +162,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
 
 .emotion-6 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -173,6 +176,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
 
 .emotion-6 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-4 {
@@ -281,10 +285,12 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-4 {
@@ -391,6 +397,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
 
 .emotion-5 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -404,6 +411,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
 
 .emotion-5 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-8 {
@@ -575,10 +583,12 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -685,6 +695,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
 
 .emotion-6 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -698,6 +709,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
 
 .emotion-6 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-4 {
@@ -846,10 +858,12 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -956,6 +970,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
 
 .emotion-6 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -969,6 +984,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
 
 .emotion-6 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-4 {
@@ -1115,10 +1131,12 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-4 {
@@ -1225,6 +1243,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
 
 .emotion-5 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -1238,6 +1257,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
 
 .emotion-5 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <div

@@ -7,10 +7,12 @@ exports[`checkbox/presenters/CheckPresenter renders with all props 1`] = `
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-4 {
@@ -131,10 +133,12 @@ exports[`checkbox/presenters/CheckPresenter renders without props 1`] = `
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <span

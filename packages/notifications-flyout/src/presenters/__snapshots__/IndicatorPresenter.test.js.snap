@@ -39,6 +39,7 @@ exports[`notifications-flyout/presenters/IndicatorPresenter renders with all pro
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -52,6 +53,7 @@ exports[`notifications-flyout/presenters/IndicatorPresenter renders with all pro
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-2 {
@@ -165,6 +167,7 @@ exports[`notifications-flyout/presenters/IndicatorPresenter renders without prop
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -178,6 +181,7 @@ exports[`notifications-flyout/presenters/IndicatorPresenter renders without prop
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <div

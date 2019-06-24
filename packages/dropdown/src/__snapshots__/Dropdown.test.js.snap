@@ -90,10 +90,12 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-14 {
@@ -170,10 +172,12 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 
 .emotion-9 {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 .emotion-9 > * {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 <div
@@ -478,10 +482,12 @@ exports[`Dropdown renders with a controlled value 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-9 {
@@ -558,10 +564,12 @@ exports[`Dropdown renders with a controlled value 1`] = `
 
 .emotion-7 {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 .emotion-7 > * {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 <div
@@ -791,10 +799,12 @@ exports[`Dropdown renders with a label and an ID 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -980,10 +990,12 @@ exports[`Dropdown renders with custom option formatting 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-8 {
@@ -1242,10 +1254,12 @@ exports[`Dropdown renders with custom option render function 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -1450,10 +1464,12 @@ exports[`Dropdown renders with default value 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-9 {
@@ -1530,10 +1546,12 @@ exports[`Dropdown renders with default value 1`] = `
 
 .emotion-7 {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 .emotion-7 > * {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 <div
@@ -1763,10 +1781,12 @@ exports[`Dropdown renders with multiple selection 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-8 {
@@ -2025,10 +2045,12 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-10 {
@@ -2105,10 +2127,12 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 
 .emotion-5 {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 .emotion-5 > * {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 <div
@@ -2354,10 +2378,12 @@ exports[`Dropdown renders with option specific and general option render functio
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -2571,10 +2597,12 @@ exports[`Dropdown renders with option specific render function 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -2824,10 +2852,12 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -3041,10 +3071,12 @@ exports[`Dropdown renders without props 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
