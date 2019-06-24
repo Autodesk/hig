@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actions 1`] = `
-.emotion-9 {
+.emotion-10 {
   background-color: #ffffff;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -99,7 +99,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
   text-align: initial;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -118,16 +118,61 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
   padding-right: calc(50px - calc((36px - 10px) / 2));
 }
 
-.emotion-7 svg {
+.emotion-8 svg {
   cursor: pointer;
+}
+
+.emotion-8 svg * {
+  fill: #808080;
+}
+
+.emotion-8:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-7 {
+  border: 2px solid transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  box-shadow: none;
+  background-color: transparent;
 }
 
 .emotion-7 svg * {
   fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
 }
 
-.emotion-7:hover svg * {
-  fill: #0696d7;
+.emotion-6 {
+  fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.emotion-6 > * {
+  fill: #808080;
 }
 
 .emotion-4 {
@@ -139,11 +184,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
 }
 
 <div
-  className="emotion-9"
+  className="emotion-10"
 >
   <div
     aria-live="polite"
-    className="emotion-8"
+    className="emotion-9"
     role="alert"
   >
     <figure
@@ -196,30 +241,41 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
       </div>
     </div>
     <div
-      className="emotion-7"
+      className="emotion-8"
     >
-      <svg
-        className="emotion-0"
-        height="24px"
+      <button
+        className="emotion-7"
+        onBlur={[Function]}
         onClick={undefined}
-        viewBox="0 0 24 24"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        title="Close"
       >
-        <title>
-          hig-icons/common/24/close-24
-        </title>
-        <path
-          d="M12 12.68l-7.61 7.61-.68-.68L11.32 12 3.71 4.38l.68-.67L12 11.32l7.61-7.61.68.67L12.68 12l7.61 7.61-.68.68z"
-        />
-      </svg>
+        <svg
+          className="emotion-6"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            close-m
+          </title>
+          <path
+            d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
 `;
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
-.emotion-8 {
+.emotion-9 {
   background-color: #ffffff;
 }
 
@@ -274,7 +330,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
   text-align: initial;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -293,19 +349,64 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
   padding-right: calc(50px - calc((36px - 10px) / 2));
 }
 
-.emotion-6 svg {
+.emotion-7 svg {
   cursor: pointer;
+}
+
+.emotion-7 svg * {
+  fill: #808080;
+}
+
+.emotion-7:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-6 {
+  border: 2px solid transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  box-shadow: none;
+  background-color: transparent;
 }
 
 .emotion-6 svg * {
   fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
 }
 
-.emotion-6:hover svg * {
-  fill: #0696d7;
+.emotion-5 {
+  fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
-.emotion-7 {
+.emotion-5 > * {
+  fill: #808080;
+}
+
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -349,11 +450,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
 }
 
 <div
-  className="emotion-8"
+  className="emotion-9"
 >
   <div
     aria-live="assertive"
-    className="emotion-7"
+    className="emotion-8"
     role="alert"
   >
     <figure
@@ -391,34 +492,45 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
       </div>
     </div>
     <div
-      className="emotion-6"
+      className="emotion-7"
     >
-      <svg
-        className="emotion-0"
-        height="24px"
+      <button
+        className="emotion-6"
+        onBlur={[Function]}
         onClick={undefined}
-        viewBox="0 0 24 24"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        title="Close"
       >
-        <title>
-          hig-icons/common/24/close-24
-        </title>
-        <path
-          d="M12 12.68l-7.61 7.61-.68-.68L11.32 12 3.71 4.38l.68-.67L12 11.32l7.61-7.61.68.67L12.68 12l7.61 7.61-.68.68z"
-        />
-      </svg>
+        <svg
+          className="emotion-5"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            close-m
+          </title>
+          <path
+            d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
 `;
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1`] = `
-.emotion-9 {
+.emotion-10 {
   background-color: #ffffff;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -512,7 +624,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
   text-align: initial;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -531,16 +643,61 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
   padding-right: calc(50px - calc((36px - 10px) / 2));
 }
 
-.emotion-7 svg {
+.emotion-8 svg {
   cursor: pointer;
+}
+
+.emotion-8 svg * {
+  fill: #808080;
+}
+
+.emotion-8:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-7 {
+  border: 2px solid transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  box-shadow: none;
+  background-color: transparent;
 }
 
 .emotion-7 svg * {
   fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
 }
 
-.emotion-7:hover svg * {
-  fill: #0696d7;
+.emotion-6 {
+  fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.emotion-6 > * {
+  fill: #808080;
 }
 
 .emotion-4 {
@@ -552,11 +709,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
 }
 
 <div
-  className="emotion-9"
+  className="emotion-10"
 >
   <div
     aria-live="polite"
-    className="emotion-8"
+    className="emotion-9"
     role="alert"
   >
     <figure
@@ -606,34 +763,45 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
       </div>
     </div>
     <div
-      className="emotion-7"
+      className="emotion-8"
     >
-      <svg
-        className="emotion-0"
-        height="24px"
+      <button
+        className="emotion-7"
+        onBlur={[Function]}
         onClick={undefined}
-        viewBox="0 0 24 24"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        title="Close"
       >
-        <title>
-          hig-icons/common/24/close-24
-        </title>
-        <path
-          d="M12 12.68l-7.61 7.61-.68-.68L11.32 12 3.71 4.38l.68-.67L12 11.32l7.61-7.61.68.67L12.68 12l7.61 7.61-.68.68z"
-        />
-      </svg>
+        <svg
+          className="emotion-6"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            close-m
+          </title>
+          <path
+            d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
 `;
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions 1`] = `
-.emotion-9 {
+.emotion-10 {
   background-color: #ffffff;
 }
 
-.emotion-8 {
+.emotion-9 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -727,7 +895,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
   text-align: initial;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -746,16 +914,61 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
   padding-right: calc(50px - calc((36px - 10px) / 2));
 }
 
-.emotion-7 svg {
+.emotion-8 svg {
   cursor: pointer;
+}
+
+.emotion-8 svg * {
+  fill: #808080;
+}
+
+.emotion-8:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-7 {
+  border: 2px solid transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  box-shadow: none;
+  background-color: transparent;
 }
 
 .emotion-7 svg * {
   fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
 }
 
-.emotion-7:hover svg * {
-  fill: #0696d7;
+.emotion-6 {
+  fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.emotion-6 > * {
+  fill: #808080;
 }
 
 .emotion-4 {
@@ -767,11 +980,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
 }
 
 <div
-  className="emotion-9"
+  className="emotion-10"
 >
   <div
     aria-live="polite"
-    className="emotion-8"
+    className="emotion-9"
     role="alert"
   >
     <figure
@@ -819,34 +1032,45 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
       </div>
     </div>
     <div
-      className="emotion-7"
+      className="emotion-8"
     >
-      <svg
-        className="emotion-0"
-        height="24px"
+      <button
+        className="emotion-7"
+        onBlur={[Function]}
         onClick={undefined}
-        viewBox="0 0 24 24"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        title="Close"
       >
-        <title>
-          hig-icons/common/24/close-24
-        </title>
-        <path
-          d="M12 12.68l-7.61 7.61-.68-.68L11.32 12 3.71 4.38l.68-.67L12 11.32l7.61-7.61.68.67L12.68 12l7.61 7.61-.68.68z"
-        />
-      </svg>
+        <svg
+          className="emotion-6"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            close-m
+          </title>
+          <path
+            d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
 `;
 
 exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
-.emotion-8 {
+.emotion-9 {
   background-color: #ffffff;
 }
 
-.emotion-7 {
+.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -940,7 +1164,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
   text-align: initial;
 }
 
-.emotion-6 {
+.emotion-7 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -959,24 +1183,69 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
   padding-right: calc(50px - calc((36px - 10px) / 2));
 }
 
-.emotion-6 svg {
+.emotion-7 svg {
   cursor: pointer;
+}
+
+.emotion-7 svg * {
+  fill: #808080;
+}
+
+.emotion-7:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-6 {
+  border: 2px solid transparent;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  box-shadow: none;
+  background-color: transparent;
 }
 
 .emotion-6 svg * {
   fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
 }
 
-.emotion-6:hover svg * {
-  fill: #0696d7;
+.emotion-5 {
+  fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.emotion-5 > * {
+  fill: #808080;
 }
 
 <div
-  className="emotion-8"
+  className="emotion-9"
 >
   <div
     aria-live="polite"
-    className="emotion-7"
+    className="emotion-8"
     role="alert"
   >
     <figure
@@ -1019,23 +1288,34 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
       </div>
     </div>
     <div
-      className="emotion-6"
+      className="emotion-7"
     >
-      <svg
-        className="emotion-0"
-        height="24px"
+      <button
+        className="emotion-6"
+        onBlur={[Function]}
         onClick={undefined}
-        viewBox="0 0 24 24"
-        width="24px"
-        xmlns="http://www.w3.org/2000/svg"
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        title="Close"
       >
-        <title>
-          hig-icons/common/24/close-24
-        </title>
-        <path
-          d="M12 12.68l-7.61 7.61-.68-.68L11.32 12 3.71 4.38l.68-.67L12 11.32l7.61-7.61.68.67L12.68 12l7.61 7.61-.68.68z"
-        />
-      </svg>
+        <svg
+          className="emotion-5"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            close-m
+          </title>
+          <path
+            d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
+          />
+        </svg>
+      </button>
     </div>
   </div>
 </div>
