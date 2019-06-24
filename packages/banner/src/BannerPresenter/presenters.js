@@ -4,7 +4,7 @@ import React from "react";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 import IconButton from "@hig/icon-button";
-import { Close24 } from "@hig/icons";
+import { CloseSUI, CloseMUI } from "@hig/icons";
 import Typography from "@hig/typography";
 import { types } from "../types";
 import stylesheet from "./stylesheet";
