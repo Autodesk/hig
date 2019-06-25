@@ -57,10 +57,12 @@ exports[`checkbox/Checkbox integration renders correctly 1`] = `
 
 .emotion-1 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-1 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <div

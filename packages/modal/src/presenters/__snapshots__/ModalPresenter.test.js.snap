@@ -42,6 +42,7 @@ exports[`modal/presenters/ModalPresenter  1`] = `
 
 .emotion-1 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -55,6 +56,7 @@ exports[`modal/presenters/ModalPresenter  1`] = `
 
 .emotion-1 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <header

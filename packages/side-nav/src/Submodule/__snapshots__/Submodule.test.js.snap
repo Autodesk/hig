@@ -147,10 +147,12 @@ exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <a

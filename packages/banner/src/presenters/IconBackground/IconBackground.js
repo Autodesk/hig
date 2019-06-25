@@ -2,16 +2,37 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
-import { Info24, Complete24, Issue24, Error24 } from "@hig/icons";
+import {
+  Complete16,
+  Complete24,
+  Error16,
+  Error24,
+  Info16,
+  Info24,
+  Issue16,
+  Issue24
+} from "@hig/icons";
 import stylesheet from "./stylesheet";
 import { types } from "../../types";
 
 /** @type {Object.<string, string>} */
 const iconNamesByType = {
-  [types.PRIMARY]: Info24,
-  [types.COMPLETE]: Complete24,
-  [types.WARNING]: Issue24,
-  [types.URGENT]: Error24
+  [types.PRIMARY]: {
+    high: Info16,
+    medium: Info24
+  },
+  [types.COMPLETE]: {
+    high: Complete16,
+    medium: Complete24
+  },
+  [types.WARNING]: {
+    high: Issue16,
+    medium: Issue24
+  },
+  [types.URGENT]: {
+    high: Error16,
+    medium: Error24
+  }
 };
 
 /**
@@ -24,14 +45,18 @@ const iconNamesByType = {
  * @returns {JSX.Element}
  */
 export function IconBackground({ type }) {
-  const Icon = iconNamesByType[type];
   return (
     <ThemeContext.Consumer>
-      {({ resolvedRoles }) => (
-        <figure className={css(stylesheet({ type }, resolvedRoles))}>
-          <Icon />
-        </figure>
-      )}
+      {({ resolvedRoles, metadata }) => {
+        const density =
+          metadata.densityId === "medium-density" ? "medium" : "high";
+        const Icon = iconNamesByType[type][density];
+        return (
+          <figure className={css(stylesheet({ type }, resolvedRoles))}>
+            <Icon />
+          </figure>
+        );
+      }}
     </ThemeContext.Consumer>
   );
 }
