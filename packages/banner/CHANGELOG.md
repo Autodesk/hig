@@ -1,3 +1,11 @@
+# [@hig/banner-v2.0.2](https://github.com/Autodesk/hig/compare/@hig/banner@2.0.1...@hig/banner@2.0.2) (2019-06-25)
+
+
+### Bug Fixes
+
+* should use icon-button for dismiss instead of icon ([9c72ac5](https://github.com/Autodesk/hig/commit/9c72ac5))
+* swap icons based on density ([0c45e4c](https://github.com/Autodesk/hig/commit/0c45e4c))
+
 # [@hig/banner-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/banner@2.0.0...@hig/banner@2.0.1) (2019-03-13)
 
 
