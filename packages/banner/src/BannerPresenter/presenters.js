@@ -3,7 +3,8 @@
 import React from "react";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
-import { Close24 } from "@hig/icons";
+import IconButton from "@hig/icon-button";
+import { CloseSUI, CloseMUI } from "@hig/icons";
 import Typography from "@hig/typography";
 import { types } from "../types";
 import stylesheet from "./stylesheet";
@@ -79,11 +80,15 @@ export function Content({ isWrappingContent, innerRef, children }) {
 export function DismissButton({ onClick }) {
   return (
     <ThemeContext.Consumer>
-      {({ resolvedRoles }) => (
-        <div className={css(stylesheet({}, resolvedRoles).dismissButton)}>
-          <Close24 onClick={onClick} />
-        </div>
-      )}
+      {({ resolvedRoles, metadata }) => {
+        const closeIcon =
+          metadata.densityId === "medium-density" ? <CloseMUI /> : <CloseSUI />;
+        return (
+          <div className={css(stylesheet({}, resolvedRoles).dismissButton)}>
+            <IconButton icon={closeIcon} onClick={onClick} title="Close" />
+          </div>
+        );
+      }}
     </ThemeContext.Consumer>
   );
 }

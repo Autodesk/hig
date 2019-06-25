@@ -31,6 +31,7 @@ exports[`IconButtonPresenter renders correctly 1`] = `
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -44,6 +45,7 @@ exports[`IconButtonPresenter renders correctly 1`] = `
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <button
@@ -108,6 +110,7 @@ exports[`IconButtonPresenter renders correctly with a link 1`] = `
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -121,6 +124,7 @@ exports[`IconButtonPresenter renders correctly with a link 1`] = `
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <a

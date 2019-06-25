@@ -77,10 +77,12 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  2`
 
 .emotion-5 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <div

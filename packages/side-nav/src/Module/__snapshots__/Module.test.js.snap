@@ -75,10 +75,12 @@ exports[`side-nav/Module snapshot tests renders a expanded menu with active chil
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-6 {
@@ -635,10 +637,12 @@ exports[`side-nav/Module snapshot tests renders an external link 1`] = `
 
 .emotion-2 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-2 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 {
