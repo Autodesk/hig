@@ -1,3 +1,10 @@
+# [@hig/icons-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/icons@2.1.1...@hig/icons@2.1.2) (2019-06-25)
+
+
+### Bug Fixes
+
+* don't show tooltip on hover ([e50e34f](https://github.com/Autodesk/hig/commit/e50e34f))
+
 # [@hig/icons-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/icons@2.1.0...@hig/icons@2.1.1) (2019-03-13)
 
 
