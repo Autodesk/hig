@@ -1,11 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./InputPresenter.stylesheet";
-import { availableTagNames, availableVariants, tagNames } from "../constants";
+import {
+  availableTagNames,
+  availableVariants,
+  tagNames,
+  variants
+} from "../constants";
 
 export default function InputPresenter(props) {
   const {
@@ -36,18 +41,32 @@ export default function InputPresenter(props) {
               metadata.colorSchemeId
             )
           : styles;
+
+        let className = css(cssStyles.input);
+        const { className: customClassName } = otherProps;
+        if (customClassName) {
+          className = cx(
+            className,
+            variant === variants.PLAIN
+              ? customClassName
+              : customClassName
+                  .split(" ")
+                  .reduce((acc, cur) => cx(acc, `${cur.trim()}__input`), "")
+          );
+        }
+
         const tagNameKey = tagName.toUpperCase();
         const Element = tagNames[tagNameKey];
 
         return (
           <Element
-            className={css(cssStyles.input)}
+            {...otherProps}
+            className={className}
             disabled={disabled}
             onBlur={onBlur}
             onFocus={onFocus}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            {...otherProps}
           />
         );
       }}

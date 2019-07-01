@@ -116,4 +116,11 @@ describe("Input", () => {
     const wrapper = mount(<Input data-my-attr="foo" />);
     expect(wrapper.find("input")).toHaveProp("data-my-attr", "foo");
   });
+
+  it("passes className prop to input element", () => {
+    const className = "custom-class";
+    const wrapper = mount(<Input className={className} />);
+    expect(wrapper.hasClass(className)).toBe(true);
+    expect(wrapper.find("input").hasClass(`${className}__input`)).toBe(true);
+  });
 });

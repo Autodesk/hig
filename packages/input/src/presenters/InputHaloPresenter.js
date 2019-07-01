@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 
 import { ThemeContext } from "@hig/theme-context";
 
@@ -14,7 +14,8 @@ function InputHaloPresenter(props) {
     hasHover,
     isDisabled,
     stylesheet: customStylesheet,
-    variant
+    variant,
+    ...otherProps
   } = props;
 
   return (
@@ -33,10 +34,21 @@ function InputHaloPresenter(props) {
             )
           : styles;
 
+        const { className } = otherProps;
+
         return (
-          <div className={css(cssStyles.wrapper)}>
+          <div className={cx(css(cssStyles.wrapper), className)}>
             {children}
-            <div className={css(cssStyles.halo)} />
+            <div
+              className={cx(
+                css(cssStyles.halo),
+                className
+                  ? className
+                      .split(" ")
+                      .reduce((acc, cur) => cx(acc, `${cur.trim()}__halo`), "")
+                  : ""
+              )}
+            />
           </div>
         );
       }}
