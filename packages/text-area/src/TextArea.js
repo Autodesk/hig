@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { cx } from "emotion";
 import Input from "@hig/input";
 
 import customStylesheet from "./customStylesheet";
@@ -33,14 +34,21 @@ export default class TextArea extends Component {
 
   render() {
     const { variant, ...otherProps } = this.props;
+    const { className } = otherProps;
+    const textareaClassName =
+      className &&
+      className
+        .split(" ")
+        .reduce((acc, cur) => cx(acc, `${cur.trim()}-textarea`), "");
 
     return (
-      <div style={{ position: "relative" }}>
+      <div style={{ position: "relative" }} className={className}>
         <Input
+          {...otherProps}
+          className={textareaClassName}
           stylesheet={customStylesheet}
           tagName="textarea"
           variant={variant}
-          {...otherProps}
         />
       </div>
     );
