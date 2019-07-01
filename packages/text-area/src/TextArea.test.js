@@ -56,4 +56,11 @@ describe("TextArea", () => {
       });
     });
   });
+
+  it("passes className prop to textarea element", () => {
+    const className = "custom-class";
+    const wrapper = mount(<TextArea className={className} />);
+    expect(wrapper.hasClass(className)).toBe(true);
+    expect(wrapper.childAt(0).hasClass(`${className}-textarea`)).toBe(true);
+  });
 });
