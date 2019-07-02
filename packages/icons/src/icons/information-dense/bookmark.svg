@@ -1,4 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>bookmark-16</title>
-  <path d="M12,16,7.51,12,3,16V1A1,1,0,0,1,4,0h7a1,1,0,0,1,1,1Z" fill="#231f20"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>bookmark-16</title><polygon points="12 16 7.51 12 3 16 3 0 12 0 12 16" fill="#231f20"/></svg>

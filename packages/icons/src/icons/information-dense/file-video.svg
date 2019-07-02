@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>file-video-16</title>
-  <g id="assets">
-    <path d="M2,11H3v1H2ZM2,7H3V8H2ZM2,3H3V4H2ZM2,13H3v1H2ZM2,9H3v1H2ZM2,5H3V6H2ZM2,1H3V2H2ZM13,11h1v1H13Zm0-4h1V8H13Zm0-4h1V4H13Zm0,10h1v1H13Zm0-4h1v1H13Zm0-4h1V6H13Zm0-4h1V2H13ZM4,8h8v6H4ZM4,1h8V7H4ZM1,.5v14a.5.5,0,0,0,.5.5h13a.5.5,0,0,0,.5-.5V.5a.5.5,0,0,0-.5-.5H1.5A.5.5,0,0,0,1,.5Z"/>
-    <rect x="5" y="2" width="6" height="4"/>
-    <rect x="5" y="9" width="6" height="4"/>
-    <rect x="3" y="7" width="9" height="1"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>file-video-16</title><rect x="3" y="6" width="3" height="4"/><rect x="9" y="6" width="3" height="4"/><path d="M15,5V2H0V5H1v6H0v3H15V11H14V5ZM13,3h1V4H13ZM11,3h1V4H11ZM9,3h1V4H9ZM7,3H8V4H7ZM5,3H6V4H5ZM3,3H4V4H3ZM1,3H2V4H1ZM2,5H7v6H2Zm0,8H1V12H2Zm2,0H3V12H4Zm2,0H5V12H6Zm2,0H7V12H8Zm2,0H9V12h1Zm2,0H11V12h1Zm2,0H13V12h1Zm-1-2H8V5h5Z"/></svg>

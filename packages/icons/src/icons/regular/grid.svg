@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>grid-24</title>
-  <g id="final">
-    <g id="view-thumbnail">
-      <g id="outline">
-        <path d="M10,11H4a1,1,0,0,1-1-1V4A1,1,0,0,1,4,3h6a1,1,0,0,1,1,1v6A1,1,0,0,1,10,11ZM4,4v6h6V4Z" fill="#2e4258"/>
-        <path d="M20,11H14a1,1,0,0,1-1-1V4a1,1,0,0,1,1-1h6a1,1,0,0,1,1,1v6A1,1,0,0,1,20,11ZM14,4v6h6V4Z" fill="#2e4258"/>
-        <path d="M10,21H4a1,1,0,0,1-1-1V14a1,1,0,0,1,1-1h6a1,1,0,0,1,1,1v6A1,1,0,0,1,10,21ZM4,14v6h6V14Z" fill="#2e4258"/>
-        <path d="M20,21H14a1,1,0,0,1-1-1V14a1,1,0,0,1,1-1h6a1,1,0,0,1,1,1v6A1,1,0,0,1,20,21Zm-6-7v6h6V14Z" fill="#2e4258"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>grid-24</title><path d="M11,11H3V3h8ZM4,4v6h6V4Z"/><path d="M21,11H13V3h8ZM14,4v6h6V4Z"/><path d="M11,21H3V13h8ZM4,14v6h6V14Z"/><path d="M21,21H13V13h8Zm-7-7v6h6V14Z"/></svg>

@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>building-ops-16</title>
-  <g id="assets">
-    <path d="M4,1V16H7V13h3v3h3V1a1,1,0,0,0-1-1H5A1,1,0,0,0,4,1Zm4,9H6V8H8ZM8,7H6V5H8ZM8,4H6V2H8Zm3,6H9V8h2Zm0-3H9V5h2Zm0-3H9V2h2Z"/>
-    <path d="M15,8V3a1,1,0,0,0-1-1V16h2V9A1,1,0,0,0,15,8Z"/>
-    <path d="M2,8V3A1,1,0,0,1,3,2V16H1V9A1,1,0,0,1,2,8Z"/>
-  </g>
-</svg>

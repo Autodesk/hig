@@ -1,7 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>devices-16</title>
-  <path d="M4,2V5H7A1,1,0,0,1,8,6v4h6V2Z"/>
-  <path d="M6,6H1A1,1,0,0,0,0,7v8a1,1,0,0,0,1,1H6a1,1,0,0,0,1-1V7A1,1,0,0,0,6,6Zm0,8H1V7H6Z"/>
-  <rect x="2" y="8" width="3" height="5"/>
-  <path d="M15,0H3A1,1,0,0,0,2,1V5H3V1H15V11H8v2h7a1,1,0,0,0,1-1V1A1,1,0,0,0,15,0Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>devices-16</title><polygon points="2 0 2 5 3 5 3 1 15 1 15 11 8 11 8 13 16 13 16 0 2 0"/><path d="M0,16H7V6H0ZM1,7H6v7H1Z"/><rect x="2" y="8" width="3" height="5"/><polygon points="14 10 14 2 4 2 4 5 8 5 8 10 14 10"/></svg>

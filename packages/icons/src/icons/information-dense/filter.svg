@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>filter-16</title>
-  <g id="assets">
-    <path d="M14.52,2.11A1,1,0,0,0,14.06,2H.94A.92.92,0,0,0,0,3v.93A1.6,1.6,0,0,0,.63,5L6,8.5V13c0,.94,1,1,1,1H8a1,1,0,0,0,1-1V8.5L14.35,5A1.31,1.31,0,0,0,15,3.89v-1A.9.9,0,0,0,14.52,2.11Z"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>filter-16</title><polygon points="0 2 15 2 15 4 9 8.5 9 13 6 15 6 8.5 0 3.89 0 2"/></svg>

@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>authoring-collaboratino-24</title>
-  <g id="final">
-    <g>
-      <path d="M8,9v6a1,1,0,0,0,1,1h7V9a1,1,0,0,0-1-1H8ZM9,9h6v6H9Z" fill="#2e4258"/>
-      <path d="M20,3H9A1,1,0,0,0,8,4V7H9V4H20V15H17v1h3a1,1,0,0,0,1-1V4A1,1,0,0,0,20,3Z" fill="#2e4258"/>
-      <path d="M15,17v3H4V9H7V8H4A1,1,0,0,0,3,9V20a1,1,0,0,0,1,1H15a1,1,0,0,0,1-1V17Z" fill="#2e4258"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>collaboration-24</title><path d="M8,9v7h8V8H8ZM9,9h6v6H9Z"/><path d="M21,3H8V7H9V4H20V15H17v1h4Z"/><path d="M15,17v3H4V9H7V8H3V21H16V17Z"/></svg>
