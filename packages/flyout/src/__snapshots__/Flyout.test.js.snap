@@ -91,7 +91,6 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
 
 .emotion-3 {
   min-width: 200px;
-  max-width: 400px;
   max-height: 360px;
   padding: 12px;
   overflow-y: auto;
@@ -277,7 +276,6 @@ exports[`flyout/Flyout snapshots renders children from the given render function
 
 .emotion-5 {
   min-width: 200px;
-  max-width: 400px;
   max-height: 360px;
   padding: 12px;
   overflow-y: auto;
@@ -474,7 +472,6 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
 
 .emotion-5 {
   min-width: 200px;
-  max-width: 400px;
   max-height: 360px;
   padding: 12px;
   overflow-y: auto;
@@ -671,7 +668,6 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
 
 .emotion-4 {
   min-width: 200px;
-  max-width: 400px;
   max-height: 360px;
   padding: 12px;
   overflow-y: auto;
@@ -1159,7 +1155,6 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
 
 .emotion-5 {
   min-width: 200px;
-  max-width: 400px;
   max-height: 360px;
   padding: 12px;
   overflow-y: auto;
@@ -1376,7 +1371,6 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
 
 .emotion-4 {
   min-width: 200px;
-  max-width: 400px;
   max-height: 360px;
   padding: 12px;
   overflow-y: auto;
