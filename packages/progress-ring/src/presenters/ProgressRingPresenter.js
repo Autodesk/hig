@@ -7,7 +7,7 @@ import SVGPresenter from "./SVGPresenter";
 import Small from "./smallSVG";
 import Medium from "./mediumSVG";
 import ExtraSmall from "./xsmallSVG";
-import availableSizes from "../availableSizes";
+import { availableSizes, availableSurfaces } from "../constants";
 import stylesheet from "./stylesheet";
 
 const sizes = {
@@ -34,7 +34,14 @@ const sizes = {
 };
 
 export default function ProgressRingPresenter(props) {
-  const { innerRef, percentComplete, size, cssTransitionState } = props;
+  const {
+    innerRef,
+    percentComplete,
+    size,
+    cssTransitionState,
+    surface,
+    mask
+  } = props;
   const SVG = sizes[size].svg;
   const originalSize = sizes[size].svg === Medium ? 72 : sizes[size].size;
 
@@ -53,16 +60,20 @@ export default function ProgressRingPresenter(props) {
         original={originalSize}
         svgData={SVG}
         cssTransitionState={cssTransitionState}
+        surface={surface}
+        mask={mask}
       />
     </div>
   );
 }
 
-ProgressRingPresenter.defaultProps = { size: "m" };
+ProgressRingPresenter.defaultProps = { size: "m", surface: 100 };
 
 ProgressRingPresenter.propTypes = {
   innerRef: PropTypes.func,
   percentComplete: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   size: PropTypes.oneOf(availableSizes),
-  cssTransitionState: PropTypes.string
+  cssTransitionState: PropTypes.string,
+  surface: PropTypes.oneOf(availableSurfaces),
+  mask: PropTypes.string
 };
