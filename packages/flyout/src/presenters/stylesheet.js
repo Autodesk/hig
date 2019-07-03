@@ -106,7 +106,6 @@ export default function(props, themeData, themeId) {
     },
     panel: {
       minWidth: `200px`,
-      maxWidth: `400px`,
       maxHeight: `360px`,
       padding: densitySmall,
       overflowY: `auto`,
