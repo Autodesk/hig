@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import ProgressRingDeterminateBehavior from "./behaviors/ProgressRingDeterminateBehavior";
 import ProgressRingIndeterminateBehavior from "./behaviors/ProgressRingIndeterminateBehavior";
 import ProgressRingPresenter from "./presenters/ProgressRingPresenter";
-import availableSizes from "./availableSizes";
+import { availableSizes, availableSurfaces } from "./constants";
 
 export default class ProgressRing extends Component {
   static propTypes = {
@@ -16,15 +16,25 @@ export default class ProgressRing extends Component {
     /**
      * {xs, s, m, l, xl} the size of the progress indicator
      */
-    size: PropTypes.oneOf(availableSizes)
+    size: PropTypes.oneOf(availableSizes),
+    /**
+     * Specifies the surface level for the background
+     */
+    surface: PropTypes.oneOf(availableSurfaces),
+    /**
+     * Specifies a background color
+     * If both surface & mask are provided, the value of mask will be used
+     */
+    mask: PropTypes.string
   };
 
   static defaultProps = {
-    size: "m"
+    size: "m",
+    surface: 100
   };
 
   render() {
-    const { percentComplete, size } = this.props;
+    const { percentComplete, size, surface, mask } = this.props;
     const ProgressRingBehavior =
       percentComplete === undefined
         ? ProgressRingIndeterminateBehavior
@@ -40,6 +50,8 @@ export default class ProgressRing extends Component {
             percentComplete={percentComplete}
             size={size}
             cssTransitionState={cssTransitionState}
+            surface={surface}
+            mask={mask}
           />
         )}
       </ProgressRingBehavior>
