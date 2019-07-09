@@ -1,3 +1,10 @@
+# [@hig/text-area-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/text-area@1.1.4...@hig/text-area@1.2.0) (2019-07-09)
+
+
+### Features
+
+* add stylesheet prop to TextArea ([0f14579](https://github.com/Autodesk/hig/commit/0f14579))
+
 # [@hig/text-area-v1.1.4](https://github.com/Autodesk/hig/compare/@hig/text-area@1.1.3...@hig/text-area@1.1.4) (2019-07-01)
 
 
