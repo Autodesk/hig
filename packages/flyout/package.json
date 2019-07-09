@@ -19,7 +19,8 @@
   "dependencies": {
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
-    "react-transition-group": "^2.3.1"
+    "react-transition-group": "^2.3.1",
+    "@hig/utils": "^0.3.0"
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.0",
