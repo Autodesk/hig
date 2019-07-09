@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>complete-24</title>
-  <g id="final">
-    <g id="complete">
-      <g id="outline">
-        <path d="M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22ZM12,3a9,9,0,1,0,9,9A9,9,0,0,0,12,3Z" fill="#2e4258"/>
-        <polygon points="11.34 13.92 8.96 11.93 8 13.07 11.57 16.08 17.07 8.96 15.89 8.04 11.34 13.92" fill="#2e4258"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>complete-24</title><path d="M12,3a9,9,0,1,0,9,9A9,9,0,0,0,12,3Zm0,17a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z"/><polygon points="16.29 8.73 10.64 14.38 8.14 11.89 7.43 12.6 10.64 15.8 17 9.43 16.29 8.73"/></svg>

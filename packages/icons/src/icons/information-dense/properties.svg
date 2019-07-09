@@ -1,5 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>properties-16</title>
-  <path d="M13,0H3A1,1,0,0,0,2,1V15a1,1,0,0,0,1,1H13a1,1,0,0,0,1-1V1A1,1,0,0,0,13,0Zm0,13H11v1H10V13H3V12h7V11h1v1h2Zm0-3H6v1H5V10H3V9H5V8H6V9h7Zm0-4H3V1H13Z"/>
-  <rect x="6.5" y="-0.5" width="3" height="8" transform="translate(11.5 -4.5) rotate(90)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>properties-16</title><path d="M14,0H2V16H14ZM13,13H11v1H10V13H3V12h7V11h1v1h2Zm0-3H6v1H5V10H3V9H5V8H6V9h7Zm0-4H3V1H13Z"/><rect x="4" y="2" width="8" height="3"/></svg>

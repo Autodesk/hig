@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>delete-trash-24</title>
-  <g id="final">
-    <g id="delete-trash">
-      <path id="outline" d="M18,5H16V3.13A1.08,1.08,0,0,0,15,2H8A1.12,1.12,0,0,0,7,3.13V5H5A1,1,0,0,0,4,6V8A1,1,0,0,0,5,9V21a1,1,0,0,0,1,1H17a1,1,0,0,0,1-1V9a1,1,0,0,0,1-1V6A1,1,0,0,0,18,5ZM15,3V5H14V4H9V5H8V3Zm2,18H6V9H17ZM18,8H5V6H18Z" fill="#2e4258"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>trash-24</title><path d="M19,5H16V3.13A1.08,1.08,0,0,0,15,2H8A1.11,1.11,0,0,0,7,3.13V5H4V9H5V22H18V9h1ZM15,3V5H14V4H9V5H8V3Zm2,18H6V9H17ZM18,8H5V6H18Z"/></svg>

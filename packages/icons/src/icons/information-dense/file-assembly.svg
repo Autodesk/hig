@@ -1,7 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>assembly-16</title>
-  <g>
-    <rect x="12" y="3" width="4" height="4" rx="0.5" ry="0.5" fill="#ec4a41"/>
-    <path d="M11,8V4a1,1,0,0,0-1-1H6A1,1,0,0,0,5,4V8H1A1,1,0,0,0,0,9v3a1,1,0,0,0,1,1H15a1,1,0,0,0,1-1V9a1,1,0,0,0-1-1Z" fill="#ec4a41"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>file-assembly-16</title><rect x="12" y="3" width="4" height="4" fill="#ec4a41"/><polygon points="11 8 11 3 5 3 5 8 0 8 0 13 16 13 16 8 11 8" fill="#ec4a41"/></svg>

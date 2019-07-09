@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>file-spreadsheet-24</title>
-  <g id="final">
-    <path d="M19,4H5A1,1,0,0,0,4,5V19a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V5A1,1,0,0,0,19,4ZM8,5h5V7H8ZM8,8h5v2H8Zm0,3h5v2H8Zm0,3h5v2H8Zm0,5V17h5v2Zm11,0H14V17h5Zm0-3H14V14h5Zm0-3H14V11h5Zm0-3H14V8h5Zm0-3H14V5h5Z" fill="#87bc40"/>
-    <rect x="5" y="5" width="2" height="14" fill="#abd079"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>file-spreadsheet-24</title><path d="M20,4H4V20H20ZM8,5h5V7H8ZM8,8h5v2H8Zm0,3h5v2H8Zm0,3h5v2H8Zm0,5V17h5v2Zm11,0H14V17h5Zm0-3H14V14h5Zm0-3H14V11h5Zm0-3H14V8h5Zm0-3H14V5h5Z" fill="#87bc40"/></svg>

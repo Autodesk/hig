@@ -1,17 +1,1 @@
-<svg width="9px" height="8px" viewBox="0 0 9 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Specifications" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Sidenav-examples" transform="translate(-730.000000, -670.000000)" stroke="#2E4258">
-            <g id="Dark-blue-side-nav---favorites-Copy-2" transform="translate(483.000000, 165.000000)">
-                <g id="hig-web-light/component/globalnav/sidenav/externallink" transform="translate(16.000000, 498.000000)">
-                    <g id="icon-external-link" transform="translate(231.000000, 7.000000)">
-                        <polyline id="Stroke-1" points="7.7074 6.4303 7.7074 0.5003 1.7904 0.5003"></polyline>
-                        <path d="M1.08617072,7.11062928 L7.6864,0.5104" id="Stroke-3"></path>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>external-link-16</title><polygon points="10 11 4 11 4 5 6 5 6 3 2 3 2 13 12 13 12 9 10 9 10 11" fill-rule="evenodd"/><polygon points="7.23 2.96 8.82 4.54 5.35 8.01 6.99 9.65 10.46 6.18 12.04 7.77 13.02 1.98 7.23 2.96" fill-rule="evenodd"/></svg>

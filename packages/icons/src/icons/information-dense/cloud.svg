@@ -1,4 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>cloud-16</title>
-  <path d="M13.5,8h-.05A4,4,0,0,0,14,6,4,4,0,0,0,6.14,5H6A3,3,0,0,0,3,8H2.5a2.5,2.5,0,0,0,0,5h11a2.5,2.5,0,0,0,0-5Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>cloud-16</title><path d="M13.5,8h-.05A4,4,0,1,0,6.14,5H6A3,3,0,0,0,3,8H2.5a2.5,2.5,0,0,0,0,5h11a2.5,2.5,0,0,0,0-5Z"/></svg>

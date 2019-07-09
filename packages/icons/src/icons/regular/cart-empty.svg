@@ -1,8 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>cart-empty-24</title>
-  <g>
-    <path d="M18.3,16H4L2,7H5.44l1.18,6h8.92l2.4-9H22V7H20.3ZM4.76,15H17.5l2.1-9H21V5H18.79L16.5,14H5.65L4.49,8H3.21Z"/>
-    <path d="M7,17a2,2,0,1,0,2,2A2,2,0,0,0,7,17Zm0,3a1,1,0,1,1,1-1A1,1,0,0,1,7,20Z"/>
-    <path d="M15,17a2,2,0,1,0,2,2A2,2,0,0,0,15,17Zm0,3a1,1,0,1,1,1-1A1,1,0,0,1,15,20Z"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>cart-empty-24</title><circle cx="7.5" cy="20.5" r="1.5"/><circle cx="16.5" cy="20.5" r="1.5"/><path d="M7.9,15H18l3-8H6.87L6.51,5.2h0L2.41,3.32,2,4.23,5.63,5.89l1.63,8.23h0L5,18H19V17H6.73ZM7.07,8H19.56l-2.23,6H8.25Z"/></svg>

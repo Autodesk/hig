@@ -1,5 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>clock-16</title>
-  <path d="M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,1a7,7,0,1,0,7,7A7,7,0,0,0,8,1Z"/>
-  <path d="M8,2.14A5.87,5.87,0,1,0,13.88,8,5.88,5.88,0,0,0,8,2.14ZM12,9H7V4H8V8h4Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>clock-16</title><path d="M8,1a7,7,0,1,0,7,7A7,7,0,0,0,8,1Zm4,8H7V3H8V8h4Z"/></svg>

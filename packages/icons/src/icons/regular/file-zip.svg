@@ -1,9 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>file-zip-24</title>
-  <g id="zip-file">
-    <g>
-      <path d="M15,3H5A1,1,0,0,0,4,4V20a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V8ZM12,4V5H11V4Zm1,2v5H10V6ZM10,20H5V4h5V5A1,1,0,0,0,9,6v5a1,1,0,0,0,1,1h1v1H10v1h1v1H10v1h1v1H10v1h1v1H10Zm9,0H12V19h1V18H12V17h1V16H12V15h1V14H12V13h1V12a1,1,0,0,0,1-1V6a1,1,0,0,0-1-1V4h2V8h4Z"/>
-      <rect x="11" y="8" width="1" height="2"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>file-zip-24</title><path d="M15,3H4V21H20V8Zm1,2.41L17.59,7H16ZM11,4h1V5H11Zm2,2v5H10V6Zm-2,7H10v1h1v1H10v1h1v1H10v1h1v1H10v1H5V4h5V5H9v7h2Zm8,7H12V19h1V18H12V17h1V16H12V15h1V14H12V13h1V12h1V5H13V4h2V8h4Z"/><rect x="11" y="8" width="1" height="2"/></svg>

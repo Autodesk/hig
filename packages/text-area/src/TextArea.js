@@ -25,7 +25,11 @@ export default class TextArea extends Component {
     /**
      * The visual variant of the textarea
      */
-    variant: PropTypes.oneOf(variantTypes)
+    variant: PropTypes.oneOf(variantTypes),
+    /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -33,7 +37,7 @@ export default class TextArea extends Component {
   };
 
   render() {
-    const { variant, ...otherProps } = this.props;
+    const { variant, stylesheet, ...otherProps } = this.props;
     const { className } = otherProps;
     const textareaClassName =
       className &&
@@ -41,12 +45,19 @@ export default class TextArea extends Component {
         .split(" ")
         .reduce((acc, cur) => cx(acc, `${cur.trim()}-textarea`), "");
 
+    const textareaStylesheet = (styles, props, themeData, theme) => {
+      const textareaStyles = customStylesheet(styles, props, themeData, theme);
+      return stylesheet
+        ? stylesheet(textareaStyles, props, themeData, theme)
+        : textareaStyles;
+    };
+
     return (
       <div style={{ position: "relative" }} className={className}>
         <Input
           {...otherProps}
           className={textareaClassName}
-          stylesheet={customStylesheet}
+          stylesheet={textareaStylesheet}
           tagName="textarea"
           variant={variant}
         />

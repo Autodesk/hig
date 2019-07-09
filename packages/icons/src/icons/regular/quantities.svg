@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>quantities-24</title>
-  <g id="final">
-    <g>
-      <path d="M21,15H17V11h3a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H11a1,1,0,0,0-1,1v7a1,1,0,0,0,1,1h3v4H3a1,1,0,0,0-1,1v3a1,1,0,0,0,1,1H4v1a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V20h1a1,1,0,0,0,1-1V16A1,1,0,0,0,21,15ZM11,10V3h9v7Zm4,1h1v4H15Zm4,10H5V20H19Zm2-2H3V16H21Z" fill="#2e4258"/>
-      <path d="M18,5V6H13V5h5m1-1H12V7h7V4Z" fill="#2e4258"/>
-      <rect x="17" y="8" width="2" height="1" fill="#2e4258"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>quantities-24</title><path d="M22,15H17V11h4V2H10v9h4v4H2v5H4v2H20V20h2ZM11,10V3h9v7Zm4,1h1v4H15Zm4,10H5V20H19Zm2-2H3V16H21Z"/><path d="M18,5V6H13V5h5m1-1H12V7h7Z"/><rect x="17" y="8" width="2" height="1"/></svg>

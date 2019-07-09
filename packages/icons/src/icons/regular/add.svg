@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>add-24</title>
-  <g id="final">
-    <g id="add">
-      <path id="outline" d="M20,10H14V4a1,1,0,0,0-1-1H11a1,1,0,0,0-1,1v6H4a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1h6.13v6a1,1,0,0,0,1,1H13a1,1,0,0,0,1-1V14h6a1,1,0,0,0,1-1V11A1,1,0,0,0,20,10Zm0,3H13v7H11V13H4V11h7V4h2v7h7Z" fill="#2e4258"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>add-24</title><path d="M21,10H14V3H10v7H3v4h7.13v7H14V14h7Zm-1,3H13v7H11V13H4V11h7V4h2v7h7Z"/></svg>

@@ -1,8 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>more-vertical-16</title>
-  <g>
-    <circle cx="7.5" cy="14.5" r="1.5"/>
-    <circle cx="7.5" cy="8.5" r="1.5"/>
-    <circle cx="7.5" cy="2.5" r="1.5"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>more-vertical-16</title><circle cx="7.5" cy="14.5" r="1.5"/><circle cx="7.5" cy="8.5" r="1.5"/><circle cx="7.5" cy="2.5" r="1.5"/></svg>

@@ -1,4 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>checklist-16</title>
-  <path d="M14,0H4A1,1,0,0,0,3,1L2.86,3h8.4l-1,1H1A1,1,0,0,0,0,5V15a1,1,0,0,0,1,1h9a1,1,0,0,0,1-1V9.1l1-1V13h2a1,1,0,0,0,1-1V1A1,1,0,0,0,14,0ZM5.82,12.93,1.55,8.73,3.31,7,5.78,9.56l6.94-6.78,1.66,1.78Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>checklist-16</title><rect x="4" y="3" width="1" height="1"/><rect x="4" y="7" width="1" height="1"/><rect x="4" y="11" width="1" height="1"/><path d="M1,0V15H15V0ZM6,13H3V10H6ZM6,9H3V6H6ZM6,5H3V2H6Zm7,7H8V11h5Zm0-4H8V7h5Zm0-4H8V3h5Z"/></svg>

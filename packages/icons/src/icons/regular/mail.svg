@@ -1,10 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="_x32_4x24_OUTLINED" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" width="24px" height="24px" viewBox="4651 2021 24 24" enable-background="new 4651 2021 24 24" xml:space="preserve">
-<path d="M4672,2026h-18c-0.553,0-0.982,0.434-0.982,0.985V2039c0,0.552,0.447,1,1,1h17.965c0.552,0,1-0.448,1-1v-12.015
-	C4672.982,2026.434,4672.552,2026,4672,2026z M4663.035,2034.014l-8.096-7.014h16.076L4663.035,2034.014z M4654,2027.465
-	l5.793,5.049l-5.793,5.776V2027.465z M4660.549,2033.174l1.832,1.596c0.173,0.148,0.393,0.23,0.619,0.23s0.446-0.082,0.621-0.232
-	l1.829-1.594l5.844,5.826h-16.588L4660.549,2033.174z M4666.207,2032.514l5.793-5.049v10.825L4666.207,2032.514z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>mail-24</title><path d="M22,5H2V19H22ZM12,13,3.94,6H20ZM3,6.46l5.79,5.05L3,17.29Zm6.55,5.71,1.83,1.6a1,1,0,0,0,1.24,0l1.83-1.6L20.29,18H3.71Zm5.66-.66,5.79-5V17.29Z"/></svg>

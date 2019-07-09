@@ -1,5 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>expand-panel-24</title>
-  <path d="M9,3H3A1,1,0,0,0,2,4V19a1,1,0,0,0,1,1H9a1,1,0,0,0,1-1V4A1,1,0,0,0,9,3ZM9,19H3V4H9Z"/>
-  <path d="M21.71,10.78,18.23,7.3a1,1,0,0,0-1.41,0l-.7.7a1,1,0,0,0,0,1.41l.59.59H12a1,1,0,0,0-1,1v1a1,1,0,0,0,1,1h4.69l-.57.57a1,1,0,0,0,0,1.41l.7.7a1,1,0,0,0,1.41,0l3.49-3.49A1,1,0,0,0,21.71,10.78ZM17.52,15l-.7-.7L19.1,12H12V11h7.12l-2.3-2.3.7-.7L21,11.49Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>expand-panel-24</title><path d="M22,12,15,7v3H11v4h4v3ZM12,13V11h4V9l4.28,3L16,15V13Z" fill-rule="evenodd"/><path d="M2,3V21h8V3ZM9,20H3V4H9Z"/></svg>
