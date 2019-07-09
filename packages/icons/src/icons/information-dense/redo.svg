@@ -1,4 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>redo-16</title>
-  <path d="M15,7,10.05,2,8.64,3.46,11.18,6H8.5A6.5,6.5,0,0,0,2,12.5V14H4V12.5A4.5,4.5,0,0,1,8.5,8h2.66L8.64,10.53l1.41,1.41Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>redo-16</title><path d="M8,3V6H4.5C1.74,6,0,8.5,0,11.27c0,.19,0,.73,0,.92A4.11,4.11,0,0,1,4,10H8v3l8-5L8,3Z"/></svg>

@@ -1,5 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>zoom-out-16</title>
-  <rect x="7" y="5" width="6" height="2"/>
-  <path d="M10,0A6,6,0,0,0,5.42,9.87l-.76.76-.16-.16a.68.68,0,0,0-.93,0l-3.13,3a.66.66,0,0,0,0,.93l1.07,1.07a.65.65,0,0,0,.47.19H2a.65.65,0,0,0,.47-.2l3.07-3.1a.65.65,0,0,0,.19-.47.42.42,0,0,0-.14-.37l-.21-.21.75-.75A6,6,0,1,0,10,0Zm0,10.5A4.5,4.5,0,1,1,14.5,6,4.5,4.5,0,0,1,10,10.5Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>zoom-out-16</title><rect x="12" y="10.17" width="2" height="5.66" transform="translate(-5.38 13) rotate(-45)"/><path d="M6,0a6,6,0,1,0,6,6A6,6,0,0,0,6,0ZM6,10.5A4.5,4.5,0,1,1,10.5,6,4.51,4.51,0,0,1,6,10.5Z"/><rect x="3" y="5" width="6" height="2"/></svg>

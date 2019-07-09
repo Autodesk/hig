@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>archive-24</title>
-  <g id="final">
-    <g id="archive">
-      <g id="outline">
-        <path d="M20,5H4A1,1,0,0,0,3,6V8A1,1,0,0,0,4,9V19a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V9a1,1,0,0,0,1-1V6A1,1,0,0,0,20,5ZM19,19H5V9H19ZM20,8H4V6H20Z" fill="#2e4258"/>
-        <rect x="8" y="12" width="8" height="1" fill="#2e4258"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>archive-24</title><path d="M21,5H3V9H4V20H20V9h1ZM19,19H5V9H19ZM20,8H4V6H20Z"/><rect x="8" y="12" width="8" height="1"/></svg>

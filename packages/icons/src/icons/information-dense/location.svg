@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>location-16</title>
-  <g id="assets">
-    <g id="Layer_201" data-name="Layer%201">
-      <path d="M6.06,5A1.94,1.94,0,1,1,8,7,1.94,1.94,0,0,1,6.06,5ZM3,5.05C3,7.84,5.55,11.79,8,16c2.47-4.24,5-8.16,5-10.95a5,5,0,1,0-10,0Z"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>location-16</title><path d="M6.06,5A1.94,1.94,0,1,1,8,7,1.94,1.94,0,0,1,6.06,5ZM3,5.05c0,2.79,2.55,6.74,5,11,2.47-4.24,5-8.16,5-10.95a5,5,0,1,0-10,0Z"/></svg>

@@ -1,6 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>file-16</title>
-  <g id="Layer_201" data-name="Layer%201">
-    <path d="M1,1V15a1,1,0,0,0,1,1H13a1,1,0,0,0,1-1V5H9V0H2A1,1,0,0,0,1,1Zm9-1V4h4Z"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>file-generic-16</title><path d="M1,0V16H14V5H9V0Zm9,0V4h4Z"/></svg>

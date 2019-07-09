@@ -1,5 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>publish-16</title>
-  <path d="M14,12H2a1,1,0,0,0-1,1v2a1,1,0,0,0,1,1H14a1,1,0,0,0,1-1V13A1,1,0,0,0,14,12Zm-2,3H4V13h8Z"/>
-  <polygon points="11.5 6.5 9 4 9 11 7 11 7 4 4.5 6.5 3 5 8 0 12.95 5 11.5 6.5"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>publish-16</title><path d="M15,12H1v4H15Zm-3,3H4V13h8Z"/><polygon points="6.37 5.91 3.79 5.91 7.99 0 12.19 5.91 9.61 5.91 9.61 10 6.37 10 6.37 5.91" fill-rule="evenodd"/></svg>

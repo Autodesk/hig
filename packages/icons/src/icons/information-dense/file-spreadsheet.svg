@@ -1,4 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>spreadsheet-16</title>
-  <path d="M0,3V14a1,1,0,0,0,1,1H15a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H1A1,1,0,0,0,0,3ZM9,14H4V12H9Zm0-3H4V9H9ZM9,8H4V6H9ZM9,5H4V3H9Zm6,9H10V12h5Zm0-3H10V9h5Zm0-3H10V6h5Zm0-3H10V3h5Z" fill="#87bc40"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>file-spreadsheet-16</title><path d="M0,2V15H16V2ZM9,14H4V12H9Zm0-3H4V9H9ZM9,8H4V6H9ZM9,5H4V3H9Zm6,9H10V12h5Zm0-3H10V9h5Zm0-3H10V6h5Zm0-3H10V3h5Z" fill="#87bc40"/></svg>
