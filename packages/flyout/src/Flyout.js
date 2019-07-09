@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { cx } from "emotion";
 
 import { combineEventHandlers } from "@hig/utils";
 
@@ -85,9 +86,14 @@ export default class Flyout extends Component {
     /**
      * @param {PanelRendererPayload} payload
      */
-    panel({ innerRef, content, handleScroll, maxHeight }) {
+    panel({ innerRef, content, handleScroll, maxHeight, ...otherProps }) {
+      const { className } = otherProps;
       return (
-        <PanelContainerPresenter innerRef={innerRef} maxHeight={maxHeight}>
+        <PanelContainerPresenter
+          innerRef={innerRef}
+          maxHeight={maxHeight}
+          className={className}
+        >
           <PanelPresenter onScroll={handleScroll}>{content}</PanelPresenter>
         </PanelContainerPresenter>
       );
@@ -269,12 +275,20 @@ export default class Flyout extends Component {
   }
 
   renderPanel({ transitionStatus }) {
-    const { panel } = this.props;
+    const { panel, ...otherProps } = this.props;
+    const { className } = otherProps;
 
     if (typeof panel === "function") {
       return panel({
         ...this.createPanelPayload(),
-        transitionStatus
+        transitionStatus,
+        className: className
+          ? cx(
+              className
+                .split(" ")
+                .map(name => `${name.trim()}-container__panel`)
+            )
+          : ""
       });
     }
 
@@ -308,7 +322,8 @@ export default class Flyout extends Component {
       refPointer,
       refWrapper
     } = this;
-    const { openOnHoverDelay, pointer } = this.props;
+    const { openOnHoverDelay, pointer, ...otherProps } = this.props;
+    const { className } = otherProps;
     const panel = this.renderPanel({ transitionStatus });
     const {
       anchorPoint,
@@ -333,6 +348,7 @@ export default class Flyout extends Component {
             refPointer={refPointer}
             refWrapper={refWrapper}
             transitionStatus={transitionStatus}
+            className={className}
           >
             {this.renderChildren(onMouseEnter, onMouseLeave)}
           </FlyoutPresenter>

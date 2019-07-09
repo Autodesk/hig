@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 import stylesheet from "./stylesheet";
 import { AVAILABLE_ANCHOR_POINTS } from "../anchorPoints";
 
@@ -8,14 +8,16 @@ export default function PointerWrapperPresenter({
   children,
   innerRef,
   style,
-  anchorPoint
+  anchorPoint,
+  ...otherProps
 }) {
   const styles = stylesheet({ transitionStatus: null, anchorPoint });
+  const { className } = otherProps;
 
   return (
     <div
       aria-hidden="true"
-      className={css(styles.pointerWrapper)}
+      className={cx(css(styles.pointerWrapper), className)}
       ref={innerRef}
       role="presentation"
       style={style}
