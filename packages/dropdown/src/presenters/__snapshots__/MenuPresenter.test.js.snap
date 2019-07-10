@@ -20,7 +20,7 @@ exports[`Dropdown/presenters/MenuPresenter renders with all props 1`] = `
 }
 
 <div
-  className="emotion-0"
+  className="emotion-0 custom-class"
 >
   <p>
     hi
