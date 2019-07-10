@@ -9,8 +9,8 @@ import {
   Error24,
   Info16,
   Info24,
-  Issue16,
-  Issue24
+  Alert16,
+  Alert24
 } from "@hig/icons";
 import stylesheet from "./stylesheet";
 import { types } from "../../types";
@@ -26,8 +26,8 @@ const iconNamesByType = {
     medium: Complete24
   },
   [types.WARNING]: {
-    high: Issue16,
-    medium: Issue24
+    high: Alert16,
+    medium: Alert24
   },
   [types.URGENT]: {
     high: Error16,
