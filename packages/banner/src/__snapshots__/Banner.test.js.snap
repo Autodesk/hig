@@ -221,10 +221,10 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
               info-24
             </title>
             <path
-              d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
+              d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
             />
             <path
-              d="M11 11h2v6h-2z"
+              d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
             />
             <circle
               cx="12"
