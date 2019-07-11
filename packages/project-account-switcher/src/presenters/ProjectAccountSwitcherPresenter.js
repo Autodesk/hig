@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
-import { Caret24 } from "@hig/icons";
+import { CaretDownMUI } from "@hig/icons";
 import Typography from "@hig/typography";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 
@@ -135,7 +135,7 @@ export default class ProjectAccountSwitcherPresenter extends Component {
           <Typography>{label}</Typography>
         </div>
         <div className={css(styles.targetCaret)}>
-          <Caret24 />
+          <CaretDownMUI />
         </div>
       </div>
     );
