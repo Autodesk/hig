@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
-import { CheckmarkBlueDark24 } from "@hig/icons";
+import { CheckmarkSUI, CheckmarkXsUI } from "@hig/icons";
 import { createButtonEventHandlers } from "@hig/utils";
 import stylesheet from "./OptionPresenter.stylesheet";
 
@@ -84,14 +84,24 @@ export default class OptionPresenter extends Component {
     const { children, selected, ...otherProps } = this.props;
 
     return (
-      <OptionWrapper selected={selected} {...otherProps}>
-        <span>{children}</span>
-        {selected && (
-          <div>
-            <CheckmarkBlueDark24 color="#087AAD" />
-          </div>
-        )}
-      </OptionWrapper>
+      <ThemeContext.Consumer>
+        {({ metadata }) => {
+          const Icon =
+            metadata.densityId === "medium-density"
+              ? CheckmarkSUI
+              : CheckmarkXsUI;
+          return (
+            <OptionWrapper selected={selected} {...otherProps}>
+              <span>{children}</span>
+              {selected && (
+                <div>
+                  <Icon color="#087AAD" />
+                </div>
+              )}
+            </OptionWrapper>
+          );
+        }}
+      </ThemeContext.Consumer>
     );
   }
 }
