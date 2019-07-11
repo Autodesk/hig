@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.3...@hig/project-account-switcher@2.0.4) (2019-07-11)
+
+
+### Bug Fixes
+
+* update ProjectAccountSwitcher to newest Icons ([ef2cf9c](https://github.com/Autodesk/hig/commit/ef2cf9c))
+
 # [@hig/project-account-switcher-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.2...@hig/project-account-switcher@2.0.3) (2019-06-12)
 
 
