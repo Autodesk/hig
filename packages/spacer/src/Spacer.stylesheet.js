@@ -9,7 +9,9 @@ export default function stylesheet(props, themeData) {
     spacer: {
       width: props.size ? props.size : getSpacing(props.spacing, themeData),
       height: props.size ? props.size : getSpacing(props.spacing, themeData),
-      flex: props.size ? `0 0 ${props.size}` : `0 0 ${getSpacing(props.spacing, themeData)}`
+      flex: props.size
+        ? `0 0 ${props.size}`
+        : `0 0 ${getSpacing(props.spacing, themeData)}`
     }
   };
 }
