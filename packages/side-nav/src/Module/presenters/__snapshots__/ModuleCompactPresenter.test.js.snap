@@ -126,18 +126,14 @@ exports[`side-nav/Module/presenters/ModuleCompactPresenter snapshot tests render
           xmlns="http://www.w3.org/2000/svg"
         >
           <title>
-            authoring-collaboratino-24
+            collaboration-24
           </title>
-          <g
-            fill="#2e4258"
-          >
-            <path
-              d="M8 9v6a1 1 0 0 0 1 1h7V9a1 1 0 0 0-1-1H8zm1 0h6v6H9z"
-            />
-            <path
-              d="M20 3H9a1 1 0 0 0-1 1v3h1V4h11v11h-3v1h3a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-5 14v3H4V9h3V8H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-3z"
-            />
-          </g>
+          <path
+            d="M8 9v7h8V8H8zm1 0h6v6H9z"
+          />
+          <path
+            d="M21 3H8v4h1V4h11v11h-3v1h4zm-6 14v3H4V9h3V8H3v13h13v-4z"
+          />
         </svg>
       </div>
     </div>
