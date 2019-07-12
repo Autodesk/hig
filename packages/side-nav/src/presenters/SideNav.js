@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
-import { Back24 } from "@hig/icons";
+import { Back24, Back16 } from "@hig/icons";
 import Typography from "@hig/typography";
 import TextLink from "@hig/text-link";
 import IconButton from "@hig/icon-button";
@@ -107,7 +107,7 @@ export default class SideNav extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles }) => {
+        {({ resolvedRoles, metadata }) => {
           const styles = stylesheet(this.props, resolvedRoles);
 
           return (
@@ -131,7 +131,13 @@ export default class SideNav extends Component {
               {showMinimizeButton && (
                 <div className={css(styles.minimize)}>
                   <IconButton
-                    icon={<Back24 />}
+                    icon={
+                      metadata.densityId === "medium-density" ? (
+                        <Back24 />
+                      ) : (
+                        <Back16 />
+                      )
+                    }
                     title="Minimize"
                     aria-label="Minimize"
                     onClick={onMinimize}
