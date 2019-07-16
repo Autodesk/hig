@@ -658,10 +658,6 @@ exports[`side-nav/Module snapshot tests renders an external link 1`] = `
   padding: 6px 10px;
 }
 
-.emotion-3 svg * {
-  fill: #3c3c3c;
-}
-
 <div
   className="emotion-7"
   onFocus={undefined}
