@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>quantities-16</title>
-  <g id="assets">
-    <path d="M1,11H15a1,1,0,0,1,1,1v2a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V12A1,1,0,0,1,1,11Z"/>
-    <path d="M14,16H2a1,1,0,0,1-1-1H15A1,1,0,0,1,14,16Z"/>
-    <path d="M8,1V5A1,1,0,0,0,9,6h2v4h2V6h2a1,1,0,0,0,1-1V1a1,1,0,0,0-1-1H9A1,1,0,0,0,8,1Zm7,2H9V1h6Z"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>quantities-16</title><rect y="11" width="16" height="3"/><path d="M8,0V6h3v4h2V6h3V0Zm7,3H9V1h6Z"/><rect x="1" y="15" width="14" height="1"/></svg>

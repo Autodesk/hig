@@ -1,6 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>hierarchy-16</title>
-  <g id="Layer_201" data-name="Layer%201">
-    <path d="M3,0V7H7V9H2v3H0v4H5V12H3V10h9v2H10v4h5V12H13V9H8V7h4V0Z"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>hierarchy-16</title><path d="M3,0V7H7V9H2v3H0v4H5V12H3V10h9v2H10v4h5V12H13V9H8V7h4V0Z"/></svg>

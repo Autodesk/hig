@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>comment-16</title>
-  <g id="assets">
-    <g id="Layer_201" data-name="Layer%201">
-      <path d="M2,4H14V5H2ZM2,7H13V8H2ZM0,1V16l4-4H15a1,1,0,0,0,1-1V1a1,1,0,0,0-1-1H1A1,1,0,0,0,0,1Z"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>comment-16</title><path d="M0,1V11H3v5l5-5h8V1ZM9,8H3V7H9Zm4-3H3V4H13Z"/></svg>

@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>list-16</title>
-  <g id="assets">
-    <rect x="4" y="2" width="11" height="2" rx="0.5" ry="0.5"/>
-    <rect x="1" y="2" width="2" height="2" rx="0.5" ry="0.5"/>
-    <rect x="4" y="7" width="11" height="2" rx="0.5" ry="0.5"/>
-    <rect x="1" y="7" width="2" height="2" rx="0.5" ry="0.5"/>
-    <rect x="4" y="12" width="11" height="2" rx="0.5" ry="0.5"/>
-    <rect x="1" y="12" width="2" height="2" rx="0.5" ry="0.5"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>list-16</title><rect x="4" y="2" width="11" height="2" rx="0.5" ry="0.5"/><rect x="1" y="2" width="2" height="2"/><rect x="4" y="7" width="11" height="2" rx="0.5" ry="0.5"/><rect x="1" y="7" width="2" height="2"/><rect x="4" y="12" width="11" height="2" rx="0.5" ry="0.5"/><rect x="1" y="12" width="2" height="2"/></svg>

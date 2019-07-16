@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>comment-24</title>
-  <g id="final">
-    <g id="comment">
-      <g id="outline">
-        <rect x="6" y="8" width="12" height="1" fill="#2e4258"/>
-        <rect x="6" y="11" width="12" height="0.96" fill="#2e4258"/>
-        <path d="M2.74,21.3a.7.7,0,0,1-.5-.21A1,1,0,0,1,2,20.37V4A1,1,0,0,1,3,3H21a1,1,0,0,1,1,1V16a1,1,0,0,1-1,1H6.74L3.79,20.69A1.62,1.62,0,0,1,2.74,21.3ZM3,4V20.08l0,0,3.09-3.87A.5.5,0,0,1,6.5,16H21V4Z" fill="#2e4258"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>comment-24</title><path d="M2,3V16H6v6l6-6H22V3ZM21,15H11.59L7,19.59V15H3V4H21Z"/><rect x="6" y="7" width="13" height="1"/><rect x="6" y="11" width="8" height="1"/></svg>

@@ -1,3 +1,68 @@
+# [@hig/icons-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/icons@2.1.2...@hig/icons@3.0.0) (2019-07-09)
+
+
+### Features
+
+* updating icons ([67a908a](https://github.com/Autodesk/hig/commit/67a908a))
+
+
+### BREAKING CHANGES
+
+* Updated styling of all 16 and 24px icons to better align with existing command icons
+
+* Added add-page
+* Added external-link
+* Added file-audio
+* Added import
+* Added inbox
+* Added mute
+* Added not-editable
+* Added select-all
+* Added select-none
+* Added sort
+* Added unlink
+* Added unpin
+* Added user-inactive
+* Renamed building-ops to building
+* Renamed cost-control to bill-stack
+* Renamed export to export-move
+* Renamed insight to graph
+* Renamed issue to alert
+* Renamed layout to survey-equipment
+* Renamed user-incactive to user-inactive
+* Removed assets
+* Removed caret - can be found in UI Controls
+* Removed check-disabled - can be found in UI Controls
+* Removed check-white
+* Removed checkbox-checked - can be found in UI Controls
+* Removed checkbox-indeterminate - can be found in UI Controls
+* Removed checkmark-blue-dark
+* Removed checkmark-indeterminate - can be found in UI Controls
+* Removed checkmark-s - can be found in UI Controls
+* Removed clear-small
+* Removed close - can be found in UI Controls
+* Removed close-hamburger - can be found in UI Controls
+* Removed close-notification - can be found in UI Controls
+* Removed close-xs - can be found in UI Controls
+* Removed dropdown-caret-down - can be found in UI Controls
+* Removed dropdown-caret-left - can be found in UI Controls
+* Removed dropdown-caret-right - can be found in UI Controls
+* Removed dropdown-caret-up - can be found in UI Controls
+* Removed hamburger - can be found in UI Controls
+* Removed hamburger-close - can be found in UI Controls
+* Removed hamburger-default - can be found in UI Controls
+* Removed model-coordination
+* Removed rfi
+* Removed social-blog-2
+* Removed x-close-gray
+
+# [@hig/icons-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/icons@2.1.1...@hig/icons@2.1.2) (2019-06-25)
+
+
+### Bug Fixes
+
+* don't show tooltip on hover ([e50e34f](https://github.com/Autodesk/hig/commit/e50e34f))
+
 # [@hig/icons-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/icons@2.1.0...@hig/icons@2.1.1) (2019-03-13)
 
 

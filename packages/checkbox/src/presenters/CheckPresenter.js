@@ -2,12 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
-import {
-  CheckboxChecked16,
-  CheckmarkIndeterminate16,
-  CheckDisabled16,
-  CheckWhite24
-} from "@hig/icons";
+import { CheckmarkXsUI, OperatorMinusXsUI } from "@hig/icons";
 
 import stylesheet from "./stylesheet";
 
@@ -57,31 +52,19 @@ export default class CheckPresenter extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles, metadata }) => {
+        {({ resolvedRoles }) => {
           const styles = stylesheet(
             { checked, disabled, hasFocus, hasHover, indeterminate, isPressed },
-            resolvedRoles,
-            metadata.colorSchemeId
+            resolvedRoles
           );
-          const Checkmark =
-            metadata.colorSchemeId === "hig-light" ? (
-              <CheckWhite24 />
-            ) : (
-              <CheckboxChecked16 />
-            );
-          const DisabledCheckmark =
-            metadata.colorSchemeId === "hig-light" ? (
-              <CheckDisabled16 />
-            ) : (
-              <CheckboxChecked16 />
-            );
-          const CheckmarkIcon = disabled ? DisabledCheckmark : Checkmark;
 
           return (
             <span className={css(styles.checkboxCheckWrapper)}>
-              <span className={css(styles.checkboxCheck)}>{CheckmarkIcon}</span>
+              <span className={css(styles.checkboxCheck)}>
+                <CheckmarkXsUI />
+              </span>
               <span className={css(styles.checkboxIndeterminate)}>
-                <CheckmarkIndeterminate16 />
+                <OperatorMinusXsUI />
               </span>
             </span>
           );

@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>publish-24</title>
-  <g id="final">
-    <g id="publish">
-      <g id="outline">
-        <path d="M19,16H4a1,1,0,0,0-1,1v3a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V17A1,1,0,0,0,19,16Zm0,4H4V17H19v3" fill="#2e4258"/>
-        <rect x="6.05" y="18" width="10.92" height="1" fill="#2e4258"/>
-        <path d="M14.51,8.06,12,5.52V14H11V5.52L8.45,8.06l-.54-.7L11.5,3.5l3.57,3.86Zm1.36-1.32S12.73,3.4,12.36,3a1.11,1.11,0,0,0-1.83,0L7.1,6.76a.89.89,0,0,0,0,1.17l.74.95A.86.86,0,0,0,9,8.9L10,8v6.15a.86.86,0,0,0,.84.88h1.32a.86.86,0,0,0,.84-.87V8l.91.88a.93.93,0,0,0,1.25,0L15.87,8A.91.91,0,0,0,15.87,6.74Z" fill="#2e4258"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>publish-24</title><path d="M12.5,2.32,7,10h3v6h5V10h3ZM14,9v6H11V9H9L12.5,4l3.55,5Z" fill-rule="evenodd"/><path d="M3,17v5H21V17Zm17,4H4V18H20Z"/><rect x="6" y="19" width="12" height="1"/></svg>

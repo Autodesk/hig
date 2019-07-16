@@ -1,5 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>filter-tokens-16</title>
-  <path d="M15,1H1A1,1,0,0,0,0,2V6A1,1,0,0,0,1,7H15a1,1,0,0,0,1-1V2A1,1,0,0,0,15,1ZM4,5H2V3H4Z"/>
-  <path d="M15,9H1a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1H15a1,1,0,0,0,1-1V10A1,1,0,0,0,15,9ZM4,13H2V11H4Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>filter-tokens-16</title><path d="M0,1V7H16V1ZM4,5H2V3H4Z"/><path d="M0,15H16V9H0Zm2-4H4v2H2Z"/></svg>

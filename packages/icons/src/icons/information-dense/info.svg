@@ -1,4 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>info-16</title>
-  <path d="M8,1a7,7,0,1,0,7,7A7,7,0,0,0,8,1ZM9,12H7V7H9ZM8,6.25A1.25,1.25,0,1,1,9.25,5,1.25,1.25,0,0,1,8,6.25Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>info-16</title><path d="M8,1a7,7,0,1,0,7,7A7,7,0,0,0,8,1ZM9,12H7V7H9ZM8,6.25A1.25,1.25,0,1,1,9.25,5,1.25,1.25,0,0,1,8,6.25Z"/></svg>

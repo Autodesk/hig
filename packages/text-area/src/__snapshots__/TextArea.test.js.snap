@@ -85,6 +85,118 @@ exports[`TextArea integration renders correctly 1`] = `
 }
 
 <div
+  className={undefined}
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <div
+    className="emotion-2"
+  >
+    <textarea
+      className="emotion-0"
+      disabled={undefined}
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    />
+    <div
+      className="emotion-1"
+    />
+  </div>
+</div>
+`;
+
+exports[`TextArea integration renders with stylesheet prop 1`] = `
+.emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  position: static;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgba(128,128,128,0.2);
+  border-right-color: rgba(128,128,128,0.2);
+  border-top-color: rgba(128,128,128,0.2);
+}
+
+.emotion-1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(128,128,128,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: calc((36px - 2px) * 2);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  display: block;
+  resize: vertical;
+  padding: 4px 12px;
+  background: #e7f2d9;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.4);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.4);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.4);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.4);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.4);
+}
+
+.emotion-0::selection {
+  background-color: rgba(6,150,215,0.25);
+}
+
+<div
+  className={undefined}
   style={
     Object {
       "position": "relative",

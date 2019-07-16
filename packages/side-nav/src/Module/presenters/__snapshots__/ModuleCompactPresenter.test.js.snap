@@ -92,10 +92,12 @@ exports[`side-nav/Module/presenters/ModuleCompactPresenter snapshot tests render
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <div

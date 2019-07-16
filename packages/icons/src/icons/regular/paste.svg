@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>paste-24</title>
-  <g id="final">
-    <g id="paste">
-      <g id="outline">
-        <rect x="7" y="10.04" width="9" height="0.93" fill="#2e4258"/>
-        <rect x="7" y="13.04" width="9" height="0.93" fill="#2e4258"/>
-        <rect x="7" y="16.04" width="9" height="0.93" fill="#2e4258"/>
-        <path d="M18,5H17V4H14.77a3.61,3.61,0,0,0-3.21-2A3.39,3.39,0,0,0,8.47,4H6V5H5A1,1,0,0,0,4,6V20.09A.92.92,0,0,0,5,21H18a.92.92,0,0,0,1-.91V6A1,1,0,0,0,18,5ZM7,5H9l.12-.33a2.54,2.54,0,0,1,4.76,0L14,5h2V7H7ZM18,20H5V6H6V8H17V6h1Z" fill="#2e4258"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>paste-24</title><path d="M10,19H3V5H4V7h9V5h1V8h1V4H13a1,1,0,0,0-1-1H11V2H6V3H5A1,1,0,0,0,4,4H2V20h8ZM5,4H7V3h3V4h2V6H5Z"/><path d="M19,9H11V22H22V12Zm2,12H12V10h7v2h2Z"/></svg>

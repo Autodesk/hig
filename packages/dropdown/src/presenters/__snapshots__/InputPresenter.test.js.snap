@@ -57,10 +57,12 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-2 {
@@ -224,10 +226,12 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <div

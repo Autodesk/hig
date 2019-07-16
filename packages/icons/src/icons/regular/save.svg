@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>save-24</title>
-  <g id="assets">
-    <path d="M20,3H4A1,1,0,0,0,3,4V17.65L5.23,21H20a1,1,0,0,0,1-1V4A1,1,0,0,0,20,3ZM7,4H17v6H7Zm8,16H9V16h6Zm5,0H16V16a1,1,0,0,0-1-1H9a1,1,0,0,0-1,1v4H5.77L4,17.35V4H6v6a1,1,0,0,0,.77,1H17a1,1,0,0,0,1-1V4h2Z"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>save-24</title><path d="M18,3H3V18l3,3H21V3ZM17,4v7H7V4ZM7,20V15H17v5Zm13,0H18V14H6v5.59l-2-2V4H6v8H18V4h2Z" fill-rule="evenodd"/><rect x="8" y="16" width="2" height="3"/></svg>

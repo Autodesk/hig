@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>filter-24</title>
-  <g id="final">
-    <g id="filters">
-      <g id="outline">
-        <path d="M20,11H4a1,1,0,0,1-1-1V5A1,1,0,0,1,4,4H20a1,1,0,0,1,1,1v5A1,1,0,0,1,20,11ZM4,5v5H20V5Z" fill="#2e4258"/>
-        <path d="M20,13H4a1,1,0,0,0-1,1v5a1,1,0,0,0,1,1H20a1,1,0,0,0,1-1V14A1,1,0,0,0,20,13Zm0,6H4V14H20Z" fill="#2e4258"/>
-        <path d="M7,6H6A1,1,0,0,0,5,7V8A1,1,0,0,0,6,9H7A1,1,0,0,0,8,8V7A1,1,0,0,0,7,6ZM7,8H6V7H7Z" fill="#2e4258"/>
-        <path d="M7,15H6a1,1,0,0,0-1,1v1a1,1,0,0,0,1,1H7a1,1,0,0,0,1-1V16A1,1,0,0,0,7,15Zm0,2H6V16H7Z" fill="#2e4258"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>filter-tokens-24</title><path d="M21,11H3V4H21ZM4,5v5H20V5Z"/><path d="M21,13H3v7H21Zm-1,6H4V14H20Z"/><path d="M8,6H5V9H8ZM7,8H6V7H7Z"/><path d="M8,15H5v3H8ZM7,17H6V16H7Z"/></svg>

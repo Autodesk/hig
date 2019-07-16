@@ -107,10 +107,12 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 
 .emotion-5 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-11 {
@@ -606,10 +608,12 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 
 .emotion-5 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-11 {
