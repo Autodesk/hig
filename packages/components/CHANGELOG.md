@@ -1,3 +1,10 @@
+# [@hig/components-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/components@2.0.0...@hig/components@2.0.1) (2019-07-16)
+
+
+### Bug Fixes
+
+* update icons package ([406803c](https://github.com/Autodesk/hig/commit/406803c))
+
 # [@hig/components-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/components@1.1.2...@hig/components@2.0.0) (2019-05-10)
 
 

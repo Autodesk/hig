@@ -1,6 +1,6 @@
 {
   "name": "@hig/notifications-toast",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "HIG Toast",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "@hig/icon-button": "^2.1.1",
-    "@hig/icons": "^3.0.0",
+    "@hig/icons": "^3.0.1",
     "@hig/rich-text": "^1.0.1",
     "@hig/typography": "^1.0.3",
     "emotion": "^10.0.0",
