@@ -6,7 +6,6 @@ function getButtonDefaultButtonRules(themeData) {
     borderStyle: "solid",
     borderColor: "transparent",
     borderRadius: themeData["button.borderRadius"],
-    boxShadow: "none",
     boxSizing: "border-box",
     color: themeData["colorScheme.textColor"],
     cursor: "pointer",
