@@ -31,10 +31,10 @@ export default class Link extends Component {
     onMouseOver: () => {}
   };
 
-  _renderExternalLinkIcon = styles =>
+  _renderExternalLinkIcon = (styles, size) =>
     this.props.target === "_blank" && (
       <div className={css(styles.externalIcon)}>
-        <ExternalLinkIcon size={iconSizes.PX_24} />
+        <ExternalLinkIcon size={size} />
       </div>
     );
 
@@ -44,8 +44,12 @@ export default class Link extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles }) => {
+        {({ resolvedRoles, metadata }) => {
           const styles = stylesheet(this.props, resolvedRoles);
+          const size =
+            metadata.densityId === "medium-density"
+              ? iconSizes.PX_24
+              : iconSizes.PX_16;
           return (
             <Wrapper
               className={css(styles.wrapper)}
@@ -58,7 +62,7 @@ export default class Link extends Component {
               <Typography elementType="span" style={styles.typography}>
                 {title}
               </Typography>
-              {this._renderExternalLinkIcon(styles)}
+              {this._renderExternalLinkIcon(styles, size)}
             </Wrapper>
           );
         }}

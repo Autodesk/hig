@@ -173,16 +173,21 @@ exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
     <svg
       className="emotion-0"
       color={undefined}
-      height="8px"
-      viewBox="0 0 9 8"
-      width="9px"
+      height="24px"
+      viewBox="0 0 24 24"
+      width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        eternal-link
+        external-link-24
       </title>
       <path
-        d="M7 0H2v2h3.54L1 6.54 2.46 8 7 3.46V7h2V0H7z"
+        d="M18 18H6V6h4V5H5v14h14v-5h-1v4z"
+        fillRule="evenodd"
+      />
+      <path
+        d="M11.88 5.05L14 7.17l-3.54 3.54 2.83 2.83L16.83 10 19 12.12l1.41-8.48zm6.36 5l-1.43-1.48-3.53 3.54-1.4-1.4 3.53-3.54L14 5.76l5.15-.91z"
+        fillRule="evenodd"
       />
     </svg>
   </div>

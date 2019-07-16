@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
-import { Caret24 } from "@hig/icons";
+import { CaretDownMUI, CaretDownSUI } from "@hig/icons";
 import ThemeContext from "@hig/theme-context";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 import stylesheet from "./stylesheet";
@@ -31,7 +31,7 @@ export default class CollapseButton extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles }) => (
+        {({ resolvedRoles, metadata }) => (
           <div
             aria-pressed={!minimized}
             className={css(
@@ -42,7 +42,11 @@ export default class CollapseButton extends Component {
             role="button"
             tabIndex={0}
           >
-            <Caret24 />
+            {metadata.densityId === "high-density" ? (
+              <CaretDownSUI />
+            ) : (
+              <CaretDownMUI />
+            )}
           </div>
         )}
       </ThemeContext.Consumer>

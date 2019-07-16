@@ -9,7 +9,6 @@ import OperatorMinusXsUISVG from "./icons/ui-controls/operator-minus-xs.svg";
 import OperatorMinusSUISVG from "./icons/ui-controls/operator-minus-s.svg";
 import HamburgerDefaultUISVG from "./icons/ui-controls/hamburger-default.svg";
 import HamburgerCloseUISVG from "./icons/ui-controls/hamburger-close.svg";
-import ExternalLinkUISVG from "./icons/ui-controls/external-link.svg";
 import CloseXsUISVG from "./icons/ui-controls/close-xs.svg";
 import CloseSUISVG from "./icons/ui-controls/close-s.svg";
 import CloseMUISVG from "./icons/ui-controls/close-m.svg";
@@ -5004,21 +5003,6 @@ export const CloseXsUI = props => (
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <CloseXsUISVG {...propsClone} />
-      );
-    }}
-  </ThemeContext.Consumer>
-)
-
-export const ExternalLinkUI = props => (
-  <ThemeContext.Consumer>
-    {({ resolvedRoles }) => {
-      let baseProps = {
-        width: "9px",
-        height: "8px"
-      }
-      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
-      return (
-        <ExternalLinkUISVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>

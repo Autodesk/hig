@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "@hig/icon-button": "^2.1.1",
-    "@hig/icons": "^2.1.1",
+    "@hig/icons": "^3.0.0",
     "@hig/skeleton-item": "^1.0.1",
     "@hig/surface": "^1.0.1",
     "@hig/text-link": "^1.0.1",
