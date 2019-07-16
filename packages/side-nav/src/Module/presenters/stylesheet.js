@@ -67,7 +67,7 @@ export default function stylesheet(props, themeData) {
       display: "flex",
       alignItems: "center",
       marginLeft: "auto",
-      padding: "6px 10px",
+      padding: "6px 10px"
     },
 
     row: {
