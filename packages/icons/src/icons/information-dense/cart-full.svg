@@ -1,10 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>cart-full-16</title>
-  <g>
-    <path d="M15,1h-.73a1.26,1.26,0,0,0-1.19,1L11.5,10H3.18L2,6H1A.71.71,0,0,0,.28,7L1.46,11a1.41,1.41,0,0,0,1.28,1H12a1.26,1.26,0,0,0,1.19-1l1.54-8H16V2A1,1,0,0,0,15,1Z"/>
-    <circle cx="5.5" cy="14.5" r="1.5"/>
-    <circle cx="10.5" cy="14.5" r="1.5"/>
-  </g>
-  <rect x="4" y="6" width="7" height="3" rx="0.5" ry="0.5"/>
-  <rect x="4" y="2" width="7" height="3" rx="0.5" ry="0.5"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>cart-full-16</title><polygon points="4.07 4 3.78 2.83 1.02 1.15 -0.02 2.85 2.03 4.1 4 12 14 12 16 4 4.07 4"/><circle cx="11.5" cy="14.5" r="1.5"/><circle cx="5.5" cy="14.5" r="1.5"/></svg>

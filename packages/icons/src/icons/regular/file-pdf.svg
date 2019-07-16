@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>file-pdf-24</title>
-  <g id="final">
-    <g id="file-pdf">
-      <path d="M15,3H5A1,1,0,0,0,4,4V20a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V8Zm4,16.5a.5.5,0,0,1-.5.5H5.5a.5.5,0,0,1-.5-.5V4.5A.5.5,0,0,1,5.5,4H15V8h4Z" fill="#ec4a41"/>
-      <rect x="7" y="13" width="10" height="1" fill="#ec4a41"/>
-      <rect x="7" y="15" width="7" height="1" fill="#ec4a41"/>
-      <rect x="12" y="11" width="5" height="1" fill="#ec4a41"/>
-      <rect x="12" y="9" width="5" height="1" fill="#ec4a41"/>
-      <rect x="7" y="9" width="4" height="3" fill="#ec4a41"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>file-pdf-24</title><path d="M15,3H4V21H20V8Zm1,2.41L17.59,7H16ZM19,20H5V4H15V8h4Z" fill="#ec4a41"/><rect x="7" y="13" width="10" height="1" fill="#ec4a41"/><rect x="7" y="15" width="7" height="1" fill="#ec4a41"/><rect x="12" y="11" width="5" height="1" fill="#ec4a41"/><rect x="12" y="9" width="5" height="1" fill="#ec4a41"/><rect x="7" y="9" width="4" height="3" fill="#ec4a41"/></svg>

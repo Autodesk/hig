@@ -1,5 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>mobile-24</title>
-  <rect x="10" y="19" width="3" height="1"/>
-  <path d="M17,2H6A1,1,0,0,0,5,3V21a1,1,0,0,0,1,1H17a1,1,0,0,0,1-1V3A1,1,0,0,0,17,2Zm0,19H6V18H17Zm0-4H6V6H17ZM6,5V3H17V5Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>device-mobile-24</title><path d="M5,2V22H18V2ZM17,21H6V18H17ZM6,17V3H17V17Z"/><rect x="10" y="19" width="3" height="1"/></svg>

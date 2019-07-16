@@ -143,6 +143,13 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
 
+"@hig/icons@^2.1.1":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-2.1.2.tgz#029623f0fe54b9eb939dd348ac86d9b248143966"
+  integrity sha512-+IjNq99b8bd21EnvGjXAIwZxWxVi9zHybbejPJIzLX6t8JresolK9DVzkTdlRREOPjZTst5RoeAh03wif2gbfg==
+  dependencies:
+    emotion "^10.0.0"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

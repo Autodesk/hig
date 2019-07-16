@@ -29,6 +29,10 @@ describe("Button", () => {
       props: { icon: "<Icon />", title: "Settings" }
     },
     {
+      description: "renders with className prop",
+      props: { title: "Button Class", className: "custom-class" }
+    },
+    {
       description: "renders with a link",
       props: { link: "https://hig.autodesk.com", title: "Settings" }
     }

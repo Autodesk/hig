@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>lock-24</title>
-  <g id="final">
-    <g>
-      <path d="M19,10H17V8A5,5,0,0,0,7,8v2H5a1,1,0,0,0-1,1v9a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V11A1,1,0,0,0,19,10ZM8,8a4,4,0,0,1,8,0v2H15V8A3,3,0,0,0,9,8v2H8Zm6,0v2H10V8a2,2,0,0,1,4,0Zm5,12H5V11H19Z" fill="#2e4258"/>
-      <g>
-        <rect x="6" y="13" width="12" height="1" fill="#2e4258"/>
-        <rect x="6" y="15" width="12" height="1" fill="#2e4258"/>
-        <rect x="6" y="17" width="12" height="1" fill="#2e4258"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>lock-24</title><path d="M17,10V9A5,5,0,0,0,7,9v1H5V21H19V10ZM8,9a4,4,0,0,1,8,0v1H15V9A3,3,0,0,0,9,9v1H8Zm6,0v1H10V9a2,2,0,0,1,4,0Zm4,11H6V11H18Z"/><rect x="11" y="13" width="2" height="5"/></svg>

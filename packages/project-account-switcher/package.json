@@ -1,6 +1,6 @@
 {
   "name": "@hig/project-account-switcher",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "HIG Project Account Switcher",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -17,8 +17,8 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/flyout": "^1.0.2",
-    "@hig/icons": "^2.1.1",
+    "@hig/flyout": "^1.0.7",
+    "@hig/icons": "^3.0.0",
     "@hig/text-link": "^1.0.0",
     "@hig/typography": "^1.0.3",
     "@hig/utils": "^0.3.0",

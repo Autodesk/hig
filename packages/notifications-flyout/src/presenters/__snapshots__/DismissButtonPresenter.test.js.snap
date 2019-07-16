@@ -38,6 +38,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders with all
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -51,6 +52,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders with all
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <div
@@ -123,6 +125,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders without 
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -136,6 +139,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders without 
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <div

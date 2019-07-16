@@ -38,7 +38,7 @@ When contributing code, please also include appropriate tests as part of the pul
 
 Please view the [contribution example][] for an example of the recommended package structure.
 
-[contribution example]: ./packages/contribution-example
+[contribution example]: ./docs/sample-component
 
 ### Contributing Features
 

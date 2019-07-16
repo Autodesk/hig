@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Downshift from "downshift";
+import { cx } from "emotion";
 import MultiDownshift from "@hig/multi-downshift";
 
 import InputPresenter from "./presenters/InputPresenter";
@@ -162,8 +163,16 @@ export default class Dropdown extends Component {
       required,
       onBlur,
       onFocus,
-      variant
+      variant,
+      ...otherProps
     } = this.props;
+
+    const { className } = otherProps;
+    const inputClassName =
+      className &&
+      className
+        .split(" ")
+        .reduce((acc, cur) => cx(acc, `${cur.trim()}-input-wrapper`), "");
 
     const inputProps = getInputProps({
       id,
@@ -174,7 +183,8 @@ export default class Dropdown extends Component {
       onBlur,
       onFocus,
       onClick: toggleMenu,
-      variant
+      variant,
+      className: inputClassName
     });
 
     return <InputPresenter key="input" {...inputProps} />;
@@ -193,8 +203,29 @@ export default class Dropdown extends Component {
       selectedItem,
       selectedItems
     } = downshift;
-    const menuProps = getMenuProps({ isOpen, refKey: "innerRef" });
-    const { formatOption, multiple, options, renderOption } = this.props;
+
+    const {
+      formatOption,
+      multiple,
+      options,
+      renderOption,
+      ...otherProps
+    } = this.props;
+
+    const { className } = otherProps;
+
+    const menuClassName =
+      className &&
+      className
+        .split(" ")
+        .reduce((acc, cur) => cx(acc, `${cur.trim()}-menu-wrapper`), "");
+
+    const menuProps = getMenuProps({
+      isOpen,
+      refKey: "innerRef",
+      className: menuClassName
+    });
+
     const children = renderOptions({
       formatOption,
       getItemProps,
@@ -218,7 +249,24 @@ export default class Dropdown extends Component {
    * @returns {JSX.Element}
    */
   renderPresenter = downshift => {
-    const { disabled } = this.props;
+    const {
+      children,
+      defaultValue,
+      disabled,
+      formatOption,
+      id,
+      multiple,
+      onBlur,
+      onChange,
+      onFocus,
+      options,
+      placeholder,
+      renderOption,
+      required,
+      value,
+      variant,
+      ...otherProps
+    } = this.props;
 
     /**
      * The `Wrapper` presenter is used as a function to avoid having to use Downshift's `getRootProps`
@@ -226,7 +274,8 @@ export default class Dropdown extends Component {
      */
     return renderWrapper({
       disabled,
-      children: [this.renderInput(downshift), this.renderMenu(downshift)]
+      children: [this.renderInput(downshift), this.renderMenu(downshift)],
+      ...otherProps
     });
   };
 

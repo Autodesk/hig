@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>copy-24</title>
-  <g id="final">
-    <g id="copy">
-      <g id="outine">
-        <path d="M19.92,6H17V7h3V20H9V19H8v1c0,.58,0,1,.92,1h11A1.05,1.05,0,0,0,21,20V7A1.08,1.08,0,0,0,19.92,6Z" fill="#2e4258"/>
-        <path d="M15,3H4A1,1,0,0,0,3,4V17a1,1,0,0,0,1,1H15a1,1,0,0,0,1-1V4A1,1,0,0,0,15,3Zm0,14H4V4H15Z" fill="#2e4258"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>copy-24</title><polygon points="7 17 4 17 4 4 11 4 11 5 13 5 11 3 3 3 3 18 7 18 7 17"/><path d="M16,6H8V21H21V11Zm1,2.41L18.59,10H17ZM20,20H9V7h7v4h4Z"/></svg>

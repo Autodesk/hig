@@ -1,3 +1,11 @@
+# [@hig/dropdown-v2.0.7](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.6...@hig/dropdown@2.0.7) (2019-07-11)
+
+
+### Bug Fixes
+
+* allow className to be passed down in Dropdown ([faedcce](https://github.com/Autodesk/hig/commit/faedcce))
+* update Dropdown to the newest Icons version ([3a446de](https://github.com/Autodesk/hig/commit/3a446de))
+
 # [@hig/dropdown-v2.0.6](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.5...@hig/dropdown@2.0.6) (2019-06-07)
 
 

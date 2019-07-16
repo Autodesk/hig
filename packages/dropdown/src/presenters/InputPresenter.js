@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "emotion";
-import { Caret24, CaretDownSUI } from "@hig/icons";
+import { CaretDownMUI, CaretDownSUI } from "@hig/icons";
 import Input from "@hig/input";
 import ThemeContext from "@hig/theme-context";
 
@@ -23,7 +23,7 @@ export default function InputPresenter(props) {
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
         const CaretIcon =
-          metadata.densityId === "medium-density" ? Caret24 : CaretDownSUI;
+          metadata.densityId === "medium-density" ? CaretDownMUI : CaretDownSUI;
         const iconColor = isOpen
           ? resolvedRoles["colorScheme.accentColor"]
           : resolvedRoles["colorScheme.iconColor"];

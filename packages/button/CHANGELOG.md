@@ -1,3 +1,15 @@
+# [@hig/button-v1.4.0](https://github.com/Autodesk/hig/compare/@hig/button@1.3.3...@hig/button@1.4.0) (2019-06-20)
+
+
+### Bug Fixes
+
+* allow passing down className to Button ([fa47fd5](https://github.com/Autodesk/hig/commit/fa47fd5))
+
+
+### Features
+
+* enable stylesheet function prop on Button ([4374d81](https://github.com/Autodesk/hig/commit/4374d81))
+
 # [@hig/button-v1.3.3](https://github.com/Autodesk/hig/compare/@hig/button@1.3.2...@hig/button@1.3.3) (2019-05-24)
 
 

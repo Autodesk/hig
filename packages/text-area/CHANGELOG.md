@@ -1,3 +1,17 @@
+# [@hig/text-area-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/text-area@1.1.4...@hig/text-area@1.2.0) (2019-07-09)
+
+
+### Features
+
+* add stylesheet prop to TextArea ([0f14579](https://github.com/Autodesk/hig/commit/0f14579))
+
+# [@hig/text-area-v1.1.4](https://github.com/Autodesk/hig/compare/@hig/text-area@1.1.3...@hig/text-area@1.1.4) (2019-07-01)
+
+
+### Bug Fixes
+
+* allow className to be passed down in TextArea ([fc8928a](https://github.com/Autodesk/hig/commit/fc8928a))
+
 # [@hig/text-area-v1.1.3](https://github.com/Autodesk/hig/compare/@hig/text-area@1.1.2...@hig/text-area@1.1.3) (2019-05-22)
 
 

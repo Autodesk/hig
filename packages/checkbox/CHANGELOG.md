@@ -1,3 +1,10 @@
+# [@hig/checkbox-v2.0.7](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.6...@hig/checkbox@2.0.7) (2019-07-11)
+
+
+### Bug Fixes
+
+* update icons package ([6df732c](https://github.com/Autodesk/hig/commit/6df732c))
+
 # [@hig/checkbox-v2.0.6](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.5...@hig/checkbox@2.0.6) (2019-06-07)
 
 

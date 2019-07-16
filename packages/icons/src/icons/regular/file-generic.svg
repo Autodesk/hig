@@ -1,6 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>file-generic-24</title>
-  <g id="file">
-    <path id="outline" d="M15,3H5A1,1,0,0,0,4,4V20a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V8Zm4,5V20H5V4H15V8Z"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>file-generic-24</title><path d="M15,3H4V21H20V8Zm1,2.41L17.59,7H16ZM19,20H5V4H15V8h4Z"/></svg>

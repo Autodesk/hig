@@ -1,6 +1,6 @@
 {
   "name": "@hig/checkbox",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "HIG Checkbox",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "@hig/behaviors": "^1.1.1",
-    "@hig/icons": "^2.1.1",
+    "@hig/icons": "^3.0.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
     "react-lifecycles-compat": "^3.0.4"
