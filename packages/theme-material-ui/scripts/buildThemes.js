@@ -130,6 +130,9 @@ function writeMaterialUiConfigFile(dirPath, metadata, theme) {
           textTransform: 'none',
           marginLeft: "${theme["button.gutter"]}",
           marginRight: "${theme["button.gutter"]}",
+          "&:focus:hover": {
+            boxShadow: "${theme["button.flat.hover.halo.color"]} 0 0 0 2px",
+          },
       },
       text: {
         backgroundColor: "${theme["button.flat.backgroundColor"]}",
@@ -193,6 +196,9 @@ function writeMaterialUiConfigFile(dirPath, metadata, theme) {
           "& svg * ": {
             fill: "${theme["button.outline.focus.icon.color"]}"
           },
+        },
+        "&:focus:hover": {
+          borderColor: "${theme["button.outline.borderColor"]}",
         },
         "&:active": {
           backgroundColor: "${theme["button.outline.pressed.backgroundColor"]}",
