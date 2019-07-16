@@ -9,7 +9,7 @@ import {
     createMuiTheme
 } from '@material-ui/core/styles'
 
-import { unstable_Box as Box } from '@material-ui/core/Box';
+import Box from '@material-ui/core/Box';
 
 import lightGrayHighTheme from "@hig/theme-material-ui/build/material-ui/lightGrayHighDensityTheme";
 import webLightMediumTheme from "@hig/theme-material-ui/build/material-ui/webLightMediumDensityTheme";
