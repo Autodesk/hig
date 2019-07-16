@@ -68,9 +68,6 @@ export default function stylesheet(props, themeData) {
       alignItems: "center",
       marginLeft: "auto",
       padding: "6px 10px",
-      "& svg *": {
-        fill: themeData["typography.body.color"]
-      }
     },
 
     row: {
