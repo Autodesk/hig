@@ -1,15 +1,15 @@
 import React from 'react';
-import { Assets24, Assets16, AddFolder24, AddFolder16, Calendar24, Calendar16, Location24, Location16, Tag24, Tag16 } from '@hig/icons';
+import { AddFolder24, AddFolder16, Calendar24, Calendar16, Location24, Location16, Tag24, Tag16 } from '@hig/icons';
 import Spacer from '@hig/spacer';
 
 import ThemeRepeater from '../components/ThemeRepeater';
 
 const highDensityIcons = [
-  Assets16, AddFolder16, Calendar16, Location16, Tag16
+  AddFolder16, Calendar16, Location16, Tag16
 ];
 
 const mediumDensityIcons = [
-  Assets24, AddFolder24, Calendar24, Location24, Tag24
+  AddFolder24, Calendar24, Location24, Tag24
 ];
 
 function IconsPage() {
