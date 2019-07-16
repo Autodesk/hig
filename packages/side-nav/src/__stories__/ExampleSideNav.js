@@ -1,7 +1,7 @@
 import React from "react";
 import { action } from "@storybook/addon-actions";
 import { boolean, text } from "@storybook/addon-knobs/react";
-import { Insight24, ProductsAndServices24, Collaboration24 } from "@hig/icons";
+import { Graph24, ProductsAndServices24, Collaboration24 } from "@hig/icons";
 import Typography from "@hig/typography";
 
 import SideNav from "../index";
@@ -18,7 +18,7 @@ const ExampleSideNav = () => (
     onClickSuperHeader={action("onClick")}
     groups={
       <SideNav.Group>
-        <SideNav.Module title="Module 1" icon={<Insight24 />} activeChildren>
+        <SideNav.Module title="Module 1" icon={<Graph24 />} activeChildren>
           <SideNav.Submodule title="Submodule 1" />
           <SideNav.Submodule title="Submodule 2" active />
         </SideNav.Module>
