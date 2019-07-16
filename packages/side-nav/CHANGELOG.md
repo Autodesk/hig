@@ -1,3 +1,11 @@
+# [@hig/side-nav-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.1.0...@hig/side-nav@2.1.1) (2019-07-16)
+
+
+### Bug Fixes
+
+* external link icon colors ([c980876](https://github.com/Autodesk/hig/commit/c980876))
+* update SideNav to newest Icons version ([d16d999](https://github.com/Autodesk/hig/commit/d16d999))
+
 # [@hig/side-nav-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.0.5...@hig/side-nav@2.1.0) (2019-06-12)
 
 
