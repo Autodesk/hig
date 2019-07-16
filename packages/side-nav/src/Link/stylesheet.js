@@ -14,10 +14,6 @@ export default function(props, themeData) {
         color: themeData["colorScheme.accentColor"]
       },
 
-      "& svg *": {
-        fill: themeData["typography.body.color"]
-      },
-
       "&:hover svg *": {
         fill: themeData["colorScheme.accentColor"]
       }
