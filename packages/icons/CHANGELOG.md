@@ -1,3 +1,10 @@
+# [@hig/icons-v3.0.1](https://github.com/Autodesk/hig/compare/@hig/icons@3.0.0...@hig/icons@3.0.1) (2019-07-16)
+
+
+### Bug Fixes
+
+* remove ExternalLinkUI icon ([06fbbde](https://github.com/Autodesk/hig/commit/06fbbde))
+
 # [@hig/icons-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/icons@2.1.2...@hig/icons@3.0.0) (2019-07-09)
 
 
