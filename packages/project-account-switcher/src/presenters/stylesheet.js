@@ -34,7 +34,6 @@ export default function stylesheet() {
     },
     panel: {
       margin: 0,
-      width: `200px`,
       padding: `0 10px 10px 10px`
     },
     switcherList: {
@@ -53,7 +52,8 @@ export default function stylesheet() {
       height: `34px`,
       alignItems: `center`,
       width: `100%`,
-      paddingTop: `8px`
+      paddingTop: `8px`,
+      whiteSpace: `nowrap`
     },
     switcherAccountImageWrapper: {
       display: `inline-block`,

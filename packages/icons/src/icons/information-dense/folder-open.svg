@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>folder-open-16</title>
-  <g id="assets">
-    <g id="Layer_201" data-name="Layer%201">
-      <path d="M1,14H11.62L16,6H5.37ZM14,5V4a1,1,0,0,0-1-1H6L5,2H1A1,1,0,0,0,0,3V13.32L4.37,5Z"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>folder-open-16</title><polygon points="12 5 12 4 8 4 6 2 0 2 0 3.94 0 4 0 11.76 3.38 5 12 5"/><polygon points="4 6 0 14 12 14 16 6 4 6"/></svg>

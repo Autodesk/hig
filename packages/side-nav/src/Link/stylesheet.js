@@ -20,10 +20,6 @@ export default function(props, themeData) {
         cursor: "pointer"
       },
 
-      "& svg *": {
-        fill: themeData["typography.body.color"]
-      },
-
       "&:hover svg *": {
         fill: themeData["colorScheme.accentColor"]
       }

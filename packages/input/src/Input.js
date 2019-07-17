@@ -61,6 +61,7 @@ function Input(props) {
           stylesheet={stylesheet}
           tagName={tagName}
           variant={variant}
+          {...otherProps}
         >
           <InputPresenter
             disabled={disabledProp}

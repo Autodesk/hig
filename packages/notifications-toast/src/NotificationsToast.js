@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import IconButton from "@hig/icon-button";
-import { CloseSUI } from "@hig/icons";
+import { CloseSUI, CloseXsUI } from "@hig/icons";
 import RichText from "@hig/rich-text";
 import ThemeContext from "@hig/theme-context";
 import Typography from "@hig/typography";
@@ -42,7 +42,7 @@ export default class NotificationsToast extends Component {
     status: "primary"
   };
 
-  _renderImage = themeData => {
+  _renderImage = (themeData, metadata) => {
     const { showStatusIcon, image, status } = this.props;
     const styles = stylesheet(themeData, status);
     const iconFill =
@@ -53,8 +53,9 @@ export default class NotificationsToast extends Component {
       return <div className={css(styles.toastImageContainer)}>{image}</div>;
     }
 
+    const density = metadata.densityId === "medium-density" ? "medium" : "high";
     if (showStatusIcon && STATUS_ICONS[status]) {
-      const Icon = STATUS_ICONS[status];
+      const Icon = STATUS_ICONS[status][density];
       return (
         <div className={css(styles.toastImageContainer)}>
           <Icon color={iconFill} />
@@ -68,24 +69,33 @@ export default class NotificationsToast extends Component {
   render() {
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles }) => {
+        {({ resolvedRoles, metadata }) => {
           const { status } = this.props;
           const styles = stylesheet(resolvedRoles, status);
+          const CloseIcon =
+            metadata.densityId === "medium-density" ? CloseSUI : CloseXsUI;
 
           return (
             <div className={css(styles.toast)}>
-              {this._renderImage(resolvedRoles)}
+              {this._renderImage(resolvedRoles, metadata)}
               <div className={css(styles.toastBody)}>
                 <div className={css(styles.toastMessage)}>
                   <RichText>
-                    <Typography style={{ fontSize: "12px" }}>
+                    <Typography
+                      style={{
+                        fontSize: "12px",
+                        maxWidth: "220px",
+                        textOverflow: "ellipsis",
+                        overflow: "hidden"
+                      }}
+                    >
                       {this.props.children}
                     </Typography>
                   </RichText>
                   <div className={css(styles.toastDismiss)}>
                     <IconButton
                       title="Dismiss"
-                      icon={<CloseSUI />}
+                      icon={<CloseIcon />}
                       type="transparent"
                       onClick={this.props.onDismiss}
                     />

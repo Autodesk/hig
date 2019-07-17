@@ -21,7 +21,8 @@ describe("Dropdown/presenters/MenuPresenter", () => {
       props: {
         innerRef: () => {},
         isOpen: true,
-        children: <p key="p">hi</p>
+        children: <p key="p">hi</p>,
+        className: "custom-class"
       }
     }
   ];

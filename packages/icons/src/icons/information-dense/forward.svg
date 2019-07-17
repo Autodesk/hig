@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>forward-16</title>
-  <g style="isolation: isolate">
-    <g id="assets">
-      <polygon points="8.22 12.53 11.38 9.25 0 9.25 0 6.75 11.4 6.75 8.22 3.46 9.93 1.69 16 7.99 9.93 14.29 8.22 12.53" style="mix-blend-mode: darken"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>forward-16</title><polygon points="8.13 10.63 8.13 14.13 16 8.44 8.13 2.75 8.13 6.25 0 6.25 0 10.63 8.13 10.63" fill-rule="evenodd"/></svg>

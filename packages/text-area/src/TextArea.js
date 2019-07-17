@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { cx } from "emotion";
 import Input from "@hig/input";
 
 import customStylesheet from "./customStylesheet";
@@ -24,7 +25,11 @@ export default class TextArea extends Component {
     /**
      * The visual variant of the textarea
      */
-    variant: PropTypes.oneOf(variantTypes)
+    variant: PropTypes.oneOf(variantTypes),
+    /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -32,15 +37,29 @@ export default class TextArea extends Component {
   };
 
   render() {
-    const { variant, ...otherProps } = this.props;
+    const { variant, stylesheet, ...otherProps } = this.props;
+    const { className } = otherProps;
+    const textareaClassName =
+      className &&
+      className
+        .split(" ")
+        .reduce((acc, cur) => cx(acc, `${cur.trim()}-textarea`), "");
+
+    const textareaStylesheet = (styles, props, themeData, theme) => {
+      const textareaStyles = customStylesheet(styles, props, themeData, theme);
+      return stylesheet
+        ? stylesheet(textareaStyles, props, themeData, theme)
+        : textareaStyles;
+    };
 
     return (
-      <div style={{ position: "relative" }}>
+      <div style={{ position: "relative" }} className={className}>
         <Input
-          stylesheet={customStylesheet}
+          {...otherProps}
+          className={textareaClassName}
+          stylesheet={textareaStylesheet}
           tagName="textarea"
           variant={variant}
-          {...otherProps}
         />
       </div>
     );

@@ -1,3 +1,17 @@
+# [@hig/input-v1.1.5](https://github.com/Autodesk/hig/compare/@hig/input@1.1.4...@hig/input@1.1.5) (2019-07-01)
+
+
+### Bug Fixes
+
+* allow className to be passed down in Input ([bb8e040](https://github.com/Autodesk/hig/commit/bb8e040))
+
+# [@hig/input-v1.1.4](https://github.com/Autodesk/hig/compare/@hig/input@1.1.3...@hig/input@1.1.4) (2019-05-17)
+
+
+### Bug Fixes
+
+* should take up rest of space in flex container ([9dd7f74](https://github.com/Autodesk/hig/commit/9dd7f74))
+
 # [@hig/input-v1.1.3](https://github.com/Autodesk/hig/compare/@hig/input@1.1.2...@hig/input@1.1.3) (2019-03-27)
 
 

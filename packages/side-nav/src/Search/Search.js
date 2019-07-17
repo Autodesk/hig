@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
-import { Search24, ClearSmall24 } from "@hig/icons";
+import { Search24, Error24 } from "@hig/icons";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
@@ -94,7 +94,7 @@ export default class Search extends Component {
                     role="button"
                     tabIndex={0}
                   >
-                    <ClearSmall24 />
+                    <Error24 />
                   </div>
                 )}
             </div>

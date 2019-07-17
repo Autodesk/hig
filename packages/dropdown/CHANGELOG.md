@@ -1,3 +1,25 @@
+# [@hig/dropdown-v2.0.7](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.6...@hig/dropdown@2.0.7) (2019-07-11)
+
+
+### Bug Fixes
+
+* allow className to be passed down in Dropdown ([faedcce](https://github.com/Autodesk/hig/commit/faedcce))
+* update Dropdown to the newest Icons version ([3a446de](https://github.com/Autodesk/hig/commit/3a446de))
+
+# [@hig/dropdown-v2.0.6](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.5...@hig/dropdown@2.0.6) (2019-06-07)
+
+
+### Bug Fixes
+
+* cursor should be pointer and not text ([0751d13](https://github.com/Autodesk/hig/commit/0751d13))
+
+# [@hig/dropdown-v2.0.5](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.4...@hig/dropdown@2.0.5) (2019-05-10)
+
+
+### Bug Fixes
+
+* remove unused styles dependency ([708554b](https://github.com/Autodesk/hig/commit/708554b))
+
 # [@hig/dropdown-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.3...@hig/dropdown@2.0.4) (2019-04-04)
 
 

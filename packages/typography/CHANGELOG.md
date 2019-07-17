@@ -1,3 +1,11 @@
+# [@hig/typography-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/typography@1.0.3...@hig/typography@1.0.4) (2019-06-06)
+
+
+### Bug Fixes
+
+* break out className from otherProps ([7a38584](https://github.com/Autodesk/hig/commit/7a38584))
+* enable passing className prop ([25cd959](https://github.com/Autodesk/hig/commit/25cd959))
+
 # [@hig/typography-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/typography@1.0.2...@hig/typography@1.0.3) (2019-03-13)
 
 

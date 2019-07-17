@@ -27,10 +27,6 @@ exports[`side-nav/Link snapshot tests renders with no props 1`] = `
   cursor: pointer;
 }
 
-.emotion-1 svg * {
-  fill: #3c3c3c;
-}
-
 .emotion-1:hover svg * {
   fill: #0696d7;
 }

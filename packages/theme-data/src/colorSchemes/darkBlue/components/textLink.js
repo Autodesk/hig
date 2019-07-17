@@ -18,10 +18,5 @@ export default {
     value: {
       ref: "basics.colors.textLinkAgainstDark"
     }
-  },
-  "textLink.focus.halo.color": {
-    transform: {
-      alpha: 0.35
-    }
   }
 };

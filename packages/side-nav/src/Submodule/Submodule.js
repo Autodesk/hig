@@ -43,7 +43,7 @@ export default class Submodule extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles }) => (
+        {({ resolvedRoles, metadata }) => (
           <Wrapper
             className={css(stylesheet(this.props, resolvedRoles).wrapper)}
             href={link}
@@ -62,7 +62,13 @@ export default class Submodule extends Component {
                   stylesheet(this.props, resolvedRoles).externalIcon
                 )}
               >
-                <ExternalLinkIcon size={iconSizes.PX_24} />
+                <ExternalLinkIcon
+                  size={
+                    metadata.densityId === "medium-density"
+                      ? iconSizes.PX_24
+                      : iconSizes.PX_16
+                  }
+                />
               </div>
             ) : null}
           </Wrapper>

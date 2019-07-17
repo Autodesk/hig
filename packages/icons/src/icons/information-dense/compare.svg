@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>compare-16</title>
-  <g id="assets">
-    <polygon points="4.64 1.46 6.18 3 0 3 0 5 6.16 5 4.64 6.53 6.05 7.94 10 3.99 6.05 0.04 4.64 1.46"/>
-    <polygon points="11.36 9.46 9.82 11 16 11 16 13 9.84 13 11.36 14.53 9.95 15.94 6 11.99 9.95 8.04 11.36 9.46"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>compare-16</title><polygon points="5.38 8 11 4 5.38 0 5.38 2.46 0 2.46 0 5.54 5.38 5.54 5.38 8" fill-rule="evenodd"/><polygon points="10.63 10.46 10.63 8 5 12 10.63 16 10.63 13.54 16 13.54 16 10.46 10.63 10.46" fill-rule="evenodd"/></svg>

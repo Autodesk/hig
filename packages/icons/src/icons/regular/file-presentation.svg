@@ -1,12 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>file-presentation-24</title>
-  <g id="final">
-    <g id="file-presentation-02">
-      <path d="M19.5,4H3.5a.5.5,0,0,0,0,1H4V16a1,1,0,0,0,1,1H9.33L7.22,19.92a.5.5,0,1,0,.81.58L10.56,17H11v3.38a.57.57,0,0,0,.5.63.57.57,0,0,0,.5-.62V17h.44L15,20.51a.5.5,0,0,0,.81-.58L13.67,17H18a1,1,0,0,0,1-1V5h.5a.5.5,0,0,0,0-1ZM18,16H5V5H18Z" fill="#faa21b"/>
-      <rect x="14" y="6" width="1" height="5" transform="translate(6 23) rotate(-90)" fill="#faa21b"/>
-      <rect x="14" y="8" width="1" height="5" transform="translate(4 25) rotate(-90)" fill="#faa21b"/>
-      <rect x="13.5" y="10.5" width="1" height="4" transform="translate(1.5 26.5) rotate(-90)" fill="#faa21b"/>
-      <path d="M8.5,8A2.5,2.5,0,1,0,11,10.5,2.5,2.5,0,0,0,8.5,8Zm0,4A1.5,1.5,0,1,1,10,10.5,1.5,1.5,0,0,1,8.5,12Z" fill="#faa21b"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>file-presentation-24</title><path d="M19.5,4H3.5a.5.5,0,0,0,0,1H4V17H9.33L7.22,19.92a.49.49,0,0,0,0,.7A.51.51,0,0,0,8,20.57l0-.07L10.56,17H11v3.38a.57.57,0,0,0,.5.63.57.57,0,0,0,.5-.62V17h.44L15,20.51a.5.5,0,0,0,.81-.58L13.67,17H19V5h.5a.5.5,0,0,0,0-1ZM18,16H5V5H18Z" fill="#faa21b"/><rect x="12" y="8" width="5" height="1" fill="#faa21b"/><rect x="12" y="10" width="5" height="1" fill="#faa21b"/><rect x="12" y="12" width="4" height="1" fill="#faa21b"/><path d="M8.5,8A2.5,2.5,0,1,0,11,10.5,2.5,2.5,0,0,0,8.5,8Zm0,4A1.5,1.5,0,1,1,10,10.5,1.5,1.5,0,0,1,8.5,12Z" fill="#faa21b"/></svg>

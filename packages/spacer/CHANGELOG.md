@@ -1,3 +1,10 @@
+# [@hig/spacer-v1.0.8](https://github.com/Autodesk/hig/compare/@hig/spacer@1.0.7...@hig/spacer@1.0.8) (2019-07-11)
+
+
+### Bug Fixes
+
+* account for flex containers ([0a88907](https://github.com/Autodesk/hig/commit/0a88907))
+
 # [@hig/spacer-v1.0.7](https://github.com/Autodesk/hig/compare/@hig/spacer@1.0.6...@hig/spacer@1.0.7) (2019-03-13)
 
 

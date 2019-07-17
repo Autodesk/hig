@@ -10,6 +10,23 @@ describe("TextArea", () => {
 
       expect(tree).toMatchSnapshot();
     });
+
+    it("renders with stylesheet prop", () => {
+      function stylesheet(styles, props, themeData) {
+        return {
+          ...styles,
+          input: {
+            ...styles.input,
+            background: themeData[`basics.colors.green100`]
+          }
+        };
+      }
+      const tree = renderer
+        .create(<TextArea stylesheet={stylesheet} />)
+        .toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
   });
 
   describe("event handlers", () => {
@@ -55,5 +72,12 @@ describe("TextArea", () => {
         expect(eventHandler).toBeCalled();
       });
     });
+  });
+
+  it("passes className prop to textarea element", () => {
+    const className = "custom-class";
+    const wrapper = mount(<TextArea className={className} />);
+    expect(wrapper.hasClass(className)).toBe(true);
+    expect(wrapper.childAt(0).hasClass(`${className}-textarea`)).toBe(true);
   });
 });

@@ -19,15 +19,15 @@ describe("side-nav/Search", () => {
     const wrapper = mount(<Search />);
     const input = wrapper.find("input");
 
-    expect(wrapper.find("ClearSmall24").parent()).toHaveLength(0);
+    expect(wrapper.find("Error24").parent()).toHaveLength(0);
     input.simulate("change", { target: { value: "bar" } });
-    expect(wrapper.find("ClearSmall24").parent()).toHaveLength(1);
+    expect(wrapper.find("Error24").parent()).toHaveLength(1);
 
     wrapper
-      .find("ClearSmall24")
+      .find("Error24")
       .parent()
       .simulate("click");
     expect(input.prop("value")).toEqual("");
-    expect(wrapper.find("ClearSmall24").parent()).toHaveLength(0);
+    expect(wrapper.find("Error24").parent()).toHaveLength(0);
   });
 });

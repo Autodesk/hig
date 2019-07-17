@@ -1,5 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>copy-16</title>
-  <rect width="11" height="12" rx="1" ry="1"/>
-  <path d="M12,4v9H5v2a1,1,0,0,0,1,1h9a1,1,0,0,0,1-1V5a1,1,0,0,0-1-1Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>copy-16</title><polygon points="10 3 7 3 7 0 10 3"/><polygon points="5 4 6 4 6 0 0 0 0 11 5 11 5 4"/><polygon points="16 8 13 8 13 5 16 8"/><polygon points="12 9 12 5 6 5 6 16 16 16 16 9 12 9"/></svg>

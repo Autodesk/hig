@@ -1,3 +1,10 @@
+# [@hig/progress-ring-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/progress-ring@1.0.2...@hig/progress-ring@1.1.0) (2019-07-08)
+
+
+### Features
+
+* add props to customize ProgressRing background ([208c523](https://github.com/Autodesk/hig/commit/208c523))
+
 # [@hig/progress-ring-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/progress-ring@1.0.1...@hig/progress-ring@1.0.2) (2019-03-13)
 
 

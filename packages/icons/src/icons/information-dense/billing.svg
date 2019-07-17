@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="_x31_6x16_OUTLINED" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" width="16px" height="16px" viewBox="5361 1508 16 16" enable-background="new 5361 1508 16 16" xml:space="preserve">
-<g>
-</g>
-<g>
-	<path d="M5374,1508h-11c-0.542,0-1,0.458-1,1v14c0,0.532,0.468,1,1,1h11c0.552,0,1-0.448,1-1v-14
-		C5375,1508.458,5374.543,1508,5374,1508z M5373,1522h-5v-1h5V1522z M5373,1520h-9v-10h9V1520z"/>
-	<rect x="5368" y="1517" width="4" height="2"/>
-	<rect x="5368" y="1514" width="4" height="2"/>
-	<rect x="5365" y="1514" width="2" height="2"/>
-	<rect x="5365" y="1511" width="2" height="2"/>
-	<rect x="5368" y="1511" width="4" height="2"/>
-	<rect x="5365" y="1517" width="2" height="2"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>billing-16</title><path d="M14,0H1V16H14ZM12,14H7V13h5Zm0-2H3V2h9Z"/><rect x="7" y="9" width="4" height="2"/><rect x="7" y="6" width="4" height="2"/><rect x="4" y="6" width="2" height="2"/><rect x="4" y="3" width="2" height="2"/><rect x="7" y="3" width="4" height="2"/><rect x="4" y="9" width="2" height="2"/></svg>

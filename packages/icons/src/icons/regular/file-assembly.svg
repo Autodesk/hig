@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>file-assembly-24</title>
-  <g id="final">
-    <path d="M19,6H10A1,1,0,0,0,9,7v4H5a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V7A1,1,0,0,0,19,6Zm0,10H5V12h5V7h4v5h5Zm0-5H15V7h4Z" fill="#ec4a41"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>file-assembly-24</title><path d="M20,6H9v5H4v6H20ZM19,16H5V12h5V7h4v5h5Zm0-5H15V7h4Z" fill="#ec4a41"/></svg>

@@ -7,10 +7,12 @@ exports[`checkbox/presenters/CheckPresenter renders with all props 1`] = `
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-4 {
@@ -18,7 +20,7 @@ exports[`checkbox/presenters/CheckPresenter renders with all props 1`] = `
   display: block;
   box-sizing: border-box;
   color: transparent;
-  border: 1px solid rgba(128,128,128,0.5);
+  border: none;
   background-color: #808080;
   text-align: center;
   font-size: 25px;
@@ -27,7 +29,13 @@ exports[`checkbox/presenters/CheckPresenter renders with all props 1`] = `
   width: 16px;
   border-radius: 0;
   cursor: default;
-  opacity: 0.5;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,border;
+  transition-property: box-shadow,border;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  opacity: 0.4;
   box-shadow: none;
   pointer-events: none;
 }
@@ -64,10 +72,10 @@ exports[`checkbox/presenters/CheckPresenter renders with all props 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        checkbox-checked-16
+        checkmark-xs
       </title>
       <path
-        d="M3.55 8.45l1.12-1.16L6.7 9.23l4.6-4.74 1.15 1.14-5.73 5.88-3.17-3.06z"
+        d="M4.2 8.6l1.4-1.5 1.7 1.5 3.6-4 1.5 1.3-5 5.5-3.2-2.8z"
       />
     </svg>
   </span>
@@ -76,18 +84,16 @@ exports[`checkbox/presenters/CheckPresenter renders with all props 1`] = `
   >
     <svg
       className="emotion-0"
-      height="2px"
-      viewBox="0 0 8 2"
-      width="8px"
+      height="16px"
+      viewBox="0 0 16 16"
+      width="16px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        Rectangle 11
+        operator-minus-xs
       </title>
       <path
-        d="M0 0h8v2H0z"
-        fill="#FFF"
-        fillRule="evenodd"
+        d="M4 7h8v2H4z"
       />
     </svg>
   </span>
@@ -109,6 +115,12 @@ exports[`checkbox/presenters/CheckPresenter renders without props 1`] = `
   width: 16px;
   border-radius: 0;
   cursor: default;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,border;
+  transition-property: box-shadow,border;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
 }
 
 .emotion-4 svg {
@@ -131,10 +143,12 @@ exports[`checkbox/presenters/CheckPresenter renders without props 1`] = `
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <span
@@ -151,10 +165,10 @@ exports[`checkbox/presenters/CheckPresenter renders without props 1`] = `
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        checkbox-checked-16
+        checkmark-xs
       </title>
       <path
-        d="M3.55 8.45l1.12-1.16L6.7 9.23l4.6-4.74 1.15 1.14-5.73 5.88-3.17-3.06z"
+        d="M4.2 8.6l1.4-1.5 1.7 1.5 3.6-4 1.5 1.3-5 5.5-3.2-2.8z"
       />
     </svg>
   </span>
@@ -163,18 +177,16 @@ exports[`checkbox/presenters/CheckPresenter renders without props 1`] = `
   >
     <svg
       className="emotion-0"
-      height="2px"
-      viewBox="0 0 8 2"
-      width="8px"
+      height="16px"
+      viewBox="0 0 16 16"
+      width="16px"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>
-        Rectangle 11
+        operator-minus-xs
       </title>
       <path
-        d="M0 0h8v2H0z"
-        fill="#FFF"
-        fillRule="evenodd"
+        d="M4 7h8v2H4z"
       />
     </svg>
   </span>

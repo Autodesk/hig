@@ -50,11 +50,12 @@
     "surge": "^0.20.1"
   },
   "dependencies": {
-    "@hig/icons": "^2.1.1",
+    "@hig/fonts": "^1.0.2",
+    "@hig/icons": "^3.0.0",
     "@hig/rich-text": "^1.0.0",
     "@hig/spacer": "^1.0.7",
     "@hig/theme-context": "^3.0.0",
-    "@hig/theme-data": "^2.5.0",
+    "@hig/theme-data": "^2.8.0",
     "@hig/typography": "^1.0.2",
     "faker": "^4.1.0",
     "prop-types": "^15.6.1",
