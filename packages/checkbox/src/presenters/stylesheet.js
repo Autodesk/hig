@@ -136,6 +136,10 @@ export default function stylesheet(props, themeData, theme) {
       width: themeData["checkbox.width"],
       borderRadius: themeData["checkbox.borderRadius"],
       cursor: hasHover ? `pointer` : `default`,
+      transitionDuration: "0.3s, 0.3s",
+      transitionProperty: "box-shadow, border",
+      transitionTimingFunction:
+        "cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1)",
       // eslint-disable-next-line prettier/prettier
       "svg": {
         position: `absolute`,
