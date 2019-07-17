@@ -1,117 +1,86 @@
 import React from "react";
 import { mount } from "enzyme";
-import {
-  behavesLikeFocusBehavior,
-  behavesLikeHoverBehavior,
-  composesLikeControlBehavior
-} from "@hig/behaviors/test";
+import { CaretUp16, CaretDown16 } from "@hig/icons";
 
 import Spinner from "./Spinner";
 
 describe("Spinner", () => {
-  behavesLikeFocusBehavior(<Spinner />);
-  behavesLikeHoverBehavior(<Spinner />);
-  composesLikeControlBehavior({
-    Subject: Input,
-    Receiver: InputPresenter
+  it("has an up and a down arrow", () => {
+    const wrapper = mount(<Spinner />);
+    const buttons = wrapper.find('[role="button"]');
+
+    expect(buttons).toHaveLength(2);
+
+    const up = buttons.find(CaretUp16);
+    const down = buttons.find(CaretDown16);
+
+    expect(up).toHaveLength(1);
+    expect(down).toHaveLength(1);
   });
 
-  describe("rendering variants", () => {
-    describe("when variant='line'", () => {
-      it("renders the line-style input", () => {
-        const wrapper = mount(<Spinner variant="line" />);
+  describe("the increment and decrement callbacks", () => {
+    const mockIncrement = jest.fn();
+    const mockDecrement = jest.fn();
+    const mocks = [mockIncrement, mockDecrement];
+    const resetMocks = () => mocks.forEach(mock => mock.mockReset());
+    const checkAllCalledTimes = times =>
+      mocks.forEach(mock => expect(mock).toHaveBeenCalledTimes(times));
 
-        const decoration = wrapper.find(InputHaloPresenter);
-        expect(decoration).toHaveProp("variant", "line");
-      });
+    const wrapper = mount(
+      <Spinner increment={mockIncrement} decrement={mockDecrement} />
+    );
+
+    const up = wrapper
+      .find('[role="button"]')
+      .find(CaretUp16)
+      .parent();
+
+    const down = wrapper
+      .find('[role="button"]')
+      .find(CaretDown16)
+      .parent();
+
+    const buttons = [up, down];
+    const simulateAll = (event, extraArgs) =>
+      buttons.forEach(button => button.simulate(event, extraArgs));
+
+    beforeEach(() => resetMocks());
+
+    it("calls the correct callback for up", () => {
+      up.simulate("click");
+      expect(mockIncrement).toHaveBeenCalledTimes(1);
+      expect(mockDecrement).toHaveBeenCalledTimes(0);
     });
 
-    describe("when variant='box'", () => {
-      it("renders the box-style  input", () => {
-        const wrapper = mount(<Spinner variant="box" />);
-
-        const decoration = wrapper.find(InputHaloPresenter);
-        expect(decoration).toHaveProp("variant", "box");
-      });
+    it("calls the correct callback for down", () => {
+      down.simulate("click");
+      expect(mockIncrement).toHaveBeenCalledTimes(0);
+      expect(mockDecrement).toHaveBeenCalledTimes(1);
     });
 
-    describe("when variant='plain'", () => {
-      it("renders a plain input", () => {
-        const wrapper = mount(<Spinner variant="plain" />);
-
-        expect(wrapper).not.toContain(InputHaloPresenter);
-      });
-    });
-  });
-
-  describe("when controlled", () => {
-    let onChangeSpy;
-    let wrapper;
-    let interactiveElement;
-
-    beforeEach(() => {
-      onChangeSpy = jest.fn();
-      wrapper = mount(<Spinner value="foo" onChange={onChangeSpy} />);
-      interactiveElement = wrapper.find("input");
+    it("correctly calls the callbacks on button click", () => {
+      simulateAll("click");
+      checkAllCalledTimes(1);
     });
 
-    it("sets the value", () => {
-      expect(interactiveElement).toHaveProp("value", "foo");
+    it("correctly calls the callbacks on enter key press", () => {
+      const enterKey = {
+        key: "Enter",
+        keyCode: 13,
+        which: 13,
+        preventDefault: jest.fn()
+      };
+      simulateAll("keydown", enterKey);
+      checkAllCalledTimes(1);
     });
 
-    describe("typing into the field", () => {
-      beforeEach(() => {
-        interactiveElement.getDOMNode().value = "bar";
-        interactiveElement.simulate("change");
-      });
-
-      it("calls the callback", () => {
-        expect(onChangeSpy.mock.calls.length).toEqual(1);
-      });
-
-      describe("the interactive element", () => {
-        it("keeps the value from the value prop", () => {
-          expect(interactiveElement.getDOMNode().value).toEqual("foo");
-        });
-      });
+    it("doesn't call the callbacks on non enter key press", () => {
+      const otherKeyPress = {
+        key: "UpArrow",
+        preventDefault: jest.fn()
+      };
+      simulateAll("keydown", otherKeyPress);
+      checkAllCalledTimes(0);
     });
-  });
-
-  describe("when uncontrolled", () => {
-    let onChangeSpy;
-    let wrapper;
-    let interactiveElement;
-
-    beforeEach(() => {
-      onChangeSpy = jest.fn();
-      wrapper = mount(<Spinner defaultValue="foo" onChange={onChangeSpy} />);
-      interactiveElement = wrapper.find("input");
-    });
-
-    it("sets the defaultValue", () => {
-      expect(interactiveElement).toHaveProp("defaultValue", "foo");
-    });
-
-    describe("typing into the field", () => {
-      beforeEach(() => {
-        interactiveElement.getDOMNode().value = "bar";
-        interactiveElement.simulate("change");
-      });
-
-      it("calls the callback", () => {
-        expect(onChangeSpy.mock.calls.length).toEqual(1);
-      });
-
-      describe("the interactive element", () => {
-        it("gets the typed value", () => {
-          expect(interactiveElement.getDOMNode().value).toEqual("bar");
-        });
-      });
-    });
-  });
-
-  it("passes arbitrary props to input element", () => {
-    const wrapper = mount(<Spinner data-my-attr="foo" />);
-    expect(wrapper.find("input")).toHaveProp("data-my-attr", "foo");
   });
 });

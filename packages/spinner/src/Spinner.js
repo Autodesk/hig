@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 
-import { CaretUp24, CaretDown24 } from "@hig/icons";
+import { CaretUp16, CaretDown16 } from "@hig/icons";
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./Spinner.stylesheet";
@@ -28,22 +28,32 @@ export default function Spinner(props) {
             )
           : styles;
 
+        const ifKeyIsEnter = action => event => {
+          if (event.key === "Enter") {
+            action();
+          }
+        };
+
         return (
           <div className={css(cssStyles.scrollers)}>
-            <button
+            <div
               disabled={isDisabled}
               onClick={increment}
+              onKeyDown={ifKeyIsEnter(increment)}
               className={css(cssStyles.button)}
+              role="button"
             >
-              <CaretUp24 className={css(cssStyles.caret)} />
-            </button>
-            <button
+              <CaretUp16 className={css(cssStyles.caret)} />
+            </div>
+            <div
               disabled={isDisabled}
               onClick={decrement}
+              onKeyDown={ifKeyIsEnter(decrement)}
               className={css(cssStyles.button)}
+              role="button"
             >
-              <CaretDown24 className={css(cssStyles.caret)} />
-            </button>
+              <CaretDown16 className={css(cssStyles.caret)} />
+            </div>
           </div>
         );
       }}
