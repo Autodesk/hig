@@ -36,6 +36,18 @@ describe("banner/BannerPresenter/BannerPresenter", () => {
       props: {
         actions: [<span key="0">bar</span>, <div key="1">baz</div>]
       }
+    },
+    {
+      desc: "renders with onDismiss function",
+      props: {
+        onDismiss: () => {}
+      }
+    },
+    {
+      desc: "renders without onDismiss function",
+      props: {
+        onDismiss: null
+      }
     }
   ]);
 });
