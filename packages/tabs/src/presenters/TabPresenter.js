@@ -2,60 +2,133 @@ import React from "react";
 import PropTypes from "prop-types";
 import Typography from "@hig/typography";
 import ThemeContext from "@hig/theme-context";
-import { css } from "emotion";
+import { createCustomClassNames } from "@hig/utils";
+import { cx, css } from "emotion";
 import stylesheet from "./TabPresenter.stylesheet";
+import TabCloseButtonPresenter from "./TabCloseButtonPresenter";
+import {
+  variants,
+  orientations,
+  AVAILABLE_VARIANTS,
+  AVAILABLE_ORIENTATIONS
+} from "../constants";
 
-/**
- * @typedef {Object} TabPresenterProps
- * @property {boolean} [active]
- * @property {string} label
- * @property {Function} [onClick]
- * @property {Function} [onKeyDown]
- */
-
-/**
- * @param {TabPresenterProps} props
- * @returns {JSX.Element}
- */
 export default function TabPresenter({
   active,
   hasFocus,
   hasHover,
   isPressed,
   label,
+  icon,
+  disabled,
+  closable,
+  variant,
+  orientation,
+  showDivider,
   onBlur,
   onFocus,
   onClick,
   onKeyDown,
-  onMouseDown,
   onMouseEnter,
   onMouseLeave,
-  onMouseUp
+  onClose,
+  ...otherProps
 }) {
   return (
     <ThemeContext.Consumer>
-      {({ resolvedRoles }) => {
+      {({ resolvedRoles, metadata }) => {
         const styles = stylesheet(
-          { active, hasFocus, hasHover, isPressed, label },
-          resolvedRoles
+          {
+            active,
+            hasFocus,
+            hasHover,
+            isPressed,
+            label,
+            icon,
+            variant,
+            orientation,
+            disabled,
+            closable
+          },
+          resolvedRoles,
+          metadata
+        );
+
+        const { className } = otherProps;
+
+        const showIcon = variant !== variants.UNDERLINE && icon;
+        const showClose = variant !== variants.UNDERLINE && closable;
+        const showHalo = variant !== variants.CANVAS;
+
+        const buttonClassName = createCustomClassNames(
+          otherProps.className,
+          "button"
+        );
+
+        const iconClassName = createCustomClassNames(
+          otherProps.className,
+          "icon"
+        );
+
+        const labelClassName = createCustomClassNames(
+          otherProps.className,
+          "label"
+        );
+
+        const closeButtonClassName = createCustomClassNames(
+          otherProps.className,
+          "close-button"
+        );
+
+        const haloClassName = createCustomClassNames(
+          otherProps.className,
+          "halo"
+        );
+
+        const dividerClassName = createCustomClassNames(
+          otherProps.className,
+          "divider"
         );
 
         return (
-          <li className={css(styles.tab)}>
+          <li className={cx(css(styles.tab), className)}>
             <div
               onBlur={onBlur}
               onFocus={onFocus}
               onClick={onClick}
               onKeyDown={onKeyDown}
-              onMouseDown={onMouseDown}
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
-              onMouseUp={onMouseUp}
+              disabled={disabled}
+              tabIndex={disabled ? "-1" : "0"}
               role="button"
-              tabIndex="0"
-              className={css(styles.tabLabel)}
+              className={cx(css(styles.buttonWrapper), buttonClassName)}
             >
-              <Typography style={styles.tabLabelText}>{label}</Typography>
+              <div className={css(styles.contentWrapper)}>
+                {showIcon && (
+                  <span className={cx(css(styles.icon), iconClassName)}>
+                    {icon}
+                  </span>
+                )}
+                <Typography className={cx(css(styles.label), labelClassName)}>
+                  {label}
+                </Typography>
+                {showClose && (
+                  <TabCloseButtonPresenter
+                    className={cx(
+                      css(styles.closeButton),
+                      closeButtonClassName
+                    )}
+                    onClick={onClose}
+                  />
+                )}
+              </div>
+              {showHalo && (
+                <div className={cx(css(styles.halo), haloClassName)} />
+              )}
+              {showDivider && (
+                <div className={cx(css(styles.divider), dividerClassName)} />
+              )}
             </div>
           </li>
         );
@@ -67,6 +140,12 @@ export default function TabPresenter({
 TabPresenter.propTypes = {
   active: PropTypes.bool,
   label: PropTypes.string,
+  icon: PropTypes.node,
+  disabled: PropTypes.bool,
+  closable: PropTypes.bool,
+  variant: PropTypes.oneOf(AVAILABLE_VARIANTS),
+  orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
+  showDivider: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
   isPressed: PropTypes.bool,
@@ -74,8 +153,13 @@ TabPresenter.propTypes = {
   onFocus: PropTypes.func,
   onClick: PropTypes.func,
   onKeyDown: PropTypes.func,
-  onMouseDown: PropTypes.func,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
-  onMouseUp: PropTypes.func
+  onClose: PropTypes.func
+};
+
+TabPresenter.defaultProps = {
+  variant: variants.UNDERLINE,
+  label: "",
+  orientation: orientations.HORIZONTAL
 };
