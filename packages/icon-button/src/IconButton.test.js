@@ -26,4 +26,19 @@ describe("IconButton", () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  it("renders correctly when disabled", () => {
+    const tree = renderer
+      .create(
+        <IconButton
+          disabled
+          title="Settings"
+          link="//example.com"
+          icon={<Settings24 />}
+        />
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });

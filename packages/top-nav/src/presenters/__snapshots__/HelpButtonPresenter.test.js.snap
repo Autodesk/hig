@@ -59,6 +59,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  1`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   onMouseUp={[Function]}
+  tabIndex="0"
   title="View help"
 >
   <svg
@@ -145,6 +146,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  2`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   onMouseUp={[Function]}
+  tabIndex="0"
   title="View help"
 >
   <svg
@@ -231,6 +233,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  3`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   onMouseUp={[Function]}
+  tabIndex="0"
   title="View help"
 >
   <svg

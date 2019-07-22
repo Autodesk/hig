@@ -69,6 +69,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders with all
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
+    tabIndex="0"
     title="HELLO"
   >
     <svg
@@ -158,6 +159,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders without 
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
+    tabIndex="0"
     title="Dismiss featured notification"
   >
     <svg

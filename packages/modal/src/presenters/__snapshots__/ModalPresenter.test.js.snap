@@ -87,6 +87,7 @@ exports[`modal/presenters/ModalPresenter  1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
+      tabIndex="0"
       title="Close"
     >
       <svg

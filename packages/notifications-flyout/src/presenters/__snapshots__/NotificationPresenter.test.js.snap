@@ -232,6 +232,7 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          tabIndex="0"
           title="hello world"
         >
           <svg

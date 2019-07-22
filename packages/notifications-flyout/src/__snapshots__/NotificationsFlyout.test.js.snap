@@ -341,6 +341,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        tabIndex="0"
         title="View notifications"
       >
         <svg
@@ -817,6 +818,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        tabIndex="0"
         title="View notifications"
       >
         <svg
@@ -1293,6 +1295,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        tabIndex="0"
         title="World"
       >
         <svg
@@ -1671,6 +1674,7 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        tabIndex="0"
         title="View notifications"
       >
         <svg

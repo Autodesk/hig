@@ -889,6 +889,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
         onMouseEnter={[Function]}
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
+        tabIndex="0"
         title="Close"
       >
         <svg
