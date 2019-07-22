@@ -76,6 +76,7 @@ export default class IconButtonPresenter extends Component {
           const icon = React.cloneElement(this.props.icon, {
             className: css(styles.iconButtonIcon)
           });
+          const tabIndex = disabled ? "-1" : "0";
 
           return (
             <Element
@@ -87,6 +88,7 @@ export default class IconButtonPresenter extends Component {
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
               onMouseUp={onMouseUp}
+              tabIndex={tabIndex}
               title={title}
               {...linkProps}
             >
