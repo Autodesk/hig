@@ -32,8 +32,10 @@
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
-    "build": "hig-scripts-build",
+    "build": "yarn build:core && yarn dist:icons",
+    "build:core": "hig-scripts-build",
     "build-icons": "node scripts/build-icons/index.js",
+    "dist:icons": "mkdir -p build/svg && cp -r src/icons/* build/svg",
     "lint": "hig-scripts-lint",
     "test": "hig-scripts-test",
     "release": "hig-scripts-release"
