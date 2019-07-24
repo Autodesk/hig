@@ -1,3 +1,10 @@
+# [@hig/checkbox-v2.0.8](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.7...@hig/checkbox@2.0.8) (2019-07-24)
+
+
+### Bug Fixes
+
+* halo transition ([de130ee](https://github.com/Autodesk/hig/commit/de130ee))
+
 # [@hig/checkbox-v2.0.7](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.6...@hig/checkbox@2.0.7) (2019-07-11)
 
 
