@@ -1,3 +1,10 @@
+# [@hig/icons-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/icons@3.0.1...@hig/icons@3.1.0) (2019-07-24)
+
+
+### Features
+
+* distribute SVG source files with [@hig](https://github.com/hig)/icons ([18ac0ed](https://github.com/Autodesk/hig/commit/18ac0ed))
+
 # [@hig/icons-v3.0.1](https://github.com/Autodesk/hig/compare/@hig/icons@3.0.0...@hig/icons@3.0.1) (2019-07-16)
 
 
