@@ -1,3 +1,10 @@
+# [@hig/radio-button-v1.0.8](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.7...@hig/radio-button@1.0.8) (2019-07-24)
+
+
+### Bug Fixes
+
+* halo transitions ([1e433a0](https://github.com/Autodesk/hig/commit/1e433a0))
+
 # [@hig/radio-button-v1.0.7](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.6...@hig/radio-button@1.0.7) (2019-06-07)
 
 
