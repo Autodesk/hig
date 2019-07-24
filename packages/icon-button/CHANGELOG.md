@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.1.1...@hig/icon-button@2.1.2) (2019-07-24)
+
+
+### Bug Fixes
+
+* halo transitions ([66b1301](https://github.com/Autodesk/hig/commit/66b1301))
+
 # [@hig/icon-button-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.1.0...@hig/icon-button@2.1.1) (2019-05-07)
 
 
