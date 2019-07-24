@@ -1,3 +1,10 @@
+# [@hig/side-nav-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.1.1...@hig/side-nav@2.1.2) (2019-07-24)
+
+
+### Bug Fixes
+
+* using pointer cursor consistently throughout side-nav links ([958c716](https://github.com/Autodesk/hig/commit/958c716))
+
 # [@hig/side-nav-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.1.0...@hig/side-nav@2.1.1) (2019-07-16)
 
 
