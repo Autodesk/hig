@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actions 1`] = `
-.emotion-10 {
+.emotion-7 {
   background-color: #ffffff;
 }
 
-.emotion-9 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -101,86 +101,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
   text-align: initial;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  padding-right: calc(50px - calc((36px - 10px) / 2));
-}
-
-.emotion-8 svg {
-  cursor: pointer;
-}
-
-.emotion-8 svg * {
-  fill: #808080;
-}
-
-.emotion-8:hover svg * {
-  fill: #0696d7;
-}
-
-.emotion-7 {
-  border: 2px solid transparent;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  box-sizing: border-box;
-  border-radius: 2px;
-  padding: 0;
-  height: calc(20px + (8px * 2));
-  line-height: calc(20px + (8px * 2));
-  width: calc(20px + (8px * 2));
-  outline: 0;
-  -webkit-transition-property: box-shadow,background-color;
-  transition-property: box-shadow,background-color;
-  -webkit-transition-duration: 0.3s,0.3s;
-  transition-duration: 0.3s,0.3s;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
-  box-shadow: none;
-  background-color: transparent;
-}
-
-.emotion-7 svg * {
-  fill: #808080;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: fill;
-  transition-property: fill;
-}
-
-.emotion-6 {
-  fill: #808080;
-  pointer-events: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.emotion-6 > * {
-  fill: #808080;
-  pointer-events: none;
-}
-
 .emotion-4 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -190,11 +110,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
 }
 
 <div
-  className="emotion-10"
+  className="emotion-7"
 >
   <div
     aria-live="polite"
-    className="emotion-9"
+    className="emotion-6"
     role="alert"
   >
     <figure
@@ -246,42 +166,12 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
         </div>
       </div>
     </div>
-    <div
-      className="emotion-8"
-    >
-      <button
-        className="emotion-7"
-        onBlur={[Function]}
-        onClick={undefined}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        title="Close"
-      >
-        <svg
-          className="emotion-6"
-          height="16px"
-          viewBox="0 0 16 16"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            close-m
-          </title>
-          <path
-            d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
-          />
-        </svg>
-      </button>
-    </div>
   </div>
 </div>
 `;
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
-.emotion-9 {
+.emotion-6 {
   background-color: #ffffff;
 }
 
@@ -338,87 +228,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
   text-align: initial;
 }
 
-.emotion-7 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  padding-right: calc(50px - calc((36px - 10px) / 2));
-}
-
-.emotion-7 svg {
-  cursor: pointer;
-}
-
-.emotion-7 svg * {
-  fill: #808080;
-}
-
-.emotion-7:hover svg * {
-  fill: #0696d7;
-}
-
-.emotion-6 {
-  border: 2px solid transparent;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  box-sizing: border-box;
-  border-radius: 2px;
-  padding: 0;
-  height: calc(20px + (8px * 2));
-  line-height: calc(20px + (8px * 2));
-  width: calc(20px + (8px * 2));
-  outline: 0;
-  -webkit-transition-property: box-shadow,background-color;
-  transition-property: box-shadow,background-color;
-  -webkit-transition-duration: 0.3s,0.3s;
-  transition-duration: 0.3s,0.3s;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
-  box-shadow: none;
-  background-color: transparent;
-}
-
-.emotion-6 svg * {
-  fill: #808080;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: fill;
-  transition-property: fill;
-}
-
 .emotion-5 {
-  fill: #808080;
-  pointer-events: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.emotion-5 > * {
-  fill: #808080;
-  pointer-events: none;
-}
-
-.emotion-8 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -462,11 +272,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
 }
 
 <div
-  className="emotion-9"
+  className="emotion-6"
 >
   <div
     aria-live="assertive"
-    className="emotion-8"
+    className="emotion-5"
     role="alert"
   >
     <figure
@@ -503,46 +313,16 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
         </p>
       </div>
     </div>
-    <div
-      className="emotion-7"
-    >
-      <button
-        className="emotion-6"
-        onBlur={[Function]}
-        onClick={undefined}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        title="Close"
-      >
-        <svg
-          className="emotion-5"
-          height="16px"
-          viewBox="0 0 16 16"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            close-m
-          </title>
-          <path
-            d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
-          />
-        </svg>
-      </button>
-    </div>
   </div>
 </div>
 `;
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1`] = `
-.emotion-10 {
+.emotion-7 {
   background-color: #ffffff;
 }
 
-.emotion-9 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -638,86 +418,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
   text-align: initial;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  padding-right: calc(50px - calc((36px - 10px) / 2));
-}
-
-.emotion-8 svg {
-  cursor: pointer;
-}
-
-.emotion-8 svg * {
-  fill: #808080;
-}
-
-.emotion-8:hover svg * {
-  fill: #0696d7;
-}
-
-.emotion-7 {
-  border: 2px solid transparent;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  box-sizing: border-box;
-  border-radius: 2px;
-  padding: 0;
-  height: calc(20px + (8px * 2));
-  line-height: calc(20px + (8px * 2));
-  width: calc(20px + (8px * 2));
-  outline: 0;
-  -webkit-transition-property: box-shadow,background-color;
-  transition-property: box-shadow,background-color;
-  -webkit-transition-duration: 0.3s,0.3s;
-  transition-duration: 0.3s,0.3s;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
-  box-shadow: none;
-  background-color: transparent;
-}
-
-.emotion-7 svg * {
-  fill: #808080;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: fill;
-  transition-property: fill;
-}
-
-.emotion-6 {
-  fill: #808080;
-  pointer-events: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.emotion-6 > * {
-  fill: #808080;
-  pointer-events: none;
-}
-
 .emotion-4 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -727,11 +427,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
 }
 
 <div
-  className="emotion-10"
+  className="emotion-7"
 >
   <div
     aria-live="polite"
-    className="emotion-9"
+    className="emotion-6"
     role="alert"
   >
     <figure
@@ -780,46 +480,16 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
         </span>
       </div>
     </div>
-    <div
-      className="emotion-8"
-    >
-      <button
-        className="emotion-7"
-        onBlur={[Function]}
-        onClick={undefined}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        title="Close"
-      >
-        <svg
-          className="emotion-6"
-          height="16px"
-          viewBox="0 0 16 16"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            close-m
-          </title>
-          <path
-            d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
-          />
-        </svg>
-      </button>
-    </div>
   </div>
 </div>
 `;
 
 exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions 1`] = `
-.emotion-10 {
+.emotion-7 {
   background-color: #ffffff;
 }
 
-.emotion-9 {
+.emotion-6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -915,86 +585,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
   text-align: initial;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  padding-right: calc(50px - calc((36px - 10px) / 2));
-}
-
-.emotion-8 svg {
-  cursor: pointer;
-}
-
-.emotion-8 svg * {
-  fill: #808080;
-}
-
-.emotion-8:hover svg * {
-  fill: #0696d7;
-}
-
-.emotion-7 {
-  border: 2px solid transparent;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  box-sizing: border-box;
-  border-radius: 2px;
-  padding: 0;
-  height: calc(20px + (8px * 2));
-  line-height: calc(20px + (8px * 2));
-  width: calc(20px + (8px * 2));
-  outline: 0;
-  -webkit-transition-property: box-shadow,background-color;
-  transition-property: box-shadow,background-color;
-  -webkit-transition-duration: 0.3s,0.3s;
-  transition-duration: 0.3s,0.3s;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
-  box-shadow: none;
-  background-color: transparent;
-}
-
-.emotion-7 svg * {
-  fill: #808080;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: fill;
-  transition-property: fill;
-}
-
-.emotion-6 {
-  fill: #808080;
-  pointer-events: none;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.emotion-6 > * {
-  fill: #808080;
-  pointer-events: none;
-}
-
 .emotion-4 {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
@@ -1004,11 +594,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
 }
 
 <div
-  className="emotion-10"
+  className="emotion-7"
 >
   <div
     aria-live="polite"
-    className="emotion-9"
+    className="emotion-6"
     role="alert"
   >
     <figure
@@ -1055,41 +645,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
         foobar
       </div>
     </div>
-    <div
-      className="emotion-8"
-    >
-      <button
-        className="emotion-7"
-        onBlur={[Function]}
-        onClick={undefined}
-        onFocus={[Function]}
-        onMouseDown={[Function]}
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        title="Close"
-      >
-        <svg
-          className="emotion-6"
-          height="16px"
-          viewBox="0 0 16 16"
-          width="16px"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>
-            close-m
-          </title>
-          <path
-            d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
-          />
-        </svg>
-      </button>
-    </div>
   </div>
 </div>
 `;
 
-exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
+exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 1`] = `
 .emotion-9 {
   background-color: #ffffff;
 }
@@ -1323,7 +883,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
       <button
         className="emotion-6"
         onBlur={[Function]}
-        onClick={undefined}
+        onClick={[Function]}
         onFocus={[Function]}
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
@@ -1346,6 +906,310 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
           />
         </svg>
       </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`banner/BannerPresenter/BannerPresenter renders without onDismiss function 1`] = `
+.emotion-6 {
+  background-color: #ffffff;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 50px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: rgba(56,171,223,0.5);
+  background-color: rgba(56,171,223,0.1);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50px;
+  min-height: 50px;
+  margin: 0;
+  background-color: #38abdf;
+}
+
+.emotion-1 svg * {
+  fill: white;
+}
+
+.emotion-0 {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: calc((50px - 20px) / 2) 0 0 16px;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  min-width: 200px;
+  max-width: 900px;
+  padding-bottom: calc((50px - 20px) / 2);
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+
+.emotion-2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+<div
+  className="emotion-6"
+>
+  <div
+    aria-live="polite"
+    className="emotion-5"
+    role="alert"
+  >
+    <figure
+      className="emotion-1"
+    >
+      <svg
+        className="emotion-0"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          info-24
+        </title>
+        <path
+          d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+        />
+        <path
+          d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
+        />
+        <circle
+          cx="12"
+          cy="8"
+          r="1.25"
+        />
+      </svg>
+    </figure>
+    <div
+      className="emotion-4"
+    >
+      <div
+        className="emotion-3"
+      >
+        <p
+          className="emotion-2"
+        >
+          Message
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
+.emotion-6 {
+  background-color: #ffffff;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 50px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: rgba(56,171,223,0.5);
+  background-color: rgba(56,171,223,0.1);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50px;
+  min-height: 50px;
+  margin: 0;
+  background-color: #38abdf;
+}
+
+.emotion-1 svg * {
+  fill: white;
+}
+
+.emotion-0 {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: calc((50px - 20px) / 2) 0 0 16px;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  min-width: 200px;
+  max-width: 900px;
+  padding-bottom: calc((50px - 20px) / 2);
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+
+.emotion-2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+<div
+  className="emotion-6"
+>
+  <div
+    aria-live="polite"
+    className="emotion-5"
+    role="alert"
+  >
+    <figure
+      className="emotion-1"
+    >
+      <svg
+        className="emotion-0"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <title>
+          info-24
+        </title>
+        <path
+          d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+        />
+        <path
+          d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
+        />
+        <circle
+          cx="12"
+          cy="8"
+          r="1.25"
+        />
+      </svg>
+    </figure>
+    <div
+      className="emotion-4"
+    >
+      <div
+        className="emotion-3"
+      >
+        <p
+          className="emotion-2"
+        >
+          Message
+        </p>
+      </div>
     </div>
   </div>
 </div>
