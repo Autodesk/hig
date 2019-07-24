@@ -1,3 +1,10 @@
+# [@hig/button-v1.4.1](https://github.com/Autodesk/hig/compare/@hig/button@1.4.0...@hig/button@1.4.1) (2019-07-24)
+
+
+### Bug Fixes
+
+* halo transitions ([89ad431](https://github.com/Autodesk/hig/commit/89ad431))
+
 # [@hig/button-v1.4.0](https://github.com/Autodesk/hig/compare/@hig/button@1.3.3...@hig/button@1.4.0) (2019-06-20)
 
 
