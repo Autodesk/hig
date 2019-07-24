@@ -14,6 +14,12 @@ export default function(props, themeData) {
         color: themeData["colorScheme.accentColor"]
       },
 
+      // making sure to consitently use pointer cursor when
+      // just implementing onClick and not setting link property
+      "&:hover": {
+        cursor: "pointer"
+      },
+
       "&:hover svg *": {
         fill: themeData["colorScheme.accentColor"]
       }
