@@ -29,6 +29,12 @@ exports[`checkbox/presenters/CheckPresenter renders with all props 1`] = `
   width: 16px;
   border-radius: 0;
   cursor: default;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,border;
+  transition-property: box-shadow,border;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
   opacity: 0.4;
   box-shadow: none;
   pointer-events: none;
@@ -109,6 +115,12 @@ exports[`checkbox/presenters/CheckPresenter renders without props 1`] = `
   width: 16px;
   border-radius: 0;
   cursor: default;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,border;
+  transition-property: box-shadow,border;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
 }
 
 .emotion-4 svg {

@@ -129,7 +129,11 @@ export default function stylesheet(props, themeData, theme) {
       height: themeData["checkbox.height"],
       width: themeData["checkbox.width"],
       borderRadius: "50%",
-      boxShadow: `${uncheckedInnerShadow},${outerShadow}`
+      boxShadow: `${uncheckedInnerShadow},${outerShadow}`,
+      transitionDuration: "0.3s, 0.3s",
+      transitionProperty: "box-shadow, background-color",
+      transitionTimingFunction:
+        "cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1)"
     },
 
     // this maps to .radio-button__input

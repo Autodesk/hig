@@ -16,7 +16,7 @@ function getStylesByFocus(themeData, on) {
     boxShadow: `0 0 0 ${themeData["iconButton.focus.halo.width"]} ${
       themeData["iconButton.focus.halo.color"]
     }`,
-    transitionDuration: `0.1s, 0.1s`,
+    transitionDuration: `0.3s, 0.3s`,
     "& svg *": {
       fill: on
         ? themeData["iconButton.focus.on.iconColor"]
@@ -42,7 +42,7 @@ function getStylesByPressed(themeData, surface, on) {
       surfaceLevel <= 250
         ? themeData["iconButton.pressed.level100To250.backgroundColor"]
         : themeData["iconButton.pressed.level300To350.backgroundColor"],
-    transitionDuration: `0.1s, 0.1s`,
+    transitionDuration: `0.3s, 0.3s`,
     "& svg *": {
       fill: on
         ? themeData["iconButton.pressed.on.iconColor"]
@@ -78,6 +78,7 @@ export default function stylesheet(props, themeData, density) {
       outline: 0,
       transitionProperty: `box-shadow, background-color`,
       transitionDuration: `0.3s, 0.3s`,
+      transitionTimingFunction: `cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1)`,
       "& svg *": {
         fill: on
           ? themeData["iconButton.on.iconColor"]
