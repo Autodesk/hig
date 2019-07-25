@@ -80,6 +80,7 @@ exports[`modal/presenters/ModalHeaderPresenter  1`] = `
     />
     <button
       className="emotion-2"
+      disabled={undefined}
       onBlur={[Function]}
       onClick={undefined}
       onFocus={[Function]}
@@ -202,6 +203,7 @@ exports[`modal/presenters/ModalHeaderPresenter  3`] = `
     </p>
     <button
       className="emotion-2"
+      disabled={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}

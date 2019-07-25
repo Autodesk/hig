@@ -882,6 +882,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
     >
       <button
         className="emotion-6"
+        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
