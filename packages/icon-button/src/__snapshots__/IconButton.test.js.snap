@@ -52,6 +52,7 @@ exports[`IconButton renders correctly 1`] = `
 
 <button
   className="emotion-1"
+  disabled={undefined}
   onBlur={[Function]}
   onClick={undefined}
   onFocus={[Function]}
@@ -136,6 +137,7 @@ exports[`IconButton renders correctly when disabled 1`] = `
 
 <a
   className="emotion-1"
+  disabled={true}
   href="//example.com"
   onBlur={[Function]}
   onClick={undefined}
@@ -219,6 +221,7 @@ exports[`IconButton renders correctly with a link 1`] = `
 
 <a
   className="emotion-1"
+  disabled={undefined}
   href="//example.com"
   onBlur={[Function]}
   onClick={undefined}
