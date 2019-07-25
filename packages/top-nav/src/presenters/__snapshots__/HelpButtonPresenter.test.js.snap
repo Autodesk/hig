@@ -52,6 +52,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  1`] = `
 
 <button
   className="emotion-1"
+  disabled={undefined}
   onBlur={[Function]}
   onClick={undefined}
   onFocus={[Function]}
@@ -139,6 +140,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  2`] = `
 
 <button
   className="emotion-1"
+  disabled={undefined}
   onBlur={[Function]}
   onClick={undefined}
   onFocus={[Function]}
@@ -226,6 +228,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  3`] = `
 
 <button
   className="emotion-1"
+  disabled={undefined}
   onBlur={[Function]}
   onClick={[Function]}
   onFocus={[Function]}

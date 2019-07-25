@@ -81,6 +81,7 @@ export default class IconButtonPresenter extends Component {
           return (
             <Element
               className={css(styles.iconButton)}
+              disabled={disabled}
               onClick={onClick}
               onBlur={onBlur}
               onFocus={onFocus}

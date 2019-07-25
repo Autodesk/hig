@@ -239,6 +239,7 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
       >
         <button
           className="emotion-2"
+          disabled={undefined}
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}

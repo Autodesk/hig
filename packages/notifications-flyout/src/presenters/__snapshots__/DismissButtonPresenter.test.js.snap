@@ -62,6 +62,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders with all
 >
   <button
     className="emotion-1"
+    disabled={undefined}
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
@@ -152,6 +153,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders without 
 >
   <button
     className="emotion-1"
+    disabled={undefined}
     onBlur={[Function]}
     onClick={undefined}
     onFocus={[Function]}

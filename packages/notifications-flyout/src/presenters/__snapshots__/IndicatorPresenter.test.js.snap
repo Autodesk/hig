@@ -82,6 +82,7 @@ exports[`notifications-flyout/presenters/IndicatorPresenter renders with all pro
 >
   <button
     className="emotion-1"
+    disabled={undefined}
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
@@ -197,6 +198,7 @@ exports[`notifications-flyout/presenters/IndicatorPresenter renders without prop
 >
   <button
     className="emotion-1"
+    disabled={undefined}
     onBlur={[Function]}
     onClick={undefined}
     onFocus={[Function]}
