@@ -89,6 +89,7 @@ exports[`notifications-flyout/presenters/IndicatorPresenter renders with all pro
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
+    tabIndex="0"
     title="hello world"
   >
     <svg
@@ -203,6 +204,7 @@ exports[`notifications-flyout/presenters/IndicatorPresenter renders without prop
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
+    tabIndex="0"
     title="View notifications"
   >
     <svg
