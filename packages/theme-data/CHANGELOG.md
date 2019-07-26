@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.8.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.8.0...@hig/theme-data@2.8.1) (2019-07-26)
+
+
+### Bug Fixes
+
+* use correct color for dark themed icon colors ([94541ae](https://github.com/Autodesk/hig/commit/94541ae))
+
 # [@hig/theme-data-v2.8.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.7.0...@hig/theme-data@2.8.0) (2019-06-07)
 
 
