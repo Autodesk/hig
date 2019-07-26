@@ -45,7 +45,6 @@ storybook.add(
           value: this.state.value // <--- Reason "StoryComp" is needed
         };
 
-        console.log(`Yey value is: ${this.state.value}`);
         return <NumericInput {...props} />;
       }
     }

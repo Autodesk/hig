@@ -2,14 +2,12 @@ import React from "react";
 import { mount } from "enzyme";
 import {
   behavesLikeFocusBehavior,
-  behavesLikeHoverBehavior,
-  composesLikeControlBehavior
+  behavesLikeHoverBehavior
 } from "@hig/behaviors/test";
 
 import Input from "@hig/input";
 import Spinner from "@hig/spinner";
 import NumericInput from "./NumericInput";
-import NumericInputPresenter from "./presenters/NumericInputPresenter";
 
 describe("NumericInput", () => {
   behavesLikeFocusBehavior(<NumericInput value={0} />);
