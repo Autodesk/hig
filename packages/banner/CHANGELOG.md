@@ -1,3 +1,10 @@
+# [@hig/banner-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/banner@2.0.3...@hig/banner@2.1.0) (2019-07-26)
+
+
+### Features
+
+* dismiss button when there is no onDismiss function passed ([2371299](https://github.com/Autodesk/hig/commit/2371299))
+
 # [@hig/banner-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/banner@2.0.2...@hig/banner@2.0.3) (2019-07-11)
 
 
