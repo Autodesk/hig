@@ -1,3 +1,10 @@
+# [@hig/button-v1.4.2](https://github.com/Autodesk/hig/compare/@hig/button@1.4.1...@hig/button@1.4.2) (2019-07-26)
+
+
+### Bug Fixes
+
+* remove pointer events when link is disabled ([1d6f04a](https://github.com/Autodesk/hig/commit/1d6f04a))
+
 # [@hig/button-v1.4.1](https://github.com/Autodesk/hig/compare/@hig/button@1.4.0...@hig/button@1.4.1) (2019-07-24)
 
 
