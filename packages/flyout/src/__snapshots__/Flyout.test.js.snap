@@ -91,7 +91,6 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
 
 .emotion-3 {
   min-width: 200px;
-  max-width: 400px;
   max-height: 360px;
   padding: 12px;
   overflow-y: auto;
@@ -134,10 +133,17 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-overflow: ellipsis;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -177,7 +183,9 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Click Me
       </span>
     </button>
@@ -274,7 +282,6 @@ exports[`flyout/Flyout snapshots renders children from the given render function
 
 .emotion-5 {
   min-width: 200px;
-  max-width: 400px;
   max-height: 360px;
   padding: 12px;
   overflow-y: auto;
@@ -317,10 +324,17 @@ exports[`flyout/Flyout snapshots renders children from the given render function
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-overflow: ellipsis;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -360,7 +374,9 @@ exports[`flyout/Flyout snapshots renders children from the given render function
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Render prop
       </span>
     </button>
@@ -468,7 +484,6 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
 
 .emotion-5 {
   min-width: 200px;
-  max-width: 400px;
   max-height: 360px;
   padding: 12px;
   overflow-y: auto;
@@ -511,10 +526,17 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-overflow: ellipsis;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -554,7 +576,9 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Click Me
       </span>
     </button>
@@ -662,7 +686,6 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
 
 .emotion-4 {
   min-width: 200px;
-  max-width: 400px;
   max-height: 360px;
   padding: 12px;
   overflow-y: auto;
@@ -819,10 +842,17 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-overflow: ellipsis;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -862,7 +892,9 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Click Me
       </span>
     </button>
@@ -988,10 +1020,17 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-overflow: ellipsis;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1031,7 +1070,9 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Render prop
       </span>
     </button>
@@ -1144,7 +1185,6 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
 
 .emotion-5 {
   min-width: 200px;
-  max-width: 400px;
   max-height: 360px;
   padding: 12px;
   overflow-y: auto;
@@ -1187,10 +1227,17 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
   margin: 0;
   overflow: hidden;
   padding: 8px 16px;
+  position: relative;
   text-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   text-overflow: ellipsis;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1230,7 +1277,9 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
       tabIndex="0"
       target={undefined}
     >
-      <span>
+      <span
+        className=""
+      >
         Click Me
       </span>
     </button>
@@ -1358,7 +1407,6 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
 
 .emotion-4 {
   min-width: 200px;
-  max-width: 400px;
   max-height: 360px;
   padding: 12px;
   overflow-y: auto;

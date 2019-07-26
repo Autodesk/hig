@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="_x32_4x24_OUTLINED" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
-	 y="0px" width="24px" height="24px" viewBox="4651 1504 24 24" enable-background="new 4651 1504 24 24" xml:space="preserve">
-<path d="M4670,1526h-14c-0.532,0-1-0.468-1-1v-18c0-0.542,0.458-1,1-1h14c0.536,0,1,0.448,1,1v17.999
-	C4671,1525.542,4670.542,1526,4670,1526z M4656,1507v18h14v-18H4656z"/>
-<rect x="4662" y="1523" width="7" height="1"/>
-<path d="M4668,1509h-10c-0.542,0-1,0.458-1,1v11c0,0.532,0.468,1,1,1h10c0.542,0,1-0.458,1-1v-11
-	C4669,1509.458,4668.542,1509,4668,1509z M4668,1512h-7v-2h7V1512z M4660,1516v2h-2v-2H4660z M4658,1515v-2h2v2H4658z M4661,1516h7
-	v2h-7V1516z M4661,1515v-2h7v2H4661z M4660,1510v2h-2v-2H4660z M4658,1519h2v2h-2V1519z M4661,1521v-2h7v2H4661z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>billing-24</title><path d="M19,2H4V22H20V3A1,1,0,0,0,19,2Zm0,19H5V3H19Z"/><rect x="11" y="19" width="7" height="1"/><path d="M18,5H6V18H18ZM9,17H7V15H9Zm0-3H7V12H9Zm0-3H7V9H9ZM9,8H7V6H9Zm8,9H10V15h7Zm0-3H10V12h7Zm0-3H10V9h7Zm0-3H10V6h7Z"/></svg>

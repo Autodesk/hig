@@ -1,3 +1,17 @@
+# [@hig/flyout-v1.0.7](https://github.com/Autodesk/hig/compare/@hig/flyout@1.0.6...@hig/flyout@1.0.7) (2019-07-09)
+
+
+### Bug Fixes
+
+* children's onClick prop is discarded in Flyout ([b538364](https://github.com/Autodesk/hig/commit/b538364))
+
+# [@hig/flyout-v1.0.6](https://github.com/Autodesk/hig/compare/@hig/flyout@1.0.5...@hig/flyout@1.0.6) (2019-07-08)
+
+
+### Bug Fixes
+
+* remove fixed width ([fa753fb](https://github.com/Autodesk/hig/commit/fa753fb))
+
 # [@hig/flyout-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/flyout@1.0.4...@hig/flyout@1.0.5) (2019-03-20)
 
 

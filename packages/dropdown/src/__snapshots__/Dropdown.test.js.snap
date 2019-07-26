@@ -56,11 +56,12 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -89,10 +90,12 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-14 {
@@ -100,7 +103,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -169,10 +172,12 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 
 .emotion-9 {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 .emotion-9 > * {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 <div
@@ -325,15 +330,16 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
         <svg
           className="emotion-9"
           color="#087AAD"
-          height="24px"
-          viewBox="0 0 24 24"
-          width="24px"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
+          <title>
+            checkmark-s
+          </title>
           <path
-            d="M10.18 16L6 12.113l1.296-1.292 2.861 2.644L16.679 7 18 8.268z"
-            fill="#087AAD"
-            fillRule="evenodd"
+            d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
           />
         </svg>
       </div>
@@ -443,11 +449,12 @@ exports[`Dropdown renders with a controlled value 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -476,10 +483,12 @@ exports[`Dropdown renders with a controlled value 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-9 {
@@ -487,7 +496,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -556,10 +565,12 @@ exports[`Dropdown renders with a controlled value 1`] = `
 
 .emotion-7 {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 .emotion-7 > * {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 <div
@@ -682,15 +693,16 @@ exports[`Dropdown renders with a controlled value 1`] = `
         <svg
           className="emotion-7"
           color="#087AAD"
-          height="24px"
-          viewBox="0 0 24 24"
-          width="24px"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
+          <title>
+            checkmark-s
+          </title>
           <path
-            d="M10.18 16L6 12.113l1.296-1.292 2.861 2.644L16.679 7 18 8.268z"
-            fill="#087AAD"
-            fillRule="evenodd"
+            d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
           />
         </svg>
       </div>
@@ -699,7 +711,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
 </div>
 `;
 
-exports[`Dropdown renders with a label and an ID 1`] = `
+exports[`Dropdown renders with an ID 1`] = `
 .emotion-6 {
   position: relative;
   width: 100%;
@@ -755,11 +767,12 @@ exports[`Dropdown renders with a label and an ID 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -788,10 +801,12 @@ exports[`Dropdown renders with a label and an ID 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -799,7 +814,7 @@ exports[`Dropdown renders with a label and an ID 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -887,6 +902,197 @@ exports[`Dropdown renders with a label and an ID 1`] = `
 </div>
 `;
 
+exports[`Dropdown renders with className prop 1`] = `
+.emotion-6 {
+  position: relative;
+  width: 100%;
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-2 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: rgba(128,128,128,0.35);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.emotion-1 {
+  position: absolute;
+  top: calc(100% + 1px);
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(128,128,128,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-0 {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-top: 4px;
+  padding-right: 0;
+  padding-bottom: 4px;
+  padding-left: 0;
+  outline: none;
+  font-size: 14px;
+  font-family: ArtifaktElement,sans-serif;
+  font-weight: 600;
+  line-height: 1.4;
+  width: 100%;
+  color: #3c3c3c;
+  height: calc(36px - 2px);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+.emotion-0::-webkit-input-placeholder {
+  color: rgba(60,60,60,0.4);
+}
+
+.emotion-0::-moz-placeholder {
+  color: rgba(60,60,60,0.4);
+}
+
+.emotion-0:-ms-input-placeholder {
+  color: rgba(60,60,60,0.4);
+}
+
+.emotion-0::placeholder {
+  color: rgba(60,60,60,0.4);
+}
+
+.emotion-0::-ms-input-placeholder {
+  color: rgba(60,60,60,0.4);
+}
+
+.emotion-0::selection {
+  background-color: rgba(6,150,215,0.25);
+}
+
+.emotion-3 {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-5 {
+  display: none;
+  position: absolute;
+  width: 100%;
+  max-height: 360px;
+  top: 36px;
+  overflow: auto;
+  z-index: 9996;
+  box-sizing: border-box;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
+<div
+  aria-expanded={false}
+  aria-haspopup="listbox"
+  aria-labelledby="downshift-11-label"
+  aria-owns={null}
+  className="emotion-6 custom-class-1 custom-class-2"
+  role="combobox"
+>
+  <div
+    className="emotion-4"
+  >
+    <div
+      className="emotion-2 custom-class-1-input-wrapper custom-class-2-input-wrapper"
+    >
+      <input
+        aria-activedescendant={null}
+        aria-autocomplete="list"
+        aria-controls={null}
+        aria-labelledby="downshift-11-label"
+        autoComplete="off"
+        className="emotion-0 custom-class-1-input-wrapper__input custom-class-2-input-wrapper__input"
+        disabled={undefined}
+        id="downshift-11"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        placeholder={undefined}
+        readOnly={true}
+        required={undefined}
+        value=""
+      />
+      <div
+        className="emotion-1 custom-class-1-input-wrapper__halo custom-class-2-input-wrapper__halo"
+      />
+    </div>
+    <svg
+      className="emotion-3"
+      color="#808080"
+      height="10px"
+      style={
+        Object {
+          "opacity": 1,
+          "pointerEvents": "none",
+          "position": "absolute",
+          "right": "0",
+          "top": "50%",
+          "transform": "translateY(-50%)",
+          "transition": "transform 0.3s, color 0.3s",
+        }
+      }
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        caret-down-m
+      </title>
+      <path
+        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+      />
+    </svg>
+  </div>
+  <div
+    aria-labelledby="downshift-11-label"
+    className="emotion-5 custom-class-1-menu-wrapper custom-class-2-menu-wrapper"
+    id="downshift-11-menu"
+    role="listbox"
+  />
+</div>
+`;
+
 exports[`Dropdown renders with custom option formatting 1`] = `
 .emotion-9 {
   position: relative;
@@ -943,11 +1149,12 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -976,10 +1183,12 @@ exports[`Dropdown renders with custom option formatting 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-8 {
@@ -987,7 +1196,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -1204,11 +1413,12 @@ exports[`Dropdown renders with custom option render function 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -1237,10 +1447,12 @@ exports[`Dropdown renders with custom option render function 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -1248,7 +1460,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -1411,11 +1623,12 @@ exports[`Dropdown renders with default value 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -1444,10 +1657,12 @@ exports[`Dropdown renders with default value 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-9 {
@@ -1455,7 +1670,7 @@ exports[`Dropdown renders with default value 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -1524,10 +1739,12 @@ exports[`Dropdown renders with default value 1`] = `
 
 .emotion-7 {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 .emotion-7 > * {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 <div
@@ -1650,15 +1867,16 @@ exports[`Dropdown renders with default value 1`] = `
         <svg
           className="emotion-7"
           color="#087AAD"
-          height="24px"
-          viewBox="0 0 24 24"
-          width="24px"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
+          <title>
+            checkmark-s
+          </title>
           <path
-            d="M10.18 16L6 12.113l1.296-1.292 2.861 2.644L16.679 7 18 8.268z"
-            fill="#087AAD"
-            fillRule="evenodd"
+            d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
           />
         </svg>
       </div>
@@ -1723,11 +1941,12 @@ exports[`Dropdown renders with multiple selection 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -1756,10 +1975,12 @@ exports[`Dropdown renders with multiple selection 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-8 {
@@ -1767,7 +1988,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -1984,11 +2205,12 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -2017,10 +2239,12 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-10 {
@@ -2028,7 +2252,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -2097,10 +2321,12 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 
 .emotion-5 {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 .emotion-5 > * {
   fill: #087AAD;
+  pointer-events: none;
 }
 
 <div
@@ -2193,15 +2419,16 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
         <svg
           className="emotion-5"
           color="#087AAD"
-          height="24px"
-          viewBox="0 0 24 24"
-          width="24px"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
+          <title>
+            checkmark-s
+          </title>
           <path
-            d="M10.18 16L6 12.113l1.296-1.292 2.861 2.644L16.679 7 18 8.268z"
-            fill="#087AAD"
-            fillRule="evenodd"
+            d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
           />
         </svg>
       </div>
@@ -2239,15 +2466,16 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
         <svg
           className="emotion-5"
           color="#087AAD"
-          height="24px"
-          viewBox="0 0 24 24"
-          width="24px"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
+          <title>
+            checkmark-s
+          </title>
           <path
-            d="M10.18 16L6 12.113l1.296-1.292 2.861 2.644L16.679 7 18 8.268z"
-            fill="#087AAD"
-            fillRule="evenodd"
+            d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
           />
         </svg>
       </div>
@@ -2312,11 +2540,12 @@ exports[`Dropdown renders with option specific and general option render functio
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -2345,10 +2574,12 @@ exports[`Dropdown renders with option specific and general option render functio
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -2356,7 +2587,7 @@ exports[`Dropdown renders with option specific and general option render functio
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -2528,11 +2759,12 @@ exports[`Dropdown renders with option specific render function 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -2561,10 +2793,12 @@ exports[`Dropdown renders with option specific render function 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -2572,7 +2806,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -2780,11 +3014,12 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -2813,10 +3048,12 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -2824,7 +3061,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;
@@ -2996,11 +3233,12 @@ exports[`Dropdown renders without props 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -3029,10 +3267,12 @@ exports[`Dropdown renders without props 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-5 {
@@ -3040,7 +3280,7 @@ exports[`Dropdown renders without props 1`] = `
   position: absolute;
   width: 100%;
   max-height: 360px;
-  top: 28px;
+  top: 36px;
   overflow: auto;
   z-index: 9996;
   box-sizing: border-box;

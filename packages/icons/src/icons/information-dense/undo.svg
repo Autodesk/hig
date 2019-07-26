@@ -1,4 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>undo-16</title>
-  <path d="M1,7,5.95,2,7.36,3.46,4.82,6H7.5A6.5,6.5,0,0,1,14,12.5V14H12V12.5A4.5,4.5,0,0,0,7.5,8H4.84l2.53,2.53L5.95,11.94Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>undo-16</title><path d="M8,3,0,8l8,5V10h4a4.11,4.11,0,0,1,4,2.19c0-.19,0-.73,0-.92C16,8.5,14.25,6,11.49,6H8V3Z"/></svg>

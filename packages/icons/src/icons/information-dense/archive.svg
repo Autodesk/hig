@@ -1,5 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>archive-16</title>
-  <path d="M0,2V4H16V2a1,1,0,0,0-1-1H1A1,1,0,0,0,0,2Z"/>
-  <path d="M1,5v9a1,1,0,0,0,1,1H14a1,1,0,0,0,1-1V5ZM12,9H4V8h8Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>archive-16</title><rect y="1" width="16" height="3"/><path d="M1,15H15V5H1ZM4,8h8V9H4Z"/></svg>

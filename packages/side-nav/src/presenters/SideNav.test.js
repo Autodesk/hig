@@ -16,6 +16,16 @@ describe("side-nav/presenters/SideNav", () => {
           headerLabel: "Storybook",
           superHeaderLabel: "HIG"
         }
+      },
+      {
+        description: "renders headers with onClick",
+        props: {
+          headerLabel: "Storybook",
+          onClickHeader: () => jest.fn(),
+          superHeaderLabel: "HIG",
+          superHeaderLink: "/",
+          onClickSuperHeader: () => jest.fn()
+        }
       }
     ];
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { mount } from "enzyme";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 
 import Dropdown from "./Dropdown";
@@ -58,10 +59,9 @@ describe("Dropdown", () => {
       props: {}
     },
     {
-      desc: "renders with a label and an ID",
+      desc: "renders with an ID",
       props: {
-        id: "whoaBuddy",
-        label: "HIG Themes"
+        id: "whoaBuddy"
       }
     },
     {
@@ -145,8 +145,20 @@ describe("Dropdown", () => {
         multiple: true,
         value: ["foo", "bar"]
       }
+    },
+    {
+      desc: "renders with className prop",
+      props: {
+        className: "custom-class-1 custom-class-2"
+      }
     }
   ];
 
   takeSnapshotsOf(Dropdown, cases, rendererOptions);
+
+  it("passes className props to Dropdown element", () => {
+    const className = "custom-class";
+    const wrapper = mount(<Dropdown className={className} />);
+    expect(wrapper.hasClass(className)).toBe(true);
+  });
 });

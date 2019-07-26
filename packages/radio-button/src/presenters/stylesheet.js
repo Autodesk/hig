@@ -79,13 +79,17 @@ export default function stylesheet(props, themeData, theme) {
   const opacity = disabled ? themeData["component.disabled.opacity"] : "1.0";
   // because we don't have access to the checked status in react, we need to
   // write css rules to handle both cases
+  const borderColor =
+    hasFocus && !hasHover
+      ? themeData["checkbox.focus.borderColor"]
+      : themeData["checkbox.borderColor"];
   const checkedInnerShadow = `inset 0 0 0 ${
     themeData["checkbox.pressed.halo.width"]
   } ${themeData["checkbox.checked.backgroundColor"]}`;
   const uncheckedInnerShadow = `inset 0 0 0 ${
     themeData["checkbox.borderWidth"]
   } 
-    ${themeData["checkbox.borderColor"]}
+    ${borderColor}
   `;
   let outerShadow = "0 0 0 0px transparent";
 
@@ -93,7 +97,7 @@ export default function stylesheet(props, themeData, theme) {
     // do nothing
   } else if (isPressed) {
     outerShadow = `0 0 0 ${themeData["checkbox.pressed.halo.width"]} ${
-      themeData["checkbox.focus.halo.color"]
+      themeData["checkbox.pressed.halo.color"]
     }`;
   } else if (hasHover) {
     outerShadow = `0 0 0 ${themeData["checkbox.hover.halo.width"]} ${
@@ -125,7 +129,11 @@ export default function stylesheet(props, themeData, theme) {
       height: themeData["checkbox.height"],
       width: themeData["checkbox.width"],
       borderRadius: "50%",
-      boxShadow: `${uncheckedInnerShadow},${outerShadow}`
+      boxShadow: `${uncheckedInnerShadow},${outerShadow}`,
+      transitionDuration: "0.3s, 0.3s",
+      transitionProperty: "box-shadow, background-color",
+      transitionTimingFunction:
+        "cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1)"
     },
 
     // this maps to .radio-button__input

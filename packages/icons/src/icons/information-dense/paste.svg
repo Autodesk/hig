@@ -1,5 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>paste-16</title>
-  <path d="M13,3V5H2V3A1,1,0,0,0,1,4V15a1,1,0,0,0,1,1H13a1,1,0,0,0,1-1V4A1,1,0,0,0,13,3ZM11,14H4V13h7Zm0-2H4V11h7Zm0-2H4V9h7Zm0-2H4V7h7Z"/>
-  <path d="M10,2A2.8,2.8,0,0,0,7.5.5,2.77,2.77,0,0,0,5,2H3V4h9V2Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>paste-16</title><polygon points="7 6 10 6 10 2 9 2 9 3 1 3 1 2 0 2 0 14 7 14 7 6"/><polygon points="16 10 13 10 13 7 16 10"/><polygon points="12 11 12 7 8 7 8 16 16 16 16 11 12 11"/><path d="M7.5,1H7V0H3V1H2.5a.5.5,0,0,0-.5.5V2H8V1.5A.5.5,0,0,0,7.5,1Z"/></svg>

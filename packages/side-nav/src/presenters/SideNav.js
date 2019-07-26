@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
-import { Back24 } from "@hig/icons";
+import { Back24, Back16 } from "@hig/icons";
 import Typography from "@hig/typography";
 import TextLink from "@hig/text-link";
 import IconButton from "@hig/icon-button";
@@ -21,6 +21,8 @@ export default class SideNav extends Component {
     headerLabel: PropTypes.string,
     /** An href for the SideNav Subtitle */
     headerLink: PropTypes.string,
+    /** Called when headerLink is clicked */
+    onClickHeader: PropTypes.func,
     /** 0 or more SideNav Links */
     links: PropTypes.node,
     /** Called when minimize button is clicked */
@@ -32,7 +34,9 @@ export default class SideNav extends Component {
     /** Title at the top of the SideNav */
     superHeaderLabel: PropTypes.string,
     /** An href for the SideNav Title */
-    superHeaderLink: PropTypes.string
+    superHeaderLink: PropTypes.string,
+    /** Called when superHeaderLink is clicked */
+    onClickSuperHeader: PropTypes.func
   };
 
   static defaultProps = {
@@ -40,14 +44,14 @@ export default class SideNav extends Component {
     showMinimizeButton: false
   };
 
-  _renderHeader = (link, label, styles) => {
+  _renderHeader = (link, label, styles, onClick) => {
     if (!label) {
       return null;
     }
 
-    if (link) {
+    if (link || onClick) {
       return (
-        <TextLink link={link} style={styles}>
+        <TextLink link={link} style={styles} onClick={onClick}>
           {label}
         </TextLink>
       );
@@ -60,8 +64,10 @@ export default class SideNav extends Component {
     const {
       headerLabel,
       headerLink,
+      onClickHeader,
       superHeaderLabel,
-      superHeaderLink
+      superHeaderLink,
+      onClickSuperHeader
     } = this.props;
 
     if (!(superHeaderLabel || headerLabel)) {
@@ -74,13 +80,15 @@ export default class SideNav extends Component {
           superHeaderLink,
           superHeaderLabel,
           stylesheet({ isLink: superHeaderLink, ...this.props }, resolvedRoles)
-            .headers.super
+            .headers.super,
+          onClickSuperHeader
         )}
         {this._renderHeader(
           headerLink,
           headerLabel,
           stylesheet({ isLink: headerLink, ...this.props }, resolvedRoles)
-            .headers.normal
+            .headers.normal,
+          onClickHeader
         )}
       </div>
     );
@@ -99,7 +107,7 @@ export default class SideNav extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles }) => {
+        {({ resolvedRoles, metadata }) => {
           const styles = stylesheet(this.props, resolvedRoles);
 
           return (
@@ -123,7 +131,13 @@ export default class SideNav extends Component {
               {showMinimizeButton && (
                 <div className={css(styles.minimize)}>
                   <IconButton
-                    icon={<Back24 />}
+                    icon={
+                      metadata.densityId === "medium-density" ? (
+                        <Back24 />
+                      ) : (
+                        <Back16 />
+                      )
+                    }
                     title="Minimize"
                     aria-label="Minimize"
                     onClick={onMinimize}

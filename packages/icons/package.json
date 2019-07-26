@@ -1,6 +1,6 @@
 {
   "name": "@hig/icons",
-  "version": "2.1.1",
+  "version": "3.1.0",
   "description": "HIG icon assets",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -28,12 +28,14 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.0",
-    "@hig/theme-data": "^2.6.0",
+    "@hig/theme-data": "^2.8.0",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
-    "build": "hig-scripts-build",
+    "build": "yarn build:core && yarn dist:icons",
+    "build:core": "hig-scripts-build",
     "build-icons": "node scripts/build-icons/index.js",
+    "dist:icons": "mkdir -p build/svg && cp -r src/icons/* build/svg",
     "lint": "hig-scripts-lint",
     "test": "hig-scripts-test",
     "release": "hig-scripts-release"

@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>home-24</title>
-  <g id="final">
-    <g id="home">
-      <path id="outline" d="M19,21H15a1,1,0,0,1-1-1V15H10v5a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V14H3L2,12.26,11.29,3h1.41L22,12.26,21,14H20v6A1,1,0,0,1,19,21ZM9,14h6v6h4V13h1.25l.48-.64L12.29,4h-.59L3.27,12.36l.48.65H5v7H9Z" fill="#2e4258"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>home-24</title><path d="M19,9V4H16V6L12,2,2,12l1,2H4v7H20V14h1l1-2ZM17,5h1V8H17ZM14,20H10V18h1V17H10V15h4Zm5,0H15V14H9v6H5V14.41l7-7,7,7Zm1.38-7H19L12,6,5,13H3.62l-.4-.8L12,3.41l8.78,8.79Z"/></svg>

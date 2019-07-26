@@ -1,15 +1,1 @@
-<svg id="create-artboards" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <title>area-post-16</title>
-  <g>
-    <rect width="2" height="2"/>
-    <rect x="4" width="2" height="2"/>
-    <rect x="8" width="2" height="2"/>
-    <rect x="4" y="12" width="2" height="2"/>
-    <rect x="12" width="2" height="2"/>
-    <rect x="12" y="4" width="2" height="2"/>
-    <polygon points="16 11 13 11 13 8 11 8 11 11 8 11 8 13 11 13 11 16 13 16 13 13 16 13 16 11"/>
-    <rect y="4" width="2" height="2"/>
-    <rect y="8" width="2" height="2"/>
-    <rect y="12" width="2" height="2"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>area-post-16</title><rect width="2" height="2"/><rect x="4" width="2" height="2"/><rect x="8" width="2" height="2"/><rect x="4" y="12" width="2" height="2"/><rect x="12" width="2" height="2"/><rect x="12" y="4" width="2" height="2"/><polygon points="16 11 13 11 13 8 11 8 11 11 8 11 8 13 11 13 11 16 13 16 13 13 16 13 16 11"/><rect y="4" width="2" height="2"/><rect y="8" width="2" height="2"/><rect y="12" width="2" height="2"/></svg>

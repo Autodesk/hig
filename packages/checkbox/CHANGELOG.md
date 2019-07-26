@@ -1,3 +1,25 @@
+# [@hig/checkbox-v2.0.8](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.7...@hig/checkbox@2.0.8) (2019-07-24)
+
+
+### Bug Fixes
+
+* halo transition ([de130ee](https://github.com/Autodesk/hig/commit/de130ee))
+
+# [@hig/checkbox-v2.0.7](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.6...@hig/checkbox@2.0.7) (2019-07-11)
+
+
+### Bug Fixes
+
+* update icons package ([6df732c](https://github.com/Autodesk/hig/commit/6df732c))
+
+# [@hig/checkbox-v2.0.6](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.5...@hig/checkbox@2.0.6) (2019-06-07)
+
+
+### Bug Fixes
+
+* no border for indeterminate focus state ([6fa7506](https://github.com/Autodesk/hig/commit/6fa7506))
+* use proper border color in focus state ([0e4b011](https://github.com/Autodesk/hig/commit/0e4b011))
+
 # [@hig/checkbox-v2.0.5](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.4...@hig/checkbox@2.0.5) (2019-04-01)
 
 

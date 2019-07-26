@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`banner/Banner snapshot tests renders with no props 1`] = `
-.emotion-8 {
+.emotion-6 {
   background-color: #ffffff;
 }
 
-.emotion-7 {
+.emotion-5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50,10 +50,12 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-4 {
@@ -99,37 +101,6 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
   text-align: initial;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  padding-right: calc(50px - calc((36px - 10px) / 2));
-}
-
-.emotion-6 svg {
-  cursor: pointer;
-}
-
-.emotion-6 svg * {
-  fill: #808080;
-}
-
-.emotion-6:hover svg * {
-  fill: #0696d7;
-}
-
 <div
   aria-busy={false}
   aria-expanded={true}
@@ -151,11 +122,11 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
     }
   >
     <div
-      className="emotion-8"
+      className="emotion-6"
     >
       <div
         aria-live="polite"
-        className="emotion-7"
+        className="emotion-5"
         role="alert"
       >
         <figure
@@ -172,10 +143,10 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
               info-24
             </title>
             <path
-              d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 19a9 9 0 1 1 9-9 9 9 0 0 1-9 9z"
+              d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
             />
             <path
-              d="M11 11h2v6h-2z"
+              d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
             />
             <circle
               cx="12"
@@ -196,25 +167,6 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
               Message
             </p>
           </div>
-        </div>
-        <div
-          className="emotion-6"
-        >
-          <svg
-            className="emotion-0"
-            height="24px"
-            onClick={undefined}
-            viewBox="0 0 24 24"
-            width="24px"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>
-              hig-icons/common/24/close-24
-            </title>
-            <path
-              d="M12 12.68l-7.61 7.61-.68-.68L11.32 12 3.71 4.38l.68-.67L12 11.32l7.61-7.61.68.67L12.68 12l7.61 7.61-.68.68z"
-            />
-          </svg>
         </div>
       </div>
     </div>

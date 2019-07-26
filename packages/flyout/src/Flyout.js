@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
+import { combineEventHandlers } from "@hig/utils";
+
 import { AVAILABLE_ANCHOR_POINTS } from "./anchorPoints";
 import ContainerTransition from "./behaviors/ContainerTransition";
 import FlyoutPresenter from "./presenters/FlyoutPresenter";
@@ -289,7 +291,7 @@ export default class Flyout extends Component {
 
     if (React.Children.count(children) === 1) {
       return React.cloneElement(children, {
-        onClick: handleChildClick,
+        onClick: combineEventHandlers(handleChildClick, children.props.onClick),
         onMouseEnter,
         onMouseLeave
       });

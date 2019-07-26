@@ -23,11 +23,12 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -56,10 +57,12 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-2 {
@@ -115,7 +118,7 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
     height="10px"
     style={
       Object {
-        "opacity": "0.5",
+        "opacity": "0.4",
         "pointerEvents": "none",
         "position": "absolute",
         "right": "0",
@@ -189,11 +192,12 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
   line-height: 1.4;
   width: 100%;
   color: #3c3c3c;
-  height: calc(28px - 2px);
+  height: calc(36px - 2px);
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -222,10 +226,12 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
 
 .emotion-3 {
   fill: #808080;
+  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <div

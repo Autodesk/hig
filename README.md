@@ -76,7 +76,7 @@ Each HIG pattern is implemented as a set of React components. Each pattern is pu
 - [`<SkeletonItem>`](./packages/skeleton-item/README.md) - A placeholder for loading content
 - [`<Slider>`](./packages/slider/README.md) - A control for selecting a single numeric value from a range
 - [`<Spacer>`](./packages/spacer/README.md) - A square of empty space, meant to add space between other components
-- [`<Table>`](./packages/table/README.md) - Represents tabular data in columns and rows
+- [`<Surface>`](./packages/surface/README.md) - A themable container with the appropriate background color for the current theme
 - [`<Tabs>`](./packages/tabs/README.md) - Keeps related content in a single container
 - [`<TextArea>`](./packages/text-area/README.md) - A control to provide a large amount of freeform text
 - [`<TextLink>`](./packages/text-link/README.md) - Directs visitors to another location

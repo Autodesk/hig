@@ -1,3 +1,25 @@
+# [@hig/radio-button-v1.0.8](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.7...@hig/radio-button@1.0.8) (2019-07-24)
+
+
+### Bug Fixes
+
+* halo transitions ([1e433a0](https://github.com/Autodesk/hig/commit/1e433a0))
+
+# [@hig/radio-button-v1.0.7](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.6...@hig/radio-button@1.0.7) (2019-06-07)
+
+
+### Bug Fixes
+
+* use correct border color for focused unselected state ([b3d9d7d](https://github.com/Autodesk/hig/commit/b3d9d7d))
+* use proper border color in focus state ([c539639](https://github.com/Autodesk/hig/commit/c539639))
+
+# [@hig/radio-button-v1.0.6](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.5...@hig/radio-button@1.0.6) (2019-05-22)
+
+
+### Bug Fixes
+
+* use proper theme-data role for hover halo ([77a5e3d](https://github.com/Autodesk/hig/commit/77a5e3d))
+
 # [@hig/radio-button-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.4...@hig/radio-button@1.0.5) (2019-04-02)
 
 

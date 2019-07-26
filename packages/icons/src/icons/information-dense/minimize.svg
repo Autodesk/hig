@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="_x2D_--SET_2_16x16_EDITABLE"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
-	 viewBox="5361 2065 16 16" enable-background="new 5361 2065 16 16" xml:space="preserve">
-<g>
-	<polyline points="5369,2073 5369,2066 5371,2066 5371,2069.5 5375.5,2065 5377,2065 5377,2066.5 5372.5,2071 5376,2071 5376,2073 
-		5369,2073 	"/>
-	<path d="M5369,2073"/>
-	<path d="M5368,2081c0.553,0,1-0.447,1-1v-7h-7c-0.553,0-1,0.447-1,1v6c0,0.553,0.447,1,1,1H5368z M5367,2079h-4v-4h4V2079z"/>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>minimize-16</title><path d="M0,16H8V8H0Zm2-6H6v4H2Z" fill-rule="evenodd"/><polygon points="15.71 1.71 14.29 0.29 10.77 3.81 9.01 2.04 8 8 13.96 6.99 12.19 5.23 15.71 1.71" fill-rule="evenodd"/></svg>

@@ -1,6 +1,6 @@
 {
   "name": "@hig/banner",
-  "version": "2.0.1",
+  "version": "2.0.3",
   "description": "HIG Banner",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -17,7 +17,8 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icons": "^2.1.1",
+    "@hig/icon-button": "^2.1.1",
+    "@hig/icons": "^3.0.0",
     "@hig/typography": "^1.0.3",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
@@ -32,7 +33,7 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.0",
-    "@hig/theme-data": "^2.6.0",
+    "@hig/theme-data": "^2.8.0",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {

@@ -24,6 +24,8 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders with all
   transition-property: box-shadow,background-color;
   -webkit-transition-duration: 0.3s,0.3s;
   transition-duration: 0.3s,0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
   box-shadow: none;
   background-color: transparent;
 }
@@ -38,6 +40,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders with all
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -51,6 +54,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders with all
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <div
@@ -58,6 +62,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders with all
 >
   <button
     className="emotion-1"
+    disabled={undefined}
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
@@ -65,6 +70,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders with all
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
+    tabIndex="0"
     title="HELLO"
   >
     <svg
@@ -109,6 +115,8 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders without 
   transition-property: box-shadow,background-color;
   -webkit-transition-duration: 0.3s,0.3s;
   transition-duration: 0.3s,0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
   box-shadow: none;
   background-color: transparent;
 }
@@ -123,6 +131,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders without 
 
 .emotion-0 {
   fill: #808080;
+  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -136,6 +145,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders without 
 
 .emotion-0 > * {
   fill: #808080;
+  pointer-events: none;
 }
 
 <div
@@ -143,6 +153,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders without 
 >
   <button
     className="emotion-1"
+    disabled={undefined}
     onBlur={[Function]}
     onClick={undefined}
     onFocus={[Function]}
@@ -150,6 +161,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders without 
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
+    tabIndex="0"
     title="Dismiss featured notification"
   >
     <svg

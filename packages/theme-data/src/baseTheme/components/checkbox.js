@@ -79,10 +79,7 @@ export default {
   "checkbox.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
-    },
-    transform: {
-      alpha: 0.5
+      ref: "colorScheme.accentColor"
     }
   },
   "checkbox.focus.halo.color": {
@@ -91,7 +88,7 @@ export default {
       ref: "colorScheme.accentColor"
     },
     transform: {
-      alpha: 0.25
+      alpha: 0.35
     }
   },
   "checkbox.focus.halo.width": {
@@ -114,7 +111,7 @@ export default {
   "checkbox.pressed.halo.color": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "colorScheme.baseColor"
     },
     transform: {
       alpha: 0.25

@@ -63,7 +63,9 @@ export default function BannerPresenter(props) {
           </InteractionsWrapper>
         ) : null}
       </Content>
-      <DismissButton title={dismissButtonTitle} onClick={onDismiss} />
+      {onDismiss ? (
+        <DismissButton title={dismissButtonTitle} onClick={onDismiss} />
+      ) : null}
     </Wrapper>
   );
 }

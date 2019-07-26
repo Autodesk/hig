@@ -1,7 +1,1 @@
-<svg id="assets" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <title>device-desktop-24</title>
-  <g>
-    <path d="M21,3H3A1,1,0,0,0,2,4V17a1,1,0,0,0,1,1h7v2H6v1H18V20H14V18h7a1,1,0,0,0,1-1V4A1,1,0,0,0,21,3ZM13,20H11V18h2Zm8-3H3V4H21Z"/>
-    <path d="M4,5V16H20V5ZM19,15H5V6H19Z"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>device-desktop-24</title><path d="M14,18h8V3H2V18h8v2H6v1H18V20H14V18Zm-1,2H11V18h2ZM3,17V4H21V17Z"/></svg>

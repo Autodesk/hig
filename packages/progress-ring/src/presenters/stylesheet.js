@@ -85,7 +85,7 @@ const SegmentsExiting = keyframes`
 `;
 
 export default function stylesheet(props, themeData) {
-  const { cssTransitionState } = props;
+  const { cssTransitionState, surface, mask } = props;
 
   const styles = {
     ring: {
@@ -105,7 +105,7 @@ export default function stylesheet(props, themeData) {
 
     mask: {
       transformOrigin: "center",
-      fill: themeData["colorScheme.surfaceLevel100Color"]
+      fill: mask || themeData[`colorScheme.surfaceLevel${surface}Color`]
     },
 
     segment: {

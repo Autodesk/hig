@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
@@ -27,6 +27,7 @@ export default class ButtonPresenter extends Component {
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
     onMouseUp: PropTypes.func,
+    stylesheet: PropTypes.func,
     target: PropTypes.oneOf(availableTargets),
     title: PropTypes.string.isRequired,
     type: PropTypes.oneOf(availableTypes),
@@ -49,12 +50,15 @@ export default class ButtonPresenter extends Component {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
+      stylesheet: customStylesheet,
       target,
       title,
       type,
       width,
       ...otherProps
     } = this.props;
+
+    const { className } = otherProps;
 
     const href = link || undefined;
     const tabIndex = disabled ? "-1" : "0";
@@ -63,14 +67,20 @@ export default class ButtonPresenter extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles }) => {
+        {({ resolvedRoles, metadata }) => {
           const styles = stylesheet(
             { disabled, hasFocus, hasHover, isPressed, type, width },
-            resolvedRoles
+            resolvedRoles,
+            metadata
           );
+          const cssStyles = customStylesheet
+            ? customStylesheet(styles, this.props, resolvedRoles, metadata)
+            : styles;
+
           return (
             <Wrapper
-              className={css(styles.button)}
+              {...otherProps}
+              className={cx(css(cssStyles.button), className)}
               href={href}
               tabIndex={tabIndex}
               target={wrapperTarget}
@@ -83,10 +93,11 @@ export default class ButtonPresenter extends Component {
               onMouseOver={onHover}
               onMouseUp={onMouseUp}
               disabled={disabled}
-              {...otherProps}
             >
-              {icon && <span className={css(styles.icon)}>{icon}</span>}
-              <span>{title}</span>
+              {icon && <span className={css(cssStyles.icon)}>{icon}</span>}
+              <span className={icon ? css(cssStyles.iconText) : ""}>
+                {title}
+              </span>
             </Wrapper>
           );
         }}

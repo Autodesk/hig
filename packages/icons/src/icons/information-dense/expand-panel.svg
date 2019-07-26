@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
-<polygon points="10.6,5.5 12.2,7 8,7 8,9 12.2,9 10.6,10.5 12,11.9 16,8 12,4 "/>
-<path d="M1,15h5c0.6,0,1-0.4,1-1V2c0-0.6-0.4-1-1-1H1C0.4,1,0,1.4,0,2v12C0,14.6,0.4,15,1,15z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><title>expand-panel-16</title><rect y="1" width="7" height="14" transform="translate(7 16) rotate(-180)"/><polygon points="11.02 6.15 11.02 4 15.94 7.5 11.02 11 11.02 8.85 8 8.85 8 6.15 11.02 6.15" fill-rule="evenodd"/></svg>
