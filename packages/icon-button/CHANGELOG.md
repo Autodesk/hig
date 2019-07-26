@@ -1,3 +1,11 @@
+# [@hig/icon-button-v2.1.3](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.1.2...@hig/icon-button@2.1.3) (2019-07-26)
+
+
+### Bug Fixes
+
+* pass down disabled attribute to root element ([3f57c24](https://github.com/Autodesk/hig/commit/3f57c24))
+* prevent disabled IconButton gaining tab focus ([f548f9c](https://github.com/Autodesk/hig/commit/f548f9c))
+
 # [@hig/icon-button-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.1.1...@hig/icon-button@2.1.2) (2019-07-24)
 
 
