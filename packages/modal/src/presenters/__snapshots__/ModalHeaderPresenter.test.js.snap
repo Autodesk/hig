@@ -80,6 +80,7 @@ exports[`modal/presenters/ModalHeaderPresenter  1`] = `
     />
     <button
       className="emotion-2"
+      disabled={undefined}
       onBlur={[Function]}
       onClick={undefined}
       onFocus={[Function]}
@@ -87,6 +88,7 @@ exports[`modal/presenters/ModalHeaderPresenter  1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
+      tabIndex="0"
       title="Close"
     >
       <svg
@@ -201,6 +203,7 @@ exports[`modal/presenters/ModalHeaderPresenter  3`] = `
     </p>
     <button
       className="emotion-2"
+      disabled={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -208,6 +211,7 @@ exports[`modal/presenters/ModalHeaderPresenter  3`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
+      tabIndex="0"
       title="Close"
     >
       <svg

@@ -225,6 +225,7 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
       >
         <button
           className="emotion-2"
+          disabled={undefined}
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -232,6 +233,7 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          tabIndex="0"
           title="hello world"
         >
           <svg

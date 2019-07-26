@@ -52,6 +52,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  1`] = `
 
 <button
   className="emotion-1"
+  disabled={undefined}
   onBlur={[Function]}
   onClick={undefined}
   onFocus={[Function]}
@@ -59,6 +60,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  1`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   onMouseUp={[Function]}
+  tabIndex="0"
   title="View help"
 >
   <svg
@@ -138,6 +140,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  2`] = `
 
 <button
   className="emotion-1"
+  disabled={undefined}
   onBlur={[Function]}
   onClick={undefined}
   onFocus={[Function]}
@@ -145,6 +148,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  2`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   onMouseUp={[Function]}
+  tabIndex="0"
   title="View help"
 >
   <svg
@@ -224,6 +228,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  3`] = `
 
 <button
   className="emotion-1"
+  disabled={undefined}
   onBlur={[Function]}
   onClick={[Function]}
   onFocus={[Function]}
@@ -231,6 +236,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  3`] = `
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   onMouseUp={[Function]}
+  tabIndex="0"
   title="View help"
 >
   <svg

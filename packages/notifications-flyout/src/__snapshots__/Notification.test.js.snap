@@ -239,6 +239,7 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
       >
         <button
           className="emotion-2"
+          disabled={undefined}
           onBlur={[Function]}
           onClick={[Function]}
           onFocus={[Function]}
@@ -246,6 +247,7 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
           onMouseEnter={[Function]}
           onMouseLeave={[Function]}
           onMouseUp={[Function]}
+          tabIndex="0"
           title="Dismiss featured notification"
         >
           <svg

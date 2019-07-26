@@ -62,6 +62,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders with all
 >
   <button
     className="emotion-1"
+    disabled={undefined}
     onBlur={[Function]}
     onClick={[Function]}
     onFocus={[Function]}
@@ -69,6 +70,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders with all
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
+    tabIndex="0"
     title="HELLO"
   >
     <svg
@@ -151,6 +153,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders without 
 >
   <button
     className="emotion-1"
+    disabled={undefined}
     onBlur={[Function]}
     onClick={undefined}
     onFocus={[Function]}
@@ -158,6 +161,7 @@ exports[`notifications-flyout/presenters/DismissButtonPresenter renders without 
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
     onMouseUp={[Function]}
+    tabIndex="0"
     title="Dismiss featured notification"
   >
     <svg
