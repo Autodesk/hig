@@ -5,8 +5,8 @@ export default class NumericInputBehaviour extends Component {
   static propTypes = {
     children: PropTypes.func.isRequired,
     step: PropTypes.number,
-    value: PropTypes.string,
-    initialValue: PropTypes.string,
+    value: PropTypes.number,
+    initialValue: PropTypes.number,
     onChange: PropTypes.func,
     isDisabled: PropTypes.bool
   };
@@ -22,9 +22,6 @@ export default class NumericInputBehaviour extends Component {
   constructor(props) {
     super(props);
 
-    this.increment = this.increment.bind(this);
-    this.decrement = this.decrement.bind(this);
-
     // Uncontrolled
     if (props.initialValue !== undefined) {
       this.state = {
@@ -33,66 +30,58 @@ export default class NumericInputBehaviour extends Component {
     }
   }
 
-  getNumericValue() {
+  getNumericValue = () => {
     if (!this.valueIsNumeric()) {
       throw new Error("Can't get numeric value if value is not a number");
     }
 
     return +this.getValue();
-  }
+  };
 
-  getValue() {
-    return this.isValueControlled() ? this.props.value : this.state.value;
-  }
+  getValue = () =>
+    this.isValueControlled() ? this.props.value : this.state.value;
 
-  setValue(value) {
+  setValue = value => {
     this.props.onChange(value);
     if (!this.isValueControlled()) {
       this.setState({ value });
     }
-  }
+  };
 
-  // eslint-disable-next-line class-methods-use-this
-  isNumeric(value) {
-    // eslint-disable-next-line no-restricted-globals
-    return !isNaN(value);
-  }
+  // eslint-disable-next-line no-restricted-globals
+  isNumeric = value => !isNaN(value);
 
-  isValueControlled() {
-    return this.props.value !== undefined && this.props.value !== null;
-  }
+  isValueControlled = () =>
+    this.props.value !== undefined && this.props.value !== null;
 
-  updateValue(value) {
+  updateValue = value => {
     // Do nothing if the input is currently disabled
     if (this.props.isDisabled) {
       return;
     }
 
     this.setValue(value);
-  }
+  };
 
-  increment() {
+  increment = () => {
     if (this.valueIsNumeric()) {
       this.updateValue(this.getNumericValue() + this.props.step);
     }
-  }
+  };
 
-  decrement() {
+  decrement = () => {
     if (this.valueIsNumeric()) {
       this.updateValue(this.getNumericValue() - this.props.step);
     }
-  }
+  };
 
-  valueIsNumeric() {
-    return this.isNumeric(this.getValue());
-  }
+  valueIsNumeric = () => this.isNumeric(this.getValue());
 
-  render() {
-    return this.props.children({
+  render = () =>
+    this.props.children({
       increment: this.increment,
       decrement: this.decrement,
-      value: this.getValue(),
+      value: `${this.getValue()}`,
       setValue: this.setValue
     });
-  }
 }

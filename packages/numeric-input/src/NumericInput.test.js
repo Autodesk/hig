@@ -6,116 +6,141 @@ import {
   composesLikeControlBehavior
 } from "@hig/behaviors/test";
 
+import Input from "@hig/input";
+import Spinner from "@hig/spinner";
 import NumericInput from "./NumericInput";
-import InputPresenter from "./presenters/InputPresenter";
-import InputHaloPresenter from "./presenters/InputHaloPresenter";
+import NumericInputPresenter from "./presenters/NumericInputPresenter";
 
 describe("NumericInput", () => {
-  behavesLikeFocusBehavior(<NumericInput />);
-  behavesLikeHoverBehavior(<NumericInput />);
-  composesLikeControlBehavior({
-    Subject: Input,
-    Receiver: InputPresenter
-  });
+  behavesLikeFocusBehavior(<NumericInput value={0} />);
+  behavesLikeHoverBehavior(<NumericInput value={0} />);
 
   describe("rendering variants", () => {
     describe("when variant='line'", () => {
       it("renders the line-style input", () => {
-        const wrapper = mount(<NumericInput variant="line" />);
+        const wrapper = mount(<NumericInput variant="line" value={0} />);
 
-        const decoration = wrapper.find(InputHaloPresenter);
-        expect(decoration).toHaveProp("variant", "line");
+        const input = wrapper.find(Input);
+        expect(input).toHaveProp("variant", "line");
       });
     });
 
     describe("when variant='box'", () => {
-      it("renders the box-style  input", () => {
-        const wrapper = mount(<NumericInput variant="box" />);
+      it("renders the box-style input", () => {
+        const wrapper = mount(<NumericInput variant="box" value={0} />);
 
-        const decoration = wrapper.find(InputHaloPresenter);
-        expect(decoration).toHaveProp("variant", "box");
+        const input = wrapper.find(Input);
+        expect(input).toHaveProp("variant", "box");
       });
     });
 
     describe("when variant='plain'", () => {
       it("renders a plain input", () => {
-        const wrapper = mount(<NumericInput variant="plain" />);
+        const wrapper = mount(<NumericInput variant="plain" value={0} />);
 
-        expect(wrapper).not.toContain(InputHaloPresenter);
+        const input = wrapper.find(Input);
+        expect(input).toHaveProp("variant", "plain");
       });
     });
   });
 
   describe("when controlled", () => {
-    let onChangeSpy;
+    let onChangeMock;
     let wrapper;
     let interactiveElement;
 
     beforeEach(() => {
-      onChangeSpy = jest.fn();
-      wrapper = mount(<NumericInput value="foo" onChange={onChangeSpy} />);
+      onChangeMock = jest.fn();
+      wrapper = mount(<NumericInput value={23} onChange={onChangeMock} />);
       interactiveElement = wrapper.find("input");
     });
 
     it("sets the value", () => {
-      expect(interactiveElement).toHaveProp("value", "foo");
+      expect(interactiveElement).toHaveProp("value", "23");
     });
 
-    describe("typing into the field", () => {
-      beforeEach(() => {
-        interactiveElement.getDOMNode().value = "bar";
-        interactiveElement.simulate("change");
-      });
+    it("calls the onChange callback when changed", () => {
+      interactiveElement.simulate("change");
+      expect(onChangeMock).toHaveBeenCalledTimes(1);
+    });
 
-      it("calls the callback", () => {
-        expect(onChangeSpy.mock.calls.length).toEqual(1);
-      });
+    it("doesn't accept non-numeric values", () => {
+      interactiveElement.simulate("change", { target: { value: "Hello" } });
 
-      describe("the interactive element", () => {
-        it("keeps the value from the value prop", () => {
-          expect(interactiveElement.getDOMNode().value).toEqual("foo");
-        });
-      });
+      expect(interactiveElement).toHaveProp("value", "23");
+    });
+
+    it("calls the onChange callback with the incremented value when incremented", () => {
+      const spinnerWrapper = wrapper.find(Spinner);
+      spinnerWrapper.props().increment();
+
+      expect(onChangeMock).toHaveBeenCalledTimes(1);
+      expect(onChangeMock).toHaveBeenCalledWith(24);
+
+      expect(interactiveElement).toHaveProp("value", "23");
+    });
+
+    it("calls the onChange callback with the decremented value when decremented", () => {
+      const spinnerWrapper = wrapper.find(Spinner);
+      spinnerWrapper.props().decrement();
+
+      expect(onChangeMock).toHaveBeenCalledTimes(1);
+      expect(onChangeMock).toHaveBeenCalledWith(22);
+
+      expect(interactiveElement).toHaveProp("value", "23");
     });
   });
 
   describe("when uncontrolled", () => {
-    let onChangeSpy;
+    let onChangeMock;
     let wrapper;
     let interactiveElement;
 
     beforeEach(() => {
-      onChangeSpy = jest.fn();
+      onChangeMock = jest.fn();
       wrapper = mount(
-        <NumericInput defaultValue="foo" onChange={onChangeSpy} />
+        <NumericInput defaultValue={23} onChange={onChangeMock} />
       );
       interactiveElement = wrapper.find("input");
     });
 
-    it("sets the defaultValue", () => {
-      expect(interactiveElement).toHaveProp("defaultValue", "foo");
+    it("sets the value", () => {
+      expect(interactiveElement).toHaveProp("value", "23");
     });
 
-    describe("typing into the field", () => {
-      beforeEach(() => {
-        interactiveElement.getDOMNode().value = "bar";
-        interactiveElement.simulate("change");
-      });
+    it("calls the onChange callback when changed", () => {
+      interactiveElement.simulate("change", { target: { value: "7" } });
+      expect(onChangeMock).toHaveBeenCalledTimes(1);
+      expect(interactiveElement).toHaveProp("value", "7");
+    });
 
-      it("calls the callback", () => {
-        expect(onChangeSpy.mock.calls.length).toEqual(1);
-      });
+    it("doesn't accept non-numeric values", () => {
+      expect(interactiveElement).toHaveProp("type", "number");
+    });
 
-      describe("the interactive element", () => {
-        it("gets the typed value", () => {
-          expect(interactiveElement.getDOMNode().value).toEqual("bar");
-        });
-      });
+    it("increments the value", () => {
+      const spinnerWrapper = wrapper.find(Spinner);
+      spinnerWrapper.props().increment();
+
+      expect(onChangeMock).toHaveBeenCalledTimes(1);
+      expect(onChangeMock).toHaveBeenCalledWith(24);
+
+      expect(interactiveElement).toHaveProp("value", "24");
+    });
+
+    it("decrements the value", () => {
+      const spinnerWrapper = wrapper.find(Spinner);
+      spinnerWrapper.props().decrement();
+
+      expect(onChangeMock).toHaveBeenCalledTimes(1);
+      expect(onChangeMock).toHaveBeenCalledWith(22);
+
+      expect(interactiveElement).toHaveProp("value", "22");
     });
   });
 
   it("passes arbitrary props to input element", () => {
-    const wrapper = mount(<NumericInput data-my-attr="foo" />);
+    const wrapper = mount(<NumericInput value={123} data-my-attr="foo" />);
     expect(wrapper.find("input")).toHaveProp("data-my-attr", "foo");
   });
 });

@@ -17,6 +17,7 @@
     "build/*"
   ],
   "dependencies": {
+    "@hig/spinner": "^0.0.1",
     "@hig/icons": "^2.1.1",
     "@hig/input": "^1.1.4",
     "@hig/behaviors": "1.1.1",

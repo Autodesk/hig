@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
 import Input from "@hig/input";
+import Spinner from "@hig/spinner";
 
 import NumericInputPresenter from "./presenters/NumericInputPresenter";
-import IncrementDecrementPresenter from "./presenters/IncrementDecrementPresenter";
 import NumericInputBehaviour from "./behaviours/NumericInputBehaviour";
 
 import { availableVariants, variants } from "./constants";
@@ -19,7 +19,7 @@ function NumericInput(props) {
     disabled: disabledProp,
     stylesheet,
     variant,
-    initialValue,
+    defaultValue: initialValue,
     value,
     step,
     ...otherProps
@@ -77,24 +77,20 @@ function NumericInput(props) {
                     onMouseLeave={onMouseLeave}
                     onChange={onDirectChange}
                     stylesheet={stylesheet}
+                    type="number"
                     variant={variant}
                     value={controlledValue}
                     {...otherProps}
                   />
-                  <IncrementDecrementPresenter
+                  <Spinner
                     disabled={disabledProp}
                     hasFocus={hasFocus}
                     hasHover={hasHover}
                     onFocus={onFocus}
                     onBlur={onBlur}
-                    onMouseEnter={onMouseEnter}
-                    onMouseLeave={onMouseLeave}
                     stylesheet={stylesheet}
-                    variant={variant}
-                    value={controlledValue}
                     increment={increment}
                     decrement={decrement}
-                    {...otherProps}
                   />
                 </NumericInputPresenter>
               );
@@ -136,13 +132,9 @@ NumericInput.propTypes = {
    */
   stylesheet: PropTypes.func,
   /**
-   * The initial value of the control
-   */
-  initialValue: PropTypes.number,
-  /**
    * The value of the control
    */
-  value: PropTypes.string,
+  value: PropTypes.number,
   /**
    * The visual variant of the input
    */
