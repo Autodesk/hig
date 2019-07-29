@@ -1,5 +1,7 @@
 # HIG Themes for Material UI
-HIG theme-data is embedded in 8 separate json theme files within @hig/theme-material-ui/build/material-ui/ as 'medadata' and 'resolvedRoles' keys. The Material UI configs within these themes currently contain settings for typography, color palette, and buttons. Please [contrubute](CONTRIBUTING.md) if you need themes for other Material UI components.
+HIG theme-data is embedded in 8 separate json theme files within @hig/theme-material-ui/build/material-ui/ as 'medadata' and 'resolvedRoles' keys. 
+
+This package is currently in pre-release and the Material UI configs within these themes currently contain settings for only typography, color palette, and buttons. Please [contrubute](CONTRIBUTING.md) if you need themes for other Material UI components.
 
 ```js
 // Setup a theme provider and supply a @hig material theme
