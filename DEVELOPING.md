@@ -47,6 +47,7 @@ The following dependencies must be available to be begin project development.
 * [Node][] `^9.7.1`
 * [Yarn][] `>=1.5.1`
 * [Python][] `^2.7` _— Some dependencies require `node-gyp` which uses Python_
+* [Additional instruction for Windows](WindowsSetup.md)
 
 [Git]: https://git-scm.com/
 [Node]: https://nodejs.org
@@ -87,6 +88,8 @@ Private packages are used to organize development tools and dependencies. For ex
 ## Code style
 
 We use [ESLint][] and [Prettier][] to ensure consistency throughout the source code. Please view our [ESLint configuration][] for details on style rules.
+
+Use the [JSDoc style guide](https://github.com/shri/JSDoc-Style-Guide) for documentation comments.
 
 [ESLint]: https://eslint.org/
 [ESLint configuration]: ./packages/eslint-config
