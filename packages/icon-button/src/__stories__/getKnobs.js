@@ -1,9 +1,10 @@
 import { action } from "@storybook/addon-actions";
 import { boolean, select, text } from "@storybook/addon-knobs/react";
 
-import { AVAILABLE_SURFACES } from "../surfaces";
+import { AVAILABLE_SURFACES, AVAILABLE_VARIANTS } from "../constants";
 
 const surfaceLevelOptions = AVAILABLE_SURFACES;
+const variantOptions = AVAILABLE_VARIANTS;
 
 const knobGroupIds = {
   basic: "Basic",
@@ -22,11 +23,12 @@ const knobLabels = {
   onMouseLeave: "onMouseLeave",
   onMouseUp: "onMouseUp",
   surface: "Surface",
-  title: "Title"
+  title: "Title",
+  variant: "Variant"
 };
 
 export default function getKnobs(props) {
-  const { disabled, link, on, surface, title, ...otherProps } = props;
+  const { disabled, link, on, surface, title, variant, ...otherProps } = props;
 
   return {
     ...otherProps,
@@ -44,6 +46,12 @@ export default function getKnobs(props) {
       knobLabels.surface,
       surfaceLevelOptions,
       surface,
+      knobGroupIds.basic
+    ),
+    variant: select(
+      knobLabels.variant,
+      variantOptions,
+      variant,
       knobGroupIds.basic
     ),
     title: text(knobLabels.title, title, knobGroupIds.basic)

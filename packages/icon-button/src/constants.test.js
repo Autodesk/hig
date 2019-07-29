@@ -1,4 +1,4 @@
-import * as surfaces from "./surfaces";
+import * as surfaces from "./constants";
 
 describe("icon-button/surfaces", () => {
   it("has an array of available surfaces", () => {
