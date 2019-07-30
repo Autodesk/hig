@@ -9,6 +9,7 @@ import IconsPage from "./pages/IconsPage";
 import InputPage from "./pages/InputPage";
 import LabelPage from "./pages/LabelPage";
 import ModalPage from "./pages/ModalPage";
+import MuiButtonsPage from "./pages/material-ui/ButtonsPage";
 import ProgressBarPage from "./pages/ProgressBarPage";
 import ProgressRingPage from "./pages/ProgressRingPage";
 import RadioButtonPage from "./pages/RadioButtonPage";
@@ -41,5 +42,6 @@ export default [
   { path: "/text-area/", component: TextAreaPage, label: "Text Area" },
   { path: "/text-link/", component: TextLinkPage, label: "Text Link" },
   { path: "/tooltip/", component: TooltipPage, label: "Tooltip" },
-  { path: "/typography/", component: TypographyPage, label: "Typography" }
+  { path: "/typography/", component: TypographyPage, label: "Typography" },
+  { path: "/material-ui/buttons/", component: MuiButtonsPage, label: "Material Buttons" },
 ];
