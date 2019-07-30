@@ -20,15 +20,17 @@
 
 ### Filing Issues
 
+The HIG project is meant to evolve with feedback - the project and its users greatly appreciate any thoughts on ways to improve the design or features. There are three type of issues you may file: suggestions, bug reports and requests for code contributions.
+
 #### Suggestions
 
-The HIG project is meant to evolve with feedback - the project and its users greatly appreciate any thoughts on ways to improve the design or features. Please use the `enhancement` tag to specifically denote issues that are suggestions - this helps us triage and respond appropriately.
+ Please use the `enhancement` tag to specifically denote issues that are suggestions - this helps us triage and respond appropriately.
 
-#### Bugs
+#### Bug Reports
 
 As with all pieces of software, you may end up running into bugs. Please submit bugs as regular issues on GitHub - HIG developers are regularly monitoring issues and will try to fix open bugs quickly.
 
-The best bug reports include a detailed way to predictably reproduce the issue, and possibly even a working example that demonstrates the issue.
+The best bug reports include a detailed way to predictably reproduce the issue, and a working example that demonstrates the issue, if possible.
 
 ### Contributing Code
 
@@ -45,12 +47,21 @@ Please view the [contribution example][] for an example of the recommended packa
 All pull requests for new features must go through the following process:
 
 * Please familiarize yourself with the [Developing guide](DEVELOPING.md).
-* Start an Intent-to-implement GitHub issue for discussion of the new feature.
-* Written approval from the HIG engineering team (GitHub comment).
+* Start an Intent-to-implement GitHub issue for discussion of the new feature. HIG developers will review the request and start a discussion. For new HIG React controls, a UX designer may be brought in to review the proposal.
+* Written approval from the HIG engineering team (GitHub comment) must be received before any pull requests are submitted.
 * Development occurs on a separate branch of a separate fork, noted in the intent-to-implement issue
+* Commit messages should adhere to the [Angular Git Commit Guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines).
 * A pull request is created, referencing the issue.
 * HIG developers will provide feedback on pull requests, looking at code quality, style, tests, performance, and directional alignment with the goals of the project. That feedback should be discussed and incorporated.
 * Approval via code review from the Tech Lead and another core committer, who can confirm engineering quality and direction.
+
+There are two primary types of code contributions, which have somewhat different requirements. 
+* React Component
+  * A [visual regression test](DEVELOPING.md#visual-regression-testing) must be added for the component.
+  * Include details on how to use the component in the README file. Use the button component as an example. This documentation is included in the storybook.
+  * Follow the [JSDoc style guide](https://github.com/shri/JSDoc-Style-Guide) for documentation commenting conventions. These comments generate documentation in the storybook.
+* Theming Components
+  * Include documentation on how to use the theming data in an application in the component README file.
 
 #### Fork the project
 
@@ -94,8 +105,8 @@ In the event the Tech Lead is unable to perform his or her duties, or abdicates,
 In the event there are no Core Committers, Autodesk Inc. will appoint one.
 Core Committers:
 
-- Tech Lead: Sean Durham (@nfiniteset)
-- Core Committer: Morris Allison III (@morrisallison)
+- Tech Lead: Scott Morrison (@scmm17)
+- Core Committer: Wilbert Mui (@wmui51)
 
 ### See Also
 
