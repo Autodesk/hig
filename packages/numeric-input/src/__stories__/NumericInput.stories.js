@@ -35,7 +35,7 @@ storybook.add(
       }
 
       onValueChange = value => {
-        this.setState({ value: parseInt(value, 10) });
+        this.setState({ value });
       };
 
       render() {
@@ -52,7 +52,8 @@ storybook.add(
     const { ...otherProps } = getKnobs({
       value: 5,
       initialValue: undefined,
-      disabled: false
+      disabled: false,
+      step: 0.1
     });
 
     return (
@@ -62,10 +63,3 @@ storybook.add(
     );
   })
 );
-
-/*
-{
-    description: "controlled",
-    getProps: () => (
-    })
-  }, */

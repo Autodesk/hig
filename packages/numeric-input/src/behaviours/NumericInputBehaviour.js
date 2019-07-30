@@ -42,7 +42,12 @@ export default class NumericInputBehaviour extends Component {
     this.isValueControlled() ? this.props.value : this.state.value;
 
   setValue = value => {
+    if (!this.isNumeric(value)) {
+      return;
+    }
+
     this.props.onChange(value);
+
     if (!this.isValueControlled()) {
       this.setState({ value });
     }

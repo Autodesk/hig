@@ -6,15 +6,16 @@ const knobGroupIds = {
 };
 
 const knobLabels = {
-  value: "Value",
-  initialValue: "Initial Value",
   disabled: "Disabled",
+  defaultValue: "Default Value",
+  onBlur: "onBlur",
   onChange: "onChange",
   onFocus: "onFocus",
-  onBlur: "onBlur",
   onMouseEnter: "onMouseEnter",
   onMouseLeave: "onMouseLeave",
-  variant: "variant"
+  step: "Step",
+  value: "Value",
+  variant: "Variant"
 };
 
 const variantOptions = {
@@ -24,25 +25,26 @@ const variantOptions = {
 };
 
 export default function getKnobs(props) {
-  const { value, initialValue, variant, disabled, ...otherProps } = props;
+  const { value, defaultValue, variant, disabled, step, ...otherProps } = props;
 
   return {
     ...otherProps,
     disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
+    defaultValue: number(
+      knobLabels.defaultValue,
+      defaultValue,
+      knobGroupIds.basic
+    ),
     onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
     onFocus: action(knobLabels.onFocus),
     onMouseEnter: action(knobLabels.onMouseEnter),
     onMouseLeave: action(knobLabels.onMouseLeave),
+    step: number(knobLabels.step, step, knobGroupIds.basic),
     variant: select(
       knobLabels.variant,
       variantOptions,
       variant,
-      knobGroupIds.basic
-    ),
-    initialValue: number(
-      knobLabels.initialValue,
-      initialValue,
       knobGroupIds.basic
     ),
     value: number(knobLabels.value, value, knobGroupIds.basic)

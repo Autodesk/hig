@@ -4,7 +4,8 @@ export default [
     getProps: () => ({
       defaultValue: 45,
       value: undefined,
-      disabled: false
+      disabled: false,
+      step: 1
     })
   },
   {
@@ -12,7 +13,8 @@ export default [
     getProps: () => ({
       defaultValue: 23,
       value: undefined,
-      disabled: true
+      disabled: true,
+      step: 1
     })
   }
 ];

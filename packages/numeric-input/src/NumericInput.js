@@ -77,7 +77,6 @@ function NumericInput(props) {
                     onMouseLeave={onMouseLeave}
                     onChange={onDirectChange}
                     stylesheet={stylesheet}
-                    type="number"
                     variant={variant}
                     value={controlledValue}
                     {...otherProps}
