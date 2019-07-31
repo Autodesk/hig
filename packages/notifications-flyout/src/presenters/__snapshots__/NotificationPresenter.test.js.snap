@@ -149,7 +149,10 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
 }
 
 .emotion-2 {
-  border: 2px solid transparent;
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
   display: inline-block;
   position: relative;
   cursor: pointer;
@@ -166,8 +169,6 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
   transition-duration: 0.3s,0.3s;
   -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
   transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
-  box-shadow: none;
-  background-color: transparent;
 }
 
 .emotion-2 svg * {
