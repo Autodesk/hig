@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.9.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.8.1...@hig/theme-data@2.9.0) (2019-08-01)
+
+
+### Features
+
+* add static icon-button theme-data ([df4e906](https://github.com/Autodesk/hig/commit/df4e906))
+
 # [@hig/theme-data-v2.8.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.8.0...@hig/theme-data@2.8.1) (2019-07-26)
 
 
