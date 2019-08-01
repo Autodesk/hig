@@ -90,5 +90,73 @@ export default {
     transform: {
       alpha: 0.5
     }
+  },
+
+  // Static
+  "iconButton.static.hover.level100To250.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.baseColor"
+    },
+    transform: {
+      alpha: 0.1
+    }
+  },
+  "iconButton.static.hover.level300To350.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.component.backgroundColor"
+    },
+    transform: {
+      alpha: 0.3
+    }
+  },
+  "iconButton.static.on.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.accentColor"
+    },
+    transform: {
+      alpha: 0.15
+    }
+  },
+  "iconButton.static.on.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.accentColor"
+    },
+    transform: {
+      alpha: 0.5
+    }
+  },
+  "iconButton.static.on.hover.level100To250.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.accentColor"
+    },
+    transform: {
+      alpha: 0.35
+    }
+  },
+  "iconButton.static.on.hover.level300To350.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "iconButton.static.on.hover.level100To250.backgroundColor"
+    }
+  },
+  "iconButton.static.on.hover.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "iconButton.static.on.borderColor"
+    }
+  },
+  "iconButton.static.on.focus.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "iconButton.static.on.borderColor"
+    },
+    transform: {
+      alpha: 1.0
+    }
   }
 };

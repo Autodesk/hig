@@ -21,5 +21,11 @@ export default {
     value: {
       ref: "basics.colors.surfaceLightGrayLevel300"
     }
+  },
+  // Static
+  "iconButton.static.hover.level100To250.backgroundColor": {
+    transform: {
+      alpha: 0.2
+    }
   }
 };

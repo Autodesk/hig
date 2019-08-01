@@ -7,3 +7,10 @@ export const surfaces = Object.freeze({
 });
 
 export const AVAILABLE_SURFACES = Object.freeze(Object.values(surfaces));
+
+export const variants = Object.freeze({
+  DYNAMIC: "dynamic",
+  STATIC: "static"
+});
+
+export const AVAILABLE_VARIANTS = Object.freeze(Object.values(variants));

@@ -2,7 +2,12 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
 
-import { surfaces, AVAILABLE_SURFACES } from "./surfaces";
+import {
+  surfaces,
+  variants,
+  AVAILABLE_SURFACES,
+  AVAILABLE_VARIANTS
+} from "./constants";
 import IconButtonPresenter from "./presenters/IconButtonPresenter";
 
 export default class IconButton extends Component {
@@ -58,11 +63,16 @@ export default class IconButton extends Component {
     /**
      * Title of the button for accessibility purposes
      */
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    /**
+     * The visual variant of the icon-button
+     */
+    variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
   };
 
   static defaultProps = {
-    surface: surfaces.SURFACELEVEL100
+    surface: surfaces.SURFACELEVEL100,
+    variant: variants.DYNAMIC
   };
 
   render() {

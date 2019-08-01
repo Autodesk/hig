@@ -26,7 +26,9 @@ describe("stylesheet", () => {
     expect(stylesheet(props, themeData)).toEqual(expect.any(Object));
   });
   describe("if the icon-button is at the default state", () => {
-    const props = {};
+    const props = {
+      variant: "dynamic"
+    };
 
     it("default styles match values in theme data", () => {
       const styles = stylesheet(props, themeData);
@@ -36,6 +38,7 @@ describe("stylesheet", () => {
   });
   describe("if the icon-button has focus", () => {
     const props = {
+      variant: "dynamic",
       hasFocus: true
     };
 
@@ -48,6 +51,7 @@ describe("stylesheet", () => {
   });
   describe("if the icon-button has hover", () => {
     const props = {
+      variant: "dynamic",
       hasHover: true
     };
 
@@ -59,6 +63,7 @@ describe("stylesheet", () => {
   });
   describe("if the icon-button is pressed", () => {
     const props = {
+      variant: "dynamic",
       isPressed: true
     };
 
@@ -95,8 +100,11 @@ describe("stylesheet", () => {
   });
   describe("if the button-button is toggled on", () => {
     it("toggled on styles should match values in theme data", () => {
-      const styles = stylesheet({ on: true }, themeData);
-      const stylesHover = stylesheet({ hasHover: true, on: true }, themeData);
+      const styles = stylesheet({ on: true, variant: "dynamic" }, themeData);
+      const stylesHover = stylesheet(
+        { hasHover: true, on: true, variant: "dynamic" },
+        themeData
+      );
       expect(styles.iconButton["& svg *"].fill).toEqual("grey");
       expect(stylesHover.iconButton["& svg *"].fill).toEqual("green");
     });
