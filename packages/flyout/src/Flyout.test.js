@@ -94,6 +94,13 @@ describe("flyout/Flyout", () => {
           ...basicProps,
           pointer: <span>my custom pointer</span>
         }
+      },
+      {
+        desc: "renders with className prop",
+        props: {
+          ...basicProps,
+          className: "my-class"
+        }
       }
     ]);
   });

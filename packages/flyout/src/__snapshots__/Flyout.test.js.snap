@@ -1342,6 +1342,208 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
 </div>
 `;
 
+exports[`flyout/Flyout snapshots renders with className prop 1`] = `
+.emotion-9 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-2 {
+  fill: transparent;
+}
+
+.emotion-3 {
+  fill: #ffffff;
+}
+
+.emotion-7 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+}
+
+.emotion-6 {
+  position: relative;
+}
+
+.emotion-5 {
+  min-width: 200px;
+  max-height: 360px;
+  padding: 12px;
+  overflow-y: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.emotion-8 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #f5f5f5;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  position: relative;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #f5f5f5;
+}
+
+.emotion-0 svg * {
+  fill: #f5f5f5;
+}
+
+<div
+  className="emotion-9 my-class__flyout-wrapper"
+>
+  <div
+    className="emotion-1 my-class__flyout-action"
+  >
+    <button
+      className="emotion-0"
+      disabled={false}
+      href={undefined}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseOver={undefined}
+      onMouseUp={[Function]}
+      tabIndex="0"
+      target={undefined}
+    >
+      <span
+        className=""
+      >
+        Click Me
+      </span>
+    </button>
+  </div>
+  <div
+    className="emotion-8 my-class__flyout-container"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="emotion-4 my-class__pointer-wrapper"
+      role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          className="emotion-2"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          className="emotion-3"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
+    <div
+      className="emotion-7 my-class__panel-container"
+      style={
+        Object {
+          "maxHeight": "150px",
+        }
+      }
+    >
+      <div
+        className="emotion-6 my-class__panel-container-inner"
+      >
+        <div
+          className="emotion-5 my-class__panel"
+          onScroll={[Function]}
+        >
+          Hello World
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`flyout/Flyout snapshots renders without props 1`] = `
 .emotion-8 {
   position: relative;
