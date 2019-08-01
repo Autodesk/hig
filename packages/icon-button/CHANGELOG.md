@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.1.3...@hig/icon-button@2.2.0) (2019-08-01)
+
+
+### Features
+
+* add static variant ([d8ace9d](https://github.com/Autodesk/hig/commit/d8ace9d))
+
 # [@hig/icon-button-v2.1.3](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.1.2...@hig/icon-button@2.1.3) (2019-07-26)
 
 
