@@ -6,10 +6,10 @@ gemini.suite("IconButton", () => {
       .capture("Default");
   });
 
-  gemini.suite("with link", suite => {
+  gemini.suite("static", suite => {
     suite
-      .setUrl("iframe.html?selectedKind=IconButton&selectedStory=with%20link")
+      .setUrl("iframe.html?selectedKind=IconButton&selectedStory=static")
       .setCaptureElements(".storybook-component")
-      .capture("with link");
+      .capture("static");
   });
 });

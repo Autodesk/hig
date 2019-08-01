@@ -4,7 +4,7 @@ import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
-import { AVAILABLE_SURFACES } from "../surfaces";
+import { AVAILABLE_SURFACES, AVAILABLE_VARIANTS } from "../constants";
 
 export default class IconButtonPresenter extends Component {
   static propTypes = {
@@ -23,7 +23,8 @@ export default class IconButtonPresenter extends Component {
     onMouseLeave: PropTypes.func,
     onMouseUp: PropTypes.func,
     surface: PropTypes.oneOf(AVAILABLE_SURFACES),
-    title: PropTypes.string.isRequired
+    title: PropTypes.string.isRequired,
+    variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
   };
 
   render() {
@@ -42,7 +43,8 @@ export default class IconButtonPresenter extends Component {
       onMouseLeave,
       onMouseUp,
       surface,
-      title
+      title,
+      variant
     } = this.props;
 
     return (
@@ -69,7 +71,8 @@ export default class IconButtonPresenter extends Component {
             onMouseLeave,
             onMouseUp,
             surface,
-            title
+            title,
+            variant
           };
           const Element = this.props.link ? "a" : "button";
           const styles = stylesheet(props, resolvedRoles, metadata.densityId);

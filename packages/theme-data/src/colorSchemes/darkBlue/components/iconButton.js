@@ -30,5 +30,42 @@ export default {
     transform: {
       alpha: 0.2
     }
+  },
+  // Static
+  "iconButton.static.hover.level100To250.backgroundColor": {
+    value: {
+      ref: "iconButton.pressed.backgroundColor"
+    },
+    transform: {
+      alpha: 0.3
+    }
+  },
+  "iconButton.static.hover.level300To350.backgroundColor": {
+    value: {
+      ref: "iconButton.pressed.level300To350.backgroundColor"
+    },
+    transform: {
+      alpha: 0.1
+    }
+  },
+  "iconButton.static.on.backgroundColor": {
+    transform: {
+      alpha: 0.25
+    }
+  },
+  "iconButton.static.on.borderColor": {
+    transform: {
+      alpha: 0.6
+    }
+  },
+  "iconButton.static.on.hover.level100To250.backgroundColor": {
+    transform: {
+      alpha: 0.45
+    }
+  },
+  "iconButton.static.on.focus.borderColor": {
+    value: {
+      ref: "basics.colors.autodeskBlue500"
+    }
   }
 };
