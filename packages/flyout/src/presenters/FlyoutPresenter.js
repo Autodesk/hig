@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 import { AVAILABLE_ANCHOR_POINTS } from "../anchorPoints";
 import { DEFAULT_COORDINATES } from "../getCoordinates";
 import {
   transitionStatuses,
   AVAILABLE_TRANSITION_STATUSES
 } from "../transitionStatuses";
-import createCustomClassNames from "./createCustomClassNames";
 import stylesheet from "./stylesheet";
 import PointerPresenter from "./PointerPresenter";
 import PointerWrapperPresenter from "./PointerWrapperPresenter";
@@ -39,10 +39,6 @@ export default function FlyoutPresenter(props) {
     ...otherProps
   } = props;
   const { className } = otherProps;
-  const flyoutWrapperClassName = createCustomClassNames(
-    className,
-    "flyout-wrapper"
-  );
   const flyoutActionClassName = createCustomClassNames(
     className,
     "flyout-action"
@@ -64,7 +60,7 @@ export default function FlyoutPresenter(props) {
 
         return (
           <div
-            className={cx(css(styles.flyoutWrapper), flyoutWrapperClassName)}
+            className={cx(css(styles.flyoutWrapper), className)}
             ref={refWrapper}
           >
             <div
