@@ -4,7 +4,8 @@ import IconButton from "@hig/icon-button";
 import ThemeContext from "@hig/theme-context";
 import Typography from "@hig/typography";
 import { CloseSUI, CloseMUI } from "@hig/icons";
-import { css } from "emotion";
+import { createCustomClassNames } from "@hig/utils";
+import { css, cx } from "emotion";
 
 export default class ModalHeaderPresenter extends Component {
   static propTypes = {
@@ -55,8 +56,10 @@ export default class ModalHeaderPresenter extends Component {
       id,
       onCloseClick,
       title,
-      styles
+      styles,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     return children ? (
       this.renderChildren()
@@ -69,9 +72,22 @@ export default class ModalHeaderPresenter extends Component {
             ) : (
               <CloseSUI />
             );
+          const headerClassName = createCustomClassNames(
+            className,
+            "modal-header"
+          );
+          const headerContentClassName = createCustomClassNames(
+            className,
+            "modal-header-content"
+          );
           return (
-            <header className={css(styles.header)} id={id}>
-              <div className={css(styles.headerContent)}>
+            <header className={cx(css(styles.header), headerClassName)} id={id}>
+              <div
+                className={cx(
+                  css(styles.headerContent),
+                  headerContentClassName
+                )}
+              >
                 <Typography
                   style={{
                     fontSize: styles.header.fontSize,
