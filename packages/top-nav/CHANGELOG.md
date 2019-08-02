@@ -1,3 +1,10 @@
+# [@hig/top-nav-v3.0.6](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.5...@hig/top-nav@3.0.6) (2019-08-02)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/utils to version 0.4.0 ([fa073af](https://github.com/Autodesk/hig/commit/fa073af))
+
 # [@hig/top-nav-v3.0.5](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.4...@hig/top-nav@3.0.5) (2019-04-25)
 
 

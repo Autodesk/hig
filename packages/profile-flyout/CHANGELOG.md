@@ -1,3 +1,10 @@
+# [@hig/profile-flyout-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@2.0.3...@hig/profile-flyout@2.0.4) (2019-08-02)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/utils to version 0.4.0 ([4cdb7c9](https://github.com/Autodesk/hig/commit/4cdb7c9))
+
 # [@hig/profile-flyout-v2.0.3](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@2.0.2...@hig/profile-flyout@2.0.3) (2019-03-20)
 
 

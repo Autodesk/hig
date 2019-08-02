@@ -1,3 +1,10 @@
+# [@hig/slider-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/slider@1.0.1...@hig/slider@1.0.2) (2019-08-02)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/utils to version 0.4.0 ([aa4421f](https://github.com/Autodesk/hig/commit/aa4421f))
+
 # [@hig/slider-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/slider@1.0.0...@hig/slider@1.0.1) (2019-03-13)
 
 

@@ -1,3 +1,10 @@
+# [@hig/side-nav-v2.1.3](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.1.2...@hig/side-nav@2.1.3) (2019-08-02)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/utils to version 0.4.0 ([247beb6](https://github.com/Autodesk/hig/commit/247beb6))
+
 # [@hig/side-nav-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.1.1...@hig/side-nav@2.1.2) (2019-07-24)
 
 

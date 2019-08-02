@@ -1,3 +1,10 @@
+# [@hig/multi-downshift-v0.1.2](https://github.com/Autodesk/hig/compare/@hig/multi-downshift@0.1.1...@hig/multi-downshift@0.1.2) (2019-08-02)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/utils to version 0.4.0 ([c62b949](https://github.com/Autodesk/hig/commit/c62b949))
+
 # [@hig/multi-downshift-v0.1.1](https://github.com/Autodesk/hig/compare/@hig/multi-downshift@0.1.0...@hig/multi-downshift@0.1.1) (2018-08-24)
 
 

@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v2.0.5](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.4...@hig/project-account-switcher@2.0.5) (2019-08-02)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/utils to version 0.4.0 ([9b05e16](https://github.com/Autodesk/hig/commit/9b05e16))
+
 # [@hig/project-account-switcher-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.3...@hig/project-account-switcher@2.0.4) (2019-07-11)
 
 
