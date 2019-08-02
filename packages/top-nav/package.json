@@ -24,7 +24,7 @@
     "@hig/notifications-flyout": "^2.0.3",
     "@hig/profile-flyout": "^2.0.3",
     "@hig/typography": "^1.0.3",
-    "@hig/utils": "^0.3.0",
+    "@hig/utils": "^0.4.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
