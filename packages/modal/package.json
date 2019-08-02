@@ -1,6 +1,6 @@
 {
   "name": "@hig/modal",
-  "version": "2.0.4",
+  "version": "2.1.0",
   "description": "HIG Modal",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -17,7 +17,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon-button": "^2.2.0",
+    "@hig/icon-button": "^2.2.1",
     "@hig/icons": "^3.0.0",
     "@hig/utils": "^0.3.0",
     "@hig/typography": "^1.0.3",

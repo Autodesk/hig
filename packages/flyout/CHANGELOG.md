@@ -1,3 +1,10 @@
+# [@hig/flyout-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/flyout@1.0.7...@hig/flyout@1.1.0) (2019-08-02)
+
+
+### Features
+
+* pass down css className to all emotion styled elements ([a8b4181](https://github.com/Autodesk/hig/commit/a8b4181))
+
 # [@hig/flyout-v1.0.7](https://github.com/Autodesk/hig/compare/@hig/flyout@1.0.6...@hig/flyout@1.0.7) (2019-07-09)
 
 
