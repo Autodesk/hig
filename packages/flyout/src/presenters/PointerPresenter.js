@@ -20,7 +20,6 @@ export default function PointerPresenter(props) {
         const cssStyles = props.stylesheet
           ? props.stylesheet(styles, props, resolvedRoles)
           : styles;
-
         return (
           <svg
             height={size.toString()}

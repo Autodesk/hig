@@ -24,6 +24,15 @@ describe("modal/Modal", () => {
           stylesheet: styles =>
             merge(styles, { modal: { wrapper: { color: "aliceblue" } } })
         }
+      },
+      {
+        desc: "renders with a custom css class name",
+        props: {
+          body: "Hi",
+          open: true,
+          title: "HIG Modal",
+          className: "custom-class"
+        }
       }
     ]);
   });

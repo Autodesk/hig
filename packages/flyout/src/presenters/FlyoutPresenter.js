@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 import { AVAILABLE_ANCHOR_POINTS } from "../anchorPoints";
 import { DEFAULT_COORDINATES } from "../getCoordinates";
 import {
@@ -34,9 +35,18 @@ export default function FlyoutPresenter(props) {
     refAction,
     refPointer,
     refWrapper,
-    transitionStatus
+    transitionStatus,
+    ...otherProps
   } = props;
-
+  const { className } = otherProps;
+  const flyoutActionClassName = createCustomClassNames(
+    className,
+    "flyout-action"
+  );
+  const flyoutContainerClassName = createCustomClassNames(
+    className,
+    "flyout-container"
+  );
   const containerStyle = positionToStyle(containerPosition);
   const pointerStyle = positionToStyle(pointerPosition);
 
@@ -49,15 +59,28 @@ export default function FlyoutPresenter(props) {
         );
 
         return (
-          <div className={css(styles.flyoutWrapper)} ref={refWrapper}>
-            <div className={css(styles.flyoutAction)} ref={refAction}>
+          <div
+            className={cx(css(styles.flyoutWrapper), className)}
+            ref={refWrapper}
+          >
+            <div
+              className={cx(css(styles.flyoutAction), flyoutActionClassName)}
+              ref={refAction}
+            >
               {children}
             </div>
-            <div className={css(styles.flyoutContainer)} style={containerStyle}>
+            <div
+              className={cx(
+                css(styles.flyoutContainer),
+                flyoutContainerClassName
+              )}
+              style={containerStyle}
+            >
               <PointerWrapperPresenter
                 innerRef={refPointer}
                 anchorPoint={anchorPoint}
                 style={pointerStyle}
+                className={className}
               >
                 {pointer}
               </PointerWrapperPresenter>

@@ -85,10 +85,16 @@ export default class Flyout extends Component {
     /**
      * @param {PanelRendererPayload} payload
      */
-    panel({ innerRef, content, handleScroll, maxHeight }) {
+    panel({ innerRef, content, handleScroll, maxHeight, className }) {
       return (
-        <PanelContainerPresenter innerRef={innerRef} maxHeight={maxHeight}>
-          <PanelPresenter onScroll={handleScroll}>{content}</PanelPresenter>
+        <PanelContainerPresenter
+          innerRef={innerRef}
+          maxHeight={maxHeight}
+          className={className}
+        >
+          <PanelPresenter onScroll={handleScroll} className={className}>
+            {content}
+          </PanelPresenter>
         </PanelContainerPresenter>
       );
     }
@@ -246,14 +252,16 @@ export default class Flyout extends Component {
    */
   createPanelPayload() {
     const { hideFlyout } = this;
-    const { maxHeight, onScroll } = this.props;
+    const { maxHeight, onScroll, ...otherProps } = this.props;
+    const { className } = otherProps;
 
     return {
       hideFlyout,
       maxHeight,
       content: this.renderContent(),
       handleScroll: onScroll,
-      innerRef: this.refPanel
+      innerRef: this.refPanel,
+      className
     };
   }
 
@@ -308,7 +316,8 @@ export default class Flyout extends Component {
       refPointer,
       refWrapper
     } = this;
-    const { openOnHoverDelay, pointer } = this.props;
+    const { openOnHoverDelay, pointer, ...otherProps } = this.props;
+    const { className } = otherProps;
     const panel = this.renderPanel({ transitionStatus });
     const {
       anchorPoint,
@@ -325,6 +334,7 @@ export default class Flyout extends Component {
         {({ onMouseEnter, onMouseLeave }) => (
           <FlyoutPresenter
             anchorPoint={anchorPoint}
+            className={className}
             containerPosition={containerPosition}
             panel={panel}
             pointer={pointer}

@@ -25,7 +25,6 @@ exports[`IconButtonPresenter renders correctly 1`] = `
 }
 
 .emotion-1 svg * {
-  fill: initial;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: fill;
@@ -130,7 +129,6 @@ exports[`IconButtonPresenter renders correctly when disabled 1`] = `
 }
 
 .emotion-1 svg * {
-  fill: initial;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: fill;
@@ -196,7 +194,6 @@ exports[`IconButtonPresenter renders correctly with a link 1`] = `
 }
 
 .emotion-1 svg * {
-  fill: initial;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: fill;
