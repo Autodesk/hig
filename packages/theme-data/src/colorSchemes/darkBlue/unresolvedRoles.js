@@ -17,6 +17,7 @@ import progressRing from "./components/progressRing";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
 import textLink from "./components/textLink";
+import thumbnail from "./components/thumbnail";
 import tooltip from "./components/tooltip";
 
 const darkBlueThemeConfig = extendTheme(
@@ -39,6 +40,7 @@ const darkBlueThemeConfig = extendTheme(
     skeletonItem,
     slider,
     textLink,
+    thumbnail,
     tooltip
   )
 );
