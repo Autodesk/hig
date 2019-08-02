@@ -1,3 +1,10 @@
+# [@hig/utils-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/utils@0.3.0...@hig/utils@0.4.0) (2019-08-02)
+
+
+### Features
+
+* add createCustomClassNames ([8b41973](https://github.com/Autodesk/hig/commit/8b41973))
+
 # [@hig/utils-v0.3.0](https://github.com/Autodesk/hig/compare/@hig/utils@0.2.1...@hig/utils@0.3.0) (2018-09-26)
 
 
