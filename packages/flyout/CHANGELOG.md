@@ -1,3 +1,10 @@
+# [@hig/flyout-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/flyout@1.1.0...@hig/flyout@1.1.1) (2019-08-02)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/utils to version 0.4.0 ([b45496c](https://github.com/Autodesk/hig/commit/b45496c))
+
 # [@hig/flyout-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/flyout@1.0.7...@hig/flyout@1.1.0) (2019-08-02)
 
 
