@@ -1459,7 +1459,7 @@ exports[`flyout/Flyout snapshots renders with className prop 1`] = `
 }
 
 <div
-  className="emotion-9 my-class__flyout-wrapper"
+  className="emotion-9 my-class"
 >
   <div
     className="emotion-1 my-class__flyout-action"
