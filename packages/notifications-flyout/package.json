@@ -1,6 +1,6 @@
 {
   "name": "@hig/notifications-flyout",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "HIG NotificationsFlyout",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "@hig/behaviors": "^1.1.1",
-    "@hig/flyout": "^1.0.7",
+    "@hig/flyout": "^1.1.1",
     "@hig/icon-button": "^2.2.0",
     "@hig/icons": "^3.0.0",
     "@hig/progress-ring": "^1.0.2",
@@ -41,7 +41,7 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.0",
-    "@hig/theme-data": "^2.9.0",
+    "@hig/theme-data": "^2.10.0",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
