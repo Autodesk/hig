@@ -111,7 +111,7 @@ export default function stylesheet(props, themeData, density) {
   const dynamicIconColor = on
     ? themeData["iconButton.on.iconColor"]
     : themeData["iconButton.iconColor"];
-  const iconColor = isDynamic ? dynamicIconColor : `initial`;
+  const iconColor = isDynamic ? dynamicIconColor : ``;
 
   return {
     iconButton: {
