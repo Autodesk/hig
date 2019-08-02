@@ -1,3 +1,10 @@
+# [@hig/modal-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/modal@2.0.4...@hig/modal@2.1.0) (2019-08-02)
+
+
+### Features
+
+* pass down css className to all emotion styled elements ([d1e5ee8](https://github.com/Autodesk/hig/commit/d1e5ee8))
+
 # [@hig/modal-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/modal@2.0.3...@hig/modal@2.0.4) (2019-04-25)
 
 
