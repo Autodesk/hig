@@ -23,6 +23,7 @@ import slider from "./components/slider";
 import tabs from "./components/tabs";
 import textarea from "./components/textarea";
 import textLink from "./components/textLink";
+import thumbnail from "./components/thumbnail";
 import tooltip from "./components/tooltip";
 import typography from "./components/typography";
 
@@ -61,6 +62,7 @@ const baseThemeConfig = extendTheme(
     tabs,
     textarea,
     textLink,
+    thumbnail,
     tooltip,
     typography
   )
