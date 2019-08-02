@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.2.0...@hig/icon-button@2.2.1) (2019-08-02)
+
+
+### Bug Fixes
+
+* remove static variant's fill color ([8c71b7a](https://github.com/Autodesk/hig/commit/8c71b7a))
+
 # [@hig/icon-button-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.1.3...@hig/icon-button@2.2.0) (2019-08-01)
 
 
