@@ -10,3 +10,4 @@ export {
   default as memoizeCreateButtonEventHandlers
 } from "./memoizeCreateButtonEventHandlers";
 export { default as generateId } from "./generateId";
+export { default as createCustomClassNames } from "./createCustomClassNames";
