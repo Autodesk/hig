@@ -1,3 +1,10 @@
+# [@hig/modal-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/modal@2.1.0...@hig/modal@2.1.1) (2019-08-02)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/utils to version 0.4.0 ([ba296ed](https://github.com/Autodesk/hig/commit/ba296ed))
+
 # [@hig/modal-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/modal@2.0.4...@hig/modal@2.1.0) (2019-08-02)
 
 
