@@ -7,6 +7,7 @@ import divider from "./components/divider";
 import iconButton from "./components/iconButton";
 import input from "./components/input";
 import slider from "./components/slider";
+import thumbnail from "./components/thumbnail";
 import tooltip from "./components/tooltip";
 
 const darkGrayThemeConfig = extendTheme(
@@ -19,6 +20,7 @@ const darkGrayThemeConfig = extendTheme(
     iconButton,
     input,
     slider,
+    thumbnail,
     tooltip
   )
 );
