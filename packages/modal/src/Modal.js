@@ -55,8 +55,10 @@ export default class Modal extends Component {
       open,
       stylesheet,
       title,
-      type
+      type,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     return (
       <ModalBehavior
@@ -66,6 +68,7 @@ export default class Modal extends Component {
       >
         {({ handleCloseClick, handleOverlayClick, handleWindowClick }) => (
           <ModalPresenter
+            className={className}
             closeButtonAriaLabel={closeButtonAriaLabel}
             headerChildren={headerChildren}
             onCloseClick={handleCloseClick}

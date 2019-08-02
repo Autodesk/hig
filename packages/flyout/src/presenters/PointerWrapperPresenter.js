@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
-import createCustomClassNames from "./createCustomClassNames";
+import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 import { AVAILABLE_ANCHOR_POINTS } from "../anchorPoints";
 

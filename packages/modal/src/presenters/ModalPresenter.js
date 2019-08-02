@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
-import { generateId } from "@hig/utils";
+import { css, cx } from "emotion";
+import { createCustomClassNames, generateId } from "@hig/utils";
 import ThemeContext from "@hig/theme-context";
 import stylesheet from "./ModalPresenter.stylesheet";
 import ModalHeaderPresenter from "./ModalHeaderPresenter";
@@ -69,8 +69,23 @@ export default class ModalPresenter extends Component {
       open,
       stylesheet: customizeStyles,
       title,
-      type
+      type,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
+    const modalOverlayClassName = createCustomClassNames(
+      className,
+      "modal-overlay"
+    );
+    const modalWindowClassName = createCustomClassNames(
+      className,
+      "modal-window"
+    );
+    const modalBodyClassName = createCustomClassNames(className, "modal-body");
+    const modalBodyContentClassName = createCustomClassNames(
+      className,
+      "modal-body-content"
+    );
 
     /*
      * The "no-noninteractive-element-interactions" rule is disabled for this block.
@@ -99,20 +114,27 @@ export default class ModalPresenter extends Component {
             : styles;
 
           return (
-            <div className={css(cssStyles.modal.wrapper)}>
+            <div className={cx(css(cssStyles.modal.wrapper), className)}>
               <div
                 aria-labelledby={this.titleId}
-                className={css(cssStyles.modal.overlay)}
+                className={cx(
+                  css(cssStyles.modal.overlay),
+                  modalOverlayClassName
+                )}
                 onClick={onOverlayClick}
                 role="dialog"
                 tabIndex="-1"
               >
                 <article
-                  className={css(cssStyles.modal.window)}
+                  className={cx(
+                    css(cssStyles.modal.window),
+                    modalWindowClassName
+                  )}
                   onClick={onWindowClick}
                   role="document"
                 >
                   <ModalHeaderPresenter
+                    className={className}
                     id={this.titleId}
                     closeButtonAriaLabel={closeButtonAriaLabel}
                     onCloseClick={onCloseClick}
@@ -121,8 +143,18 @@ export default class ModalPresenter extends Component {
                   >
                     {headerChildren}
                   </ModalHeaderPresenter>
-                  <section className={css(cssStyles.modal.body)}>
-                    <div className={css(cssStyles.modal.bodyContent)}>
+                  <section
+                    className={cx(
+                      css(cssStyles.modal.body),
+                      modalBodyClassName
+                    )}
+                  >
+                    <div
+                      className={cx(
+                        css(cssStyles.modal.bodyContent),
+                        modalBodyContentClassName
+                      )}
+                    >
                       {children}
                     </div>
                   </section>
