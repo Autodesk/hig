@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.10.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.9.0...@hig/theme-data@2.10.0) (2019-08-02)
+
+
+### Features
+
+* add thumbnail theme-data ([b967f7a](https://github.com/Autodesk/hig/commit/b967f7a))
+
 # [@hig/theme-data-v2.9.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.8.1...@hig/theme-data@2.9.0) (2019-08-01)
 
 
