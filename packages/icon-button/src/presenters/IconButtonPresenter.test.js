@@ -41,4 +41,18 @@ describe("IconButtonPresenter", () => {
 
     expect(tree).toMatchSnapshot();
   });
+
+  it("renders correctly when a custom className is passed in", () => {
+    const tree = renderer
+      .create(
+        <IconButtonPresenter
+          title="Settings"
+          icon={<Settings24 />}
+          className="test-class"
+        />
+      )
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });
