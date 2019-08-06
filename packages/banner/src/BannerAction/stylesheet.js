@@ -6,12 +6,7 @@ export default function stylesheet(props, themeData) {
   return {
     display: "flex",
     alignItems: "center",
-    padding: `${vars.bannerActionPaddingY} ${vars.bannerActionSpacingX} ${
-      vars.bannerActionPaddingY
-    } 0`,
-    borderRightWidth: "1px",
-    borderRightStyle: "solid",
-    borderRightColor: themeData["divider.lightColor"],
+    padding: `${vars.bannerActionPaddingY} 0`,
     marginLeft: vars.bannerActionSpacingX,
 
     "&:first-of-type": {
