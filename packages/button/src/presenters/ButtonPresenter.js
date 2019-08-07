@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { cx, css } from "emotion";
+import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 
 import stylesheet from "./stylesheet";
 
@@ -64,6 +65,8 @@ export default class ButtonPresenter extends Component {
     const tabIndex = disabled ? "-1" : "0";
     const Wrapper = link ? "a" : "button";
     const wrapperTarget = link ? target : undefined;
+    const iconClassName = createCustomClassNames(className, "icon");
+    const iconTextClassName = createCustomClassNames(className, "icon-text");
 
     return (
       <ThemeContext.Consumer>
@@ -94,8 +97,16 @@ export default class ButtonPresenter extends Component {
               onMouseUp={onMouseUp}
               disabled={disabled}
             >
-              {icon && <span className={css(cssStyles.icon)}>{icon}</span>}
-              <span className={icon ? css(cssStyles.iconText) : ""}>
+              {icon && (
+                <span className={cx(css(cssStyles.icon), iconClassName)}>
+                  {icon}
+                </span>
+              )}
+              <span
+                className={
+                  icon ? cx(css(cssStyles.iconText), iconTextClassName) : ""
+                }
+              >
                 {title}
               </span>
             </Wrapper>
