@@ -7,13 +7,13 @@ Read more about where and how to use IconButton on [the website](https://hig.aut
 ## Getting started
 
 ```
-yarn add @hig/icon-button
+yarn add @hig/icon-button @hig/theme-context @hig/theme-data
 ```
 
 ## Import the component
 
 ```
-import IconButton from '@hig/icon-button @hig/theme-context @hig/theme-data';
+import IconButton from '@hig/icon-button';
 ```
 
 ## Typical usage
@@ -32,6 +32,10 @@ function MyComponent() {
   );
 }
 ```
+
+## Custom CSS
+
+Use the `className` prop to pass in a css class name to the outermost container of the component. The class name will also pass down to most of the other styled elements within the component.
 
 ## Providing a custom SVG
 
