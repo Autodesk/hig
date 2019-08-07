@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 
 import stylesheet from "./stylesheet";
 import { AVAILABLE_SURFACES, AVAILABLE_VARIANTS } from "../constants";
@@ -44,8 +45,10 @@ export default class IconButtonPresenter extends Component {
       onMouseUp,
       surface,
       title,
-      variant
+      variant,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     return (
       <ThemeContext.Consumer>
@@ -74,16 +77,20 @@ export default class IconButtonPresenter extends Component {
             title,
             variant
           };
+          const iconButtonIconClassName = createCustomClassNames(
+            className,
+            "icon-button-icon"
+          );
           const Element = this.props.link ? "a" : "button";
           const styles = stylesheet(props, resolvedRoles, metadata.densityId);
           const icon = React.cloneElement(this.props.icon, {
-            className: css(styles.iconButtonIcon)
+            className: cx(css(styles.iconButtonIcon), iconButtonIconClassName)
           });
           const tabIndex = disabled ? "-1" : "0";
 
           return (
             <Element
-              className={css(styles.iconButton)}
+              className={cx(css(styles.iconButton), className)}
               disabled={disabled}
               onClick={onClick}
               onBlur={onBlur}
