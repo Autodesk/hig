@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.2.1...@hig/icon-button@2.3.0) (2019-08-07)
+
+
+### Features
+
+* allow passing down of css className ([ef3d19d](https://github.com/Autodesk/hig/commit/ef3d19d))
+
 # [@hig/icon-button-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.2.0...@hig/icon-button@2.2.1) (2019-08-02)
 
 
