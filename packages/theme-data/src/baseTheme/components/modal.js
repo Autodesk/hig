@@ -17,7 +17,7 @@ export default {
   },
   "modal.header.backgroundColor": {
     type: COLOR,
-    value: { ref: "colorScheme.component.backgroundColor" }
+    value: { ref: "colorScheme.surfaceLevel100Color" }
   },
   "modal.header.borderColor": {
     type: COLOR,
@@ -29,7 +29,7 @@ export default {
   },
   "modal.window.backgroundColor": {
     type: COLOR,
-    value: { ref: "colorScheme.component.backgroundColor" }
+    value: { ref: "colorScheme.surfaceLevel100Color" }
   },
   "modal.window.borderRadius": {
     type: BORDER_RADIUS,
