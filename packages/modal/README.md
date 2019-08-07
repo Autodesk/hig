@@ -34,7 +34,9 @@ import Modal from '@hig/modal';
 
 ## Styling
 
-You will likely want to provide your own styles for the Modal body content, including positioning for Typography and Button elements. Modal has a `stylesheet` prop that accepts a function wherein you can modify Modal's styles. For instance
+Use the `className` prop to pass in a css class name to the outermost container of the component. The class name will also pass down to most of the other styled elements within the component.
+
+Modal also has a `stylesheet` prop that accepts a function wherein you can modify Modal's styles. For instance
 
 ```js
 import Modal from "@hig/modal";
