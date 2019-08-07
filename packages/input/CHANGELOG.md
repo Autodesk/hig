@@ -1,3 +1,10 @@
+# [@hig/input-v1.1.6](https://github.com/Autodesk/hig/compare/@hig/input@1.1.5...@hig/input@1.1.6) (2019-08-07)
+
+
+### Bug Fixes
+
+* apply focus colour over hover ([abad5ed](https://github.com/Autodesk/hig/commit/abad5ed))
+
 # [@hig/input-v1.1.5](https://github.com/Autodesk/hig/compare/@hig/input@1.1.4...@hig/input@1.1.5) (2019-07-01)
 
 
