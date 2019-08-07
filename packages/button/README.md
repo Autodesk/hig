@@ -26,6 +26,10 @@ import Button from '@hig/button';
 />
 ```
 
+## Custom CSS
+
+Use the `className` prop to pass in a css class name to the outermost container of the component. The class name will also pass down to most of the other styled elements within the component.
+
 ## Usage as a link
 
 ```jsx

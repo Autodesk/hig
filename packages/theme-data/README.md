@@ -162,11 +162,11 @@ Here are the two previous roles after being resolved:
 
 ## Extend a theme to make a new variation
 ```js
-import unresolvedRoles from '@hig/theme-data/build/esm/unresolved/lightGrayMediumDensityTheme';
+import unresolvedTheme from '@hig/theme-data/build/esm/unresolved/lightGrayMediumDensityTheme';
 import { extendTheme, resolveTheme } from '@hig/theme-data';
 
-const redAccentedUnresolvedTheme = extendTheme(unresolvedRoles, {
-    "colorScheme.accentColor": "#F00",
+const redAccentedUnresolvedTheme = extendTheme(unresolvedTheme.unresolvedRoles, {
+    "colorScheme.accentColor": { value: "#F00" }
 });
 const redAccentedTheme = resolveTheme(redAccentedUnresolvedTheme);
 
