@@ -29,16 +29,16 @@ function borderBottomStyles({ isDisabled, hasFocus, hasHover }, themeData) {
       opacity: themeData["input.disabled.opacity"]
     };
   }
-  if (hasHover) {
-    return {
-      ...defaults,
-      borderBottomColor: themeData["input.hover.borderBottomColor"]
-    };
-  }
   if (hasFocus) {
     return {
       ...defaults,
       borderBottomColor: themeData["input.focus.borderBottomColor"]
+    };
+  }
+  if (hasHover) {
+    return {
+      ...defaults,
+      borderBottomColor: themeData["input.hover.borderBottomColor"]
     };
   }
   return defaults;
@@ -55,17 +55,17 @@ function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   if (isDisabled) {
     return {};
   }
-  if (hasHover) {
-    return {
-      ...defaults,
-      height: themeData["input.hover.halo.width"],
-      transitionDuration: "0.1s, 0.1s"
-    };
-  }
   if (hasFocus) {
     return {
       height: themeData["input.focus.halo.width"],
       backgroundColor: themeData["input.focus.halo.color"],
+      transitionDuration: "0.1s, 0.1s"
+    };
+  }
+  if (hasHover) {
+    return {
+      ...defaults,
+      height: themeData["input.hover.halo.width"],
       transitionDuration: "0.1s, 0.1s"
     };
   }
