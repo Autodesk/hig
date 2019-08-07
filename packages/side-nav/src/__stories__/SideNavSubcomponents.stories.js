@@ -4,7 +4,7 @@ import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import { boolean, select, text } from "@storybook/addon-knobs/react";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
-import { Insight24, ProductsAndServices24, Collaboration24 } from "@hig/icons";
+import { Graph24, ProductsAndServices24, Collaboration24 } from "@hig/icons";
 
 import SideNav from "../index";
 import infoOptions from "./infoOptions";
@@ -64,7 +64,7 @@ storiesOf("GlobalNav|SideNav.Module", module)
         <SideNav.Module
           active={boolean("Active", true)}
           activeChildren={boolean("Active Children", false)}
-          icon={<Insight24 />}
+          icon={<Graph24 />}
           link={text("Link", "https://www.autodesk.com")}
           minimized={boolean("Minimized", false)}
           onClickCollapseButton={action("onClickCollapseButton")}
@@ -126,7 +126,7 @@ storiesOf("GlobalNav|SideNav.ModuleCompact", module).add(
       <SideNav.ModuleCompact
         active={boolean("Active", true)}
         activeChildren={boolean("Active Children", false)}
-        icon={<Insight24 />}
+        icon={<Graph24 />}
         onClickTitle={action("onClick")}
         onFocus={action("onFocus")}
         onMouseOver={action("onMouseOver")}
@@ -144,7 +144,7 @@ storiesOf("GlobalNav|SideNav.Group", module)
     })(() => (
       <KnobbedThemeProvider>
         <SideNav.Group>
-          <SideNav.Module title="Module 1" icon={<Insight24 />} activeChildren>
+          <SideNav.Module title="Module 1" icon={<Graph24 />} activeChildren>
             <SideNav.Submodule title="Submodule 1" />
             <SideNav.Submodule title="Submodule 2" active />
           </SideNav.Module>
