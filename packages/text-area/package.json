@@ -17,7 +17,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/input": "^1.1.5",
+    "@hig/input": "^1.1.6",
     "prop-types": "^15.7.1"
   },
   "peerDependencies": {
