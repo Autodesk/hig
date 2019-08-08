@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.10.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.10.0...@hig/theme-data@2.10.1) (2019-08-08)
+
+
+### Bug Fixes
+
+* modal bg color should be surface level 100 ([fb695c2](https://github.com/Autodesk/hig/commit/fb695c2))
+
 # [@hig/theme-data-v2.10.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.9.0...@hig/theme-data@2.10.0) (2019-08-02)
 
 
