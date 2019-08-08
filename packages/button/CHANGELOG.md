@@ -1,3 +1,10 @@
+# [@hig/button-v1.4.3](https://github.com/Autodesk/hig/compare/@hig/button@1.4.2...@hig/button@1.4.3) (2019-08-08)
+
+
+### Bug Fixes
+
+* classname should be passed down to icon elements ([5c9b6c5](https://github.com/Autodesk/hig/commit/5c9b6c5))
+
 # [@hig/button-v1.4.2](https://github.com/Autodesk/hig/compare/@hig/button@1.4.1...@hig/button@1.4.2) (2019-07-26)
 
 
