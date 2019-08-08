@@ -1,6 +1,312 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tabs/TabPresenter renders with all props 1`] = `
+.emotion-9 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.emotion-6 {
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 100%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: height,width;
+  transition-property: height,width;
+  top: 0;
+  background-color: rgba(6,150,215,0.35);
+}
+
+.emotion-8 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  border: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  background-color: #ffffff;
+  padding: 8px 12px;
+}
+
+.emotion-8:focus {
+  outline: none;
+}
+
+.emotion-5 {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  opacity: 1;
+  width: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-1 {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 24px;
+  width: 24px;
+  overflow: hidden;
+}
+
+.emotion-7 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 18px;
+  width: 1px;
+  background-color: rgba(60,60,60,0.25);
+}
+
+.emotion-0 {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+  display: inline-block;
+  position: relative;
+  background: transparent;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.428571429;
+  text-align: center;
+  padding-left: calc(24px + 12px);
+  padding-right: calc(16px + 12px);
+  color: #3c3c3c;
+}
+
+.emotion-2:before {
+  display: block;
+  content: "Hello World";
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  height: 0;
+  color: transparent;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.emotion-4 {
+  box-shadow: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-4 svg * {
+  fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
+
+<li
+  className="emotion-9"
+>
+  <div
+    className="emotion-8"
+    disabled={undefined}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    role="button"
+    tabIndex="0"
+  >
+    <div
+      className="emotion-5"
+    >
+      <span
+        className="emotion-1"
+      >
+        <svg
+          className="emotion-0"
+          height="24px"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            settings-24
+          </title>
+          <path
+            d="M12 7.67A4.33 4.33 0 1 0 16.33 12 4.34 4.34 0 0 0 12 7.67zm0 7.66A3.33 3.33 0 1 1 15.33 12 3.33 3.33 0 0 1 12 15.33z"
+          />
+          <path
+            d="M22 14v-4h-2.95a7.22 7.22 0 0 0-.65-1.57l2.09-2.09-2.83-2.83-2.09 2.09A7.22 7.22 0 0 0 14 5V2h-4v3a7.22 7.22 0 0 0-1.57.65L6.34 3.51 3.51 6.34 5.6 8.43A7.22 7.22 0 0 0 5 10H2v4h3a7.22 7.22 0 0 0 .65 1.57l-2.14 2.09 2.83 2.83 2.09-2.09a7.22 7.22 0 0 0 1.57.65V22h4v-2.95a7.22 7.22 0 0 0 1.57-.65l2.09 2.09 2.83-2.83-2.09-2.09a7.22 7.22 0 0 0 .65-1.57zm-2.93 3.66l-1.41 1.41-1.91-1.91-.66.37a7.07 7.07 0 0 1-1.36.56l-.73.2V21h-2v-2.71l-.73-.2a7.07 7.07 0 0 1-1.36-.56l-.66-.37-1.91 1.91-1.41-1.41 1.91-1.92-.37-.66a6.73 6.73 0 0 1-.56-1.35l-.2-.73H3v-2h2.71l.2-.73a6.73 6.73 0 0 1 .56-1.35l.37-.66-1.91-1.92 1.41-1.41 1.91 1.91.66-.37a7.07 7.07 0 0 1 1.36-.56l.73-.2V3h2v2.71l.73.2a7.07 7.07 0 0 1 1.36.56l.66.37 1.91-1.91 1.41 1.41-1.91 1.92.37.66a6.73 6.73 0 0 1 .56 1.35l.2.73H21v2h-2.71l-.2.73a6.73 6.73 0 0 1-.56 1.35l-.37.66z"
+          />
+        </svg>
+      </span>
+      <p
+        className="emotion-2"
+      >
+        Hello World
+      </p>
+      <button
+        className="emotion-4"
+        disabled={undefined}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onMouseDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        tabIndex="-1"
+        title="close"
+      >
+        <svg
+          className="emotion-0"
+          height="16px"
+          viewBox="0 0 16 16"
+          width="16px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>
+            close-s
+          </title>
+          <path
+            d="M13.4 3.4l-.8-.8L8 7.3 3.4 2.6l-.8.8L7.3 8l-4.7 4.6.8.8L8 8.7l4.6 4.7.8-.8L8.7 8l4.7-4.6z"
+          />
+        </svg>
+      </button>
+    </div>
+    <div
+      className="emotion-6"
+    />
+    <div
+      className="emotion-7"
+    />
+  </div>
+</li>
+`;
+
+exports[`tabs/TabPresenter renders without props 1`] = `
+.emotion-4 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+.emotion-3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  border: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  background-color: transparent;
+  padding: 8px 12px;
+}
+
+.emotion-3:focus {
+  outline: none;
+}
+
+.emotion-1 {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  opacity: 1;
+  width: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 100%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: height,width;
+  transition-property: height,width;
+  top: 0;
+  background-color: rgba(6,150,215,0.35);
+}
+
 .emotion-0 {
   color: #3c3c3c;
   display: block;
@@ -10,105 +316,24 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
   line-height: 1.428571429;
   margin: 0;
   text-align: initial;
-}
-
-.emotion-2 {
+  display: inline-block;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 12px;
-  margin: 0;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-align: center;
-  border-bottom: 1px solid rgba(128,128,128,0.1);
-}
-
-.emotion-2:first-of-type {
-  padding-left: 0;
-}
-
-.emotion-2:last-of-type {
-  padding-right: 0;
-}
-
-.emotion-2:before {
-  position: absolute;
-  content: '';
-  bottom: -1px;
-  left: 12px;
-  width: calc(100% - (2 * 12px));
-  border-bottom-color: #0696d7;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-}
-
-.emotion-2:first-of-type:before {
-  left: 0;
-  width: calc(100% - 12px);
-}
-
-.emotion-2:last-of-type:before {
-  width: calc(100% - 12px);
-}
-
-.emotion-2:after {
-  position: absolute;
-  content: '';
-  bottom: -4px;
-  left: 12px;
-  width: calc(100% - (2 * 12px));
-}
-
-.emotion-2:first-of-type:after {
-  left: 0;
-  width: calc(100% - 12px);
-}
-
-.emotion-2:last-of-type:after {
-  width: calc(100% - 12px);
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 8px 0;
-}
-
-.emotion-1:focus {
-  outline: none;
-}
-
-.emotion-1:before {
-  display: block;
-  content: "Hello World";
+  background: transparent;
   font-family: ArtifaktElement,sans-serif;
-  font-size: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  color: #3c3c3c;
+}
+
+.emotion-0:before {
+  display: block;
+  content: "";
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
   font-weight: 700;
   height: 0;
   color: transparent;
@@ -117,163 +342,31 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
 }
 
 <li
-  className="emotion-2"
+  className="emotion-4"
 >
   <div
-    className="emotion-1"
-    onBlur={[Function]}
-    onClick={[Function]}
-    onFocus={[Function]}
-    onKeyDown={[Function]}
-    onMouseDown={undefined}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={undefined}
-    role="button"
-    tabIndex="0"
-  >
-    <p
-      className="emotion-0"
-      style={
-        Object {
-          "fontSize": "20px",
-          "fontWeight": 700,
-        }
-      }
-    >
-      Hello World
-    </p>
-  </div>
-</li>
-`;
-
-exports[`tabs/TabPresenter renders without props 1`] = `
-.emotion-2 {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0 12px;
-  margin: 0;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-align: center;
-  border-bottom: 1px solid rgba(128,128,128,0.1);
-}
-
-.emotion-2:first-of-type {
-  padding-left: 0;
-}
-
-.emotion-2:last-of-type {
-  padding-right: 0;
-}
-
-.emotion-2:before {
-  position: absolute;
-  content: '';
-  bottom: -1px;
-  left: 12px;
-  width: calc(100% - (2 * 12px));
-  border-bottom-color: transparent;
-  border-bottom-style: solid;
-  border-bottom-width: 0;
-}
-
-.emotion-2:first-of-type:before {
-  left: 0;
-  width: calc(100% - 12px);
-}
-
-.emotion-2:last-of-type:before {
-  width: calc(100% - 12px);
-}
-
-.emotion-2:after {
-  position: absolute;
-  content: '';
-  bottom: -4px;
-  left: 12px;
-  width: calc(100% - (2 * 12px));
-}
-
-.emotion-2:first-of-type:after {
-  left: 0;
-  width: calc(100% - 12px);
-}
-
-.emotion-2:last-of-type:after {
-  width: calc(100% - 12px);
-}
-
-.emotion-1 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 8px 0;
-}
-
-.emotion-1:focus {
-  outline: none;
-}
-
-.emotion-0 {
-  color: #3c3c3c;
-  display: block;
-  font-family: ArtifaktElement,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.428571429;
-  margin: 0;
-  text-align: initial;
-}
-
-<li
-  className="emotion-2"
->
-  <div
-    className="emotion-1"
+    className="emotion-3"
+    disabled={undefined}
     onBlur={undefined}
     onClick={undefined}
     onFocus={undefined}
     onKeyDown={undefined}
-    onMouseDown={undefined}
     onMouseEnter={undefined}
     onMouseLeave={undefined}
-    onMouseUp={undefined}
     role="button"
     tabIndex="0"
   >
-    <p
-      className="emotion-0"
-      style={
-        Object {
-          "fontSize": "20px",
-        }
-      }
+    <div
+      className="emotion-1"
+    >
+      <p
+        className="emotion-0"
+      >
+        
+      </p>
+    </div>
+    <div
+      className="emotion-2"
     />
   </div>
 </li>

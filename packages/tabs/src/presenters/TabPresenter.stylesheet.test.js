@@ -1,111 +1,41 @@
 import stylesheet from "./TabPresenter.stylesheet";
 
-describe("TabPresenter/stylesheet", () => {
-  const themeData = {
-    "density.spacings.medium": "1px",
-    "tabs.general.borderBottomColor": "orange",
-    "tabs.general.borderBottomWidth": "2px",
-    "tabs.general.gutter": "3px",
-    "tabs.general.tab.fontFamily": "CurlzMT",
-    "tabs.general.tab.fontSize": "4px",
-    "tabs.general.tab.fontWeight": "100",
-    "tabs.general.tab.focus.halo.color": "burlywood",
-    "tabs.general.tab.focus.halo.width": "9px",
-    "tabs.general.tab.hover.borderBottomColor": "pink",
-    "tabs.general.tab.hover.borderBottomWidth": "7px",
-    "tabs.general.tab.selected.borderBottomColor": "aliceblue",
-    "tabs.general.tab.selected.borderBottomWidth": "5px",
-    "tabs.general.tab.selected.fontWeight": "700"
-  };
+describe("tabs/TabPresenter/stylesheet", () => {
+  const styles = stylesheet({}, {});
 
   it("returns an object", () => {
-    expect(stylesheet({}, themeData)).toEqual(expect.any(Object));
+    expect(styles).toEqual(expect.any(Object));
   });
 
-  describe("with label", () => {
-    const styles = stylesheet({ label: "Info" }, themeData);
-
-    expect(styles.tabLabel).toEqual(
-      expect.objectContaining({
-        "&:before": expect.objectContaining({
-          content: expect.stringContaining("Info")
-        })
-      })
-    );
+  it("returned object contains property of tab", () => {
+    expect(styles).toHaveProperty("tab", expect.any(Object));
   });
 
-  describe("active", () => {
-    it("returns an object with correct rules", () => {
-      const styles = stylesheet({ active: true }, themeData);
-
-      expect(styles.tab).toEqual(
-        expect.objectContaining({
-          "&:before": expect.objectContaining({
-            borderBottomColor: "aliceblue",
-            borderBottomWidth: "5px"
-          })
-        })
-      );
-    });
+  it("returned object contains property of buttonWrapper", () => {
+    expect(styles).toHaveProperty("buttonWrapper", expect.any(Object));
   });
 
-  describe("hasHover", () => {
-    it("returns an object with correct rules", () => {
-      const styles = stylesheet({ hasHover: true }, themeData);
-
-      expect(styles.tab).toEqual(
-        expect.objectContaining({
-          "&:before": expect.objectContaining({
-            borderBottomColor: "pink",
-            borderBottomWidth: "7px"
-          })
-        })
-      );
-    });
+  it("returned object contains property of contentWrapper", () => {
+    expect(styles).toHaveProperty("contentWrapper", expect.any(Object));
   });
 
-  describe("active and hasHover", () => {
-    it("returns an object with correct rules", () => {
-      const styles = stylesheet({ active: true, hasHover: true }, themeData);
-
-      expect(styles.tab).toEqual(
-        expect.objectContaining({
-          "&:before": expect.objectContaining({
-            borderBottomColor: "aliceblue",
-            borderBottomWidth: "5px"
-          })
-        })
-      );
-    });
+  it("returned object contains property of label", () => {
+    expect(styles).toHaveProperty("label", expect.any(Object));
   });
 
-  describe("active and isPressed", () => {
-    it("returns an object with correct rules", () => {
-      const styles = stylesheet({ active: true, isPressed: true }, themeData);
-
-      expect(styles.tab).toEqual(
-        expect.objectContaining({
-          "&:before": expect.objectContaining({
-            borderBottomColor: "aliceblue",
-            borderBottomWidth: "5px"
-          })
-        })
-      );
-    });
+  it("returned object contains property of halo", () => {
+    expect(styles).toHaveProperty("halo", expect.any(Object));
   });
 
-  describe("not active or hasHover", () => {
-    it("returns an object with correct rules", () => {
-      const styles = stylesheet({}, themeData);
+  it("returned object contains property of divider", () => {
+    expect(styles).toHaveProperty("divider", expect.any(Object));
+  });
 
-      expect(styles.tab).toEqual(
-        expect.objectContaining({
-          borderBottom: "2px solid orange",
-          "&:before": expect.objectContaining({
-            borderBottomColor: "transparent"
-          })
-        })
-      );
-    });
+  it("returned object contains property of icon", () => {
+    expect(styles).toHaveProperty("icon", expect.any(Object));
+  });
+
+  it("returned object contains property of closeButton", () => {
+    expect(styles).toHaveProperty("closeButton", expect.any(Object));
   });
 });

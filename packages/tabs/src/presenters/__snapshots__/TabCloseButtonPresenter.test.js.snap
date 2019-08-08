@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tabs/TabCloseButtonPresenter renders with all props 1`] = `
+.emotion-1 {
+  box-shadow: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.emotion-1 svg * {
+  fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
+
+.emotion-0 {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+  pointer-events: none;
+}
+
+<button
+  className="emotion-1"
+  disabled={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  tabIndex="-1"
+  title="close"
+>
+  <svg
+    className="emotion-0"
+    height="16px"
+    viewBox="0 0 16 16"
+    width="16px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      close-s
+    </title>
+    <path
+      d="M13.4 3.4l-.8-.8L8 7.3 3.4 2.6l-.8.8L7.3 8l-4.7 4.6.8.8L8 8.7l4.6 4.7.8-.8L8.7 8l4.7-4.6z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`tabs/TabCloseButtonPresenter renders without props 1`] = `
+.emotion-1 {
+  box-shadow: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.emotion-1 svg * {
+  fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
+
+.emotion-0 {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+  pointer-events: none;
+}
+
+<button
+  className="emotion-1"
+  disabled={undefined}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  tabIndex="-1"
+  title="close"
+>
+  <svg
+    className="emotion-0"
+    height="16px"
+    viewBox="0 0 16 16"
+    width="16px"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <title>
+      close-s
+    </title>
+    <path
+      d="M13.4 3.4l-.8-.8L8 7.3 3.4 2.6l-.8.8L7.3 8l-4.7 4.6.8.8L8 8.7l4.6 4.7.8-.8L8.7 8l4.7-4.6z"
+    />
+  </svg>
+</button>
+`;
