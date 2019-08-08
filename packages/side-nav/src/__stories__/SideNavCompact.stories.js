@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { action } from "@storybook/addon-actions";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
-import { Insight24, Collaboration24, ProductsAndServices24 } from "@hig/icons";
+import { Graph24, Collaboration24, ProductsAndServices24 } from "@hig/icons";
 import SideNav, { BelowTopNavCompact } from "../index";
 import infoOptions from "./infoOptions";
 
@@ -14,7 +14,7 @@ const compactSideNav = () => (
         <SideNav.Group>
           <SideNav.ModuleCompact
             title="Module 1"
-            icon={<Insight24 />}
+            icon={<Graph24 />}
             activeChildren
           >
             <SideNav.Submodule title="Submodule 1" />
