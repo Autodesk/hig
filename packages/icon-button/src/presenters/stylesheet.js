@@ -11,9 +11,7 @@ function getStylesByHover(themeData, surface, on, variant) {
   const dynamicHoverIconColor = on
     ? themeData["iconButton.hover.on.iconColor"]
     : themeData["iconButton.hover.iconColor"];
-  const hoverIconColor = isDynamic
-    ? dynamicHoverIconColor
-    : themeData["iconButton.static.iconColor"];
+  const hoverIconColor = isDynamic ? dynamicHoverIconColor : "";
   const staticSurfaceLevelBackgroundColor =
     surfaceLevel <= 250
       ? themeData["iconButton.static.hover.level100To250.backgroundColor"]
@@ -45,9 +43,7 @@ function getStylesByFocus(themeData, on, variant) {
   const dynamicFocusIconColor = on
     ? themeData["iconButton.focus.on.iconColor"]
     : themeData["iconButton.focus.iconColor"];
-  const focusIconColor = isDynamic
-    ? dynamicFocusIconColor
-    : themeData["iconButton.static.iconColor"];
+  const focusIconColor = isDynamic ? dynamicFocusIconColor : "";
   const staticBorderColor = on
     ? themeData["iconButton.static.on.focus.borderColor"]
     : `transparent`;
@@ -71,10 +67,7 @@ function getStylesByPressed(themeData, surface, on, variant) {
   const dynamicPressedIconColor = on
     ? themeData["iconButton.pressed.on.iconColor"]
     : themeData["iconButton.pressed.iconColor"];
-  const pressedIconColor =
-    variant === "dynamic"
-      ? dynamicPressedIconColor
-      : themeData["iconButton.static.iconColor"];
+  const pressedIconColor = variant === "dynamic" ? dynamicPressedIconColor : "";
   return {
     backgroundColor:
       surfaceLevel <= 250
