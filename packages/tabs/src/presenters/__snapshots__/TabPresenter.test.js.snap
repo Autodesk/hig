@@ -10,19 +10,6 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
   margin: 0;
 }
 
-.emotion-6 {
-  position: absolute;
-  left: 0;
-  height: 0;
-  width: 100%;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: height,width;
-  transition-property: height,width;
-  top: 0;
-  background-color: rgba(6,150,215,0.35);
-}
-
 .emotion-8 {
   position: relative;
   display: -webkit-box;
@@ -76,6 +63,19 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
   height: 24px;
   width: 24px;
   overflow: hidden;
+}
+
+.emotion-6 {
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 100%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: height,width;
+  transition-property: height,width;
+  top: 0;
+  background-color: rgba(6,150,215,0.35);
 }
 
 .emotion-7 {
@@ -143,6 +143,7 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
   margin: 0;
   width: 16px;
   height: 16px;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   right: 0;
@@ -250,6 +251,11 @@ exports[`tabs/TabPresenter renders without props 1`] = `
   display: -ms-flexbox;
   display: flex;
   margin: 0;
+  margin-right: 24px;
+}
+
+.emotion-4:last-of-type {
+  margin-right: 0;
 }
 
 .emotion-3 {
@@ -270,7 +276,8 @@ exports[`tabs/TabPresenter renders without props 1`] = `
   -webkit-transition-property: background-color;
   transition-property: background-color;
   background-color: transparent;
-  padding: 8px 12px;
+  margin-bottom: -1px;
+  padding: 0 0 4px 0;
 }
 
 .emotion-3:focus {
@@ -303,8 +310,23 @@ exports[`tabs/TabPresenter renders without props 1`] = `
   transition-duration: 0.3s;
   -webkit-transition-property: height,width;
   transition-property: height,width;
-  top: 0;
+  bottom: 0;
+  background-color: rgba(128,128,128,0.85);
+  overflow: visible;
+}
+
+.emotion-2:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
   background-color: rgba(6,150,215,0.35);
+  content: " ";
+  width: 100%;
+  height: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: height;
+  transition-property: height;
 }
 
 .emotion-0 {

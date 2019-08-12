@@ -62,37 +62,6 @@ exports[`tabs/TabsPresenter renders horizontal canvas style tabs 1`] = `
 </ul>
 `;
 
-exports[`tabs/TabsPresenter renders horizontal underline style tabs 1`] = `
-.emotion-0 {
-  box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  border-bottom: 1px solid rgba(128,128,128,0.35);
-  background-color: transparent;
-}
-
-<ul
-  className="emotion-0"
->
-  Hello World
-</ul>
-`;
-
 exports[`tabs/TabsPresenter renders vertical box style tabs 1`] = `
 .emotion-0 {
   box-sizing: border-box;
@@ -113,8 +82,8 @@ exports[`tabs/TabsPresenter renders vertical box style tabs 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  border-bottom: 0;
-  background-color: #eeeeee;
+  border-bottom: 1px solid rgba(128,128,128,0.35);
+  background-color: transparent;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -151,8 +120,8 @@ exports[`tabs/TabsPresenter renders without props 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  border-bottom: 0;
-  background-color: #eeeeee;
+  border-bottom: 1px solid rgba(128,128,128,0.35);
+  background-color: transparent;
 }
 
 <ul

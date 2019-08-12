@@ -279,6 +279,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   margin: 0;
   width: 16px;
   height: 16px;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   right: 0;
@@ -1132,6 +1133,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   margin: 0;
   width: 16px;
   height: 16px;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   right: 0;
@@ -2269,6 +2271,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   margin: 0;
   width: 16px;
   height: 16px;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   right: 0;
@@ -2562,6 +2565,315 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
     className="emotion-41"
   >
     active
+  </div>
+</div>
+`;
+
+exports[`tabs/Tabs renders with custom className 1`] = `
+.emotion-12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-1 {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  opacity: 1;
+  width: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-11 {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.emotion-10 {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  border-bottom: 1px solid rgba(128,128,128,0.35);
+  background-color: transparent;
+}
+
+.emotion-4 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  margin-right: 24px;
+}
+
+.emotion-4:last-of-type {
+  margin-right: 0;
+}
+
+.emotion-3 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  border: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  background-color: transparent;
+  margin-bottom: -1px;
+  padding: 0 0 4px 0;
+}
+
+.emotion-3:focus {
+  outline: none;
+}
+
+.emotion-7 {
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 100%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: height,width;
+  transition-property: height,width;
+  bottom: 0;
+  background-color: rgba(128,128,128,0.85);
+  overflow: visible;
+}
+
+.emotion-7:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(6,150,215,0.35);
+  content: " ";
+  width: 100%;
+  height: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: height;
+  transition-property: height;
+}
+
+.emotion-2 {
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: height,width;
+  transition-property: height,width;
+  bottom: 0;
+  background-color: #0696d7;
+  overflow: visible;
+}
+
+.emotion-2:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(6,150,215,0.35);
+  content: " ";
+  width: 100%;
+  height: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: height;
+  transition-property: height;
+}
+
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+  display: inline-block;
+  position: relative;
+  background: transparent;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.428571429;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  color: #3c3c3c;
+}
+
+.emotion-0:before {
+  display: block;
+  content: "foo";
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  height: 0;
+  color: transparent;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.emotion-5 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+  display: inline-block;
+  position: relative;
+  background: transparent;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  color: #3c3c3c;
+}
+
+.emotion-5:before {
+  display: block;
+  content: "hello";
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  height: 0;
+  color: transparent;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+<div
+  className="emotion-12 class1 class2"
+>
+  <ul
+    className="emotion-10 class1__tabs class2__tabs"
+  >
+    <li
+      className="emotion-4 class1__tab class2__tab"
+    >
+      <div
+        className="emotion-3 class1__tab__button class2__tab__button"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="emotion-1"
+        >
+          <p
+            className="class1__tab__label class2__tab__label emotion-0"
+          >
+            foo
+          </p>
+        </div>
+        <div
+          className="emotion-2 class1__tab__halo class2__tab__halo"
+        />
+      </div>
+    </li>
+    <li
+      className="emotion-4 class1__tab class2__tab"
+    >
+      <div
+        className="emotion-3 class1__tab__button class2__tab__button"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        role="button"
+        tabIndex="0"
+      >
+        <div
+          className="emotion-1"
+        >
+          <p
+            className="class1__tab__label class2__tab__label emotion-5"
+          >
+            hello
+          </p>
+        </div>
+        <div
+          className="emotion-7 class1__tab__halo class2__tab__halo"
+        />
+      </div>
+    </li>
+  </ul>
+  <div
+    className="emotion-11 class1__content class2__content"
+  >
+    bar
   </div>
 </div>
 `;

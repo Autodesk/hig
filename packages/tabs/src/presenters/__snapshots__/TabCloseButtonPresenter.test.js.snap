@@ -10,6 +10,7 @@ exports[`tabs/TabCloseButtonPresenter renders with all props 1`] = `
   margin: 0;
   width: 16px;
   height: 16px;
+  cursor: pointer;
 }
 
 .emotion-1 svg * {
@@ -70,6 +71,7 @@ exports[`tabs/TabCloseButtonPresenter renders without props 1`] = `
   margin: 0;
   width: 16px;
   height: 16px;
+  cursor: pointer;
 }
 
 .emotion-1 svg * {
