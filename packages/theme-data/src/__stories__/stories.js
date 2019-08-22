@@ -74,6 +74,11 @@ export default [
     readme: undefined
   },
   {
+    description: "Component - Accordion",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^accordion./),
+    readme: undefined
+  },
+  {
     description: "Component - Avatar",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^avatar./),
     readme: undefined
