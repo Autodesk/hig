@@ -1,0 +1,688 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`menu/Menu renders Menu and Options with defaultSelected 1`] = `
+.emotion-6 {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: ArtifaktElement,sans-serif;
+  list-style: none;
+  margin: 0;
+  outline: 0;
+  padding: 8px 0;
+  overflow-y: auto;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #3c3c3c;
+  font-size: 14px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 18px;
+  padding: 8px 12px;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  font-weight: 400;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #3c3c3c;
+  font-size: 14px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 18px;
+  padding: 8px 12px;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  font-weight: 700;
+}
+
+<ul
+  className="emotion-6"
+  id={undefined}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseMove={[Function]}
+  role="listbox"
+  selected={undefined}
+  tabIndex="0"
+>
+  <li
+    aria-selected={false}
+    className="emotion-1"
+    disabled={undefined}
+    id="option-1"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={false}
+  >
+    <div
+      className="emotion-0"
+    >
+      Option 1
+    </div>
+  </li>
+  <li
+    aria-selected={true}
+    className="emotion-3"
+    disabled={undefined}
+    id="option-2"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={true}
+  >
+    <div
+      className="emotion-0"
+    >
+      Option 2
+    </div>
+  </li>
+  <li
+    aria-selected={false}
+    className="emotion-1"
+    disabled={undefined}
+    id="option-3"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={false}
+  >
+    <div
+      className="emotion-0"
+    >
+      Option 3
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`menu/Menu renders Menu and Options with defaultSelected and checkmark variant 1`] = `
+.emotion-12 {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: ArtifaktElement,sans-serif;
+  list-style: none;
+  margin: 0;
+  outline: 0;
+  padding: 8px 0;
+  overflow-y: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #3c3c3c;
+  font-size: 14px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 18px;
+  padding: 8px 12px;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  font-weight: 400;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  height: 18px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.emotion-1 > svg > * {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #3c3c3c;
+  font-size: 14px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 18px;
+  padding: 8px 12px;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  font-weight: 700;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  height: 18px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.emotion-5 > svg > * {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+  fill: #0696d7;
+}
+
+<ul
+  className="emotion-12"
+  id={undefined}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseMove={[Function]}
+  role="listbox"
+  selected={undefined}
+  tabIndex="0"
+>
+  <li
+    aria-selected={false}
+    className="emotion-3"
+    disabled={undefined}
+    id="option-1"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={false}
+  >
+    <div
+      className="emotion-1"
+    >
+      <svg
+        className="emotion-0"
+        height="16px"
+        viewBox="0 0 16 16"
+        width="16px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
+        />
+      </svg>
+    </div>
+    <div
+      className="emotion-2"
+    >
+      Option 1
+    </div>
+  </li>
+  <li
+    aria-selected={true}
+    className="emotion-7"
+    disabled={undefined}
+    id="option-2"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={true}
+  >
+    <div
+      className="emotion-5"
+    >
+      <svg
+        className="emotion-0"
+        height="16px"
+        viewBox="0 0 16 16"
+        width="16px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
+        />
+      </svg>
+    </div>
+    <div
+      className="emotion-2"
+    >
+      Option 2
+    </div>
+  </li>
+  <li
+    aria-selected={false}
+    className="emotion-3"
+    disabled={undefined}
+    id="option-3"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={false}
+  >
+    <div
+      className="emotion-1"
+    >
+      <svg
+        className="emotion-0"
+        height="16px"
+        viewBox="0 0 16 16"
+        width="16px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
+        />
+      </svg>
+    </div>
+    <div
+      className="emotion-2"
+    >
+      Option 3
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`menu/Menu renders checkmark indicator Menu and Options 1`] = `
+.emotion-12 {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: ArtifaktElement,sans-serif;
+  list-style: none;
+  margin: 0;
+  outline: 0;
+  padding: 8px 0;
+  overflow-y: auto;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #3c3c3c;
+  font-size: 14px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 18px;
+  padding: 8px 12px;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  font-weight: 400;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  height: 18px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.emotion-1 > svg > * {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+<ul
+  className="emotion-12"
+  id={undefined}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseMove={[Function]}
+  role="listbox"
+  selected={undefined}
+  tabIndex="0"
+>
+  <li
+    aria-selected={false}
+    className="emotion-3"
+    disabled={undefined}
+    id="option-1"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={false}
+  >
+    <div
+      className="emotion-1"
+    >
+      <svg
+        className="emotion-0"
+        height="16px"
+        viewBox="0 0 16 16"
+        width="16px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
+        />
+      </svg>
+    </div>
+    <div
+      className="emotion-2"
+    >
+      Option 1
+    </div>
+  </li>
+  <li
+    aria-selected={false}
+    className="emotion-3"
+    disabled={undefined}
+    id="option-2"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={false}
+  >
+    <div
+      className="emotion-1"
+    >
+      <svg
+        className="emotion-0"
+        height="16px"
+        viewBox="0 0 16 16"
+        width="16px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
+        />
+      </svg>
+    </div>
+    <div
+      className="emotion-2"
+    >
+      Option 2
+    </div>
+  </li>
+  <li
+    aria-selected={false}
+    className="emotion-3"
+    disabled={undefined}
+    id="option-3"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={false}
+  >
+    <div
+      className="emotion-1"
+    >
+      <svg
+        className="emotion-0"
+        height="16px"
+        viewBox="0 0 16 16"
+        width="16px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
+        />
+      </svg>
+    </div>
+    <div
+      className="emotion-2"
+    >
+      Option 3
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`menu/Menu renders default Menu and Options 1`] = `
+.emotion-6 {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: ArtifaktElement,sans-serif;
+  list-style: none;
+  margin: 0;
+  outline: 0;
+  padding: 8px 0;
+  overflow-y: auto;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #3c3c3c;
+  font-size: 14px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 18px;
+  padding: 8px 12px;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  font-weight: 400;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+<ul
+  className="emotion-6"
+  id={undefined}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseMove={[Function]}
+  role="listbox"
+  selected={undefined}
+  tabIndex="0"
+>
+  <li
+    aria-selected={false}
+    className="emotion-1"
+    disabled={undefined}
+    id="option-1"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={false}
+  >
+    <div
+      className="emotion-0"
+    >
+      Option 1
+    </div>
+  </li>
+  <li
+    aria-selected={false}
+    className="emotion-1"
+    disabled={undefined}
+    id="option-2"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={false}
+  >
+    <div
+      className="emotion-0"
+    >
+      Option 2
+    </div>
+  </li>
+  <li
+    aria-selected={false}
+    className="emotion-1"
+    disabled={undefined}
+    id="option-3"
+    multiple={false}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    role="option"
+    selected={false}
+  >
+    <div
+      className="emotion-0"
+    >
+      Option 3
+    </div>
+  </li>
+</ul>
+`;
