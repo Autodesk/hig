@@ -45,7 +45,7 @@ function getAnchorPointTransformRotate(anchorPoint) {
 }
 
 export default function(props, themeData, themeId) {
-  const { transitionStatus, anchorPoint } = props;
+  const { transitionStatus, anchorPoint, stylesheet } = props;
   const isExiting = transitionStatus === `exiting`;
   const isExited = transitionStatus === `exited`;
   const isHidden = transitionStatus === `hidden`;
@@ -66,7 +66,7 @@ export default function(props, themeData, themeId) {
     ? getStyle(themeData, `density.spacings.small`)
     : 0;
 
-  return {
+  const styles = {
     flyoutWrapper: {
       position: `relative`,
       display: `inline-block`
@@ -123,4 +123,10 @@ export default function(props, themeData, themeId) {
       fill: backgroundColor
     }
   };
+
+  if (stylesheet) {
+    return stylesheet(styles, props, themeData, themeId);
+  }
+
+  return styles;
 }
