@@ -36,6 +36,7 @@ function Input(props) {
     stylesheet,
     tagName,
     variant,
+    error,
     ...otherProps
   } = props;
 
@@ -61,6 +62,7 @@ function Input(props) {
           stylesheet={stylesheet}
           tagName={tagName}
           variant={variant}
+          error={error}
           {...otherProps}
         >
           <InputPresenter
@@ -122,12 +124,17 @@ Input.propTypes = {
   /**
    * The visual variant of the input
    */
-  variant: PropTypes.oneOf(availableVariants)
+  variant: PropTypes.oneOf(availableVariants),
+  /**
+   * Specify if the value of the input is wrong
+   */
+  error: PropTypes.bool
 };
 
 Input.defaultProps = {
   tagName: tagNames.INPUT,
-  variant: variants.LINE
+  variant: variants.LINE,
+  error: false
 };
 
 export default Input;
