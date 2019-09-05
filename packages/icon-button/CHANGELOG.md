@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.3.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.3.0...@hig/icon-button@2.3.1) (2019-09-05)
+
+
+### Bug Fixes
+
+* remove non-existant theme-data role from stylesheet ([ee42999](https://github.com/Autodesk/hig/commit/ee42999))
+
 # [@hig/icon-button-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.2.1...@hig/icon-button@2.3.0) (2019-08-07)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@hig/icon-button",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "HIG IconButton component",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -32,7 +32,7 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.0",
-    "@hig/theme-data": "^2.10.1",
+    "@hig/theme-data": "^2.11.0",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {

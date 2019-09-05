@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.11.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.10.1...@hig/theme-data@2.11.0) (2019-09-05)
+
+
+### Features
+
+* update theme-data for Input error state styles ([e50214d](https://github.com/Autodesk/hig/commit/e50214d))
+
 # [@hig/theme-data-v2.10.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.10.0...@hig/theme-data@2.10.1) (2019-08-08)
 
 
