@@ -71,6 +71,44 @@ exports[`InputHaloPresenter renders when disabled 1`] = `
 </div>
 `;
 
+exports[`InputHaloPresenter renders when error 1`] = `
+.emotion-0 {
+  position: absolute;
+  top: calc(100% + 1px);
+  left: -1px;
+  right: 0;
+  width: calc(100% + 2px);
+  height: 0;
+  background-color: rgba(128,128,128,0.15);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+}
+
+.emotion-1 {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
+  position: relative;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 1px;
+  border-bottom-color: #ec4a41;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+<div
+  className="emotion-1"
+>
+  <div
+    className="emotion-0"
+  />
+</div>
+`;
+
 exports[`InputHaloPresenter renders with focus 1`] = `
 .emotion-1 {
   -webkit-box-flex: 2;

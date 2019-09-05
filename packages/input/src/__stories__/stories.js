@@ -3,14 +3,16 @@ export default [
     description: "default",
     getProps: () => ({
       value: "jon.snow@winterfell.gov",
-      disabled: false
+      disabled: false,
+      error: false
     })
   },
   {
     description: "disabled",
     getProps: () => ({
       value: "bran.stark@winterfell.gov",
-      disabled: true
+      disabled: true,
+      error: false
     })
   }
 ];

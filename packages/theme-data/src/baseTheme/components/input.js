@@ -193,6 +193,14 @@ export default {
     value: 0.5
   },
 
+  // Error
+  "input.error.borderBottomColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.errorColor"
+    }
+  },
+
   // Box
   "input.box.borderBottomColor": {
     type: COLOR,

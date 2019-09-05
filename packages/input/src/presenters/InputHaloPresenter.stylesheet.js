@@ -17,7 +17,10 @@ function borderStyles({ variant }, themeData) {
     : defaults;
 }
 
-function borderBottomStyles({ isDisabled, hasFocus, hasHover }, themeData) {
+function borderBottomStyles(
+  { isDisabled, hasFocus, hasHover, error },
+  themeData
+) {
   const defaults = {
     borderBottomStyle: "solid",
     borderBottomWidth: themeData["input.borderBottomWidth"]
@@ -39,6 +42,12 @@ function borderBottomStyles({ isDisabled, hasFocus, hasHover }, themeData) {
     return {
       ...defaults,
       borderBottomColor: themeData["input.hover.borderBottomColor"]
+    };
+  }
+  if (error) {
+    return {
+      ...defaults,
+      borderBottomColor: themeData["input.error.borderBottomColor"]
     };
   }
   return defaults;
