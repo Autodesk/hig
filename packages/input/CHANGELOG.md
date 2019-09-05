@@ -1,3 +1,10 @@
+# [@hig/input-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/input@1.1.6...@hig/input@1.2.0) (2019-09-05)
+
+
+### Features
+
+* add error state for Input ([10b7875](https://github.com/Autodesk/hig/commit/10b7875))
+
 # [@hig/input-v1.1.6](https://github.com/Autodesk/hig/compare/@hig/input@1.1.5...@hig/input@1.1.6) (2019-08-07)
 
 
