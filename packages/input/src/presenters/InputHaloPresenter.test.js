@@ -25,4 +25,9 @@ describe("InputHaloPresenter", () => {
       renderer.create(<InputHaloPresenter isDisabled />).toJSON()
     ).toMatchSnapshot();
   });
+  it("renders when error", () => {
+    expect(
+      renderer.create(<InputHaloPresenter error />).toJSON()
+    ).toMatchSnapshot();
+  });
 });
