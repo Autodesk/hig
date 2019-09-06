@@ -11,6 +11,7 @@ const knobLabels = {
   variant: "Variant",
   placeholder: "Placeholder",
   disabled: "Disabled",
+  error: "Error",
   required: "Required",
   multiple: "Multiple",
   onBlur: "onBlur",
@@ -30,6 +31,7 @@ export default function getKnobs(props) {
   const {
     placeholder = "",
     disabled = false,
+    error = false,
     required = "",
     multiple = false,
     options = [],
@@ -54,6 +56,7 @@ export default function getKnobs(props) {
     value: controlledObject(knobLabels.value, value, knobGroupIds.advanced),
     placeholder: text(knobLabels.placeholder, placeholder, knobGroupIds.basic),
     disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
+    error: boolean(knobLabels.error, error, knobGroupIds.basic),
     required: text(knobLabels.required, required, knobGroupIds.basic),
     multiple: boolean(knobLabels.multiple, multiple, knobGroupIds.basic),
     onBlur: action(knobLabels.onBlur),
