@@ -86,7 +86,11 @@ export default class Dropdown extends Component {
     /**
      * The visual variant of the textarea
      */
-    variant: PropTypes.oneOf(variantTypes)
+    variant: PropTypes.oneOf(variantTypes),
+    /**
+     * Specifies if the value provided is wrong
+     */
+    error: PropTypes.bool
   };
 
   static defaultProps = {
@@ -164,6 +168,7 @@ export default class Dropdown extends Component {
       onBlur,
       onFocus,
       variant,
+      error,
       ...otherProps
     } = this.props;
 
@@ -176,6 +181,7 @@ export default class Dropdown extends Component {
 
     const inputProps = getInputProps({
       id,
+      error,
       placeholder,
       disabled,
       isOpen,
@@ -265,6 +271,7 @@ export default class Dropdown extends Component {
       required,
       value,
       variant,
+      error,
       ...otherProps
     } = this.props;
 
