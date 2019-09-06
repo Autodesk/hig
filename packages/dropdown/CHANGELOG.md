@@ -1,3 +1,10 @@
+# [@hig/dropdown-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.7...@hig/dropdown@2.1.0) (2019-09-06)
+
+
+### Features
+
+* add error prop for Dropdown ([6d86709](https://github.com/Autodesk/hig/commit/6d86709))
+
 # [@hig/dropdown-v2.0.7](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.6...@hig/dropdown@2.0.7) (2019-07-11)
 
 
