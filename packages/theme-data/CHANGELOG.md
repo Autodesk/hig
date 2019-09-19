@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.12.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.11.0...@hig/theme-data@2.12.0) (2019-09-19)
+
+
+### Features
+
+* update theme-data for Tabs to match the new design ([9a280fc](https://github.com/Autodesk/hig/commit/9a280fc))
+
 # [@hig/theme-data-v2.11.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.10.1...@hig/theme-data@2.11.0) (2019-09-05)
 
 
