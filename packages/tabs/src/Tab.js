@@ -1,102 +1,103 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
 import TabPresenter from "./presenters/TabPresenter";
 
-/**
- * @typedef {Object} RenderTabPayload
- * @property {string} key
- * @property {boolean} [active]
- * @property {string} [label]
- * @property {Function} [handleClick]
- * @property {Function} [handleKeyDown]
- */
+export default class Tab extends Component {
+  static propTypes = {
+    /**
+     * Specify if the tab is active
+     * If more than one tabs are marked as active, the first one will take effect
+     */
+    active: PropTypes.bool,
+    /**
+     * Sets the label of a tab
+     */
+    label: PropTypes.string,
+    /**
+     * A @hig/icon element
+     * Icon will only be displayed when varient prop of parent Tabs is set to "box" or "canvas"
+     */
+    icon: PropTypes.node,
+    /**
+     * Specify if the tab is disabled
+     */
+    disabled: PropTypes.bool,
+    /**
+     * Specify if the tab will have a close button
+     * Only works when varient prop of parent Tabs is set to "box" or "canvas"
+     */
+    closable: PropTypes.bool
+  };
 
-/**
- * @typedef {Object} TabProps
- * @property {boolean} [active]
- * @property {string} [children]
- * @property {string} [label]
- * @property {Function} [onClick]
- * @property {string} render A render prop allowing for custom tab components to be rendered
- */
+  static defaultProps = {
+    active: false,
+    disabled: false,
+    closable: false
+  };
 
-/**
- * This component is a facade for interfacing with the `Tabs` component.
- * The logic within the `Tabs` component is strictly separated from the `TabPresenter`.
- *
- * @param {TabProps} props
- * @returns {null}
- */
-export default function Tab() {
-  return null;
-}
+  render() {
+    const {
+      active,
+      label,
+      icon,
+      disabled,
+      closable,
+      ...otherProps
+    } = this.props;
 
-Tab.defaultProps = {
-  /**
-   * @param {RenderTabPayload} props
-   * @returns {JSX.Element}
-   */
-  render({
-    handleClick,
-    handleKeyDown,
-    label,
-    onBlur,
-    onFocus,
-    onMouseDown,
-    onMouseEnter,
-    onMouseLeave,
-    onMouseUp,
-    ...otherProps
-  }) {
+    const { className } = otherProps;
+
+    const {
+      variant,
+      orientation,
+      showDivider,
+      onMouseEnter,
+      onMouseLeave,
+      handleClick,
+      handleKeyDown,
+      onClose,
+      render
+    } = otherProps;
+
+    if (render) {
+      return render({ ...this.props });
+    }
+
     return (
-      <ControlBehavior
-        key={label}
-        onBlur={onBlur}
-        onFocus={onFocus}
-        onMouseDown={onMouseDown}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        onMouseUp={onMouseUp}
-      >
+      <ControlBehavior onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
         {({
           hasFocus,
           hasHover,
           isPressed,
-          onBlur: handleBlur,
-          onFocus: handleFocus,
-          onMouseDown: handleMouseDown,
+          onBlur,
+          onFocus,
           onMouseEnter: handleMouseEnter,
-          onMouseLeave: handleMouseLeave,
-          onMouseUp: handleMouseUp
+          onMouseLeave: handleMouseLeave
         }) => (
           <TabPresenter
+            active={active}
+            disabled={disabled}
+            closable={closable}
             hasFocus={hasFocus}
             hasHover={hasHover}
             isPressed={isPressed}
             label={label}
-            onBlur={handleBlur}
-            onFocus={handleFocus}
-            onMouseDown={handleMouseDown}
+            icon={icon}
+            variant={variant}
+            orientation={orientation}
+            showDivider={showDivider}
+            onBlur={onBlur}
+            onFocus={onFocus}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            onMouseUp={handleMouseUp}
             onClick={handleClick}
             onKeyDown={handleKeyDown}
-            {...otherProps}
+            onClose={onClose}
+            className={className}
           />
         )}
       </ControlBehavior>
     );
   }
-};
-
-Tab.propTypes = {
-  active: PropTypes.bool,
-  children: PropTypes.node,
-  label: PropTypes.string,
-  onBlur: PropTypes.func,
-  onFocus: PropTypes.func,
-  onClick: PropTypes.func,
-  render: PropTypes.func.isRequired
-};
+}

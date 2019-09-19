@@ -1,7 +1,9 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import { Settings24 } from "@hig/icons";
 
 import TabPresenter from "./TabPresenter";
+import { variants, orientations } from "../constants";
 
 describe("tabs/TabPresenter", () => {
   const cases = [
@@ -14,6 +16,11 @@ describe("tabs/TabPresenter", () => {
       props: {
         active: true,
         label: "Hello World",
+        icon: <Settings24 />,
+        closable: true,
+        variant: variants.BOX,
+        orientation: orientations.HORIZONTAL,
+        showDivider: true,
         onBlur: function onBlur() {},
         onClick: function handleClick() {},
         onFocus: function onFocus() {},

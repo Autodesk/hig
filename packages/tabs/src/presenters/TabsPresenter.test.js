@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 
 import TabsPresenter from "./TabsPresenter";
-import { alignments } from "../alignments";
+import { alignments, variants, orientations } from "../constants";
 
 describe("tabs/TabsPresenter", () => {
   const cases = [
@@ -11,22 +11,25 @@ describe("tabs/TabsPresenter", () => {
       props: {}
     },
     {
-      description: "renders with all props",
+      description: "renders horizontal box style tabs",
       props: {
         align: alignments.CENTER,
+        variant: variants.BOX,
         children: "Hello World"
       }
     },
     {
-      description: "renders aligned left",
+      description: "renders horizontal canvas style tabs",
       props: {
-        align: alignments.LEFT
+        variant: variants.CANVAS,
+        children: "Hello World"
       }
     },
     {
-      description: "renders aligned right",
+      description: "renders vertical box style tabs",
       props: {
-        align: alignments.RIGHT
+        orientation: orientations.VERTICAL,
+        children: "Hello World"
       }
     }
   ];

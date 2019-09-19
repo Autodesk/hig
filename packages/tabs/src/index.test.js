@@ -17,6 +17,22 @@ describe("tabs/index", () => {
     {
       name: "AVAILABLE_ALIGNMENTS",
       value: expect.any(Array)
+    },
+    {
+      name: "variants",
+      value: expect.any(Object)
+    },
+    {
+      name: "AVAILABLE_VARIANTS",
+      value: expect.any(Array)
+    },
+    {
+      name: "orientations",
+      value: expect.any(Object)
+    },
+    {
+      name: "AVAILABLE_ORIENTATIONS",
+      value: expect.any(Array)
     }
   ].forEach(({ name, value }) => {
     it(`exports ${name}`, () => {

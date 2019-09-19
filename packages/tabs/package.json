@@ -19,11 +19,12 @@
   "dependencies": {
     "@hig/behaviors": "^1.1.1",
     "@hig/typography": "^1.0.3",
+    "@hig/icons": "^3.1.0",
+    "@hig/utils": "^0.4.0",
     "emotion": "^10.0.0",
     "lodash.memoize": "^4.1.2",
     "prop-types": "^15.7.1",
-    "react-lifecycles-compat": "^3.0.4",
-    "render-fragment": "^0.1.1"
+    "react-lifecycles-compat": "^3.0.4"
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.0",
