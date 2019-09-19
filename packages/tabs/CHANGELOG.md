@@ -1,3 +1,10 @@
+# [@hig/tabs-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/tabs@1.0.3...@hig/tabs@1.1.0) (2019-09-19)
+
+
+### Features
+
+* update Tabs to match the new design ([a6ab419](https://github.com/Autodesk/hig/commit/a6ab419))
+
 # [@hig/tabs-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/tabs@1.0.2...@hig/tabs@1.0.3) (2019-04-25)
 
 
