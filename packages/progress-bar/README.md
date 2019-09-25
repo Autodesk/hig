@@ -23,3 +23,26 @@ import ProgressBar from '@hig/progress-bar';
 ```jsx
 <ProgressBar />
 ```
+
+## Styling
+
+ProgressBar has a `stylesheet` prop that accepts a function wherein you can modify ProgressBar's styles. For instance
+
+```jsx
+import ProgressBar from '@hig/progress-bar';
+
+function YourComponent() {
+  // ...
+  const customStylesheet = (styles, themeData) => ({
+    ...styles,
+    wrapper: {
+      ...styles.wrapper,
+      backgroundColor: themeData["colorScheme.surfaceLevel100Color"]
+    }
+  });
+
+  return (
+    <ProgressBar stylesheet={customStylesheet} />
+  );
+}
+```
