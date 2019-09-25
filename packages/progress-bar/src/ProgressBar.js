@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
 export default class ProgressBar extends Component {
@@ -17,7 +18,19 @@ export default class ProgressBar extends Component {
   };
 
   render() {
-    const { percentComplete, stylesheet: customStylesheet } = this.props;
+    const {
+      percentComplete,
+      stylesheet: customStylesheet,
+      ...otherProps
+    } = this.props;
+
+    const { className } = otherProps;
+    const innerWrapperClassNames = createCustomClassNames(
+      className,
+      "progress-bar"
+    );
+    const fillClassNames = createCustomClassNames(className, "fill");
+    const polygonClassNames = createCustomClassNames(className, "polygon");
 
     return (
       <ThemeContext.Consumer>
@@ -28,14 +41,18 @@ export default class ProgressBar extends Component {
           );
           return (
             <div
-              className={css(styles.wrapper)}
+              className={cx(css(styles.wrapper), className)}
               role="progressbar"
               aria-valuemin="0"
               aria-valuemax="100"
               aria-valuenow={percentComplete}
             >
-              <div className={css(styles.progressBar)}>
-                <div className={css(styles.progressBarFill)} />
+              <div
+                className={cx(css(styles.progressBar), innerWrapperClassNames)}
+              >
+                <div
+                  className={cx(css(styles.progressBarFill), fillClassNames)}
+                />
                 <svg
                   width="3px"
                   height="4px"
@@ -45,7 +62,7 @@ export default class ProgressBar extends Component {
                   xmlnsXlink="http://www.w3.org/1999/xlink"
                 >
                   <polygon
-                    className={css(styles.polygon)}
+                    className={cx(css(styles.polygon), polygonClassNames)}
                     id="end-right"
                     points="0 0 2.68 0 1 4 0 4"
                   />
