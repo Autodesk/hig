@@ -23,3 +23,28 @@ import ProgressBar from '@hig/progress-bar';
 ```jsx
 <ProgressBar />
 ```
+
+## Styling
+
+Use the `className` prop to pass in a css class name to the outermost container of the component. The class name will also pass down to most of the other styled elements within the component. 
+
+ProgressBar also has a `stylesheet` prop that accepts a function wherein you can modify ProgressBar's styles. For instance
+
+```jsx
+import ProgressBar from '@hig/progress-bar';
+
+function YourComponent() {
+  // ...
+  const customStylesheet = (styles, themeData) => ({
+    ...styles,
+    wrapper: {
+      ...styles.wrapper,
+      backgroundColor: themeData["colorScheme.surfaceLevel100Color"]
+    }
+  });
+
+  return (
+    <ProgressBar stylesheet={customStylesheet} />
+  );
+}
+```

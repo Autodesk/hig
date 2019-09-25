@@ -48,11 +48,11 @@ export const renderedBarWidth = percent => {
 };
 
 export default function stylesheet(props, themeData) {
-  const { percentComplete } = props;
+  const { percentComplete, stylesheet: customStylesheet } = props;
   const isIndeterminate =
     percentComplete === null || percentComplete === undefined;
 
-  return {
+  const styles = {
     wrapper: {
       position: `relative`,
       borderRadius: themeData["progressBar.borderRadius"],
@@ -87,4 +87,6 @@ export default function stylesheet(props, themeData) {
       fill: themeData["progressBar.highlightColor"]
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }
