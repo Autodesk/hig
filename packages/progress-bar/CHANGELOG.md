@@ -1,3 +1,11 @@
+# [@hig/progress-bar-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/progress-bar@1.0.3...@hig/progress-bar@1.1.0) (2019-09-25)
+
+
+### Features
+
+* add stylesheet prop for ProgressBar ([2ab671f](https://github.com/Autodesk/hig/commit/2ab671f))
+* allow className to be passed down to ProgressBar ([f79ed07](https://github.com/Autodesk/hig/commit/f79ed07))
+
 # [@hig/progress-bar-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/progress-bar@1.0.2...@hig/progress-bar@1.0.3) (2019-03-13)
 
 
