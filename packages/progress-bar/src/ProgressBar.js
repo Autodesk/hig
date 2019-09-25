@@ -9,16 +9,23 @@ export default class ProgressBar extends Component {
     /**
      * A number from 0 to 100 representing the percent the delayed operation has completed
      */
-    percentComplete: PropTypes.number
+    percentComplete: PropTypes.number,
+    /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func
   };
 
   render() {
-    const { percentComplete } = this.props;
+    const { percentComplete, stylesheet: customStylesheet } = this.props;
 
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
-          const styles = stylesheet({ percentComplete }, resolvedRoles);
+          const styles = stylesheet(
+            { percentComplete, stylesheet: customStylesheet },
+            resolvedRoles
+          );
           return (
             <div
               className={css(styles.wrapper)}
