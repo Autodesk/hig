@@ -127,9 +127,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          info-24
-        </title>
         <path
           d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
         />
@@ -289,9 +286,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          error-24
-        </title>
         <path
           d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
         />
@@ -444,9 +438,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          info-24
-        </title>
         <path
           d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
         />
@@ -611,9 +602,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          info-24
-        </title>
         <path
           d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
         />
@@ -849,9 +837,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          info-24
-        </title>
         <path
           d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
         />
@@ -901,9 +886,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
           width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            close-m
-          </title>
           <path
             d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
           />
@@ -1033,9 +1015,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders without onDismiss functi
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          info-24
-        </title>
         <path
           d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
         />
@@ -1185,9 +1164,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          info-24
-        </title>
         <path
           d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
         />

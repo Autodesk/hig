@@ -244,9 +244,6 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
             width="16px"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>
-              close-s
-            </title>
             <path
               d="M13.4 3.4l-.8-.8L8 7.3 3.4 2.6l-.8.8L7.3 8l-4.7 4.6.8.8L8 8.7l4.6 4.7.8-.8L8.7 8l4.7-4.6z"
             />
