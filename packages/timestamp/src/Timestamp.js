@@ -47,7 +47,7 @@ export default class Timestamp extends Component {
       distance = Math.round(timeDifference / (60 * 60 * 24 * (365 / 12)));
       timePassed = `${distance} ${pluralize("month", distance)}`;
     } else {
-      distance = Math.round(timeDifference / (60 * 60 * 24 * (365)));
+      distance = Math.round(timeDifference / (60 * 60 * 24 * 365));
       timePassed = `${distance} ${pluralize("year", distance)}`;
     }
 
