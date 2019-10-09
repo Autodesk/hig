@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
@@ -59,14 +59,15 @@ export default class Timestamp extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
-          const { stylesheet: customStylesheet } = this.props;
+          const { stylesheet: customStylesheet, ...otherProps } = this.props;
+          const { className } = otherProps;
           const styles = stylesheet(
             { stylesheet: customStylesheet },
             resolvedRoles,
             metadata.colorSchemeId
           );
           return (
-            <div className={css(styles.timestamp)}>
+            <div className={cx(css(styles.timestamp), className)}>
               {this.humanizeTimestamp(this.props.timestamp)}
             </div>
           );
