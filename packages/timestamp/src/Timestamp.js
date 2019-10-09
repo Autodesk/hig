@@ -12,7 +12,11 @@ export default class Timestamp extends Component {
     /**
      * ISO date string
      */
-    timestamp: PropTypes.string
+    timestamp: PropTypes.string,
+    /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func
   };
 
   humanizeTimestamp = timestamp => {
@@ -55,7 +59,12 @@ export default class Timestamp extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
-          const styles = stylesheet(resolvedRoles, metadata.colorSchemeId);
+          const { stylesheet: customStylesheet } = this.props;
+          const styles = stylesheet(
+            { stylesheet: customStylesheet },
+            resolvedRoles,
+            metadata.colorSchemeId
+          );
           return (
             <div className={css(styles.timestamp)}>
               {this.humanizeTimestamp(this.props.timestamp)}
