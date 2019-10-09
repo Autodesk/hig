@@ -30,6 +30,15 @@ describe("avatar/Avatar", () => {
         onImageError: function handleImageError() {},
         size: sizes.LARGE_48
       }
+    },
+    {
+      desc: "renders with className prop",
+      props: {
+        name: "Jon Snow",
+        image: "http://placekitten.com/g/64/64",
+        className: "my-class-a my-class-b",
+        size: sizes.LARGE_48
+      }
     }
   ]);
 
