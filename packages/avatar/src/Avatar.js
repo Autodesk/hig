@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 import { polyfill } from "react-lifecycles-compat";
 import { ThemeContext } from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 import { sizes, AVAILABLE_SIZES } from "./sizes";
 import stylesheet from "./Avatar.stylesheet";
 
@@ -50,14 +51,22 @@ function initialsFromName(name) {
  * @returns {JSX.Element}
  */
 // eslint-disable-next-line react/prop-types
-function Image({ image, name, size, onError, resolvedRoles }) {
+function Image({ image, name, size, onError, className, resolvedRoles }) {
   const alt = `Avatar image of ${name}`;
   const styles = stylesheet({ size }, resolvedRoles);
 
+  const imageWrapperClassName = createCustomClassNames(
+    className,
+    "image-wrapper"
+  );
+  const imageClassName = createCustomClassNames(className, "image");
+
   return (
-    <span className={css(styles.avatar.imageWrapper)}>
+    <span
+      className={cx(css(styles.avatar.imageWrapper), imageWrapperClassName)}
+    >
       <img
-        className={css(styles.avatar.image)}
+        className={cx(css(styles.avatar.image), imageClassName)}
         src={image}
         alt={alt}
         onError={onError}
@@ -72,12 +81,16 @@ function Image({ image, name, size, onError, resolvedRoles }) {
  * @returns {JSX.Element}
  */
 // eslint-disable-next-line react/prop-types
-function Initials({ size, name, resolvedRoles }) {
+function Initials({ size, name, className, resolvedRoles }) {
   const styles = stylesheet({ size, name }, resolvedRoles);
   const initials = initialsFromName(name);
+  const initialsClassName = createCustomClassNames(className, "initials");
 
   return (
-    <span className={css(styles.avatar.initials)} aria-hidden="true">
+    <span
+      className={cx(css(styles.avatar.initials), initialsClassName)}
+      aria-hidden="true"
+    >
       {size === sizes.SMALL_16 ? initials[0] : initials}
     </span>
   );
@@ -152,7 +165,8 @@ class Avatar extends Component {
   };
 
   render() {
-    const { size, name } = this.props;
+    const { size, name, ...otherProps } = this.props;
+    const { className } = otherProps;
     const { imageUrl, hasImageError } = this.state;
     const { handleImageError } = this;
     const backgroundId =
@@ -168,7 +182,10 @@ class Avatar extends Component {
         {({ resolvedRoles }) => (
           <span
             aria-label={label}
-            className={css(styles(resolvedRoles).avatar.container)}
+            className={cx(
+              css(styles(resolvedRoles).avatar.container),
+              className
+            )}
             role="img"
           >
             {!showImage ? null : (
@@ -177,10 +194,16 @@ class Avatar extends Component {
                 size={size}
                 image={imageUrl}
                 name={name}
+                className={className}
                 onError={handleImageError}
               />
             )}
-            <Initials name={name} size={size} resolvedRoles={resolvedRoles} />
+            <Initials
+              name={name}
+              size={size}
+              resolvedRoles={resolvedRoles}
+              className={className}
+            />
           </span>
         )}
       </ThemeContext.Consumer>

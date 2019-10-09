@@ -5,7 +5,7 @@ import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./stylesheet";
 
 export default function PointerPresenter(props) {
-  const { borderWidth, size } = props;
+  const { borderWidth, size, stylesheet: customStylesheet } = props;
   const height = size / 2;
   const width = size;
   const widthMidpoint = width / 2;
@@ -14,12 +14,14 @@ export default function PointerPresenter(props) {
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
         const styles = stylesheet(
-          { transitionStatus: null, anchorPoint: null },
+          {
+            transitionStatus: null,
+            anchorPoint: null,
+            stylesheet: customStylesheet
+          },
           resolvedRoles
         );
-        const cssStyles = props.stylesheet
-          ? props.stylesheet(styles, props, resolvedRoles)
-          : styles;
+
         return (
           <svg
             height={size.toString()}
@@ -27,7 +29,7 @@ export default function PointerPresenter(props) {
             width={width.toString()}
           >
             <polygon
-              className={css(cssStyles.pointerBorder)}
+              className={css(styles.pointerBorder)}
               points={[
                 `0,${height}`,
                 `${widthMidpoint},0`,
@@ -35,7 +37,7 @@ export default function PointerPresenter(props) {
               ].join(" ")}
             />
             <polygon
-              className={css(cssStyles.pointerBody)}
+              className={css(styles.pointerBody)}
               points={[
                 `${borderWidth},${height}`,
                 `${widthMidpoint},${borderWidth}`,
