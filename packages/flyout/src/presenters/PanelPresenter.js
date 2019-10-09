@@ -6,7 +6,12 @@ import { createCustomClassNames } from "@hig/utils";
 
 import stylesheet from "./stylesheet";
 
-export default function PanelPresenter({ children, onScroll, ...otherProps }) {
+export default function PanelPresenter({
+  children,
+  onScroll,
+  stylesheet: customStylesheet,
+  ...otherProps
+}) {
   const { className } = otherProps;
   const panelClassName = createCustomClassNames(className, "panel");
 
@@ -14,7 +19,11 @@ export default function PanelPresenter({ children, onScroll, ...otherProps }) {
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
         const styles = stylesheet(
-          { transitionStatus: null, anchorPoint: null },
+          {
+            transitionStatus: null,
+            anchorPoint: null,
+            stylesheet: customStylesheet
+          },
           resolvedRoles
         );
 
@@ -33,5 +42,6 @@ export default function PanelPresenter({ children, onScroll, ...otherProps }) {
 
 PanelPresenter.propTypes = {
   children: PropTypes.node,
-  onScroll: PropTypes.func
+  onScroll: PropTypes.func,
+  stylesheet: PropTypes.func
 };
