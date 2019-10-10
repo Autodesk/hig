@@ -1,3 +1,10 @@
+# [@hig/avatar-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.6...@hig/avatar@1.1.0) (2019-10-10)
+
+
+### Features
+
+* allow className to be passed down to Avatar ([6b7c894](https://github.com/Autodesk/hig/commit/6b7c894))
+
 # [@hig/avatar-v1.0.6](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.5...@hig/avatar@1.0.6) (2019-03-20)
 
 
