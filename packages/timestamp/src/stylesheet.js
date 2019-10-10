@@ -1,5 +1,6 @@
-export default function stylesheet(themeData, theme) {
-  return {
+export default function stylesheet(props, themeData, theme) {
+  const { stylesheet: customStylesheet } = props;
+  const styles = {
     timestamp: {
       color:
         theme === "hig-light"
@@ -12,4 +13,8 @@ export default function stylesheet(themeData, theme) {
       margin: 0
     }
   };
+
+  return customStylesheet
+    ? customStylesheet(styles, props, themeData, theme)
+    : styles;
 }

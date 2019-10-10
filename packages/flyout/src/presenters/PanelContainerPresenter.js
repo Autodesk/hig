@@ -7,7 +7,13 @@ import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
 export default function PanelContainerPresenter(props) {
-  const { children, innerRef, maxHeight, ...otherProps } = props;
+  const {
+    children,
+    innerRef,
+    maxHeight,
+    stylesheet: customStylesheet,
+    ...otherProps
+  } = props;
   const { className } = otherProps;
   const maxHeightInPixels = maxHeight ? `${maxHeight}px` : undefined;
   const panelContainerClassName = createCustomClassNames(
@@ -26,7 +32,8 @@ export default function PanelContainerPresenter(props) {
         const styles = stylesheet(
           {
             transitionStatus: null,
-            anchorPoint: null
+            anchorPoint: null,
+            stylesheet: customStylesheet
           },
           resolvedRoles,
           themeId
@@ -59,5 +66,7 @@ PanelContainerPresenter.propTypes = {
   /** The panel content */
   children: PropTypes.node,
   /** Max height of the panel */
-  maxHeight: PropTypes.number
+  maxHeight: PropTypes.number,
+  /** Function to modify the component's styles */
+  stylesheet: PropTypes.func
 };

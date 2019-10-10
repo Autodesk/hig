@@ -73,7 +73,9 @@ export default class Flyout extends Component {
      * If openOnHover is true, this prop will determine the delay
      * from when mouseEnter begins until the flyout visually opens
      */
-    openOnHoverDelay: PropTypes.number
+    openOnHoverDelay: PropTypes.number,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -85,14 +87,26 @@ export default class Flyout extends Component {
     /**
      * @param {PanelRendererPayload} payload
      */
-    panel({ innerRef, content, handleScroll, maxHeight, className }) {
+    panel({
+      innerRef,
+      content,
+      handleScroll,
+      maxHeight,
+      className,
+      stylesheet
+    }) {
       return (
         <PanelContainerPresenter
           innerRef={innerRef}
           maxHeight={maxHeight}
           className={className}
+          stylesheet={stylesheet}
         >
-          <PanelPresenter onScroll={handleScroll} className={className}>
+          <PanelPresenter
+            onScroll={handleScroll}
+            className={className}
+            stylesheet={stylesheet}
+          >
             {content}
           </PanelPresenter>
         </PanelContainerPresenter>
@@ -252,7 +266,7 @@ export default class Flyout extends Component {
    */
   createPanelPayload() {
     const { hideFlyout } = this;
-    const { maxHeight, onScroll, ...otherProps } = this.props;
+    const { maxHeight, onScroll, stylesheet, ...otherProps } = this.props;
     const { className } = otherProps;
 
     return {
@@ -261,7 +275,8 @@ export default class Flyout extends Component {
       content: this.renderContent(),
       handleScroll: onScroll,
       innerRef: this.refPanel,
-      className
+      className,
+      stylesheet
     };
   }
 
@@ -316,7 +331,7 @@ export default class Flyout extends Component {
       refPointer,
       refWrapper
     } = this;
-    const { openOnHoverDelay, pointer, ...otherProps } = this.props;
+    const { openOnHoverDelay, pointer, stylesheet, ...otherProps } = this.props;
     const { className } = otherProps;
     const panel = this.renderPanel({ transitionStatus });
     const {
@@ -335,6 +350,7 @@ export default class Flyout extends Component {
           <FlyoutPresenter
             anchorPoint={anchorPoint}
             className={className}
+            stylesheet={stylesheet}
             containerPosition={containerPosition}
             panel={panel}
             pointer={pointer}
