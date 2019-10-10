@@ -17,7 +17,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/avatar": "1.0.6",
+    "@hig/avatar": "1.1.0",
     "@hig/flyout": "^1.1.1",
     "@hig/icon-button": "^2.3.1",
     "@hig/icons": "^3.0.0",
