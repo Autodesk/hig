@@ -1,3 +1,11 @@
+# [@hig/timestamp-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/timestamp@1.0.2...@hig/timestamp@1.1.0) (2019-10-10)
+
+
+### Features
+
+* add stylesheet prop for Timestamp ([4e870c4](https://github.com/Autodesk/hig/commit/4e870c4))
+* allow className to be passed down to Timestamp ([5fda22a](https://github.com/Autodesk/hig/commit/5fda22a))
+
 # [@hig/timestamp-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/timestamp@1.0.1...@hig/timestamp@1.0.2) (2019-05-10)
 
 
