@@ -56,6 +56,8 @@ export default class Dropdown extends Component {
     onFocus: PropTypes.func,
     /**
      * An array of unique values of any type except `undefined`
+     * If you use an array of objects, the object must contain the property `item`,
+     * the option's disabled state can be controlled with a `disabled` property.
      */
     options: PropTypes.arrayOf(PropTypes.any),
     /**
@@ -67,6 +69,10 @@ export default class Dropdown extends Component {
      * option is passed as an argument. If any option has Option.render
      * prop present, that will take precedence and this
      * function will not be called for that option.
+     *
+     * In  addition to the option passed as an argument, props
+     * are also passed in that can be used for each option to help
+     * maintain some of the built-in `Dropdown` option functionality.
      *
      * Similarly if both formatOption and renderOption are provided,
      * renderOption will take precedence
@@ -276,7 +282,8 @@ export default class Dropdown extends Component {
     } = this.props;
 
     /**
-     * The `Wrapper` presenter is used as a function to avoid having to use Downshift's `getRootProps`
+     * The `Wrapper` presenter is used as a function to avoid having to
+     * use Downshift's `getRootProps`
      * @see https://github.com/paypal/downshift#getrootprops
      */
     return renderWrapper({
