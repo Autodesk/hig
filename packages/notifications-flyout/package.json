@@ -31,7 +31,7 @@
     "react-transition-group": "^2.3.0"
   },
   "devDependencies": {
-    "@hig/avatar": "^1.0.6",
+    "@hig/avatar": "^1.1.0",
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
