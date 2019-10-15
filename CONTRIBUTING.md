@@ -38,7 +38,7 @@ The HIG project accepts and greatly appreciates contributions. The project follo
 
 When contributing code, please also include appropriate tests as part of the pull request, and follow the same comment and coding style as the rest of the project. Take a look through the existing code for examples of the testing and style practices the project follows.
 
-Please view the [contribution example][] for an example of the recommended package structure.
+Please view the [contribution example][] for an example of the recommended package structure, and follow the guidelines in the HIG React [architecture document](ARCHITECTURE.md).
 
 [contribution example]: ./docs/sample-component
 
