@@ -36,8 +36,7 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
       }`,
       ...(indicatorPosition === indicatorPositions.RIGHT && {
         paddingLeft: themeData["accordion.header.indicatorRight.paddingLeft"],
-        paddingRight:
-          themeData["accordion.header.indicatorRight.paddingRight"]
+        paddingRight: themeData["accordion.header.indicatorRight.paddingRight"]
       }),
       fontFamily: themeData["accordion.header.fontFamily"],
       fontSize: themeData["accordion.header.fontSize"],
