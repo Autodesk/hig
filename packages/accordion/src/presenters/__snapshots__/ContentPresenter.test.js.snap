@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion/ContentPresenter renders collapsed content 1`] = `
+.emotion-0 {
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+<div
+  className="emotion-0"
+  onTransitionEnd={[Function]}
+>
+  test
+</div>
+`;
+
+exports[`Accordion/ContentPresenter renders expanded content 1`] = `
+.emotion-0 {
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+<div
+  className="emotion-0"
+  onTransitionEnd={[Function]}
+>
+  test
+</div>
+`;

@@ -1,3 +1,4 @@
+import AccordionPage from "./pages/AccordionPage";
 import AvatarPage from "./pages/AvatarPage";
 import BannerPage from "./pages/BannerPage";
 import ButtonsPage from "./pages/ButtonsPage";
@@ -22,6 +23,7 @@ import TooltipPage from "./pages/TooltipPage";
 import TypographyPage from "./pages/TypographyPage";
 
 export default [
+  { path: "/accordion/", component: AccordionPage, label: "Accordion" },
   { path: "/avatar/", component: AvatarPage, label: "Avatar" },
   { path: "/button/", component: ButtonsPage, label: "Button" },
   { path: "/banner/", component: BannerPage, label: "Banner" },
