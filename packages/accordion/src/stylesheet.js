@@ -31,19 +31,19 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
       backgroundColor: themeData["accordion.header.backgroundColor"],
       border: 0,
       outline: 0,
-      padding: `${themeData["accordion.header.verticalPadding"]} ${
-        themeData["accordion.header.horizontalPadding"]
+      padding: `${themeData["accordion.header.paddingVertical"]} ${
+        themeData["accordion.header.paddingHorizontal"]
       }`,
       ...(indicatorPosition === indicatorPositions.RIGHT && {
-        paddingLeft: themeData["accordion.header.indicatorOnRight.paddingLeft"],
+        paddingLeft: themeData["accordion.header.indicatorRight.paddingLeft"],
         paddingRight:
-          themeData["accordion.header.indicatorOnRight.paddingRight"]
+          themeData["accordion.header.indicatorRight.paddingRight"]
       }),
       fontFamily: themeData["accordion.header.fontFamily"],
       fontSize: themeData["accordion.header.fontSize"],
       fontWeight: themeData["accordion.header.fontWeight"],
       lineHeight: themeData["accordion.header.lineHeight"],
-      color: themeData["accordion.header.color"],
+      color: themeData["accordion.header.fontColor"],
       width: "100%",
       opacity: disabled ? themeData["component.disabled.opacity"] : "1"
     },
@@ -51,22 +51,22 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
       order: indicatorPosition === indicatorPositions.LEFT ? -1 : 1,
       flexGrow: 0,
       flexShrink: 0,
-      width: themeData["accordion.header.indicator.size"],
+      width: themeData["accordion.header.indicatorSize"],
       textAlign: "center",
       "> path": {
         fill:
           !disabled && hasHover
-            ? themeData["accordion.header.hover.indicator.color"]
-            : themeData["accordion.header.indicator.color"]
+            ? themeData["accordion.header.hover.indicatorColor"]
+            : themeData["accordion.header.indicatorColor"]
       },
       marginRight:
         indicatorPosition === indicatorPositions.LEFT
-          ? themeData["accordion.header.indicator.gutter"]
+          ? themeData["accordion.header.indicatorGutter"]
           : 0,
       marginLeft:
         indicatorPosition === indicatorPositions.LEFT
           ? 0
-          : themeData["accordion.header.indicator.gutter"],
+          : themeData["accordion.header.indicatorGutter"],
       transitionDuration,
       transform:
         indicator === indicators.CARET && !collapsed ? "rotate(90deg)" : "none"
