@@ -13,19 +13,19 @@ export default {
     value: { ref: "colorScheme.baseColor" },
     transform: { alpha: 0.1 }
   },
-  "accordion.header.verticalPadding": {
+  "accordion.header.paddingVertical": {
     type: LENGTH,
     value: { ref: "density.spacings.extraSmall" }
   },
-  "accordion.header.horizontalPadding": {
+  "accordion.header.paddingHorizontal": {
     type: LENGTH,
     value: { ref: "density.spacings.extraSmall" }
   },
-  "accordion.header.indicatorOnRight.paddingLeft": {
+  "accordion.header.indicatorRight.paddingLeft": {
     type: LENGTH,
     value: { ref: "density.spacings.small" }
   },
-  "accordion.header.indicatorOnRight.paddingRight": {
+  "accordion.header.indicatorRight.paddingRight": {
     type: LENGTH,
     value: { ref: "density.spacings.medium" }
   },
@@ -45,23 +45,23 @@ export default {
     type: LINE_HEIGHT,
     value: { ref: "basics.lineHeights.mediumExtraLarge" }
   },
-  "accordion.header.color": {
+  "accordion.header.fontColor": {
     type: COLOR,
     value: { ref: "colorScheme.textColor" }
   },
-  "accordion.header.indicator.size": {
+  "accordion.header.indicatorSize": {
     type: LENGTH,
     value: { ref: "basics.spacings.mediumMedium" }
   },
-  "accordion.header.indicator.gutter": {
+  "accordion.header.indicatorGutter": {
     type: LENGTH,
     value: { ref: "density.spacings.extraSmall" }
   },
-  "accordion.header.indicator.color": {
+  "accordion.header.indicatorColor": {
     type: COLOR,
     value: { ref: "colorScheme.iconColor" }
   },
-  "accordion.header.hover.indicator.color": {
+  "accordion.header.hover.indicatorColor": {
     type: COLOR,
     value: { ref: "colorScheme.textColor" }
   }
