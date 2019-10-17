@@ -1,0 +1,573 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion/Accordion renders default collapsed accordion 1`] = `
+.emotion-4 {
+  height: auto;
+  width: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(128,128,128,0.1);
+  border: 0;
+  outline: 0;
+  padding: 8px 8px;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.428571429;
+  color: #3c3c3c;
+  width: 100%;
+  opacity: 1;
+}
+
+.emotion-1 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0 {
+  fill: #808080;
+  pointer-events: none;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 16px;
+  text-align: center;
+  margin-right: 8px;
+  margin-left: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-0 > path {
+  fill: #808080;
+}
+
+.emotion-3 {
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+<div
+  className="emotion-4"
+>
+  <button
+    className="emotion-2"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    tabIndex="0"
+  >
+    <svg
+      className="emotion-0"
+      height="10px"
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        caret-right-m
+      </title>
+      <path
+        d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
+      />
+    </svg>
+    <div
+      className="emotion-1"
+    >
+      foo
+    </div>
+  </button>
+  <div
+    className="emotion-3"
+    onTransitionEnd={[Function]}
+  >
+    bar
+  </div>
+</div>
+`;
+
+exports[`Accordion/Accordion renders default expanded accordion 1`] = `
+.emotion-4 {
+  height: auto;
+  width: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(128,128,128,0.1);
+  border: 0;
+  outline: 0;
+  padding: 8px 8px;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.428571429;
+  color: #3c3c3c;
+  width: 100%;
+  opacity: 1;
+}
+
+.emotion-1 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.emotion-0 {
+  fill: #808080;
+  pointer-events: none;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 16px;
+  text-align: center;
+  margin-right: 8px;
+  margin-left: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.emotion-0 > * {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-0 > path {
+  fill: #808080;
+}
+
+<div
+  className="emotion-4"
+>
+  <button
+    className="emotion-2"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    tabIndex="0"
+  >
+    <svg
+      className="emotion-0"
+      height="10px"
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        caret-right-m
+      </title>
+      <path
+        d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
+      />
+    </svg>
+    <div
+      className="emotion-1"
+    >
+      foo
+    </div>
+  </button>
+  <div
+    className="emotion-3"
+    onTransitionEnd={[Function]}
+  >
+    bar
+  </div>
+</div>
+`;
+
+exports[`Accordion/Accordion renders indicator in the right 1`] = `
+.emotion-4 {
+  height: auto;
+  width: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(128,128,128,0.1);
+  border: 0;
+  outline: 0;
+  padding: 8px 8px;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.428571429;
+  color: #3c3c3c;
+  width: 100%;
+  opacity: 1;
+}
+
+.emotion-1 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0 {
+  fill: #808080;
+  pointer-events: none;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 16px;
+  text-align: center;
+  margin-right: 8px;
+  margin-left: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-0 > path {
+  fill: #808080;
+}
+
+.emotion-3 {
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+<div
+  className="emotion-4"
+>
+  <button
+    className="emotion-2"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    tabIndex="0"
+  >
+    <svg
+      className="emotion-0"
+      height="10px"
+      viewBox="0 0 10 10"
+      width="10px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        caret-right-m
+      </title>
+      <path
+        d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
+      />
+    </svg>
+    <div
+      className="emotion-1"
+    >
+      foo
+    </div>
+  </button>
+  <div
+    className="emotion-3"
+    onTransitionEnd={[Function]}
+  >
+    bar
+  </div>
+</div>
+`;
+
+exports[`Accordion/Accordion renders using operator as indicator 1`] = `
+.emotion-4 {
+  height: auto;
+  width: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(128,128,128,0.1);
+  border: 0;
+  outline: 0;
+  padding: 8px 8px;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.428571429;
+  color: #3c3c3c;
+  width: 100%;
+  opacity: 1;
+}
+
+.emotion-1 {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.emotion-0 {
+  fill: #808080;
+  pointer-events: none;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 16px;
+  text-align: center;
+  margin-right: 8px;
+  margin-left: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+  pointer-events: none;
+}
+
+.emotion-0 > path {
+  fill: #808080;
+}
+
+.emotion-3 {
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+<div
+  className="emotion-4"
+>
+  <button
+    className="emotion-2"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onMouseDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onMouseOver={undefined}
+    onMouseUp={[Function]}
+    tabIndex="0"
+  >
+    <svg
+      className="emotion-0"
+      height="16px"
+      viewBox="0 0 16 16"
+      width="16px"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <title>
+        operator-plus-s
+      </title>
+      <path
+        d="M7 7V2h2v5h5v2H9v5H7V9H2V7h5z"
+      />
+    </svg>
+    <div
+      className="emotion-1"
+    >
+      foo
+    </div>
+  </button>
+  <div
+    className="emotion-3"
+    onTransitionEnd={[Function]}
+  >
+    bar
+  </div>
+</div>
+`;

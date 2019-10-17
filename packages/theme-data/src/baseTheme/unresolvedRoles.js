@@ -3,6 +3,7 @@ import extendTheme from "../utils/extendTheme";
 import basics from "../basics";
 import system from "./system";
 
+import accordion from "./components/accordion";
 import avatar from "./components/avatar";
 import banner from "./components/banner";
 import button from "./components/button";
@@ -42,6 +43,7 @@ const baseThemeConfig = extendTheme(
     mapKeys(basics.spacings, key => `basics.spacings.${key}`),
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     mapKeys(system.density, key => `density.${key}`),
+    accordion,
     avatar,
     banner,
     button,
