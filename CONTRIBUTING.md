@@ -57,10 +57,12 @@ All pull requests for new features must go through the following process:
 
 There are two primary types of code contributions, which have somewhat different requirements. 
 * React Component
+  * Add a [Storybook](DEVELOPING.md#Storybook) integration for the component.
   * A [visual regression test](DEVELOPING.md#visual-regression-testing) must be added for the component.
+  * Add unit tests using the [Jest/Enzyme system](DEVELOPING.md#Unit-testing)
   * Include details on how to use the component in the README file. Use the button component as an example. This documentation is included in the storybook.
   * Follow the [JSDoc style guide](https://github.com/shri/JSDoc-Style-Guide) for documentation commenting conventions. These comments generate documentation in the storybook.
-* Theming Components
+* Theming Component
   * Include documentation on how to use the theming data in an application in the component README file.
 
 #### Fork the project
