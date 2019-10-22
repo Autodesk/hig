@@ -37,5 +37,5 @@ To implement theme support, components are required to use the [_ThemeContext_](
 
 ### CSS Stylesheets
 
-Every HIG React component should support passing in custom stylesheets as a prop. [Button](packages/button/src/Button.js) has a good example of how to do this.
+Every HIG React component should support passing in custom style overrides as a prop. The "stylesheet" prop is a function that returns a JSON style object. [TextArea](packages/text-area/src/customStylesheet.js) has a good example of a stylesheet function. HIG components use [emotion](https://github.com/emotion-js/emotion) as their css JavaScript library: .
 
