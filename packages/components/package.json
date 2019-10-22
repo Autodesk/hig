@@ -18,12 +18,13 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/avatar": "^1.0.5",
+    "@hig/accordion": "^1.0.0",
+    "@hig/avatar": "^1.1.0",
     "@hig/banner": "^2.1.1",
     "@hig/button": "^1.4.3",
     "@hig/checkbox": "^2.0.8",
     "@hig/dropdown": "^2.1.0",
-    "@hig/flyout": "^1.0.7",
+    "@hig/flyout": "^1.2.0",
     "@hig/icon-button": "^2.3.1",
     "@hig/icons": "^3.0.1",
     "@hig/modal": "^2.1.1",
@@ -40,14 +41,14 @@
     "@hig/slider": "^1.0.2",
     "@hig/spacer": "^1.0.8",
     "@hig/surface": "^1.0.0",
-    "@hig/tabs": "^1.0.3",
+    "@hig/tabs": "^1.1.0",
     "@hig/text-area": "^1.1.0",
     "@hig/text-link": "^1.0.0",
     "@hig/theme-context": "^3.0.0",
-    "@hig/theme-data": "^2.11.0",
+    "@hig/theme-data": "^2.13.0",
     "@hig/timestamp": "^1.0.2",
     "@hig/tooltip": "^1.0.4",
-    "@hig/top-nav": "^3.0.6",
+    "@hig/top-nav": "^3.0.7",
     "@hig/typography": "^1.0.3"
   },
   "peerDependencies": {

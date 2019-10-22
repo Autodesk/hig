@@ -17,15 +17,15 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/avatar": "^1.0.6",
-    "@hig/flyout": "^1.1.1",
+    "@hig/avatar": "^1.1.0",
+    "@hig/flyout": "^1.2.0",
     "@hig/utils": "^0.4.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.0",
-    "@hig/theme-data": "^2.11.0",
+    "@hig/theme-data": "^2.13.0",
     "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {

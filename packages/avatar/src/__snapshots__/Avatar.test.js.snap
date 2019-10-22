@@ -160,6 +160,68 @@ exports[`avatar/Avatar renders with an image 1`] = `
 </span>
 `;
 
+exports[`avatar/Avatar renders with className prop 1`] = `
+.emotion-3 {
+  background-color: #5d822c;
+  color: #ffffff;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 24px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-1 {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  font-size: 24px;
+}
+
+.emotion-0 {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+.emotion-2 {
+  width: 48px;
+  height: 48px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
+<span
+  aria-label="Avatar for Jon Snow"
+  className="emotion-3 my-class-a my-class-b"
+  role="img"
+>
+  <span
+    className="emotion-1 my-class-a__image-wrapper my-class-b__image-wrapper"
+  >
+    <img
+      alt="Avatar image of Jon Snow"
+      className="emotion-0 my-class-a__image my-class-b__image"
+      onError={[Function]}
+      src="http://placekitten.com/g/64/64"
+    />
+  </span>
+  <span
+    aria-hidden="true"
+    className="emotion-2 my-class-a__initials my-class-b__initials"
+  >
+    JS
+  </span>
+</span>
+`;
+
 exports[`avatar/Avatar renders without props 1`] = `
 .emotion-1 {
   background-color: #6ac0e7;

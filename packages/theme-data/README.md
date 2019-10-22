@@ -51,7 +51,7 @@ console.log(lightGrayMediumDensityTheme);
 
 ### Access theme data as JSON
 ```js
-import lightGrayMediumDensityTheme from '@hig/theme-data/build/json/lightGrayMediumDensityTheme/resolvedRoles.json';
+import lightGrayMediumDensityTheme from '@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json';
 
 console.log(lightGrayMediumDensityTheme);
 // {

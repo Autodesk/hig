@@ -1,3 +1,10 @@
+# [@hig/top-nav-v3.0.7](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.6...@hig/top-nav@3.0.7) (2019-10-17)
+
+
+### Bug Fixes
+
+* **package:** update [@hig](https://github.com/hig)/avatar to version 1.1.0 ([6e90684](https://github.com/Autodesk/hig/commit/6e90684))
+
 # [@hig/top-nav-v3.0.6](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.5...@hig/top-nav@3.0.6) (2019-08-02)
 
 

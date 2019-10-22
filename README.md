@@ -57,6 +57,7 @@ Theme data is a representation of the HIG visual design language in the form of 
 
 Each HIG pattern is implemented as a set of React components. Each pattern is published to NPM individually under the @hig namespace.
 
+- [`<Accordion`](./packages/accordion/README.md) - Make content-heavy pages appear less so by vertically stacking items in lists that users can expand or contract
 - [`<Avatar>`](./packages/avatar/README.md) - A visual representation of a customer's identity
 - [`<Banner>`](./packages/banner/README.md) - An alert that requires a user action
 - [`<Button>`](./packages/button/README.md) - Trigger actions or changes

@@ -36,6 +36,7 @@ export default function FlyoutPresenter(props) {
     refPointer,
     refWrapper,
     transitionStatus,
+    stylesheet: customStylesheet,
     ...otherProps
   } = props;
   const { className } = otherProps;
@@ -54,7 +55,7 @@ export default function FlyoutPresenter(props) {
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
         const styles = stylesheet(
-          { transitionStatus, anchorPoint },
+          { transitionStatus, anchorPoint, stylesheet: customStylesheet },
           resolvedRoles
         );
 
@@ -81,8 +82,9 @@ export default function FlyoutPresenter(props) {
                 anchorPoint={anchorPoint}
                 style={pointerStyle}
                 className={className}
+                stylesheet={customStylesheet}
               >
-                {pointer}
+                {pointer || <PointerPresenter stylesheet={customStylesheet} />}
               </PointerWrapperPresenter>
               {panel}
             </div>
@@ -96,7 +98,6 @@ export default function FlyoutPresenter(props) {
 FlyoutPresenter.defaultProps = {
   anchorPoint: DEFAULT_COORDINATES.anchorPoint,
   containerPosition: DEFAULT_COORDINATES.containerPosition,
-  pointer: <PointerPresenter />,
   pointerPosition: DEFAULT_COORDINATES.pointerPosition,
   transitionStatus: transitionStatuses.EXITED
 };
@@ -127,5 +128,7 @@ FlyoutPresenter.propTypes = {
   /** The status of the container transition */
   transitionStatus: PropTypes.oneOf(AVAILABLE_TRANSITION_STATUSES),
   /** Target component to open the flyout */
-  children: PropTypes.node
+  children: PropTypes.node,
+  /** Function to modify the component's styles */
+  stylesheet: PropTypes.func
 };

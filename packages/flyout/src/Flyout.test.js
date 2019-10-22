@@ -101,6 +101,28 @@ describe("flyout/Flyout", () => {
           ...basicProps,
           className: "my-class"
         }
+      },
+      {
+        desc: "renders with custom stylesheet function",
+        props: {
+          ...basicProps,
+          stylesheet(styles) {
+            return {
+              ...styles,
+              flyoutContainer: {
+                ...styles.flyoutContainer,
+                opacity: "0.3"
+              },
+              panel: {
+                ...styles.panel,
+                backgroundColor: "orange"
+              },
+              pointerBody: {
+                fill: "orange"
+              }
+            };
+          }
+        }
       }
     ]);
   });

@@ -2,6 +2,7 @@
   "groups": {
     "default": {
       "packages": [
+        "packages/accordion/package.json",
         "packages/avatar/package.json",
         "packages/banner/package.json",
         "packages/button/package.json",

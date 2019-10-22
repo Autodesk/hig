@@ -1,3 +1,10 @@
+# [@hig/flyout-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/flyout@1.1.1...@hig/flyout@1.2.0) (2019-10-10)
+
+
+### Features
+
+* add stylesheet prop to Flyout ([517a121](https://github.com/Autodesk/hig/commit/517a121))
+
 # [@hig/flyout-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/flyout@1.1.0...@hig/flyout@1.1.1) (2019-08-02)
 
 

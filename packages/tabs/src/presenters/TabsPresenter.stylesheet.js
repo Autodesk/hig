@@ -1,6 +1,16 @@
-import { alignments } from "../alignments";
+import { alignments, variants, orientations } from "../constants";
 
-export default function stylesheet({ align }, themeData) {
+function getBackgroundColor(variant, themeData) {
+  if (variant === variants.BOX) {
+    return themeData["tabs.box.wrapper.backgroundColor"];
+  }
+  if (variant === variants.CANVAS) {
+    return themeData["tabs.canvas.wrapper.backgroundColor"];
+  }
+  return "transparent";
+}
+
+export default function stylesheet({ align, variant, orientation }, themeData) {
   const justifyContent = {
     [alignments.LEFT]: "flex-start",
     [alignments.CENTER]: "center",
@@ -8,15 +18,27 @@ export default function stylesheet({ align }, themeData) {
   };
 
   return {
-    tabs: {
+    tabsWrapper: {
       boxSizing: "border-box",
-      flexGrow: 1,
+      flexGrow: 0,
+      flexShrink: 0,
       display: "flex",
-      padding: `${themeData["density.spacings.extraExtraSmall"]} 0 ${
-        themeData["density.spacings.extraSmall"]
-      } 0`,
+      padding: 0,
       margin: 0,
-      justifyContent: justifyContent[align]
+      justifyContent: justifyContent[align],
+      borderBottom:
+        variant === variants.UNDERLINE
+          ? `${themeData["tabs.underline.wrapper.borderBottomWidth"]} solid ${
+              themeData["tabs.underline.wrapper.borderBottomColor"]
+            }`
+          : 0,
+      backgroundColor: getBackgroundColor(variant, themeData),
+
+      ...(orientation === orientations.VERTICAL && {
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "stretch"
+      })
     }
   };
 }

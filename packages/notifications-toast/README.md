@@ -12,11 +12,10 @@ Read more about when and how to use the Toast component [on the internal wiki](h
 yarn add @hig/notifications-toast @hig/theme-context @hig/theme-data
 ```
 
-### Import the component and CSS
+### Import the component
 
 ```js
 import NotificationsToast from '@hig/notifications-toast';
-import '@hig/notifications-toast/build/index.css';
 ```
 
 ## Basic usage
