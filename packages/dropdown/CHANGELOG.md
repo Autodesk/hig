@@ -1,3 +1,10 @@
+# [@hig/dropdown-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.1.0...@hig/dropdown@2.2.0) (2019-10-23)
+
+
+### Features
+
+* allow for disabled options ([64ae4ca](https://github.com/Autodesk/hig/commit/64ae4ca))
+
 # [@hig/dropdown-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.0.7...@hig/dropdown@2.1.0) (2019-09-06)
 
 
