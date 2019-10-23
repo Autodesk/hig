@@ -23,7 +23,7 @@ module.exports = {
   },
   rules: {
     "import/no-extraneous-dependencies": 0,
-    "max-len": [1, { code: 100 }],
+    "max-len": [1, { code: 200 }],
     "no-underscore-dangle": 0,
     "prettier/prettier": "error",
     "react/jsx-filename-extension": 0,

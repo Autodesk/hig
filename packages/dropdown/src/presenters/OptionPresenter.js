@@ -9,6 +9,7 @@ import stylesheet from "./OptionPresenter.stylesheet";
 function OptionWrapper(props) {
   const {
     children,
+    disabled,
     id,
     onClick,
     onMouseDown,
@@ -25,8 +26,12 @@ function OptionWrapper(props) {
         <div
           aria-selected={selected}
           className={css(
-            stylesheet({ selected, highlighted, ...props }, resolvedRoles)
+            stylesheet(
+              { disabled, selected, highlighted, ...props },
+              resolvedRoles
+            )
           )}
+          disabled={disabled}
           id={id}
           onClick={handleClick}
           onKeyDown={handleKeyDown}
@@ -44,6 +49,7 @@ function OptionWrapper(props) {
 
 OptionWrapper.propTypes = {
   children: PropTypes.node,
+  disabled: PropTypes.bool,
   highlighted: PropTypes.bool,
   id: PropTypes.string,
   onClick: PropTypes.func,
@@ -59,7 +65,8 @@ export default class OptionPresenter extends Component {
      */
     children: PropTypes.node,
     /**
-     * Indicates the option is currently highlighted. This is comparable to hover state, but useful when interacting by keyboard.
+     * Indicates the option is currently highlighted.
+     * This is comparable to hover state, but useful when interacting by keyboard.
      */
     highlighted: PropTypes.bool,
     /**

@@ -16,7 +16,6 @@ const knobLabels = {
   multiple: "Multiple",
   onBlur: "onBlur",
   onChange: "onChange",
-  onClickOutside: "onClickOutside",
   onFocus: "onFocus",
   options: "Options",
   value: "Value"
@@ -61,7 +60,6 @@ export default function getKnobs(props) {
     multiple: boolean(knobLabels.multiple, multiple, knobGroupIds.basic),
     onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
-    onClickOutside: action(knobLabels.onClickOutside),
     onFocus: action(knobLabels.onFocus),
     options: object(knobLabels.options, options, knobGroupIds.basic)
   };
