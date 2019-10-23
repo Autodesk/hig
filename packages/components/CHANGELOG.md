@@ -1,3 +1,10 @@
+# [@hig/components-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/components@2.0.1...@hig/components@2.1.0) (2019-10-23)
+
+
+### Features
+
+* add accordion component ([f58e6cb](https://github.com/Autodesk/hig/commit/f58e6cb))
+
 # [@hig/components-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/components@2.0.0...@hig/components@2.0.1) (2019-07-16)
 
 
