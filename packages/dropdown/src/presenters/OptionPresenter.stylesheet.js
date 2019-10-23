@@ -17,11 +17,14 @@ export default function stylesheet(props, themeData) {
     fontSize: themeData[`typography.body.fontSize`],
     lineHeight: themeData[`typography.body.lineHeight`],
     backgroundColor: "transparent",
-    ...(props.highlighted
+    ...(props.highlighted && !props.disabled
       ? { backgroundColor: themeData["menu.item.hover.backgroundColor"] }
       : null),
     ...(props.selected
       ? { backgroundColor: themeData["menu.item.focus.backgroundColor"] }
+      : null),
+    ...(props.disabled
+      ? { opacity: themeData["component.disabled.opacity"] }
       : null)
   };
 }

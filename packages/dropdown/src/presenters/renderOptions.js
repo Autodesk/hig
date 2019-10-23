@@ -29,22 +29,25 @@ function createOptionRenderer(downshift, renderOption) {
   const isSelected = createSelectedDeterminer(downshift);
 
   return (option, index) => {
+    const itemProps = getItemProps({
+      index,
+      key: `option-${index}`,
+      item: option && option.item ? option.item : option,
+      disabled: option && option.disabled ? option.disabled : false,
+      selected: isSelected(option),
+      highlighted: highlightedIndex === index
+    });
     let result;
     if (option && option.render !== undefined) {
-      result = option.render(option);
+      result = option.render(option, itemProps);
     } else if (renderOption !== undefined) {
-      result = renderOption(option);
+      result = renderOption(option, itemProps);
     } else {
-      const itemProps = getItemProps({
-        index,
-        key: `option-${index}`,
-        item: option,
-        selected: isSelected(option),
-        highlighted: highlightedIndex === index
-      });
-
+      const optionLabel = option && option.item ? option.item : option;
       result = (
-        <OptionPresenter {...itemProps}>{formatOption(option)}</OptionPresenter>
+        <OptionPresenter {...itemProps}>
+          {formatOption(optionLabel)}
+        </OptionPresenter>
       );
     }
     return result;

@@ -41,6 +41,7 @@ exports[`Dropdown/presenters/OptionPresenter renders with all props 1`] = `
 <div
   aria-selected={true}
   className="emotion-1"
+  disabled={undefined}
   id={undefined}
   onClick={[Function]}
   onKeyDown={[Function]}
@@ -105,6 +106,7 @@ exports[`Dropdown/presenters/OptionPresenter renders without props 1`] = `
 <div
   aria-selected={undefined}
   className="emotion-0"
+  disabled={undefined}
   id={undefined}
   onClick={undefined}
   onKeyDown={undefined}
