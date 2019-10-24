@@ -1,3 +1,10 @@
+# [@hig/tabs-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/tabs@1.1.0...@hig/tabs@1.1.1) (2019-10-24)
+
+
+### Bug Fixes
+
+* tab with zero index not trigger to active in Tabs ([9715472](https://github.com/Autodesk/hig/commit/9715472))
+
 # [@hig/tabs-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/tabs@1.0.3...@hig/tabs@1.1.0) (2019-09-19)
 
 
