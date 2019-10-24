@@ -136,7 +136,7 @@ class Tabs extends Component {
 
     const nextTabs = createTabs(children);
     const nextActiveTabIndex = nextTabs.findIndex(({ props }) => props.active);
-    if (nextActiveTabIndex > 0 && nextActiveTabIndex !== prevActiveTabIndex) {
+    if (nextActiveTabIndex >= 0 && nextActiveTabIndex !== prevActiveTabIndex) {
       newState.activeTabIndex = nextActiveTabIndex;
       hasStateChanged = true;
     }
