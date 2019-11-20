@@ -78,7 +78,7 @@ export default function stylesheet(themeData) {
       width: `276px`,
       maxHeight: `360px`,
       overflowY: `auto`,
-      "-ms-overflow-style": `-ms-autohiding-scrollbar`
+      msOverflowStyle: `-ms-autohiding-scrollbar`
     }
   };
 }
