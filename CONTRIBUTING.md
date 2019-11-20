@@ -76,7 +76,7 @@ The name of your branch should include the type of change it holds, a brief desc
 E.g. Fixing a typo in the readme as discussed in issue #101 would have a branch name like this:
 
 ```
-bugs/fix-readme-type-101
+docs/fix-readme-type-101
 ```
 
 #### Develop new functionality
