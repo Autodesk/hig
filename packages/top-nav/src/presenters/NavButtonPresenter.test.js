@@ -1,10 +1,11 @@
 import React from "react";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 
-import HelpButtonPresenter from "./HelpButtonPresenter";
+import { List24 } from "@hig/icons";
+import NavButtonPresenter from "./NavButtonPresenter";
 
-describe("top-nav/presenters/HelpButtonPresenter", () => {
-  takeSnapshotsOf(HelpButtonPresenter, [
+describe("top-nav/presenters/NavActionButtonPresenter", () => {
+  takeSnapshotsOf(NavButtonPresenter, [
     {
       description: "renders with no props",
       props: {}
@@ -16,10 +17,12 @@ describe("top-nav/presenters/HelpButtonPresenter", () => {
       }
     },
     {
-      description: "renders with children and onClick",
+      description: "renders with children, icon, onClick and title",
       props: {
         children: <div className="logo" />,
-        onClick: () => {}
+        onClick: () => {},
+        icon: <List24 />,
+        title: "title"
       }
     }
   ]);

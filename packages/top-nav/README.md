@@ -39,3 +39,31 @@ import '@hig/top-nav/build/index.css';
 ```jsx
 <TopNav logo={<Logo />} />
 ```
+
+You can set right interactions as follows using the predefined actions ProfileAction, HelpAction and NotificationsAction:
+```jsx
+<TopNav
+  logo={<Logo />}
+  rightActions={
+    <Interactions>
+      <NotificationsAction />
+      <HelpAction />
+      <ProfileAction />
+    </Interactions>
+  }
+/>
+```
+
+You can create a custom action by using the NavAction component and adding it to a right interaction, be sure to set the title and icon (the default is the list icon):
+```jsx
+<TopNav
+  logo={<Logo />}
+  rightActions={
+    <Interactions>
+      <NavAction title="Custom Nav Action" icon={<Icon/>}>
+        <div>Your Content here</div>
+      </NavAction>
+    </Interactions>
+  }
+/>
+```

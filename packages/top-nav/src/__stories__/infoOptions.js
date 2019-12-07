@@ -7,11 +7,20 @@ import TopNav, {
   HelpAction,
   Interactions,
   Logo,
-  ProfileAction
+  ProfileAction,
+  NavAction
 } from "../index";
 
 export default {
-  propTables: [TopNav, Action, HelpAction, Interactions, Logo, ProfileAction],
+  propTables: [
+    TopNav,
+    Action,
+    HelpAction,
+    Interactions,
+    Logo,
+    ProfileAction,
+    NavAction
+  ],
   source: true,
   text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
 };
