@@ -8,6 +8,7 @@
   "version": "1.0.1",
   "scripts": {
     "build": "lerna run build --stream",
+    "start": "cd packages/storybook && yarn storybook",
     "create-dependency-hash": "cat yarn.lock > .dependency-hash && ls ./packages >> .dependency-hash",
     "lint": "lerna run lint --stream",
     "test": "jest --watch",

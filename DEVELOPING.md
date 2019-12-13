@@ -67,6 +67,15 @@ yarn
 yarn build
 ```
 
+## Watch mode
+
+To recompile/reload browser automatically on every changes
+
+```bash
+yarn start
+```
+Go to http://localhost:9001/
+
 ## Project structure
 
 ### Monorepo
