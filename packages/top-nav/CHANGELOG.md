@@ -1,3 +1,15 @@
+# [@hig/top-nav-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.7...@hig/top-nav@3.1.0) (2019-12-16)
+
+
+### Bug Fixes
+
+* Updated stylesheet to use camelCase for top nav component ([08c5662](https://github.com/Autodesk/hig/commit/08c5662))
+
+
+### Features
+
+* New pull down in top bar with configurable icon, title text and content box ([87731ca](https://github.com/Autodesk/hig/commit/87731ca))
+
 # [@hig/top-nav-v3.0.7](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.6...@hig/top-nav@3.0.7) (2019-10-17)
 
 
