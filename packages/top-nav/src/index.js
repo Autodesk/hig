@@ -7,6 +7,7 @@ import LogoPresenter from "./presenters/LogoPresenter";
 import LogoTextPresenter from "./presenters/LogoTextPresenter";
 import NotificationsAction from "./NotificationsAction";
 import ProfileAction from "./ProfileAction";
+import NavAction from "./NavAction";
 import SeparatorPresenter from "./presenters/SeparatorPresenter";
 import TopNavPresenter from "./presenters/TopNavPresenter";
 
@@ -36,6 +37,7 @@ export {
   NotificationsAction,
   ProfileAction,
   ProfileContent,
+  NavAction,
   ActionPresenter as Action,
   LogoPresenter as Logo,
   LogoTextPresenter as LogoText,

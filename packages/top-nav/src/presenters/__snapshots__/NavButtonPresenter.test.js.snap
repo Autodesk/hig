@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`top-nav/presenters/HelpButtonPresenter  1`] = `
+exports[`top-nav/presenters/NavActionButtonPresenter  1`] = `
 .emotion-1 {
   background-color: transparent;
   border-color: transparent;
@@ -62,7 +62,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  1`] = `
   onMouseLeave={[Function]}
   onMouseUp={[Function]}
   tabIndex="0"
-  title="View help"
+  title=""
 >
   <svg
     className="emotion-0"
@@ -72,24 +72,16 @@ exports[`top-nav/presenters/HelpButtonPresenter  1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>
-      help-24
+      list-24
     </title>
     <path
-      d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
-    />
-    <path
-      d="M12.35 6.33A3.15 3.15 0 0 0 9 9.23v.24l1.49.32v-.25c.23-1.19.83-1.77 1.83-1.77a1.77 1.77 0 0 1 1.15.38 1.18 1.18 0 0 1 .46 1 1.45 1.45 0 0 1-.48 1.08 6 6 0 0 1-.8.51 3.91 3.91 0 0 0-.77.5 1.55 1.55 0 0 0-.32.48 1.79 1.79 0 0 0-.17.6c0 .19-.08 1.44-.08 2.15v.25h1.5v-1.83a.89.89 0 0 1 .12-.55 2.73 2.73 0 0 1 .83-.55 2.91 2.91 0 0 0 1.85-2.61 2.66 2.66 0 0 0-.91-2.06 3.41 3.41 0 0 0-2.35-.79z"
-    />
-    <circle
-      cx="12"
-      cy="17"
-      r="1"
+      d="M5.08 10h-3v4h3A.94.94 0 0 0 6 13v-2a.94.94 0 0 0-.88-1zM5 13H3v-2h2zm.08-10h-3v4h3A.94.94 0 0 0 6 6V4a.94.94 0 0 0-.88-1zM5 6H3V4h2zm.08 11h-3v4h3A.94.94 0 0 0 6 20v-2a.94.94 0 0 0-.88-1zM5 20H3v-2h2zM21 6H8V4h13zm.08-3H7v4h14.08A.94.94 0 0 0 22 6V4a.94.94 0 0 0-.88-1zM21 20H8v-2h13zm.08-3H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zm0-7H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zM21 13H8v-2h13z"
     />
   </svg>
 </button>
 `;
 
-exports[`top-nav/presenters/HelpButtonPresenter  2`] = `
+exports[`top-nav/presenters/NavActionButtonPresenter  2`] = `
 .emotion-1 {
   background-color: transparent;
   border-color: transparent;
@@ -151,7 +143,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  2`] = `
   onMouseLeave={[Function]}
   onMouseUp={[Function]}
   tabIndex="0"
-  title="View help"
+  title=""
 >
   <svg
     className="emotion-0"
@@ -161,24 +153,16 @@ exports[`top-nav/presenters/HelpButtonPresenter  2`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>
-      help-24
+      list-24
     </title>
     <path
-      d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
-    />
-    <path
-      d="M12.35 6.33A3.15 3.15 0 0 0 9 9.23v.24l1.49.32v-.25c.23-1.19.83-1.77 1.83-1.77a1.77 1.77 0 0 1 1.15.38 1.18 1.18 0 0 1 .46 1 1.45 1.45 0 0 1-.48 1.08 6 6 0 0 1-.8.51 3.91 3.91 0 0 0-.77.5 1.55 1.55 0 0 0-.32.48 1.79 1.79 0 0 0-.17.6c0 .19-.08 1.44-.08 2.15v.25h1.5v-1.83a.89.89 0 0 1 .12-.55 2.73 2.73 0 0 1 .83-.55 2.91 2.91 0 0 0 1.85-2.61 2.66 2.66 0 0 0-.91-2.06 3.41 3.41 0 0 0-2.35-.79z"
-    />
-    <circle
-      cx="12"
-      cy="17"
-      r="1"
+      d="M5.08 10h-3v4h3A.94.94 0 0 0 6 13v-2a.94.94 0 0 0-.88-1zM5 13H3v-2h2zm.08-10h-3v4h3A.94.94 0 0 0 6 6V4a.94.94 0 0 0-.88-1zM5 6H3V4h2zm.08 11h-3v4h3A.94.94 0 0 0 6 20v-2a.94.94 0 0 0-.88-1zM5 20H3v-2h2zM21 6H8V4h13zm.08-3H7v4h14.08A.94.94 0 0 0 22 6V4a.94.94 0 0 0-.88-1zM21 20H8v-2h13zm.08-3H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zm0-7H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zM21 13H8v-2h13z"
     />
   </svg>
 </button>
 `;
 
-exports[`top-nav/presenters/HelpButtonPresenter  3`] = `
+exports[`top-nav/presenters/NavActionButtonPresenter  3`] = `
 .emotion-1 {
   background-color: transparent;
   border-color: transparent;
@@ -240,7 +224,7 @@ exports[`top-nav/presenters/HelpButtonPresenter  3`] = `
   onMouseLeave={[Function]}
   onMouseUp={[Function]}
   tabIndex="0"
-  title="View help"
+  title="title"
 >
   <svg
     className="emotion-0"
@@ -250,18 +234,10 @@ exports[`top-nav/presenters/HelpButtonPresenter  3`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <title>
-      help-24
+      list-24
     </title>
     <path
-      d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
-    />
-    <path
-      d="M12.35 6.33A3.15 3.15 0 0 0 9 9.23v.24l1.49.32v-.25c.23-1.19.83-1.77 1.83-1.77a1.77 1.77 0 0 1 1.15.38 1.18 1.18 0 0 1 .46 1 1.45 1.45 0 0 1-.48 1.08 6 6 0 0 1-.8.51 3.91 3.91 0 0 0-.77.5 1.55 1.55 0 0 0-.32.48 1.79 1.79 0 0 0-.17.6c0 .19-.08 1.44-.08 2.15v.25h1.5v-1.83a.89.89 0 0 1 .12-.55 2.73 2.73 0 0 1 .83-.55 2.91 2.91 0 0 0 1.85-2.61 2.66 2.66 0 0 0-.91-2.06 3.41 3.41 0 0 0-2.35-.79z"
-    />
-    <circle
-      cx="12"
-      cy="17"
-      r="1"
+      d="M5.08 10h-3v4h3A.94.94 0 0 0 6 13v-2a.94.94 0 0 0-.88-1zM5 13H3v-2h2zm.08-10h-3v4h3A.94.94 0 0 0 6 6V4a.94.94 0 0 0-.88-1zM5 6H3V4h2zm.08 11h-3v4h3A.94.94 0 0 0 6 20v-2a.94.94 0 0 0-.88-1zM5 20H3v-2h2zM21 6H8V4h13zm.08-3H7v4h14.08A.94.94 0 0 0 22 6V4a.94.94 0 0 0-.88-1zM21 20H8v-2h13zm.08-3H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zm0-7H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zM21 13H8v-2h13z"
     />
   </svg>
 </button>

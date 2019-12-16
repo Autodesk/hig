@@ -11,7 +11,8 @@ import TopNav, {
   LogoText,
   NotificationsAction,
   ProfileAction,
-  ProfileContent
+  ProfileContent,
+  NavAction
 } from "../index";
 import AccountLogo from "./accounts-logo.svg";
 import infoOptions from "./infoOptions";
@@ -85,6 +86,36 @@ storybook.add(
               AUTODESK <strong>HIG</strong>
             </LogoText>
           </Logo>
+        }
+      />
+    </KnobbedThemeProvider>
+  ))
+);
+
+storybook.add(
+  "using a custom NavAction",
+  withInfo(infoOptions)(() => (
+    <KnobbedThemeProvider>
+      <TopNav
+        logo={
+          <Logo link="https://autodesk.com" label="Autodesk HIG">
+            <LogoText>
+              AUTODESK <strong>HIG</strong>
+            </LogoText>
+          </Logo>
+        }
+        rightActions={
+          <Interactions>
+            <NavAction title="Custom Nav Action">
+              <div>
+                <h3>Navigation Action</h3>
+                <p>
+                  You can put what ever you want in here. You can also change
+                  the icon and the title of the button.
+                </p>
+              </div>
+            </NavAction>
+          </Interactions>
         }
       />
     </KnobbedThemeProvider>
