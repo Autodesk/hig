@@ -97,13 +97,13 @@ class Tabs extends Component {
      */
     children: PropTypes.node,
     /**
-     * Sets the initial active tab. Overrides the deprecated active property on
-     * the Tab component.
+     * Sets the initial active tab.
+     * Overrides the deprecated active property on the Tab component.
      */
     defaultActiveTabIndex: PropTypes.number,
     /**
-     * Control the active tab. Overrides the deprecated active property on
-     * the Tab component.
+     * Control the active tab.
+     * Overrides the deprecated active property on the Tab component.
      */
     activeTabIndex: PropTypes.number,
     /**
