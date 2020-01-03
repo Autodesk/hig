@@ -31,6 +31,7 @@ const DEFAULT_HOVERED_TAB_INDEX = -1;
 /**
  * @typedef {Object} TabsProps
  * @property {string} [align]
+ * @property {string} [className]
  * @property {string} [variant]
  * @property {string} [orientation]
  * @property {bool} [showTabDivider]
@@ -77,6 +78,10 @@ class Tabs extends Component {
      * When variant is set to "canvas", the effective alignment will always be "left"
      */
     align: PropTypes.oneOf(AVAILABLE_ALIGNMENTS),
+    /**
+     * CSS class to apply
+     */
+    className: PropTypes.string,
     /**
      * The list orientation of the tabs
      * Vertical tabs only works when variant is set to "box"
@@ -142,7 +147,7 @@ class Tabs extends Component {
    * @returns {TabsState | null}
    */
   static getDerivedStateFromProps(nextProps, prevState) {
-    const { children, align, variant, orientation, showTabDivider } = nextProps;
+    const { align, variant, orientation, showTabDivider } = nextProps;
     const {
       effectiveAlign: prevEffectiveAlign,
       effectiveOrientation: prevEffectiveOrientation,
@@ -189,9 +194,17 @@ class Tabs extends Component {
     return null;
   }
 
-  /** @returns {TabMeta[]} */
-  getTabs() {
-    return createTabs(this.props.children);
+  /**
+   * @param {number} nextActiveTabIndex
+   * @param {TabMeta} tab
+   */
+  onTabSelection(selectedTabIndex, { disabled }) {
+    this.props.onTabChange(selectedTabIndex);
+
+    const prevActiveTabIndex = this.getActiveTabIndex();
+    if (!disabled && prevActiveTabIndex !== selectedTabIndex) {
+      this.setState({ activeTabIndex: selectedTabIndex });
+    }
   }
 
   /**
@@ -210,17 +223,9 @@ class Tabs extends Component {
     return this.getTabs()[this.getActiveTabIndex()];
   }
 
-  /**
-   * @param {number} nextActiveTabIndex
-   * @param {TabMeta} tab
-   */
-  onTabSelection(selectedTabIndex, { disabled }) {
-    this.props.onTabChange(selectedTabIndex);
-
-    const prevActiveTabIndex = this.getActiveTabIndex();
-    if (!disabled && prevActiveTabIndex !== selectedTabIndex) {
-      this.setState({ activeTabIndex: selectedTabIndex });
-    }
+  /** @returns {TabMeta[]} */
+  getTabs() {
+    return createTabs(this.props.children);
   }
 
   /**

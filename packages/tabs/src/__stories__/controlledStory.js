@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import Tabs, { Tab } from "../index";
-import Button from "@hig/Button";
+import Button from "@hig/button";
 import RichText from "@hig/rich-text";
+
+import Tabs, { Tab } from "../index";
 
 export default class ControlledTabs extends Component {
   state = {
