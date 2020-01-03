@@ -83,7 +83,9 @@ function getTabBackground(
 function getContentWrapperWidth({ label, icon, closable }, themeData) {
   if (label) return "auto";
   if (icon && closable) {
-    return `calc(${themeData["tabs.general.icon.size"]} + ${themeData["tabs.general.icon.gutter"]} + ${themeData["tabs.general.closeButton.size"]})`;
+    return `calc(${themeData["tabs.general.icon.size"]} + ${
+      themeData["tabs.general.icon.gutter"]
+    } + ${themeData["tabs.general.closeButton.size"]})`;
   }
   if (icon) return themeData["tabs.general.icon.size"];
 
@@ -130,16 +132,22 @@ export default function stylesheet(props, themeData) {
       },
 
       ...(variant === variants.UNDERLINE && {
-        marginBottom: `-${themeData["tabs.underline.wrapper.borderBottomWidth"]}`,
+        marginBottom: `-${
+          themeData["tabs.underline.wrapper.borderBottomWidth"]
+        }`,
         padding: `0 0 ${themeData["tabs.underline.tab.paddingBottom"]} 0`
       }),
 
       ...(variant === variants.BOX && {
-        padding: `${themeData["tabs.box.tab.verticalPadding"]} ${themeData["tabs.box.tab.horizontalPadding"]}`
+        padding: `${themeData["tabs.box.tab.verticalPadding"]} ${
+          themeData["tabs.box.tab.horizontalPadding"]
+        }`
       }),
 
       ...(variant === variants.CANVAS && {
-        padding: `${themeData["tabs.canvas.tab.verticalPadding"]} ${themeData["tabs.canvas.tab.horizontalPadding"]}`,
+        padding: `${themeData["tabs.canvas.tab.verticalPadding"]} ${
+          themeData["tabs.canvas.tab.horizontalPadding"]
+        }`,
         transform: "skewX(-23deg)",
         transformOrigin: "0 100%"
       })
@@ -165,12 +173,16 @@ export default function stylesheet(props, themeData) {
       textAlign: "center",
       paddingLeft:
         icon && variant !== variants.UNDERLINE
-          ? `calc(${themeData["tabs.general.icon.size"]} + ${themeData["tabs.general.icon.gutter"]})`
+          ? `calc(${themeData["tabs.general.icon.size"]} + ${
+              themeData["tabs.general.icon.gutter"]
+            })`
           : "0",
 
       paddingRight:
         closable && variant !== variants.UNDERLINE
-          ? `calc(${themeData["tabs.general.closeButton.size"]} + ${themeData["tabs.general.closeButton.gutter"]})`
+          ? `calc(${themeData["tabs.general.closeButton.size"]} + ${
+              themeData["tabs.general.closeButton.gutter"]
+            })`
           : "0",
 
       color: themeData["tabs.general.tab.color"],

@@ -28,7 +28,9 @@ export default function stylesheet({ align, variant, orientation }, themeData) {
       justifyContent: justifyContent[align],
       borderBottom:
         variant === variants.UNDERLINE
-          ? `${themeData["tabs.underline.wrapper.borderBottomWidth"]} solid ${themeData["tabs.underline.wrapper.borderBottomColor"]}`
+          ? `${themeData["tabs.underline.wrapper.borderBottomWidth"]} solid ${
+              themeData["tabs.underline.wrapper.borderBottomColor"]
+            }`
           : 0,
       backgroundColor: getBackgroundColor(variant, themeData),
 
