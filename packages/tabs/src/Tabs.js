@@ -125,7 +125,6 @@ class Tabs extends Component {
   static getDerivedStateFromProps(nextProps, prevState) {
     const { children, align, variant, orientation, showTabDivider } = nextProps;
     const {
-      activeTabIndex: prevActiveTabIndex,
       effectiveAlign: prevEffectiveAlign,
       effectiveOrientation: prevEffectiveOrientation,
       effectiveShowTabDivider: prevEffectiveShowTabDivider
@@ -133,13 +132,6 @@ class Tabs extends Component {
 
     let hasStateChanged = false;
     const newState = {};
-
-    const nextTabs = createTabs(children);
-    const nextActiveTabIndex = nextTabs.findIndex(({ props }) => props.active);
-    if (nextActiveTabIndex >= 0 && nextActiveTabIndex !== prevActiveTabIndex) {
-      newState.activeTabIndex = nextActiveTabIndex;
-      hasStateChanged = true;
-    }
 
     // vertical tabs will only work when variant is "box"
     const nextEffectiveOrientation =
