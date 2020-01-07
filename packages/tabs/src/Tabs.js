@@ -66,6 +66,25 @@ function createTabs(children) {
   }, []);
 }
 
+/**
+ * @param {TabsProps} tabsProps
+ * @returns {number}
+ */
+function findInitialStateActiveTab(tabsProps) {
+  if (tabsProps.defaultActiveTabIndex !== undefined) {
+    return tabsProps.defaultActiveTabIndex;
+  }
+
+  const tabIndexWithActiveProp = createTabs(tabsProps.children).findIndex(
+    ({ props }) => props.active
+  );
+  if (tabIndexWithActiveProp >= 0) {
+    return tabIndexWithActiveProp;
+  }
+
+  return FIRST_TAB_INDEX;
+}
+
 class Tabs extends Component {
   static propTypes = {
     /**
@@ -126,10 +145,7 @@ class Tabs extends Component {
      * We maintain the active tab index in the state in case it was not
      * provided as a prop.
      */
-    activeTabIndex:
-      this.props.defaultActiveTabIndex === undefined
-        ? FIRST_TAB_INDEX
-        : this.props.defaultActiveTabIndex,
+    activeTabIndex: findInitialStateActiveTab(this.props),
     hoveredTabIndex: DEFAULT_HOVERED_TAB_INDEX,
     effectiveAlign: alignments.LEFT,
     effectiveShowTabDivider: true,
