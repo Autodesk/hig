@@ -31,7 +31,6 @@ const DEFAULT_HOVERED_TAB_INDEX = -1;
 /**
  * @typedef {Object} TabsProps
  * @property {string} [align]
- * @property {string} [className]
  * @property {string} [variant]
  * @property {string} [orientation]
  * @property {bool} [showTabDivider]
@@ -78,10 +77,6 @@ class Tabs extends Component {
      * When variant is set to "canvas", the effective alignment will always be "left"
      */
     align: PropTypes.oneOf(AVAILABLE_ALIGNMENTS),
-    /**
-     * CSS class to apply
-     */
-    className: PropTypes.string,
     /**
      * The list orientation of the tabs
      * Vertical tabs only works when variant is set to "box"
