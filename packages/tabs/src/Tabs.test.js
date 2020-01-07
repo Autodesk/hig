@@ -200,6 +200,47 @@ describe("tabs/Tabs", () => {
       expect(contentPresenter.html()).toContain(expectedActiveTab);
     };
 
+    describe("Tab => active", () => {
+      it("should set the initial active tab", () => {
+        const tabs = shallow(
+          <Tabs>
+            {[
+              children[0],
+              React.cloneElement(children[1], { active: true }),
+              children[2]
+            ]}
+          </Tabs>
+        );
+        checkActiveTab(tabs, 1);
+      });
+
+      it("should not take effect when defaultActiveTabIndex is specified", () => {
+        const tabs = shallow(
+          <Tabs defaultActiveTabIndex={2}>
+            {[
+              children[0],
+              React.cloneElement(children[1], { active: true }),
+              children[2]
+            ]}
+          </Tabs>
+        );
+        checkActiveTab(tabs, 2);
+      });
+
+      it("should not take effect when defaultActiveTabIndex is specified", () => {
+        const tabs = shallow(
+          <Tabs activeTabIndex={2}>
+            {[
+              children[0],
+              React.cloneElement(children[1], { active: true }),
+              children[2]
+            ]}
+          </Tabs>
+        );
+        checkActiveTab(tabs, 2);
+      });
+    });
+
     describe("defaultActiveTabIndex", () => {
       it("should set the initial active tab", () => {
         const tabs = shallow(<Tabs defaultActiveTabIndex={1}>{children}</Tabs>);

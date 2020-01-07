@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tabs/Tabs renders canvas style tabs 1`] = `
-.emotion-37 {
+.emotion-36 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -45,7 +45,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   background: transparent;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.428571429;
   text-align: center;
   padding-left: 0;
@@ -65,18 +65,6 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-6 {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 18px;
-  width: 1px;
-  background-color: rgba(60,60,60,0.25);
-}
-
 .emotion-4 {
   color: #3c3c3c;
   display: block;
@@ -91,7 +79,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   background: transparent;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.428571429;
   text-align: center;
   padding-left: 0;
@@ -111,7 +99,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-10 {
+.emotion-9 {
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -124,17 +112,29 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   overflow: hidden;
 }
 
-.emotion-9 {
+.emotion-12 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 18px;
+  width: 1px;
+  background-color: rgba(60,60,60,0.25);
+}
+
+.emotion-8 {
   fill: #808080;
   pointer-events: none;
 }
 
-.emotion-9 > * {
+.emotion-8 > * {
   fill: #808080;
   pointer-events: none;
 }
 
-.emotion-11 {
+.emotion-10 {
   color: #3c3c3c;
   display: block;
   font-family: ArtifaktElement,sans-serif;
@@ -156,7 +156,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   color: #3c3c3c;
 }
 
-.emotion-11:before {
+.emotion-10:before {
   display: block;
   content: "withicon";
   font-family: ArtifaktElement,sans-serif;
@@ -168,7 +168,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-18 {
+.emotion-17 {
   color: #3c3c3c;
   display: block;
   font-family: ArtifaktElement,sans-serif;
@@ -190,7 +190,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   color: #3c3c3c;
 }
 
-.emotion-18:before {
+.emotion-17:before {
   display: block;
   content: "icononly";
   font-family: ArtifaktElement,sans-serif;
@@ -202,7 +202,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-23 {
+.emotion-22 {
   color: #3c3c3c;
   display: block;
   font-family: ArtifaktElement,sans-serif;
@@ -224,7 +224,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   color: #3c3c3c;
 }
 
-.emotion-23:before {
+.emotion-22:before {
   display: block;
   content: "disabled";
   font-family: ArtifaktElement,sans-serif;
@@ -236,7 +236,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-28 {
+.emotion-27 {
   color: #3c3c3c;
   display: block;
   font-family: ArtifaktElement,sans-serif;
@@ -258,7 +258,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   color: #3c3c3c;
 }
 
-.emotion-28:before {
+.emotion-27:before {
   display: block;
   content: "closable";
   font-family: ArtifaktElement,sans-serif;
@@ -270,7 +270,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-30 {
+.emotion-29 {
   box-shadow: none;
   background-color: transparent;
   outline: none;
@@ -288,7 +288,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   transform: translateY(-50%);
 }
 
-.emotion-30 svg * {
+.emotion-29 svg * {
   fill: #808080;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -296,7 +296,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   transition-property: fill;
 }
 
-.emotion-36 {
+.emotion-35 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -306,7 +306,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   flex-shrink: 1;
 }
 
-.emotion-35 {
+.emotion-34 {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -346,7 +346,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   transition-duration: 0.3s;
   -webkit-transition-property: background-color;
   transition-property: background-color;
-  background-color: #f5f5f5;
+  background-color: transparent;
   padding: 8px 16px;
   -webkit-transform: skewX(-23deg);
   -ms-transform: skewX(-23deg);
@@ -377,7 +377,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   display: flex;
 }
 
-.emotion-7 {
+.emotion-6 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -394,7 +394,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   transition-duration: 0.3s;
   -webkit-transition-property: background-color;
   transition-property: background-color;
-  background-color: transparent;
+  background-color: #f5f5f5;
   padding: 8px 16px;
   -webkit-transform: skewX(-23deg);
   -ms-transform: skewX(-23deg);
@@ -404,11 +404,11 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   transform-origin: 0 100%;
 }
 
-.emotion-7:focus {
+.emotion-6:focus {
   outline: none;
 }
 
-.emotion-26 {
+.emotion-25 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -435,11 +435,11 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   transform-origin: 0 100%;
 }
 
-.emotion-26:focus {
+.emotion-25:focus {
   outline: none;
 }
 
-.emotion-24 {
+.emotion-23 {
   position: relative;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -457,10 +457,10 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
 }
 
 <div
-  className="emotion-37"
+  className="emotion-36"
 >
   <ul
-    className="emotion-35"
+    className="emotion-34"
   >
     <li
       className="emotion-3"
@@ -492,7 +492,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
       className="emotion-3"
     >
       <div
-        className="emotion-7"
+        className="emotion-6"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -512,16 +512,13 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
             active
           </p>
         </div>
-        <div
-          className="emotion-6"
-        />
       </div>
     </li>
     <li
       className="emotion-3"
     >
       <div
-        className="emotion-7"
+        className="emotion-2"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -536,10 +533,10 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
           className="emotion-1"
         >
           <span
-            className="emotion-10"
+            className="emotion-9"
           >
             <svg
-              className="emotion-9"
+              className="emotion-8"
               height="24px"
               viewBox="0 0 24 24"
               width="24px"
@@ -557,13 +554,13 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
             </svg>
           </span>
           <p
-            className="emotion-11"
+            className="emotion-10"
           >
             withicon
           </p>
         </div>
         <div
-          className="emotion-6"
+          className="emotion-12"
         />
       </div>
     </li>
@@ -571,7 +568,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
       className="emotion-3"
     >
       <div
-        className="emotion-7"
+        className="emotion-2"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -586,10 +583,10 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
           className="emotion-1"
         >
           <span
-            className="emotion-10"
+            className="emotion-9"
           >
             <svg
-              className="emotion-9"
+              className="emotion-8"
               height="24px"
               viewBox="0 0 24 24"
               width="24px"
@@ -607,13 +604,13 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
             </svg>
           </span>
           <p
-            className="emotion-18"
+            className="emotion-17"
           >
             icononly
           </p>
         </div>
         <div
-          className="emotion-6"
+          className="emotion-12"
         />
       </div>
     </li>
@@ -621,7 +618,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
       className="emotion-3"
     >
       <div
-        className="emotion-26"
+        className="emotion-25"
         disabled={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -633,16 +630,16 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
         tabIndex="-1"
       >
         <div
-          className="emotion-24"
+          className="emotion-23"
         >
           <p
-            className="emotion-23"
+            className="emotion-22"
           >
             disabled
           </p>
         </div>
         <div
-          className="emotion-6"
+          className="emotion-12"
         />
       </div>
     </li>
@@ -650,7 +647,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
       className="emotion-3"
     >
       <div
-        className="emotion-7"
+        className="emotion-2"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -665,12 +662,12 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
           className="emotion-1"
         >
           <p
-            className="emotion-28"
+            className="emotion-27"
           >
             closable
           </p>
           <button
-            className="emotion-30"
+            className="emotion-29"
             disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
@@ -683,7 +680,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
             title="close"
           >
             <svg
-              className="emotion-9"
+              className="emotion-8"
               height="16px"
               viewBox="0 0 16 16"
               width="16px"
@@ -699,21 +696,21 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
           </button>
         </div>
         <div
-          className="emotion-6"
+          className="emotion-12"
         />
       </div>
     </li>
   </ul>
   <div
-    className="emotion-36"
+    className="emotion-35"
   >
-    bar
+    active
   </div>
 </div>
 `;
 
 exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
-.emotion-43 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -734,7 +731,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   flex-direction: column;
 }
 
-.emotion-41 {
+.emotion-40 {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -783,7 +780,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   transition-duration: 0.3s;
   -webkit-transition-property: background-color;
   transition-property: background-color;
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 8px 12px;
 }
 
@@ -835,7 +832,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   background: transparent;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.428571429;
   text-align: center;
   padding-left: 0;
@@ -855,7 +852,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-9 {
+.emotion-8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -872,24 +869,12 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   transition-duration: 0.3s;
   -webkit-transition-property: background-color;
   transition-property: background-color;
-  background-color: transparent;
+  background-color: #ffffff;
   padding: 8px 12px;
 }
 
-.emotion-9:focus {
+.emotion-8:focus {
   outline: none;
-}
-
-.emotion-8 {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 18px;
-  width: 1px;
-  background-color: rgba(60,60,60,0.25);
 }
 
 .emotion-5 {
@@ -906,7 +891,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   background: transparent;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.428571429;
   text-align: center;
   padding-left: 0;
@@ -926,7 +911,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-12 {
+.emotion-11 {
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -939,17 +924,29 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   overflow: hidden;
 }
 
-.emotion-11 {
+.emotion-15 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 18px;
+  width: 1px;
+  background-color: rgba(60,60,60,0.25);
+}
+
+.emotion-10 {
   fill: #808080;
   pointer-events: none;
 }
 
-.emotion-11 > * {
+.emotion-10 > * {
   fill: #808080;
   pointer-events: none;
 }
 
-.emotion-13 {
+.emotion-12 {
   color: #3c3c3c;
   display: block;
   font-family: ArtifaktElement,sans-serif;
@@ -971,7 +968,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   color: #3c3c3c;
 }
 
-.emotion-13:before {
+.emotion-12:before {
   display: block;
   content: "withicon";
   font-family: ArtifaktElement,sans-serif;
@@ -983,7 +980,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-21 {
+.emotion-20 {
   color: #3c3c3c;
   display: block;
   font-family: ArtifaktElement,sans-serif;
@@ -1005,7 +1002,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   color: #3c3c3c;
 }
 
-.emotion-21:before {
+.emotion-20:before {
   display: block;
   content: "icononly";
   font-family: ArtifaktElement,sans-serif;
@@ -1017,7 +1014,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-31 {
+.emotion-30 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1038,11 +1035,11 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   padding: 8px 12px;
 }
 
-.emotion-31:focus {
+.emotion-30:focus {
   outline: none;
 }
 
-.emotion-28 {
+.emotion-27 {
   position: relative;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -1059,7 +1056,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   display: flex;
 }
 
-.emotion-27 {
+.emotion-26 {
   color: #3c3c3c;
   display: block;
   font-family: ArtifaktElement,sans-serif;
@@ -1081,7 +1078,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   color: #3c3c3c;
 }
 
-.emotion-27:before {
+.emotion-26:before {
   display: block;
   content: "disabled";
   font-family: ArtifaktElement,sans-serif;
@@ -1093,7 +1090,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-33 {
+.emotion-32 {
   color: #3c3c3c;
   display: block;
   font-family: ArtifaktElement,sans-serif;
@@ -1115,7 +1112,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   color: #3c3c3c;
 }
 
-.emotion-33:before {
+.emotion-32:before {
   display: block;
   content: "closable";
   font-family: ArtifaktElement,sans-serif;
@@ -1127,7 +1124,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-35 {
+.emotion-34 {
   box-shadow: none;
   background-color: transparent;
   outline: none;
@@ -1145,7 +1142,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   transform: translateY(-50%);
 }
 
-.emotion-35 svg * {
+.emotion-34 svg * {
   fill: #808080;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -1153,7 +1150,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   transition-property: fill;
 }
 
-.emotion-42 {
+.emotion-41 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1164,10 +1161,10 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
 }
 
 <div
-  className="emotion-43"
+  className="emotion-42"
 >
   <ul
-    className="emotion-41"
+    className="emotion-40"
   >
     <li
       className="emotion-4"
@@ -1202,7 +1199,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
       className="emotion-4"
     >
       <div
-        className="emotion-9"
+        className="emotion-8"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1225,9 +1222,6 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
         <div
           className="emotion-2"
         />
-        <div
-          className="emotion-8"
-        />
       </div>
     </li>
     <button />
@@ -1235,7 +1229,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
       className="emotion-4"
     >
       <div
-        className="emotion-9"
+        className="emotion-3"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1250,10 +1244,10 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
           className="emotion-1"
         >
           <span
-            className="emotion-12"
+            className="emotion-11"
           >
             <svg
-              className="emotion-11"
+              className="emotion-10"
               height="24px"
               viewBox="0 0 24 24"
               width="24px"
@@ -1271,7 +1265,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
             </svg>
           </span>
           <p
-            className="emotion-13"
+            className="emotion-12"
           >
             withicon
           </p>
@@ -1280,7 +1274,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
           className="emotion-2"
         />
         <div
-          className="emotion-8"
+          className="emotion-15"
         />
       </div>
     </li>
@@ -1288,7 +1282,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
       className="emotion-4"
     >
       <div
-        className="emotion-9"
+        className="emotion-3"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1303,10 +1297,10 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
           className="emotion-1"
         >
           <span
-            className="emotion-12"
+            className="emotion-11"
           >
             <svg
-              className="emotion-11"
+              className="emotion-10"
               height="24px"
               viewBox="0 0 24 24"
               width="24px"
@@ -1324,7 +1318,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
             </svg>
           </span>
           <p
-            className="emotion-21"
+            className="emotion-20"
           >
             icononly
           </p>
@@ -1333,7 +1327,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
           className="emotion-2"
         />
         <div
-          className="emotion-8"
+          className="emotion-15"
         />
       </div>
     </li>
@@ -1341,7 +1335,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
       className="emotion-4"
     >
       <div
-        className="emotion-31"
+        className="emotion-30"
         disabled={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1353,10 +1347,10 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
         tabIndex="-1"
       >
         <div
-          className="emotion-28"
+          className="emotion-27"
         >
           <p
-            className="emotion-27"
+            className="emotion-26"
           >
             disabled
           </p>
@@ -1365,7 +1359,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
           className="emotion-2"
         />
         <div
-          className="emotion-8"
+          className="emotion-15"
         />
       </div>
     </li>
@@ -1373,7 +1367,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
       className="emotion-4"
     >
       <div
-        className="emotion-9"
+        className="emotion-3"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1388,12 +1382,12 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
           className="emotion-1"
         >
           <p
-            className="emotion-33"
+            className="emotion-32"
           >
             closable
           </p>
           <button
-            className="emotion-35"
+            className="emotion-34"
             disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
@@ -1406,7 +1400,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
             title="close"
           >
             <svg
-              className="emotion-11"
+              className="emotion-10"
               height="16px"
               viewBox="0 0 16 16"
               width="16px"
@@ -1425,15 +1419,15 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
           className="emotion-2"
         />
         <div
-          className="emotion-8"
+          className="emotion-15"
         />
       </div>
     </li>
   </ul>
   <div
-    className="emotion-42"
+    className="emotion-41"
   >
-    bar
+    active
   </div>
 </div>
 `;
@@ -1491,7 +1485,7 @@ exports[`tabs/Tabs renders underline style tabs 1`] = `
   background: transparent;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.428571429;
   text-align: center;
   padding-left: 0;
@@ -1525,7 +1519,7 @@ exports[`tabs/Tabs renders underline style tabs 1`] = `
   background: transparent;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.428571429;
   text-align: center;
   padding-left: 0;
@@ -1672,14 +1666,14 @@ exports[`tabs/Tabs renders underline style tabs 1`] = `
 .emotion-2 {
   position: absolute;
   left: 0;
-  height: 2px;
+  height: 0;
   width: 100%;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: height,width;
   transition-property: height,width;
   bottom: 0;
-  background-color: #0696d7;
+  background-color: rgba(128,128,128,0.85);
   overflow: visible;
 }
 
@@ -1700,14 +1694,14 @@ exports[`tabs/Tabs renders underline style tabs 1`] = `
 .emotion-7 {
   position: absolute;
   left: 0;
-  height: 0;
+  height: 2px;
   width: 100%;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: height,width;
   transition-property: height,width;
   bottom: 0;
-  background-color: rgba(128,128,128,0.85);
+  background-color: #0696d7;
   overflow: visible;
 }
 
@@ -1840,7 +1834,7 @@ exports[`tabs/Tabs renders underline style tabs 1`] = `
           </p>
         </div>
         <div
-          className="emotion-7"
+          className="emotion-2"
         />
       </div>
     </li>
@@ -1848,13 +1842,13 @@ exports[`tabs/Tabs renders underline style tabs 1`] = `
   <div
     className="emotion-16"
   >
-    bar
+    active
   </div>
 </div>
 `;
 
 exports[`tabs/Tabs renders vertical box style tabs 1`] = `
-.emotion-43 {
+.emotion-42 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1875,7 +1869,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   flex-direction: column;
 }
 
-.emotion-41 {
+.emotion-40 {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -1924,7 +1918,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   transition-duration: 0.3s;
   -webkit-transition-property: background-color;
   transition-property: background-color;
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 8px 12px;
 }
 
@@ -1976,7 +1970,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   background: transparent;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.428571429;
   text-align: center;
   padding-left: 0;
@@ -1996,7 +1990,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-9 {
+.emotion-8 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2013,24 +2007,12 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   transition-duration: 0.3s;
   -webkit-transition-property: background-color;
   transition-property: background-color;
-  background-color: transparent;
+  background-color: #ffffff;
   padding: 8px 12px;
 }
 
-.emotion-9:focus {
+.emotion-8:focus {
   outline: none;
-}
-
-.emotion-8 {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  height: 18px;
-  width: 1px;
-  background-color: rgba(60,60,60,0.25);
 }
 
 .emotion-5 {
@@ -2047,7 +2029,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   background: transparent;
   font-family: ArtifaktElement,sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1.428571429;
   text-align: center;
   padding-left: 0;
@@ -2067,7 +2049,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-12 {
+.emotion-11 {
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -2080,17 +2062,29 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   overflow: hidden;
 }
 
-.emotion-11 {
+.emotion-15 {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 18px;
+  width: 1px;
+  background-color: rgba(60,60,60,0.25);
+}
+
+.emotion-10 {
   fill: #808080;
   pointer-events: none;
 }
 
-.emotion-11 > * {
+.emotion-10 > * {
   fill: #808080;
   pointer-events: none;
 }
 
-.emotion-13 {
+.emotion-12 {
   color: #3c3c3c;
   display: block;
   font-family: ArtifaktElement,sans-serif;
@@ -2112,7 +2106,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   color: #3c3c3c;
 }
 
-.emotion-13:before {
+.emotion-12:before {
   display: block;
   content: "withicon";
   font-family: ArtifaktElement,sans-serif;
@@ -2124,7 +2118,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-21 {
+.emotion-20 {
   color: #3c3c3c;
   display: block;
   font-family: ArtifaktElement,sans-serif;
@@ -2146,7 +2140,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   color: #3c3c3c;
 }
 
-.emotion-21:before {
+.emotion-20:before {
   display: block;
   content: "icononly";
   font-family: ArtifaktElement,sans-serif;
@@ -2158,7 +2152,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-31 {
+.emotion-30 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2179,11 +2173,11 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   padding: 8px 12px;
 }
 
-.emotion-31:focus {
+.emotion-30:focus {
   outline: none;
 }
 
-.emotion-28 {
+.emotion-27 {
   position: relative;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -2200,7 +2194,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   display: flex;
 }
 
-.emotion-27 {
+.emotion-26 {
   color: #3c3c3c;
   display: block;
   font-family: ArtifaktElement,sans-serif;
@@ -2222,7 +2216,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   color: #3c3c3c;
 }
 
-.emotion-27:before {
+.emotion-26:before {
   display: block;
   content: "disabled";
   font-family: ArtifaktElement,sans-serif;
@@ -2234,7 +2228,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-33 {
+.emotion-32 {
   color: #3c3c3c;
   display: block;
   font-family: ArtifaktElement,sans-serif;
@@ -2256,7 +2250,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   color: #3c3c3c;
 }
 
-.emotion-33:before {
+.emotion-32:before {
   display: block;
   content: "closable";
   font-family: ArtifaktElement,sans-serif;
@@ -2268,7 +2262,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-35 {
+.emotion-34 {
   box-shadow: none;
   background-color: transparent;
   outline: none;
@@ -2286,7 +2280,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   transform: translateY(-50%);
 }
 
-.emotion-35 svg * {
+.emotion-34 svg * {
   fill: #808080;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -2294,7 +2288,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   transition-property: fill;
 }
 
-.emotion-42 {
+.emotion-41 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -2305,10 +2299,10 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
 }
 
 <div
-  className="emotion-43"
+  className="emotion-42"
 >
   <ul
-    className="emotion-41"
+    className="emotion-40"
   >
     <li
       className="emotion-4"
@@ -2343,7 +2337,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
       className="emotion-4"
     >
       <div
-        className="emotion-9"
+        className="emotion-8"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -2366,16 +2360,13 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
         <div
           className="emotion-2"
         />
-        <div
-          className="emotion-8"
-        />
       </div>
     </li>
     <li
       className="emotion-4"
     >
       <div
-        className="emotion-9"
+        className="emotion-3"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -2390,10 +2381,10 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
           className="emotion-1"
         >
           <span
-            className="emotion-12"
+            className="emotion-11"
           >
             <svg
-              className="emotion-11"
+              className="emotion-10"
               height="24px"
               viewBox="0 0 24 24"
               width="24px"
@@ -2411,7 +2402,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
             </svg>
           </span>
           <p
-            className="emotion-13"
+            className="emotion-12"
           >
             withicon
           </p>
@@ -2420,7 +2411,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
           className="emotion-2"
         />
         <div
-          className="emotion-8"
+          className="emotion-15"
         />
       </div>
     </li>
@@ -2428,7 +2419,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
       className="emotion-4"
     >
       <div
-        className="emotion-9"
+        className="emotion-3"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -2443,10 +2434,10 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
           className="emotion-1"
         >
           <span
-            className="emotion-12"
+            className="emotion-11"
           >
             <svg
-              className="emotion-11"
+              className="emotion-10"
               height="24px"
               viewBox="0 0 24 24"
               width="24px"
@@ -2464,7 +2455,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
             </svg>
           </span>
           <p
-            className="emotion-21"
+            className="emotion-20"
           >
             icononly
           </p>
@@ -2473,7 +2464,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
           className="emotion-2"
         />
         <div
-          className="emotion-8"
+          className="emotion-15"
         />
       </div>
     </li>
@@ -2481,7 +2472,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
       className="emotion-4"
     >
       <div
-        className="emotion-31"
+        className="emotion-30"
         disabled={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -2493,10 +2484,10 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
         tabIndex="-1"
       >
         <div
-          className="emotion-28"
+          className="emotion-27"
         >
           <p
-            className="emotion-27"
+            className="emotion-26"
           >
             disabled
           </p>
@@ -2505,7 +2496,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
           className="emotion-2"
         />
         <div
-          className="emotion-8"
+          className="emotion-15"
         />
       </div>
     </li>
@@ -2513,7 +2504,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
       className="emotion-4"
     >
       <div
-        className="emotion-9"
+        className="emotion-3"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -2528,12 +2519,12 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
           className="emotion-1"
         >
           <p
-            className="emotion-33"
+            className="emotion-32"
           >
             closable
           </p>
           <button
-            className="emotion-35"
+            className="emotion-34"
             disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
@@ -2546,7 +2537,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
             title="close"
           >
             <svg
-              className="emotion-11"
+              className="emotion-10"
               height="16px"
               viewBox="0 0 16 16"
               width="16px"
@@ -2565,15 +2556,15 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
           className="emotion-2"
         />
         <div
-          className="emotion-8"
+          className="emotion-15"
         />
       </div>
     </li>
   </ul>
   <div
-    className="emotion-42"
+    className="emotion-41"
   >
-    bar
+    active
   </div>
 </div>
 `;
@@ -2615,40 +2606,6 @@ exports[`tabs/Tabs renders with custom className 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-}
-
-.emotion-0 {
-  color: #3c3c3c;
-  display: block;
-  font-family: ArtifaktElement,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.428571429;
-  margin: 0;
-  text-align: initial;
-  display: inline-block;
-  position: relative;
-  background: transparent;
-  font-family: ArtifaktElement,sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.428571429;
-  text-align: center;
-  padding-left: 0;
-  padding-right: 0;
-  color: #3c3c3c;
-}
-
-.emotion-0:before {
-  display: block;
-  content: "foo";
-  font-family: ArtifaktElement,sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  height: 0;
-  color: transparent;
-  overflow: hidden;
-  visibility: hidden;
 }
 
 .emotion-11 {
@@ -2724,6 +2681,34 @@ exports[`tabs/Tabs renders with custom className 1`] = `
   outline: none;
 }
 
+.emotion-7 {
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 100%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: height,width;
+  transition-property: height,width;
+  bottom: 0;
+  background-color: rgba(128,128,128,0.85);
+  overflow: visible;
+}
+
+.emotion-7:after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(6,150,215,0.35);
+  content: " ";
+  width: 100%;
+  height: 0;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: height;
+  transition-property: height;
+}
+
 .emotion-2 {
   position: absolute;
   left: 0;
@@ -2752,32 +2737,38 @@ exports[`tabs/Tabs renders with custom className 1`] = `
   transition-property: height;
 }
 
-.emotion-7 {
-  position: absolute;
-  left: 0;
-  height: 0;
-  width: 100%;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: height,width;
-  transition-property: height,width;
-  bottom: 0;
-  background-color: rgba(128,128,128,0.85);
-  overflow: visible;
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+  display: inline-block;
+  position: relative;
+  background: transparent;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.428571429;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  color: #3c3c3c;
 }
 
-.emotion-7:after {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgba(6,150,215,0.35);
-  content: " ";
-  width: 100%;
+.emotion-0:before {
+  display: block;
+  content: "foo";
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
   height: 0;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: height;
-  transition-property: height;
+  color: transparent;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 .emotion-5 {
