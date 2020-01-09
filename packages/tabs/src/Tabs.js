@@ -158,7 +158,7 @@ class Tabs extends Component {
    * @returns {TabsState | null}
    */
   static getDerivedStateFromProps(nextProps, prevState) {
-    const { align, variant, orientation, showTabDivider } = nextProps;
+    const { children, align, variant, orientation, showTabDivider } = nextProps;
     const {
       activeTabIndex: prevActiveTabIndex,
       effectiveAlign: prevEffectiveAlign,
@@ -171,7 +171,11 @@ class Tabs extends Component {
 
     const nextTabs = createTabs(children);
     const nextActiveTabIndex = nextTabs.findIndex(({ props }) => props.active);
-    if (nextActiveTabIndex >= 0 && nextActiveTabIndex !== prevActiveTabIndex) {
+    if (
+      nextActiveTabIndex >= 0 &&
+      nextActiveTabIndex !== prevActiveTabIndex &&
+      nextProps.defaultActiveTabIndex === undefined
+    ) {
       newState.activeTabIndex = nextActiveTabIndex;
       hasStateChanged = true;
     }
