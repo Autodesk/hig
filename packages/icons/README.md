@@ -41,4 +41,4 @@ This will use SVGO to optimize the new icon, and update our release files. Remem
 
 ## Accessing SVG source files
 
-SVG source files for all icons are available in the `/svg` subdirectory of the `@hig/icons` package (e.g. `./node_modules/@hig/icons/svg`).
+SVG source files for all icons are available in the `build/svg` subdirectory of the `@hig/icons` package (e.g. `./node_modules/@hig/icons/build/svg`).
