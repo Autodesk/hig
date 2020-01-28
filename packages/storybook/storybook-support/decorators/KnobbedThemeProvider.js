@@ -6,21 +6,17 @@ import { ThemeContext } from "@hig/theme-context";
 import lightGrayMediumDensityTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
 import darkBlueMediumDensityTheme from "@hig/theme-data/build/json/darkBlueMediumDensityTheme/theme.json";
 import darkGrayMediumDensityTheme from "@hig/theme-data/build/json/darkGrayMediumDensityTheme/theme.json";
-import webLightMediumDensityTheme from "@hig/theme-data/build/json/webLightMediumDensityTheme/theme.json";
 import lightGrayHighDensityTheme from "@hig/theme-data/build/json/lightGrayHighDensityTheme/theme.json";
 import darkBlueHighDensityTheme from "@hig/theme-data/build/json/darkBlueHighDensityTheme/theme.json";
 import darkGrayHighDensityTheme from "@hig/theme-data/build/json/darkGrayHighDensityTheme/theme.json";
-import webLightHighDensityTheme from "@hig/theme-data/build/json/webLightHighDensityTheme/theme.json";
 
 const themes = {
   "high-density": {
-    "hig-light": webLightHighDensityTheme,
     "hig-light-gray": lightGrayHighDensityTheme,
     "hig-dark-blue": darkBlueHighDensityTheme,
     "hig-dark-gray": darkGrayHighDensityTheme
   },
   "medium-density": {
-    "hig-light": webLightMediumDensityTheme,
     "hig-light-gray": lightGrayMediumDensityTheme,
     "hig-dark-blue": darkBlueMediumDensityTheme,
     "hig-dark-gray": darkGrayMediumDensityTheme
@@ -36,7 +32,6 @@ const DEFAULT_THEME_ID = "hig-light-gray";
 const DEFAULT_DENSITY_ID = "medium-density";
 
 const COLOR_THEME_IDS = {
-  WEB_LIGHT: "hig-light",
   LIGHT_GRAY: "hig-light-gray",
   DARK_BLUE: "hig-dark-blue",
   DARK_GRAY: "hig-dark-gray"
