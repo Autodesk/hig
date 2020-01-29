@@ -1,3 +1,10 @@
+# [@hig/top-nav-v3.1.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.1.0...@hig/top-nav@3.1.1) (2020-01-29)
+
+
+### Bug Fixes
+
+* Title hover for HelpAction being returned to the correct version of View help ([cae67dc](https://github.com/Autodesk/hig/commit/cae67dc))
+
 # [@hig/top-nav-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.0.7...@hig/top-nav@3.1.0) (2019-12-16)
 
 
