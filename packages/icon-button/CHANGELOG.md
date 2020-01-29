@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.3.2](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.3.1...@hig/icon-button@2.3.2) (2020-01-29)
+
+
+### Bug Fixes
+
+* export surfaces, AVAILABLE_SURFACES, variants, AVAILABLE_VARIANTS ([b81c7cb](https://github.com/Autodesk/hig/commit/b81c7cb))
+
 # [@hig/icon-button-v2.3.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.3.0...@hig/icon-button@2.3.1) (2019-09-05)
 
 
