@@ -57,7 +57,7 @@ export default class HelpAction extends Component {
     return (
       <ThemeContext.Consumer>
         {({ metadata }) => {
-          const title = "View Help";
+          const title = "View help";
           const HelpIcon =
             metadata.densityId === "high-density" ? Help16 : Help24;
           return (
