@@ -27,6 +27,10 @@ export default class NotificationsToast extends Component {
      */
     onDismiss: PropTypes.func,
     /**
+     * The tooltip text shown for the close icon
+     */
+    onDismissTitle: PropTypes.string,
+    /**
      * Indicate whether to show the icon associated with the provided status.
      * An icon will not be shown for a null status.
      */
@@ -38,6 +42,7 @@ export default class NotificationsToast extends Component {
   };
 
   static defaultProps = {
+    onDismissTitle: "Dismiss",
     showStatusIcon: true,
     status: "primary"
   };
@@ -70,7 +75,7 @@ export default class NotificationsToast extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
-          const { status } = this.props;
+          const { onDismissTitle, status } = this.props;
           const styles = stylesheet(resolvedRoles, status);
           const CloseIcon =
             metadata.densityId === "medium-density" ? CloseSUI : CloseXsUI;
@@ -94,7 +99,7 @@ export default class NotificationsToast extends Component {
                   </RichText>
                   <div className={css(styles.toastDismiss)}>
                     <IconButton
-                      title="Dismiss"
+                      title={onDismissTitle}
                       icon={<CloseIcon />}
                       type="transparent"
                       onClick={this.props.onDismiss}
