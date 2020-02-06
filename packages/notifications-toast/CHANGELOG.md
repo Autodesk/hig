@@ -1,3 +1,10 @@
+# [@hig/notifications-toast-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.0.5...@hig/notifications-toast@2.1.0) (2020-02-06)
+
+
+### Features
+
+* add onDissmissTitle prop to allow text for close icon tooltip ([20ddc80](https://github.com/Autodesk/hig/commit/20ddc80))
+
 # [@hig/notifications-toast-v2.0.5](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.0.4...@hig/notifications-toast@2.0.5) (2019-07-16)
 
 
