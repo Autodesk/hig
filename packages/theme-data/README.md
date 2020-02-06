@@ -86,10 +86,10 @@ console.log(lightGrayMediumDensityTheme);
 
 There are eight themes made up of four color schemes a two densities each. These themes are importable in three formats from respective folders in the build folder: [ESM](./build/esm), [JSON](./build/json), [SCSS](./build/scss), and [LESS](./build/less) 
 
-* Light gray, medium and high density 
+* Light gray, medium (default) and high density 
 * Dark gray, medium and high density 
 * Dark blue, medium and high density
-* Web light, medium (default) and high density - though web light is the default color scheme, it is on the road to being deprecated 
+* Web light, medium and high density - DEPRECATED
 
 ## Structure of a theme
 A theme is comprised of many, many _roles_. Each _roles_ defines the meaning of a value in the design system. Consider the following role—`colorScheme.textColor`. This roles describes the default color of text in the design system. The _value_ for a role may vary from theme to theme. For example, a theme with a light gray color scheme may provide the value `"#3c3c3c"`. A theme with a dark blue color scheme may provide the value `"#f5f5f5"`.
