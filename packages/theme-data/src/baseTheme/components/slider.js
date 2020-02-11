@@ -17,6 +17,14 @@ export default {
     type: LENGTH,
     value: "12px"
   },
+  "slider.thumb.minWidth": {
+    type: LENGTH,
+    value: "6px"
+  },
+  "slider.thumb.minHeight": {
+    type: LENGTH,
+    value: "20px"
+  },
   "slider.track.color": {
     type: COLOR,
     value: { ref: "colorScheme.baseColor" },
