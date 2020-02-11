@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.14.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.13.0...@hig/theme-data@2.14.0) (2020-02-11)
+
+
+### Features
+
+* add updated slider thumb height and width ([3b84782](https://github.com/Autodesk/hig/commit/3b84782))
+
 # [@hig/theme-data-v2.13.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.12.0...@hig/theme-data@2.13.0) (2019-10-17)
 
 
