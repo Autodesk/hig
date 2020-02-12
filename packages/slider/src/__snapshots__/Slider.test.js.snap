@@ -30,40 +30,58 @@ exports[`slider/Slider renders 1`] = `
 
 .emotion-0::-ms-thumb {
   box-sizing: content-box;
-  height: 12px;
-  width: 12px;
+  height: 20px;
+  width: 6px;
   background-color: #808080;
   border: 0;
-  border-radius: 50%;
+  border-radius: 0;
   box-shadow: 0 0 0 0 #ffffff;
   position: relative;
   top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-appearance: none;
 }
 
 .emotion-0::-moz-range-thumb {
   box-sizing: content-box;
-  height: 12px;
-  width: 12px;
+  height: 20px;
+  width: 6px;
   background-color: #808080;
   border: 0;
-  border-radius: 50%;
+  border-radius: 0;
   box-shadow: 0 0 0 0 #ffffff;
   position: relative;
   top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-appearance: none;
 }
 
 .emotion-0::-webkit-slider-thumb {
   box-sizing: content-box;
-  height: 12px;
-  width: 12px;
+  height: 20px;
+  width: 6px;
   background-color: #808080;
   border: 0;
-  border-radius: 50%;
+  border-radius: 0;
   box-shadow: 0 0 0 0 #ffffff;
   position: relative;
   top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-appearance: none;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -166,41 +184,59 @@ exports[`slider/Slider renders disabled 1`] = `
 
 .emotion-0::-ms-thumb {
   box-sizing: content-box;
-  height: 12px;
-  width: 12px;
+  height: 20px;
+  width: 6px;
   background-color: #808080;
   border: 0;
-  border-radius: 50%;
+  border-radius: 0;
   box-shadow: 0 0 0 0 #ffffff;
   position: relative;
   top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-appearance: none;
 }
 
 .emotion-0::-moz-range-thumb {
   box-sizing: content-box;
-  height: 12px;
-  width: 12px;
+  height: 20px;
+  width: 6px;
   background-color: #808080;
   border: 0;
-  border-radius: 50%;
+  border-radius: 0;
   box-shadow: 0 0 0 0 #ffffff;
   position: relative;
   top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-appearance: none;
   opacity: 0.4;
 }
 
 .emotion-0::-webkit-slider-thumb {
   box-sizing: content-box;
-  height: 12px;
-  width: 12px;
+  height: 20px;
+  width: 6px;
   background-color: #808080;
   border: 0;
-  border-radius: 50%;
+  border-radius: 0;
   box-shadow: 0 0 0 0 #ffffff;
   position: relative;
   top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-appearance: none;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
