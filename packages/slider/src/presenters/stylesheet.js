@@ -100,16 +100,19 @@ function stylesheet(props, trackValueRatio, themeData) {
     {
       ...{
         boxSizing: "content-box",
-        height: themeData["slider.thumb.width"],
-        width: themeData["slider.thumb.width"],
+        height: themeData["slider.thumb.minHeight"],
+        width: themeData["slider.thumb.minWidth"],
         backgroundColor: themeData["slider.thumb.backgroundColor"],
         border: 0,
-        borderRadius: "50%",
+        borderRadius: 0,
         boxShadow: `0 0 0 ${themeData["slider.halo.width"]} ${
           themeData["slider.halo.color"]
         }`,
         position: "relative",
         top: "50%",
+        transitionDuration: "0.3s",
+        transitionProperty: "box-shadow",
+        transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
         WebkitAppearance: "none" /* Hides platform-native styling */
       },
 
