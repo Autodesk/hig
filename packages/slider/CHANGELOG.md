@@ -1,3 +1,10 @@
+# [@hig/slider-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/slider@1.0.2...@hig/slider@1.1.0) (2020-02-12)
+
+
+### Features
+
+* match slider knob to latest design toolkit ([885c7ba](https://github.com/Autodesk/hig/commit/885c7ba))
+
 # [@hig/slider-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/slider@1.0.1...@hig/slider@1.0.2) (2019-08-02)
 
 
