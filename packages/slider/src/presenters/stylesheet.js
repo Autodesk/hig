@@ -104,7 +104,7 @@ function stylesheet(props, trackValueRatio, themeData) {
         width: themeData["slider.thumb.minWidth"],
         backgroundColor: themeData["slider.thumb.backgroundColor"],
         border: 0,
-        borderRadius: 0,
+        borderRadius: "1px",
         boxShadow: `0 0 0 ${themeData["slider.halo.width"]} ${
           themeData["slider.halo.color"]
         }`,
