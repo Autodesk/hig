@@ -1,3 +1,10 @@
+# [@hig/slider-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/slider@1.1.0...@hig/slider@1.1.1) (2020-02-13)
+
+
+### Bug Fixes
+
+* slider knob missing border radius ([34cf17e](https://github.com/Autodesk/hig/commit/34cf17e))
+
 # [@hig/slider-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/slider@1.0.2...@hig/slider@1.1.0) (2020-02-12)
 
 
