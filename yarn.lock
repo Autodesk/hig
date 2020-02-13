@@ -143,10 +143,10 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
 
-"@hig/slider@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@hig/slider/-/slider-1.1.0.tgz#6360ec0093a9aae568a2da0678ee34a17a71aac1"
-  integrity sha512-678amCYSP5pkQQNra4r8I5wvnzSD7kDsVi/vQWD8Ib+Cv0jXl0ZDN3s/PzxH3BH4uVD/XctdFiLfECdwAX/xYA==
+"@hig/slider@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@hig/slider/-/slider-1.1.1.tgz#38b7ebacc1161c8b8cdba2069ffd10d440b62f1f"
+  integrity sha512-+k7ync9nDAlk646q2X20UjFv6wGTT1H03X7r7bwad89peVwYNQomt37eL/52CD4NZ2Ayjj3ctY3d2WQefjYA7A==
   dependencies:
     "@hig/behaviors" "^1.1.1"
     "@hig/utils" "^0.4.0"
