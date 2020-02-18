@@ -26,6 +26,7 @@ import textarea from "./components/textarea";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
 import toggle from "./components/toggle";
+import token from "./components/token";
 import tooltip from "./components/tooltip";
 import topNav from "./components/topNav";
 import treeView from "./components/treeView";
@@ -69,6 +70,7 @@ const baseThemeConfig = extendTheme(
     textLink,
     thumbnail,
     toggle,
+    token,
     tooltip,
     topNav,
     treeView,
