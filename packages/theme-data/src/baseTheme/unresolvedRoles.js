@@ -27,6 +27,7 @@ import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
 import toggle from "./components/toggle";
 import tooltip from "./components/tooltip";
+import treeView from "./components/treeView";
 import typography from "./components/typography";
 
 const baseThemeConfig = extendTheme(
@@ -68,6 +69,7 @@ const baseThemeConfig = extendTheme(
     thumbnail,
     toggle,
     tooltip,
+    treeView,
     typography
   )
 );

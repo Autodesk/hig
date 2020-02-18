@@ -20,6 +20,7 @@ import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
 import toggle from "./components/toggle";
 import tooltip from "./components/tooltip";
+import treeView from "./components/treeView";
 
 const darkBlueThemeConfig = extendTheme(
   baseTheme.unresolvedRoles,
@@ -43,7 +44,8 @@ const darkBlueThemeConfig = extendTheme(
     textLink,
     thumbnail,
     toggle,
-    tooltip
+    tooltip,
+    treeView
   )
 );
 
