@@ -25,6 +25,7 @@ import tabs from "./components/tabs";
 import textarea from "./components/textarea";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
+import token from "./components/token";
 import tooltip from "./components/tooltip";
 import topNav from "./components/topNav";
 import treeView from "./components/treeView";
@@ -67,6 +68,7 @@ const baseThemeConfig = extendTheme(
     textarea,
     textLink,
     thumbnail,
+    token,
     tooltip,
     topNav,
     treeView,
