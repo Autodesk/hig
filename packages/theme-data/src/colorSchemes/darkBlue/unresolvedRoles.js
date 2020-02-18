@@ -19,6 +19,7 @@ import slider from "./components/slider";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
 import tooltip from "./components/tooltip";
+import treeView from "./components/treeView";
 
 const darkBlueThemeConfig = extendTheme(
   baseTheme.unresolvedRoles,
@@ -41,7 +42,8 @@ const darkBlueThemeConfig = extendTheme(
     slider,
     textLink,
     thumbnail,
-    tooltip
+    tooltip,
+    treeView
   )
 );
 
