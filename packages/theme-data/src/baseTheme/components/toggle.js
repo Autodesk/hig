@@ -22,10 +22,7 @@ export default {
   "toggle.focus.haloColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
-    },
-    transform: {
-      alpha: 0.35
+      ref: "colorScheme.halo.focus"
     }
   },
   "toggle.focus.haloWidth": {
@@ -37,10 +34,7 @@ export default {
   "toggle.hover.haloColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
-    },
-    transform: {
-      alpha: 0.15
+      ref: "colorScheme.halo.hover"
     }
   },
   "toggle.hover.haloWidth": {
@@ -66,10 +60,7 @@ export default {
   "toggle.pressed.haloColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
-    },
-    transform: {
-      alpha: 0.25
+      ref: "colorScheme.halo.pressed"
     }
   },
   "toggle.pressed.haloWidth": {
@@ -88,77 +79,70 @@ export default {
     type: LENGTH,
     value: "12px"
   },
-  "toggle.thumb.on.backgroundColor": {
+  "toggle.thumb.selected.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.white"
+      ref: "basics.colors.primary.white"
     }
   },
-  "toggle.thumb.off.backgroundColor": {
+  "toggle.thumb.unselected.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
+      ref: "colorScheme.reference.base"
     }
   },
-  "toggle.off.default.backgroundColor": {
-    type: COLOR,
-    value: "rgba(255, 255, 255, 0)"
-  },
-  "toggle.off.default.borderColor": {
+  "toggle.unselected.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
-    },
-    transform: {
-      alpha: 0.5
+      ref: "colorScheme.transparent"
     }
   },
-  "toggle.off.focus.backgroundColor": {
-    type: COLOR,
-    value: "rgba(255, 255, 255, 0)"
-  },
-  "toggle.off.focus.borderColor": {
+  "toggle.unselected.default.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "colorScheme.border.default"
     }
   },
-  "toggle.off.hover.backgroundColor": {
-    type: COLOR,
-    value: "rgba(255, 255, 255, 0)"
-  },
-  "toggle.off.hover.borderColor": {
+  "toggle.unselected.focus.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
-    },
-    transform: {
-      alpha: 0.5
+      ref: "colorScheme.transparent"
     }
   },
-  "toggle.off.pressed.backgroundColor": {
-    type: COLOR,
-    value: "rgba(255, 255, 255, 0)"
-  },
-  "toggle.off.pressed.borderColor": {
+  "toggle.unselected.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
-    },
-    transform: {
-      alpha: 0.5
+      ref: "colorScheme.border.focus"
     }
   },
-  "toggle.on.default.backgroundColor": {
+  "toggle.unselected.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "colorScheme.transparent"
     }
   },
-  "toggle.on.default.borderColor": {
+  "toggle.unselected.hover.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "colorScheme.border.default"
+    }
+  },
+  "toggle.unselected.pressed.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.transparent"
+    }
+  },
+  "toggle.unselected.pressed.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.border.default"
+    }
+  },
+  "toggle.selected.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.active"
     }
   }
 };
