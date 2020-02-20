@@ -15,6 +15,15 @@ describe("skeleton-item/SkeletonItem", () => {
           marginBottom: "12px",
           height: "90px"
         }
+      },
+      {
+        description: "renders with custom className",
+        props: {
+          maxWidth: "100px",
+          marginBottom: "12px",
+          height: "90px",
+          className: "test-classname"
+        }
       }
     ]);
   });
