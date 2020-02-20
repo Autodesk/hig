@@ -31,6 +31,10 @@ describe("surface/Surface", () => {
     {
       description: "renders with tagName",
       props: { tagName: "span" }
+    },
+    {
+      description: "renders with custom className",
+      props: { className: "test-classname" }
     }
   ]);
 });
