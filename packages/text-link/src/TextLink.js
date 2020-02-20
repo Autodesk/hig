@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
 import { ControlBehavior } from "@hig/behaviors";
 
@@ -62,6 +62,7 @@ export default class TextLink extends Component {
       onMouseEnter,
       ...otherProps
     } = this.props;
+    const { className } = otherProps;
     const Element = link ? "a" : "span";
     const linkProps = link
       ? {
@@ -104,7 +105,8 @@ export default class TextLink extends Component {
               return (
                 <Element
                   {...linkProps}
-                  className={css(styles)}
+                  {...otherProps}
+                  className={cx(css(styles), className)}
                   onBlur={handleBlur}
                   onFocus={handleFocus}
                   onMouseDown={handleMouseDown}
@@ -112,7 +114,6 @@ export default class TextLink extends Component {
                   onMouseLeave={handleMouseLeave}
                   onMouseUp={handleMouseUp}
                   onClick={onClick}
-                  {...otherProps}
                 >
                   {children}
                 </Element>
