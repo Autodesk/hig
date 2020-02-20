@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { ThemeContext } from "@hig/theme-context";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import stylesheet from "./Surface.stylesheet";
 import {
   AVAILABLE_LEVELS,
@@ -56,9 +56,10 @@ export default class Surface extends Component {
       verticalPadding,
       level,
       shadow,
-      tagName
+      tagName,
+      ...otherProps
     } = this.props;
-
+    const { className } = otherProps;
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
@@ -75,7 +76,11 @@ export default class Surface extends Component {
 
           const Element = tagName;
 
-          return <Element className={css(styles.surface)}>{children}</Element>;
+          return (
+            <Element className={cx(css(styles.surface), className)}>
+              {children}
+            </Element>
+          );
         }}
       </ThemeContext.Consumer>
     );
