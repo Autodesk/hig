@@ -1,5 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import TextLink from "./TextLink";
 
 describe("TextLink", () => {
@@ -22,6 +23,32 @@ describe("TextLink", () => {
     );
     wrapper.simulate("click");
     expect(clickHandler).toHaveBeenCalled();
+  });
+
+  describe("snapshot tests", () => {
+    takeSnapshotsOf(TextLink, [
+      {
+        description: "renders with no props",
+        props: {}
+      },
+      {
+        description: "renders with props",
+        props: {
+          link: "https://www.autodesk.com/",
+          target: "_parent",
+          children: "This is a link"
+        }
+      },
+      {
+        description: "renders with custom className",
+        props: {
+          link: "https://www.autodesk.com/",
+          target: "_parent",
+          children: "This is a link",
+          className: "test-classname"
+        }
+      }
+    ]);
   });
 
   describe("target", () => {
