@@ -1,4 +1,4 @@
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { ThemeContext } from "@hig/theme-context";
@@ -16,7 +16,8 @@ export default class SkeletonItem extends Component {
   };
 
   render() {
-    const { height, marginBottom, maxWidth } = this.props;
+    const { height, marginBottom, maxWidth, ...otherProps } = this.props;
+    const { className } = otherProps;
 
     return (
       <ThemeContext.Consumer>
@@ -29,7 +30,7 @@ export default class SkeletonItem extends Component {
             },
             resolvedRoles
           );
-          return <div className={css(styles.skeletonItem)} />;
+          return <div className={cx(css(styles.skeletonItem), className)} />;
         }}
       </ThemeContext.Consumer>
     );

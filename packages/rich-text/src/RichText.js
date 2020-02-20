@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
@@ -23,13 +23,21 @@ export default class RichText extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
+          const {
+            children,
+            dangerouslySetInnerHTML,
+            ...otherProps
+          } = this.props;
+          const { className } = otherProps;
           const styles = stylesheet(resolvedRoles);
-          return this.props.children ? (
-            <div className={css(styles.richText)}>{this.props.children}</div>
+          return children ? (
+            <div className={cx(css(styles.richText), className)}>
+              {children}
+            </div>
           ) : (
             <div
-              className={css(styles.richText)}
-              dangerouslySetInnerHTML={this.props.dangerouslySetInnerHTML} // eslint-disable-line react/no-danger
+              className={cx(css(styles.richText), className)}
+              dangerouslySetInnerHTML={dangerouslySetInnerHTML} // eslint-disable-line react/no-danger
             />
           );
         }}
