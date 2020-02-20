@@ -21,4 +21,13 @@ describe("RichText", () => {
       }
     }
   ]);
+  takeSnapshotsOf(RichText, [
+    {
+      desc: "renders with custom className",
+      props: {
+        className: "test-class",
+        children: <h1>Happy little clouds</h1>
+      }
+    }
+  ]);
 });
