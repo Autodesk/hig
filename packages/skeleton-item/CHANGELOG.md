@@ -1,3 +1,10 @@
+# [@hig/skeleton-item-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@1.0.1...@hig/skeleton-item@1.1.0) (2020-02-21)
+
+
+### Features
+
+* allow className to be passed down ([8237ec9](https://github.com/Autodesk/hig/commit/8237ec9))
+
 # [@hig/skeleton-item-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@1.0.0...@hig/skeleton-item@1.0.1) (2019-03-13)
 
 
