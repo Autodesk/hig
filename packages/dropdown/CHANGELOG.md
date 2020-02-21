@@ -1,3 +1,10 @@
+# [@hig/dropdown-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.2.0...@hig/dropdown@2.2.1) (2020-02-21)
+
+
+### Bug Fixes
+
+* show checked selected option when options is an array of objects ([70828a4](https://github.com/Autodesk/hig/commit/70828a4))
+
 # [@hig/dropdown-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.1.0...@hig/dropdown@2.2.0) (2019-10-23)
 
 
