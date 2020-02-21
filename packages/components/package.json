@@ -35,7 +35,7 @@
     "@hig/progress-ring": "^1.0.1",
     "@hig/project-account-switcher": "^2.0.5",
     "@hig/radio-button": "^1.0.8",
-    "@hig/rich-text": "^1.0.0",
+    "@hig/rich-text": "^1.1.0",
     "@hig/side-nav": "^2.1.3",
     "@hig/skeleton-item": "^1.1.0",
     "@hig/slider": "^1.1.1",
