@@ -34,7 +34,8 @@ function createOptionRenderer(downshift, renderOption) {
       key: `option-${index}`,
       item: option && option.item ? option.item : option,
       disabled: option && option.disabled ? option.disabled : false,
-      selected: isSelected(option),
+      selected:
+        option && option.item ? isSelected(option.item) : isSelected(option),
       highlighted: highlightedIndex === index
     });
     let result;

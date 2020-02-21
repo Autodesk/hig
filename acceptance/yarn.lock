@@ -1151,10 +1151,10 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
-"@hig/slider@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@hig/slider/-/slider-1.0.2.tgz#623a3ede62879b793c3a8422fbf3176012cadb6f"
-  integrity sha512-Ei4LrLJalX0ISqM6vEDd4d8GFU0ZYBJg8c5DaktGFqXE30resbppDmmmsUbtZLC5d93Elb0sRWAPBsmk2fq5Fw==
+"@hig/slider@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@hig/slider/-/slider-1.1.1.tgz#38b7ebacc1161c8b8cdba2069ffd10d440b62f1f"
+  integrity sha512-+k7ync9nDAlk646q2X20UjFv6wGTT1H03X7r7bwad89peVwYNQomt37eL/52CD4NZ2Ayjj3ctY3d2WQefjYA7A==
   dependencies:
     "@hig/behaviors" "^1.1.1"
     "@hig/utils" "^0.4.0"
@@ -1216,10 +1216,10 @@
     create-react-context "^0.2.3"
     prop-types "^15.6.1"
 
-"@hig/theme-data@^2.13.0":
-  version "2.13.0"
-  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.13.0.tgz#282ebe8701abc7d8f7d6a3f2bc42b850d8fb7b4a"
-  integrity sha512-ZU6GWRdVpU1baeDb4F/1BGzdVkdamFSrr+1DuRpwD4TbhFa5nXTT+xfyX20ZUf3eO5KP68QSAKFMaMPYbfEGQA==
+"@hig/theme-data@^2.14.0":
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.14.0.tgz#95af0fae30ae8eef2390f128591aba2e18447f1d"
+  integrity sha512-bpAp5ebVpEMnehrVhUxOMWfBIWp860AamJrCBuotEWiujhEHcOuBzkUc9lAvt4X0l/Cdkv0hi4ZF+lR75ZLlLw==
   dependencies:
     tinycolor2 "^1.4.1"
 
