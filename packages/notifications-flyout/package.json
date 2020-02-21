@@ -37,7 +37,7 @@
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/text-link": "^1.0.1"
+    "@hig/text-link": "^1.1.0"
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.0",
