@@ -1,3 +1,10 @@
+# [@hig/text-link-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/text-link@1.0.1...@hig/text-link@1.1.0) (2020-02-21)
+
+
+### Features
+
+* allow className to be passed down ([e0c7205](https://github.com/Autodesk/hig/commit/e0c7205))
+
 # [@hig/text-link-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/text-link@1.0.0...@hig/text-link@1.0.1) (2019-03-13)
 
 

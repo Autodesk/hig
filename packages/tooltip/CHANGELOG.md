@@ -1,3 +1,10 @@
+# [@hig/tooltip-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.4...@hig/tooltip@1.0.5) (2020-02-21)
+
+
+### Bug Fixes
+
+* allow className to be passed down ([94eb3b4](https://github.com/Autodesk/hig/commit/94eb3b4))
+
 # [@hig/tooltip-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.3...@hig/tooltip@1.0.4) (2019-03-20)
 
 
