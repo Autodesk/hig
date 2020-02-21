@@ -1,3 +1,10 @@
+# [@hig/rich-text-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/rich-text@1.0.1...@hig/rich-text@1.1.0) (2020-02-21)
+
+
+### Features
+
+* allow className to be passed down ([2b6bb16](https://github.com/Autodesk/hig/commit/2b6bb16))
+
 # [@hig/rich-text-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/rich-text@1.0.0...@hig/rich-text@1.0.1) (2019-03-13)
 
 
