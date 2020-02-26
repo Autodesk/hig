@@ -59,7 +59,7 @@ export default function stylesheet(props, themeData) {
 
       header: {
         fontSize: headerFontSize,
-        fontWeight: 400,
+        fontWeight: themeData["basics.fontWeights.medium"],
         lineHeight: headerLinHeight,
         display: "flex",
         flexDirection: "column",
