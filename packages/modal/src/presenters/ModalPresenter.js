@@ -138,7 +138,7 @@ export default class ModalPresenter extends Component {
                     id={this.titleId}
                     closeButtonAriaLabel={closeButtonAriaLabel}
                     onCloseClick={onCloseClick}
-                    styles={styles.modal}
+                    styles={cssStyles.modal}
                     title={title}
                   >
                     {headerChildren}
