@@ -18,11 +18,9 @@ import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
-<<<<<<< HEAD
+import tile from "./components/tile";
 import toggle from "./components/toggle";
-=======
 import token from "./components/token";
->>>>>>> b99064ec4... feat: add token theme-data
 import tooltip from "./components/tooltip";
 import topNav from "./components/topNav";
 import treeView from "./components/treeView";
@@ -48,11 +46,9 @@ const darkBlueThemeConfig = extendTheme(
     slider,
     textLink,
     thumbnail,
-<<<<<<< HEAD
+    tile,
     toggle,
-=======
     token,
->>>>>>> b99064ec4... feat: add token theme-data
     tooltip,
     topNav,
     treeView

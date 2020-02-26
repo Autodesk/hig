@@ -25,6 +25,7 @@ import tabs from "./components/tabs";
 import textarea from "./components/textarea";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
+import tile from "./components/tile";
 import timestamp from "./components/timestamp";
 import toggle from "./components/toggle";
 import token from "./components/token";
@@ -69,6 +70,7 @@ const baseThemeConfig = extendTheme(
     tabs,
     textarea,
     textLink,
+    tile,
     timestamp,
     thumbnail,
     toggle,
