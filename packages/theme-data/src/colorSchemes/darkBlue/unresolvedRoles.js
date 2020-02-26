@@ -18,6 +18,7 @@ import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
+import tile from "./components/tile";
 import token from "./components/token";
 import tooltip from "./components/tooltip";
 import topNav from "./components/topNav";
@@ -44,6 +45,7 @@ const darkBlueThemeConfig = extendTheme(
     slider,
     textLink,
     thumbnail,
+    tile,
     token,
     tooltip,
     topNav,
