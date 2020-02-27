@@ -22,6 +22,7 @@ import progressRing from "./components/progressRing";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
 import tabs from "./components/tabs";
+import tag from "./components/tag";
 import textarea from "./components/textarea";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
@@ -68,6 +69,7 @@ const baseThemeConfig = extendTheme(
     skeletonItem,
     slider,
     tabs,
+    tag,
     textarea,
     textLink,
     tile,
