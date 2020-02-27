@@ -73,8 +73,8 @@ exports[`modal/presenters/ModalPresenter  1`] = `
       className="emotion-0"
       style={
         Object {
-          "fontSize": undefined,
-          "fontWeight": 600,
+          "fontSize": "inherit",
+          "fontWeight": "inherit",
           "lineHeight": "inherit",
         }
       }
