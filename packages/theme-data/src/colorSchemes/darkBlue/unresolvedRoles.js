@@ -16,6 +16,7 @@ import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
+import tag from "./components/tag";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
 import tile from "./components/tile";
@@ -43,6 +44,7 @@ const darkBlueThemeConfig = extendTheme(
     progressRing,
     skeletonItem,
     slider,
+    tag,
     textLink,
     thumbnail,
     tile,
