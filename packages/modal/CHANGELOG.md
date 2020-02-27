@@ -1,3 +1,10 @@
+# [@hig/modal-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/modal@2.1.1...@hig/modal@2.1.2) (2020-02-27)
+
+
+### Bug Fixes
+
+* stylesheet function needs to be passed down to the header ([b7e8d0e](https://github.com/Autodesk/hig/commit/b7e8d0e))
+
 # [@hig/modal-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/modal@2.1.0...@hig/modal@2.1.1) (2019-08-02)
 
 
