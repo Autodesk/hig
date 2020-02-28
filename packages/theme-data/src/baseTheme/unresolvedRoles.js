@@ -21,6 +21,7 @@ import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
+import stepIndicator from "./components/stepIndicator";
 import table from "./components/table";
 import tabs from "./components/tabs";
 import tag from "./components/tag";
@@ -69,6 +70,7 @@ const baseThemeConfig = extendTheme(
     progressRing,
     skeletonItem,
     slider,
+    stepIndicator,
     table,
     tabs,
     tag,
