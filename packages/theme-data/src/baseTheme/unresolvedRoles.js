@@ -19,6 +19,7 @@ import menu from "./components/menu";
 import modal from "./components/modal";
 import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
+import sideNav from "./components/sideNav";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
 import stepIndicator from "./components/stepIndicator";
@@ -68,6 +69,7 @@ const baseThemeConfig = extendTheme(
     modal,
     progressBar,
     progressRing,
+    sideNav,
     skeletonItem,
     slider,
     stepIndicator,
