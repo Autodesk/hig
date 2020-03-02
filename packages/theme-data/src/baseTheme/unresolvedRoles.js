@@ -17,6 +17,7 @@ import input from "./components/input";
 import label from "./components/label";
 import menu from "./components/menu";
 import modal from "./components/modal";
+import notification from "./components/notification";
 import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
 import scrollbar from "./components/scrollbar";
@@ -68,6 +69,7 @@ const baseThemeConfig = extendTheme(
     label,
     menu,
     modal,
+    notification,
     progressBar,
     progressRing,
     scrollbar,
