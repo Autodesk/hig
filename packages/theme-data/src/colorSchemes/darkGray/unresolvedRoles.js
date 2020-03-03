@@ -2,6 +2,7 @@ import extendTheme from "../../utils/extendTheme";
 import mapKeys from "../../utils/mapKeys";
 import darkBlueTheme from "../darkBlue";
 import system from "./system";
+import avatarBundle from "./components/avatarBundle";
 import button from "./components/button";
 import divider from "./components/divider";
 import iconButton from "./components/iconButton";
@@ -19,6 +20,7 @@ const darkGrayThemeConfig = extendTheme(
   Object.assign(
     {},
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
+    avatarBundle,
     button,
     divider,
     iconButton,
