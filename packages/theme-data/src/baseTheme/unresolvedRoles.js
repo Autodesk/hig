@@ -9,6 +9,7 @@ import banner from "./components/banner";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
 import component from "./components/component";
+import datePicker from "./components/datePicker";
 import divider from "./components/divider";
 import flyout from "./components/flyout";
 import formField from "./components/formField";
@@ -61,6 +62,7 @@ const baseThemeConfig = extendTheme(
     button,
     checkbox,
     component,
+    datePicker,
     divider,
     flyout,
     formField,
