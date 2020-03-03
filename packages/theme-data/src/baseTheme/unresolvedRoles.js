@@ -5,6 +5,7 @@ import system from "./system";
 
 import accordion from "./components/accordion";
 import avatar from "./components/avatar";
+import avatarBundle from "./components/avatarBundle";
 import banner from "./components/banner";
 import breadcrumb from "./components/breadcrumb";
 import button from "./components/button";
@@ -60,6 +61,7 @@ const baseThemeConfig = extendTheme(
     mapKeys(system.density, key => `density.${key}`),
     accordion,
     avatar,
+    avatarBundle,
     banner,
     breadcrumb,
     button,
