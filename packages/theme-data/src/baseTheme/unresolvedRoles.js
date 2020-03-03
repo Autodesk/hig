@@ -6,6 +6,7 @@ import system from "./system";
 import accordion from "./components/accordion";
 import avatar from "./components/avatar";
 import banner from "./components/banner";
+import breadcrumb from "./components/breadcrumb";
 import button from "./components/button";
 import canvasFrame from "./components/canvasFrame";
 import checkbox from "./components/checkbox";
@@ -60,6 +61,7 @@ const baseThemeConfig = extendTheme(
     accordion,
     avatar,
     banner,
+    breadcrumb,
     button,
     canvasFrame,
     checkbox,
