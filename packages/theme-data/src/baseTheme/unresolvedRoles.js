@@ -7,6 +7,7 @@ import accordion from "./components/accordion";
 import avatar from "./components/avatar";
 import banner from "./components/banner";
 import button from "./components/button";
+import canvasFrame from "./components/canvasFrame";
 import checkbox from "./components/checkbox";
 import component from "./components/component";
 import datePicker from "./components/datePicker";
@@ -60,6 +61,7 @@ const baseThemeConfig = extendTheme(
     avatar,
     banner,
     button,
+    canvasFrame,
     checkbox,
     component,
     datePicker,
