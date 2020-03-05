@@ -25,6 +25,7 @@ import tabs from "./components/tabs";
 import textarea from "./components/textarea";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
+import toggle from "./components/toggle";
 import tooltip from "./components/tooltip";
 import typography from "./components/typography";
 
@@ -65,6 +66,7 @@ const baseThemeConfig = extendTheme(
     textarea,
     textLink,
     thumbnail,
+    toggle,
     tooltip,
     typography
   )
