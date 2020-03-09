@@ -6,6 +6,7 @@ import input from "./components/input";
 import modal from "./components/modal";
 import slider from "./components/slider";
 import tabs from "./components/tabs";
+import toggle from "./components/toggle";
 import typography from "./components/typography";
 
 const highDensityThemeConfig = Object.assign(
@@ -15,6 +16,7 @@ const highDensityThemeConfig = Object.assign(
   modal,
   slider,
   tabs,
+  toggle,
   typography,
   mapKeys(system.density, key => `density.${key}`)
 );
