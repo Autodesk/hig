@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.15.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.14.0...@hig/theme-data@2.15.0) (2020-03-10)
+
+
+### Features
+
+* add toggle theme-data ([634433a](https://github.com/Autodesk/hig/commit/634433a))
+
 # [@hig/theme-data-v2.14.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.13.0...@hig/theme-data@2.14.0) (2020-02-11)
 
 

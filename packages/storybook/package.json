@@ -55,7 +55,7 @@
     "@hig/rich-text": "^1.0.0",
     "@hig/spacer": "^1.0.7",
     "@hig/theme-context": "^3.0.0",
-    "@hig/theme-data": "^2.14.0",
+    "@hig/theme-data": "^2.15.0",
     "@hig/typography": "^1.0.2",
     "faker": "^4.1.0",
     "prop-types": "^15.6.1",
