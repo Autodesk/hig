@@ -28,12 +28,6 @@ Import the component:
 import TopNav from '@hig/top-nav';
 ```
 
-Import the related CSS:
-
-```
-import '@hig/top-nav/build/index.css';
-```
-
 ## Basic usage
 
 ```jsx
