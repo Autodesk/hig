@@ -108,6 +108,9 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
+    },
+    transform: {
+      alpha: 0.5
     }
   },
   "toggle.off.focus.backgroundColor": {
@@ -156,9 +159,6 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.accentColor"
-    },
-    transform: {
-      alpha: 0.5
     }
   }
 };
