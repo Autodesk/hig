@@ -128,6 +128,9 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
+    },
+    transform: {
+      alpha: 0.5
     }
   },
   "toggle.off.pressed.backgroundColor": {
@@ -138,6 +141,9 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.baseColor"
+    },
+    transform: {
+      alpha: 0.5
     }
   },
   "toggle.on.default.backgroundColor": {
@@ -150,6 +156,9 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.accentColor"
+    },
+    transform: {
+      alpha: 0.5
     }
   }
 };
