@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.15.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.15.0...@hig/theme-data@2.15.1) (2020-03-12)
+
+
+### Bug Fixes
+
+* toggle theme-data knob color ([347ae24](https://github.com/Autodesk/hig/commit/347ae24))
+
 # [@hig/theme-data-v2.15.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.14.0...@hig/theme-data@2.15.0) (2020-03-10)
 
 
