@@ -8,6 +8,7 @@ import iconButton from "./components/iconButton";
 import input from "./components/input";
 import slider from "./components/slider";
 import thumbnail from "./components/thumbnail";
+import toggle from "./components/toggle";
 import tooltip from "./components/tooltip";
 
 const darkGrayThemeConfig = extendTheme(
@@ -21,6 +22,7 @@ const darkGrayThemeConfig = extendTheme(
     input,
     slider,
     thumbnail,
+    toggle,
     tooltip
   )
 );
