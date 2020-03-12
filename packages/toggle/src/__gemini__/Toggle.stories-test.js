@@ -1,7 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import ThemeContext from "@hig/theme-context";
-import Toggle from "../Toggle";
 
 import lightGrayHighTheme from "@hig/theme-data/build/json/lightGrayHighDensityTheme/theme.json";
 import lightGrayMediumTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
@@ -9,6 +8,8 @@ import darkGrayHighTheme from "@hig/theme-data/build/json/darkGrayHighDensityThe
 import darkGrayMediumTheme from "@hig/theme-data/build/json/darkGrayMediumDensityTheme/theme.json";
 import darkBlueHighTheme from "@hig/theme-data/build/json/darkBlueHighDensityTheme/theme.json";
 import darkBlueMediumTheme from "@hig/theme-data/build/json/darkBlueMediumDensityTheme/theme.json";
+
+import Toggle from "../Toggle";
 
 const themes = [
   lightGrayHighTheme,
@@ -47,7 +48,7 @@ function Surface({ children }) {
   );
 }
 
-function ToggleVariantRepeater({ children }) {
+function ToggleVariantRepeater() {
   return (
     <div>
       <Toggle defaultOn />
