@@ -19,6 +19,7 @@ import SliderPage from "./pages/SliderPage";
 import TabsPage from "./pages/TabsPage";
 import TextAreaPage from "./pages/TextAreaPage";
 import TextLinkPage from "./pages/TextLinkPage";
+import TogglePage from "./pages/TogglePage";
 import TooltipPage from "./pages/TooltipPage";
 import TypographyPage from "./pages/TypographyPage";
 
@@ -43,6 +44,7 @@ export default [
   { path: "/tabs/", component: TabsPage, label: "Tabs" },
   { path: "/text-area/", component: TextAreaPage, label: "Text Area" },
   { path: "/text-link/", component: TextLinkPage, label: "Text Link" },
+  { path: "/toggle/", component: TogglePage, label: "Toggle" },
   { path: "/tooltip/", component: TooltipPage, label: "Tooltip" },
   { path: "/typography/", component: TypographyPage, label: "Typography" },
   { path: "/material-ui/buttons/", component: MuiButtonsPage, label: "Material Buttons" },
