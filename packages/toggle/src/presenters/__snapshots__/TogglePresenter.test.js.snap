@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toggle/presenters/TogglePresenter renders with all props 1`] = `
+.emotion-0 {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-1 {
+  background-color: #808080;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 12px;
+  position: absolute;
+  left: 4px;
+  pointer-events: none;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  width: 12px;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(255,255,255,0);
+  border-color: blue;
+  border-radius: 1000em;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 20px;
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1),box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1),box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+  width: 37px;
+}
+
+<label
+  className="emotion-2"
+  htmlFor="toggleInput-1"
+>
+  <input
+    className="emotion-0"
+    defaultOn={true}
+    id="toggleInput-1"
+    on={true}
+    type="checkbox"
+  />
+  <span
+    className="emotion-1"
+  />
+</label>
+`;
+
+exports[`toggle/presenters/TogglePresenter renders without props 1`] = `
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(255,255,255,0);
+  border-color: rgba(128,128,128,0.5);
+  border-radius: 1000em;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 20px;
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1),box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1),box-shadow 0.3s cubic-bezier(0.4,0,0.2,1);
+  width: 37px;
+}
+
+.emotion-0 {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.emotion-1 {
+  background-color: #808080;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 12px;
+  position: absolute;
+  left: 4px;
+  pointer-events: none;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+  width: 12px;
+}
+
+<label
+  className="emotion-2"
+  htmlFor="toggleInput-1"
+>
+  <input
+    className="emotion-0"
+    id="toggleInput-1"
+    type="checkbox"
+  />
+  <span
+    className="emotion-1"
+  />
+</label>
+`;

@@ -82,6 +82,7 @@ Each HIG pattern is implemented as a set of React components. Each pattern is pu
 - [`<TextArea>`](./packages/text-area/README.md) - A control to provide a large amount of freeform text
 - [`<TextLink>`](./packages/text-link/README.md) - Directs visitors to another location
 - [`<Timestamp>`](./packages/timestamp/README.md) - Presents a date with humanized phrasing
+- [`<Toggle>`](./packages/toggle/README.md) - A control for a single action with a clear on/off or start/stop.
 - [`<Tooltip>`](./packages/tooltip/README.md) - Provides context in a small popup container
 - [`<TopNav>`](./packages/top-nav/README.md) - Navigation across the top of the screen
 - [`<Typography>`](./packages/typography/README.md) - A set of components in many typographical variations
