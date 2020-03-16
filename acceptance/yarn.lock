@@ -1216,12 +1216,23 @@
     create-react-context "^0.2.3"
     prop-types "^15.6.1"
 
-"@hig/theme-data@^2.14.0":
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.14.0.tgz#95af0fae30ae8eef2390f128591aba2e18447f1d"
-  integrity sha512-bpAp5ebVpEMnehrVhUxOMWfBIWp860AamJrCBuotEWiujhEHcOuBzkUc9lAvt4X0l/Cdkv0hi4ZF+lR75ZLlLw==
+"@hig/theme-data@^2.15.1":
+  version "2.15.1"
+  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.15.1.tgz#c08479d108ca619f5390bdf7cf4736a1ec749f20"
+  integrity sha512-jsKt9HrHsCbnwqY1gPE4/503np7jU0cZTeAJx8R7KPRQF1TAtNzKHcPnzJXJaw74xDyXmTiEX8n+Ya6xVAtvjg==
   dependencies:
     tinycolor2 "^1.4.1"
+
+"@hig/toggle@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@hig/toggle/-/toggle-1.0.0.tgz#d93ea5c1314f93ffb0b9f37aca3ec7de4d23d89b"
+  integrity sha512-DOsV1ZLYWPCMihq0u+dVMaDXupxKY9OisH6t6aPJPVVo63AyZ5b/D0UuldLabYuAU/6VP1VvXOQIiOBUb8PrjA==
+  dependencies:
+    "@hig/behaviors" "^1.1.1"
+    "@hig/utils" "^0.4.0"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+    react-lifecycles-compat "^3.0.4"
 
 "@hig/tooltip@^1.0.4":
   version "1.0.4"
@@ -1603,9 +1614,9 @@ acorn-walk@^6.0.1:
   integrity sha512-OtUw6JUTgxA2QoqqmrmQ7F2NYqiBPi/L2jqHyFtllhOUvXYQXf0Z1CYUinIfyT4bTCGmrA7gX9FvHA81uzCoVw==
 
 acorn@^5.0.0, acorn@^5.5.3, acorn@^5.6.2:
-  version "5.7.3"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
-  integrity sha512-T/zvzYRfbVojPWahDsE5evJdHb3oJoQfFbsrKM7w5Zcs++Tr257tia3BmMP8XYVjp1S9RZXQMh7gao96BlqZOw==
+  version "5.7.4"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.4.tgz#3e8d8a9947d0599a1796d10225d7432f4a4acf5e"
+  integrity sha512-1D++VG7BhrtvQpNbBzovKNc1FLGGEE/oGe7b9xJm/RFHMBeUaUGpluV9RLjZa47YFdPcDAenEYuq9pQPcMdLJg==
 
 acorn@^6.0.1, acorn@^6.0.2, acorn@^6.0.4:
   version "6.1.1"
