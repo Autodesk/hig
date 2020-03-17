@@ -21,9 +21,6 @@ import stepIndicator from "./components/stepIndicator";
 import tag from "./components/tag";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
-import tile from "./components/tile";
-import toggle from "./components/toggle";
-import token from "./components/token";
 import tooltip from "./components/tooltip";
 import topNav from "./components/topNav";
 import treeView from "./components/treeView";
@@ -52,9 +49,6 @@ const darkBlueThemeConfig = extendTheme(
     tag,
     textLink,
     thumbnail,
-    tile,
-    toggle,
-    token,
     tooltip,
     topNav,
     treeView

@@ -10,7 +10,6 @@ import input from "./components/input";
 import slider from "./components/slider";
 import tag from "./components/tag";
 import thumbnail from "./components/thumbnail";
-import tile from "./components/tile";
 import toggle from "./components/toggle";
 import tooltip from "./components/tooltip";
 
@@ -27,7 +26,6 @@ const darkGrayThemeConfig = extendTheme(
     slider,
     tag,
     thumbnail,
-    tile,
     toggle,
     tooltip
   )
