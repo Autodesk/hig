@@ -123,11 +123,6 @@ export default {
       alpha: 0.7
     }
   },
-  "background.active": {
-    value: {
-      ref: "colorScheme.reference.accent"
-    }
-  },
   "background.hover": {
     value: {
       ref: "colorScheme.reference.base"
@@ -158,14 +153,6 @@ export default {
     },
     transform: {
       alpha: 0.35
-    }
-  },
-  "background.pressed": {
-    value: {
-      ref: "colorScheme.reference.base"
-    },
-    transform: {
-      alpha: 0.2
     }
   },
   "background.selected": {

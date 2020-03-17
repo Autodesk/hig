@@ -125,11 +125,6 @@ export default {
       alpha: 0.7
     }
   },
-  "background.active": {
-    value: {
-      ref: "basics.colors.primary.autodeskBlue.500"
-    }
-  },
   "background.hover": {
     value: {
       ref: "basics.colors.surface.darkBlue.300"
@@ -160,14 +155,6 @@ export default {
     },
     transform: {
       alpha: 0.25
-    }
-  },
-  "background.pressed": {
-    value: {
-      ref: "colorScheme.reference.base"
-    },
-    transform: {
-      alpha: 0.3
     }
   },
   "background.selected": {
