@@ -79,70 +79,76 @@ export default {
     type: LENGTH,
     value: "12px"
   },
-  "toggle.thumb.selected.backgroundColor": {
+  "toggle.thumb.on.backgroundColor": {
     type: COLOR,
     value: {
       ref: "basics.colors.primary.white"
     }
   },
-  "toggle.thumb.unselected.backgroundColor": {
+  "toggle.thumb.off.backgroundColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.reference.base"
     }
   },
-  "toggle.unselected.default.backgroundColor": {
+  "toggle.off.default.backgroundColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.opacity.transparent"
     }
   },
-  "toggle.unselected.default.borderColor": {
+  "toggle.off.default.borderColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.border.base"
     }
   },
-  "toggle.unselected.focus.backgroundColor": {
+  "toggle.off.focus.backgroundColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.opacity.transparent"
     }
   },
-  "toggle.unselected.focus.borderColor": {
+  "toggle.off.focus.borderColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.border.accent"
     }
   },
-  "toggle.unselected.hover.backgroundColor": {
+  "toggle.off.hover.backgroundColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.opacity.transparent"
     }
   },
-  "toggle.unselected.hover.borderColor": {
+  "toggle.off.hover.borderColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.border.base"
     }
   },
-  "toggle.unselected.pressed.backgroundColor": {
+  "toggle.off.pressed.backgroundColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.opacity.transparent"
     }
   },
-  "toggle.unselected.pressed.borderColor": {
+  "toggle.off.pressed.borderColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.border.base"
     }
   },
-  "toggle.selected.backgroundColor": {
+  "toggle.on.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.active"
+      ref: "basics.colors.primary.autodeskBlue.500"
+    }
+  },
+  "toggle.on.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.500"
     }
   }
 };
