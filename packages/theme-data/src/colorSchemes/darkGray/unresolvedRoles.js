@@ -12,7 +12,6 @@ import tag from "./components/tag";
 import thumbnail from "./components/thumbnail";
 import tile from "./components/tile";
 import toggle from "./components/toggle";
-import tile from "./components/tile";
 import tooltip from "./components/tooltip";
 
 const darkGrayThemeConfig = extendTheme(
@@ -30,7 +29,6 @@ const darkGrayThemeConfig = extendTheme(
     thumbnail,
     tile,
     toggle,
-    tile,
     tooltip
   )
 );
