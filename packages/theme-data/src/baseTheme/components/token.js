@@ -9,117 +9,159 @@ import {
 
 export default {
   "token.borderRadii": {
-    type: BORDER_RADIUS,
     value: {
       ref: "basics.borderRadii.none"
-    }
+    },
+    type: BORDER_RADIUS
   },
   "token.icon.marginRight": {
-    type: SPACING,
     value: {
       ref: "density.spacings.extraSmall"
-    }
+    },
+    type: SPACING
   },
   "token.label.marginRight": {
-    type: SPACING,
     value: {
       ref: "density.spacings.extraExtraSmall"
-    }
+    },
+    type: SPACING
   },
   "token.paddingLeft": {
-    type: SPACING,
     value: {
       ref: "density.spacings.extraSmall"
-    }
+    },
+    type: SPACING
   },
   "token.paddingRight": {
-    type: SPACING,
     value: {
       ref: "density.spacings.extraExtraSmall"
-    }
+    },
+    type: SPACING
   },
   "token.paddingVertical": {
-    type: SPACING,
     value: {
       ref: "density.spacings.extraExtraSmall"
-    }
+    },
+    type: SPACING
   },
   "token.label.fontColor": {
-    type: COLOR,
     value: {
       ref: "colorScheme.text.default"
-    }
+    },
+    type: COLOR
   },
   "token.label.fontFamily": {
-    type: FONT_FAMILY,
     value: {
       ref: "basics.fontFamilies.main"
-    }
+    },
+    type: FONT_FAMILY
   },
   "token.label.fontSize": {
-    type: FONT_SIZE,
     value: {
       ref: "density.fontSizes.medium"
-    }
+    },
+    type: FONT_SIZE
   },
   "token.label.fontWeight": {
-    type: FONT_WEIGHT,
     value: {
       ref: "basics.fontWeights.medium"
-    }
+    },
+    type: FONT_WEIGHT
   },
   "token.default.backgroundColor": {
-    type: COLOR,
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.background.filled.level100To250.default"
     },
-    transform: {
-      alpha: 0.15
-    }
+    type: COLOR
+  },
+  "token.default.borderColor": {
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    },
+    type: COLOR
   },
   "token.hover.backgroundColor": {
-    type: COLOR,
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.background.filled.level100To250.hover"
     },
-    transform: {
-      alpha: 0.25
-    }
+    type: COLOR
+  },
+  "token.hover.borderColor": {
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    },
+    type: COLOR
   },
   "token.pressed.backgroundColor": {
-    type: COLOR,
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.background.filled.level100To250.pressed"
     },
-    transform: {
-      alpha: 0.35
-    }
+    type: COLOR
   },
-  "token.selected.backgroundColor": {
-    type: COLOR,
+  "token.pressed.borderColor": {
     value: {
-      ref: "colorScheme.reference.accent"
+      ref: "colorScheme.opacity.transparent"
     },
-    transform: {
-      alpha: 0.25
-    }
+    type: COLOR
+  },
+  "token.selected.default.backgroundColor": {
+    value: {
+      ref: "colorScheme.background.on.default"
+    },
+    type: COLOR
+  },
+  "token.selected.default.borderColor": {
+    value: {
+      ref: "colorScheme.border.on"
+    },
+    type: COLOR
+  },
+  "token.selected.hover.backgroundColor": {
+    value: {
+      ref: "colorScheme.background.on.hover"
+    },
+    type: COLOR
+  },
+  "token.selected.hover.borderColor": {
+    value: {
+      ref: "colorScheme.border.on"
+    },
+    type: COLOR
+  },
+  "token.selected.pressed.backgroundColor": {
+    value: {
+      ref: "colorScheme.background.empty.level100To250.pressed"
+    },
+    type: COLOR
+  },
+  "token.selected.pressed.borderColor": {
+    value: {
+      ref: "colorScheme.border.on"
+    },
+    type: COLOR
   },
   "token.warning.default.backgroundColor": {
-    type: COLOR,
     value: {
       ref: "colorScheme.status.warning"
     },
     transform: {
       alpha: 0.15
-    }
+    },
+    type: COLOR
   },
   "token.warning.hover.backgroundColor": {
-    type: COLOR,
     value: {
       ref: "colorScheme.status.warning"
     },
     transform: {
       alpha: 0.3
-    }
+    },
+    type: COLOR
+  },
+  "token.warning.iconColor": {
+    value: {
+      ref: "colorScheme.status.warning"
+    },
+    type: COLOR
   }
 };

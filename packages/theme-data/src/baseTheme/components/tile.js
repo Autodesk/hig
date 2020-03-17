@@ -94,13 +94,10 @@ export default {
       ref: "basics.lineHeights.highMedium"
     }
   },
-  "tile.default.level100To250BackgroundColor": {
+  "tile.filled.default.level100To250.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.charcoal.600"
-    },
-    transform: {
-      alpha: 0.1
+      ref: "colorScheme.background.filled.level100To250.default"
     }
   },
   "tile.default.level300To350BackgroundColor": {
@@ -115,25 +112,19 @@ export default {
   "tile.selected.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.accent"
-    },
-    transform: {
-      alpha: 0.5
+      ref: "colorScheme.background.on.default"
     }
   },
   "tile.selected.default.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.focus"
+      ref: "colorScheme.border.on"
     }
   },
-  "tile.hover.level100To250BackgroundColor": {
+  "tile.filled.hover.level100To250.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.charcoal.600"
-    },
-    transform: {
-      alpha: 0.2
+      ref: "colorScheme.background.filled.level100To250.hover"
     }
   },
   "tile.hover.level300To350BackgroundColor": {
@@ -148,25 +139,19 @@ export default {
   "tile.selected.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.accent"
-    },
-    transform: {
-      alpha: 0.5
+      ref: "colorScheme.background.on.hover"
     }
   },
   "tile.selected.hover.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.focus"
+      ref: "colorScheme.border.on"
     }
   },
-  "tile.focus.level100To250BackgroundColor": {
+  "tile.filled.focus.level100To250.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.charcoal.600"
-    },
-    transform: {
-      alpha: 0.1
+      ref: "colorScheme.background.filled.level100To250.focus"
     }
   },
   "tile.focus.level300To350BackgroundColor": {
@@ -187,25 +172,19 @@ export default {
   "tile.selected.focus.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.accent"
-    },
-    transform: {
-      alpha: 0.5
+      ref: "colorScheme.background.on.focus"
     }
   },
   "tile.selected.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.focus"
+      ref: "colorScheme.border.accent"
     }
   },
-  "tile.pressed.level100To250BackgroundColor": {
+  "tile.filled.pressed.level100To250.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.charcoal.600"
-    },
-    transform: {
-      alpha: 0.3
+      ref: "colorScheme.background.filled.level100To250.pressed"
     }
   },
   "tile.pressed.level300To350BackgroundColor": {
@@ -215,6 +194,186 @@ export default {
     },
     transform: {
       alpha: 0.9
+    }
+  },
+  "tile.filled.default.level300To350.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.filled.level300To350.default"
+    }
+  },
+  "tile.filled.focus.level300To350.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.filled.level300To350.focus"
+    }
+  },
+  "tile.filled.hover.level300To350.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.filled.level300To350.hover"
+    }
+  },
+  "tile.filled.pressed.level300To350.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.filled.level300To350.pressed"
+    }
+  },
+  "tile.empty.default.level100To250.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.empty.default.level100To250.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.empty.default.level300To350.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.empty.default.level300To350.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.empty.focus.level100To250.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.empty.focus.level100To250.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.empty.focus.level300To350.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.empty.focus.level300To350.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.empty.hover.level100To250.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.empty.level100To250.hover"
+    }
+  },
+  "tile.empty.hover.level100To250.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.empty.hover.level300To350.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.empty.level300To350.hover"
+    }
+  },
+  "tile.empty.hover.level300To350.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.empty.level300To350.hover"
+    }
+  },
+  "tile.empty.pressed.level100To250.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.empty.level100To250.pressed"
+    }
+  },
+  "tile.empty.pressed.level100To250.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.empty.pressed.level300To350.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.empty.level300To350.pressed"
+    }
+  },
+  "tile.empty.pressed.level300To350.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.empty.level300To350.pressed"
+    }
+  },
+  "tile.filled.default.level100To250.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.filled.default.level300To350.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.filled.focus.level100To250.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.filled.focus.level300To350.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.filled.hover.level100To250.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.filled.hover.level300To350.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.filled.pressed.level100To250.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.filled.pressed.level300To350.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tile.selected.pressed.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.empty.level100To250.pressed"
+    }
+  },
+  "tile.selected.pressed.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.border.on"
     }
   }
 };

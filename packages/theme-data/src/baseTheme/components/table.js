@@ -46,19 +46,19 @@ export default {
   "table.row.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.hover"
+      ref: "colorScheme.background.empty.level100To250.hover"
     }
   },
   "table.row.selected.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.selected"
+      ref: "colorScheme.background.on.default"
     }
   },
   "table.row.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.pressed"
+      ref: "colorScheme.background.empty.level100To250.pressed"
     }
   },
   "table.header.borderTopColor": {

@@ -86,7 +86,7 @@ export default {
   "sideNav.module.active.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.accent"
+      ref: "colorScheme.text.active"
     }
   },
   "sideNav.module.active.fontSize": {
@@ -134,7 +134,7 @@ export default {
   "sideNav.subModule.active.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.accent"
+      ref: "colorScheme.text.active"
     }
   },
   "sideNav.subModule.active.fontSize": {
