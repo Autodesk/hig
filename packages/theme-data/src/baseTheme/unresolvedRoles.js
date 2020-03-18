@@ -25,6 +25,7 @@ import notification from "./components/notification";
 import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
 import scrollbar from "./components/scrollbar";
+import segmentedButton from "./components/segmentedButton";
 import sideNav from "./components/sideNav";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
@@ -81,6 +82,7 @@ const baseThemeConfig = extendTheme(
     progressBar,
     progressRing,
     scrollbar,
+    segmentedButton,
     sideNav,
     skeletonItem,
     slider,
