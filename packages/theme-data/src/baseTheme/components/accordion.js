@@ -8,16 +8,7 @@ import {
 } from "../../consts/types";
 
 export default {
-  "accordion.header.backgroundColor": {
-    type: COLOR,
-    value: { ref: "colorScheme.baseColor" },
-    transform: { alpha: 0.1 }
-  },
-  "accordion.header.paddingVertical": {
-    type: LENGTH,
-    value: { ref: "density.spacings.extraSmall" }
-  },
-  "accordion.header.paddingHorizontal": {
+  "accordion.header.indicatorGutter": {
     type: LENGTH,
     value: { ref: "density.spacings.extraSmall" }
   },
@@ -29,13 +20,29 @@ export default {
     type: LENGTH,
     value: { ref: "density.spacings.medium" }
   },
+  "accordion.header.indicatorSize": {
+    type: LENGTH,
+    value: { ref: "density.spacings.medium" }
+  },
+  "accordion.header.paddingHorizontal": {
+    type: LENGTH,
+    value: { ref: "density.spacings.extraSmall" }
+  },
+  "accordion.header.paddingVertical": {
+    type: LENGTH,
+    value: { ref: "density.spacings.extraSmall" }
+  },
+  "accordion.header.fontColor": {
+    type: COLOR,
+    value: { ref: "colorScheme.text.default" }
+  },
   "accordion.header.fontFamily": {
     type: FONT_FAMILY,
     value: { ref: "basics.fontFamilies.main" }
   },
   "accordion.header.fontSize": {
     type: FONT_SIZE,
-    value: { ref: "typography.body.fontSize" }
+    value: { ref: "density.fontSizes.medium" }
   },
   "accordion.header.fontWeight": {
     type: FONT_WEIGHT,
@@ -45,24 +52,26 @@ export default {
     type: LINE_HEIGHT,
     value: { ref: "basics.lineHeights.mediumExtraLarge" }
   },
-  "accordion.header.fontColor": {
+  "accordion.header.backgroundColor": {
     type: COLOR,
-    value: { ref: "colorScheme.textColor" }
-  },
-  "accordion.header.indicatorSize": {
-    type: LENGTH,
-    value: { ref: "basics.spacings.mediumMedium" }
-  },
-  "accordion.header.indicatorGutter": {
-    type: LENGTH,
-    value: { ref: "density.spacings.extraSmall" }
-  },
-  "accordion.header.indicatorColor": {
-    type: COLOR,
-    value: { ref: "colorScheme.iconColor" }
+    value: { ref: "basics.colors.primary.charcoal.600" },
+    transform: { alpha: 0.1 }
   },
   "accordion.header.hover.indicatorColor": {
     type: COLOR,
-    value: { ref: "colorScheme.textColor" }
+    value: { ref: "colorScheme.indicator.hover" }
+  },
+  "accordion.header.default.indicatorColor": {
+    type: COLOR,
+    value: { ref: "colorScheme.indicator.default" }
+  },
+  "accordion.header.indicatorColor": {
+    type: COLOR,
+    value: { ref: "accordion.header.default.indicatorColor" },
+    metadata: {
+      deprecated: {
+        equivalent: "accordion.header.default.indicatorColor"
+      }
+    }
   }
 };
