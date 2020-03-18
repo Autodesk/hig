@@ -7,6 +7,7 @@ import button from "./components/button";
 import divider from "./components/divider";
 import iconButton from "./components/iconButton";
 import input from "./components/input";
+import segmentedButton from "./components/segmentedButton";
 import slider from "./components/slider";
 import tag from "./components/tag";
 import thumbnail from "./components/thumbnail";
@@ -23,6 +24,7 @@ const darkGrayThemeConfig = extendTheme(
     divider,
     iconButton,
     input,
+    segmentedButton,
     slider,
     tag,
     thumbnail,
