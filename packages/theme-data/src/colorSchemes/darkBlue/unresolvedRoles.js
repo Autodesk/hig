@@ -3,6 +3,7 @@ import mapKeys from "../../utils/mapKeys";
 import system from "./system";
 import baseTheme from "../../baseTheme";
 import mediumDensityTheme from "../../densities/mediumDensity";
+import accordion from "./components/accordion";
 import avatarBundle from "./components/avatarBundle";
 import banner from "./components/banner";
 import button from "./components/button";
@@ -32,6 +33,7 @@ const darkBlueThemeConfig = extendTheme(
     {},
     mediumDensityTheme.unresolvedRoles,
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
+    accordion,
     avatarBundle,
     banner,
     button,
