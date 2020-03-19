@@ -1,26 +1,15 @@
 import {
   BORDER_RADIUS,
   BORDER_WIDTH,
+  COLOR,
   FONT_FAMILY,
   FONT_SIZE,
   FONT_WEIGHT,
   LENGTH,
-  LINE_HEIGHT,
-  COLOR
+  LINE_HEIGHT
 } from "../../consts/types";
 
-const transparentColor = {
-  type: COLOR,
-  value: {
-    ref: "basics.colors.white"
-  },
-  transform: {
-    alpha: 0
-  }
-};
-
 export default {
-  // General
   "button.borderRadius": {
     type: BORDER_RADIUS,
     value: {
@@ -33,157 +22,364 @@ export default {
       ref: "basics.borderWidths.small"
     }
   },
-  "button.fontWeight": {
+  "button.label.fontWeight": {
     type: FONT_WEIGHT,
     value: {
       ref: "basics.fontWeights.medium"
     }
   },
-  "button.lineHeight": {
-    type: LINE_HEIGHT
+  "button.fontWeight": {
+    type: FONT_WEIGHT,
+    value: {
+      ref: "button.label.fontWeight"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.label.fontWeight"
+      }
+    }
   },
-  "button.fontFamily": {
+  "button.label.lineHeight": {
+    type: LINE_HEIGHT,
+    value: "18px"
+  },
+  "button.lineHeight": {
+    type: LINE_HEIGHT,
+    value: {
+      ref: "button.label.lineHeight"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.label.lineHeight"
+      }
+    }
+  },
+  "button.label.fontFamily": {
     type: FONT_FAMILY,
     value: {
       ref: "basics.fontFamilies.main"
     }
   },
-  "button.fontSize": {
+  "button.fontFamily": {
+    type: FONT_FAMILY,
+    value: {
+      ref: "button.label.fontFamily"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.label.fontFamily"
+      }
+    }
+  },
+  "button.label.fontSize": {
     type: FONT_SIZE,
     value: {
       ref: "density.fontSizes.medium"
     }
   },
-  "button.gutter": {
+  "button.fontSize": {
+    type: FONT_SIZE,
+    value: {
+      ref: "button.label.fontSize"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.label.fontSize"
+      }
+    }
+  },
+  "button.gutterWidth": {
     type: LENGTH,
-    /** @todo */
     value: "4px",
     comment: `
       The space between elements with the component.
       E.g. The space between an icon and label within a button.`
   },
-  "button.horizontalPadding": {
+  "button.gutter": {
+    type: LENGTH,
+    value: {
+      ref: "button.gutterWidth"
+    },
+    comment: `
+      The space between elements with the component.
+      E.g. The space between an icon and label within a button.`,
+    metadata: {
+      deprecated: {
+        equivalent: "button.gutterWidth"
+      }
+    }
+  },
+  "button.paddingHorizontal": {
     type: LENGTH,
     value: {
       ref: "density.spacings.medium"
     }
   },
-  "button.minimumWidth": {
+  "button.horizontalPadding": {
+    type: LENGTH,
+    value: {
+      ref: "button.paddingHorizontal"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.paddingHorizontal"
+      }
+    }
+  },
+  "button.minWidth": {
     type: LENGTH,
     value: "10px"
   },
-  "button.verticalPadding": {
+  "button.minimumWidth": {
+    type: LENGTH,
+    value: {
+      ref: "button.minWidth"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.minWidth"
+      }
+    }
+  },
+  "button.paddingVertical": {
     type: LENGTH,
     value: {
       ref: "density.spacings.extraSmall"
     }
   },
-  /**
-   * ## States
-   *
-   * ### Default
-   */
+  "button.verticalPadding": {
+    type: LENGTH,
+    value: {
+      ref: "button.paddingVertical"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.paddingVertical"
+      }
+    }
+  },
   "button.halo.width": {
     type: LENGTH,
-    value: "2px"
+    value: "2px",
+    metadata: {
+      deprecated: {
+        equivalent: "basics.borderWidths"
+      }
+    }
   },
   "button.halo.color": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
+      ref: "colorScheme.reference.base"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "colorScheme.halo"
+      }
     }
   },
-
-  /**
-   * ### Hover
-   */
-  "button.hover.halo.width": {
+  "button.hover.haloWidth": {
     type: LENGTH,
     value: "2px"
   },
-  "button.hover.halo.color": {
+  "button.hover.halo.width": {
+    type: LENGTH,
+    value: "2px",
+    metadata: {
+      deprecated: {
+        equivalent: "button.hover.haloWidth"
+      }
+    }
+  },
+  "button.hover.haloColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
+      ref: "colorScheme.reference.base"
     },
     transform: {
       alpha: 0.15
     }
   },
-
-  /**
-   * ### Focus
-   */
-  "button.focus.halo.width": {
+  "button.hover.halo.color": {
+    type: COLOR,
+    value: {
+      ref: "button.hover.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.hover.haloColor"
+      }
+    }
+  },
+  "button.haloWidth": {
     type: LENGTH,
     value: "2px"
   },
-  "button.focus.halo.color": {
+  "button.focus.halo.width": {
+    type: LENGTH,
+    value: {
+      ref: "button.haloWidth"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.haloWidth"
+      }
+    }
+  },
+  "button.focus.haloColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "colorScheme.reference.accent"
     },
     transform: {
       alpha: 0.35
     }
   },
-
-  /**
-   * ### Pressed
-   */
-  "button.pressed.halo.width": {
+  "button.focus.halo.color": {
+    type: COLOR,
+    value: {
+      ref: "button.focus.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.focus.haloColor"
+      }
+    }
+  },
+  "button.pressed.haloWidth": {
     type: LENGTH,
     value: "4px"
   },
-  "button.pressed.halo.color": {
+  "button.pressed.halo.width": {
+    type: LENGTH,
+    value: {
+      ref: "button.pressed.haloWidth"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.pressed.haloWidth"
+      }
+    }
+  },
+  "button.pressed.haloColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
+      ref: "colorScheme.reference.base"
     },
     transform: {
       alpha: 0.25
     }
   },
-
+  "button.pressed.halo.color": {
+    type: COLOR,
+    value: {
+      ref: "button.pressed.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.pressed.haloColor"
+      }
+    }
+  },
   /**
    * ## Variants
    *
    * ### Outline
    *
-   * #### Default
    */
-  "button.outline.backgroundColor": transparentColor,
-  "button.outline.borderColor": {
+  "button.outline.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "button.outline.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.default.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.outline.default.backgroundColor"
+      }
+    }
+  },
+  "button.outline.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.reference.base"
     },
     transform: {
       alpha: 0.5
     }
   },
+  "button.outline.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.default.borderColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.outline.default.borderColor"
+      }
+    }
+  },
+  "button.outline.focus.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.backgroundColor"
+    }
+  },
+  "button.outline.focus.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.reference.accent"
+    }
+  },
+  "button.outline.focus.halo.color": {
+    type: COLOR,
+    value: {
+      ref: "button.focus.halo.color"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.focus.haloColor"
+      }
+    }
+  },
+  "button.outline.focus.icon.color": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.icon.color"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.outline.iconColor"
+      }
+    }
+  },
+  "button.outline.focus.textColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.textColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.outline.label.fontColor"
+      }
+    }
+  },
   "button.outline.halo.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.charcoal400"
+      ref: "button.halo.color"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "colorScheme.halo"
+      }
     }
   },
-  "button.outline.textColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.textColor"
-    }
-  },
-  "button.outline.icon.color": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.textColor"
-    }
-  },
-
-  /**
-   * #### Hover
-   */
   "button.outline.hover.backgroundColor": {
     type: COLOR,
     value: {
@@ -199,62 +395,46 @@ export default {
   "button.outline.hover.halo.color": {
     type: COLOR,
     value: {
-      ref: "button.hover.halo.color"
-    }
-  },
-  "button.outline.hover.textColor": {
-    type: COLOR,
-    value: {
-      ref: "button.outline.textColor"
+      ref: "button.hover.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.hover.haloColor"
+      }
     }
   },
   "button.outline.hover.icon.color": {
     type: COLOR,
     value: {
-      ref: "button.outline.icon.color"
+      ref: "button.outline.iconColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.outline.iconColor"
+      }
     }
   },
-
-  /**
-   * #### Focus
-   */
-  "button.outline.focus.backgroundColor": {
+  "button.outline.hover.textColor": {
     type: COLOR,
     value: {
-      ref: "button.outline.backgroundColor"
+      ref: "button.outline.label.fontColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.outline.label.fontColor"
+      }
     }
   },
-  "button.outline.focus.borderColor": {
+  "button.outline.icon.color": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "button.outline.iconColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.outline.iconColor"
+      }
     }
-  },
-  "button.outline.focus.halo.color": {
-    type: COLOR,
-    value: {
-      ref: "button.focus.halo.color"
-    }
-  },
-  "button.outline.focus.textColor": {
-    type: COLOR,
-    value: {
-      ref: "button.outline.textColor"
-    }
-  },
-  "button.outline.focus.icon.color": {
-    type: COLOR,
-    value: {
-      ref: "button.outline.icon.color"
-    }
-  },
-
-  /**
-   * #### Pressed
-   */
-  "button.outline.pressed.haloWidth": {
-    type: LENGTH,
-    value: "4px"
   },
   "button.outline.pressed.backgroundColor": {
     type: COLOR,
@@ -271,65 +451,153 @@ export default {
   "button.outline.pressed.halo.color": {
     type: COLOR,
     value: {
-      ref: "button.pressed.halo.color"
+      ref: "button.pressed.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.pressed.haloColor"
+      }
     }
   },
-  "button.outline.pressed.textColor": {
-    type: COLOR,
+  "button.outline.pressed.haloWidth": {
+    type: LENGTH,
     value: {
-      ref: "button.outline.textColor"
+      ref: "button.pressed.haloWidth"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.pressed.haloWidth"
+      }
     }
   },
   "button.outline.pressed.icon.color": {
     type: COLOR,
     value: {
-      ref: "button.outline.icon.color"
+      ref: "button.outline.iconColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.outline.iconColor"
+      }
     }
   },
-
+  "button.outline.pressed.textColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.label.fontColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.outline.label.fontColor"
+      }
+    }
+  },
+  "button.outline.textColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.label.fontColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.outline.label.fontColor"
+      }
+    }
+  },
+  "button.outline.label.fontColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.text.default"
+    }
+  },
+  "button.outline.indicatorColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.indicator.default"
+    }
+  },
+  "button.outline.iconColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.icon.default"
+    }
+  },
   /**
+   * ## Variants
+   *
    * ### Solid
    *
-   * #### Default
    */
+  "button.solid.default.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.reference.accent"
+    }
+  },
   "button.solid.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "button.solid.default.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.solid.default.backgroundColor"
+      }
+    }
+  },
+  "button.solid.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.reference.accent"
     }
   },
   "button.solid.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "button.solid.default.borderColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.solid.default.borderColor"
+      }
     }
   },
   "button.solid.halo.color": {
     type: COLOR,
     value: {
       ref: "button.halo.color"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "colorScheme.halo"
+      }
     }
   },
   "button.solid.textColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.textAgainstDark"
+      ref: "button.solid.label.fontColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.solid.label.fontColor"
+      }
     }
   },
   "button.solid.icon.color": {
     type: COLOR,
     value: {
-      ref: "basics.colors.textAgainstDark"
+      ref: "button.solid.iconColor"
+    },
+    metadata: {
+      deprecated: {
+        ref: "button.solid.iconColor"
+      }
     }
   },
-
-  /**
-   * #### Hover
-   */
   "button.solid.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "colorScheme.reference.accent"
     }
   },
   "button.solid.hover.borderColor": {
@@ -341,219 +609,390 @@ export default {
   "button.solid.hover.halo.color": {
     type: COLOR,
     value: {
-      ref: "button.hover.halo.color"
+      ref: "button.hover.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.hover.haloColor"
+      }
     }
   },
   "button.solid.hover.textColor": {
     type: COLOR,
     value: {
-      ref: "button.solid.textColor"
+      ref: "button.solid.label.fontColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.solid.label.fontColor"
+      }
     }
   },
   "button.solid.hover.icon.color": {
     type: COLOR,
     value: {
-      ref: "button.solid.icon.color"
+      ref: "button.solid.iconColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.solid.iconColor"
+      }
     }
   },
-
-  /**
-   * #### Focus
-   */
   "button.solid.focus.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "colorScheme.reference.accent"
     }
   },
   "button.solid.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "button.solid.borderColor"
+      ref: "button.solid.default.borderColor"
     }
   },
   "button.solid.focus.halo.color": {
     type: COLOR,
     value: {
-      ref: "button.focus.halo.color"
+      ref: "button.focus.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.focus.haloColor"
+      }
     }
   },
   "button.solid.focus.textColor": {
     type: COLOR,
     value: {
-      ref: "button.solid.textColor"
+      ref: "button.solid.label.fontColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.solid.label.fontColor"
+      }
     }
   },
   "button.solid.focus.icon.color": {
     type: COLOR,
     value: {
-      ref: "button.solid.icon.color"
+      ref: "button.solid.iconColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.solid.iconColor"
+      }
     }
   },
-
-  /**
-   * #### Pressed
-   */
   "button.solid.pressed.haloWidth": {
     type: LENGTH,
-    value: "4px"
+    value: {
+      ref: "button.pressed.haloWidth"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.pressed.haloWidth"
+      }
+    }
   },
   "button.solid.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "button.solid.backgroundColor"
+      ref: "button.solid.default.backgroundColor"
     }
   },
   "button.solid.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "button.solid.borderColor"
+      ref: "button.solid.default.borderColor"
     }
   },
   "button.solid.pressed.halo.color": {
     type: COLOR,
     value: {
-      ref: "button.pressed.halo.color"
+      ref: "button.pressed.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.pressed.haloColor"
+      }
     }
   },
   "button.solid.pressed.textColor": {
     type: COLOR,
     value: {
-      ref: "button.solid.textColor"
+      ref: "button.solid.label.fontColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.solid.label.fontColor"
+      }
     }
   },
   "button.solid.pressed.icon.color": {
     type: COLOR,
     value: {
-      ref: "button.solid.icon.color"
+      ref: "button.solid.iconColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.solid.iconColor"
+      }
     }
   },
-
+  "button.solid.label.fontColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white"
+    }
+  },
+  "button.solid.iconColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white"
+    }
+  },
+  "button.solid.indicatorColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white"
+    }
+  },
   /**
+   * ## Variants
+   *
    * ### Flat
    *
-   * #### Default
    */
-  "button.flat.backgroundColor": transparentColor,
-  "button.flat.borderColor": transparentColor,
+  "button.flat.default.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "button.flat.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "button.flat.default.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.flat.default.backgroundColor"
+      }
+    }
+  },
+  "button.flat.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "button.flat.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "button.flat.default.borderColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.flat.default.borderColor"
+      }
+    }
+  },
   "button.flat.halo.color": {
     type: COLOR,
     value: {
       ref: "button.halo.color"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "colorScheme.halo"
+      }
     }
   },
   "button.flat.textColor": {
     type: COLOR,
-    value: "#006EAF"
+    value: {
+      ref: "button.flat.label.fontColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.flat.label.fontColor"
+      }
+    }
   },
   "button.flat.icon.color": {
     type: COLOR,
-    value: "#006EAF"
+    value: {
+      ref: "button.flat.iconColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.flat.iconColor"
+      }
+    }
   },
-
-  /**
-   * #### Hover
-   */
   "button.flat.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "button.flat.backgroundColor"
+      ref: "button.flat.default.backgroundColor"
     }
   },
   "button.flat.hover.borderColor": {
     type: COLOR,
     value: {
-      ref: "button.flat.borderColor"
+      ref: "button.flat.default.borderColor"
     }
   },
   "button.flat.hover.halo.color": {
     type: COLOR,
     value: {
-      ref: "button.hover.halo.color"
+      ref: "button.hover.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.hover.haloColor"
+      }
     }
   },
   "button.flat.hover.textColor": {
     type: COLOR,
     value: {
-      ref: "button.flat.textColor"
+      ref: "button.flat.label.fontColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.flat.label.fontColor"
+      }
     }
   },
   "button.flat.hover.icon.color": {
     type: COLOR,
     value: {
-      ref: "button.flat.icon.color"
+      ref: "button.flat.iconColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.flat.iconColor"
+      }
     }
   },
-
-  /**
-   * #### Focus
-   */
   "button.flat.focus.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "button.flat.backgroundColor"
+      ref: "button.flat.default.backgroundColor"
     }
   },
   "button.flat.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "button.flat.borderColor"
+      ref: "button.flat.default.borderColor"
     }
   },
   "button.flat.focus.halo.color": {
     type: COLOR,
     value: {
-      ref: "button.focus.halo.color"
+      ref: "button.focus.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.focus.haloColor"
+      }
     }
   },
   "button.flat.focus.textColor": {
     type: COLOR,
     value: {
-      ref: "button.flat.textColor"
+      ref: "button.flat.label.fontColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.flat.label.fontColor"
+      }
     }
   },
   "button.flat.focus.icon.color": {
     type: COLOR,
     value: {
-      ref: "button.flat.icon.color"
+      ref: "button.flat.iconColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.flat.iconColor"
+      }
     }
   },
-
-  /**
-   * #### Pressed
-   */
   "button.flat.pressed.haloWidth": {
     type: LENGTH,
-    value: "4px"
+    value: {
+      ref: "button.pressed.haloWidth"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.pressed.haloWidth"
+      }
+    }
   },
   "button.flat.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "button.flat.backgroundColor"
+      ref: "button.flat.default.backgroundColor"
     }
   },
   "button.flat.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "button.flat.borderColor"
+      ref: "button.flat.default.borderColor"
     }
   },
   "button.flat.pressed.halo.color": {
     type: COLOR,
     value: {
-      ref: "button.pressed.halo.color"
+      ref: "button.pressed.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.pressed.haloColor"
+      }
     }
   },
   "button.flat.pressed.textColor": {
     type: COLOR,
     value: {
-      ref: "button.flat.textColor"
+      ref: "button.flat.label.fontColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.flat.label.fontColor"
+      }
     }
   },
   "button.flat.pressed.icon.color": {
     type: COLOR,
     value: {
-      ref: "button.flat.icon.color"
+      ref: "button.flat.iconColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "button.flat.iconColor"
+      }
+    }
+  },
+  "button.flat.label.fontColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.700"
+    }
+  },
+  "button.flat.iconColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.700"
+    }
+  },
+  "button.flat.indicatorColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.700"
     }
   }
 };
