@@ -51,7 +51,10 @@ export default {
     }
   },
   "treeView.title.lineHeight": {
-    type: LINE_HEIGHT
+    type: LINE_HEIGHT,
+    value: {
+      ref: "basics.lineHeights.highExtraLarge"
+    }
   },
   "treeView.item.fontSize": {
     type: FONT_SIZE,
@@ -66,7 +69,10 @@ export default {
     }
   },
   "treeView.item.lineHeight": {
-    type: LINE_HEIGHT
+    type: LINE_HEIGHT,
+    value: {
+      ref: "basics.lineHeights.highExtraLarge"
+    }
   },
   "treeView.indicatorColor": {
     type: COLOR,

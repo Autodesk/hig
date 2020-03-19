@@ -1,10 +1,7 @@
 export default {
-  "treeView.guideLine.backgroundColor": {
+  "segmentedButton.active.backgroundColor": {
     value: {
       ref: "colorScheme.reference.base"
-    },
-    transform: {
-      alpha: 0.4
     }
   }
 };

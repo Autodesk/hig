@@ -94,49 +94,49 @@ export default {
   "toggle.off.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.transparent"
+      ref: "colorScheme.opacity.transparent"
     }
   },
   "toggle.off.default.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.default"
+      ref: "colorScheme.border.base"
     }
   },
   "toggle.off.focus.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.transparent"
+      ref: "colorScheme.opacity.transparent"
     }
   },
   "toggle.off.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.focus"
+      ref: "colorScheme.border.accent"
     }
   },
   "toggle.off.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.transparent"
+      ref: "colorScheme.opacity.transparent"
     }
   },
   "toggle.off.hover.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.default"
+      ref: "colorScheme.border.base"
     }
   },
   "toggle.off.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.transparent"
+      ref: "colorScheme.opacity.transparent"
     }
   },
   "toggle.off.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.default"
+      ref: "colorScheme.border.base"
     }
   },
   "toggle.on.default.backgroundColor": {

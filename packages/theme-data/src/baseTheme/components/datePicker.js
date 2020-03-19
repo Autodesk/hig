@@ -12,7 +12,7 @@ export default {
   "datePicker.container.paddingHorizontal": {
     type: SPACING,
     value: {
-      ref: "density.spacings.large"
+      ref: "density.spacings.medium"
     }
   },
   "datePicker.container.paddingVertical": {
@@ -86,7 +86,7 @@ export default {
   "datePicker.notableDate.fontColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.autodeskBlue.500"
+      ref: "colorScheme.text.active"
     }
   },
   "datePicker.notableDate.fontSize": {
@@ -104,7 +104,7 @@ export default {
   "datePicker.restrictedDate.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.default"
+      ref: "colorScheme.text.placeholder"
     },
     transform: {
       alpha: 0.4
@@ -173,7 +173,7 @@ export default {
   "datePicker.standardDateCell.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.hover"
+      ref: "colorScheme.background.empty.level100To250.hover"
     }
   },
   "datePicker.standardDateCell.focus.backgroundColor": {
@@ -185,7 +185,7 @@ export default {
   "datePicker.standardDateCell.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.focus"
+      ref: "colorScheme.border.accent"
     }
   },
   "datePicker.standardDateCell.focus.borderWidth": {
@@ -209,19 +209,19 @@ export default {
   "datePicker.standardDateCell.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.pressed"
+      ref: "colorScheme.background.empty.level100To250.pressed"
     }
   },
   "datePicker.selectedDateCell.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.active"
+      ref: "basics.colors.primary.autodeskBlue.500"
     }
   },
   "datePicker.selectedDateCell.focus.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.active"
+      ref: "basics.colors.primary.autodeskBlue.500"
     }
   },
   "datePicker.selectedDateCell.focus.haloColor": {
@@ -272,7 +272,7 @@ export default {
   "datePicker.rangeDateCell.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.pressed"
+      ref: "colorScheme.background.empty.level100To250.pressed"
     }
   },
   "datePicker.currentDateCell.default.backgroundColor": {
@@ -284,7 +284,7 @@ export default {
   "datePicker.currentDateCell.default.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.focus"
+      ref: "colorScheme.border.accent"
     }
   },
   "datePicker.currentDateCell.default.borderWidth": {
@@ -296,13 +296,13 @@ export default {
   "datePicker.currentDateCell.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.hover"
+      ref: "colorScheme.background.empty.level100To250.hover"
     }
   },
   "datePicker.currentDateCell.hover.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.focus"
+      ref: "colorScheme.border.accent"
     }
   },
   "datePicker.currentDateCell.hover.borderWidth": {
@@ -320,7 +320,7 @@ export default {
   "datePicker.currentDateCell.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.focus"
+      ref: "colorScheme.border.accent"
     }
   },
   "datePicker.currentDateCell.focus.borderWidth": {
@@ -344,13 +344,19 @@ export default {
   "datePicker.currentDateCell.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.pressed"
+      ref: "colorScheme.background.empty.level100To250.pressed"
     }
   },
   "datePicker.currentDateCell.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.focus"
+      ref: "colorScheme.border.accent"
+    }
+  },
+  "datePicker.currentDateCell.pressed.borderWidth": {
+    type: BORDER_WIDTH,
+    value: {
+      ref: "basics.borderWidths.small"
     }
   }
 };

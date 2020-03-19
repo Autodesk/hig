@@ -134,7 +134,7 @@ export default {
   "stepIndicator.number.inProgress.fontColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.autodeskBlue.500"
+      ref: "colorScheme.text.active"
     }
   },
   "stepIndicator.number.inProgress.fontWeight": {
@@ -167,13 +167,13 @@ export default {
   "stepIndicator.connector.active.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.active"
+      ref: "basics.colors.primary.autodeskBlue.500"
     }
   },
   "stepIndicator.incomplete.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.transparent"
+      ref: "colorScheme.opacity.transparent"
     }
   },
   "stepIndicator.incomplete.borderColor": {
@@ -185,19 +185,19 @@ export default {
   "stepIndicator.inProgress.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.transparent"
+      ref: "colorScheme.opacity.transparent"
     }
   },
   "stepIndicator.inProgress.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.focus"
+      ref: "colorScheme.border.accent"
     }
   },
   "stepIndicator.completed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.active"
+      ref: "basics.colors.primary.autodeskBlue.500"
     }
   },
   "stepIndicator.completed.iconColor": {

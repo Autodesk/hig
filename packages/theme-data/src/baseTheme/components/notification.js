@@ -19,7 +19,7 @@ export default {
   "notification.container.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.transparent"
+      ref: "colorScheme.opacity.transparent"
     }
   },
   "notification.borderRadius": {
@@ -34,7 +34,7 @@ export default {
       ref: "basics.shadows.lowBlur"
     }
   },
-  "notification.container.shaowColor": {
+  "notification.container.shadowColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.shadow.low"
@@ -70,7 +70,7 @@ export default {
   },
   "notification.header.lineHeight": {
     type: LINE_HEIGHT,
-    value: "16px"
+    value: "20px"
   },
   "notification.toast.object.fontSize": {
     type: FONT_SIZE,
@@ -107,13 +107,13 @@ export default {
   "notification.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.transparent"
+      ref: "colorScheme.opacity.transparent"
     }
   },
   "notification.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.hover"
+      ref: "colorScheme.background.empty.level100To250.hover"
     }
   }
 };
