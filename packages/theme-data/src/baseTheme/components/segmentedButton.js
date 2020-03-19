@@ -5,10 +5,8 @@ import {
   FONT_SIZE,
   FONT_WEIGHT,
   LENGTH,
-  LINE_HEIGHT,
   SPACING
 } from "../../consts/types";
-import { P } from "glamorous";
 
 export default {
   "segmentedButton.borderRadius": {
@@ -49,7 +47,7 @@ export default {
   },
   "segmentedButton.focus.haloWidth": {
     value: {
-      ref: "button.focus.haloWidth"
+      ref: "button.haloWidth"
     },
     type: BORDER_WIDTH
   },
@@ -103,7 +101,7 @@ export default {
   },
   "segmentedButton.label.active.fontColor": {
     value: {
-      ref: "basics.text.againstLight"
+      ref: "basics.colors.text.againstLight"
     },
     type: COLOR
   },
@@ -112,12 +110,6 @@ export default {
       ref: "button.label.fontSize"
     },
     type: FONT_SIZE
-  },
-  "segmentedButton.label.lineHeight": {
-    value: {
-      ref: "button.label.lineHeight"
-    },
-    type: LINE_HEIGHT
   },
   "segmentedButton.default.iconColor": {
     value: {
