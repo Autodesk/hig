@@ -6,6 +6,9 @@ import TabPresenter from "./presenters/TabPresenter";
 export default class Tab extends Component {
   static propTypes = {
     /**
+     * DEPRECATED: Use the activeTabIndex or defaultActiveTabIndex prop on the Tabs
+     * component instead.
+     *
      * Specify if the tab is active
      * If more than one tabs are marked as active, the first one will take effect
      */
