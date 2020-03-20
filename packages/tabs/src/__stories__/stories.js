@@ -45,6 +45,7 @@ export default [
       variant: variants.BOX,
       orientation: orientations.HORIZONTAL,
       showDivider: true,
+      defaultActiveTabIndex: 1,
       children: [
         <Tab label="Complex" key="complex" icon={<Settings24 />} closable>
           <RichText>
