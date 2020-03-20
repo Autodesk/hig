@@ -83,7 +83,7 @@ export default class Dropdown extends Component {
      */
     required: PropTypes.string,
     /**
-     * An array of objects to choose from
+     * The value of the control
      */
     value: PropTypes.oneOfType([
       PropTypes.any,
