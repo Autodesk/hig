@@ -36,6 +36,7 @@
         "packages/theme-context/package.json",
         "packages/theme-data/package.json",
         "packages/timestamp/package.json",
+        "packages/toggle/package.json",
         "packages/tooltip/package.json",
         "packages/top-nav/package.json",
         "packages/typography/package.json",
