@@ -47,7 +47,9 @@ export default class Banner extends Component {
     actions: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
     /** Accessibility text for the dismiss button */
     dismissButtonTitle: PropTypes.string,
-    /** Called when the banner is dismissed */
+    /** Called when the banner is dismissed
+     *  If this is not supplied the close button will not appear
+     */
     onDismiss: PropTypes.func,
     /** Animation; Determines the visibility of the banner */
     isVisible: PropTypes.bool,
