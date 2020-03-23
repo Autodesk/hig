@@ -1,3 +1,10 @@
+# [@hig/components-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/components@2.1.0...@hig/components@2.2.0) (2020-03-23)
+
+
+### Features
+
+* add toggle ([d97e5fc](https://github.com/Autodesk/hig/commit/d97e5fc))
+
 # [@hig/components-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/components@2.0.1...@hig/components@2.1.0) (2019-10-23)
 
 
