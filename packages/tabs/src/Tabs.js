@@ -34,6 +34,8 @@ const DEFAULT_HOVERED_TAB_INDEX = -1;
  * @property {string} [variant]
  * @property {string} [orientation]
  * @property {bool} [showTabDivider]
+ * @property {number} [defaultActiveTabIndex]
+ * @property {number} [activeTabIndex]
  * @property {function} [onTabChange]
  * @property {function} [onTabClose]
  * @property {ReactNode} [children]
@@ -64,6 +66,25 @@ function createTabs(children) {
   }, []);
 }
 
+/**
+ * @param {TabsProps} tabsProps
+ * @returns {number}
+ */
+function findInitialStateActiveTab(tabsProps) {
+  if (tabsProps.defaultActiveTabIndex !== undefined) {
+    return tabsProps.defaultActiveTabIndex;
+  }
+
+  const tabIndexWithActiveProp = createTabs(tabsProps.children).findIndex(
+    ({ props }) => props.active
+  );
+  if (tabIndexWithActiveProp >= 0) {
+    return tabIndexWithActiveProp;
+  }
+
+  return FIRST_TAB_INDEX;
+}
+
 class Tabs extends Component {
   static propTypes = {
     /**
@@ -90,6 +111,16 @@ class Tabs extends Component {
      */
     children: PropTypes.node,
     /**
+     * Sets the initial active tab.
+     * Overrides the deprecated active property on the Tab component.
+     */
+    defaultActiveTabIndex: PropTypes.number,
+    /**
+     * Control the active tab.
+     * Overrides the deprecated active property on the Tab component.
+     */
+    activeTabIndex: PropTypes.number,
+    /**
      * Called when user activates a tab
      */
     onTabChange: PropTypes.func,
@@ -110,7 +141,11 @@ class Tabs extends Component {
 
   /** @type {TabsState} */
   state = {
-    activeTabIndex: FIRST_TAB_INDEX,
+    /**
+     * We maintain the active tab index in the state in case it was not
+     * provided as a prop.
+     */
+    activeTabIndex: findInitialStateActiveTab(this.props),
     hoveredTabIndex: DEFAULT_HOVERED_TAB_INDEX,
     effectiveAlign: alignments.LEFT,
     effectiveShowTabDivider: true,
@@ -136,7 +171,11 @@ class Tabs extends Component {
 
     const nextTabs = createTabs(children);
     const nextActiveTabIndex = nextTabs.findIndex(({ props }) => props.active);
-    if (nextActiveTabIndex >= 0 && nextActiveTabIndex !== prevActiveTabIndex) {
+    if (
+      nextActiveTabIndex >= 0 &&
+      nextActiveTabIndex !== prevActiveTabIndex &&
+      nextProps.defaultActiveTabIndex === undefined
+    ) {
       newState.activeTabIndex = nextActiveTabIndex;
       hasStateChanged = true;
     }
@@ -178,30 +217,38 @@ class Tabs extends Component {
     return null;
   }
 
-  /** @returns {TabMeta[]} */
-  getTabs() {
-    return createTabs(this.props.children);
-  }
-
-  /** @returns {TabMeta|undefined} */
-  getActiveTab() {
-    const { activeTabIndex } = this.state;
-
-    return this.getTabs()[activeTabIndex];
-  }
-
   /**
    * @param {number} nextActiveTabIndex
    * @param {TabMeta} tab
    */
-  setActiveTab(nextActiveTabIndex, { disabled }) {
-    const { activeTabIndex: prevActiveTabIndex } = this.state;
-    const { onTabChange } = this.props;
+  onTabSelection(selectedTabIndex, { disabled }) {
+    this.props.onTabChange(selectedTabIndex);
 
-    if (disabled || prevActiveTabIndex === nextActiveTabIndex) return;
+    const prevActiveTabIndex = this.getActiveTabIndex();
+    if (!disabled && prevActiveTabIndex !== selectedTabIndex) {
+      this.setState({ activeTabIndex: selectedTabIndex });
+    }
+  }
 
-    onTabChange(nextActiveTabIndex);
-    this.setState({ activeTabIndex: nextActiveTabIndex });
+  /**
+   * If the activeTabIndex has been passed, use it. Otherwise, use our
+   * internally managed activeTabIndex.
+   * @returns {number}
+   */
+  getActiveTabIndex() {
+    return this.props.activeTabIndex !== undefined
+      ? this.props.activeTabIndex
+      : this.state.activeTabIndex;
+  }
+
+  /** @returns {TabMeta|undefined} */
+  getActiveTab() {
+    return this.getTabs()[this.getActiveTabIndex()];
+  }
+
+  /** @returns {TabMeta[]} */
+  getTabs() {
+    return createTabs(this.props.children);
   }
 
   /**
@@ -225,7 +272,9 @@ class Tabs extends Component {
   }
 
   createTabEventHandlers = memoize((index, { disabled }) => ({
-    ...createButtonEventHandlers(() => this.setActiveTab(index, { disabled })),
+    ...createButtonEventHandlers(() =>
+      this.onTabSelection(index, { disabled })
+    ),
     onMouseEnter: () => this.setHoveredTab(index, { disabled }),
     onMouseLeave: () => this.removeHoveredTab(index),
     onClose: () => this.props.onTabClose(index)
@@ -240,12 +289,12 @@ class Tabs extends Component {
     const { disabled, className: tabClassName } = props;
     const { variant, className: tabsClassName } = this.props;
     const {
-      activeTabIndex,
       hoveredTabIndex,
       effectiveAlign,
       effectiveOrientation,
       effectiveShowTabDivider
     } = this.state;
+    const activeTabIndex = this.getActiveTabIndex();
 
     let showTabDivider = effectiveShowTabDivider;
     if (index === activeTabIndex || index === activeTabIndex - 1) {
