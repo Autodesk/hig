@@ -1,6 +1,6 @@
 {
   "name": "@hig/components",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "HIG Components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -41,7 +41,7 @@
     "@hig/slider": "^1.1.1",
     "@hig/spacer": "^1.0.8",
     "@hig/surface": "^1.1.0",
-    "@hig/tabs": "^1.1.1",
+    "@hig/tabs": "^1.2.0",
     "@hig/text-area": "^1.2.0",
     "@hig/text-link": "^1.1.0",
     "@hig/theme-context": "^3.0.0",
