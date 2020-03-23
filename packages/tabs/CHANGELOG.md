@@ -1,3 +1,10 @@
+# [@hig/tabs-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/tabs@1.1.1...@hig/tabs@1.2.0) (2020-03-23)
+
+
+### Features
+
+* allow active Tab to be controlled ([4ecbb79](https://github.com/Autodesk/hig/commit/4ecbb79))
+
 # [@hig/tabs-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/tabs@1.1.0...@hig/tabs@1.1.1) (2019-10-24)
 
 
