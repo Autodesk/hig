@@ -39,12 +39,18 @@ export default {
       }
     }
   },
+  "button.label.lineHeight": {
+    type: LINE_HEIGHT,
+    value: "18px"
+  },
   "button.lineHeight": {
     type: LINE_HEIGHT,
-    value: "18px",
+    value: {
+      ref: "button.label.lineHeight"
+    },
     metadata: {
       deprecated: {
-        equivalent: "basics.lineHeights"
+        equivalent: "button.label.lineHeight"
       }
     }
   },
