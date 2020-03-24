@@ -64,7 +64,7 @@
     "clean-css": "^4.1.11",
     "esprima": "^4.0.0",
     "mkdirp": "^0.5.1",
-    "rollup": "^0.68.0"
+    "rollup": "^2.2.0"
   },
   "scripts": {
     "build": "node scripts/build.js",
