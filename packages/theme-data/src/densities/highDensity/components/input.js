@@ -1,8 +1,8 @@
 export default {
-  "input.height": {
+  "input.minHeight": {
     value: "24px"
   },
-  "input.boxType.horizontalPadding": {
+  "input.box.paddingHorizontal": {
     value: "8px"
   }
 };
