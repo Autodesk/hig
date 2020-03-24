@@ -1,70 +1,31 @@
 export default {
-  "input.borderBottomColor": {
+  "input.box.default.backgroundColor": {
     value: {
-      ref: "basics.colors.white"
+      ref: "basics.colors.surface.darkBlue.300"
+    },
+    transform: {
+      opacity: 0.6
     }
   },
-  "input.hover.borderBottomColor": {
+  "input.box.default.borderBottomColor": {
     value: {
-      ref: "basics.colors.white"
-    },
+      ref: "basics.colors.secondary.darkBlue.200"
+    }
+  },
+  "input.value.highlightColor": {
+    value: "#38ABDF",
+    transform: {
+      alpha: 0.35
+    }
+  },
+  "input.box.pressed.borderBottomColor": {
     transform: {
       alpha: 0.75
     }
   },
-  "input.focus.halo.color": {
+  "input.line.pressed.borderBottomColor": {
     transform: {
-      alpha: 0.35
-    }
-  },
-  "input.active.halo.color": {
-    transform: {
-      alpha: 0.35
-    }
-  },
-  "input.box.backgroundColor": {
-    value: {
-      ref: "colorScheme.surfaceLevel300Color"
-    }
-  },
-  "input.borderColor": {
-    value: {
-      ref: "input.box.backgroundColor"
-    },
-    transform: {
-      alpha: 1
-    }
-  },
-  "input.box.borderBottomColor": {
-    value: {
-      ref: "input.box.backgroundColor"
-    },
-    transform: {
-      alpha: 1
-    }
-  },
-  "input.placeholder.fontColor": {
-    value: {
-      ref: "basics.colors.surfaceLightGrayLevel200"
-    },
-    transform: {
-      alpha: 0.4
-    }
-  },
-  "input.highlightColor": {
-    value: {
-      ref: "basics.colors.autodeskBlue400"
-    },
-    transform: {
-      alpha: 0.35
-    }
-  },
-  "input.halo.color": {
-    value: {
-      ref: "basics.colors.darkBlue200"
-    },
-    transform: {
-      alpha: 0.2
+      alpha: 0.87
     }
   }
 };
