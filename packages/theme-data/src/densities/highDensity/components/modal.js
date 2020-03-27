@@ -1,9 +1,5 @@
 export default {
-  "modal.body.height": {
-    value: "98px"
-  },
-  "modal.header.height": {
-    value: "45px"
-  },
-  "modal.window.height": { value: "200px" }
+  "modal.body.minHeight": { value: "98px" },
+  "modal.header.minHeight": { value: "45px" },
+  "modal.shell.minHeight": { value: "200px" }
 };
