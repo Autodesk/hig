@@ -8,7 +8,6 @@ import avatarBundle from "./components/avatarBundle";
 import banner from "./components/banner";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
-import divider from "./components/divider";
 import formField from "./components/formField";
 import iconButton from "./components/iconButton";
 import input from "./components/input";
@@ -38,7 +37,6 @@ const darkBlueThemeConfig = extendTheme(
     banner,
     button,
     checkbox,
-    divider,
     formField,
     iconButton,
     input,
