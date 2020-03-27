@@ -12,7 +12,6 @@ import formField from "./components/formField";
 import iconButton from "./components/iconButton";
 import input from "./components/input";
 import label from "./components/label";
-import menu from "./components/menu";
 import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
 import segmentedButton from "./components/segmentedButton";
@@ -41,7 +40,6 @@ const darkBlueThemeConfig = extendTheme(
     iconButton,
     input,
     label,
-    menu,
     progressBar,
     progressRing,
     segmentedButton,
