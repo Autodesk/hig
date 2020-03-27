@@ -4,6 +4,7 @@ import darkBlueTheme from "../darkBlue";
 import system from "./system";
 import accordion from "./components/accordion";
 import avatarBundle from "./components/avatarBundle";
+import checkbox from "./components/checkbox";
 import divider from "./components/divider";
 import input from "./components/input";
 import segmentedButton from "./components/segmentedButton";
@@ -20,6 +21,7 @@ const darkGrayThemeConfig = extendTheme(
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     accordion,
     avatarBundle,
+    checkbox,
     divider,
     input,
     segmentedButton,
