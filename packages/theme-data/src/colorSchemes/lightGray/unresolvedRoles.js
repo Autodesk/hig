@@ -4,7 +4,6 @@ import baseTheme from "../../baseTheme";
 import mediumDensityTheme from "../../densities/mediumDensity";
 import system from "./system";
 import formField from "./components/formField";
-import skeletonItem from "./components/skeletonItem";
 
 const lightGrayThemeConfig = extendTheme(
   baseTheme.unresolvedRoles,
@@ -12,8 +11,7 @@ const lightGrayThemeConfig = extendTheme(
     {},
     mediumDensityTheme.unresolvedRoles,
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
-    formField,
-    skeletonItem
+    formField
   )
 );
 
