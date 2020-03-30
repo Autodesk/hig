@@ -1,5 +1,5 @@
 export default {
-  "progressRing.backgroundColor": {
+  "progress.ring.backgroundColor": {
     value: {
       ref: "basics.colors.white"
     },
