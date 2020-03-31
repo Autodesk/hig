@@ -1349,8 +1349,8 @@ export default {
     type: COLOR
   },
 
-  "textLink.primary.againstLight": { value: "#006EAF", type: COLOR },
-  "textLink.primary.againstDark": { value: "#6DD2FF", type: COLOR },
+  "textLink.primary.againstLight": { value: "#006eaf", type: COLOR },
+  "textLink.primary.againstDark": { value: "#6dd2ff", type: COLOR },
   "textLink.secondary.againstLight": { value: "#3c3c3c", type: COLOR },
   "textLink.secondary.againstDark": { value: "#f5f5f5", type: COLOR }
 };
