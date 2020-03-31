@@ -18,6 +18,7 @@ import segmentedButton from "./components/segmentedButton";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
 import stepIndicator from "./components/stepIndicator";
+import tabs from "./components/tabs";
 import tag from "./components/tag";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
@@ -46,6 +47,7 @@ const darkBlueThemeConfig = extendTheme(
     skeletonItem,
     slider,
     stepIndicator,
+    tabs,
     tag,
     textLink,
     thumbnail,
