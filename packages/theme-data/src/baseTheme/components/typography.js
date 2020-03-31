@@ -28,7 +28,7 @@ export default {
   "typography.body.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.small"
+      ref: "basics.lineHeights.mediumExtraLarge"
     }
   },
   "typography.body.color": {
@@ -60,13 +60,13 @@ export default {
   "typography.caption.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.small"
+      ref: "basics.lineHeights.mediumExtraExtraLarge"
     }
   },
   "typography.caption.color": {
     type: LINE_HEIGHT,
     value: {
-      ref: "colorScheme.textColor"
+      ref: "colorScheme.text.default"
     }
   },
 
@@ -92,13 +92,13 @@ export default {
   "typography.h1.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.large"
+      ref: "basics.lineHeights.mediumMedium"
     }
   },
   "typography.h1.color": {
     type: LINE_HEIGHT,
     value: {
-      ref: "colorScheme.textColor"
+      ref: "colorScheme.text.default"
     }
   },
 
@@ -124,13 +124,13 @@ export default {
   "typography.h2.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.small"
+      ref: "basics.lineHeights.mediumSmall"
     }
   },
   "typography.h2.color": {
     type: LINE_HEIGHT,
     value: {
-      ref: "colorScheme.textColor"
+      ref: "colorScheme.text.default"
     }
   },
 
@@ -156,13 +156,13 @@ export default {
   "typography.h3.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.medium"
+      ref: "basics.lineHeights.mediumLarge"
     }
   },
   "typography.h3.color": {
     type: LINE_HEIGHT,
     value: {
-      ref: "colorScheme.textColor"
+      ref: "colorScheme.text.default"
     }
   }
 };
