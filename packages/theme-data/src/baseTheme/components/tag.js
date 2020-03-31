@@ -84,31 +84,31 @@ export default {
   "tag.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.white"
+      ref: "colorScheme.reference.base"
     },
     transform: {
-      alpha: 0.7
+      alpha: 0.15
     }
   },
   "tag.default.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.base"
+      ref: "colorScheme.opacity.transparent"
     }
   },
   "tag.focus.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.white"
+      ref: "colorScheme.reference.base"
     },
     transform: {
-      alpha: 0.6
+      alpha: 0.15
     }
   },
   "tag.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.accent"
+      ref: "colorScheme.opacity.transparent"
     }
   },
   "tag.focus.haloColor": {
@@ -120,28 +120,31 @@ export default {
   "tag.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.empty.level100To250.hover"
+      ref: "colorScheme.reference.base"
+    },
+    transform: {
+      alpha: 0.25
     }
   },
   "tag.hover.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.base"
+      ref: "colorScheme.opacity.transparent"
     }
   },
   "tag.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.white"
+      ref: "colorScheme.reference.base"
     },
     transform: {
-      alpha: 0.7
+      alpha: 0.35
     }
   },
   "tag.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.border.base"
+      ref: "colorScheme.opacity.transparent"
     }
   },
   "tag.on.default.backgroundColor": {
@@ -199,6 +202,12 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.border.on"
+    }
+  },
+  "tag.closeButton.iconColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.reference.base"
     }
   }
 };
