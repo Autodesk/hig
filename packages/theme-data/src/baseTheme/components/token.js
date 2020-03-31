@@ -70,7 +70,10 @@ export default {
   },
   "token.default.backgroundColor": {
     value: {
-      ref: "colorScheme.background.filled.level100To250.default"
+      ref: "colorScheme.reference.base"
+    },
+    transform: {
+      alpha: 0.15
     },
     type: COLOR
   },
@@ -82,7 +85,10 @@ export default {
   },
   "token.hover.backgroundColor": {
     value: {
-      ref: "colorScheme.background.filled.level100To250.hover"
+      ref: "colorScheme.reference.base"
+    },
+    transform: {
+      alpha: 0.25
     },
     type: COLOR
   },
@@ -94,7 +100,10 @@ export default {
   },
   "token.pressed.backgroundColor": {
     value: {
-      ref: "colorScheme.background.filled.level100To250.pressed"
+      ref: "colorScheme.reference.base"
+    },
+    transform: {
+      alpha: 0.35
     },
     type: COLOR
   },
@@ -161,6 +170,12 @@ export default {
   "token.warning.iconColor": {
     value: {
       ref: "colorScheme.status.warning"
+    },
+    type: COLOR
+  },
+  "token.closeButton.iconColor": {
+    value: {
+      ref: "basics.colors.icon.lightGray"
     },
     type: COLOR
   }

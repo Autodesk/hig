@@ -21,6 +21,7 @@ import tabs from "./components/tabs";
 import tag from "./components/tag";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
+import token from "./components/token";
 import tooltip from "./components/tooltip";
 import topNav from "./components/topNav";
 import treeView from "./components/treeView";
@@ -49,6 +50,7 @@ const darkBlueThemeConfig = extendTheme(
     tag,
     textLink,
     thumbnail,
+    token,
     tooltip,
     topNav,
     treeView
