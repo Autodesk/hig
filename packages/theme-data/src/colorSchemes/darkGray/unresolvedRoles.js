@@ -11,6 +11,7 @@ import slider from "./components/slider";
 import tag from "./components/tag";
 import thumbnail from "./components/thumbnail";
 import toggle from "./components/toggle";
+import token from "./components/token";
 import tooltip from "./components/tooltip";
 
 const darkGrayThemeConfig = extendTheme(
@@ -27,6 +28,7 @@ const darkGrayThemeConfig = extendTheme(
     tag,
     thumbnail,
     toggle,
+    token,
     tooltip
   )
 );
