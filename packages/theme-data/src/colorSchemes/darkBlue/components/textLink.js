@@ -1,22 +1,7 @@
 export default {
-  "textLink.textColor": {
+  "textLink.primary.default.fontColor": {
     value: {
-      ref: "basics.colors.textLinkAgainstDark"
-    }
-  },
-  "textLink.hover.textColor": {
-    value: {
-      ref: "basics.colors.textLinkAgainstDark"
-    }
-  },
-  "textLink.focus.textColor": {
-    value: {
-      ref: "basics.colors.textLinkAgainstDark"
-    }
-  },
-  "textLink.hover.underline.color": {
-    value: {
-      ref: "basics.colors.textLinkAgainstDark"
+      ref: "basics.colors.textLink.primary.againstDark"
     }
   }
 };
