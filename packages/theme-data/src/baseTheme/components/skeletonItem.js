@@ -13,17 +13,6 @@ export default {
       ref: "density.spacings.medium"
     }
   },
-  "skeletonItem.defaultHeight": {
-    type: LENGTH,
-    value: {
-      ref: "skeletonItem.minHeight"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "skeletonItem.minHeight"
-      }
-    }
-  },
   "skeletonItem.backgroundColor": {
     type: COLOR,
     value: {
@@ -40,6 +29,22 @@ export default {
     },
     transform: {
       alpha: 0.3
+    }
+  },
+  /**
+   * ## Deprecated
+   *
+   *
+   */
+  "skeletonItem.defaultHeight": {
+    type: LENGTH,
+    value: {
+      ref: "skeletonItem.minHeight"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "skeletonItem.minHeight"
+      }
     }
   }
 };

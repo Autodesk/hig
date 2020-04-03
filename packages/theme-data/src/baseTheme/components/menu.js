@@ -25,15 +25,28 @@ export default {
       ref: "colorScheme.opacity.transparent"
     }
   },
-  "menu.item.backgroundColor": {
-    type: COLOR,
+  "menu.item.paddingHorizontal": {
+    type: SPACING,
     value: {
-      ref: "menu.item.default.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "menu.item.default.backgroundColor"
-      }
+      ref: "density.spacings.extraSmall"
+    }
+  },
+  "menu.item.paddingVertical": {
+    type: SPACING,
+    value: {
+      ref: "basics.spacings.mediumSmall"
+    }
+  },
+  "menu.item.minHeight": {
+    type: LENGTH,
+    value: {
+      ref: "density.spacings.large"
+    }
+  },
+  "menu.item.gutterWidth": {
+    type: SPACING,
+    value: {
+      ref: "basics.spacings.mediumSmall"
     }
   },
   "menu.item.hover.backgroundColor": {
@@ -54,6 +67,22 @@ export default {
       ref: "colorScheme.background.empty.level100To250.pressed"
     }
   },
+  /**
+   *  ## Deprecated
+   *
+   *
+   */
+  "menu.item.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "menu.item.default.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "menu.item.default.backgroundColor"
+      }
+    }
+  },
   "menu.item.active.backgroundColor": {
     type: COLOR,
     value: {
@@ -63,12 +92,6 @@ export default {
       deprecated: {
         equivalent: "menu.item.pressed.backgroundColor"
       }
-    }
-  },
-  "menu.item.paddingHorizontal": {
-    type: SPACING,
-    value: {
-      ref: "density.spacings.extraSmall"
     }
   },
   "menu.item.horizontalPadding": {
@@ -82,12 +105,6 @@ export default {
       }
     }
   },
-  "menu.item.paddingVertical": {
-    type: SPACING,
-    value: {
-      ref: "basics.spacings.mediumSmall"
-    }
-  },
   "menu.item.verticalPadding": {
     type: SPACING,
     value: {
@@ -97,18 +114,6 @@ export default {
       deprecated: {
         equivalent: "menu.item.paddingVertical"
       }
-    }
-  },
-  "menu.item.minHeight": {
-    type: LENGTH,
-    value: {
-      ref: "density.spacings.large"
-    }
-  },
-  "menu.item.gutterWidth": {
-    type: SPACING,
-    value: {
-      ref: "basics.spacings.mediumSmall"
     }
   }
 };

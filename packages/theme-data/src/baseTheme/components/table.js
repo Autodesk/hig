@@ -43,22 +43,28 @@ export default {
       ref: "basics.fontWeights.regular"
     }
   },
+  "table.row.borderBottomColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.divider.lightweight"
+    }
+  },
   "table.row.hover.backgroundColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.background.empty.level100To250.hover"
     }
   },
-  "table.row.selected.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.background.on.default"
-    }
-  },
   "table.row.pressed.backgroundColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.background.empty.level100To250.pressed"
+    }
+  },
+  "table.row.selected.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.on.default"
     }
   },
   "table.header.borderTopColor": {
@@ -71,12 +77,6 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.divider.heavyweight"
-    }
-  },
-  "table.row.borderBottomColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.divider.lightweight"
     }
   }
 };

@@ -1,12 +1,12 @@
 export default {
   "thumbnail.backgroundColor": {
     value: {
-      ref: "basics.colors.charcoal700"
+      ref: "basics.colors.primary.charcoal.700"
     }
   },
   "thumbnail.borderColor": {
     value: {
-      ref: "basics.colors.black"
+      ref: "basics.colors.primary.black"
     }
   }
 };

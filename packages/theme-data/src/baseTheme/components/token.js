@@ -14,18 +14,6 @@ export default {
     },
     type: BORDER_RADIUS
   },
-  "token.icon.marginRight": {
-    value: {
-      ref: "density.spacings.extraSmall"
-    },
-    type: SPACING
-  },
-  "token.label.marginRight": {
-    value: {
-      ref: "density.spacings.extraExtraSmall"
-    },
-    type: SPACING
-  },
   "token.paddingLeft": {
     value: {
       ref: "density.spacings.extraSmall"
@@ -44,42 +32,12 @@ export default {
     },
     type: SPACING
   },
-  "token.label.fontColor": {
-    value: {
-      ref: "colorScheme.text.default"
-    },
-    type: COLOR
-  },
-  "token.label.fontFamily": {
-    value: {
-      ref: "basics.fontFamilies.main"
-    },
-    type: FONT_FAMILY
-  },
-  "token.label.fontSize": {
-    value: {
-      ref: "density.fontSizes.medium"
-    },
-    type: FONT_SIZE
-  },
-  "token.label.fontWeight": {
-    value: {
-      ref: "basics.fontWeights.medium"
-    },
-    type: FONT_WEIGHT
-  },
   "token.default.backgroundColor": {
     value: {
       ref: "colorScheme.reference.base"
     },
     transform: {
       alpha: 0.15
-    },
-    type: COLOR
-  },
-  "token.default.borderColor": {
-    value: {
-      ref: "colorScheme.opacity.transparent"
     },
     type: COLOR
   },
@@ -92,18 +50,24 @@ export default {
     },
     type: COLOR
   },
-  "token.hover.borderColor": {
-    value: {
-      ref: "colorScheme.opacity.transparent"
-    },
-    type: COLOR
-  },
   "token.pressed.backgroundColor": {
     value: {
       ref: "colorScheme.reference.base"
     },
     transform: {
       alpha: 0.35
+    },
+    type: COLOR
+  },
+  "token.default.borderColor": {
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    },
+    type: COLOR
+  },
+  "token.hover.borderColor": {
+    value: {
+      ref: "colorScheme.opacity.transparent"
     },
     type: COLOR
   },
@@ -119,27 +83,27 @@ export default {
     },
     type: COLOR
   },
-  "token.selected.default.borderColor": {
-    value: {
-      ref: "colorScheme.border.on"
-    },
-    type: COLOR
-  },
   "token.selected.hover.backgroundColor": {
     value: {
       ref: "colorScheme.background.on.hover"
     },
     type: COLOR
   },
-  "token.selected.hover.borderColor": {
+  "token.selected.pressed.backgroundColor": {
+    value: {
+      ref: "colorScheme.background.empty.level100To250.pressed"
+    },
+    type: COLOR
+  },
+  "token.selected.default.borderColor": {
     value: {
       ref: "colorScheme.border.on"
     },
     type: COLOR
   },
-  "token.selected.pressed.backgroundColor": {
+  "token.selected.hover.borderColor": {
     value: {
-      ref: "colorScheme.background.empty.level100To250.pressed"
+      ref: "colorScheme.border.on"
     },
     type: COLOR
   },
@@ -172,6 +136,42 @@ export default {
       ref: "colorScheme.status.warning"
     },
     type: COLOR
+  },
+  "token.icon.marginRight": {
+    value: {
+      ref: "density.spacings.extraSmall"
+    },
+    type: SPACING
+  },
+  "token.label.fontColor": {
+    value: {
+      ref: "colorScheme.text.default"
+    },
+    type: COLOR
+  },
+  "token.label.fontFamily": {
+    value: {
+      ref: "basics.fontFamilies.main"
+    },
+    type: FONT_FAMILY
+  },
+  "token.label.fontSize": {
+    value: {
+      ref: "density.fontSizes.medium"
+    },
+    type: FONT_SIZE
+  },
+  "token.label.fontWeight": {
+    value: {
+      ref: "basics.fontWeights.medium"
+    },
+    type: FONT_WEIGHT
+  },
+  "token.label.marginRight": {
+    value: {
+      ref: "density.spacings.extraExtraSmall"
+    },
+    type: SPACING
   },
   "token.closeButton.iconColor": {
     value: {

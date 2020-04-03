@@ -9,6 +9,12 @@ import {
 } from "../../consts/types";
 
 export default {
+  "datePicker.fontFamily": {
+    type: FONT_FAMILY,
+    value: {
+      ref: "basics.fontFamilies.main"
+    }
+  },
   "datePicker.container.paddingHorizontal": {
     type: SPACING,
     value: {
@@ -28,18 +34,6 @@ export default {
   "datePicker.cell.minWidth": {
     type: LENGTH,
     value: "36px"
-  },
-  "datePicker.header.paddingBottom": {
-    type: SPACING,
-    value: {
-      ref: "density.spacings.large"
-    }
-  },
-  "datePicker.fontFamily": {
-    type: FONT_FAMILY,
-    value: {
-      ref: "basics.fontFamilies.main"
-    }
   },
   "datePicker.standardDate.fontColor": {
     type: COLOR,
@@ -150,6 +144,12 @@ export default {
     type: FONT_SIZE,
     value: {
       ref: "density.fontSizes.large"
+    }
+  },
+  "datePicker.header.paddingBottom": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.large"
     }
   },
   "datePicker.cell.borderColor": {

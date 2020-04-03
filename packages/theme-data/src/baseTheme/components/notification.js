@@ -10,6 +10,36 @@ import {
 } from "../../consts/types";
 
 export default {
+  "notification.borderRadius": {
+    type: BORDER_RADIUS,
+    value: {
+      ref: "basics.borderRadii.large"
+    }
+  },
+  "notification.fontColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.text.default"
+    }
+  },
+  "notification.fontFamily": {
+    type: FONT_FAMILY,
+    value: {
+      ref: "basics.fontFamilies.main"
+    }
+  },
+  "notification.default.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "notification.hover.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.empty.level100To250.hover"
+    }
+  },
   "notification.container.backgroundColor": {
     type: COLOR,
     value: {
@@ -20,12 +50,6 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.opacity.transparent"
-    }
-  },
-  "notification.borderRadius": {
-    type: BORDER_RADIUS,
-    value: {
-      ref: "basics.borderRadii.large"
     }
   },
   "notification.container.shadowBlur": {
@@ -43,18 +67,6 @@ export default {
   "notification.statusIndicator.width": {
     type: LENGTH,
     value: "3px"
-  },
-  "notification.fontFamily": {
-    type: FONT_FAMILY,
-    value: {
-      ref: "basics.fontFamilies.main"
-    }
-  },
-  "notification.fontColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.text.default"
-    }
   },
   "notification.header.fontSize": {
     type: FONT_SIZE,
@@ -103,17 +115,5 @@ export default {
   "notification.toast.description.lineHeight": {
     type: LINE_HEIGHT,
     value: "16px"
-  },
-  "notification.default.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.opacity.transparent"
-    }
-  },
-  "notification.hover.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.background.empty.level100To250.hover"
-    }
   }
 };

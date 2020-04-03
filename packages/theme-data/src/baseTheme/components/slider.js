@@ -1,6 +1,83 @@
 import { COLOR, LENGTH } from "../../consts/types";
 
 export default {
+  "slider.hover.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.halo.hover"
+    }
+  },
+  "slider.focus.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.halo.focus"
+    }
+  },
+  "slider.pressed.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.halo.pressed"
+    }
+  },
+  "slider.hover.haloWidth": {
+    type: LENGTH,
+    value: "2px"
+  },
+  "slider.focus.haloWidth": {
+    type: LENGTH,
+    value: "2px"
+  },
+  "slider.pressed.haloWidth": {
+    type: LENGTH,
+    value: "4px"
+  },
+  "slider.thumbColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.600"
+    }
+  },
+  "slider.thumb.minWidth": {
+    type: LENGTH,
+    value: "6px"
+  },
+  "slider.thumb.minHeight": {
+    type: LENGTH,
+    value: "20px"
+  },
+  "slider.track.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.600"
+    },
+    transform: {
+      alpha: 0.2
+    }
+  },
+  "slider.track.minHeight": {
+    type: LENGTH,
+    value: "2px"
+  },
+  "slider.value.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.600"
+    }
+  },
+  "slider.inputOverlay.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.reference.base"
+    },
+    transform: {
+      alpha: 0.2
+    }
+  },
+  /**
+   * ## Deprecated
+   *
+   *
+   */
   "slider.halo.width": {
     type: LENGTH,
     value: 0,
@@ -21,12 +98,6 @@ export default {
       }
     }
   },
-  "slider.thumbColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.charcoal.600"
-    }
-  },
   "slider.thumb.backgroundColor": {
     type: COLOR,
     value: {
@@ -37,10 +108,6 @@ export default {
         equivalent: "slider.thumbColor"
       }
     }
-  },
-  "slider.thumb.minWidth": {
-    type: LENGTH,
-    value: "6px"
   },
   "slider.thumb.width": {
     type: LENGTH,
@@ -53,12 +120,6 @@ export default {
       }
     }
   },
-  "slider.focus.haloColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.halo.focus"
-    }
-  },
   "slider.focused.halo.color": {
     type: COLOR,
     value: {
@@ -69,10 +130,6 @@ export default {
         equivalent: "slider.focus.haloColor"
       }
     }
-  },
-  "slider.focus.haloWidth": {
-    type: LENGTH,
-    value: "2px"
   },
   "slider.focused.halo.width": {
     type: LENGTH,
@@ -96,12 +153,6 @@ export default {
       }
     }
   },
-  "slider.hover.haloColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.halo.hover"
-    }
-  },
   "slider.hover.halo.color": {
     type: COLOR,
     value: {
@@ -112,10 +163,6 @@ export default {
         equivalent: "slider.hover.haloColor"
       }
     }
-  },
-  "slider.hover.haloWidth": {
-    type: LENGTH,
-    value: "2px"
   },
   "slider.hover.halo.width": {
     type: LENGTH,
@@ -139,12 +186,6 @@ export default {
       }
     }
   },
-  "slider.pressed.haloColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.halo.pressed"
-    }
-  },
   "slider.pressed.halo.color": {
     type: COLOR,
     value: {
@@ -155,10 +196,6 @@ export default {
         equivalent: "slider.pressed.haloColor"
       }
     }
-  },
-  "slider.pressed.haloWidth": {
-    type: LENGTH,
-    value: "4px"
   },
   "slider.pressed.halo.width": {
     type: LENGTH,
@@ -182,15 +219,6 @@ export default {
       }
     }
   },
-  "slider.track.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.charcoal.600"
-    },
-    transform: {
-      alpha: 0.2
-    }
-  },
   "slider.track.color": {
     type: COLOR,
     value: {
@@ -201,10 +229,6 @@ export default {
         equivalent: "slider.track.backgroundColor"
       }
     }
-  },
-  "slider.track.minHeight": {
-    type: LENGTH,
-    value: "2px"
   },
   "slider.track.width": {
     type: LENGTH,
@@ -217,12 +241,6 @@ export default {
       }
     }
   },
-  "slider.value.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.charcoal.600"
-    }
-  },
   "slider.value.color": {
     type: COLOR,
     value: {
@@ -233,18 +251,5 @@ export default {
         equivalent: "slider.value.backgroundColor"
       }
     }
-  },
-  "slider.inputOverlay.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.reference.base"
-    },
-    transform: {
-      alpha: 0.2
-    }
-  },
-  "slider.thumb.minHeight": {
-    type: LENGTH,
-    value: "20px"
   }
 };

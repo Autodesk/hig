@@ -13,6 +13,12 @@ export default {
       ref: "basics.fontFamilies.main"
     }
   },
+  "sideNav.container.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.surface.level100"
+    }
+  },
   "sideNav.account.fontColor": {
     type: COLOR,
     value: {
@@ -193,12 +199,6 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.reference.accent"
-    }
-  },
-  "sideNav.container.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.surface.level100"
     }
   }
 };
