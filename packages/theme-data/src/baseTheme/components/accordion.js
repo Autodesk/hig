@@ -8,30 +8,6 @@ import {
 } from "../../consts/types";
 
 export default {
-  "accordion.header.indicatorGutter": {
-    type: LENGTH,
-    value: { ref: "density.spacings.extraSmall" }
-  },
-  "accordion.header.indicatorRight.paddingLeft": {
-    type: LENGTH,
-    value: { ref: "density.spacings.small" }
-  },
-  "accordion.header.indicatorRight.paddingRight": {
-    type: LENGTH,
-    value: { ref: "density.spacings.medium" }
-  },
-  "accordion.header.indicatorSize": {
-    type: LENGTH,
-    value: { ref: "density.spacings.medium" }
-  },
-  "accordion.header.paddingHorizontal": {
-    type: LENGTH,
-    value: { ref: "density.spacings.extraSmall" }
-  },
-  "accordion.header.paddingVertical": {
-    type: LENGTH,
-    value: { ref: "density.spacings.extraSmall" }
-  },
   "accordion.header.fontColor": {
     type: COLOR,
     value: { ref: "colorScheme.text.default" }
@@ -57,14 +33,43 @@ export default {
     value: { ref: "basics.colors.primary.charcoal.600" },
     transform: { alpha: 0.1 }
   },
-  "accordion.header.hover.indicatorColor": {
-    type: COLOR,
-    value: { ref: "colorScheme.indicator.hover" }
+  "accordion.header.paddingHorizontal": {
+    type: LENGTH,
+    value: { ref: "density.spacings.extraSmall" }
+  },
+  "accordion.header.paddingVertical": {
+    type: LENGTH,
+    value: { ref: "density.spacings.extraSmall" }
+  },
+  "accordion.header.indicatorGutter": {
+    type: LENGTH,
+    value: { ref: "density.spacings.extraSmall" }
+  },
+  "accordion.header.indicatorSize": {
+    type: LENGTH,
+    value: { ref: "density.spacings.medium" }
   },
   "accordion.header.default.indicatorColor": {
     type: COLOR,
     value: { ref: "colorScheme.indicator.default" }
   },
+  "accordion.header.hover.indicatorColor": {
+    type: COLOR,
+    value: { ref: "colorScheme.indicator.hover" }
+  },
+  "accordion.header.indicatorRight.paddingLeft": {
+    type: LENGTH,
+    value: { ref: "density.spacings.small" }
+  },
+  "accordion.header.indicatorRight.paddingRight": {
+    type: LENGTH,
+    value: { ref: "density.spacings.medium" }
+  },
+  /**
+   *  ## Deprecated
+   *
+   *
+   */
   "accordion.header.indicatorColor": {
     type: COLOR,
     value: { ref: "accordion.header.default.indicatorColor" },

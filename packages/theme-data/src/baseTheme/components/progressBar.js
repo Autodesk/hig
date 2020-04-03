@@ -10,6 +10,27 @@ export default {
       alpha: "0.05"
     }
   },
+  "progress.bar.highlightColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.autodeskBlue400"
+    }
+  },
+  "progress.bar.borderRadius": {
+    type: BORDER_RADIUS,
+    value: {
+      ref: "basics.borderRadii.medium"
+    }
+  },
+  "progress.bar.minHeight": {
+    type: LENGTH,
+    value: "4px"
+  },
+  /**
+   *  ## Deprecated
+   *
+   *
+   */
   "progressBar.backgroundColor": {
     type: COLOR,
     value: {
@@ -19,12 +40,6 @@ export default {
       deprecated: {
         equivalent: "progress.bar.backgroundColor"
       }
-    }
-  },
-  "progress.bar.highlightColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.autodeskBlue400"
     }
   },
   "progressBar.highlightColor": {
@@ -38,12 +53,6 @@ export default {
       }
     }
   },
-  "progress.bar.borderRadius": {
-    type: BORDER_RADIUS,
-    value: {
-      ref: "basics.borderRadii.medium"
-    }
-  },
   "progressBar.borderRadius": {
     type: BORDER_RADIUS,
     value: {
@@ -54,10 +63,6 @@ export default {
         equivalent: "progress.bar.borderRadius"
       }
     }
-  },
-  "progress.bar.minHeight": {
-    type: LENGTH,
-    value: "4px"
   },
   "progressBar.height": {
     type: LENGTH,

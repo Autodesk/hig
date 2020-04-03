@@ -19,30 +19,6 @@ export default {
       ref: "basics.borderWidths.small"
     }
   },
-  "toggle.focus.haloColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.halo.focus"
-    }
-  },
-  "toggle.focus.haloWidth": {
-    type: BORDER_WIDTH,
-    value: {
-      ref: "basics.borderWidths.medium"
-    }
-  },
-  "toggle.hover.haloColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.halo.hover"
-    }
-  },
-  "toggle.hover.haloWidth": {
-    type: BORDER_WIDTH,
-    value: {
-      ref: "basics.borderWidths.medium"
-    }
-  },
   "toggle.minHeight": {
     type: LENGTH,
     value: "20px"
@@ -57,16 +33,100 @@ export default {
       ref: "density.spacings.extraExtraSmall"
     }
   },
+  "toggle.hover.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.halo.hover"
+    }
+  },
+  "toggle.focus.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.halo.focus"
+    }
+  },
   "toggle.pressed.haloColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.halo.pressed"
     }
   },
+  "toggle.hover.haloWidth": {
+    type: BORDER_WIDTH,
+    value: {
+      ref: "basics.borderWidths.medium"
+    }
+  },
+  "toggle.focus.haloWidth": {
+    type: BORDER_WIDTH,
+    value: {
+      ref: "basics.borderWidths.medium"
+    }
+  },
   "toggle.pressed.haloWidth": {
     type: BORDER_WIDTH,
     value: {
       ref: "basics.borderWidths.large"
+    }
+  },
+  "toggle.off.default.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "toggle.off.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.border.base"
+    }
+  },
+  "toggle.off.hover.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "toggle.off.focus.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "toggle.off.pressed.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "toggle.off.hover.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.border.base"
+    }
+  },
+  "toggle.off.focus.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.border.accent"
+    }
+  },
+  "toggle.off.pressed.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.border.base"
+    }
+  },
+  "toggle.on.default.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.500"
+    }
+  },
+  "toggle.on.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.500"
     }
   },
   "toggle.thumb.borderRadii": {
@@ -89,66 +149,6 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.reference.base"
-    }
-  },
-  "toggle.off.default.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.opacity.transparent"
-    }
-  },
-  "toggle.off.default.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.border.base"
-    }
-  },
-  "toggle.off.focus.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.opacity.transparent"
-    }
-  },
-  "toggle.off.focus.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.border.accent"
-    }
-  },
-  "toggle.off.hover.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.opacity.transparent"
-    }
-  },
-  "toggle.off.hover.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.border.base"
-    }
-  },
-  "toggle.off.pressed.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.opacity.transparent"
-    }
-  },
-  "toggle.off.pressed.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.border.base"
-    }
-  },
-  "toggle.on.default.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.autodeskBlue.500"
-    }
-  },
-  "toggle.on.default.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.autodeskBlue.500"
     }
   }
 };

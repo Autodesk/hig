@@ -51,6 +51,129 @@ export default {
       ref: "density.spacings.extraSmall"
     }
   },
+  "tag.default.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.reference.base"
+    },
+    transform: {
+      alpha: 0.15
+    }
+  },
+  "tag.hover.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.reference.base"
+    },
+    transform: {
+      alpha: 0.25
+    }
+  },
+  "tag.focus.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.reference.base"
+    },
+    transform: {
+      alpha: 0.15
+    }
+  },
+  "tag.pressed.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.reference.base"
+    },
+    transform: {
+      alpha: 0.35
+    }
+  },
+  "tag.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tag.hover.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tag.focus.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tag.pressed.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.opacity.transparent"
+    }
+  },
+  "tag.focus.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.halo.focus"
+    }
+  },
+  "tag.on.default.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.on.default"
+    }
+  },
+  "tag.on.hover.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.empty.level100To250.hover"
+    }
+  },
+  "tag.on.focus.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.on.focus"
+    }
+  },
+  "tag.on.pressed.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.empty.level100To250.pressed"
+    },
+    transform: {
+      alpha: 0.7
+    }
+  },
+  "tag.on.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.border.on"
+    }
+  },
+  "tag.on.hover.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.border.on"
+    }
+  },
+  "tag.on.focus.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.border.accent"
+    }
+  },
+  "tag.on.pressed.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.border.on"
+    }
+  },
+  "tag.on.focus.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.halo.focus"
+    }
+  },
   "tag.label.marginRight": {
     type: SPACING,
     value: {
@@ -79,129 +202,6 @@ export default {
     type: FONT_WEIGHT,
     value: {
       ref: "basics.fontWeights.medium"
-    }
-  },
-  "tag.default.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.reference.base"
-    },
-    transform: {
-      alpha: 0.15
-    }
-  },
-  "tag.default.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.opacity.transparent"
-    }
-  },
-  "tag.focus.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.reference.base"
-    },
-    transform: {
-      alpha: 0.15
-    }
-  },
-  "tag.focus.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.opacity.transparent"
-    }
-  },
-  "tag.focus.haloColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.halo.focus"
-    }
-  },
-  "tag.hover.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.reference.base"
-    },
-    transform: {
-      alpha: 0.25
-    }
-  },
-  "tag.hover.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.opacity.transparent"
-    }
-  },
-  "tag.pressed.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.reference.base"
-    },
-    transform: {
-      alpha: 0.35
-    }
-  },
-  "tag.pressed.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.opacity.transparent"
-    }
-  },
-  "tag.on.default.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.background.on.default"
-    }
-  },
-  "tag.on.default.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.border.on"
-    }
-  },
-  "tag.on.focus.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.background.on.focus"
-    }
-  },
-  "tag.on.focus.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.border.accent"
-    }
-  },
-  "tag.on.focus.haloColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.halo.focus"
-    }
-  },
-  "tag.on.hover.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.background.empty.level100To250.hover"
-    }
-  },
-  "tag.on.hover.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.border.on"
-    }
-  },
-  "tag.on.pressed.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.background.empty.level100To250.pressed"
-    },
-    transform: {
-      alpha: 0.7
-    }
-  },
-  "tag.on.pressed.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.border.on"
     }
   },
   "tag.closeButton.iconColor": {

@@ -7,12 +7,6 @@ export default {
       ref: "density.spacings.small"
     }
   },
-  "topNav.hamburgetIcon.margin": {
-    type: SPACING,
-    value: {
-      ref: "density.spacings.extraSmall"
-    }
-  },
   "topNav.backgroundColor": {
     type: COLOR,
     value: {
@@ -29,6 +23,12 @@ export default {
     type: COLOR,
     value: {
       ref: "basics.colors.primary.black"
+    }
+  },
+  "topNav.hamburgetIcon.margin": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.extraSmall"
     }
   }
 };

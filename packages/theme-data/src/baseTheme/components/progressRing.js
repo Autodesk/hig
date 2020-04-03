@@ -4,12 +4,29 @@ export default {
   "progress.ring.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.black"
+      ref: "basics.colors.primary.black"
     },
     transform: {
       alpha: "0.05"
     }
   },
+  "progress.ring.highlightColor1": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.600"
+    }
+  },
+  "progress.ring.highlightColor2": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.400"
+    }
+  },
+  /**
+   *  ## Deprecated
+   *
+   *
+   */
   "progressRing.backgroundColor": {
     type: COLOR,
     value: {
@@ -21,12 +38,6 @@ export default {
       }
     }
   },
-  "progress.ring.highlightColor1": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.autodeskBlue.600"
-    }
-  },
   "progressRing.highlightColor1": {
     type: COLOR,
     value: {
@@ -36,12 +47,6 @@ export default {
       deprecated: {
         equivalent: "progress.ring.highlightColor1"
       }
-    }
-  },
-  "progress.ring.highlightColor2": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.autodeskBlue.400"
     }
   },
   "progressRing.highlightColor2": {

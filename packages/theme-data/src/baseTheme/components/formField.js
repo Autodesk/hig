@@ -8,6 +8,7 @@ import {
 } from "../../consts/types";
 
 export default {
+  // Deprecated
   "formField.instructionalText.fontSize": {
     type: FONT_SIZE,
     value: {

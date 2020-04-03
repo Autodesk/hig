@@ -5,17 +5,6 @@ export default {
     type: LENGTH,
     value: "1px"
   },
-  "divider.width": {
-    type: LENGTH,
-    value: {
-      ref: "divider.borderWidth"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "divider.borderWidth"
-      }
-    }
-  },
   "divider.lightColor": {
     type: COLOR,
     value: {
@@ -26,6 +15,22 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.divider.heavyweight"
+    }
+  },
+  /**
+   * ## Deprecated
+   *
+   *
+   */
+  "divider.width": {
+    type: LENGTH,
+    value: {
+      ref: "divider.borderWidth"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "divider.borderWidth"
+      }
     }
   }
 };

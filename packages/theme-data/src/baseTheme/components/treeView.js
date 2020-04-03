@@ -8,6 +8,30 @@ import {
 } from "../../consts/types";
 
 export default {
+  "treeView.fontColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.text.default"
+    }
+  },
+  "treeView.fontFamily": {
+    type: FONT_FAMILY,
+    value: {
+      ref: "basics.fontFamilies.main"
+    }
+  },
+  "treeView.indicatorColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.icon.hover"
+    }
+  },
+  "treeView.icon.marginRight": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.extraSmall"
+    }
+  },
   "treeView.row.paddingHorizontal": {
     type: SPACING,
     value: {
@@ -18,24 +42,6 @@ export default {
     type: SPACING,
     value: {
       ref: "density.spacings.extraSmall"
-    }
-  },
-  "treeView.icon.marginRight": {
-    type: SPACING,
-    value: {
-      ref: "density.spacings.extraSmall"
-    }
-  },
-  "treeView.fontFamily": {
-    type: FONT_FAMILY,
-    value: {
-      ref: "basics.fontFamilies.main"
-    }
-  },
-  "treeView.fontColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.text.default"
     }
   },
   "treeView.title.fontSize": {
@@ -72,12 +78,6 @@ export default {
     type: LINE_HEIGHT,
     value: {
       ref: "basics.lineHeights.mediumExtraLarge"
-    }
-  },
-  "treeView.indicatorColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.icon.hover"
     }
   },
   "treeView.guideLine.backgroundColor": {

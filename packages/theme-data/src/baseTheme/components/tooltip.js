@@ -15,17 +15,6 @@ export default {
       ref: "basics.colors.surface.darkGray.100"
     }
   },
-  "tooltip.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "tooltip.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "tooltip.backgroundColor"
-      }
-    }
-  },
   "tooltip.borderRadius": {
     type: BORDER_RADIUS,
     value: {
@@ -50,16 +39,23 @@ export default {
       ref: "colorScheme.surface.level200"
     }
   },
-  "tooltip.textColor": {
-    type: COLOR,
+  "tooltip.title.fontFamily": {
+    type: FONT_FAMILY,
     value: {
-      ref: "tooltip.title.fontColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "tooltip.title.fontColor"
-      }
+      ref: "basics.fontFamilies.main"
     }
+  },
+  "tooltip.title.fontSize": {
+    type: FONT_SIZE,
+    value: "12px"
+  },
+  "tooltip.title.fontWeight": {
+    type: FONT_WEIGHT,
+    value: 700
+  },
+  "tooltip.title.lineHeight": {
+    type: LINE_HEIGHT,
+    value: 1.333333333
   },
   "tooltip.nub.hypotenuseLength": {
     type: LENGTH,
@@ -96,22 +92,31 @@ export default {
       alpha: 0.1
     }
   },
-  "tooltip.title.fontFamily": {
-    type: FONT_FAMILY,
+  /**
+   * ## Deprecated
+   *
+   *
+   */
+  "tooltip.textColor": {
+    type: COLOR,
     value: {
-      ref: "basics.fontFamilies.main"
+      ref: "tooltip.title.fontColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "tooltip.title.fontColor"
+      }
     }
   },
-  "tooltip.title.fontSize": {
-    type: FONT_SIZE,
-    value: "12px"
-  },
-  "tooltip.title.fontWeight": {
-    type: FONT_WEIGHT,
-    value: 700
-  },
-  "tooltip.title.lineHeight": {
-    type: LINE_HEIGHT,
-    value: 1.333333333
+  "tooltip.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "tooltip.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "tooltip.backgroundColor"
+      }
+    }
   }
 };

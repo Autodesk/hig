@@ -19,17 +19,6 @@ export default {
       ref: "colorScheme.status.error"
     }
   },
-  "banner.error.iconBackground": {
-    type: COLOR,
-    value: {
-      ref: "banner.error.iconField.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "banner.error.iconField.backgroundColor"
-      }
-    }
-  },
   "banner.info.backgroundColor": {
     type: COLOR,
     value: {
@@ -46,17 +35,6 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.status.info"
-    }
-  },
-  "banner.info.iconBackground": {
-    type: COLOR,
-    value: {
-      ref: "banner.info.iconField.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "banner.info.iconField.backgroundColor"
-      }
     }
   },
   "banner.success.backgroundColor": {
@@ -77,17 +55,6 @@ export default {
       ref: "colorScheme.status.success"
     }
   },
-  "banner.success.iconBackground": {
-    type: COLOR,
-    value: {
-      ref: "banner.success.iconField.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "banner.success.iconField.backgroundColor"
-      }
-    }
-  },
   "banner.warning.backgroundColor": {
     type: COLOR,
     value: {
@@ -106,6 +73,33 @@ export default {
       ref: "colorScheme.status.warning"
     }
   },
+  /**
+   *  ## Deprecated
+   *
+   *
+   */
+  "banner.info.iconBackground": {
+    type: COLOR,
+    value: {
+      ref: "banner.info.iconField.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "banner.info.iconField.backgroundColor"
+      }
+    }
+  },
+  "banner.success.iconBackground": {
+    type: COLOR,
+    value: {
+      ref: "banner.success.iconField.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "banner.success.iconField.backgroundColor"
+      }
+    }
+  },
   "banner.warning.iconBackground": {
     type: COLOR,
     value: {
@@ -114,6 +108,17 @@ export default {
     metadata: {
       deprecated: {
         equivalent: "banner.warning.iconField.backgroundColor"
+      }
+    }
+  },
+  "banner.error.iconBackground": {
+    type: COLOR,
+    value: {
+      ref: "banner.error.iconField.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "banner.error.iconField.backgroundColor"
       }
     }
   }

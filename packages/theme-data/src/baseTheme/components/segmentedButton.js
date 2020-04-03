@@ -45,15 +45,63 @@ export default {
     },
     type: SPACING
   },
-  "segmentedButton.focus.haloWidth": {
+  "segmentedButton.default.backgroundColor": {
     value: {
-      ref: "button.haloWidth"
+      ref: "button.outline.default.backgroundColor"
     },
-    type: BORDER_WIDTH
+    type: COLOR
+  },
+  "segmentedButton.hover.backgroundColor": {
+    value: {
+      ref: "button.outline.hover.backgroundColor"
+    },
+    type: COLOR
+  },
+  "segmentedButton.focus.backgroundColor": {
+    value: {
+      ref: "button.outline.focus.backgroundColor"
+    },
+    type: COLOR
+  },
+  "segmentedButton.pressed.backgroundColor": {
+    value: {
+      ref: "button.outline.pressed.backgroundColor"
+    },
+    type: COLOR
+  },
+  "segmentedButton.default.borderColor": {
+    value: {
+      ref: "button.outline.default.borderColor"
+    },
+    type: COLOR
+  },
+  "segmentedButton.hover.borderColor": {
+    value: {
+      ref: "button.outline.hover.borderColor"
+    },
+    type: COLOR
+  },
+  "segmentedButton.focus.borderColor": {
+    value: {
+      ref: "button.outline.focus.borderColor"
+    },
+    type: COLOR
+  },
+  "segmentedButton.pressed.borderColor": {
+    value: {
+      ref: "button.outline.pressed.borderColor"
+    },
+    type: COLOR
   },
   "segmentedButton.hover.haloWidth": {
     value: {
       ref: "button.hover.haloWidth"
+    },
+    type: BORDER_WIDTH
+  },
+  "segmentedButton.focus.haloWidth": {
+    value: {
+      ref: "button.haloWidth"
     },
     type: BORDER_WIDTH
   },
@@ -63,15 +111,15 @@ export default {
     },
     type: BORDER_WIDTH
   },
-  "segmentedButton.focus.haloColor": {
-    value: {
-      ref: "button.focus.haloColor"
-    },
-    type: COLOR
-  },
   "segmentedButton.hover.haloColor": {
     value: {
       ref: "button.hover.haloColor"
+    },
+    type: COLOR
+  },
+  "segmentedButton.focus.haloColor": {
+    value: {
+      ref: "button.focus.haloColor"
     },
     type: COLOR
   },
@@ -80,36 +128,6 @@ export default {
       ref: "button.pressed.haloColor"
     },
     type: COLOR
-  },
-  "segmentedButton.label.active.fontWeight": {
-    value: {
-      ref: "basics.fontWeights.bold"
-    },
-    type: FONT_WEIGHT
-  },
-  "segmentedButton.label.default.fontWeight": {
-    value: {
-      ref: "button.label.fontWeight"
-    },
-    type: FONT_WEIGHT
-  },
-  "segmentedButton.label.default.fontColor": {
-    value: {
-      ref: "button.outline.label.fontColor"
-    },
-    type: COLOR
-  },
-  "segmentedButton.label.active.fontColor": {
-    value: {
-      ref: "basics.colors.text.againstLight"
-    },
-    type: COLOR
-  },
-  "segmentedButton.label.fontSize": {
-    value: {
-      ref: "button.label.fontSize"
-    },
-    type: FONT_SIZE
   },
   "segmentedButton.default.iconColor": {
     value: {
@@ -129,52 +147,34 @@ export default {
     },
     type: COLOR
   },
-  "segmentedButton.default.backgroundColor": {
+  "segmentedButton.label.fontSize": {
     value: {
-      ref: "button.outline.default.backgroundColor"
+      ref: "button.label.fontSize"
+    },
+    type: FONT_SIZE
+  },
+  "segmentedButton.label.default.fontColor": {
+    value: {
+      ref: "button.outline.label.fontColor"
     },
     type: COLOR
   },
-  "segmentedButton.default.borderColor": {
+  "segmentedButton.label.default.fontWeight": {
     value: {
-      ref: "button.outline.default.borderColor"
+      ref: "button.label.fontWeight"
+    },
+    type: FONT_WEIGHT
+  },
+  "segmentedButton.label.active.fontColor": {
+    value: {
+      ref: "basics.colors.text.againstLight"
     },
     type: COLOR
   },
-  "segmentedButton.focus.backgroundColor": {
+  "segmentedButton.label.active.fontWeight": {
     value: {
-      ref: "button.outline.focus.backgroundColor"
+      ref: "basics.fontWeights.bold"
     },
-    type: COLOR
-  },
-  "segmentedButton.focus.borderColor": {
-    value: {
-      ref: "button.outline.focus.borderColor"
-    },
-    type: COLOR
-  },
-  "segmentedButton.hover.backgroundColor": {
-    value: {
-      ref: "button.outline.hover.backgroundColor"
-    },
-    type: COLOR
-  },
-  "segmentedButton.hover.borderColor": {
-    value: {
-      ref: "button.outline.hover.borderColor"
-    },
-    type: COLOR
-  },
-  "segmentedButton.pressed.backgroundColor": {
-    value: {
-      ref: "button.outline.pressed.backgroundColor"
-    },
-    type: COLOR
-  },
-  "segmentedButton.pressed.borderColor": {
-    value: {
-      ref: "button.outline.pressed.borderColor"
-    },
-    type: COLOR
+    type: FONT_WEIGHT
   }
 };

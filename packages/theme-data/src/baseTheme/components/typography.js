@@ -37,7 +37,6 @@ export default {
       ref: "colorScheme.textColor"
     }
   },
-
   // Caption
   "typography.caption.fontFamily": {
     type: FONT_FAMILY,
@@ -69,7 +68,6 @@ export default {
       ref: "colorScheme.text.default"
     }
   },
-
   // H1
   "typography.h1.fontFamily": {
     type: FONT_FAMILY,
@@ -101,7 +99,6 @@ export default {
       ref: "colorScheme.text.default"
     }
   },
-
   // H2
   "typography.h2.fontFamily": {
     type: FONT_FAMILY,
@@ -133,7 +130,6 @@ export default {
       ref: "colorScheme.text.default"
     }
   },
-
   // H3
   "typography.h3.fontFamily": {
     type: FONT_FAMILY,
