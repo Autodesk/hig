@@ -83,7 +83,7 @@ exports[`Accordion/Accordion renders default collapsed accordion 1`] = `
 }
 
 .emotion-0 > path {
-  fill: #808080;
+  fill: rgba(102,102,102,0.7);
 }
 
 .emotion-3 {
@@ -238,7 +238,7 @@ exports[`Accordion/Accordion renders default expanded accordion 1`] = `
 }
 
 .emotion-0 > path {
-  fill: #808080;
+  fill: rgba(102,102,102,0.7);
 }
 
 <div
@@ -369,7 +369,7 @@ exports[`Accordion/Accordion renders indicator in the right 1`] = `
 }
 
 .emotion-0 > path {
-  fill: #808080;
+  fill: rgba(102,102,102,0.7);
 }
 
 .emotion-3 {
@@ -512,7 +512,7 @@ exports[`Accordion/Accordion renders using operator as indicator 1`] = `
 }
 
 .emotion-0 > path {
-  fill: #808080;
+  fill: rgba(102,102,102,0.7);
 }
 
 .emotion-3 {

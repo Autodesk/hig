@@ -16,7 +16,7 @@ exports[`Dropdown/presenters/MenuPresenter renders with all props 1`] = `
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   background-color: #ffffff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
 <div
@@ -44,7 +44,7 @@ exports[`Dropdown/presenters/MenuPresenter renders with only required props 1`] 
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   background-color: #ffffff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
 <div

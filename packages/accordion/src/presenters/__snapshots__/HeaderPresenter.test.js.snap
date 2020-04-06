@@ -67,7 +67,7 @@ exports[`Accordion/HeaderPresenter renders defaut collapsed header 1`] = `
 }
 
 .emotion-0 > path {
-  fill: #808080;
+  fill: rgba(102,102,102,0.7);
 }
 
 <button
@@ -172,7 +172,7 @@ exports[`Accordion/HeaderPresenter renders expanded header 1`] = `
 }
 
 .emotion-0 > path {
-  fill: #808080;
+  fill: rgba(102,102,102,0.7);
 }
 
 <button
@@ -255,7 +255,7 @@ exports[`Accordion/HeaderPresenter renders indicator in the right 1`] = `
 }
 
 .emotion-0 > path {
-  fill: #808080;
+  fill: rgba(102,102,102,0.7);
 }
 
 .emotion-2 {
@@ -384,7 +384,7 @@ exports[`Accordion/HeaderPresenter renders using operator as indicator 1`] = `
 }
 
 .emotion-0 > path {
-  fill: #808080;
+  fill: rgba(102,102,102,0.7);
 }
 
 <button

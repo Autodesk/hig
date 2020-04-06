@@ -10,7 +10,7 @@ exports[`TextLink snapshot tests  1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #006EAF;
+  color: #006eaf;
   outline: none;
 }
 
@@ -37,7 +37,7 @@ exports[`TextLink snapshot tests  2`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #006EAF;
+  color: #006eaf;
   outline: none;
 }
 
@@ -67,7 +67,7 @@ exports[`TextLink snapshot tests  3`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #006EAF;
+  color: #006eaf;
   outline: none;
 }
 

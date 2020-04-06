@@ -14,8 +14,8 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
   min-height: 50px;
   border-width: 1px 0;
   border-style: solid;
-  border-color: rgba(56,171,223,0.5);
-  background-color: rgba(56,171,223,0.1);
+  border-color: #9bd5ef;
+  background-color: #cdeaf7;
 }
 
 .emotion-1 {
@@ -41,7 +41,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
   width: 50px;
   min-height: 50px;
   margin: 0;
-  background-color: #38abdf;
+  background-color: #0696d7;
 }
 
 .emotion-1 svg * {
@@ -237,8 +237,8 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
   min-height: 50px;
   border-width: 1px 0;
   border-style: solid;
-  border-color: rgba(236,74,65,0.5);
-  background-color: rgba(236,74,65,0.1);
+  border-color: #f1a7a7;
+  background-color: #ffefec;
 }
 
 .emotion-1 {
@@ -331,8 +331,8 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
   min-height: 50px;
   border-width: 1px 0;
   border-style: solid;
-  border-color: rgba(56,171,223,0.5);
-  background-color: rgba(56,171,223,0.1);
+  border-color: #9bd5ef;
+  background-color: #cdeaf7;
 }
 
 .emotion-1 {
@@ -358,7 +358,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
   width: 50px;
   min-height: 50px;
   margin: 0;
-  background-color: #38abdf;
+  background-color: #0696d7;
 }
 
 .emotion-1 svg * {
@@ -498,8 +498,8 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
   min-height: 50px;
   border-width: 1px 0;
   border-style: solid;
-  border-color: rgba(56,171,223,0.5);
-  background-color: rgba(56,171,223,0.1);
+  border-color: #9bd5ef;
+  background-color: #cdeaf7;
 }
 
 .emotion-1 {
@@ -525,7 +525,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
   width: 50px;
   min-height: 50px;
   margin: 0;
-  background-color: #38abdf;
+  background-color: #0696d7;
 }
 
 .emotion-1 svg * {
@@ -663,8 +663,8 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
   min-height: 50px;
   border-width: 1px 0;
   border-style: solid;
-  border-color: rgba(56,171,223,0.5);
-  background-color: rgba(56,171,223,0.1);
+  border-color: #9bd5ef;
+  background-color: #cdeaf7;
 }
 
 .emotion-1 {
@@ -690,7 +690,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
   width: 50px;
   min-height: 50px;
   margin: 0;
-  background-color: #38abdf;
+  background-color: #0696d7;
 }
 
 .emotion-1 svg * {
@@ -928,8 +928,8 @@ exports[`banner/BannerPresenter/BannerPresenter renders without onDismiss functi
   min-height: 50px;
   border-width: 1px 0;
   border-style: solid;
-  border-color: rgba(56,171,223,0.5);
-  background-color: rgba(56,171,223,0.1);
+  border-color: #9bd5ef;
+  background-color: #cdeaf7;
 }
 
 .emotion-1 {
@@ -955,7 +955,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders without onDismiss functi
   width: 50px;
   min-height: 50px;
   margin: 0;
-  background-color: #38abdf;
+  background-color: #0696d7;
 }
 
 .emotion-1 svg * {
@@ -1080,8 +1080,8 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
   min-height: 50px;
   border-width: 1px 0;
   border-style: solid;
-  border-color: rgba(56,171,223,0.5);
-  background-color: rgba(56,171,223,0.1);
+  border-color: #9bd5ef;
+  background-color: #cdeaf7;
 }
 
 .emotion-1 {
@@ -1107,7 +1107,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
   width: 50px;
   min-height: 50px;
   margin: 0;
-  background-color: #38abdf;
+  background-color: #0696d7;
 }
 
 .emotion-1 svg * {

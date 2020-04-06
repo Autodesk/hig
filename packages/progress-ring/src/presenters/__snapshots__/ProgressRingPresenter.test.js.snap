@@ -32,11 +32,11 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders with all props 1
 }
 
 .emotion-1:nth-of-type(even) {
-  fill: #0696d7;
+  fill: #0686c2;
 }
 
 .emotion-1:nth-of-type(odd) {
-  fill: rgba(6,150,215,0.6);
+  fill: #38abdf;
 }
 
 .emotion-17 {
@@ -205,11 +205,11 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders with both surfac
 }
 
 .emotion-1:nth-of-type(even) {
-  fill: #0696d7;
+  fill: #0686c2;
 }
 
 .emotion-1:nth-of-type(odd) {
-  fill: rgba(6,150,215,0.6);
+  fill: #38abdf;
 }
 
 .emotion-21 {
@@ -402,11 +402,11 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders with mask prop 1
 }
 
 .emotion-1:nth-of-type(even) {
-  fill: #0696d7;
+  fill: #0686c2;
 }
 
 .emotion-1:nth-of-type(odd) {
-  fill: rgba(6,150,215,0.6);
+  fill: #38abdf;
 }
 
 .emotion-21 {
@@ -599,11 +599,11 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders with surface pro
 }
 
 .emotion-1:nth-of-type(even) {
-  fill: #0696d7;
+  fill: #0686c2;
 }
 
 .emotion-1:nth-of-type(odd) {
-  fill: rgba(6,150,215,0.6);
+  fill: #38abdf;
 }
 
 .emotion-21 {
@@ -796,11 +796,11 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders without props 1`
 }
 
 .emotion-1:nth-of-type(even) {
-  fill: #0696d7;
+  fill: #0686c2;
 }
 
 .emotion-1:nth-of-type(odd) {
-  fill: rgba(6,150,215,0.6);
+  fill: #38abdf;
 }
 
 .emotion-21 {

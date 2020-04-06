@@ -30,7 +30,7 @@ exports[`toggle/presenters/TogglePresenter renders with all props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(128,128,128,0);
   border-color: blue;
   border-radius: 1000em;
   border-style: solid;
@@ -72,7 +72,7 @@ exports[`toggle/presenters/TogglePresenter renders without props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: rgba(255,255,255,0);
+  background-color: rgba(128,128,128,0);
   border-color: rgba(128,128,128,0.5);
   border-radius: 1000em;
   border-style: solid;
