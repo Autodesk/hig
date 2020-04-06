@@ -75,7 +75,7 @@ exports[`tabs/TabPresenter renders with all props 1`] = `
   -webkit-transition-property: height,width;
   transition-property: height,width;
   top: 0;
-  background-color: rgba(6,150,215,0.35);
+  background-color: rgba(6,150,215,0.5);
 }
 
 .emotion-7 {
@@ -311,7 +311,7 @@ exports[`tabs/TabPresenter renders without props 1`] = `
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: rgba(6,150,215,0.35);
+  background-color: rgba(6,150,215,0.5);
   content: " ";
   width: 100%;
   height: 0;

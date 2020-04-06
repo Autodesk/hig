@@ -51,7 +51,7 @@ exports[`InputHaloPresenter renders when disabled 1`] = `
   border-bottom-color: rgba(128,128,128,0.35);
   border-bottom-style: solid;
   border-bottom-width: 1px;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .emotion-0 {
@@ -131,7 +131,7 @@ exports[`InputHaloPresenter renders with focus 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 4px;
-  background-color: rgba(6,150,215,0.35);
+  background-color: rgba(6,150,215,0.25);
   -webkit-transition-duration: 0.1s,0.1s;
   transition-duration: 0.1s,0.1s;
 }

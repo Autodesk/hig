@@ -10,7 +10,7 @@ exports[`project-account-switcher/presenters/PanelPresenter  1`] = `
   background-color: #ffffff;
   border-radius: 4px;
   border: none;
-  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+  box-shadow: 0 0 16px rgba(0,0,0,0.2);
 }
 
 .emotion-1 {
@@ -45,7 +45,7 @@ exports[`project-account-switcher/presenters/PanelPresenter  2`] = `
   background-color: #ffffff;
   border-radius: 4px;
   border: none;
-  box-shadow: 0 0 16px rgba(0,0,0,0.25);
+  box-shadow: 0 0 16px rgba(0,0,0,0.2);
 }
 
 .emotion-1 {

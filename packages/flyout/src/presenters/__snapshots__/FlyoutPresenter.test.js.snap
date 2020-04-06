@@ -50,7 +50,7 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
   border-color: transparent;
   border-radius: 2px;
   box-sizing: border-box;
-  color: #f5f5f5;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
@@ -82,11 +82,11 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
 }
 
 .emotion-0:visited {
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
 .emotion-0 svg * {
-  fill: #f5f5f5;
+  fill: #ffffff;
 }
 
 <div
@@ -190,7 +190,7 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
 }
 
 .emotion-1 {
-  fill: transparent;
+  fill: rgba(128,128,128,0);
 }
 
 .emotion-2 {
