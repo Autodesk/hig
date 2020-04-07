@@ -10,109 +10,109 @@ import {
 } from "../../consts/types";
 
 export default {
-  "notification.borderRadius": {
+  "notifications.borderRadius": {
     type: BORDER_RADIUS,
     value: {
       ref: "basics.borderRadii.large"
     }
   },
-  "notification.fontColor": {
+  "notifications.fontColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.text.default"
     }
   },
-  "notification.fontFamily": {
+  "notifications.fontFamily": {
     type: FONT_FAMILY,
     value: {
       ref: "basics.fontFamilies.main"
     }
   },
-  "notification.default.backgroundColor": {
+  "notifications.default.backgroundColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.opacity.transparent"
     }
   },
-  "notification.hover.backgroundColor": {
+  "notifications.hover.backgroundColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.background.empty.level100To250.hover"
     }
   },
-  "notification.container.backgroundColor": {
+  "notifications.container.backgroundColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.surface.level100"
     }
   },
-  "notification.container.borderColor": {
+  "notifications.container.borderColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.opacity.transparent"
     }
   },
-  "notification.container.shadowBlur": {
+  "notifications.container.shadowBlur": {
     type: SHADOW,
     value: {
       ref: "basics.shadows.lowBlur"
     }
   },
-  "notification.container.shadowColor": {
+  "notifications.container.shadowColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.shadow.low"
     }
   },
-  "notification.statusIndicator.width": {
+  "notifications.statusIndicator.width": {
     type: LENGTH,
     value: "3px"
   },
-  "notification.header.fontSize": {
+  "notifications.header.fontSize": {
     type: FONT_SIZE,
     value: {
       ref: "density.fontSizes.medium"
     }
   },
-  "notification.header.fontWeight": {
+  "notifications.header.fontWeight": {
     type: FONT_WEIGHT,
     value: {
       ref: "basics.fontWeights.bold"
     }
   },
-  "notification.header.lineHeight": {
+  "notifications.header.lineHeight": {
     type: LINE_HEIGHT,
     value: "20px"
   },
-  "notification.toast.object.fontSize": {
+  "notifications.toast.object.fontSize": {
     type: FONT_SIZE,
     value: {
       ref: "density.fontSizes.small"
     }
   },
-  "notification.toast.object.fontWeight": {
+  "notifications.toast.object.fontWeight": {
     type: FONT_WEIGHT,
     value: {
       ref: "basics.fontWeights.bold"
     }
   },
-  "notification.toast.object.lineHeight": {
+  "notifications.toast.object.lineHeight": {
     type: LINE_HEIGHT,
     value: "16px"
   },
-  "notification.toast.description.fontSize": {
+  "notifications.toast.description.fontSize": {
     type: FONT_SIZE,
     value: {
       ref: "density.fontSizes.small"
     }
   },
-  "notification.toast.description.fontWeight": {
+  "notifications.toast.description.fontWeight": {
     type: FONT_WEIGHT,
     value: {
       ref: "basics.fontWeights.regular"
     }
   },
-  "notification.toast.description.lineHeight": {
+  "notifications.toast.description.lineHeight": {
     type: LINE_HEIGHT,
     value: "16px"
   }
