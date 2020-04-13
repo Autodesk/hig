@@ -426,7 +426,7 @@ export default {
     value: "2px",
     metadata: {
       deprecated: {
-        equivalent: "basics.borderWidths"
+        equivalent: "button.haloWidth"
       }
     }
   },
@@ -710,7 +710,7 @@ export default {
     },
     metadata: {
       deprecated: {
-        ref: "button.solid.iconColor"
+        equivalent: "button.solid.iconColor"
       }
     }
   },

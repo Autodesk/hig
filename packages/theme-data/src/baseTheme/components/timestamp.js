@@ -22,7 +22,7 @@ export default {
   "timestamp.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "density.fontSizes.medium"
+      ref: "density.fontSizes.small"
     }
   },
   "timestamp.fontWeight": {

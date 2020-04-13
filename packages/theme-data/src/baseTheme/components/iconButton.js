@@ -133,7 +133,7 @@ export default {
       ref: "colorScheme.opacity.transparent"
     }
   },
-  "iconButton.static.hover.borderColor*": {
+  "iconButton.static.hover.borderColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.opacity.transparent"
@@ -199,13 +199,10 @@ export default {
       ref: "colorScheme.border.on"
     }
   },
-  "iconButton.static.hover.100To250.backgroundColor": {
+  "iconButton.static.hover.100To250BackgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.base"
-    },
-    transform: {
-      alpha: 0.1
+      ref: "colorScheme.background.empty.level100To250.hover"
     }
   },
   "iconButton.static.pressed.100To250BackgroundColor": {
@@ -214,13 +211,10 @@ export default {
       ref: "colorScheme.background.empty.level100To250.pressed"
     }
   },
-  "iconButton.static.hover.300To350.backgroundColor": {
+  "iconButton.static.hover.300To350BackgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.component.backgroundColor"
-    },
-    transform: {
-      alpha: 0.3
+      ref: "colorScheme.background.empty.level300To350.hover"
     }
   },
   "iconButton.static.pressed.300To350BackgroundColor": {
@@ -395,22 +389,22 @@ export default {
   "iconButton.static.hover.level100To250.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "iconButton.static.hover.100To250.backgroundColor"
+      ref: "iconButton.static.hover.100To250BackgroundColor"
     },
     metadata: {
       deprecated: {
-        equivalent: "iconButton.static.hover.100To250.backgroundColor"
+        equivalent: "iconButton.static.hover.100To250BackgroundColor"
       }
     }
   },
   "iconButton.static.hover.level300To350.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "iconButton.static.hover.300To350.backgroundColor"
+      ref: "iconButton.static.hover.300To350BackgroundColor"
     },
     metadata: {
       deprecated: {
-        equivalent: "iconButton.static.hover.300To350.backgroundColor"
+        equivalent: "iconButton.static.hover.300To350BackgroundColor"
       }
     }
   },

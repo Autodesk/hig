@@ -539,11 +539,11 @@ export default {
   "input.placeholder.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.placeholder"
+      ref: "input.value.placeholderFontColor"
     },
     metadata: {
       deprecated: {
-        equivalent: "colorScheme.text.placeholder"
+        equivalent: "input.value.placeholderFontColor"
       }
     }
   },

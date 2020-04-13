@@ -34,7 +34,7 @@ export default {
   "typography.body.color": {
     type: LINE_HEIGHT,
     value: {
-      ref: "colorScheme.textColor"
+      ref: "colorScheme.text.default"
     }
   },
   // Caption

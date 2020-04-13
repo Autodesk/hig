@@ -157,7 +157,7 @@ export default {
   },
   "background.on.hover": {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.100"
+      ref: "basics.colors.primary.autodeskBlue.200"
     },
     transform: {
       alpha: 0.7
@@ -165,7 +165,7 @@ export default {
   },
   "background.on.pressed": {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.100"
+      ref: "basics.colors.primary.autodeskBlue.300"
     },
     transform: {
       alpha: 0.7

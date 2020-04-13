@@ -134,11 +134,17 @@ export default {
     }
   },
   "background.empty.level100To250.pressed": {
+    value: "#222933",
+    transform: {
+      alpha: 0.7
+    }
+  },
+  "background.empty.level300To350.pressed": {
     value: {
       ref: "colorScheme.reference.base"
     },
     transform: {
-      alpha: 0.3
+      alpha: 0.2
     }
   },
   "background.on.default": {

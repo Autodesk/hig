@@ -94,9 +94,24 @@ export default {
     }
   },
   "background.empty.level100To250.hover": {
-    value: "#1f1f1f",
+    value: {
+      ref: "basics.colors.primary.black"
+    },
     transform: {
-      alpha: 0.3
+      alpha: 0.2
+    }
+  },
+  "background.empty.level100To250.pressed": {
+    value: {
+      ref: "basics.colors.primary.black"
+    },
+    transform: {
+      alpha: 0.35
+    }
+  },
+  "background.empty.level300To350.pressed": {
+    transform: {
+      alpha: 0.18
     }
   },
   "icon.focus": {
@@ -112,21 +127,6 @@ export default {
   "icon.pressed": {
     value: {
       ref: "basics.colors.primary.charcoal.200"
-    }
-  },
-  "background.on.default": {
-    transform: {
-      alpha: 0.25
-    }
-  },
-  "background.on.focus": {
-    transform: {
-      alpha: 0.25
-    }
-  },
-  "background.on.hover": {
-    transform: {
-      alpha: 0.45
     }
   }
 };

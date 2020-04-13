@@ -68,11 +68,11 @@ export default {
   },
   "tabs.closeButton.hover.iconColor": {
     type: COLOR,
-    value: { ref: "colorScheme.text.default" }
+    value: { ref: "colorScheme.icon.hover" }
   },
   "tabs.closeButton.pressed.iconColor": {
     type: COLOR,
-    value: { ref: "colorScheme.text.default" }
+    value: { ref: "colorScheme.icon.pressed" }
   },
   /**
    * ## Variants
