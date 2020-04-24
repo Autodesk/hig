@@ -10,11 +10,10 @@ Read more about when and how to use the Notifications Flyout [on the internal wi
 yarn add @hig/notifications-flyout @hig/theme-context @hig/theme-data
 ```
 
-## Import the component and CSS
+## Import the component
 
 ```js
 import NotificationsFlyout, { Notification } from "@hig/notifications-flyout";
-import "@hig/notifications-flyout/build/index.css";
 ```
 
 ## Basic usage
@@ -32,7 +31,6 @@ import "@hig/notifications-flyout/build/index.css";
 ```jsx
 import NotificationsFlyout, { anchorPoints } from "@hig/notifications-flyout";
 import Timestamp from "@hig/timestamp";
-import "@hig/timestamp/build/index.css";
 
 <NotificationsFlyout
   open
