@@ -63,7 +63,7 @@ export default class IconButton extends Component {
     /**
      * Title of the button for accessibility purposes
      */
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     /**
      * The visual variant of the icon-button
      */
