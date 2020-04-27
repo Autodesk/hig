@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.4.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.3.2...@hig/icon-button@2.4.0) (2020-04-27)
+
+
+### Features
+
+* title prop is no longer required ([e3240eb](https://github.com/Autodesk/hig/commit/e3240eb))
+
 # [@hig/icon-button-v2.3.2](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.3.1...@hig/icon-button@2.3.2) (2020-01-29)
 
 
