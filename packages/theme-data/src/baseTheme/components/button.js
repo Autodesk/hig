@@ -205,7 +205,7 @@ export default {
   "button.outline.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "button.outline.hover.backgroundColor": {
@@ -280,7 +280,7 @@ export default {
   "button.flat.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "button.flat.hover.backgroundColor": {
@@ -304,7 +304,7 @@ export default {
   "button.flat.default.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "button.flat.hover.borderColor": {

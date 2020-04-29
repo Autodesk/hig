@@ -123,31 +123,111 @@ export default {
       alpha: 0.7
     }
   },
-  "background.empty.level100To250.hover": {
+  "text.placeholder": {
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "basics.colors.text.againstLight"
     },
     transform: {
-      alpha: 0.08
+      alpha: 0.4
+    }
+  },
+  "background.empty.level100To250.hover": {
+    value: {
+      ref: "basics.colors.primary.charcoal.600"
+    },
+    transform: {
+      alpha: 0.1
     }
   },
   "background.empty.level100To250.pressed": {
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "basics.colors.primary.charcoal.600"
     },
     transform: {
       alpha: 0.2
     }
   },
-  "background.on.default": {
+  "background.empty.level300To350.hover": {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.100"
+      ref: "basics.colors.primary.white"
     },
     transform: {
-      alpha: 0.6
+      alpha: 0.25
     }
   },
-  "background.on.focus": {
+  "background.empty.level300To350.pressed": {
+    value: {
+      ref: "basics.colors.primary.white"
+    },
+    transform: {
+      alpha: 0.35
+    }
+  },
+  "background.filled.level100To250.default": {
+    value: {
+      ref: "basics.colors.primary.charcoal.600"
+    },
+    transform: {
+      alpha: 0.15
+    }
+  },
+  "background.filled.level100To250.hover": {
+    value: {
+      ref: "basics.colors.primary.charcoal.600"
+    },
+    transform: {
+      alpha: 0.25
+    }
+  },
+  "background.filled.level100To250.focus": {
+    value: {
+      ref: "basics.colors.primary.charcoal.600"
+    },
+    transform: {
+      alpha: 0.15
+    }
+  },
+  "background.filled.level100To250.pressed": {
+    value: {
+      ref: "basics.colors.primary.charcoal.600"
+    },
+    transform: {
+      alpha: 0.35
+    }
+  },
+  "background.filled.level300To350.default": {
+    value: {
+      ref: "basics.colors.primary.white"
+    },
+    transform: {
+      alpha: 0.5
+    }
+  },
+  "background.filled.level300To350.hover": {
+    value: {
+      ref: "basics.colors.primary.white"
+    },
+    transform: {
+      alpha: 0.7
+    }
+  },
+  "background.filled.level300To350.focus": {
+    value: {
+      ref: "basics.colors.primary.white"
+    },
+    transform: {
+      alpha: 0.5
+    }
+  },
+  "background.filled.level300To350.pressed": {
+    value: {
+      ref: "basics.colors.primary.white"
+    },
+    transfrom: {
+      alpha: 0.9
+    }
+  },
+  "background.on.default": {
     value: {
       ref: "basics.colors.primary.autodeskBlue.100"
     },
@@ -161,6 +241,14 @@ export default {
     },
     transform: {
       alpha: 0.7
+    }
+  },
+  "background.on.focus": {
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.100"
+    },
+    transform: {
+      alpha: 0.6
     }
   },
   "background.on.pressed": {
@@ -197,6 +285,26 @@ export default {
   "icon.pressed": {
     value: {
       ref: "basics.colors.primary.charcoal.900"
+    }
+  },
+  "icon.on.default": {
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.500"
+    }
+  },
+  "icon.on.hover": {
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.700"
+    }
+  },
+  "icon.on.focus": {
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.500"
+    }
+  },
+  "icon.on.pressed": {
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.700"
     }
   },
   "divider.lightweight": {

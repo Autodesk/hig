@@ -10,7 +10,7 @@ export default {
   "thumbnail.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "basics.colors.primary.charcoal.600"
     },
     transform: {
       alpha: 0.5

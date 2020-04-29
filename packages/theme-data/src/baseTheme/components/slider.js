@@ -31,7 +31,7 @@ export default {
     type: LENGTH,
     value: "4px"
   },
-  "slider.thumbColor": {
+  "slider.thumb.backgroundColor": {
     type: COLOR,
     value: {
       ref: "basics.colors.primary.charcoal.600"
@@ -98,17 +98,6 @@ export default {
       }
     }
   },
-  "slider.thumb.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "slider.thumbColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.thumbColor"
-      }
-    }
-  },
   "slider.thumb.width": {
     type: LENGTH,
     value: {
@@ -145,11 +134,11 @@ export default {
   "slider.focused.thumb.color": {
     type: COLOR,
     value: {
-      ref: "slider.thumbColor"
+      ref: "slider.thumb.backgroundColor"
     },
     metadata: {
       deprecated: {
-        equivalent: "slider.thumbColor"
+        equivalent: "slider.thumb.backgroundColor"
       }
     }
   },
@@ -178,11 +167,11 @@ export default {
   "slider.hover.thumb.color": {
     type: COLOR,
     value: {
-      ref: "slider.thumbColor"
+      ref: "slider.thumb.backgroundColor"
     },
     metadata: {
       deprecated: {
-        equivalent: "slider.thumbColor"
+        equivalent: "slider.thumb.backgroundColor"
       }
     }
   },
@@ -211,11 +200,11 @@ export default {
   "slider.pressed.thumb.color": {
     type: COLOR,
     value: {
-      ref: "slider.thumbColor"
+      ref: "slider.thumb.backgroundColor"
     },
     metadata: {
       deprecated: {
-        equivalent: "slider.thumbColor"
+        equivalent: "slider.thumb.backgroundColor"
       }
     }
   },

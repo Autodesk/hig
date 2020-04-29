@@ -34,19 +34,19 @@ export default {
   "iconButton.dynamic.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "iconButton.dynamic.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "iconButton.dynamic.focus.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "iconButton.dynamic.default.iconColor": {
@@ -76,7 +76,7 @@ export default {
   "iconButton.dynamic.on.default.iconColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.icon.active"
+      ref: "colorScheme.icon.on.default"
     }
   },
   "iconButton.dynamic.on.hover.iconColor": {
@@ -88,7 +88,7 @@ export default {
   "iconButton.dynamic.on.focus.iconColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.icon.active"
+      ref: "colorScheme.icon.on.default"
     }
   },
   "iconButton.dynamic.on.pressed.iconColor": {
@@ -118,37 +118,37 @@ export default {
   "iconButton.static.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "iconButton.static.focus.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "iconButton.static.default.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "iconButton.static.hover.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "iconButton.static.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "iconButton.static.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "iconButton.static.on.default.backgroundColor": {

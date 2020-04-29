@@ -192,7 +192,7 @@ export default {
   "sideNav.icon.activeColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.icon.active"
+      ref: "colorScheme.icon.on.default"
     }
   },
   "sideNav.activeIndicator.backgroundColor": {

@@ -90,25 +90,25 @@ export default {
   "tag.default.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tag.hover.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tag.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tag.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tag.focus.haloColor": {

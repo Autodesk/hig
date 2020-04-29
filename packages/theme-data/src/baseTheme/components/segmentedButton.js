@@ -167,7 +167,7 @@ export default {
   },
   "segmentedButton.label.active.fontColor": {
     value: {
-      ref: "basics.colors.text.againstLight"
+      ref: "basics.colors.text.againstDark"
     },
     type: COLOR
   },

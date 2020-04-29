@@ -4,7 +4,15 @@ export default {
       ref: "basics.colors.surface.darkBlue.300"
     },
     transform: {
-      opacity: 0.6
+      alpha: 0.6
+    }
+  },
+  "input.box.default.borderColor": {
+    value: {
+      ref: "basics.colors.surface.darkBlue.300"
+    },
+    transform: {
+      alpha: 0.6
     }
   },
   "input.box.default.borderBottomColor": {
@@ -13,7 +21,9 @@ export default {
     }
   },
   "input.value.highlightColor": {
-    value: "#38ABDF",
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.400"
+    },
     transform: {
       alpha: 0.35
     }
@@ -26,6 +36,11 @@ export default {
   "input.line.pressed.borderBottomColor": {
     transform: {
       alpha: 0.87
+    }
+  },
+  "input.textArea.line.borderColor": {
+    value: {
+      ref: "basics.colors.secondary.darkBlue.200"
     }
   }
 };

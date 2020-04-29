@@ -9,11 +9,11 @@ import {
 } from "../../consts/types";
 
 export default {
-  "tabs.sharedProperties.focus.haloWidth": {
+  "tabs.focus.haloWidth": {
     type: LENGTH,
     value: { ref: "basics.borderWidths.medium" }
   },
-  "tabs.sharedProperties.focus.haloColor": {
+  "tabs.focus.haloColor": {
     type: COLOR,
     value: { ref: "basics.colors.primary.autodeskBlue.500" },
     transform: { alpha: 0.5 }
@@ -50,7 +50,7 @@ export default {
     type: COLOR,
     value: { ref: "colorScheme.icon.default" }
   },
-  "tabs.icon.gutter": {
+  "tabs.iconGutter": {
     type: LENGTH,
     value: { ref: "density.spacings.small" }
   },
@@ -114,7 +114,7 @@ export default {
    */
   "tabs.box.wrapper.backgroundColor": {
     type: COLOR,
-    value: { ref: "colorScheme.opacity.transparent" }
+    value: { ref: "colorScheme.background.transparent" }
   },
   "tabs.box.tab.paddingHorizontal": {
     type: LENGTH,
@@ -153,7 +153,7 @@ export default {
    */
   "tabs.canvas.wrapper.backgroundColor": {
     type: COLOR,
-    value: { ref: "colorScheme.opacity.transparent" }
+    value: { ref: "colorScheme.background.transparent" }
   },
   "tabs.canvas.tab.paddingHorizontal": {
     type: LENGTH,
@@ -221,16 +221,16 @@ export default {
   },
   "tabs.general.halo.size": {
     type: LENGTH,
-    value: { ref: "tabs.sharedProperties.focus.haloWidth" },
+    value: { ref: "tabs.focus.haloWidth" },
     metadata: {
-      deprecated: { equivalent: "tabs.sharedProperties.focus.haloWidth" }
+      deprecated: { equivalent: "tabs.focus.haloWidth" }
     }
   },
   "tabs.general.halo.color": {
     type: COLOR,
-    value: { ref: "tabs.sharedProperties.focus.haloColor" },
+    value: { ref: "tabs.focus.haloColor" },
     metadata: {
-      deprecated: { equivalent: "tabs.sharedProperties.focus.haloColor" }
+      deprecated: { equivalent: "tabs.focus.haloColor" }
     }
   },
   "tabs.general.icon.size": {
@@ -245,8 +245,8 @@ export default {
   },
   "tabs.general.icon.gutter": {
     type: LENGTH,
-    value: { ref: "tabs.icon.gutter" },
-    metadata: { deprecated: { equivalent: "tabs.icon.gutter" } }
+    value: { ref: "tabs.iconGutter" },
+    metadata: { deprecated: { equivalent: "tabs.iconGutter" } }
   },
   "tabs.general.closeButton.size": {
     type: LENGTH,

@@ -22,7 +22,7 @@ export default {
   "menu.item.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "menu.item.paddingHorizontal": {

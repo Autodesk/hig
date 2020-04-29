@@ -1,5 +1,5 @@
 export default {
-  "slider.thumbColor": {
+  "slider.thumb.backgroundColor": {
     value: {
       ref: "basics.colors.secondary.darkBlue.200"
     }

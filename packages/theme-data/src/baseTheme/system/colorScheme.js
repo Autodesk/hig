@@ -15,94 +15,23 @@ export default {
   "background.on.pressed": { type: COLOR },
   "background.empty.level100To250.hover": { type: COLOR },
   "background.empty.level100To250.pressed": { type: COLOR },
-  "background.filled.level100To250.default": {
+  "background.empty.level300To350.hover": { type: COLOR },
+  "background.empty.level300To350.pressed": { type: COLOR },
+  "background.filled.level100To250.default": { type: COLOR },
+  "background.filled.level100To250.hover": { type: COLOR },
+  "background.filled.level100To250.focus": { type: COLOR },
+  "background.filled.level100To250.pressed": { type: COLOR },
+  "background.filled.level300To350.default": { type: COLOR },
+  "background.filled.level300To350.hover": { type: COLOR },
+  "background.filled.level300To350.focus": { type: COLOR },
+  "background.filled.level300To350.pressed": { type: COLOR },
+  "background.transparent": {
     type: COLOR,
     value: {
       ref: "colorScheme.reference.base"
     },
     transform: {
-      alpha: 0.15
-    }
-  },
-  "background.filled.level100To250.hover": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.reference.base"
-    },
-    transform: {
-      alpha: 0.25
-    }
-  },
-  "background.filled.level100To250.focus": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.reference.base"
-    },
-    transform: {
-      alpha: 0.15
-    }
-  },
-  "background.filled.level100To250.pressed": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.reference.base"
-    },
-    transform: {
-      alpha: 0.35
-    }
-  },
-  "background.empty.level300To350.hover": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white"
-    },
-    transform: {
-      alpha: 0.3
-    }
-  },
-  "background.empty.level300To350.pressed": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white"
-    },
-    transform: {
-      alpha: 0.5
-    }
-  },
-  "background.filled.level300To350.default": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white"
-    },
-    transform: {
-      alpha: 0.5
-    }
-  },
-  "background.filled.level300To350.hover": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white"
-    },
-    transform: {
-      alpha: 0.7
-    }
-  },
-  "background.filled.level300To350.focus": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white"
-    },
-    transform: {
-      alpha: 0.5
-    }
-  },
-  "background.filled.level300To350.pressed": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white"
-    },
-    transfrom: {
-      alpha: 0.9
+      alpha: 0
     }
   },
   "border.base": {
@@ -122,6 +51,15 @@ export default {
     },
     transform: {
       alpha: 0.5
+    }
+  },
+  "border.transparent": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.reference.base"
+    },
+    transform: {
+      alpha: 0
     }
   },
   "halo.hover": {
@@ -155,15 +93,7 @@ export default {
   "shadow.low": { type: COLOR },
   "text.default": { type: COLOR },
   "text.dim": { type: COLOR },
-  "text.placeholder": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.text.againstLight"
-    },
-    transform: {
-      alpha: 0.4
-    }
-  },
+  "text.placeholder": { type: COLOR },
   "text.active": {
     type: COLOR,
     value: {
@@ -171,15 +101,13 @@ export default {
     }
   },
   "icon.default": { type: COLOR },
-  "icon.active": {
-    value: {
-      ref: "colorScheme.reference.accent"
-    },
-    type: COLOR
-  },
   "icon.hover": { type: COLOR },
   "icon.focus": { type: COLOR },
   "icon.pressed": { type: COLOR },
+  "icon.on.default": { type: COLOR },
+  "icon.on.hover": { type: COLOR },
+  "icon.on.focus": { type: COLOR },
+  "icon.on.pressed": { type: COLOR },
   "indicator.default": { type: COLOR },
   "indicator.hover": { type: COLOR },
   "indicator.focus": { type: COLOR },
@@ -227,19 +155,7 @@ export default {
   "opacity.mask": {
     type: COLOR,
     value: {
-      ref: "basics.colors.tertiary.pink.500"
-    },
-    transform: {
-      alpha: 0
-    }
-  },
-  "opacity.transparent": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.reference.base"
-    },
-    transform: {
-      alpha: 0
+      ref: "basics.colors.tertiary.pink.600"
     }
   },
   "opacity.disabled": {

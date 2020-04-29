@@ -64,7 +64,7 @@ export default {
   "stepIndicator.incomplete.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "stepIndicator.incomplete.borderColor": {
@@ -76,7 +76,7 @@ export default {
   "stepIndicator.inProgress.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "stepIndicator.inProgress.borderColor": {

@@ -85,7 +85,7 @@ export default {
   "checkbox.unchecked.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "checkbox.backgroundColor": {
@@ -311,48 +311,36 @@ export default {
       }
     }
   },
-  "checkbox.checked.focus.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "checkbox.checked.default.backgroundColor"
-    }
-  },
   "checkbox.focus.checked.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "checkbox.checked.focus.backgroundColor"
+      ref: "checkbox.checked.default.backgroundColor"
     },
     metadata: {
       deprecated: {
-        equivalent: "checkbox.checked.focus.backgroundColor"
+        equivalent: "checkbox.checked.default.backgroundColor"
       }
-    }
-  },
-  "checkbox.checked.focus.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "checkbox.checked.default.borderColor"
     }
   },
   "checkbox.focus.checked.borderColor": {
     type: COLOR,
     value: {
-      ref: "checkbox.checked.focus.borderColor"
+      ref: "checkbox.checked.default.borderColor"
     },
     metadata: {
       deprecated: {
-        equivalent: "checkbox.checked.focus.borderColor"
+        equivalent: "checkbox.checked.default.borderColor"
       }
     }
   },
   "checkbox.focus.indeterminate.borderColor": {
     type: COLOR,
     value: {
-      ref: "checkbox.checked.focus.borderColor"
+      ref: "checkbox.checked.default.borderColor"
     },
     metadata: {
       deprecated: {
-        equivalent: "checkbox.checked.focus.borderColor"
+        equivalent: "checkbox.checked.default.borderColor"
       }
     }
   },
@@ -395,19 +383,19 @@ export default {
   "checkbox.unchecked.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "checkbox.unchecked.focus.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "checkbox.unchecked.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "checkbox.checked.hover.backgroundColor": {

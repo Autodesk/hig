@@ -10,7 +10,7 @@ export default {
   "primary.autodeskBlue.400": { value: "#38abdf", type: COLOR },
   "primary.autodeskBlue.500": { value: "#0696d7", type: COLOR },
   "primary.autodeskBlue.600": { value: "#0686c2", type: COLOR },
-  "primary.autodeskBlue.700": { value: "#006EAF", type: COLOR },
+  "primary.autodeskBlue.700": { value: "#006eaf", type: COLOR },
   "primary.autodeskBlue.800": { value: "#034b6c", type: COLOR },
   "primary.autodeskBlue.900": { value: "#022c40", type: COLOR },
 
@@ -162,16 +162,16 @@ export default {
   "text.againstDark": { value: "#f5f5f5", type: COLOR },
   "text.againstLight": { value: "#3c3c3c", type: COLOR },
 
-  // Icon colors
-  "icon.lightGray": { value: "#808080", type: COLOR },
-  "icon.darkBlue": { value: "#a2a6b0", type: COLOR },
-  "icon.darkGray": { value: "#999999", type: COLOR },
-
   // Text link colors
   "textLink.primary.againstLight": { value: "#006eaf", type: COLOR },
   "textLink.primary.againstDark": { value: "#6dd2ff", type: COLOR },
   "textLink.secondary.againstLight": { value: "#3c3c3c", type: COLOR },
   "textLink.secondary.againstDark": { value: "#f5f5f5", type: COLOR },
+
+  // Icon colors
+  "icon.lightGray": { value: "#808080", type: COLOR },
+  "icon.darkBlue": { value: "#a2a6b0", type: COLOR },
+  "icon.darkGray": { value: "#999999", type: COLOR },
 
   // Deprecated
   black: {

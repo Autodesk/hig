@@ -3,5 +3,10 @@ export default {
     value: {
       ref: "colorScheme.reference.base"
     }
+  },
+  "segmentedButton.label.active.fontColor": {
+    value: {
+      ref: "basics.colors.text.againstLight"
+    }
   }
 };

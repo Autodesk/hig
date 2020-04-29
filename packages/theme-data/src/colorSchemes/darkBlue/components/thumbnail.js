@@ -3,9 +3,11 @@ export default {
     value: "#485366"
   },
   "thumbnail.borderColor": {
-    value: "#222933",
+    value: {
+      ref: "basics.colors.surface.darkBlue.300"
+    },
     transform: {
-      alpha: 1.0
+      alpha: 0.5
     }
   }
 };

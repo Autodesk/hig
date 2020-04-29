@@ -31,7 +31,7 @@ export default {
   "notifications.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "notifications.hover.backgroundColor": {
@@ -49,7 +49,7 @@ export default {
   "notifications.container.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "notifications.container.shadowBlur": {

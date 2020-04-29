@@ -211,25 +211,25 @@ export default {
   "tile.filled.default.level100To250.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.filled.hover.level100To250.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.filled.focus.level100To250.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.filled.pressed.level100To250.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.filled.default.level300To350.backgroundColor": {
@@ -259,31 +259,31 @@ export default {
   "tile.filled.default.level300To350.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.filled.hover.level300To350.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.filled.focus.level300To350.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.filled.pressed.level300To350.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.empty.default.level100To250.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.empty.hover.level100To250.backgroundColor": {
@@ -295,7 +295,7 @@ export default {
   "tile.empty.focus.level100To250.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.empty.pressed.level100To250.backgroundColor": {
@@ -307,31 +307,31 @@ export default {
   "tile.empty.default.level100To250.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.empty.hover.level100To250.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.empty.focus.level100To250.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.empty.pressed.level100To250.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.empty.default.level300To350.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.empty.hover.level300To350.backgroundColor": {
@@ -343,7 +343,7 @@ export default {
   "tile.empty.focus.level300To350.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.empty.pressed.level300To350.backgroundColor": {
@@ -355,7 +355,7 @@ export default {
   "tile.empty.default.level300To350.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.empty.hover.level300To350.borderColor": {
@@ -367,7 +367,7 @@ export default {
   "tile.empty.focus.level300To350.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     }
   },
   "tile.empty.pressed.level300To350.borderColor": {

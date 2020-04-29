@@ -237,7 +237,7 @@ export default {
   "input.box.default.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "basics.colors.primary.charcoal.600"
     },
     transform: {
       alpha: 0.2
@@ -298,6 +298,15 @@ export default {
     },
     transform: {
       alpha: 0.85
+    }
+  },
+  "input.textArea.line.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.600"
+    },
+    transform: {
+      alpha: 0.2
     }
   },
   /**

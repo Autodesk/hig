@@ -61,19 +61,19 @@ export default {
   },
   "token.default.borderColor": {
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     },
     type: COLOR
   },
   "token.hover.borderColor": {
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     },
     type: COLOR
   },
   "token.pressed.borderColor": {
     value: {
-      ref: "colorScheme.opacity.transparent"
+      ref: "colorScheme.background.transparent"
     },
     type: COLOR
   },

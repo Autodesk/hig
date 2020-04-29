@@ -7,7 +7,7 @@ export default {
   },
   "flyout.borderColor": {
     type: COLOR,
-    value: { ref: "colorScheme.opacity.transparent" }
+    value: { ref: "colorScheme.background.transparent" }
   },
   "flyout.borderRadius": {
     type: BORDER_RADIUS,
