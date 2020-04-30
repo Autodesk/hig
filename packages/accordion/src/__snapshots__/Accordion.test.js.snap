@@ -55,7 +55,6 @@ exports[`Accordion/Accordion renders default collapsed accordion 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
   -webkit-order: -1;
   -ms-flex-order: -1;
   order: -1;
@@ -79,7 +78,6 @@ exports[`Accordion/Accordion renders default collapsed accordion 1`] = `
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > path {
@@ -121,9 +119,6 @@ exports[`Accordion/Accordion renders default collapsed accordion 1`] = `
       width="10px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        caret-right-m
-      </title>
       <path
         d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
       />
@@ -210,7 +205,6 @@ exports[`Accordion/Accordion renders default expanded accordion 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
   -webkit-order: -1;
   -ms-flex-order: -1;
   order: -1;
@@ -234,7 +228,6 @@ exports[`Accordion/Accordion renders default expanded accordion 1`] = `
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > path {
@@ -264,9 +257,6 @@ exports[`Accordion/Accordion renders default expanded accordion 1`] = `
       width="10px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        caret-right-m
-      </title>
       <path
         d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
       />
@@ -341,7 +331,6 @@ exports[`Accordion/Accordion renders indicator in the right 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
   -webkit-order: -1;
   -ms-flex-order: -1;
   order: -1;
@@ -365,7 +354,6 @@ exports[`Accordion/Accordion renders indicator in the right 1`] = `
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > path {
@@ -407,9 +395,6 @@ exports[`Accordion/Accordion renders indicator in the right 1`] = `
       width="10px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        caret-right-m
-      </title>
       <path
         d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
       />
@@ -484,7 +469,6 @@ exports[`Accordion/Accordion renders using operator as indicator 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
   -webkit-order: -1;
   -ms-flex-order: -1;
   order: -1;
@@ -508,7 +492,6 @@ exports[`Accordion/Accordion renders using operator as indicator 1`] = `
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > path {
@@ -550,9 +533,6 @@ exports[`Accordion/Accordion renders using operator as indicator 1`] = `
       width="16px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        operator-plus-s
-      </title>
       <path
         d="M7 7V2h2v5h5v2H9v5H7V9H2V7h5z"
       />
