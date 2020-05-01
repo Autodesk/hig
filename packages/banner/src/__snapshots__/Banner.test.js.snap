@@ -50,12 +50,10 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-4 {
@@ -139,9 +137,6 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
             width="24px"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <title>
-              info-24
-            </title>
             <path
               d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
             />

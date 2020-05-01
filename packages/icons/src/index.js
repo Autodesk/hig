@@ -70,16 +70,27 @@ import ProjectManagement16SVG from "./icons/information-dense/project-management
 import Profile16SVG from "./icons/information-dense/profile.svg";
 import ProductsAndServices16SVG from "./icons/information-dense/products-and-services.svg";
 import Print16SVG from "./icons/information-dense/print.svg";
-import Play16SVG from "./icons/information-dense/play.svg";
+import PlaybackStop16SVG from "./icons/information-dense/playback-stop.svg";
+import PlaybackShuffle16SVG from "./icons/information-dense/playback-shuffle.svg";
+import PlaybackRewind16SVG from "./icons/information-dense/playback-rewind.svg";
+import PlaybackRecord16SVG from "./icons/information-dense/playback-record.svg";
+import PlaybackPrevious16SVG from "./icons/information-dense/playback-previous.svg";
+import PlaybackPlay16SVG from "./icons/information-dense/playback-play.svg";
+import PlaybackPause16SVG from "./icons/information-dense/playback-pause.svg";
+import PlaybackNext16SVG from "./icons/information-dense/playback-next.svg";
+import PlaybackLoop16SVG from "./icons/information-dense/playback-loop.svg";
+import PlaybackGoToStart16SVG from "./icons/information-dense/playback-go-to-start.svg";
+import PlaybackGoToEnd16SVG from "./icons/information-dense/playback-go-to-end.svg";
+import PlaybackFastForward16SVG from "./icons/information-dense/playback-fast-forward.svg";
 import Placeholder16SVG from "./icons/information-dense/placeholder.svg";
 import Pin16SVG from "./icons/information-dense/pin.svg";
 import Photos16SVG from "./icons/information-dense/photos.svg";
 import PermissionIndividual16SVG from "./icons/information-dense/permission-individual.svg";
 import PermissionGroup16SVG from "./icons/information-dense/permission-group.svg";
-import Pause16SVG from "./icons/information-dense/pause.svg";
 import Paste16SVG from "./icons/information-dense/paste.svg";
 import OnlineViewers16SVG from "./icons/information-dense/online-viewers.svg";
 import Notification16SVG from "./icons/information-dense/notification.svg";
+import NotificationOff16SVG from "./icons/information-dense/notification-off.svg";
 import NotEditable16SVG from "./icons/information-dense/not-editable.svg";
 import Mute16SVG from "./icons/information-dense/mute.svg";
 import More16SVG from "./icons/information-dense/more.svg";
@@ -132,6 +143,7 @@ import ExpandPanel16SVG from "./icons/information-dense/expand-panel.svg";
 import Error16SVG from "./icons/information-dense/error.svg";
 import Education16SVG from "./icons/information-dense/education.svg";
 import Edit16SVG from "./icons/information-dense/edit.svg";
+import EditProfile16SVG from "./icons/information-dense/edit-profile.svg";
 import Download16SVG from "./icons/information-dense/download.svg";
 import Down16SVG from "./icons/information-dense/down.svg";
 import DocumentManagement16SVG from "./icons/information-dense/document-management.svg";
@@ -217,16 +229,27 @@ import ProjectManagement24SVG from "./icons/regular/project-management.svg";
 import Profile24SVG from "./icons/regular/profile.svg";
 import ProductsAndServices24SVG from "./icons/regular/products-and-services.svg";
 import Print24SVG from "./icons/regular/print.svg";
-import Play24SVG from "./icons/regular/play.svg";
+import PlaybackStop24SVG from "./icons/regular/playback-stop.svg";
+import PlaybackShuffle24SVG from "./icons/regular/playback-shuffle.svg";
+import PlaybackRewind24SVG from "./icons/regular/playback-rewind.svg";
+import PlaybackRecord24SVG from "./icons/regular/playback-record.svg";
+import PlaybackPrevious24SVG from "./icons/regular/playback-previous.svg";
+import PlaybackPlay24SVG from "./icons/regular/playback-play.svg";
+import PlaybackPause24SVG from "./icons/regular/playback-pause.svg";
+import PlaybackNext24SVG from "./icons/regular/playback-next.svg";
+import PlaybackLoop24SVG from "./icons/regular/playback-loop.svg";
+import PlaybackGoToStart24SVG from "./icons/regular/playback-go-to-start.svg";
+import PlaybackGoToEnd24SVG from "./icons/regular/playback-go-to-end.svg";
+import PlaybackFastForward24SVG from "./icons/regular/playback-fast-forward.svg";
 import Placeholder24SVG from "./icons/regular/placeholder.svg";
 import Pin24SVG from "./icons/regular/pin.svg";
 import Photos24SVG from "./icons/regular/photos.svg";
 import PermissionIndividual24SVG from "./icons/regular/permission-individual.svg";
 import PermissionGroup24SVG from "./icons/regular/permission-group.svg";
-import Pause24SVG from "./icons/regular/pause.svg";
 import Paste24SVG from "./icons/regular/paste.svg";
 import OnlineViewers24SVG from "./icons/regular/online-viewers.svg";
 import Notification24SVG from "./icons/regular/notification.svg";
+import NotificationOff24SVG from "./icons/regular/notification-off.svg";
 import NotEditable24SVG from "./icons/regular/not-editable.svg";
 import Mute24SVG from "./icons/regular/mute.svg";
 import More24SVG from "./icons/regular/more.svg";
@@ -279,6 +302,7 @@ import ExpandPanel24SVG from "./icons/regular/expand-panel.svg";
 import Error24SVG from "./icons/regular/error.svg";
 import Education24SVG from "./icons/regular/education.svg";
 import Edit24SVG from "./icons/regular/edit.svg";
+import EditProfile24SVG from "./icons/regular/edit-profile.svg";
 import Download24SVG from "./icons/regular/download.svg";
 import Down24SVG from "./icons/regular/down.svg";
 import DocumentManagement24SVG from "./icons/regular/document-management.svg";
@@ -953,6 +977,21 @@ export const Download24 = props => (
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Download24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const EditProfile24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <EditProfile24SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -1738,6 +1777,21 @@ export const NotEditable24 = props => (
   </ThemeContext.Consumer>
 )
 
+export const NotificationOff24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <NotificationOff24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const Notification24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -1778,21 +1832,6 @@ export const Paste24 = props => (
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Paste24SVG {...propsClone} />
-      );
-    }}
-  </ThemeContext.Consumer>
-)
-
-export const Pause24 = props => (
-  <ThemeContext.Consumer>
-    {({ resolvedRoles }) => {
-      let baseProps = {
-        width: "24px",
-        height: "24px"
-      }
-      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
-      return (
-        <Pause24SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -1873,7 +1912,7 @@ export const Placeholder24 = props => (
   </ThemeContext.Consumer>
 )
 
-export const Play24 = props => (
+export const PlaybackFastForward24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
       let baseProps = {
@@ -1882,7 +1921,172 @@ export const Play24 = props => (
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
-        <Play24SVG {...propsClone} />
+        <PlaybackFastForward24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackGoToEnd24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackGoToEnd24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackGoToStart24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackGoToStart24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackLoop24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackLoop24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackNext24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackNext24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackPause24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackPause24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackPlay24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackPlay24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackPrevious24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackPrevious24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackRecord24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackRecord24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackRewind24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackRewind24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackShuffle24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackShuffle24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackStop24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackStop24SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -3163,6 +3367,21 @@ export const Download16 = props => (
   </ThemeContext.Consumer>
 )
 
+export const EditProfile16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <EditProfile16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const Edit16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -3943,6 +4162,21 @@ export const NotEditable16 = props => (
   </ThemeContext.Consumer>
 )
 
+export const NotificationOff16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <NotificationOff16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const Notification16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -3983,21 +4217,6 @@ export const Paste16 = props => (
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Paste16SVG {...propsClone} />
-      );
-    }}
-  </ThemeContext.Consumer>
-)
-
-export const Pause16 = props => (
-  <ThemeContext.Consumer>
-    {({ resolvedRoles }) => {
-      let baseProps = {
-        width: "16px",
-        height: "16px"
-      }
-      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
-      return (
-        <Pause16SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -4078,7 +4297,7 @@ export const Placeholder16 = props => (
   </ThemeContext.Consumer>
 )
 
-export const Play16 = props => (
+export const PlaybackFastForward16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
       let baseProps = {
@@ -4087,7 +4306,172 @@ export const Play16 = props => (
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
-        <Play16SVG {...propsClone} />
+        <PlaybackFastForward16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackGoToEnd16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackGoToEnd16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackGoToStart16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackGoToStart16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackLoop16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackLoop16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackNext16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackNext16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackPause16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackPause16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackPlay16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackPlay16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackPrevious16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackPrevious16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackRecord16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackRecord16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackRewind16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackRewind16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackShuffle16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackShuffle16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const PlaybackStop16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <PlaybackStop16SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>

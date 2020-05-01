@@ -27,12 +27,10 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
 
 .emotion-1 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-1 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-5 {
@@ -111,9 +109,6 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
         width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          checkmark-xs
-        </title>
         <path
           d="M4.2 8.6l1.4-1.5 1.7 1.5 3.6-4 1.5 1.3-5 5.5-3.2-2.8z"
         />
@@ -129,9 +124,6 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
         width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          operator-minus-xs
-        </title>
         <path
           d="M4 7h8v2H4z"
         />
@@ -204,12 +196,10 @@ exports[`checkbox/presenters/CheckboxPresenter renders without props 1`] = `
 
 .emotion-1 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-1 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <div
@@ -244,9 +234,6 @@ exports[`checkbox/presenters/CheckboxPresenter renders without props 1`] = `
         width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          checkmark-xs
-        </title>
         <path
           d="M4.2 8.6l1.4-1.5 1.7 1.5 3.6-4 1.5 1.3-5 5.5-3.2-2.8z"
         />
@@ -262,9 +249,6 @@ exports[`checkbox/presenters/CheckboxPresenter renders without props 1`] = `
         width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          operator-minus-xs
-        </title>
         <path
           d="M4 7h8v2H4z"
         />

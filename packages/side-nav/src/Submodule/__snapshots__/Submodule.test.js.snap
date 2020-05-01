@@ -147,12 +147,10 @@ exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <a
@@ -178,9 +176,6 @@ exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
       width="24px"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>
-        external-link-24
-      </title>
       <path
         d="M18 18H6V6h4V5H5v14h14v-5h-1v4z"
         fillRule="evenodd"

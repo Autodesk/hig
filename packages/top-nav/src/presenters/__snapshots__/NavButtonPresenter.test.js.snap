@@ -34,7 +34,6 @@ exports[`top-nav/presenters/NavActionButtonPresenter  1`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -48,7 +47,6 @@ exports[`top-nav/presenters/NavActionButtonPresenter  1`] = `
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <button
@@ -71,9 +69,6 @@ exports[`top-nav/presenters/NavActionButtonPresenter  1`] = `
     width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      list-24
-    </title>
     <path
       d="M5.08 10h-3v4h3A.94.94 0 0 0 6 13v-2a.94.94 0 0 0-.88-1zM5 13H3v-2h2zm.08-10h-3v4h3A.94.94 0 0 0 6 6V4a.94.94 0 0 0-.88-1zM5 6H3V4h2zm.08 11h-3v4h3A.94.94 0 0 0 6 20v-2a.94.94 0 0 0-.88-1zM5 20H3v-2h2zM21 6H8V4h13zm.08-3H7v4h14.08A.94.94 0 0 0 22 6V4a.94.94 0 0 0-.88-1zM21 20H8v-2h13zm.08-3H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zm0-7H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zM21 13H8v-2h13z"
     />
@@ -115,7 +110,6 @@ exports[`top-nav/presenters/NavActionButtonPresenter  2`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -129,7 +123,6 @@ exports[`top-nav/presenters/NavActionButtonPresenter  2`] = `
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <button
@@ -152,9 +145,6 @@ exports[`top-nav/presenters/NavActionButtonPresenter  2`] = `
     width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      list-24
-    </title>
     <path
       d="M5.08 10h-3v4h3A.94.94 0 0 0 6 13v-2a.94.94 0 0 0-.88-1zM5 13H3v-2h2zm.08-10h-3v4h3A.94.94 0 0 0 6 6V4a.94.94 0 0 0-.88-1zM5 6H3V4h2zm.08 11h-3v4h3A.94.94 0 0 0 6 20v-2a.94.94 0 0 0-.88-1zM5 20H3v-2h2zM21 6H8V4h13zm.08-3H7v4h14.08A.94.94 0 0 0 22 6V4a.94.94 0 0 0-.88-1zM21 20H8v-2h13zm.08-3H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zm0-7H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zM21 13H8v-2h13z"
     />
@@ -196,7 +186,6 @@ exports[`top-nav/presenters/NavActionButtonPresenter  3`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -210,7 +199,6 @@ exports[`top-nav/presenters/NavActionButtonPresenter  3`] = `
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <button
@@ -233,9 +221,6 @@ exports[`top-nav/presenters/NavActionButtonPresenter  3`] = `
     width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      list-24
-    </title>
     <path
       d="M5.08 10h-3v4h3A.94.94 0 0 0 6 13v-2a.94.94 0 0 0-.88-1zM5 13H3v-2h2zm.08-10h-3v4h3A.94.94 0 0 0 6 6V4a.94.94 0 0 0-.88-1zM5 6H3V4h2zm.08 11h-3v4h3A.94.94 0 0 0 6 20v-2a.94.94 0 0 0-.88-1zM5 20H3v-2h2zM21 6H8V4h13zm.08-3H7v4h14.08A.94.94 0 0 0 22 6V4a.94.94 0 0 0-.88-1zM21 20H8v-2h13zm.08-3H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zm0-7H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zM21 13H8v-2h13z"
     />

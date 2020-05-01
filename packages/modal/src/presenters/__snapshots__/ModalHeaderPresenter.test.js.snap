@@ -45,7 +45,6 @@ exports[`modal/presenters/ModalHeaderPresenter  1`] = `
 
 .emotion-1 {
   fill: #808080;
-  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -59,7 +58,6 @@ exports[`modal/presenters/ModalHeaderPresenter  1`] = `
 
 .emotion-1 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <header
@@ -99,9 +97,6 @@ exports[`modal/presenters/ModalHeaderPresenter  1`] = `
         width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          close-m
-        </title>
         <path
           d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
         />
@@ -167,7 +162,6 @@ exports[`modal/presenters/ModalHeaderPresenter  3`] = `
 
 .emotion-1 {
   fill: #808080;
-  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -181,7 +175,6 @@ exports[`modal/presenters/ModalHeaderPresenter  3`] = `
 
 .emotion-1 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <header
@@ -223,9 +216,6 @@ exports[`modal/presenters/ModalHeaderPresenter  3`] = `
         width="16px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          close-m
-        </title>
         <path
           d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
         />

@@ -3,12 +3,10 @@
 exports[`side-nav/CollapseButton snapshot tests renders minimized 1`] = `
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-1 {
@@ -35,9 +33,6 @@ exports[`side-nav/CollapseButton snapshot tests renders minimized 1`] = `
     width="10px"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      caret-down-m
-    </title>
     <path
       d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
     />
@@ -57,12 +52,10 @@ exports[`side-nav/CollapseButton snapshot tests renders with event handlers 1`] 
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <div
@@ -80,9 +73,6 @@ exports[`side-nav/CollapseButton snapshot tests renders with event handlers 1`] 
     width="10px"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      caret-down-m
-    </title>
     <path
       d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
     />
@@ -102,12 +92,10 @@ exports[`side-nav/CollapseButton snapshot tests renders with no props 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <div
@@ -125,9 +113,6 @@ exports[`side-nav/CollapseButton snapshot tests renders with no props 1`] = `
     width="10px"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      caret-down-m
-    </title>
     <path
       d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
     />
