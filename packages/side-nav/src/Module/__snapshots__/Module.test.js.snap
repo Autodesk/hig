@@ -75,12 +75,10 @@ exports[`side-nav/Module snapshot tests renders a expanded menu with active chil
 
 .emotion-3 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-3 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-6 {
@@ -187,9 +185,6 @@ exports[`side-nav/Module snapshot tests renders a expanded menu with active chil
         width="10px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          caret-down-m
-        </title>
         <path
           d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
         />
@@ -637,12 +632,10 @@ exports[`side-nav/Module snapshot tests renders an external link 1`] = `
 
 .emotion-2 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-2 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-3 {
@@ -694,9 +687,6 @@ exports[`side-nav/Module snapshot tests renders an external link 1`] = `
           width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            external-link-24
-          </title>
           <path
             d="M18 18H6V6h4V5H5v14h14v-5h-1v4z"
             fillRule="evenodd"

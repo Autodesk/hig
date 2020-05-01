@@ -33,7 +33,6 @@ exports[`IconButtonPresenter renders correctly 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -47,7 +46,6 @@ exports[`IconButtonPresenter renders correctly 1`] = `
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <button
@@ -70,9 +68,6 @@ exports[`IconButtonPresenter renders correctly 1`] = `
     width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      settings-24
-    </title>
     <path
       d="M12 7.67A4.33 4.33 0 1 0 16.33 12 4.34 4.34 0 0 0 12 7.67zm0 7.66A3.33 3.33 0 1 1 15.33 12 3.33 3.33 0 0 1 12 15.33z"
     />
@@ -116,7 +111,6 @@ exports[`IconButtonPresenter renders correctly when a custom className is passed
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -130,7 +124,6 @@ exports[`IconButtonPresenter renders correctly when a custom className is passed
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <button
@@ -153,9 +146,6 @@ exports[`IconButtonPresenter renders correctly when a custom className is passed
     width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      settings-24
-    </title>
     <path
       d="M12 7.67A4.33 4.33 0 1 0 16.33 12 4.34 4.34 0 0 0 12 7.67zm0 7.66A3.33 3.33 0 1 1 15.33 12 3.33 3.33 0 0 1 12 15.33z"
     />
@@ -169,7 +159,6 @@ exports[`IconButtonPresenter renders correctly when a custom className is passed
 exports[`IconButtonPresenter renders correctly when disabled 1`] = `
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -183,7 +172,6 @@ exports[`IconButtonPresenter renders correctly when disabled 1`] = `
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-1 {
@@ -239,9 +227,6 @@ exports[`IconButtonPresenter renders correctly when disabled 1`] = `
     width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      settings-24
-    </title>
     <path
       d="M12 7.67A4.33 4.33 0 1 0 16.33 12 4.34 4.34 0 0 0 12 7.67zm0 7.66A3.33 3.33 0 1 1 15.33 12 3.33 3.33 0 0 1 12 15.33z"
     />
@@ -285,7 +270,6 @@ exports[`IconButtonPresenter renders correctly with a link 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -299,7 +283,6 @@ exports[`IconButtonPresenter renders correctly with a link 1`] = `
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <a
@@ -323,9 +306,6 @@ exports[`IconButtonPresenter renders correctly with a link 1`] = `
     width="24px"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <title>
-      settings-24
-    </title>
     <path
       d="M12 7.67A4.33 4.33 0 1 0 16.33 12 4.34 4.34 0 0 0 12 7.67zm0 7.66A3.33 3.33 0 1 1 15.33 12 3.33 3.33 0 0 1 12 15.33z"
     />

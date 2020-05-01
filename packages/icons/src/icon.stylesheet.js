@@ -4,10 +4,8 @@ export default function stylesheet(props, themeData) {
 
   return {
     fill: fillColor,
-    pointerEvents: "none",
     "> *": {
-      fill: fillColor,
-      pointerEvents: "none"
+      fill: fillColor
     }
   };
 }

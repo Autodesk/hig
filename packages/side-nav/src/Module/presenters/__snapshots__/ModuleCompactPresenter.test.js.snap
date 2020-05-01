@@ -92,12 +92,10 @@ exports[`side-nav/Module/presenters/ModuleCompactPresenter snapshot tests render
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <div
@@ -125,9 +123,6 @@ exports[`side-nav/Module/presenters/ModuleCompactPresenter snapshot tests render
           width="24px"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            collaboration-24
-          </title>
           <path
             d="M8 9v7h8V8H8zm1 0h6v6H9z"
           />

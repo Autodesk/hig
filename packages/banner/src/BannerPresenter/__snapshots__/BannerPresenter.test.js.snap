@@ -50,12 +50,10 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-5 {
@@ -127,9 +125,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          info-24
-        </title>
         <path
           d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
         />
@@ -177,12 +172,10 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-4 {
@@ -289,14 +282,11 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          error-24
-        </title>
         <path
-          d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+          d="M12 2L2 12l10 10 10-10zM3.41 12L12 3.41 20.59 12 12 20.59z"
         />
         <path
-          d="M16.04 7.26L12 11.29 7.96 7.26l-.7.7L11.29 12l-4.03 4.04.7.7L12 12.71l4.04 4.03.7-.7L12.71 12l4.03-4.04-.7-.7z"
+          d="M11.75 12.82h.5c.14 0 .25-.15.25-.33l.5-4.82c0-.19-.53-.67-.67-.67h-.66c-.14 0-.67.48-.67.67l.5 4.82c0 .18.11.33.25.33zM12 14a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"
         />
       </svg>
     </figure>
@@ -367,12 +357,10 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-5 {
@@ -444,9 +432,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          info-24
-        </title>
         <path
           d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
         />
@@ -534,12 +519,10 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-5 {
@@ -611,9 +594,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          info-24
-        </title>
         <path
           d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
         />
@@ -699,12 +679,10 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-4 {
@@ -814,7 +792,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
 
 .emotion-5 {
   fill: #808080;
-  pointer-events: none;
   position: absolute;
   left: 0;
   right: 0;
@@ -828,7 +805,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
 
 .emotion-5 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 <div
@@ -849,9 +825,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          info-24
-        </title>
         <path
           d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
         />
@@ -901,9 +874,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
           width="16px"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <title>
-            close-m
-          </title>
           <path
             d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
           />
@@ -964,12 +934,10 @@ exports[`banner/BannerPresenter/BannerPresenter renders without onDismiss functi
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-4 {
@@ -1033,9 +1001,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders without onDismiss functi
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          info-24
-        </title>
         <path
           d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
         />
@@ -1116,12 +1081,10 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-0 > * {
   fill: #808080;
-  pointer-events: none;
 }
 
 .emotion-4 {
@@ -1185,9 +1148,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <title>
-          info-24
-        </title>
         <path
           d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
         />
