@@ -1,3 +1,15 @@
+# [@hig/icons-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/icons@3.1.0...@hig/icons@3.2.0) (2020-05-01)
+
+
+### Bug Fixes
+
+* remove title element ([8a13814](https://github.com/Autodesk/hig/commit/8a13814))
+
+
+### Features
+
+* add new icons ([ca0efcd](https://github.com/Autodesk/hig/commit/ca0efcd))
+
 # [@hig/icons-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/icons@3.0.1...@hig/icons@3.1.0) (2019-07-24)
 
 
