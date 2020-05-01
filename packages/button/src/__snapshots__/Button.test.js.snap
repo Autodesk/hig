@@ -214,7 +214,7 @@ exports[`Button  4`] = `
   border-color: rgba(128,128,128,0);
   border-radius: 2px;
   box-sizing: border-box;
-  color: #006EAF;
+  color: #006eaf;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
@@ -246,11 +246,11 @@ exports[`Button  4`] = `
 }
 
 .emotion-0:visited {
-  color: #006EAF;
+  color: #006eaf;
 }
 
 .emotion-0 svg * {
-  fill: #006EAF;
+  fill: #006eaf;
 }
 
 <button

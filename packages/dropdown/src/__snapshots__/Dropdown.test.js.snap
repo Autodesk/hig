@@ -165,7 +165,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   font-weight: 400;
   font-size: 14px;
   line-height: 1.428571429;
-  background-color: rgba(128,128,128,0.08);
+  background-color: rgba(128,128,128,0.1);
 }
 
 .emotion-9 {
@@ -556,7 +556,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   font-weight: 400;
   font-size: 14px;
   line-height: 1.428571429;
-  background-color: rgba(128,128,128,0.08);
+  background-color: rgba(128,128,128,0.1);
 }
 
 .emotion-7 {
@@ -1706,7 +1706,7 @@ exports[`Dropdown renders with default value 1`] = `
   font-weight: 400;
   font-size: 14px;
   line-height: 1.428571429;
-  background-color: rgba(128,128,128,0.08);
+  background-color: rgba(128,128,128,0.1);
 }
 
 .emotion-7 {
@@ -2279,7 +2279,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   font-weight: 400;
   font-size: 14px;
   line-height: 1.428571429;
-  background-color: rgba(128,128,128,0.08);
+  background-color: rgba(128,128,128,0.1);
 }
 
 .emotion-5 {
