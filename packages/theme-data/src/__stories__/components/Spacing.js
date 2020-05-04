@@ -11,7 +11,7 @@ export default function Swatch({ length }) {
           style={{
             height: length,
             width: length,
-            borderColor: resolvedRoles["colorScheme.accentColor"],
+            borderColor: resolvedRoles["colorScheme.reference.accent"],
             borderStyle: "dashed",
             borderWidth: resolvedRoles["basics.borderWidths.small"],
             borderRadius: resolvedRoles["basics.borderRadii.small"],

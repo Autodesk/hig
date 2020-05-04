@@ -12,8 +12,8 @@ function getBoxShadowColor(boxShadowBlur, resolvedRoles) {
   );
 
   return blurHeight === "lowBlur"
-    ? resolvedRoles["colorScheme.lowShadowColor"]
-    : resolvedRoles["colorScheme.highShadowColor"];
+    ? resolvedRoles["colorScheme.shadow.low"]
+    : resolvedRoles["colorScheme.shadow.high"];
 }
 
 export default function ShadowExample({ value }) {

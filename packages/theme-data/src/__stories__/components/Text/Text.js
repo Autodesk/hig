@@ -56,7 +56,7 @@ function Text({
             fontWeight,
             color:
               color === DEFAULT_TEXT_COLOR
-                ? resolvedRoles["colorScheme.textColor"]
+                ? resolvedRoles["colorScheme.text.default"]
                 : color,
             fontFamily,
             lineHeight,
