@@ -14,7 +14,7 @@ function Role(props) {
             display: "flex",
             marginBottom: resolvedRoles["density.spacings.extraLarge"],
             borderTop: `${resolvedRoles["basics.borderWidths.small"]} solid ${
-              resolvedRoles["colorScheme.textColorDim"]
+              resolvedRoles["colorScheme.text.dim"]
             }`,
             paddingTop: resolvedRoles["density.spacings.medium"]
           }}
