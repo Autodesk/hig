@@ -19,7 +19,7 @@
   "dependencies": {
     "prop-types": "^15.7.1",
     "react-lifecycles-compat": "^3.0.4",
-    "react-transition-group": "^2.4.0"
+    "react-transition-group": "^4.4.0"
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.0",
