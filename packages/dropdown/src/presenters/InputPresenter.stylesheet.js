@@ -12,8 +12,8 @@ function getActiveStyles(isOpen) {
 export default function stylesheet(props, themeData) {
   const padding =
     props.variant === "box"
-      ? themeData["input.boxType.horizontalPadding"]
-      : themeData["input.horizontalPadding"];
+      ? themeData["input.box.paddingHorizontal"]
+      : themeData["input.line.paddingHorizontal"];
   const { isOpen } = props;
 
   return {
@@ -24,7 +24,7 @@ export default function stylesheet(props, themeData) {
       position: "absolute",
       top: "50%",
       right: padding,
-      opacity: props.disabled ? themeData["component.disabled.opacity"] : 1,
+      opacity: props.disabled ? themeData["colorScheme.opacity.disabled"] : 1,
       pointerEvents: "none",
       transition: "transform 0.3s, color 0.3s",
       ...getActiveStyles(isOpen)

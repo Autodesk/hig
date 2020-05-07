@@ -6,7 +6,7 @@ export default function stylesheet(props, themeData) {
     position: "absolute",
     width: "100%",
     maxHeight: constants.menuMaxHeight,
-    top: themeData["input.height"],
+    top: themeData["input.minHeight"],
     overflow: "auto",
     zIndex: constants.dropdownLayer,
     boxSizing: "border-box",
@@ -17,7 +17,7 @@ export default function stylesheet(props, themeData) {
     borderBottomRightRadius: themeData["menu.borderRadius"],
     backgroundColor: themeData["menu.backgroundColor"],
     boxShadow: `0 1px ${themeData["basics.shadows.lowBlur"]} ${
-      themeData["colorScheme.lowShadowColor"]
+      themeData["colorScheme.shadow.low"]
     }`
   };
 }
