@@ -24,7 +24,7 @@ export default function stylesheet(props, themeData) {
     },
 
     input: reset({
-      border: `1px solid ${themeData["basics.colors.slate400"]}`,
+      border: `1px solid ${themeData["basics.colors.tertiary.slate.400"]}`,
       borderRadius: "4px",
       fontSize: "14px",
       padding: "6px 35px",
@@ -33,7 +33,7 @@ export default function stylesheet(props, themeData) {
 
       "&:placeholder": {
         fontWeight: "normal",
-        color: themeData["basics.colors.slate700"]
+        color: themeData["basics.colors.tertiary.slate.700"]
       },
 
       "&:focus": {
