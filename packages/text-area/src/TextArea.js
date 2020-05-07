@@ -45,10 +45,10 @@ export default class TextArea extends Component {
         .split(" ")
         .reduce((acc, cur) => cx(acc, `${cur.trim()}-textarea`), "");
 
-    const textareaStylesheet = (styles, props, themeData, theme) => {
-      const textareaStyles = customStylesheet(styles, props, themeData, theme);
+    const textareaStylesheet = (styles, props, themeData) => {
+      const textareaStyles = customStylesheet(styles, props, themeData);
       return stylesheet
-        ? stylesheet(textareaStyles, props, themeData, theme)
+        ? stylesheet(textareaStyles, props, themeData)
         : textareaStyles;
     };
 
