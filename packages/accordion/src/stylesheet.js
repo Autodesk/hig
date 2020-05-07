@@ -56,7 +56,7 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
         fill:
           !disabled && hasHover
             ? themeData["accordion.header.hover.indicatorColor"]
-            : themeData["accordion.header.indicatorColor"]
+            : themeData["accordion.header.default.indicatorColor"]
       },
       marginRight:
         indicatorPosition === indicatorPositions.LEFT
