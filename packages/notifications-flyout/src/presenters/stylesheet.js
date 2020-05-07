@@ -13,33 +13,20 @@ function getRulesByTransitionStatus(transitionStatus) {
 function getRulesByType(type, themeData) {
   switch (type) {
     case types.ERROR:
-      return { borderLeftColor: themeData["colorScheme.errorColor"] };
+      return { borderLeftColor: themeData["colorScheme.status.error"] };
     case types.WARNING:
-      return { borderLeftColor: themeData["colorScheme.warningColor"] };
+      return { borderLeftColor: themeData["colorScheme.status.warning"] };
     case types.SUCCESS:
-      return { borderLeftColor: themeData["colorScheme.successColor"] };
+      return { borderLeftColor: themeData["colorScheme.status.success"] };
     default:
-      return { borderLeftColor: themeData["basics.colors.autodeskBlue500"] };
+      return {
+        borderLeftColor: themeData["basics.colors.primary.autodeskBlue.500"]
+      };
   }
 }
 
-function getRulesByHover(themeData, theme) {
-  if (theme !== "hig-light") {
-    return { backgroundColor: themeData["colorScheme.surfaceLevel300Color"] };
-  }
-  return {};
-}
-
-function getRulesByFeatured(theme) {
-  if (theme === "hig-light") {
-    return { backgroundColor: `#e2f9f7` };
-  }
-  return {};
-}
-
-export default function stylesheet(themeData, props, theme) {
+export default function stylesheet(themeData, props) {
   const {
-    featured,
     hasHover,
     loadingTransitionState,
     showCount,
@@ -68,8 +55,9 @@ export default function stylesheet(themeData, props, theme) {
         borderBottom: `none`
       },
       ...(transitionStatus ? getRulesByTransitionStatus(transitionStatus) : {}),
-      ...(hasHover ? getRulesByHover(themeData, theme) : {}),
-      ...(featured ? getRulesByFeatured(theme) : {})
+      ...(hasHover
+        ? { backgroundColor: themeData["colorScheme.surface.level300"] }
+        : {})
     },
     notificationContent: {
       display: `flex`,
@@ -124,13 +112,13 @@ export default function stylesheet(themeData, props, theme) {
       padding: `0 3px`,
       fontSize: `11px`,
       lineHeight: `13px`,
-      border: `1px solid ${themeData["colorScheme.surfaceLevel100Color"]}`,
-      color: themeData["basics.colors.white"],
+      border: `1px solid ${themeData["colorScheme.surface.level100"]}`,
+      color: themeData["basics.colors.primary.white"],
       backgroundColor: `#0696d7`,
       borderRadius: `4px`,
       pointerEvents: `none`,
       fontWeight: 400,
-      fontFamily: themeData["basics.fontFamilies.main"],
+      fontFamily: themeData["notifications.fontFamily"],
       margin: 0,
       ...(showCount ? { display: `block` } : { display: `none` })
     },
