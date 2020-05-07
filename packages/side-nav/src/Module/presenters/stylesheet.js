@@ -1,5 +1,7 @@
 export default function stylesheet(props, themeData) {
-  const activeBorderLeft = `2px solid ${themeData["colorScheme.accentColor"]}`;
+  const activeBorderLeft = `2px solid ${
+    themeData["colorScheme.reference.accent"]
+  }`;
   const activeBorderBefore = active => ({
     content: '""',
     position: "absolute",
@@ -9,7 +11,7 @@ export default function stylesheet(props, themeData) {
 
     ...(active
       ? {
-          color: themeData["colorScheme.accentColor"],
+          color: themeData["colorScheme.reference.accent"],
           borderLeft: activeBorderLeft
         }
       : { borderLeft: "2px solid transparent" })
@@ -29,10 +31,10 @@ export default function stylesheet(props, themeData) {
 
       "&:focus, &:hover": {
         outline: "none",
-        color: themeData["colorScheme.accentColor"],
+        color: themeData["colorScheme.reference.accent"],
 
         "svg *": {
-          fill: themeData["colorScheme.accentColor"]
+          fill: themeData["colorScheme.reference.accent"]
         }
       },
 
@@ -40,7 +42,7 @@ export default function stylesheet(props, themeData) {
 
       ...((props.active || props.activeChildren) && {
         "& svg *": {
-          fill: themeData["colorScheme.accentColor"]
+          fill: themeData["colorScheme.reference.accent"]
         }
       })
     },
@@ -78,7 +80,7 @@ export default function stylesheet(props, themeData) {
       marginRight: themeData["density.spacings.extraSmall"],
 
       "&:hover svg *": {
-        fill: themeData["colorScheme.accentColor"],
+        fill: themeData["colorScheme.reference.accent"],
         pointerEvents: "none"
       }
     },
@@ -108,13 +110,13 @@ export default function stylesheet(props, themeData) {
       cursor: "pointer",
 
       "&:hover svg *": {
-        fill: themeData["colorScheme.accentColor"]
+        fill: themeData["colorScheme.reference.accent"]
       },
 
       ...((props.active || props.activeChildren) && {
         "&:before": activeBorderBefore(true),
         "& svg *": {
-          fill: themeData["colorScheme.accentColor"]
+          fill: themeData["colorScheme.reference.accent"]
         }
       }),
 
