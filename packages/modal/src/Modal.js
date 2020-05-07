@@ -38,7 +38,7 @@ export default class Modal extends Component {
     /**
      * Title of the modal
      */
-    title: PropTypes.string,
+    title: PropTypes.node,
     /**
      * Style of the modal shell
      */
