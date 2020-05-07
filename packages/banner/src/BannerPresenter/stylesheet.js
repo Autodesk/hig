@@ -23,7 +23,7 @@ export default function stylesheet(props, themeData) {
     },
 
     bannerBackground: {
-      backgroundColor: themeData["colorScheme.component.backgroundColor"]
+      backgroundColor: themeData["colorScheme.surface.level100"]
     },
 
     // .hig__banner__content
@@ -81,11 +81,11 @@ export default function stylesheet(props, themeData) {
       },
 
       "& svg *": {
-        fill: themeData["colorScheme.iconColor"]
+        fill: themeData["colorScheme.icon.default"]
       },
 
       "&:hover svg *": {
-        fill: themeData["colorScheme.accentColor"]
+        fill: themeData["colorScheme.reference.accent"]
       }
     },
 
