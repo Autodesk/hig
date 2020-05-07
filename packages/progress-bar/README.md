@@ -39,7 +39,7 @@ function YourComponent() {
     ...styles,
     wrapper: {
       ...styles.wrapper,
-      backgroundColor: themeData["colorScheme.surfaceLevel100Color"]
+      backgroundColor: themeData["colorScheme.surface.level100"]
     }
   });
 
