@@ -35,7 +35,7 @@ exports[`slider/Slider renders 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 1px;
-  box-shadow: 0 0 0 0 rgba(128,128,128,0.15);
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
   position: relative;
   top: 50%;
   -webkit-transition-duration: 0.3s;
@@ -54,7 +54,7 @@ exports[`slider/Slider renders 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 1px;
-  box-shadow: 0 0 0 0 rgba(128,128,128,0.15);
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
   position: relative;
   top: 50%;
   -webkit-transition-duration: 0.3s;
@@ -73,7 +73,7 @@ exports[`slider/Slider renders 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 1px;
-  box-shadow: 0 0 0 0 rgba(128,128,128,0.15);
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
   position: relative;
   top: 50%;
   -webkit-transition-duration: 0.3s;
@@ -189,7 +189,7 @@ exports[`slider/Slider renders disabled 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 1px;
-  box-shadow: 0 0 0 0 rgba(128,128,128,0.15);
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
   position: relative;
   top: 50%;
   -webkit-transition-duration: 0.3s;
@@ -208,7 +208,7 @@ exports[`slider/Slider renders disabled 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 1px;
-  box-shadow: 0 0 0 0 rgba(128,128,128,0.15);
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
   position: relative;
   top: 50%;
   -webkit-transition-duration: 0.3s;
@@ -228,7 +228,7 @@ exports[`slider/Slider renders disabled 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 1px;
-  box-shadow: 0 0 0 0 rgba(128,128,128,0.15);
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
   position: relative;
   top: 50%;
   -webkit-transition-duration: 0.3s;

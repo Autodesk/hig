@@ -5,11 +5,9 @@ import ThemeContext from "@hig/theme-context";
 import lightGrayMediumTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
 import darkBlueMediumTheme from "@hig/theme-data/build/json/darkBlueMediumDensityTheme/theme.json";
 import darkGrayMediumTheme from "@hig/theme-data/build/json/darkGrayMediumDensityTheme/theme.json";
-import webLightMediumTheme from "@hig/theme-data/build/json/webLightMediumDensityTheme/theme.json";
 import lightGrayHighTheme from "@hig/theme-data/build/json/lightGrayHighDensityTheme/theme.json";
 import darkBlueHighTheme from "@hig/theme-data/build/json/darkBlueHighDensityTheme/theme.json";
 import darkGrayHighTheme from "@hig/theme-data/build/json/darkGrayHighDensityTheme/theme.json";
-import webLightHighTheme from "@hig/theme-data/build/json/webLightHighDensityTheme/theme.json";
 
 import Surface from "./Surface";
 import Text from "./Text";
@@ -17,8 +15,7 @@ import Text from "./Text";
 const colorSchemes = [
   [lightGrayHighTheme, lightGrayMediumTheme],
   [darkBlueHighTheme, darkBlueMediumTheme],
-  [darkGrayHighTheme, darkGrayMediumTheme],
-  [webLightHighTheme, webLightMediumTheme]
+  [darkGrayHighTheme, darkGrayMediumTheme]
 ];
 
 function stylesheet() {
