@@ -68,7 +68,7 @@ function stylesheet(props, trackValueRatio, themeData) {
 
   const thumbDisabledRules = disabled
     ? {
-        opacity: themeData["component.disabled.opacity"]
+        opacity: themeData["colorScheme.opacity.disabled"]
       }
     : {};
 
@@ -83,14 +83,14 @@ function stylesheet(props, trackValueRatio, themeData) {
 
     let stateKey;
 
-    if (hasFocus) stateKey = "focused";
+    if (hasFocus) stateKey = "focus";
     if (hasHover) stateKey = "hover";
     if (isPressed) stateKey = "pressed";
 
     return {
-      backgroundColor: themeData[`slider.${stateKey}.thumb.color`],
-      boxShadow: `0 0 0 ${themeData[`slider.${stateKey}.halo.width`]} ${
-        themeData[`slider.${stateKey}.halo.color`]
+      backgroundColor: themeData[`slider.thumb.backgroundColor`],
+      boxShadow: `0 0 0 ${themeData[`slider.${stateKey}.haloWidth`]} ${
+        themeData[`slider.${stateKey}.haloColor`]
       }`
     };
   };
@@ -105,9 +105,7 @@ function stylesheet(props, trackValueRatio, themeData) {
         backgroundColor: themeData["slider.thumb.backgroundColor"],
         border: 0,
         borderRadius: "1px",
-        boxShadow: `0 0 0 ${themeData["slider.halo.width"]} ${
-          themeData["slider.halo.color"]
-        }`,
+        boxShadow: "0 0 0 0 rgba(255, 255, 255, 0)",
         position: "relative",
         top: "50%",
         transitionDuration: "0.3s",
@@ -130,20 +128,20 @@ function stylesheet(props, trackValueRatio, themeData) {
 
   const trackDisabledRules = disabled
     ? {
-        opacity: themeData["component.disabled.opacity"]
+        opacity: themeData["colorScheme.opacity.disabled"]
       }
     : {};
 
-  const trackValueWidth = `calc((0.5 * ${themeData["slider.thumb.width"]}) 
-  + (${trackValueRatio} * (100% - ${themeData["slider.thumb.width"]})))`;
+  const trackValueWidth = `calc((0.5 * ${themeData["slider.thumb.minWidth"]}) 
+  + (${trackValueRatio} * (100% - ${themeData["slider.thumb.minWidth"]})))`;
 
   const trackRules = browserSpecificPseudoElementRules(
     trackPseudoElements,
     {
       width: "100%",
-      height: themeData["slider.track.width"],
+      height: themeData["slider.track.minHeight"],
       border: "none",
-      backgroundColor: themeData["slider.track.color"],
+      backgroundColor: themeData["slider.track.backgroundColor"],
       color: "transparent",
       outline: "none",
 
@@ -153,10 +151,10 @@ function stylesheet(props, trackValueRatio, themeData) {
       // WebKit does not have a built-in way to target the progress/lower fill of a slider track.
       // This produces the same visual effect.
       webkit: {
-        backgroundColor: themeData["slider.track.color"],
-        backgroundImage: `linear-gradient(${themeData["slider.value.color"]}, ${
-          themeData["slider.value.color"]
-        })`,
+        backgroundColor: themeData["slider.track.backgroundColor"],
+        backgroundImage: `linear-gradient(${
+          themeData["slider.value.backgroundColor"]
+        }, ${themeData["slider.value.backgroundColor"]})`,
         backgroundPosition: 0,
         backgroundSize: `${trackValueWidth} 100%`,
         backgroundRepeat: "no-repeat"
@@ -168,7 +166,7 @@ function stylesheet(props, trackValueRatio, themeData) {
     trackProgressPseudoElements,
     {
       border: "none",
-      backgroundColor: themeData["slider.value.color"]
+      backgroundColor: themeData["slider.value.backgroundColor"]
     },
     {
       mozilla: {
