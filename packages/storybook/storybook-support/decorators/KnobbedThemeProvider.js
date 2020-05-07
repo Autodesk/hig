@@ -53,7 +53,7 @@ function Surface({ children }) {
       {({ resolvedRoles }) => (
         <div
           style={{
-            backgroundColor: resolvedRoles["colorScheme.surfaceLevel100Color"],
+            backgroundColor: resolvedRoles["colorScheme.surface.level100"],
             padding: resolvedRoles["density.spacings.extraLarge"],
             margin: `-${resolvedRoles["density.spacings.extraLarge"]}`,
             borderRadius: resolvedRoles["basics.borderRadii.medium"],
