@@ -1,13 +1,15 @@
 function getRulesByStatus(themeData, status) {
   switch (status) {
     case "error":
-      return { borderLeftColor: themeData["colorScheme.errorColor"] };
+      return { borderLeftColor: themeData["colorScheme.status.error"] };
     case "warning":
-      return { borderLeftColor: themeData["colorScheme.warningColor"] };
+      return { borderLeftColor: themeData["colorScheme.status.warning"] };
     case "success":
-      return { borderLeftColor: themeData["colorScheme.successColor"] };
+      return { borderLeftColor: themeData["colorScheme.status.success"] };
     default:
-      return { borderLeftColor: themeData["basics.colors.autodeskBlue500"] };
+      return {
+        borderLeftColor: themeData["basics.colors.primary.autodeskBlue.500"]
+      };
   }
 }
 
@@ -21,13 +23,13 @@ export default function stylesheet(themeData, status) {
       minHeight: `53px`,
       padding: `16px 0`,
       boxShadow: `0 0 ${
-        themeData["basics.shadows.lowBlur"]
+        themeData["notifications.container.shadowBlur"]
       } 0 rgba(0, 0, 0, 0.25)`,
-      borderRadius: `3px ${themeData["basics.borderRadii.large"]} ${
-        themeData["basics.borderRadii.large"]
+      borderRadius: `3px ${themeData["notifications.borderRadius"]} ${
+        themeData["notifications.borderRadius"]
       } 3px`,
       borderLeft: `3px solid transparent`,
-      backgroundColor: themeData["colorScheme.surfaceLevel100Color"],
+      backgroundColor: themeData["colorScheme.surface.level100"],
       ...(status ? getRulesByStatus(themeData, status) : {})
     },
     toastImageContainer: {
@@ -61,7 +63,7 @@ export default function stylesheet(themeData, status) {
       "svg": {
         // eslint-disable-next-line prettier/prettier
         "path": {
-          fill: themeData["colorScheme.iconColor"]
+          fill: themeData["colorScheme.icon.default"]
         }
       }
     }
