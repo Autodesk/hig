@@ -1,3 +1,10 @@
+# [@hig/modal-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/modal@2.1.2...@hig/modal@2.2.0) (2020-05-07)
+
+
+### Features
+
+* allow PropTypes.node for title prop ([b0744d8](https://github.com/Autodesk/hig/commit/b0744d8))
+
 # [@hig/modal-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/modal@2.1.1...@hig/modal@2.1.2) (2020-02-27)
 
 
