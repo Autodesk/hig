@@ -44,7 +44,7 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
       lineHeight: themeData["accordion.header.lineHeight"],
       color: themeData["accordion.header.fontColor"],
       width: "100%",
-      opacity: disabled ? themeData["component.disabled.opacity"] : "1"
+      opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "1"
     },
     indicator: {
       order: indicatorPosition === indicatorPositions.LEFT ? -1 : 1,
@@ -56,7 +56,7 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
         fill:
           !disabled && hasHover
             ? themeData["accordion.header.hover.indicatorColor"]
-            : themeData["accordion.header.indicatorColor"]
+            : themeData["accordion.header.default.indicatorColor"]
       },
       marginRight:
         indicatorPosition === indicatorPositions.LEFT
