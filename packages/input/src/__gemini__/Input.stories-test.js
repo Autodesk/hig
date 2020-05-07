@@ -24,8 +24,7 @@ function Example({ theme, name }) /* eslint-disable-line react/prop-types */ {
     <ThemeContext.Provider value={theme}>
       <div
         style={{
-          backgroundColor:
-            theme.resolvedRoles["colorScheme.surfaceLevel100Color"],
+          backgroundColor: theme.resolvedRoles["colorScheme.surface.level100"],
           padding: theme.resolvedRoles["density.spacings.medium"],
           width: "300px"
         }}

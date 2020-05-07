@@ -2,8 +2,8 @@ import { variants } from "../constants";
 
 function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
-    color: themeData["input.fontColor"],
-    height: `calc(${themeData["input.height"]} - 2px)`,
+    color: themeData["input.value.fontColor"],
+    height: `calc(${themeData["input.minHeight"]} - 2px)`,
     transitionProperty: "color",
     transitionDuration: "0.3s"
   };
@@ -33,35 +33,35 @@ export default function stylesheet(props, themeData) {
     input: {
       backgroundColor:
         props.variant === variants.BOX
-          ? themeData["input.box.backgroundColor"]
+          ? themeData["input.box.default.backgroundColor"]
           : "transparent",
       boxSizing: "border-box",
       border: "none",
       appearance: "none",
-      paddingTop: themeData["input.verticalPadding"],
+      paddingTop: themeData["input.paddingVertical"],
       paddingRight:
         props.variant === variants.BOX
-          ? themeData["input.boxType.horizontalPadding"]
-          : themeData["input.horizontalPadding"],
-      paddingBottom: themeData["input.verticalPadding"],
+          ? themeData["input.box.paddingHorizontal"]
+          : themeData["input.line.paddingHorizontal"],
+      paddingBottom: themeData["input.paddingVertical"],
       paddingLeft:
         props.variant === variants.BOX
-          ? themeData["input.boxType.horizontalPadding"]
-          : themeData["input.horizontalPadding"],
+          ? themeData["input.box.paddingHorizontal"]
+          : themeData["input.line.paddingHorizontal"],
       outline: "none",
-      fontSize: themeData["density.fontSizes.medium"],
-      fontFamily: themeData["input.fontFamily"],
-      fontWeight: themeData["input.fontWeight"],
-      lineHeight: themeData["input.lineHeight"],
+      fontSize: themeData["input.value.fontSize"],
+      fontFamily: themeData["input.value.fontFamily"],
+      fontWeight: themeData["input.value.fontWeight"],
+      lineHeight: themeData["input.value.lineHeight"],
       width: "100%",
       "&::placeholder": {
-        color: themeData["input.placeholder.fontColor"]
+        color: themeData["input.value.placeholderFontColor"]
       },
       "&::-ms-input-placeholder": {
-        color: themeData["input.placeholder.fontColor"]
+        color: themeData["input.value.placeholderFontColor"]
       },
       "::selection": {
-        backgroundColor: themeData["input.highlightColor"]
+        backgroundColor: themeData["input.value.highlightColor"]
       },
       ...inputStyles(props, themeData)
     }
