@@ -11,7 +11,7 @@ export default function TextPresenter({ children }) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
-        const typographyCustomColor = resolvedRoles["tooltip.textColor"];
+        const typographyCustomColor = resolvedRoles["tooltip.title.fontColor"];
         const typographyCustomStyles = {
           color: typographyCustomColor,
           fontSize: "12px"
