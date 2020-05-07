@@ -15,22 +15,23 @@ export default function stylesheet(props, themeData) {
     textDecoration: "none",
     cursor: "pointer",
 
-    color: themeData["textLink.textColor"],
+    color: themeData["textLink.primary.default.fontColor"],
     outline: "none",
 
     ...(hasHover
       ? {
-          color: themeData["textLink.hover.textColor"],
+          color: themeData["textLink.primary.hover.fontColor"],
           textDecoration: "underline",
-          textDecorationColor: themeData["textLink.hover.underline.color"]
+          textDecorationColor:
+            themeData["textLink.primary.hover.underlineColor"]
         }
       : {}),
 
     ...(hasFocus
       ? {
-          color: themeData["textLink.focus.textColor"],
-          outline: `solid ${themeData["textLink.focus.halo.width"]} ${
-            themeData["textLink.focus.halo.color"]
+          color: themeData["textLink.primary.focus.fontColor"],
+          outline: `solid ${themeData["textLink.focus.haloWidth"]} ${
+            themeData["textLink.focus.haloColor"]
           }`
         }
       : {})
