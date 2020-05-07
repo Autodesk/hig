@@ -33,7 +33,7 @@ export default class ModalHeaderPresenter extends Component {
     /**
      * Title of the modal
      */
-    title: PropTypes.string
+    title: PropTypes.node
   };
 
   static defaultProps = {

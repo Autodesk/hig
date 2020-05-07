@@ -45,7 +45,7 @@ export default class ModalPresenter extends Component {
     /**
      * Title of the modal
      */
-    title: PropTypes.string,
+    title: PropTypes.node,
     /**
      * Style of the modal shell
      */
