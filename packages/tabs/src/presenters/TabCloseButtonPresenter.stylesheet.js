@@ -1,7 +1,7 @@
 function getIconColor({ hasHover, isPressed }, themeData) {
-  if (isPressed) return themeData["tabs.general.closeButton.pressed.color"];
-  if (hasHover) return themeData["tabs.general.closeButton.hover.color"];
-  return themeData["tabs.general.closeButton.color"];
+  if (isPressed) return themeData["tabs.closeButton.pressed.iconColor"];
+  if (hasHover) return themeData["tabs.closeButton.hover.iconColor"];
+  return themeData["tabs.closeButton.default.iconColor"];
 }
 
 export default function stylesheet({ hasHover, isPressed }, themeData) {
@@ -13,8 +13,8 @@ export default function stylesheet({ hasHover, isPressed }, themeData) {
       border: "none",
       padding: "0",
       margin: "0",
-      width: themeData["tabs.general.closeButton.size"],
-      height: themeData["tabs.general.closeButton.size"],
+      width: themeData["tabs.closeButton.minSize"],
+      height: themeData["tabs.closeButton.minSize"],
       cursor: "pointer",
 
       "& svg *": {

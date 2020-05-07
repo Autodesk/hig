@@ -18,16 +18,16 @@ function getHaloStyles(
       ...styles,
       bottom: 0,
       width: "100%",
-      backgroundColor: themeData["tabs.underline.halo.hover.color"],
+      backgroundColor: themeData["tabs.underline.hover.haloColor"],
       overflow: "visible",
       "&:after": {
         position: "absolute",
         top: "100%",
         left: 0,
-        backgroundColor: themeData["tabs.general.halo.color"],
+        backgroundColor: themeData["tabs.focus.haloColor"],
         content: `" "`,
         width: "100%",
-        height: !disabled && hasFocus ? themeData["tabs.general.halo.size"] : 0,
+        height: !disabled && hasFocus ? themeData["tabs.focus.haloWidth"] : 0,
         transitionDuration: "0.3s",
         transitionProperty: "height"
       }
@@ -36,9 +36,9 @@ function getHaloStyles(
     if (!disabled && (hasHover || active || isPressed)) {
       styles = {
         ...styles,
-        height: themeData["tabs.general.halo.size"],
+        height: themeData["tabs.focus.haloWidth"],
         ...((active || isPressed) && {
-          backgroundColor: themeData["tabs.underline.halo.active.color"]
+          backgroundColor: themeData["tabs.underline.active.haloColor"]
         })
       };
     }
@@ -46,18 +46,18 @@ function getHaloStyles(
     styles = {
       ...styles,
       top: 0,
-      backgroundColor: themeData["tabs.general.halo.color"]
+      backgroundColor: themeData["tabs.focus.haloColor"]
     };
 
     if (orientation === orientations.VERTICAL) {
       styles.height = "100%";
       if (!disabled && hasFocus) {
-        styles.width = themeData["tabs.general.halo.size"];
+        styles.width = themeData["tabs.focus.haloWidth"];
       }
     } else {
       styles.width = "100%";
       if (!disabled && hasFocus) {
-        styles.height = themeData["tabs.general.halo.size"];
+        styles.height = themeData["tabs.focus.haloWidth"];
       }
     }
   }
@@ -83,11 +83,11 @@ function getTabBackground(
 function getContentWrapperWidth({ label, icon, closable }, themeData) {
   if (label) return "auto";
   if (icon && closable) {
-    return `calc(${themeData["tabs.general.icon.size"]} + ${
-      themeData["tabs.general.icon.gutter"]
-    } + ${themeData["tabs.general.closeButton.size"]})`;
+    return `calc(${themeData["tabs.iconSize"]} + ${
+      themeData["tabs.icon.gutter"]
+    } + ${themeData["tabs.closeButton.minSize"]})`;
   }
-  if (icon) return themeData["tabs.general.icon.size"];
+  if (icon) return themeData["tabs.iconSize"];
 
   return "0";
 }
@@ -139,14 +139,14 @@ export default function stylesheet(props, themeData) {
       }),
 
       ...(variant === variants.BOX && {
-        padding: `${themeData["tabs.box.tab.verticalPadding"]} ${
-          themeData["tabs.box.tab.horizontalPadding"]
+        padding: `${themeData["tabs.box.tab.paddingVertical"]} ${
+          themeData["tabs.box.tab.paddingHorizontal"]
         }`
       }),
 
       ...(variant === variants.CANVAS && {
-        padding: `${themeData["tabs.canvas.tab.verticalPadding"]} ${
-          themeData["tabs.canvas.tab.horizontalPadding"]
+        padding: `${themeData["tabs.canvas.tab.paddingVertical"]} ${
+          themeData["tabs.canvas.tab.paddingHorizontal"]
         }`,
         transform: "skewX(-23deg)",
         transformOrigin: "0 100%"
@@ -156,7 +156,7 @@ export default function stylesheet(props, themeData) {
       position: "relative",
       flexGrow: "1",
       transform: variant === variants.CANVAS ? "skewX(23deg)" : "none",
-      opacity: disabled ? themeData["component.disabled.opacity"] : "1",
+      opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "1",
       width: getContentWrapperWidth(props, themeData),
       display: orientation === orientations.VERTICAL ? "block" : "flex"
     },
@@ -164,37 +164,37 @@ export default function stylesheet(props, themeData) {
       display: "inline-block",
       position: "relative",
       background: "transparent",
-      fontFamily: themeData["tabs.general.tab.fontFamily"],
-      fontSize: themeData["tabs.general.tab.fontSize"],
+      fontFamily: themeData["tabs.label.fontFamily"],
+      fontSize: themeData["tabs.label.fontSize"],
       fontWeight: active
-        ? themeData["tabs.general.tab.active.fontWeight"]
-        : themeData["tabs.general.tab.fontWeight"],
-      lineHeight: themeData["tabs.general.tab.lineHeight"],
+        ? themeData["tabs.label.active.fontWeight"]
+        : themeData["tabs.label.inactive.fontWeight"],
+      lineHeight: themeData["tabs.label.active.lineHeight"],
       textAlign: "center",
       paddingLeft:
         icon && variant !== variants.UNDERLINE
-          ? `calc(${themeData["tabs.general.icon.size"]} + ${
-              themeData["tabs.general.icon.gutter"]
+          ? `calc(${themeData["tabs.iconSize"]} + ${
+              themeData["tabs.icon.gutter"]
             })`
           : "0",
 
       paddingRight:
         closable && variant !== variants.UNDERLINE
-          ? `calc(${themeData["tabs.general.closeButton.size"]} + ${
-              themeData["tabs.general.closeButton.gutter"]
+          ? `calc(${themeData["tabs.closeButton.minSize"]} + ${
+              themeData["tabs.closeButton.gutter"]
             })`
           : "0",
 
-      color: themeData["tabs.general.tab.color"],
+      color: themeData["tabs.label.fontColor"],
 
       // keep same amount of space whether it's active (bold font weight)
       // or not active (regular font weight)
       "&:before": {
         display: "block",
         content: `"${label}"`,
-        fontFamily: themeData["tabs.general.tab.fontFamily"],
-        fontSize: themeData["tabs.general.tab.fontSize"],
-        fontWeight: themeData["tabs.general.tab.active.fontWeight"],
+        fontFamily: themeData["tabs.label.fontFamily"],
+        fontSize: themeData["tabs.label.fontSize"],
+        fontWeight: themeData["tabs.label.active.fontWeight"],
         height: "0",
         color: "transparent",
         overflow: "hidden",
@@ -208,9 +208,9 @@ export default function stylesheet(props, themeData) {
         top: "50%",
         right: "0",
         transform: "translateY(-50%)",
-        height: themeData[`tabs.${variant}.divider.height`],
-        width: themeData[`tabs.${variant}.divider.width`],
-        backgroundColor: themeData[`tabs.${variant}.divider.color`]
+        height: themeData[`tabs.${variant}.dividerHeight`],
+        width: themeData[`tabs.${variant}.dividerWidth`],
+        backgroundColor: themeData[`tabs.${variant}.divider.borderColor`]
       })
     },
     icon: {
@@ -219,8 +219,8 @@ export default function stylesheet(props, themeData) {
       top: "50%",
       left: "0",
       transform: "translateY(-50%)",
-      height: themeData["tabs.general.icon.size"],
-      width: themeData["tabs.general.icon.size"],
+      height: themeData["tabs.iconSize"],
+      width: themeData["tabs.iconSize"],
       overflow: "hidden"
     },
     closeButton: {
