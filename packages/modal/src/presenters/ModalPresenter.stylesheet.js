@@ -19,7 +19,7 @@ export default function stylesheet(props, themeData) {
   return {
     modal: {
       wrapper: {
-        color: themeData["modal.textColor"],
+        color: themeData["modal.fontColor"],
         opacity: open ? 1.0 : 0,
         pointerEvents: open ? "visible" : "none",
         transition: "all ease 0.2s",
@@ -27,7 +27,7 @@ export default function stylesheet(props, themeData) {
       },
 
       overlay: {
-        backgroundColor: themeData["modal.overlay.color"],
+        backgroundColor: themeData["modal.overlayColor"],
         bottom: 0,
         left: 0,
         position: "fixed",
@@ -37,14 +37,14 @@ export default function stylesheet(props, themeData) {
       },
 
       window: {
-        background: themeData["modal.window.backgroundColor"],
-        borderRadius: themeData["modal.window.borderRadius"],
-        boxShadow: `0 0 8px 0 ${themeData["modal.window.shadowColor"]}`,
+        background: themeData["modal.shell.backgroundColor"],
+        borderRadius: themeData["modal.shell.borderRadius"],
+        boxShadow: `0 0 8px 0 ${themeData["modal.shell.shadowColor"]}`,
         display: "flex",
         flexDirection: "column",
         left: "50%",
-        height: themeData["modal.window.height"],
-        width: themeData["modal.window.width"],
+        height: themeData["modal.shell.minHeight"],
+        width: themeData["modal.shell.minWidth"],
         opacity: open ? 1.0 : 0,
         outline: "none",
         position: "fixed",
@@ -64,8 +64,10 @@ export default function stylesheet(props, themeData) {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        borderBottom: `1px solid ${themeData["modal.header.borderColor"]}`,
-        minHeight: themeData["modal.header.height"],
+        borderBottom: `1px solid ${
+          themeData["modal.header.borderBottomColor"]
+        }`,
+        minHeight: themeData["modal.header.minHeight"],
         zIndex: MODAL_HEADER_LAYER,
 
         ...(type === types.ALTERNATE && {
@@ -74,15 +76,15 @@ export default function stylesheet(props, themeData) {
       },
 
       headerContent: {
-        margin: `0 ${themeData["modal.horizontalPadding"]}`,
+        margin: `0 ${themeData["modal.paddingHorizontal"]}`,
         display: "flex",
         justifyContent: "space-between",
         "svg *": {
-          fill: themeData["modal.textColor"]
+          fill: themeData["modal.fontColor"]
         },
         "&:hover, &:focus": {
           "svg *": {
-            fill: themeData["modal.textColor"]
+            fill: themeData["modal.fontColor"]
           }
         },
         ...(type === types.ALTERNATE && {
@@ -96,7 +98,7 @@ export default function stylesheet(props, themeData) {
         flexDirection: "column",
         overflow: "hidden",
         position: "relative",
-        minHeight: themeData["modal.body.height"]
+        minHeight: themeData["modal.body.minHeight"]
       },
 
       bodyContent: {
@@ -104,7 +106,7 @@ export default function stylesheet(props, themeData) {
         flex: "1 1 auto",
         overflowX: "auto",
         overflowY: "auto",
-        padding: themeData["modal.horizontalPadding"]
+        padding: themeData["modal.paddingHorizontal"]
       }
     }
   };
