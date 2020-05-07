@@ -9,15 +9,15 @@ function getStylesByHover(themeData, surface, on, variant) {
   const surfaceLevel = Number(surface);
   const isDynamic = variant === `dynamic`;
   const dynamicHoverIconColor = on
-    ? themeData["iconButton.hover.on.iconColor"]
-    : themeData["iconButton.hover.iconColor"];
+    ? themeData["iconButton.dynamic.on.hover.iconColor"]
+    : themeData["iconButton.dynamic.hover.iconColor"];
   const hoverIconColor = isDynamic ? dynamicHoverIconColor : "";
   const staticSurfaceLevelBackgroundColor =
     surfaceLevel <= 250
-      ? themeData["iconButton.static.hover.level100To250.backgroundColor"]
-      : themeData["iconButton.static.hover.level300To350.backgroundColor"];
+      ? themeData["iconButton.static.hover.100To250BackgroundColor"]
+      : themeData["iconButton.static.hover.300To350BackgroundColor"];
   const staticHoverBackgroundColor = on
-    ? themeData["iconButton.static.on.hover.level100To250.backgroundColor"]
+    ? themeData["iconButton.static.on.hover.100To250BackgroundColor"]
     : staticSurfaceLevelBackgroundColor;
   const backgroundColor = !isDynamic
     ? staticHoverBackgroundColor
@@ -41,8 +41,8 @@ function getStylesByHover(themeData, surface, on, variant) {
 function getStylesByFocus(themeData, on, variant) {
   const isDynamic = variant === `dynamic`;
   const dynamicFocusIconColor = on
-    ? themeData["iconButton.focus.on.iconColor"]
-    : themeData["iconButton.focus.iconColor"];
+    ? themeData["iconButton.dynamic.on.focus.iconColor"]
+    : themeData["iconButton.dynamic.focus.iconColor"];
   const focusIconColor = isDynamic ? dynamicFocusIconColor : "";
   const staticBorderColor = on
     ? themeData["iconButton.static.on.focus.borderColor"]
@@ -51,8 +51,8 @@ function getStylesByFocus(themeData, on, variant) {
 
   return {
     borderColor,
-    boxShadow: `0 0 0 ${themeData["iconButton.focus.halo.width"]} ${
-      themeData["iconButton.focus.halo.color"]
+    boxShadow: `0 0 0 ${themeData["iconButton.focus.haloWidth"]} ${
+      themeData["iconButton.focus.haloColor"]
     }`,
     transitionDuration: `0.3s, 0.3s`,
     "& svg *": {
@@ -65,14 +65,14 @@ function getStylesByFocus(themeData, on, variant) {
 function getStylesByPressed(themeData, surface, on, variant) {
   const surfaceLevel = Number(surface);
   const dynamicPressedIconColor = on
-    ? themeData["iconButton.pressed.on.iconColor"]
-    : themeData["iconButton.pressed.iconColor"];
+    ? themeData["iconButton.dynamic.on.pressed.iconColor"]
+    : themeData["iconButton.dynamic.pressed.iconColor"];
   const pressedIconColor = variant === "dynamic" ? dynamicPressedIconColor : "";
   return {
     backgroundColor:
       surfaceLevel <= 250
-        ? themeData["iconButton.pressed.level100To250.backgroundColor"]
-        : themeData["iconButton.pressed.level300To350.backgroundColor"],
+        ? themeData["iconButton.dynamic.pressed.100To250BackgroundColor"]
+        : themeData["iconButton.dynamic.pressed.300To350BackgroundColor"],
     borderColor: `transparent`,
     transitionDuration: `0.3s, 0.3s`,
     "& svg *": {
@@ -84,7 +84,7 @@ function getStylesByPressed(themeData, surface, on, variant) {
 
 function getStylesByDisabled(themeData) {
   return {
-    opacity: themeData["component.disabled.opacity"],
+    opacity: themeData["colorScheme.opacity.disabled"],
     pointerEvents: `none`
   };
 }
@@ -102,19 +102,19 @@ export default function stylesheet(props, themeData, density) {
   const contentHeight = density === `medium-density` ? `20px` : `16px`;
   const isDynamic = variant === `dynamic`;
   const dynamicIconColor = on
-    ? themeData["iconButton.on.iconColor"]
-    : themeData["iconButton.iconColor"];
+    ? themeData["iconButton.dynamic.on.default.iconColor"]
+    : themeData["iconButton.dynamic.default.iconColor"];
   const iconColor = isDynamic ? dynamicIconColor : ``;
 
   return {
     iconButton: {
       backgroundColor:
         !isDynamic && on
-          ? themeData["iconButton.static.on.backgroundColor"]
+          ? themeData["iconButton.static.on.default.backgroundColor"]
           : `transparent`,
       borderColor:
         !isDynamic && on
-          ? themeData["iconButton.static.on.borderColor"]
+          ? themeData["iconButton.static.on.default.borderColor"]
           : `transparent`,
       borderStyle: `solid`,
       borderWidth: `1px`,
