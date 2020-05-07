@@ -24,7 +24,7 @@ function getProgressBarFillIndeterminateRules(themeData) {
       width: `200px`,
       height: `4px`,
       backgroundImage: `linear-gradient(135deg, transparent, ${
-        themeData["progressBar.highlightColor"]
+        themeData["progress.bar.highlightColor"]
       } 100%)`,
       backgroundSize: `200px 4px`
     }
@@ -55,11 +55,11 @@ export default function stylesheet(props, themeData) {
   const styles = {
     wrapper: {
       position: `relative`,
-      borderRadius: themeData["progressBar.borderRadius"],
-      backgroundColor: themeData["progressBar.backgroundColor"],
+      borderRadius: themeData["progress.bar.borderRadius"],
+      backgroundColor: themeData["progress.bar.backgroundColor"],
       overflow: `hidden`,
       width: `100%`,
-      height: themeData["progressBar.height"]
+      height: themeData["progress.bar.minHeight"]
     },
     progressBar: {
       position: `absolute`,
@@ -77,14 +77,14 @@ export default function stylesheet(props, themeData) {
     progressBarFill: {
       backgroundColor: isIndeterminate
         ? `transparent`
-        : themeData["progressBar.highlightColor"],
+        : themeData["progress.bar.highlightColor"],
       flex: `1 1 0`,
       ...(isIndeterminate
         ? getProgressBarFillIndeterminateRules(themeData)
         : {})
     },
     polygon: {
-      fill: themeData["progressBar.highlightColor"]
+      fill: themeData["progress.bar.highlightColor"]
     }
   };
 
