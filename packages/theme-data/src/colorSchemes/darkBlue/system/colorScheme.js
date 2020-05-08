@@ -291,7 +291,7 @@ export default {
   },
   "border.accent": {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.500"
+      ref: "basics.colors.primary.autodeskBlue.400"
     }
   },
   "icon.focus": {
