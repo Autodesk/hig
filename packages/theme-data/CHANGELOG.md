@@ -1,3 +1,32 @@
+# [@hig/theme-data-v2.16.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.15.1...@hig/theme-data@2.16.0) (2020-05-11)
+
+
+### Features
+
+* add accordion roles ([d1ee024](https://github.com/Autodesk/hig/commit/d1ee024))
+* add theme-data for unreleased components ([9f32044](https://github.com/Autodesk/hig/commit/9f32044))
+* add/rename/deprecate checkbox roles ([22c8a1f](https://github.com/Autodesk/hig/commit/22c8a1f))
+* add/rename/deprecate icon-button roles ([0dd40a9](https://github.com/Autodesk/hig/commit/0dd40a9))
+* add/rename/deprecate input roles ([2ea2697](https://github.com/Autodesk/hig/commit/2ea2697))
+* add/rename/deprecate roles for button ([9d14b75](https://github.com/Autodesk/hig/commit/9d14b75))
+* add/rename/deprecate slider roles ([ef6330c](https://github.com/Autodesk/hig/commit/ef6330c))
+* add/rename/deprecate tooltip roles ([486c6cc](https://github.com/Autodesk/hig/commit/486c6cc))
+* align basics.colors role names with design toolkit ([1f91199](https://github.com/Autodesk/hig/commit/1f91199))
+* align colorScheme roles with design toolkit ([0d45d34](https://github.com/Autodesk/hig/commit/0d45d34))
+* deprecate component role ([8c70465](https://github.com/Autodesk/hig/commit/8c70465))
+* deprecate formField roles ([a738213](https://github.com/Autodesk/hig/commit/a738213))
+* rename avatar roles ([fbf7f71](https://github.com/Autodesk/hig/commit/fbf7f71))
+* rename banner roles ([6d024af](https://github.com/Autodesk/hig/commit/6d024af))
+* rename divider roles ([6cb54e1](https://github.com/Autodesk/hig/commit/6cb54e1))
+* rename menu roles ([04e4284](https://github.com/Autodesk/hig/commit/04e4284))
+* rename modal roles ([27734e5](https://github.com/Autodesk/hig/commit/27734e5))
+* rename progress-bar roles ([6399e78](https://github.com/Autodesk/hig/commit/6399e78))
+* rename progress-ring roles ([648fc58](https://github.com/Autodesk/hig/commit/648fc58))
+* rename skeletonItem roles ([8590fa7](https://github.com/Autodesk/hig/commit/8590fa7))
+* rename tabs roles ([6a05c9c](https://github.com/Autodesk/hig/commit/6a05c9c))
+* rename toggle roles ([1a1e8fb](https://github.com/Autodesk/hig/commit/1a1e8fb))
+* rename/add text-link roles ([8febff8](https://github.com/Autodesk/hig/commit/8febff8))
+
 # [@hig/theme-data-v2.15.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.15.0...@hig/theme-data@2.15.1) (2020-03-12)
 
 

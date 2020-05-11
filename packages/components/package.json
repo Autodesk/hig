@@ -45,7 +45,7 @@
     "@hig/text-area": "^1.2.0",
     "@hig/text-link": "^1.1.0",
     "@hig/theme-context": "^3.0.0",
-    "@hig/theme-data": "^2.15.1",
+    "@hig/theme-data": "^2.16.0",
     "@hig/timestamp": "^1.1.0",
     "@hig/toggle": "^1.0.0",
     "@hig/tooltip": "^1.0.5",
