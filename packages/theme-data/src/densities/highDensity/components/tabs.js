@@ -1,8 +1,8 @@
 export default {
-  "tabs.box.divider.height": {
+  "tabs.box.dividerHeight": {
     value: "12px"
   },
-  "tabs.canvas.divider.height": {
+  "tabs.canvas.dividerHeight": {
     value: "12px"
   }
 };

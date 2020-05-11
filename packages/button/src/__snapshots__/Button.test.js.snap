@@ -7,7 +7,7 @@ exports[`Button  1`] = `
   border-color: transparent;
   border-radius: 2px;
   box-sizing: border-box;
-  color: #f5f5f5;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
@@ -39,11 +39,11 @@ exports[`Button  1`] = `
 }
 
 .emotion-0:visited {
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
 .emotion-0 svg * {
-  fill: #f5f5f5;
+  fill: #ffffff;
 }
 
 <button
@@ -76,7 +76,7 @@ exports[`Button  2`] = `
   border-color: transparent;
   border-radius: 2px;
   box-sizing: border-box;
-  color: #f5f5f5;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
@@ -108,11 +108,11 @@ exports[`Button  2`] = `
 }
 
 .emotion-0:visited {
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
 .emotion-0 svg * {
-  fill: #f5f5f5;
+  fill: #ffffff;
 }
 
 <button
@@ -181,7 +181,7 @@ exports[`Button  3`] = `
 }
 
 .emotion-0 svg * {
-  fill: #3c3c3c;
+  fill: #808080;
 }
 
 <button
@@ -211,10 +211,10 @@ exports[`Button  4`] = `
 .emotion-0 {
   border-width: 1px;
   border-style: solid;
-  border-color: rgba(255,255,255,0);
+  border-color: rgba(128,128,128,0);
   border-radius: 2px;
   box-sizing: border-box;
-  color: #006EAF;
+  color: #006eaf;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
@@ -246,11 +246,11 @@ exports[`Button  4`] = `
 }
 
 .emotion-0:visited {
-  color: #006EAF;
+  color: #006eaf;
 }
 
 .emotion-0 svg * {
-  fill: #006EAF;
+  fill: #006eaf;
 }
 
 <button
@@ -283,7 +283,7 @@ exports[`Button  5`] = `
   border-color: transparent;
   border-radius: 2px;
   box-sizing: border-box;
-  color: #f5f5f5;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
@@ -315,11 +315,11 @@ exports[`Button  5`] = `
 }
 
 .emotion-2:visited {
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
 .emotion-2 svg * {
-  fill: #f5f5f5;
+  fill: #ffffff;
 }
 
 .emotion-0 {
@@ -372,7 +372,7 @@ exports[`Button  6`] = `
   border-color: transparent;
   border-radius: 2px;
   box-sizing: border-box;
-  color: #f5f5f5;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
@@ -404,11 +404,11 @@ exports[`Button  6`] = `
 }
 
 .emotion-0:visited {
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
 .emotion-0 svg * {
-  fill: #f5f5f5;
+  fill: #ffffff;
 }
 
 <button
@@ -441,7 +441,7 @@ exports[`Button  7`] = `
   border-color: transparent;
   border-radius: 2px;
   box-sizing: border-box;
-  color: #f5f5f5;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family: ArtifaktElement,sans-serif;
@@ -473,11 +473,11 @@ exports[`Button  7`] = `
 }
 
 .emotion-0:visited {
-  color: #f5f5f5;
+  color: #ffffff;
 }
 
 .emotion-0 svg * {
-  fill: #f5f5f5;
+  fill: #ffffff;
 }
 
 <a

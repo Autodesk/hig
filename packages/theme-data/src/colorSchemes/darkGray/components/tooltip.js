@@ -1,7 +1,7 @@
 export default {
   "tooltip.backgroundColor": {
     value: {
-      ref: "basics.colors.surfaceLightGrayLevel300"
+      ref: "basics.colors.surface.lightGray.300"
     }
   }
 };

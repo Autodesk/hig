@@ -81,7 +81,7 @@ exports[`TextArea integration renders correctly 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(6,150,215,0.25);
+  background-color: rgba(128,128,128,0.2);
 }
 
 <div
@@ -192,7 +192,7 @@ exports[`TextArea integration renders with stylesheet prop 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(6,150,215,0.25);
+  background-color: rgba(128,128,128,0.2);
 }
 
 <div

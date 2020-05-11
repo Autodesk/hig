@@ -21,7 +21,7 @@ exports[`tabs/TabsPresenter renders horizontal box style tabs 1`] = `
   -ms-flex-pack: center;
   justify-content: center;
   border-bottom: 0;
-  background-color: #eeeeee;
+  background-color: rgba(128,128,128,0);
 }
 
 <ul
@@ -52,7 +52,7 @@ exports[`tabs/TabsPresenter renders horizontal canvas style tabs 1`] = `
   -ms-flex-pack: start;
   justify-content: flex-start;
   border-bottom: 0;
-  background-color: #cccccc;
+  background-color: rgba(128,128,128,0);
 }
 
 <ul

@@ -1,21 +1,18 @@
 import { FONT_SIZE, LENGTH, FONT_WEIGHT, COLOR } from "../../consts/types";
 
 export default {
-  /** Defaults */
   "avatar.fontWeight": {
     type: FONT_WEIGHT,
     value: { ref: "basics.fontWeights.regular" }
   },
-  "avatar.fontColorOnDark": {
+  "avatar.darkBackground.fontColor": {
     type: COLOR,
-    value: { ref: "basics.colors.white" }
+    value: { ref: "basics.colors.primary.white" }
   },
-  "avatar.fontColorOnLight": {
+  "avatar.lightBackground.fontColor": {
     type: COLOR,
-    value: { ref: "basics.colors.textAgainstLight" }
+    value: { ref: "basics.colors.text.againstLight" }
   },
-
-  /** Size variants */
   "avatar.extraSmall.fontSize": {
     type: FONT_SIZE,
     value: "11px"
@@ -24,7 +21,6 @@ export default {
     type: LENGTH,
     value: "16px"
   },
-
   "avatar.small.fontSize": {
     type: FONT_SIZE,
     value: "12px"
@@ -33,7 +29,6 @@ export default {
     type: LENGTH,
     value: "24px"
   },
-
   "avatar.medium.fontSize": {
     type: FONT_SIZE,
     value: "14px"
@@ -42,7 +37,6 @@ export default {
     type: LENGTH,
     value: "32px"
   },
-
   "avatar.large.fontSize": {
     type: FONT_SIZE,
     value: "24px"
@@ -51,7 +45,6 @@ export default {
     type: LENGTH,
     value: "48px"
   },
-
   "avatar.extraLarge.fontSize": {
     type: FONT_SIZE,
     value: "30px"
@@ -60,68 +53,75 @@ export default {
     type: LENGTH,
     value: "64px"
   },
-
-  /** Color variants */
   "avatar.color1.backgroundColor": {
     type: COLOR,
-    value: { ref: "basics.colors.autodeskBlue300" }
+    value: { ref: "basics.colors.primary.autodeskBlue.300" }
+  },
+  "avatar.color2.backgroundColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.secondary.darkBlue.600" }
+  },
+  "avatar.color3.backgroundColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.secondary.green.700" }
+  },
+  "avatar.color4.backgroundColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.tertiary.salmon.400" }
+  },
+  "avatar.color5.backgroundColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.tertiary.slate.500" }
+  },
+  "avatar.color6.backgroundColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.secondary.turquoise.400" }
+  },
+  "avatar.color7.backgroundColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.secondary.yellowOrange.500" }
   },
   "avatar.color1.fontColor": {
     type: COLOR,
-    value: { ref: "avatar.fontColorOnLight" }
-  },
-
-  "avatar.color2.backgroundColor": {
-    type: COLOR,
-    value: { ref: "basics.colors.darkBlue600" }
+    value: { ref: "avatar.lightBackground.fontColor" }
   },
   "avatar.color2.fontColor": {
     type: COLOR,
-    value: { ref: "avatar.fontColorOnDark" }
-  },
-
-  "avatar.color3.backgroundColor": {
-    type: COLOR,
-    value: { ref: "basics.colors.green700" }
+    value: { ref: "avatar.darkBackground.fontColor" }
   },
   "avatar.color3.fontColor": {
     type: COLOR,
-    value: { ref: "avatar.fontColorOnDark" }
-  },
-
-  "avatar.color4.backgroundColor": {
-    type: COLOR,
-    value: { ref: "basics.colors.salmon400" }
+    value: { ref: "avatar.darkBackground.fontColor" }
   },
   "avatar.color4.fontColor": {
     type: COLOR,
-    value: { ref: "avatar.fontColorOnLight" }
-  },
-
-  "avatar.color5.backgroundColor": {
-    type: COLOR,
-    value: { ref: "basics.colors.slate500" }
+    value: { ref: "avatar.lightBackground.fontColor" }
   },
   "avatar.color5.fontColor": {
     type: COLOR,
-    value: { ref: "avatar.fontColorOnDark" }
-  },
-
-  "avatar.color6.backgroundColor": {
-    type: COLOR,
-    value: { ref: "basics.colors.turquoise400" }
+    value: { ref: "avatar.darkBackground.fontColor" }
   },
   "avatar.color6.fontColor": {
     type: COLOR,
-    value: { ref: "avatar.fontColorOnLight" }
-  },
-
-  "avatar.color7.backgroundColor": {
-    type: COLOR,
-    value: { ref: "basics.colors.yellowOrange500" }
+    value: { ref: "avatar.lightBackground.fontColor" }
   },
   "avatar.color7.fontColor": {
     type: COLOR,
-    value: { ref: "avatar.fontColorOnLight" }
+    value: { ref: "avatar.lightBackground.fontColor" }
+  },
+  /**
+   *  ## Deprecated
+   *
+   *
+   */
+  "avatar.fontColorOnDark": {
+    type: COLOR,
+    value: { ref: "avatar.darkBackground.fontColor" },
+    metadata: { deprecated: { equivalent: "avatar.darkBackground.fontColor" } }
+  },
+  "avatar.fontColorOnLight": {
+    type: COLOR,
+    value: { ref: "avatar.lightBackground.fontColor" },
+    metadata: { deprecated: { equivalent: "avatar.lightBackground.fontColor" } }
   }
 };

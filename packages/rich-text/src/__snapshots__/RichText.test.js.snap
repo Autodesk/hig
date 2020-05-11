@@ -66,20 +66,20 @@ exports[`RichText renders 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #006EAF;
+  color: #006eaf;
   outline: none;
 }
 
 .emotion-0 a:hover {
-  color: #006EAF;
+  color: #006eaf;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: #006EAF;
-  text-decoration-color: #006EAF;
+  -webkit-text-decoration-color: #006eaf;
+  text-decoration-color: #006eaf;
 }
 
 .emotion-0 a:focus {
-  color: #006EAF;
+  color: #006eaf;
   outline: solid 2px rgba(6,150,215,0.35);
 }
 
@@ -184,20 +184,20 @@ exports[`RichText renders with children 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #006EAF;
+  color: #006eaf;
   outline: none;
 }
 
 .emotion-0 a:hover {
-  color: #006EAF;
+  color: #006eaf;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: #006EAF;
-  text-decoration-color: #006EAF;
+  -webkit-text-decoration-color: #006eaf;
+  text-decoration-color: #006eaf;
 }
 
 .emotion-0 a:focus {
-  color: #006EAF;
+  color: #006eaf;
   outline: solid 2px rgba(6,150,215,0.35);
 }
 
@@ -305,20 +305,20 @@ exports[`RichText renders with custom className 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #006EAF;
+  color: #006eaf;
   outline: none;
 }
 
 .emotion-0 a:hover {
-  color: #006EAF;
+  color: #006eaf;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: #006EAF;
-  text-decoration-color: #006EAF;
+  -webkit-text-decoration-color: #006eaf;
+  text-decoration-color: #006eaf;
 }
 
 .emotion-0 a:focus {
-  color: #006EAF;
+  color: #006eaf;
   outline: solid 2px rgba(6,150,215,0.35);
 }
 
@@ -426,20 +426,20 @@ exports[`RichText renders with dangerouslySetInnerHTML 1`] = `
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #006EAF;
+  color: #006eaf;
   outline: none;
 }
 
 .emotion-0 a:hover {
-  color: #006EAF;
+  color: #006eaf;
   -webkit-text-decoration: underline;
   text-decoration: underline;
-  -webkit-text-decoration-color: #006EAF;
-  text-decoration-color: #006EAF;
+  -webkit-text-decoration-color: #006eaf;
+  text-decoration-color: #006eaf;
 }
 
 .emotion-0 a:focus {
-  color: #006EAF;
+  color: #006eaf;
   outline: solid 2px rgba(6,150,215,0.35);
 }
 

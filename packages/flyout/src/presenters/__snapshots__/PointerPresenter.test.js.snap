@@ -2,7 +2,7 @@
 
 exports[`flyout/presenters/PointerPresenter  1`] = `
 .emotion-0 {
-  fill: transparent;
+  fill: rgba(128,128,128,0);
 }
 
 .emotion-1 {
@@ -27,7 +27,7 @@ exports[`flyout/presenters/PointerPresenter  1`] = `
 
 exports[`flyout/presenters/PointerPresenter  2`] = `
 .emotion-0 {
-  fill: transparent;
+  fill: rgba(128,128,128,0);
 }
 
 .emotion-1 {

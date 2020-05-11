@@ -14,8 +14,8 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
   min-height: 50px;
   border-width: 1px 0;
   border-style: solid;
-  border-color: rgba(56,171,223,0.5);
-  background-color: rgba(56,171,223,0.1);
+  border-color: #9bd5ef;
+  background-color: #cdeaf7;
 }
 
 .emotion-1 {
@@ -41,7 +41,7 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
   width: 50px;
   min-height: 50px;
   margin: 0;
-  background-color: #38abdf;
+  background-color: #0696d7;
 }
 
 .emotion-1 svg * {

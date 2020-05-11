@@ -1,16 +1,18 @@
-import { BORDER_RADIUS, COLOR, LENGTH } from "../../consts/types";
+import {
+  BORDER_RADIUS,
+  COLOR,
+  FONT_FAMILY,
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LENGTH,
+  LINE_HEIGHT
+} from "../../consts/types";
 
 export default {
   "tooltip.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.surfaceDarkGrayLevel100"
-    }
-  },
-  "tooltip.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "tooltip.backgroundColor"
+      ref: "basics.colors.surface.darkGray.100"
     }
   },
   "tooltip.borderRadius": {
@@ -28,17 +30,93 @@ export default {
   "tooltip.shadowColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.highShadowColor"
+      ref: "colorScheme.shadow.high"
     }
   },
-  "tooltip.textColor": {
+  "tooltip.title.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.surfaceLevel200Color"
+      ref: "colorScheme.surface.level200"
     }
+  },
+  "tooltip.title.fontFamily": {
+    type: FONT_FAMILY,
+    value: {
+      ref: "basics.fontFamilies.main"
+    }
+  },
+  "tooltip.title.fontSize": {
+    type: FONT_SIZE,
+    value: "12px"
+  },
+  "tooltip.title.fontWeight": {
+    type: FONT_WEIGHT,
+    value: 700
+  },
+  "tooltip.title.lineHeight": {
+    type: LINE_HEIGHT,
+    value: 1.333333333
   },
   "tooltip.nub.hypotenuseLength": {
     type: LENGTH,
     value: "16px"
+  },
+  "tooltip.description.fontColor": {
+    type: COLOR,
+    value: "#F5F5F5"
+  },
+  "tooltip.description.fontFamily": {
+    type: FONT_FAMILY,
+    value: {
+      ref: "basics.fontFamilies.main"
+    }
+  },
+  "tooltip.description.fontSize": {
+    type: FONT_SIZE,
+    value: "12px"
+  },
+  "tooltip.description.fontWeight": {
+    type: FONT_WEIGHT,
+    value: 400
+  },
+  "tooltip.description.lineHeight": {
+    type: LINE_HEIGHT,
+    value: 1.333333333
+  },
+  "tooltip.divider.borderBottomColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white"
+    },
+    transform: {
+      alpha: 0.1
+    }
+  },
+  /**
+   * ## Deprecated
+   *
+   *
+   */
+  "tooltip.textColor": {
+    type: COLOR,
+    value: {
+      ref: "tooltip.title.fontColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "tooltip.title.fontColor"
+      }
+    }
+  },
+  "tooltip.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "tooltip.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "tooltip.backgroundColor"
+      }
+    }
   }
 };

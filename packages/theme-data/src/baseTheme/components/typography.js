@@ -28,16 +28,15 @@ export default {
   "typography.body.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.small"
+      ref: "basics.lineHeights.mediumExtraLarge"
     }
   },
   "typography.body.color": {
     type: LINE_HEIGHT,
     value: {
-      ref: "colorScheme.textColor"
+      ref: "colorScheme.text.default"
     }
   },
-
   // Caption
   "typography.caption.fontFamily": {
     type: FONT_FAMILY,
@@ -60,16 +59,15 @@ export default {
   "typography.caption.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.small"
+      ref: "basics.lineHeights.mediumExtraExtraLarge"
     }
   },
   "typography.caption.color": {
     type: LINE_HEIGHT,
     value: {
-      ref: "colorScheme.textColor"
+      ref: "colorScheme.text.default"
     }
   },
-
   // H1
   "typography.h1.fontFamily": {
     type: FONT_FAMILY,
@@ -92,16 +90,15 @@ export default {
   "typography.h1.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.large"
+      ref: "basics.lineHeights.mediumMedium"
     }
   },
   "typography.h1.color": {
     type: LINE_HEIGHT,
     value: {
-      ref: "colorScheme.textColor"
+      ref: "colorScheme.text.default"
     }
   },
-
   // H2
   "typography.h2.fontFamily": {
     type: FONT_FAMILY,
@@ -124,16 +121,15 @@ export default {
   "typography.h2.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.small"
+      ref: "basics.lineHeights.mediumSmall"
     }
   },
   "typography.h2.color": {
     type: LINE_HEIGHT,
     value: {
-      ref: "colorScheme.textColor"
+      ref: "colorScheme.text.default"
     }
   },
-
   // H3
   "typography.h3.fontFamily": {
     type: FONT_FAMILY,
@@ -156,13 +152,13 @@ export default {
   "typography.h3.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.medium"
+      ref: "basics.lineHeights.mediumLarge"
     }
   },
   "typography.h3.color": {
     type: LINE_HEIGHT,
     value: {
-      ref: "colorScheme.textColor"
+      ref: "colorScheme.text.default"
     }
   }
 };

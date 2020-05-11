@@ -45,7 +45,7 @@ exports[`side-nav/presenters/SideNav snapshot tests renders headers with onClick
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
-  color: #006EAF;
+  color: #006eaf;
   outline: none;
 }
 

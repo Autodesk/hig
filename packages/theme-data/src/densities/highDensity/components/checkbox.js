@@ -1,8 +1,8 @@
 export default {
-  "checkbox.height": {
+  "checkbox.minHeight": {
     value: "12px"
   },
-  "checkbox.width": {
+  "checkbox.minWidth": {
     value: "12px"
   }
 };

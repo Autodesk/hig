@@ -1,21 +1,41 @@
 import { COLOR, LENGTH } from "../../consts/types";
 
 export default {
-  "slider.halo.width": {
-    type: LENGTH,
-    value: "0"
-  },
-  "slider.halo.color": {
+  "slider.hover.haloColor": {
     type: COLOR,
-    value: { ref: "basics.colors.white" }
+    value: {
+      ref: "colorScheme.halo.hover"
+    }
+  },
+  "slider.focus.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.halo.focus"
+    }
+  },
+  "slider.pressed.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.halo.pressed"
+    }
+  },
+  "slider.hover.haloWidth": {
+    type: LENGTH,
+    value: "2px"
+  },
+  "slider.focus.haloWidth": {
+    type: LENGTH,
+    value: "2px"
+  },
+  "slider.pressed.haloWidth": {
+    type: LENGTH,
+    value: "4px"
   },
   "slider.thumb.backgroundColor": {
     type: COLOR,
-    value: { ref: "colorScheme.baseColor" }
-  },
-  "slider.thumb.width": {
-    type: LENGTH,
-    value: "12px"
+    value: {
+      ref: "basics.colors.primary.charcoal.600"
+    }
   },
   "slider.thumb.minWidth": {
     type: LENGTH,
@@ -25,62 +45,200 @@ export default {
     type: LENGTH,
     value: "20px"
   },
-  "slider.track.color": {
+  "slider.track.backgroundColor": {
     type: COLOR,
-    value: { ref: "colorScheme.baseColor" },
-    transform: { alpha: 0.2 }
+    value: {
+      ref: "basics.colors.primary.charcoal.600"
+    },
+    transform: {
+      alpha: 0.2
+    }
   },
-  "slider.track.width": {
+  "slider.track.minHeight": {
     type: LENGTH,
     value: "2px"
   },
-  "slider.value.color": {
+  "slider.value.backgroundColor": {
     type: COLOR,
-    value: { ref: "colorScheme.baseColor" }
+    value: {
+      ref: "basics.colors.primary.charcoal.600"
+    }
   },
-
-  // Focused
+  "slider.inputOverlay.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.reference.base"
+    },
+    transform: {
+      alpha: 0.2
+    }
+  },
+  /**
+   * ## Deprecated
+   *
+   *
+   */
+  "slider.halo.width": {
+    type: LENGTH,
+    value: 0,
+    metadata: {
+      deprecated: {
+        equivalent: "slider.hover.haloWidth"
+      }
+    }
+  },
+  "slider.halo.color": {
+    type: COLOR,
+    value: {
+      ref: "slider.hover.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.hover.haloColor"
+      }
+    }
+  },
+  "slider.thumb.width": {
+    type: LENGTH,
+    value: {
+      ref: "slider.thumb.minWidth"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.thumb.minWidth"
+      }
+    }
+  },
   "slider.focused.halo.color": {
     type: COLOR,
-    value: { ref: "colorScheme.accentColor" },
-    transform: { alpha: 0.35 }
+    value: {
+      ref: "slider.focus.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.focus.haloColor"
+      }
+    }
   },
   "slider.focused.halo.width": {
     type: LENGTH,
-    value: "2px"
+    value: {
+      ref: "slider.focus.haloWidth"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.focus.haloWidth"
+      }
+    }
   },
   "slider.focused.thumb.color": {
     type: COLOR,
-    value: { ref: "colorScheme.baseColor" }
+    value: {
+      ref: "slider.thumb.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.thumb.backgroundColor"
+      }
+    }
   },
-
-  // Hover
   "slider.hover.halo.color": {
     type: COLOR,
-    value: { ref: "colorScheme.baseColor" },
-    transform: { alpha: 0.15 }
+    value: {
+      ref: "slider.hover.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.hover.haloColor"
+      }
+    }
   },
   "slider.hover.halo.width": {
     type: LENGTH,
-    value: "2px"
+    value: {
+      ref: "slider.hover.haloWidth"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.hover.haloWidth"
+      }
+    }
   },
   "slider.hover.thumb.color": {
     type: COLOR,
-    value: { ref: "colorScheme.baseColor" }
+    value: {
+      ref: "slider.thumb.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.thumb.backgroundColor"
+      }
+    }
   },
-
-  // Pressed
   "slider.pressed.halo.color": {
     type: COLOR,
-    value: { ref: "colorScheme.baseColor" },
-    transform: { alpha: 0.25 }
+    value: {
+      ref: "slider.pressed.haloColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.pressed.haloColor"
+      }
+    }
   },
   "slider.pressed.halo.width": {
     type: LENGTH,
-    value: "4px"
+    value: {
+      ref: "slider.pressed.haloWidth"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.pressed.haloWidth"
+      }
+    }
   },
   "slider.pressed.thumb.color": {
     type: COLOR,
-    value: { ref: "colorScheme.baseColor" }
+    value: {
+      ref: "slider.thumb.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.thumb.backgroundColor"
+      }
+    }
+  },
+  "slider.track.color": {
+    type: COLOR,
+    value: {
+      ref: "slider.track.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.track.backgroundColor"
+      }
+    }
+  },
+  "slider.track.width": {
+    type: LENGTH,
+    value: {
+      ref: "slider.track.minHeight"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.track.minHeight"
+      }
+    }
+  },
+  "slider.value.color": {
+    type: COLOR,
+    value: {
+      ref: "slider.value.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "slider.value.backgroundColor"
+      }
+    }
   }
 };
