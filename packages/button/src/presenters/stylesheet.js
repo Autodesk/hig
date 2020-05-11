@@ -7,17 +7,17 @@ function getButtonDefaultButtonRules(themeData) {
     borderColor: "transparent",
     borderRadius: themeData["button.borderRadius"],
     boxSizing: "border-box",
-    color: themeData["colorScheme.textColor"],
+    color: themeData["button.solid.label.fontColor"],
     cursor: "pointer",
     display: "inline-block",
-    fontFamily: themeData["button.fontFamily"],
-    fontSize: themeData["button.fontSize"],
-    fontWeight: themeData["button.fontWeight"],
-    lineHeight: themeData["button.lineHeight"],
+    fontFamily: themeData["button.label.fontFamily"],
+    fontSize: themeData["button.label.fontSize"],
+    fontWeight: themeData["button.label.fontWeight"],
+    lineHeight: themeData["button.label.lineHeight"],
     margin: "0",
     overflow: "hidden",
-    padding: `${themeData["button.verticalPadding"]}
-      ${themeData["button.horizontalPadding"]}`,
+    padding: `${themeData["button.paddingVertical"]}
+      ${themeData["button.paddingHorizontal"]}`,
     position: "relative",
     textAlign: "center",
     textDecoration: "none",
@@ -37,13 +37,13 @@ function getButtonRulesByType(type, themeData) {
     case types.SOLID:
     case types.PRIMARY: {
       return {
-        background: themeData["button.solid.backgroundColor"],
-        color: themeData["button.solid.textColor"],
+        background: themeData["button.solid.default.backgroundColor"],
+        color: themeData["button.solid.label.fontColor"],
         "&:visited": {
-          color: themeData["button.solid.textColor"]
+          color: themeData["button.solid.label.fontColor"]
         },
         "svg *": {
-          fill: themeData["button.solid.icon.color"]
+          fill: themeData["button.solid.iconColor"]
         }
       };
     }
@@ -51,26 +51,26 @@ function getButtonRulesByType(type, themeData) {
     case types.SECONDARY: {
       return {
         background: "none",
-        borderColor: themeData["button.outline.borderColor"],
-        color: themeData["button.outline.textColor"],
+        borderColor: themeData["button.outline.default.borderColor"],
+        color: themeData["button.outline.label.fontColor"],
         "&:visited": {
-          color: themeData["button.outline.textColor"]
+          color: themeData["button.outline.label.fontColor"]
         },
         "svg *": {
-          fill: themeData["button.outline.icon.color"]
+          fill: themeData["button.outline.iconColor"]
         }
       };
     }
     case types.FLAT: {
       return {
         background: "none",
-        borderColor: themeData["button.flat.borderColor"],
-        color: themeData["button.flat.textColor"],
+        borderColor: themeData["button.flat.default.borderColor"],
+        color: themeData["button.flat.label.fontColor"],
         "&:visited": {
-          color: themeData["button.flat.textColor"]
+          color: themeData["button.flat.label.fontColor"]
         },
         "svg *": {
-          fill: themeData["button.flat.icon.color"]
+          fill: themeData["button.flat.iconColor"]
         }
       };
     }
@@ -81,7 +81,7 @@ function getButtonRulesByType(type, themeData) {
 
 function getButtonRulesByDisabled(type, themeData) {
   return {
-    opacity: themeData["component.disabled.opacity"],
+    opacity: themeData["colorScheme.opacity.disabled"],
     cursor: "default",
     pointerEvents: "none"
   };
@@ -97,23 +97,23 @@ function getButtonHoverRulesByType(type, themeData) {
     case types.PRIMARY:
       return {
         background: themeData["button.solid.hover.backgroundColor"],
-        boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
-          themeData["button.solid.hover.halo.color"]
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${
+          themeData["button.hover.haloColor"]
         }`
       };
     case types.OUTLINE:
     case types.SECONDARY:
       return {
         borderColor: themeData["button.outline.hover.borderColor"],
-        boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
-          themeData["button.outline.hover.halo.color"]
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${
+          themeData["button.hover.haloColor"]
         }`
       };
     case types.FLAT:
       return {
         borderColor: themeData["button.flat.hover.borderColor"],
-        boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
-          themeData["button.flat.hover.halo.color"]
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${
+          themeData["button.hover.haloColor"]
         }`
       };
     default:
@@ -127,8 +127,8 @@ function getButtonFocusRulesByType(type, themeData) {
     case types.PRIMARY:
       return {
         background: themeData["button.solid.focus.backgroundColor"],
-        boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
-          themeData["button.solid.focus.halo.color"]
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${
+          themeData["button.focus.haloColor"]
         }`,
         outline: `none`
       };
@@ -137,26 +137,26 @@ function getButtonFocusRulesByType(type, themeData) {
       return {
         background: themeData["button.outline.focus.backgroundColor"],
         borderColor: themeData["button.outline.focus.borderColor"],
-        boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
-          themeData["button.outline.focus.halo.color"]
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${
+          themeData["button.focus.haloColor"]
         }`,
-        color: themeData["button.outline.focus.textColor"],
+        color: themeData["button.outline.label.fontColor"],
         outline: `none`,
         "svg *": {
-          fill: themeData["button.outline.focus.icon.color"]
+          fill: themeData["button.outline.iconColor"]
         }
       };
     case types.FLAT:
       return {
         background: themeData["button.flat.focus.backgroundColor"],
         borderColor: themeData["button.flat.focus.borderColor"],
-        boxShadow: `0 0 0 ${themeData["button.halo.width"]} ${
-          themeData["button.flat.focus.halo.color"]
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${
+          themeData["button.focus.haloColor"]
         }`,
-        color: themeData["button.flat.focus.textColor"],
+        color: themeData["button.flat.label.fontColor"],
         outline: `none`,
         "svg *": {
-          fill: themeData["button.flat.focus.icon.color"]
+          fill: themeData["button.flat.iconColor"]
         }
       };
     default:
@@ -169,22 +169,22 @@ function getButtonPressedRulesByType(type, themeData) {
     case types.SOLID:
     case types.PRIMARY:
       return {
-        boxShadow: `0 0 0 ${themeData["button.solid.pressed.haloWidth"]} ${
-          themeData["button.solid.pressed.halo.color"]
+        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${
+          themeData["button.pressed.haloColor"]
         }`
       };
     case types.OUTLINE:
     case types.SECONDARY:
       return {
         borderColor: themeData["button.outline.pressed.borderColor"],
-        boxShadow: `0 0 0 ${themeData["button.outline.pressed.haloWidth"]} ${
-          themeData["button.outline.pressed.halo.color"]
+        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${
+          themeData["button.pressed.haloColor"]
         }`
       };
     case types.FLAT:
       return {
-        boxShadow: `0 0 0 ${themeData["button.flat.pressed.haloWidth"]} ${
-          themeData["button.flat.pressed.halo.color"]
+        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${
+          themeData["button.pressed.haloColor"]
         }`
       };
     default:
@@ -213,12 +213,12 @@ export default function stylesheet(props, themeData, theme) {
       display: "inline-block",
       position: "absolute",
       height: iconSize,
-      marginRight: themeData["button.gutter"],
+      marginRight: themeData["button.gutterWidth"],
       top: "50%",
       transform: "translateY(-50%)"
     },
     iconText: {
-      marginLeft: `calc(${iconSize} + ${themeData["button.gutter"]})`
+      marginLeft: `calc(${iconSize} + ${themeData["button.gutterWidth"]})`
     }
   };
 }

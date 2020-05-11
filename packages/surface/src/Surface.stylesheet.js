@@ -21,7 +21,7 @@ export default function stylesheet(props, themeData) {
 
   return {
     surface: {
-      backgroundColor: themeData[`colorScheme.surfaceLevel${level}Color`],
+      backgroundColor: themeData[`colorScheme.surface.level${level}`],
       padding: `${themeData[spacing(sizeKey(verticalPadding))]} ${
         themeData[spacing(sizeKey(horizontalPadding))]
       }`,
@@ -29,7 +29,7 @@ export default function stylesheet(props, themeData) {
 
       ...(shadow && {
         boxShadow: `0 0 ${themeData[`basics.shadows.${shadow}Blur`]} 0 ${
-          themeData[`colorScheme.${shadow}ShadowColor`]
+          themeData[`colorScheme.shadow.${shadow}`]
         }`
       })
     }

@@ -49,11 +49,10 @@ export default class RadioButtonPresenter extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles, metadata }) => {
+        {({ resolvedRoles }) => {
           const styles = stylesheet(
             { isPressed, hasFocus, hasHover, disabled, ...this.props },
-            resolvedRoles,
-            metadata.colorSchemeId
+            resolvedRoles
           );
 
           return (

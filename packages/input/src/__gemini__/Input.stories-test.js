@@ -4,9 +4,10 @@ import { ThemeContext } from "@hig/theme-context";
 
 import lightGrayMediumDensityTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
 import darkBlueMediumDensityTheme from "@hig/theme-data/build/json/darkBlueMediumDensityTheme/theme.json";
-import webLightMediumDensityTheme from "@hig/theme-data/build/json/webLightMediumDensityTheme/theme.json";
+import darkGrayMediumDensityTheme from "@hig/theme-data/build/json/darkGrayMediumDensityTheme/theme.json";
 import lightGrayHighDensityTheme from "@hig/theme-data/build/json/lightGrayHighDensityTheme/theme.json";
 import darkBlueHighDensityTheme from "@hig/theme-data/build/json/darkBlueHighDensityTheme/theme.json";
+import darkGrayHighDensityTheme from "@hig/theme-data/build/json/darkGrayHighDensityTheme/theme.json";
 
 import InputPresenter from "@hig/input/src/presenters/InputPresenter";
 import InputHaloPresenter from "@hig/input/src/presenters/InputHaloPresenter";
@@ -16,7 +17,8 @@ const themes = [
   { name: "Light gray, high density", theme: lightGrayHighDensityTheme },
   { name: "Dark blue, medium density", theme: darkBlueMediumDensityTheme },
   { name: "Dark blue, high density", theme: darkBlueHighDensityTheme },
-  { name: "Web light", theme: webLightMediumDensityTheme }
+  { name: "Dark gray, medium density", theme: darkGrayMediumDensityTheme },
+  { name: "Dark gray, high density", theme: darkGrayHighDensityTheme }
 ];
 
 function Example({ theme, name }) /* eslint-disable-line react/prop-types */ {
@@ -24,8 +26,7 @@ function Example({ theme, name }) /* eslint-disable-line react/prop-types */ {
     <ThemeContext.Provider value={theme}>
       <div
         style={{
-          backgroundColor:
-            theme.resolvedRoles["colorScheme.surfaceLevel100Color"],
+          backgroundColor: theme.resolvedRoles["colorScheme.surface.level100"],
           padding: theme.resolvedRoles["density.spacings.medium"],
           width: "300px"
         }}

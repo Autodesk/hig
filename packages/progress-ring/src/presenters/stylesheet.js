@@ -100,21 +100,21 @@ export default function stylesheet(props, themeData) {
 
     background: {
       transformOrigin: "center",
-      fill: themeData["progressRing.backgroundColor"]
+      fill: themeData["progress.ring.backgroundColor"]
     },
 
     mask: {
       transformOrigin: "center",
-      fill: mask || themeData[`colorScheme.surfaceLevel${surface}Color`]
+      fill: mask || themeData[`colorScheme.surface.level${surface}`]
     },
 
     segment: {
       opacity: 0,
       "&:nth-of-type(even)": {
-        fill: themeData["progressRing.highlightColor1"]
+        fill: themeData["progress.ring.highlightColor1"]
       },
       "&:nth-of-type(odd)": {
-        fill: themeData["progressRing.highlightColor2"]
+        fill: themeData["progress.ring.highlightColor2"]
       }
     }
   };
@@ -124,7 +124,7 @@ export default function stylesheet(props, themeData) {
     styles.mask.animation = `${MaskEntering} 0.65s ease-out`;
   } else if (cssTransitionState === "exiting") {
     styles.background.animation = `${BackgroundExiting(
-      themeData["progressRing.highlightColor1"]
+      themeData["progress.ring.highlightColor1"]
     )} 0.466s ease-in forwards`;
     styles.mask.animation = `${MaskExiting} 0.466s ease-in forwards`;
     styles.segment.animation = `${SegmentsExiting} 0.466s linear`;

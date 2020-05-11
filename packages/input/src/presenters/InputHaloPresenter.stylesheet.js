@@ -5,14 +5,14 @@ function borderStyles({ variant }, themeData) {
     borderStyle: "solid",
     borderColor: "transparent",
     borderWidth: themeData["input.borderWidth"],
-    borderBottomColor: themeData["input.borderBottomColor"]
+    borderBottomColor: themeData["input.line.default.borderBottomColor"]
   };
 
   return variant === variants.BOX
     ? {
         ...defaults,
-        borderColor: themeData["input.borderColor"],
-        borderBottomColor: themeData["input.box.borderBottomColor"]
+        borderColor: themeData["input.box.default.borderColor"],
+        borderBottomColor: themeData["input.box.default.borderColor"]
       }
     : defaults;
 }
@@ -35,13 +35,13 @@ function borderBottomStyles(
   if (hasFocus) {
     return {
       ...defaults,
-      borderBottomColor: themeData["input.focus.borderBottomColor"]
+      borderBottomColor: themeData["input.line.focus.borderBottomColor"]
     };
   }
   if (hasHover) {
     return {
       ...defaults,
-      borderBottomColor: themeData["input.hover.borderBottomColor"]
+      borderBottomColor: themeData["input.box.hover.borderBottomColor"]
     };
   }
   if (error) {
@@ -56,7 +56,7 @@ function borderBottomStyles(
 function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
     height: 0,
-    backgroundColor: themeData["input.halo.color"],
+    backgroundColor: themeData["input.hover.haloColor"],
     transitionProperty: "height, color",
     transitionDuration: "0.3s, 0.3s"
   };
@@ -66,15 +66,15 @@ function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   }
   if (hasFocus) {
     return {
-      height: themeData["input.focus.halo.width"],
-      backgroundColor: themeData["input.focus.halo.color"],
+      height: themeData["input.haloWidth"],
+      backgroundColor: themeData["input.focus.haloColor"],
       transitionDuration: "0.1s, 0.1s"
     };
   }
   if (hasHover) {
     return {
       ...defaults,
-      height: themeData["input.hover.halo.width"],
+      height: themeData["input.haloWidth"],
       transitionDuration: "0.1s, 0.1s"
     };
   }

@@ -4,7 +4,7 @@ import ThemeContext from "@hig/theme-context";
 
 function stylesheet({ level, paddingSize }, resolvedRoles) {
   return {
-    backgroundColor: resolvedRoles[`colorScheme.surfaceLevel${level}Color`],
+    backgroundColor: resolvedRoles[`colorScheme.surface.level${level}`],
     marginBottom: resolvedRoles["density.spacings.large"],
     padding: paddingSize
       ? resolvedRoles[`density.spacings.${paddingSize}`]

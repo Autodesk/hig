@@ -4,7 +4,7 @@ export default function stylesheet(props, themeData) {
     skeletonItem: {
       backgroundColor: themeData["skeletonItem.backgroundColor"],
       borderRadius: themeData["skeletonItem.borderRadius"],
-      height: height || themeData["skeletonItem.defaultHeight"],
+      height: height || themeData["skeletonItem.minHeight"],
       overflow: "hidden",
       position: "relative",
       marginBottom,
