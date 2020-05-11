@@ -23,7 +23,7 @@
     "release": "hig-scripts-release"
   },
   "peerDependencies": {
-    "@hig/theme-data": "^2.15.1"
+    "@hig/theme-data": "^2.16.0"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.1",
