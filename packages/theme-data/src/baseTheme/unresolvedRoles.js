@@ -5,10 +5,14 @@ import system from "./system";
 
 import accordion from "./components/accordion";
 import avatar from "./components/avatar";
+import avatarBundle from "./components/avatarBundle";
 import banner from "./components/banner";
+import breadcrumb from "./components/breadcrumb";
 import button from "./components/button";
+import canvasFrame from "./components/canvasFrame";
 import checkbox from "./components/checkbox";
 import component from "./components/component";
+import datePicker from "./components/datePicker";
 import divider from "./components/divider";
 import flyout from "./components/flyout";
 import formField from "./components/formField";
@@ -17,16 +21,28 @@ import input from "./components/input";
 import label from "./components/label";
 import menu from "./components/menu";
 import modal from "./components/modal";
+import notifications from "./components/notifications";
 import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
+import scrollbar from "./components/scrollbar";
+import segmentedButton from "./components/segmentedButton";
+import sideNav from "./components/sideNav";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
+import stepIndicator from "./components/stepIndicator";
+import table from "./components/table";
 import tabs from "./components/tabs";
+import tag from "./components/tag";
 import textarea from "./components/textarea";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
+import tile from "./components/tile";
+import timestamp from "./components/timestamp";
 import toggle from "./components/toggle";
+import token from "./components/token";
 import tooltip from "./components/tooltip";
+import topNav from "./components/topNav";
+import treeView from "./components/treeView";
 import typography from "./components/typography";
 
 const baseThemeConfig = extendTheme(
@@ -46,10 +62,14 @@ const baseThemeConfig = extendTheme(
     mapKeys(system.density, key => `density.${key}`),
     accordion,
     avatar,
+    avatarBundle,
     banner,
+    breadcrumb,
     button,
+    canvasFrame,
     checkbox,
     component,
+    datePicker,
     divider,
     flyout,
     formField,
@@ -58,16 +78,28 @@ const baseThemeConfig = extendTheme(
     label,
     menu,
     modal,
+    notifications,
     progressBar,
     progressRing,
+    scrollbar,
+    segmentedButton,
+    sideNav,
     skeletonItem,
     slider,
+    stepIndicator,
+    table,
     tabs,
+    tag,
     textarea,
     textLink,
+    tile,
+    timestamp,
     thumbnail,
     toggle,
+    token,
     tooltip,
+    topNav,
+    treeView,
     typography
   )
 );

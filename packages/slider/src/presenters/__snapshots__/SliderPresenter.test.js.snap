@@ -31,7 +31,7 @@ exports[`Slider/presenters/SliderPresenter renders 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 1px;
-  box-shadow: 0 0 0 0 #ffffff;
+  box-shadow: 0 0 0 0 rgba(128,128,128,0.15);
   position: relative;
   top: 50%;
   -webkit-transition-duration: 0.3s;
@@ -50,7 +50,7 @@ exports[`Slider/presenters/SliderPresenter renders 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 1px;
-  box-shadow: 0 0 0 0 #ffffff;
+  box-shadow: 0 0 0 0 rgba(128,128,128,0.15);
   position: relative;
   top: 50%;
   -webkit-transition-duration: 0.3s;
@@ -69,7 +69,7 @@ exports[`Slider/presenters/SliderPresenter renders 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 1px;
-  box-shadow: 0 0 0 0 #ffffff;
+  box-shadow: 0 0 0 0 rgba(128,128,128,0.15);
   position: relative;
   top: 50%;
   -webkit-transition-duration: 0.3s;
@@ -111,7 +111,7 @@ exports[`Slider/presenters/SliderPresenter renders 1`] = `
   outline: none;
   background-image: linear-gradient(#808080,#808080);
   background-position: 0;
-  background-size: calc((0.5 * 12px)  + (NaN * (100% - 12px))) 100%;
+  background-size: calc((0.5 * 6px)  + (NaN * (100% - 6px))) 100%;
   background-repeat: no-repeat;
 }
 
@@ -169,7 +169,7 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 1px;
-  box-shadow: 0 0 0 0 #ffffff;
+  box-shadow: 0 0 0 0 rgba(128,128,128,0.15);
   position: relative;
   top: 50%;
   -webkit-transition-duration: 0.3s;
@@ -188,7 +188,7 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 1px;
-  box-shadow: 0 0 0 0 #ffffff;
+  box-shadow: 0 0 0 0 rgba(128,128,128,0.15);
   position: relative;
   top: 50%;
   -webkit-transition-duration: 0.3s;
@@ -208,7 +208,7 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   background-color: #808080;
   border: 0;
   border-radius: 1px;
-  box-shadow: 0 0 0 0 #ffffff;
+  box-shadow: 0 0 0 0 rgba(128,128,128,0.15);
   position: relative;
   top: 50%;
   -webkit-transition-duration: 0.3s;
@@ -253,7 +253,7 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   opacity: 0.4;
   background-image: linear-gradient(#808080,#808080);
   background-position: 0;
-  background-size: calc((0.5 * 12px)  + (NaN * (100% - 12px))) 100%;
+  background-size: calc((0.5 * 6px)  + (NaN * (100% - 6px))) 100%;
   background-repeat: no-repeat;
 }
 
@@ -392,7 +392,7 @@ exports[`Slider/presenters/SliderPresenter renders focused 1`] = `
   outline: none;
   background-image: linear-gradient(#808080,#808080);
   background-position: 0;
-  background-size: calc((0.5 * 12px)  + (NaN * (100% - 12px))) 100%;
+  background-size: calc((0.5 * 6px)  + (NaN * (100% - 6px))) 100%;
   background-repeat: no-repeat;
 }
 
@@ -530,7 +530,7 @@ exports[`Slider/presenters/SliderPresenter renders hovered 1`] = `
   outline: none;
   background-image: linear-gradient(#808080,#808080);
   background-position: 0;
-  background-size: calc((0.5 * 12px)  + (NaN * (100% - 12px))) 100%;
+  background-size: calc((0.5 * 6px)  + (NaN * (100% - 6px))) 100%;
   background-repeat: no-repeat;
 }
 
@@ -668,7 +668,7 @@ exports[`Slider/presenters/SliderPresenter renders pressed 1`] = `
   outline: none;
   background-image: linear-gradient(#808080,#808080);
   background-position: 0;
-  background-size: calc((0.5 * 12px)  + (NaN * (100% - 12px))) 100%;
+  background-size: calc((0.5 * 6px)  + (NaN * (100% - 6px))) 100%;
   background-repeat: no-repeat;
 }
 

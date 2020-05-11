@@ -1,57 +1,17 @@
 export default {
-  "checkbox.borderColor": {
+  "checkbox.indicatorColor": {
     value: {
-      ref: "basics.colors.white"
-    },
-    transform: {
-      alpha: 0.5
+      ref: "basics.colors.surface.darkBlue.200"
     }
   },
-  "checkbox.iconColor": {
+  "checkbox.checked.default.borderColor": {
     value: {
-      ref: "colorScheme.surfaceLevel200Color"
+      ref: "basics.colors.primary.white"
     }
   },
-
-  // Focus
-  "checkbox.focus.halo.color": {
+  "checkbox.checked.default.backgroundColor": {
     value: {
-      ref: "basics.colors.autodeskBlue400"
-    },
-    transform: {
-      alpha: 0.35
-    }
-  },
-
-  // Hover
-  "checkbox.hover.borderColor": {
-    value: {
-      ref: "basics.colors.white"
-    },
-    transform: {
-      alpha: 1
-    }
-  },
-  "checkbox.hover.halo.color": {
-    value: {
-      ref: "basics.colors.white"
-    },
-    transform: {
-      alpha: 0.15
-    }
-  },
-
-  // Checked
-  "checkbox.checked.backgroundColor": {
-    value: {
-      ref: "basics.colors.white"
-    }
-  },
-
-  // Indeterminate
-  "checkbox.indeterminate.backgroundColor": {
-    value: {
-      ref: "basics.colors.white"
+      ref: "basics.colors.primary.white"
     }
   }
 };

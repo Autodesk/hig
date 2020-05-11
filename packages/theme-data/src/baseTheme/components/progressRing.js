@@ -1,28 +1,63 @@
 import { COLOR } from "../../consts/types";
 
 export default {
-  "progressRing.backgroundColor": {
+  "progress.ring.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.black"
+      ref: "basics.colors.primary.black"
     },
     transform: {
       alpha: "0.05"
     }
   },
+  "progress.ring.highlightColor1": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.600"
+    }
+  },
+  "progress.ring.highlightColor2": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.400"
+    }
+  },
+  /**
+   *  ## Deprecated
+   *
+   *
+   */
+  "progressRing.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "progress.ring.backgroundColor"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "progress.ring.backgroundColor"
+      }
+    }
+  },
   "progressRing.highlightColor1": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "progress.ring.highlightColor1"
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "progress.ring.highlightColor1"
+      }
     }
   },
   "progressRing.highlightColor2": {
     type: COLOR,
     value: {
-      ref: "colorScheme.accentColor"
+      ref: "progress.ring.highlightColor2"
     },
-    transform: {
-      alpha: "0.60"
+    metadata: {
+      deprecated: {
+        equivalent: "progress.ring.highlightColor2"
+      }
     }
   }
 };

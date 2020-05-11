@@ -4,13 +4,13 @@ export default {
   "thumbnail.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.charcoal100"
+      ref: "basics.colors.primary.charcoal.100"
     }
   },
   "thumbnail.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.baseColor"
+      ref: "basics.colors.primary.charcoal.600"
     },
     transform: {
       alpha: 0.5

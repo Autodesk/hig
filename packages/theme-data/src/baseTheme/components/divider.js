@@ -1,26 +1,36 @@
 import { LENGTH, COLOR } from "../../consts/types";
 
 export default {
-  "divider.width": {
+  "divider.borderWidth": {
     type: LENGTH,
     value: "1px"
   },
   "divider.lightColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.charcoal900"
-    },
-    transform: {
-      alpha: 0.1
+      ref: "colorScheme.divider.lightweight"
     }
   },
   "divider.heavyColor": {
     type: COLOR,
     value: {
-      ref: "divider.lightColor"
+      ref: "colorScheme.divider.heavyweight"
+    }
+  },
+  /**
+   * ## Deprecated
+   *
+   *
+   */
+  "divider.width": {
+    type: LENGTH,
+    value: {
+      ref: "divider.borderWidth"
     },
-    transform: {
-      alpha: 0.25
+    metadata: {
+      deprecated: {
+        equivalent: "divider.borderWidth"
+      }
     }
   }
 };

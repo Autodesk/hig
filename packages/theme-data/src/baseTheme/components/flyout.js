@@ -3,11 +3,11 @@ import { BORDER_RADIUS, COLOR, LENGTH } from "../../consts/types";
 export default {
   "flyout.backgroundColor": {
     type: COLOR,
-    value: { ref: "colorScheme.surfaceLevel100Color" }
+    value: { ref: "colorScheme.surface.level100" }
   },
   "flyout.borderColor": {
     type: COLOR,
-    value: "transparent"
+    value: { ref: "colorScheme.background.transparent" }
   },
   "flyout.borderRadius": {
     type: BORDER_RADIUS,
@@ -19,7 +19,7 @@ export default {
   },
   "flyout.shadowColor": {
     type: COLOR,
-    value: { ref: "colorScheme.highShadowColor" }
+    value: { ref: "colorScheme.shadow.high" }
   },
   "flyout.nub.hypotenuseLength": {
     type: LENGTH,

@@ -1,12 +1,12 @@
 export default {
   "label.fontColor": {
     value: {
-      ref: "basics.colors.surfaceLightGrayLevel200"
+      ref: "basics.colors.surface.lightGray.200"
     }
   },
   "label.hover.fontColor": {
     value: {
-      ref: "basics.colors.textAgainstDark"
+      ref: "basics.colors.text.againstDark"
     },
     transform: {
       alpha: 0.6
