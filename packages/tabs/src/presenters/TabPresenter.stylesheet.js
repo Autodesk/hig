@@ -84,7 +84,7 @@ function getContentWrapperWidth({ label, icon, closable }, themeData) {
   if (label) return "auto";
   if (icon && closable) {
     return `calc(${themeData["tabs.iconSize"]} + ${
-      themeData["tabs.icon.gutter"]
+      themeData["tabs.iconGutter"]
     } + ${themeData["tabs.closeButton.minSize"]})`;
   }
   if (icon) return themeData["tabs.iconSize"];
@@ -174,7 +174,7 @@ export default function stylesheet(props, themeData) {
       paddingLeft:
         icon && variant !== variants.UNDERLINE
           ? `calc(${themeData["tabs.iconSize"]} + ${
-              themeData["tabs.icon.gutter"]
+              themeData["tabs.iconGutter"]
             })`
           : "0",
 

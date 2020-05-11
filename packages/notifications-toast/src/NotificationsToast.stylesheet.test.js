@@ -2,10 +2,10 @@ import stylesheet from "./NotificationsToast.stylesheet";
 
 describe("stylesheet", () => {
   const mockThemeData = {
-    "colorScheme.errorColor": "red",
-    "colorScheme.warningColor": "yellow",
-    "colorScheme.successColor": "green",
-    "basics.colors.autodeskBlue500": "blue"
+    "colorScheme.status.error": "red",
+    "colorScheme.status.warning": "yellow",
+    "colorScheme.status.success": "green",
+    "basics.colors.primary.autodeskBlue.500": "blue"
   };
   it("returns an oject", () => {
     const status = "warning";
@@ -19,7 +19,7 @@ describe("stylesheet", () => {
       const mockStyles = stylesheet(mockThemeData, status);
 
       expect(mockStyles.toast.borderLeftColor).toMatch(
-        mockThemeData["colorScheme.warningColor"]
+        mockThemeData["colorScheme.status.warning"]
       );
     });
     it("returns the proper error color", () => {
@@ -27,7 +27,7 @@ describe("stylesheet", () => {
       const mockStyles = stylesheet(mockThemeData, status);
 
       expect(mockStyles.toast.borderLeftColor).toMatch(
-        mockThemeData["colorScheme.errorColor"]
+        mockThemeData["colorScheme.status.error"]
       );
     });
     it("returns the proper error color", () => {
@@ -35,7 +35,7 @@ describe("stylesheet", () => {
       const mockStyles = stylesheet(mockThemeData, status);
 
       expect(mockStyles.toast.borderLeftColor).toMatch(
-        mockThemeData["colorScheme.successColor"]
+        mockThemeData["colorScheme.status.success"]
       );
     });
     it("returns the proper primary color", () => {
@@ -43,7 +43,7 @@ describe("stylesheet", () => {
       const mockStyles = stylesheet(mockThemeData, status);
 
       expect(mockStyles.toast.borderLeftColor).toMatch(
-        mockThemeData["basics.colors.autodeskBlue500"]
+        mockThemeData["basics.colors.primary.autodeskBlue.500"]
       );
     });
   });
