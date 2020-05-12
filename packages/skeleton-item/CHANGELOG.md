@@ -1,3 +1,10 @@
+# [@hig/skeleton-item-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@1.1.0...@hig/skeleton-item@1.1.1) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([9eda515](https://github.com/Autodesk/hig/commit/9eda515))
+
 # [@hig/skeleton-item-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@1.0.1...@hig/skeleton-item@1.1.0) (2020-02-21)
 
 
