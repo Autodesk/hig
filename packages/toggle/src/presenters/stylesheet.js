@@ -55,7 +55,7 @@ export default function stylesheet(props, themeData) {
       boxSizing: `border-box`,
       display: `inline-flex`,
       height: themeData[`toggle.minHeight`],
-      opacity: disabled ? themeData[`component.disabled.opacity`] : 1,
+      opacity: disabled ? themeData[`colorScheme.opacity.disabled`] : 1,
       pointerEvents: disabled ? `none` : `auto`,
       position: `relative`,
       transition: `background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1)`,

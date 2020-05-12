@@ -17,7 +17,7 @@ describe("TextArea", () => {
           ...styles,
           input: {
             ...styles.input,
-            background: themeData[`basics.colors.green100`]
+            background: themeData[`basics.colors.secondary.green.100`]
           }
         };
       }

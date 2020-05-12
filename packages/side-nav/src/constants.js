@@ -53,7 +53,7 @@ function groupSeparator(props, themeData, styles) {
         content: '""',
         left: themeData["density.spacings.extraSmall"],
         right: themeData["density.spacings.extraSmall"],
-        borderTop: `${themeData["divider.width"]} solid ${
+        borderTop: `${themeData["divider.borderWidth"]} solid ${
           themeData["divider.heavyColor"]
         }`,
 

@@ -11,7 +11,7 @@ export default function(props, themeData) {
       // style prop, so we have to style the text from the
       // container element
       "&:hover span": {
-        color: themeData["colorScheme.accentColor"]
+        color: themeData["colorScheme.reference.accent"]
       },
 
       // making sure to consitently use pointer cursor when
@@ -21,7 +21,7 @@ export default function(props, themeData) {
       },
 
       "&:hover svg *": {
-        fill: themeData["colorScheme.accentColor"]
+        fill: themeData["colorScheme.reference.accent"]
       }
     },
 

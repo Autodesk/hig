@@ -25,8 +25,8 @@ export default function InputPresenter(props) {
         const CaretIcon =
           metadata.densityId === "medium-density" ? CaretDownMUI : CaretDownSUI;
         const iconColor = isOpen
-          ? resolvedRoles["colorScheme.accentColor"]
-          : resolvedRoles["colorScheme.iconColor"];
+          ? resolvedRoles["colorScheme.reference.accent"]
+          : resolvedRoles["input.indicator.default"];
 
         return (
           <div className={css(stylesheet(props, resolvedRoles).wrapper)}>

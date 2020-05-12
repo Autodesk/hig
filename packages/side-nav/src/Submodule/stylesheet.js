@@ -25,7 +25,7 @@ export default function stylesheet(props, themeData) {
 
       "&:focus, &:hover": {
         outline: "none",
-        color: themeData["colorScheme.accentColor"]
+        color: themeData["colorScheme.reference.accent"]
       },
 
       externalIcon: {
@@ -39,7 +39,7 @@ export default function stylesheet(props, themeData) {
         },
 
         "&:hover svg *": {
-          fill: themeData["colorScheme.accentColor"]
+          fill: themeData["colorScheme.reference.accent"]
         }
       }
     }

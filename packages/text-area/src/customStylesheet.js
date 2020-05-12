@@ -1,49 +1,23 @@
-function getWebLightBorders(props, themeData) {
-  const { isDisabled, hasFocus, hasHover } = props;
-  if (hasFocus) {
-    return themeData[`input.focus.borderBottomColor`];
-  }
-  if (hasHover && !isDisabled) {
-    return themeData[`input.hover.borderBottomColor`];
-  }
-  return themeData[`input.borderColor`];
-}
-
-export default function stylesheetOverride(
-  stylesheet,
-  props,
-  themeData,
-  theme
-) {
+export default function stylesheetOverride(stylesheet, props, themeData) {
   const borderStyles =
     props.variant === `line`
-      ? `rgba(128, 128, 128, 0.2)`
-      : themeData[`input.borderColor`];
-  const textAreaWrapper =
-    theme === `hig-light`
-      ? {
-          ...stylesheet.wrapper,
-          borderColor: getWebLightBorders(props, themeData),
-          borderBottomColor: getWebLightBorders(props, themeData)
-        }
-      : {
-          ...stylesheet.wrapper,
-          borderLeftColor: borderStyles,
-          borderRightColor: borderStyles,
-          borderTopColor: borderStyles
-        };
+      ? themeData[`input.textArea.line.borderColor`]
+      : themeData[`input.box.default.borderColor`];
   const textArea = {
     ...stylesheet.input,
     display: `block`,
     resize: `vertical`,
-    padding: `${themeData["input.verticalPadding"]}
-      ${themeData["input.boxType.horizontalPadding"]}`,
-    height: `calc((${themeData["input.height"]} - 2px) * 2)`
+    padding: `${themeData["input.paddingVertical"]}
+      ${themeData["input.box.paddingHorizontal"]}`,
+    height: `calc((${themeData["input.minHeight"]} - 2px) * 2)`
   };
   return {
     ...stylesheet,
     wrapper: {
-      ...textAreaWrapper,
+      ...stylesheet.wrapper,
+      borderLeftColor: borderStyles,
+      borderRightColor: borderStyles,
+      borderTopColor: borderStyles,
       position: `static`
     },
     input: textArea,

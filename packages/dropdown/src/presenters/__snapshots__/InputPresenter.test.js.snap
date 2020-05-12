@@ -56,11 +56,11 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
 }
 
 .emotion-3 {
-  fill: #808080;
+  fill: rgba(102,102,102,0.7);
 }
 
 .emotion-3 > * {
-  fill: #808080;
+  fill: rgba(102,102,102,0.7);
 }
 
 .emotion-2 {
@@ -112,11 +112,11 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
   </div>
   <svg
     className="emotion-3"
-    color="#808080"
+    color="rgba(102, 102, 102, 0.7)"
     height="10px"
     style={
       Object {
-        "opacity": "0.4",
+        "opacity": 0.4,
         "pointerEvents": "none",
         "position": "absolute",
         "right": "0",
@@ -220,11 +220,11 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
 }
 
 .emotion-3 {
-  fill: #808080;
+  fill: rgba(102,102,102,0.7);
 }
 
 .emotion-3 > * {
-  fill: #808080;
+  fill: rgba(102,102,102,0.7);
 }
 
 <div
@@ -248,7 +248,7 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
   </div>
   <svg
     className="emotion-3"
-    color="#808080"
+    color="rgba(102, 102, 102, 0.7)"
     height="10px"
     style={
       Object {

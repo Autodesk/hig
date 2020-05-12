@@ -7,7 +7,7 @@ export default function stylesheet(themeData) {
     },
     panel: {
       border: themeData
-        ? `1px solid ${themeData["tooltip.borderColor"]}`
+        ? `1px solid ${themeData["tooltip.backgroundColor"]}`
         : `none`,
       backgroundColor: themeData
         ? themeData["tooltip.backgroundColor"]

@@ -17,9 +17,10 @@ export default function stylesheet(props, themeData) {
 
     ...(validTypes.includes(props.type) && {
       backgroundColor:
-        themeData[`banner.${vars.colorMapping[props.type]}.iconBackground`]
+        themeData[
+          `banner.${vars.colorMapping[props.type]}.iconField.backgroundColor`
+        ]
     }),
-
     "svg *": {
       fill: "white"
     }
