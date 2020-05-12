@@ -6,7 +6,7 @@ import ThemeContext from "@hig/theme-context";
 function stylesheet({ variant }, theme) {
   const defaults = {
     fontFamily: theme["basics.fontFamilies.main"],
-    color: theme["colorScheme.textColor"],
+    color: theme["colorScheme.text.default"],
     fontSize: theme["density.fontSizes.medium"],
     margin: `0 0 ${theme["density.spacings.small"]} 0`,
     fontWeight: theme["basics.fontWeights.medium"]

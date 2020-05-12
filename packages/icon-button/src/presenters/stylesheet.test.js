@@ -2,17 +2,17 @@ import stylesheet from "./stylesheet";
 
 describe("stylesheet", () => {
   const themeData = {
-    "iconButton.iconColor": "black",
-    "iconButton.on.iconColor": "grey",
-    "iconButton.hover.iconColor": "white",
-    "iconButton.hover.on.iconColor": "green",
-    "iconButton.focus.iconColor": "red",
-    "iconButton.focus.halo.width": "2px",
-    "iconButton.focus.halo.color": "blue",
-    "iconButton.pressed.level100To250.backgroundColor": "orange",
-    "iconButton.pressed.level300To350.backgroundColor": "yellow",
-    "iconButton.pressed.iconColor": "purple",
-    "component.disabled.opacity": 0.5
+    "iconButton.dynamic.default.iconColor": "black",
+    "iconButton.dynamic.on.default.iconColor": "grey",
+    "iconButton.dynamic.hover.iconColor": "white",
+    "iconButton.dynamic.on.hover.iconColor": "green",
+    "iconButton.dynamic.focus.iconColor": "red",
+    "iconButton.focus.haloWidth": "2px",
+    "iconButton.focus.haloColor": "blue",
+    "iconButton.dynamic.pressed.100To250BackgroundColor": "orange",
+    "iconButton.dynamic.pressed.300To350BackgroundColor": "yellow",
+    "iconButton.dynamic.pressed.iconColor": "purple",
+    "colorScheme.opacity.disabled": 0.4
   };
 
   it("returns an object", () => {
@@ -81,7 +81,7 @@ describe("stylesheet", () => {
     it("disabled styles match values in theme data", () => {
       const styles = stylesheet(props, themeData);
 
-      expect(styles.iconButton.opacity).toEqual(0.5);
+      expect(styles.iconButton.opacity).toEqual(0.4);
     });
   });
   describe("surface level options", () => {

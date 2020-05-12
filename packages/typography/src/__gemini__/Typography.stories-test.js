@@ -45,7 +45,7 @@ function Surface({ children }) {
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
         const style = {
-          backgroundColor: resolvedRoles["colorScheme.surfaceLevel100Color"],
+          backgroundColor: resolvedRoles["colorScheme.surface.level100"],
           marginBottom: resolvedRoles["density.spacings.large"]
         };
 

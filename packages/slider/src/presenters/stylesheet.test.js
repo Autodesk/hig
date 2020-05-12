@@ -2,23 +2,20 @@ import stylesheet from "./stylesheet";
 
 describe("stylesheet", () => {
   const themeData = {
-    "slider.halo.width": "0",
-    "slider.halo.color": "red",
+    "slider.haloWidth": "0",
+    "slider.haloColor": "red",
     "slider.thumb.backgroundColor": "aliceblue",
-    "slider.thumb.width": "1px",
-    "slider.track.color": "black",
-    "slider.track.width": "2px",
-    "slider.value.color": "green",
-    "slider.hover.halo.color": "purple",
-    "slider.hover.halo.width": "4px",
-    "slider.hover.thumb.color": "turquoise",
-    "slider.focused.halo.color": "magenta",
-    "slider.focused.halo.width": "3px",
-    "slider.focused.thumb.color": "pink",
-    "slider.pressed.halo.color": "orange",
-    "slider.pressed.halo.width": "5px",
-    "slider.pressed.thumb.color": "white",
-    "component.disabled.opacity": "0.2"
+    "slider.thumb.minWidth": "1px",
+    "slider.track.backgrounColor": "black",
+    "slider.track.minHeight": "2px",
+    "slider.value.backgroundColor": "green",
+    "slider.hover.haloColor": "purple",
+    "slider.hover.haloWidth": "4px",
+    "slider.focus.haloColor": "magenta",
+    "slider.focus.haloWidth": "3px",
+    "slider.pressed.haloColor": "orange",
+    "slider.pressed.haloWidth": "5px",
+    "colorScheme.opacity.disabled": "0.4"
   };
 
   it("returns an object", () => {
@@ -48,13 +45,13 @@ describe("stylesheet", () => {
 
     it("sets the halo around the thumb to theme's default halo width", () => {
       expect(styles.slider["&::-webkit-slider-thumb"].boxShadow).toMatch(
-        `0 0 0 ${themeData["slider.halo.width"]}`
+        `0 0 0 ${themeData["slider.haloWidth"]}`
       );
     });
 
     it("changes the track to the theme's disabled opacity ", () => {
       expect(styles.slider["&::-webkit-slider-runnable-track"].opacity).toMatch(
-        themeData["component.disabled.opacity"]
+        themeData["colorScheme.opacity.disabled"]
       );
     });
   });
@@ -69,7 +66,7 @@ describe("stylesheet", () => {
       const styles = stylesheet(props, trackValueRatio, themeData);
 
       expect(styles.slider["&::-webkit-slider-thumb"].boxShadow).toMatch(
-        `0 0 0 ${themeData["slider.focused.halo.width"]}`
+        `0 0 0 ${themeData["slider.focus.haloWidth"]}`
       );
     });
   });
@@ -84,7 +81,7 @@ describe("stylesheet", () => {
       const styles = stylesheet(props, trackValueRatio, themeData);
 
       expect(styles.slider["&::-webkit-slider-thumb"].boxShadow).toMatch(
-        `0 0 0 ${themeData["slider.hover.halo.width"]}`
+        `0 0 0 ${themeData["slider.hover.haloWidth"]}`
       );
     });
   });
@@ -100,8 +97,8 @@ describe("stylesheet", () => {
       const styles = stylesheet(props, trackValueRatio, themeData);
 
       expect(styles.slider["&::-webkit-slider-thumb"].boxShadow).toMatch(
-        `0 0 0 ${themeData["slider.hover.halo.width"]} ${
-          themeData["slider.hover.halo.color"]
+        `0 0 0 ${themeData["slider.hover.haloWidth"]} ${
+          themeData["slider.hover.haloColor"]
         }`
       );
     });
@@ -117,7 +114,7 @@ describe("stylesheet", () => {
       const styles = stylesheet(props, trackValueRatio, themeData);
 
       expect(styles.slider["&::-webkit-slider-thumb"].boxShadow).toMatch(
-        `0 0 0 ${themeData["slider.pressed.halo.width"]}`
+        `0 0 0 ${themeData["slider.pressed.haloWidth"]}`
       );
     });
   });
@@ -141,8 +138,8 @@ describe("stylesheet", () => {
 
     it("produces a background image for the track with a reasonable width calculation", () => {
       expect(styles.slider["&::-webkit-slider-runnable-track"].backgroundSize)
-        .toMatch(`calc((0.5 * ${themeData["slider.thumb.width"]}) 
-  + (${trackValueRatio} * (100% - ${themeData["slider.thumb.width"]})))`);
+        .toMatch(`calc((0.5 * ${themeData["slider.thumb.minWidth"]}) 
+  + (${trackValueRatio} * (100% - ${themeData["slider.thumb.minWidth"]})))`);
     });
   });
 });

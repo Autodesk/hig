@@ -44,7 +44,7 @@ function getAnchorPointTransformRotate(anchorPoint) {
   }
 }
 
-export default function(props, themeData, themeId) {
+export default function(props, themeData) {
   const { transitionStatus, anchorPoint, stylesheet } = props;
   const isExiting = transitionStatus === `exiting`;
   const isExited = transitionStatus === `exited`;
@@ -95,10 +95,7 @@ export default function(props, themeData, themeId) {
     panelContainer: {
       backgroundColor,
       borderRadius,
-      border:
-        themeId && themeId === `hig-light`
-          ? `1px solid ${borderColor}`
-          : `none`,
+      border: `none`,
       boxShadow: `0 0 ${shadowBlur} ${shadowColor}`
     },
     panelContainerInner: {
@@ -125,7 +122,7 @@ export default function(props, themeData, themeId) {
   };
 
   if (stylesheet) {
-    return stylesheet(styles, props, themeData, themeId);
+    return stylesheet(styles, props, themeData);
   }
 
   return styles;

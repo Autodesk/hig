@@ -20,8 +20,14 @@ const themes = [
       "iframe.html?selectedKind=Input&selectedStory=Dark%20blue%2C%20high%20density"
   },
   {
-    name: "Web light",
-    url: "iframe.html?selectedKind=Input&selectedStory=Web%20light"
+    name: "Dark gray medium density",
+    url:
+      "iframe.html?selectedKind=Input&selectedStory=Dark%20gray%2C%20medium%20density"
+  },
+  {
+    name: "Dark gray high density",
+    url:
+      "iframe.html?selectedKind=Input&selectedStory=Dark%20gray%2C%20high%20density"
   }
 ];
 
