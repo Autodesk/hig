@@ -1,3 +1,10 @@
+# [@hig/progress-bar-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/progress-bar@1.1.0...@hig/progress-bar@1.1.1) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([e5b22db](https://github.com/Autodesk/hig/commit/e5b22db))
+
 # [@hig/progress-bar-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/progress-bar@1.0.3...@hig/progress-bar@1.1.0) (2019-09-25)
 
 
