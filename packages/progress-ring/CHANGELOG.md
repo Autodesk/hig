@@ -1,3 +1,10 @@
+# [@hig/progress-ring-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/progress-ring@1.1.0...@hig/progress-ring@1.1.1) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([a4de3fb](https://github.com/Autodesk/hig/commit/a4de3fb))
+
 # [@hig/progress-ring-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/progress-ring@1.0.2...@hig/progress-ring@1.1.0) (2019-07-08)
 
 
