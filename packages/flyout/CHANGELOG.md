@@ -1,3 +1,10 @@
+# [@hig/flyout-v1.2.1](https://github.com/Autodesk/hig/compare/@hig/flyout@1.2.0...@hig/flyout@1.2.1) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([f068af3](https://github.com/Autodesk/hig/commit/f068af3))
+
 # [@hig/flyout-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/flyout@1.1.1...@hig/flyout@1.2.0) (2019-10-10)
 
 
