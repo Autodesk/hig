@@ -1,3 +1,10 @@
+# [@hig/text-link-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/text-link@1.1.0...@hig/text-link@1.1.1) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([0bc4ada](https://github.com/Autodesk/hig/commit/0bc4ada))
+
 # [@hig/text-link-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/text-link@1.0.1...@hig/text-link@1.1.0) (2020-02-21)
 
 
