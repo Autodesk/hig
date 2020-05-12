@@ -1,3 +1,10 @@
+# [@hig/input-v1.2.1](https://github.com/Autodesk/hig/compare/@hig/input@1.2.0...@hig/input@1.2.1) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([98cde66](https://github.com/Autodesk/hig/commit/98cde66))
+
 # [@hig/input-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/input@1.1.6...@hig/input@1.2.0) (2019-09-05)
 
 
