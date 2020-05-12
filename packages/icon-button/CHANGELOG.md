@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.4.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.4.0...@hig/icon-button@2.4.1) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([1409974](https://github.com/Autodesk/hig/commit/1409974))
+
 # [@hig/icon-button-v2.4.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.3.2...@hig/icon-button@2.4.0) (2020-04-27)
 
 

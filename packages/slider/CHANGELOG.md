@@ -1,3 +1,10 @@
+# [@hig/slider-v1.1.2](https://github.com/Autodesk/hig/compare/@hig/slider@1.1.1...@hig/slider@1.1.2) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([4dfe027](https://github.com/Autodesk/hig/commit/4dfe027))
+
 # [@hig/slider-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/slider@1.1.0...@hig/slider@1.1.1) (2020-02-13)
 
 

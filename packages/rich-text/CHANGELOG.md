@@ -1,3 +1,10 @@
+# [@hig/rich-text-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/rich-text@1.1.0...@hig/rich-text@1.1.1) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([4358da8](https://github.com/Autodesk/hig/commit/4358da8))
+
 # [@hig/rich-text-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/rich-text@1.0.1...@hig/rich-text@1.1.0) (2020-02-21)
 
 

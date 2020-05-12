@@ -1,3 +1,10 @@
+# [@hig/timestamp-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/timestamp@1.1.0...@hig/timestamp@1.1.1) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([6818763](https://github.com/Autodesk/hig/commit/6818763))
+
 # [@hig/timestamp-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/timestamp@1.0.2...@hig/timestamp@1.1.0) (2019-10-10)
 
 

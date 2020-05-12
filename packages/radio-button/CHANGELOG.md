@@ -1,3 +1,10 @@
+# [@hig/radio-button-v1.0.9](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.8...@hig/radio-button@1.0.9) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([d33e9f4](https://github.com/Autodesk/hig/commit/d33e9f4))
+
 # [@hig/radio-button-v1.0.8](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.7...@hig/radio-button@1.0.8) (2019-07-24)
 
 
