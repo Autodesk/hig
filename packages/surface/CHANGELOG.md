@@ -1,3 +1,10 @@
+# [@hig/surface-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/surface@1.1.0...@hig/surface@1.1.1) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([b4f191a](https://github.com/Autodesk/hig/commit/b4f191a))
+
 # [@hig/surface-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/surface@1.0.1...@hig/surface@1.1.0) (2020-02-21)
 
 
