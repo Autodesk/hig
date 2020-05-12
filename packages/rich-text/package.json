@@ -1,6 +1,6 @@
 {
   "name": "@hig/rich-text",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "HIG RichText",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -25,10 +25,10 @@
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
-    "@hig/progress-bar": "^1.0.3",
+    "@hig/progress-bar": "^1.1.1",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/text-link": "^1.1.0"
+    "@hig/text-link": "^1.1.1"
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.0",
