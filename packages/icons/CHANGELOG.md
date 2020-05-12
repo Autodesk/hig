@@ -1,3 +1,10 @@
+# [@hig/icons-v3.2.1](https://github.com/Autodesk/hig/compare/@hig/icons@3.2.0...@hig/icons@3.2.1) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([59e91ae](https://github.com/Autodesk/hig/commit/59e91ae))
+
 # [@hig/icons-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/icons@3.1.0...@hig/icons@3.2.0) (2020-05-01)
 
 
