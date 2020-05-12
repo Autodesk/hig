@@ -1,3 +1,10 @@
+# [@hig/button-v1.4.4](https://github.com/Autodesk/hig/compare/@hig/button@1.4.3...@hig/button@1.4.4) (2020-05-12)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([98a91ef](https://github.com/Autodesk/hig/commit/98a91ef))
+
 # [@hig/button-v1.4.3](https://github.com/Autodesk/hig/compare/@hig/button@1.4.2...@hig/button@1.4.3) (2019-08-08)
 
 
