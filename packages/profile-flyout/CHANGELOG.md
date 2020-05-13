@@ -1,3 +1,10 @@
+# [@hig/profile-flyout-v2.0.5](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@2.0.4...@hig/profile-flyout@2.0.5) (2020-05-13)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([8cb76e8](https://github.com/Autodesk/hig/commit/8cb76e8))
+
 # [@hig/profile-flyout-v2.0.4](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@2.0.3...@hig/profile-flyout@2.0.4) (2019-08-02)
 
 
