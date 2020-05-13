@@ -1,3 +1,10 @@
+# [@hig/side-nav-v2.1.4](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.1.3...@hig/side-nav@2.1.4) (2020-05-13)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([e469589](https://github.com/Autodesk/hig/commit/e469589))
+
 # [@hig/side-nav-v2.1.3](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.1.2...@hig/side-nav@2.1.3) (2019-08-02)
 
 
