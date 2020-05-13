@@ -24,7 +24,7 @@ describe("stylesheet", () => {
     "toggle.off.pressed.borderColor": "rgba(128, 128, 128, 0.5)",
     "toggle.on.default.backgroundColor": "#0696d7",
     "toggle.on.default.borderColor": "#0696d7",
-    "component.disabled.opacity": 0.4
+    "colorScheme.opacity.disabled": 0.4
   };
 
   it("returns an oject", () => {

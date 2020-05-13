@@ -9,8 +9,8 @@ export default function ProfileContentPresenter(props) {
 
   return (
     <ThemeContext.Consumer>
-      {({ resolvedRoles, metadata }) => {
-        const styles = stylesheet(resolvedRoles, metadata.colorSchemeId);
+      {({ resolvedRoles }) => {
+        const styles = stylesheet(resolvedRoles);
 
         return (
           <div className={css(styles.profileContent)}>

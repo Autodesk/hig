@@ -24,7 +24,7 @@ export default function stylesheet(props, themeData) {
       ? { backgroundColor: themeData["menu.item.focus.backgroundColor"] }
       : null),
     ...(props.disabled
-      ? { opacity: themeData["component.disabled.opacity"] }
+      ? { opacity: themeData["colorScheme.opacity.disabled"] }
       : null)
   };
 }

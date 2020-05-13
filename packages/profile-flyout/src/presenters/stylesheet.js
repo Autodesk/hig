@@ -1,18 +1,4 @@
-function getProfileNameColor(themeData, theme) {
-  return {
-    color:
-      theme === `hig-light` ? `#222934` : themeData["colorScheme.textColor"]
-  };
-}
-
-function getProfileEmailColor(themeData, theme) {
-  return {
-    color:
-      theme === `hig-light` ? `#666` : themeData["colorScheme.textColorDim"]
-  };
-}
-
-export default function stylesheet(themeData, theme) {
+export default function stylesheet(themeData) {
   return {
     flyoutButton: {
       display: `flex`,
@@ -42,7 +28,7 @@ export default function stylesheet(themeData, theme) {
       fontSize: `16px`,
       fontWeight: `bold`,
       lineHeight: `24px`,
-      ...(theme ? getProfileNameColor(themeData, theme) : {})
+      ...(themeData ? { color: themeData["colorScheme.text.default"] } : {})
     },
     profileEmail: {
       display: `block`,
@@ -51,7 +37,7 @@ export default function stylesheet(themeData, theme) {
       textOverflow: `ellipsis`,
       fontSize: `12px`,
       lineHeight: `16px`,
-      ...(theme ? getProfileEmailColor(themeData, theme) : {})
+      ...(themeData ? { color: themeData["colorScheme.text.dim"] } : {})
     }
   };
 }

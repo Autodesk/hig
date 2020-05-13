@@ -16,16 +16,8 @@ import ContentPresenter from "./presenters/ContentPresenter";
 
 export default class Accordion extends Component {
   static propTypes = {
-    /** Text label for the accordion header */
-    label: PropTypes.string.isRequired,
-    /** Indicator icon */
-    indicator: PropTypes.oneOf(AVAILABLE_INDICATORS),
-    /** Indicator's position.
-     * Note: When indicator is set to `indicators.CARET`,
-     * indicator position will always be `indicatorPositions.LEFT` */
-    indicatorPosition: PropTypes.oneOf(AVAILABLE_INDICATOR_POSITIONS),
-    /** Function to modify the component's styles */
-    stylesheet: PropTypes.func,
+    /** Content of the accordion */
+    children: PropTypes.node,
     /** Controlled value, specifies whether the accordion is collapsed or not
      * When provided, it overrides the accordion's collapsed state
      */
@@ -34,10 +26,18 @@ export default class Accordion extends Component {
     defaultCollapsed: PropTypes.bool,
     /** Specifies whether the accordion is disabled or not */
     disabled: PropTypes.bool,
-    /** Content of the accordion */
-    children: PropTypes.node,
+    /** Indicator icon */
+    indicator: PropTypes.oneOf(AVAILABLE_INDICATORS),
+    /** Indicator's position.
+     * Note: When indicator is set to `indicators.CARET`,
+     * indicator position will always be `indicatorPositions.LEFT` */
+    indicatorPosition: PropTypes.oneOf(AVAILABLE_INDICATOR_POSITIONS),
+    /** Text label for the accordion header */
+    label: PropTypes.node.isRequired,
     /** Function called when clicks the accordion's header */
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {

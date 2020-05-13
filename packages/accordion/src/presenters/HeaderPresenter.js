@@ -32,7 +32,7 @@ export default class HeaderPresenter extends Component {
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
     onMouseUp: PropTypes.func,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.node.isRequired,
     indicator: PropTypes.oneOf(AVAILABLE_INDICATORS),
     indicatorPosition: PropTypes.oneOf(AVAILABLE_INDICATOR_POSITIONS),
     collapsed: PropTypes.bool,
