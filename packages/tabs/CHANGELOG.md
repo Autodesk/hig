@@ -1,3 +1,10 @@
+# [@hig/tabs-v1.2.1](https://github.com/Autodesk/hig/compare/@hig/tabs@1.2.0...@hig/tabs@1.2.1) (2020-05-13)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([e963079](https://github.com/Autodesk/hig/commit/e963079))
+
 # [@hig/tabs-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/tabs@1.1.1...@hig/tabs@1.2.0) (2020-03-23)
 
 

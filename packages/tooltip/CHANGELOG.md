@@ -1,3 +1,10 @@
+# [@hig/tooltip-v1.0.6](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.5...@hig/tooltip@1.0.6) (2020-05-13)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([48539e6](https://github.com/Autodesk/hig/commit/48539e6))
+
 # [@hig/tooltip-v1.0.5](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.4...@hig/tooltip@1.0.5) (2020-02-21)
 
 

@@ -1,3 +1,10 @@
+# [@hig/text-area-v1.2.1](https://github.com/Autodesk/hig/compare/@hig/text-area@1.2.0...@hig/text-area@1.2.1) (2020-05-13)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([099946d](https://github.com/Autodesk/hig/commit/099946d))
+
 # [@hig/text-area-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/text-area@1.1.4...@hig/text-area@1.2.0) (2019-07-09)
 
 

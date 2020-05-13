@@ -1,3 +1,10 @@
+# [@hig/top-nav-v3.1.2](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.1.1...@hig/top-nav@3.1.2) (2020-05-13)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([16d4a2c](https://github.com/Autodesk/hig/commit/16d4a2c))
+
 # [@hig/top-nav-v3.1.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.1.0...@hig/top-nav@3.1.1) (2020-01-29)
 
 

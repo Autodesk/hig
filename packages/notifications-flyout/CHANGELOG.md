@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v2.0.6](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.0.5...@hig/notifications-flyout@2.0.6) (2020-05-13)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([341f37a](https://github.com/Autodesk/hig/commit/341f37a))
+
 # [@hig/notifications-flyout-v2.0.5](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.0.4...@hig/notifications-flyout@2.0.5) (2019-08-02)
 
 

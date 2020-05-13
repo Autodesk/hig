@@ -1,3 +1,10 @@
+# [@hig/checkbox-v2.0.9](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.8...@hig/checkbox@2.0.9) (2020-05-13)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([398bec3](https://github.com/Autodesk/hig/commit/398bec3))
+
 # [@hig/checkbox-v2.0.8](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.7...@hig/checkbox@2.0.8) (2019-07-24)
 
 

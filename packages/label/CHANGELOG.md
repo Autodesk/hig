@@ -1,3 +1,10 @@
+# [@hig/label-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/label@1.1.0...@hig/label@1.1.1) (2020-05-13)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data-roles ([07524b9](https://github.com/Autodesk/hig/commit/07524b9))
+
 # [@hig/label-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/label@1.0.3...@hig/label@1.1.0) (2019-05-17)
 
 
