@@ -20,7 +20,7 @@
   "dependencies": {
     "@hig/accordion": "^1.0.0",
     "@hig/avatar": "^1.1.0",
-    "@hig/banner": "^2.1.1",
+    "@hig/banner": "^2.1.2",
     "@hig/button": "^1.4.4",
     "@hig/checkbox": "^2.0.9",
     "@hig/dropdown": "^2.2.2",
