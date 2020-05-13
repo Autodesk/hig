@@ -1,3 +1,10 @@
+# [@hig/banner-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/banner@2.1.1...@hig/banner@2.1.2) (2020-05-13)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([3de065c](https://github.com/Autodesk/hig/commit/3de065c))
+
 # [@hig/banner-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/banner@2.1.0...@hig/banner@2.1.1) (2019-08-07)
 
 
