@@ -1,3 +1,10 @@
+# [@hig/notifications-toast-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.1.0...@hig/notifications-toast@2.1.1) (2020-05-13)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([bd7adff](https://github.com/Autodesk/hig/commit/bd7adff))
+
 # [@hig/notifications-toast-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.0.5...@hig/notifications-toast@2.1.0) (2020-02-06)
 
 
