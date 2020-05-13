@@ -1,3 +1,10 @@
+# [@hig/dropdown-v2.2.2](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.2.1...@hig/dropdown@2.2.2) (2020-05-13)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([f49febe](https://github.com/Autodesk/hig/commit/f49febe))
+
 # [@hig/dropdown-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.2.0...@hig/dropdown@2.2.1) (2020-02-21)
 
 
