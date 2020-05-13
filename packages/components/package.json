@@ -30,7 +30,7 @@
     "@hig/modal": "^2.2.0",
     "@hig/notifications-flyout": "^2.0.5",
     "@hig/notifications-toast": "^2.1.0",
-    "@hig/profile-flyout": "^2.0.4",
+    "@hig/profile-flyout": "^2.0.5",
     "@hig/progress-bar": "^1.1.1",
     "@hig/progress-ring": "^1.1.0",
     "@hig/project-account-switcher": "^2.0.5",
