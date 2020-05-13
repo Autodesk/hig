@@ -1,3 +1,10 @@
+# [@hig/modal-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/modal@2.2.0...@hig/modal@2.2.1) (2020-05-13)
+
+
+### Bug Fixes
+
+* stop using deprecated theme-data roles ([38960a5](https://github.com/Autodesk/hig/commit/38960a5))
+
 # [@hig/modal-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/modal@2.1.2...@hig/modal@2.2.0) (2020-05-07)
 
 
