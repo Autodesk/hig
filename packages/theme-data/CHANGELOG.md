@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.16.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.16.0...@hig/theme-data@2.16.1) (2020-05-14)
+
+
+### Bug Fixes
+
+* correct solid button background and border colors ([d15241d](https://github.com/Autodesk/hig/commit/d15241d))
+
 # [@hig/theme-data-v2.16.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.15.1...@hig/theme-data@2.16.0) (2020-05-11)
 
 
