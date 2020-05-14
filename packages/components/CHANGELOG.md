@@ -1,3 +1,10 @@
+# [@hig/components-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/components@2.2.0...@hig/components@2.3.0) (2020-05-14)
+
+
+### Features
+
+* add [@hig](https://github.com/hig)/label ([46c0444](https://github.com/Autodesk/hig/commit/46c0444))
+
 # [@hig/components-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/components@2.1.0...@hig/components@2.2.0) (2020-03-23)
 
 
