@@ -1,3 +1,10 @@
+# [@hig/icons-v3.3.0](https://github.com/Autodesk/hig/compare/@hig/icons@3.2.1...@hig/icons@3.3.0) (2020-05-15)
+
+
+### Features
+
+* add save-as icons ([197294b](https://github.com/Autodesk/hig/commit/197294b))
+
 # [@hig/icons-v3.2.1](https://github.com/Autodesk/hig/compare/@hig/icons@3.2.0...@hig/icons@3.2.1) (2020-05-12)
 
 
