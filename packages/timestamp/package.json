@@ -27,7 +27,7 @@
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "mockdate": "^2.0.2"
+    "mockdate": "^3.0.0"
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.0",
