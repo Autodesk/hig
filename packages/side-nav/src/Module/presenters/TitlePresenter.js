@@ -18,6 +18,7 @@ export default class TitlePresenter extends Component {
     icon: PropTypes.node,
     link: PropTypes.string,
     onClick: PropTypes.func,
+    stylesheet: PropTypes.func,
     tabIndex: PropTypes.string.isRequired,
     target: PropTypes.oneOf(AVAILABLE_TARGETS),
     title: PropTypes.string.isRequired
@@ -26,7 +27,16 @@ export default class TitlePresenter extends Component {
   createEventHandlers = memoizeCreateButtonEventHandlers();
 
   render() {
-    const { active, icon, link, onClick, tabIndex, target, title } = this.props;
+    const {
+      active,
+      icon,
+      link,
+      onClick,
+      stylesheet: customStylesheet,
+      tabIndex,
+      target,
+      title
+    } = this.props;
     const { handleClick, handleKeyDown } = this.createEventHandlers(onClick, {
       // Allow default on hyperlinks to trigger navigation
       preventDefault: !link
@@ -39,7 +49,10 @@ export default class TitlePresenter extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
-          const styles = stylesheet(this.props, resolvedRoles);
+          const styles = stylesheet(
+            { stylesheet: customStylesheet, ...this.props },
+            resolvedRoles
+          );
 
           return (
             <Wrapper

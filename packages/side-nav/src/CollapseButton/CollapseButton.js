@@ -16,7 +16,9 @@ export default class CollapseButton extends Component {
     /** Presents the icon in a minimized state: caret pointing right */
     minimized: PropTypes.bool,
     /** Called when element is clicked */
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -26,7 +28,7 @@ export default class CollapseButton extends Component {
   createEventHandlers = memoizeCreateButtonEventHandlers();
 
   render() {
-    const { minimized, onClick } = this.props;
+    const { minimized, onClick, stylesheet: customStylesheet } = this.props;
     const { handleClick, handleKeyDown } = this.createEventHandlers(onClick);
 
     return (
@@ -35,7 +37,10 @@ export default class CollapseButton extends Component {
           <div
             aria-pressed={!minimized}
             className={css(
-              stylesheet({ minimized, ...this.props }, resolvedRoles)
+              stylesheet(
+                { minimized, stylesheet: customStylesheet, ...this.props },
+                resolvedRoles
+              )
             )}
             onClick={handleClick}
             onKeyDown={handleKeyDown}

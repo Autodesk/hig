@@ -9,16 +9,28 @@ export default class Group extends Component {
     /** A slot for arbitrary content to render above the Modules */
     intro: PropTypes.node,
     /** One or more SideNav Modules */
-    children: PropTypes.node
+    children: PropTypes.node,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   render() {
-    const { intro, children } = this.props;
+    const {
+      intro,
+      children,
+      stylesheet: customStylesheet
+    } = this.props;
 
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
-          const styles = stylesheet(this.props, resolvedRoles);
+          const styles = stylesheet(
+            {
+              stylesheet: customStylesheet,
+              ...this.props
+            },
+            resolvedRoles
+          );
           return (
             <section className={css(styles.group)}>
               {intro && <div className={css(styles.intro)}>{intro}</div>}

@@ -30,6 +30,8 @@ export default class Module extends Component {
     onFocus: PropTypes.func,
     /** Called when hovering over the title */
     onMouseOver: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func,
     /** A label for rendering this Module */
     title: PropTypes.string.isRequired,
     /** Anchor target. Applicable only if link is provided */
@@ -53,6 +55,7 @@ export default class Module extends Component {
       onClickTitle,
       onFocus,
       onMouseOver,
+      stylesheet: customStylesheet,
       target,
       title
     } = this.props;
@@ -67,7 +70,10 @@ export default class Module extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
-          const styles = stylesheet(this.props, resolvedRoles);
+          const styles = stylesheet(
+            { stylesheet: customStylesheet, ...this.props },
+            resolvedRoles
+          );
 
           return (
             <div

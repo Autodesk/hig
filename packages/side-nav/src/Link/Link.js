@@ -20,6 +20,8 @@ export default class Link extends Component {
     onFocus: PropTypes.func,
     /** Called when hovering over the link */
     onMouseOver: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func,
     /** Corresponds to the anchor tag's target */
     target: PropTypes.oneOf(AVAILABLE_TARGETS),
     /** Link text */
@@ -39,13 +41,27 @@ export default class Link extends Component {
     );
 
   render() {
-    const { title, link, onClick, onFocus, onMouseOver, target } = this.props;
+    const {
+      link,
+      title,
+      onClick,
+      onFocus,
+      onMouseOver,
+      stylesheet: customStylesheet,
+      target
+    } = this.props;
     const Wrapper = link ? "a" : "div";
 
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
-          const styles = stylesheet(this.props, resolvedRoles);
+          const styles = stylesheet(
+            {
+              stylesheet: customStylesheet,
+              ...this.props
+            },
+            resolvedRoles
+          );
           const size =
             metadata.densityId === "medium-density"
               ? iconSizes.PX_24

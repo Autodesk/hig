@@ -29,6 +29,10 @@ export default class Search extends Component {
      */
     placeholder: PropTypes.string,
     /**
+     * Function to modify the component's styles
+     */
+    stylesheet: PropTypes.func,
+    /**
      * Value of the input field. Can be changed after mount to update the input value.
      */
     value: PropTypes.string
@@ -58,7 +62,12 @@ export default class Search extends Component {
     );
 
   render() {
-    const { onBlur, onFocus, placeholder } = this.props;
+    const {
+      onBlur,
+      onFocus,
+      placeholder,
+      stylesheet: customStylesheet
+    } = this.props;
     const { handleClick, handleKeyDown } = this.createEventHandlers(
       this.handleClear
     );
@@ -66,7 +75,10 @@ export default class Search extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
-          const styles = stylesheet(this.props, resolvedRoles);
+          const styles = stylesheet(
+            { stylesheet: customStylesheet, ...this.props },
+            resolvedRoles
+          );
           return (
             <div className={css(styles.search)}>
               <div className={css(styles.icon)}>

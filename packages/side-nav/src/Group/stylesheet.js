@@ -1,7 +1,8 @@
 import { groupSeparator } from "../constants";
 
 export default function stylesheet(props, themeData) {
-  return {
+  const { stylesheet: customStylesheet } = props;
+  const styles = {
     group: groupSeparator(props, themeData, {
       padding: `${themeData["density.spacings.extraSmall"]} 0`,
       position: "relative",
@@ -15,4 +16,10 @@ export default function stylesheet(props, themeData) {
       paddingLeft: themeData["density.spacings.medium"]
     }
   };
+
+  if (customStylesheet) {
+    return customStylesheet(styles, props, themeData);
+  }
+
+  return styles;
 }

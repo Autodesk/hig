@@ -22,6 +22,8 @@ export default class Submodule extends Component {
     onFocus: PropTypes.func,
     /** Called when hovering over the submodule */
     onMouseOver: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func,
     /** Anchor target. Applicable only if link is provided */
     target: PropTypes.oneOf(AVAILABLE_TARGETS),
     /** Text to render */
@@ -31,7 +33,15 @@ export default class Submodule extends Component {
   createEventHandlers = memoizeCreateButtonEventHandlers();
 
   render() {
-    const { link, onClick, onFocus, onMouseOver, target, title } = this.props;
+    const {
+      link,
+      onClick,
+      onFocus,
+      onMouseOver,
+      stylesheet: customStylesheet,
+      target,
+      title
+    } = this.props;
     const { handleClick, handleKeyDown } = this.createEventHandlers(onClick, {
       // Allow default on hyperlinks to trigger navigation
       preventDefault: !link
@@ -45,7 +55,12 @@ export default class Submodule extends Component {
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => (
           <Wrapper
-            className={css(stylesheet(this.props, resolvedRoles).wrapper)}
+            className={css(
+              stylesheet(
+                { stylesheet: customStylesheet, ...this.props },
+                resolvedRoles
+              ).wrapper
+            )}
             href={link}
             onClick={handleClick}
             onFocus={onFocus}

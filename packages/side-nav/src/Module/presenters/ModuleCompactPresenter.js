@@ -20,13 +20,21 @@ export default class ModuleCompact extends Component {
     /** Called when link is focused  */
     onFocus: PropTypes.func,
     /** Called when hovering over the icon */
-    onMouseOver: PropTypes.func
+    onMouseOver: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   createEventHandlers = memoizeCreateButtonEventHandlers();
 
   render() {
-    const { icon, onClickTitle, onFocus, onMouseOver } = this.props;
+    const {
+      icon,
+      onClickTitle,
+      onFocus,
+      onMouseOver,
+      stylesheet: customStylesheet
+    } = this.props;
     const { handleClick, handleKeyDown } = this.createEventHandlers(
       onClickTitle
     );
@@ -34,7 +42,10 @@ export default class ModuleCompact extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
-          const styles = stylesheet(this.props, resolvedRoles);
+          const styles = stylesheet(
+            { stylesheet: customStylesheet, ...this.props },
+            resolvedRoles
+          );
 
           return (
             <div

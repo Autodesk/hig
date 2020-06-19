@@ -31,6 +31,8 @@ export default class SideNav extends Component {
     search: PropTypes.node,
     /** Renders a button to minimize the SideNav */
     showMinimizeButton: PropTypes.bool,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func,
     /** Title at the top of the SideNav */
     superHeaderLabel: PropTypes.string,
     /** An href for the SideNav Title */
@@ -65,6 +67,7 @@ export default class SideNav extends Component {
       headerLabel,
       headerLink,
       onClickHeader,
+      stylesheet: customStylesheet,
       superHeaderLabel,
       superHeaderLink,
       onClickSuperHeader
@@ -79,15 +82,23 @@ export default class SideNav extends Component {
         {this._renderHeader(
           superHeaderLink,
           superHeaderLabel,
-          stylesheet({ isLink: superHeaderLink, ...this.props }, resolvedRoles)
-            .headers.super,
+          stylesheet(
+            {
+              isLink: superHeaderLink,
+              stylesheet: customStylesheet,
+              ...this.props
+            },
+            resolvedRoles
+          ).headers.super,
           onClickSuperHeader
         )}
         {this._renderHeader(
           headerLink,
           headerLabel,
-          stylesheet({ isLink: headerLink, ...this.props }, resolvedRoles)
-            .headers.normal,
+          stylesheet(
+            { isLink: headerLink, stylesheet: customStylesheet, ...this.props },
+            resolvedRoles
+          ).headers.normal,
           onClickHeader
         )}
       </div>
@@ -102,13 +113,17 @@ export default class SideNav extends Component {
       links,
       onMinimize,
       search,
-      showMinimizeButton
+      showMinimizeButton,
+      stylesheet: customStylesheet
     } = this.props;
 
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
-          const styles = stylesheet(this.props, resolvedRoles);
+          const styles = stylesheet(
+            { stylesheet: customStylesheet, ...this.props },
+            resolvedRoles
+          );
 
           return (
             <nav className={css(styles.sideNav)}>

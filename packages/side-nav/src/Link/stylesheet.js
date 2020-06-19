@@ -1,5 +1,6 @@
 export default function(props, themeData) {
-  return {
+  const { stylesheet: customStylesheet } = props;
+  const styles = {
     wrapper: {
       display: "flex",
       justifyContent: "space-between",
@@ -36,4 +37,10 @@ export default function(props, themeData) {
       lineHeight: "26px"
     }
   };
+
+  if (customStylesheet) {
+    return customStylesheet(styles, props, themeData);
+  }
+
+  return styles;
 }
