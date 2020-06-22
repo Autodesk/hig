@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
 import { Search24, Error24 } from "@hig/icons";
-import { memoizeCreateButtonEventHandlers } from "@hig/utils";
+import {
+  createCustomClassNames,
+  memoizeCreateButtonEventHandlers
+} from "@hig/utils";
 import stylesheet from "./stylesheet";
 
 export default class Search extends Component {
@@ -66,11 +69,20 @@ export default class Search extends Component {
       onBlur,
       onFocus,
       placeholder,
-      stylesheet: customStylesheet
+      stylesheet: customStylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
     const { handleClick, handleKeyDown } = this.createEventHandlers(
       this.handleClear
     );
+    const iconClassName = createCustomClassNames(className, "icon");
+    const inputWrapperClassName = createCustomClassNames(
+      className,
+      "input_wrapper"
+    );
+    const inputClassName = createCustomClassNames(className, "input");
+    const clearClassName = createCustomClassNames(className, "clear");
 
     return (
       <ThemeContext.Consumer>
@@ -80,14 +92,19 @@ export default class Search extends Component {
             resolvedRoles
           );
           return (
-            <div className={css(styles.search)}>
-              <div className={css(styles.icon)}>
+            <div className={cx([css(styles.search), className])}>
+              <div className={cx([css(styles.icon), iconClassName])}>
                 <Search24 />
               </div>
 
-              <div className={css(styles.inputWrapper)}>
+              <div
+                className={cx([
+                  css(styles.inputWrapper),
+                  inputWrapperClassName
+                ])}
+              >
                 <input
-                  className={css(styles.input)}
+                  className={cx([css(styles.input), inputClassName])}
                   type="text"
                   onBlur={onBlur}
                   onFocus={onFocus}
@@ -100,7 +117,7 @@ export default class Search extends Component {
               {this.state.value &&
                 this.state.value.length > 0 && (
                   <div
-                    className={css(styles.clear)}
+                    className={cx([css(styles.clear), clearClassName])}
                     onClick={handleClick}
                     onKeyDown={handleKeyDown}
                     role="button"

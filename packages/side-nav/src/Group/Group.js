@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
 export default class Group extends Component {
@@ -18,8 +19,11 @@ export default class Group extends Component {
     const {
       intro,
       children,
-      stylesheet: customStylesheet
+      stylesheet: customStylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
+    const introClassName = createCustomClassNames(className, "intro");
 
     return (
       <ThemeContext.Consumer>
@@ -27,13 +31,17 @@ export default class Group extends Component {
           const styles = stylesheet(
             {
               stylesheet: customStylesheet,
-              ...this.props
+              ...otherProps
             },
             resolvedRoles
           );
           return (
-            <section className={css(styles.group)}>
-              {intro && <div className={css(styles.intro)}>{intro}</div>}
+            <section className={cx([css(styles.group), className])}>
+              {intro && (
+                <div className={cx([css(styles.intro), introClassName])}>
+                  {intro}
+                </div>
+              )}
               {children}
             </section>
           );

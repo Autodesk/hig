@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
-import { memoizeCreateButtonEventHandlers } from "@hig/utils";
+import {
+  createCustomClassNames,
+  memoizeCreateButtonEventHandlers
+} from "@hig/utils";
 import stylesheet from "./stylesheet";
 
 export default class ModuleCompact extends Component {
@@ -33,11 +36,16 @@ export default class ModuleCompact extends Component {
       onClickTitle,
       onFocus,
       onMouseOver,
-      stylesheet: customStylesheet
+      stylesheet: customStylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
     const { handleClick, handleKeyDown } = this.createEventHandlers(
       onClickTitle
     );
+    const rowClassName = createCustomClassNames(className, "row");
+    const linkClassName = createCustomClassNames(className, "link");
+    const iconClassName = createCustomClassNames(className, "icon");
 
     return (
       <ThemeContext.Consumer>
@@ -49,19 +57,21 @@ export default class ModuleCompact extends Component {
 
           return (
             <div
-              className={css(styles.module)}
+              className={cx([css(styles.module), className])}
               onFocus={onFocus}
               onMouseOver={onMouseOver}
             >
-              <div className={css(styles.row)}>
+              <div className={cx([css(styles.row), rowClassName])}>
                 <div
-                  className={css(styles.link)}
+                  className={cx([css(styles.link), linkClassName])}
                   onClick={handleClick}
                   onKeyDown={handleKeyDown}
                   role="button"
                   tabIndex={0}
                 >
-                  <div className={css(styles.icon)}>{icon}</div>
+                  <div className={cx([css(styles.icon), iconClassName])}>
+                    {icon}
+                  </div>
                 </div>
               </div>
             </div>

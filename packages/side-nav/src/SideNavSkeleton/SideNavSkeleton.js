@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import SkeletonItem from "@hig/skeleton-item";
 import stylesheet from "./stylesheet";
 
@@ -49,13 +49,15 @@ export default class SideNavSkeleton extends Component {
   };
 
   render() {
-    const { stylesheet: customStylesheet } = this.props;
+    const { stylesheet: customStylesheet, ...otherProps } = this.props;
+    const { className } = otherProps;
 
     return (
       <div
-        className={css(
-          stylesheet({ stylesheet: customStylesheet, ...this.props })
-        )}
+        className={cx([
+          css(stylesheet({ stylesheet: customStylesheet, ...this.props })),
+          className
+        ])}
       >
         {skeletonItemStyles.map((style, index) => (
           // eslint-disable-next-line react/no-array-index-key

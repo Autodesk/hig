@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { sizes as iconSizes } from "@hig/icons";
 import ThemeContext from "@hig/theme-context";
-import { memoizeCreateButtonEventHandlers } from "@hig/utils";
+import {
+  createCustomClassNames,
+  memoizeCreateButtonEventHandlers
+} from "@hig/utils";
 
 import { AVAILABLE_TARGETS, targets } from "../targets";
 import ExternalLinkIcon from "../presenters/ExternalLinkIcon";
@@ -40,8 +43,10 @@ export default class Submodule extends Component {
       onMouseOver,
       stylesheet: customStylesheet,
       target,
-      title
+      title,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
     const { handleClick, handleKeyDown } = this.createEventHandlers(onClick, {
       // Allow default on hyperlinks to trigger navigation
       preventDefault: !link
@@ -50,17 +55,24 @@ export default class Submodule extends Component {
     const isExternalLink = link && target === targets.BLANK;
     const role = link ? undefined : "button";
     const wrapperTarget = link ? target : undefined;
+    const externalIconClassName = createCustomClassNames(
+      className,
+      "external_icon"
+    );
 
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => (
           <Wrapper
-            className={css(
-              stylesheet(
-                { stylesheet: customStylesheet, ...this.props },
-                resolvedRoles
-              ).wrapper
-            )}
+            className={cx([
+              css(
+                stylesheet(
+                  { stylesheet: customStylesheet, ...this.props },
+                  resolvedRoles
+                ).wrapper
+              ),
+              className
+            ])}
             href={link}
             onClick={handleClick}
             onFocus={onFocus}
@@ -73,9 +85,10 @@ export default class Submodule extends Component {
             {title}
             {isExternalLink ? (
               <div
-                className={css(
-                  stylesheet(this.props, resolvedRoles).externalIcon
-                )}
+                className={cx([
+                  css(stylesheet(this.props, resolvedRoles).externalIcon),
+                  externalIconClassName
+                ])}
               >
                 <ExternalLinkIcon
                   size={

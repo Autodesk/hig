@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
 import stylesheet from "./stylesheet";
 
@@ -26,23 +26,28 @@ export default class Docked extends Component {
       children,
       onMouseLeave,
       onMouseEnter,
-      stylesheet: customStylesheet
+      stylesheet: customStylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => (
           <div
             id="surface"
-            className={css(
-              stylesheet(
-                {
-                  stylesheet: customStylesheet,
-                  ...this.props
-                },
-                resolvedRoles
-              ).docked
-            )}
+            className={cx([
+              css(
+                stylesheet(
+                  {
+                    stylesheet: customStylesheet,
+                    ...this.props
+                  },
+                  resolvedRoles
+                ).docked
+              ),
+              className
+            ])}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >

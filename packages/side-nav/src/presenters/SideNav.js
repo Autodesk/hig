@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 import { Back24, Back16 } from "@hig/icons";
 import Typography from "@hig/typography";
 import TextLink from "@hig/text-link";
 import IconButton from "@hig/icon-button";
+import { createCustomClassNames } from "@hig/utils";
 
 import stylesheet from "./stylesheet";
 
@@ -46,20 +47,29 @@ export default class SideNav extends Component {
     showMinimizeButton: false
   };
 
-  _renderHeader = (link, label, styles, onClick) => {
+  _renderHeader = (link, label, styles, onClick, className) => {
     if (!label) {
       return null;
     }
 
     if (link || onClick) {
       return (
-        <TextLink link={link} style={styles} onClick={onClick}>
+        <TextLink
+          link={link}
+          style={styles}
+          onClick={onClick}
+          className={className}
+        >
           {label}
         </TextLink>
       );
     }
 
-    return <Typography style={styles}>{label}</Typography>;
+    return (
+      <Typography style={styles} className={className}>
+        {label}
+      </Typography>
+    );
   };
 
   _renderHeaders = resolvedRoles => {
@@ -70,8 +80,10 @@ export default class SideNav extends Component {
       stylesheet: customStylesheet,
       superHeaderLabel,
       superHeaderLink,
-      onClickSuperHeader
+      onClickSuperHeader,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     if (!(superHeaderLabel || headerLabel)) {
       return null;
@@ -90,7 +102,8 @@ export default class SideNav extends Component {
             },
             resolvedRoles
           ).headers.super,
-          onClickSuperHeader
+          onClickSuperHeader,
+          createCustomClassNames(className, "headers__super")
         )}
         {this._renderHeader(
           headerLink,
@@ -99,7 +112,8 @@ export default class SideNav extends Component {
             { isLink: headerLink, stylesheet: customStylesheet, ...this.props },
             resolvedRoles
           ).headers.normal,
-          onClickHeader
+          onClickHeader,
+          createCustomClassNames(className, "headers__normal")
         )}
       </div>
     );
@@ -114,30 +128,48 @@ export default class SideNav extends Component {
       onMinimize,
       search,
       showMinimizeButton,
-      stylesheet: customStylesheet
+      stylesheet: customStylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
+    const overflowClassName = createCustomClassNames(className, "overflow");
+    const slotClassName = createCustomClassNames(className, "slot");
+    const linksClassName = createCustomClassNames(className, "links");
+    const copyrightClassName = createCustomClassNames(className, "copyright");
 
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
           const styles = stylesheet(
-            { stylesheet: customStylesheet, ...this.props },
+            { stylesheet: customStylesheet, ...otherProps },
             resolvedRoles
           );
 
           return (
-            <nav className={css(styles.sideNav)}>
-              <div className={css(styles.overflow)}>
+            <nav className={cx([css(styles.sideNav), className])}>
+              <div className={cx([css(styles.overflow), overflowClassName])}>
                 {this._renderHeaders(resolvedRoles)}
 
                 {groups && <div>{groups}</div>}
 
-                {children && <div className={css(styles.slot)}>{children}</div>}
+                {children && (
+                  <div className={cx([css(styles.slot), slotClassName])}>
+                    {children}
+                  </div>
+                )}
 
-                {links && <div className={css(styles.links)}>{links}</div>}
+                {links && (
+                  <div className={cx([css(styles.links), linksClassName])}>
+                    {links}
+                  </div>
+                )}
 
                 {copyright && (
-                  <div className={css(styles.copyright)}>{copyright}</div>
+                  <div
+                    className={cx([css(styles.copyright), copyrightClassName])}
+                  >
+                    {copyright}
+                  </div>
                 )}
               </div>
 
