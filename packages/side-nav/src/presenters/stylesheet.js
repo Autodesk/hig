@@ -22,7 +22,9 @@ function _header(props, themeData, styles) {
 }
 
 export default function stylesheet(props, themeData) {
-  return {
+  const { stylesheet: customStylesheet } = props;
+
+  const styles = {
     sideNav: {
       display: "flex",
       flexFlow: "column",
@@ -87,4 +89,10 @@ export default function stylesheet(props, themeData) {
       }
     }
   };
+
+  if (customStylesheet) {
+    return customStylesheet(styles, props, themeData);
+  }
+
+  return styles;
 }

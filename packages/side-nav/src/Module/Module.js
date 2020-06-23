@@ -26,6 +26,8 @@ export default class Module extends Component {
     onFocus: PropTypes.func,
     /** Called when hovering over the title */
     onMouseOver: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func,
     /** A label for rendering this Module */
     title: PropTypes.string.isRequired,
     /** Anchor target. Applicable only if link is provided */

@@ -1,7 +1,8 @@
 import { constants, reset } from "../constants";
 
 export default function stylesheet(props, themeData) {
-  return {
+  const { stylesheet: customStylesheet } = props;
+  const styles = {
     belowTop: reset({
       position: "absolute",
       top: "56px",
@@ -38,4 +39,10 @@ export default function stylesheet(props, themeData) {
       overflowX: "hidden"
     })
   };
+
+  if (customStylesheet) {
+    return customStylesheet(styles, props, themeData);
+  }
+
+  return styles;
 }

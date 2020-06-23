@@ -11,11 +11,18 @@ export default class BelowTopNav extends Component {
     /** Called when beginning to hover over the container */
     onMouseEnter: PropTypes.func,
     /** Called when no longer hovering over the container */
-    onMouseLeave: PropTypes.func
+    onMouseLeave: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   render() {
-    const { children, onMouseLeave, onMouseEnter } = this.props;
+    const {
+      children,
+      onMouseLeave,
+      onMouseEnter,
+      stylesheet: customStylesheet
+    } = this.props;
 
     return (
       <ThemeContext.Consumer>
@@ -23,7 +30,12 @@ export default class BelowTopNav extends Component {
           <Surface
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            style={stylesheet(this.props, resolvedRoles).belowTop}
+            style={
+              stylesheet(
+                { stylesheet: customStylesheet, ...this.props },
+                resolvedRoles
+              ).belowTop
+            }
           >
             {children}
           </Surface>
