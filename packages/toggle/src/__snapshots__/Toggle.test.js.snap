@@ -51,12 +51,12 @@ exports[`toggle/Toggle integration renders correctly 1`] = `
 
 <label
   className="emotion-2"
-  htmlFor="toggleInput-1"
+  htmlFor="toggleInput-66494"
 >
   <input
     checked={false}
     className="emotion-0"
-    id="toggleInput-1"
+    id="toggleInput-66494"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -124,12 +124,12 @@ exports[`toggle/Toggle integration renders correctly with a custom className 1`]
 
 <label
   className="emotion-2 custom-class"
-  htmlFor="toggleInput-1"
+  htmlFor="toggleInput-39531"
 >
   <input
     checked={false}
     className="emotion-0 custom-class__input"
-    id="toggleInput-1"
+    id="toggleInput-39531"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -197,12 +197,12 @@ exports[`toggle/Toggle integration renders correctly with a stylesheet function 
 
 <label
   className="emotion-2"
-  htmlFor="toggleInput-1"
+  htmlFor="toggleInput-63549"
 >
   <input
     checked={false}
     className="emotion-0"
-    id="toggleInput-1"
+    id="toggleInput-63549"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
