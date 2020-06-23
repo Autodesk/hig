@@ -14,6 +14,7 @@ import label from "./components/label";
 import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
 import segmentedButton from "./components/segmentedButton";
+import sideNav from "./components/sideNav";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
 import stepIndicator from "./components/stepIndicator";
@@ -43,6 +44,7 @@ const darkBlueThemeConfig = extendTheme(
     progressBar,
     progressRing,
     segmentedButton,
+    sideNav,
     skeletonItem,
     slider,
     stepIndicator,

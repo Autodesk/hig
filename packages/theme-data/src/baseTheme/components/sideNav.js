@@ -186,13 +186,13 @@ export default {
   "sideNav.icon.defaultColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.icon.default"
+      ref: "basics.colors.text.againstLight"
     }
   },
   "sideNav.icon.activeColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.icon.on.default"
+      ref: "basics.colors.primary.autodeskBlue.500"
     }
   },
   "sideNav.activeIndicator.backgroundColor": {

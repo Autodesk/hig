@@ -250,7 +250,10 @@ export default {
   "button.outline.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "button.outline.borderColor"
+      ref: "basics.colors.primary.charcoal.600"
+    },
+    transform: {
+      alpha: 0.85
     }
   },
   /**

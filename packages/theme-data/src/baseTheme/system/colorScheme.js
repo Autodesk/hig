@@ -119,7 +119,7 @@ export default {
   },
   "status.error": {
     value: {
-      ref: "basics.colors.secondary.red.500"
+      ref: "basics.colors.secondary.red.600"
     },
     type: COLOR
   },
