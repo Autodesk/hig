@@ -51,12 +51,12 @@ exports[`toggle/presenters/TogglePresenter renders with all props 1`] = `
 
 <label
   className="emotion-2"
-  htmlFor="toggleInput-73156"
+  htmlFor="toggleInput-1"
 >
   <input
     className="emotion-0"
     defaultOn={true}
-    id="toggleInput-73156"
+    id="toggleInput-1"
     on={true}
     type="checkbox"
   />
@@ -117,11 +117,11 @@ exports[`toggle/presenters/TogglePresenter renders without props 1`] = `
 
 <label
   className="emotion-2"
-  htmlFor="toggleInput-84259"
+  htmlFor="toggleInput-1"
 >
   <input
     className="emotion-0"
-    id="toggleInput-84259"
+    id="toggleInput-1"
     type="checkbox"
   />
   <span

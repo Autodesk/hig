@@ -49,7 +49,7 @@ exports[`top-nav/presenters/ProfileButtonPresenter  2`] = `
 }
 
 .emotion-1 {
-  background-color: #507b16;
+  background-color: #5d822c;
   color: #ffffff;
   width: 32px;
   height: 32px;

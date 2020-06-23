@@ -95,7 +95,7 @@ exports[`InputHaloPresenter renders when error 1`] = `
   border-style: solid;
   border-color: transparent;
   border-width: 1px;
-  border-bottom-color: #dd2222;
+  border-bottom-color: #ec4a41;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }

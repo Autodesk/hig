@@ -230,7 +230,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
   min-height: 50px;
   border-width: 1px 0;
   border-style: solid;
-  border-color: #f9b4b4;
+  border-color: #f1a7a7;
   background-color: #ffefec;
 }
 
@@ -257,7 +257,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
   width: 50px;
   min-height: 50px;
   margin: 0;
-  background-color: #dd2222;
+  background-color: #ec4a41;
 }
 
 .emotion-1 svg * {
