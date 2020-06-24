@@ -1,3 +1,11 @@
+# [@hig/side-nav-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.1.4...@hig/side-nav@2.2.0) (2020-06-24)
+
+
+### Features
+
+* add stylesheet prop ([c5a610d](https://github.com/Autodesk/hig/commit/c5a610d))
+* allow className to be passed down ([2364106](https://github.com/Autodesk/hig/commit/2364106))
+
 # [@hig/side-nav-v2.1.4](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.1.3...@hig/side-nav@2.1.4) (2020-05-13)
 
 
