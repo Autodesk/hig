@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 
 import CollapseButton from "../../CollapseButton";
 import TitlePresenter from "./TitlePresenter";
@@ -30,6 +31,8 @@ export default class Module extends Component {
     onFocus: PropTypes.func,
     /** Called when hovering over the title */
     onMouseOver: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func,
     /** A label for rendering this Module */
     title: PropTypes.string.isRequired,
     /** Anchor target. Applicable only if link is provided */
@@ -53,9 +56,12 @@ export default class Module extends Component {
       onClickTitle,
       onFocus,
       onMouseOver,
+      stylesheet: customStylesheet,
       target,
-      title
+      title,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     const isCollapsible = !!children;
     /**
@@ -63,22 +69,32 @@ export default class Module extends Component {
      * the keyboard sequence if the collapse button is rendered.
      */
     const titleTabIndex = isCollapsible ? "-1" : "0";
+    const rowClassName = createCustomClassNames(className, "row");
+    const submoduleClassName = createCustomClassNames(className, "submodule");
+    const titlePresenterClassName = createCustomClassNames(
+      className,
+      "row_title"
+    );
 
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
-          const styles = stylesheet(this.props, resolvedRoles);
+          const styles = stylesheet(
+            { stylesheet: customStylesheet, ...this.props },
+            resolvedRoles
+          );
 
           return (
             <div
-              className={css(styles.module)}
+              className={cx([css(styles.module), className])}
               onFocus={onFocus}
               onMouseOver={onMouseOver}
             >
-              <div className={css(styles.row)}>
+              <div className={cx([css(styles.row), rowClassName])}>
                 <TitlePresenter
                   active={active}
                   activeChildren={activeChildren}
+                  className={titlePresenterClassName}
                   icon={icon}
                   link={link}
                   onClick={onClickTitle}
@@ -94,7 +110,11 @@ export default class Module extends Component {
                 )}
               </div>
               {!minimized && (
-                <div className={css(styles.submodule)}>{children}</div>
+                <div
+                  className={cx([css(styles.submodule), submoduleClassName])}
+                >
+                  {children}
+                </div>
               )}
             </div>
           );

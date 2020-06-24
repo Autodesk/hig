@@ -1,5 +1,6 @@
 export default function stylesheet(props, themeData) {
-  return {
+  const { stylesheet: customStylesheet } = props;
+  const styles = {
     wrapper: {
       fontFamily: themeData[`typography.body.fontFamily`],
       fontSize: themeData[`typography.body.fontSize`],
@@ -44,4 +45,10 @@ export default function stylesheet(props, themeData) {
       }
     }
   };
+
+  if (customStylesheet) {
+    return customStylesheet(styles, props, themeData);
+  }
+
+  return styles;
 }

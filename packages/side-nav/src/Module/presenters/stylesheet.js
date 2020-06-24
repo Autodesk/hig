@@ -1,4 +1,5 @@
 export default function stylesheet(props, themeData) {
+  const { stylesheet: customStylesheet } = props;
   const activeBorderLeft = `2px solid ${
     themeData["colorScheme.reference.accent"]
   }`;
@@ -16,8 +17,7 @@ export default function stylesheet(props, themeData) {
         }
       : { borderLeft: "2px solid transparent" })
   });
-
-  return {
+  const styles = {
     wrapper: {
       display: "flex",
       alignItems: "stretch",
@@ -123,4 +123,10 @@ export default function stylesheet(props, themeData) {
       "&:hover:before, &:focus:before": activeBorderBefore(true)
     }
   };
+
+  if (customStylesheet) {
+    return customStylesheet(styles, props, themeData);
+  }
+
+  return styles;
 }

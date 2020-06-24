@@ -1,7 +1,8 @@
 import { reset } from "../constants";
 
 export default function stylesheet(props, themeData) {
-  return {
+  const { stylesheet: customStylesheet } = props;
+  const styles = {
     search: {
       display: "flex",
       alignItems: "center",
@@ -47,4 +48,10 @@ export default function stylesheet(props, themeData) {
       cursor: "pointer"
     }
   };
+
+  if (customStylesheet) {
+    return customStylesheet(styles, props, themeData);
+  }
+
+  return styles;
 }

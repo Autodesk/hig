@@ -4,7 +4,8 @@ describe("stylesheet", () => {
   const themeData = {
     "colorScheme.lowShadowColor": "grey"
   };
-  const subject = props => stylesheet(props, themeData);
+  const props = {};
+  const subject = () => stylesheet(props, themeData);
 
   it("renders correctly", () => {
     expect(subject(null)).toHaveProperty("docked");

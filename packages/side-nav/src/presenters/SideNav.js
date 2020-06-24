@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 import { Back24, Back16 } from "@hig/icons";
 import Typography from "@hig/typography";
 import TextLink from "@hig/text-link";
 import IconButton from "@hig/icon-button";
+import { createCustomClassNames } from "@hig/utils";
 
 import stylesheet from "./stylesheet";
 
@@ -31,6 +32,8 @@ export default class SideNav extends Component {
     search: PropTypes.node,
     /** Renders a button to minimize the SideNav */
     showMinimizeButton: PropTypes.bool,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func,
     /** Title at the top of the SideNav */
     superHeaderLabel: PropTypes.string,
     /** An href for the SideNav Title */
@@ -44,20 +47,29 @@ export default class SideNav extends Component {
     showMinimizeButton: false
   };
 
-  _renderHeader = (link, label, styles, onClick) => {
+  _renderHeader = (link, label, styles, onClick, className) => {
     if (!label) {
       return null;
     }
 
     if (link || onClick) {
       return (
-        <TextLink link={link} style={styles} onClick={onClick}>
+        <TextLink
+          link={link}
+          style={styles}
+          onClick={onClick}
+          className={className}
+        >
           {label}
         </TextLink>
       );
     }
 
-    return <Typography style={styles}>{label}</Typography>;
+    return (
+      <Typography style={styles} className={className}>
+        {label}
+      </Typography>
+    );
   };
 
   _renderHeaders = resolvedRoles => {
@@ -65,10 +77,13 @@ export default class SideNav extends Component {
       headerLabel,
       headerLink,
       onClickHeader,
+      stylesheet: customStylesheet,
       superHeaderLabel,
       superHeaderLink,
-      onClickSuperHeader
+      onClickSuperHeader,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     if (!(superHeaderLabel || headerLabel)) {
       return null;
@@ -79,16 +94,26 @@ export default class SideNav extends Component {
         {this._renderHeader(
           superHeaderLink,
           superHeaderLabel,
-          stylesheet({ isLink: superHeaderLink, ...this.props }, resolvedRoles)
-            .headers.super,
-          onClickSuperHeader
+          stylesheet(
+            {
+              isLink: superHeaderLink,
+              stylesheet: customStylesheet,
+              ...this.props
+            },
+            resolvedRoles
+          ).headers.super,
+          onClickSuperHeader,
+          createCustomClassNames(className, "headers__super")
         )}
         {this._renderHeader(
           headerLink,
           headerLabel,
-          stylesheet({ isLink: headerLink, ...this.props }, resolvedRoles)
-            .headers.normal,
-          onClickHeader
+          stylesheet(
+            { isLink: headerLink, stylesheet: customStylesheet, ...this.props },
+            resolvedRoles
+          ).headers.normal,
+          onClickHeader,
+          createCustomClassNames(className, "headers__normal")
         )}
       </div>
     );
@@ -102,27 +127,49 @@ export default class SideNav extends Component {
       links,
       onMinimize,
       search,
-      showMinimizeButton
+      showMinimizeButton,
+      stylesheet: customStylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
+    const overflowClassName = createCustomClassNames(className, "overflow");
+    const slotClassName = createCustomClassNames(className, "slot");
+    const linksClassName = createCustomClassNames(className, "links");
+    const copyrightClassName = createCustomClassNames(className, "copyright");
 
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
-          const styles = stylesheet(this.props, resolvedRoles);
+          const styles = stylesheet(
+            { stylesheet: customStylesheet, ...otherProps },
+            resolvedRoles
+          );
 
           return (
-            <nav className={css(styles.sideNav)}>
-              <div className={css(styles.overflow)}>
+            <nav className={cx([css(styles.sideNav), className])}>
+              <div className={cx([css(styles.overflow), overflowClassName])}>
                 {this._renderHeaders(resolvedRoles)}
 
                 {groups && <div>{groups}</div>}
 
-                {children && <div className={css(styles.slot)}>{children}</div>}
+                {children && (
+                  <div className={cx([css(styles.slot), slotClassName])}>
+                    {children}
+                  </div>
+                )}
 
-                {links && <div className={css(styles.links)}>{links}</div>}
+                {links && (
+                  <div className={cx([css(styles.links), linksClassName])}>
+                    {links}
+                  </div>
+                )}
 
                 {copyright && (
-                  <div className={css(styles.copyright)}>{copyright}</div>
+                  <div
+                    className={cx([css(styles.copyright), copyrightClassName])}
+                  >
+                    {copyright}
+                  </div>
                 )}
               </div>
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { CaretDownMUI, CaretDownSUI } from "@hig/icons";
 import ThemeContext from "@hig/theme-context";
 import { memoizeCreateButtonEventHandlers } from "@hig/utils";
@@ -16,7 +16,9 @@ export default class CollapseButton extends Component {
     /** Presents the icon in a minimized state: caret pointing right */
     minimized: PropTypes.bool,
     /** Called when element is clicked */
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -26,7 +28,13 @@ export default class CollapseButton extends Component {
   createEventHandlers = memoizeCreateButtonEventHandlers();
 
   render() {
-    const { minimized, onClick } = this.props;
+    const {
+      minimized,
+      onClick,
+      stylesheet: customStylesheet,
+      ...otherProps
+    } = this.props;
+    const { className } = otherProps;
     const { handleClick, handleKeyDown } = this.createEventHandlers(onClick);
 
     return (
@@ -34,9 +42,15 @@ export default class CollapseButton extends Component {
         {({ resolvedRoles, metadata }) => (
           <div
             aria-pressed={!minimized}
-            className={css(
-              stylesheet({ minimized, ...this.props }, resolvedRoles)
-            )}
+            className={cx([
+              css(
+                stylesheet(
+                  { minimized, stylesheet: customStylesheet, ...this.props },
+                  resolvedRoles
+                )
+              ),
+              className
+            ])}
             onClick={handleClick}
             onKeyDown={handleKeyDown}
             role="button"

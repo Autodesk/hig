@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import { sizes as iconSizes } from "@hig/icons";
 import ThemeContext from "@hig/theme-context";
 import Typography from "@hig/typography";
-import { css } from "emotion";
+import { createCustomClassNames } from "@hig/utils";
+import { css, cx } from "emotion";
 
 import { AVAILABLE_TARGETS } from "../targets";
 import ExternalLinkIcon from "../presenters/ExternalLinkIcon";
@@ -20,6 +21,8 @@ export default class Link extends Component {
     onFocus: PropTypes.func,
     /** Called when hovering over the link */
     onMouseOver: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func,
     /** Corresponds to the anchor tag's target */
     target: PropTypes.oneOf(AVAILABLE_TARGETS),
     /** Link text */
@@ -39,27 +42,48 @@ export default class Link extends Component {
     );
 
   render() {
-    const { title, link, onClick, onFocus, onMouseOver, target } = this.props;
+    const {
+      link,
+      title,
+      onClick,
+      onFocus,
+      onMouseOver,
+      stylesheet: customStylesheet,
+      target,
+      ...otherProps
+    } = this.props;
+    const { className } = otherProps;
+    const typographyClassName = createCustomClassNames(className, "typography");
     const Wrapper = link ? "a" : "div";
 
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
-          const styles = stylesheet(this.props, resolvedRoles);
+          const styles = stylesheet(
+            {
+              stylesheet: customStylesheet,
+              ...this.props
+            },
+            resolvedRoles
+          );
           const size =
             metadata.densityId === "medium-density"
               ? iconSizes.PX_24
               : iconSizes.PX_16;
           return (
             <Wrapper
-              className={css(styles.wrapper)}
+              className={cx([css(styles.wrapper), className])}
               href={link}
               target={target}
               onClick={onClick}
               onFocus={onFocus}
               onMouseOver={onMouseOver}
             >
-              <Typography elementType="span" style={styles.typography}>
+              <Typography
+                elementType="span"
+                style={styles.typography}
+                className={typographyClassName}
+              >
                 {title}
               </Typography>
               {this._renderExternalLinkIcon(styles, size)}
