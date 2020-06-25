@@ -53,5 +53,13 @@ export default {
     value: {
       ref: "basics.colors.primary.autodeskBlue.500"
     }
+  },
+  "button.outline.pressed.borderColor": {
+    value: {
+      ref: "basics.colors.secondary.darkBlue.200"
+    },
+    transform: {
+      alpha: 0.75
+    }
   }
 };
