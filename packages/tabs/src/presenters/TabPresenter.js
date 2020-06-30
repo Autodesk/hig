@@ -4,7 +4,7 @@ import Typography from "@hig/typography";
 import ThemeContext from "@hig/theme-context";
 import { createCustomClassNames } from "@hig/utils";
 import { cx, css } from "emotion";
-import stylesheet from "./TabPresenter.stylesheet";
+import stylesheet from "./Tab.stylesheet";
 import TabCloseButtonPresenter from "./TabCloseButtonPresenter";
 import {
   variants,
@@ -32,6 +32,7 @@ export default function TabPresenter({
   onMouseEnter,
   onMouseLeave,
   onClose,
+  stylesheet: customStylesheet,
   ...otherProps
 }) {
   return (
@@ -48,7 +49,8 @@ export default function TabPresenter({
             variant,
             orientation,
             disabled,
-            closable
+            closable,
+            stylesheet: customStylesheet
           },
           resolvedRoles,
           metadata
@@ -120,6 +122,7 @@ export default function TabPresenter({
                       closeButtonClassName
                     )}
                     onClick={onClose}
+                    stylesheet={customStylesheet}
                   />
                 )}
               </div>
@@ -155,7 +158,8 @@ TabPresenter.propTypes = {
   onKeyDown: PropTypes.func,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
+  stylesheet: PropTypes.func
 };
 
 TabPresenter.defaultProps = {
