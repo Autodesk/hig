@@ -14,23 +14,27 @@ export default class Tab extends Component {
      */
     active: PropTypes.bool,
     /**
-     * Sets the label of a tab
+     * Specify if the tab will have a close button
+     * Only works when varient prop of parent Tabs is set to "box" or "canvas"
      */
-    label: PropTypes.string,
+    closable: PropTypes.bool,
+    /**
+     * Specify if the tab is disabled
+     */
+    disabled: PropTypes.bool,
     /**
      * A @hig/icon element
      * Icon will only be displayed when varient prop of parent Tabs is set to "box" or "canvas"
      */
     icon: PropTypes.node,
     /**
-     * Specify if the tab is disabled
+     * Sets the label of a tab
      */
-    disabled: PropTypes.bool,
+    label: PropTypes.string,
     /**
-     * Specify if the tab will have a close button
-     * Only works when varient prop of parent Tabs is set to "box" or "canvas"
+     * Function to modify the component's styles
      */
-    closable: PropTypes.bool
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -42,10 +46,11 @@ export default class Tab extends Component {
   render() {
     const {
       active,
-      label,
-      icon,
-      disabled,
       closable,
+      disabled,
+      icon,
+      label,
+      stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
 
@@ -98,6 +103,7 @@ export default class Tab extends Component {
             onKeyDown={handleKeyDown}
             onClose={onClose}
             className={className}
+            stylesheet={customStylesheet}
           />
         )}
       </ControlBehavior>

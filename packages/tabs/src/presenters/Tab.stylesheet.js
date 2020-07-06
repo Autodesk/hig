@@ -13,7 +13,7 @@ function getHaloStyles(
     transitionProperty: "height, width"
   };
 
-  if (variant === variants.UNDERLINE) {
+  if (variant && variant === variants.UNDERLINE) {
     styles = {
       ...styles,
       bottom: 0,
@@ -42,14 +42,14 @@ function getHaloStyles(
         })
       };
     }
-  } else if (variant === variants.BOX) {
+  } else if (variant && variant === variants.BOX) {
     styles = {
       ...styles,
       top: 0,
       backgroundColor: themeData["tabs.focus.haloColor"]
     };
 
-    if (orientation === orientations.VERTICAL) {
+    if (orientation && orientation === orientations.VERTICAL) {
       styles.height = "100%";
       if (!disabled && hasFocus) {
         styles.width = themeData["tabs.focus.haloWidth"];
@@ -69,7 +69,7 @@ function getTabBackground(
   { active, hasHover, isPressed, variant, disabled },
   themeData
 ) {
-  if (!disabled && variant !== variants.UNDERLINE) {
+  if (!disabled && variant && variant !== variants.UNDERLINE) {
     if (active || isPressed) {
       return themeData[`tabs.${variant}.tab.active.backgroundColor`];
     }
@@ -92,34 +92,45 @@ function getContentWrapperWidth({ label, icon, closable }, themeData) {
   return "0";
 }
 
+function getIconColor({ hasHover, isPressed }, themeData) {
+  if (isPressed) return themeData["tabs.closeButton.pressed.iconColor"];
+  if (hasHover) return themeData["tabs.closeButton.hover.iconColor"];
+  return themeData["tabs.closeButton.default.iconColor"];
+}
+
 export default function stylesheet(props, themeData) {
   const {
     active,
+    hasHover,
+    isPressed,
     label,
     icon,
     variant,
     orientation,
     disabled,
-    closable
+    closable,
+    stylesheet: customStylesheet
   } = props;
 
-  return {
+  const styles = {
     tab: {
       position: "relative",
       display: "flex",
       margin: "0",
 
-      ...(variant === variants.UNDERLINE && {
-        marginRight: themeData["tabs.underline.tab.gutter"],
-        "&:last-of-type": {
-          marginRight: "0"
-        }
-      })
+      ...(variant &&
+        variant === variants.UNDERLINE && {
+          marginRight: themeData["tabs.underline.tab.gutter"],
+          "&:last-of-type": {
+            marginRight: "0"
+          }
+        })
     },
     buttonWrapper: {
       position: "relative",
       display: "flex",
-      width: orientation === orientations.VERTICAL ? "100%" : "auto",
+      width:
+        orientation && orientation === orientations.VERTICAL ? "100%" : "auto",
       userSelect: "none",
       cursor: disabled ? "default" : "pointer",
       border: "0",
@@ -131,34 +142,39 @@ export default function stylesheet(props, themeData) {
         outline: "none"
       },
 
-      ...(variant === variants.UNDERLINE && {
-        marginBottom: `-${
-          themeData["tabs.underline.wrapper.borderBottomWidth"]
-        }`,
-        padding: `0 0 ${themeData["tabs.underline.tab.paddingBottom"]} 0`
-      }),
+      ...(variant &&
+        variant === variants.UNDERLINE && {
+          marginBottom: `-${
+            themeData["tabs.underline.wrapper.borderBottomWidth"]
+          }`,
+          padding: `0 0 ${themeData["tabs.underline.tab.paddingBottom"]} 0`
+        }),
 
-      ...(variant === variants.BOX && {
-        padding: `${themeData["tabs.box.tab.paddingVertical"]} ${
-          themeData["tabs.box.tab.paddingHorizontal"]
-        }`
-      }),
+      ...(variant &&
+        variant === variants.BOX && {
+          padding: `${themeData["tabs.box.tab.paddingVertical"]} ${
+            themeData["tabs.box.tab.paddingHorizontal"]
+          }`
+        }),
 
-      ...(variant === variants.CANVAS && {
-        padding: `${themeData["tabs.canvas.tab.paddingVertical"]} ${
-          themeData["tabs.canvas.tab.paddingHorizontal"]
-        }`,
-        transform: "skewX(-23deg)",
-        transformOrigin: "0 100%"
-      })
+      ...(variant &&
+        variant === variants.CANVAS && {
+          padding: `${themeData["tabs.canvas.tab.paddingVertical"]} ${
+            themeData["tabs.canvas.tab.paddingHorizontal"]
+          }`,
+          transform: "skewX(-23deg)",
+          transformOrigin: "0 100%"
+        })
     },
     contentWrapper: {
       position: "relative",
       flexGrow: "1",
-      transform: variant === variants.CANVAS ? "skewX(23deg)" : "none",
+      transform:
+        variant && variant === variants.CANVAS ? "skewX(23deg)" : "none",
       opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "1",
       width: getContentWrapperWidth(props, themeData),
-      display: orientation === orientations.VERTICAL ? "block" : "flex"
+      display:
+        orientation && orientation === orientations.VERTICAL ? "block" : "flex"
     },
     label: {
       display: "inline-block",
@@ -172,14 +188,14 @@ export default function stylesheet(props, themeData) {
       lineHeight: themeData["tabs.label.active.lineHeight"],
       textAlign: "center",
       paddingLeft:
-        icon && variant !== variants.UNDERLINE
+        icon && variant && variant !== variants.UNDERLINE
           ? `calc(${themeData["tabs.iconSize"]} + ${
               themeData["tabs.iconGutter"]
             })`
           : "0",
 
       paddingRight:
-        closable && variant !== variants.UNDERLINE
+        closable && variant && variant !== variants.UNDERLINE
           ? `calc(${themeData["tabs.closeButton.minSize"]} + ${
               themeData["tabs.closeButton.gutter"]
             })`
@@ -203,15 +219,16 @@ export default function stylesheet(props, themeData) {
     },
     halo: getHaloStyles(props, themeData),
     divider: {
-      ...(variant !== variants.UNDERLINE && {
-        position: "absolute",
-        top: "50%",
-        right: "0",
-        transform: "translateY(-50%)",
-        height: themeData[`tabs.${variant}.dividerHeight`],
-        width: themeData[`tabs.${variant}.dividerWidth`],
-        backgroundColor: themeData[`tabs.${variant}.divider.borderColor`]
-      })
+      ...(variant &&
+        variant !== variants.UNDERLINE && {
+          position: "absolute",
+          top: "50%",
+          right: "0",
+          transform: "translateY(-50%)",
+          height: themeData[`tabs.${variant}.dividerHeight`],
+          width: themeData[`tabs.${variant}.dividerWidth`],
+          backgroundColor: themeData[`tabs.${variant}.divider.borderColor`]
+        })
     },
     icon: {
       display: "inline-block",
@@ -228,6 +245,33 @@ export default function stylesheet(props, themeData) {
       top: "50%",
       right: "0",
       transform: "translateY(-50%)"
+    },
+    button: {
+      boxShadow: "none",
+      backgroundColor: "transparent",
+      outline: "none",
+      border: "none",
+      padding: "0",
+      margin: "0",
+      width: themeData["tabs.closeButton.minSize"],
+      height: themeData["tabs.closeButton.minSize"],
+      cursor: "pointer",
+
+      "& svg *": {
+        fill: getIconColor({ hasHover, isPressed }, themeData),
+        transitionDuration: `0.3s`,
+        transitionProperty: `fill`
+      }
+    },
+    content: {
+      flexGrow: 1,
+      flexShrink: 1
     }
   };
+
+  if (customStylesheet) {
+    return customStylesheet(styles, props, themeData);
+  }
+
+  return styles;
 }
