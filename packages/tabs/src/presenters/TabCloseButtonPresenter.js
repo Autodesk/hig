@@ -4,7 +4,7 @@ import { CloseSUI, CloseXsUI } from "@hig/icons";
 import ThemeContext from "@hig/theme-context";
 import { ControlBehavior } from "@hig/behaviors";
 import { cx, css } from "emotion";
-import stylesheet from "./TabCloseButtonPresenter.stylesheet";
+import stylesheet from "./Tab.stylesheet";
 
 export default class TabCloseButtonPresenter extends React.Component {
   static propTypes = {
@@ -39,7 +39,11 @@ export default class TabCloseButtonPresenter extends React.Component {
     /**
      * Called when mouse is released over the button
      */
-    onMouseUp: PropTypes.func
+    onMouseUp: PropTypes.func,
+    /**
+     * Function to modify the component's styles
+     */
+    stylesheet: PropTypes.func
   };
 
   render() {
@@ -52,6 +56,7 @@ export default class TabCloseButtonPresenter extends React.Component {
       onMouseLeave,
       onMouseUp,
       onClick,
+      stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
 
@@ -84,7 +89,7 @@ export default class TabCloseButtonPresenter extends React.Component {
           <ThemeContext.Consumer>
             {({ resolvedRoles, metadata }) => {
               const styles = stylesheet(
-                { hasFocus, hasHover, isPressed },
+                { hasFocus, hasHover, isPressed, stylesheet: customStylesheet },
                 resolvedRoles,
                 metadata
               );

@@ -344,5 +344,15 @@ export default {
     transform: {
       alpha: 0.75
     }
+  },
+  "status.error": {
+    value: {
+      ref: "basics.colors.secondary.red.500"
+    }
+  },
+  "status.warning": {
+    value: {
+      ref: "basics.colors.secondary.yellowOrange.400"
+    }
   }
 };

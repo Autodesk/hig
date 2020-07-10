@@ -1,4 +1,4 @@
-import { alignments, variants, orientations } from "../constants";
+import { alignments, orientations, variants } from "../constants";
 
 function getBackgroundColor(variant, themeData) {
   if (variant === variants.BOX) {
@@ -10,14 +10,23 @@ function getBackgroundColor(variant, themeData) {
   return "transparent";
 }
 
-export default function stylesheet({ align, variant, orientation }, themeData) {
+export default function stylesheet(props, themeData) {
+  const { align, orientation, stylesheet: customStylesheet, variant } = props;
+
   const justifyContent = {
     [alignments.LEFT]: "flex-start",
     [alignments.CENTER]: "center",
     [alignments.RIGHT]: "flex-end"
   };
 
-  return {
+  const styles = {
+    wrapper: {
+      display: "flex",
+      flexWrap: "nowrap",
+      justifyContent: "flex-start",
+      alignItems: "stretch",
+      flexDirection: orientation === orientations.HORIZONTAL ? "column" : "row"
+    },
     tabsWrapper: {
       boxSizing: "border-box",
       flexGrow: 0,
@@ -41,4 +50,10 @@ export default function stylesheet({ align, variant, orientation }, themeData) {
       })
     }
   };
+
+  if (customStylesheet) {
+    return customStylesheet(styles, props, themeData);
+  }
+
+  return styles;
 }

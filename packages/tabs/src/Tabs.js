@@ -6,7 +6,7 @@ import memoize from "lodash.memoize";
 import { createButtonEventHandlers, createCustomClassNames } from "@hig/utils";
 
 import Tab from "./Tab";
-import stylesheet from "./Tabs.stylesheet";
+import stylesheet from "./presenters/Tabs.stylesheet";
 import TabsPresenter from "./presenters/TabsPresenter";
 import ContentPresenter from "./presenters/ContentPresenter";
 
@@ -88,14 +88,32 @@ function findInitialStateActiveTab(tabsProps) {
 class Tabs extends Component {
   static propTypes = {
     /**
-     * The visual variant of the tabs
+     * Control the active tab.
+     * Overrides the deprecated active property on the Tab component.
      */
-    variant: PropTypes.oneOf(AVAILABLE_VARIANTS),
+    activeTabIndex: PropTypes.number,
     /**
      * Specify how to justify the tabs within their container
      * When variant is set to "canvas", the effective alignment will always be "left"
      */
     align: PropTypes.oneOf(AVAILABLE_ALIGNMENTS),
+    /**
+     * Accepts Tab components
+     */
+    children: PropTypes.node,
+    /**
+     * Sets the initial active tab.
+     * Overrides the deprecated active property on the Tab component.
+     */
+    defaultActiveTabIndex: PropTypes.number,
+    /**
+     * Called when user activates a tab
+     */
+    onTabChange: PropTypes.func,
+    /**
+     * Called when user closes a tab
+     */
+    onTabClose: PropTypes.func,
     /**
      * The list orientation of the tabs
      * Vertical tabs only works when variant is set to "box"
@@ -107,27 +125,13 @@ class Tabs extends Component {
      */
     showTabDivider: PropTypes.bool,
     /**
-     * Accepts Tab components
+     * Function to modify the component's styles
      */
-    children: PropTypes.node,
+    stylesheet: PropTypes.func,
     /**
-     * Sets the initial active tab.
-     * Overrides the deprecated active property on the Tab component.
+     * The visual variant of the tabs
      */
-    defaultActiveTabIndex: PropTypes.number,
-    /**
-     * Control the active tab.
-     * Overrides the deprecated active property on the Tab component.
-     */
-    activeTabIndex: PropTypes.number,
-    /**
-     * Called when user activates a tab
-     */
-    onTabChange: PropTypes.func,
-    /**
-     * Called when user closes a tab
-     */
-    onTabClose: PropTypes.func
+    variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
   };
 
   static defaultProps = {
@@ -328,7 +332,7 @@ class Tabs extends Component {
    * @returns {JSX.Element}
    */
   renderTabs() {
-    const { variant, className } = this.props;
+    const { className, variant, stylesheet: customStylesheet } = this.props;
     const { effectiveAlign, effectiveOrientation } = this.state;
     return (
       <TabsPresenter
@@ -336,6 +340,7 @@ class Tabs extends Component {
         align={effectiveAlign}
         orientation={effectiveOrientation}
         className={className}
+        stylesheet={customStylesheet}
       >
         {this.getTabs().map(this.renderTab)}
       </TabsPresenter>
@@ -346,11 +351,11 @@ class Tabs extends Component {
    * @returns {JSX.Element}
    */
   renderContent() {
-    const { className } = this.props;
+    const { className, stylesheet: customStylesheet } = this.props;
     const activeTab = this.getActiveTab();
 
     return (
-      <ContentPresenter className={className}>
+      <ContentPresenter className={className} stylesheet={customStylesheet}>
         {activeTab ? activeTab.props.children : null}
       </ContentPresenter>
     );

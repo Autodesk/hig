@@ -1,6 +1,6 @@
-import stylesheet from "./TabPresenter.stylesheet";
+import stylesheet from "./Tab.stylesheet";
 
-describe("tabs/TabPresenter/stylesheet", () => {
+describe("tabs/Tab/stylesheet", () => {
   const styles = stylesheet({}, {});
 
   it("returns an object", () => {
@@ -37,5 +37,19 @@ describe("tabs/TabPresenter/stylesheet", () => {
 
   it("returned object contains property of closeButton", () => {
     expect(styles).toHaveProperty("closeButton", expect.any(Object));
+  });
+
+  it("returned object contains property of button", () => {
+    expect(styles).toHaveProperty("button", expect.any(Object));
+  });
+
+  it("returned object contains property of content", () => {
+    expect(styles).toHaveProperty("content", expect.any(Object));
+  });
+  it("returns the custom stylesheet", () => {
+    const props = {
+      stylesheet: () => ({ padding: 0 })
+    };
+    expect(stylesheet(props, {})).toEqual({ padding: 0 });
   });
 });
