@@ -143,13 +143,6 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
 
-"@hig/theme-data@^2.16.1":
-  version "2.16.1"
-  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.16.1.tgz#ae9c916d6ef2c3013aa5c67f5bf47521f91dff90"
-  integrity sha512-3nBnzRqYyc6ejoCgA+zBjQGqe6LAXlcemTs0257E5bWu/JyZe8YyOLN+psq2zyjF+FUk35p38wWNPyaOcPnhvw==
-  dependencies:
-    tinycolor2 "^1.4.1"
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
