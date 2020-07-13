@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { cx, css } from "emotion";
 
 import { types, AVAILABLE_TYPES } from "../types";
 
@@ -9,9 +10,11 @@ import {
   InteractionsWrapper,
   Message,
   Notification,
-  Wrapper
+  Wrapper,
+  IconBackground
 } from "./presenters";
-import IconBackground from "../presenters/IconBackground";
+
+import stylesheet from "./stylesheet"
 
 /**
  * @typedef {Object} BannerPresenterProps
@@ -24,6 +27,7 @@ import IconBackground from "../presenters/IconBackground";
  * @property {function(HTMLParagraphElement): any} [refNotification]
  * @property {function(HTMLDivElement): any} [refInteractionsWrapper]
  * @property {any} [children]
+ * @property {Function} [stylesheet]
  */
 
 /**
@@ -41,9 +45,10 @@ export default function BannerPresenter(props) {
     refContent,
     refNotification,
     refInteractionsWrapper,
-    children: message
+    children: message,
+    stylesheet: customStylesheet,
+    ...otherProps
   } = props;
-
   const hasActions = React.Children.count(actions) > 0;
 
   return (
@@ -51,20 +56,21 @@ export default function BannerPresenter(props) {
       type={type}
       hasActions={hasActions}
       isWrappingContent={isWrappingContent}
+      stylesheet={customStylesheet}
     >
-      <IconBackground type={type} />
-      <Content isWrappingContent innerRef={refContent}>
-        <Notification innerRef={refNotification}>
-          <Message>{message}</Message>
+      <IconBackground type={type} stylesheet={customStylesheet}/>
+      <Content isWrappingContent innerRef={refContent} stylesheet={customStylesheet}>
+        <Notification innerRef={refNotification} stylesheet={customStylesheet}>
+          <Message >{message}</Message>
         </Notification>
         {hasActions ? (
-          <InteractionsWrapper innerRef={refInteractionsWrapper}>
+          <InteractionsWrapper innerRef={refInteractionsWrapper} stylesheet={customStylesheet}>
             {actions}
           </InteractionsWrapper>
         ) : null}
       </Content>
       {onDismiss ? (
-        <DismissButton title={dismissButtonTitle} onClick={onDismiss} />
+        <DismissButton title={dismissButtonTitle} onClick={onDismiss} stylesheet={customStylesheet}/>
       ) : null}
     </Wrapper>
   );
@@ -96,5 +102,7 @@ BannerPresenter.propTypes = {
   /** References interactions wrapper element */
   refInteractionsWrapper: PropTypes.func,
   /** The displayed message */
-  children: PropTypes.node
+  children: PropTypes.node,
+  /** Adds custom/overriding style */
+  stylesheet: PropTypes.func
 };

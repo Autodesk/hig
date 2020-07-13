@@ -1,13 +1,24 @@
 /* eslint-disable react/prop-types */
 
 import React from "react";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 import IconButton from "@hig/icon-button";
 import { CloseSUI, CloseMUI } from "@hig/icons";
 import Typography from "@hig/typography";
 import { types } from "../types";
 import stylesheet from "./stylesheet";
+import { createCustomClassNames } from "@hig/utils";
+import {
+  Complete16,
+  Complete24,
+  Error16,
+  Error24,
+  Info16,
+  Info24,
+  Alert16,
+  Alert24
+} from "@hig/icons"
 
 /**
  * @typedef {Object} StyledProps
@@ -28,12 +39,12 @@ import stylesheet from "./stylesheet";
  * @returns {JSX.Element}
  */
 export function Wrapper(props) {
-  const { type, children } = props;
+  const { type, children, ...otherProps } = props;
 
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => (
-        <div className={css(stylesheet(props, resolvedRoles).bannerBackground)}>
+        <div className={css(stylesheet(props, resolvedRoles).bannerBackground)} >
           <div
             role="alert"
             aria-live={type === types.URGENT ? "assertive" : "polite"}
@@ -51,13 +62,13 @@ export function Wrapper(props) {
  * @param {StyledProps} props
  * @returns {JSX.Element}
  */
-export function Content({ isWrappingContent, innerRef, children }) {
+export function Content({ isWrappingContent, innerRef, children, stylesheet:customStylesheet }) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => (
         <div
           className={css(
-            stylesheet({ isWrappingContent }, resolvedRoles).content
+            stylesheet({ isWrappingContent, stylesheet:customStylesheet }, resolvedRoles).content
           )}
           ref={innerRef}
         >
@@ -77,14 +88,14 @@ export function Content({ isWrappingContent, innerRef, children }) {
  * @param {DismissButtonProps} props
  * @returns {JSX.Element}
  */
-export function DismissButton({ onClick }) {
+export function DismissButton({ onClick, stylesheet:customStylesheet }) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
         const closeIcon =
           metadata.densityId === "medium-density" ? <CloseMUI /> : <CloseSUI />;
         return (
-          <div className={css(stylesheet({}, resolvedRoles).dismissButton)}>
+          <div className={css(stylesheet({stylesheet:customStylesheet}, resolvedRoles).dismissButton)} >
             <IconButton icon={closeIcon} onClick={onClick} title="Close" />
           </div>
         );
@@ -97,12 +108,12 @@ export function DismissButton({ onClick }) {
  * @param {StyledProps} props
  * @returns {JSX.Element}
  */
-export function Notification({ innerRef, children }) {
+export function Notification({ innerRef, children, stylesheet: customStylesheet}) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => (
         <div
-          className={css(stylesheet({}, resolvedRoles).message)}
+          className={css(stylesheet({stylesheet: customStylesheet}, resolvedRoles).message)}
           ref={innerRef}
         >
           {children}
@@ -128,17 +139,58 @@ export function Message({ children }) {
  * @param {StyledProps} props
  * @returns {JSX.Element}
  */
-export function InteractionsWrapper({ innerRef, children }) {
+export function InteractionsWrapper({ innerRef, children, stylesheet:customStylesheet}) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => (
         <div
-          className={css(stylesheet({}, resolvedRoles).interactionsWrapper)}
+          className={css(stylesheet({stylesheet:customStylesheet}, resolvedRoles).interactionsWrapper)}
           ref={innerRef}
         >
           {children}
         </div>
       )}
+    </ThemeContext.Consumer>
+  );
+}
+
+/** @type {Object.<string, string>} */
+const iconNamesByType = {
+  [types.PRIMARY]: {
+    high: Info16,
+    medium: Info24
+  },
+  [types.COMPLETE]: {
+    high: Complete16,
+    medium: Complete24
+  },
+  [types.WARNING]: {
+    high: Alert16,
+    medium: Alert24
+  },
+  [types.URGENT]: {
+    high: Error16,
+    medium: Error24
+  }
+};
+
+/**
+ * @property {string} type
+ */
+
+export function IconBackground({ type, stylesheet: customStylesheet }) {
+  return (
+    <ThemeContext.Consumer>
+      {({ resolvedRoles, metadata }) => {
+        const density =
+          metadata.densityId === "medium-density" ? "medium" : "high";
+        const Icon = iconNamesByType[type][density];
+        return (
+          <figure className={css(stylesheet({ type, stylesheet: customStylesheet }, resolvedRoles).iconBackground)}>
+            <Icon />
+          </figure>
+        );
+      }}
     </ThemeContext.Consumer>
   );
 }

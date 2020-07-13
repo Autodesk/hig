@@ -21,6 +21,7 @@ import BannerPresenter from "./BannerPresenter";
  * @property {Function} [onDismiss]
  * @property {boolean} [isVisible]
  * @property {any} [children]
+ * @property {Function} [stylesheet]
  */
 
 /** @type {Component<BannerProps>} */
@@ -54,7 +55,9 @@ export default class Banner extends Component {
     /** Animation; Determines the visibility of the banner */
     isVisible: PropTypes.bool,
     /** The displayed message */
-    children: PropTypes.node
+    children: PropTypes.node,
+    /* Adds custom/overriding style */
+    stylesheet: PropTypes.func
   };
 
   /** @type {BannerProps | any} */
@@ -65,9 +68,9 @@ export default class Banner extends Component {
    */
   renderPresenter = presenterBag => {
     const presenterProps = { ...this.props, ...presenterBag };
-    const { children, ...otherProps } = presenterProps;
+    const { children, stylesheet: customStylesheet, ...otherProps } = presenterProps;
 
-    return <BannerPresenter {...otherProps}>{children}</BannerPresenter>;
+    return <BannerPresenter {...otherProps} stylesheet={customStylesheet}>{children}</BannerPresenter>;
   };
 
   /**
@@ -78,14 +81,14 @@ export default class Banner extends Component {
     const { renderPresenter } = this;
 
     return (
-      <BannerContainer actions={actions} onReady={handleReady}>
+      <BannerContainer actions={actions} onReady={handleReady} >
         {renderPresenter}
       </BannerContainer>
     );
   };
 
   render() {
-    const { isVisible, placement } = this.props;
+    const { isVisible, placement} = this.props;
     const { renderContainer } = this;
 
     return (
