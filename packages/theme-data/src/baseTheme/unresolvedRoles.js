@@ -12,6 +12,7 @@ import button from "./components/button";
 import canvasFrame from "./components/canvasFrame";
 import checkbox from "./components/checkbox";
 import component from "./components/component";
+import dataVis from "./components/dataVis";
 import datePicker from "./components/datePicker";
 import divider from "./components/divider";
 import flyout from "./components/flyout";
@@ -22,6 +23,7 @@ import label from "./components/label";
 import menu from "./components/menu";
 import modal from "./components/modal";
 import notifications from "./components/notifications";
+import panel from "./components/panel";
 import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
 import scrollbar from "./components/scrollbar";
@@ -69,6 +71,7 @@ const baseThemeConfig = extendTheme(
     canvasFrame,
     checkbox,
     component,
+    dataVis,
     datePicker,
     divider,
     flyout,
@@ -79,6 +82,7 @@ const baseThemeConfig = extendTheme(
     menu,
     modal,
     notifications,
+    panel,
     progressBar,
     progressRing,
     scrollbar,

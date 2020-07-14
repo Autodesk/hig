@@ -4,6 +4,7 @@ import button from "./components/button";
 import checkbox from "./components/checkbox";
 import input from "./components/input";
 import modal from "./components/modal";
+import panel from "./components/panel";
 import slider from "./components/slider";
 import tabs from "./components/tabs";
 import toggle from "./components/toggle";
@@ -15,6 +16,7 @@ const highDensityThemeConfig = Object.assign(
   checkbox,
   input,
   modal,
+  panel,
   slider,
   tabs,
   toggle,
