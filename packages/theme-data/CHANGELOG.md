@@ -1,3 +1,16 @@
+# [@hig/theme-data-v2.17.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.16.1...@hig/theme-data@2.17.0) (2020-07-14)
+
+
+### Bug Fixes
+
+* use newest color palette and component color fixes ([5178fdb](https://github.com/Autodesk/hig/commit/5178fdb))
+
+
+### Features
+
+* add dataVis color palette ([2b635b9](https://github.com/Autodesk/hig/commit/2b635b9))
+* add theme-data for panel ([7829106](https://github.com/Autodesk/hig/commit/7829106))
+
 # [@hig/theme-data-v2.16.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.16.0...@hig/theme-data@2.16.1) (2020-05-14)
 
 
