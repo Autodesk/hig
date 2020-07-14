@@ -2,7 +2,7 @@ import constants from "../constants";
 
 export default function stylesheet(props, themeData) {
   const vars = constants(themeData);
-  const {stylesheet: customStylesheet} = props;
+  const { stylesheet: customStylesheet } = props;
   const styles = {
     display: "flex",
     alignItems: "center",

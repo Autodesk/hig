@@ -14,11 +14,20 @@ import stylesheet from "./stylesheet";
  * @param {BannerActionProps} props
  * @returns {JSX.Element}
  */
-export default function BannerAction({ children, stylesheet:customStylesheet }) {
+export default function BannerAction({
+  children,
+  stylesheet: customStylesheet
+}) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => (
-        <div className={css(stylesheet({stylesheet:customStylesheet}, resolvedRoles))}>{children}</div>
+        <div
+          className={css(
+            stylesheet({ stylesheet: customStylesheet }, resolvedRoles)
+          )}
+        >
+          {children}
+        </div>
       )}
     </ThemeContext.Consumer>
   );

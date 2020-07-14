@@ -4,7 +4,7 @@ import { types } from "../types";
 export default function stylesheet(props, themeData) {
   const validTypes = Object.values(types);
   const vars = constants(themeData);
-  const {stylesheet: customStylesheet} = props;
+  const { stylesheet: customStylesheet } = props;
   const styles = {
     // .hig__banner
     banner: {

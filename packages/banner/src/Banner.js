@@ -68,9 +68,17 @@ export default class Banner extends Component {
    */
   renderPresenter = presenterBag => {
     const presenterProps = { ...this.props, ...presenterBag };
-    const { children, stylesheet: customStylesheet, ...otherProps } = presenterProps;
+    const {
+      children,
+      stylesheet: customStylesheet,
+      ...otherProps
+    } = presenterProps;
 
-    return <BannerPresenter {...otherProps} stylesheet={customStylesheet}>{children}</BannerPresenter>;
+    return (
+      <BannerPresenter {...otherProps} stylesheet={customStylesheet}>
+        {children}
+      </BannerPresenter>
+    );
   };
 
   /**
@@ -81,14 +89,14 @@ export default class Banner extends Component {
     const { renderPresenter } = this;
 
     return (
-      <BannerContainer actions={actions} onReady={handleReady} >
+      <BannerContainer actions={actions} onReady={handleReady}>
         {renderPresenter}
       </BannerContainer>
     );
   };
 
   render() {
-    const { isVisible, placement} = this.props;
+    const { isVisible, placement } = this.props;
     const { renderContainer } = this;
 
     return (
