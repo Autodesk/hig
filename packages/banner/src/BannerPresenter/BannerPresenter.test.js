@@ -48,6 +48,24 @@ describe("banner/BannerPresenter/BannerPresenter", () => {
       props: {
         onDismiss: null
       }
+    },
+    {
+      desc: "renders with custom stylesheet",
+      props: {
+        stylesheet: styles => ({
+          ...styles,
+          banner: {
+            ...styles.banner,
+            backgroundColor: "red"
+          }
+        })
+      }
+    },
+    {
+      desc: "renders with custom className",
+      props: {
+        className: "custom"
+      }
     }
   ]);
 });

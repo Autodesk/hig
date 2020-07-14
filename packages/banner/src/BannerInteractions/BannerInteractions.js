@@ -17,7 +17,11 @@ import stylesheet from "./stylesheet";
 export default function BannerInteractions(props) {
   const { children, stylesheet: customStylesheet } = props;
 
-  return <div className={css(stylesheet({stylesheet:customStylesheet}, {}))}>{children}</div>;
+  return (
+    <div className={css(stylesheet({ stylesheet: customStylesheet }, {}))}>
+      {children}
+    </div>
+  );
 }
 
 BannerInteractions.defaultProps = {

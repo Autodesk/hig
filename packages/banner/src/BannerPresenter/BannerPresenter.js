@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { cx, css } from "emotion";
 
 import { types, AVAILABLE_TYPES } from "../types";
 
@@ -13,8 +12,6 @@ import {
   Wrapper,
   IconBackground
 } from "./presenters";
-
-import stylesheet from "./stylesheet"
 
 /**
  * @typedef {Object} BannerPresenterProps
@@ -50,27 +47,50 @@ export default function BannerPresenter(props) {
     ...otherProps
   } = props;
   const hasActions = React.Children.count(actions) > 0;
-
+  const { className } = otherProps;
   return (
     <Wrapper
+      className={className}
       type={type}
       hasActions={hasActions}
       isWrappingContent={isWrappingContent}
       stylesheet={customStylesheet}
     >
-      <IconBackground type={type} stylesheet={customStylesheet}/>
-      <Content isWrappingContent innerRef={refContent} stylesheet={customStylesheet}>
-        <Notification innerRef={refNotification} stylesheet={customStylesheet}>
-          <Message >{message}</Message>
+      <IconBackground
+        className={className}
+        type={type}
+        stylesheet={customStylesheet}
+      />
+      <Content
+        className={className}
+        isWrappingContent
+        innerRef={refContent}
+        stylesheet={customStylesheet}
+      >
+        <Notification
+          className={className}
+          innerRef={refNotification}
+          stylesheet={customStylesheet}
+        >
+          <Message className={className}>{message}</Message>
         </Notification>
         {hasActions ? (
-          <InteractionsWrapper innerRef={refInteractionsWrapper} stylesheet={customStylesheet}>
+          <InteractionsWrapper
+            className={className}
+            innerRef={refInteractionsWrapper}
+            stylesheet={customStylesheet}
+          >
             {actions}
           </InteractionsWrapper>
         ) : null}
       </Content>
       {onDismiss ? (
-        <DismissButton title={dismissButtonTitle} onClick={onDismiss} stylesheet={customStylesheet}/>
+        <DismissButton
+          className={className}
+          title={dismissButtonTitle}
+          onClick={onDismiss}
+          stylesheet={customStylesheet}
+        />
       ) : null}
     </Wrapper>
   );
