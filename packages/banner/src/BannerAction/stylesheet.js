@@ -2,8 +2,8 @@ import constants from "../constants";
 
 export default function stylesheet(props, themeData) {
   const vars = constants(themeData);
-
-  return {
+  const { stylesheet: customStylesheet } = props;
+  const styles = {
     display: "flex",
     alignItems: "center",
     padding: `${vars.bannerActionPaddingY} 0`,
@@ -19,4 +19,5 @@ export default function stylesheet(props, themeData) {
       }
     })
   };
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

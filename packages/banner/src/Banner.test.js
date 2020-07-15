@@ -43,6 +43,24 @@ describe("banner/Banner", () => {
       {
         description: "renders with no props",
         props: {}
+      },
+      {
+        description: "renders with custom stylesheet",
+        props: {
+          stylesheet: styles => ({
+            ...styles,
+            banner: {
+              ...styles.banner,
+              backgroundColor: "red"
+            }
+          })
+        }
+      },
+      {
+        description: "renders with custom className",
+        props: {
+          className: "custom"
+        }
       }
     ];
 

@@ -28,6 +28,16 @@ exports[`banner/BannerInteractions/BannerInteractions renders with children 1`] 
 </div>
 `;
 
+exports[`banner/BannerInteractions/BannerInteractions renders with custom stylesheet 1`] = `
+.emotion-0 {
+  display: absolute;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
 exports[`banner/BannerInteractions/BannerInteractions renders without props 1`] = `
 .emotion-0 {
   display: -webkit-box;

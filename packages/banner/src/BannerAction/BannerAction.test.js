@@ -10,4 +10,16 @@ describe("banner/BannerAction/BannerAction", () => {
 
     expect(tree).toMatchSnapshot();
   });
+  it("renders with custom stylesheet", () => {
+    const customStylesheet = styles => ({
+      ...styles,
+      display: "absolute"
+    });
+    const action = (
+      <BannerAction stylesheet={customStylesheet}>Hello</BannerAction>
+    );
+    const tree = renderer.create(action).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });
