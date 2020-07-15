@@ -24,3 +24,25 @@ exports[`banner/BannerAction/BannerAction renders with children 1`] = `
   Hello
 </div>
 `;
+
+exports[`banner/BannerAction/BannerAction renders with custom stylesheet 1`] = `
+.emotion-0 {
+  display: absolute;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0;
+  margin-left: 24px;
+}
+
+.emotion-0:first-of-type {
+  margin-left: 0;
+}
+
+<div
+  className="emotion-0"
+>
+  Hello
+</div>
+`;
