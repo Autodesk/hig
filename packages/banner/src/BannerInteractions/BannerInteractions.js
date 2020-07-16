@@ -7,6 +7,7 @@ import stylesheet from "./stylesheet";
  * @typedef {Object} BannerInteractionsProps
  * @property {boolean} [isWrappingActions]
  * @property {any} [children]
+ * @property {Function} [stylesheet]
  */
 
 /**
@@ -14,9 +15,13 @@ import stylesheet from "./stylesheet";
  * @returns {JSX.Element}
  */
 export default function BannerInteractions(props) {
-  const { children } = props;
+  const { children, stylesheet: customStylesheet } = props;
 
-  return <div className={css(stylesheet())}>{children}</div>;
+  return (
+    <div className={css(stylesheet({ stylesheet: customStylesheet }, {}))}>
+      {children}
+    </div>
+  );
 }
 
 BannerInteractions.defaultProps = {
@@ -26,5 +31,6 @@ BannerInteractions.defaultProps = {
 BannerInteractions.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   isWrappingActions: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  stylesheet: PropTypes.func
 };

@@ -1,5 +1,343 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`banner/Banner snapshot tests renders with custom className 1`] = `
+.emotion-6 {
+  background-color: #ffffff;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 50px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #9bd5ef;
+  background-color: #cdeaf7;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50px;
+  min-height: 50px;
+  margin: 0;
+  background-color: #0696d7;
+}
+
+.emotion-1 svg * {
+  fill: white;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: calc((50px - 20px) / 2) 0 0 16px;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  min-width: 200px;
+  max-width: 900px;
+  padding-bottom: calc((50px - 20px) / 2);
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+
+.emotion-2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+<div
+  aria-busy={false}
+  aria-expanded={true}
+  onTransitionEnd={[Function]}
+  style={
+    Object {
+      "height": "",
+      "overflow": "",
+      "transition": "",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "transform": "",
+        "transition": "",
+      }
+    }
+  >
+    <div
+      className="emotion-6 custom"
+    >
+      <div
+        aria-live="polite"
+        className="emotion-5 custom__banner"
+        role="alert"
+      >
+        <figure
+          className="emotion-1 custom__icon-background"
+        >
+          <svg
+            className="emotion-0 custom__icon-background-image"
+            height="24px"
+            viewBox="0 0 24 24"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+            />
+            <path
+              d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
+            />
+            <circle
+              cx="12"
+              cy="8"
+              r="1.25"
+            />
+          </svg>
+        </figure>
+        <div
+          className="emotion-4 custom__content"
+        >
+          <div
+            className="emotion-3 custom__message"
+          >
+            <p
+              className="emotion-2 custom__message-text"
+            >
+              Message
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`banner/Banner snapshot tests renders with custom stylesheet 1`] = `
+.emotion-6 {
+  background-color: #ffffff;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 50px;
+  min-height: 50px;
+  margin: 0;
+  background-color: #0696d7;
+}
+
+.emotion-1 svg * {
+  fill: white;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: calc((50px - 20px) / 2) 0 0 16px;
+  overflow: hidden;
+}
+
+.emotion-3 {
+  min-width: 200px;
+  max-width: 900px;
+  padding-bottom: calc((50px - 20px) / 2);
+  margin: 0 auto 0 0;
+  text-align: left;
+}
+
+.emotion-2 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  box-sizing: border-box;
+  min-height: 50px;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #9bd5ef;
+  background-color: red;
+}
+
+<div
+  aria-busy={false}
+  aria-expanded={true}
+  onTransitionEnd={[Function]}
+  style={
+    Object {
+      "height": "",
+      "overflow": "",
+      "transition": "",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "transform": "",
+        "transition": "",
+      }
+    }
+  >
+    <div
+      className="emotion-6"
+    >
+      <div
+        aria-live="polite"
+        className="emotion-5"
+        role="alert"
+      >
+        <figure
+          className="emotion-1"
+        >
+          <svg
+            className="emotion-0"
+            height="24px"
+            viewBox="0 0 24 24"
+            width="24px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+            />
+            <path
+              d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
+            />
+            <circle
+              cx="12"
+              cy="8"
+              r="1.25"
+            />
+          </svg>
+        </figure>
+        <div
+          className="emotion-4"
+        >
+          <div
+            className="emotion-3"
+          >
+            <p
+              className="emotion-2"
+            >
+              Message
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`banner/Banner snapshot tests renders with no props 1`] = `
 .emotion-6 {
   background-color: #ffffff;

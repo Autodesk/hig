@@ -20,6 +20,15 @@ describe("banner/BannerInteractions/BannerInteractions", () => {
       props: {
         isWrappingActions: true
       }
+    },
+    {
+      description: "renders with custom stylesheet",
+      props: {
+        stylesheet: styles => ({
+          ...styles,
+          display: "absolute"
+        })
+      }
     }
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {

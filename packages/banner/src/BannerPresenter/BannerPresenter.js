@@ -9,9 +9,9 @@ import {
   InteractionsWrapper,
   Message,
   Notification,
-  Wrapper
+  Wrapper,
+  IconBackground
 } from "./presenters";
-import IconBackground from "../presenters/IconBackground";
 
 /**
  * @typedef {Object} BannerPresenterProps
@@ -24,6 +24,7 @@ import IconBackground from "../presenters/IconBackground";
  * @property {function(HTMLParagraphElement): any} [refNotification]
  * @property {function(HTMLDivElement): any} [refInteractionsWrapper]
  * @property {any} [children]
+ * @property {Function} [stylesheet]
  */
 
 /**
@@ -41,30 +42,55 @@ export default function BannerPresenter(props) {
     refContent,
     refNotification,
     refInteractionsWrapper,
-    children: message
+    children: message,
+    stylesheet: customStylesheet,
+    ...otherProps
   } = props;
-
   const hasActions = React.Children.count(actions) > 0;
-
+  const { className } = otherProps;
   return (
     <Wrapper
+      className={className}
       type={type}
       hasActions={hasActions}
       isWrappingContent={isWrappingContent}
+      stylesheet={customStylesheet}
     >
-      <IconBackground type={type} />
-      <Content isWrappingContent innerRef={refContent}>
-        <Notification innerRef={refNotification}>
-          <Message>{message}</Message>
+      <IconBackground
+        className={className}
+        type={type}
+        stylesheet={customStylesheet}
+      />
+      <Content
+        className={className}
+        isWrappingContent
+        innerRef={refContent}
+        stylesheet={customStylesheet}
+      >
+        <Notification
+          className={className}
+          innerRef={refNotification}
+          stylesheet={customStylesheet}
+        >
+          <Message className={className}>{message}</Message>
         </Notification>
         {hasActions ? (
-          <InteractionsWrapper innerRef={refInteractionsWrapper}>
+          <InteractionsWrapper
+            className={className}
+            innerRef={refInteractionsWrapper}
+            stylesheet={customStylesheet}
+          >
             {actions}
           </InteractionsWrapper>
         ) : null}
       </Content>
       {onDismiss ? (
-        <DismissButton title={dismissButtonTitle} onClick={onDismiss} />
+        <DismissButton
+          className={className}
+          title={dismissButtonTitle}
+          onClick={onDismiss}
+          stylesheet={customStylesheet}
+        />
       ) : null}
     </Wrapper>
   );
@@ -73,7 +99,7 @@ export default function BannerPresenter(props) {
 /** @type {BannerPresenterProps} */
 BannerPresenter.defaultProps = {
   type: types.PRIMARY,
-  dismissButtonTitle: "Dismiss",
+  dismissButtonTitle: "Close",
   isWrappingContent: false,
   children: "Message"
 };
@@ -96,5 +122,7 @@ BannerPresenter.propTypes = {
   /** References interactions wrapper element */
   refInteractionsWrapper: PropTypes.func,
   /** The displayed message */
-  children: PropTypes.node
+  children: PropTypes.node,
+  /** Adds custom/overriding style */
+  stylesheet: PropTypes.func
 };

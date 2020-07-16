@@ -4,8 +4,8 @@ import { types } from "../types";
 export default function stylesheet(props, themeData) {
   const validTypes = Object.values(types);
   const vars = constants(themeData);
-
-  return {
+  const { stylesheet: customStylesheet } = props;
+  const styles = {
     // .hig__banner
     banner: {
       display: "flex",
@@ -94,6 +94,29 @@ export default function stylesheet(props, themeData) {
       flexShrink: "0",
       paddingRight: vars.bannerActionSpacingX,
       paddingBottom: vars.bannerInteractionsWrapperPaddingY
+    },
+
+    // .hig__banner__icon-background
+    iconBackground: {
+      display: "flex",
+      flexGrow: 0,
+      flexShrink: 0,
+      alignItems: "center",
+      justifyContent: "center",
+      width: vars.bannerWrapperMinHeight,
+      minHeight: vars.bannerWrapperMinHeight,
+      margin: 0,
+
+      ...(validTypes.includes(props.type) && {
+        backgroundColor:
+          themeData[
+            `banner.${vars.colorMapping[props.type]}.iconField.backgroundColor`
+          ]
+      }),
+      "svg *": {
+        fill: "white"
+      }
     }
   };
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }
