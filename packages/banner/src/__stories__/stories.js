@@ -26,7 +26,8 @@ export default [
   {
     description: "default",
     getProps: ({ language }) => ({
-      children: getMessage(language)
+      children: getMessage(language),
+      dismissButtonTitle: "Close"
     })
   },
   {
@@ -34,6 +35,7 @@ export default [
     getProps: ({ language }) => ({
       type: Banner.types.WARNING,
       children: getMessage(language),
+      dismissButtonTitle: "Close",
       // eslint-disable-next-line react/prop-types
       actions: ({ isWrappingActions }) => (
         <Banner.Interactions isWrappingActions={isWrappingActions}>

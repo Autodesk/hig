@@ -99,7 +99,7 @@ export default function BannerPresenter(props) {
 /** @type {BannerPresenterProps} */
 BannerPresenter.defaultProps = {
   type: types.PRIMARY,
-  dismissButtonTitle: "Dismiss",
+  dismissButtonTitle: "Close",
   isWrappingContent: false,
   children: "Message"
 };

@@ -78,8 +78,9 @@ export function Content({
   innerRef,
   children,
   stylesheet: customStylesheet,
-  className
+  ...otherProps
 }) {
+  const { className } = otherProps;
   const contentClassName = createCustomClassNames(className, "content");
   return (
     <ThemeContext.Consumer>
@@ -115,8 +116,9 @@ export function Content({
 export function DismissButton({
   onClick,
   stylesheet: customStylesheet,
-  className
+  ...otherProps
 }) {
+  const { className } = otherProps;
   const dismissClassName = createCustomClassNames(className, "dismiss-button");
   const dismissIconClassName = createCustomClassNames(
     className,
@@ -138,10 +140,10 @@ export function DismissButton({
             )}
           >
             <IconButton
+              {...otherProps}
               className={dismissIconClassName}
               icon={closeIcon}
               onClick={onClick}
-              title="Close"
             />
           </div>
         );
@@ -158,8 +160,9 @@ export function Notification({
   innerRef,
   children,
   stylesheet: customStylesheet,
-  className
+  ...otherProps
 }) {
+  const { className } = otherProps;
   const notifClassName = createCustomClassNames(className, "message");
   return (
     <ThemeContext.Consumer>
@@ -185,7 +188,8 @@ export function Notification({
  * @param {StyledProps} props
  * @returns {JSX.Element}
  */
-export function Message({ children, className }) {
+export function Message({ children, ...otherProps }) {
+  const { className } = otherProps;
   const notifClassName = createCustomClassNames(className, "message-text");
   if (typeof children === "string") {
     return (
@@ -206,8 +210,9 @@ export function InteractionsWrapper({
   innerRef,
   children,
   stylesheet: customStylesheet,
-  className
+  ...otherProps
 }) {
+  const { className } = otherProps;
   const interactionClassName = createCustomClassNames(
     className,
     "interactions-wrapper"
@@ -239,8 +244,9 @@ export function InteractionsWrapper({
 export function IconBackground({
   type,
   stylesheet: customStylesheet,
-  className
+  ...otherProps
 }) {
+  const { className } = otherProps;
   const iconClassName = createCustomClassNames(className, "icon-background");
   const iconImageClassName = createCustomClassNames(
     className,
