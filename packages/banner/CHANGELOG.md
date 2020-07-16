@@ -1,3 +1,16 @@
+# [@hig/banner-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/banner@2.1.2...@hig/banner@2.2.0) (2020-07-16)
+
+
+### Bug Fixes
+
+* dismissButtonTitle prop was not working ([e2e222d](https://github.com/Autodesk/hig/commit/e2e222d))
+
+
+### Features
+
+* add className to banner ([5c023f6](https://github.com/Autodesk/hig/commit/5c023f6))
+* add stylesheet prop to banner ([8b813c5](https://github.com/Autodesk/hig/commit/8b813c5))
+
 # [@hig/banner-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/banner@2.1.1...@hig/banner@2.1.2) (2020-05-13)
 
 
