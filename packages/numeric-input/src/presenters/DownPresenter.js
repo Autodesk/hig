@@ -4,7 +4,7 @@ import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
-import { CaretDown16 } from "@hig/icons";
+import { CaretDownMUI, CaretDownSUI} from "@hig/icons";
 
 export default class UpPresenter extends Component {
     static PropTypes = {
@@ -30,16 +30,18 @@ export default class UpPresenter extends Component {
 
         return (
             <ThemeContext.Consumer>
-              {({ resolvedRoles }) => {
+              {({ resolvedRoles, metadata }) => {
                 const styles = stylesheet(
                   { disabled, hasFocus, hasHover, isPressed },
                   resolvedRoles
                 );
+                const iconColor = hasHover ? resolvedRoles["colorScheme.indicator.hover"]: resolvedRoles["input.indicator.default"];
+                const DownIcon = metadata.densityId === "medium-density" ? CaretDownMUI : CaretDownSUI;
       
                 return (
                   <span className={css(styles.spinnerUpWrapper)}>
                     <span className={css(styles.spinnerUp)}>
-                      <CaretDown16 color={iconColor}/>
+                      <DownIcon color={iconColor}/>
                     </span>
                   </span>
                 );

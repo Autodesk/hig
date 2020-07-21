@@ -22,10 +22,18 @@ export default function stylesheet(props, themeData) {
             width: themeData["checkbox.minWidth"],
             //right: "40px",
             zIndex: 1,
-            ...(isPressed ? getSpinnerRulesByPressed(themeData) : {})   
+            //...(isPressed ? getSpinnerRulesByPressed(themeData) : {})   
         },
-        spinnerUp: {
-          color: "red"
+        spinner: {
+            "svg *": {
+                fill: themeData["input.indicator.default"]
+            },
+            "&:hover svg *": {
+                fill: themeData["colorScheme.indicator.hover"]
+            },
+            "&:active svg *": {
+                fill: themeData["colorScheme.indicator.pressed"]
+            },
         },
         spinnerUpWrapper: {
  
@@ -33,12 +41,20 @@ export default function stylesheet(props, themeData) {
         spinnerDown: {
 
         },
-        spinner: {
+        spinner1: {
             backgroundColor: "transparent",
             position: "absolute",
             borderColor: "transparent",
             color: "transparent",
             outline: "none"
-        }
+        },
+        spinner2: {
+            backgroundColor: "transparent",
+            position: "absolute",
+            borderColor: "transparent",
+            color: "transparent",
+            outline: "none"
+        },
+
     }
 }

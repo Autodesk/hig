@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./stylesheet";
-import { CaretUp16, CaretDown16 } from "@hig/icons";
+import { CaretUpMUI, CaretUpSUI, CaretDownMUI, CaretDownSUI } from "@hig/icons";
 import UpPresenter from "./UpPresenter.js";
 import DownPresenter from "./DownPresenter.js";
 
@@ -37,6 +37,7 @@ export default class SpinnerPresenter extends Component {
             isPressed,
             onBlur,
             onClick,
+            onChange,
             onMouseDown,
             onMouseEnter,
             onMouseLeave,
@@ -44,10 +45,9 @@ export default class SpinnerPresenter extends Component {
             onFocus,
             ...otherProps
         } = this.props;
-        const iconColor = hasHover ? "red" : "";
         return (
             <ThemeContext.Consumer>
-                {({ resolvedRoles }) => {
+                {({ resolvedRoles, metadata }) => {
                     const styles = stylesheet (
                         {
                             disabled,
@@ -57,29 +57,35 @@ export default class SpinnerPresenter extends Component {
                         }, 
                         resolvedRoles
                     );
-
+                    const UpIcon = metadata.densityId === "medium-density" ? CaretUpMUI : CaretUpSUI;
+                    const DownIcon = metadata.densityId === "medium-density" ? CaretDownMUI : CaretDownSUI;
                     return (
                         <div className={css(styles.spinnerWrapper)}>
-                            <span>
-                                <input
-                                    className={css(styles.spinner)}
-                                    disabled={disabled}
-                                    onBlur={onBlur}
-                                    onClick={onClick}
-                                    onFocus={onFocus}
-                                    onMouseDown={onMouseDown}
-                                    onMouseEnter={onMouseEnter}
-                                    onMouseLeave={onMouseLeave}
-                                    onMouseUp={onMouseUp}
-                                    type="button"
-                                    {...otherProps}
-                                />
-                                <UpPresenter
-                                    disabled={disabled}
-                                    hasFocus={hasFocus}
-                                    hasHover={hasHover}
-                                    isPressed={isPressed}
-                                />
+                            <span 
+                                onBlur={onBlur}
+                                onClick={onClick}
+                                onFocus={onFocus}
+                                onChange={onChange}
+                                onMouseDown={onMouseDown}
+                                onMouseEnter={onMouseEnter}
+                                onMouseLeave={onMouseLeave}
+                                onMouseUp={onMouseUp}
+                                className = {css(styles.spinner)}
+                                >
+                                    <UpIcon/>
+                            </span>
+                            <span 
+                                onBlur={onBlur}
+                                onClick={onClick}
+                                onFocus={onFocus}
+                                onChange={onChange}
+                                onMouseDown={onMouseDown}
+                                onMouseEnter={onMouseEnter}
+                                onMouseLeave={onMouseLeave}
+                                onMouseUp={onMouseUp}
+                                className = {css(styles.spinner)}
+                                >
+                                    <DownIcon/>
                             </span>
                         </div> 
 
@@ -103,4 +109,49 @@ export default class SpinnerPresenter extends Component {
                             <span className={css(styles.spinnerDown)}>
                                 <CaretDown16 />
                             </span>
-                        </span>*/
+                        </span>
+                        
+                        
+                            <span>
+                                <input
+                                    className={css(styles.spinner1)}
+                                    disabled={disabled}
+                                    onBlur={onBlur}
+                                    onClick={onClick}
+                                    onFocus={onFocus}
+                                    onMouseDown={onMouseDown}
+                                    onMouseEnter={onMouseEnter}
+                                    onMouseLeave={onMouseLeave}
+                                    onMouseUp={onMouseUp}
+                                    type="button"
+                                    {...otherProps}
+                                />
+                                <UpPresenter
+                                    disabled={disabled}
+                                    hasFocus={hasFocus}
+                                    hasHover={hasHover}
+                                    isPressed={isPressed}
+                                />
+                            </span>
+                            <span>
+                                <input
+                                        className={css(styles.spinner2)}
+                                        disabled={disabled}
+                                        onBlur={onBlur}
+                                        onClick={onClick}
+                                        onFocus={onFocus}
+                                        onMouseDown={onMouseDown}
+                                        onMouseEnter={onMouseEnter}
+                                        onMouseLeave={onMouseLeave}
+                                        onMouseUp={onMouseUp}
+                                        type="button"
+                                        {...otherProps}
+                                    />
+                                    <DownPresenter
+                                        disabled={disabled}
+                                        hasFocus={hasFocus}
+                                        hasHover={hasHover}
+                                        isPressed={isPressed}
+                                    />
+                            </span>
+                            */

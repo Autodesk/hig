@@ -73,7 +73,6 @@ export default class NumericInput extends Component {
       onClick,
       ...otherProps
     } = this.props;
-    const { className } = otherProps;
 
     const numericInputStylesheet = (styles, props, themeData) => {
       const numericInputStyles = customStylesheet(styles, props, themeData);
@@ -103,11 +102,13 @@ export default class NumericInput extends Component {
               onMouseLeave: handleMouseLeave,
               onMouseUp: handleMouseUp
             })=> (
+              <div>
               <SpinnerBehavior
                 onClick={onClick}
                 value={value}
+                onChange={onChange}
                 >
-                  {({ handleClick })=> (
+                  {({ handleClick, handleChange })=> (
                     <SpinnerPresenter
                       value={value}
                       disabled={disabled}
@@ -116,6 +117,7 @@ export default class NumericInput extends Component {
                       isPressed={isPressed}
                       onBlur={handleBlur}
                       onClick={handleClick}
+                      onChange={handleChange}
                       onFocus={handleFocus}
                       onMouseDown={handleMouseDown}
                       onMouseEnter={handleMouseEnter}
@@ -125,19 +127,29 @@ export default class NumericInput extends Component {
                     />
                   )}
               </SpinnerBehavior>
+               <Input
+               {...otherProps}
+               className="numeric-input"
+               placeholder={placeholder}
+               step={step}
+               stylesheet={numericInputStylesheet}
+               tagName="input"
+               type="number"
+               variant={variant}
+               value={value}
+               hasFocus={hasFocus}
+               hasHover={hasHover}
+               onBlur={handleBlur}
+               onFocus={handleFocus}
+               onMouseDown={handleMouseDown}
+               onMouseEnter={handleMouseEnter}
+               onMouseLeave={handleMouseLeave}
+               onMouseUp={handleMouseUp}
+               {...otherProps}
+             /> </div>
             )}
           </ControlBehavior>
-        <Input
-          {...otherProps}
-          className="numeric-input"
-          placeholder={placeholder}
-          step={step}
-          stylesheet={numericInputStylesheet}
-          tagName="input"
-          type="number"
-          variant={variant}
-          value={value}
-        />
+       
       </div>
     )
   }

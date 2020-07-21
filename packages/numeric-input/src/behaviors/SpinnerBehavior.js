@@ -5,29 +5,36 @@ export default class SpinnerBehavior extends Component {
     static propTypes = {
         onClick: PropTypes.func,
         children: PropTypes.func,
-        value: PropTypes.string
+        numberInput: PropTypes.number,
+        onChange: PropTypes.func
     }
-
+    static defaultProps = {
+        defaultInput: 0
+      };
     state = {
-        value: parseInt(this.props.value)
+        numberInput: this.props.defaultInput
     }
 
     increment() {
-        return this.state.value + 1;
+        this.setState({numberInput: this.state.numberInput + 1})
     }
 
     decrement() {
-        return this.state.value - 1;
+        this.setState({numberInput: this.state.numberInput - 1})
+    }
+
+    handleChange = ()=>{
+        this.increment();
     }
 
     render() {
-        
-        const { onClick: handleClick} = this.props;
-        const value = this.props.value;
-        console.log(value);
+        const { onClick: handleClick } = this.props;
+        const { handleChange } = this;
+        const numberInput = this.state.numberInput;
         return this.props.children({
-            value,
-            handleClick
+            numberInput,
+            handleClick,
+            handleChange
         });
     }
 
