@@ -32,53 +32,47 @@ function borderBottomStyles(
       opacity: themeData["input.disabled.opacity"]
     };
   }
-  if (hasFocus) {
-    return {
-      ...defaults,
-      borderBottomColor: themeData["input.line.focus.borderBottomColor"]
-    };
-  }
-  if (hasHover) {
-    return {
-      ...defaults,
-      borderBottomColor: themeData["input.box.hover.borderBottomColor"]
-    };
-  }
-  if (error) {
-    return {
-      ...defaults,
-      borderBottomColor: themeData["input.error.borderBottomColor"]
-    };
-  }
-  return defaults;
+
+  return {
+    ...defaults,
+    ...(error
+      ? { borderBottomColor: themeData["input.error.borderBottomColor"] }
+      : {}),
+    ...(hasFocus
+      ? { borderBottomColor: themeData["input.line.focus.borderBottomColor"] }
+      : {}),
+    ...(hasHover
+      ? { borderBottomColor: themeData["input.box.hover.borderBottomColor"] }
+      : {})
+  };
 }
 
 function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
     height: 0,
-    backgroundColor: themeData["input.hover.haloColor"],
     transitionProperty: "height, color",
     transitionDuration: "0.3s, 0.3s"
+  };
+  const focusStyles = {
+    height: themeData["input.haloWidth"],
+    backgroundColor: themeData["input.focus.haloColor"],
+    transitionDuration: "0.1s, 0.1s"
+  };
+  const hoverStyles = {
+    backgroundColor: themeData["input.hover.haloColor"],
+    height: themeData["input.haloWidth"],
+    transitionDuration: "0.1s, 0.1s"
   };
 
   if (isDisabled) {
     return {};
   }
-  if (hasFocus) {
-    return {
-      height: themeData["input.haloWidth"],
-      backgroundColor: themeData["input.focus.haloColor"],
-      transitionDuration: "0.1s, 0.1s"
-    };
-  }
-  if (hasHover) {
-    return {
-      ...defaults,
-      height: themeData["input.haloWidth"],
-      transitionDuration: "0.1s, 0.1s"
-    };
-  }
-  return defaults;
+
+  return {
+    ...defaults,
+    ...(hasFocus ? focusStyles : {}),
+    ...(hasHover ? hoverStyles : {})
+  };
 }
 
 export default function(props, themeData) {
