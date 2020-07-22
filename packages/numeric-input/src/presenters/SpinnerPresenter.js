@@ -4,12 +4,10 @@ import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./stylesheet";
 import { CaretUpMUI, CaretUpSUI, CaretDownMUI, CaretDownSUI } from "@hig/icons";
-import UpPresenter from "./UpPresenter.js";
-import DownPresenter from "./DownPresenter.js";
 
 export default class SpinnerPresenter extends Component {
     static propTypes = {
-        value: PropTypes.string,
+        value: PropTypes.number,
         disabled: PropTypes.bool,
         hasFocus: PropTypes.bool,
         hasHover: PropTypes.bool,
@@ -61,6 +59,11 @@ export default class SpinnerPresenter extends Component {
                     );
                     const UpIcon = metadata.densityId === "medium-density" ? CaretUpMUI : CaretUpSUI;
                     const DownIcon = metadata.densityId === "medium-density" ? CaretDownMUI : CaretDownSUI;
+                    const ifKeyIsEnter = action => event => {
+                        if (event.key === "Enter") {
+                          action();
+                        }
+                      };
                     return (
                         <div className={css(styles.spinnerWrapper)}>
                             <span 
@@ -72,6 +75,7 @@ export default class SpinnerPresenter extends Component {
                                 onMouseEnter={onMouseEnter}
                                 onMouseLeave={onMouseLeave}
                                 onMouseUp={onMouseUp}
+                                onKeyDown={ifKeyIsEnter(increment)}
                                 className = {css(styles.spinner)}
                                 >
                                     <UpIcon/>
@@ -85,6 +89,7 @@ export default class SpinnerPresenter extends Component {
                                 onMouseEnter={onMouseEnter}
                                 onMouseLeave={onMouseLeave}
                                 onMouseUp={onMouseUp}
+                                onKeyDown={ifKeyIsEnter(decrement)}
                                 className = {css(styles.spinner)}
                                 >
                                     <DownIcon/>

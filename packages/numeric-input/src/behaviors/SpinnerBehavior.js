@@ -23,8 +23,7 @@ export default class SpinnerBehavior extends Component {
         super(props);
     
         this.state = {
-            value: props.initialValue,
-            focus: false
+            value: props.initialValue
           };
     }
 
@@ -48,7 +47,6 @@ export default class SpinnerBehavior extends Component {
         if (this.props.isDisabled) {
           return;
         }
-        this.setState({focus: true});
         this.setValue(value);
       };
       isValueControlled = () =>
@@ -72,9 +70,8 @@ export default class SpinnerBehavior extends Component {
             handleChange,
             increment: this.increment,
             decrement: this.decrement,
-            value: `${this.getValue()}`,
-            setValue: this.setValue,
-            //hasFocus: this.state.focus
+            value: this.getValue(),
+            setValue: this.setValue
         });
     }
 

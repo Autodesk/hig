@@ -16,16 +16,12 @@ export default function stylesheetOverride(stylesheet, props, themeData) {
     ":hover": {
       MozAppearance: `textfield`
     },
-    MozAppearance: `textfield`,
-    //display: "inline-block",
-    //position: "relative",
-    zIndex: 2
+    MozAppearance: `textfield`
   };
   return {
     ...stylesheet,
     wrapper: {
-      ...stylesheet.wrapper,
-      width: "200px"
+      ...stylesheet.wrapper
     },
     input: numericInput,
     halo: {
