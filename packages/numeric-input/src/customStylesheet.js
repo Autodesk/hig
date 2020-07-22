@@ -18,12 +18,14 @@ export default function stylesheetOverride(stylesheet, props, themeData) {
     },
     MozAppearance: `textfield`,
     //display: "inline-block",
-    //position: "relative"
+    //position: "relative",
+    zIndex: 2
   };
   return {
     ...stylesheet,
     wrapper: {
-      ...stylesheet.wrapper
+      ...stylesheet.wrapper,
+      width: "200px"
     },
     input: numericInput,
     halo: {

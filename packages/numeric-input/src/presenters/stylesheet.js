@@ -16,24 +16,22 @@ export default function stylesheet(props, themeData) {
     return {
         spinnerWrapper: {
             boxSizing: `border-box`,
-            display: `inline-block`,
             position: `absolute`,
-            height: themeData["checkbox.minHeight"],
-            width: themeData["checkbox.minWidth"],
+            width: "10px",
             //right: "40px",
             zIndex: 1,
+            left: "200px"
             //...(isPressed ? getSpinnerRulesByPressed(themeData) : {})   
         },
         spinner: {
             "svg *": {
                 fill: themeData["input.indicator.default"]
             },
-            "&:hover svg *": {
-                fill: themeData["colorScheme.indicator.hover"]
-            },
+
             "&:active svg *": {
                 fill: themeData["colorScheme.indicator.pressed"]
             },
+            height: "10px"
         },
         spinnerUpWrapper: {
  

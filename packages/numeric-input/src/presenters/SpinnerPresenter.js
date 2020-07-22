@@ -43,6 +43,8 @@ export default class SpinnerPresenter extends Component {
             onMouseLeave,
             onMouseUp,
             onFocus,
+            increment,
+            decrement,
             ...otherProps
         } = this.props;
         return (
@@ -63,7 +65,7 @@ export default class SpinnerPresenter extends Component {
                         <div className={css(styles.spinnerWrapper)}>
                             <span 
                                 onBlur={onBlur}
-                                onClick={onClick}
+                                onClick={increment}
                                 onFocus={onFocus}
                                 onChange={onChange}
                                 onMouseDown={onMouseDown}
@@ -76,7 +78,7 @@ export default class SpinnerPresenter extends Component {
                             </span>
                             <span 
                                 onBlur={onBlur}
-                                onClick={onClick}
+                                onClick={decrement}
                                 onFocus={onFocus}
                                 onChange={onChange}
                                 onMouseDown={onMouseDown}

@@ -6,35 +6,75 @@ export default class SpinnerBehavior extends Component {
         onClick: PropTypes.func,
         children: PropTypes.func,
         numberInput: PropTypes.number,
-        onChange: PropTypes.func
+        onChange: PropTypes.func, 
+        value: PropTypes.number,
+        initialValue: PropTypes.number,
+        step: PropTypes.number
     }
     static defaultProps = {
-        defaultInput: 0
+        step: 1,
+        isDisabled: false,
+        initialValue: 0,
+        value: undefined,
+        onChange: undefined
       };
-    state = {
-        numberInput: this.props.defaultInput
+    
+    constructor(props) {
+        super(props);
+    
+        this.state = {
+            value: props.initialValue,
+            focus: false
+          };
     }
 
-    increment() {
-        this.setState({numberInput: this.state.numberInput + 1})
-    }
+    getValue() {
+        if(this.props.value !== undefined && this.props.value !== null) {
+            return this.props.value;
+        } else {
+            return this.state.value;
+        }
+    } 
+    setValue = value => {
+        this.props.onChange(value);
+    
+        if (!this.isValueControlled()) {
+          this.setState({ value });
+        }
+      };
 
-    decrement() {
-        this.setState({numberInput: this.state.numberInput - 1})
-    }
+    updateValue = value => {
+        // Do nothing if the input is currently disabled
+        if (this.props.isDisabled) {
+          return;
+        }
+        this.setState({focus: true});
+        this.setValue(value);
+      };
+      isValueControlled = () =>
+        this.props.value !== undefined && this.props.value !== null;
 
-    handleChange = ()=>{
-        this.increment();
-    }
+      increment = () => {
+        this.updateValue(this.getValue() + this.props.step);
+      };
+    
+      decrement = () => {
+        this.updateValue(this.getValue() - this.props.step);
+      };
+
 
     render() {
         const { onClick: handleClick } = this.props;
         const { handleChange } = this;
-        const numberInput = this.state.numberInput;
+
         return this.props.children({
-            numberInput,
             handleClick,
-            handleChange
+            handleChange,
+            increment: this.increment,
+            decrement: this.decrement,
+            value: `${this.getValue()}`,
+            setValue: this.setValue,
+            //hasFocus: this.state.focus
         });
     }
 

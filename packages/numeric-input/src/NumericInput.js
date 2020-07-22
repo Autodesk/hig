@@ -36,7 +36,7 @@ export default class NumericInput extends Component {
     /**
      * Initial text to display in the input
      */
-    step: PropTypes.string,
+    step: PropTypes.number,
     /**
      * Adds custom/overriding styles
      */
@@ -44,17 +44,18 @@ export default class NumericInput extends Component {
     /**
      * Starting value for the input
      */
-    value: PropTypes.string,
+    value: PropTypes.number,
     /**
      * The visual variant of the numeric input
      */
     variant: PropTypes.oneOf(variantTypes),
     onClick: PropTypes.func,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    defaultValue: PropTypes.number
   };
 
   static defaultProps = {
-    step: "1",
+    step: 1,
     variant: "line"
   };
 
@@ -69,6 +70,7 @@ export default class NumericInput extends Component {
       step,
       stylesheet,
       value,
+      defaultValue: initialValue,
       variant,
       onClick,
       ...otherProps
@@ -102,51 +104,65 @@ export default class NumericInput extends Component {
               onMouseLeave: handleMouseLeave,
               onMouseUp: handleMouseUp
             })=> (
-              <div>
               <SpinnerBehavior
                 onClick={onClick}
                 value={value}
                 onChange={onChange}
+                initialValue={initialValue}
+                step={step}
                 >
-                  {({ handleClick, handleChange })=> (
-                    <SpinnerPresenter
-                      value={value}
-                      disabled={disabled}
+                  {({ handleClick, handleChange, increment, decrement, value: controlledValue, setValue, hasFocus: focused }) => {
+                    const onDirectChange = event => {
+                      const newValue = event.target.value;
+                      setValue(newValue);
+                    }; 
+                  
+                   return (
+                    <div>
+                      
+                      <SpinnerPresenter
+                        value={value}
+                        disabled={disabled}
+                        hasFocus={hasFocus}
+                        hasHover={hasHover}
+                        isPressed={isPressed}
+                        onBlur={handleBlur}
+                        onClick={handleClick}
+                        onChange={handleChange}
+                        onFocus={handleFocus}
+                        onMouseDown={handleMouseDown}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                        onMouseUp={handleMouseUp}
+                        increment={increment}
+                        decrement={decrement}
+                        {...otherProps}
+                      />
+                      <Input
+                      {...otherProps}
+                      className="numeric-input"
+                      placeholder={placeholder}
+                      step={step}
+                      stylesheet={numericInputStylesheet}
+                      tagName="input"
+                      type="number"
+                      variant={variant}
+                      value={controlledValue}
                       hasFocus={hasFocus}
                       hasHover={hasHover}
-                      isPressed={isPressed}
+                      onChange={onDirectChange}
                       onBlur={handleBlur}
-                      onClick={handleClick}
-                      onChange={handleChange}
                       onFocus={handleFocus}
                       onMouseDown={handleMouseDown}
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                       onMouseUp={handleMouseUp}
                       {...otherProps}
-                    />
-                  )}
+                    /> 
+                  </div>
+                  );
+                }}
               </SpinnerBehavior>
-               <Input
-               {...otherProps}
-               className="numeric-input"
-               placeholder={placeholder}
-               step={step}
-               stylesheet={numericInputStylesheet}
-               tagName="input"
-               type="number"
-               variant={variant}
-               value={value}
-               hasFocus={hasFocus}
-               hasHover={hasHover}
-               onBlur={handleBlur}
-               onFocus={handleFocus}
-               onMouseDown={handleMouseDown}
-               onMouseEnter={handleMouseEnter}
-               onMouseLeave={handleMouseLeave}
-               onMouseUp={handleMouseUp}
-               {...otherProps}
-             /> </div>
             )}
           </ControlBehavior>
        
