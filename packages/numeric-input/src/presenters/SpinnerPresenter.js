@@ -8,107 +8,110 @@ import { CaretUpMUI, CaretUpSUI, CaretDownMUI, CaretDownSUI } from "@hig/icons";
 const variantTypes = ["line", "box"];
 
 export default class SpinnerPresenter extends Component {
-    static propTypes = {
-        value: PropTypes.number,
-        disabled: PropTypes.bool,
-        hasFocus: PropTypes.bool,
-        hasHover: PropTypes.bool,
-        isPressed: PropTypes.bool,
-        onBlur: PropTypes.func,
-        onClick: PropTypes.func,
-        onFocus: PropTypes.func,
-        onMouseDown: PropTypes.func,
-        onMouseEnter: PropTypes.func,
-        onMouseLeave: PropTypes.func,
-        onMouseUp: PropTypes.func,
-        variant: PropTypes.oneOf(variantTypes)
-    }
+  static propTypes = {
+    value: PropTypes.number,
+    disabled: PropTypes.bool,
+    hasFocus: PropTypes.bool,
+    hasHover: PropTypes.bool,
+    isPressed: PropTypes.bool,
+    onBlur: PropTypes.func,
+    onClick: PropTypes.func,
+    onFocus: PropTypes.func,
+    onMouseDown: PropTypes.func,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+    onMouseUp: PropTypes.func,
+    variant: PropTypes.oneOf(variantTypes)
+  };
 
-    static defaultProps = {
-        disabled: false,
-        value: "0"
-    }
+  static defaultProps = {
+    disabled: false,
+    value: "0"
+  };
 
-    render() {
-        const {
-            value,
-            disabled,
-            hasFocus,
-            hasHover,
-            isPressed,
-            onBlur,
-            onClick,
-            onChange,
-            onMouseDown,
-            onMouseEnter,
-            onMouseLeave,
-            onMouseUp,
-            onFocus,
-            increment,
-            decrement,
-            variant,
-            ...otherProps
-        } = this.props;
-        return (
-            <ThemeContext.Consumer>
-                {({ resolvedRoles, metadata }) => {
-                    const styles = stylesheet (
-                        {
-                            disabled,
-                            hasFocus,
-                            hasHover,
-                            isPressed,
-                            variant
-                        }, 
-                        resolvedRoles
-                    );
-                    const UpIcon = metadata.densityId === "medium-density" ? CaretUpMUI : CaretUpSUI;
-                    const DownIcon = metadata.densityId === "medium-density" ? CaretDownMUI : CaretDownSUI;
-                    const ifKeyIsEnter = action => event => {
-                        if (event.key === "Enter") {
-                          action();
-                        }
-                      };
-                    return (
-                        <div className={css(styles.spinnerWrapper)}>
-                            <span 
-                                onBlur={onBlur}
-                                onClick={increment}
-                                onFocus={onFocus}
-                                onChange={onChange}
-                                onMouseDown={onMouseDown}
-                                onMouseEnter={onMouseEnter}
-                                onMouseLeave={onMouseLeave}
-                                onMouseUp={onMouseUp}
-                                onKeyDown={ifKeyIsEnter(increment)}
-                                className = {css(styles.spinner)}
-                                >
-                                    <UpIcon className = {css(styles.iconUp)}/>
-                            </span>
-                            <span 
-                                onBlur={onBlur}
-                                onClick={decrement}
-                                onFocus={onFocus}
-                                onChange={onChange}
-                                onMouseDown={onMouseDown}
-                                onMouseEnter={onMouseEnter}
-                                onMouseLeave={onMouseLeave}
-                                onMouseUp={onMouseUp}
-                                onKeyDown={ifKeyIsEnter(decrement)}
-                                className = {css(styles.spinner)}
-                                >
-                                    <DownIcon className = {css(styles.iconDown)}/>
-                            </span>
-                        </div> 
-
-                    )
-                }}
-            </ThemeContext.Consumer>
-        )
-    }
+  render() {
+    const {
+      value,
+      disabled,
+      hasFocus,
+      hasHover,
+      isPressed,
+      onBlur,
+      onClick,
+      onChange,
+      onMouseDown,
+      onMouseEnter,
+      onMouseLeave,
+      onMouseUp,
+      onFocus,
+      increment,
+      decrement,
+      variant,
+      ...otherProps
+    } = this.props;
+    return (
+      <ThemeContext.Consumer>
+        {({ resolvedRoles, metadata }) => {
+          const styles = stylesheet(
+            {
+              disabled,
+              hasFocus,
+              hasHover,
+              isPressed,
+              variant
+            },
+            resolvedRoles
+          );
+          const UpIcon =
+            metadata.densityId === "medium-density" ? CaretUpMUI : CaretUpSUI;
+          const DownIcon =
+            metadata.densityId === "medium-density"
+              ? CaretDownMUI
+              : CaretDownSUI;
+          const ifKeyIsEnter = action => event => {
+            if (event.key === "Enter") {
+              action();
+            }
+          };
+          return (
+            <div className={css(styles.spinnerWrapper)}>
+              <span
+                onBlur={onBlur}
+                onClick={increment}
+                onFocus={onFocus}
+                onChange={onChange}
+                onMouseDown={onMouseDown}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+                onMouseUp={onMouseUp}
+                onKeyDown={ifKeyIsEnter(increment)}
+                className={css(styles.spinner)}
+              >
+                <UpIcon className={css(styles.iconUp)} />
+              </span>
+              <span
+                onBlur={onBlur}
+                onClick={decrement}
+                onFocus={onFocus}
+                onChange={onChange}
+                onMouseDown={onMouseDown}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+                onMouseUp={onMouseUp}
+                onKeyDown={ifKeyIsEnter(decrement)}
+                className={css(styles.spinner)}
+              >
+                <DownIcon className={css(styles.iconDown)} />
+              </span>
+            </div>
+          );
+        }}
+      </ThemeContext.Consumer>
+    );
+  }
 }
 
-                        /*
+/*
                         */
 /*
                         

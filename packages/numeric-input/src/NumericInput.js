@@ -85,61 +85,67 @@ export default class NumericInput extends Component {
     return (
       <div>
         <ControlBehavior
-            onBlur={onBlur}
-            onFocus={onFocus}
-            onMouseDown={this.props.onMouseDown}
-            onMouseEnter={this.props.onMouseEnter}
-            onMouseLeave={this.props.onMouseLeave}
-            onMouseUp={this.props.onMouseUp}
-          >
-            {({
-              hasFocus,
-              hasHover,
-              isPressed,
-              onBlur: handleBlur,
-              onFocus: handleFocus,
-              onMouseDown: handleMouseDown,
-              onMouseEnter: handleMouseEnter,
-              onMouseLeave: handleMouseLeave,
-              onMouseUp: handleMouseUp
-            })=> (
-              <SpinnerBehavior
-                onClick={onClick}
-                value={value}
-                onChange={onChange}
-                initialValue={initialValue}
-                step={step}
-                disabled={disabled}
-                >
-                  {({ handleClick, handleChange, increment, decrement, value: controlledValue, setValue }) => {
-                    const onDirectChange = event => {
-                          const newValue = event.target.value;
-                          setValue(newValue);
-                        }; 
-                  
-                   return (
-                    <div style={{position: "relative"}}>
-                      
-                      <SpinnerPresenter
-                        value={Number(value)}
-                        disabled={disabled}
-                        hasFocus={hasFocus}
-                        hasHover={hasHover}
-                        isPressed={isPressed}
-                        onBlur={handleBlur}
-                        onClick={handleClick}
-                        onChange={handleChange}
-                        onFocus={handleFocus}
-                        onMouseDown={handleMouseDown}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                        onMouseUp={handleMouseUp}
-                        increment={increment}
-                        decrement={decrement}
-                        variant={variant}
-                        {...otherProps}
-                      />
-                      <Input
+          onBlur={onBlur}
+          onFocus={onFocus}
+          onMouseDown={this.props.onMouseDown}
+          onMouseEnter={this.props.onMouseEnter}
+          onMouseLeave={this.props.onMouseLeave}
+          onMouseUp={this.props.onMouseUp}
+        >
+          {({
+            hasFocus,
+            hasHover,
+            isPressed,
+            onBlur: handleBlur,
+            onFocus: handleFocus,
+            onMouseDown: handleMouseDown,
+            onMouseEnter: handleMouseEnter,
+            onMouseLeave: handleMouseLeave,
+            onMouseUp: handleMouseUp
+          }) => (
+            <SpinnerBehavior
+              onClick={onClick}
+              value={value}
+              onChange={onChange}
+              initialValue={initialValue}
+              step={step}
+              disabled={disabled}
+            >
+              {({
+                handleClick,
+                handleChange,
+                increment,
+                decrement,
+                value: controlledValue,
+                setValue
+              }) => {
+                const onDirectChange = event => {
+                  const newValue = event.target.value;
+                  setValue(newValue);
+                };
+
+                return (
+                  <div style={{ position: "relative" }}>
+                    <SpinnerPresenter
+                      value={Number(value)}
+                      disabled={disabled}
+                      hasFocus={hasFocus}
+                      hasHover={hasHover}
+                      isPressed={isPressed}
+                      onBlur={handleBlur}
+                      onClick={handleClick}
+                      onChange={handleChange}
+                      onFocus={handleFocus}
+                      onMouseDown={handleMouseDown}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                      onMouseUp={handleMouseUp}
+                      increment={increment}
+                      decrement={decrement}
+                      variant={variant}
+                      {...otherProps}
+                    />
+                    <Input
                       {...otherProps}
                       disabled={disabled}
                       className="numeric-input"
@@ -159,17 +165,14 @@ export default class NumericInput extends Component {
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                       onMouseUp={handleMouseUp}
-                    /> 
+                    />
                   </div>
-                  );
-                }}
-              </SpinnerBehavior>
-            )}
-          </ControlBehavior>
-       
+                );
+              }}
+            </SpinnerBehavior>
+          )}
+        </ControlBehavior>
       </div>
-    )
+    );
   }
-
 }
-
