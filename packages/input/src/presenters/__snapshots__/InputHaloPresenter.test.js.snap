@@ -22,7 +22,6 @@ exports[`InputHaloPresenter renders by default 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -79,7 +78,6 @@ exports[`InputHaloPresenter renders when error 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 0;
-  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.3s,0.3s;
@@ -131,9 +129,11 @@ exports[`InputHaloPresenter renders with focus 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 4px;
-  background-color: rgba(6,150,215,0.25);
+  -webkit-transition-property: height,color;
+  transition-property: height,color;
   -webkit-transition-duration: 0.1s,0.1s;
   transition-duration: 0.1s,0.1s;
+  background-color: rgba(6,150,215,0.25);
 }
 
 <div
@@ -167,11 +167,11 @@ exports[`InputHaloPresenter renders with hover 1`] = `
   right: 0;
   width: calc(100% + 2px);
   height: 4px;
-  background-color: rgba(128,128,128,0.15);
   -webkit-transition-property: height,color;
   transition-property: height,color;
   -webkit-transition-duration: 0.1s,0.1s;
   transition-duration: 0.1s,0.1s;
+  background-color: rgba(128,128,128,0.15);
 }
 
 <div
