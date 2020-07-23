@@ -5,6 +5,8 @@ import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./stylesheet";
 import { CaretUpMUI, CaretUpSUI, CaretDownMUI, CaretDownSUI } from "@hig/icons";
 
+const variantTypes = ["line", "box"];
+
 export default class SpinnerPresenter extends Component {
     static propTypes = {
         value: PropTypes.number,
@@ -18,7 +20,8 @@ export default class SpinnerPresenter extends Component {
         onMouseDown: PropTypes.func,
         onMouseEnter: PropTypes.func,
         onMouseLeave: PropTypes.func,
-        onMouseUp: PropTypes.func
+        onMouseUp: PropTypes.func,
+        variant: PropTypes.oneOf(variantTypes)
     }
 
     static defaultProps = {
@@ -43,6 +46,7 @@ export default class SpinnerPresenter extends Component {
             onFocus,
             increment,
             decrement,
+            variant,
             ...otherProps
         } = this.props;
         return (
@@ -53,7 +57,8 @@ export default class SpinnerPresenter extends Component {
                             disabled,
                             hasFocus,
                             hasHover,
-                            isPressed
+                            isPressed,
+                            variant
                         }, 
                         resolvedRoles
                     );
@@ -78,7 +83,7 @@ export default class SpinnerPresenter extends Component {
                                 onKeyDown={ifKeyIsEnter(increment)}
                                 className = {css(styles.spinner)}
                                 >
-                                    <UpIcon/>
+                                    <UpIcon className = {css(styles.iconUp)}/>
                             </span>
                             <span 
                                 onBlur={onBlur}
@@ -92,7 +97,7 @@ export default class SpinnerPresenter extends Component {
                                 onKeyDown={ifKeyIsEnter(decrement)}
                                 className = {css(styles.spinner)}
                                 >
-                                    <DownIcon/>
+                                    <DownIcon className = {css(styles.iconDown)}/>
                             </span>
                         </div> 
 

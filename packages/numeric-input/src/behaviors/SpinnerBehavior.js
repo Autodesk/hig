@@ -9,11 +9,11 @@ export default class SpinnerBehavior extends Component {
         onChange: PropTypes.func, 
         value: PropTypes.number,
         initialValue: PropTypes.number,
-        step: PropTypes.number
+        step: PropTypes.number,
+        disabled: PropTypes.bool
     }
     static defaultProps = {
         step: 1,
-        isDisabled: false,
         initialValue: 0,
         value: undefined,
         onChange: undefined
@@ -44,7 +44,7 @@ export default class SpinnerBehavior extends Component {
 
     updateValue = value => {
         // Do nothing if the input is currently disabled
-        if (this.props.isDisabled) {
+        if (this.props.disabled) {
           return;
         }
         this.setValue(value);
@@ -53,18 +53,17 @@ export default class SpinnerBehavior extends Component {
         this.props.value !== undefined && this.props.value !== null;
 
       increment = () => {
-        this.updateValue(this.getValue() + this.props.step);
+        this.updateValue(Number(this.getValue()) + this.props.step);
       };
     
       decrement = () => {
-        this.updateValue(this.getValue() - this.props.step);
+        this.updateValue(Number(this.getValue()) - this.props.step);
       };
-
 
     render() {
         const { onClick: handleClick } = this.props;
         const { handleChange } = this;
-
+      
         return this.props.children({
             handleClick,
             handleChange,

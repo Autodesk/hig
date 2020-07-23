@@ -109,18 +109,19 @@ export default class NumericInput extends Component {
                 onChange={onChange}
                 initialValue={initialValue}
                 step={step}
+                disabled={disabled}
                 >
-                  {({ handleClick, handleChange, increment, decrement, value: controlledValue, setValue, hasFocus: focused }) => {
+                  {({ handleClick, handleChange, increment, decrement, value: controlledValue, setValue }) => {
                     const onDirectChange = event => {
-                      const newValue = event.target.value;
-                      setValue(newValue);
-                    }; 
+                          const newValue = event.target.value;
+                          setValue(newValue);
+                        }; 
                   
                    return (
                     <div style={{position: "relative"}}>
                       
                       <SpinnerPresenter
-                        value={value}
+                        value={Number(value)}
                         disabled={disabled}
                         hasFocus={hasFocus}
                         hasHover={hasHover}
@@ -135,10 +136,12 @@ export default class NumericInput extends Component {
                         onMouseUp={handleMouseUp}
                         increment={increment}
                         decrement={decrement}
+                        variant={variant}
                         {...otherProps}
                       />
                       <Input
                       {...otherProps}
+                      disabled={disabled}
                       className="numeric-input"
                       placeholder={placeholder}
                       step={step}
@@ -156,7 +159,6 @@ export default class NumericInput extends Component {
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                       onMouseUp={handleMouseUp}
-                      {...otherProps}
                     /> 
                   </div>
                   );
