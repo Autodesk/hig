@@ -1,4 +1,4 @@
-function getWrapperRulesByVariant(variant, props, themeData) {
+function getWrapperRulesByVariant(variant, density) {
   switch (variant) {
     case "line":
       return {
@@ -8,42 +8,49 @@ function getWrapperRulesByVariant(variant, props, themeData) {
       };
     case "box":
       return {
-        width: "36px",
+        width: density === "medium-density" ? "35px" : "24px",
         right: "0px",
-        backgroundColor: themeData["input.box.default.backgroundColor"],
-        borderStyle: "solid",
-        borderColor: themeData["input.borderColor"],
-        borderWidth: themeData["basics.borderWidths.small"],
-        // height: "100%",
-        borderBottomColor: "transparent",
-        top: "0px",
-        bottom: "1px",
+        height: "100%",
         textAlign: "-webkit-center"
       };
     default:
       return {};
   }
 }
-function getSpinnerRulesByVariant(variant, themeData) {
-  switch (variant) {
-    case "line":
-      return {};
-    case "box":
-      return {};
-    default:
-      return {};
-  }
+function getBoxRules(themeData) {
+  return {
+    zIndex: -2,
+    borderLeftStyle: "solid",
+    borderLeftColor: themeData["input.borderColor"],
+    borderLeftWidth: themeData["basics.borderWidths.small"],
+    marginTop: "1px",
+    marginBottom: "1px",
+    marginRight: "1px",
+    height: "-webkit-fill-available",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    backgroundColor: themeData["input.box.default.backgroundColor"]
+  };
 }
-
-export default function stylesheet(props, themeData) {
-  const { disabled, hasFocus, hasHover, isPressed, variant } = props;
+function getDisabledBoxRules(themeData) {
+  return {
+    opacity: themeData["input.disabled.opacity"]
+  };
+}
+export default function stylesheet(props, themeData, density) {
+  const { disabled, variant } = props;
 
   return {
     spinnerWrapper: {
       boxSizing: `border-box`,
       position: `absolute`,
       zIndex: 1,
-      ...getWrapperRulesByVariant(variant, props, themeData)
+      ...getWrapperRulesByVariant(variant, density)
+    },
+    boxWrapper: {
+      ...(variant === "box" ? getBoxRules(themeData) : {}),
+      ...(disabled ? getDisabledBoxRules(themeData) : {})
     },
     spinner: {
       display: "block",
@@ -52,16 +59,18 @@ export default function stylesheet(props, themeData) {
       },
 
       "&:active svg *": {
-        fill: themeData["colorScheme.indicator.pressed"]
+        fill: disabled
+          ? themeData["input.indicator.default"]
+          : themeData["colorScheme.indicator.pressed"]
       }
     },
     iconUp: {
       display: "flex",
-      paddingTop: variant === "box" ? "7px" : {}
+      paddingBottom: density === "high-density" ? "3px" : {}
     },
     iconDown: {
       display: "flex",
-      paddingBottom: variant === "box" ? "8px" : {}
+      paddingTop: density === "high-density" ? "3px" : {}
     }
   };
 }

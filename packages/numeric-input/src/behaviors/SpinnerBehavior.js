@@ -5,7 +5,6 @@ export default class SpinnerBehavior extends Component {
   static propTypes = {
     onClick: PropTypes.func,
     children: PropTypes.func,
-    numberInput: PropTypes.number,
     onChange: PropTypes.func,
     value: PropTypes.number,
     initialValue: PropTypes.number,

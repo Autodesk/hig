@@ -1,20 +1,17 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { ThemeContext } from "@hig/theme-context";
 
-import { css } from "emotion";
 import Input from "@hig/input";
+import { ControlBehavior } from "@hig/behaviors";
 
 import customStylesheet from "./customStylesheet";
-import ControlBehavior from "@hig/behaviors/src/ControlBehavior";
-import SpinnerBehavior from "./behaviors/SpinnerBehavior.js";
-import SpinnerPresenter from "./presenters/SpinnerPresenter.js";
+import SpinnerBehavior from "./behaviors/SpinnerBehavior";
+import SpinnerPresenter from "./presenters/SpinnerPresenter";
 
 const variantTypes = ["line", "box"];
 
 export default class NumericInput extends Component {
   static propTypes = {
-    className: PropTypes.string,
     onBlur: PropTypes.func,
     /**
      * Called after user changes the value of the field
@@ -76,7 +73,7 @@ export default class NumericInput extends Component {
     } = this.props;
 
     const numericInputStylesheet = (styles, props, themeData) => {
-      const numericInputStyles = customStylesheet(styles, props, themeData);
+      const numericInputStyles = customStylesheet(styles);
       return stylesheet
         ? stylesheet(numericInputStyles, props, themeData)
         : numericInputStyles;
@@ -95,7 +92,6 @@ export default class NumericInput extends Component {
           {({
             hasFocus,
             hasHover,
-            isPressed,
             onBlur: handleBlur,
             onFocus: handleFocus,
             onMouseDown: handleMouseDown,
@@ -127,11 +123,7 @@ export default class NumericInput extends Component {
                 return (
                   <div style={{ position: "relative" }}>
                     <SpinnerPresenter
-                      value={Number(value)}
                       disabled={disabled}
-                      hasFocus={hasFocus}
-                      hasHover={hasHover}
-                      isPressed={isPressed}
                       onBlur={handleBlur}
                       onClick={handleClick}
                       onChange={handleChange}
@@ -148,11 +140,8 @@ export default class NumericInput extends Component {
                     <Input
                       {...otherProps}
                       disabled={disabled}
-                      className="numeric-input"
-                      placeholder={placeholder}
                       step={step}
                       stylesheet={numericInputStylesheet}
-                      tagName="input"
                       type="number"
                       variant={variant}
                       value={`${controlledValue}`}

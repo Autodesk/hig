@@ -1,4 +1,4 @@
-export default function stylesheetOverride(stylesheet, props, themeData) {
+export default function stylesheetOverride(stylesheet) {
   const numericInput = {
     ...stylesheet.input,
     // Safari chrome
