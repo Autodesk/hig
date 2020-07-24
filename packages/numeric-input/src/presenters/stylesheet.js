@@ -17,6 +17,7 @@ function getWrapperRulesByVariant(variant, density) {
       return {};
   }
 }
+
 function getBoxRules(themeData) {
   return {
     zIndex: -2,
@@ -33,15 +34,17 @@ function getBoxRules(themeData) {
     backgroundColor: themeData["input.box.default.backgroundColor"]
   };
 }
+
 function getDisabledBoxRules(themeData) {
   return {
     opacity: themeData["input.disabled.opacity"]
   };
 }
+
 export default function stylesheet(props, themeData, density) {
   const { disabled, variant } = props;
-
-  return {
+  const {stylesheet: customStylesheet} = props;
+  const styles = {
     spinnerWrapper: {
       boxSizing: `border-box`,
       position: `absolute`,
@@ -73,4 +76,6 @@ export default function stylesheet(props, themeData, density) {
       paddingTop: density === "high-density" ? "3px" : {}
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

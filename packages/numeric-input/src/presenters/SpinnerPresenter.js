@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 import { CaretUpMUI, CaretUpSUI, CaretDownMUI, CaretDownSUI } from "@hig/icons";
+import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
 const variantTypes = ["line", "box"];
@@ -20,7 +21,8 @@ export default class SpinnerPresenter extends Component {
     onMouseUp: PropTypes.func,
     variant: PropTypes.oneOf(variantTypes),
     increment: PropTypes.func,
-    decrement: PropTypes.func
+    decrement: PropTypes.func,
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -41,15 +43,25 @@ export default class SpinnerPresenter extends Component {
       increment,
       decrement,
       variant,
+      stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
+
+    const {className} = otherProps;
+    const spinnerWrapperClassName = createCustomClassNames(className, "spinner-wrapper");
+    const boxWrapperClassName = createCustomClassNames(className, "box-wrapper");
+    const spinnerClassName = createCustomClassNames(className, "spinner");
+    const spinnerUpClassName = createCustomClassNames(className, "spinner-icon-up");
+    const spinnerDownClassName = createCustomClassNames(className, "spinner-icon-down");
+
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
           const styles = stylesheet(
             {
               disabled,
-              variant
+              variant,
+              stylesheet: customStylesheet
             },
             resolvedRoles,
             metadata.densityId
@@ -68,10 +80,10 @@ export default class SpinnerPresenter extends Component {
             }
           };
           return (
-            <div className={css(styles.spinnerWrapper)}>
-              <div className={css(styles.boxWrapper)}>
+            <div className={cx(css(styles.spinnerWrapper), spinnerWrapperClassName)}>
+              <div className={cx(css(styles.boxWrapper), boxWrapperClassName)}>
                 <span
-                  className={css(styles.spinner)}
+                  className={cx(css(styles.spinner), spinnerClassName)}
                   onBlur={onBlur}
                   onClick={increment}
                   onFocus={onFocus}
@@ -82,10 +94,10 @@ export default class SpinnerPresenter extends Component {
                   onMouseUp={onMouseUp}
                   onKeyDown={ifKeyIsEnter(increment)}
                 >
-                  <UpIcon className={css(styles.iconUp)} />
+                  <UpIcon className={cx(css(styles.iconUp), spinnerUpClassName)} />
                 </span>
                 <span
-                  className={css(styles.spinner)}
+                  className={cx(css(styles.spinner), spinnerClassName)}
                   onBlur={onBlur}
                   onClick={decrement}
                   onFocus={onFocus}
@@ -96,7 +108,7 @@ export default class SpinnerPresenter extends Component {
                   onMouseUp={onMouseUp}
                   onKeyDown={ifKeyIsEnter(decrement)}
                 >
-                  <DownIcon className={css(styles.iconDown)} />
+                  <DownIcon className={cx(css(styles.iconDown), spinnerDownClassName)} />
                 </span>
               </div>
             </div>

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { cx, css } from "emotion";
 
-import Input from "@hig/input";
+import { createCustomClassNames } from "@hig/utils";
 import { ControlBehavior } from "@hig/behaviors";
+import Input from "@hig/input";
 
 import customStylesheet from "./customStylesheet";
 import SpinnerBehavior from "./behaviors/SpinnerBehavior";
@@ -12,25 +14,8 @@ const variantTypes = ["line", "box"];
 
 export default class NumericInput extends Component {
   static propTypes = {
-    onBlur: PropTypes.func,
     /**
-     * Called after user changes the value of the field
-     */
-    onChange: PropTypes.func,
-    /**
-     * Called when user puts focus onto the field
-     */
-    onFocus: PropTypes.func,
-    /**
-     * Called as user changes the value of the field
-     */
-    onInput: PropTypes.func,
-    /**
-     * How much you want the arrows to move up or down
-     */
-    placeholder: PropTypes.string,
-    /**
-     * Initial text to display in the input
+     * Increment/decrement value of numeric input
      */
     step: PropTypes.number,
     /**
@@ -38,16 +23,10 @@ export default class NumericInput extends Component {
      */
     stylesheet: PropTypes.func,
     /**
-     * Starting value for the input
-     */
-    value: PropTypes.number,
-    /**
      * The visual variant of the numeric input
      */
     variant: PropTypes.oneOf(variantTypes),
-    onClick: PropTypes.func,
-    disabled: PropTypes.bool,
-    defaultValue: PropTypes.number
+
   };
 
   static defaultProps = {
@@ -62,15 +41,17 @@ export default class NumericInput extends Component {
       onChange,
       onFocus,
       onInput,
-      placeholder,
       step,
       stylesheet,
       value,
-      defaultValue: initialValue,
+      defaultValue,
       variant,
       onClick,
       ...otherProps
     } = this.props;
+
+    const {className} = otherProps;
+    const inputClassName = createCustomClassNames(className, "input");
 
     const numericInputStylesheet = (styles, props, themeData) => {
       const numericInputStyles = customStylesheet(styles);
@@ -103,7 +84,7 @@ export default class NumericInput extends Component {
               onClick={onClick}
               value={value}
               onChange={onChange}
-              initialValue={initialValue}
+              initialValue={defaultValue}
               step={step}
               disabled={disabled}
             >
@@ -115,6 +96,8 @@ export default class NumericInput extends Component {
                 value: controlledValue,
                 setValue
               }) => {
+
+                //used to update the value between the input and spinners
                 const onDirectChange = event => {
                   const newValue = event.target.value;
                   setValue(newValue);
@@ -135,16 +118,17 @@ export default class NumericInput extends Component {
                       increment={increment}
                       decrement={decrement}
                       variant={variant}
+                      stylesheet={stylesheet}
                       {...otherProps}
                     />
                     <Input
-                      {...otherProps}
+                      className = {cx(css(numericInputStylesheet.input), inputClassName)}
                       disabled={disabled}
                       step={step}
                       stylesheet={numericInputStylesheet}
                       type="number"
                       variant={variant}
-                      value={`${controlledValue}`}
+                      value={String(controlledValue)}
                       hasFocus={hasFocus}
                       hasHover={hasHover}
                       onChange={onDirectChange}
@@ -154,6 +138,7 @@ export default class NumericInput extends Component {
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                       onMouseUp={handleMouseUp}
+                      {...otherProps}
                     />
                   </div>
                 );
