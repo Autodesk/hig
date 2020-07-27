@@ -19,6 +19,7 @@
   "dependencies": {
     "@hig/input": "^1.2.1",
     "@hig/behaviors": "^1.1.1",
+    "@hig/utils": "^0.4.0",
     "prop-types": "^15.7.1"
   },
   "peerDependencies": {
