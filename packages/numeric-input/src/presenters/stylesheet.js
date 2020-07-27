@@ -18,7 +18,7 @@ function getWrapperRulesByVariant(variant, density) {
   }
 }
 
-function getBoxRules(themeData) {
+function getBoxRules(themeData, density) {
   return {
     zIndex: -2,
     borderLeftStyle: "solid",
@@ -27,7 +27,7 @@ function getBoxRules(themeData) {
     marginTop: "1px",
     marginBottom: "1px",
     marginRight: "1px",
-    height: "-webkit-fill-available",
+    height: density === "medium-density"? "34px" : "22px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -49,10 +49,11 @@ export default function stylesheet(props, themeData, density) {
       boxSizing: `border-box`,
       position: `absolute`,
       zIndex: 1,
+      lineHeight: density == "medium-density" ? "10px" : "4px",
       ...getWrapperRulesByVariant(variant, density)
     },
     boxWrapper: {
-      ...(variant === "box" ? getBoxRules(themeData) : {}),
+      ...(variant === "box" ? getBoxRules(themeData, density) : {}),
       ...(disabled ? getDisabledBoxRules(themeData) : {})
     },
     spinner: {

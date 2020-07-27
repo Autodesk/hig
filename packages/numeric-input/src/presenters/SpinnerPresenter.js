@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import { cx, css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 import { CaretUpMUI, CaretUpSUI, CaretDownMUI, CaretDownSUI } from "@hig/icons";
+import { availableVariants } from "@hig/input";
 import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
-const variantTypes = ["line", "box"];
 
 export default class SpinnerPresenter extends Component {
   static propTypes = {
@@ -19,14 +19,10 @@ export default class SpinnerPresenter extends Component {
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
     onMouseUp: PropTypes.func,
-    variant: PropTypes.oneOf(variantTypes),
+    variant: PropTypes.oneOf(availableVariants),
     increment: PropTypes.func,
     decrement: PropTypes.func,
     stylesheet: PropTypes.func
-  };
-
-  static defaultProps = {
-    disabled: false
   };
 
   render() {
@@ -74,39 +70,26 @@ export default class SpinnerPresenter extends Component {
               ? CaretDownMUI
               : CaretDownSUI;
 
-          const ifKeyIsEnter = action => event => {
-            if (event.key === "Enter") {
-              action();
-            }
-          };
           return (
             <div className={cx(css(styles.spinnerWrapper), spinnerWrapperClassName)}>
               <div className={cx(css(styles.boxWrapper), boxWrapperClassName)}>
                 <span
                   className={cx(css(styles.spinner), spinnerClassName)}
-                  onBlur={onBlur}
                   onClick={increment}
-                  onFocus={onFocus}
-                  onChange={onChange}
                   onMouseDown={onMouseDown}
                   onMouseEnter={onMouseEnter}
                   onMouseLeave={onMouseLeave}
                   onMouseUp={onMouseUp}
-                  onKeyDown={ifKeyIsEnter(increment)}
                 >
                   <UpIcon className={cx(css(styles.iconUp), spinnerUpClassName)} />
                 </span>
                 <span
                   className={cx(css(styles.spinner), spinnerClassName)}
-                  onBlur={onBlur}
                   onClick={decrement}
-                  onFocus={onFocus}
-                  onChange={onChange}
                   onMouseDown={onMouseDown}
                   onMouseEnter={onMouseEnter}
                   onMouseLeave={onMouseLeave}
                   onMouseUp={onMouseUp}
-                  onKeyDown={ifKeyIsEnter(decrement)}
                 >
                   <DownIcon className={cx(css(styles.iconDown), spinnerDownClassName)} />
                 </span>

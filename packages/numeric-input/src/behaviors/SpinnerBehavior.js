@@ -57,14 +57,16 @@ export default class SpinnerBehavior extends Component {
   decrement = () => {
     this.updateValue(Number(this.getValue()) - this.props.step);
   };
-
+  onDirectChange = event => {
+    const newValue = event.target.value;
+    this.setValue(newValue);
+  };
   render() {
     const { onClick: handleClick } = this.props;
-    const { handleChange } = this;
 
     return this.props.children({
       handleClick,
-      handleChange,
+      onDirectChange: this.onDirectChange,
       increment: this.increment,
       decrement: this.decrement,
       value: this.getValue(),

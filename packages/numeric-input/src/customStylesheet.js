@@ -26,8 +26,8 @@ export default function stylesheetOverride(stylesheet) {
     input: numericInput,
     halo: {
       ...stylesheet.halo,
-      width: `100%`,
-      left: 0,
+      width: 'calc(100% + 2px)',
+      left: -1,
       top: `100%`
     }
   };

@@ -4,20 +4,15 @@ import { cx, css } from "emotion";
 
 import { createCustomClassNames } from "@hig/utils";
 import { ControlBehavior } from "@hig/behaviors";
-import Input from "@hig/input";
+import Input, { availableVariants } from "@hig/input";
 
 import customStylesheet from "./customStylesheet";
 import SpinnerBehavior from "./behaviors/SpinnerBehavior";
 import SpinnerPresenter from "./presenters/SpinnerPresenter";
 
-const variantTypes = ["line", "box"];
 
 export default class NumericInput extends Component {
   static propTypes = {
-    /**
-     * Increment/decrement value of numeric input
-     */
-    step: PropTypes.number,
     /**
      * Adds custom/overriding styles
      */
@@ -25,7 +20,7 @@ export default class NumericInput extends Component {
     /**
      * The visual variant of the numeric input
      */
-    variant: PropTypes.oneOf(variantTypes),
+    variant: PropTypes.oneOf(availableVariants),
 
   };
 
@@ -33,7 +28,7 @@ export default class NumericInput extends Component {
     step: 1,
     variant: "line"
   };
-
+  
   render() {
     const {
       disabled,
@@ -61,7 +56,6 @@ export default class NumericInput extends Component {
     };
 
     return (
-      <div>
         <ControlBehavior
           onBlur={onBlur}
           onFocus={onFocus}
@@ -90,26 +84,17 @@ export default class NumericInput extends Component {
             >
               {({
                 handleClick,
-                handleChange,
+                onDirectChange,
                 increment,
                 decrement,
-                value: controlledValue,
-                setValue
+                value: controlledValue
               }) => {
-
-                //used to update the value between the input and spinners
-                const onDirectChange = event => {
-                  const newValue = event.target.value;
-                  setValue(newValue);
-                };
-
                 return (
                   <div style={{ position: "relative" }}>
                     <SpinnerPresenter
                       disabled={disabled}
                       onBlur={handleBlur}
                       onClick={handleClick}
-                      onChange={handleChange}
                       onFocus={handleFocus}
                       onMouseDown={handleMouseDown}
                       onMouseEnter={handleMouseEnter}
@@ -146,7 +131,6 @@ export default class NumericInput extends Component {
             </SpinnerBehavior>
           )}
         </ControlBehavior>
-      </div>
     );
   }
 }
