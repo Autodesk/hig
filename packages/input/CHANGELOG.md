@@ -1,3 +1,10 @@
+# [@hig/input-v1.2.2](https://github.com/Autodesk/hig/compare/@hig/input@1.2.1...@hig/input@1.2.2) (2020-07-28)
+
+
+### Bug Fixes
+
+* hover styles take precedent over focus ([16e15a4](https://github.com/Autodesk/hig/commit/16e15a4))
+
 # [@hig/input-v1.2.1](https://github.com/Autodesk/hig/compare/@hig/input@1.2.0...@hig/input@1.2.1) (2020-05-12)
 
 
