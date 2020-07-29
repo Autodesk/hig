@@ -26,6 +26,11 @@ export default class SpinnerBehavior extends Component {
     };
   }
 
+  onDirectChange = event => {
+    const newValue = event.target.value;
+    this.setValue(newValue);
+  };
+
   getValue() {
     if (this.props.value !== undefined && this.props.value !== null) {
       return this.props.value;
@@ -47,6 +52,7 @@ export default class SpinnerBehavior extends Component {
     }
     this.setValue(value);
   };
+
   isValueControlled = () =>
     this.props.value !== undefined && this.props.value !== null;
 
@@ -57,10 +63,7 @@ export default class SpinnerBehavior extends Component {
   decrement = () => {
     this.updateValue(Number(this.getValue()) - this.props.step);
   };
-  onDirectChange = event => {
-    const newValue = event.target.value;
-    this.setValue(newValue);
-  };
+
   render() {
     const { onClick: handleClick } = this.props;
 
@@ -69,8 +72,7 @@ export default class SpinnerBehavior extends Component {
       onDirectChange: this.onDirectChange,
       increment: this.increment,
       decrement: this.decrement,
-      value: this.getValue(),
-      setValue: this.setValue
+      value: this.getValue()
     });
   }
 }

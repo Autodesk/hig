@@ -10,8 +10,7 @@ function getWrapperRulesByVariant(variant, density) {
       return {
         width: density === "medium-density" ? "35px" : "24px",
         right: "0px",
-        height: "100%",
-        textAlign: "-webkit-center"
+        height: "100%"
       };
     default:
       return {};
@@ -27,11 +26,12 @@ function getBoxRules(themeData, density) {
     marginTop: "1px",
     marginBottom: "1px",
     marginRight: "1px",
-    height: density === "medium-density"? "34px" : "22px",
+    height: density === "medium-density" ? "34px" : "22px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    backgroundColor: themeData["input.box.default.backgroundColor"]
+    backgroundColor: themeData["input.box.default.backgroundColor"],
+    alignItems: "center"
   };
 }
 
@@ -43,13 +43,13 @@ function getDisabledBoxRules(themeData) {
 
 export default function stylesheet(props, themeData, density) {
   const { disabled, variant } = props;
-  const {stylesheet: customStylesheet} = props;
+  const { stylesheet: customStylesheet } = props;
   const styles = {
     spinnerWrapper: {
       boxSizing: `border-box`,
       position: `absolute`,
       zIndex: 1,
-      lineHeight: density == "medium-density" ? "10px" : "4px",
+      lineHeight: density === "medium-density" ? "10px" : "4px",
       ...getWrapperRulesByVariant(variant, density)
     },
     boxWrapper: {

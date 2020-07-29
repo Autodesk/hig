@@ -7,7 +7,6 @@ import { availableVariants } from "@hig/input";
 import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
-
 export default class SpinnerPresenter extends Component {
   static propTypes = {
     disabled: PropTypes.bool,
@@ -43,12 +42,24 @@ export default class SpinnerPresenter extends Component {
       ...otherProps
     } = this.props;
 
-    const {className} = otherProps;
-    const spinnerWrapperClassName = createCustomClassNames(className, "spinner-wrapper");
-    const boxWrapperClassName = createCustomClassNames(className, "box-wrapper");
+    const { className } = otherProps;
+    const spinnerWrapperClassName = createCustomClassNames(
+      className,
+      "spinner-wrapper"
+    );
+    const boxWrapperClassName = createCustomClassNames(
+      className,
+      "box-wrapper"
+    );
     const spinnerClassName = createCustomClassNames(className, "spinner");
-    const spinnerUpClassName = createCustomClassNames(className, "spinner-icon-up");
-    const spinnerDownClassName = createCustomClassNames(className, "spinner-icon-down");
+    const spinnerUpClassName = createCustomClassNames(
+      className,
+      "spinner-icon-up"
+    );
+    const spinnerDownClassName = createCustomClassNames(
+      className,
+      "spinner-icon-down"
+    );
 
     return (
       <ThemeContext.Consumer>
@@ -71,7 +82,12 @@ export default class SpinnerPresenter extends Component {
               : CaretDownSUI;
 
           return (
-            <div className={cx(css(styles.spinnerWrapper), spinnerWrapperClassName)}>
+            <div
+              className={cx(
+                css(styles.spinnerWrapper),
+                spinnerWrapperClassName
+              )}
+            >
               <div className={cx(css(styles.boxWrapper), boxWrapperClassName)}>
                 <span
                   className={cx(css(styles.spinner), spinnerClassName)}
@@ -81,7 +97,9 @@ export default class SpinnerPresenter extends Component {
                   onMouseLeave={onMouseLeave}
                   onMouseUp={onMouseUp}
                 >
-                  <UpIcon className={cx(css(styles.iconUp), spinnerUpClassName)} />
+                  <UpIcon
+                    className={cx(css(styles.iconUp), spinnerUpClassName)}
+                  />
                 </span>
                 <span
                   className={cx(css(styles.spinner), spinnerClassName)}
@@ -91,7 +109,9 @@ export default class SpinnerPresenter extends Component {
                   onMouseLeave={onMouseLeave}
                   onMouseUp={onMouseUp}
                 >
-                  <DownIcon className={cx(css(styles.iconDown), spinnerDownClassName)} />
+                  <DownIcon
+                    className={cx(css(styles.iconDown), spinnerDownClassName)}
+                  />
                 </span>
               </div>
             </div>
