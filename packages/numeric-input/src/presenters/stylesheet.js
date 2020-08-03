@@ -49,6 +49,7 @@ export default function stylesheet(props, themeData, density) {
       position: `absolute`,
       zIndex: 1,
       lineHeight: density === "medium-density" ? "10px" : "4px",
+      cursor: disabled ? "default" : "pointer",
       ...getWrapperRulesByVariant(variant, density)
     },
     boxWrapper: {

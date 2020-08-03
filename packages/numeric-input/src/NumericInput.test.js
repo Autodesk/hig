@@ -1,5 +1,9 @@
+import React from "react";
+import { mount } from "enzyme";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+import Input from "@hig/input";
 import NumericInput from "./NumericInput";
+import SpinnerPresenter from "./presenters/SpinnerPresenter";
 
 describe("numeric-input/NumericInput", () => {
   takeSnapshotsOf(NumericInput, [
@@ -44,4 +48,40 @@ describe("numeric-input/NumericInput", () => {
       }
     }
   ]);
+});
+
+describe("event handlers", () => {
+  let onChangeMock;
+  let wrapper;
+  let interactiveElement;
+
+  beforeEach(() => {
+    onChangeMock = jest.fn();
+    wrapper = mount(<NumericInput defaultValue={23} onChange={onChangeMock} />);
+    interactiveElement = wrapper.find(Input);
+  });
+
+  it("sets the value", () => {
+    expect(interactiveElement).toHaveProp("value", "23");
+  });
+
+  it("increments value", () => {
+    const spinnerWrapper = wrapper.find(SpinnerPresenter);
+    spinnerWrapper.props().increment();
+
+    expect(onChangeMock).toHaveBeenCalledTimes(1);
+    expect(onChangeMock).toHaveBeenCalledWith(24);
+
+    expect(interactiveElement).toHaveProp("value", "24");
+  });
+
+  it("decrements value", () => {
+    const spinnerWrapper = wrapper.find(SpinnerPresenter);
+    spinnerWrapper.props().decrement();
+
+    expect(onChangeMock).toHaveBeenCalledTimes(1);
+    expect(onChangeMock).toHaveBeenCalledWith(22);
+
+    expect(interactiveElement).toHaveProp("value", "22");
+  });
 });

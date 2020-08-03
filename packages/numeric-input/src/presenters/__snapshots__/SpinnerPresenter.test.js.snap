@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`spinner/SpinnerPresenter/SpinnerPresenter renders with custom className 1`] = `
+exports[`spinner/SpinnerPresenter renders with custom className 1`] = `
 .emotion-5 {
   box-sizing: border-box;
   position: absolute;
   z-index: 1;
   line-height: 10px;
+  cursor: pointer;
 }
 
 .emotion-1 {
@@ -104,12 +105,13 @@ exports[`spinner/SpinnerPresenter/SpinnerPresenter renders with custom className
 </div>
 `;
 
-exports[`spinner/SpinnerPresenter/SpinnerPresenter renders with custom stylesheet 1`] = `
+exports[`spinner/SpinnerPresenter renders with custom stylesheet 1`] = `
 .emotion-5 {
   box-sizing: border-box;
   position: absolute;
   z-index: 1;
   line-height: 10px;
+  cursor: pointer;
 }
 
 .emotion-0 {
@@ -209,14 +211,7 @@ exports[`spinner/SpinnerPresenter/SpinnerPresenter renders with custom styleshee
 </div>
 `;
 
-exports[`spinner/SpinnerPresenter/SpinnerPresenter renders with disabled 1`] = `
-.emotion-5 {
-  box-sizing: border-box;
-  position: absolute;
-  z-index: 1;
-  line-height: 10px;
-}
-
+exports[`spinner/SpinnerPresenter renders with disabled 1`] = `
 .emotion-0 {
   fill: #808080;
   display: -webkit-box;
@@ -239,6 +234,14 @@ exports[`spinner/SpinnerPresenter/SpinnerPresenter renders with disabled 1`] = `
 
 .emotion-2 > * {
   fill: #808080;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  line-height: 10px;
+  cursor: default;
 }
 
 .emotion-4 {
@@ -317,7 +320,7 @@ exports[`spinner/SpinnerPresenter/SpinnerPresenter renders with disabled 1`] = `
 </div>
 `;
 
-exports[`spinner/SpinnerPresenter/SpinnerPresenter renders with variant 1`] = `
+exports[`spinner/SpinnerPresenter renders with variant 1`] = `
 .emotion-1 {
   display: block;
 }
@@ -363,6 +366,7 @@ exports[`spinner/SpinnerPresenter/SpinnerPresenter renders with variant 1`] = `
   position: absolute;
   z-index: 1;
   line-height: 10px;
+  cursor: pointer;
   width: 35px;
   right: 0px;
   height: 100%;
@@ -450,12 +454,13 @@ exports[`spinner/SpinnerPresenter/SpinnerPresenter renders with variant 1`] = `
 </div>
 `;
 
-exports[`spinner/SpinnerPresenter/SpinnerPresenter renders without props 1`] = `
+exports[`spinner/SpinnerPresenter renders without props 1`] = `
 .emotion-5 {
   box-sizing: border-box;
   position: absolute;
   z-index: 1;
   line-height: 10px;
+  cursor: pointer;
 }
 
 .emotion-1 {

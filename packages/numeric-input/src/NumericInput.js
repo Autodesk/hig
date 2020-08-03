@@ -19,7 +19,11 @@ export default class NumericInput extends Component {
     /**
      * The visual variant of the numeric input
      */
-    variant: PropTypes.oneOf(availableVariants)
+    variant: PropTypes.oneOf(availableVariants),
+    /**
+     * Specify if the value of the input is wrong
+     */
+    error: PropTypes.bool
   };
 
   static defaultProps = {
@@ -38,6 +42,7 @@ export default class NumericInput extends Component {
       defaultValue,
       variant,
       onClick,
+      error,
       ...otherProps
     } = this.props;
 
@@ -112,6 +117,7 @@ export default class NumericInput extends Component {
                   type="number"
                   variant={variant}
                   value={String(controlledValue)}
+                  error={error}
                   hasFocus={hasFocus}
                   hasHover={hasHover}
                   onChange={onDirectChange}

@@ -1,8 +1,7 @@
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
-
 import SpinnerPresenter from "./SpinnerPresenter";
 
-describe("spinner/SpinnerPresenter/SpinnerPresenter", () => {
+describe("spinner/SpinnerPresenter", () => {
   takeSnapshotsOf(SpinnerPresenter, [
     {
       desc: "renders without props",

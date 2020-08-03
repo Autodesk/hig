@@ -1,5 +1,5 @@
 import { action } from "@storybook/addon-actions";
-import { boolean, select } from "@storybook/addon-knobs/react";
+import { boolean, select, number } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
   basic: "Basic",
@@ -16,7 +16,7 @@ const knobLabels = {
   onBlur: "onBlur",
   onMouseEnter: "onMouseEnter",
   onMouseLeave: "onMouseLeave",
-  variant: "variant"
+  variant: "Variant"
 };
 
 const variantOptions = {
@@ -36,6 +36,8 @@ export default function getKnobs(props) {
       variant,
       knobGroupIds.basic
     ),
+    step: number(knobLabels.step, 1),
+    error: boolean(knobLabels.error, false),
     onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
     onFocus: action(knobLabels.onFocus)

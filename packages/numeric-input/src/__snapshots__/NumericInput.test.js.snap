@@ -6,6 +6,7 @@ exports[`numeric-input/NumericInput renders with custom className 1`] = `
   position: absolute;
   z-index: 1;
   line-height: 10px;
+  cursor: pointer;
   width: 10px;
   right: 0px;
   bottom: 22%;
@@ -235,6 +236,7 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
   position: absolute;
   z-index: 1;
   line-height: 10px;
+  cursor: pointer;
   width: 10px;
   right: 0px;
   bottom: 22%;
@@ -465,6 +467,7 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
   position: absolute;
   z-index: 1;
   line-height: 10px;
+  cursor: pointer;
   width: 10px;
   right: 0px;
   bottom: 22%;
@@ -689,16 +692,6 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
 `;
 
 exports[`numeric-input/NumericInput renders with disabled 1`] = `
-.emotion-5 {
-  box-sizing: border-box;
-  position: absolute;
-  z-index: 1;
-  line-height: 10px;
-  width: 10px;
-  right: 0px;
-  bottom: 22%;
-}
-
 .emotion-0 {
   fill: #808080;
   display: -webkit-box;
@@ -787,6 +780,17 @@ exports[`numeric-input/NumericInput renders with disabled 1`] = `
 
 .emotion-6:hover {
   -moz-appearance: textfield;
+}
+
+.emotion-5 {
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  line-height: 10px;
+  cursor: default;
+  width: 10px;
+  right: 0px;
+  bottom: 22%;
 }
 
 .emotion-4 {
@@ -976,6 +980,7 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
   position: absolute;
   z-index: 1;
   line-height: 10px;
+  cursor: pointer;
   width: 35px;
   right: 0px;
   height: 100%;
@@ -1178,6 +1183,7 @@ exports[`numeric-input/NumericInput renders without props 1`] = `
   position: absolute;
   z-index: 1;
   line-height: 10px;
+  cursor: pointer;
   width: 10px;
   right: 0px;
   bottom: 22%;
