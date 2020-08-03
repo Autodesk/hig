@@ -4,16 +4,16 @@ import { cx, css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 import { CaretUpMUI, CaretUpSUI, CaretDownMUI, CaretDownSUI } from "@hig/icons";
 import { availableVariants } from "@hig/input";
-import { createCustomClassNames } from "@hig/utils";
+import {
+  createCustomClassNames,
+  memoizeCreateButtonEventHandlers
+} from "@hig/utils";
 import stylesheet from "./stylesheet";
 
 export default class SpinnerPresenter extends Component {
   static propTypes = {
     disabled: PropTypes.bool,
-    onBlur: PropTypes.func,
     onClick: PropTypes.func,
-    onFocus: PropTypes.func,
-    onChange: PropTypes.func,
     onMouseDown: PropTypes.func,
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
@@ -24,23 +24,32 @@ export default class SpinnerPresenter extends Component {
     stylesheet: PropTypes.func
   };
 
+  createButtonHandlers = memoizeCreateButtonEventHandlers();
+
   render() {
     const {
       disabled,
-      onBlur,
       onClick,
-      onChange,
       onMouseDown,
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
-      onFocus,
       increment,
       decrement,
       variant,
       stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
+
+    const {
+      handleClick: handleIncrementClick,
+      handleKeyDown: handleIncrementKeyDown
+    } = this.createButtonHandlers(increment);
+
+    const {
+      handleClick: handleDecrementClick,
+      handleKeyDown: handleDecrementKeyDown
+    } = this.createButtonHandlers(decrement);
 
     const { className } = otherProps;
     const spinnerWrapperClassName = createCustomClassNames(
@@ -91,11 +100,14 @@ export default class SpinnerPresenter extends Component {
               <div className={cx(css(styles.boxWrapper), boxWrapperClassName)}>
                 <span
                   className={cx(css(styles.spinner), spinnerClassName)}
-                  onClick={increment}
+                  onClick={handleIncrementClick}
                   onMouseDown={onMouseDown}
                   onMouseEnter={onMouseEnter}
                   onMouseLeave={onMouseLeave}
                   onMouseUp={onMouseUp}
+                  role="button"
+                  tabIndex="-1"
+                  onKeyDown={handleIncrementKeyDown}
                 >
                   <UpIcon
                     className={cx(css(styles.iconUp), spinnerUpClassName)}
@@ -103,11 +115,14 @@ export default class SpinnerPresenter extends Component {
                 </span>
                 <span
                   className={cx(css(styles.spinner), spinnerClassName)}
-                  onClick={decrement}
+                  onClick={handleDecrementClick}
                   onMouseDown={onMouseDown}
                   onMouseEnter={onMouseEnter}
                   onMouseLeave={onMouseLeave}
                   onMouseUp={onMouseUp}
+                  role="button"
+                  tabIndex="-1"
+                  onKeyDown={handleDecrementKeyDown}
                 >
                   <DownIcon
                     className={cx(css(styles.iconDown), spinnerDownClassName)}

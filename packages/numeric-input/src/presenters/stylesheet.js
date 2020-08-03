@@ -21,7 +21,7 @@ function getBoxRules(themeData, density) {
   return {
     zIndex: -2,
     borderLeftStyle: "solid",
-    borderLeftColor: themeData["input.borderColor"],
+    borderLeftColor: themeData["colorScheme.divider.lightweight"],
     borderLeftWidth: themeData["basics.borderWidths.small"],
     marginTop: "1px",
     marginBottom: "1px",
@@ -30,7 +30,6 @@ function getBoxRules(themeData, density) {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    backgroundColor: themeData["input.box.default.backgroundColor"],
     alignItems: "center"
   };
 }
@@ -58,6 +57,9 @@ export default function stylesheet(props, themeData, density) {
     },
     spinner: {
       display: "block",
+      "&:focus": {
+        outline: "none"
+      },
       "svg *": {
         fill: themeData["input.indicator.default"]
       },
