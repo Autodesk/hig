@@ -23,7 +23,19 @@ export default class NumericInput extends Component {
     /**
      * Specify if the value of the input is wrong
      */
-    error: PropTypes.bool
+    error: PropTypes.bool,
+    /**
+     * Fired when an element's value changes
+     */
+    onChange: PropTypes.func,
+    /**
+     * Fired when an element has lost focus
+     */
+    onBlur: PropTypes.func,
+    /**
+     * Fired when an element has received focus
+     */
+    onFocus: PropTypes.func
   };
 
   static defaultProps = {
@@ -32,21 +44,17 @@ export default class NumericInput extends Component {
 
   render() {
     const {
-      disabled,
-      onBlur,
-      onChange,
-      onFocus,
-      step,
       stylesheet,
-      value,
-      defaultValue,
       variant,
-      onClick,
       error,
+      onChange,
+      onBlur,
+      onFocus,
       ...otherProps
     } = this.props;
 
-    const { className } = otherProps;
+    const { className, disabled, step, value, defaultValue } = otherProps;
+
     const inputClassName = createCustomClassNames(className, "input");
 
     const numericInputStylesheet = (styles, props, themeData) => {
@@ -76,7 +84,6 @@ export default class NumericInput extends Component {
           onMouseUp: handleMouseUp
         }) => (
           <SpinnerBehavior
-            onClick={onClick}
             value={value}
             onChange={onChange}
             initialValue={defaultValue}
@@ -84,7 +91,6 @@ export default class NumericInput extends Component {
             disabled={disabled}
           >
             {({
-              handleClick,
               onDirectChange,
               increment,
               decrement,
@@ -94,7 +100,6 @@ export default class NumericInput extends Component {
                 <SpinnerPresenter
                   disabled={disabled}
                   onBlur={handleBlur}
-                  onClick={handleClick}
                   onFocus={handleFocus}
                   onMouseDown={handleMouseDown}
                   onMouseEnter={handleMouseEnter}

@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 export default class SpinnerBehavior extends Component {
   static propTypes = {
-    onClick: PropTypes.func,
     children: PropTypes.func,
     onChange: PropTypes.func,
     value: PropTypes.number,
@@ -15,7 +14,7 @@ export default class SpinnerBehavior extends Component {
     step: 1,
     initialValue: 0,
     value: undefined,
-    onChange: undefined
+    onChange: () => {}
   };
 
   constructor(props) {
@@ -65,10 +64,7 @@ export default class SpinnerBehavior extends Component {
   };
 
   render() {
-    const { onClick: handleClick } = this.props;
-
     return this.props.children({
-      handleClick,
       onDirectChange: this.onDirectChange,
       increment: this.increment,
       decrement: this.decrement,

@@ -13,7 +13,6 @@ import stylesheet from "./stylesheet";
 export default class SpinnerPresenter extends Component {
   static propTypes = {
     disabled: PropTypes.bool,
-    onClick: PropTypes.func,
     onMouseDown: PropTypes.func,
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
@@ -29,7 +28,6 @@ export default class SpinnerPresenter extends Component {
   render() {
     const {
       disabled,
-      onClick,
       onMouseDown,
       onMouseEnter,
       onMouseLeave,
