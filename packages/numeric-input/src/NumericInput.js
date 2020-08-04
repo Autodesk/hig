@@ -35,7 +35,11 @@ export default class NumericInput extends Component {
     /**
      * Fired when an element has received focus
      */
-    onFocus: PropTypes.func
+    onFocus: PropTypes.func,
+    /**
+     * Initial value to display
+     */
+    defaultValue: PropTypes.number
   };
 
   static defaultProps = {
@@ -50,10 +54,11 @@ export default class NumericInput extends Component {
       onChange,
       onBlur,
       onFocus,
+      defaultValue, 
       ...otherProps
     } = this.props;
 
-    const { className, disabled, step, value, defaultValue } = otherProps;
+    const { className, disabled, step, value} = otherProps;
 
     const inputClassName = createCustomClassNames(className, "input");
 
