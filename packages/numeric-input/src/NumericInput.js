@@ -39,7 +39,15 @@ export default class NumericInput extends Component {
     /**
      * Initial value to display
      */
-    defaultValue: PropTypes.number
+    defaultValue: PropTypes.number,
+    /**
+     * Prevents the user from interacting with element
+     */
+    disabled: PropTypes.bool,
+    /**
+     * Number to increment/decrement value by
+     */
+    step: PropTypes.number
   };
 
   static defaultProps = {
@@ -54,11 +62,13 @@ export default class NumericInput extends Component {
       onChange,
       onBlur,
       onFocus,
-      defaultValue, 
+      defaultValue,
+      disabled,
+      step,
       ...otherProps
     } = this.props;
 
-    const { className, disabled, step, value} = otherProps;
+    const { className, value } = otherProps;
 
     const inputClassName = createCustomClassNames(className, "input");
 
