@@ -11,6 +11,7 @@ import InputPage from "./pages/InputPage";
 import LabelPage from "./pages/LabelPage";
 import ModalPage from "./pages/ModalPage";
 import MuiButtonsPage from "./pages/material-ui/ButtonsPage";
+import NumericInputPage from "./pages/NumericInputPage";
 import ProgressBarPage from "./pages/ProgressBarPage";
 import ProgressRingPage from "./pages/ProgressRingPage";
 import RadioButtonPage from "./pages/RadioButtonPage";
@@ -36,6 +37,7 @@ export default [
   { path: "/input/", component: InputPage, label: "Input" },
   { path: "/label/", component: LabelPage, label: "Label"},
   { path: "/modal/", component: ModalPage, label: "Modal" },
+  { path: "/numeric-input/", component: NumericInputPage, label: "Numeric Input" },
   { path: "/progress-bar/", component: ProgressBarPage, label: "Progress Bar" },
   { path: "/progress-ring/", component: ProgressRingPage, label: "Progress Ring" },
   { path: "/radio-button/", component: RadioButtonPage, label: "Radio Button" },
