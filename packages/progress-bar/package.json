@@ -17,6 +17,7 @@
     "build/*"
   ],
   "dependencies": {
+    "@hig/utils": "^0.4.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
