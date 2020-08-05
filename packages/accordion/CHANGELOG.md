@@ -1,3 +1,10 @@
+# [@hig/accordion-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/accordion@1.1.0...@hig/accordion@1.1.1) (2020-08-05)
+
+
+### Bug Fixes
+
+* replace componentWillReceiveProps before React deprecates it ([a1a2ba7](https://github.com/Autodesk/hig/commit/a1a2ba7))
+
 # [@hig/accordion-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/accordion@1.0.0...@hig/accordion@1.1.0) (2020-05-13)
 
 
