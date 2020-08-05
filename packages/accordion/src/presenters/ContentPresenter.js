@@ -41,22 +41,17 @@ export default class ContentPresenter extends Component {
     }
   }
 
-  componentWillReceiveProps({ collapsed: nextCollapsed }) {
+  componentDidUpdate({ collapsed: previousCollapsed }) {
+    const { collapsed: currentCollapsed } = this.props;
+
     if (!this.contentWrapper) {
       return;
     }
-
-    const { collapsed: currentCollapsed } = this.props;
-
-    if (currentCollapsed && !nextCollapsed) {
-      this.setState({ status: collapseStatus.EXPANDING });
+    if (currentCollapsed && !previousCollapsed) {
+      this.collapse();
     }
-
-    if (!currentCollapsed && nextCollapsed) {
-      this.setState({ status: collapseStatus.BEFORE_COLLAPSE });
-      window.requestAnimationFrame(() => {
-        setTimeout(() => this.setState({ status: collapseStatus.COLLAPSED }));
-      });
+    if (!currentCollapsed && previousCollapsed) {
+      this.expand();
     }
   }
 
@@ -114,6 +109,15 @@ export default class ContentPresenter extends Component {
 
     return defaultCollapsedStyles;
   };
+
+  collapse = () => {
+    this.setState({ status: collapseStatus.BEFORE_COLLAPSE });
+    window.requestAnimationFrame(() => {
+      setTimeout(() => this.setState({ status: collapseStatus.COLLAPSED }));
+    });
+  };
+
+  expand = () => this.setState({ status: collapseStatus.EXPANDING });
 
   afterCollapsed = () => this.setState({ status: collapseStatus.COLLAPSED });
   afterExpanded = () => this.setState({ status: collapseStatus.EXPANDED });
