@@ -1,3 +1,10 @@
+# [@hig/input-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/input@1.2.2...@hig/input@1.3.0) (2020-08-06)
+
+
+### Features
+
+* add inputRef callback ref prop to pass to input ([926a97e](https://github.com/Autodesk/hig/commit/926a97e))
+
 # [@hig/input-v1.2.2](https://github.com/Autodesk/hig/compare/@hig/input@1.2.1...@hig/input@1.2.2) (2020-07-28)
 
 
