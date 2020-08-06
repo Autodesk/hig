@@ -33,6 +33,7 @@ function Input(props) {
     onMouseEnter: onMouseEnterProp,
     onMouseLeave: onMouseLeaveProp,
     disabled: disabledProp,
+    inputRef,
     stylesheet,
     tagName,
     variant,
@@ -69,6 +70,7 @@ function Input(props) {
             disabled={disabledProp}
             hasFocus={hasFocus}
             hasHover={hasHover}
+            inputRef={inputRef}
             onBlur={onBlur}
             onFocus={onFocus}
             onMouseEnter={onMouseEnter}
@@ -93,6 +95,10 @@ Input.propTypes = {
    * Prevents the user from interacting with the input
    */
   disabled: PropTypes.bool,
+  /**
+   * A callback ref that gets passed to the HTML input
+   */
+  inputRef: PropTypes.func,
   /**
    * Fired when an element has lost focus
    */

@@ -65,4 +65,16 @@ describe("InputPresenter", () => {
     expect(inputProps.onMouseLeave).toEqual(onMouseLeaveHandler);
     expect(inputProps.onInput).toEqual(onInputHandler);
   });
+
+  it("passes down the inputRef", () => {
+    let inputRef;
+
+    function setInputRef(element) {
+      inputRef = element;
+    }
+
+    expect(
+      mount(<InputPresenter inputRef={setInputRef} />).getDOMNode()
+    ).toEqual(inputRef);
+  });
 });

@@ -17,6 +17,7 @@ export default function InputPresenter(props) {
     disabled,
     hasFocus,
     hasHover,
+    inputRef,
     onBlur,
     onFocus,
     onMouseEnter,
@@ -67,6 +68,7 @@ export default function InputPresenter(props) {
             onFocus={onFocus}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
+            ref={inputRef}
           />
         );
       }}
