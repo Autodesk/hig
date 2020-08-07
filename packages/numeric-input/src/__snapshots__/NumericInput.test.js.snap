@@ -1,27 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`numeric-input/NumericInput renders with custom className 1`] = `
+.emotion-9 {
+  position: relative;
+}
+
 .emotion-5 {
   box-sizing: border-box;
   position: absolute;
   z-index: 1;
   line-height: 10px;
   cursor: pointer;
-  width: 10px;
   right: 0px;
-  bottom: 22%;
+}
+
+.emotion-4 {
+  height: calc(36px - 2px);
 }
 
 .emotion-1 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc((36px - 2px) / 2);
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.emotion-1:focus {
-  outline: none;
+.emotion-1:first-of-type {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
 .emotion-1 svg * {
   fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
+  fill: #666666;
 }
 
 .emotion-1:active svg * {
@@ -146,11 +170,7 @@ exports[`numeric-input/NumericInput renders with custom className 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
+  className="emotion-9 custom"
 >
   <div
     className="emotion-5 custom__spinner-wrapper"
@@ -207,10 +227,10 @@ exports[`numeric-input/NumericInput renders with custom className 1`] = `
     </div>
   </div>
   <div
-    className="emotion-8 custom"
+    className="emotion-8 custom__numeric_input"
   >
     <input
-      className="emotion-6 custom__input"
+      className="emotion-6 custom__numeric_input__input"
       disabled={undefined}
       onBlur={[Function]}
       onChange={[Function]}
@@ -224,22 +244,28 @@ exports[`numeric-input/NumericInput renders with custom className 1`] = `
       value="0"
     />
     <div
-      className="emotion-7 custom__halo"
+      className="emotion-7 custom__numeric_input__halo"
     />
   </div>
 </div>
 `;
 
 exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
+.emotion-9 {
+  position: relative;
+}
+
 .emotion-5 {
   box-sizing: border-box;
   position: absolute;
   z-index: 1;
   line-height: 10px;
   cursor: pointer;
-  width: 10px;
   right: 0px;
-  bottom: 22%;
+}
+
+.emotion-4 {
+  height: calc(36px - 2px);
 }
 
 .emotion-0 {
@@ -266,7 +292,7 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
   fill: #808080;
 }
 
-.emotion-10 {
+.emotion-8 {
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
   -ms-flex-positive: 2;
@@ -280,7 +306,7 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
   border-bottom-width: 1px;
 }
 
-.emotion-8 {
+.emotion-7 {
   position: absolute;
   top: calc(100% + 1px);
   left: -1px;
@@ -360,16 +386,34 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
 }
 
 .emotion-1 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc((36px - 2px) / 2);
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
   background-color: pink;
 }
 
-.emotion-1:focus {
-  outline: none;
+.emotion-1:first-of-type {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
 .emotion-1 svg * {
   fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
+  fill: #666666;
 }
 
 .emotion-1:active svg * {
@@ -377,11 +421,7 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
+  className="emotion-9"
 >
   <div
     className="emotion-5"
@@ -438,10 +478,10 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
     </div>
   </div>
   <div
-    className="emotion-10"
+    className="emotion-8"
   >
     <input
-      className="emotion-6 emotion-4__input"
+      className="emotion-6"
       disabled={undefined}
       onBlur={[Function]}
       onChange={[Function]}
@@ -455,34 +495,58 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
       value="0"
     />
     <div
-      className="emotion-8 emotion-4__halo"
+      className="emotion-7"
     />
   </div>
 </div>
 `;
 
 exports[`numeric-input/NumericInput renders with default value 1`] = `
+.emotion-9 {
+  position: relative;
+}
+
 .emotion-5 {
   box-sizing: border-box;
   position: absolute;
   z-index: 1;
   line-height: 10px;
   cursor: pointer;
-  width: 10px;
   right: 0px;
-  bottom: 22%;
+}
+
+.emotion-4 {
+  height: calc(36px - 2px);
 }
 
 .emotion-1 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc((36px - 2px) / 2);
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.emotion-1:focus {
-  outline: none;
+.emotion-1:first-of-type {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
 .emotion-1 svg * {
   fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
+  fill: #666666;
 }
 
 .emotion-1:active svg * {
@@ -513,7 +577,7 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
   fill: #808080;
 }
 
-.emotion-10 {
+.emotion-8 {
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
   -ms-flex-positive: 2;
@@ -527,7 +591,7 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
   border-bottom-width: 1px;
 }
 
-.emotion-8 {
+.emotion-7 {
   position: absolute;
   top: calc(100% + 1px);
   left: -1px;
@@ -607,11 +671,7 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
+  className="emotion-9"
 >
   <div
     className="emotion-5"
@@ -668,10 +728,10 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
     </div>
   </div>
   <div
-    className="emotion-10"
+    className="emotion-8"
   >
     <input
-      className="emotion-6 emotion-4__input"
+      className="emotion-6"
       disabled={undefined}
       onBlur={[Function]}
       onChange={[Function]}
@@ -685,13 +745,17 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
       value="10"
     />
     <div
-      className="emotion-8 emotion-4__halo"
+      className="emotion-7"
     />
   </div>
 </div>
 `;
 
 exports[`numeric-input/NumericInput renders with disabled 1`] = `
+.emotion-9 {
+  position: relative;
+}
+
 .emotion-0 {
   fill: #808080;
   display: -webkit-box;
@@ -788,24 +852,41 @@ exports[`numeric-input/NumericInput renders with disabled 1`] = `
   z-index: 1;
   line-height: 10px;
   cursor: default;
-  width: 10px;
   right: 0px;
-  bottom: 22%;
 }
 
 .emotion-4 {
+  height: calc(36px - 2px);
   opacity: 0.4;
 }
 
 .emotion-1 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc((36px - 2px) / 2);
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.emotion-1:focus {
-  outline: none;
+.emotion-1:first-of-type {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
 .emotion-1 svg * {
+  fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
   fill: rgba(102,102,102,0.7);
 }
 
@@ -813,7 +894,7 @@ exports[`numeric-input/NumericInput renders with disabled 1`] = `
   fill: rgba(102,102,102,0.7);
 }
 
-.emotion-10 {
+.emotion-8 {
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
   -ms-flex-positive: 2;
@@ -828,7 +909,7 @@ exports[`numeric-input/NumericInput renders with disabled 1`] = `
   opacity: 0.4;
 }
 
-.emotion-8 {
+.emotion-7 {
   position: absolute;
   top: calc(100% + 1px);
   left: -1px;
@@ -837,11 +918,7 @@ exports[`numeric-input/NumericInput renders with disabled 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
+  className="emotion-9"
 >
   <div
     className="emotion-5"
@@ -898,10 +975,10 @@ exports[`numeric-input/NumericInput renders with disabled 1`] = `
     </div>
   </div>
   <div
-    className="emotion-10"
+    className="emotion-8"
   >
     <input
-      className="emotion-6 emotion-7"
+      className="emotion-6"
       disabled={true}
       onBlur={[Function]}
       onChange={[Function]}
@@ -915,23 +992,45 @@ exports[`numeric-input/NumericInput renders with disabled 1`] = `
       value="0"
     />
     <div
-      className="emotion-8 emotion-9"
+      className="emotion-7"
     />
   </div>
 </div>
 `;
 
 exports[`numeric-input/NumericInput renders with variant 1`] = `
-.emotion-1 {
-  display: block;
+.emotion-9 {
+  position: relative;
 }
 
-.emotion-1:focus {
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc((36px - 2px) / 2);
   outline: none;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.emotion-1:first-of-type {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
 .emotion-1 svg * {
   fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
+  fill: #666666;
 }
 
 .emotion-1:active svg * {
@@ -962,7 +1061,7 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
   fill: #808080;
 }
 
-.emotion-8 {
+.emotion-7 {
   position: absolute;
   top: calc(100% + 1px);
   left: -1px;
@@ -987,6 +1086,7 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
 }
 
 .emotion-4 {
+  height: 36px;
   z-index: -2;
   border-left-style: solid;
   border-left-color: rgba(60,60,60,0.1);
@@ -994,7 +1094,6 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
   margin-top: 1px;
   margin-bottom: 1px;
   margin-right: 1px;
-  height: 34px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1010,9 +1109,12 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
-.emotion-10 {
+.emotion-8 {
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
   -ms-flex-positive: 2;
@@ -1093,11 +1195,7 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
+  className="emotion-9"
 >
   <div
     className="emotion-5"
@@ -1154,10 +1252,10 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
     </div>
   </div>
   <div
-    className="emotion-10"
+    className="emotion-8"
   >
     <input
-      className="emotion-6 emotion-7"
+      className="emotion-6"
       disabled={undefined}
       onBlur={[Function]}
       onChange={[Function]}
@@ -1171,34 +1269,58 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
       value="0"
     />
     <div
-      className="emotion-8 emotion-9"
+      className="emotion-7"
     />
   </div>
 </div>
 `;
 
 exports[`numeric-input/NumericInput renders without props 1`] = `
+.emotion-9 {
+  position: relative;
+}
+
 .emotion-5 {
   box-sizing: border-box;
   position: absolute;
   z-index: 1;
   line-height: 10px;
   cursor: pointer;
-  width: 10px;
   right: 0px;
-  bottom: 22%;
+}
+
+.emotion-4 {
+  height: calc(36px - 2px);
 }
 
 .emotion-1 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc((36px - 2px) / 2);
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.emotion-1:focus {
-  outline: none;
+.emotion-1:first-of-type {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
 .emotion-1 svg * {
   fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
+  fill: #666666;
 }
 
 .emotion-1:active svg * {
@@ -1229,7 +1351,7 @@ exports[`numeric-input/NumericInput renders without props 1`] = `
   fill: #808080;
 }
 
-.emotion-10 {
+.emotion-8 {
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
   -ms-flex-positive: 2;
@@ -1243,7 +1365,7 @@ exports[`numeric-input/NumericInput renders without props 1`] = `
   border-bottom-width: 1px;
 }
 
-.emotion-8 {
+.emotion-7 {
   position: absolute;
   top: calc(100% + 1px);
   left: -1px;
@@ -1323,11 +1445,7 @@ exports[`numeric-input/NumericInput renders without props 1`] = `
 }
 
 <div
-  style={
-    Object {
-      "position": "relative",
-    }
-  }
+  className="emotion-9"
 >
   <div
     className="emotion-5"
@@ -1384,10 +1502,10 @@ exports[`numeric-input/NumericInput renders without props 1`] = `
     </div>
   </div>
   <div
-    className="emotion-10"
+    className="emotion-8"
   >
     <input
-      className="emotion-6 emotion-4__input"
+      className="emotion-6"
       disabled={undefined}
       onBlur={[Function]}
       onChange={[Function]}
@@ -1401,7 +1519,7 @@ exports[`numeric-input/NumericInput renders without props 1`] = `
       value="0"
     />
     <div
-      className="emotion-8 emotion-4__halo"
+      className="emotion-7"
     />
   </div>
 </div>

@@ -1,17 +1,39 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { cx, css } from "emotion";
+import { css, cx } from "emotion";
 
 import { createCustomClassNames } from "@hig/utils";
 import { ControlBehavior } from "@hig/behaviors";
 import Input, { availableVariants } from "@hig/input";
 
 import customStylesheet from "./customStylesheet";
+import stylesheet from "./presenters/stylesheet";
 import SpinnerBehavior from "./behaviors/SpinnerBehavior";
 import SpinnerPresenter from "./presenters/SpinnerPresenter";
 
 export default class NumericInput extends Component {
   static propTypes = {
+    /**
+     * Initial value to display
+     */
+    defaultValue: PropTypes.number,
+    /**
+     * Specify if the value of the input is wrong
+     */
+    error: PropTypes.bool,
+    /**
+     * Fired when an element's value changes,
+     * Passes back in the current value
+     */
+    onChange: PropTypes.func,
+    /**
+     * Fired when an element has received focus
+     */
+    onFocus: PropTypes.func,
+    /**
+     * Fired when an element has lost focus
+     */
+    onBlur: PropTypes.func,
     /**
      * Adds custom/overriding styles
      */
@@ -19,35 +41,7 @@ export default class NumericInput extends Component {
     /**
      * The visual variant of the numeric input
      */
-    variant: PropTypes.oneOf(availableVariants),
-    /**
-     * Specify if the value of the input is wrong
-     */
-    error: PropTypes.bool,
-    /**
-     * Fired when an element's value changes
-     */
-    onChange: PropTypes.func,
-    /**
-     * Fired when an element has lost focus
-     */
-    onBlur: PropTypes.func,
-    /**
-     * Fired when an element has received focus
-     */
-    onFocus: PropTypes.func,
-    /**
-     * Initial value to display
-     */
-    defaultValue: PropTypes.number,
-    /**
-     * Prevents the user from interacting with element
-     */
-    disabled: PropTypes.bool,
-    /**
-     * Number to increment/decrement value by
-     */
-    step: PropTypes.number
+    variant: PropTypes.oneOf(availableVariants)
   };
 
   static defaultProps = {
@@ -56,26 +50,33 @@ export default class NumericInput extends Component {
 
   render() {
     const {
-      stylesheet,
-      variant,
+      defaultValue,
       error,
       onChange,
       onBlur,
       onFocus,
-      defaultValue,
-      disabled,
-      step,
+      stylesheet: userStylesheet,
+      variant,
       ...otherProps
     } = this.props;
 
-    const { className, value } = otherProps;
+    const {
+      className,
+      disabled,
+      onMouseDown,
+      onMouseEnter,
+      onMouseLeave,
+      onMouseUp,
+      step,
+      value
+    } = otherProps;
 
-    const inputClassName = createCustomClassNames(className, "input");
+    const inputClassName = createCustomClassNames(className, "numeric_input");
 
     const numericInputStylesheet = (styles, props, themeData) => {
       const numericInputStyles = customStylesheet(styles);
-      return stylesheet
-        ? stylesheet(numericInputStyles, props, themeData)
+      return userStylesheet
+        ? userStylesheet(numericInputStyles, props, themeData)
         : numericInputStyles;
     };
 
@@ -83,10 +84,10 @@ export default class NumericInput extends Component {
       <ControlBehavior
         onBlur={onBlur}
         onFocus={onFocus}
-        onMouseDown={this.props.onMouseDown}
-        onMouseEnter={this.props.onMouseEnter}
-        onMouseLeave={this.props.onMouseLeave}
-        onMouseUp={this.props.onMouseUp}
+        onMouseDown={onMouseDown}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onMouseUp={onMouseUp}
       >
         {({
           hasFocus,
@@ -104,33 +105,45 @@ export default class NumericInput extends Component {
             initialValue={defaultValue}
             step={step}
             disabled={disabled}
+            onMouseLeave={handleMouseLeave}
           >
             {({
               onDirectChange,
               increment,
               decrement,
-              value: controlledValue
+              value: controlledValue,
+              mouseDownDecrement,
+              mouseDownIncrement,
+              clearTimer,
+              mouseLeaveClearTimer,
+              setInputRef
             }) => (
-              <div style={{ position: "relative" }}>
+              <div
+                className={cx([
+                  css(stylesheet({}, {}).numericInputWrapper),
+                  className
+                ])}
+              >
                 <SpinnerPresenter
+                  {...otherProps}
                   disabled={disabled}
                   onBlur={handleBlur}
                   onFocus={handleFocus}
                   onMouseDown={handleMouseDown}
                   onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
+                  onMouseLeave={mouseLeaveClearTimer}
                   onMouseUp={handleMouseUp}
                   increment={increment}
                   decrement={decrement}
+                  clearTimer={clearTimer}
+                  mouseDownDecrement={mouseDownDecrement}
+                  mouseDownIncrement={mouseDownIncrement}
                   variant={variant}
-                  stylesheet={stylesheet}
-                  {...otherProps}
+                  stylesheet={userStylesheet}
                 />
                 <Input
-                  className={cx(
-                    css(numericInputStylesheet.input),
-                    inputClassName
-                  )}
+                  {...otherProps}
+                  className={inputClassName}
                   disabled={disabled}
                   step={step}
                   stylesheet={numericInputStylesheet}
@@ -147,7 +160,7 @@ export default class NumericInput extends Component {
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                   onMouseUp={handleMouseUp}
-                  {...otherProps}
+                  inputRef={setInputRef}
                 />
               </div>
             )}

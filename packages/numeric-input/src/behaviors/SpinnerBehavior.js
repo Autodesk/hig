@@ -5,6 +5,7 @@ export default class SpinnerBehavior extends Component {
   static propTypes = {
     children: PropTypes.func,
     onChange: PropTypes.func,
+    onMouseLeave: PropTypes.func,
     value: PropTypes.number,
     initialValue: PropTypes.number,
     step: PropTypes.number,
@@ -23,6 +24,10 @@ export default class SpinnerBehavior extends Component {
     this.state = {
       value: props.initialValue
     };
+
+    this.timer = null;
+    this.timerSet = false;
+    this.inputRef = null;
   }
 
   onDirectChange = event => {
@@ -44,12 +49,17 @@ export default class SpinnerBehavior extends Component {
     }
   };
 
+  setInputRef = element => {
+    this.inputRef = element;
+  };
+
   updateValue = value => {
     // Do nothing if the input is currently disabled
     if (this.props.disabled) {
       return;
     }
     this.setValue(value);
+    this.inputRef.focus();
   };
 
   isValueControlled = () =>
@@ -63,12 +73,47 @@ export default class SpinnerBehavior extends Component {
     this.updateValue(Number(this.getValue()) - this.props.step);
   };
 
+  mouseDownIncrement = () => {
+    if (!this.timerSet) {
+      this.timer = setInterval(() => {
+        this.increment();
+      }, 150);
+      this.timerSet = true;
+    }
+  };
+
+  mouseDownDecrement = () => {
+    if (!this.timerSet) {
+      this.timer = setInterval(() => {
+        this.decrement();
+      }, 150);
+      this.timerSet = true;
+    }
+  };
+
+  clearTimer = () => {
+    clearInterval(this.timer);
+    this.timerSet = false;
+  };
+
+  mouseLeaveClearTimer = event => {
+    if (this.props.onMouseLeave) {
+      this.props.onMouseLeave(event);
+    }
+    this.clearTimer();
+  };
+
   render() {
     return this.props.children({
       onDirectChange: this.onDirectChange,
       increment: this.increment,
       decrement: this.decrement,
-      value: this.getValue()
+      value: this.getValue(),
+      mouseDownDecrement: this.mouseDownDecrement,
+      mouseDownIncrement: this.mouseDownIncrement,
+      clearTimer: this.clearTimer,
+      mouseLeaveClearTimer: this.mouseLeaveClearTimer,
+      setInputRef: this.setInputRef
     });
   }
 }

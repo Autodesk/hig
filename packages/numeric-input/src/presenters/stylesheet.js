@@ -2,9 +2,7 @@ function getWrapperRulesByVariant(variant, density) {
   switch (variant) {
     case "line":
       return {
-        width: "10px",
-        right: "0px",
-        bottom: "22%"
+        right: "0px"
       };
     case "box":
       return {
@@ -17,20 +15,21 @@ function getWrapperRulesByVariant(variant, density) {
   }
 }
 
-function getBoxRules(themeData, density) {
+function getBoxRules(themeData) {
   return {
     zIndex: -2,
     borderLeftStyle: "solid",
     borderLeftColor: themeData["colorScheme.divider.lightweight"],
-    borderLeftWidth: themeData["basics.borderWidths.small"],
+    borderLeftWidth: themeData["input.borderWidth"],
     marginTop: "1px",
     marginBottom: "1px",
     marginRight: "1px",
-    height: density === "medium-density" ? "34px" : "22px",
+    height: themeData["input.minHeight"],
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    transform: "translateY(-1px)"
   };
 }
 
@@ -44,31 +43,44 @@ export default function stylesheet(props, themeData, density) {
   const { disabled, variant } = props;
   const { stylesheet: customStylesheet } = props;
   const styles = {
+    numericInputWrapper: {
+      position: "relative"
+    },
     spinnerWrapper: {
-      boxSizing: `border-box`,
-      position: `absolute`,
+      boxSizing: "border-box",
+      position: "absolute",
       zIndex: 1,
       lineHeight: density === "medium-density" ? "10px" : "4px",
       cursor: disabled ? "default" : "pointer",
       ...getWrapperRulesByVariant(variant, density)
     },
     boxWrapper: {
-      ...(variant === "box" ? getBoxRules(themeData, density) : {}),
+      height: `calc(${themeData["input.minHeight"]} - 2px)`,
+      ...(variant === "box" ? getBoxRules(themeData) : {}),
       ...(disabled ? getDisabledBoxRules(themeData) : {})
     },
     spinner: {
-      display: "block",
-      "&:focus": {
-        outline: "none"
+      display: "flex",
+      height: `calc((${themeData["input.minHeight"]} - 2px) / 2)`,
+      outline: "none",
+      boxSizing: "border-box",
+      justifyContent: "center",
+      width: "100%",
+      "&:first-of-type": {
+        alignItems: "flex-end"
       },
       "svg *": {
         fill: themeData["input.indicator.default"]
       },
-
+      "&:hover svg *": {
+        fill: disabled
+          ? themeData["input.indicator.default"]
+          : themeData["input.indicator.hover"]
+      },
       "&:active svg *": {
         fill: disabled
           ? themeData["input.indicator.default"]
-          : themeData["colorScheme.indicator.pressed"]
+          : themeData["input.indicator.pressed"]
       }
     },
     iconUp: {
