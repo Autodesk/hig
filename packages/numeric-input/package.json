@@ -1,6 +1,6 @@
 {
   "name": "@hig/numeric-input",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "description": "HIG Numeric Input",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
