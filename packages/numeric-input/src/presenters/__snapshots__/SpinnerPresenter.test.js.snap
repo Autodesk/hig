@@ -9,16 +9,38 @@ exports[`spinner/SpinnerPresenter renders with custom className 1`] = `
   cursor: pointer;
 }
 
-.emotion-1 {
-  display: block;
+.emotion-4 {
+  height: calc(36px - 2px);
 }
 
-.emotion-1:focus {
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc((36px - 2px) / 2);
   outline: none;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.emotion-1:first-of-type {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
 .emotion-1 svg * {
   fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
+  fill: #666666;
 }
 
 .emotion-1:active svg * {
@@ -114,6 +136,10 @@ exports[`spinner/SpinnerPresenter renders with custom stylesheet 1`] = `
   cursor: pointer;
 }
 
+.emotion-4 {
+  height: calc(36px - 2px);
+}
+
 .emotion-0 {
   fill: #808080;
   display: -webkit-box;
@@ -139,16 +165,34 @@ exports[`spinner/SpinnerPresenter renders with custom stylesheet 1`] = `
 }
 
 .emotion-1 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc((36px - 2px) / 2);
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
   background-color: pink;
 }
 
-.emotion-1:focus {
-  outline: none;
+.emotion-1:first-of-type {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
 .emotion-1 svg * {
   fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
+  fill: #666666;
 }
 
 .emotion-1:active svg * {
@@ -245,18 +289,37 @@ exports[`spinner/SpinnerPresenter renders with disabled 1`] = `
 }
 
 .emotion-4 {
+  height: calc(36px - 2px);
   opacity: 0.4;
 }
 
 .emotion-1 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc((36px - 2px) / 2);
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.emotion-1:focus {
-  outline: none;
+.emotion-1:first-of-type {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
 .emotion-1 svg * {
+  fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
   fill: rgba(102,102,102,0.7);
 }
 
@@ -322,15 +385,33 @@ exports[`spinner/SpinnerPresenter renders with disabled 1`] = `
 
 exports[`spinner/SpinnerPresenter renders with variant 1`] = `
 .emotion-1 {
-  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc((36px - 2px) / 2);
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.emotion-1:focus {
-  outline: none;
+.emotion-1:first-of-type {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
 .emotion-1 svg * {
   fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
+  fill: #666666;
 }
 
 .emotion-1:active svg * {
@@ -373,6 +454,7 @@ exports[`spinner/SpinnerPresenter renders with variant 1`] = `
 }
 
 .emotion-4 {
+  height: 36px;
   z-index: -2;
   border-left-style: solid;
   border-left-color: rgba(60,60,60,0.1);
@@ -380,7 +462,6 @@ exports[`spinner/SpinnerPresenter renders with variant 1`] = `
   margin-top: 1px;
   margin-bottom: 1px;
   margin-right: 1px;
-  height: 34px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -396,6 +477,9 @@ exports[`spinner/SpinnerPresenter renders with variant 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
 <div
@@ -463,16 +547,38 @@ exports[`spinner/SpinnerPresenter renders without props 1`] = `
   cursor: pointer;
 }
 
-.emotion-1 {
-  display: block;
+.emotion-4 {
+  height: calc(36px - 2px);
 }
 
-.emotion-1:focus {
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc((36px - 2px) / 2);
   outline: none;
+  box-sizing: border-box;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.emotion-1:first-of-type {
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
 .emotion-1 svg * {
   fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
+  fill: #666666;
 }
 
 .emotion-1:active svg * {
