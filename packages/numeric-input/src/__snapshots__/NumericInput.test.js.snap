@@ -44,6 +44,10 @@ exports[`numeric-input/NumericInput renders with custom className 1`] = `
   fill: rgba(102,102,102,0.7);
 }
 
+.emotion-1:hover svg * {
+  fill: #666666;
+}
+
 .emotion-1:active svg * {
   fill: #0696d7;
 }
@@ -408,6 +412,10 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
   fill: rgba(102,102,102,0.7);
 }
 
+.emotion-1:hover svg * {
+  fill: #666666;
+}
+
 .emotion-1:active svg * {
   fill: #0696d7;
 }
@@ -535,6 +543,10 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
 
 .emotion-1 svg * {
   fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
+  fill: #666666;
 }
 
 .emotion-1:active svg * {
@@ -874,6 +886,10 @@ exports[`numeric-input/NumericInput renders with disabled 1`] = `
   fill: rgba(102,102,102,0.7);
 }
 
+.emotion-1:hover svg * {
+  fill: rgba(102,102,102,0.7);
+}
+
 .emotion-1:active svg * {
   fill: rgba(102,102,102,0.7);
 }
@@ -1011,6 +1027,10 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
 
 .emotion-1 svg * {
   fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
+  fill: #666666;
 }
 
 .emotion-1:active svg * {
@@ -1297,6 +1317,10 @@ exports[`numeric-input/NumericInput renders without props 1`] = `
 
 .emotion-1 svg * {
   fill: rgba(102,102,102,0.7);
+}
+
+.emotion-1:hover svg * {
+  fill: #666666;
 }
 
 .emotion-1:active svg * {
