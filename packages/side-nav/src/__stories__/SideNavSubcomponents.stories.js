@@ -197,6 +197,7 @@ storiesOf("GlobalNav|SideNav.Search", module).add(
     <KnobbedThemeProvider>
       <SideNav.Search
         onBlur={action("onBlur")}
+        onChange={action("onChange")}
         onClearIconClick={action("onClearIconClick")}
         onFocus={action("onFocus")}
         onInput={action("onInput")}
