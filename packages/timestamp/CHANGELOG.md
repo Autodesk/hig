@@ -1,3 +1,15 @@
+# [@hig/timestamp-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/timestamp@1.1.1...@hig/timestamp@1.2.0) (2020-08-18)
+
+
+### Bug Fixes
+
+* support for dates over a year old ([8dac1f6](https://github.com/Autodesk/hig/commit/8dac1f6))
+
+
+### Features
+
+* allow for localization ([b80bcf2](https://github.com/Autodesk/hig/commit/b80bcf2))
+
 # [@hig/timestamp-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/timestamp@1.1.0...@hig/timestamp@1.1.1) (2020-05-12)
 
 
