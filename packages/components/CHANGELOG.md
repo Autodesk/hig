@@ -1,3 +1,10 @@
+# [@hig/components-v2.4.0](https://github.com/Autodesk/hig/compare/@hig/components@2.3.0...@hig/components@2.4.0) (2020-08-18)
+
+
+### Features
+
+* add [@hig](https://github.com/hig)/numeric-input, [@hig](https://github.com/hig)/input ([37b5f51](https://github.com/Autodesk/hig/commit/37b5f51))
+
 # [@hig/components-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/components@2.2.0...@hig/components@2.3.0) (2020-05-14)
 
 
