@@ -51,11 +51,11 @@ export default class Search extends Component {
 
   createEventHandlers = memoizeCreateButtonEventHandlers();
 
+  callPropsOnChange = event =>
+    this.props.onChange && this.props.onChange(event);
+
   handleChange = event => {
-    this.setState(
-      { value: event.target.value },
-      () => this.props.onChange && this.props.onChange(event)
-    );
+    this.setState({ value: event.target.value }, this.callPropsOnChange(event));
   };
 
   handleClear = () =>
