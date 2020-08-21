@@ -1,3 +1,10 @@
+# [@hig/side-nav-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.2.0...@hig/side-nav@2.2.1) (2020-08-21)
+
+
+### Bug Fixes
+
+* Search component onchange should pass in event ([59f8d53](https://github.com/Autodesk/hig/commit/59f8d53))
+
 # [@hig/side-nav-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.1.4...@hig/side-nav@2.2.0) (2020-06-24)
 
 
