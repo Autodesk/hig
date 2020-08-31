@@ -20,14 +20,6 @@ export default {
       ref: "basics.colors.secondary.darkBlue.200"
     }
   },
-  "input.value.highlightColor": {
-    value: {
-      ref: "basics.colors.primary.autodeskBlue.400"
-    },
-    transform: {
-      alpha: 0.35
-    }
-  },
   "input.box.pressed.borderBottomColor": {
     transform: {
       alpha: 0.75
