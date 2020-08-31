@@ -52,7 +52,7 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
@@ -215,7 +215,7 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
