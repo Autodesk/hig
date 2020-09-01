@@ -1,7 +1,7 @@
 export default function stylesheet(props, themeData) {
-  const { hasHover, hasFocus } = props;
+  const { stylesheet: customStylesheet, hasHover, hasFocus } = props;
 
-  return {
+  const styles = {
     // from base typography-medium
     fontWeight: themeData["typography.body.fontWeight"],
     fontSize: themeData["typography.body.fontSize"],
@@ -36,4 +36,6 @@ export default function stylesheet(props, themeData) {
         }
       : {})
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }
