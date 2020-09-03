@@ -42,20 +42,20 @@ Modal also has a `stylesheet` prop that accepts a function wherein you can modif
 import Modal from "@hig/modal";
 import Typography from "@hig/typography";
 import Button from "@hig/button";
-import merge from "lodash.merge";
 
 function YourComponent() {
-  // ...
-  const modalStyles = styles =>
-    merge(styles, {
-      modal: {
-        bodyContent: {
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between"
-        }
+  const modalStyles = styles => ({
+    ...styles,
+    modal: {
+      ...styles.modal,
+      bodyContent: {
+        ...styles.modal.bodyContent,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between"
       }
-    })
+    }
+  });
                                       
   return (
     <Modal open title="Your title" stylesheet={modalStyles}>
