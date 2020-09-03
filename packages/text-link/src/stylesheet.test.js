@@ -8,6 +8,13 @@ describe("stylesheet", () => {
     expect(subject({})).toEqual(expect.any(Object));
   });
 
+  it("returns the custom stylesheet", () => {
+    const props = {
+      stylesheet: () => ({ padding: 0 })
+    };
+    expect(stylesheet(props, {})).toEqual({ padding: 0 });
+  });
+
   describe("when hasHover=true", () => {
     it("should set the correct style", () => {
       expect(subject({ hasHover: true }).textDecoration).toEqual("underline");
