@@ -1,8 +1,18 @@
 import { mount } from "enzyme";
 import React from "react";
-import merge from "lodash.merge";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import Modal from "./Modal";
+
+const customStylesheet = styles => ({
+  ...styles,
+  modal: {
+    ...styles.modal,
+    wrapper: {
+      ...styles.modal.wrapper,
+      color: "aliceblue"
+    }
+  }
+});
 
 describe("modal/Modal", () => {
   describe("integration", () => {
@@ -21,8 +31,7 @@ describe("modal/Modal", () => {
           body: "Hi",
           open: true,
           title: "HIG Modal",
-          stylesheet: styles =>
-            merge(styles, { modal: { wrapper: { color: "aliceblue" } } })
+          stylesheet: customStylesheet
         }
       },
       {
