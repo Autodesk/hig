@@ -1,3 +1,10 @@
+# [@hig/text-link-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/text-link@1.1.1...@hig/text-link@1.2.0) (2020-09-09)
+
+
+### Features
+
+* add stylesheet prop for TextLink ([4507a2c](https://github.com/Autodesk/hig/commit/4507a2c))
+
 # [@hig/text-link-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/text-link@1.1.0...@hig/text-link@1.1.1) (2020-05-12)
 
 
