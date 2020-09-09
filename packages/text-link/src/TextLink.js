@@ -44,6 +44,10 @@ export default class TextLink extends Component {
      * Triggers when the user's mouse is no longer pressed over the checkbox
      */
     onMouseUp: PropTypes.func,
+    /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func,
     /** Specify the anchor tag's target */
     target: PropTypes.oneOf(availableTargets)
   };
@@ -93,8 +97,10 @@ export default class TextLink extends Component {
               onMouseLeave: handleMouseLeave,
               onMouseUp: handleMouseUp
             }) => {
+              const { stylesheet: customStylesheet } = this.props;
               const styles = stylesheet(
                 {
+                  stylesheet: customStylesheet,
                   hasFocus,
                   hasHover,
                   isPressed,

@@ -19,8 +19,8 @@
   "dependencies": {
     "@hig/icon-button": "^2.4.1",
     "@hig/icons": "^3.2.0",
-    "@hig/utils": "^0.4.0",
     "@hig/typography": "^1.0.3",
+    "@hig/utils": "^0.4.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
     "react-lifecycles-compat": "^3.0.4"
@@ -35,8 +35,7 @@
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
-    "@hig/semantic-release-config": "^0.1.0",
-    "lodash.merge": "^4.4.0"
+    "@hig/semantic-release-config": "^0.1.0"
   },
   "scripts": {
     "build": "hig-scripts-build",

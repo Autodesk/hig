@@ -3,7 +3,6 @@ import Button from "@hig/button";
 import Modal from "@hig/modal";
 import Typography from "@hig/typography";
 import Spacer from "@hig/spacer";
-import merge from "lodash.merge";
 import ThemeRepeater from "../components/ThemeRepeater";
 
 function ModalPage() {
@@ -15,26 +14,32 @@ function ModalPage() {
             <Modal
               open
               title="Modal Time"
-              stylesheet={styles =>
-                merge(styles, {
-                  modal: {
-                    overlay: {
-                      position: "static",
-                      height: "400px",
-                      width: "500px",
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center"
-                    },
-                    window: { position: "static", transform: "initial" },
-                    bodyContent: {
-                      display: "flex",
-                      flexDirection: "column",
-                      justifyContent: "space-between"
-                    }
+              stylesheet={styles => ({
+                ...styles,
+                modal: {
+                  ...styles.modal,
+                  overlay: {
+                    ...styles.modal.overlay,
+                    position: "static",
+                    height: "400px",
+                    width: "500px",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
+                  },
+                  window: {
+                    ...styles.modal.window,
+                    position: "static",
+                    transform: "initial"
+                  },
+                  bodyContent: {
+                    ...styles.modal.bodyContent,
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between"
                   }
-                })
-              }
+                }
+              })}
             >
               <div>
                 <Typography>When you see a modal...</Typography>
