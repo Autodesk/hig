@@ -28,9 +28,7 @@ export default class Accordion extends Component {
     disabled: PropTypes.bool,
     /** Indicator icon */
     indicator: PropTypes.oneOf(AVAILABLE_INDICATORS),
-    /** Indicator's position.
-     * Note: When indicator is set to `indicators.CARET`,
-     * indicator position will always be `indicatorPositions.LEFT` */
+    /** Indicator's position */
     indicatorPosition: PropTypes.oneOf(AVAILABLE_INDICATOR_POSITIONS),
     /** Text label for the accordion header */
     label: PropTypes.node.isRequired,
