@@ -90,10 +90,10 @@ export default class Accordion extends Component {
       onHover
     } = otherProps;
 
-    const effectiveIndicatorPosition =
+    /* const effectiveIndicatorPosition =
       indicator === indicators.OPERATOR
         ? indicatorPosition
-        : indicatorPositions.LEFT;
+        : indicatorPositions.LEFT; */
 
     const collapsed = this.isCollapsed();
 
@@ -103,7 +103,7 @@ export default class Accordion extends Component {
           const styles = stylesheet(
             {
               indicator,
-              indicatorPosition: effectiveIndicatorPosition,
+              indicatorPosition,
               collapsed,
               stylesheet: customStylesheet
             },
@@ -148,7 +148,7 @@ export default class Accordion extends Component {
                     stylesheet={customStylesheet}
                     label={label}
                     indicator={indicator}
-                    indicatorPosition={effectiveIndicatorPosition}
+                    indicatorPosition={indicatorPosition}
                     collapsed={collapsed}
                     disabled={disabled}
                   />
