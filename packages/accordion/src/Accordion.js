@@ -28,9 +28,7 @@ export default class Accordion extends Component {
     disabled: PropTypes.bool,
     /** Indicator icon */
     indicator: PropTypes.oneOf(AVAILABLE_INDICATORS),
-    /** Indicator's position.
-     * Note: When indicator is set to `indicators.CARET`,
-     * indicator position will always be `indicatorPositions.LEFT` */
+    /** Indicator's position */
     indicatorPosition: PropTypes.oneOf(AVAILABLE_INDICATOR_POSITIONS),
     /** Text label for the accordion header */
     label: PropTypes.node.isRequired,
@@ -90,10 +88,10 @@ export default class Accordion extends Component {
       onHover
     } = otherProps;
 
-    const effectiveIndicatorPosition =
+    /* const effectiveIndicatorPosition =
       indicator === indicators.OPERATOR
         ? indicatorPosition
-        : indicatorPositions.LEFT;
+        : indicatorPositions.LEFT; */
 
     const collapsed = this.isCollapsed();
 
@@ -103,7 +101,7 @@ export default class Accordion extends Component {
           const styles = stylesheet(
             {
               indicator,
-              indicatorPosition: effectiveIndicatorPosition,
+              indicatorPosition,
               collapsed,
               stylesheet: customStylesheet
             },
@@ -148,7 +146,7 @@ export default class Accordion extends Component {
                     stylesheet={customStylesheet}
                     label={label}
                     indicator={indicator}
-                    indicatorPosition={effectiveIndicatorPosition}
+                    indicatorPosition={indicatorPosition}
                     collapsed={collapsed}
                     disabled={disabled}
                   />
