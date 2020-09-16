@@ -1,3 +1,10 @@
+# [@hig/accordion-v1.1.2](https://github.com/Autodesk/hig/compare/@hig/accordion@1.1.1...@hig/accordion@1.1.2) (2020-09-16)
+
+
+### Bug Fixes
+
+* caret should be allowed to be on the right ([bd520cf](https://github.com/Autodesk/hig/commit/bd520cf))
+
 # [@hig/accordion-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/accordion@1.1.0...@hig/accordion@1.1.1) (2020-08-05)
 
 
