@@ -343,5 +343,10 @@ export default {
     value: {
       ref: "basics.colors.primary.charcoal.700"
     }
+  },
+  "indicator.pressed": {
+    value: {
+      ref: "basics.colors.primary.charcoal.900"
+    }
   }
 };

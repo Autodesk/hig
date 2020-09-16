@@ -111,7 +111,8 @@ export default {
   "indicator.default": { type: COLOR },
   "indicator.hover": { type: COLOR },
   "indicator.focus": { type: COLOR },
-  "indicator.pressed": {
+  "indicator.pressed": { type: COLOR },
+  "indicator.on": {
     value: {
       ref: "colorScheme.reference.accent"
     },
