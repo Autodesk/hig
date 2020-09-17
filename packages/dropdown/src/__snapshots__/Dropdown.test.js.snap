@@ -84,7 +84,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
@@ -474,7 +474,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
@@ -784,7 +784,7 @@ exports[`Dropdown renders with an ID 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
@@ -969,7 +969,7 @@ exports[`Dropdown renders with className prop 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
@@ -1154,7 +1154,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
@@ -1415,7 +1415,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
@@ -1619,7 +1619,7 @@ exports[`Dropdown renders with default value 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
@@ -1929,7 +1929,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
@@ -2190,7 +2190,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
@@ -2514,7 +2514,7 @@ exports[`Dropdown renders with option specific and general option render functio
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
@@ -2727,7 +2727,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
@@ -2976,7 +2976,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
@@ -3189,7 +3189,7 @@ exports[`Dropdown renders without props 1`] = `
 }
 
 .emotion-0::selection {
-  background-color: rgba(128,128,128,0.2);
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-3 {
