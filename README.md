@@ -67,6 +67,9 @@ Each HIG pattern is implemented as a set of React components. Each pattern is pu
 - [`<Icons>`](./packages/icons/README.md) - Represents a concept in graphical form
 - [`<IconButton>`](./packages/icon-button/README.md) - Action buttons that include an icon only
 - [`<Modal>`](./packages/modal/README.md) - An overlay that focuses the customer's attention
+- [`<NotificationsFlyout>`](./packages/notifications-flyout/README.md) - A less intrusive way of announcing an event of potential interest to the user
+- [`<NotificationsToast>`](./packages/notifications-toast/README.md) - Floating message boxes that appear
+- [`<NumericInput>`](./packages/numeric-input/README.md) - For numerical values that allows freehand text entries or toggling values up and down
 - [`<ProfileFlyout>`](./packages/profile-flyout/README.md) - A flyout containing customer's name, email, and account info
 - [`<ProgressBar>`](./packages/progress-bar/README.md) - An indication of content loading, presented horizontally
 - [`<ProgressRing>`](./packages/progress-ring/README.md) - An indication of content loading, presented circularly
