@@ -1,3 +1,15 @@
+# [@hig/theme-data-v2.18.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.17.0...@hig/theme-data@2.18.0) (2020-09-18)
+
+
+### Bug Fixes
+
+* use correct input.value.highlight value ([825dd8d](https://github.com/Autodesk/hig/commit/825dd8d))
+
+
+### Features
+
+* add role colorScheme.indicator.on ([72e464d](https://github.com/Autodesk/hig/commit/72e464d))
+
 # [@hig/theme-data-v2.17.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.16.1...@hig/theme-data@2.17.0) (2020-07-14)
 
 
