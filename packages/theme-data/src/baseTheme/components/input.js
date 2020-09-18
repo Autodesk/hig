@@ -118,7 +118,7 @@ export default {
   "input.value.highlightColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.charcoal.600"
+      ref: "colorScheme.reference.accent"
     },
     transform: {
       alpha: 0.2

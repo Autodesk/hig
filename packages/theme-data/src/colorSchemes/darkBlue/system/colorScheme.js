@@ -345,6 +345,9 @@ export default {
       alpha: 0.75
     }
   },
+  "indicator.pressed": {
+    value: "#d0d2d7"
+  },
   "status.error": {
     value: {
       ref: "basics.colors.secondary.red.500"

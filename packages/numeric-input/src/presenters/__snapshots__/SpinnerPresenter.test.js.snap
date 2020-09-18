@@ -44,7 +44,7 @@ exports[`spinner/SpinnerPresenter renders with custom className 1`] = `
 }
 
 .emotion-1:active svg * {
-  fill: #0696d7;
+  fill: #3c3c3c;
 }
 
 .emotion-0 {
@@ -196,7 +196,7 @@ exports[`spinner/SpinnerPresenter renders with custom stylesheet 1`] = `
 }
 
 .emotion-1:active svg * {
-  fill: #0696d7;
+  fill: #3c3c3c;
 }
 
 <div
@@ -415,7 +415,7 @@ exports[`spinner/SpinnerPresenter renders with variant 1`] = `
 }
 
 .emotion-1:active svg * {
-  fill: #0696d7;
+  fill: #3c3c3c;
 }
 
 .emotion-0 {
@@ -582,7 +582,7 @@ exports[`spinner/SpinnerPresenter renders without props 1`] = `
 }
 
 .emotion-1:active svg * {
-  fill: #0696d7;
+  fill: #3c3c3c;
 }
 
 .emotion-0 {
