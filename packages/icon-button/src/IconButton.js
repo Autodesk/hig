@@ -77,6 +77,7 @@ export default class IconButton extends Component {
 
   render() {
     const {
+      disabled,
       onBlur,
       onFocus,
       onMouseDown,
@@ -107,9 +108,10 @@ export default class IconButton extends Component {
           onMouseUp: handleMouseUp
         }) => (
           <IconButtonPresenter
-            hasFocus={hasFocus}
-            hasHover={hasHover}
-            isPressed={isPressed}
+            disabled={disabled}
+            hasFocus={hasFocus && !disabled}
+            hasHover={hasHover && !disabled}
+            isPressed={isPressed && !disabled}
             onBlur={handleBlur}
             onFocus={handleFocus}
             onMouseDown={handleMouseDown}
