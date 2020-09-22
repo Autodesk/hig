@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.4.2](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.4.1...@hig/icon-button@2.4.2) (2020-09-22)
+
+
+### Bug Fixes
+
+* do not trigger focus/hover/pressed states when disabled ([19ab026](https://github.com/Autodesk/hig/commit/19ab026))
+
 # [@hig/icon-button-v2.4.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.4.0...@hig/icon-button@2.4.1) (2020-05-12)
 
 
