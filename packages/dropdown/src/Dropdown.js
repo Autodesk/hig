@@ -55,6 +55,10 @@ export default class Dropdown extends Component {
      */
     onFocus: PropTypes.func,
     /**
+     * Called when the input field value changes
+     */
+    onInputChange: PropTypes.func,
+    /**
      * An array of unique values of any type except `undefined`
      * If you use an array of objects, the object must contain the property `item`,
      * the option's disabled state can be controlled with a `disabled` property.
@@ -83,6 +87,10 @@ export default class Dropdown extends Component {
      */
     required: PropTypes.string,
     /**
+     * Allows the input to be typeable
+     */
+    searchable: PropTypes.bool,
+    /**
      * The value of the control
      */
     value: PropTypes.oneOfType([
@@ -106,7 +114,8 @@ export default class Dropdown extends Component {
      */
     formatOption(option) {
       return option ? String(option) : "";
-    }
+    },
+    searchable: false
   };
 
   getBehaviorProps() {
@@ -173,8 +182,10 @@ export default class Dropdown extends Component {
       required,
       onBlur,
       onFocus,
+      onInputChange,
       variant,
       error,
+      searchable,
       ...otherProps
     } = this.props;
 
@@ -195,8 +206,10 @@ export default class Dropdown extends Component {
       onBlur,
       onFocus,
       onClick: toggleMenu,
+      onInputChange,
       variant,
-      className: inputClassName
+      className: inputClassName,
+      searchable
     });
 
     return <InputPresenter key="input" {...inputProps} />;
@@ -275,6 +288,7 @@ export default class Dropdown extends Component {
       placeholder,
       renderOption,
       required,
+      searchable,
       value,
       variant,
       error,

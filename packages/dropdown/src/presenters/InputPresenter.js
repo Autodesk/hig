@@ -15,15 +15,27 @@ function customStyles(inputStylesheet, props, themeData) {
       cursor: `pointer`,
       whiteSpace: `nowrap`,
       textOverflow: `ellipsis`,
-      paddingRight: variant === `line`
-        ? `calc(${themeData["density.spacings.large"]} + ${themeData["input.line.paddingHorizontal"]}px)`
-        : `calc(${themeData["density.spacings.large"]} + ${themeData["input.box.paddingHorizontal"]})`
+      paddingRight:
+        variant === `line`
+          ? `calc(${themeData["density.spacings.large"]} + ${
+              themeData["input.line.paddingHorizontal"]
+            }px)`
+          : `calc(${themeData["density.spacings.large"]} + ${
+              themeData["input.box.paddingHorizontal"]
+            })`
     }
   };
 }
 
 export default function InputPresenter(props) {
-  const { isOpen, ...otherProps } = props;
+  const { isOpen, onChange, onInputChange, searchable, ...otherProps } = props;
+  const handleChange = event => {
+    onChange(event);
+
+    if (onInputChange) {
+      onInputChange(event);
+    }
+  };
 
   return (
     <ThemeContext.Consumer>
@@ -36,7 +48,12 @@ export default function InputPresenter(props) {
 
         return (
           <div className={css(stylesheet(props, resolvedRoles).wrapper)}>
-            <Input {...otherProps} stylesheet={customStyles} readOnly />
+            <Input
+              {...otherProps}
+              onChange={handleChange}
+              readOnly={!searchable}
+              stylesheet={customStyles}
+            />
             <CaretIcon
               style={stylesheet(props, resolvedRoles).caret}
               color={iconColor}
