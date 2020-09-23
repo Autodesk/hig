@@ -88,11 +88,6 @@ export default class Accordion extends Component {
       onHover
     } = otherProps;
 
-    /* const effectiveIndicatorPosition =
-      indicator === indicators.OPERATOR
-        ? indicatorPosition
-        : indicatorPositions.LEFT; */
-
     const collapsed = this.isCollapsed();
 
     return (
