@@ -13,7 +13,7 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -29,6 +29,8 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -97,6 +99,7 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
       disabled={true}
       id="id"
       onBlur={[Function]}
+      onChange={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseEnter={[Function]}
@@ -176,7 +179,7 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -192,6 +195,8 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -236,6 +241,7 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
       className="emotion-0"
       disabled={undefined}
       onBlur={[Function]}
+      onChange={[Function]}
       onFocus={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
