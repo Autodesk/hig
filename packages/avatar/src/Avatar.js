@@ -39,9 +39,17 @@ function backgroundIdFromName(name) {
  * @returns {string}
  */
 function initialsFromName(name) {
-  const initials = name.match(/\b\w/g) || [];
-
-  return ((initials.shift() || "") + (initials.pop() || "")).toUpperCase();
+	const temp = name.match(/(?<=[-\s,.:;"'_]|^)\p{L}/gu) || [];
+	const initials = ((temp.shift() || "") + (temp.pop() || "")).toUpperCase();
+	if (initials.length == 2) {
+		if (initials[0].match(/\p{sc=Han}/gu)) {
+			return initials[0];
+		}
+		if (initials[1].match(/\p{sc=Han}/gu)) {
+			return initials[1];
+		}
+	}
+	return initials;
 }
 
 /**
