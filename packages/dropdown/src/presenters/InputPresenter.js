@@ -32,8 +32,8 @@ export default function InputPresenter(props) {
     isOpen,
     onChange,
     onInputChange,
-    searchable,
     stylesheet: userStylesheet,
+    typable,
     ...otherProps
   } = props;
   const dropdownInputStylesheet = (styles, componentProps, themeData) => {
@@ -68,7 +68,7 @@ export default function InputPresenter(props) {
             <Input
               {...otherProps}
               onChange={handleChange}
-              readOnly={!searchable}
+              readOnly={!typable}
               stylesheet={dropdownInputStylesheet}
             />
             <CaretIcon

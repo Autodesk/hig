@@ -91,13 +91,13 @@ export default class Dropdown extends Component {
      */
     required: PropTypes.string,
     /**
-     * Allows the input to be typeable
-     */
-    searchable: PropTypes.bool,
-    /**
      * Adds custom/overriding styles
      */
     stylesheet: PropTypes.func,
+    /**
+     * Allows the input to be typable
+     */
+    typable: PropTypes.bool,
     /**
      * The value of the control
      */
@@ -119,7 +119,7 @@ export default class Dropdown extends Component {
     formatOption(option) {
       return option ? String(option) : "";
     },
-    searchable: false
+    typable: false
   };
 
   getBehaviorProps() {
@@ -189,8 +189,8 @@ export default class Dropdown extends Component {
       onInputChange,
       variant,
       error,
-      searchable,
       stylesheet: customStylesheet,
+      typable,
       ...otherProps
     } = this.props;
 
@@ -214,8 +214,8 @@ export default class Dropdown extends Component {
       onInputChange,
       variant,
       className: inputClassName,
-      searchable,
-      stylesheet: customStylesheet
+      stylesheet: customStylesheet,
+      typable
     });
 
     return <InputPresenter key="input" {...inputProps} />;
@@ -297,7 +297,7 @@ export default class Dropdown extends Component {
       placeholder,
       renderOption,
       required,
-      searchable,
+      typable,
       value,
       variant,
       error,
