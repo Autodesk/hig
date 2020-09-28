@@ -28,6 +28,10 @@ export default class Dropdown extends Component {
      */
     disabled: PropTypes.bool,
     /**
+     * Specifies if the value provided is wrong
+     */
+    error: PropTypes.bool,
+    /**
      * Used to format options into human readable strings
      *
      * Note that if both formatOption and renderOption are provided,
@@ -91,6 +95,10 @@ export default class Dropdown extends Component {
      */
     searchable: PropTypes.bool,
     /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func,
+    /**
      * The value of the control
      */
     value: PropTypes.oneOfType([
@@ -100,11 +108,7 @@ export default class Dropdown extends Component {
     /**
      * The visual variant of the textarea
      */
-    variant: PropTypes.oneOf(variantTypes),
-    /**
-     * Specifies if the value provided is wrong
-     */
-    error: PropTypes.bool
+    variant: PropTypes.oneOf(variantTypes)
   };
 
   static defaultProps = {
@@ -186,6 +190,7 @@ export default class Dropdown extends Component {
       variant,
       error,
       searchable,
+      stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
 
@@ -209,7 +214,8 @@ export default class Dropdown extends Component {
       onInputChange,
       variant,
       className: inputClassName,
-      searchable
+      searchable,
+      stylesheet: customStylesheet
     });
 
     return <InputPresenter key="input" {...inputProps} />;
@@ -234,6 +240,7 @@ export default class Dropdown extends Component {
       multiple,
       options,
       renderOption,
+      stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
 
@@ -248,7 +255,8 @@ export default class Dropdown extends Component {
     const menuProps = getMenuProps({
       isOpen,
       refKey: "innerRef",
-      className: menuClassName
+      className: menuClassName,
+      stylesheet: customStylesheet
     });
 
     const children = renderOptions({
@@ -259,7 +267,8 @@ export default class Dropdown extends Component {
       options,
       renderOption,
       selectedItem,
-      selectedItems
+      selectedItems,
+      stylesheet: customStylesheet
     });
 
     return (

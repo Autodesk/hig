@@ -6,7 +6,7 @@ import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./InputPresenter.stylesheet";
 
-function customStyles(inputStylesheet, props, themeData) {
+function customStylesheet(inputStylesheet, props, themeData) {
   const { variant } = props;
   return {
     ...inputStylesheet,
@@ -28,7 +28,24 @@ function customStyles(inputStylesheet, props, themeData) {
 }
 
 export default function InputPresenter(props) {
-  const { isOpen, onChange, onInputChange, searchable, ...otherProps } = props;
+  const {
+    isOpen,
+    onChange,
+    onInputChange,
+    searchable,
+    stylesheet: userStylesheet,
+    ...otherProps
+  } = props;
+  const dropdownInputStylesheet = (styles, componentProps, themeData) => {
+    const dropdownInputStyles = customStylesheet(
+      styles,
+      componentProps,
+      themeData
+    );
+    return userStylesheet
+      ? userStylesheet(dropdownInputStyles, componentProps, themeData)
+      : dropdownInputStyles;
+  };
   const handleChange = event => {
     onChange(event);
 
@@ -47,12 +64,12 @@ export default function InputPresenter(props) {
           : resolvedRoles[`input.indicator.default`];
 
         return (
-          <div className={css(stylesheet(props, resolvedRoles).wrapper)}>
+          <div className={css(stylesheet(props, resolvedRoles).inputWrapper)}>
             <Input
               {...otherProps}
               onChange={handleChange}
               readOnly={!searchable}
-              stylesheet={customStyles}
+              stylesheet={dropdownInputStylesheet}
             />
             <CaretIcon
               style={stylesheet(props, resolvedRoles).caret}

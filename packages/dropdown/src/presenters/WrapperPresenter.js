@@ -25,7 +25,10 @@ export default function WrapperPresenter(props) {
   const { className } = otherProps;
 
   return (
-    <div {...otherProps} className={cx(css(stylesheet(props)), className)}>
+    <div
+      {...otherProps}
+      className={cx(css(stylesheet(props).dropdownWrapper), className)}
+    >
       {children}
     </div>
   );

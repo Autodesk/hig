@@ -15,7 +15,8 @@ function OptionWrapper(props) {
     onMouseDown,
     onMouseMove,
     selected,
-    highlighted
+    highlighted,
+    ...otherProps
   } = props;
 
   const { handleClick, handleKeyDown } = createButtonEventHandlers(onClick);
@@ -24,12 +25,13 @@ function OptionWrapper(props) {
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => (
         <div
+          {...otherProps}
           aria-selected={selected}
           className={css(
             stylesheet(
               { disabled, selected, highlighted, ...props },
               resolvedRoles
-            )
+            ).option
           )}
           disabled={disabled}
           id={id}

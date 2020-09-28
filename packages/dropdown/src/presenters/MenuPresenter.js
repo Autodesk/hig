@@ -14,7 +14,7 @@ export default function MenuPresenter(props) {
         <div
           {...otherProps}
           ref={innerRef}
-          className={cx(css(stylesheet(props, resolvedRoles)), className)}
+          className={cx(css(stylesheet(props, resolvedRoles).menu), className)}
         >
           {children}
         </div>

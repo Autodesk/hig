@@ -24,9 +24,10 @@ function createSelectedDeterminer(downshift) {
  * @param {function(Object)} renderOption
  * @returns {function(OptionMeta, number): JSX.Element}
  */
-function createOptionRenderer(downshift, renderOption) {
+function createOptionRenderer(downshift, renderOption, otherProps) {
   const { formatOption, getItemProps, highlightedIndex } = downshift;
   const isSelected = createSelectedDeterminer(downshift);
+  const { stylesheet: customStylesheet } = otherProps;
 
   return (option, index) => {
     const itemProps = getItemProps({
@@ -46,7 +47,7 @@ function createOptionRenderer(downshift, renderOption) {
     } else {
       const optionLabel = option && option.item ? option.item : option;
       result = (
-        <OptionPresenter {...itemProps}>
+        <OptionPresenter {...itemProps} stylesheet={customStylesheet}>
           {formatOption(optionLabel)}
         </OptionPresenter>
       );
@@ -70,7 +71,8 @@ export default function renderOptions(props) {
     options = [],
     renderOption,
     selectedItem,
-    selectedItems = []
+    selectedItems = [],
+    ...otherProps
   } = props;
   const downshift = {
     formatOption,
@@ -81,7 +83,11 @@ export default function renderOptions(props) {
     selectedItems
   };
 
-  const optionRenderer = createOptionRenderer(downshift, renderOption);
+  const optionRenderer = createOptionRenderer(
+    downshift,
+    renderOption,
+    otherProps
+  );
 
   return options.map(optionRenderer);
 }
