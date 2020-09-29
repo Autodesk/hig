@@ -245,7 +245,6 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     className="emotion-14"
     id="downshift-2-menu"
     role="listbox"
-    stylesheet={undefined}
   >
     <div
       aria-selected={false}
@@ -257,7 +256,6 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -274,7 +272,6 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -291,7 +288,6 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -308,7 +304,6 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -325,7 +320,6 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -356,7 +350,6 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -373,7 +366,6 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -390,7 +382,6 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -646,7 +637,6 @@ exports[`Dropdown renders with a controlled value 1`] = `
     className="emotion-9"
     id="downshift-9-menu"
     role="listbox"
-    stylesheet={undefined}
   >
     <div
       aria-selected={false}
@@ -658,7 +648,6 @@ exports[`Dropdown renders with a controlled value 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -675,7 +664,6 @@ exports[`Dropdown renders with a controlled value 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -692,7 +680,6 @@ exports[`Dropdown renders with a controlled value 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -900,7 +887,6 @@ exports[`Dropdown renders with an ID 1`] = `
     className="emotion-5"
     id="whoaBuddy-menu"
     role="listbox"
-    stylesheet={undefined}
   />
 </div>
 `;
@@ -1088,7 +1074,6 @@ exports[`Dropdown renders with className prop 1`] = `
     className="emotion-5 custom-class-1-menu-wrapper custom-class-2-menu-wrapper"
     id="downshift-11-menu"
     role="listbox"
-    stylesheet={undefined}
   />
 </div>
 `;
@@ -1303,7 +1288,6 @@ exports[`Dropdown renders with custom option formatting 1`] = `
     className="emotion-8"
     id="downshift-1-menu"
     role="listbox"
-    stylesheet={undefined}
   >
     <div
       aria-selected={false}
@@ -1315,7 +1299,6 @@ exports[`Dropdown renders with custom option formatting 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -1332,7 +1315,6 @@ exports[`Dropdown renders with custom option formatting 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -1349,7 +1331,6 @@ exports[`Dropdown renders with custom option formatting 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -1543,7 +1524,6 @@ exports[`Dropdown renders with custom option render function 1`] = `
     className="emotion-5"
     id="downshift-3-menu"
     role="listbox"
-    stylesheet={undefined}
   >
     <div>
       RENDERS
@@ -1812,7 +1792,6 @@ exports[`Dropdown renders with default value 1`] = `
     className="emotion-9"
     id="downshift-7-menu"
     role="listbox"
-    stylesheet={undefined}
   >
     <div
       aria-selected={false}
@@ -1824,7 +1803,6 @@ exports[`Dropdown renders with default value 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -1841,7 +1819,6 @@ exports[`Dropdown renders with default value 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -1858,7 +1835,6 @@ exports[`Dropdown renders with default value 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -2093,7 +2069,6 @@ exports[`Dropdown renders with multiple selection 1`] = `
     className="emotion-8"
     id="downshift-8-menu"
     role="listbox"
-    stylesheet={undefined}
   >
     <div
       aria-selected={false}
@@ -2105,7 +2080,6 @@ exports[`Dropdown renders with multiple selection 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -2122,7 +2096,6 @@ exports[`Dropdown renders with multiple selection 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -2139,7 +2112,6 @@ exports[`Dropdown renders with multiple selection 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -2395,7 +2367,6 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     className="emotion-10"
     id="downshift-10-menu"
     role="listbox"
-    stylesheet={undefined}
   >
     <div
       aria-selected={true}
@@ -2407,7 +2378,6 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -2438,7 +2408,6 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -2455,7 +2424,6 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       onMouseDown={[Function]}
       onMouseMove={[Function]}
       role="option"
-      stylesheet={undefined}
       tabIndex="0"
     >
       <span>
@@ -2663,7 +2631,6 @@ exports[`Dropdown renders with option specific and general option render functio
     className="emotion-5"
     id="downshift-5-menu"
     role="listbox"
-    stylesheet={undefined}
   >
     <div
       style={
@@ -2879,7 +2846,6 @@ exports[`Dropdown renders with option specific render function 1`] = `
     className="emotion-5"
     id="downshift-4-menu"
     role="listbox"
-    stylesheet={undefined}
   >
     <div
       style={
@@ -3131,7 +3097,6 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
     className="emotion-5"
     id="downshift-6-menu"
     role="listbox"
-    stylesheet={undefined}
   >
     <div
       style={
@@ -3347,7 +3312,6 @@ exports[`Dropdown renders without props 1`] = `
     className="emotion-5"
     id="downshift-0-menu"
     role="listbox"
-    stylesheet={undefined}
   />
 </div>
 `;
