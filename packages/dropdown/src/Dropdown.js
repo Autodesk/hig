@@ -293,6 +293,7 @@ export default class Dropdown extends Component {
       onBlur,
       onChange,
       onFocus,
+      onInputChange,
       options,
       placeholder,
       renderOption,

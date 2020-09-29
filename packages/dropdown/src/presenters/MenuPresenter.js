@@ -5,7 +5,13 @@ import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./MenuPresenter.stylesheet";
 
 export default function MenuPresenter(props) {
-  const { innerRef, isOpen, children, ...otherProps } = props;
+  const {
+    children,
+    innerRef,
+    isOpen,
+    stylesheet: customStylesheet,
+    ...otherProps
+  } = props;
   const { className } = otherProps;
 
   return (
@@ -26,5 +32,6 @@ export default function MenuPresenter(props) {
 MenuPresenter.propTypes = {
   innerRef: PropTypes.func.isRequired,
   isOpen: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
+  stylesheet: PropTypes.func
 };
