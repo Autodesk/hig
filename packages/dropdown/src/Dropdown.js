@@ -59,7 +59,9 @@ export default class Dropdown extends Component {
      */
     onFocus: PropTypes.func,
     /**
-     * Called when the input field value changes
+     * Called when the input field value changes via typing
+     * Meant to be used when the `typable` prop is set to `true`,
+     * otherwise use `onChange`
      */
     onInputChange: PropTypes.func,
     /**
