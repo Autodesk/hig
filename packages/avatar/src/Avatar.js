@@ -39,8 +39,15 @@ function backgroundIdFromName(name) {
  * @returns {string}
  */
 function initialsFromName(name) {
-  const initials = name.match(/\b\w/g) || [];
-
+  const results = name.matchAll(/([-\s,.:;"'_]|^)(?<FirstChar>\p{L})/gu);
+  let initials = [];
+  for (let result of results) {
+    // Return initial if it is a Chinese or Japanese character
+    if (result.groups.FirstChar.match(/\p{sc=Han}/gu)) {
+      return result.groups.FirstChar;
+    }
+    initials.push(result.groups.FirstChar);
+  }
   return ((initials.shift() || "") + (initials.pop() || "")).toUpperCase();
 }
 
