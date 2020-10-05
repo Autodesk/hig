@@ -27,9 +27,45 @@ import Dropdown from "@hig/dropdown";
 />
 ```
 
-## Custom CSS
+### Styling
 
 Use the `className` prop to pass in a css class name to the outermost container of the component. The class name will also pass down to most of the other styled elements within the component.
+
+Dropdown also has a `stylesheet` prop that accepts a function wherein you can modify Dropdown's styles. The original styles, props, and current theme data will be passed to your custom stylesheet function, and it should return an object with the same structure as the original styles. For instance
+
+```jsx
+function customStylesheet(styles, props, themeData) {
+  return {
+    ...styles,
+    dropdownWrapper: {
+      ...styles.dropdownWrapper,
+      position: "absolute"
+    },
+    inputWrapper: {
+      ...styles.inputWrapper,
+      borderColor: props.variant === "box"
+        ? themeData["basics.colors.secondary.green.100"]
+        : themeData["basics.colors.secondary.darkBlue.100"]
+    },
+    caret: {
+      ...styles.caret,
+      cursor: "default"
+    },
+    menu: {
+      ...styles.menu,
+      backgroundColor: themeData["colorScheme.reference.accent"]
+    },
+    option: {
+      ...styles.menu,
+      padding: "0 12px"
+    }
+  };
+}
+
+<Dropdown stylesheet={customStylesheet} options={["Foo", "Bar"]}>
+  bar
+</Dropdown>
+```
 
 ## Using [render props][] for additional customization
 
