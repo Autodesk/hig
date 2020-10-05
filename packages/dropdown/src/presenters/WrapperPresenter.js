@@ -21,16 +21,26 @@ import stylesheet from "./WrapperPresenter.stylesheet";
  * @see https://github.com/paypal/downshift#getrootprops
  */
 export default function WrapperPresenter(props) {
-  const { disabled, children, ...otherProps } = props;
+  const {
+    children,
+    disabled,
+    stylesheet: customStylesheet,
+    ...otherProps
+  } = props;
   const { className } = otherProps;
 
   return (
-    <div {...otherProps} className={cx(css(stylesheet(props)), className)}>
+    <div
+      {...otherProps}
+      className={cx(css(stylesheet(props).dropdownWrapper), className)}
+    >
       {children}
     </div>
   );
 }
 
 WrapperPresenter.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  disabled: PropTypes.bool,
+  stylesheet: PropTypes.func
 };

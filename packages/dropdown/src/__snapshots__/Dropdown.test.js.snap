@@ -45,7 +45,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -61,6 +61,8 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -435,7 +437,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -451,6 +453,8 @@ exports[`Dropdown renders with a controlled value 1`] = `
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -745,7 +749,7 @@ exports[`Dropdown renders with an ID 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -761,6 +765,8 @@ exports[`Dropdown renders with an ID 1`] = `
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -930,7 +936,7 @@ exports[`Dropdown renders with className prop 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -946,6 +952,8 @@ exports[`Dropdown renders with className prop 1`] = `
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -1115,7 +1123,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -1131,6 +1139,8 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -1376,7 +1386,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -1392,6 +1402,8 @@ exports[`Dropdown renders with custom option render function 1`] = `
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -1580,7 +1592,7 @@ exports[`Dropdown renders with default value 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -1596,6 +1608,8 @@ exports[`Dropdown renders with default value 1`] = `
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -1890,7 +1904,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -1906,6 +1920,8 @@ exports[`Dropdown renders with multiple selection 1`] = `
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -2151,7 +2167,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -2167,6 +2183,8 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -2475,7 +2493,7 @@ exports[`Dropdown renders with option specific and general option render functio
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -2491,6 +2509,8 @@ exports[`Dropdown renders with option specific and general option render functio
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -2688,7 +2708,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -2704,6 +2724,8 @@ exports[`Dropdown renders with option specific render function 1`] = `
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -2937,7 +2959,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -2953,6 +2975,8 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
@@ -3150,7 +3174,7 @@ exports[`Dropdown renders without props 1`] = `
   -moz-appearance: none;
   appearance: none;
   padding-top: 4px;
-  padding-right: 0;
+  padding-right: calc(24px + 0px);
   padding-bottom: 4px;
   padding-left: 0;
   outline: none;
@@ -3166,6 +3190,8 @@ exports[`Dropdown renders without props 1`] = `
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .emotion-0::-webkit-input-placeholder {
