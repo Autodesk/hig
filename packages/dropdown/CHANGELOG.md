@@ -1,3 +1,16 @@
+# [@hig/dropdown-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.2.2...@hig/dropdown@2.3.0) (2020-10-06)
+
+
+### Bug Fixes
+
+* long options should not run into the caret ([34471fa](https://github.com/Autodesk/hig/commit/34471fa))
+
+
+### Features
+
+* add searchable and onInputChange props ([317286a](https://github.com/Autodesk/hig/commit/317286a))
+* add stylesheet prop ([1edf4ed](https://github.com/Autodesk/hig/commit/1edf4ed))
+
 # [@hig/dropdown-v2.2.2](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.2.1...@hig/dropdown@2.2.2) (2020-05-13)
 
 

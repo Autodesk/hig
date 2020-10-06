@@ -1,3 +1,10 @@
+# [@hig/avatar-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/avatar@1.1.0...@hig/avatar@1.1.1) (2020-10-06)
+
+
+### Bug Fixes
+
+* function initialsFromName() can't handle some non-English names properly ([a844ede](https://github.com/Autodesk/hig/commit/a844ede))
+
 # [@hig/avatar-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/avatar@1.0.6...@hig/avatar@1.1.0) (2019-10-10)
 
 
