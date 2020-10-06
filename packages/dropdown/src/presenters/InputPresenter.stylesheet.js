@@ -14,10 +14,10 @@ export default function stylesheet(props, themeData) {
     props.variant === "box"
       ? themeData["input.box.paddingHorizontal"]
       : themeData["input.line.paddingHorizontal"];
-  const { isOpen } = props;
+  const { isOpen, stylesheet: customStylesheet } = props;
 
-  return {
-    wrapper: {
+  const styles = {
+    inputWrapper: {
       position: "relative"
     },
     caret: {
@@ -30,4 +30,6 @@ export default function stylesheet(props, themeData) {
       ...getActiveStyles(isOpen)
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

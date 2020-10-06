@@ -29,7 +29,7 @@ function OptionWrapper(props) {
             stylesheet(
               { disabled, selected, highlighted, ...props },
               resolvedRoles
-            )
+            ).option
           )}
           disabled={disabled}
           id={id}

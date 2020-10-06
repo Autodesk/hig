@@ -39,8 +39,7 @@ function backgroundIdFromName(name) {
  * @returns {string}
  */
 function initialsFromName(name) {
-  const initials = name.match(/\b\w/g) || [];
-
+  const initials = name.match(/(?<=[-\s._'",;]|^)[^-\s._'",;]/g) || [];
   return ((initials.shift() || "") + (initials.pop() || "")).toUpperCase();
 }
 

@@ -28,6 +28,10 @@ export default class Dropdown extends Component {
      */
     disabled: PropTypes.bool,
     /**
+     * Specifies if the value provided is wrong
+     */
+    error: PropTypes.bool,
+    /**
      * Used to format options into human readable strings
      *
      * Note that if both formatOption and renderOption are provided,
@@ -54,6 +58,12 @@ export default class Dropdown extends Component {
      * Called when the text field is focused
      */
     onFocus: PropTypes.func,
+    /**
+     * Called when the input field value changes via typing
+     * Meant to be used when the `typable` prop is set to `true`,
+     * otherwise use `onChange`
+     */
+    onInputChange: PropTypes.func,
     /**
      * An array of unique values of any type except `undefined`
      * If you use an array of objects, the object must contain the property `item`,
@@ -83,6 +93,14 @@ export default class Dropdown extends Component {
      */
     required: PropTypes.string,
     /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func,
+    /**
+     * Allows the input to be typable
+     */
+    typable: PropTypes.bool,
+    /**
      * The value of the control
      */
     value: PropTypes.oneOfType([
@@ -92,11 +110,7 @@ export default class Dropdown extends Component {
     /**
      * The visual variant of the textarea
      */
-    variant: PropTypes.oneOf(variantTypes),
-    /**
-     * Specifies if the value provided is wrong
-     */
-    error: PropTypes.bool
+    variant: PropTypes.oneOf(variantTypes)
   };
 
   static defaultProps = {
@@ -106,7 +120,8 @@ export default class Dropdown extends Component {
      */
     formatOption(option) {
       return option ? String(option) : "";
-    }
+    },
+    typable: false
   };
 
   getBehaviorProps() {
@@ -173,8 +188,11 @@ export default class Dropdown extends Component {
       required,
       onBlur,
       onFocus,
+      onInputChange,
       variant,
       error,
+      stylesheet: customStylesheet,
+      typable,
       ...otherProps
     } = this.props;
 
@@ -195,8 +213,11 @@ export default class Dropdown extends Component {
       onBlur,
       onFocus,
       onClick: toggleMenu,
+      onInputChange,
       variant,
-      className: inputClassName
+      className: inputClassName,
+      stylesheet: customStylesheet,
+      typable
     });
 
     return <InputPresenter key="input" {...inputProps} />;
@@ -221,6 +242,7 @@ export default class Dropdown extends Component {
       multiple,
       options,
       renderOption,
+      stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
 
@@ -235,7 +257,8 @@ export default class Dropdown extends Component {
     const menuProps = getMenuProps({
       isOpen,
       refKey: "innerRef",
-      className: menuClassName
+      className: menuClassName,
+      stylesheet: customStylesheet
     });
 
     const children = renderOptions({
@@ -246,7 +269,8 @@ export default class Dropdown extends Component {
       options,
       renderOption,
       selectedItem,
-      selectedItems
+      selectedItems,
+      stylesheet: customStylesheet
     });
 
     return (
@@ -271,10 +295,12 @@ export default class Dropdown extends Component {
       onBlur,
       onChange,
       onFocus,
+      onInputChange,
       options,
       placeholder,
       renderOption,
       required,
+      typable,
       value,
       variant,
       error,
