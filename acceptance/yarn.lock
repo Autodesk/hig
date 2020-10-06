@@ -959,10 +959,10 @@
     "@hig/utils" "^0.4.0"
     prop-types "^15.7.1"
 
-"@hig/avatar@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-1.1.0.tgz#dddce1c4bb1eea293ee26469b15e17169139ef8d"
-  integrity sha512-pgGEx2K4xI/xoIRwvdyXDYdRUYIX/lbCgGynJWAShU0lTo8fIpPMFLHfAfghAlg/2phd8dfbYe/txXFkvUXAIg==
+"@hig/avatar@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-1.1.1.tgz#84414dd14e6a462e380a031c595b73611adaabda"
+  integrity sha512-JS53Zw9Xr/4N365j0XfKmccmi4H4FNZyFMlb59MoQ5S5UAIo6ZXGX1OSs9FE5YVP5UUAi07dh9C+9mA6/C1x0g==
   dependencies:
     "@hig/utils" "^0.4.0"
     prop-types "^15.7.1"
@@ -1009,13 +1009,13 @@
     prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/dropdown@^2.2.2":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@hig/dropdown/-/dropdown-2.2.2.tgz#276cf151f677ac8b3bf1b7d206abdcdbbe141304"
-  integrity sha512-qxGI5KV+AxzV0r7xoWnxEhZug031nr2IG9IRRrGnOzTLjQPLnyVKBJJTtgto7Iu+05o6GwumwOLnm/h72FZ4Vg==
+"@hig/dropdown@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@hig/dropdown/-/dropdown-2.3.0.tgz#b8b3755cb60c0306a517f66faba81b733d7c8ed6"
+  integrity sha512-fuxZw1NaJknwBB2BILECBgHvuKh5GfbC9EZo8lqINPou6d8IVDZ6B/pNltxrFqJ3+c89S2i9xs+5QN592Mrslg==
   dependencies:
     "@hig/icons" "^3.2.0"
-    "@hig/input" "^1.2.1"
+    "@hig/input" "^1.3.0"
     "@hig/multi-downshift" "^0.1.1"
     downshift "^3.2.0"
     emotion "^10.0.0"
