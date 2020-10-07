@@ -13,8 +13,9 @@ function getRulesByStatus(themeData, status) {
   }
 }
 
-export default function stylesheet(themeData, status) {
-  return {
+export default function stylesheet(props, themeData) {
+  const { status, stylesheet: customStylesheet } = props;
+  const styles = {
     toast: {
       boxSizing: `border-box`,
       display: `flex`,
@@ -68,4 +69,6 @@ export default function stylesheet(themeData, status) {
       }
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

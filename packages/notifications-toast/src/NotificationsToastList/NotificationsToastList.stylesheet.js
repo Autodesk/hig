@@ -8,12 +8,15 @@ function getStylesByPlacement(placement) {
   return {};
 }
 
-export default function stylesheet(placement) {
-  return {
+export default function stylesheet(props) {
+  const { placement, stylesheet: customStylesheet } = props;
+  const styles = {
     toastListWrapper: {
       position: `fixed`,
       right: `10px`,
       ...(placement ? getStylesByPlacement(placement) : {})
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props) : styles;
 }

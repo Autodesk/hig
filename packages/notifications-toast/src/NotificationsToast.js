@@ -38,7 +38,11 @@ export default class NotificationsToast extends Component {
     /**
      * Indicates the style of toast notification
      */
-    status: PropTypes.oneOf(AVAILABLE_STATUSES)
+    status: PropTypes.oneOf(AVAILABLE_STATUSES),
+    /**
+     * Function to modify the component's styles
+     */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -49,7 +53,7 @@ export default class NotificationsToast extends Component {
 
   _renderImage = (themeData, metadata) => {
     const { showStatusIcon, image, status } = this.props;
-    const styles = stylesheet(themeData, status);
+    const styles = stylesheet(this.props, themeData);
     const iconFill =
       status === "primary"
         ? themeData["basics.colors.primary.autodeskBlue.500"]
@@ -75,8 +79,15 @@ export default class NotificationsToast extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
-          const { onDismissTitle, status } = this.props;
-          const styles = stylesheet(resolvedRoles, status);
+          const {
+            onDismissTitle,
+            status,
+            stylesheet: customStylesheet
+          } = this.props;
+          const styles = stylesheet(
+            { status, stylesheet: customStylesheet },
+            resolvedRoles
+          );
           const CloseIcon =
             metadata.densityId === "medium-density" ? CloseSUI : CloseXsUI;
 

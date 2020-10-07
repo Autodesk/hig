@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import FlipMove from "react-flip-move";
-import { AVAILABLE_PLACEMENTS } from "../placements";
 
 import stylesheet from "./NotificationsToastListAnimator.stylesheet";
 
@@ -20,8 +19,7 @@ const onScreenStyles = () => ({
 
 export default class NotificationsToastListAnimator extends Component {
   render() {
-    const { placement } = this.props;
-    const styles = stylesheet(placement);
+    const styles = stylesheet(this.props);
 
     const enterAnimation = {
       from: offScreenStyles(this.props),
@@ -50,12 +48,6 @@ export default class NotificationsToastListAnimator extends Component {
 }
 
 NotificationsToastListAnimator.propTypes = {
-  /**
-   * Determines the placement of the ToastList.
-   * The list will be sorted such that the most recently added notification will
-   *  appear closest to the page edge.
-   */
-  placement: PropTypes.oneOf(AVAILABLE_PLACEMENTS),
   /**
    * A list of Toast elements to render
    */

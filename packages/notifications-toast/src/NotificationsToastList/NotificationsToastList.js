@@ -13,13 +13,16 @@ export default class NotificationsToastList extends React.Component {
   static placements = placements;
 
   render() {
-    const { children, placement } = this.props;
+    const { children, placement, stylesheet: customStylesheet } = this.props;
     const keyedChildren = React.Children.toArray(children);
-    const styles = stylesheet(placement);
+    const styles = stylesheet(this.props);
 
     return (
       <div className={css(styles.toastListWrapper)}>
-        <NotificationsToastListAnimator placement={placement}>
+        <NotificationsToastListAnimator
+          placement={placement}
+          stylesheet={customStylesheet}
+        >
           {keyedChildren.slice(0, MAX_TOASTS_ONSCREEN)}
         </NotificationsToastListAnimator>
       </div>
@@ -37,5 +40,9 @@ NotificationsToastList.propTypes = {
   /**
    * A list of Toast elements to render
    */
-  children: PropTypes.node
+  children: PropTypes.node,
+  /**
+   * Function to modify the component's styles
+   */
+  stylesheet: PropTypes.func
 };
