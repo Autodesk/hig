@@ -10,13 +10,13 @@ describe("stylesheet", () => {
   it("returns an oject", () => {
     const status = "warning";
 
-    expect(stylesheet(mockThemeData, status)).toEqual(expect.any(Object));
+    expect(stylesheet(mockThemeData, { status })).toEqual(expect.any(Object));
   });
 
   describe("the notification status colors", () => {
     it("returns the proper warning color", () => {
       const status = "warning";
-      const mockStyles = stylesheet(mockThemeData, status);
+      const mockStyles = stylesheet({ status }, mockThemeData);
 
       expect(mockStyles.toast.borderLeftColor).toMatch(
         mockThemeData["colorScheme.status.warning"]
@@ -24,7 +24,7 @@ describe("stylesheet", () => {
     });
     it("returns the proper error color", () => {
       const status = "error";
-      const mockStyles = stylesheet(mockThemeData, status);
+      const mockStyles = stylesheet({ status }, mockThemeData);
 
       expect(mockStyles.toast.borderLeftColor).toMatch(
         mockThemeData["colorScheme.status.error"]
@@ -32,7 +32,7 @@ describe("stylesheet", () => {
     });
     it("returns the proper error color", () => {
       const status = "success";
-      const mockStyles = stylesheet(mockThemeData, status);
+      const mockStyles = stylesheet({ status }, mockThemeData);
 
       expect(mockStyles.toast.borderLeftColor).toMatch(
         mockThemeData["colorScheme.status.success"]
@@ -40,7 +40,7 @@ describe("stylesheet", () => {
     });
     it("returns the proper primary color", () => {
       const status = "primary";
-      const mockStyles = stylesheet(mockThemeData, status);
+      const mockStyles = stylesheet({ status }, mockThemeData);
 
       expect(mockStyles.toast.borderLeftColor).toMatch(
         mockThemeData["basics.colors.primary.autodeskBlue.500"]
