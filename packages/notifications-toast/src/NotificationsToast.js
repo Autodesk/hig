@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import IconButton from "@hig/icon-button";
 import { CloseSUI, CloseXsUI } from "@hig/icons";
 import RichText from "@hig/rich-text";
 import ThemeContext from "@hig/theme-context";
 import Typography from "@hig/typography";
+import { createCustomClassNames } from "@hig/utils";
 
 import { STATUS_ICONS, AVAILABLE_STATUSES } from "./statuses";
 
@@ -52,21 +53,40 @@ export default class NotificationsToast extends Component {
   };
 
   _renderImage = (themeData, metadata) => {
-    const { showStatusIcon, image, status } = this.props;
+    const { showStatusIcon, image, status, ...otherProps } = this.props;
+    const { className } = otherProps;
     const styles = stylesheet(this.props, themeData);
     const iconFill =
       status === "primary"
         ? themeData["basics.colors.primary.autodeskBlue.500"]
         : themeData[`colorScheme.status.${status}`];
+    const toastImageContainerClassName = createCustomClassNames(
+      className,
+      "toast-image-container"
+    );
     if (image) {
-      return <div className={css(styles.toastImageContainer)}>{image}</div>;
+      return (
+        <div
+          className={cx([
+            css(styles.toastImageContainer),
+            toastImageContainerClassName
+          ])}
+        >
+          {image}
+        </div>
+      );
     }
 
     const density = metadata.densityId === "medium-density" ? "medium" : "high";
     if (showStatusIcon && STATUS_ICONS[status]) {
       const Icon = STATUS_ICONS[status][density];
       return (
-        <div className={css(styles.toastImageContainer)}>
+        <div
+          className={cx([
+            css(styles.toastImageContainer),
+            toastImageContainerClassName
+          ])}
+        >
           <Icon color={iconFill} />
         </div>
       );
@@ -82,20 +102,47 @@ export default class NotificationsToast extends Component {
           const {
             onDismissTitle,
             status,
-            stylesheet: customStylesheet
+            stylesheet: customStylesheet,
+            ...otherProps
           } = this.props;
+          const { className } = otherProps;
           const styles = stylesheet(
             { status, stylesheet: customStylesheet },
             resolvedRoles
+          );
+          const toastBodyClassName = createCustomClassNames(
+            className,
+            "toast-body"
+          );
+          const toastMessageClassName = createCustomClassNames(
+            className,
+            "toast-message"
+          );
+          const toastDismissClassName = createCustomClassNames(
+            className,
+            "toast-dismiss"
+          );
+          const toastTypographyClassName = createCustomClassNames(
+            className,
+            "toast-typography"
+          );
+          const toastIconButtonClassName = createCustomClassNames(
+            className,
+            "toast-icon-button"
           );
           const CloseIcon =
             metadata.densityId === "medium-density" ? CloseSUI : CloseXsUI;
 
           return (
-            <div className={css(styles.toast)}>
+            <div className={cx([css(styles.toast), className])}>
               {this._renderImage(resolvedRoles, metadata)}
-              <div className={css(styles.toastBody)}>
-                <div className={css(styles.toastMessage)}>
+              <div className={cx([css(styles.toastBody), toastBodyClassName])}>
+                <div
+                  className={cx([
+                    css(styles.toastMessage),
+                    toastMessageClassName
+                  ])}
+                >
                   <RichText>
                     <Typography
                       style={{
@@ -104,16 +151,23 @@ export default class NotificationsToast extends Component {
                         textOverflow: "ellipsis",
                         overflow: "hidden"
                       }}
+                      className={toastTypographyClassName}
                     >
                       {this.props.children}
                     </Typography>
                   </RichText>
-                  <div className={css(styles.toastDismiss)}>
+                  <div
+                    className={cx([
+                      css(styles.toastDismiss),
+                      toastDismissClassName
+                    ])}
+                  >
                     <IconButton
                       title={onDismissTitle}
                       icon={<CloseIcon />}
                       type="transparent"
                       onClick={this.props.onDismiss}
+                      className={toastIconButtonClassName}
                     />
                   </div>
                 </div>

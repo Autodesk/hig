@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import FlipMove from "react-flip-move";
 
 import stylesheet from "./NotificationsToastListAnimator.stylesheet";
@@ -19,6 +19,8 @@ const onScreenStyles = () => ({
 
 export default class NotificationsToastListAnimator extends Component {
   render() {
+    const { children, ...otherProps } = this.props;
+    const { className } = otherProps;
     const styles = stylesheet(this.props);
 
     const enterAnimation = {
@@ -33,7 +35,7 @@ export default class NotificationsToastListAnimator extends Component {
 
     return (
       <FlipMove
-        className={css(styles.toastList)}
+        className={cx([css(styles.toastList), className])}
         duration={_ANIMATION_DURATION}
         staggerDelayBy={_ANIMATION_STAGGER_DELAY_BY}
         easing="ease-out"
@@ -41,7 +43,7 @@ export default class NotificationsToastListAnimator extends Component {
         enterAnimation={enterAnimation}
         leaveAnimation={leaveAnimation}
       >
-        {this.props.children}
+        {children}
       </FlipMove>
     );
   }
