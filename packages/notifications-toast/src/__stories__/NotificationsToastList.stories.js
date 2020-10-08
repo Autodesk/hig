@@ -35,7 +35,10 @@ storiesOf("Notifications|ToastList", module)
     "static",
     withInfo({
       ...infoOptions,
-      propTablesExclude: [NotificationsToastListInteractions]
+      propTablesExclude: [
+        NotificationsToastListInteractions,
+        KnobbedThemeProvider
+      ]
     })(() => (
       <KnobbedThemeProvider>
         <NotificationsToastList
@@ -50,7 +53,10 @@ storiesOf("Notifications|ToastList", module)
     "demonstrate adding new children",
     withInfo({
       ...infoOptions,
-      propTablesExclude: [NotificationsToastListInteractions]
+      propTablesExclude: [
+        NotificationsToastListInteractions,
+        KnobbedThemeProvider
+      ]
     })(() => (
       <KnobbedThemeProvider>
         <NotificationsToastListInteractions

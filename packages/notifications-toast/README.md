@@ -18,6 +18,46 @@ yarn add @hig/notifications-toast @hig/theme-context @hig/theme-data
 import NotificationsToast from '@hig/notifications-toast';
 ```
 
-## Basic usage
+### Styling
 
-<!-- TODO: Write usage description -->
+Use the `className` prop to pass in a css class name to the outermost container of the component. The class name will also pass down to most of the other styled elements within the component.
+
+NotificationsToast also has a `stylesheet` prop that accepts a function wherein you can modify NotificationsToast's styles. The original styles, props, and current theme data will be passed to your custom stylesheet function, and it should return an object with the same structure as the original styles. For instance
+
+```jsx
+function customStylesheet(styles, props, themeData) {
+  return {
+    ...styles,
+    toast: {
+      ...styles.toast,
+      position: "absolute"
+    },
+    toastImageContainer: {
+      ...styles.toastImageContainer,
+      borderColor: props.variant === "box"
+        ? themeData["basics.colors.secondary.green.100"]
+        : themeData["basics.colors.secondary.darkBlue.100"]
+    },
+    toastBody: {
+      ...styles.toastBody,
+      cursor: "default"
+    },
+    toastMessage: {
+      ...styles.toastMessage,
+      backgroundColor: themeData["colorScheme.reference.accent"]
+    },
+    toastDismiss: {
+      ...styles.toastDismiss,
+      padding: "0 12px"
+    },
+    toastListWrapper: {
+      ...styles.toastListWrapper,
+      display: "flex"
+    },
+    toastList: {
+      ...styles.toastList,
+      flexDirection: "row"
+    }
+  };
+}
+```
