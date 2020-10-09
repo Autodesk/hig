@@ -56,7 +56,7 @@ function customStylesheet(styles, props, themeData) {
       backgroundColor: themeData["colorScheme.reference.accent"]
     },
     option: {
-      ...styles.menu,
+      ...styles.option,
       padding: "0 12px"
     }
   };
