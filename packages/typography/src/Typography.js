@@ -36,7 +36,11 @@ export default class Typography extends Component {
     /**
      * Indicates the initial Typography style
      */
-    variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
+    variant: PropTypes.oneOf(AVAILABLE_VARIANTS),
+     /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func
   };
 
   elementType = () => {
@@ -64,8 +68,15 @@ export default class Typography extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
+          const { stylesheet: customStylesheet } = this.props;
           const styles = stylesheet(
-            { align, fontWeight, variant },
+            {
+              stylesheet: customStylesheet,
+              align,
+              fontWeight,
+              variant,
+              ...this.props
+            },
             resolvedRoles
           );
 

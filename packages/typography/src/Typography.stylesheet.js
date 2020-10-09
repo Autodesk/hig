@@ -1,8 +1,8 @@
 export default function stylesheet(props, themeData) {
-  const { fontWeight, align } = props;
+  const { stylesheet: customStylesheet, fontWeight, align } = props;
   const variant = props.variant || "body";
 
-  return {
+  const styles = {
     typography: {
       color: themeData[`typography.${variant}.color`],
       display: "block",
@@ -14,4 +14,6 @@ export default function stylesheet(props, themeData) {
       textAlign: align || "initial"
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }
