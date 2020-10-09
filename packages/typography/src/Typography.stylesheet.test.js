@@ -7,5 +7,4 @@ describe("stylesheet", () => {
     };
     expect(stylesheet(props, {})).toEqual({ padding: 0 });
   });
-
 });
