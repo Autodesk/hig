@@ -18,7 +18,7 @@
     "build/*"
   ],
   "dependencies": {
-    "create-react-context": "^0.2.3",
+    "create-react-context": "^0.3.0",
     "prop-types": "^15.6.1"
   },
   "devDependencies": {
