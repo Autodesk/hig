@@ -59,6 +59,7 @@ export default class Typography extends Component {
       children,
       fontWeight,
       variant,
+      stylesheet: customStylesheet,
       elementType, // we don't want this included in the otherProps that appear in the DOM
       ...otherProps
     } = this.props;
@@ -68,7 +69,6 @@ export default class Typography extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
-          const { stylesheet: customStylesheet } = this.props;
           const styles = stylesheet(
             {
               stylesheet: customStylesheet,
