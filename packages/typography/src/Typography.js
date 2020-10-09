@@ -37,7 +37,7 @@ export default class Typography extends Component {
      * Indicates the initial Typography style
      */
     variant: PropTypes.oneOf(AVAILABLE_VARIANTS),
-     /**
+    /**
      * Adds custom/overriding styles
      */
     stylesheet: PropTypes.func
