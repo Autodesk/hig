@@ -1,10 +1,11 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { boolean, object, text } from "@storybook/addon-knobs/react";
+import { boolean, object, select, text } from "@storybook/addon-knobs/react";
 import { withInfo } from "@storybook/addon-info";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 
 import Timestamp from "../Timestamp";
+import { availableSequences } from "../constants";
 import infoOptions from "./infoOptions";
 
 const now = new Date();
@@ -27,9 +28,14 @@ storiesOf("Timestamp", module).add(
   })(() => (
     <KnobbedThemeProvider>
       <Timestamp
-        timeDescriptors={object("Time Descriptors", timeObject)}
         plural={boolean("Plural", true)}
+        timeDescriptors={object("Time Descriptors", timeObject)}
         timestamp={text("Timestamp", now.toISOString())}
+        timestampSequence={select(
+          "Timestamp Sequence",
+          availableSequences,
+          availableSequences.ABC
+        )}
         wordSpace={boolean("Word Space", true)}
       />
     </KnobbedThemeProvider>
