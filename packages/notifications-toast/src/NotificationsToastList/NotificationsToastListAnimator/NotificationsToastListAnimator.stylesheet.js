@@ -8,8 +8,9 @@ function getStylesByPlacement(placement) {
   return {};
 }
 
-export default function stylesheet(placement) {
-  return {
+export default function stylesheet(props) {
+  const { placement, stylesheet: customStylesheet } = props;
+  const styles = {
     toastList: {
       display: `flex`,
       minWidth: `340px`,
@@ -19,4 +20,6 @@ export default function stylesheet(placement) {
       }
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props) : styles;
 }
