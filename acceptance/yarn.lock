@@ -1211,10 +1211,10 @@
     create-react-context "^0.2.3"
     prop-types "^15.6.1"
 
-"@hig/theme-data@^2.17.0":
-  version "2.17.0"
-  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.17.0.tgz#9728cf0f55511de49d07ee7e868fb2f07dc3c08d"
-  integrity sha512-J8AeQJSXvdxBzTdM7pn6hgfw2nMBDTOKizSZG+6V/IgghkKDHaX6c7kaM62kkZFj6jn0B1vav7KPC4Hqmxm7bw==
+"@hig/theme-data@^2.18.0":
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.18.0.tgz#4e69eaaba8cd3d0993451dbd1d3e72671fbe6cc9"
+  integrity sha512-omP7TSlq0sQwFOPi5o4jfx3h874vR0bcWcqBm1xawwMx0Q05S+ZmrCiTDqBcDmI1A82m0VVxEOBP3t3N1RUM5w==
   dependencies:
     tinycolor2 "^1.4.1"
 
@@ -1251,6 +1251,14 @@
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-1.0.4.tgz#d96eda1984720290b3d21deda61d3b01a745201d"
   integrity sha512-LPDZJKCKE+nwgJ7kOx1KBqjF0dXPVS/ES6RdrJHWrGjGOtnypODFxIxl1ySSro6JWAgZn+GYsj+UMS/MlKKBuQ==
+  dependencies:
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
+"@hig/typography@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-1.1.0.tgz#e562724e065c985d6800ecb50999e87dd4aba99f"
+  integrity sha512-u7GF7FcKNAcsiW/o1Rfk+ZjGowZ4a3r0HjN+RSXZz1/zDzUGco6eshqyVSeVrfC6zD64FvqmPltiTl7PGOjvgQ==
   dependencies:
     emotion "^10.0.0"
     prop-types "^15.7.1"
