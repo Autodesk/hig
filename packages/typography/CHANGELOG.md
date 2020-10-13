@@ -1,3 +1,10 @@
+# [@hig/typography-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/typography@1.0.4...@hig/typography@1.1.0) (2020-10-13)
+
+
+### Features
+
+* Add stylesheet prop ([85dfd86](https://github.com/Autodesk/hig/commit/85dfd86))
+
 # [@hig/typography-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/typography@1.0.3...@hig/typography@1.0.4) (2019-06-06)
 
 

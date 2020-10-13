@@ -1,3 +1,11 @@
+# [@hig/notifications-toast-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.1.1...@hig/notifications-toast@2.2.0) (2020-10-13)
+
+
+### Features
+
+* add stylesheet prop ([1390d9c](https://github.com/Autodesk/hig/commit/1390d9c))
+* allow className to be passed down ([89c0e1b](https://github.com/Autodesk/hig/commit/89c0e1b))
+
 # [@hig/notifications-toast-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.1.0...@hig/notifications-toast@2.1.1) (2020-05-13)
 
 
