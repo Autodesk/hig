@@ -31,7 +31,7 @@
     "@hig/label": "^1.1.1",
     "@hig/modal": "^2.2.1",
     "@hig/notifications-flyout": "^2.0.6",
-    "@hig/notifications-toast": "^2.1.1",
+    "@hig/notifications-toast": "^2.2.0",
     "@hig/numeric-input": "^1.0.0",
     "@hig/profile-flyout": "^2.0.5",
     "@hig/progress-bar": "^1.1.1",
@@ -53,7 +53,7 @@
     "@hig/toggle": "^1.0.1",
     "@hig/tooltip": "^1.0.6",
     "@hig/top-nav": "^3.1.2",
-    "@hig/typography": "^1.0.4"
+    "@hig/typography": "^1.1.0"
   },
   "peerDependencies": {
     "react": "^15.4.1 || ^16.3.2"
