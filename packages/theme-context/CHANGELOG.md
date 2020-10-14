@@ -1,3 +1,10 @@
+# [@hig/theme-context-v3.0.1](https://github.com/Autodesk/hig/compare/@hig/theme-context@3.0.0...@hig/theme-context@3.0.1) (2020-10-14)
+
+
+### Bug Fixes
+
+* security update for create-react-context ([6bb8edf](https://github.com/Autodesk/hig/commit/6bb8edf))
+
 # [@hig/theme-context-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/theme-context@2.1.3...@hig/theme-context@3.0.0) (2019-04-04)
 
 
