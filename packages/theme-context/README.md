@@ -40,9 +40,9 @@ import ThemeContext from '@hig/theme-context';
 function MyThemedComponent() {
   <ThemeContext.Consumer>{({ resolvedRoles, metadata }) => (
     <div style={{
-      backgroundColor: resolvedRoles["colorScheme.surfaceLevel200Color"],
+      backgroundColor: resolvedRoles["colorScheme.surface.level200"],
       borderRadius: resolvedRoles["basics.borderRadii.small"],
-      color: resolvedRoles["colorScheme.textColor"],
+      color: resolvedRoles["colorScheme.text.default"],
       padding: resolvedRoles["density.spacings.medium"],
     }}>
       The current theme is "${metadata.name}".
