@@ -1,3 +1,10 @@
+# [@hig/timestamp-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/timestamp@1.2.0...@hig/timestamp@1.3.0) (2020-10-15)
+
+
+### Features
+
+* add timestampSequence prop to help with localization ([f777858](https://github.com/Autodesk/hig/commit/f777858))
+
 # [@hig/timestamp-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/timestamp@1.1.1...@hig/timestamp@1.2.0) (2020-08-18)
 
 
