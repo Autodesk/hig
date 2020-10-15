@@ -243,4 +243,19 @@ describe("timestamp", () => {
       expect(wrapper).toHaveText("10monthsago");
     });
   });
+
+  describe("when timestampSequence is provided", () => {
+    it("the sequence should match the provided sequence provided", () => {
+      const tenMonthsAgo = new Date(mayFifth);
+      tenMonthsAgo.setMonth(mayFifth.getMonth() - 10);
+
+      const wrapper = mount(
+        <Timestamp
+          timestamp={tenMonthsAgo.toISOString()}
+          timestampSequence="cab"
+        />
+      );
+      expect(wrapper).toHaveText("ago 10 months");
+    });
+  });
 });
