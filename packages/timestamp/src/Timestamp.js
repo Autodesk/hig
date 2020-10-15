@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { cx, css } from "emotion";
+import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
+import { availableSequences } from "./constants";
 import stylesheet from "./stylesheet";
 
 const pluralize = (word, count) => (count === 1 ? word : `${word}s`);
@@ -15,9 +16,9 @@ export default class Timestamp extends Component {
      */
     plural: PropTypes.bool,
     /**
-     * ISO date string
+     * Adds custom/overriding styles
      */
-    timestamp: PropTypes.string,
+    stylesheet: PropTypes.func,
     /**
      * An object that allows for localization of all the time words used
      * By default the object property name is the same as the property value
@@ -34,9 +35,14 @@ export default class Timestamp extends Component {
       ago: PropTypes.string
     }),
     /**
-     * Adds custom/overriding styles
+     * ISO date string
      */
-    stylesheet: PropTypes.func,
+    timestamp: PropTypes.string,
+    /**
+     * The sequence in which the timestamp is displayed
+     * ie. 4 seconds ago (abc)
+     */
+    timestampSequence: PropTypes.oneOf(availableSequences),
     /**
      * If you want a space between words
      */
@@ -55,11 +61,51 @@ export default class Timestamp extends Component {
       year: "year",
       ago: "ago"
     },
+    timestampSequence: availableSequences.ABC,
     wordSpace: true
   };
 
-  humanizeTimestamp = timestamp => {
-    const { plural, timeDescriptors, wordSpace } = this.props;
+  getTimestampSequence = (distance, ellapsedDescriptor) => {
+    const { timeDescriptors, timestampSequence, wordSpace } = this.props;
+    let userTimestamp;
+
+    switch (timestampSequence) {
+      case "acb":
+        userTimestamp = wordSpace
+          ? `${distance} ${timeDescriptors.ago} ${ellapsedDescriptor}`
+          : `${distance}${timeDescriptors.ago}${ellapsedDescriptor}`;
+        break;
+      case "bac":
+        userTimestamp = wordSpace
+          ? `${ellapsedDescriptor} ${distance} ${timeDescriptors.ago}`
+          : `${ellapsedDescriptor}${distance}${timeDescriptors.ago}`;
+        break;
+      case "bca":
+        userTimestamp = wordSpace
+          ? `${ellapsedDescriptor} ${timeDescriptors.ago} ${distance}`
+          : `${ellapsedDescriptor}${timeDescriptors.ago}${distance}`;
+        break;
+      case "cab":
+        userTimestamp = wordSpace
+          ? `${timeDescriptors.ago} ${distance} ${ellapsedDescriptor}`
+          : `${timeDescriptors.ago}${distance}${ellapsedDescriptor}`;
+        break;
+      case "cba":
+        userTimestamp = wordSpace
+          ? `${timeDescriptors.ago} ${ellapsedDescriptor} ${distance}`
+          : `${timeDescriptors.ago}${ellapsedDescriptor}${distance}`;
+        break;
+      default:
+        userTimestamp = wordSpace
+          ? `${distance} ${ellapsedDescriptor} ${timeDescriptors.ago}`
+          : `${distance}${ellapsedDescriptor}${timeDescriptors.ago}`;
+    }
+
+    return userTimestamp;
+  };
+
+  humanizeTimestamp = () => {
+    const { plural, timeDescriptors, timestamp } = this.props;
     const asSeconds = Date.parse(timestamp) / 1000; // TODO: handle future timestamps, or bad input?
     const nowAsSeconds = new Date().valueOf() / 1000;
 
@@ -110,9 +156,7 @@ export default class Timestamp extends Component {
         : timeDescriptors.year;
     }
 
-    return wordSpace
-      ? `${distance} ${ellapsedDescriptor} ${timeDescriptors.ago}`
-      : `${distance}${ellapsedDescriptor}${timeDescriptors.ago}`;
+    return this.getTimestampSequence(distance, ellapsedDescriptor);
   };
 
   render() {
@@ -128,7 +172,7 @@ export default class Timestamp extends Component {
           );
           return (
             <div className={cx(css(styles.timestamp), className)}>
-              {this.humanizeTimestamp(this.props.timestamp)}
+              {this.humanizeTimestamp()}
             </div>
           );
         }}
