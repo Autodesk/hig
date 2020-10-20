@@ -26,13 +26,11 @@ export default class MultiDownshift extends React.Component {
     /** Controlled: the currently selected items */
     selectedItems: PropTypes.arrayOf(PropTypes.any),
     /** Items selected by default */
-    defaultSelectedItems: PropTypes.arrayOf(PropTypes.any),
-    /** Alias of `defaultSelectedItems` for consistency with Downshift */
     initialSelectedItems: PropTypes.arrayOf(PropTypes.any)
   };
 
   static defaultProps = {
-    defaultSelectedItems: []
+    initialSelectedItems: []
   };
 
   state = {
@@ -40,12 +38,9 @@ export default class MultiDownshift extends React.Component {
   };
 
   getDefaultSelectedItem() {
-    const {
-      initialSelectedItems,
-      defaultSelectedItems = initialSelectedItems
-    } = this.props;
+    const { initialSelectedItems } = this.props;
 
-    return defaultSelectedItems;
+    return initialSelectedItems;
   }
 
   /**
