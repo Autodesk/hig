@@ -1,3 +1,15 @@
+# [@hig/multi-downshift-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/multi-downshift@0.1.2...@hig/multi-downshift@1.0.0) (2020-10-30)
+
+
+### Bug Fixes
+
+* defaultSelectedItems prop not working ([831aa33](https://github.com/Autodesk/hig/commit/831aa33))
+
+
+### BREAKING CHANGES
+
+* initialSelectedItems was returning the correct default items but was not being used, using this instead of defaultSelectedItems which was always returning empty and now is a redundancy and therefore has been remove.
+
 # [@hig/multi-downshift-v0.1.2](https://github.com/Autodesk/hig/compare/@hig/multi-downshift@0.1.1...@hig/multi-downshift@0.1.2) (2019-08-02)
 
 
