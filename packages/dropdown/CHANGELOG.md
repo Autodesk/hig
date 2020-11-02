@@ -1,3 +1,10 @@
+# [@hig/dropdown-v2.3.1](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.3.0...@hig/dropdown@2.3.1) (2020-11-02)
+
+
+### Bug Fixes
+
+* defaultValue when multiple is selected ([3eec268](https://github.com/Autodesk/hig/commit/3eec268))
+
 # [@hig/dropdown-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.2.2...@hig/dropdown@2.3.0) (2020-10-06)
 
 
