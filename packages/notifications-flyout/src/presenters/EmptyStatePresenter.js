@@ -6,7 +6,10 @@ import Typography from "@hig/typography";
 import Bell from "./Bell.svg";
 import stylesheet from "./stylesheet";
 
-export default function EmptyStatePresenter({ message, stylesheet: customStylesheet }) {
+export default function EmptyStatePresenter({
+  message,
+  stylesheet: customStylesheet
+}) {
   const styles = stylesheet({ stylesheet: customStylesheet }, {});
   return (
     <div className={css(styles.emptyState)}>

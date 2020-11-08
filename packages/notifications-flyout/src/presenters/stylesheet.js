@@ -140,7 +140,7 @@ export default function stylesheet(props, themeData) {
     emptyStateMessage: {
       margin: `20px 0 37px`
     }
-  }
+  };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

@@ -77,5 +77,6 @@ PanelPresenter.propTypes = {
     EXITING
   ]),
   onScroll: PropTypes.func,
-  refListWrapper: PropTypes.func
+  refListWrapper: PropTypes.func,
+  stylesheet: PropTypes.func
 };

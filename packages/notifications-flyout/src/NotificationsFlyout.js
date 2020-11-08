@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import { combineEventHandlers } from "@hig/utils";
 import Flyout, { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
 
@@ -31,8 +30,10 @@ function createNotificationRenderer({ hideFlyout, dismissNotification }) {
       stylesheet,
       timestamp,
       type,
-      unread
+      unread,
+      ...otherProps
     } = notification;
+    const { className } = otherProps;
 
     const handleDismiss = combineEventHandlers(onDismiss, () =>
       dismissNotification(id)
@@ -40,6 +41,7 @@ function createNotificationRenderer({ hideFlyout, dismissNotification }) {
 
     return (
       <Notification
+        className={className}
         featured={featured}
         hideFlyout={hideFlyout}
         image={image}
@@ -111,8 +113,10 @@ export default function NotificationsFlyout(props) {
     open,
     notifications: notificationsInput = children,
     unreadCount: controlledUnreadCount,
-    stylesheet
+    stylesheet,
+    ...otherProps
   } = props;
+  const { className } = otherProps;
 
   return (
     <NotificationFlyoutBehavior
@@ -129,6 +133,7 @@ export default function NotificationsFlyout(props) {
         <Flyout
           alterCoordinates={alterCoordinates}
           anchorPoint={anchorPoint}
+          className={className}
           fallbackAnchorPoints={fallbackAnchorPoints}
           onClickOutside={onClickOutside}
           onClose={handleClose}
@@ -146,6 +151,7 @@ export default function NotificationsFlyout(props) {
         >
           {({ handleClick }) => (
             <IndicatorPresenter
+              className={className}
               onClick={combineEventHandlers(onClick, handleClick)}
               count={unreadCount}
               showCount={showUnreadCount}

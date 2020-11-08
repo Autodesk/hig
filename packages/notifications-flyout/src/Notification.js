@@ -71,8 +71,10 @@ export default class Notification extends Component {
       stylesheet,
       timestamp,
       type,
-      unread
+      unread,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     return (
       <NotificationBehavior onDismiss={onDismiss}>
@@ -87,6 +89,7 @@ export default class Notification extends Component {
               onMouseLeave: handleMouseLeave
             }) => (
               <NotificationPresenter
+                className={className}
                 featured={featured}
                 hasHover={hasHover}
                 height={height}

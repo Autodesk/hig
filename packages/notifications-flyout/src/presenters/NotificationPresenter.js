@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import RichText from "@hig/rich-text";
 import ThemeContext from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 
 import DismissButtonPresenter from "./DismissButtonPresenter";
 import stylesheet from "./stylesheet";
@@ -20,8 +21,22 @@ export default function NotificationPresenter(props) {
     onMouseLeave,
     showDismissButton,
     stylesheet: customStylesheet,
-    timestamp
+    timestamp,
+    ...otherProps
   } = props;
+  const { className } = otherProps;
+  const notificationContentClassName = createCustomClassNames(
+    className,
+    "notification-content"
+  );
+  const notificationContentImageClassName = createCustomClassNames(
+    className,
+    "notification-content-image"
+  );
+  const notificationContentTextClassName = createCustomClassNames(
+    className,
+    "notification-content-text"
+  );
 
   return (
     <ThemeContext.Consumer>
@@ -29,24 +44,40 @@ export default function NotificationPresenter(props) {
         const styles = stylesheet(props, resolvedRoles);
         return (
           <div
-            className={css(styles.notification)}
+            className={cx([className, css(styles.notification)])}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             ref={innerRef}
             role="listitem"
             style={{ height }}
           >
-            <div className={css(styles.notificationContent)}>
+            <div
+              className={cx([
+                notificationContentClassName,
+                css(styles.notificationContent)
+              ])}
+            >
               {image ? (
-                <div className={css(styles.notificationContentImage)}>
+                <div
+                  className={cx([
+                    notificationContentImageClassName,
+                    css(styles.notificationContentImage)
+                  ])}
+                >
                   {image}
                 </div>
               ) : null}
-              <div className={css(styles.notificationContentText)}>
+              <div
+                className={cx([
+                  notificationContentTextClassName,
+                  css(styles.notificationContentText)
+                ])}
+              >
                 <RichText size="small">{children}</RichText>
                 {timestamp}
                 {showDismissButton ? (
                   <DismissButtonPresenter
+                    className={className}
                     hasHover={hasHover}
                     onClick={onDismissButtonClick}
                     stylesheet={customStylesheet}
@@ -73,5 +104,6 @@ NotificationPresenter.propTypes = {
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   showDismissButton: PropTypes.bool,
+  stylesheet: PropTypes.func,
   timestamp: PropTypes.node
 };
