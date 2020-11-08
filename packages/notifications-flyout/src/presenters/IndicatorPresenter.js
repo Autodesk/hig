@@ -13,7 +13,7 @@ export default function IndicatorPresenter(props) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
-        const styles = stylesheet(resolvedRoles, props);
+        const styles = stylesheet(props, resolvedRoles);
         const NotificationIcon =
           metadata.densityId === "high-density"
             ? Notification16

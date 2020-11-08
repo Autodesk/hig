@@ -28,6 +28,7 @@ function createNotificationRenderer({ hideFlyout, dismissNotification }) {
       key,
       onDismiss,
       showDismissButton,
+      stylesheet,
       timestamp,
       type,
       unread
@@ -45,6 +46,7 @@ function createNotificationRenderer({ hideFlyout, dismissNotification }) {
         key={key}
         onDismiss={handleDismiss}
         showDismissButton={showDismissButton}
+        stylesheet={stylesheet}
         timestamp={timestamp}
         type={type}
         unread={unread}
@@ -60,7 +62,8 @@ function createPanelRenderer({
   dismissNotification,
   notifications,
   loading,
-  heading
+  heading,
+  stylesheet
 }) {
   return function renderPanel({
     /* eslint-disable react/prop-types */
@@ -78,9 +81,10 @@ function createPanelRenderer({
         loading={loading}
         onScroll={handleScroll}
         transitionStatus={transitionStatus}
+        stylesheet={stylesheet}
       >
         {isEmpty ? (
-          <EmptyStatePresenter message={emptyMessage} />
+          <EmptyStatePresenter message={emptyMessage} stylesheet={stylesheet} />
         ) : (
           notifications.map(
             createNotificationRenderer({ hideFlyout, dismissNotification })
@@ -106,7 +110,8 @@ export default function NotificationsFlyout(props) {
     onScroll,
     open,
     notifications: notificationsInput = children,
-    unreadCount: controlledUnreadCount
+    unreadCount: controlledUnreadCount,
+    stylesheet
   } = props;
 
   return (
@@ -134,8 +139,10 @@ export default function NotificationsFlyout(props) {
             dismissNotification,
             notifications,
             loading,
-            heading
+            heading,
+            stylesheet
           })}
+          stylesheet={stylesheet}
         >
           {({ handleClick }) => (
             <IndicatorPresenter
@@ -143,6 +150,7 @@ export default function NotificationsFlyout(props) {
               count={unreadCount}
               showCount={showUnreadCount}
               title={indicatorTitle}
+              stylesheet={stylesheet}
             />
           )}
         </Flyout>
@@ -195,6 +203,8 @@ NotificationsFlyout.propTypes = {
   onScroll: PropTypes.func,
   /** When provided, it overrides the flyout's open state */
   open: PropTypes.bool,
+  /** Function to modify the component's styles */
+  stylesheet: PropTypes.func,
   /** When provided, it overrides the derived unread notification count */
   unreadCount: PropTypes.number
 };

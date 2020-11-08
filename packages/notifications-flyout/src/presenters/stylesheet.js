@@ -25,11 +25,12 @@ function getRulesByType(type, themeData) {
   }
 }
 
-export default function stylesheet(themeData, props) {
+export default function stylesheet(props, themeData) {
   const {
     hasHover,
     loadingTransitionState,
     showCount,
+    stylesheet: customStylesheet,
     transitionStatus,
     type,
     unread
@@ -37,7 +38,7 @@ export default function stylesheet(themeData, props) {
   const isEntering =
     loadingTransitionState === `entering` ||
     loadingTransitionState === `entered`;
-  return {
+  const styles = {
     dismissButton: {
       display: `none`,
       position: `absolute`,
@@ -139,5 +140,7 @@ export default function stylesheet(themeData, props) {
     emptyStateMessage: {
       margin: `20px 0 37px`
     }
-  };
+  }
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

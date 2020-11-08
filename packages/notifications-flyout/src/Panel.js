@@ -11,7 +11,8 @@ export default function Panel(props) {
     innerRef,
     loading,
     onScroll,
-    transitionStatus
+    transitionStatus,
+    stylesheet
   } = props;
 
   return (
@@ -24,6 +25,7 @@ export default function Panel(props) {
           loadingTransitionState={loadingTransitionState}
           onScroll={onScroll}
           refListWrapper={refListWrapper}
+          stylesheet={stylesheet}
         >
           {children}
         </PanelPresenter>
@@ -38,5 +40,6 @@ Panel.propTypes = {
   innerRef: PropTypes.func.isRequired,
   loading: PropTypes.bool,
   onScroll: PropTypes.func,
+  stylesheet: PropTypes.func,
   transitionStatus: PropTypes.string
 };

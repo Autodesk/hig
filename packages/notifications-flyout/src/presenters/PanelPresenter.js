@@ -22,15 +22,20 @@ export default function PanelPresenter({
   listMaxHeight,
   loadingTransitionState,
   onScroll,
-  refListWrapper
+  refListWrapper,
+  stylesheet: customStylesheet
 }) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
-        const styles = stylesheet(resolvedRoles, {
-          transitionState: null,
-          loadingTransitionState
-        });
+        const styles = stylesheet(
+          {
+            transitionState: null,
+            loadingTransitionState,
+            customStylesheet
+          },
+          resolvedRoles
+        );
         return (
           <Panel innerRef={innerRef}>
             <Typography elementType="header" style={styles.panelTitle}>

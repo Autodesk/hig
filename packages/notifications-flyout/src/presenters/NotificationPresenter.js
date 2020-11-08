@@ -19,13 +19,14 @@ export default function NotificationPresenter(props) {
     onMouseEnter,
     onMouseLeave,
     showDismissButton,
+    stylesheet: customStylesheet,
     timestamp
   } = props;
 
   return (
     <ThemeContext.Consumer>
-      {({ resolvedRoles, metadata }) => {
-        const styles = stylesheet(resolvedRoles, props, metadata.colorSchemeId);
+      {({ resolvedRoles }) => {
+        const styles = stylesheet(props, resolvedRoles);
         return (
           <div
             className={css(styles.notification)}
@@ -48,6 +49,7 @@ export default function NotificationPresenter(props) {
                   <DismissButtonPresenter
                     hasHover={hasHover}
                     onClick={onDismissButtonClick}
+                    stylesheet={customStylesheet}
                     title={dismissButtonTitle}
                   />
                 ) : null}
