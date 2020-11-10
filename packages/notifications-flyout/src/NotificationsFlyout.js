@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-
 import { combineEventHandlers } from "@hig/utils";
 import Flyout, { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
 
@@ -28,10 +27,13 @@ function createNotificationRenderer({ hideFlyout, dismissNotification }) {
       key,
       onDismiss,
       showDismissButton,
+      stylesheet,
       timestamp,
       type,
-      unread
+      unread,
+      ...otherProps
     } = notification;
+    const { className } = otherProps;
 
     const handleDismiss = combineEventHandlers(onDismiss, () =>
       dismissNotification(id)
@@ -39,12 +41,14 @@ function createNotificationRenderer({ hideFlyout, dismissNotification }) {
 
     return (
       <Notification
+        className={className}
         featured={featured}
         hideFlyout={hideFlyout}
         image={image}
         key={key}
         onDismiss={handleDismiss}
         showDismissButton={showDismissButton}
+        stylesheet={stylesheet}
         timestamp={timestamp}
         type={type}
         unread={unread}
@@ -60,7 +64,8 @@ function createPanelRenderer({
   dismissNotification,
   notifications,
   loading,
-  heading
+  heading,
+  stylesheet
 }) {
   return function renderPanel({
     /* eslint-disable react/prop-types */
@@ -78,9 +83,10 @@ function createPanelRenderer({
         loading={loading}
         onScroll={handleScroll}
         transitionStatus={transitionStatus}
+        stylesheet={stylesheet}
       >
         {isEmpty ? (
-          <EmptyStatePresenter message={emptyMessage} />
+          <EmptyStatePresenter message={emptyMessage} stylesheet={stylesheet} />
         ) : (
           notifications.map(
             createNotificationRenderer({ hideFlyout, dismissNotification })
@@ -106,8 +112,11 @@ export default function NotificationsFlyout(props) {
     onScroll,
     open,
     notifications: notificationsInput = children,
-    unreadCount: controlledUnreadCount
+    unreadCount: controlledUnreadCount,
+    stylesheet,
+    ...otherProps
   } = props;
+  const { className } = otherProps;
 
   return (
     <NotificationFlyoutBehavior
@@ -124,6 +133,7 @@ export default function NotificationsFlyout(props) {
         <Flyout
           alterCoordinates={alterCoordinates}
           anchorPoint={anchorPoint}
+          className={className}
           fallbackAnchorPoints={fallbackAnchorPoints}
           onClickOutside={onClickOutside}
           onClose={handleClose}
@@ -134,15 +144,19 @@ export default function NotificationsFlyout(props) {
             dismissNotification,
             notifications,
             loading,
-            heading
+            heading,
+            stylesheet
           })}
+          stylesheet={stylesheet}
         >
           {({ handleClick }) => (
             <IndicatorPresenter
+              className={className}
               onClick={combineEventHandlers(onClick, handleClick)}
               count={unreadCount}
               showCount={showUnreadCount}
               title={indicatorTitle}
+              stylesheet={stylesheet}
             />
           )}
         </Flyout>
@@ -195,6 +209,8 @@ NotificationsFlyout.propTypes = {
   onScroll: PropTypes.func,
   /** When provided, it overrides the flyout's open state */
   open: PropTypes.bool,
+  /** Function to modify the component's styles */
+  stylesheet: PropTypes.func,
   /** When provided, it overrides the derived unread notification count */
   unreadCount: PropTypes.number
 };
