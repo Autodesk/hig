@@ -37,7 +37,7 @@ export default class ModalHeaderPresenter extends Component {
   };
 
   static defaultProps = {
-    closeButtonAriaLabel: "close"
+    closeButtonAriaLabel: "Close"
   };
 
   renderChildren() {
@@ -101,7 +101,7 @@ export default class ModalHeaderPresenter extends Component {
                   aria-label={closeButtonAriaLabel}
                   icon={closeIcon}
                   onClick={onCloseClick}
-                  title="Close"
+                  title={closeButtonAriaLabel}
                 />
               </div>
             </header>
