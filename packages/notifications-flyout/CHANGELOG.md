@@ -1,3 +1,11 @@
+# [@hig/notifications-flyout-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.0.6...@hig/notifications-flyout@2.1.0) (2020-11-11)
+
+
+### Features
+
+* add stylesheet prop ([b167948](https://github.com/Autodesk/hig/commit/b167948))
+* allow passing down of className ([e218a47](https://github.com/Autodesk/hig/commit/e218a47))
+
 # [@hig/notifications-flyout-v2.0.6](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.0.5...@hig/notifications-flyout@2.0.6) (2020-05-13)
 
 

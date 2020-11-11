@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v2.0.6](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.5...@hig/project-account-switcher@2.0.6) (2020-11-11)
+
+
+### Bug Fixes
+
+* ProjectAccountSwitcher does not accept non-English labels ([4023d26](https://github.com/Autodesk/hig/commit/4023d26)), closes [#2332](https://github.com/Autodesk/hig/issues/2332)
+
 # [@hig/project-account-switcher-v2.0.5](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.4...@hig/project-account-switcher@2.0.5) (2019-08-02)
 
 
