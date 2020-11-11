@@ -6,8 +6,11 @@ import Typography from "@hig/typography";
 import Bell from "./Bell.svg";
 import stylesheet from "./stylesheet";
 
-export default function EmptyStatePresenter({ message }) {
-  const styles = stylesheet({}, {});
+export default function EmptyStatePresenter({
+  message,
+  stylesheet: customStylesheet
+}) {
+  const styles = stylesheet({ stylesheet: customStylesheet }, {});
   return (
     <div className={css(styles.emptyState)}>
       <Bell role="presentation" className={css(styles.emptyStateImage)} />
@@ -21,5 +24,6 @@ EmptyStatePresenter.defaultProps = {
 };
 
 EmptyStatePresenter.propTypes = {
-  message: PropTypes.string
+  message: PropTypes.string,
+  stylesheet: PropTypes.func
 };

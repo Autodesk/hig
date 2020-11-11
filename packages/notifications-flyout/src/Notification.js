@@ -27,6 +27,8 @@ export default class Notification extends Component {
     onMouseLeave: PropTypes.func,
     /** Determines whether the dismiss button is shown */
     showDismissButton: PropTypes.bool,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func,
     /** Timestamp component */
     timestamp: PropTypes.node,
     /** Determines notification variant */
@@ -66,10 +68,13 @@ export default class Notification extends Component {
       onMouseLeave,
       // Featured notifications show the dismiss button by default
       showDismissButton = featured,
+      stylesheet,
       timestamp,
       type,
-      unread
+      unread,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     return (
       <NotificationBehavior onDismiss={onDismiss}>
@@ -84,6 +89,7 @@ export default class Notification extends Component {
               onMouseLeave: handleMouseLeave
             }) => (
               <NotificationPresenter
+                className={className}
                 featured={featured}
                 hasHover={hasHover}
                 height={height}
@@ -93,6 +99,7 @@ export default class Notification extends Component {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 showDismissButton={showDismissButton}
+                stylesheet={stylesheet}
                 timestamp={timestamp}
                 transitionStatus={transitionStatus}
                 type={type}
