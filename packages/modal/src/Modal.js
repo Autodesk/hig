@@ -12,7 +12,7 @@ export default class Modal extends Component {
     children: PropTypes.node,
     /**
      * ARIA label attribute for the close button if/when headerChildren
-     * are not utilized
+     * are not utilized, also used for the title attribute
      */
     closeButtonAriaLabel: PropTypes.string,
     /**
@@ -43,6 +43,10 @@ export default class Modal extends Component {
      * Style of the modal shell
      */
     type: PropTypes.string
+  };
+
+  static defaultProps = {
+    closeButtonAriaLabel: "Close"
   };
 
   render() {
