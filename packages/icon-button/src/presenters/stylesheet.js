@@ -68,12 +68,14 @@ function getStylesByPressed(themeData, surface, on, variant) {
     ? themeData["iconButton.dynamic.on.pressed.iconColor"]
     : themeData["iconButton.dynamic.pressed.iconColor"];
   const pressedIconColor = variant === "dynamic" ? dynamicPressedIconColor : "";
+
+  const dynamicPressedBackgroundColor = surfaceLevel <= 250 ? themeData["iconButton.dynamic.pressed.100To250BackgroundColor"] : themeData["iconButton.dynamic.pressed.300To350BackgroundColor"];
+  const staticPressedBackgroundColor = themeData["iconButton.static.on.pressed.backgroundColor"];
   return {
     backgroundColor:
-      surfaceLevel <= 250
-        ? themeData["iconButton.dynamic.pressed.100To250BackgroundColor"]
-        : themeData["iconButton.dynamic.pressed.300To350BackgroundColor"],
-    borderColor: `transparent`,
+      variant === `dynamic` ? dynamicPressedBackgroundColor : staticPressedBackgroundColor,
+    borderColor:
+      variant === `dynamic` ? `transparent` : themeData["iconButton.static.on.pressed.borderColor"],
     transitionDuration: `0.3s, 0.3s`,
     "& svg *": {
       ...getDefaultIconTransitionProperties(),
