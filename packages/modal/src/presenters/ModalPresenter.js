@@ -15,7 +15,7 @@ export default class ModalPresenter extends Component {
     children: PropTypes.node,
     /**
      * ARIA label attribute for the close button if/when headerChildren
-     * are not utilized
+     * are not utilized, also used for the title attribute
      */
     closeButtonAriaLabel: PropTypes.string,
     /**
