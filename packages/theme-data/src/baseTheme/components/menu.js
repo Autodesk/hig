@@ -1,10 +1,24 @@
-import { BORDER_RADIUS, COLOR, LENGTH, SPACING } from "../../consts/types";
+import {
+  BORDER_RADIUS,
+  COLOR,
+  FONT_FAMILY,
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LENGTH,
+  SPACING
+} from "../../consts/types";
 
 export default {
   "menu.backgroundColor": {
     type: COLOR,
     value: {
       ref: "colorScheme.surface.level100"
+    }
+  },
+  "menu.fontFamily": {
+    type: FONT_FAMILY,
+    value: {
+      ref: "basics.fontFamilies.main"
     }
   },
   "menu.borderRadius": {
@@ -19,34 +33,94 @@ export default {
       ref: "basics.borderRadii.none"
     }
   },
-  "menu.item.default.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.background.transparent"
-    }
-  },
-  "menu.item.paddingHorizontal": {
+  "menu.container.paddingVertical": {
     type: SPACING,
     value: {
       ref: "density.spacings.extraSmall"
     }
   },
-  "menu.item.paddingVertical": {
-    type: SPACING,
+  "menu.divider.backgroundColor": {
+    type: COLOR,
     value: {
-      ref: "basics.spacings.mediumSmall"
+      ref: "colorScheme.divider.lightweight"
     }
   },
-  "menu.item.minHeight": {
-    type: LENGTH,
-    value: {
-      ref: "density.spacings.large"
-    }
-  },
-  "menu.item.gutterWidth": {
+  "memu.divider.paddingVertical": {
     type: SPACING,
     value: {
-      ref: "basics.spacings.mediumSmall"
+      ref: "density.spacings.small"
+    }
+  },
+  "menu.header.fontSize": {
+    type: FONT_SIZE,
+    value: {
+      ref: "basics.fontSizes.mediumSmall"
+    }
+  },
+  "menu.header.fontWeight": {
+    type: FONT_WEIGHT,
+    value: {
+      ref: "basics.fontWeights.bold"
+    }
+  },
+  "menu.header.fontColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.text.default"
+    }
+  },
+  "menu.header.marginBottom": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.small"
+    }
+  },
+  "menu.label.fontSize": {
+    type: FONT_SIZE,
+    value: {
+      ref: "density.fontSizes.medium"
+    }
+  },
+  "menu.label.default.fontWeight": {
+    type: FONT_WEIGHT,
+    value: {
+      ref: "basics.fontWeights.regular"
+    }
+  },
+  "menu.label.selected.fontWeight": {
+    type: FONT_WEIGHT,
+    value: {
+      ref: "basics.fontWeights.bold"
+    }
+  },
+  "menu.label.fontColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.text.default"
+    }
+  },
+  "menu.shortcut.fontSize": {
+    type: FONT_SIZE,
+    value: {
+      ref: "basics.fontSizes.mediumSmall"
+    }
+  },
+  "menu.shortcut.fontWeight": {
+    type: FONT_WEIGHT,
+    value: {
+      ref: "basics.fontWeights.regular"
+    }
+  },
+  "menu.shortcut.fontColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.text.dim"
+    }
+  },
+  "menu.item.default.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.transparent"
     }
   },
   "menu.item.hover.backgroundColor": {
@@ -65,6 +139,52 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.background.empty.level100To250.pressed"
+    }
+  },
+  "menu.item.pressed.active.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "menu.item.pressed.backgroundColor"
+    }
+  },
+  "menu.item.paddingHorizontal": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.small"
+    }
+  },
+  "menu.item.paddingVertical": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.extraSmall"
+    }
+  },
+  "menu.item.minHeight": {
+    type: LENGTH,
+    value: "36px"
+  },
+  "menu.item.gutterWidth": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.small"
+    }
+  },
+  "menu.item.checkmark.hover.iconColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.indicator.default"
+    }
+  },
+  "menu.item.checkmark.active.iconColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.indicator.on"
+    }
+  },
+  "menu.item.indicatorColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.indicator.default"
     }
   },
   /**

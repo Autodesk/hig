@@ -3,6 +3,7 @@ import system from "./system";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
 import input from "./components/input";
+import menu from "./components/menu";
 import modal from "./components/modal";
 import panel from "./components/panel";
 import slider from "./components/slider";
@@ -15,6 +16,7 @@ const highDensityThemeConfig = Object.assign(
   { ...button },
   checkbox,
   input,
+  menu,
   modal,
   panel,
   slider,
