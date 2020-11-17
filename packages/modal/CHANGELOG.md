@@ -1,3 +1,10 @@
+# [@hig/modal-v2.2.2](https://github.com/Autodesk/hig/compare/@hig/modal@2.2.1...@hig/modal@2.2.2) (2020-11-17)
+
+
+### Bug Fixes
+
+* pass closeButtonAriaLabel to title attribute ([b9348f9](https://github.com/Autodesk/hig/commit/b9348f9))
+
 # [@hig/modal-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/modal@2.2.0...@hig/modal@2.2.1) (2020-05-13)
 
 
