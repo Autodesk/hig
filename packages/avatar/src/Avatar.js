@@ -10,48 +10,96 @@ import stylesheet from "./Avatar.stylesheet";
 const COLOR_VARIANT_COUNT = 7;
 
 /**
- * @param {number} value
- * @param {number[]} range1
- * @param {number[]} range2
- * @returns {string}
+ * @param {Object} name
+ * @param {string} name.firstName - first name
+ * @param {string} name.lastName - last name
+ * @returns {number}
  */
-function convertRanges(value, range1, range2) {
-  return Number(
-    ((value - range1[0]) * (range2[1] - range2[0])) / (range1[1] - range1[0]) +
-      range2[0]
-  ).toFixed();
+function generateUniqueNumberFromName(name) {
+  const { firstName, lastName } = name;
+  let firstNum = 0;
+  if (firstName) {
+    const firstArray = firstName.split("");
+    firstArray.forEach(char => {
+      firstNum += char.charCodeAt(0);
+    });
+  }
+
+  let lastNum = 0;
+  if (lastName) {
+    const lastArray = lastName.split("");
+    lastArray.forEach(char => {
+      lastNum += char.charCodeAt(0);
+    });
+  }
+
+  return firstNum + lastNum;
 }
 
 /**
- * @param {string} name
- * @returns {string}
+ * @param {Object} name
+ * @param {string} name.firstName - first name
+ * @param {string} name.lastName - last name
+ * @returns {number} - whole number between 1 and COLOR_VARIANT_COUNT
  */
-function backgroundIdFromName(name) {
-  return convertRanges(
-    name.charCodeAt(0) - 65,
-    [0, 26],
-    [1, COLOR_VARIANT_COUNT]
-  );
+export function backgroundIdFromName(name) {
+  const uniqueNum = generateUniqueNumberFromName(name);
+  // Return whole number between 1 and COLOR_VARIANT_COUNT
+  return (Math.round(uniqueNum) % COLOR_VARIANT_COUNT) + 1;
 }
 
 /**
- * @param {string} name
+ * @param {Object} name
+ * @param {string} name.firstName - first name
+ * @param {string} name.lastName - last name
  * @returns {string}
  */
 function initialsFromName(name) {
-  const initials = name.match(/(?<=[-\s._'",;]|^)[^-\s._'",;]/g) || [];
-  return ((initials.shift() || "") + (initials.pop() || "")).toUpperCase();
+  const firstInitial = name.firstName ? name.firstName.slice(0, 1) : "";
+  const lastInitial = name.lastName ? name.lastName.slice(0, 1) : "";
+  return `${firstInitial}${lastInitial}`.toUpperCase();
+}
+
+/**
+ * @param {string} name
+ * @returns {Object} name
+ * @returns {string} name.firstName - first name
+ * @returns {string} name.lastName - last name
+ */
+function buildFirstAndLastName(name) {
+  if (typeof name === "string") {
+    const spaceIndex = name.lastIndexOf(" ");
+
+    // No spaces - there is only a single name, return it as the firstName
+    if (spaceIndex === -1) {
+      return {
+        firstName: name
+      };
+    }
+
+    // Grab first name
+    const firstName = name.slice(0, spaceIndex);
+    // Grab last name, skipping the space
+    const lastName = name.slice(spaceIndex + 1);
+
+    // Return new name structure, split into firstName and last
+    return {
+      firstName,
+      lastName
+    };
+  }
+
+  return name;
 }
 
 /**
  * @param {Object} props
  * @param {string} props.image
- * @param {string} props.name
+ * @param {string} props.alt
  * @returns {JSX.Element}
  */
 // eslint-disable-next-line react/prop-types
-function Image({ image, name, size, onError, className, resolvedRoles }) {
-  const alt = `Avatar image of ${name}`;
+function Image({ image, alt, size, onError, className, resolvedRoles }) {
   const styles = stylesheet({ size }, resolvedRoles);
 
   const imageWrapperClassName = createCustomClassNames(
@@ -77,11 +125,13 @@ function Image({ image, name, size, onError, className, resolvedRoles }) {
 /**
  * @param {Object} props
  * @param {Object} props.name
+ * @param {string} props.name.firstName - first name
+ * @param {string} props.name.lastName - last name
  * @returns {JSX.Element}
  */
 // eslint-disable-next-line react/prop-types
 function Initials({ size, name, className, resolvedRoles }) {
-  const styles = stylesheet({ size, name }, resolvedRoles);
+  const styles = stylesheet({ size }, resolvedRoles);
   const initials = initialsFromName(name);
   const initialsClassName = createCustomClassNames(className, "initials");
 
@@ -110,15 +160,22 @@ function Initials({ size, name, className, resolvedRoles }) {
 
 class Avatar extends Component {
   static propTypes = {
-    /** The name for the avatar */
+    /** The name for the avatar, in one string */
     name: PropTypes.string,
+    /** The first name for the avatar */
+    firstName: PropTypes.string,
+    /** The last name for the avatar */
+    lastName: PropTypes.string,
     /** Set the size of the avatar */
     size: PropTypes.oneOf(AVAILABLE_SIZES),
     /** URL to a profile image */
-    // eslint-disable-next-line react/no-unused-prop-types
     image: PropTypes.string,
     /** Called when an error occurs on the image  */
-    onImageError: PropTypes.func
+    onImageError: PropTypes.func,
+    /** Optional label message override for Avatar  */
+    label: PropTypes.string,
+    /** Optional alt message override for Avatar Image  */
+    imageAlt: PropTypes.string
   };
 
   static defaultProps = {
@@ -164,15 +221,29 @@ class Avatar extends Component {
   };
 
   render() {
-    const { size, name, ...otherProps } = this.props;
+    const { size, name, firstName, lastName, ...otherProps } = this.props;
     const { className } = otherProps;
     const { imageUrl, hasImageError } = this.state;
     const { handleImageError } = this;
-    const backgroundId =
-      backgroundIdFromName(name) <= COLOR_VARIANT_COUNT
-        ? backgroundIdFromName(name)
-        : COLOR_VARIANT_COUNT;
-    const label = `Avatar for ${name}`;
+
+    const nameObj =
+      !firstName && !lastName
+        ? buildFirstAndLastName(name)
+        : {
+            firstName,
+            lastName
+          };
+
+    const backgroundId = backgroundIdFromName(nameObj);
+    const nameStringWithLeadingSpace = `${
+      nameObj.firstName ? ` ${nameObj.firstName}` : ""
+    }${nameObj.lastName ? ` ${nameObj.lastName}` : ""}`;
+    const label = this.props.label
+      ? this.props.label
+      : `Avatar for${nameStringWithLeadingSpace}`;
+    const imageAlt = this.props.imageAlt
+      ? this.props.imageAlt
+      : `Avatar image of${nameStringWithLeadingSpace}`;
     const showImage = imageUrl && !hasImageError;
     const styles = roles => stylesheet({ size, backgroundId }, roles);
 
@@ -192,13 +263,13 @@ class Avatar extends Component {
                 resolvedRoles={resolvedRoles}
                 size={size}
                 image={imageUrl}
-                name={name}
                 className={className}
                 onError={handleImageError}
+                alt={imageAlt}
               />
             )}
             <Initials
-              name={name}
+              name={nameObj}
               size={size}
               resolvedRoles={resolvedRoles}
               className={className}
