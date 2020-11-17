@@ -29,7 +29,7 @@
     "@hig/icons": "^3.2.0",
     "@hig/input": "^1.3.0",
     "@hig/label": "^1.1.1",
-    "@hig/modal": "^2.2.1",
+    "@hig/modal": "^2.2.2",
     "@hig/notifications-flyout": "^2.1.0",
     "@hig/notifications-toast": "^2.2.0",
     "@hig/numeric-input": "^1.0.0",
