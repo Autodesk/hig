@@ -1,5 +1,11 @@
 export default function stylesheet(props, themeData) {
-  const { isPressed, hasFocus, hasHover, disabled } = props;
+  const {
+    isPressed,
+    hasFocus,
+    hasHover,
+    disabled,
+    stylesheet: customStylesheet
+  } = props;
   const opacity = disabled ? themeData["colorScheme.opacity.disabled"] : "1.0";
   // because we don't have access to the checked status in react, we need to
   // write css rules to handle both cases
@@ -79,5 +85,5 @@ export default function stylesheet(props, themeData) {
     }
   };
 
-  return styles;
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }
