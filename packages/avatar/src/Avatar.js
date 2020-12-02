@@ -160,7 +160,10 @@ function Initials({ size, name, className, resolvedRoles }) {
 
 class Avatar extends Component {
   static propTypes = {
-    /** The name for the avatar, in one string */
+    /** The name for the avatar, in one string
+     * If firstName/lastName used then those
+     * take precedent over this prop
+     */
     name: PropTypes.string,
     /** The first name for the avatar */
     firstName: PropTypes.string,
