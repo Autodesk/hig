@@ -11,18 +11,22 @@ const knobGroupIds = {
 };
 
 const knobLabels = {
-  name: "Name",
+  name: "Full Name",
+  firstName: "First Name",
+  lastName: "Last Name",
   size: "Size",
   image: "Image",
   onImageError: "onImageError"
 };
 
 export default function getKnobs(props) {
-  const { name, size, image, ...otherProps } = props;
+  const { name, firstName, lastName, size, image, ...otherProps } = props;
 
   return {
     ...otherProps,
     name: text(knobLabels.name, name, knobGroupIds.basic),
+    firstName: text(knobLabels.firstName, firstName, knobGroupIds.basic),
+    lastName: text(knobLabels.lastName, lastName, knobGroupIds.basic),
     size: select(knobLabels.size, sizeOptions, size, knobGroupIds.basic),
     image: text(knobLabels.image, image, knobGroupIds.basic),
     onImageError: action(knobLabels.onImageError)
