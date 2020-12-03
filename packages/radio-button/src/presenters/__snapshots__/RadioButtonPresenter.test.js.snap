@@ -135,13 +135,13 @@ exports[`radio-button/presenters/RadioButtonPresenter renders with className pro
   className="emotion-2 custom-class"
 >
   <input
-    className="emotion-0 custom-class__input"
+    className="emotion-0 custom-class__radio-button-input"
     disabled={undefined}
     title="Radio Button Class"
     type="radio"
   />
   <span
-    className="emotion-1 custom-class__span"
+    className="emotion-1 custom-class__radio-button-wrapper"
   />
 </div>
 `;
