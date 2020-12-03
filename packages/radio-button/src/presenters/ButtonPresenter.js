@@ -17,7 +17,10 @@ export default class ButtonPresenter extends Component {
   render() {
     const { stylesheet: customStylesheet, ...otherProps } = this.props;
     const { className } = otherProps;
-    const spanClassName = createCustomClassNames(className, "span");
+    const radioButtonWrapperClassName = createCustomClassNames(
+      className,
+      "radio-button-wrapper"
+    );
 
     return (
       <ThemeContext.Consumer>
@@ -32,7 +35,10 @@ export default class ButtonPresenter extends Component {
           );
           return (
             <span
-              className={cx(css(styles.radioButtonWrapper), spanClassName)}
+              className={cx(
+                css(styles.radioButtonWrapper),
+                radioButtonWrapperClassName
+              )}
             />
           );
         }}

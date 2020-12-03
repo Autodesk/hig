@@ -69,7 +69,10 @@ export default class RadioButtonPresenter extends Component {
           );
 
           const { className } = otherProps;
-          const inputClassName = createCustomClassNames(className, "input");
+          const radioButtonInputClassName = createCustomClassNames(
+            className,
+            "radio-button-input"
+          );
 
           return (
             <div className={cx(css(styles.radioButtonContainer), className)}>
@@ -77,7 +80,10 @@ export default class RadioButtonPresenter extends Component {
                 {...otherProps}
                 disabled={disabled}
                 type="radio"
-                className={cx(css(styles.radioButtonInput), inputClassName)}
+                className={cx(
+                  css(styles.radioButtonInput),
+                  radioButtonInputClassName
+                )}
               />
               <ButtonPresenter
                 {...otherProps}
