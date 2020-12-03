@@ -8,7 +8,7 @@ exports[`avatar/Avatar renders with a name 1`] = `
 }
 
 .emotion-1 {
-  background-color: #507b16;
+  background-color: #7993b0;
   color: #ffffff;
   width: 32px;
   height: 32px;
@@ -38,7 +38,7 @@ exports[`avatar/Avatar renders with a name 1`] = `
 
 exports[`avatar/Avatar renders with all props 1`] = `
 .emotion-3 {
-  background-color: #507b16;
+  background-color: #7993b0;
   color: #ffffff;
   width: 48px;
   height: 48px;
@@ -100,7 +100,7 @@ exports[`avatar/Avatar renders with all props 1`] = `
 
 exports[`avatar/Avatar renders with an image 1`] = `
 .emotion-3 {
-  background-color: #6ac0e7;
+  background-color: #5bc9bd;
   color: #3c3c3c;
   width: 32px;
   height: 32px;
@@ -162,7 +162,7 @@ exports[`avatar/Avatar renders with an image 1`] = `
 
 exports[`avatar/Avatar renders with className prop 1`] = `
 .emotion-3 {
-  background-color: #507b16;
+  background-color: #7993b0;
   color: #ffffff;
   width: 48px;
   height: 48px;
@@ -224,7 +224,7 @@ exports[`avatar/Avatar renders with className prop 1`] = `
 
 exports[`avatar/Avatar renders without props 1`] = `
 .emotion-1 {
-  background-color: #6ac0e7;
+  background-color: #5bc9bd;
   color: #3c3c3c;
   width: 32px;
   height: 32px;

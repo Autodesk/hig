@@ -5,14 +5,18 @@ export default [
   {
     description: "default",
     getProps: () => ({
-      name: "Maria McCaplin",
+      name: "Maria Smith",
+      firstName: "",
+      lastName: "",
       size: sizes.LARGE_48
     })
   },
   {
     description: "with picture",
     getProps: () => ({
-      name: "Maria McCaplin",
+      name: "",
+      firstName: "Jonas",
+      lastName: "James",
       image: avatarImagePath,
       size: sizes.LARGE_48
     })
