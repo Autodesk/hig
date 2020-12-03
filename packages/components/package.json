@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "@hig/accordion": "^1.1.0",
-    "@hig/avatar": "^1.1.1",
+    "@hig/avatar": "^1.2.0",
     "@hig/banner": "^2.2.0",
     "@hig/button": "^1.4.4",
     "@hig/checkbox": "^2.0.9",
@@ -36,7 +36,7 @@
     "@hig/profile-flyout": "^2.0.5",
     "@hig/progress-bar": "^1.1.1",
     "@hig/progress-ring": "^1.1.0",
-    "@hig/project-account-switcher": "^2.0.6",
+    "@hig/project-account-switcher": "^2.0.7",
     "@hig/radio-button": "^1.0.9",
     "@hig/rich-text": "^1.1.0",
     "@hig/side-nav": "^2.2.1",

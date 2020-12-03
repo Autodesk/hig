@@ -959,10 +959,10 @@
     "@hig/utils" "^0.4.0"
     prop-types "^15.7.1"
 
-"@hig/avatar@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-1.1.1.tgz#84414dd14e6a462e380a031c595b73611adaabda"
-  integrity sha512-JS53Zw9Xr/4N365j0XfKmccmi4H4FNZyFMlb59MoQ5S5UAIo6ZXGX1OSs9FE5YVP5UUAi07dh9C+9mA6/C1x0g==
+"@hig/avatar@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-1.2.0.tgz#c4c27b64b75b0892dced8868b45eaf3c8acb110e"
+  integrity sha512-ZM0XG2Fp1sPerSrKtSll0SsmSaS3qr0SNYz4CV+N2R/7kV5jZ7ycOJ5NKYcRUT4CHmjjOfDhtw0qPaG2jcXR2g==
   dependencies:
     "@hig/utils" "^0.4.0"
     prop-types "^15.7.1"
@@ -1211,10 +1211,10 @@
     create-react-context "^0.3.0"
     prop-types "^15.6.1"
 
-"@hig/theme-data@^2.18.0":
-  version "2.18.0"
-  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.18.0.tgz#4e69eaaba8cd3d0993451dbd1d3e72671fbe6cc9"
-  integrity sha512-omP7TSlq0sQwFOPi5o4jfx3h874vR0bcWcqBm1xawwMx0Q05S+ZmrCiTDqBcDmI1A82m0VVxEOBP3t3N1RUM5w==
+"@hig/theme-data@^2.19.0":
+  version "2.19.0"
+  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.19.0.tgz#fb1a5a2a493850e383324c262b77ae0518184a41"
+  integrity sha512-gGioHasWw6DjlqXVZqoC974fWiiWDEJO6AjmcnmSkh1ihyN6ZNJG4OONoB0rs9RLA44Wad3/NAYqvaizUDc28A==
   dependencies:
     tinycolor2 "^1.4.1"
 
