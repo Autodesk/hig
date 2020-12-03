@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.19.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.18.0...@hig/theme-data@2.19.0) (2020-12-03)
+
+
+### Features
+
+* add additional menu roles ([6f99fe6](https://github.com/Autodesk/hig/commit/6f99fe6))
+
 # [@hig/theme-data-v2.18.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.17.0...@hig/theme-data@2.18.0) (2020-09-18)
 
 
