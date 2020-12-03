@@ -69,13 +69,21 @@ function getStylesByPressed(themeData, surface, on, variant) {
     : themeData["iconButton.dynamic.pressed.iconColor"];
   const pressedIconColor = variant === "dynamic" ? dynamicPressedIconColor : "";
 
-  const dynamicPressedBackgroundColor = surfaceLevel <= 250 ? themeData["iconButton.dynamic.pressed.100To250BackgroundColor"] : themeData["iconButton.dynamic.pressed.300To350BackgroundColor"];
-  const staticPressedBackgroundColor = themeData["iconButton.static.on.pressed.backgroundColor"];
+  const dynamicPressedBackgroundColor =
+    surfaceLevel <= 250
+      ? themeData["iconButton.dynamic.pressed.100To250BackgroundColor"]
+      : themeData["iconButton.dynamic.pressed.300To350BackgroundColor"];
+  const staticPressedBackgroundColor =
+    themeData["iconButton.static.on.pressed.backgroundColor"];
   return {
     backgroundColor:
-      variant === `dynamic` ? dynamicPressedBackgroundColor : staticPressedBackgroundColor,
+      variant === `dynamic`
+        ? dynamicPressedBackgroundColor
+        : staticPressedBackgroundColor,
     borderColor:
-      variant === `dynamic` ? `transparent` : themeData["iconButton.static.on.pressed.borderColor"],
+      variant === `dynamic`
+        ? `transparent`
+        : themeData["iconButton.static.on.pressed.borderColor"],
     transitionDuration: `0.3s, 0.3s`,
     "& svg *": {
       ...getDefaultIconTransitionProperties(),
@@ -98,6 +106,7 @@ export default function stylesheet(props, themeData, density) {
     hasHover,
     isPressed,
     on,
+    stylesheet: customStylesheet,
     surface,
     variant
   } = props;
@@ -108,7 +117,7 @@ export default function stylesheet(props, themeData, density) {
     : themeData["iconButton.dynamic.default.iconColor"];
   const iconColor = isDynamic ? dynamicIconColor : ``;
 
-  return {
+  const styles = {
     iconButton: {
       backgroundColor:
         !isDynamic && on
@@ -162,4 +171,8 @@ export default function stylesheet(props, themeData, density) {
       pointerEvents: `none`
     }
   };
+
+  return customStylesheet
+    ? customStylesheet(styles, props, themeData, density)
+    : styles;
 }

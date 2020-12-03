@@ -23,6 +23,7 @@ export default class IconButtonPresenter extends Component {
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
     onMouseUp: PropTypes.func,
+    stylesheet: PropTypes.func,
     surface: PropTypes.oneOf(AVAILABLE_SURFACES),
     title: PropTypes.string.isRequired,
     variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
@@ -43,6 +44,7 @@ export default class IconButtonPresenter extends Component {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
+      stylesheet: customStylesheet,
       surface,
       title,
       variant,
@@ -73,6 +75,7 @@ export default class IconButtonPresenter extends Component {
             onMouseEnter,
             onMouseLeave,
             onMouseUp,
+            stylesheet: customStylesheet,
             surface,
             title,
             variant

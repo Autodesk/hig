@@ -11,6 +11,7 @@ describe("stylesheet", () => {
     "iconButton.focus.haloColor": "blue",
     "iconButton.dynamic.pressed.100To250BackgroundColor": "orange",
     "iconButton.dynamic.pressed.300To350BackgroundColor": "yellow",
+    "iconButton.static.on.pressed.backgroundColor": "purple",
     "iconButton.dynamic.pressed.iconColor": "purple",
     "colorScheme.opacity.disabled": 0.4
   };
@@ -24,6 +25,12 @@ describe("stylesheet", () => {
     };
 
     expect(stylesheet(props, themeData)).toEqual(expect.any(Object));
+  });
+  it("returns the custom stylesheet", () => {
+    const props = {
+      stylesheet: () => ({ padding: 0 })
+    };
+    expect(stylesheet(props, themeData)).toEqual({ padding: 0 });
   });
   describe("if the icon-button is at the default state", () => {
     const props = {
@@ -66,11 +73,17 @@ describe("stylesheet", () => {
       variant: "dynamic",
       isPressed: true
     };
+    const staticPressed = stylesheet(
+      { isPressed: true, surface: 300, variant: "static" },
+      themeData
+    );
 
     it("pressed styles match values in theme data", () => {
       const styles = stylesheet(props, themeData);
       expect(styles.iconButton["& svg *"].fill).toEqual("purple");
       expect(styles.iconButton.backgroundColor).toEqual("yellow");
+
+      expect(staticPressed.iconButton.backgroundColor).toEqual("purple");
     });
   });
   describe("if the icon-button is disabled", () => {
@@ -86,16 +99,17 @@ describe("stylesheet", () => {
   });
   describe("surface level options", () => {
     it("surface levels should match values in theme data", () => {
-      const lightLevel = stylesheet(
-        { isPressed: true, surface: 100 },
+      const dynamicLightLevel = stylesheet(
+        { isPressed: true, surface: 100, variant: "dynamic" },
         themeData
       );
-      const darkLevel = stylesheet(
-        { isPressed: true, surface: "300" },
+      const dynamicDarkLevel = stylesheet(
+        { isPressed: true, surface: 300, variant: "dynamic" },
         themeData
       );
-      expect(lightLevel.iconButton.backgroundColor).toEqual("orange");
-      expect(darkLevel.iconButton.backgroundColor).toEqual("yellow");
+
+      expect(dynamicLightLevel.iconButton.backgroundColor).toEqual("orange");
+      expect(dynamicDarkLevel.iconButton.backgroundColor).toEqual("yellow");
     });
   });
   describe("if the button-button is toggled on", () => {

@@ -57,6 +57,10 @@ export default class IconButton extends Component {
      */
     onMouseUp: PropTypes.func,
     /**
+     * Function to modify the component's styles
+     */
+    stylesheet: PropTypes.func,
+    /**
      * Surface color level that the icon-button will be sitting on
      */
     surface: PropTypes.oneOf(AVAILABLE_SURFACES),
@@ -84,6 +88,7 @@ export default class IconButton extends Component {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
+      stylesheet,
       ...props
     } = this.props;
 
@@ -118,6 +123,7 @@ export default class IconButton extends Component {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
+            stylesheet={stylesheet}
             {...props}
           />
         )}
