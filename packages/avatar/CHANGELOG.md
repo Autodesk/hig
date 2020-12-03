@@ -1,3 +1,10 @@
+# [@hig/avatar-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/avatar@1.1.1...@hig/avatar@1.2.0) (2020-12-03)
+
+
+### Features
+
+* Update avatar props and background color calculation ([7eaf08a](https://github.com/Autodesk/hig/commit/7eaf08a))
+
 # [@hig/avatar-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/avatar@1.1.0...@hig/avatar@1.1.1) (2020-10-06)
 
 
