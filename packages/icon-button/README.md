@@ -37,6 +37,32 @@ function MyComponent() {
 
 Use the `className` prop to pass in a css class name to the outermost container of the component. The class name will also pass down to most of the other styled elements within the component.
 
+Icon-Button also has a `stylesheet` prop that accepts a function wherein you can modify Icon Button's styles. The original styles, props, current theme data and theme meta will be passed to your custom stylesheet function, and it should return an object with the same structure as the original styles. For instance
+
+```jsx
+function customStylesheet(styles, props, themeData, themeMeta) {
+  return {
+    ...styles,
+    iconButton: {
+      ...styles.iconButton,
+      backgroundColor: "yellow"
+    },
+    iconSpacer: {
+      ...styles.iconSpacer,
+      backgroundColor: props.hasFocus
+        ? themeData["colorScheme.reference.base"]
+        : themeData["colorScheme.reference.accent"]
+    },
+    iconButtonIcon: {
+      ...styles.iconButtonIcon,
+      padding: themeData["density.spacings.medium"]
+    }
+  };
+}
+
+<IconButton stylesheet={customStylesheet} />
+```
+
 ## Providing a custom SVG
 
 ```jsx
