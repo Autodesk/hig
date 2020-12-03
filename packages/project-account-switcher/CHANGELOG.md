@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v2.0.7](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.6...@hig/project-account-switcher@2.0.7) (2020-12-03)
+
+
+### Bug Fixes
+
+* don't use regex lookbehind, revert to previous regex ([167cde6](https://github.com/Autodesk/hig/commit/167cde6))
+
 # [@hig/project-account-switcher-v2.0.6](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.5...@hig/project-account-switcher@2.0.6) (2020-11-11)
 
 
