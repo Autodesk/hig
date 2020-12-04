@@ -5,12 +5,20 @@ import ThemeContext from "@hig/theme-context";
 import stylesheet from "./stylesheet";
 
 export default function ProfileContentPresenter(props) {
-  const { profileName, profileEmail, children } = props;
+  const {
+    children,
+    profileEmail,
+    profileName,
+    stylesheet: customStylesheet
+  } = props;
 
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
-        const styles = stylesheet(resolvedRoles);
+        const styles = stylesheet(
+          { stylesheet: customStylesheet },
+          resolvedRoles
+        );
 
         return (
           <div className={css(styles.profileContent)}>
@@ -29,10 +37,12 @@ export default function ProfileContentPresenter(props) {
 }
 
 ProfileContentPresenter.propTypes = {
-  /** The displayed name */
-  profileName: PropTypes.string,
+  /** Profile actions */
+  children: PropTypes.node,
   /** The displayed email */
   profileEmail: PropTypes.string,
-  /** Profile actions */
-  children: PropTypes.node
+  /** The displayed name */
+  profileName: PropTypes.string,
+  /** Function to modify the component's styles */
+  stylesheet: PropTypes.func
 };

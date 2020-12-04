@@ -7,9 +7,10 @@ import stylesheet from "./stylesheet";
 export default function ProfileButtonPresenter({
   avatarImage,
   avatarName,
-  onClick
+  onClick,
+  stylesheet: customStylesheet
 }) {
-  const styles = stylesheet();
+  const styles = stylesheet({ stylesheet: customStylesheet });
 
   return (
     <button
@@ -28,5 +29,7 @@ ProfileButtonPresenter.propTypes = {
   /** The name that will converted into initials, and displayed when an image isn't available */
   avatarName: PropTypes.string,
   /** Callback when the flyout is opened */
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  /** Function to modify the component's styles */
+  stylesheet: PropTypes.func
 };
