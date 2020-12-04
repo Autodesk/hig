@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { cx, css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 
 import ButtonPresenter from "./ButtonPresenter";
 import stylesheet from "./stylesheet";
@@ -35,7 +36,11 @@ export default class RadioButtonPresenter extends Component {
     /**
      * Returns whether or not the button is currently pressed
      */
-    isPressed: PropTypes.bool
+    isPressed: PropTypes.bool,
+    /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func
   };
 
   render() {
@@ -44,6 +49,7 @@ export default class RadioButtonPresenter extends Component {
       hasFocus,
       hasHover,
       isPressed,
+      stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
 
@@ -51,23 +57,41 @@ export default class RadioButtonPresenter extends Component {
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
           const styles = stylesheet(
-            { isPressed, hasFocus, hasHover, disabled, ...this.props },
+            {
+              isPressed,
+              hasFocus,
+              hasHover,
+              disabled,
+              stylesheet: customStylesheet,
+              ...this.props
+            },
             resolvedRoles
           );
 
+          const { className } = otherProps;
+          const radioButtonInputClassName = createCustomClassNames(
+            className,
+            "radio-button-input"
+          );
+
           return (
-            <div className={css(styles.radioButtonContainer)}>
+            <div className={cx(css(styles.radioButtonContainer), className)}>
               <input
+                {...otherProps}
                 disabled={disabled}
                 type="radio"
-                className={css(styles.radioButtonInput)}
-                {...otherProps}
+                className={cx(
+                  css(styles.radioButtonInput),
+                  radioButtonInputClassName
+                )}
               />
               <ButtonPresenter
+                {...otherProps}
                 hasFocus={hasFocus}
                 hasHover={hasHover}
                 isPressed={isPressed}
                 disabled={disabled}
+                stylesheet={customStylesheet}
               />
             </div>
           );
