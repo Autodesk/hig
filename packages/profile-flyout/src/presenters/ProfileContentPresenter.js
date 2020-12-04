@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
 export default function ProfileContentPresenter(props) {
@@ -9,8 +10,18 @@ export default function ProfileContentPresenter(props) {
     children,
     profileEmail,
     profileName,
-    stylesheet: customStylesheet
+    stylesheet: customStylesheet,
+    ...otherProps
   } = props;
+  const { className } = otherProps;
+  const profileNameClassName = createCustomClassNames(
+    className,
+    "profile-name"
+  );
+  const profileEmailClassName = createCustomClassNames(
+    className,
+    "profile-email"
+  );
 
   return (
     <ThemeContext.Consumer>
@@ -21,12 +32,20 @@ export default function ProfileContentPresenter(props) {
         );
 
         return (
-          <div className={css(styles.profileContent)}>
+          <div className={cx(className, css(styles.profileContent))}>
             {profileName ? (
-              <span className={css(styles.profileName)}>{profileName}</span>
+              <span
+                className={cx(profileNameClassName, css(styles.profileName))}
+              >
+                {profileName}
+              </span>
             ) : null}
             {profileEmail ? (
-              <span className={css(styles.profileEmail)}>{profileEmail}</span>
+              <span
+                className={cx(profileEmailClassName, css(styles.profileEmail))}
+              >
+                {profileEmail}
+              </span>
             ) : null}
             {children}
           </div>

@@ -1,7 +1,7 @@
 export default function stylesheet(props, themeData) {
   const { stylesheet: customStylesheet } = props;
   const styles = {
-    flyoutButton: {
+    profileFlyoutButton: {
       display: `flex`,
       alignItems: `center`,
       justifyContent: `center`,

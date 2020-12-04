@@ -55,13 +55,16 @@ export default class ProfileFlyout extends Component {
       onProfileImageClick,
       open,
       panel,
-      stylesheet
+      stylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     return (
       <Flyout
         alterCoordinates={alterCoordinates}
         anchorPoint={anchorPoint}
+        className={className}
         content={children}
         fallbackAnchorPoints={fallbackAnchorPoints}
         onClickOutside={onProfileClickOutside}
@@ -73,6 +76,7 @@ export default class ProfileFlyout extends Component {
           <ProfileButtonPresenter
             avatarImage={avatarImage}
             avatarName={avatarName}
+            className={className}
             onClick={combineEventHandlers(handleClick, onProfileImageClick)}
             stylesheet={stylesheet}
           />

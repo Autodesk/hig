@@ -1,24 +1,43 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Avatar, { sizes } from "@hig/avatar";
-import { css } from "emotion";
+import { createCustomClassNames } from "@hig/utils";
+import { css, cx } from "emotion";
 import stylesheet from "./stylesheet";
 
 export default function ProfileButtonPresenter({
   avatarImage,
   avatarName,
   onClick,
-  stylesheet: customStylesheet
+  stylesheet: customStylesheet,
+  ...otherProps
 }) {
+  const { className } = otherProps;
+  const profileFlyoutButtonClassName = createCustomClassNames(
+    className,
+    "profile-flyout-button"
+  );
+  const profileFlyoutAvatarClassName = createCustomClassNames(
+    className,
+    "profile-flyout-avatar"
+  );
   const styles = stylesheet({ stylesheet: customStylesheet });
 
   return (
     <button
       type="button"
-      className={css(styles.flyoutButton)}
+      className={cx(
+        profileFlyoutButtonClassName,
+        css(styles.profileFlyoutButton)
+      )}
       onClick={onClick}
     >
-      <Avatar name={avatarName} image={avatarImage} size={sizes.MEDIUM_32} />
+      <Avatar
+        className={profileFlyoutAvatarClassName}
+        image={avatarImage}
+        name={avatarName}
+        size={sizes.MEDIUM_32}
+      />
     </button>
   );
 }
