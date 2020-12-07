@@ -1047,6 +1047,16 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
+"@hig/icon-button@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-2.5.0.tgz#95db7ddea940a0f77c38fea7fe851f4e81329d51"
+  integrity sha512-1uugArMN4HD6dhbZU+fZF2kxG2AxDa/CU2ZHoiEmctLU/iMrd9G41PdHOThfrYCmI8tN+p8VhRvlvF3yP84ZIg==
+  dependencies:
+    "@hig/behaviors" "^1.1.1"
+    "@hig/utils" "^0.4.0"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
 "@hig/icons@^3.2.0", "@hig/icons@^3.3.0":
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-3.3.0.tgz#3bf4684c4ed81bdf055941015a3bb28c6072e3fd"
@@ -1128,10 +1138,10 @@
     react-lifecycles-compat "^3.0.4"
     react-transition-group "^2.4.0"
 
-"@hig/radio-button@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@hig/radio-button/-/radio-button-1.0.9.tgz#0ad68dcdaa5c952a825a1289e4ec5aaeed3c6d48"
-  integrity sha512-loKW6r/Ox4caqc0zAWPbwiEzdOfC0BnS/CJyESAufWG5WQTfdXzHb5h7D/+EhjFACSWeclT0p9VhGeOdX5sbzw==
+"@hig/radio-button@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/radio-button/-/radio-button-1.1.0.tgz#f2f8793ce4f8522e6f788b61c71c718dc0f0a6ce"
+  integrity sha512-rZxS36V+MpKhcPbFdlE+cmgs+2W+m5g3vWICQKmIAQaFrbWJ7p5IUM8k+qH6+hzuzFChHsu64mot7r81MU2wCw==
   dependencies:
     "@hig/behaviors" "^1.1.1"
     emotion "^10.0.0"
