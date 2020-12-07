@@ -9,6 +9,8 @@ export default class Notification extends Component {
   static propTypes = {
     /** Notification content */
     children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    /** Title HTML attribute for the dismiss button */
+    dismissButtonTitle: PropTypes.string,
     /** Determines whether the notification is featured */
     featured: PropTypes.bool,
     /** An action provided hide the flyout. This is provided to the `children` render prop */
@@ -61,6 +63,7 @@ export default class Notification extends Component {
 
   render() {
     const {
+      dismissButtonTitle,
       featured,
       image,
       onDismiss,
@@ -90,6 +93,7 @@ export default class Notification extends Component {
             }) => (
               <NotificationPresenter
                 className={className}
+                dismissButtonTitle={dismissButtonTitle}
                 featured={featured}
                 hasHover={hasHover}
                 height={height}
