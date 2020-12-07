@@ -1,3 +1,15 @@
+# [@hig/icon-button-v2.5.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.4.2...@hig/icon-button@2.5.0) (2020-12-07)
+
+
+### Bug Fixes
+
+* include static on pressed states ([969c415](https://github.com/Autodesk/hig/commit/969c415))
+
+
+### Features
+
+* add stylesheet prop ([bdebb11](https://github.com/Autodesk/hig/commit/bdebb11))
+
 # [@hig/icon-button-v2.4.2](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.4.1...@hig/icon-button@2.4.2) (2020-09-22)
 
 

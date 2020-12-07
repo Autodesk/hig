@@ -1,3 +1,10 @@
+# [@hig/radio-button-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.9...@hig/radio-button@1.1.0) (2020-12-07)
+
+
+### Features
+
+* add stylesheet and className props ([3ce7888](https://github.com/Autodesk/hig/commit/3ce7888))
+
 # [@hig/radio-button-v1.0.9](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.8...@hig/radio-button@1.0.9) (2020-05-12)
 
 
