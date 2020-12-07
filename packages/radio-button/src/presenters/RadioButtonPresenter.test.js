@@ -27,6 +27,10 @@ describe("radio-button/presenters/RadioButtonPresenter", () => {
         required: "required helper text",
         value: "value"
       }
+    },
+    {
+      description: "renders with className prop",
+      props: { title: "Radio Button Class", className: "custom-class" }
     }
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {
