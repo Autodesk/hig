@@ -19,7 +19,7 @@
   "dependencies": {
     "@hig/avatar": "1.2.0",
     "@hig/flyout": "^1.2.1",
-    "@hig/icon-button": "^2.4.1",
+    "@hig/icon-button": "^2.5.0",
     "@hig/icons": "^3.2.0",
     "@hig/notifications-flyout": "^2.1.0",
     "@hig/profile-flyout": "^2.0.5",
