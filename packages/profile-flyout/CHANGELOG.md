@@ -1,3 +1,11 @@
+# [@hig/profile-flyout-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@2.0.5...@hig/profile-flyout@2.1.0) (2020-12-08)
+
+
+### Features
+
+* add stylesheet prop ([5c06f0d](https://github.com/Autodesk/hig/commit/5c06f0d))
+* pass down className ([dddeed9](https://github.com/Autodesk/hig/commit/dddeed9))
+
 # [@hig/profile-flyout-v2.0.5](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@2.0.4...@hig/profile-flyout@2.0.5) (2020-05-13)
 
 
