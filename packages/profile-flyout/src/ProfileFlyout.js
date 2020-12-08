@@ -32,7 +32,9 @@ export default class ProfileFlyout extends Component {
     /** Shows or hides the flyout */
     open: PropTypes.bool,
     /** Renders a custom flyout panel. Can be either a node or a render function */
-    panel: PropTypes.func
+    panel: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -52,24 +54,31 @@ export default class ProfileFlyout extends Component {
       onProfileClickOutside,
       onProfileImageClick,
       open,
-      panel
+      panel,
+      stylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     return (
       <Flyout
         alterCoordinates={alterCoordinates}
         anchorPoint={anchorPoint}
+        className={className}
         content={children}
         fallbackAnchorPoints={fallbackAnchorPoints}
         onClickOutside={onProfileClickOutside}
         open={open}
         panel={panel}
+        stylesheet={stylesheet}
       >
         {({ handleClick }) => (
           <ProfileButtonPresenter
             avatarImage={avatarImage}
             avatarName={avatarName}
+            className={className}
             onClick={combineEventHandlers(handleClick, onProfileImageClick)}
+            stylesheet={stylesheet}
           />
         )}
       </Flyout>

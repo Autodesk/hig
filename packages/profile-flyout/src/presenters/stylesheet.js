@@ -1,6 +1,7 @@
-export default function stylesheet(themeData) {
-  return {
-    flyoutButton: {
+export default function stylesheet(props, themeData) {
+  const { stylesheet: customStylesheet } = props;
+  const styles = {
+    profileFlyoutButton: {
       display: `flex`,
       alignItems: `center`,
       justifyContent: `center`,
@@ -40,4 +41,6 @@ export default function stylesheet(themeData) {
       ...(themeData ? { color: themeData["colorScheme.text.dim"] } : {})
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }
