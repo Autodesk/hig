@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.1.0...@hig/notifications-flyout@2.1.1) (2020-12-08)
+
+
+### Bug Fixes
+
+* dismissButtonTitle prop was never exposed ([4221ccb](https://github.com/Autodesk/hig/commit/4221ccb))
+
 # [@hig/notifications-flyout-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.0.6...@hig/notifications-flyout@2.1.0) (2020-11-11)
 
 
