@@ -21,6 +21,7 @@ function createNotificationRenderer({ hideFlyout, dismissNotification }) {
   return function renderNotification(notification) {
     const {
       content,
+      dismissButtonTitle,
       featured,
       id,
       image,
@@ -42,6 +43,7 @@ function createNotificationRenderer({ hideFlyout, dismissNotification }) {
     return (
       <Notification
         className={className}
+        dismissButtonTitle={dismissButtonTitle}
         featured={featured}
         hideFlyout={hideFlyout}
         image={image}
