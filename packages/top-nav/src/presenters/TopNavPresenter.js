@@ -5,11 +5,19 @@ import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
 
-export default function TopNav({ leftActions, rightActions, logo }) {
+export default function TopNav({
+  leftActions,
+  rightActions,
+  logo,
+  stylesheet: customStylesheet
+}) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
-        const styles = stylesheet(resolvedRoles);
+        const styles = stylesheet(
+          { stylesheet: customStylesheet },
+          resolvedRoles
+        );
         return (
           <div className={css(styles.topNav)}>
             {leftActions}
@@ -33,5 +41,7 @@ TopNav.propTypes = {
   /** Actions to render on the right of the bar */
   rightActions: PropTypes.node,
   /** Content to render as the logo */
-  logo: PropTypes.node
+  logo: PropTypes.node,
+  /** Function to modify the component's styles */
+  stylesheet: PropTypes.func
 };

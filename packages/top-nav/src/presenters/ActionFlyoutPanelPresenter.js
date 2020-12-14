@@ -10,7 +10,7 @@ export default function ActionFlyoutPanelPresenter({
   handleScroll,
   innerRef
 }) {
-  const styles = stylesheet();
+  const styles = stylesheet({}, {});
   return (
     <Panel innerRef={innerRef}>
       <div

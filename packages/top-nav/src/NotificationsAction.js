@@ -23,9 +23,10 @@ export default class NotificationsAction extends Component {
 
   render() {
     const { children, ...otherProps } = this.props;
+    const { stylesheet } = otherProps;
 
     return (
-      <ActionPresenter>
+      <ActionPresenter stylesheet={stylesheet}>
         <NotificationsFlyout {...otherProps}>{children}</NotificationsFlyout>
       </ActionPresenter>
     );

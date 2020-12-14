@@ -32,7 +32,9 @@ export default class ProfileAction extends Component {
     /** Content to render in the profile flyout */
     children: PropTypes.node,
     /** Callback when the flyout is opened */
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -55,7 +57,8 @@ export default class ProfileAction extends Component {
       avatarName,
       children,
       fallbackAnchorPoints,
-      onClick
+      onClick,
+      stylesheet
     } = this.props;
 
     return (
@@ -68,6 +71,7 @@ export default class ProfileAction extends Component {
           fallbackAnchorPoints={fallbackAnchorPoints}
           onProfileImageClick={onClick}
           panel={renderActionFlyoutPanel}
+          stylesheet={stylesheet}
         >
           {children}
         </ProfileFlyout>

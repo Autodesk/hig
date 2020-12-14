@@ -9,12 +9,15 @@ import stylesheet from "./stylesheet";
 /**
  * @todo Remove the <SeparatorPresenter /> and wrapping <div /> component
  */
-export default function ProfileActionPresenter({ children }) {
-  const styles = stylesheet();
+export default function ProfileActionPresenter({
+  children,
+  stylesheet: customStylesheet
+}) {
+  const styles = stylesheet({ stylesheet: customStylesheet }, {});
   return (
     <div className={css(styles.topNavProfileAction)}>
       <SeparatorPresenter />
-      <ActionPresenter>
+      <ActionPresenter stylesheet={customStylesheet}>
         <div className={css(styles.topNavProfileActionButtonWrapper)}>
           {children}
         </div>
@@ -24,5 +27,6 @@ export default function ProfileActionPresenter({ children }) {
 }
 
 ProfileActionPresenter.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  stylesheet: PropTypes.func
 };

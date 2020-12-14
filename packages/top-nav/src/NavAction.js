@@ -35,7 +35,9 @@ export default class NavAction extends Component {
     /** Callback when the flyout is opened */
     onClick: PropTypes.func,
     /** Title text displayed in the tooltip on button hover */
-    title: PropTypes.string
+    title: PropTypes.string,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -58,11 +60,12 @@ export default class NavAction extends Component {
       fallbackAnchorPoints,
       icon,
       onClick,
+      stylesheet,
       title
     } = this.props;
 
     return (
-      <ActionPresenter>
+      <ActionPresenter stylesheet={stylesheet}>
         <Flyout
           alterCoordinates={alterCoordinates}
           anchorPoint={anchorPoint}
@@ -70,6 +73,7 @@ export default class NavAction extends Component {
           fallbackAnchorPoints={fallbackAnchorPoints}
           onClick={onClick}
           panel={renderActionFlyoutPanel}
+          stylesheet={stylesheet}
         >
           {({ handleClick }) => (
             <NavButtonPresenter
