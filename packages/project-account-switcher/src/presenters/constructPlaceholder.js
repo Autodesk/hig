@@ -1,3 +1,3 @@
 export default function constructPlaceholder(label) {
-  return label.match(/\b(\w)/g).join("");
+  return label.split(" ").reduce((acc, cur) => acc + cur.slice(0, 1), "");
 }
