@@ -32,7 +32,7 @@ export default function PanelPresenter({
           {
             transitionState: null,
             loadingTransitionState,
-            customStylesheet
+            stylesheet: customStylesheet
           },
           resolvedRoles
         );
