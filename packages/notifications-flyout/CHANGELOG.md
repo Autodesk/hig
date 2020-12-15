@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.1.1...@hig/notifications-flyout@2.1.2) (2020-12-15)
+
+
+### Bug Fixes
+
+* passing stylesheet incorrectly to flyout panel ([e2e3f46](https://github.com/Autodesk/hig/commit/e2e3f46))
+
 # [@hig/notifications-flyout-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.1.0...@hig/notifications-flyout@2.1.1) (2020-12-08)
 
 
