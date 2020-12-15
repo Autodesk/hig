@@ -54,7 +54,7 @@ export default {
   "menu.header.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "basics.fontSizes.mediumSmall"
+      ref: "density.fontSizes.small"
     }
   },
   "menu.header.fontWeight": {
@@ -161,7 +161,7 @@ export default {
   },
   "menu.item.minHeight": {
     type: LENGTH,
-    value: "36px"
+    value: "18px"
   },
   "menu.item.gutterWidth": {
     type: SPACING,
