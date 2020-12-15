@@ -25,10 +25,10 @@ export default class Interactions extends Component {
   }
 
   render() {
-    const { stylesheet } = this.props;
+    const { stylesheet, ...otherProps } = this.props;
 
     return (
-      <InteractionsPresenter stylesheet={stylesheet}>
+      <InteractionsPresenter stylesheet={stylesheet} {...otherProps}>
         {this.renderChildren()}
       </InteractionsPresenter>
     );

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 
 import LogoTextPresenter from "./LogoTextPresenter";
 import stylesheet from "./stylesheet";
@@ -24,14 +24,16 @@ export default function LogoPresenter({
   onClick,
   children,
   dangerouslySetInnerHTML,
-  stylesheet: customStylesheet
+  stylesheet: customStylesheet,
+  ...otherProps
 }) {
   const Wrapper = link ? "a" : "div";
+  const { className } = otherProps;
   const styles = stylesheet({ stylesheet: customStylesheet }, {});
 
   return (
     <Wrapper
-      className={css(styles.topNavLogo)}
+      className={cx([className, css(styles.topNavLogo)])}
       href={link}
       title={title}
       aria-label={label}

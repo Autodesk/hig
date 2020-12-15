@@ -54,8 +54,10 @@ export default class HelpAction extends Component {
       children,
       fallbackAnchorPoints,
       onClick,
-      stylesheet
+      stylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     return (
       <ThemeContext.Consumer>
@@ -67,6 +69,7 @@ export default class HelpAction extends Component {
             <NavAction
               alterCoordinates={alterCoordinates}
               anchorPoint={anchorPoint}
+              className={className}
               fallbackAnchorPoints={fallbackAnchorPoints}
               icon={<HelpIcon />}
               onClick={onClick}

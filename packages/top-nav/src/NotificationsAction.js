@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { offsetContainerVertical, offsetPanelHorizontal } from "@hig/flyout";
 import NotificationsFlyout, { anchorPoints } from "@hig/notifications-flyout";
+import { createCustomClassNames } from "@hig/utils";
 
 import ActionPresenter from "./presenters/ActionPresenter";
 
@@ -23,11 +24,20 @@ export default class NotificationsAction extends Component {
 
   render() {
     const { children, ...otherProps } = this.props;
-    const { stylesheet } = otherProps;
+    const { className, stylesheet } = otherProps;
+    const topNavNotificationsFlyoutClassName = createCustomClassNames(
+      className,
+      "top-nav__notifications-flyout"
+    );
 
     return (
-      <ActionPresenter stylesheet={stylesheet}>
-        <NotificationsFlyout {...otherProps}>{children}</NotificationsFlyout>
+      <ActionPresenter stylesheet={stylesheet} className={className}>
+        <NotificationsFlyout
+          {...otherProps}
+          className={topNavNotificationsFlyoutClassName}
+        >
+          {children}
+        </NotificationsFlyout>
       </ActionPresenter>
     );
   }

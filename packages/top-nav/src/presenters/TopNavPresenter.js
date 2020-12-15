@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 
 import stylesheet from "./stylesheet";
 
@@ -9,23 +10,40 @@ export default function TopNav({
   leftActions,
   rightActions,
   logo,
-  stylesheet: customStylesheet
+  stylesheet: customStylesheet,
+  ...otherProps
 }) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
+        const { className } = otherProps;
         const styles = stylesheet(
           { stylesheet: customStylesheet },
           resolvedRoles
         );
+        const topNavLogoWrapperClassName = createCustomClassNames(
+          className,
+          "top-nav-logo-wrapper"
+        );
+        const topNavSpacerClassName = createCustomClassNames(
+          className,
+          "top-nav-spacer"
+        );
         return (
-          <div className={css(styles.topNav)}>
+          <div className={cx([className, css(styles.topNav)])}>
             {leftActions}
-            <div className={css(styles.topNavLogoWrapper)}>{logo}</div>
+            <div
+              className={cx([
+                topNavLogoWrapperClassName,
+                css(styles.topNavLogoWrapper)
+              ])}
+            >
+              {logo}
+            </div>
             <div
               role="presentation"
               aria-hidden
-              className={css(styles.topNavSpacer)}
+              className={cx([topNavSpacerClassName, css(styles.topNavSpacer)])}
             />
             {rightActions}
           </div>

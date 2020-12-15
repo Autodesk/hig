@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { combineEventHandlers } from "@hig/utils";
+import { combineEventHandlers, createCustomClassNames } from "@hig/utils";
 import Flyout, {
   anchorPoints,
   AVAILABLE_ANCHOR_POINTS,
@@ -61,14 +61,25 @@ export default class NavAction extends Component {
       icon,
       onClick,
       stylesheet,
-      title
+      title,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
+    const topNavNavActionFlyoutClassName = createCustomClassNames(
+      className,
+      "top-nav__nav-action-flyout"
+    );
+    const topNavNavActionButtonClassName = createCustomClassNames(
+      className,
+      "top-nav__nav-action-button"
+    );
 
     return (
-      <ActionPresenter stylesheet={stylesheet}>
+      <ActionPresenter className={className} stylesheet={stylesheet}>
         <Flyout
           alterCoordinates={alterCoordinates}
           anchorPoint={anchorPoint}
+          className={topNavNavActionFlyoutClassName}
           content={children}
           fallbackAnchorPoints={fallbackAnchorPoints}
           onClick={onClick}
@@ -77,6 +88,7 @@ export default class NavAction extends Component {
         >
           {({ handleClick }) => (
             <NavButtonPresenter
+              className={topNavNavActionButtonClassName}
               icon={icon}
               onClick={combineEventHandlers(onClick, handleClick)}
               title={title}
