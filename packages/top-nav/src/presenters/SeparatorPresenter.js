@@ -1,14 +1,18 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
 
-export default function SeparatorPresenter() {
+export default function SeparatorPresenter({ stylesheet: customStylesheet }) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
-        const styles = stylesheet(resolvedRoles);
+        const styles = stylesheet(
+          { stylesheet: customStylesheet },
+          resolvedRoles
+        );
         return (
           <div
             role="presentation"
@@ -20,3 +24,7 @@ export default function SeparatorPresenter() {
     </ThemeContext.Consumer>
   );
 }
+
+SeparatorPresenter.propTypes = {
+  stylesheet: PropTypes.func
+};
