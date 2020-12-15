@@ -34,6 +34,7 @@ export default class NotificationsAction extends Component {
       <ActionPresenter stylesheet={stylesheet} className={className}>
         <NotificationsFlyout
           {...otherProps}
+          stylesheet={stylesheet}
           className={topNavNotificationsFlyoutClassName}
         >
           {children}
