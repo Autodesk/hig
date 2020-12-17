@@ -1,3 +1,11 @@
+# [@hig/top-nav-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.1.2...@hig/top-nav@3.2.0) (2020-12-17)
+
+
+### Features
+
+* add stylesheet prop ([1ba75e6](https://github.com/Autodesk/hig/commit/1ba75e6))
+* allow passing down className ([4d4129e](https://github.com/Autodesk/hig/commit/4d4129e))
+
 # [@hig/top-nav-v3.1.2](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.1.1...@hig/top-nav@3.1.2) (2020-05-13)
 
 
