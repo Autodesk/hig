@@ -8,8 +8,9 @@ function getTopNavThemeData(themeData) {
   };
 }
 
-export default function stylesheet(themeData) {
-  return {
+export default function stylesheet(props, themeData) {
+  const { stylesheet: customStylesheet } = props;
+  const styles = {
     topNav: {
       display: `flex`,
       position: `relative`,
@@ -81,4 +82,6 @@ export default function stylesheet(themeData) {
       msOverflowStyle: `-ms-autohiding-scrollbar`
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

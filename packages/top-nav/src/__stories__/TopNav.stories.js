@@ -21,7 +21,10 @@ const storybook = storiesOf("GlobalNav|TopNav", module);
 
 storybook.add(
   "accounts",
-  withInfo(infoOptions)(() => (
+  withInfo({
+    ...infoOptions,
+    propTablesExclude: [KnobbedThemeProvider]
+  })(() => (
     <KnobbedThemeProvider>
       <TopNav
         logo={
@@ -68,7 +71,10 @@ storybook.add(
 
 storybook.add(
   "with text logo",
-  withInfo(infoOptions)(() => (
+  withInfo({
+    ...infoOptions,
+    propTablesExclude: [KnobbedThemeProvider]
+  })(() => (
     <KnobbedThemeProvider>
       <TopNav logo={<Logo link="https://autodesk.com">Autodesk HIG</Logo>} />
     </KnobbedThemeProvider>
@@ -77,7 +83,10 @@ storybook.add(
 
 storybook.add(
   "using LogoText",
-  withInfo(infoOptions)(() => (
+  withInfo({
+    ...infoOptions,
+    propTablesExclude: [KnobbedThemeProvider]
+  })(() => (
     <KnobbedThemeProvider>
       <TopNav
         logo={
@@ -94,7 +103,10 @@ storybook.add(
 
 storybook.add(
   "using a custom NavAction",
-  withInfo(infoOptions)(() => (
+  withInfo({
+    ...infoOptions,
+    propTablesExclude: [KnobbedThemeProvider]
+  })(() => (
     <KnobbedThemeProvider>
       <TopNav
         logo={

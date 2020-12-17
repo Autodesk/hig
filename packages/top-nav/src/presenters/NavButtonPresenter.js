@@ -5,7 +5,12 @@ import IconButton from "@hig/icon-button";
 import { List16, List24 } from "@hig/icons";
 import ThemeContext from "@hig/theme-context";
 
-export default function NavButtonPresenter({ icon, onClick, title }) {
+export default function NavButtonPresenter({
+  icon,
+  onClick,
+  title,
+  ...otherProps
+}) {
   return (
     <ThemeContext.Consumer>
       {({ metadata }) => {
@@ -16,6 +21,7 @@ export default function NavButtonPresenter({ icon, onClick, title }) {
             icon={icon || <NavDefaultIcon />}
             onClick={onClick}
             title={title}
+            {...otherProps}
           />
         );
       }}

@@ -30,7 +30,9 @@ export default class HelpAction extends Component {
       PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS)
     ),
     /** Callback when the flyout is opened */
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -51,8 +53,11 @@ export default class HelpAction extends Component {
       anchorPoint,
       children,
       fallbackAnchorPoints,
-      onClick
+      onClick,
+      stylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     return (
       <ThemeContext.Consumer>
@@ -64,9 +69,11 @@ export default class HelpAction extends Component {
             <NavAction
               alterCoordinates={alterCoordinates}
               anchorPoint={anchorPoint}
+              className={className}
               fallbackAnchorPoints={fallbackAnchorPoints}
               icon={<HelpIcon />}
               onClick={onClick}
+              stylesheet={stylesheet}
               title={title}
             >
               {children}

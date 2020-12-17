@@ -8,9 +8,10 @@ import stylesheet from "./stylesheet";
 export default function ActionFlyoutPanelPresenter({
   children,
   handleScroll,
-  innerRef
+  innerRef,
+  stylesheet: customStylesheet
 }) {
-  const styles = stylesheet();
+  const styles = stylesheet({ stylesheet: customStylesheet }, {});
   return (
     <Panel innerRef={innerRef}>
       <div
@@ -26,13 +27,17 @@ export default function ActionFlyoutPanelPresenter({
 ActionFlyoutPanelPresenter.propTypes = {
   children: PropTypes.node,
   handleScroll: PropTypes.func,
-  innerRef: PropTypes.func
+  innerRef: PropTypes.func,
+  stylesheet: PropTypes.func
 };
 
-/* eslint-disable-next-line react/prop-types */
-export function renderActionFlyoutPanel({ content, innerRef }) {
+/* eslint-disable-next-line react/prop-types, prettier/prettier */
+export function renderActionFlyoutPanel({ content, innerRef, stylesheet: customStylesheet }) {
   return (
-    <ActionFlyoutPanelPresenter innerRef={innerRef}>
+    <ActionFlyoutPanelPresenter
+      innerRef={innerRef}
+      stylesheet={customStylesheet}
+    >
       {content}
     </ActionFlyoutPanelPresenter>
   );

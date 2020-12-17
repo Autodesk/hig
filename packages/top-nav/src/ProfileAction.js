@@ -5,6 +5,7 @@ import ProfileFlyout, {
   anchorPoints,
   AVAILABLE_ANCHOR_POINTS
 } from "@hig/profile-flyout";
+import { createCustomClassNames } from "@hig/utils";
 
 import { renderActionFlyoutPanel } from "./presenters/ActionFlyoutPanelPresenter";
 import ProfileActionPresenter from "./presenters/ProfileActionPresenter";
@@ -32,7 +33,9 @@ export default class ProfileAction extends Component {
     /** Content to render in the profile flyout */
     children: PropTypes.node,
     /** Callback when the flyout is opened */
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -55,19 +58,28 @@ export default class ProfileAction extends Component {
       avatarName,
       children,
       fallbackAnchorPoints,
-      onClick
+      onClick,
+      stylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
+    const topNavProfileFlyoutClassName = createCustomClassNames(
+      className,
+      "top-nav__profile-flyout"
+    );
 
     return (
-      <ProfileActionPresenter>
+      <ProfileActionPresenter className={className}>
         <ProfileFlyout
           alterCoordinates={alterCoordinates}
           anchorPoint={anchorPoint}
           avatarImage={avatarImage}
           avatarName={avatarName}
+          className={topNavProfileFlyoutClassName}
           fallbackAnchorPoints={fallbackAnchorPoints}
           onProfileImageClick={onClick}
           panel={renderActionFlyoutPanel}
+          stylesheet={stylesheet}
         >
           {children}
         </ProfileFlyout>

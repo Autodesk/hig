@@ -6,7 +6,9 @@ import InteractionsPresenter from "./presenters/InteractionsPresenter";
 export default class Interactions extends Component {
   static propTypes = {
     /** Actions to be rendered */
-    children: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
+    children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   /**
@@ -23,8 +25,12 @@ export default class Interactions extends Component {
   }
 
   render() {
+    const { stylesheet, ...otherProps } = this.props;
+
     return (
-      <InteractionsPresenter>{this.renderChildren()}</InteractionsPresenter>
+      <InteractionsPresenter stylesheet={stylesheet} {...otherProps}>
+        {this.renderChildren()}
+      </InteractionsPresenter>
     );
   }
 }

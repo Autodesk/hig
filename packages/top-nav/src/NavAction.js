@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { combineEventHandlers } from "@hig/utils";
+import { combineEventHandlers, createCustomClassNames } from "@hig/utils";
 import Flyout, {
   anchorPoints,
   AVAILABLE_ANCHOR_POINTS,
@@ -35,7 +35,9 @@ export default class NavAction extends Component {
     /** Callback when the flyout is opened */
     onClick: PropTypes.func,
     /** Title text displayed in the tooltip on button hover */
-    title: PropTypes.string
+    title: PropTypes.string,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -58,21 +60,35 @@ export default class NavAction extends Component {
       fallbackAnchorPoints,
       icon,
       onClick,
-      title
+      stylesheet,
+      title,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
+    const topNavNavActionFlyoutClassName = createCustomClassNames(
+      className,
+      "top-nav__nav-action-flyout"
+    );
+    const topNavNavActionButtonClassName = createCustomClassNames(
+      className,
+      "top-nav__nav-action-button"
+    );
 
     return (
-      <ActionPresenter>
+      <ActionPresenter className={className} stylesheet={stylesheet}>
         <Flyout
           alterCoordinates={alterCoordinates}
           anchorPoint={anchorPoint}
+          className={topNavNavActionFlyoutClassName}
           content={children}
           fallbackAnchorPoints={fallbackAnchorPoints}
           onClick={onClick}
           panel={renderActionFlyoutPanel}
+          stylesheet={stylesheet}
         >
           {({ handleClick }) => (
             <NavButtonPresenter
+              className={topNavNavActionButtonClassName}
               icon={icon}
               onClick={combineEventHandlers(onClick, handleClick)}
               title={title}
