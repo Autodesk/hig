@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.19.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.19.0...@hig/theme-data@2.19.1) (2020-12-17)
+
+
+### Bug Fixes
+
+* fix values for menu roles ([365977f](https://github.com/Autodesk/hig/commit/365977f))
+
 # [@hig/theme-data-v2.19.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.18.0...@hig/theme-data@2.19.0) (2020-12-03)
 
 
