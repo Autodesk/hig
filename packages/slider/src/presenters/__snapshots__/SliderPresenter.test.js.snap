@@ -281,6 +281,398 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
 />
 `;
 
+exports[`Slider/presenters/SliderPresenter renders discrete slider 1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent;
+  box-sizing: content-box;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  outline: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-moz-focus-outer {
+  border: 0;
+}
+
+.emotion-0::-ms-thumb {
+  box-sizing: content-box;
+  height: 20px;
+  width: 6px;
+  background-color: #808080;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  position: relative;
+  top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-appearance: none;
+}
+
+.emotion-0::-moz-range-thumb {
+  box-sizing: content-box;
+  height: 20px;
+  width: 6px;
+  background-color: #808080;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  position: relative;
+  top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-appearance: none;
+}
+
+.emotion-0::-webkit-slider-thumb {
+  box-sizing: content-box;
+  height: 20px;
+  width: 6px;
+  background-color: #808080;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  position: relative;
+  top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-appearance: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-0::-ms-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(128,128,128,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(128,128,128,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(128,128,128,0.2);
+  color: transparent;
+  outline: none;
+  background-image: linear-gradient(#808080,#808080);
+  background-position: 0;
+  background-size: calc((0.5 * 6px)  + (NaN * (100% - 6px))) 100%;
+  background-repeat: no-repeat;
+}
+
+.emotion-0::-ms-fill-lower {
+  border: none;
+  background-color: #808080;
+}
+
+.emotion-0::-moz-range-progress {
+  border: none;
+  background-color: #808080;
+}
+
+.emotion-1 {
+  width: 1px;
+  height: 4px;
+  margin-top: -12px;
+  position: absolute;
+  background-color: #808080;
+}
+
+.emotion-8 {
+  position: relative;
+}
+
+.emotion-7 {
+  position: absolute;
+  width: 100%;
+}
+
+<div
+  className="emotion-8"
+>
+  <input
+    aria-valuemax={5}
+    aria-valuemin={0}
+    aria-valuenow={undefined}
+    className="emotion-0"
+    disabled={undefined}
+    max={5}
+    min={0}
+    step={1}
+    type="range"
+    value={undefined}
+  />
+  <div
+    className="emotion-7"
+  >
+    <div
+      className="emotion-1"
+      style={
+        Object {
+          "left": "0%",
+        }
+      }
+    />
+    <div
+      className="emotion-1"
+      style={
+        Object {
+          "left": "20%",
+        }
+      }
+    />
+    <div
+      className="emotion-1"
+      style={
+        Object {
+          "left": "40%",
+        }
+      }
+    />
+    <div
+      className="emotion-1"
+      style={
+        Object {
+          "left": "60%",
+        }
+      }
+    />
+    <div
+      className="emotion-1"
+      style={
+        Object {
+          "left": "80%",
+        }
+      }
+    />
+    <div
+      className="emotion-1"
+      style={
+        Object {
+          "left": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Slider/presenters/SliderPresenter renders discrete slider with step 0 1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent;
+  box-sizing: content-box;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  outline: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-moz-focus-outer {
+  border: 0;
+}
+
+.emotion-0::-ms-thumb {
+  box-sizing: content-box;
+  height: 20px;
+  width: 6px;
+  background-color: #808080;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  position: relative;
+  top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-appearance: none;
+}
+
+.emotion-0::-moz-range-thumb {
+  box-sizing: content-box;
+  height: 20px;
+  width: 6px;
+  background-color: #808080;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  position: relative;
+  top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-appearance: none;
+}
+
+.emotion-0::-webkit-slider-thumb {
+  box-sizing: content-box;
+  height: 20px;
+  width: 6px;
+  background-color: #808080;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  position: relative;
+  top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-appearance: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-0::-ms-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(128,128,128,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(128,128,128,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(128,128,128,0.2);
+  color: transparent;
+  outline: none;
+  background-image: linear-gradient(#808080,#808080);
+  background-position: 0;
+  background-size: calc((0.5 * 6px)  + (NaN * (100% - 6px))) 100%;
+  background-repeat: no-repeat;
+}
+
+.emotion-0::-ms-fill-lower {
+  border: none;
+  background-color: #808080;
+}
+
+.emotion-0::-moz-range-progress {
+  border: none;
+  background-color: #808080;
+}
+
+.emotion-1 {
+  width: 1px;
+  height: 4px;
+  margin-top: -12px;
+  position: absolute;
+  background-color: #808080;
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+.emotion-3 {
+  position: absolute;
+  width: 100%;
+}
+
+<div
+  className="emotion-4"
+>
+  <input
+    aria-valuemax={undefined}
+    aria-valuemin={undefined}
+    aria-valuenow={undefined}
+    className="emotion-0"
+    disabled={undefined}
+    max={undefined}
+    min={undefined}
+    step={0}
+    type="range"
+    value={undefined}
+  />
+  <div
+    className="emotion-3"
+  >
+    <div
+      className="emotion-1"
+      style={
+        Object {
+          "left": "0%",
+        }
+      }
+    />
+    <div
+      className="emotion-1"
+      style={
+        Object {
+          "left": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
 exports[`Slider/presenters/SliderPresenter renders focused 1`] = `
 .emotion-0 {
   -webkit-appearance: none;

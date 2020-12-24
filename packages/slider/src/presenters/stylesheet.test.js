@@ -30,6 +30,29 @@ describe("stylesheet", () => {
     );
   });
 
+  it("returns discrete style", () => {
+    const props = {};
+
+    const styles = stylesheet(props, 0, themeData);
+
+    expect(styles).toEqual(
+      expect.objectContaining({ discrete: expect.anything() })
+    );
+  });
+
+  it("returns marks style", () => {
+    const props = {};
+
+    const styles = stylesheet(props, 0, themeData);
+
+    expect(styles).toEqual(
+      expect.objectContaining({
+        markRules: expect.anything(),
+        markContainer: expect.anything()
+      })
+    );
+  });
+
   describe("when disabled", () => {
     let props;
     let styles;

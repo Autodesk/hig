@@ -175,13 +175,35 @@ function stylesheet(props, trackValueRatio, themeData) {
     }
   );
 
+  const markRules = {
+    width: "1px",
+    height: "4px",
+    marginTop: "-12px",
+    position: "absolute",
+    backgroundColor: themeData["slider.value.backgroundColor"],
+
+    ...trackDisabledRules
+  };
+
+  const markContainer = {
+    position: "absolute",
+    width: "100%"
+  };
+
+  const discrete = {
+    position: "relative"
+  };
+
   return {
     slider: {
       ...baseRules,
       ...thumbRules,
       ...trackRules,
       ...trackProgressRules
-    }
+    },
+    markRules,
+    markContainer,
+    discrete
   };
 }
 

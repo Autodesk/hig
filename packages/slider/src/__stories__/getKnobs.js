@@ -1,6 +1,10 @@
 import { action } from "@storybook/addon-actions";
-import { boolean, number, text } from "@storybook/addon-knobs/react";
-import { controlledText } from "@hig/storybook/utils";
+import { boolean, number, select, text } from "@storybook/addon-knobs/react";
+import { controlledText, makeSelectOptions } from "@hig/storybook/utils";
+
+import { sliderTypes } from "../constants";
+
+const typeOptions = makeSelectOptions(sliderTypes);
 
 const knobGroupIds = {
   basic: "Basic",
@@ -17,7 +21,8 @@ const knobLabels = {
   onFocus: "onFocus",
   onInput: "onInput",
   step: "Step",
-  value: "Value"
+  value: "Value",
+  variant: "Variant"
 };
 
 export default function getKnobs(props) {
@@ -28,6 +33,7 @@ export default function getKnobs(props) {
     min,
     step,
     value,
+    variant,
     ...otherProps
   } = props;
 
@@ -46,6 +52,12 @@ export default function getKnobs(props) {
     onFocus: action(knobLabels.onFocus),
     onInput: action(knobLabels.onInput),
     step: number(knobLabels.step, step, knobGroupIds.basic),
-    value: controlledText(knobLabels.value, value, knobGroupIds.form)
+    value: controlledText(knobLabels.value, value, knobGroupIds.form),
+    variant: select(
+      knobLabels.variant,
+      typeOptions,
+      variant,
+      knobGroupIds.basic
+    )
   };
 }
