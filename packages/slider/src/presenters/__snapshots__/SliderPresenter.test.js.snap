@@ -485,7 +485,7 @@ exports[`Slider/presenters/SliderPresenter renders discrete slider 1`] = `
       className="emotion-1"
       style={
         Object {
-          "left": "100%",
+          "right": "0%",
         }
       }
     />
@@ -665,7 +665,7 @@ exports[`Slider/presenters/SliderPresenter renders discrete slider with step 0 1
       className="emotion-1"
       style={
         Object {
-          "left": "100%",
+          "right": "0%",
         }
       }
     />
