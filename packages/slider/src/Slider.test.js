@@ -2,6 +2,7 @@ import React from "react";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import { mount } from "enzyme";
 import Slider from "./index";
+import SliderPresenter from "./presenters/SliderPresenter";
 
 describe("slider/Slider", () => {
   takeSnapshotsOf(Slider, [{ desc: "renders", props: {} }]);
@@ -53,6 +54,20 @@ describe("slider/Slider", () => {
       expect(input.prop("value")).toEqual("10");
       wrapper.setProps({ value: "20" });
       expect(input.prop("value")).toEqual("20");
+    });
+  });
+
+  describe("slider variant", () => {
+    it("default variant is continuous", () => {
+      const wrapper = mount(<Slider value="10" />);
+      const presenter = wrapper.find(SliderPresenter);
+      expect(presenter.props().variant).toEqual("continuous");
+    });
+
+    it("specify discrete variant", () => {
+      const wrapper = mount(<Slider variant="discrete" />);
+      const presenter = wrapper.find(SliderPresenter);
+      expect(presenter.props().variant).toEqual("discrete");
     });
   });
 });
