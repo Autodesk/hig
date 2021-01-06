@@ -1,3 +1,10 @@
+# [@hig/slider-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/slider@1.1.2...@hig/slider@1.2.0) (2021-01-06)
+
+
+### Features
+
+* adds discrete slider ([eb74c99](https://github.com/Autodesk/hig/commit/eb74c99))
+
 # [@hig/slider-v1.1.2](https://github.com/Autodesk/hig/compare/@hig/slider@1.1.1...@hig/slider@1.1.2) (2020-05-12)
 
 
