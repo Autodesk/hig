@@ -4,6 +4,7 @@ import { css } from "emotion";
 import { ControlBehavior } from "@hig/behaviors";
 
 import SliderPresenter from "./presenters/SliderPresenter";
+import { AVAILABLE_SLIDER_TYPES } from "./constants";
 
 /**
  * @typedef {string|number} Value
@@ -79,11 +80,16 @@ export default class Slider extends Component {
     /**
      * Value of the field
      */
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+     * Type of the slider
+     */
+    variant: PropTypes.oneOf(AVAILABLE_SLIDER_TYPES)
   };
 
   static defaultProps = {
     disabled: false,
+    variant: "continuous",
     max: "100",
     min: "0",
     step: "1"
