@@ -71,7 +71,7 @@ export default {
   },
   "avatar.color5.backgroundColor": {
     type: COLOR,
-    value: { ref: "basics.colors.tertiary.slate.500" }
+    value: { ref: "basics.colors.tertiary.slate.700" }
   },
   "avatar.color6.backgroundColor": {
     type: COLOR,
