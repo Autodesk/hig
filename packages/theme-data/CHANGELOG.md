@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.19.2](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.19.1...@hig/theme-data@2.19.2) (2021-01-08)
+
+
+### Bug Fixes
+
+* use correct Avatar bg color ([a2272a9](https://github.com/Autodesk/hig/commit/a2272a9))
+
 # [@hig/theme-data-v2.19.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.19.0...@hig/theme-data@2.19.1) (2020-12-17)
 
 
