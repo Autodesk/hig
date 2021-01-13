@@ -98,6 +98,7 @@ exports[`Dropdown/presenters/InputPresenter renders with all props (that dropdow
       className="emotion-0"
       disabled={true}
       id="id"
+      multiple={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onClick={[Function]}
@@ -240,6 +241,7 @@ exports[`Dropdown/presenters/InputPresenter renders without props 1`] = `
     <input
       className="emotion-0"
       disabled={undefined}
+      multiple={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}

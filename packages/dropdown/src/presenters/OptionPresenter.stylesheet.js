@@ -1,5 +1,3 @@
-import constants from "./constants";
-
 export default function stylesheet(props, themeData) {
   const { stylesheet: customStylesheet } = props;
   const styles = {
@@ -8,10 +6,10 @@ export default function stylesheet(props, themeData) {
       display: "flex",
       position: "relative",
       boxSizing: "border-box",
-      minHeight: constants.optionHeight,
+      minHeight: themeData[`menu.item.minHeight`],
       alignItems: "center",
-      justifyContent: "space-between",
-      padding: "0 8px",
+      padding: `${themeData["menu.item.paddingVertical"]}
+        ${themeData["menu.item.paddingHorizontal"]}`,
       cursor: "pointer",
       color: themeData[`typography.body.color`],
       fontFamily: themeData[`typography.body.fontFamily`],
@@ -19,15 +17,41 @@ export default function stylesheet(props, themeData) {
       fontSize: themeData[`typography.body.fontSize`],
       lineHeight: themeData[`typography.body.lineHeight`],
       backgroundColor: "transparent",
+      transition: `background-color 0.3s cubic-bezier(0.4,0,0.2,1)`,
       ...(props.highlighted && !props.disabled
         ? { backgroundColor: themeData["menu.item.hover.backgroundColor"] }
         : null),
-      ...(props.selected
-        ? { backgroundColor: themeData["menu.item.focus.backgroundColor"] }
-        : null),
       ...(props.disabled
         ? { opacity: themeData["colorScheme.opacity.disabled"] }
-        : null)
+        : null),
+      "&:active": {
+        backgroundColor: themeData[`menu.item.pressed.backgroundColor`]
+      }
+    },
+    optionCheckWrapper: {
+      height: themeData[`menu.item.minHeight`],
+      marginRight: themeData[`menu.item.paddingHorizontal`],
+      display: `flex`,
+      order: -1,
+      alignItems: `center`,
+      "& > svg *": {
+        transition: `opacity 0.3s cubic-bezier(0.4,0,0.2,1)`,
+        opacity: 0,
+        ...(props.highlighted && !props.disabled
+          ? {
+              opacity: 1,
+              fill: themeData[`menu.item.checkmark.hover.iconColor`],
+              transition: `opacity 0.3s cubic-bezier(0.4,0,0.2,1)`
+            }
+          : {}),
+        ...(props.selected
+          ? {
+              opacity: 1,
+              fill: themeData[`menu.item.checkmark.active.iconColor`],
+              transition: `opacity 0.3s cubic-bezier(0.4,0,0.2,1)`
+            }
+          : {})
+      }
     }
   };
 
