@@ -23,6 +23,10 @@ export default class TextArea extends Component {
      */
     onInput: PropTypes.func,
     /**
+     * A callback ref that gets passed to the HTML textarea
+     */
+    textAreaRef: PropTypes.func,
+    /**
      * The visual variant of the textarea
      */
     variant: PropTypes.oneOf(variantTypes),
@@ -37,7 +41,7 @@ export default class TextArea extends Component {
   };
 
   render() {
-    const { variant, stylesheet, ...otherProps } = this.props;
+    const { variant, stylesheet, textAreaRef, ...otherProps } = this.props;
     const { className } = otherProps;
     const textareaClassName =
       className &&
@@ -57,6 +61,7 @@ export default class TextArea extends Component {
         <Input
           {...otherProps}
           className={textareaClassName}
+          inputRef={textAreaRef}
           stylesheet={textareaStylesheet}
           tagName="textarea"
           variant={variant}
