@@ -1,3 +1,10 @@
+# [@hig/dropdown-v2.4.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.3.1...@hig/dropdown@2.4.0) (2021-01-14)
+
+
+### Features
+
+*  match the latest designs ([5cbfa0e](https://github.com/Autodesk/hig/commit/5cbfa0e))
+
 # [@hig/dropdown-v2.3.1](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.3.0...@hig/dropdown@2.3.1) (2020-11-02)
 
 
