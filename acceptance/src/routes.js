@@ -9,6 +9,7 @@ import IconnButtonsPage from "./pages/IconButtonsPage";
 import IconsPage from "./pages/IconsPage";
 import InputPage from "./pages/InputPage";
 import LabelPage from "./pages/LabelPage";
+import MenuPage from "./pages/MenuPage";
 import ModalPage from "./pages/ModalPage";
 import MuiButtonsPage from "./pages/material-ui/ButtonsPage";
 import NumericInputPage from "./pages/NumericInputPage";
@@ -35,7 +36,8 @@ export default [
   { path: "/icons/", component: IconsPage, label: "Icons" },
   { path: "/icon-button/", component: IconnButtonsPage, label: "Icon Button" },
   { path: "/input/", component: InputPage, label: "Input" },
-  { path: "/label/", component: LabelPage, label: "Label"},
+  { path: "/label/", component: LabelPage, label: "Label" },
+  { path: "/menu/", component: MenuPage, label: "Menu" },
   { path: "/modal/", component: ModalPage, label: "Modal" },
   { path: "/numeric-input/", component: NumericInputPage, label: "Numeric Input" },
   { path: "/progress-bar/", component: ProgressBarPage, label: "Progress Bar" },

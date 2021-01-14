@@ -7,7 +7,8 @@ import ThemeContext from "@hig/theme-context";
 import stylesheet from "./InputPresenter.stylesheet";
 
 function customStylesheet(inputStylesheet, props, themeData) {
-  const { variant } = props;
+  const { multiple, variant } = props;
+
   return {
     ...inputStylesheet,
     input: {
@@ -15,6 +16,7 @@ function customStylesheet(inputStylesheet, props, themeData) {
       cursor: `pointer`,
       whiteSpace: `nowrap`,
       textOverflow: `ellipsis`,
+      fontStyle: multiple ? `italic` : {},
       paddingRight:
         variant === `line`
           ? `calc(${themeData["density.spacings.large"]} + ${
@@ -30,6 +32,7 @@ function customStylesheet(inputStylesheet, props, themeData) {
 export default function InputPresenter(props) {
   const {
     isOpen,
+    multiple,
     onChange,
     onInputChange,
     stylesheet: userStylesheet,
@@ -67,6 +70,7 @@ export default function InputPresenter(props) {
           <div className={css(stylesheet(props, resolvedRoles).inputWrapper)}>
             <Input
               {...otherProps}
+              multiple={multiple}
               onChange={handleChange}
               readOnly={!typable}
               stylesheet={dropdownInputStylesheet}

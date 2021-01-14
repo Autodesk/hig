@@ -193,6 +193,7 @@ export default class Dropdown extends Component {
       error,
       stylesheet: customStylesheet,
       typable,
+      multiple,
       ...otherProps
     } = this.props;
 
@@ -217,7 +218,8 @@ export default class Dropdown extends Component {
       variant,
       className: inputClassName,
       stylesheet: customStylesheet,
-      typable
+      typable,
+      multiple
     });
 
     return <InputPresenter key="input" {...inputProps} />;

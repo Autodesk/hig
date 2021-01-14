@@ -92,19 +92,19 @@ export default class OptionPresenter extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ metadata }) => {
+        {({ resolvedRoles, metadata }) => {
           const Icon =
             metadata.densityId === "medium-density"
               ? CheckmarkSUI
               : CheckmarkXsUI;
+          const styles = stylesheet(this.props, resolvedRoles);
+
           return (
             <OptionWrapper selected={selected} {...otherProps}>
               <span>{children}</span>
-              {selected && (
-                <div>
-                  <Icon color="#087AAD" />
-                </div>
-              )}
+              <div className={css(styles.optionCheckWrapper)}>
+                <Icon />
+              </div>
             </OptionWrapper>
           );
         }}
