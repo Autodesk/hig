@@ -14,11 +14,10 @@ yarn add @hig/components
 
 ## Basic usage
 
-### Import all components and CSS
+### Import all components
 
 ```jsx
 import * as HIG from "@hig/components";
-import "@hig/components/build/index.css";
 
 <HIG.Button title="Click Me" />;
 ```
@@ -27,7 +26,6 @@ import "@hig/components/build/index.css";
 
 ```jsx
 import { Button } from "@hig/components";
-import "@hig/components/build/button.css";
 
 <Button title="Click Me" />;
 ```
@@ -36,7 +34,6 @@ import "@hig/components/build/button.css";
 
 ```jsx
 import Button, { types } from "@hig/components/build/button";
-import "@hig/components/build/button.css";
 
 <Button type={types.PRIMARY} title="Click Me" />;
 ```
