@@ -1,3 +1,10 @@
+# [@hig/text-area-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/text-area@1.2.1...@hig/text-area@1.3.0) (2021-01-15)
+
+
+### Features
+
+* allow ref forwarding to HTML textarea ([635c19f](https://github.com/Autodesk/hig/commit/635c19f))
+
 # [@hig/text-area-v1.2.1](https://github.com/Autodesk/hig/compare/@hig/text-area@1.2.0...@hig/text-area@1.2.1) (2020-05-13)
 
 

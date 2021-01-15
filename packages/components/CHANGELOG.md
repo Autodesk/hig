@@ -1,3 +1,10 @@
+# [@hig/components-v2.5.0](https://github.com/Autodesk/hig/compare/@hig/components@2.4.0...@hig/components@2.5.0) (2021-01-15)
+
+
+### Features
+
+* add Menu component ([bb8c055](https://github.com/Autodesk/hig/commit/bb8c055))
+
 # [@hig/components-v2.4.0](https://github.com/Autodesk/hig/compare/@hig/components@2.3.0...@hig/components@2.4.0) (2020-08-18)
 
 

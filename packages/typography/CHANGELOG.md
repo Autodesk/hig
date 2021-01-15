@@ -1,3 +1,10 @@
+# [@hig/typography-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/typography@1.1.0...@hig/typography@1.2.0) (2021-01-15)
+
+
+### Features
+
+* pass down a callback ref to root element ([1746795](https://github.com/Autodesk/hig/commit/1746795))
+
 # [@hig/typography-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/typography@1.0.4...@hig/typography@1.1.0) (2020-10-13)
 
 
