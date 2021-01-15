@@ -66,7 +66,7 @@ Each HIG pattern is implemented as a set of React components. Each pattern is pu
 - [`<Flyout>`](./packages/flyout/README.md) - A lightweight popup container
 - [`<Icons>`](./packages/icons/README.md) - Represents a concept in graphical form
 - [`<IconButton>`](./packages/icon-button/README.md) - Action buttons that include an icon only
-- [`<Menu>`](./packages/menu/README.md - Display a list of choices through interaction with a button, icon or other controls
+- [`<Menu>`](./packages/menu/README.md) - Display a list of choices through interaction with a button, icon or other controls
 - [`<Modal>`](./packages/modal/README.md) - An overlay that focuses the customer's attention
 - [`<NotificationsFlyout>`](./packages/notifications-flyout/README.md) - A less intrusive way of announcing an event of potential interest to the user
 - [`<NotificationsToast>`](./packages/notifications-toast/README.md) - Floating message boxes that appear
