@@ -34,6 +34,10 @@ export default class Typography extends Component {
      */
     fontWeight: PropTypes.oneOf(AVAILABLE_FONT_WEIGHTS),
     /**
+     * A callback ref that gets passed to the root HTML element
+     */
+    typographyRef: PropTypes.func,
+    /**
      * Indicates the initial Typography style
      */
     variant: PropTypes.oneOf(AVAILABLE_VARIANTS),
@@ -61,6 +65,7 @@ export default class Typography extends Component {
       variant,
       stylesheet: customStylesheet,
       elementType, // we don't want this included in the otherProps that appear in the DOM
+      typographyRef,
       ...otherProps
     } = this.props;
 
@@ -86,6 +91,7 @@ export default class Typography extends Component {
             <ElementType
               {...otherProps}
               className={cx(css(styles.typography), className)}
+              ref={typographyRef}
             >
               {children}
             </ElementType>
