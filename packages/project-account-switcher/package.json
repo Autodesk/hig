@@ -20,7 +20,7 @@
     "@hig/flyout": "^1.2.1",
     "@hig/icons": "^3.2.0",
     "@hig/text-link": "^1.1.0",
-    "@hig/typography": "^1.1.0",
+    "@hig/typography": "^1.2.0",
     "@hig/utils": "^0.4.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
