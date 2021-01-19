@@ -1064,15 +1064,6 @@
   dependencies:
     emotion "^10.0.0"
 
-"@hig/input@^1.2.1":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@hig/input/-/input-1.2.2.tgz#f38e41011e7a1cc604bf6fe860563f8fdaeddfc1"
-  integrity sha512-w8ZjkLdUKZJy+ig4ieaPtqQvLxHRx0SykwYc7gxqdvm1VQjXRJ/R8YbYYwb7DQgTNKdv259F96eIlU7kr+HCCw==
-  dependencies:
-    "@hig/behaviors" "1.1.1"
-    emotion "^10.0.0"
-    prop-types "^15.7.1"
-
 "@hig/input@^1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@hig/input/-/input-1.3.0.tgz#4763b2c71309ac44322397b44309713729f6df9d"
@@ -1196,12 +1187,12 @@
     prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/text-area@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@hig/text-area/-/text-area-1.2.1.tgz#f57a110ed74816fba08c848c9a442722793d2fa6"
-  integrity sha512-5gDloz+q+lFEpm3tv0Z6/uxPAtKb+VyaT59f6EHjQLeoMOyPA8VjnHjOiulbriug5kGvG4kY8o7dZgKkjWgtbQ==
+"@hig/text-area@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@hig/text-area/-/text-area-1.3.0.tgz#2d85c38f54895bbb6da640eb8229992084fb2ab0"
+  integrity sha512-mAFRsNJtZJTtZZFxB2WtkpPTTNIaafONNeCl9+aMmCb0aWjdhiTzIeE+DWn2L3XdJg+k0eEUFmYdjvmjK+6Iow==
   dependencies:
-    "@hig/input" "^1.2.1"
+    "@hig/input" "^1.3.0"
     prop-types "^15.7.1"
 
 "@hig/text-link@^1.1.1":
@@ -1221,10 +1212,10 @@
     create-react-context "^0.3.0"
     prop-types "^15.6.1"
 
-"@hig/theme-data@^2.19.0":
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.19.0.tgz#fb1a5a2a493850e383324c262b77ae0518184a41"
-  integrity sha512-gGioHasWw6DjlqXVZqoC974fWiiWDEJO6AjmcnmSkh1ihyN6ZNJG4OONoB0rs9RLA44Wad3/NAYqvaizUDc28A==
+"@hig/theme-data@^2.19.2":
+  version "2.19.2"
+  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-2.19.2.tgz#40f9962e27e43a4459e8596349d7e5d15d49d265"
+  integrity sha512-W0lr0UFtUlGTnJWXSkR1ZDBK+L80KZcaYW0PD1gPcfIgoETnZD4a4xFd1lDN3gUph4m4+KTQ2YhtHE5SqthRmg==
   dependencies:
     tinycolor2 "^1.4.1"
 
@@ -1269,6 +1260,14 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-1.1.0.tgz#e562724e065c985d6800ecb50999e87dd4aba99f"
   integrity sha512-u7GF7FcKNAcsiW/o1Rfk+ZjGowZ4a3r0HjN+RSXZz1/zDzUGco6eshqyVSeVrfC6zD64FvqmPltiTl7PGOjvgQ==
+  dependencies:
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
+"@hig/typography@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-1.2.0.tgz#c5029081cfbab8d51e7c1aea2e2e7c648f56408d"
+  integrity sha512-5XLuTHScGYBQfLQ1fziIr/sdZ8Tf54wzTpfoylgrg+LH93xSWynqaYlB4oqZlHYXwQKevbI/EtI0YRlB/HStmw==
   dependencies:
     emotion "^10.0.0"
     prop-types "^15.7.1"
