@@ -45,7 +45,7 @@ export default {
       ref: "colorScheme.divider.lightweight"
     }
   },
-  "memu.divider.paddingVertical": {
+  "menu.divider.paddingVertical": {
     type: SPACING,
     value: {
       ref: "density.spacings.small"
