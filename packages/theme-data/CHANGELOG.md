@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.19.3](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.19.2...@hig/theme-data@2.19.3) (2021-01-19)
+
+
+### Bug Fixes
+
+* typo in menu role ([ca9944a](https://github.com/Autodesk/hig/commit/ca9944a))
+
 # [@hig/theme-data-v2.19.2](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.19.1...@hig/theme-data@2.19.2) (2021-01-08)
 
 
