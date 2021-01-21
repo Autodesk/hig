@@ -53,10 +53,11 @@ export default function stylesheet(props, themeData) {
     hasFocus,
     hasHover,
     indeterminate,
-    isPressed
+    isPressed,
+    stylesheet: customStylesheet
   } = props;
 
-  return {
+  const styles = {
     checkboxWrapper: {
       boxSizing: `border-box`,
       display: `inline-block`,
@@ -119,4 +120,6 @@ export default function stylesheet(props, themeData) {
       display: indeterminate ? `block` : `none`
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

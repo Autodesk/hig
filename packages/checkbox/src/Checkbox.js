@@ -8,6 +8,10 @@ import CheckboxBehavior from "./behaviors/CheckboxBehavior";
 export default class Checkbox extends Component {
   static propTypes = {
     /**
+     * A callback ref that gets passed to the HTML input
+     */
+    checkboxRef: PropTypes.func,
+    /**
      * Checks the checkbox
      */
     checked: PropTypes.bool,
@@ -60,6 +64,10 @@ export default class Checkbox extends Component {
      */
     onMouseUp: PropTypes.func,
     /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func,
+    /**
      * Value submitted with a form if checked
      */
     value: PropTypes.string
@@ -67,6 +75,7 @@ export default class Checkbox extends Component {
 
   render() {
     const {
+      checkboxRef,
       checked: controlledChecked,
       defaultChecked,
       disabled,
@@ -79,6 +88,7 @@ export default class Checkbox extends Component {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
+      stylesheet,
       ...otherProps
     } = this.props;
 
@@ -110,6 +120,7 @@ export default class Checkbox extends Component {
           >
             {({ checked, handleChange, handleClick }) => (
               <CheckboxPresenter
+                checkboxRef={checkboxRef}
                 checked={checked}
                 disabled={disabled}
                 hasFocus={hasFocus}
@@ -124,6 +135,7 @@ export default class Checkbox extends Component {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onMouseUp={handleMouseUp}
+                stylesheet={stylesheet}
                 {...otherProps}
               />
             )}
