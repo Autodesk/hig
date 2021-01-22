@@ -1,6 +1,6 @@
 export default function stylesheet(props, themeData) {
-  const { variant } = props;
-  return {
+  const { disabled, stylesheet: customStylesheet, variant } = props;
+  const styles = {
     label: {
       fontSize:
         variant === "side"
@@ -10,9 +10,9 @@ export default function stylesheet(props, themeData) {
       fontWeight: themeData["label.fontWeight"],
       lineHeight: themeData["label.lineHeight"],
       color: themeData["label.fontColor"],
-      opacity: props.disabled
-        ? themeData["colorScheme.opacity.disabled"]
-        : "1.0"
+      opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "1.0"
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
 import { availableVariants, variants } from "./constants";
@@ -16,6 +17,10 @@ class Label extends Component {
      */
     disabled: PropTypes.bool,
     /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func,
+    /**
      * The visual variant of the label
      */
     variant: PropTypes.oneOf(availableVariants)
@@ -26,16 +31,33 @@ class Label extends Component {
   };
 
   render() {
-    const { children, disabled, variant, ...otherProps } = this.props;
+    const {
+      children,
+      disabled,
+      stylesheet: customStylesheet,
+      variant,
+      ...otherProps
+    } = this.props;
+    const { className } = otherProps;
 
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
-          const styles = stylesheet({ disabled, variant }, resolvedRoles);
+          const styles = stylesheet(
+            {
+              disabled,
+              stylesheet: customStylesheet,
+              variant
+            },
+            resolvedRoles
+          );
 
           return (
             // eslint-disable-next-line jsx-a11y/label-has-for
-            <label style={styles.label} {...otherProps}>
+            <label
+              {...otherProps}
+              className={cx([className, css(styles.label)])}
+            >
               {children}
             </label>
           );
