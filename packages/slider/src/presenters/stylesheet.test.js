@@ -23,17 +23,47 @@ describe("stylesheet", () => {
       disabled: false
     };
 
-    const trackValueRatio = 1;
+    expect(stylesheet(props, themeData)).toEqual(expect.any(Object));
+  });
 
-    expect(stylesheet(props, trackValueRatio, themeData)).toEqual(
+  it("returned object contains property of slider", () => {
+    expect(stylesheet({}, themeData)).toHaveProperty(
+      "slider",
       expect.any(Object)
     );
+  });
+
+  it("returned object contains property of markRules", () => {
+    expect(stylesheet({}, themeData)).toHaveProperty(
+      "markRules",
+      expect.any(Object)
+    );
+  });
+
+  it("returned object contains property of markContainer", () => {
+    expect(stylesheet({}, themeData)).toHaveProperty(
+      "markContainer",
+      expect.any(Object)
+    );
+  });
+
+  it("returned object contains property of discrete", () => {
+    expect(stylesheet({}, themeData)).toHaveProperty(
+      "discrete",
+      expect.any(Object)
+    );
+  });
+
+  it("returns the custom stylesheet", () => {
+    expect(stylesheet({ stylesheet: () => ({ padding: 0 }) }, {})).toEqual({
+      padding: 0
+    });
   });
 
   it("returns discrete style", () => {
     const props = {};
 
-    const styles = stylesheet(props, 0, themeData);
+    const styles = stylesheet(props, themeData);
 
     expect(styles).toEqual(
       expect.objectContaining({ discrete: expect.anything() })
@@ -43,7 +73,7 @@ describe("stylesheet", () => {
   it("returns marks style", () => {
     const props = {};
 
-    const styles = stylesheet(props, 0, themeData);
+    const styles = stylesheet(props, themeData);
 
     expect(styles).toEqual(
       expect.objectContaining({
@@ -63,7 +93,7 @@ describe("stylesheet", () => {
         hasFocus: true
       };
 
-      styles = stylesheet(props, 0, themeData);
+      styles = stylesheet(props, themeData);
     });
 
     it("sets the halo around the thumb to theme's default halo width", () => {
@@ -85,8 +115,7 @@ describe("stylesheet", () => {
         hasFocus: true
       };
 
-      const trackValueRatio = 1;
-      const styles = stylesheet(props, trackValueRatio, themeData);
+      const styles = stylesheet(props, themeData);
 
       expect(styles.slider["&::-webkit-slider-thumb"].boxShadow).toMatch(
         `0 0 0 ${themeData["slider.focus.haloWidth"]}`
@@ -100,8 +129,7 @@ describe("stylesheet", () => {
         hasHover: true
       };
 
-      const trackValueRatio = 1;
-      const styles = stylesheet(props, trackValueRatio, themeData);
+      const styles = stylesheet(props, themeData);
 
       expect(styles.slider["&::-webkit-slider-thumb"].boxShadow).toMatch(
         `0 0 0 ${themeData["slider.hover.haloWidth"]}`
@@ -116,8 +144,7 @@ describe("stylesheet", () => {
         hasHover: true
       };
 
-      const trackValueRatio = 1;
-      const styles = stylesheet(props, trackValueRatio, themeData);
+      const styles = stylesheet(props, themeData);
 
       expect(styles.slider["&::-webkit-slider-thumb"].boxShadow).toMatch(
         `0 0 0 ${themeData["slider.hover.haloWidth"]} ${
@@ -133,8 +160,7 @@ describe("stylesheet", () => {
         isPressed: true
       };
 
-      const trackValueRatio = 1;
-      const styles = stylesheet(props, trackValueRatio, themeData);
+      const styles = stylesheet(props, themeData);
 
       expect(styles.slider["&::-webkit-slider-thumb"].boxShadow).toMatch(
         `0 0 0 ${themeData["slider.pressed.haloWidth"]}`
@@ -148,7 +174,7 @@ describe("stylesheet", () => {
 
     beforeEach(() => {
       trackValueRatio = 0.5;
-      styles = stylesheet({}, trackValueRatio, themeData);
+      styles = stylesheet({ min: 0, max: 100, value: 50 }, themeData);
     });
 
     it("targets the track value elements for mozilla and microsoft browsers", () => {

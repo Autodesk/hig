@@ -1,6 +1,15 @@
-function stylesheet(props, trackValueRatio, themeData) {
-  const { disabled, ...activeStates } = props;
+function stylesheet(props, themeData) {
+  const {
+    disabled,
+    max,
+    min,
+    stylesheet: customStylesheet,
+    value,
+    ...activeStates
+  } = props;
   const { hasFocus, hasHover, isPressed } = activeStates;
+  const rangeRange = max - min;
+  const trackValueRatio = (value - min) / rangeRange;
 
   const thumbPseudoElements = {
     microsoft: "::-ms-thumb",
@@ -194,7 +203,7 @@ function stylesheet(props, trackValueRatio, themeData) {
     position: "relative"
   };
 
-  return {
+  const styles = {
     slider: {
       ...baseRules,
       ...thumbRules,
@@ -205,6 +214,8 @@ function stylesheet(props, trackValueRatio, themeData) {
     markContainer,
     discrete
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }
 
 export default stylesheet;
