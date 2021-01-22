@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 
 import stylesheet from "./stylesheet";
 import { AVAILABLE_SLIDER_TYPES, sliderTypes } from "../constants";
@@ -14,18 +15,24 @@ export default class SliderPresenter extends Component {
     isPressed: PropTypes.bool,
     max: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     min: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    sliderRef: PropTypes.func,
     step: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    stylesheet: PropTypes.func,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     variant: PropTypes.oneOf(AVAILABLE_SLIDER_TYPES)
   };
 
   getTickMarks = (min, max, step, styles) => {
+    const markRulesClassName = createCustomClassNames(
+      this.props.className,
+      "slider-mark-rules"
+    );
     const loops = step ? Math.floor((max - min) / step) : 1;
     const tickMarks = [];
     for (let i = 0; i < loops; i += 1) {
       tickMarks.push(
         <div
-          className={css(styles.markRules)}
+          className={cx([markRulesClassName, css(styles.markRules)])}
           style={{ left: `${(i * 100) / loops}%` }}
           key={`mark-${i}`}
         />
@@ -34,7 +41,7 @@ export default class SliderPresenter extends Component {
     // adds the mark to end of slider
     tickMarks.push(
       <div
-        className={css(styles.markRules)}
+        className={cx([markRulesClassName, css(styles.markRules)])}
         style={{ right: "0%" }}
         key={`mark-${loops}`}
       />
@@ -50,20 +57,33 @@ export default class SliderPresenter extends Component {
       isPressed,
       max,
       min,
+      sliderRef,
+      stylesheet: customStylesheet,
       value,
       variant,
       ...otherProps
     } = this.props;
+    const { className } = otherProps;
+    const sliderClassName = createCustomClassNames(className, "slider");
+    const markContainerClassName = createCustomClassNames(
+      className,
+      "slider-mark-container"
+    );
 
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
-          const rangeRange = max - min;
-          const valueRatio = (value - min) / rangeRange;
-
           const styles = stylesheet(
-            { disabled, hasFocus, hasHover, isPressed },
-            valueRatio,
+            {
+              disabled,
+              hasFocus,
+              hasHover,
+              isPressed,
+              max,
+              min,
+              stylesheet: customStylesheet,
+              value
+            },
             resolvedRoles
           );
 
@@ -73,9 +93,10 @@ export default class SliderPresenter extends Component {
               : null;
 
           return marks ? (
-            <div className={css(styles.discrete)}>
+            <div className={cx([className, css(styles.discrete)])}>
               <input
-                className={css(styles.slider)}
+                {...otherProps}
+                className={cx([sliderClassName, css(styles.slider)])}
                 disabled={disabled}
                 type="range"
                 aria-valuemin={min}
@@ -83,14 +104,22 @@ export default class SliderPresenter extends Component {
                 aria-valuenow={value}
                 max={max}
                 min={min}
+                ref={sliderRef}
                 value={value}
-                {...otherProps}
               />
-              <div className={css(styles.markContainer)}>{marks}</div>
+              <div
+                className={cx([
+                  markContainerClassName,
+                  css(styles.markContainer)
+                ])}
+              >
+                {marks}
+              </div>
             </div>
           ) : (
             <input
-              className={css(styles.slider)}
+              {...otherProps}
+              className={cx([className, css(styles.slider)])}
               disabled={disabled}
               type="range"
               aria-valuemin={min}
@@ -98,8 +127,8 @@ export default class SliderPresenter extends Component {
               aria-valuenow={value}
               max={max}
               min={min}
+              ref={sliderRef}
               value={value}
-              {...otherProps}
             />
           );
         }}
