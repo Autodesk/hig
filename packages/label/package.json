@@ -17,6 +17,7 @@
     "build/*"
   ],
   "dependencies": {
+    "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
   "peerDependencies": {
