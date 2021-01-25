@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
 import { ControlBehavior } from "@hig/behaviors";
 
 import SliderPresenter from "./presenters/SliderPresenter";
@@ -74,9 +73,17 @@ export default class Slider extends Component {
      */
     onMouseUp: PropTypes.func,
     /**
+     * A callback ref that gets passed to the HTML input
+     */
+    sliderRef: PropTypes.func,
+    /**
      * The granularity of each step on the slider
      */
     step: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func,
     /**
      * Value of the field
      */
@@ -147,6 +154,8 @@ export default class Slider extends Component {
       onMouseEnter,
       onMouseLeave,
       onMouseUp,
+      sliderRef,
+      stylesheet,
       value, // exclude from otherProps
       ...otherProps
     } = this.props;
@@ -173,22 +182,22 @@ export default class Slider extends Component {
           onMouseLeave: handleMouseLeave,
           onMouseUp: handleMouseUp
         }) => (
-          <div className={css({ display: "block" })}>
-            <SliderPresenter
-              hasFocus={hasFocus}
-              hasHover={hasHover}
-              isPressed={isPressed}
-              onBlur={handleBlur}
-              onChange={this.handleChange}
-              onFocus={handleFocus}
-              onMouseDown={handleMouseDown}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onMouseUp={handleMouseUp}
-              value={currentValue}
-              {...otherProps}
-            />
-          </div>
+          <SliderPresenter
+            hasFocus={hasFocus}
+            hasHover={hasHover}
+            isPressed={isPressed}
+            onBlur={handleBlur}
+            onChange={this.handleChange}
+            onFocus={handleFocus}
+            onMouseDown={handleMouseDown}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            sliderRef={sliderRef}
+            stylesheet={stylesheet}
+            value={currentValue}
+            {...otherProps}
+          />
         )}
       </ControlBehavior>
     );

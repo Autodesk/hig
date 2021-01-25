@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 import { CheckmarkXsUI, OperatorMinusXsUI } from "@hig/icons";
 
 import stylesheet from "./stylesheet";
@@ -31,7 +32,11 @@ export default class CheckPresenter extends Component {
     /**
      * Sets indeterminate state for checkbox
      */
-    indeterminate: PropTypes.bool
+    indeterminate: PropTypes.bool,
+    /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -47,23 +52,61 @@ export default class CheckPresenter extends Component {
       hasFocus,
       hasHover,
       indeterminate,
-      isPressed
+      isPressed,
+      stylesheet: customStylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
+    const checkboxCheckWrapperClassName = createCustomClassNames(
+      className,
+      "checkbox-check-wrapper"
+    );
+    const checkboxCheckboxClassName = createCustomClassNames(
+      className,
+      "checkbox-checkbox"
+    );
+    const checkboxIndeterminateClassName = createCustomClassNames(
+      className,
+      "checkbox-indeterminate"
+    );
 
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
           const styles = stylesheet(
-            { checked, disabled, hasFocus, hasHover, indeterminate, isPressed },
+            {
+              checked,
+              disabled,
+              hasFocus,
+              hasHover,
+              indeterminate,
+              isPressed,
+              stylesheet: customStylesheet
+            },
             resolvedRoles
           );
 
           return (
-            <span className={css(styles.checkboxCheckWrapper)}>
-              <span className={css(styles.checkboxCheck)}>
+            <span
+              className={cx([
+                checkboxCheckWrapperClassName,
+                css(styles.checkboxCheckWrapper)
+              ])}
+            >
+              <span
+                className={cx([
+                  checkboxCheckboxClassName,
+                  css(styles.checkboxCheck)
+                ])}
+              >
                 <CheckmarkXsUI />
               </span>
-              <span className={css(styles.checkboxIndeterminate)}>
+              <span
+                className={cx([
+                  checkboxIndeterminateClassName,
+                  css(styles.checkboxIndeterminate)
+                ])}
+              >
                 <OperatorMinusXsUI />
               </span>
             </span>

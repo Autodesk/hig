@@ -1,12 +1,17 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 import CheckPresenter from "./CheckPresenter";
 import stylesheet from "./stylesheet";
 
 export default class CheckboxPresenter extends Component {
   static propTypes = {
+    /**
+     * A callback ref that gets passed to the HTML input
+     */
+    checkboxRef: PropTypes.func,
     /**
      * Checks the checkbox
      */
@@ -68,6 +73,10 @@ export default class CheckboxPresenter extends Component {
      */
     onMouseUp: PropTypes.func,
     /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func,
+    /**
      * Value submitted with a form if checked
      */
     value: PropTypes.string
@@ -87,10 +96,15 @@ export default class CheckboxPresenter extends Component {
       // eslint-disable-next-line no-param-reassign
       input.indeterminate = this.props.indeterminate;
     }
+
+    if (this.props.checkboxRef) {
+      this.props.checkboxRef(input);
+    }
   };
 
   render() {
     const {
+      checkboxRef,
       checked,
       disabled,
       hasFocus,
@@ -105,8 +119,14 @@ export default class CheckboxPresenter extends Component {
       onMouseLeave,
       onMouseUp,
       onFocus,
+      stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
+    const { className } = otherProps;
+    const checkboxInputClassName = createCustomClassNames(
+      className,
+      "checkbox-input"
+    );
 
     return (
       <ThemeContext.Consumer>
@@ -118,16 +138,21 @@ export default class CheckboxPresenter extends Component {
               hasFocus,
               hasHover,
               indeterminate,
-              isPressed
+              isPressed,
+              stylesheet: customStylesheet
             },
             resolvedRoles
           );
 
           return (
-            <div className={css(styles.checkboxWrapper)}>
+            <div className={cx([className, css(styles.checkboxWrapper)])}>
               <input
+                {...otherProps}
                 checked={checked}
-                className={css(styles.checkboxInput)}
+                className={cx([
+                  checkboxInputClassName,
+                  css(styles.checkboxInput)
+                ])}
                 disabled={disabled}
                 onBlur={onBlur}
                 onChange={onChange}
@@ -139,7 +164,6 @@ export default class CheckboxPresenter extends Component {
                 onMouseUp={onMouseUp}
                 ref={this.setIndeterminate}
                 type="checkbox"
-                {...otherProps}
               />
               <CheckPresenter
                 checked={checked}
@@ -148,6 +172,8 @@ export default class CheckboxPresenter extends Component {
                 hasHover={hasHover}
                 indeterminate={indeterminate}
                 isPressed={isPressed}
+                stylesheet={customStylesheet}
+                {...otherProps}
               />
             </div>
           );

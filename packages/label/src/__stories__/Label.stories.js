@@ -2,6 +2,7 @@ import Input from "@hig/input";
 import React from "react";
 import { withInfo } from "@storybook/addon-info";
 import { storiesOf } from "@storybook/react";
+import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import Spacer from "@hig/spacer";
 
 import getKnobs from "./getKnobs";
@@ -13,7 +14,10 @@ const storybook = storiesOf("Forms|Label", module);
 
 storybook.add(
   "default",
-  withInfo(infoOptions)(() => {
+  withInfo({
+    ...infoOptions,
+    propTablesExclude: [KnobbedThemeProvider]
+  })(() => {
     const props = {
       children: "Email"
     };
@@ -25,7 +29,10 @@ storybook.add(
 
 storybook.add(
   "top label",
-  withInfo(infoOptions)(() => {
+  withInfo({
+    ...infoOptions,
+    propTablesExclude: [KnobbedThemeProvider, Input, Spacer]
+  })(() => {
     const props = {
       children: "Input Field"
     };
@@ -45,7 +52,10 @@ storybook.add(
 
 storybook.add(
   "side label",
-  withInfo(infoOptions)(() => {
+  withInfo({
+    ...infoOptions,
+    propTablesExclude: [KnobbedThemeProvider, Input, Spacer]
+  })(() => {
     const props = {
       children: "Input Field"
     };

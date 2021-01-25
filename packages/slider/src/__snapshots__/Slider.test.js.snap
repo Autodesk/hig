@@ -1,10 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`slider/Slider renders 1`] = `
-.emotion-1 {
-  display: block;
-}
-
 .emotion-0 {
   -webkit-appearance: none;
   width: 100%;
@@ -129,36 +125,28 @@ exports[`slider/Slider renders 1`] = `
   background-color: #808080;
 }
 
-<div
-  className="emotion-1"
->
-  <input
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow={50}
-    className="emotion-0"
-    disabled={false}
-    max="100"
-    min="0"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onFocus={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    step="1"
-    type="range"
-    value={50}
-  />
-</div>
+<input
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow={50}
+  className="emotion-0"
+  disabled={false}
+  max="100"
+  min="0"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  step="1"
+  type="range"
+  value={50}
+/>
 `;
 
 exports[`slider/Slider renders disabled 1`] = `
-.emotion-1 {
-  display: block;
-}
-
 .emotion-0 {
   -webkit-appearance: none;
   width: 100%;
@@ -288,27 +276,23 @@ exports[`slider/Slider renders disabled 1`] = `
   opacity: 0.4;
 }
 
-<div
-  className="emotion-1"
->
-  <input
-    aria-valuemax="100"
-    aria-valuemin="0"
-    aria-valuenow={50}
-    className="emotion-0"
-    disabled={true}
-    max="100"
-    min="0"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onFocus={[Function]}
-    onMouseDown={[Function]}
-    onMouseEnter={[Function]}
-    onMouseLeave={[Function]}
-    onMouseUp={[Function]}
-    step="1"
-    type="range"
-    value={50}
-  />
-</div>
+<input
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow={50}
+  className="emotion-0"
+  disabled={true}
+  max="100"
+  min="0"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  step="1"
+  type="range"
+  value={50}
+/>
 `;
