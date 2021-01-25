@@ -1,3 +1,10 @@
+# [@hig/label-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/label@1.1.1...@hig/label@1.2.0) (2021-01-25)
+
+
+### Features
+
+* add stylesheet prop and pass down className ([7737636](https://github.com/Autodesk/hig/commit/7737636))
+
 # [@hig/label-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/label@1.1.0...@hig/label@1.1.1) (2020-05-13)
 
 

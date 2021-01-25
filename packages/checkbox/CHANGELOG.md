@@ -1,3 +1,10 @@
+# [@hig/checkbox-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.9...@hig/checkbox@2.1.0) (2021-01-25)
+
+
+### Features
+
+* add stylesheet and checkboxRef prop, pass down className ([ba71779](https://github.com/Autodesk/hig/commit/ba71779))
+
 # [@hig/checkbox-v2.0.9](https://github.com/Autodesk/hig/compare/@hig/checkbox@2.0.8...@hig/checkbox@2.0.9) (2020-05-13)
 
 
