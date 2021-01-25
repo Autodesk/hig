@@ -1,3 +1,10 @@
+# [@hig/slider-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/slider@1.2.0...@hig/slider@1.3.0) (2021-01-25)
+
+
+### Features
+
+* add stylesheet, sliderRef prop, allow passing down of className ([7a6e52b](https://github.com/Autodesk/hig/commit/7a6e52b))
+
 # [@hig/slider-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/slider@1.1.2...@hig/slider@1.2.0) (2021-01-06)
 
 
