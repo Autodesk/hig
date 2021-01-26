@@ -31,7 +31,7 @@
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
-    "@hig/label": "^1.0.3",
+    "@hig/label": "^1.2.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
     "@hig/spacer": "^1.0.8"
