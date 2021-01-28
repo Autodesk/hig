@@ -327,7 +327,6 @@ exports[`Button  5`] = `
   position: absolute;
   height: 24px;
   margin-right: 4px;
-  top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
