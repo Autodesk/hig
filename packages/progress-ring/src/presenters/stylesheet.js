@@ -85,7 +85,12 @@ const SegmentsExiting = keyframes`
 `;
 
 export default function stylesheet(props, themeData) {
-  const { cssTransitionState, surface, mask } = props;
+  const {
+    cssTransitionState,
+    mask,
+    stylesheet: customStylesheet,
+    surface
+  } = props;
 
   const styles = {
     ring: {
@@ -135,5 +140,5 @@ export default function stylesheet(props, themeData) {
     styles.background.transform = "scale(0)";
   }
 
-  return styles;
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

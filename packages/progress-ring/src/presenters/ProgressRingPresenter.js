@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 
 import SVGPresenter from "./SVGPresenter";
 
@@ -40,14 +40,16 @@ export default function ProgressRingPresenter(props) {
     size,
     cssTransitionState,
     surface,
-    mask
+    mask,
+    ...otherProps
   } = props;
+  const { className } = otherProps;
   const SVG = sizes[size].svg;
   const originalSize = sizes[size].svg === Medium ? 72 : sizes[size].size;
 
   return (
     <div
-      className={css(stylesheet(props, {}).ring)}
+      className={cx([className, css(stylesheet(props, {}).ring)])}
       role="progressbar"
       aria-valuemin="0"
       aria-valuemax="100"
@@ -62,6 +64,7 @@ export default function ProgressRingPresenter(props) {
         cssTransitionState={cssTransitionState}
         surface={surface}
         mask={mask}
+        {...otherProps}
       />
     </div>
   );
@@ -70,10 +73,11 @@ export default function ProgressRingPresenter(props) {
 ProgressRingPresenter.defaultProps = { size: "m", surface: 100 };
 
 ProgressRingPresenter.propTypes = {
+  cssTransitionState: PropTypes.string,
   innerRef: PropTypes.func,
+  mask: PropTypes.string,
   percentComplete: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   size: PropTypes.oneOf(availableSizes),
-  cssTransitionState: PropTypes.string,
-  surface: PropTypes.oneOf(availableSurfaces),
-  mask: PropTypes.string
+  stylesheet: PropTypes.func,
+  surface: PropTypes.oneOf(availableSurfaces)
 };
