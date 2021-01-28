@@ -214,7 +214,6 @@ export default function stylesheet(props, themeData, theme) {
       position: "absolute",
       height: iconSize,
       marginRight: themeData["button.gutterWidth"],
-      top: "50%",
       transform: "translateY(-50%)"
     },
     iconText: {
