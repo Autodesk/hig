@@ -29,6 +29,39 @@ import Avatar, { sizes } from '@hig/avatar';
 />
 ```
 
-## Custom CSS
+## Styling
 
 Use the `className` prop to pass in a css class name to the outermost container of the component. The class name will also pass down to most of the other styled elements within the component. 
+
+Avatar also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
+
+```jsx
+import Avatar from '@hig/avatar';
+
+function YourComponent() {
+  // ...
+  const customStylesheet = (styles, props, themeData) => ({
+    ...styles,
+    avatarContainer: {
+      ...styles.avatarContainer,
+      color: themeData["colorScheme.status.error"]
+    },
+    avatarImageWrapper: {
+      ...styles.avatarImageWrapper,
+      opacity: 1
+    },
+    avatarImage: {
+      ...styles.avatarImage,
+      padding: `4px`
+    },
+    avatarInitials: {
+      ...styles.avatarInitials,
+      position: `static`
+    }
+  });
+
+  return (
+    <Avatar stylesheet={customStylesheet} />
+  );
+}
+```
