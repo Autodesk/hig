@@ -1,3 +1,10 @@
+# [@hig/progress-ring-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/progress-ring@1.1.1...@hig/progress-ring@1.2.0) (2021-02-02)
+
+
+### Features
+
+* add stylesheet prop, pass down className ([8ddc296](https://github.com/Autodesk/hig/commit/8ddc296))
+
 # [@hig/progress-ring-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/progress-ring@1.1.0...@hig/progress-ring@1.1.1) (2020-05-12)
 
 
