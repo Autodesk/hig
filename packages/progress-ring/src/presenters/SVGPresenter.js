@@ -6,7 +6,7 @@ import ThemeContext from "@hig/theme-context";
 import stylesheet from "./stylesheet";
 
 export default function SVGPresenter(props) {
-  const { height, width, original, svgData } = props;
+  const { height, original, svgData, width } = props;
 
   const buildPolygons = (svgs, resolvedRoles) =>
     svgs.map(item => {
@@ -49,7 +49,7 @@ export default function SVGPresenter(props) {
 
 SVGPresenter.propTypes = {
   height: PropTypes.number,
-  width: PropTypes.number,
   original: PropTypes.number,
-  svgData: PropTypes.arrayOf(PropTypes.object)
+  svgData: PropTypes.arrayOf(PropTypes.object),
+  width: PropTypes.number
 };

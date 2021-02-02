@@ -98,9 +98,12 @@ function buildFirstAndLastName(name) {
  * @param {string} props.alt
  * @returns {JSX.Element}
  */
-// eslint-disable-next-line react/prop-types
-function Image({ image, alt, size, onError, className, resolvedRoles }) {
-  const styles = stylesheet({ size }, resolvedRoles);
+// eslint-disable-next-line react/prop-types, prettier/prettier
+function Image({ image, alt, size, onError, className, resolvedRoles, stylesheet: customStylesheet }) {
+  const styles = stylesheet(
+    { size, stylesheet: customStylesheet },
+    resolvedRoles
+  );
 
   const imageWrapperClassName = createCustomClassNames(
     className,
@@ -109,11 +112,9 @@ function Image({ image, alt, size, onError, className, resolvedRoles }) {
   const imageClassName = createCustomClassNames(className, "image");
 
   return (
-    <span
-      className={cx(css(styles.avatar.imageWrapper), imageWrapperClassName)}
-    >
+    <span className={cx(css(styles.avatarImageWrapper), imageWrapperClassName)}>
       <img
-        className={cx(css(styles.avatar.image), imageClassName)}
+        className={cx(css(styles.avatarImage), imageClassName)}
         src={image}
         alt={alt}
         onError={onError}
@@ -129,15 +130,18 @@ function Image({ image, alt, size, onError, className, resolvedRoles }) {
  * @param {string} props.name.lastName - last name
  * @returns {JSX.Element}
  */
-// eslint-disable-next-line react/prop-types
-function Initials({ size, name, className, resolvedRoles }) {
-  const styles = stylesheet({ size }, resolvedRoles);
+// eslint-disable-next-line react/prop-types, prettier/prettier
+function Initials({size, name, className, resolvedRoles, stylesheet: customStylesheet }) {
+  const styles = stylesheet(
+    { size, stylesheet: customStylesheet },
+    resolvedRoles
+  );
   const initials = initialsFromName(name);
   const initialsClassName = createCustomClassNames(className, "initials");
 
   return (
     <span
-      className={cx(css(styles.avatar.initials), initialsClassName)}
+      className={cx(css(styles.avatarInitials), initialsClassName)}
       aria-hidden="true"
     >
       {size === sizes.SMALL_16 ? initials[0] : initials}
@@ -178,7 +182,9 @@ class Avatar extends Component {
     /** Optional label message override for Avatar  */
     label: PropTypes.string,
     /** Optional alt message override for Avatar Image  */
-    imageAlt: PropTypes.string
+    imageAlt: PropTypes.string,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -224,7 +230,14 @@ class Avatar extends Component {
   };
 
   render() {
-    const { size, name, firstName, lastName, ...otherProps } = this.props;
+    const {
+      size,
+      name,
+      firstName,
+      lastName,
+      stylesheet: customStylesheet,
+      ...otherProps
+    } = this.props;
     const { className } = otherProps;
     const { imageUrl, hasImageError } = this.state;
     const { handleImageError } = this;
@@ -248,7 +261,8 @@ class Avatar extends Component {
       ? this.props.imageAlt
       : `Avatar image of${nameStringWithLeadingSpace}`;
     const showImage = imageUrl && !hasImageError;
-    const styles = roles => stylesheet({ size, backgroundId }, roles);
+    const styles = roles =>
+      stylesheet({ size, backgroundId, stylesheet: customStylesheet }, roles);
 
     return (
       <ThemeContext.Consumer>
@@ -256,7 +270,7 @@ class Avatar extends Component {
           <span
             aria-label={label}
             className={cx(
-              css(styles(resolvedRoles).avatar.container),
+              css(styles(resolvedRoles).avatarContainer),
               className
             )}
             role="img"
@@ -269,6 +283,7 @@ class Avatar extends Component {
                 className={className}
                 onError={handleImageError}
                 alt={imageAlt}
+                stylesheet={customStylesheet}
               />
             )}
             <Initials
@@ -276,6 +291,7 @@ class Avatar extends Component {
               size={size}
               resolvedRoles={resolvedRoles}
               className={className}
+              stylesheet={customStylesheet}
             />
           </span>
         )}

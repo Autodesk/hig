@@ -9,6 +9,11 @@ import { availableSizes, availableSurfaces } from "./constants";
 export default class ProgressRing extends Component {
   static propTypes = {
     /**
+     * Specifies a background color
+     * If both surface & mask are provided, the value of mask will be used
+     */
+    mask: PropTypes.string,
+    /**
      * An integer from 0 to 100 representing the percent the delayed operation has completed.
      * If left blank or this prop is omitted you will have the indeterminate progress ring
      */
@@ -18,14 +23,13 @@ export default class ProgressRing extends Component {
      */
     size: PropTypes.oneOf(availableSizes),
     /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func,
+    /**
      * Specifies the surface level for the background
      */
-    surface: PropTypes.oneOf(availableSurfaces),
-    /**
-     * Specifies a background color
-     * If both surface & mask are provided, the value of mask will be used
-     */
-    mask: PropTypes.string
+    surface: PropTypes.oneOf(availableSurfaces)
   };
 
   static defaultProps = {
@@ -34,7 +38,14 @@ export default class ProgressRing extends Component {
   };
 
   render() {
-    const { percentComplete, size, surface, mask } = this.props;
+    const {
+      mask,
+      percentComplete,
+      size,
+      stylesheet,
+      surface,
+      ...otherProps
+    } = this.props;
     const ProgressRingBehavior =
       percentComplete === undefined
         ? ProgressRingIndeterminateBehavior
@@ -50,8 +61,10 @@ export default class ProgressRing extends Component {
             percentComplete={percentComplete}
             size={size}
             cssTransitionState={cssTransitionState}
+            stylesheet={stylesheet}
             surface={surface}
             mask={mask}
+            {...otherProps}
           />
         )}
       </ProgressRingBehavior>
