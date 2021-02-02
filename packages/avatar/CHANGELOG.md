@@ -1,3 +1,10 @@
+# [@hig/avatar-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/avatar@1.2.0...@hig/avatar@1.3.0) (2021-02-02)
+
+
+### Features
+
+* add stylesheet prop ([4465d6a](https://github.com/Autodesk/hig/commit/4465d6a))
+
 # [@hig/avatar-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/avatar@1.1.1...@hig/avatar@1.2.0) (2020-12-03)
 
 
