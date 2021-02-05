@@ -1033,6 +1033,16 @@
     prop-types "^15.7.1"
     react-transition-group "^2.3.1"
 
+"@hig/flyout@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-1.2.2.tgz#ea1436c89631ed8b446102db1a9bcb57085fd49a"
+  integrity sha512-s18P3imJNandMAvfZ27g/bLPc1HORMg+f2BeNwz/9e6wmJPX5+q7gOpqF8WdaABhTIqyDqUqDixI/4vSP65Mjw==
+  dependencies:
+    "@hig/utils" "^0.4.0"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+    react-transition-group "^2.3.1"
+
 "@hig/fonts@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@hig/fonts/-/fonts-1.0.2.tgz#84ffc16b9c15806b97e3d8627e5962bd75b6b81e"
