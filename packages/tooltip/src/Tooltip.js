@@ -9,7 +9,12 @@ import PanelPresenter from "./presenters/PanelPresenter";
 import PointerPresenter from "./presenters/PointerPresenter";
 
 export default function Tooltip(props) {
-  return <Flyout {...props} />;
+  return (
+    <Flyout
+      pointer={<PointerPresenter stylesheet={props.stylesheet} />}
+      {...props}
+    />
+  );
 }
 
 Tooltip.defaultProps = {
@@ -36,8 +41,7 @@ Tooltip.defaultProps = {
         {content}
       </PanelPresenter>
     );
-  },
-  pointer: <PointerPresenter />
+  }
 };
 
 /**
