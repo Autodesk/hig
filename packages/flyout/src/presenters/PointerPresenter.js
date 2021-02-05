@@ -5,7 +5,7 @@ import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./stylesheet";
 
 export default function PointerPresenter(props) {
-  const { borderWidth, size, stylesheet: customStylesheet } = props;
+  const { borderWidth, size } = props;
   const height = size / 2;
   const width = size;
   const widthMidpoint = width / 2;
@@ -13,14 +13,7 @@ export default function PointerPresenter(props) {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
-        const styles = stylesheet(
-          {
-            transitionStatus: null,
-            anchorPoint: null,
-            stylesheet: customStylesheet
-          },
-          resolvedRoles
-        );
+        const styles = stylesheet(props, resolvedRoles);
 
         return (
           <svg
@@ -58,6 +51,5 @@ PointerPresenter.defaultProps = {
 
 PointerPresenter.propTypes = {
   borderWidth: PropTypes.number,
-  size: PropTypes.number,
-  stylesheet: PropTypes.func
+  size: PropTypes.number
 };
