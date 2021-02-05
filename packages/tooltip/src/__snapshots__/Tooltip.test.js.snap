@@ -102,11 +102,6 @@ exports[`tooltip/Tooltip  1`] = `
     <div
       className="emotion-5"
       onScroll={undefined}
-      style={
-        Object {
-          "maxHeight": undefined,
-        }
-      }
     >
       <div
         className="emotion-4"
@@ -142,12 +137,6 @@ exports[`tooltip/Tooltip  2`] = `
 
 .emotion-2 {
   fill: #535353;
-}
-
-.emotion-6 {
-  border: 1px solid #535353;
-  background-color: #535353;
-  border-radius: 2px;
 }
 
 .emotion-5 {
@@ -219,6 +208,13 @@ exports[`tooltip/Tooltip  2`] = `
   fill: #ffffff;
 }
 
+.emotion-6 {
+  border: 1px solid #535353;
+  background-color: #535353;
+  border-radius: 2px;
+  max-height: 150px;
+}
+
 <div
   className="emotion-8"
 >
@@ -285,11 +281,6 @@ exports[`tooltip/Tooltip  2`] = `
     <div
       className="emotion-6"
       onScroll={[Function]}
-      style={
-        Object {
-          "maxHeight": "150px",
-        }
-      }
     >
       <div
         className="emotion-5"
