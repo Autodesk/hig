@@ -24,12 +24,14 @@ Tooltip.defaultProps = {
    * @param {import("@hig/flyout").PanelRendererPayload} payload
    */
   /* eslint-disable-next-line react/prop-types */
-  panel({ innerRef, content, handleScroll, maxHeight }) {
+  panel({ innerRef, content, handleScroll, maxHeight, className, stylesheet }) {
     return (
       <PanelPresenter
+        className={className}
         innerRef={innerRef}
         maxHeight={maxHeight}
         onScroll={handleScroll}
+        stylesheet={stylesheet}
       >
         {content}
       </PanelPresenter>
@@ -84,5 +86,7 @@ Tooltip.propTypes = {
    * If openOnHover is true, this prop will determine the delay
    * from when mouseEnter begins until the Tooltip visually opens
    */
-  openOnHoverDelay: PropTypes.number
+  openOnHoverDelay: PropTypes.number,
+  /** Function to modify the component's styles */
+  stylesheet: PropTypes.func
 };

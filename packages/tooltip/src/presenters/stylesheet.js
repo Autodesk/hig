@@ -1,5 +1,6 @@
-export default function stylesheet(themeData) {
-  return {
+export default function stylesheet(props, themeData) {
+  const { maxHeight, stylesheet: customStylesheet } = props;
+  const styles = {
     content: {
       minHeight: `32px`,
       padding: `8px 12px`,
@@ -12,7 +13,8 @@ export default function stylesheet(themeData) {
       backgroundColor: themeData
         ? themeData["tooltip.backgroundColor"]
         : `none`,
-      borderRadius: themeData ? themeData["tooltip.borderRadius"] : 0
+      borderRadius: themeData ? themeData["tooltip.borderRadius"] : 0,
+      maxHeight: maxHeight ? `${maxHeight}px` : undefined
     },
     panelInner: {
       position: `relative`
@@ -21,4 +23,6 @@ export default function stylesheet(themeData) {
       whiteSpace: `nowrap`
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }
