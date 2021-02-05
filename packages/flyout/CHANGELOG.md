@@ -1,3 +1,10 @@
+# [@hig/flyout-v1.2.2](https://github.com/Autodesk/hig/compare/@hig/flyout@1.2.1...@hig/flyout@1.2.2) (2021-02-05)
+
+
+### Bug Fixes
+
+* pass all props into stylesheet ([c49a4d2](https://github.com/Autodesk/hig/commit/c49a4d2))
+
 # [@hig/flyout-v1.2.1](https://github.com/Autodesk/hig/compare/@hig/flyout@1.2.0...@hig/flyout@1.2.1) (2020-05-12)
 
 
