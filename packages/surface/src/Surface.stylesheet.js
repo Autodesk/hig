@@ -1,14 +1,6 @@
 import { SIZES } from "./constants";
 
 export default function stylesheet(props, themeData) {
-  const {
-    borderRadius,
-    horizontalPadding,
-    verticalPadding,
-    level,
-    shadow
-  } = props;
-
   function sizeKey(size) {
     return size ? SIZES[size] : "none";
   }
@@ -19,7 +11,15 @@ export default function stylesheet(props, themeData) {
       : `density.spacings.${size}`;
   }
 
-  return {
+  const {
+    borderRadius,
+    horizontalPadding,
+    verticalPadding,
+    level,
+    shadow,
+    stylesheet: customStylesheet
+  } = props;
+  const styles = {
     surface: {
       backgroundColor: themeData[`colorScheme.surface.level${level}`],
       padding: `${themeData[spacing(sizeKey(verticalPadding))]} ${
@@ -34,4 +34,6 @@ export default function stylesheet(props, themeData) {
       })
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

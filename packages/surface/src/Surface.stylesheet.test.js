@@ -20,6 +20,16 @@ describe("Surface.stylesheet", () => {
     expect(stylesheet(props, themeData)).toEqual(expect.any(Object));
   });
 
+  it("returned object contains property of surface", () => {
+    expect(stylesheet({}, themeData)).toHaveProperty("surface", expect.any(Object));
+  });
+
+  it("returns the custom stylesheet", () => {
+    expect(stylesheet({ stylesheet: () => ({ padding: 0 }) }, themeData)).toEqual({
+      padding: 0
+    });
+  });
+
   describe("padding values are provided", () => {
     const props = {
       borderRadius: "m",
