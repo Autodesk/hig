@@ -21,11 +21,16 @@ describe("Surface.stylesheet", () => {
   });
 
   it("returned object contains property of surface", () => {
-    expect(stylesheet({}, themeData)).toHaveProperty("surface", expect.any(Object));
+    expect(stylesheet({}, themeData)).toHaveProperty(
+      "surface",
+      expect.any(Object)
+    );
   });
 
   it("returns the custom stylesheet", () => {
-    expect(stylesheet({ stylesheet: () => ({ padding: 0 }) }, themeData)).toEqual({
+    expect(
+      stylesheet({ stylesheet: () => ({ padding: 0 }) }, themeData)
+    ).toEqual({
       padding: 0
     });
   });
