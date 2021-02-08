@@ -16,7 +16,11 @@ export default class RichText extends Component {
      */
     dangerouslySetInnerHTML: PropTypes.shape({
       __html: PropTypes.string
-    })
+    }),
+    /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func
   };
 
   render() {
@@ -29,7 +33,7 @@ export default class RichText extends Component {
             ...otherProps
           } = this.props;
           const { className } = otherProps;
-          const styles = stylesheet(resolvedRoles);
+          const styles = stylesheet(this.props, resolvedRoles);
           return children ? (
             <div className={cx(css(styles.richText), className)}>
               {children}
