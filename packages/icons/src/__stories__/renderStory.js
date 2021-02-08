@@ -37,7 +37,7 @@ function Spacer() {
   );
 }
 
-function IconStory({ size, color }) {
+export function IconStory({ size, color }) {
   const set = Icons.sets.find(isonSet => isonSet.size === size);
 
   return (
