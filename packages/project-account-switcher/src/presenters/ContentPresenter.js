@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import memoize from "lodash.memoize";
 import TextLink from "@hig/text-link";
 import Typography from "@hig/typography";
-import { createButtonEventHandlers } from "@hig/utils";
+import { createButtonEventHandlers, createCustomClassNames } from "@hig/utils";
 
 import constructPlaceholder from "./constructPlaceholder";
 import stylesheet from "./stylesheet";
@@ -71,6 +71,17 @@ export default class ContentPresenter extends Component {
 
   renderAccountsList() {
     const styles = stylesheet(this.props);
+    /* eslint-disable-next-line react/prop-types */
+    const { className } = this.props;
+    const switcherItemClassName = createCustomClassNames(
+      className,
+      "switcher-item"
+    );
+    const switcherAccountImageWrapperClassName = createCustomClassNames(
+      className,
+      "switcher-account-image-wrapper"
+    );
+    const imageClassName = createCustomClassNames(className, "image");
 
     return this.props.accounts.map(({ id, image, label }) => {
       const { handleClick, handleKeyDown } = this.createAccountListItemHandlers(
@@ -80,16 +91,25 @@ export default class ContentPresenter extends Component {
       /** @todo Move this block into it's own component & module */
       return (
         <li
-          className={css(styles.switcherItem)}
+          className={cx([switcherItemClassName, css(styles.switcherItem)])}
           key={`account-${id}`}
           onClick={handleClick}
           onKeyDown={handleKeyDown}
           role="menuitem"
           tabIndex="0"
         >
-          <span className={css(styles.switcherAccountImageWrapper)}>
+          <span
+            className={cx([
+              switcherAccountImageWrapperClassName,
+              css(styles.switcherAccountImageWrapper)
+            ])}
+          >
             {Boolean(image) && (
-              <img className={css(styles.image)} src={image} alt={label} />
+              <img
+                className={cx([imageClassName, css(styles.image)])}
+                src={image}
+                alt={label}
+              />
             )}
             <Typography
               elementType="span"
@@ -106,6 +126,16 @@ export default class ContentPresenter extends Component {
 
   renderProjectsList() {
     const styles = stylesheet(this.props);
+    const { className } = this.props;
+    const switcherItemClassName = createCustomClassNames(
+      className,
+      "switcher-item"
+    );
+    const imageWrapperClassName = createCustomClassNames(
+      className,
+      "image-wrapper"
+    );
+    const imageClassName = createCustomClassNames(className, "image");
 
     return this.props.projects.map(({ id, image, label }) => {
       const { handleClick, handleKeyDown } = this.createProjectListItemHandlers(
@@ -116,15 +146,21 @@ export default class ContentPresenter extends Component {
       return (
         <li
           key={`project-${id}`}
-          className={css(styles.switcherItem)}
+          className={cx([switcherItemClassName, css(styles.switcherItem)])}
           role="menuitem"
           tabIndex="0"
           onClick={handleClick}
           onKeyDown={handleKeyDown}
         >
-          <span className={css(styles.imageWrapper)}>
+          <span
+            className={cx([imageWrapperClassName, css(styles.imageWrapper)])}
+          >
             {Boolean(image) && (
-              <img className={css(styles.image)} src={image} alt={label} />
+              <img
+                className={cx([imageClassName, css(styles.image)])}
+                src={image}
+                alt={label}
+              />
             )}
             <Typography
               elementType="span"
@@ -140,17 +176,28 @@ export default class ContentPresenter extends Component {
   }
 
   render() {
-    const { accounts, accountTitle, projects, projectTitle } = this.props;
+    const {
+      accounts,
+      accountTitle,
+      projects,
+      projectTitle,
+      ...otherProps
+    } = this.props;
+    const { className } = otherProps;
     const styles = stylesheet(this.props);
     const typographyTitleStyles = {
       textTransform: `uppercase`,
       fontSize: `11px`
     };
+    const switcherListClassName = createCustomClassNames(
+      className,
+      "switcher-list"
+    );
 
     return (
       <div>
         {accounts && (
-          <ul className={css(styles.switcherList)}>
+          <ul className={cx([switcherListClassName, css(styles.switcherList)])}>
             <Typography elementType="span" style={typographyTitleStyles}>
               {accountTitle}
             </Typography>
@@ -158,7 +205,7 @@ export default class ContentPresenter extends Component {
           </ul>
         )}
         {projects && (
-          <ul className={css(styles.switcherList)}>
+          <ul className={cx([switcherListClassName, css(styles.switcherList)])}>
             <Typography elementType="span" style={typographyTitleStyles}>
               {projectTitle}
             </Typography>

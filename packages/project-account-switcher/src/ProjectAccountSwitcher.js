@@ -8,10 +8,14 @@ import ContentPresenter from "./presenters/ContentPresenter";
 import PanelPresenter from "./presenters/PanelPresenter";
 import ProjectAccountSwitcherPresenter from "./presenters/ProjectAccountSwitcherPresenter";
 
-/* eslint-disable-next-line react/prop-types */
-function renderPanel({ innerRef, content, stylesheet: customStylesheet }) {
+/* eslint-disable-next-line react/prop-types, prettier/prettier */
+function renderPanel({innerRef, content, stylesheet: customStylesheet, className}) {
   return (
-    <PanelPresenter innerRef={innerRef} stylesheet={customStylesheet}>
+    <PanelPresenter
+      className={className}
+      innerRef={innerRef}
+      stylesheet={customStylesheet}
+    >
       {content}
     </PanelPresenter>
   );
@@ -88,8 +92,10 @@ export default class ProjectAccountSwitcher extends Component {
       open,
       projects,
       projectTitle,
-      stylesheet
+      stylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     return (
       <ProjectAccountSwitcherBehavior
@@ -121,6 +127,7 @@ export default class ProjectAccountSwitcher extends Component {
                 accountTitle={accountTitle}
                 activeAccountObj={activeAccountObj}
                 activeProjectObj={activeProjectObj}
+                className={className}
                 onAccountClick={combineEventHandlers(
                   handleAccountClick,
                   hideFlyout
@@ -135,6 +142,7 @@ export default class ProjectAccountSwitcher extends Component {
               />
             )}
             stylesheet={stylesheet}
+            className={className}
           >
             {({ handleClick }) => (
               <ProjectAccountSwitcherPresenter
@@ -142,6 +150,7 @@ export default class ProjectAccountSwitcher extends Component {
                 activeAccountObj={activeAccountObj}
                 activeLabel={activeLabel}
                 activeProjectObj={activeProjectObj}
+                className={className}
                 onTargetClick={combineEventHandlers(onTargetClick, handleClick)}
                 open={open}
                 projects={projects}
