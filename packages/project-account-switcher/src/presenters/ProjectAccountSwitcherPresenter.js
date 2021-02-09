@@ -108,7 +108,7 @@ export default class ProjectAccountSwitcherPresenter extends Component {
       handleClick: handleTargetClick,
       handleKeyDown: handleTargetKeyDown
     } = this.createTargetHandlers(onTargetClick);
-    const styles = stylesheet();
+    const styles = stylesheet(this.props);
 
     return (
       <div

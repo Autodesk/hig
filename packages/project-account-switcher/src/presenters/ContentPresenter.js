@@ -70,7 +70,7 @@ export default class ContentPresenter extends Component {
   );
 
   renderAccountsList() {
-    const styles = stylesheet();
+    const styles = stylesheet(this.props);
 
     return this.props.accounts.map(({ id, image, label }) => {
       const { handleClick, handleKeyDown } = this.createAccountListItemHandlers(
@@ -105,7 +105,7 @@ export default class ContentPresenter extends Component {
   }
 
   renderProjectsList() {
-    const styles = stylesheet();
+    const styles = stylesheet(this.props);
 
     return this.props.projects.map(({ id, image, label }) => {
       const { handleClick, handleKeyDown } = this.createProjectListItemHandlers(
@@ -141,7 +141,7 @@ export default class ContentPresenter extends Component {
 
   render() {
     const { accounts, accountTitle, projects, projectTitle } = this.props;
-    const styles = stylesheet();
+    const styles = stylesheet(this.props);
     const typographyTitleStyles = {
       textTransform: `uppercase`,
       fontSize: `11px`

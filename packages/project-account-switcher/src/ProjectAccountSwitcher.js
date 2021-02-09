@@ -9,8 +9,12 @@ import PanelPresenter from "./presenters/PanelPresenter";
 import ProjectAccountSwitcherPresenter from "./presenters/ProjectAccountSwitcherPresenter";
 
 /* eslint-disable-next-line react/prop-types */
-function renderPanel({ innerRef, content }) {
-  return <PanelPresenter innerRef={innerRef}>{content}</PanelPresenter>;
+function renderPanel({ innerRef, content, stylesheet: customStylesheet }) {
+  return (
+    <PanelPresenter innerRef={innerRef} stylesheet={customStylesheet}>
+      {content}
+    </PanelPresenter>
+  );
 }
 
 export default class ProjectAccountSwitcher extends Component {
@@ -60,7 +64,9 @@ export default class ProjectAccountSwitcher extends Component {
       })
     ),
     /** Heading title for the list of Projects */
-    projectTitle: PropTypes.string
+    projectTitle: PropTypes.string,
+    /** Adds custom/overriding styles */
+    stylesheet: PropTypes.func
   };
 
   render() {
@@ -81,7 +87,8 @@ export default class ProjectAccountSwitcher extends Component {
       onTargetClick,
       open,
       projects,
-      projectTitle
+      projectTitle,
+      stylesheet
     } = this.props;
 
     return (
@@ -124,8 +131,10 @@ export default class ProjectAccountSwitcher extends Component {
                 )}
                 projects={projects}
                 projectTitle={projectTitle}
+                stylesheet={stylesheet}
               />
             )}
+            stylesheet={stylesheet}
           >
             {({ handleClick }) => (
               <ProjectAccountSwitcherPresenter
@@ -136,6 +145,7 @@ export default class ProjectAccountSwitcher extends Component {
                 onTargetClick={combineEventHandlers(onTargetClick, handleClick)}
                 open={open}
                 projects={projects}
+                stylesheet={stylesheet}
               />
             )}
           </Flyout>
