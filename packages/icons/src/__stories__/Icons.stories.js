@@ -3,7 +3,7 @@ import { withInfo } from "@storybook/addon-info";
 import { text } from "@storybook/addon-knobs";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import infoOptions from "./infoOptions";
-import renderStory from "./renderStory";
+import renderStory, { IconStory } from "./renderStory";
 import stories from "./stories";
 
 const knobLabels = {
@@ -26,7 +26,7 @@ stories.forEach(({ description, getProps }) => {
     description,
     withInfo({
       ...infoOptions,
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider, IconStory]
     })(() => {
       const props = getKnobs(getProps());
       return renderStory(props);
