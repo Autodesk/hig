@@ -1,3 +1,10 @@
+# [@hig/icons-v3.4.0](https://github.com/Autodesk/hig/compare/@hig/icons@3.3.0...@hig/icons@3.4.0) (2021-02-22)
+
+
+### Features
+
+* add stylesheet prop ([decd68a](https://github.com/Autodesk/hig/commit/decd68a))
+
 # [@hig/icons-v3.3.0](https://github.com/Autodesk/hig/compare/@hig/icons@3.2.1...@hig/icons@3.3.0) (2020-05-15)
 
 
