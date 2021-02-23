@@ -1,24 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tooltip/presenters/PanelPresenter renders with all props 1`] = `
+.emotion-0 {
+  position: relative;
+}
+
 .emotion-1 {
   border: 1px solid #535353;
   background-color: #535353;
   border-radius: 2px;
-}
-
-.emotion-0 {
-  position: relative;
+  max-height: 42px;
 }
 
 <div
   className="emotion-1"
   onScroll={[Function]}
-  style={
-    Object {
-      "maxHeight": "42px",
-    }
-  }
 >
   <div
     className="emotion-0"
@@ -42,11 +38,6 @@ exports[`tooltip/presenters/PanelPresenter renders without props 1`] = `
 <div
   className="emotion-1"
   onScroll={undefined}
-  style={
-    Object {
-      "maxHeight": undefined,
-    }
-  }
 >
   <div
     className="emotion-0"
