@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@hig/fonts": "^1.0.2",
-    "@hig/icons": "^3.2.0",
+    "@hig/icons": "^3.4.0",
     "@hig/rich-text": "^1.0.0",
     "@hig/spacer": "^1.0.7",
     "@hig/theme-context": "^3.0.1",
