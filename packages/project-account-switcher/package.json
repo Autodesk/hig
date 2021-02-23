@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "@hig/flyout": "^1.2.2",
-    "@hig/icons": "^3.2.0",
+    "@hig/icons": "^3.4.0",
     "@hig/text-link": "^1.1.0",
     "@hig/typography": "^1.2.0",
     "@hig/utils": "^0.4.0",
