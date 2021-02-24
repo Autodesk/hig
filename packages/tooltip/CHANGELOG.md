@@ -1,3 +1,10 @@
+# [@hig/tooltip-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.6...@hig/tooltip@1.1.0) (2021-02-24)
+
+
+### Features
+
+* add stylesheet prop ([a5326c8](https://github.com/Autodesk/hig/commit/a5326c8))
+
 # [@hig/tooltip-v1.0.6](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.5...@hig/tooltip@1.0.6) (2020-05-13)
 
 

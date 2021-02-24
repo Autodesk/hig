@@ -1,3 +1,10 @@
+# [@hig/surface-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/surface@1.1.1...@hig/surface@1.2.0) (2021-02-24)
+
+
+### Features
+
+* add stylesheet prop ([acf4b95](https://github.com/Autodesk/hig/commit/acf4b95))
+
 # [@hig/surface-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/surface@1.1.0...@hig/surface@1.1.1) (2020-05-12)
 
 
