@@ -12,11 +12,19 @@ export default class SkeletonItem extends Component {
     /** Sets max width of the skeleton item */
     maxWidth: PropTypes.string,
     /** Sets spacing below the skeleton item */
-    marginBottom: PropTypes.string
+    marginBottom: PropTypes.string,
+    /** Adds custom/overriding styles */
+    stylesheet: PropTypes.func
   };
 
   render() {
-    const { height, marginBottom, maxWidth, ...otherProps } = this.props;
+    const {
+      height,
+      marginBottom,
+      maxWidth,
+      stylesheet: customStylesheet,
+      ...otherProps
+    } = this.props;
     const { className } = otherProps;
 
     return (
@@ -26,7 +34,8 @@ export default class SkeletonItem extends Component {
             {
               maxWidth,
               marginBottom,
-              height
+              height,
+              stylesheet: customStylesheet
             },
             resolvedRoles
           );

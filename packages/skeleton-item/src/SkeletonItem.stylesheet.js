@@ -1,6 +1,11 @@
 export default function stylesheet(props, themeData) {
-  const { height, marginBottom, maxWidth } = props;
-  return {
+  const {
+    height,
+    marginBottom,
+    maxWidth,
+    stylesheet: customStylesheet
+  } = props;
+  const styles = {
     skeletonItem: {
       backgroundColor: themeData["skeletonItem.backgroundColor"],
       borderRadius: themeData["skeletonItem.borderRadius"],
@@ -34,4 +39,6 @@ export default function stylesheet(props, themeData) {
       }
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

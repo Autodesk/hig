@@ -8,9 +8,17 @@ import ContentPresenter from "./presenters/ContentPresenter";
 import PanelPresenter from "./presenters/PanelPresenter";
 import ProjectAccountSwitcherPresenter from "./presenters/ProjectAccountSwitcherPresenter";
 
-/* eslint-disable-next-line react/prop-types */
-function renderPanel({ innerRef, content }) {
-  return <PanelPresenter innerRef={innerRef}>{content}</PanelPresenter>;
+/* eslint-disable-next-line react/prop-types, prettier/prettier */
+function renderPanel({innerRef, content, stylesheet: customStylesheet, className}) {
+  return (
+    <PanelPresenter
+      className={className}
+      innerRef={innerRef}
+      stylesheet={customStylesheet}
+    >
+      {content}
+    </PanelPresenter>
+  );
 }
 
 export default class ProjectAccountSwitcher extends Component {
@@ -60,7 +68,9 @@ export default class ProjectAccountSwitcher extends Component {
       })
     ),
     /** Heading title for the list of Projects */
-    projectTitle: PropTypes.string
+    projectTitle: PropTypes.string,
+    /** Adds custom/overriding styles */
+    stylesheet: PropTypes.func
   };
 
   render() {
@@ -81,8 +91,11 @@ export default class ProjectAccountSwitcher extends Component {
       onTargetClick,
       open,
       projects,
-      projectTitle
+      projectTitle,
+      stylesheet,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
 
     return (
       <ProjectAccountSwitcherBehavior
@@ -114,6 +127,7 @@ export default class ProjectAccountSwitcher extends Component {
                 accountTitle={accountTitle}
                 activeAccountObj={activeAccountObj}
                 activeProjectObj={activeProjectObj}
+                className={className}
                 onAccountClick={combineEventHandlers(
                   handleAccountClick,
                   hideFlyout
@@ -124,8 +138,11 @@ export default class ProjectAccountSwitcher extends Component {
                 )}
                 projects={projects}
                 projectTitle={projectTitle}
+                stylesheet={stylesheet}
               />
             )}
+            stylesheet={stylesheet}
+            className={className}
           >
             {({ handleClick }) => (
               <ProjectAccountSwitcherPresenter
@@ -133,9 +150,11 @@ export default class ProjectAccountSwitcher extends Component {
                 activeAccountObj={activeAccountObj}
                 activeLabel={activeLabel}
                 activeProjectObj={activeProjectObj}
+                className={className}
                 onTargetClick={combineEventHandlers(onTargetClick, handleClick)}
                 open={open}
                 projects={projects}
+                stylesheet={stylesheet}
               />
             )}
           </Flyout>

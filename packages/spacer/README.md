@@ -19,3 +19,29 @@ import Spacer from '@hig/spacer';
 ```jsx
 <Spacer spacing="xl"/>
 ```
+
+## Styling
+
+Use the `className` prop to pass in a css class name to the outermost container of the component. The class name will also pass down to most of the other styled elements within the component. 
+
+Spacer also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
+
+```jsx
+import Spacer from '@hig/spacer';
+
+function YourComponent() {
+  // ...
+  const customStylesheet = (styles, props, themeData) => ({
+    ...styles,
+    spacer: {
+      ...styles.spacer,
+      color: themeData["colorScheme.status.error"]
+    }
+  });
+
+  return (
+    <Spacer stylesheet={customStylesheet} />
+  );
+}
+```
+

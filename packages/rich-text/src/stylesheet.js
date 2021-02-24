@@ -1,4 +1,4 @@
-export default function stylesheet(themeData) {
+export default function stylesheet(props, themeData) {
   function typographyStyle(variant, margin) {
     return {
       color: themeData[`typography.${variant}.color`],
@@ -11,6 +11,8 @@ export default function stylesheet(themeData) {
       textAlign: "initial"
     };
   }
+
+  const { stylesheet: customStylesheet } = props;
 
   const baseStyles = typographyStyle(
     "body",
@@ -74,7 +76,7 @@ export default function stylesheet(themeData) {
     )
   };
 
-  return {
+  const styles = {
     richText: {
       ...baseStyles,
       ...listStyles,
@@ -84,4 +86,6 @@ export default function stylesheet(themeData) {
       ...boldStyles
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

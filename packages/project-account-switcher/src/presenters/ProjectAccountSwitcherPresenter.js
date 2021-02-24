@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { CaretDownMUI } from "@hig/icons";
 import Typography from "@hig/typography";
-import { memoizeCreateButtonEventHandlers } from "@hig/utils";
+import {
+  createCustomClassNames,
+  memoizeCreateButtonEventHandlers
+} from "@hig/utils";
 
 import constructPlaceholder from "./constructPlaceholder";
 import stylesheet from "./stylesheet";
@@ -103,25 +106,42 @@ export default class ProjectAccountSwitcherPresenter extends Component {
     }
 
     const label = this.renderLabel();
-    const { onTargetClick } = this.props;
+    const { onTargetClick, ...otherProps } = this.props;
+    const { className } = otherProps;
     const {
       handleClick: handleTargetClick,
       handleKeyDown: handleTargetKeyDown
     } = this.createTargetHandlers(onTargetClick);
-    const styles = stylesheet();
+    const styles = stylesheet(this.props);
+    const targetClassName = createCustomClassNames(className, "target");
+    const targetItemClassName = createCustomClassNames(
+      className,
+      "target-item"
+    );
+    const imageWrapperClassName = createCustomClassNames(
+      className,
+      "image-wrapper"
+    );
+    const imageClassName = createCustomClassNames(className, "image");
+    const targetCaretClassName = createCustomClassNames(
+      className,
+      "target-caret"
+    );
 
     return (
       <div
-        className={css(styles.target)}
+        className={cx([targetClassName, css(styles.target)])}
         onClick={handleTargetClick}
         onKeyDown={handleTargetKeyDown}
         role="button"
         tabIndex="0"
       >
-        <div className={css(styles.targetItem)}>
-          <span className={css(styles.imageWrapper)}>
+        <div className={cx([targetItemClassName, css(styles.targetItem)])}>
+          <span
+            className={cx([imageWrapperClassName, css(styles.imageWrapper)])}
+          >
             <img
-              className={css(styles.image)}
+              className={cx([imageClassName, css(styles.image)])}
               alt={label}
               src={this.activeImage()}
             />
@@ -134,7 +154,7 @@ export default class ProjectAccountSwitcherPresenter extends Component {
           </span>
           <Typography>{label}</Typography>
         </div>
-        <div className={css(styles.targetCaret)}>
+        <div className={cx([targetCaretClassName, css(styles.targetCaret)])}>
           <CaretDownMUI />
         </div>
       </div>

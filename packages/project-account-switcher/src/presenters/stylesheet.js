@@ -1,5 +1,6 @@
-export default function stylesheet() {
-  return {
+export default function stylesheet(props) {
+  const { stylesheet: customStylesheet } = props;
+  const styles = {
     itemLabel: {
       flex: `1 1 auto`,
       minWidth: 0,
@@ -86,4 +87,6 @@ export default function stylesheet() {
       margin: `0 12px`
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props) : styles;
 }
