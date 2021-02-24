@@ -1,3 +1,10 @@
+# [@hig/rich-text-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/rich-text@1.1.1...@hig/rich-text@1.2.0) (2021-02-24)
+
+
+### Features
+
+* add stylesheet prop ([891ba75](https://github.com/Autodesk/hig/commit/891ba75))
+
 # [@hig/rich-text-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/rich-text@1.1.0...@hig/rich-text@1.1.1) (2020-05-12)
 
 

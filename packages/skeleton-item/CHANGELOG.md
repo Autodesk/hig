@@ -1,3 +1,10 @@
+# [@hig/skeleton-item-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@1.1.1...@hig/skeleton-item@1.2.0) (2021-02-24)
+
+
+### Features
+
+* add stylesheet prop ([1d509ae](https://github.com/Autodesk/hig/commit/1d509ae))
+
 # [@hig/skeleton-item-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@1.1.0...@hig/skeleton-item@1.1.1) (2020-05-12)
 
 

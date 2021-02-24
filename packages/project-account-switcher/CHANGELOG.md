@@ -1,3 +1,11 @@
+# [@hig/project-account-switcher-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.8...@hig/project-account-switcher@2.1.0) (2021-02-24)
+
+
+### Features
+
+* add stylesheet prop ([d8dd2f1](https://github.com/Autodesk/hig/commit/d8dd2f1))
+* allow className to be passed down ([128bf5e](https://github.com/Autodesk/hig/commit/128bf5e))
+
 # [@hig/project-account-switcher-v2.0.8](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.0.7...@hig/project-account-switcher@2.0.8) (2020-12-15)
 
 
