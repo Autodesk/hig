@@ -1,3 +1,10 @@
+# [@hig/spacer-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/spacer@1.0.8...@hig/spacer@1.1.0) (2021-02-24)
+
+
+### Features
+
+* add stylesheet prop, pass down className ([cdaaad3](https://github.com/Autodesk/hig/commit/cdaaad3))
+
 # [@hig/spacer-v1.0.8](https://github.com/Autodesk/hig/compare/@hig/spacer@1.0.7...@hig/spacer@1.0.8) (2019-07-11)
 
 
