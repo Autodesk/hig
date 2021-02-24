@@ -37,6 +37,10 @@ export default class Surface extends Component {
      */
     shadow: PropTypes.oneOf(AVAILABLE_SHADOWS),
     /**
+     * Adds custom/overriding styles
+     */
+    stylesheet: PropTypes.func,
+    /**
      * Enables specifying the semantic element to be rendered by the component
      * The default is "div"
      */
@@ -56,6 +60,7 @@ export default class Surface extends Component {
       verticalPadding,
       level,
       shadow,
+      stylesheet: customStylesheet,
       tagName,
       ...otherProps
     } = this.props;
@@ -66,6 +71,7 @@ export default class Surface extends Component {
           const styles = stylesheet(
             {
               borderRadius,
+              stylesheet: customStylesheet,
               horizontalPadding,
               verticalPadding,
               level,
