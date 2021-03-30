@@ -1023,16 +1023,6 @@
     prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/flyout@^1.2.1":
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-1.2.1.tgz#498e0488928b0296c76b8737f6054124314ac891"
-  integrity sha512-oNybmhStyMmEC07DPsjMZg4Dgm65X7Jcp2nDFR9zZghVof/1C3WJtJvdouVgqx7BJw2IedVj8CUGoPuoll/0IQ==
-  dependencies:
-    "@hig/utils" "^0.4.0"
-    emotion "^10.0.0"
-    prop-types "^15.7.1"
-    react-transition-group "^2.3.1"
-
 "@hig/flyout@^1.2.2":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-1.2.2.tgz#ea1436c89631ed8b446102db1a9bcb57085fd49a"
@@ -1068,10 +1058,17 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
-"@hig/icons@^3.2.0", "@hig/icons@^3.3.0":
+"@hig/icons@^3.2.0":
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-3.3.0.tgz#3bf4684c4ed81bdf055941015a3bb28c6072e3fd"
   integrity sha512-9cvbC0XaIwih8W6a6TeclOWHUs0US48EdOE3uNi8F7KP/xJ/8PssDbPhhAdlbAunH4sygWCfe5LXPN/zR2oanw==
+  dependencies:
+    emotion "^10.0.0"
+
+"@hig/icons@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-3.4.0.tgz#dc4f63e1f8a72228741e0dabaef3eeaf6175066b"
+  integrity sha512-oKM6Qf1uRRwgPFiNxXSmQuiLX8Bw7khqmuq1rUCheRlY+GZiX2IM45AQ8EREqRip8yAU/wKPkxP9RUaQFsrdAw==
   dependencies:
     emotion "^10.0.0"
 
@@ -1152,10 +1149,10 @@
     prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/rich-text@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@hig/rich-text/-/rich-text-1.1.1.tgz#92db7f038669fa748ac6f0cd715d58928e38d0c0"
-  integrity sha512-UPWRvtRHwFljuD9fjs72KcrSsFdoj6bABl8n5WpB0etmI2knxeX3opdpx2cI+NdFQ1HhuqWta1tO++f7qRNNRw==
+"@hig/rich-text@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/rich-text/-/rich-text-1.2.0.tgz#3685e47c20e86fb9c87f6d7d571f9393807d3eb9"
+  integrity sha512-9yVas7d22VVTDws5U5cuDfTcJbxAV1JCyyC3LETVM2v7jymrlIlok7NATP1ata/hVR+XK2mu4BO+fR1UETMr1A==
   dependencies:
     emotion "^10.0.0"
     prop-types "^15.7.1"
@@ -1170,18 +1167,18 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
-"@hig/spacer@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@hig/spacer/-/spacer-1.0.8.tgz#d09fc8612f566b7b6a25981ae30153770d296703"
-  integrity sha512-GJAzHrI0WO5WT3wDyu6j8Yw93IOk/8o1n2WIgbq6b4PQFjC7txLcKWz0OlUvmhCzv1KjLkpMESYQdwkQCK/vZQ==
+"@hig/spacer@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/spacer/-/spacer-1.1.0.tgz#0c7db5af9bc50809f443d8f0142d2368a6b6dff3"
+  integrity sha512-GjYi4ZsfrtBPwi9OKnPe+1TQCdUy90tWtv3uI98h2fVJZiE/CDNLw1+qBJnn6vhRDky6lJQQV8lJD2YkqG938Q==
   dependencies:
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
-"@hig/surface@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@hig/surface/-/surface-1.1.1.tgz#707acb0ddb55d2687c84f28f958440606cdd69ed"
-  integrity sha512-7l/HjDqinAbBXHlH8vd3yEV8O8UXwJCqzTPjfCDATTjhnFdQnCtLU52YjcDN93F+my3JJbl/+u+savkocY4y+Q==
+"@hig/surface@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/surface/-/surface-1.2.0.tgz#cd5a7f175ddb9d526a1938c20d72a40994f829d5"
+  integrity sha512-k2EH0PPwSbf1OahA14eTMucVE0hbp2zg2fcHwaJZuNaJrAPBFcWisAAL1LiIyTiXzXEDoa5th0sVpPukEOSQyA==
   dependencies:
     emotion "^10.0.0"
     prop-types "^15.7.1"
@@ -1243,13 +1240,14 @@
     prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/tooltip@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@hig/tooltip/-/tooltip-1.0.6.tgz#a7426051a3b3287a6be6dfaf61d57c16f5fa9d2d"
-  integrity sha512-vmS0IFrcag2kuDRbxDnOsyP8M85bG/D2xWf4McJc+4CyplrGSS0U+B77EqQBQOQ13WPywOF0yqY2VfLWmv3EoQ==
+"@hig/tooltip@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/tooltip/-/tooltip-1.1.0.tgz#a55f8ccbfe29f6b6eb206de1d2ef9f4947efcc25"
+  integrity sha512-pIlhawD/gt287H1RgjDmamJoJIWDvUMNa6Es3OyUCpdZ+RQJNMHdm++bwNjai+4Mqr56VcGBdsC/uMpOioV1Kg==
   dependencies:
-    "@hig/flyout" "^1.2.1"
-    "@hig/typography" "^1.0.4"
+    "@hig/flyout" "^1.2.2"
+    "@hig/typography" "^1.2.0"
+    "@hig/utils" "^0.4.0"
     prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
 
@@ -1257,14 +1255,6 @@
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-1.0.3.tgz#43355e184caca252236a261f78cb2f081146b200"
   integrity sha512-VtWTPsJLDjVi3A9r9iya+PxhTv/aQDhIjR3SnnAabHGUepIIOm5FtI7HTWxCx0vaSVHKBk92uKGS3IsUA1emzg==
-  dependencies:
-    emotion "^10.0.0"
-    prop-types "^15.7.1"
-
-"@hig/typography@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-1.0.4.tgz#d96eda1984720290b3d21deda61d3b01a745201d"
-  integrity sha512-LPDZJKCKE+nwgJ7kOx1KBqjF0dXPVS/ES6RdrJHWrGjGOtnypODFxIxl1ySSro6JWAgZn+GYsj+UMS/MlKKBuQ==
   dependencies:
     emotion "^10.0.0"
     prop-types "^15.7.1"
@@ -11047,9 +11037,9 @@ xtend@^4.0.0, xtend@~4.0.1:
   integrity sha1-pcbVMr5lbiPbgg77lDofBJmNY68=
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"
