@@ -143,7 +143,7 @@ describe("avatar/Avatar", () => {
               .getDOMNode()
           )
           .getPropertyValue("background-color")
-      ).toEqual("rgb(255, 149, 130)");
+      ).toEqual("rgb(190, 41, 190)");
 
       const wrapper2 = mount(<Avatar firstName="John" lastName="Snoz" />);
       expect(
@@ -155,7 +155,7 @@ describe("avatar/Avatar", () => {
               .getDOMNode()
           )
           .getPropertyValue("background-color")
-      ).toEqual("rgb(250, 162, 27)");
+      ).toEqual("rgb(188, 43, 43)");
     });
   });
 
