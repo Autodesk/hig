@@ -5,13 +5,9 @@ export default {
     type: FONT_WEIGHT,
     value: { ref: "basics.fontWeights.regular" }
   },
-  "avatar.darkBackground.fontColor": {
+  "avatar.fontColor": {
     type: COLOR,
     value: { ref: "basics.colors.primary.white" }
-  },
-  "avatar.lightBackground.fontColor": {
-    type: COLOR,
-    value: { ref: "basics.colors.text.againstLight" }
   },
   "avatar.extraSmall.fontSize": {
     type: FONT_SIZE,
@@ -52,6 +48,79 @@ export default {
   "avatar.extraLarge.diameter": {
     type: LENGTH,
     value: "64px"
+  },
+  "avatar.backgroundColor1": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.red.b.80" }
+  },
+  "avatar.backgroundColor2": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.red.b.100" }
+  },
+  "avatar.backgroundColor3": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.orange.a.70" }
+  },
+  "avatar.backgroundColor4": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.yellowGreen.c.90" }
+  },
+  "avatar.backgroundColor5": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.blueGreen.a.100" }
+  },
+  "avatar.backgroundColor6": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.cyan.c.80" }
+  },
+  "avatar.backgroundColor7": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.blueCyan.b.90" }
+  },
+  "avatar.backgroundColor8": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.blue.a.70" }
+  },
+  "avatar.backgroundColor9": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.blue.b.100" }
+  },
+  "avatar.backgroundColor10": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.blue.c.70" }
+  },
+  "avatar.backgroundColor11": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.purple.c.100" }
+  },
+  "avatar.backgroundColor12": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.magenta.b.100" }
+  },
+  "avatar.backgroundColor13": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.magenta.c.80" }
+  },
+  "avatar.backgroundColor14": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.rose.b.100" }
+  },
+  "avatar.backgroundColor15": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.rose.d.70" }
+  },
+  /**
+   *  ## Deprecated
+   *
+   *
+   */
+  "avatar.darkBackground.fontColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.primary.white" }
+  },
+  "avatar.lightBackground.fontColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.text.againstLight" }
   },
   "avatar.color1.backgroundColor": {
     type: COLOR,
@@ -109,11 +178,6 @@ export default {
     type: COLOR,
     value: { ref: "avatar.lightBackground.fontColor" }
   },
-  /**
-   *  ## Deprecated
-   *
-   *
-   */
   "avatar.fontColorOnDark": {
     type: COLOR,
     value: { ref: "avatar.darkBackground.fontColor" },
