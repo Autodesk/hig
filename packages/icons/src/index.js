@@ -3,6 +3,9 @@ import { cx, css } from "emotion";
 import React from "react";
 import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./icon.stylesheet";
+import Error1212SVG from "./icons/size12/error-12.svg";
+import Complete1212SVG from "./icons/size12/complete-12.svg";
+import Alert1212SVG from "./icons/size12/alert-12.svg";
 import OperatorPlusXsUISVG from "./icons/ui-controls/operator-plus-xs.svg";
 import OperatorPlusSUISVG from "./icons/ui-controls/operator-plus-s.svg";
 import OperatorMinusXsUISVG from "./icons/ui-controls/operator-minus-xs.svg";
@@ -34,11 +37,13 @@ import Visible16SVG from "./icons/information-dense/visible.svg";
 import UserInactive16SVG from "./icons/information-dense/user-inactive.svg";
 import Upload16SVG from "./icons/information-dense/upload.svg";
 import Up16SVG from "./icons/information-dense/up.svg";
+import Up1616SVG from "./icons/information-dense/up-16.svg";
 import Unpin16SVG from "./icons/information-dense/unpin.svg";
 import Unlock16SVG from "./icons/information-dense/unlock.svg";
 import Unlink16SVG from "./icons/information-dense/unlink.svg";
 import Undo16SVG from "./icons/information-dense/undo.svg";
 import Unavailable16SVG from "./icons/information-dense/unavailable.svg";
+import TreeView1616SVG from "./icons/information-dense/tree-view-16.svg";
 import Trash16SVG from "./icons/information-dense/trash.svg";
 import Tag16SVG from "./icons/information-dense/tag.svg";
 import Sync16SVG from "./icons/information-dense/sync.svg";
@@ -103,6 +108,7 @@ import Mail16SVG from "./icons/information-dense/mail.svg";
 import Lock16SVG from "./icons/information-dense/lock.svg";
 import Location16SVG from "./icons/information-dense/location.svg";
 import List16SVG from "./icons/information-dense/list.svg";
+import List1616SVG from "./icons/information-dense/list-16.svg";
 import Link16SVG from "./icons/information-dense/link.svg";
 import Item16SVG from "./icons/information-dense/item.svg";
 import Info16SVG from "./icons/information-dense/info.svg";
@@ -116,6 +122,7 @@ import Grid16SVG from "./icons/information-dense/grid.svg";
 import Graph16SVG from "./icons/information-dense/graph.svg";
 import Globe16SVG from "./icons/information-dense/globe.svg";
 import Forward16SVG from "./icons/information-dense/forward.svg";
+import Forward1616SVG from "./icons/information-dense/forward-16.svg";
 import Forums16SVG from "./icons/information-dense/forums.svg";
 import Folder16SVG from "./icons/information-dense/folder.svg";
 import FolderOpen16SVG from "./icons/information-dense/folder-open.svg";
@@ -142,11 +149,13 @@ import ExternalLink16SVG from "./icons/information-dense/external-link.svg";
 import ExportMove16SVG from "./icons/information-dense/export-move.svg";
 import ExpandPanel16SVG from "./icons/information-dense/expand-panel.svg";
 import Error16SVG from "./icons/information-dense/error.svg";
+import Error1616SVG from "./icons/information-dense/error-16.svg";
 import Education16SVG from "./icons/information-dense/education.svg";
 import Edit16SVG from "./icons/information-dense/edit.svg";
 import EditProfile16SVG from "./icons/information-dense/edit-profile.svg";
 import Download16SVG from "./icons/information-dense/download.svg";
 import Down16SVG from "./icons/information-dense/down.svg";
+import Down1616SVG from "./icons/information-dense/down-16.svg";
 import DocumentManagement16SVG from "./icons/information-dense/document-management.svg";
 import Devices16SVG from "./icons/information-dense/devices.svg";
 import DeviceTablet16SVG from "./icons/information-dense/device-tablet.svg";
@@ -178,11 +187,13 @@ import Bookmark16SVG from "./icons/information-dense/bookmark.svg";
 import Billing16SVG from "./icons/information-dense/billing.svg";
 import BillStack16SVG from "./icons/information-dense/bill-stack.svg";
 import Back16SVG from "./icons/information-dense/back.svg";
+import Back1616SVG from "./icons/information-dense/back-16.svg";
 import Attachment16SVG from "./icons/information-dense/attachment.svg";
 import Attach16SVG from "./icons/information-dense/attach.svg";
 import AreaPost16SVG from "./icons/information-dense/area-post.svg";
 import Archive16SVG from "./icons/information-dense/archive.svg";
 import Alert16SVG from "./icons/information-dense/alert.svg";
+import Alert1616SVG from "./icons/information-dense/alert-16.svg";
 import Add16SVG from "./icons/information-dense/add.svg";
 import AddPage16SVG from "./icons/information-dense/add-page.svg";
 import AddMember16SVG from "./icons/information-dense/add-member.svg";
@@ -199,6 +210,7 @@ import Unlock24SVG from "./icons/regular/unlock.svg";
 import Unlink24SVG from "./icons/regular/unlink.svg";
 import Undo24SVG from "./icons/regular/undo.svg";
 import Unavailable24SVG from "./icons/regular/unavailable.svg";
+import TreeView2424SVG from "./icons/regular/tree-view-24.svg";
 import Trash24SVG from "./icons/regular/trash.svg";
 import Tag24SVG from "./icons/regular/tag.svg";
 import Sync24SVG from "./icons/regular/sync.svg";
@@ -263,6 +275,7 @@ import Mail24SVG from "./icons/regular/mail.svg";
 import Lock24SVG from "./icons/regular/lock.svg";
 import Location24SVG from "./icons/regular/location.svg";
 import List24SVG from "./icons/regular/list.svg";
+import List2424SVG from "./icons/regular/list-24.svg";
 import Link24SVG from "./icons/regular/link.svg";
 import Item24SVG from "./icons/regular/item.svg";
 import Info24SVG from "./icons/regular/info.svg";
@@ -302,6 +315,7 @@ import ExternalLink24SVG from "./icons/regular/external-link.svg";
 import ExportMove24SVG from "./icons/regular/export-move.svg";
 import ExpandPanel24SVG from "./icons/regular/expand-panel.svg";
 import Error24SVG from "./icons/regular/error.svg";
+import Error2424SVG from "./icons/regular/error-24.svg";
 import Education24SVG from "./icons/regular/education.svg";
 import Edit24SVG from "./icons/regular/edit.svg";
 import EditProfile24SVG from "./icons/regular/edit-profile.svg";
@@ -343,6 +357,7 @@ import Attach24SVG from "./icons/regular/attach.svg";
 import AreaPost24SVG from "./icons/regular/area-post.svg";
 import Archive24SVG from "./icons/regular/archive.svg";
 import Alert24SVG from "./icons/regular/alert.svg";
+import Alert2424SVG from "./icons/regular/alert-24.svg";
 import Add24SVG from "./icons/regular/add.svg";
 import AddPage24SVG from "./icons/regular/add-page.svg";
 import AddMember24SVG from "./icons/regular/add-member.svg";
@@ -409,6 +424,21 @@ export const Add24 = props => (
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Add24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const Alert2424 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Alert2424SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -1029,6 +1059,21 @@ export const Education24 = props => (
   </ThemeContext.Consumer>
 )
 
+export const Error2424 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Error2424SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const Error24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -1609,6 +1654,21 @@ export const Link24 = props => (
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Link24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const List2424 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <List2424SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -2574,6 +2634,21 @@ export const Trash24 = props => (
   </ThemeContext.Consumer>
 )
 
+export const TreeView2424 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <TreeView2424SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const Unavailable24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -2814,6 +2889,21 @@ export const Add16 = props => (
   </ThemeContext.Consumer>
 )
 
+export const Alert1616 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Alert1616SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const Alert16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -2884,6 +2974,21 @@ export const Attachment16 = props => (
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Attachment16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const Back1616 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Back1616SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -3354,6 +3459,21 @@ export const DocumentManagement16 = props => (
   </ThemeContext.Consumer>
 )
 
+export const Down1616 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Down1616SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const Down16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -3424,6 +3544,21 @@ export const Education16 = props => (
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Education16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const Error1616 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Error1616SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -3819,6 +3954,21 @@ export const Forums16 = props => (
   </ThemeContext.Consumer>
 )
 
+export const Forward1616 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Forward1616SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const Forward16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -4009,6 +4159,21 @@ export const Link16 = props => (
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Link16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const List1616 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <List1616SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -4974,6 +5139,21 @@ export const Trash16 = props => (
   </ThemeContext.Consumer>
 )
 
+export const TreeView1616 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <TreeView1616SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const Unavailable16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -5044,6 +5224,21 @@ export const Unpin16 = props => (
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <Unpin16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const Up1616 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Up1616SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -5509,6 +5704,51 @@ export const OperatorPlusXsUI = props => (
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
       return (
         <OperatorPlusXsUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const Alert1212 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "12px",
+        height: "12px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Alert1212SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const Complete1212 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "12px",
+        height: "12px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Complete1212SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const Error1212 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "12px",
+        height: "12px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Error1212SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
