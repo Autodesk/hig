@@ -79,36 +79,23 @@ export default class TreeItem extends Component {
         }) => (
           <TreeItemBehavior
             {...otherProps}
-            disabled={disabled}
-            id={id}
             onMouseLeave={handlePressedMouseLeave}
-            role={role}
           >
             {({
-              getIndexFromId,
               handleClick,
               handleMouseEnter,
-              handleMouseLeave,
-              handleMouseOver,
-              isActive
+              handleMouseLeave
             }) => (
               <TreeItemPresenter
                 {...otherProps}
-                asset={asset}
-                disabled={disabled}
-                highlighted={getHighlightIndex() === getIndexFromId(id) + 1}
-                id={id}
                 isPressed={isPressed}
                 onClick={handleClick}
                 onFocus={onFocus}
                 onMouseDown={handleMouseDown}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
-                onMouseOver={handleMouseOver}
+                // onMouseOver={handleMouseOver}
                 onMouseUp={handleMouseUp}
-                role={role}
-                selected={isActive()}
-                shortcut={shortcut}
                 stylesheet={stylesheet}
               >
                 {children}

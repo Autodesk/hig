@@ -84,39 +84,17 @@ export default class TreeView extends Component {
             selected={selected}
           >
             {({
-              getActiveOption,
-              getHighlightIndex,
-              getOptionsInfo,
-              getPreviousEvent,
               handleBlur: handleMenuBehaviorBlur,
               handleFocus: handleMenuBehaviorFocus,
               handleKeyDown,
-              handleMouseMove,
-              setActiveOption,
-              setHighlightIndex,
-              setMenuRef,
-              setOptionsInfo,
-              setPreviousEvent
             }) => (
               <TreeViewPresenter
                 {...otherProps}
                 checkmark={checkmark}
                 divider={divider}
-                getActiveOption={getActiveOption}
-                getHighlightIndex={getHighlightIndex}
-                getOptionsInfo={getOptionsInfo}
-                getPreviousEvent={getPreviousEvent}
-                menuRef={setMenuRef}
-                multiple={multiple}
                 onBlur={handleMenuBehaviorBlur}
                 onFocus={handleMenuBehaviorFocus}
                 onKeyDown={handleKeyDown}
-                onMouseMove={handleMouseMove}
-                selected={selected}
-                setActiveOption={setActiveOption}
-                setHighlightIndex={setHighlightIndex}
-                setOptionsInfo={setOptionsInfo}
-                setPreviousEvent={setPreviousEvent}
                 stylesheet={stylesheet}
               >
                 {children}
