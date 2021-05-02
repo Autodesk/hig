@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
-import Option from "../Option";
+import TreeItem from "../TreeItem";
 import createChildren from "../behaviors/createChildren";
 import stylesheet from "./stylesheet";
 
-export default class MenuPresenter extends Component {
+export default class TreeViewPresenter extends Component {
   static propTypes = {
     children: PropTypes.node,
     divider: PropTypes.bool,
@@ -19,7 +19,7 @@ export default class MenuPresenter extends Component {
 
     if (this.props.role !== `group`) {
       React.Children.forEach(this.props.children, child => {
-        if (child.type === Option) {
+        if (child.type === TreeItem) {
           optionsInfo.push(child.props);
         }
       });
@@ -54,7 +54,7 @@ export default class MenuPresenter extends Component {
   }
 
   getOptions() {
-    return createChildren(this.props.children, Option);
+    return createChildren(this.props.children, TreeItem);
   }
 
   renderOption = ({ key, props }) => {
@@ -85,7 +85,7 @@ export default class MenuPresenter extends Component {
       setHighlightIndex
     };
 
-    return <Option {...payload} />;
+    return <TreeItem {...payload} />;
   };
 
   renderOptions() {
@@ -133,7 +133,7 @@ export default class MenuPresenter extends Component {
     delete payload.setHighlightIndex;
     delete payload.setOptionsInfo;
     delete payload.setPreviousEvent;
-console.log('hello');
+
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {

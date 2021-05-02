@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { PressedBehavior } from "@hig/behaviors";
 
-import OptionBehavior from "./behaviors/OptionBehavior";
-import OptionPresenter from "./presenters/OptionPresenter";
+import TreeItemBehavior from "./behaviors/TreeItemBehavior";
+import TreeItemPresenter from "./presenters/TreeItemPresenter";
 
 import { roles, AVAILABLE_ROLES } from "./constants";
 
-export default class Option extends Component {
+export default class TreeItem extends Component {
   static propTypes = {
     /**
      * Allows for an asset before the Option text
@@ -77,7 +77,7 @@ export default class Option extends Component {
           onMouseUp: handleMouseUp,
           onPressedMouseLeave: handlePressedMouseLeave
         }) => (
-          <OptionBehavior
+          <TreeItemBehavior
             {...otherProps}
             disabled={disabled}
             id={id}
@@ -92,7 +92,7 @@ export default class Option extends Component {
               handleMouseOver,
               isActive
             }) => (
-              <OptionPresenter
+              <TreeItemPresenter
                 {...otherProps}
                 asset={asset}
                 disabled={disabled}
@@ -112,9 +112,9 @@ export default class Option extends Component {
                 stylesheet={stylesheet}
               >
                 {children}
-              </OptionPresenter>
+              </TreeItemPresenter>
             )}
-          </OptionBehavior>
+          </TreeItemBehavior>
         )}
       </PressedBehavior>
     );

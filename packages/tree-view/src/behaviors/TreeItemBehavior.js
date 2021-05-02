@@ -2,7 +2,7 @@ import { Component } from "react";
 import PropTypes from "prop-types";
 import selectOption from "./selectOption";
 
-export default class OptionBehavior extends Component {
+export default class TreeItemBehavior extends Component {
   static propTypes = {
     children: PropTypes.func,
     disabled: PropTypes.bool,

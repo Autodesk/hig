@@ -49,7 +49,7 @@ function checkScroll(optionId, menu) {
   scrollInListbox(option, menu);
 }
 
-export default class MenuBehavior extends Component {
+export default class TreeViewBehavior extends Component {
   static propTypes = {
     children: PropTypes.func,
     defaultSelected: PropTypes.arrayOf(PropTypes.any),

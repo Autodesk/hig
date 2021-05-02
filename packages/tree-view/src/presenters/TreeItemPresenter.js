@@ -8,7 +8,7 @@ import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 import { AVAILABLE_ROLES } from "../constants";
 
-export default class OptionPresenter extends Component {
+export default class TreeItemPresenter extends Component {
   static propTypes = {
     asset: PropTypes.node,
     checkmark: PropTypes.bool,

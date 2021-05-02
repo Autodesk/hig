@@ -16,8 +16,7 @@ stories.forEach(({ description, getProps }) => {
       propTablesExclude: [KnobbedThemeProvider, Surface]
     })(() => {
       const props = getProps();
-      const storybookType = description === `default` ? `Menu` : `MenuGroup`;
-      return renderStory(props, storybookType);
+      return renderStory(props);
     })
   );
 });

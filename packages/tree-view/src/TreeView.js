@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { FocusBehavior } from "@hig/behaviors";
 
-import MenuBehavior from "./behaviors/MenuBehavior";
-import MenuPresenter from "./presenters/MenuPresenter";
+import TreeViewBehavior from "./behaviors/TreeViewBehavior";
+import TreeViewPresenter from "./presenters/TreeViewPresenter";
 
-export default class Menu extends Component {
+export default class TreeView extends Component {
   static propTypes = {
     /**
      * Shows a checkmark selection indicator
@@ -71,7 +71,7 @@ export default class Menu extends Component {
     return (
       <FocusBehavior onBlur={onBlur} onFocus={onFocus}>
         {({ hasFocus, onBlur: handleBlur, onFocus: handleFocus }) => (
-          <MenuBehavior
+          <TreeViewBehavior
             {...otherProps}
             defaultSelected={defaultSelected}
             hasFocus={hasFocus}
@@ -98,7 +98,7 @@ export default class Menu extends Component {
               setOptionsInfo,
               setPreviousEvent
             }) => (
-              <MenuPresenter
+              <TreeViewPresenter
                 {...otherProps}
                 checkmark={checkmark}
                 divider={divider}
@@ -120,9 +120,9 @@ export default class Menu extends Component {
                 stylesheet={stylesheet}
               >
                 {children}
-              </MenuPresenter>
+              </TreeViewPresenter>
             )}
-          </MenuBehavior>
+          </TreeViewBehavior>
         )}
       </FocusBehavior>
     );

@@ -1,18 +1,17 @@
 import React from "react";
 import KnobbedThemeProvider from "@hig/storybook/storybook-support/decorators/KnobbedThemeProvider";
 import Surface from "@hig/surface";
-import Menu, { MenuGroup } from "../index";
+import TreeView from "../index";
 import getKnobs from "./getKnobs";
 
-export default function renderStory(props, component) {
-  const HIGComponent = component === `Menu` ? Menu : MenuGroup;
-  const { children, theme, ...otherProps } = getKnobs(props, HIGComponent);
+export default function renderStory(props) {
+  const { children, theme, ...otherProps } = getKnobs(props);
 
   return (
     <KnobbedThemeProvider>
       <div style={{ width: "300px" }}>
         <Surface borderRadius="m" shadow="low">
-          <HIGComponent {...otherProps}>{children}</HIGComponent>
+          <TreeView {...otherProps}>{children}</TreeView>
         </Surface>
       </div>
     </KnobbedThemeProvider>
