@@ -48,7 +48,7 @@ function checkScroll(optionId, menu) {
   scrollInListbox(option, menu);
 } */
 
-export default class TreeViewBehavior extends Component {
+export default class TreeViewBehaviorRR extends Component {
   static propTypes = {
     children: PropTypes.func,
     onBlur: PropTypes.func,
@@ -128,7 +128,7 @@ export default class TreeViewBehavior extends Component {
     const handleBlur = this.handleBlur;
     const handleFocus = this.handleFocus;
     const handleKeyDown = this.handleKeyDown;
-
+console.log('TreeView Behavior RR');
     return this.props.children({
       handleBlur,
       handleFocus,

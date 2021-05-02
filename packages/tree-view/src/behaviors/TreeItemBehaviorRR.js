@@ -33,7 +33,7 @@ export default class TreeItemBehavior extends Component {
       handleMouseEnter,
       handleMouseLeave,
     } = this;
-
+console.log('TreeItem Behavior RR');
     return this.props.children({
       handleClick,
       handleMouseEnter,

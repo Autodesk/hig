@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { PressedBehavior } from "@hig/behaviors";
 
-import TreeItemBehavior from "./behaviors/TreeItemBehavior";
+import TreeItemBehaviorWM from "./behaviors/TreeItemBehaviorWM";
+import TreeItemBehaviorRR from "./behaviors/TreeItemBehaviorRR";
 import TreeItemPresenter from "./presenters/TreeItemPresenter";
 
 import { roles, AVAILABLE_ROLES } from "./constants";
@@ -55,15 +56,17 @@ export default class TreeItem extends Component {
       role,
       shortcut,
       stylesheet,
+      test,
       ...otherProps
     } = this.props;
     const {
-      getHighlightIndex,
       onFocus,
       onMouseDown,
       onMouseLeave,
       onMouseUp
     } = otherProps;
+    // Test mode
+    const TreeItemBehavior = test === 'WM' ? TreeItemBehaviorWM : TreeItemBehaviorRR;
 
     return (
       <PressedBehavior
