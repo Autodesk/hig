@@ -1,3 +1,10 @@
+# [@hig/banner-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/banner@2.2.0...@hig/banner@2.3.0) (2021-05-03)
+
+
+### Features
+
+* update snaps ([d50a8e5](https://github.com/Autodesk/hig/commit/d50a8e5))
+
 # [@hig/banner-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/banner@2.1.2...@hig/banner@2.2.0) (2020-07-16)
 
 

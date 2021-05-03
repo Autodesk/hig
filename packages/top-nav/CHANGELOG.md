@@ -1,3 +1,10 @@
+# [@hig/top-nav-v3.3.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.2.0...@hig/top-nav@3.3.0) (2021-05-03)
+
+
+### Features
+
+* update snaps ([d50a8e5](https://github.com/Autodesk/hig/commit/d50a8e5))
+
 # [@hig/top-nav-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.1.2...@hig/top-nav@3.2.0) (2020-12-17)
 
 
