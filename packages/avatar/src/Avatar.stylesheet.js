@@ -8,17 +8,13 @@ const SizeMapping = {
   [sizes.XLARGE_64]: "extraLarge"
 };
 
-export function getBGColor(backgroundId, themeData) {
-  return themeData[`avatar.backgroundColor${backgroundId || 1}`];
-}
-
 export default function stylesheet(props, themeData) {
   const { backgroundId, size, stylesheet: customStylesheet } = props;
   const sizeString = size ? SizeMapping[size] : SizeMapping[sizes.MEDIUM_32];
   const diameter = themeData[`avatar.${sizeString}.diameter`];
   const fontSize = themeData[`avatar.${sizeString}.fontSize`];
   const fontFamily = themeData["basics.fontFamilies.main"];
-  const bgColor = getBGColor(backgroundId, themeData);
+  const bgColor = themeData[`avatar.backgroundColor${backgroundId || 1}`];
   const fgColor = themeData["avatar.fontColor"];
 
   const styles = {
