@@ -7,7 +7,7 @@ import { createCustomClassNames } from "@hig/utils";
 import { sizes, AVAILABLE_SIZES } from "./sizes";
 import stylesheet from "./Avatar.stylesheet";
 
-const COLOR_VARIANT_COUNT = 7;
+export const COLOR_VARIANT_COUNT = 15;
 
 /**
  * @param {Object} name
@@ -96,6 +96,7 @@ function buildFirstAndLastName(name) {
  * @param {Object} props
  * @param {string} props.image
  * @param {string} props.alt
+ * @param {string} props.size
  * @returns {JSX.Element}
  */
 // eslint-disable-next-line react/prop-types, prettier/prettier
@@ -128,6 +129,7 @@ function Image({ image, alt, size, onError, className, resolvedRoles, stylesheet
  * @param {Object} props.name
  * @param {string} props.name.firstName - first name
  * @param {string} props.name.lastName - last name
+ * @param {string} className
  * @returns {JSX.Element}
  */
 // eslint-disable-next-line react/prop-types, prettier/prettier

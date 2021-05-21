@@ -14,8 +14,8 @@ export default function stylesheet(props, themeData) {
   const diameter = themeData[`avatar.${sizeString}.diameter`];
   const fontSize = themeData[`avatar.${sizeString}.fontSize`];
   const fontFamily = themeData["basics.fontFamilies.main"];
-  const bgColor = themeData[`avatar.color${backgroundId || 1}.backgroundColor`];
-  const fgColor = themeData[`avatar.color${backgroundId || 1}.fontColor`];
+  const bgColor = themeData[`avatar.backgroundColor${backgroundId || 1}`];
+  const fgColor = themeData["avatar.fontColor"];
 
   const styles = {
     avatarContainer: {
