@@ -6,8 +6,9 @@ import { polyfill } from "react-lifecycles-compat";
 import { ThemeContext } from "@hig/theme-context";
 import { createCustomClassNames } from "@hig/utils";
 
+import stylesheet from "./Avatar.stylesheet";
 import { sizes, AVAILABLE_SIZES } from "./sizes";
-import stylesheet, { StyleItems } from "./Avatar.stylesheet";
+import { StyleItems } from "./constants";
 
 export const COLOR_VARIANT_COUNT = 15;
 
