@@ -6,55 +6,28 @@ import TreeItemBehaviorWM from "./behaviors/TreeItemBehaviorWM";
 import TreeItemBehaviorRR from "./behaviors/TreeItemBehaviorRR";
 import TreeItemPresenter from "./presenters/TreeItemPresenter";
 
-import { roles, AVAILABLE_ROLES } from "./constants";
+// import { roles, AVAILABLE_ROLES } from "./constants";
 
 export default class TreeItem extends Component {
   static propTypes = {
-    /**
-     * Allows for an asset before the Option text
-     * Can be from @hig/avatar, @hig/icons or
-     * whatever image of yor choosing
-     */
-    asset: PropTypes.node,
     /**
      * Content of the Option
      */
     children: PropTypes.node.isRequired,
     /**
-     * Disables the Option
+     * Labels the TreeItem, this is rendered before all children
      */
-    disabled: PropTypes.bool,
-    /**
-     * HTML unique id for the element
-     */
-    id: PropTypes.string.isRequired,
-    /**
-     * HTML attribute for accessibility
-     */
-    role: PropTypes.oneOf(AVAILABLE_ROLES),
-    /**
-     * Allows for a keyboard shortcut or any
-     * content to the right of the Option content
-     */
-    shortcut: PropTypes.node,
+    label: PropTypes.string,
     /**
      * Adds custom/overriding styles
      */
     stylesheet: PropTypes.func
   };
 
-  static defaultProps = {
-    role: roles.OPTION
-  };
-
   render() {
     const {
-      asset,
       children,
-      disabled,
-      id,
-      role,
-      shortcut,
+      label,
       stylesheet,
       test,
       ...otherProps
@@ -92,6 +65,7 @@ export default class TreeItem extends Component {
               <TreeItemPresenter
                 {...otherProps}
                 isPressed={isPressed}
+                label={label}
                 onClick={handleClick}
                 onFocus={onFocus}
                 onMouseDown={handleMouseDown}
