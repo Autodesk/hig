@@ -208,9 +208,9 @@ workflows:
       - react-test:
           requires:
             - package-build
-      - visual-test:
-          requires:
-            - package-build
+    #   - visual-test:
+    #       requires:
+    #         - package-build
       - lockfile-upload:
           requires:
             - react-test
