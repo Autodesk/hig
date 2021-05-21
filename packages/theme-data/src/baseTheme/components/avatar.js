@@ -5,13 +5,9 @@ export default {
     type: FONT_WEIGHT,
     value: { ref: "basics.fontWeights.regular" }
   },
-  "avatar.darkBackground.fontColor": {
+  "avatar.fontColor": {
     type: COLOR,
     value: { ref: "basics.colors.primary.white" }
-  },
-  "avatar.lightBackground.fontColor": {
-    type: COLOR,
-    value: { ref: "basics.colors.text.againstLight" }
   },
   "avatar.extraSmall.fontSize": {
     type: FONT_SIZE,
@@ -53,75 +49,171 @@ export default {
     type: LENGTH,
     value: "64px"
   },
-  "avatar.color1.backgroundColor": {
+  "avatar.backgroundColor1": {
     type: COLOR,
-    value: { ref: "basics.colors.primary.autodeskBlue.300" }
+    value: { ref: "dataVis.colors.red.b.80" }
   },
-  "avatar.color2.backgroundColor": {
+  "avatar.backgroundColor2": {
     type: COLOR,
-    value: { ref: "basics.colors.secondary.darkBlue.600" }
+    value: { ref: "dataVis.colors.red.b.100" }
   },
-  "avatar.color3.backgroundColor": {
+  "avatar.backgroundColor3": {
     type: COLOR,
-    value: { ref: "basics.colors.secondary.green.700" }
+    value: { ref: "dataVis.colors.orange.a.70" }
   },
-  "avatar.color4.backgroundColor": {
+  "avatar.backgroundColor4": {
     type: COLOR,
-    value: { ref: "basics.colors.tertiary.salmon.400" }
+    value: { ref: "dataVis.colors.yellowGreen.c.90" }
   },
-  "avatar.color5.backgroundColor": {
+  "avatar.backgroundColor5": {
     type: COLOR,
-    value: { ref: "basics.colors.tertiary.slate.700" }
+    value: { ref: "dataVis.colors.blueGreen.a.100" }
   },
-  "avatar.color6.backgroundColor": {
+  "avatar.backgroundColor6": {
     type: COLOR,
-    value: { ref: "basics.colors.secondary.turquoise.400" }
+    value: { ref: "dataVis.colors.cyan.c.80" }
   },
-  "avatar.color7.backgroundColor": {
+  "avatar.backgroundColor7": {
     type: COLOR,
-    value: { ref: "basics.colors.secondary.yellowOrange.500" }
+    value: { ref: "dataVis.colors.blueCyan.b.90" }
   },
-  "avatar.color1.fontColor": {
+  "avatar.backgroundColor8": {
     type: COLOR,
-    value: { ref: "avatar.lightBackground.fontColor" }
+    value: { ref: "dataVis.colors.blue.a.70" }
   },
-  "avatar.color2.fontColor": {
+  "avatar.backgroundColor9": {
     type: COLOR,
-    value: { ref: "avatar.darkBackground.fontColor" }
+    value: { ref: "dataVis.colors.blue.b.100" }
   },
-  "avatar.color3.fontColor": {
+  "avatar.backgroundColor10": {
     type: COLOR,
-    value: { ref: "avatar.darkBackground.fontColor" }
+    value: { ref: "dataVis.colors.blue.c.70" }
   },
-  "avatar.color4.fontColor": {
+  "avatar.backgroundColor11": {
     type: COLOR,
-    value: { ref: "avatar.lightBackground.fontColor" }
+    value: { ref: "dataVis.colors.purple.c.100" }
   },
-  "avatar.color5.fontColor": {
+  "avatar.backgroundColor12": {
     type: COLOR,
-    value: { ref: "avatar.darkBackground.fontColor" }
+    value: { ref: "dataVis.colors.magenta.b.100" }
   },
-  "avatar.color6.fontColor": {
+  "avatar.backgroundColor13": {
     type: COLOR,
-    value: { ref: "avatar.lightBackground.fontColor" }
+    value: { ref: "dataVis.colors.magenta.c.80" }
   },
-  "avatar.color7.fontColor": {
+  "avatar.backgroundColor14": {
     type: COLOR,
-    value: { ref: "avatar.lightBackground.fontColor" }
+    value: { ref: "dataVis.colors.rose.b.100" }
+  },
+  "avatar.backgroundColor15": {
+    type: COLOR,
+    value: { ref: "dataVis.colors.rose.d.70" }
   },
   /**
    *  ## Deprecated
    *
    *
    */
+  "avatar.darkBackground.fontColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.primary.white" },
+    metadata: { deprecated: { equivalent: "basics.colors.primary.white" } }
+  },
+  "avatar.lightBackground.fontColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.text.againstLight" },
+    metadata: { deprecated: { equivalent: "basics.colors.text.againstLight" } }
+  },
+  "avatar.color1.backgroundColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.primary.autodeskBlue.300" },
+    metadata: {
+      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.300" }
+    }
+  },
+  "avatar.color2.backgroundColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.secondary.darkBlue.600" },
+    metadata: {
+      deprecated: { equivalent: "basics.colors.secondary.darkBlue.600" }
+    }
+  },
+  "avatar.color3.backgroundColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.secondary.green.700" },
+    metadata: {
+      deprecated: { equivalent: "basics.colors.secondary.green.700" }
+    }
+  },
+  "avatar.color4.backgroundColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.tertiary.salmon.400" },
+    metadata: {
+      deprecated: { equivalent: "basics.colors.tertiary.salmon.400" }
+    }
+  },
+  "avatar.color5.backgroundColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.tertiary.slate.700" },
+    metadata: { deprecated: { equivalent: "basics.colors.tertiary.slate.700" } }
+  },
+  "avatar.color6.backgroundColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.secondary.turquoise.400" },
+    metadata: {
+      deprecated: { equivalent: "basics.colors.secondary.turquoise.400" }
+    }
+  },
+  "avatar.color7.backgroundColor": {
+    type: COLOR,
+    value: { ref: "basics.colors.secondary.yellowOrange.500" },
+    metadata: {
+      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.500" }
+    }
+  },
+  "avatar.color1.fontColor": {
+    type: COLOR,
+    value: { ref: "avatar.lightBackground.fontColor" },
+    metadata: { deprecated: { equivalent: "basics.colors.text.againstLight" } }
+  },
+  "avatar.color2.fontColor": {
+    type: COLOR,
+    value: { ref: "avatar.darkBackground.fontColor" },
+    metadata: { deprecated: { equivalent: "avatar.fontColor" } }
+  },
+  "avatar.color3.fontColor": {
+    type: COLOR,
+    value: { ref: "avatar.darkBackground.fontColor" },
+    metadata: { deprecated: { equivalent: "avatar.fontColor" } }
+  },
+  "avatar.color4.fontColor": {
+    type: COLOR,
+    value: { ref: "avatar.lightBackground.fontColor" },
+    metadata: { deprecated: { equivalent: "basics.colors.text.againstLight" } }
+  },
+  "avatar.color5.fontColor": {
+    type: COLOR,
+    value: { ref: "avatar.darkBackground.fontColor" },
+    metadata: { deprecated: { equivalent: "avatar.fontColor" } }
+  },
+  "avatar.color6.fontColor": {
+    type: COLOR,
+    value: { ref: "avatar.lightBackground.fontColor" },
+    metadata: { deprecated: { equivalent: "basics.colors.text.againstLight" } }
+  },
+  "avatar.color7.fontColor": {
+    type: COLOR,
+    value: { ref: "avatar.lightBackground.fontColor" },
+    metadata: { deprecated: { equivalent: "basics.colors.text.againstLight" } }
+  },
   "avatar.fontColorOnDark": {
     type: COLOR,
     value: { ref: "avatar.darkBackground.fontColor" },
-    metadata: { deprecated: { equivalent: "avatar.darkBackground.fontColor" } }
+    metadata: { deprecated: { equivalent: "avatar.fontColor" } }
   },
   "avatar.fontColorOnLight": {
     type: COLOR,
     value: { ref: "avatar.lightBackground.fontColor" },
-    metadata: { deprecated: { equivalent: "avatar.lightBackground.fontColor" } }
+    metadata: { deprecated: { equivalent: "basics.colors.text.againstLight" } }
   }
 };

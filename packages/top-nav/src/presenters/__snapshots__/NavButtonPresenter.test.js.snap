@@ -70,7 +70,7 @@ exports[`top-nav/presenters/NavActionButtonPresenter  1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M5.08 10h-3v4h3A.94.94 0 0 0 6 13v-2a.94.94 0 0 0-.88-1zM5 13H3v-2h2zm.08-10h-3v4h3A.94.94 0 0 0 6 6V4a.94.94 0 0 0-.88-1zM5 6H3V4h2zm.08 11h-3v4h3A.94.94 0 0 0 6 20v-2a.94.94 0 0 0-.88-1zM5 20H3v-2h2zM21 6H8V4h13zm.08-3H7v4h14.08A.94.94 0 0 0 22 6V4a.94.94 0 0 0-.88-1zM21 20H8v-2h13zm.08-3H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zm0-7H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zM21 13H8v-2h13z"
+      d="M2 3v4h4V3zm3 3H3V4h2zm2-3v4h15V3zm14 3H8V4h13zM2 10v4h4v-4zm3 3H3v-2h2zm2-3v4h15v-4zm14 3H8v-2h13zM2 17v4h4v-4zm3 3H3v-2h2zm2-3v4h15v-4zm14 3H8v-2h13z"
     />
   </svg>
 </button>
@@ -146,7 +146,7 @@ exports[`top-nav/presenters/NavActionButtonPresenter  2`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M5.08 10h-3v4h3A.94.94 0 0 0 6 13v-2a.94.94 0 0 0-.88-1zM5 13H3v-2h2zm.08-10h-3v4h3A.94.94 0 0 0 6 6V4a.94.94 0 0 0-.88-1zM5 6H3V4h2zm.08 11h-3v4h3A.94.94 0 0 0 6 20v-2a.94.94 0 0 0-.88-1zM5 20H3v-2h2zM21 6H8V4h13zm.08-3H7v4h14.08A.94.94 0 0 0 22 6V4a.94.94 0 0 0-.88-1zM21 20H8v-2h13zm.08-3H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zm0-7H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zM21 13H8v-2h13z"
+      d="M2 3v4h4V3zm3 3H3V4h2zm2-3v4h15V3zm14 3H8V4h13zM2 10v4h4v-4zm3 3H3v-2h2zm2-3v4h15v-4zm14 3H8v-2h13zM2 17v4h4v-4zm3 3H3v-2h2zm2-3v4h15v-4zm14 3H8v-2h13z"
     />
   </svg>
 </button>
@@ -222,7 +222,7 @@ exports[`top-nav/presenters/NavActionButtonPresenter  3`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M5.08 10h-3v4h3A.94.94 0 0 0 6 13v-2a.94.94 0 0 0-.88-1zM5 13H3v-2h2zm.08-10h-3v4h3A.94.94 0 0 0 6 6V4a.94.94 0 0 0-.88-1zM5 6H3V4h2zm.08 11h-3v4h3A.94.94 0 0 0 6 20v-2a.94.94 0 0 0-.88-1zM5 20H3v-2h2zM21 6H8V4h13zm.08-3H7v4h14.08A.94.94 0 0 0 22 6V4a.94.94 0 0 0-.88-1zM21 20H8v-2h13zm.08-3H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zm0-7H7v4h14.08a.94.94 0 0 0 .92-1v-2a.94.94 0 0 0-.88-1zM21 13H8v-2h13z"
+      d="M2 3v4h4V3zm3 3H3V4h2zm2-3v4h15V3zm14 3H8V4h13zM2 10v4h4v-4zm3 3H3v-2h2zm2-3v4h15v-4zm14 3H8v-2h13zM2 17v4h4v-4zm3 3H3v-2h2zm2-3v4h15v-4zm14 3H8v-2h13z"
     />
   </svg>
 </button>

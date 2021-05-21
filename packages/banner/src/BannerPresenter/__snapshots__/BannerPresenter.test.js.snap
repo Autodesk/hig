@@ -281,12 +281,36 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
         viewBox="0 0 24 24"
         width="24px"
         xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
       >
+        <defs>
+          <symbol
+            id="a"
+            viewBox="0 0 32 32"
+          >
+            <path
+              d="M0 0h32v32H0z"
+              fill="#0ff2ff"
+              opacity=".3"
+            />
+          </symbol>
+        </defs>
         <path
           d="M12 2L2 12l10 10 10-10zM3.41 12L12 3.41 20.59 12 12 20.59z"
         />
+        <circle
+          cx="12"
+          cy="15"
+          r="1"
+        />
         <path
-          d="M11.75 12.82h.5c.14 0 .25-.15.25-.33l.5-4.82c0-.19-.53-.67-.67-.67h-.66c-.14 0-.67.48-.67.67l.5 4.82c0 .18.11.33.25.33zM12 14a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"
+          d="M11.88 13h.24a.55.55 0 0 0 .54-.5L13 8a1 1 0 0 0-2 0l.34 4.5a.55.55 0 0 0 .54.5z"
+        />
+        <use
+          height="32"
+          transform="scale(.75)"
+          width="32"
+          xlinkHref="#a"
         />
       </svg>
     </figure>

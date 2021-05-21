@@ -4,7 +4,7 @@ Avatars are a visual representation of a customer's identity. These may be small
 
 Initials are dynamically generated from the provided name and always rendered. This allows the initials to serve as a placeholder while the image is loading.
 
-Read more about when and how to use the Avatar component [on the internal wiki](https://wiki.autodesk.com/display/HIG/Avatars).
+Read more about when and how to use the Avatar component [on the hig website](https://hig.autodesk.com/web/components/avatars).
 
 ## Getting started
 
