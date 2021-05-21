@@ -9,6 +9,10 @@ import TreeViewPresenter from "./presenters/TreeViewPresenter";
 export default class TreeView extends Component {
   static propTypes = {
     /**
+     * Sets the icon padding on children TreeItems
+     */
+    iconAlignment: PropTypes.bool,
+    /**
      * Adds custom/overriding styles
      */
     stylesheet: PropTypes.func
