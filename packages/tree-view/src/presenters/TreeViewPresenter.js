@@ -28,7 +28,7 @@ export default class TreeViewPresenter extends Component {
             resolvedRoles
           );
           return (
-            <ul role="group">
+            <ul role="group" className={css(styles.higTreeView)}>
               {children}
             </ul>
           );
