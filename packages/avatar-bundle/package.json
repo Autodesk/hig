@@ -19,7 +19,7 @@
   "dependencies": {
     "@hig/avatar": "^1.3.0",
     "@hig/utils": "^0.4.0",
-    "emotion": "^10.0.2",
+    "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
   "peerDependencies": {
