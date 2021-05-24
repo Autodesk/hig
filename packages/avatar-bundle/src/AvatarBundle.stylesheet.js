@@ -35,10 +35,10 @@ export default function stylesheet(props, themeData) {
     themeData[`avatarBundle.${sizeString}.${spacingString}.spacing.thirdItem`];
   const overflowBackground = themeData["avatarBundle.default.backgroundColor"];
   const overflowFontColor = themeData["avatarBundle.fontColor"];
+  const diameter = themeData[`avatar.${sizeString}.diameter`];
+  const fontFamily = themeData["basics.fontFamilies.main"];
 
   const avatarStyle = avatarStylesheet({ size }, themeData);
-  const { height: diameter } = avatarStyle[StyleItems.avatarContainer];
-  const { fontFamily } = avatarStyle[StyleItems.avatarInitials];
 
   const styles = {
     avatarBundleContainer: {

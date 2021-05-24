@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { cx, css } from "emotion";
-import { polyfill } from "react-lifecycles-compat";
 
 import Avatar, { sizes, AVAILABLE_SIZES } from "@hig/avatar";
 import { ThemeContext } from "@hig/theme-context";
@@ -61,12 +60,6 @@ class AvatarBundle extends Component {
     } = this.props;
     const { className } = otherProps;
 
-    const styles = roles =>
-      stylesheet(
-        { size, spacing, borderColor, stylesheet: customStylesheet },
-        roles
-      );
-
     let overflow = 0;
     if (showOverflowCount && avatars.length > 3) {
       const overflowAmt = avatars.length - 2;
@@ -79,58 +72,59 @@ class AvatarBundle extends Component {
 
     return (
       <ThemeContext.Consumer>
-        {({ resolvedRoles }) => (
-          <span
-            className={cx(
-              css(styles(resolvedRoles).avatarBundleContainer),
-              className
-            )}
-          >
-            <span
-              className={cx(
-                css(styles(resolvedRoles).avatarWrapper),
-                css(styles(resolvedRoles).avatarWrapperFirstItem)
-              )}
-            >
-              <Avatar size={size} {...avatars[0]} />
-            </span>
-            {avatars.length > 1 && (
+        {({ resolvedRoles }) => {
+          const styles = stylesheet(
+            { size, spacing, borderColor, stylesheet: customStylesheet },
+            resolvedRoles
+          );
+          return (
+            <span className={cx(css(styles.avatarBundleContainer), className)}>
               <span
                 className={cx(
-                  css(styles(resolvedRoles).avatarWrapper),
-                  css(styles(resolvedRoles).avatarWrapperSecondItem)
+                  css(styles.avatarWrapper),
+                  css(styles.avatarWrapperFirstItem)
                 )}
               >
-                <Avatar size={size} {...avatars[1]} />
+                <Avatar size={size} {...avatars[0]} />
               </span>
-            )}
-            {avatars.length > 2 &&
-              overflow === 0 && (
+              {avatars.length > 1 && (
                 <span
                   className={cx(
-                    css(styles(resolvedRoles).avatarWrapper),
-                    css(styles(resolvedRoles).avatarWrapperThirdItem)
+                    css(styles.avatarWrapper),
+                    css(styles.avatarWrapperSecondItem)
                   )}
                 >
-                  <Avatar size={size} {...avatars[2]} />
+                  <Avatar size={size} {...avatars[1]} />
                 </span>
               )}
-            {overflow > 0 && (
-              <span
-                className={cx(
-                  css(styles(resolvedRoles).avatarWrapper),
-                  css(styles(resolvedRoles).avatarOverflowCount)
+              {avatars.length > 2 &&
+                overflow === 0 && (
+                  <span
+                    className={cx(
+                      css(styles.avatarWrapper),
+                      css(styles.avatarWrapperThirdItem)
+                    )}
+                  >
+                    <Avatar size={size} {...avatars[2]} />
+                  </span>
                 )}
-              >
-                {`+${overflow}`}
-              </span>
-            )}
-            <ClipPaths />
-          </span>
-        )}
+              {overflow > 0 && (
+                <span
+                  className={cx(
+                    css(styles.avatarWrapper),
+                    css(styles.avatarOverflowCount)
+                  )}
+                >
+                  {`+${overflow}`}
+                </span>
+              )}
+              <ClipPaths />
+            </span>
+          );
+        }}
       </ThemeContext.Consumer>
     );
   }
 }
 
-export default polyfill(AvatarBundle);
+export default AvatarBundle;
