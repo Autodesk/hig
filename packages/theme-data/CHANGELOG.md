@@ -1,3 +1,12 @@
+# [@hig/theme-data-v2.20.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.19.3...@hig/theme-data@2.20.0) (2021-05-25)
+
+
+### Features
+
+* **colors:** Add color metadata based on review comment ([090fe6a](https://github.com/Autodesk/hig/commit/090fe6a))
+* **colors:** Add new avatar background colors (ACWB-8852) ([096658b](https://github.com/Autodesk/hig/commit/096658b))
+* Add AvatarBundle spacings, colors etc ([93d3ca0](https://github.com/Autodesk/hig/commit/93d3ca0))
+
 # [@hig/theme-data-v2.19.3](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.19.2...@hig/theme-data@2.19.3) (2021-01-19)
 
 
