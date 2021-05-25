@@ -1,3 +1,10 @@
+# [@hig/top-nav-v3.4.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.3.0...@hig/top-nav@3.4.0) (2021-05-25)
+
+
+### Features
+
+* **avatar:** Implement new avatar BG colors (ACWB-8852) ([ec8a934](https://github.com/Autodesk/hig/commit/ec8a934))
+
 # [@hig/top-nav-v3.3.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.2.0...@hig/top-nav@3.3.0) (2021-05-03)
 
 
