@@ -90,8 +90,8 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
 }
 
 .emotion-1 {
-  background-color: #5bc9bd;
-  color: #3c3c3c;
+  background-color: #1d6328;
+  color: #ffffff;
   width: 32px;
   height: 32px;
   line-height: 32px;
@@ -276,8 +276,8 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
 }
 
 .emotion-1 {
-  background-color: #5bc9bd;
-  color: #3c3c3c;
+  background-color: #1d6328;
+  color: #ffffff;
   width: 32px;
   height: 32px;
   line-height: 32px;

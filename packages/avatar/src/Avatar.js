@@ -2,12 +2,15 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { cx, css } from "emotion";
 import { polyfill } from "react-lifecycles-compat";
+
 import { ThemeContext } from "@hig/theme-context";
 import { createCustomClassNames } from "@hig/utils";
-import { sizes, AVAILABLE_SIZES } from "./sizes";
-import stylesheet from "./Avatar.stylesheet";
 
-const COLOR_VARIANT_COUNT = 7;
+import stylesheet from "./Avatar.stylesheet";
+import { sizes, AVAILABLE_SIZES } from "./sizes";
+import { StyleItems } from "./constants";
+
+export const COLOR_VARIANT_COUNT = 15;
 
 /**
  * @param {Object} name
@@ -96,10 +99,18 @@ function buildFirstAndLastName(name) {
  * @param {Object} props
  * @param {string} props.image
  * @param {string} props.alt
+ * @param {string} props.size
  * @returns {JSX.Element}
  */
-// eslint-disable-next-line react/prop-types, prettier/prettier
-function Image({ image, alt, size, onError, className, resolvedRoles, stylesheet: customStylesheet }) {
+function Image({
+  image,
+  alt,
+  size,
+  onError,
+  className,
+  resolvedRoles,
+  stylesheet: customStylesheet
+}) {
   const styles = stylesheet(
     { size, stylesheet: customStylesheet },
     resolvedRoles
@@ -112,9 +123,14 @@ function Image({ image, alt, size, onError, className, resolvedRoles, stylesheet
   const imageClassName = createCustomClassNames(className, "image");
 
   return (
-    <span className={cx(css(styles.avatarImageWrapper), imageWrapperClassName)}>
+    <span
+      className={cx(
+        css(styles[StyleItems.avatarImageWrapper]),
+        imageWrapperClassName
+      )}
+    >
       <img
-        className={cx(css(styles.avatarImage), imageClassName)}
+        className={cx(css(styles[StyleItems.avatarImage]), imageClassName)}
         src={image}
         alt={alt}
         onError={onError}
@@ -122,16 +138,39 @@ function Image({ image, alt, size, onError, className, resolvedRoles, stylesheet
     </span>
   );
 }
+Image.propTypes = {
+  /** URL to a profile image */
+  image: PropTypes.string,
+  /** Optional alt message override for Avatar Image  */
+  alt: PropTypes.string,
+  /** Set the size of the avatar */
+  size: PropTypes.oneOf(AVAILABLE_SIZES),
+  /** Called when an error occurs on the image  */
+  onError: PropTypes.func,
+  /** Optional className */
+  className: PropTypes.string,
+  /** Theme context */
+  // eslint-disable-next-line react/forbid-prop-types
+  resolvedRoles: PropTypes.any,
+  /** Optional style override */
+  stylesheet: PropTypes.func
+};
 
 /**
  * @param {Object} props
  * @param {Object} props.name
  * @param {string} props.name.firstName - first name
  * @param {string} props.name.lastName - last name
+ * @param {string} className
  * @returns {JSX.Element}
  */
-// eslint-disable-next-line react/prop-types, prettier/prettier
-function Initials({size, name, className, resolvedRoles, stylesheet: customStylesheet }) {
+function Initials({
+  size,
+  name,
+  className,
+  resolvedRoles,
+  stylesheet: customStylesheet
+}) {
   const styles = stylesheet(
     { size, stylesheet: customStylesheet },
     resolvedRoles
@@ -141,13 +180,29 @@ function Initials({size, name, className, resolvedRoles, stylesheet: customStyle
 
   return (
     <span
-      className={cx(css(styles.avatarInitials), initialsClassName)}
+      className={cx(css(styles[StyleItems.avatarInitials]), initialsClassName)}
       aria-hidden="true"
     >
       {size === sizes.SMALL_16 ? initials[0] : initials}
     </span>
   );
 }
+Initials.propTypes = {
+  /** Set the size of the avatar */
+  size: PropTypes.oneOf(AVAILABLE_SIZES),
+  /** First and Last name object */
+  name: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string
+  }),
+  /** Optional className */
+  className: PropTypes.string,
+  /** Theme context */
+  // eslint-disable-next-line react/forbid-prop-types
+  resolvedRoles: PropTypes.any,
+  /** Optional style override */
+  stylesheet: PropTypes.func
+};
 
 /**
  * @typedef {Object} AvatarProps
@@ -270,7 +325,7 @@ class Avatar extends Component {
           <span
             aria-label={label}
             className={cx(
-              css(styles(resolvedRoles).avatarContainer),
+              css(styles(resolvedRoles)[StyleItems.avatarContainer]),
               className
             )}
             role="img"

@@ -37,7 +37,7 @@ function YourComponent() {
   const customStylesheet = (styles, props, themeData) => ({
     ...styles,
     typography: {
-      ...styles.timestamp,
+      ...styles.typography,
       color: themeData["colorScheme.errorColor"]
     }
   });
