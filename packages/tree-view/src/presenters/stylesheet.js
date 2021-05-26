@@ -56,9 +56,14 @@ export default function stylesheet(props, themeData) {
           height: `20px`,
           left: 0,
           position: `absolute`,
-          top: `-10px`,
+          top: `0`,
           width: `20px`
         },
+      },
+      "& li:last-child": {
+        "&::after": {
+          top: `-9px`
+        }
       }/* ,
         "&::after": {
           borderLeft: `1px dashed red`,

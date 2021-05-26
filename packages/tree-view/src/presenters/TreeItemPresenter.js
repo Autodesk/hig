@@ -2,7 +2,14 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
-import { CheckmarkSUI, CheckmarkXsUI } from "@hig/icons";
+import {
+  CaretRightMUI,
+  CaretRightSUI,
+  OperatorMinusSUI,
+  OperatorMinusXsUI,
+  OperatorPlusSUI,
+  OperatorPlusXsUI
+} from "@hig/icons";
 // import { createCustomClassNames } from "@hig/utils";
 import TreeItem from "../TreeItem";
 // import createChildren from "../behaviors/createChildren";
@@ -32,7 +39,7 @@ export default class TreeItemPresenter extends Component {
           if (children && children.type === TreeItem) {
             return (
               <li className={css(styles.higTreeItem)} aria-expanded="true">
-                <span>{this.props.label}</span>
+                <span><CaretRightMUI /> {this.props.label}</span>
                 <div>
                   <ul role="group">
                     {this.props.children}
