@@ -13,7 +13,9 @@
 } */
 
 export default function stylesheet(props, themeData) {
+  console.log(props);
   const {
+    guidelines,
     stylesheet: customStylesheet
   } = props;
   const styles = {
@@ -28,43 +30,43 @@ export default function stylesheet(props, themeData) {
       padding: 0,
       "& ul": {
         listStyle: `none`,
-        paddingLeft: `20px`
-        // borderLeft: `1px dashed red`
+        paddingLeft: `20px`,
+        "& li": {
+          overflow: `hidden`,
+          paddingLeft: `20px`,
+          "&::before": {
+            ...(guidelines ? { borderTop: `1px dashed red` } : {}),
+            display: `inline-block`,
+            content: `""`,
+            left: 0,
+            margin: 0,
+            position: `absolute`,
+            top: 0,
+            transform: `translateY(10px)`,
+            width: `20px`
+          },
+          "&::after": {
+            ...(guidelines ? { borderLeft: `1px dashed red` } : {}),
+            display: `inline-block`,
+            content: `""`,
+            height: `20px`,
+            left: 0,
+            position: `absolute`,
+            top: `0`,
+            width: `20px`
+          },
+        },
+        "& li:last-child": {
+          "&::after": {
+            top: `-9px`
+          }
+        }
       }
     },
     higTreeItem: {
       margin: 0,
       position: `relative`,
-      "& li": {
-        overflow: `hidden`,
-        paddingLeft: `20px`,
-        "&::before": {
-          borderTop: `1px dashed red`,
-          display: `inline-block`,
-          content: `""`,
-          left: 0,
-          margin: 0,
-          position: `absolute`,
-          top: 0,
-          transform: `translateY(10px)`,
-          width: `20px`
-        },
-        "&::after": {
-          borderLeft: `1px dashed red`,
-          display: `inline-block`,
-          content: `""`,
-          height: `20px`,
-          left: 0,
-          position: `absolute`,
-          top: `0`,
-          width: `20px`
-        },
-      },
-      "& li:last-child": {
-        "&::after": {
-          top: `-9px`
-        }
-      }/* ,
+      /* ,
         "&::after": {
           borderLeft: `1px dashed red`,
           display: `inline-block`,

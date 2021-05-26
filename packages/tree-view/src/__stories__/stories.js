@@ -5,6 +5,7 @@ export default [
   {
     description: "WM",
     getProps: () => ({
+      guidelines: false,
       test: "WM",
       children: [
         <TreeItem id="option-1" key="option-1" test="WM" label="Tree Item Nested Parent">

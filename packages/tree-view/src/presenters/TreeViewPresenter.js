@@ -8,12 +8,14 @@ import stylesheet from "./stylesheet";
 export default class TreeViewPresenter extends Component {
   static propTypes = {
     children: PropTypes.node,
+    guidelines: PropTypes.bool,
     stylesheet: PropTypes.func
   };
 
   render() {
     const {
       children,
+      guidelines,
       stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
@@ -23,6 +25,7 @@ export default class TreeViewPresenter extends Component {
         {({ resolvedRoles }) => {
           const styles = stylesheet(
             {
+              guidelines,
               stylesheet: customStylesheet
             },
             resolvedRoles

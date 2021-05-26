@@ -3,17 +3,15 @@ import { boolean } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = { basic: "Basic" };
 const knobLabels = {
-  checkmark: "Checkmark",
-  multiple: "Multiple",
-  onChange: "onChange"
+  guidelines: "Guidelines",
 };
 
 export default function getKnobs(props) {
-  const { checkmark, multiple, ...otherProps } = props;
+  const { guidelines, ...otherProps } = props;
 
   return {
     ...otherProps,
-    multiple: boolean(knobLabels.multiple, multiple, knobGroupIds.basic),
+    guidelines: boolean(knobLabels.guidelines, guidelines, knobGroupIds.basic),
     onChange: action(knobLabels.onChange)
   };
 }

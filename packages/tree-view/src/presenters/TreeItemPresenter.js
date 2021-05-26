@@ -36,6 +36,10 @@ export default class TreeItemPresenter extends Component {
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
           const styles = stylesheet({}, resolvedRoles);
+          if (Array.isArray(children)) {
+            console.log('array');
+            console.log(children);
+          }
           if (children && children.type === TreeItem) {
             return (
               <li className={css(styles.higTreeItem)} aria-expanded="true">
