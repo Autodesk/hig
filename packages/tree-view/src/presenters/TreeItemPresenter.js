@@ -6,7 +6,7 @@ import { CheckmarkSUI, CheckmarkXsUI } from "@hig/icons";
 // import { createCustomClassNames } from "@hig/utils";
 import TreeItem from "../TreeItem";
 // import createChildren from "../behaviors/createChildren";
-// import stylesheet from "./stylesheet";
+import stylesheet from "./stylesheet";
 import { AVAILABLE_ROLES } from "../constants";
 
 export default class TreeItemPresenter extends Component {
@@ -22,20 +22,30 @@ export default class TreeItemPresenter extends Component {
 
   renderChild() {
     const { children } = this.props;
+
 // should we gate from improper use allow for user error
 // check to see if children is array and check for TreeItems within
-
-    if (children && children.type === TreeItem) {
-      return (
-        <li>
-          <span>{this.props.label}</span>
-          <ul role="group">
-            {this.props.children}
-          </ul>
-        </li>
-      );
-    }
-    return <li>{this.props.label} {this.props.children}</li>;
+    return (
+      <ThemeContext.Consumer>
+        {({ resolvedRoles, metadata }) => {
+          const styles = stylesheet({}, resolvedRoles);
+          if (children && children.type === TreeItem) {
+            return (
+              <li className={css(styles.higTreeItem)} aria-expanded="true">
+                <span>{this.props.label}</span>
+                <div>
+                  <ul role="group">
+                    {this.props.children}
+                  </ul>
+                </div>
+              </li>
+            );
+          } else {
+            return <li className={css(styles.higTreeItem)}>{this.props.label} {this.props.children}</li>;
+          }
+        }}
+      </ThemeContext.Consumer>
+    );
   }
 
   render() {
@@ -53,20 +63,6 @@ export default class TreeItemPresenter extends Component {
       role: role || `treeitem`
     }
 
-    return (
-      <ThemeContext.Consumer>
-        {({ resolvedRoles, metadata }) => {
-          /* const styles = stylesheet(
-            {
-              isPressed,
-              stylesheet: customStylesheet
-            },
-            resolvedRoles
-          ); */
-
-          return this.renderChild();
-        }}
-      </ThemeContext.Consumer>
-    );
+    return this.renderChild();
   }
 }

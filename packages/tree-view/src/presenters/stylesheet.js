@@ -17,12 +17,71 @@ export default function stylesheet(props, themeData) {
     stylesheet: customStylesheet
   } = props;
   const styles = {
+    higTreeViewWrapper: {
+      margin: 0
+    },
     higTreeView: {
       color: themeData[`treeView.fontColor`],
       fontFamily: themeData[`treeView.fontFamily`],
       listStyle: `none`,
       margin: 0,
-      padding: 0
+      padding: 0,
+      "& ul": {
+        listStyle: `none`,
+        paddingLeft: `20px`
+        // borderLeft: `1px dashed red`
+      }
+    },
+    higTreeItem: {
+      margin: 0,
+      position: `relative`,
+      "& li": {
+        overflow: `hidden`,
+        paddingLeft: `20px`,
+        "&::before": {
+          borderTop: `1px dashed red`,
+          display: `inline-block`,
+          content: `""`,
+          left: 0,
+          margin: 0,
+          position: `absolute`,
+          top: 0,
+          transform: `translateY(10px)`,
+          width: `20px`
+        },
+        "&::after": {
+          borderLeft: `1px dashed red`,
+          display: `inline-block`,
+          content: `""`,
+          height: `20px`,
+          left: 0,
+          position: `absolute`,
+          top: `-10px`,
+          width: `20px`
+        },
+      }/* ,
+        "&::after": {
+          borderLeft: `1px dashed red`,
+          display: `inline-block`,
+          content: `""`,
+          height: `100%`,
+          left: 0,
+          position: `absolute`,
+          top: 0,
+          width: `20px`
+        },
+        "&[aria-expanded='true']": {
+          "&::after": {
+            border: `none`
+          }
+        }
+      }
+      */
+      /* "&[aria-expanded='true']": {
+        "&::after": {
+          border: `none`
+        }
+      } */
     }
   };
 

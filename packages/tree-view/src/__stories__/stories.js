@@ -11,7 +11,12 @@ export default [
           <TreeItem label="Tree Item Level 2" test="WM">
             <TreeItem test="WM">
               Tree Item Level 3
-              <TreeItem label="Level 4" test="WM" />
+            </TreeItem>
+            <TreeItem test="WM">
+              Tree Item Level 3a
+            </TreeItem>
+            <TreeItem test="WM">
+              Tree Item Level 3b
             </TreeItem>
           </TreeItem>
         </TreeItem>,
