@@ -7,6 +7,7 @@ import stylesheet from "./stylesheet";
 
 export default class TreeViewPresenter extends Component {
   static propTypes = {
+    alternateBg: PropTypes.bool,
     children: PropTypes.node,
     guidelines: PropTypes.bool,
     stylesheet: PropTypes.func
@@ -14,6 +15,7 @@ export default class TreeViewPresenter extends Component {
 
   render() {
     const {
+      alternateBg,
       children,
       guidelines,
       stylesheet: customStylesheet,
@@ -25,13 +27,14 @@ export default class TreeViewPresenter extends Component {
         {({ resolvedRoles }) => {
           const styles = stylesheet(
             {
+              alternateBg,
               guidelines,
               stylesheet: customStylesheet
             },
             resolvedRoles
           );
           return (
-            <div>
+            <div className={css(styles.higTreeViewWrapper)}>
               <ul role="group" className={css(styles.higTreeView)}>
                 {children}
               </ul>

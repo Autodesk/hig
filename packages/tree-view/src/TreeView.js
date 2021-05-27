@@ -24,6 +24,7 @@ export default class TreeView extends Component {
   render() {
     const {
       children,
+      alternateBg,
       guidelines,
       stylesheet,
       test,
@@ -50,6 +51,7 @@ export default class TreeView extends Component {
             }) => (
               <TreeViewPresenter
                 {...otherProps}
+                alternateBg={alternateBg}
                 guidelines={guidelines}
                 onBlur={handleMenuBehaviorBlur}
                 onFocus={handleMenuBehaviorFocus}

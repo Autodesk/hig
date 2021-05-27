@@ -12,14 +12,25 @@
   };
 } */
 
+import { PropTypes } from "react";
+
 export default function stylesheet(props, themeData) {
   console.log(props);
   const {
+    alternateBg,
     guidelines,
     stylesheet: customStylesheet
   } = props;
   const styles = {
     higTreeViewWrapper: {
+      ...(alternateBg
+        ? {
+            background: `repeating-linear-gradient(
+              0deg, yellow, yellow 23px, purple 23px, purple 46px
+            )`
+          }
+        : {}
+      ),
       margin: 0
     },
     higTreeView: {
