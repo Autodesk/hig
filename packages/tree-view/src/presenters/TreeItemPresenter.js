@@ -19,21 +19,22 @@ import { AVAILABLE_ROLES } from "../constants";
 export default class TreeItemPresenter extends Component {
   static propTypes = {
     children: PropTypes.node,
-    isPressed: PropTypes.bool,
+    /**
+     * This only appears as a label when a TreeItem is the
+     * child of another TreeItem. If your TreeItem has any
+     * other elements as children this prop will not render
+     */
+    label: PropTypes.string,
     stylesheet: PropTypes.func
   };
 
-  /* getChildren() {
-    return createChildren(this.props.children);
-  } */
-
   buildTreeItem(props, themeData, key) {
-    const { children, label } = props;
+    const { children } = props;
     const styles = stylesheet(props, themeData);
 
     return (
       <li className={css(styles.higTreeItem)} key={key}>
-        {label} {children}
+        {children}
       </li>
     );
   }
@@ -62,17 +63,14 @@ export default class TreeItemPresenter extends Component {
       <li className={css(styles.higTreeItem)} aria-expanded="true" key={key}>
         <span><CaretRightMUI /> {label}</span>
         <div>
-          <ul>
+          <ul role="group">
             {children.map((child, index) => {
               if (child.props && child.props.children && Array.isArray(child.props.children)) {
-                // this.renderChild();
                 return this.buildNestedTreeItemArrays(child.props, themeData, index);
               }
               if (child.props && child.props.children && child.props.children.type === TreeItem) {
-                // childrenArray.push(this.buildNestedTreeItem(child.props.children.props, resolvedRoles));
                 return this.buildNestedTreeItem(child.props, themeData, index);
               } else {
-                // childrenArray.push(this.buildTreeItem(child.props, resolvedRoles));
                 return this.buildTreeItem(child.props, themeData, index);
               }
             })}

@@ -8,33 +8,32 @@ export default [
       guidelines: false,
       test: "WM",
       children: [
-        <TreeItem id="option-1" key="option-1" test="WM" label="Tree Item Nested Parent">
-          <TreeItem label="another test" test="WM" />
-          <TreeItem label="Tree Item Level 2" test="WM">
+        <TreeItem  id="tree-item-1" key="tree-item-1" test="WM" label="Node 1 Level 1 Label">
+          <TreeItem label="Node 1 Level 2 Label 1" test="WM">
             <TreeItem test="WM">
-              Tree Item Level 3
+              Node 1 Level 3 Child 1
             </TreeItem>
             <TreeItem test="WM">
-              Tree Item Level 3a
+              Node 1 Level 3 Child 2
             </TreeItem>
-            <TreeItem test="WM" label="nested level">
-              <TreeItem test="WM">Tree Item Level 3b</TreeItem>
+            <TreeItem test="WM" label="Node 1 Level 3 Label 1">
+              <TreeItem test="WM">Node 1 Level 4 Child 1</TreeItem>
             </TreeItem>
           </TreeItem>
         </TreeItem>,
-        <TreeItem id="option-2" key="option-2" test="WM" label="test label">
-          TreeItem 2
+        <TreeItem id="tree-item-2" key="tree-item-2" test="WM">
+          Node 2 Level 1 Child
         </TreeItem>,
-        <TreeItem id="option-3" key="option-3" test="WM">
-          TreeItem 3
+        <TreeItem id="tree-item-3" key="tree-item-3" test="WM">
+          Node 3 Level 1 Child
         </TreeItem>,
-        <TreeItem id="option-4" key="option-4" test="WM" label="another nest">
+        <TreeItem id="tree-item-4" key="tree-item-4" test="WM" label="Node 4 Level 1 Label 1">
           <TreeItem test="WM">
-            Tree Item Level 2
+            Node 4 Level 2 Child 1
           </TreeItem>
         </TreeItem>,
-        <TreeItem id="option-5" key="option-5" test="WM">
-          TreeItem 5
+        <TreeItem id="tree-item-5" key="tree-item-5" test="WM">
+          Node 5 Level 1 Child 1
         </TreeItem>
       ]
     })
