@@ -128,7 +128,7 @@ export default class TreeViewBehaviorWM extends Component {
     const handleBlur = this.handleBlur;
     const handleFocus = this.handleFocus;
     const handleKeyDown = this.handleKeyDown;
-console.log('TreeView Behavior WM');
+// console.log('TreeView Behavior WM');
     return this.props.children({
       handleBlur,
       handleFocus,

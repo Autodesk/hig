@@ -15,7 +15,7 @@
 import { PropTypes } from "react";
 
 export default function stylesheet(props, themeData) {
-  console.log(props);
+  // console.log(props);
   const {
     alternateBg,
     guidelines,

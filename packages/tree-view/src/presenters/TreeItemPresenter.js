@@ -27,32 +27,77 @@ export default class TreeItemPresenter extends Component {
     return createChildren(this.props.children);
   } */
 
+  buildTreeItem(props, themeData, key) {
+    const { children, label } = props;
+    const styles = stylesheet(props, themeData);
+
+    return (
+      <li className={css(styles.higTreeItem)} key={key}>
+        {label} {children}
+      </li>
+    );
+  }
+
+  buildNestedTreeItem(props, themeData, key) {
+    const { children, label } = props;
+    const styles = stylesheet(props, themeData);
+
+    return (
+      <li className={css(styles.higTreeItem)} aria-expanded="true" key={key}>
+        <span><CaretRightMUI /> {label}</span>
+        <div>
+          <ul role="group">
+            {children}
+          </ul>
+        </div>
+      </li>
+    );
+  }
+
+  buildNestedTreeItemArrays(props, themeData, key) {
+    const { children, label } = props;
+    const styles = stylesheet(props, themeData);
+
+    return (
+      <li className={css(styles.higTreeItem)} aria-expanded="true" key={key}>
+        <span><CaretRightMUI /> {label}</span>
+        <div>
+          <ul>
+            {children.map((child, index) => {
+              if (child.props && child.props.children && Array.isArray(child.props.children)) {
+                // this.renderChild();
+                return this.buildNestedTreeItemArrays(child.props, themeData, index);
+              }
+              if (child.props && child.props.children && child.props.children.type === TreeItem) {
+                // childrenArray.push(this.buildNestedTreeItem(child.props.children.props, resolvedRoles));
+                return this.buildNestedTreeItem(child.props, themeData, index);
+              } else {
+                // childrenArray.push(this.buildTreeItem(child.props, resolvedRoles));
+                return this.buildTreeItem(child.props, themeData, index);
+              }
+            })}
+          </ul>
+        </div>
+      </li>
+    );
+  }
+
   renderChild() {
-    const { children } = this.props;
+    const { children, label } = this.props;
 
 // should we gate from improper use allow for user error
 // check to see if children is array and check for TreeItems within
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
-          const styles = stylesheet({}, resolvedRoles);
+          const styles = stylesheet(this.props, resolvedRoles);
           if (Array.isArray(children)) {
-            console.log('array');
-            console.log(children);
+            return this.buildNestedTreeItemArrays(this.props, resolvedRoles);
           }
           if (children && children.type === TreeItem) {
-            return (
-              <li className={css(styles.higTreeItem)} aria-expanded="true">
-                <span><CaretRightMUI /> {this.props.label}</span>
-                <div>
-                  <ul role="group">
-                    {this.props.children}
-                  </ul>
-                </div>
-              </li>
-            );
+            return this.buildNestedTreeItem(this.props, resolvedRoles);
           } else {
-            return <li className={css(styles.higTreeItem)}>{this.props.label} {this.props.children}</li>;
+            return this.buildTreeItem(this.props, resolvedRoles);
           }
         }}
       </ThemeContext.Consumer>

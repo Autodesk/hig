@@ -13,7 +13,7 @@ export default class TreeItem extends Component {
     /**
      * Content of the Option
      */
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
     /**
      * Labels the TreeItem, this is rendered before all children
      */

@@ -9,6 +9,7 @@ export default [
       test: "WM",
       children: [
         <TreeItem id="option-1" key="option-1" test="WM" label="Tree Item Nested Parent">
+          <TreeItem label="another test" test="WM" />
           <TreeItem label="Tree Item Level 2" test="WM">
             <TreeItem test="WM">
               Tree Item Level 3
@@ -16,8 +17,8 @@ export default [
             <TreeItem test="WM">
               Tree Item Level 3a
             </TreeItem>
-            <TreeItem test="WM">
-              Tree Item Level 3b
+            <TreeItem test="WM" label="nested level">
+              <TreeItem test="WM">Tree Item Level 3b</TreeItem>
             </TreeItem>
           </TreeItem>
         </TreeItem>,
@@ -27,8 +28,10 @@ export default [
         <TreeItem id="option-3" key="option-3" test="WM">
           TreeItem 3
         </TreeItem>,
-        <TreeItem id="option-4" key="option-4" test="WM">
-          TreeItem 4
+        <TreeItem id="option-4" key="option-4" test="WM" label="another nest">
+          <TreeItem test="WM">
+            Tree Item Level 2
+          </TreeItem>
         </TreeItem>,
         <TreeItem id="option-5" key="option-5" test="WM">
           TreeItem 5
