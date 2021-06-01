@@ -42,45 +42,28 @@ export default class TreeItem extends Component {
     const TreeItemBehavior = test === 'WM' ? TreeItemBehaviorWM : TreeItemBehaviorRR;
 
     return (
-      <PressedBehavior
-        onMouseDown={onMouseDown}
-        onMouseUp={onMouseUp}
-        onMouseLeave={onMouseLeave}
+      <TreeItemBehavior
+        {...otherProps}
       >
         {({
-          isPressed,
-          onMouseDown: handleMouseDown,
-          onMouseUp: handleMouseUp,
-          onPressedMouseLeave: handlePressedMouseLeave
+          handleClick,
+          handleMouseEnter,
+          handleMouseLeave
         }) => (
-          <TreeItemBehavior
+          <TreeItemPresenter
             {...otherProps}
-            onMouseLeave={handlePressedMouseLeave}
+            label={label}
+            onClick={handleClick}
+            onFocus={onFocus}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            // onMouseOver={handleMouseOver}
+            stylesheet={stylesheet}
           >
-            {({
-              handleClick,
-              handleMouseEnter,
-              handleMouseLeave
-            }) => (
-              <TreeItemPresenter
-                {...otherProps}
-                isPressed={isPressed}
-                label={label}
-                onClick={handleClick}
-                onFocus={onFocus}
-                onMouseDown={handleMouseDown}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                // onMouseOver={handleMouseOver}
-                onMouseUp={handleMouseUp}
-                stylesheet={stylesheet}
-              >
-                {children}
-              </TreeItemPresenter>
-            )}
-          </TreeItemBehavior>
+            {children}
+          </TreeItemPresenter>
         )}
-      </PressedBehavior>
+      </TreeItemBehavior>
     );
   }
 }

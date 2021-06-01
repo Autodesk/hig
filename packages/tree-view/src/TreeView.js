@@ -12,6 +12,7 @@ export default class TreeView extends Component {
      * Sets the icon padding on children TreeItems
      */
     iconAlignment: PropTypes.bool,
+    indicator: PropTypes.string,
     /**
      * Adds custom/overriding styles
      */

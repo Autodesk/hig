@@ -43,6 +43,8 @@ export default function stylesheet(props, themeData) {
         listStyle: `none`,
         paddingLeft: `20px`,
         "& li": {
+          // display: `flex`,
+          // flexDirection: `column`,
           overflow: `hidden`,
           paddingLeft: `20px`,
           "&::before": {
@@ -100,6 +102,9 @@ export default function stylesheet(props, themeData) {
           border: `none`
         }
       } */
+    },
+    higTreeItemContentWrapper: {
+      display: `flex`
     }
   };
 

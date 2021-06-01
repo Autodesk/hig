@@ -6,10 +6,12 @@ export default [
     description: "WM",
     getProps: () => ({
       guidelines: false,
+      indicator: "operator",
       test: "WM",
       children: [
         <TreeItem  id="tree-item-1" key="tree-item-1" test="WM" label="Node 1 Level 1 Label">
           <TreeItem label="Node 1 Level 2 Label 1" test="WM">
+            <TreeItem><div>hi</div><span>test1</span></TreeItem>
             <TreeItem test="WM">
               Node 1 Level 3 Child 1
             </TreeItem>
@@ -29,7 +31,7 @@ export default [
         </TreeItem>,
         <TreeItem id="tree-item-4" key="tree-item-4" test="WM" label="Node 4 Level 1 Label 1">
           <TreeItem test="WM">
-            Node 4 Level 2 Child 1
+            <strong>Node 4 Level 2</strong> <em>Child 1</em>
           </TreeItem>
         </TreeItem>,
         <TreeItem id="tree-item-5" key="tree-item-5" test="WM">

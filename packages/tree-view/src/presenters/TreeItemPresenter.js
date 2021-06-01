@@ -34,7 +34,9 @@ export default class TreeItemPresenter extends Component {
 
     return (
       <li className={css(styles.higTreeItem)} key={key}>
-        {children}
+        <div className={css(styles.higTreeItemContentWrapper)}>
+          {children}
+        </div>
       </li>
     );
   }
@@ -58,14 +60,15 @@ export default class TreeItemPresenter extends Component {
   buildNestedTreeItemArrays(props, themeData, key) {
     const { children, label } = props;
     const styles = stylesheet(props, themeData);
-
+console.log(children);
     return (
       <li className={css(styles.higTreeItem)} aria-expanded="true" key={key}>
         <span><CaretRightMUI /> {label}</span>
         <div>
           <ul role="group">
             {children.map((child, index) => {
-              if (child.props && child.props.children && Array.isArray(child.props.children)) {
+              // if it has a label then the children array should be of TreeItems
+              if (child.props && child.props.children && Array.isArray(child.props.children && label)) {
                 return this.buildNestedTreeItemArrays(child.props, themeData, index);
               }
               if (child.props && child.props.children && child.props.children.type === TreeItem) {
@@ -81,7 +84,7 @@ export default class TreeItemPresenter extends Component {
   }
 
   renderChild() {
-    const { children, label } = this.props;
+    const { children } = this.props;
 
 // should we gate from improper use allow for user error
 // check to see if children is array and check for TreeItems within
@@ -89,7 +92,8 @@ export default class TreeItemPresenter extends Component {
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
           const styles = stylesheet(this.props, resolvedRoles);
-          if (Array.isArray(children)) {
+          // if it has a label then the children array should be of TreeItems
+          if (Array.isArray(children) && this.props.label) {
             return this.buildNestedTreeItemArrays(this.props, resolvedRoles);
           }
           if (children && children.type === TreeItem) {
@@ -116,7 +120,7 @@ export default class TreeItemPresenter extends Component {
       tabIndex: `-1`,
       role: role || `treeitem`
     }
-
+// console.log(this.props);
     return this.renderChild();
   }
 }
