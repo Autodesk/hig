@@ -57,7 +57,7 @@ export default class TreeViewPresenter extends Component {
       stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
-console.log('tree view presenter');
+// console.log('tree view presenter');
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
