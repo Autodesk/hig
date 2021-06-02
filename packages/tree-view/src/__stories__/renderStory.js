@@ -5,13 +5,17 @@ import TreeView from "../index";
 import getKnobs from "./getKnobs";
 
 export default function renderStory(props) {
-  const { children, theme, ...otherProps } = getKnobs(props);
+  const { children, theme, dataObject, ...otherProps } = getKnobs(props);
 
   return (
     <KnobbedThemeProvider>
       <div style={{ width: "300px" }}>
         <Surface borderRadius="m" shadow="low">
-          <TreeView {...otherProps}>{children}</TreeView>
+          {dataObject ? (
+            children
+          ) : (
+            <TreeView {...otherProps}>{children}</TreeView>
+          )}
         </Surface>
       </div>
     </KnobbedThemeProvider>

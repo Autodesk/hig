@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #fff;
+}
+
+.parent-member {
+  background-color: #41b3a3;
+  margin: 10px;
+  padding: 50px;
+  width: 250px;
+  border: 1px solid #fff;
+}
+
+.child-member {
+  padding-left: 100px;
+}
