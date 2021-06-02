@@ -62,7 +62,7 @@ export default function stylesheet(props, themeData) {
             ...(guidelines ? { borderLeft: `1px dashed red` } : {}),
             display: `inline-block`,
             content: `""`,
-            height: `20px`,
+            height: `100%`,
             left: 0,
             position: `absolute`,
             top: `0`,
@@ -71,7 +71,8 @@ export default function stylesheet(props, themeData) {
         },
         "& li:last-child": {
           "&::after": {
-            top: `-9px`
+            top: `-9px`,
+            height: `20px`
           }
         }
       }

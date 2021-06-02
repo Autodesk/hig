@@ -41,7 +41,7 @@ export default class TreeViewPresenter extends Component {
       indicator,
       key
     };
-
+// console.log(props.children);
     return <TreeItem {...payload} />;
   };
 
@@ -57,7 +57,7 @@ export default class TreeViewPresenter extends Component {
       stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
-
+console.log('tree view presenter');
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {

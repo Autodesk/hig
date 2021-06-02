@@ -141,18 +141,25 @@ export default [
               <div>hi</div>
               <span>test1</span>
             </TreeItem>
-            <TreeItem test="WM">Node 1 Level 3 Child 1</TreeItem>
+            <TreeItem test="WM" label="Node 1 Level 2 Label 2">
+              <TreeItem test="WM">Node 1 Level 3 Child 1</TreeItem>
+              <TreeItem test="WM">Node 1 Level 3 Child 2</TreeItem>
+              <TreeItem test="WM">Node 1 Level 3 Child 3</TreeItem>
+            </TreeItem>
             <TreeItem test="WM">Node 1 Level 3 Child 2</TreeItem>
             <TreeItem test="WM" label="Node 1 Level 3 Label 1">
               <TreeItem test="WM">Node 1 Level 4 Child 1</TreeItem>
+              <TreeItem test="WM">Node 1 Level 4 Child 2</TreeItem>
+              <TreeItem test="WM">Node 1 Level 4 Child 3</TreeItem>
             </TreeItem>
           </TreeItem>
         </TreeItem>,
         <TreeItem id="tree-item-2" key="tree-item-2" test="WM">
           Node 2 Level 1 Child
         </TreeItem>,
-        <TreeItem id="tree-item-3" key="tree-item-3" test="WM">
-          Node 3 Level 1 Child
+        <TreeItem id="tree-item-3" key="tree-item-3" test="WM" label="Node 3 Level 1 Label">
+          <TreeItem test="WM">Node 3 Level 2 Child 1</TreeItem>
+          <TreeItem test="WM">Node 3 Level 2 Child 2</TreeItem>
         </TreeItem>,
         <TreeItem
           id="tree-item-4"
@@ -164,11 +171,13 @@ export default [
             <strong>Node 4 Level 2</strong> <em>Child 1</em>
           </TreeItem>
         </TreeItem>,
-        <TreeItem id="tree-item-5" key="tree-item-5" test="WM">
-          Node 5 Level 1 Child 1
-        </TreeItem>,
-      ],
-    }),
+        <TreeItem id="tree-item-5" key="tree-item-5" test="WM" label="Node 5 Level 1 Label 1">
+          <TreeItem test="WM">
+            Node 5 Level 2 Child 1
+          </TreeItem>
+        </TreeItem>
+      ]
+    })
   },
   {
     description: "RR",
