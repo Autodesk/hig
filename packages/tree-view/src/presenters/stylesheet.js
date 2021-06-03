@@ -12,10 +12,7 @@
   };
 } */
 
-import { PropTypes } from "react";
-
 export default function stylesheet(props, themeData) {
-  console.log(props.indicator);
   const {
     alternateBg,
     guidelines,

@@ -9,6 +9,10 @@ export default class TreeItemBehavior extends Component {
     onMouseLeave: PropTypes.func,
   };
 
+  constructor(props) {
+    super(props);
+  }
+
   handleClick = event => {
     if (onClick) {
       onClick(event);
@@ -32,12 +36,16 @@ export default class TreeItemBehavior extends Component {
       handleClick,
       handleMouseEnter,
       handleMouseLeave,
+      setTreeViewRef,
+      treeViewRef
     } = this;
 // console.log('TreeItem Behavior WM');
     return this.props.children({
       handleClick,
       handleMouseEnter,
       handleMouseLeave,
+      setTreeViewRef,
+      treeViewRef
     });
   }
 }

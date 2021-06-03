@@ -16,18 +16,6 @@ import TreeItem from "../TreeItem";
 import stylesheet from "./stylesheet";
 import { AVAILABLE_ROLES } from "../constants";
 
-function createSubTreeItems(children) {
-  return Children.toArray(children).reduce((result, child) => {
-    const { key, props = {} } = child;
-
-    if (type === TreeItem) {
-      result.push({ key, props });
-    }
-
-    return result;
-  }, []);
-}
-
 function SubTreeItem(props) {
   const { label, themeData } = props;
   const styles = stylesheet(props, themeData);
@@ -46,8 +34,7 @@ function NestedSubTreeItem(props) {
   const styles = stylesheet(props, themeData);
   const clonedChildren = React.cloneElement(children, { indicator });
   const IconIndicator = indicator === 'operator' ? OperatorPlusSUI : CaretRightMUI;
-console.log('nested sub tree');
-console.log(indicator);
+
   return (
     <li className={css(styles.higTreeItem)} aria-expanded="true">
       <span><IconIndicator /> {label}</span>
@@ -65,13 +52,7 @@ function NestedSubTreeItemGroup(props) {
   const styles = stylesheet(props, themeData);
   const clonedChildren = React.Children.map(children, (child => React.cloneElement(child, {indicator})));
   const IconIndicator = indicator === 'operator' ? OperatorPlusSUI : CaretRightMUI;
-  /* console.log('nested sub tree group');
-  console.log(children);
-  console.log('wut');
-  console.log(clonedChildren); */
-  // console.log(props);
-console.log('nested sub tree item group');
-console.log(indicator);
+
   return (
     <li className={css(styles.higTreeItem)} aria-expanded="true">
       <span><IconIndicator /> {label}</span>
@@ -112,27 +93,6 @@ export default class TreeItemPresenter extends Component {
     stylesheet: PropTypes.func
   };
 
-  /* getTreeItems() {
-    return createSubTreeItems(this.props.children);
-  } */
-
-  /* renderSubTreeItem = ({ key, props }) => {
-    const {
-      indicator
-    } = this.props;
-    const payload = {
-      ...props,
-      indicator,
-      key
-    };
-
-    return <TreeItem {...payload} />;
-  }; */
-
-  /* renderSubTreeItems() {
-    return this.getSubTreeItems().map(this.renderTreeItem);
-  } */
-
   renderTreeItem() {
     const { children } = this.props;
 // should we gate from improper use allow for user error
@@ -172,9 +132,7 @@ export default class TreeItemPresenter extends Component {
       tabIndex: `-1`,
       role: role || `treeitem`
     }
-// console.log('tree item presenter');
-console.log(indicator);
-// console.log(this.props.indicator);
+
     return this.renderTreeItem();
   }
 }

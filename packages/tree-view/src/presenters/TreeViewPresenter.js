@@ -25,8 +25,13 @@ export default class TreeViewPresenter extends Component {
     children: PropTypes.node,
     guidelines: PropTypes.bool,
     indicator: PropTypes.string,
+    setTreeViewRef: PropTypes.func,
     stylesheet: PropTypes.func
   };
+
+  componentDidMount() {
+    console.log('component did mount');
+  }
 
   getTreeItems() {
     return createTreeItems(this.props.children);
@@ -41,7 +46,7 @@ export default class TreeViewPresenter extends Component {
       indicator,
       key
     };
-// console.log(props.children);
+
     return <TreeItem {...payload} />;
   };
 
@@ -54,10 +59,11 @@ export default class TreeViewPresenter extends Component {
       alternateBg,
       children,
       guidelines,
+      setTreeViewRef,
       stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
-// console.log('tree view presenter');
+
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
@@ -71,7 +77,7 @@ export default class TreeViewPresenter extends Component {
           );
           return (
             <div className={css(styles.higTreeViewWrapper)}>
-              <ul role="group" className={css(styles.higTreeView)}>
+              <ul role="tree" className={css(styles.higTreeView)} ref={setTreeViewRef}>
                 {this.renderTreeItems()}
               </ul>
             </div>

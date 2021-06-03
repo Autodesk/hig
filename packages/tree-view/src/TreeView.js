@@ -56,16 +56,20 @@ export default class TreeView extends Component {
               handleBlur: handleMenuBehaviorBlur,
               handleFocus: handleMenuBehaviorFocus,
               handleKeyDown,
+              setTreeViewRef,
+              treeViewRef
             }) => (
               <TreeViewPresenterType
                 {...otherProps}
                 alternateBg={alternateBg}
+                dataObject={dataObject}
                 guidelines={guidelines}
                 onBlur={handleMenuBehaviorBlur}
                 onFocus={handleMenuBehaviorFocus}
                 onKeyDown={handleKeyDown}
+                setTreeViewRef={setTreeViewRef}
                 stylesheet={stylesheet}
-                dataObject={dataObject}
+                treeViewRef={treeViewRef}
               >
                 {children}
               </TreeViewPresenterType>

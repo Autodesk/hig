@@ -58,12 +58,26 @@ export default class TreeViewBehaviorWM extends Component {
   };
 
   static defaultProps = {
-    defaultSelected: []
+  
   };
 
   constructor(props) {
     super(props);
+
+    this.state = {
+
+    };
+
+    this.treeViewRef = null
   }
+
+  setTreeViewRef = element => {
+    if (this.props.treeViewRef) {
+      this.props.treeViewRef(element);
+    }
+
+    this.treeViewRef = element;
+  };
 
   /* getPreviousEvent = () => this.state.previousEvent;
 
@@ -125,14 +139,21 @@ export default class TreeViewBehaviorWM extends Component {
   }; */
 
   render() {
-    const handleBlur = this.handleBlur;
-    const handleFocus = this.handleFocus;
-    const handleKeyDown = this.handleKeyDown;
-// console.log('TreeView Behavior WM');
+    const {
+      handleBlur,
+      handleFocus,
+      handleKeyDown,
+      setTreeViewRef,
+      treeViewRef
+    } = this;
+console.log('TreeView Behavior WM');
+console.log(treeViewRef);
     return this.props.children({
       handleBlur,
       handleFocus,
       handleKeyDown,
+      setTreeViewRef,
+      treeViewRef
     });
   }
 }
