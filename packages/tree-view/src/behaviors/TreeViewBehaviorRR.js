@@ -58,7 +58,7 @@ export default class TreeViewBehaviorRR extends Component {
   };
 
   static defaultProps = {
-    defaultSelected: []
+    defaultSelected: [],
   };
 
   constructor(props) {
@@ -71,19 +71,19 @@ export default class TreeViewBehaviorRR extends Component {
     this.setState({ previousEvent });
   }; */
 
-  handleFocus = event => {
+  handleFocus = (event) => {
     if (this.props.onFocus) {
       this.props.onFocus(event);
     }
   };
 
-  handleBlur = event => {
+  handleBlur = (event) => {
     if (this.props.onBlur) {
       this.props.onBlur(event);
     }
   };
 
-  handleKeyDown = event => {
+  handleKeyDown = (event) => {
     if (onKeyDown) {
       onKeyDown(event);
     }
@@ -128,7 +128,7 @@ export default class TreeViewBehaviorRR extends Component {
     const handleBlur = this.handleBlur;
     const handleFocus = this.handleFocus;
     const handleKeyDown = this.handleKeyDown;
-console.log('TreeView Behavior RR');
+    console.log("TreeView Behavior RR");
     return this.props.children({
       handleBlur,
       handleFocus,

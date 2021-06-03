@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 
-class TreeView extends Component {
+class TreeObjectView extends Component {
   state = {
     treeNode: this.props.tree,
   };
 
   handleClickParent(treeNode) {
+    console.log("this.props", this.props);
     console.log("treeNode Info: ", treeNode);
     this.setState({
       treeNode: {
@@ -43,4 +44,4 @@ class TreeView extends Component {
   }
 }
 
-export default TreeView;
+export default TreeObjectView;
