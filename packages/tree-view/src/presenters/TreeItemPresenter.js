@@ -112,9 +112,9 @@ export default class TreeItemPresenter extends Component {
     stylesheet: PropTypes.func
   };
 
-  getTreeItems() {
+  /* getTreeItems() {
     return createSubTreeItems(this.props.children);
-  }
+  } */
 
   /* renderSubTreeItem = ({ key, props }) => {
     const {

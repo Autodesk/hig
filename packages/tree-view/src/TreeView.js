@@ -7,13 +7,15 @@ import TreeViewBehaviorRR from "./behaviors/TreeViewBehaviorRR";
 import TreeViewPresenter from "./presenters/TreeViewPresenter";
 import TreeViewPresenterObject from "./presenters/TreeViewPresenterObject";
 
+import { AVAILABLE_INDICATORS } from "./constants";
+
 export default class TreeView extends Component {
   static propTypes = {
     /**
      * Sets the icon padding on children TreeItems
      */
     iconAlignment: PropTypes.bool,
-    indicator: PropTypes.string,
+    indicator: PropTypes.oneOf(AVAILABLE_INDICATORS),
     /**
      * Adds custom/overriding styles
      */

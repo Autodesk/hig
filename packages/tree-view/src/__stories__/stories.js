@@ -137,13 +137,13 @@ export default [
         >
           <TreeItem label="Tree Item 1" test="WM">
             <TreeItem label="Tree Item 2">
-            <TreeItem test="WM" label="Tree Item 3">
-              <TreeItem test="WM" label="Tree Item 4" />
-              <TreeItem test="WM" label="Tree Item 5" />
-              <TreeItem test="WM" label="Tree Item 6" />
-            </TreeItem>
-            <TreeItem test="WM" label="Tree Item 7" />
-            <TreeItem test="WM" label="Tree Item 8" />
+              <TreeItem test="WM" label="Tree Item 3">
+                <TreeItem test="WM" label="Tree Item 4" />
+                <TreeItem test="WM" label="Tree Item 5" />
+                <TreeItem test="WM" label="Tree Item 6" />
+              </TreeItem>
+              <TreeItem test="WM" label="Tree Item 7" />
+              <TreeItem test="WM" label="Tree Item 8" />
               <TreeItem test="WM" label={<div><strong>Tree</strong><em>Item 9</em></div>} />
               <TreeItem test="WM" label="Tree Item 10" />
               <TreeItem test="WM" label="Tree Item 11" />

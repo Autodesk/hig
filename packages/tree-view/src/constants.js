@@ -1,6 +1,6 @@
-export const roles = Object.freeze({
-  OPTION: "option",
-  PRESENTATION: "presentation"
+export const indicators = Object.freeze({
+  CARET: "caret",
+  OPERATOR: "operator"
 });
 
-export const AVAILABLE_ROLES = Object.freeze(Object.values(roles));
+export const AVAILABLE_INDICATORS = Object.freeze(Object.values(indicators));
