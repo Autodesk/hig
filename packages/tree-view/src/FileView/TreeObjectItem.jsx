@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 
-class TreeItem extends PureComponent {
+class TreeObjectItem extends PureComponent {
   render() {
     const { children } = this.props;
     return (
@@ -11,4 +11,4 @@ class TreeItem extends PureComponent {
   }
 }
 
-export default TreeItem;
+export default TreeObjectItem;

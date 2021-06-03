@@ -1,6 +1,5 @@
 import React from "react";
 import { TreeItem } from "../index";
-import FileView from "../FileView";
 
 const FileTreeCollection = [
   {
@@ -157,7 +156,12 @@ export default [
         <TreeItem id="tree-item-2" key="tree-item-2" test="WM">
           Node 2 Level 1 Child
         </TreeItem>,
-        <TreeItem id="tree-item-3" key="tree-item-3" test="WM" label="Node 3 Level 1 Label">
+        <TreeItem
+          id="tree-item-3"
+          key="tree-item-3"
+          test="WM"
+          label="Node 3 Level 1 Label"
+        >
           <TreeItem test="WM">Node 3 Level 2 Child 1</TreeItem>
           <TreeItem test="WM">Node 3 Level 2 Child 2</TreeItem>
         </TreeItem>,
@@ -171,20 +175,24 @@ export default [
             <strong>Node 4 Level 2</strong> <em>Child 1</em>
           </TreeItem>
         </TreeItem>,
-        <TreeItem id="tree-item-5" key="tree-item-5" test="WM" label="Node 5 Level 1 Label 1">
-          <TreeItem test="WM">
-            Node 5 Level 2 Child 1
-          </TreeItem>
-        </TreeItem>
-      ]
-    })
+        <TreeItem
+          id="tree-item-5"
+          key="tree-item-5"
+          test="WM"
+          label="Node 5 Level 1 Label 1"
+        >
+          <TreeItem test="WM">Node 5 Level 2 Child 1</TreeItem>
+        </TreeItem>,
+      ],
+    }),
   },
   {
     description: "RR",
     getProps: () => ({
+      guidelines: false,
+      indicator: "operator",
       test: "RR",
-      dataObject: true,
-      children: [<FileView fileTreeCollection={FileTreeCollection} />],
+      dataObject: FileTreeCollection,
     }),
   },
   {

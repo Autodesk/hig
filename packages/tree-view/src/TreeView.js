@@ -5,6 +5,7 @@ import { FocusBehavior } from "@hig/behaviors";
 import TreeViewBehaviorWM from "./behaviors/TreeViewBehaviorWM";
 import TreeViewBehaviorRR from "./behaviors/TreeViewBehaviorRR";
 import TreeViewPresenter from "./presenters/TreeViewPresenter";
+import TreeViewPresenterObject from "./presenters/TreeViewPresenterObject";
 
 export default class TreeView extends Component {
   static propTypes = {
@@ -16,11 +17,10 @@ export default class TreeView extends Component {
     /**
      * Adds custom/overriding styles
      */
-    stylesheet: PropTypes.func
+    stylesheet: PropTypes.func,
   };
 
-  static defaultProps = {
-  };
+  static defaultProps = {};
 
   render() {
     const {
@@ -29,11 +29,16 @@ export default class TreeView extends Component {
       guidelines,
       stylesheet,
       test,
+      dataObject,
       ...otherProps
     } = this.props;
     const { onBlur, onFocus, onKeyDown } = otherProps;
     // Test mode
-    const TreeViewBehavior = test === "WM" ? TreeViewBehaviorWM : TreeViewBehaviorRR;
+    const TreeViewBehavior =
+      test === "WM" ? TreeViewBehaviorWM : TreeViewBehaviorRR;
+    const TreeViewPresenterType = dataObject
+      ? TreeViewPresenterObject
+      : TreeViewPresenter;
 
     return (
       <FocusBehavior onBlur={onBlur} onFocus={onFocus}>
@@ -50,7 +55,7 @@ export default class TreeView extends Component {
               handleFocus: handleMenuBehaviorFocus,
               handleKeyDown,
             }) => (
-              <TreeViewPresenter
+              <TreeViewPresenterType
                 {...otherProps}
                 alternateBg={alternateBg}
                 guidelines={guidelines}
@@ -58,9 +63,10 @@ export default class TreeView extends Component {
                 onFocus={handleMenuBehaviorFocus}
                 onKeyDown={handleKeyDown}
                 stylesheet={stylesheet}
+                dataObject={dataObject}
               >
                 {children}
-              </TreeViewPresenter>
+              </TreeViewPresenterType>
             )}
           </TreeViewBehavior>
         )}
