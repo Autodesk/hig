@@ -14,10 +14,11 @@ export default class TreeItem extends Component {
      * Content of the Option
      */
     children: PropTypes.node,
+    id: PropTypes.string.required,
     /**
      * Labels the TreeItem, this is rendered before all children
      */
-    label: PropTypes.string,
+    label: PropTypes.node,
     /**
      * Adds custom/overriding styles
      */
@@ -27,12 +28,14 @@ export default class TreeItem extends Component {
   render() {
     const {
       children,
+      id,
       label,
       stylesheet,
       test,
       ...otherProps
     } = this.props;
     const {
+      getActiveTreeItemId,
       onFocus,
       onMouseDown,
       onMouseLeave,
@@ -44,6 +47,7 @@ export default class TreeItem extends Component {
     return (
       <TreeItemBehavior
         {...otherProps}
+        id={id}
       >
         {({
           handleClick,
@@ -52,11 +56,13 @@ export default class TreeItem extends Component {
         }) => (
           <TreeItemPresenter
             {...otherProps}
+            id={id}
             label={label}
             onClick={handleClick}
             onFocus={onFocus}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            selected={getActiveTreeItemId() === id}
             // onMouseOver={handleMouseOver}
             stylesheet={stylesheet}
           >

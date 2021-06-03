@@ -48,6 +48,16 @@ function checkScroll(optionId, menu) {
   scrollInListbox(option, menu);
 } */
 
+function buildTreeItemIdArray(list) {
+  const ids = [];
+
+  list.map(item => {
+    ids.push(item.id);
+  })
+
+  return ids;
+}
+
 export default class TreeViewBehaviorWM extends Component {
   static propTypes = {
     children: PropTypes.func,
@@ -58,12 +68,42 @@ export default class TreeViewBehaviorWM extends Component {
   };
 
   static defaultProps = {
-    defaultSelected: []
+  
   };
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      treeItemArray: null,
+      activeTreeItemIndex: 1
+    };
+
+    this.treeViewRef = null
   }
+
+  setTreeViewRef = element => {
+    if (this.props.treeViewRef) {
+      this.props.treeViewRef(element);
+    }
+
+    console.log('set tree view ref');
+    this.setState({
+      treeItemArray: 
+      buildTreeItemIdArray(
+        Array.prototype.slice.call(element.querySelectorAll('li'))
+      )
+    });
+    this.treeViewRef = element;
+  };
+
+  getActiveTreeItemId = () => {
+    return this.state.treeItemArray && this.state.treeItemArray[this.getActiveTreeItemIndex()];
+  };
+
+  getActiveTreeItemIndex = () => {
+    return this.state.activeTreeItemIndex;
+  };
 
   /* getPreviousEvent = () => this.state.previousEvent;
 
@@ -125,14 +165,24 @@ export default class TreeViewBehaviorWM extends Component {
   }; */
 
   render() {
-    const handleBlur = this.handleBlur;
-    const handleFocus = this.handleFocus;
-    const handleKeyDown = this.handleKeyDown;
-// console.log('TreeView Behavior WM');
-    return this.props.children({
+    const {
+      getActiveTreeItemId,
+      getActiveTreeItemIndex,
       handleBlur,
       handleFocus,
       handleKeyDown,
+      setTreeViewRef,
+      treeViewRef
+    } = this;
+
+    return this.props.children({
+      getActiveTreeItemId,
+      getActiveTreeItemIndex,
+      handleBlur,
+      handleFocus,
+      handleKeyDown,
+      setTreeViewRef,
+      treeViewRef
     });
   }
 }

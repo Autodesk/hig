@@ -23,10 +23,17 @@ export default class TreeViewPresenter extends Component {
   static propTypes = {
     alternateBg: PropTypes.bool,
     children: PropTypes.node,
+    getActiveTreeItemIndex: PropTypes.func,
     guidelines: PropTypes.bool,
     indicator: PropTypes.string,
+    selected: PropTypes.bool,
+    setTreeViewRef: PropTypes.func,
     stylesheet: PropTypes.func
   };
+
+  componentDidMount() {
+    console.log('component did mount');
+  }
 
   getTreeItems() {
     return createTreeItems(this.props.children);
@@ -34,14 +41,18 @@ export default class TreeViewPresenter extends Component {
 
   renderTreeItem = ({ key, props }) => {
     const {
+      getActiveTreeItemId,
+      getActiveTreeItemIndex,
       indicator
     } = this.props;
     const payload = {
       ...props,
+      getActiveTreeItemId,
+      getActiveTreeItemIndex,
       indicator,
       key
     };
-// console.log(props.children);
+
     return <TreeItem {...payload} />;
   };
 
@@ -54,10 +65,11 @@ export default class TreeViewPresenter extends Component {
       alternateBg,
       children,
       guidelines,
+      setTreeViewRef,
       stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
-// console.log('tree view presenter');
+
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
@@ -71,7 +83,12 @@ export default class TreeViewPresenter extends Component {
           );
           return (
             <div className={css(styles.higTreeViewWrapper)}>
-              <ul role="group" className={css(styles.higTreeView)}>
+              <ul
+                className={css(styles.higTreeView)}
+                ref={setTreeViewRef}
+                role="tree"
+                tabIndex="0"
+              >
                 {this.renderTreeItems()}
               </ul>
             </div>

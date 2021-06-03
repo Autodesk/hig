@@ -126,63 +126,56 @@ export default [
     description: "WM",
     getProps: () => ({
       guidelines: false,
-      indicator: "operator",
+      indicator: "caret",
       test: "WM",
       children: [
         <TreeItem
-          id="tree-item-1"
-          key="tree-item-1"
+          id="tree-item-0"
+          key="tree-item-0"
           test="WM"
-          label="Node 1 Level 1 Label"
+          label="Tree Item 0"
         >
-          <TreeItem label="Node 1 Level 2 Label 1" test="WM">
-            <TreeItem>
-              <div>hi</div>
-              <span>test1</span>
-            </TreeItem>
-            <TreeItem test="WM" label="Node 1 Level 2 Label 2">
-              <TreeItem test="WM">Node 1 Level 3 Child 1</TreeItem>
-              <TreeItem test="WM">Node 1 Level 3 Child 2</TreeItem>
-              <TreeItem test="WM">Node 1 Level 3 Child 3</TreeItem>
-            </TreeItem>
-            <TreeItem test="WM">Node 1 Level 3 Child 2</TreeItem>
-            <TreeItem test="WM" label="Node 1 Level 3 Label 1">
-              <TreeItem test="WM">Node 1 Level 4 Child 1</TreeItem>
-              <TreeItem test="WM">Node 1 Level 4 Child 2</TreeItem>
-              <TreeItem test="WM">Node 1 Level 4 Child 3</TreeItem>
+          <TreeItem label="Tree Item 1" test="WM" id="tree-item-1">
+            <TreeItem label="Tree Item 2" id="tree-item-2">
+              <TreeItem test="WM" label="Tree Item 3" id="tree-item-3">
+                <TreeItem test="WM" label="Tree Item 4" id="tree-item-4" />
+                <TreeItem test="WM" label="Tree Item 5" id="tree-item-5" />
+                <TreeItem test="WM" label="Tree Item 6" id="tree-item-6" />
+              </TreeItem>
+              <TreeItem test="WM" label="Tree Item 7" id="tree-item-7" />
+              <TreeItem test="WM" label="Tree Item 8" id="tree-item-8" />
+              <TreeItem test="WM" label={<div><strong>Tree</strong><em>Item 9</em></div>} id="tree-item-9" />
+              <TreeItem test="WM" label="Tree Item 10" id="tree-item-10" />
+              <TreeItem test="WM" label="Tree Item 11" id="tree-item-11" />
             </TreeItem>
           </TreeItem>
         </TreeItem>,
-        <TreeItem id="tree-item-2" key="tree-item-2" test="WM">
-          Node 2 Level 1 Child
+        <TreeItem id="tree-item-12" key="tree-item-2" test="WM" label="Tree Item 12" />,
+        <TreeItem
+          id="tree-item-13"
+          key="tree-item-13"
+          test="WM"
+          label="Tree Item 13"
+        >
+          <TreeItem test="WM" label="Tree Item 14" id="tree-item-14" />
+          <TreeItem test="WM" label="Tree Item 15" id="tree-item-15" />
         </TreeItem>,
         <TreeItem
-          id="tree-item-3"
-          key="tree-item-3"
+          id="tree-item-16"
+          key="tree-item-16"
           test="WM"
-          label="Node 3 Level 1 Label"
+          label="Tree Item 16"
         >
-          <TreeItem test="WM">Node 3 Level 2 Child 1</TreeItem>
-          <TreeItem test="WM">Node 3 Level 2 Child 2</TreeItem>
+          <TreeItem test="WM" label="Tree Item 17" id="tree-item-17" />
         </TreeItem>,
         <TreeItem
-          id="tree-item-4"
-          key="tree-item-4"
+          id="tree-item-18"
+          key="tree-item-18"
           test="WM"
-          label="Node 4 Level 1 Label 1"
+          label="Tree Item 18"
         >
-          <TreeItem test="WM">
-            <strong>Node 4 Level 2</strong> <em>Child 1</em>
-          </TreeItem>
-        </TreeItem>,
-        <TreeItem
-          id="tree-item-5"
-          key="tree-item-5"
-          test="WM"
-          label="Node 5 Level 1 Label 1"
-        >
-          <TreeItem test="WM">Node 5 Level 2 Child 1</TreeItem>
-        </TreeItem>,
+          <TreeItem test="WM" label="Tree Item 19" id="tree-item-19" />
+        </TreeItem>
       ],
     }),
   },

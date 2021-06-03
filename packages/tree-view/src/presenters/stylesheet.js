@@ -12,13 +12,12 @@
   };
 } */
 
-import { PropTypes } from "react";
-
 export default function stylesheet(props, themeData) {
-  // console.log(props);
+console.log('stylesheet');
   const {
     alternateBg,
     guidelines,
+    selected,
     stylesheet: customStylesheet
   } = props;
   const styles = {
@@ -41,7 +40,7 @@ export default function stylesheet(props, themeData) {
       padding: 0,
       "& ul": {
         listStyle: `none`,
-        paddingLeft: `20px`,
+        paddingLeft: 0,
         "& li": {
           // display: `flex`,
           // flexDirection: `column`,
@@ -80,32 +79,13 @@ export default function stylesheet(props, themeData) {
     higTreeItem: {
       margin: 0,
       position: `relative`,
-      /* ,
-        "&::after": {
-          borderLeft: `1px dashed red`,
-          display: `inline-block`,
-          content: `""`,
-          height: `100%`,
-          left: 0,
-          position: `absolute`,
-          top: 0,
-          width: `20px`
-        },
-        "&[aria-expanded='true']": {
-          "&::after": {
-            border: `none`
-          }
-        }
+      "& > span": {
+        ...(selected ? { background: `rgba(0,0,0,0.3)` } : {})
       }
-      */
-      /* "&[aria-expanded='true']": {
-        "&::after": {
-          border: `none`
-        }
-      } */
     },
     higTreeItemContentWrapper: {
-      display: `flex`
+      display: `inline-flex`,
+      ...(selected ? { background: `rgba(0,0,0,0.3)` } : {})
     }
   };
 

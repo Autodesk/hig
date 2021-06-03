@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
-import "../FileView/index.scss";
+// import "../FileView/index.scss";
 
 import TreeObjectView from "../FileView/TreeObjectView";
 import TreeObjectItem from "../FileView/TreeObjectItem";

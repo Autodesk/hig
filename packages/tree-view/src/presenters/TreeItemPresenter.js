@@ -16,39 +16,48 @@ import TreeItem from "../TreeItem";
 import stylesheet from "./stylesheet";
 import { AVAILABLE_ROLES } from "../constants";
 
-function createSubTreeItems(children) {
-  return Children.toArray(children).reduce((result, child) => {
-    const { key, props = {} } = child;
-
-    result.push({ key, props });
-
-    return result;
-  }, []);
-}
-
 function SubTreeItem(props) {
-  const { children, themeData } = props;
+  const { id, label, themeData } = props;
   const styles = stylesheet(props, themeData);
 
   return (
-    <li className={css(styles.higTreeItem)}>
+    <li
+      className={css(styles.higTreeItem)}
+      id={id}
+      role="treeitem"
+    >
       <div className={css(styles.higTreeItemContentWrapper)}>
-        {children}
+        {label}
       </div>
     </li>
   );
 }
 
 function NestedSubTreeItem(props) {
-  const { children, label, themeData } = props;
+  const {
+    children,
+    getActiveTreeItemId,
+    getActiveTreeItemIndex,
+    id,
+    indicator,
+    label,
+    themeData
+  } = props;
   const styles = stylesheet(props, themeData);
+  const clonedChildren = React.cloneElement(children, { getActiveTreeItemId, getActiveTreeItemIndex, indicator });
+  const IconIndicator = indicator === 'operator' ? OperatorPlusSUI : CaretRightMUI;
 
   return (
-    <li className={css(styles.higTreeItem)} aria-expanded="true">
-      <span><CaretRightMUI /> {label}</span>
+    <li
+      aria-expanded="true"
+      className={css(styles.higTreeItem)}
+      id={id}
+      role="treeitem"
+    >
+      <span><IconIndicator /> {label}</span>
       <div>
         <ul role="group">
-          {children}
+          {clonedChildren}
         </ul>
       </div>
     </li>
@@ -56,33 +65,43 @@ function NestedSubTreeItem(props) {
 }
 
 function NestedSubTreeItemGroup(props) {
-  const { children, indicator, label, themeData } = props;
+  const {
+    children,
+    getActiveTreeItemId,
+    getActiveTreeItemIndex,
+    id,
+    indicator,
+    label,
+    themeData
+  } = props;
   const styles = stylesheet(props, themeData);
-  console.log('nested sub tree');
-  // console.log(props);
+  const clonedChildren = React.Children.map(children, (child => React.cloneElement(child, {getActiveTreeItemId, getActiveTreeItemIndex, indicator})));
+  const IconIndicator = indicator === 'operator' ? OperatorPlusSUI : CaretRightMUI;
+
   return (
-    <li className={css(styles.higTreeItem)} aria-expanded="true">
-      <span><CaretRightMUI /> {label}</span>
+    <li
+      aria-expanded="true"
+      className={css(styles.higTreeItem)}
+      id={id}
+      role="treeitem"
+    >
+      <span><IconIndicator /> {label}</span>
       <div>
         <ul role="group">
-          {children.map((child, index) => {
-            console.log(child);
-            console.log(indicator);
+          {clonedChildren.map((child, index) => {
             // if it has a label then the children array should be of TreeItems
             if (child.props
               && child.props.children
               && Array.isArray(child.props.children)
-              && child.props.children[0].type === TreeItem
-              && label
             ) {
-              return <NestedSubTreeItemGroup {...child.props} indicator={indicator} themeData={themeData} />
+              return <NestedSubTreeItemGroup {...child.props} themeData={themeData} />
               // return this.buildNestedTreeItemArrays(child.props, themeData, index);
             }
             if (child.props && child.props.children && child.props.children.type === TreeItem) {
-              return <NestedSubTreeItem {...child.props} indicator={indicator} themeData={themeData} />
+              return <NestedSubTreeItem {...child.props} themeData={themeData} />
               // return this.buildNestedTreeItem(child.props, themeData, index);
             } else {
-              return <SubTreeItem {...child.props} indicator={indicator} themeData={themeData} />
+              return <SubTreeItem {...child.props} themeData={themeData} />
               // return this.buildTreeItem(child.props, themeData, index);
             }
           })}
@@ -104,41 +123,15 @@ export default class TreeItemPresenter extends Component {
     stylesheet: PropTypes.func
   };
 
-  /* getSubTreeItems() {
-    return createSubTreeItems(this.props.children);
-  } */
-
-  /* renderSubTreeItem = ({ key, props }) => {
-    const {
-      indicator
-    } = this.props;
-    const payload = {
-      ...props,
-      indicator,
-      key
-    };
-
-    return <TreeItem {...payload} />;
-  }; */
-
-  /* renderSubTreeItems() {
-    return this.getSubTreeItems().map(this.renderTreeItem);
-  } */
-
   renderTreeItem() {
-    const { children, indicator } = this.props;
-// console.log('renderTreeItem');
-// console.log(children);
-
-    // console.log(children);
+    const { children } = this.props;
 // should we gate from improper use allow for user error
 // check to see if children is array and check for TreeItems within
-    // console.log(this.props.indicator);
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
           // if it has a label then the children array should be of TreeItems
-          if (Array.isArray(children) && this.props.label) {
+          if (Array.isArray(children)) {
             return <NestedSubTreeItemGroup {...this.props} themeData={resolvedRoles} />
             // return this.buildNestedTreeItemArrays(this.props, resolvedRoles);
           }
@@ -169,9 +162,8 @@ export default class TreeItemPresenter extends Component {
       tabIndex: `-1`,
       role: role || `treeitem`
     }
-// console.log('tree item presenter');
-
-// console.log(this.props.indicator);
+    console.log('tree item presenter');
+    console.log(this.props);
     return this.renderTreeItem();
   }
 }
