@@ -17,7 +17,7 @@ export default class TreeItem extends Component {
     /**
      * Labels the TreeItem, this is rendered before all children
      */
-    label: PropTypes.string,
+    label: PropTypes.node,
     /**
      * Adds custom/overriding styles
      */

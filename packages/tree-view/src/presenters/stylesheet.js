@@ -15,7 +15,7 @@
 import { PropTypes } from "react";
 
 export default function stylesheet(props, themeData) {
-  // console.log(props);
+  console.log(props.indicator);
   const {
     alternateBg,
     guidelines,
@@ -41,7 +41,7 @@ export default function stylesheet(props, themeData) {
       padding: 0,
       "& ul": {
         listStyle: `none`,
-        paddingLeft: `20px`,
+        paddingLeft: 0,
         "& li": {
           // display: `flex`,
           // flexDirection: `column`,
@@ -80,29 +80,6 @@ export default function stylesheet(props, themeData) {
     higTreeItem: {
       margin: 0,
       position: `relative`,
-      /* ,
-        "&::after": {
-          borderLeft: `1px dashed red`,
-          display: `inline-block`,
-          content: `""`,
-          height: `100%`,
-          left: 0,
-          position: `absolute`,
-          top: 0,
-          width: `20px`
-        },
-        "&[aria-expanded='true']": {
-          "&::after": {
-            border: `none`
-          }
-        }
-      }
-      */
-      /* "&[aria-expanded='true']": {
-        "&::after": {
-          border: `none`
-        }
-      } */
     },
     higTreeItemContentWrapper: {
       display: `flex`
