@@ -76,7 +76,7 @@ export default class TreeViewBehaviorWM extends Component {
 
     this.state = {
       treeItemArray: null,
-      activeTreeItemIndex: 12
+      activeTreeItemIndex: 1
     };
 
     this.treeViewRef = null

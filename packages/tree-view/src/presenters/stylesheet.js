@@ -79,10 +79,13 @@ console.log('stylesheet');
     higTreeItem: {
       margin: 0,
       position: `relative`,
-      ...(selected ? { background: `rgba(0,0,0,0.5)` } : {})
+      "& > span": {
+        ...(selected ? { background: `rgba(0,0,0,0.5)` } : {})
+      }
     },
     higTreeItemContentWrapper: {
-      display: `flex`
+      display: `inline-flex`,
+      ...(selected ? { background: `rgba(0,0,0,0.5)` } : {})
     }
   };
 
