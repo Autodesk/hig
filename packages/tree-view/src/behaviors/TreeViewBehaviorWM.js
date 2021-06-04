@@ -48,6 +48,16 @@ function checkScroll(optionId, menu) {
   scrollInListbox(option, menu);
 } */
 
+function buildTreeItemIdArray(list) {
+  const ids = [];
+
+  list.map(item => {
+    ids.push(item.id);
+  })
+
+  return ids;
+}
+
 export default class TreeViewBehaviorWM extends Component {
   static propTypes = {
     children: PropTypes.func,
@@ -65,7 +75,8 @@ export default class TreeViewBehaviorWM extends Component {
     super(props);
 
     this.state = {
-
+      treeItemArray: null,
+      activeTreeItemIndex: 0
     };
 
     this.treeViewRef = null
@@ -76,6 +87,13 @@ export default class TreeViewBehaviorWM extends Component {
       this.props.treeViewRef(element);
     }
 
+    console.log('set tree view ref');
+    this.setState({
+      treeItemArray: 
+      buildTreeItemIdArray(
+        Array.prototype.slice.call(element.querySelectorAll('li'))
+      )
+    });
     this.treeViewRef = element;
   };
 
@@ -147,7 +165,7 @@ export default class TreeViewBehaviorWM extends Component {
       treeViewRef
     } = this;
 console.log('TreeView Behavior WM');
-console.log(treeViewRef);
+console.log(this.state.treeItemArray);
     return this.props.children({
       handleBlur,
       handleFocus,

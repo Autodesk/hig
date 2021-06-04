@@ -14,6 +14,7 @@ export default class TreeItem extends Component {
      * Content of the Option
      */
     children: PropTypes.node,
+    id: PropTypes.string.required,
     /**
      * Labels the TreeItem, this is rendered before all children
      */
@@ -27,6 +28,7 @@ export default class TreeItem extends Component {
   render() {
     const {
       children,
+      id,
       label,
       stylesheet,
       test,
@@ -52,6 +54,7 @@ export default class TreeItem extends Component {
         }) => (
           <TreeItemPresenter
             {...otherProps}
+            id={id}
             label={label}
             onClick={handleClick}
             onFocus={onFocus}

@@ -17,11 +17,15 @@ import stylesheet from "./stylesheet";
 import { AVAILABLE_ROLES } from "../constants";
 
 function SubTreeItem(props) {
-  const { label, themeData } = props;
+  const { id, label, themeData } = props;
   const styles = stylesheet(props, themeData);
 
   return (
-    <li className={css(styles.higTreeItem)}>
+    <li
+      className={css(styles.higTreeItem)}
+      id={id}
+      role="treeitem"
+    >
       <div className={css(styles.higTreeItemContentWrapper)}>
         {label}
       </div>
@@ -30,13 +34,18 @@ function SubTreeItem(props) {
 }
 
 function NestedSubTreeItem(props) {
-  const { children, indicator, label, themeData } = props;
+  const { children, id, indicator, label, themeData } = props;
   const styles = stylesheet(props, themeData);
   const clonedChildren = React.cloneElement(children, { indicator });
   const IconIndicator = indicator === 'operator' ? OperatorPlusSUI : CaretRightMUI;
 
   return (
-    <li className={css(styles.higTreeItem)} aria-expanded="true">
+    <li
+      aria-expanded="true"
+      className={css(styles.higTreeItem)}
+      id={id}
+      role="treeitem"
+    >
       <span><IconIndicator /> {label}</span>
       <div>
         <ul role="group">
@@ -48,13 +57,18 @@ function NestedSubTreeItem(props) {
 }
 
 function NestedSubTreeItemGroup(props) {
-  const { children, indicator, label, themeData } = props;
+  const { children, id, indicator, label, themeData } = props;
   const styles = stylesheet(props, themeData);
   const clonedChildren = React.Children.map(children, (child => React.cloneElement(child, {indicator})));
   const IconIndicator = indicator === 'operator' ? OperatorPlusSUI : CaretRightMUI;
 
   return (
-    <li className={css(styles.higTreeItem)} aria-expanded="true">
+    <li
+      aria-expanded="true"
+      className={css(styles.higTreeItem)}
+      id={id}
+      role="treeitem"
+    >
       <span><IconIndicator /> {label}</span>
       <div>
         <ul role="group">
