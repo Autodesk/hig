@@ -80,12 +80,12 @@ console.log('stylesheet');
       margin: 0,
       position: `relative`,
       "& > span": {
-        ...(selected ? { background: `rgba(0,0,0,0.5)` } : {})
+        ...(selected ? { background: `rgba(0,0,0,0.3)` } : {})
       }
     },
     higTreeItemContentWrapper: {
       display: `inline-flex`,
-      ...(selected ? { background: `rgba(0,0,0,0.5)` } : {})
+      ...(selected ? { background: `rgba(0,0,0,0.3)` } : {})
     }
   };
 
