@@ -13,9 +13,11 @@
 } */
 
 export default function stylesheet(props, themeData) {
+console.log('stylesheet');
   const {
     alternateBg,
     guidelines,
+    selected,
     stylesheet: customStylesheet
   } = props;
   const styles = {
@@ -77,6 +79,7 @@ export default function stylesheet(props, themeData) {
     higTreeItem: {
       margin: 0,
       position: `relative`,
+      ...(selected ? { background: `rgba(0,0,0,0.5)` } : {})
     },
     higTreeItemContentWrapper: {
       display: `flex`

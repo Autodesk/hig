@@ -13,6 +13,11 @@ export default class TreeItemBehavior extends Component {
     super(props);
   }
 
+  /* isActive = () => {
+    return true;
+    // return this.props.getActiveTreeItemId() === this.props.id;
+  } */
+
   handleClick = event => {
     if (onClick) {
       onClick(event);
@@ -35,17 +40,14 @@ export default class TreeItemBehavior extends Component {
     const {
       handleClick,
       handleMouseEnter,
-      handleMouseLeave,
-      setTreeViewRef,
-      treeViewRef
+      handleMouseLeave
     } = this;
-// console.log('TreeItem Behavior WM');
+console.log('TreeItem Behavior WM');
+console.log(this.props);
     return this.props.children({
       handleClick,
       handleMouseEnter,
-      handleMouseLeave,
-      setTreeViewRef,
-      treeViewRef
+      handleMouseLeave
     });
   }
 }

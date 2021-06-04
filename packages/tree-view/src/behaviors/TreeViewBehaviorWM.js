@@ -76,7 +76,7 @@ export default class TreeViewBehaviorWM extends Component {
 
     this.state = {
       treeItemArray: null,
-      activeTreeItemIndex: 0
+      activeTreeItemIndex: 12
     };
 
     this.treeViewRef = null
@@ -95,6 +95,14 @@ export default class TreeViewBehaviorWM extends Component {
       )
     });
     this.treeViewRef = element;
+  };
+
+  getActiveTreeItemId = () => {
+    return this.state.treeItemArray && this.state.treeItemArray[this.getActiveTreeItemIndex()];
+  };
+
+  getActiveTreeItemIndex = () => {
+    return this.state.activeTreeItemIndex;
   };
 
   /* getPreviousEvent = () => this.state.previousEvent;
@@ -158,15 +166,18 @@ export default class TreeViewBehaviorWM extends Component {
 
   render() {
     const {
+      getActiveTreeItemId,
+      getActiveTreeItemIndex,
       handleBlur,
       handleFocus,
       handleKeyDown,
       setTreeViewRef,
       treeViewRef
     } = this;
-console.log('TreeView Behavior WM');
-console.log(this.state.treeItemArray);
+
     return this.props.children({
+      getActiveTreeItemId,
+      getActiveTreeItemIndex,
       handleBlur,
       handleFocus,
       handleKeyDown,

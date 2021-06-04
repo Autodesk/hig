@@ -53,6 +53,8 @@ export default class TreeView extends Component {
             onKeyDown={onKeyDown}
           >
             {({
+              getActiveTreeItemId,
+              getActiveTreeItemIndex,
               handleBlur: handleMenuBehaviorBlur,
               handleFocus: handleMenuBehaviorFocus,
               handleKeyDown,
@@ -63,6 +65,8 @@ export default class TreeView extends Component {
                 {...otherProps}
                 alternateBg={alternateBg}
                 dataObject={dataObject}
+                getActiveTreeItemId={getActiveTreeItemId}
+                getActiveTreeItemIndex={getActiveTreeItemIndex}
                 guidelines={guidelines}
                 onBlur={handleMenuBehaviorBlur}
                 onFocus={handleMenuBehaviorFocus}

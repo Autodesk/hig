@@ -23,8 +23,10 @@ export default class TreeViewPresenter extends Component {
   static propTypes = {
     alternateBg: PropTypes.bool,
     children: PropTypes.node,
+    getActiveTreeItemIndex: PropTypes.func,
     guidelines: PropTypes.bool,
     indicator: PropTypes.string,
+    selected: PropTypes.bool,
     setTreeViewRef: PropTypes.func,
     stylesheet: PropTypes.func
   };
@@ -39,10 +41,14 @@ export default class TreeViewPresenter extends Component {
 
   renderTreeItem = ({ key, props }) => {
     const {
+      getActiveTreeItemId,
+      getActiveTreeItemIndex,
       indicator
     } = this.props;
     const payload = {
       ...props,
+      getActiveTreeItemId,
+      getActiveTreeItemIndex,
       indicator,
       key
     };
@@ -77,7 +83,12 @@ export default class TreeViewPresenter extends Component {
           );
           return (
             <div className={css(styles.higTreeViewWrapper)}>
-              <ul role="tree" className={css(styles.higTreeView)} ref={setTreeViewRef}>
+              <ul
+                className={css(styles.higTreeView)}
+                ref={setTreeViewRef}
+                role="tree"
+                tabIndex="0"
+              >
                 {this.renderTreeItems()}
               </ul>
             </div>

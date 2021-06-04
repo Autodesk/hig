@@ -34,9 +34,17 @@ function SubTreeItem(props) {
 }
 
 function NestedSubTreeItem(props) {
-  const { children, id, indicator, label, themeData } = props;
+  const {
+    children,
+    getActiveTreeItemId,
+    getActiveTreeItemIndex,
+    id,
+    indicator,
+    label,
+    themeData
+  } = props;
   const styles = stylesheet(props, themeData);
-  const clonedChildren = React.cloneElement(children, { indicator });
+  const clonedChildren = React.cloneElement(children, { getActiveTreeItemId, getActiveTreeItemIndex, indicator });
   const IconIndicator = indicator === 'operator' ? OperatorPlusSUI : CaretRightMUI;
 
   return (
@@ -57,9 +65,17 @@ function NestedSubTreeItem(props) {
 }
 
 function NestedSubTreeItemGroup(props) {
-  const { children, id, indicator, label, themeData } = props;
+  const {
+    children,
+    getActiveTreeItemId,
+    getActiveTreeItemIndex,
+    id,
+    indicator,
+    label,
+    themeData
+  } = props;
   const styles = stylesheet(props, themeData);
-  const clonedChildren = React.Children.map(children, (child => React.cloneElement(child, {indicator})));
+  const clonedChildren = React.Children.map(children, (child => React.cloneElement(child, {getActiveTreeItemId, getActiveTreeItemIndex, indicator})));
   const IconIndicator = indicator === 'operator' ? OperatorPlusSUI : CaretRightMUI;
 
   return (
@@ -146,7 +162,8 @@ export default class TreeItemPresenter extends Component {
       tabIndex: `-1`,
       role: role || `treeitem`
     }
-
+    console.log('tree item presenter');
+    console.log(this.props);
     return this.renderTreeItem();
   }
 }

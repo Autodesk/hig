@@ -35,6 +35,7 @@ export default class TreeItem extends Component {
       ...otherProps
     } = this.props;
     const {
+      getActiveTreeItemId,
       onFocus,
       onMouseDown,
       onMouseLeave,
@@ -46,6 +47,7 @@ export default class TreeItem extends Component {
     return (
       <TreeItemBehavior
         {...otherProps}
+        id={id}
       >
         {({
           handleClick,
@@ -60,6 +62,7 @@ export default class TreeItem extends Component {
             onFocus={onFocus}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            selected={getActiveTreeItemId() === id}
             // onMouseOver={handleMouseOver}
             stylesheet={stylesheet}
           >
