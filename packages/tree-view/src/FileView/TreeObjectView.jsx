@@ -1,5 +1,45 @@
 import React, { Component } from "react";
 
+import PropTypes from "prop-types";
+import { css, cx } from "emotion";
+import { ThemeContext } from "@hig/theme-context";
+
+import {
+  CaretRightMUI,
+  CaretRightSUI,
+  OperatorMinusSUI,
+  OperatorMinusXsUI,
+  OperatorPlusSUI,
+  OperatorPlusXsUI,
+} from "@hig/icons";
+
+import stylesheet from "../presenters/stylesheet";
+
+function NestedSubTreeItem({ treeItem, themeData }) {
+  console.log(treeItem);
+  const {
+    id,
+    indicator,
+    meta: { label },
+  } = treeItem;
+  const styles = stylesheet(treeItem, themeData);
+  const IconIndicator =
+    indicator === "operator" ? OperatorPlusSUI : CaretRightMUI;
+
+  return (
+    <li
+      aria-expanded="true"
+      className={css(styles.higTreeItem)}
+      id={id}
+      role="treeitem"
+    >
+      <span>
+        <IconIndicator /> {label}
+      </span>
+    </li>
+  );
+}
+
 class TreeObjectView extends Component {
   state = {
     treeNode: this.props.tree,
@@ -17,30 +57,22 @@ class TreeObjectView extends Component {
   }
 
   renderProperties(treeItem) {
-    return Object.keys(treeItem)
-      .filter((prop) => prop !== "children")
-      .map((prop) => {
-        if (prop === "meta") {
-          return Object.entries(treeItem[prop]).map(([key, value]) => (
-            <div key={Math.random()}>{`${key}: ${value}`}</div>
-          ));
-        }
-        return (
-          <div key={`${treeItem[prop]}`}>{`${prop}: ${treeItem[prop]}`}</div>
-        );
-      });
+    return (
+      <ThemeContext.Consumer>
+        {({ resolvedRoles, metadata }) => {
+          const { treeNode } = this.state;
+          return (
+            <NestedSubTreeItem treeItem={treeNode} themeData={resolvedRoles} />
+          );
+        }}
+      </ThemeContext.Consumer>
+    );
   }
 
   render() {
     const { treeNode } = this.state;
-    return (
-      <div
-        className="parent-member"
-        onClick={() => this.handleClickParent(treeNode)}
-      >
-        {this.renderProperties(treeNode)}
-      </div>
-    );
+    console.log("treeNode", treeNode);
+    return this.renderProperties(treeNode);
   }
 }
 

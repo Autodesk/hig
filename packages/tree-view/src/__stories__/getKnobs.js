@@ -11,7 +11,7 @@ const knobGroupIds = { basic: "Basic" };
 const knobLabels = {
   alternateBg: "Alternate Background",
   guidelines: "Guidelines",
-  indicator: "Inndicators"
+  indicator: "Indicators",
 };
 
 export default function getKnobs(props) {
@@ -19,7 +19,11 @@ export default function getKnobs(props) {
 
   return {
     ...otherProps,
-    alternateBg: boolean(knobLabels.alternateBg, alternateBg, knobGroupIds.basic),
+    alternateBg: boolean(
+      knobLabels.alternateBg,
+      alternateBg,
+      knobGroupIds.basic
+    ),
     guidelines: boolean(knobLabels.guidelines, guidelines, knobGroupIds.basic),
     indicator: select(
       knobLabels.indicator,
@@ -27,6 +31,6 @@ export default function getKnobs(props) {
       indicator,
       knobGroupIds.basic
     ),
-    onChange: action(knobLabels.onChange)
+    onChange: action(knobLabels.onChange),
   };
 }

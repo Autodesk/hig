@@ -14,8 +14,11 @@ export default class TreeViewPresenterObject extends Component {
   static propTypes = {
     alternateBg: PropTypes.bool,
     children: PropTypes.node,
+    getActiveTreeItemIndex: PropTypes.func,
     guidelines: PropTypes.bool,
     indicator: PropTypes.string,
+    selected: PropTypes.bool,
+    setTreeViewRef: PropTypes.func,
     stylesheet: PropTypes.func,
   };
 
@@ -44,13 +47,20 @@ export default class TreeViewPresenterObject extends Component {
     return fileTree;
   }
 
-  renderFileTree(tree) {
+  renderFileTree(tree, payload) {
     const { id, children } = tree;
+    const appendPayload = {
+      ...tree,
+      payload,
+    };
     return (
       <div key={id}>
-        <TreeObjectView tree={tree} />
+        <TreeObjectView tree={appendPayload} />
         {children ? (
-          <TreeObjectItem renderFileTree={this.renderFileTree}>
+          <TreeObjectItem
+            renderFileTree={this.renderFileTree}
+            payload={payload}
+          >
             {children}
           </TreeObjectItem>
         ) : null}
@@ -63,13 +73,20 @@ export default class TreeViewPresenterObject extends Component {
       alternateBg,
       children,
       guidelines,
+      setTreeViewRef,
       stylesheet: customStylesheet,
       dataObject,
       ...otherProps
     } = this.props;
+
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
+          const {
+            getActiveTreeItemId,
+            getActiveTreeItemIndex,
+            indicator,
+          } = this.props;
           const styles = stylesheet(
             {
               alternateBg,
@@ -80,9 +97,18 @@ export default class TreeViewPresenterObject extends Component {
           );
           return (
             <div className={css(styles.higTreeViewWrapper)}>
-              <div role="group" className={css(styles.higTreeView)}>
-                {this.renderFileTree(this.getTreeObject(dataObject))}
-              </div>
+              <ul
+                className={css(styles.higTreeView)}
+                ref={setTreeViewRef}
+                role="tree"
+                tabIndex="0"
+              >
+                {this.renderFileTree(this.getTreeObject(dataObject), {
+                  getActiveTreeItemId,
+                  getActiveTreeItemIndex,
+                  indicator,
+                })}
+              </ul>
             </div>
           );
         }}

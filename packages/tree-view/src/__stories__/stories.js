@@ -6,7 +6,7 @@ const FileTreeCollection = [
     id: 1,
     parentId: null,
     meta: {
-      label: "Project",
+      label: "Tree Item 1",
       toggled: false,
       active: false,
     },
@@ -15,7 +15,7 @@ const FileTreeCollection = [
     id: 2,
     parentId: 1,
     meta: {
-      label: "Project",
+      label: "Tree Item 2",
       toggled: false,
       active: false,
     },
@@ -24,7 +24,7 @@ const FileTreeCollection = [
     id: 3,
     parentId: 2,
     meta: {
-      label: "Project",
+      label: "Tree Item 3",
       toggled: false,
       active: false,
     },
@@ -33,7 +33,7 @@ const FileTreeCollection = [
     id: 4,
     parentId: 2,
     meta: {
-      label: "Models",
+      label: "Tree Item 4",
       toggled: false,
       active: false,
     },
@@ -42,7 +42,7 @@ const FileTreeCollection = [
     id: 5,
     parentId: 2,
     meta: {
-      label: "Character",
+      label: "Tree Item 5",
       toggled: false,
       active: false,
     },
@@ -51,7 +51,7 @@ const FileTreeCollection = [
     id: 6,
     parentId: 5,
     meta: {
-      label: "Props",
+      label: "Tree Item 6",
       toggled: false,
       active: false,
     },
@@ -60,7 +60,7 @@ const FileTreeCollection = [
     id: 7,
     parentId: 5,
     meta: {
-      label: "Audio",
+      label: "Tree Item 7",
       toggled: false,
       active: false,
     },
@@ -69,7 +69,7 @@ const FileTreeCollection = [
     id: 8,
     parentId: 7,
     meta: {
-      label: "Track 1",
+      label: "Tree Item 8",
       toggled: false,
       active: false,
     },
@@ -78,7 +78,7 @@ const FileTreeCollection = [
     id: 9,
     parentId: 7,
     meta: {
-      label: "Track 2",
+      label: "Tree Item 9",
       toggled: false,
       active: false,
     },
@@ -87,7 +87,7 @@ const FileTreeCollection = [
     id: 10,
     parentId: 7,
     meta: {
-      label: "Track 3",
+      label: "Tree Item 10",
       toggled: false,
       active: false,
     },
@@ -96,7 +96,7 @@ const FileTreeCollection = [
     id: 11,
     parentId: 2,
     meta: {
-      label: "Random 1",
+      label: "Tree Item 11",
       toggled: false,
       active: false,
     },
@@ -105,7 +105,7 @@ const FileTreeCollection = [
     id: 12,
     parentId: 3,
     meta: {
-      label: "Random 2",
+      label: "Tree Item 12",
       toggled: false,
       active: false,
     },
@@ -114,7 +114,7 @@ const FileTreeCollection = [
     id: 13,
     parentId: 4,
     meta: {
-      label: "Random 3",
+      label: "Tree Item 13",
       toggled: false,
       active: false,
     },
@@ -144,13 +144,27 @@ export default [
               </TreeItem>
               <TreeItem test="WM" label="Tree Item 7" id="tree-item-7" />
               <TreeItem test="WM" label="Tree Item 8" id="tree-item-8" />
-              <TreeItem test="WM" label={<div><strong>Tree</strong><em>Item 9</em></div>} id="tree-item-9" />
+              <TreeItem
+                test="WM"
+                label={
+                  <div>
+                    <strong>Tree</strong>
+                    <em>Item 9</em>
+                  </div>
+                }
+                id="tree-item-9"
+              />
               <TreeItem test="WM" label="Tree Item 10" id="tree-item-10" />
               <TreeItem test="WM" label="Tree Item 11" id="tree-item-11" />
             </TreeItem>
           </TreeItem>
         </TreeItem>,
-        <TreeItem id="tree-item-12" key="tree-item-2" test="WM" label="Tree Item 12" />,
+        <TreeItem
+          id="tree-item-12"
+          key="tree-item-2"
+          test="WM"
+          label="Tree Item 12"
+        />,
         <TreeItem
           id="tree-item-13"
           key="tree-item-13"
@@ -175,7 +189,7 @@ export default [
           label="Tree Item 18"
         >
           <TreeItem test="WM" label="Tree Item 19" id="tree-item-19" />
-        </TreeItem>
+        </TreeItem>,
       ],
     }),
   },
