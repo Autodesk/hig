@@ -3,10 +3,7 @@ import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
-// import "../FileView/index.scss";
-
 import TreeObjectView from "../FileView/TreeObjectView";
-import TreeObjectItem from "../FileView/TreeObjectItem";
 
 import stylesheet from "./stylesheet";
 
@@ -48,24 +45,11 @@ export default class TreeViewPresenterObject extends Component {
   }
 
   renderFileTree(tree, payload) {
-    const { id, children } = tree;
     const appendPayload = {
       ...tree,
       payload,
     };
-    return (
-      <div key={id}>
-        <TreeObjectView tree={appendPayload} />
-        {children ? (
-          <TreeObjectItem
-            renderFileTree={this.renderFileTree}
-            payload={payload}
-          >
-            {children}
-          </TreeObjectItem>
-        ) : null}
-      </div>
-    );
+    return <TreeObjectView tree={appendPayload} />;
   }
 
   render() {

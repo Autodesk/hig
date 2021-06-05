@@ -15,12 +15,26 @@ import {
 
 import stylesheet from "../presenters/stylesheet";
 
-function NestedSubTreeItem({ treeItem, themeData }) {
-  console.log(treeItem);
+function SubTreeItem({ treeItem, themeData }) {
   const {
     id,
-    indicator,
     meta: { label },
+  } = treeItem;
+  const styles = stylesheet(treeItem, themeData);
+  return (
+    <li className={css(styles.higTreeItem)} id={id} role="treeitem">
+      <div className={css(styles.higTreeItemContentWrapper)}>{label}</div>
+    </li>
+  );
+}
+
+function NestedSubTreeItem({ treeItem, themeData }) {
+  const {
+    children,
+    id,
+    meta: { label },
+    payload,
+    payload: { indicator },
   } = treeItem;
   const styles = stylesheet(treeItem, themeData);
   const IconIndicator =
@@ -36,6 +50,20 @@ function NestedSubTreeItem({ treeItem, themeData }) {
       <span>
         <IconIndicator /> {label}
       </span>
+      <div>
+        <ul role="group">
+          {children.map((child) => {
+            return child.children ? (
+              <NestedSubTreeItem
+                treeItem={{ ...child, payload }}
+                themeData={themeData}
+              />
+            ) : (
+              <SubTreeItem treeItem={child} themeData={themeData} />
+            );
+          })}
+        </ul>
+      </div>
     </li>
   );
 }
@@ -71,7 +99,6 @@ class TreeObjectView extends Component {
 
   render() {
     const { treeNode } = this.state;
-    console.log("treeNode", treeNode);
     return this.renderProperties(treeNode);
   }
 }
