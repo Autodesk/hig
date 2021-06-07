@@ -19,12 +19,6 @@ export default class TreeViewPresenterObject extends Component {
     stylesheet: PropTypes.func,
   };
 
-  shouldComponentUpdate(nextProps, nextState) {
-    if (nextProps.dataObject[0].id === this.props.dataObject[0].id)
-      return false;
-    return true;
-  }
-
   getTreeObject(collection) {
     let fileTree = {};
     const mapTreeObject = collection.reduce((acc, el, i) => {

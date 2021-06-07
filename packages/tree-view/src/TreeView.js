@@ -59,7 +59,7 @@ export default class TreeView extends Component {
               handleFocus: handleMenuBehaviorFocus,
               handleKeyDown,
               setTreeViewRef,
-              treeViewRef
+              treeViewRef,
             }) => (
               <TreeViewPresenterType
                 {...otherProps}

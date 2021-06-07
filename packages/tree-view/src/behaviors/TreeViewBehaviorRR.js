@@ -86,12 +86,12 @@ export default class TreeViewBehaviorWM extends Component {
     }
 
     console.log("set tree view ref");
-    this.setState({
-      treeItemArray: buildTreeItemIdArray(
-        Array.prototype.slice.call(element.querySelectorAll("li"))
-      ),
-    });
-    this.treeViewRef = element;
+    // this.setState({
+    //   treeItemArray: buildTreeItemIdArray(
+    //     Array.prototype.slice.call(element.querySelectorAll("li"))
+    //   ),
+    // });
+    // this.treeViewRef = element;
   };
 
   getActiveTreeItemId = () => {

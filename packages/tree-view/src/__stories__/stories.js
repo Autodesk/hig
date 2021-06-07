@@ -4,6 +4,7 @@ import { TreeItem } from "../index";
 const FileTreeCollection = [
   {
     id: 1,
+    key: 1,
     parentId: null,
     meta: {
       label: "Tree Item 1",
@@ -13,6 +14,7 @@ const FileTreeCollection = [
   },
   {
     id: 2,
+    key: 2,
     parentId: 1,
     meta: {
       label: "Tree Item 2",
@@ -22,6 +24,7 @@ const FileTreeCollection = [
   },
   {
     id: 3,
+    key: 3,
     parentId: 2,
     meta: {
       label: "Tree Item 3",
@@ -31,6 +34,7 @@ const FileTreeCollection = [
   },
   {
     id: 4,
+    key: 4,
     parentId: 2,
     meta: {
       label: "Tree Item 4",
@@ -40,6 +44,7 @@ const FileTreeCollection = [
   },
   {
     id: 5,
+    key: 5,
     parentId: 2,
     meta: {
       label: "Tree Item 5",
@@ -49,6 +54,7 @@ const FileTreeCollection = [
   },
   {
     id: 6,
+    key: 6,
     parentId: 5,
     meta: {
       label: "Tree Item 6",
@@ -58,6 +64,7 @@ const FileTreeCollection = [
   },
   {
     id: 7,
+    key: 7,
     parentId: 5,
     meta: {
       label: "Tree Item 7",
@@ -67,6 +74,7 @@ const FileTreeCollection = [
   },
   {
     id: 8,
+    key: 8,
     parentId: 7,
     meta: {
       label: "Tree Item 8",
@@ -76,6 +84,7 @@ const FileTreeCollection = [
   },
   {
     id: 9,
+    key: 9,
     parentId: 7,
     meta: {
       label: "Tree Item 9",
@@ -85,6 +94,7 @@ const FileTreeCollection = [
   },
   {
     id: 10,
+    key: 10,
     parentId: 7,
     meta: {
       label: "Tree Item 10",
@@ -94,6 +104,7 @@ const FileTreeCollection = [
   },
   {
     id: 11,
+    key: 11,
     parentId: 2,
     meta: {
       label: "Tree Item 11",
@@ -103,6 +114,7 @@ const FileTreeCollection = [
   },
   {
     id: 12,
+    key: 12,
     parentId: 3,
     meta: {
       label: "Tree Item 12",
@@ -112,6 +124,7 @@ const FileTreeCollection = [
   },
   {
     id: 13,
+    key: 13,
     parentId: 4,
     meta: {
       label: "Tree Item 13",
@@ -197,7 +210,7 @@ export default [
     description: "RR",
     getProps: () => ({
       guidelines: false,
-      indicator: "operator",
+      indicator: "caret",
       test: "RR",
       dataObject: FileTreeCollection,
     }),
