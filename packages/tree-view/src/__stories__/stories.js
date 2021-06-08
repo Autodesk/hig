@@ -1,138 +1,104 @@
 import React from "react";
 import { TreeItem } from "../index";
 
-const FileTreeCollection = [
-  {
-    id: 1,
-    key: 1,
-    parentId: null,
-    meta: {
-      label: "Tree Item 1",
-      toggled: false,
-      active: false,
-    },
+const FileTreeCollection = {
+  id: 1,
+  parentId: null,
+  meta: {
+    label: "Tree Item 1",
+    toggled: false,
+    active: false,
   },
-  {
-    id: 2,
-    key: 2,
-    parentId: 1,
-    meta: {
-      label: "Tree Item 2",
-      toggled: false,
-      active: false,
+  children: [
+    {
+      id: 2,
+      parentId: 1,
+      meta: {
+        label: "Tree Item 2",
+        toggled: false,
+        active: false,
+      },
+      children: [
+        {
+          id: 3,
+          parentId: 2,
+          meta: {
+            label: "Tree Item 3",
+            toggled: false,
+            active: false,
+          },
+        },
+        {
+          id: 4,
+          parentId: 2,
+          meta: {
+            label: "Tree Item 4",
+            toggled: false,
+            active: false,
+          },
+        },
+        {
+          id: 5,
+          parentId: 2,
+          meta: {
+            label: "Tree Item 5",
+            toggled: false,
+            active: false,
+          },
+          children: [
+            {
+              id: 6,
+              parentId: 5,
+              meta: {
+                label: "Tree Item 6",
+                toggled: false,
+                active: false,
+              },
+            },
+            {
+              id: 7,
+              parentId: 5,
+              meta: {
+                label: "Tree Item 7",
+                toggled: false,
+                active: false,
+              },
+              children: [
+                {
+                  id: 8,
+                  parentId: 7,
+                  meta: {
+                    label: "Tree Item 8",
+                    toggled: false,
+                    active: false,
+                  },
+                },
+                {
+                  id: 9,
+                  parentId: 7,
+                  meta: {
+                    label: "Tree Item 9",
+                    toggled: false,
+                    active: false,
+                  },
+                },
+                {
+                  id: 10,
+                  parentId: 7,
+                  meta: {
+                    label: "Tree Item 10",
+                    toggled: false,
+                    active: false,
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
-  },
-  {
-    id: 3,
-    key: 3,
-    parentId: 2,
-    meta: {
-      label: "Tree Item 3",
-      toggled: false,
-      active: false,
-    },
-  },
-  {
-    id: 4,
-    key: 4,
-    parentId: 2,
-    meta: {
-      label: "Tree Item 4",
-      toggled: false,
-      active: false,
-    },
-  },
-  {
-    id: 5,
-    key: 5,
-    parentId: 2,
-    meta: {
-      label: "Tree Item 5",
-      toggled: false,
-      active: false,
-    },
-  },
-  {
-    id: 6,
-    key: 6,
-    parentId: 5,
-    meta: {
-      label: "Tree Item 6",
-      toggled: false,
-      active: false,
-    },
-  },
-  {
-    id: 7,
-    key: 7,
-    parentId: 5,
-    meta: {
-      label: "Tree Item 7",
-      toggled: false,
-      active: false,
-    },
-  },
-  {
-    id: 8,
-    key: 8,
-    parentId: 7,
-    meta: {
-      label: "Tree Item 8",
-      toggled: false,
-      active: false,
-    },
-  },
-  {
-    id: 9,
-    key: 9,
-    parentId: 7,
-    meta: {
-      label: "Tree Item 9",
-      toggled: false,
-      active: false,
-    },
-  },
-  {
-    id: 10,
-    key: 10,
-    parentId: 7,
-    meta: {
-      label: "Tree Item 10",
-      toggled: false,
-      active: false,
-    },
-  },
-  {
-    id: 11,
-    key: 11,
-    parentId: 2,
-    meta: {
-      label: "Tree Item 11",
-      toggled: false,
-      active: false,
-    },
-  },
-  {
-    id: 12,
-    key: 12,
-    parentId: 3,
-    meta: {
-      label: "Tree Item 12",
-      toggled: false,
-      active: false,
-    },
-  },
-  {
-    id: 13,
-    key: 13,
-    parentId: 4,
-    meta: {
-      label: "Tree Item 13",
-      toggled: false,
-      active: false,
-    },
-  },
-];
+  ],
+};
 
 export default [
   {

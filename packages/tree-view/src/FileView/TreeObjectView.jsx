@@ -15,13 +15,16 @@ import {
 
 import stylesheet from "../presenters/stylesheet";
 
-function SubTreeItem({ treeItem, themeData }) {
+function SubTreeItem(props) {
   const {
-    children,
-    id,
-    meta: { label },
-    payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex },
-  } = treeItem;
+    treeItem: {
+      children,
+      id,
+      meta: { label },
+      payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex },
+    },
+    themeData,
+  } = props;
 
   const styleTreeItem = {
     children,
@@ -40,14 +43,17 @@ function SubTreeItem({ treeItem, themeData }) {
   );
 }
 
-function NestedSubTreeItem({ treeItem, themeData }) {
+function NestedSubTreeItem(props) {
   const {
-    children,
-    id,
-    meta: { label },
-    payload,
-    payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex },
-  } = treeItem;
+    treeItem: {
+      children,
+      id,
+      meta: { label },
+      payload,
+      payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex },
+    },
+    themeData,
+  } = props;
 
   const styleTreeItem = {
     children,
@@ -99,11 +105,6 @@ class TreeObjectView extends Component {
     treeNode: this.props.tree,
   };
 
-  shouldComponentUpdate(nextProps, nextState) {
-    if (nextProps.payload.id === this.props.id) return false;
-    return true;
-  }
-
   handleClickParent(treeNode) {
     console.log("this.props", this.props);
     console.log("treeNode Info: ", treeNode);
@@ -115,22 +116,21 @@ class TreeObjectView extends Component {
     });
   }
 
-  renderProperties(treeItem) {
+  render() {
+    const { treeNode } = this.state;
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
-          const { treeNode } = this.state;
           return (
-            <NestedSubTreeItem treeItem={treeNode} themeData={resolvedRoles} />
+            <NestedSubTreeItem
+              treeItem={this.props.tree}
+              themeData={resolvedRoles}
+              stylesheet={stylesheet}
+            />
           );
         }}
       </ThemeContext.Consumer>
     );
-  }
-
-  render() {
-    const { treeNode } = this.state;
-    return this.renderProperties(treeNode);
   }
 }
 

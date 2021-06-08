@@ -81,10 +81,12 @@ export default class TreeViewPresenterObject extends Component {
                 role="tree"
                 tabIndex="0"
               >
-                {this.renderFileTree(this.getTreeObject(dataObject), {
+                {this.renderFileTree(dataObject, {
                   getActiveTreeItemId,
                   getActiveTreeItemIndex,
                   indicator,
+                  stylesheet,
+                  ...otherProps,
                 })}
               </ul>
             </div>
