@@ -34,7 +34,8 @@ export default class TreeView extends Component {
       dataObject,
       ...otherProps
     } = this.props;
-    const { onBlur, onFocus, onKeyDown } = otherProps;
+    const { onBlur, onClick, onFocus, onKeyDown } = otherProps;
+    console.log("OTHER", otherProps);
     // Test mode
     const TreeViewBehavior =
       test === "WM" ? TreeViewBehaviorWM : TreeViewBehaviorRR;
@@ -51,6 +52,7 @@ export default class TreeView extends Component {
             onBlur={handleBlur}
             onFocus={handleFocus}
             onKeyDown={onKeyDown}
+            onClick={onClick}
           >
             {({
               getActiveTreeItemId,
@@ -58,6 +60,7 @@ export default class TreeView extends Component {
               handleBlur: handleMenuBehaviorBlur,
               handleFocus: handleMenuBehaviorFocus,
               handleKeyDown,
+              handleClick,
               setTreeViewRef,
               treeViewRef,
             }) => (
@@ -71,6 +74,7 @@ export default class TreeView extends Component {
                 onBlur={handleMenuBehaviorBlur}
                 onFocus={handleMenuBehaviorFocus}
                 onKeyDown={handleKeyDown}
+                onClick={handleClick}
                 setTreeViewRef={setTreeViewRef}
                 stylesheet={stylesheet}
                 treeViewRef={treeViewRef}

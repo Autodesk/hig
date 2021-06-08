@@ -11,9 +11,14 @@
         ${themeData["menu.header.marginBottom"]}`
   };
 } */
+// ADD TO THEME-DATA
+// MEDIUM DENSITY = 40PX TOTAL HEIGHT
+// HIGHT DENSITY = 24PX TOTAL HEIGHT
 
 export default function stylesheet(props, themeData) {
-console.log('stylesheet');
+/* console.log('stylesheet');
+console.log(props);
+console.log(themeData); */
   const {
     alternateBg,
     guidelines,
@@ -24,9 +29,18 @@ console.log('stylesheet');
     higTreeViewWrapper: {
       ...(alternateBg
         ? {
-            background: `repeating-linear-gradient(
-              0deg, yellow, yellow 23px, purple 23px, purple 46px
-            )`
+            backgroundImage: `repeating-linear-gradient(
+              0deg,
+              ${themeData['colorScheme.surface.level200']},
+              ${themeData['colorScheme.surface.level200']} 25%,
+              ${themeData['colorScheme.surface.level100']} 25%,
+              ${themeData['colorScheme.surface.level100']} 50%,
+              ${themeData['colorScheme.surface.level200']} 50%,
+              ${themeData['colorScheme.surface.level200']} 75%,
+              ${themeData['colorScheme.surface.level100']} 75%,
+              ${themeData['colorScheme.surface.level100']} 100%
+            )`,
+            backgroundSize: `72px 72px`
           }
         : {}
       ),
@@ -35,30 +49,30 @@ console.log('stylesheet');
     higTreeView: {
       color: themeData[`treeView.fontColor`],
       fontFamily: themeData[`treeView.fontFamily`],
+      fontSize: themeData[`treeView.item.fontSize`],
+      fontWeight: themeData[`treeView.item.fontWeight`],
       listStyle: `none`,
       margin: 0,
       padding: 0,
       "& ul": {
         listStyle: `none`,
-        paddingLeft: 0,
+        paddingLeft: `4px`,
         "& li": {
-          // display: `flex`,
-          // flexDirection: `column`,
           overflow: `hidden`,
-          paddingLeft: `20px`,
+          width: `100%`,
           "&::before": {
-            ...(guidelines ? { borderTop: `1px dashed red` } : {}),
+            ...(guidelines ? { borderTop: `1px dashed ${themeData['treeView.guideLine.backgroundColor']}` } : {}),
             display: `inline-block`,
             content: `""`,
             left: 0,
             margin: 0,
             position: `absolute`,
-            top: 0,
+            top: `7px`,
             transform: `translateY(10px)`,
-            width: `20px`
+            width: themeData['treeView.row.paddingHorizontal']
           },
           "&::after": {
-            ...(guidelines ? { borderLeft: `1px dashed red` } : {}),
+            ...(guidelines ? { borderLeft: `1px dashed ${themeData['treeView.guideLine.backgroundColor']}` } : {}),
             display: `inline-block`,
             content: `""`,
             height: `100%`,
@@ -71,21 +85,34 @@ console.log('stylesheet');
         "& li:last-child": {
           "&::after": {
             top: `-9px`,
-            height: `20px`
+            height: `24px`
           }
         }
       }
     },
     higTreeItem: {
       margin: 0,
+      padding: `${themeData['treeView.row.paddingVertical']} ${themeData['treeView.row.paddingHorizontal']}`,
       position: `relative`,
+      "& [aria-expanded='true']": {
+        padding: 0
+      },
+      "& [aria-expanded='false']": {
+        padding: 0
+      },
       "& > span": {
-        ...(selected ? { background: `rgba(0,0,0,0.3)` } : {})
+        display: `block`,
+        maxWidth: `calc(100% - 10px)`,
+        padding: `${themeData['treeView.row.paddingVertical']} ${themeData['treeView.row.paddingHorizontal']}`,
+        overflow: `hidden`,
+        textOverflow: `ellipsis`,
+        whiteSpace: `nowrap`,
+        ...(selected ? { background: themeData[`colorScheme.background.on.default`] } : {})
       }
     },
     higTreeItemContentWrapper: {
       display: `inline-flex`,
-      ...(selected ? { background: `rgba(0,0,0,0.3)` } : {})
+      ...(selected ? { background: themeData[`colorScheme.background.on.default`] } : {})
     }
   };
 

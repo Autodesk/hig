@@ -76,7 +76,7 @@ export default class TreeViewBehaviorWM extends Component {
 
     this.state = {
       treeItemArray: null,
-      activeTreeItemIndex: 1
+      activeTreeItemIndex: 4
     };
 
     this.treeViewRef = null
@@ -124,20 +124,24 @@ export default class TreeViewBehaviorWM extends Component {
   };
 
   handleKeyDown = event => {
-    if (onKeyDown) {
+    if (this.props.onKeyDown) {
       onKeyDown(event);
     }
+
+    console.log('on key down');
 
     switch (event.keyCode) {
       // Arrow Down
       case 40: {
         event.preventDefault();
+        this.setState({activeTreeItemIndex: this.state.activeTreeItemIndex + 1})
         break;
       }
 
       // Arrow Up
       case 38: {
         event.preventDefault();
+        this.setState({activeTreeItemIndex: this.state.activeTreeItemIndex - 1})
         break;
       }
 
