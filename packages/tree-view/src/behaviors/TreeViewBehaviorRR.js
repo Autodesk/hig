@@ -65,6 +65,7 @@ export default class TreeViewBehaviorWM extends Component {
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onKeyDown: PropTypes.func,
+    onClick: PropTypes.func,
   };
 
   static defaultProps = {};
@@ -153,6 +154,13 @@ export default class TreeViewBehaviorWM extends Component {
     }
   };
 
+  handleClick = (event) => {
+    if (this.props.onClick) {
+      console.log("this is click");
+      this.props.onClick(event);
+    }
+  };
+
   /* handleMouseMove = event => {
     // don't let this bubble up from Menu to MenuGroup
     event.stopPropagation();
@@ -173,6 +181,7 @@ export default class TreeViewBehaviorWM extends Component {
       handleKeyDown,
       setTreeViewRef,
       treeViewRef,
+      handleClick,
     } = this;
 
     return this.props.children({
@@ -183,6 +192,7 @@ export default class TreeViewBehaviorWM extends Component {
       handleKeyDown,
       setTreeViewRef,
       treeViewRef,
+      handleClick,
     });
   }
 }

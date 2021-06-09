@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
+import TreeItemBehaviorRR from "../behaviors/TreeItemBehaviorRR";
 
 import {
   CaretRightMUI,
@@ -24,6 +25,7 @@ function SubTreeItem(props) {
       payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex },
     },
     themeData,
+    handleClick,
   } = props;
 
   const styleTreeItem = {
@@ -37,7 +39,12 @@ function SubTreeItem(props) {
   };
   const styles = stylesheet(styleTreeItem, themeData);
   return (
-    <li className={css(styles.higTreeItem)} id={id} role="treeitem">
+    <li
+      className={css(styles.higTreeItem)}
+      id={id}
+      role="treeitem"
+      onClick={handleClick}
+    >
       <div className={css(styles.higTreeItemContentWrapper)}>{label}</div>
     </li>
   );
@@ -45,6 +52,7 @@ function SubTreeItem(props) {
 
 function NestedSubTreeItem(props) {
   const {
+    treeItem,
     treeItem: {
       children,
       id,
@@ -53,8 +61,14 @@ function NestedSubTreeItem(props) {
       payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex },
     },
     themeData,
+    handleClick,
+    onFocus,
+    onMouseEnter,
+    onMouseLeave,
   } = props;
-
+  console.log("id", id);
+  console.log("checking click events", props);
+  // console.log("treeItem", treeItem);
   const styleTreeItem = {
     children,
     id,
@@ -76,7 +90,7 @@ function NestedSubTreeItem(props) {
       id={id}
       role="treeitem"
     >
-      <span>
+      <span onClick={handleClick}>
         <IconIndicator /> {label}
       </span>
       <div>
@@ -86,11 +100,19 @@ function NestedSubTreeItem(props) {
               <NestedSubTreeItem
                 treeItem={{ ...child, payload }}
                 themeData={themeData}
+                onClick={handleClick}
+                onFocus={onFocus}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
               />
             ) : (
               <SubTreeItem
                 treeItem={{ ...child, payload }}
                 themeData={themeData}
+                onClick={handleClick}
+                onFocus={onFocus}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
               />
             );
           })}
@@ -106,30 +128,56 @@ class TreeObjectView extends Component {
   };
 
   handleClickParent(treeNode) {
-    console.log("this.props", this.props);
+    // console.log("this.props", this.props);
     console.log("treeNode Info: ", treeNode);
-    this.setState({
-      treeNode: {
-        ...treeNode,
-        meta: { ...treeNode.meta, toggled: !treeNode.meta.toggled },
-      },
-    });
+
+    // this.setState({
+    //   treeNode: {
+    //     ...treeNode,
+    //     meta: { ...treeNode.meta, toggled: !treeNode.meta.toggled },
+    //   },
+    // });
   }
 
   render() {
     const { treeNode } = this.state;
+    console.log("this.props", this.props);
+    const {
+      tree: {
+        id,
+        payload: { getActiveTreeItemId },
+      },
+      ...otherProps
+    } = this.props;
+    const {
+      onFocus,
+      onMouseDown,
+      onMouseLeave,
+      onMouseUp,
+      onClick,
+    } = otherProps;
+    const TreeItemBehavior = TreeItemBehaviorRR;
     return (
-      <ThemeContext.Consumer>
-        {({ resolvedRoles, metadata }) => {
-          return (
-            <NestedSubTreeItem
-              treeItem={this.props.tree}
-              themeData={resolvedRoles}
-              stylesheet={stylesheet}
-            />
-          );
-        }}
-      </ThemeContext.Consumer>
+      <TreeItemBehavior {...otherProps} id={id}>
+        {({ handleClick, handleMouseEnter, handleMouseLeave }) => (
+          <ThemeContext.Consumer>
+            {({ resolvedRoles, metadata }) => {
+              return (
+                <NestedSubTreeItem
+                  treeItem={this.props.tree}
+                  themeData={resolvedRoles}
+                  onClick={handleClick}
+                  onFocus={onFocus}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  selected={getActiveTreeItemId() === id}
+                  stylesheet={stylesheet}
+                />
+              );
+            }}
+          </ThemeContext.Consumer>
+        )}
+      </TreeItemBehavior>
     );
   }
 }

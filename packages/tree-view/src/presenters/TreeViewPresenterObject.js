@@ -64,6 +64,7 @@ export default class TreeViewPresenterObject extends Component {
             getActiveTreeItemId,
             getActiveTreeItemIndex,
             indicator,
+            onClick,
           } = this.props;
           const styles = stylesheet(
             {
@@ -86,6 +87,7 @@ export default class TreeViewPresenterObject extends Component {
                   getActiveTreeItemIndex,
                   indicator,
                   stylesheet,
+                  onClick,
                   ...otherProps,
                 })}
               </ul>
