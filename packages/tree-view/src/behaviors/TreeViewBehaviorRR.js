@@ -145,6 +145,8 @@ export default class TreeViewBehaviorRR extends Component {
     }
 
     console.log("on key down");
+    console.log("treeItemArrayRR", this.state.treeItemArray);
+    console.log("getActiveTreeItemIndex", this.getActiveTreeItemIndex());
 
     switch (event.keyCode) {
       // Arrow Down
@@ -180,7 +182,7 @@ export default class TreeViewBehaviorRR extends Component {
   handleClick = (event, treeItem) => {
     console.log("handleClick TreeViewBehaviorRR");
     console.log("treeItem", treeItem);
-    this.setActiveTreeItemIndex(treeItem.id);
+    // this.setActiveTreeItemIndex(treeItem.id);
     console.log("treeARRRRRRRR", this.state.treeItemArray);
     if (this.props.onClick) {
       this.props.onClick(event);

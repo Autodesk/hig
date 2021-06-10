@@ -95,6 +95,7 @@ export default class TreeViewPresenterObject extends Component {
           return (
             <div className={css(styles.higTreeViewWrapper)}>
               <ul
+                {...otherProps}
                 className={css(styles.higTreeView)}
                 ref={setTreeViewRef}
                 role="tree"

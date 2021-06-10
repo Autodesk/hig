@@ -37,6 +37,7 @@ function SubTreeItem(props) {
     themeData,
     getActiveTreeItemId,
     getActiveTreeItemIndex,
+    selected: getActiveTreeItemId() === id,
   };
   const styles = stylesheet(styleTreeItem, themeData);
   return (
@@ -76,6 +77,7 @@ function NestedSubTreeItem(props) {
     themeData,
     getActiveTreeItemId,
     getActiveTreeItemIndex,
+    selected: getActiveTreeItemId() === id,
   };
 
   const styles = stylesheet(styleTreeItem, themeData);
@@ -103,7 +105,6 @@ function NestedSubTreeItem(props) {
                 onFocus={onFocus}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
-                selected={getActiveTreeItemId() === id}
               />
             ) : (
               <SubTreeItem
@@ -113,7 +114,6 @@ function NestedSubTreeItem(props) {
                 onFocus={onFocus}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
-                selected={getActiveTreeItemId() === id}
               />
             );
           })}
