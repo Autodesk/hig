@@ -7,6 +7,8 @@ import TreeObjectView from "../FileView/TreeObjectView";
 
 import stylesheet from "./stylesheet";
 
+const objectArray = [];
+
 export default class TreeViewPresenterObject extends Component {
   static propTypes = {
     alternateBg: PropTypes.bool,
@@ -18,6 +20,21 @@ export default class TreeViewPresenterObject extends Component {
     setTreeViewRef: PropTypes.func,
     stylesheet: PropTypes.func,
   };
+
+  componentDidMount() {
+    this.getTreeItemArray(this.props.dataObject);
+    this.props.setTreeItemArray(objectArray);
+  }
+
+  getTreeItemArray(collection) {
+    objectArray.push(collection.id);
+
+    if (collection.children) {
+      collection.children.map((child) => {
+        this.getTreeItemArray(child);
+      });
+    }
+  }
 
   getTreeObject(collection) {
     let fileTree = {};

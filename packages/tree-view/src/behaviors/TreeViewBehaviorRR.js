@@ -58,7 +58,7 @@ function buildTreeItemIdArray(list) {
   return ids;
 }
 
-export default class TreeViewBehaviorWM extends Component {
+export default class TreeViewBehaviorRR extends Component {
   static propTypes = {
     children: PropTypes.func,
     onBlur: PropTypes.func,
@@ -88,6 +88,7 @@ export default class TreeViewBehaviorWM extends Component {
     }
 
     console.log("set tree view ref");
+    console.log("THIS PROPS", this.props);
     this.setState({
       treeItemArray: buildTreeItemIdArray(
         Array.prototype.slice.call(element.querySelectorAll("li"))
@@ -96,19 +97,28 @@ export default class TreeViewBehaviorWM extends Component {
     this.treeViewRef = element;
   };
 
+  setTreeItemArray = (objectArray) => {
+    this.setState({ treeItemArray: { ...objectArray } });
+  };
+
   getActiveTreeItemId = () => {
     return (
       this.state.treeItemArray &&
       this.state.treeItemArray[this.getActiveTreeItemIndex()]
     );
+    // return currentItemClicked;
+  };
+
+  setActiveTreeItemId = (id) => {
+    // this.setState({ currentItemClicked: id });
   };
 
   getActiveTreeItemIndex = () => {
     return this.state.activeTreeItemIndex;
   };
 
-  setActiveTreeItemIndex = (id) => {
-    this.setState({ activeTreeItemIndex: id });
+  setActiveTreeItemIndex = () => {
+    // this.setState({ activeTreeItemIndex:  activeTreeItemIndex });
   };
 
   /* getPreviousEvent = () => this.state.previousEvent;
@@ -130,20 +140,28 @@ export default class TreeViewBehaviorWM extends Component {
   };
 
   handleKeyDown = (event) => {
-    if (onKeyDown) {
+    if (this.props.onKeyDown) {
       onKeyDown(event);
     }
+
+    console.log("on key down");
 
     switch (event.keyCode) {
       // Arrow Down
       case 40: {
         event.preventDefault();
+        this.setState({
+          activeTreeItemIndex: this.state.activeTreeItemIndex + 1,
+        });
         break;
       }
 
       // Arrow Up
       case 38: {
         event.preventDefault();
+        this.setState({
+          activeTreeItemIndex: this.state.activeTreeItemIndex - 1,
+        });
         break;
       }
 
@@ -160,10 +178,10 @@ export default class TreeViewBehaviorWM extends Component {
   };
 
   handleClick = (event, treeItem) => {
-    console.log("this is click from TREE VIEW BEHAVIOR");
-    console.log("event", event.target);
+    console.log("handleClick TreeViewBehaviorRR");
     console.log("treeItem", treeItem);
     this.setActiveTreeItemIndex(treeItem.id);
+    console.log("treeARRRRRRRR", this.state.treeItemArray);
     if (this.props.onClick) {
       this.props.onClick(event);
     }
@@ -190,6 +208,7 @@ export default class TreeViewBehaviorWM extends Component {
       setTreeViewRef,
       treeViewRef,
       handleClick,
+      setTreeItemArray,
     } = this;
 
     return this.props.children({
@@ -201,6 +220,7 @@ export default class TreeViewBehaviorWM extends Component {
       setTreeViewRef,
       treeViewRef,
       handleClick,
+      setTreeItemArray,
     });
   }
 }

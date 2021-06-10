@@ -3,6 +3,7 @@ import { TreeItem } from "../index";
 
 const FileTreeCollection = {
   id: 1,
+  index: 0,
   parentId: null,
   meta: {
     label: "Tree Item 1",
@@ -12,6 +13,7 @@ const FileTreeCollection = {
   children: [
     {
       id: 2,
+      index: 1,
       parentId: 1,
       meta: {
         label: "Tree Item 2",
@@ -21,6 +23,7 @@ const FileTreeCollection = {
       children: [
         {
           id: 3,
+          index: 2,
           parentId: 2,
           meta: {
             label: "Tree Item 3",
@@ -30,6 +33,7 @@ const FileTreeCollection = {
         },
         {
           id: 4,
+          index: 3,
           parentId: 2,
           meta: {
             label: "Tree Item 4",
@@ -39,6 +43,7 @@ const FileTreeCollection = {
         },
         {
           id: 5,
+          index: 4,
           parentId: 2,
           meta: {
             label: "Tree Item 5",
@@ -48,6 +53,7 @@ const FileTreeCollection = {
           children: [
             {
               id: 6,
+              index: 5,
               parentId: 5,
               meta: {
                 label: "Tree Item 6",
@@ -57,6 +63,7 @@ const FileTreeCollection = {
             },
             {
               id: 7,
+              index: 6,
               parentId: 5,
               meta: {
                 label: "Tree Item 7",
@@ -66,6 +73,7 @@ const FileTreeCollection = {
               children: [
                 {
                   id: 8,
+                  index: 7,
                   parentId: 7,
                   meta: {
                     label: "Tree Item 8",
@@ -75,6 +83,7 @@ const FileTreeCollection = {
                 },
                 {
                   id: 9,
+                  index: 8,
                   parentId: 7,
                   meta: {
                     label: "Tree Item 9",
@@ -84,6 +93,7 @@ const FileTreeCollection = {
                 },
                 {
                   id: 10,
+                  index: 9,
                   parentId: 7,
                   meta: {
                     label: "Tree Item 10",
