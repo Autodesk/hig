@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
-import TreeItemBehaviorRR from "../behaviors/TreeItemBehaviorRR";
+import TreeItemBehavior from "../behaviors/TreeItemBehavior";
 
 import {
   CaretRightMUI,
@@ -134,7 +134,7 @@ class TreeObjectView extends Component {
       ...otherProps
     } = this.props;
     const { onFocus, onMouseDown, onMouseLeave, onMouseUp } = otherProps;
-    const TreeItemBehavior = TreeItemBehaviorRR;
+
     return (
       <TreeItemBehavior {...otherProps} id={id} payload={payload}>
         {({ handleClick, handleMouseEnter, handleMouseLeave }) => (

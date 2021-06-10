@@ -9,45 +9,32 @@ export default class TreeItemBehavior extends Component {
     onMouseLeave: PropTypes.func,
   };
 
-  constructor(props) {
-    super(props);
-  }
-
-  /* isActive = () => {
-    return true;
-    // return this.props.getActiveTreeItemId() === this.props.id;
-  } */
-
-  handleClick = event => {
-    if (onClick) {
+  handleClick = (event, treeItem) => {
+    this.props.payload.onClick(event, treeItem);
+    if (this.props.onClick) {
       onClick(event);
     }
   };
 
-  handleMouseEnter = event => {
+  handleMouseEnter = (event) => {
     if (this.props.onMouseEnter) {
       this.props.onMouseEnter(event);
     }
   };
 
-  handleMouseLeave = event => {
+  handleMouseLeave = (event) => {
     if (this.props.onMouseLeave) {
       this.props.onMouseLeave(event);
     }
   };
 
   render() {
-    const {
-      handleClick,
-      handleMouseEnter,
-      handleMouseLeave
-    } = this;
-// console.log('TreeItem Behavior WM');
-// console.log(this.props);
+    const { handleClick, handleMouseEnter, handleMouseLeave } = this;
+    console.log("TreeItem Behavior");
     return this.props.children({
       handleClick,
       handleMouseEnter,
-      handleMouseLeave
+      handleMouseLeave,
     });
   }
 }
