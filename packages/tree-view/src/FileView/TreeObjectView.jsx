@@ -18,6 +18,7 @@ import stylesheet from "../presenters/stylesheet";
 
 function SubTreeItem(props) {
   const {
+    treeItem,
     treeItem: {
       children,
       id,
@@ -43,7 +44,7 @@ function SubTreeItem(props) {
       className={css(styles.higTreeItem)}
       id={id}
       role="treeitem"
-      onClick={onClick}
+      onClick={(event) => onClick(event, treeItem)}
     >
       <div className={css(styles.higTreeItemContentWrapper)}>{label}</div>
     </li>
@@ -66,9 +67,7 @@ function NestedSubTreeItem(props) {
     onMouseEnter,
     onMouseLeave,
   } = props;
-  console.log("id", id);
-  console.log("checking click events", props);
-  // console.log("treeItem", treeItem);
+
   const styleTreeItem = {
     children,
     id,
@@ -90,7 +89,7 @@ function NestedSubTreeItem(props) {
       id={id}
       role="treeitem"
     >
-      <span onClick={onClick}>
+      <span onClick={(event) => onClick(event, treeItem)}>
         <IconIndicator /> {label}
       </span>
       <div>
@@ -104,6 +103,7 @@ function NestedSubTreeItem(props) {
                 onFocus={onFocus}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
+                selected={getActiveTreeItemId() === id}
               />
             ) : (
               <SubTreeItem
@@ -113,6 +113,7 @@ function NestedSubTreeItem(props) {
                 onFocus={onFocus}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
+                selected={getActiveTreeItemId() === id}
               />
             );
           })}
@@ -123,42 +124,19 @@ function NestedSubTreeItem(props) {
 }
 
 class TreeObjectView extends Component {
-  state = {
-    treeNode: this.props.tree,
-  };
-
-  handleClickParent(treeNode) {
-    // console.log("this.props", this.props);
-    console.log("treeNode Info: ", treeNode);
-
-    // this.setState({
-    //   treeNode: {
-    //     ...treeNode,
-    //     meta: { ...treeNode.meta, toggled: !treeNode.meta.toggled },
-    //   },
-    // });
-  }
-
   render() {
-    const { treeNode } = this.state;
-    console.log("this.props", this.props);
     const {
       tree: {
         id,
+        payload,
         payload: { getActiveTreeItemId },
       },
       ...otherProps
     } = this.props;
-    const {
-      onFocus,
-      onMouseDown,
-      onMouseLeave,
-      onMouseUp,
-      onClick,
-    } = otherProps;
+    const { onFocus, onMouseDown, onMouseLeave, onMouseUp } = otherProps;
     const TreeItemBehavior = TreeItemBehaviorRR;
     return (
-      <TreeItemBehavior {...otherProps} id={id}>
+      <TreeItemBehavior {...otherProps} id={id} payload={payload}>
         {({ handleClick, handleMouseEnter, handleMouseLeave }) => (
           <ThemeContext.Consumer>
             {({ resolvedRoles, metadata }) => {

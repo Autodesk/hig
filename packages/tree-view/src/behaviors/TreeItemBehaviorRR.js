@@ -9,13 +9,13 @@ export default class TreeItemBehavior extends Component {
     onMouseLeave: PropTypes.func,
   };
 
-  handleClick = (event) => {
-    console.log("from ITEM BEHAVIOR handleClick");
+  handleClick = (event, treeItem) => {
+    console.log("handleClick TreeItemBehaviorRR");
+    console.log("treeItem", treeItem);
+    this.props.payload.onClick(event, treeItem);
     if (this.props.onClick) {
       onClick(event);
     }
-
-    this.props.getActiveTreeId();
   };
 
   handleMouseEnter = (event) => {
