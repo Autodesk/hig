@@ -74,6 +74,7 @@ export default class TreeViewPresenterObject extends Component {
             },
             resolvedRoles
           );
+
           return (
             <div className={css(styles.higTreeViewWrapper)}>
               <ul

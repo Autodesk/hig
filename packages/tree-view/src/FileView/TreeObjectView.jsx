@@ -25,7 +25,7 @@ function SubTreeItem(props) {
       payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex },
     },
     themeData,
-    handleClick,
+    onClick,
   } = props;
 
   const styleTreeItem = {
@@ -43,7 +43,7 @@ function SubTreeItem(props) {
       className={css(styles.higTreeItem)}
       id={id}
       role="treeitem"
-      onClick={handleClick}
+      onClick={onClick}
     >
       <div className={css(styles.higTreeItemContentWrapper)}>{label}</div>
     </li>
@@ -61,7 +61,7 @@ function NestedSubTreeItem(props) {
       payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex },
     },
     themeData,
-    handleClick,
+    onClick,
     onFocus,
     onMouseEnter,
     onMouseLeave,
@@ -90,7 +90,7 @@ function NestedSubTreeItem(props) {
       id={id}
       role="treeitem"
     >
-      <span onClick={handleClick}>
+      <span onClick={onClick}>
         <IconIndicator /> {label}
       </span>
       <div>
@@ -100,7 +100,7 @@ function NestedSubTreeItem(props) {
               <NestedSubTreeItem
                 treeItem={{ ...child, payload }}
                 themeData={themeData}
-                onClick={handleClick}
+                onClick={onClick}
                 onFocus={onFocus}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
@@ -109,7 +109,7 @@ function NestedSubTreeItem(props) {
               <SubTreeItem
                 treeItem={{ ...child, payload }}
                 themeData={themeData}
-                onClick={handleClick}
+                onClick={onClick}
                 onFocus={onFocus}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}

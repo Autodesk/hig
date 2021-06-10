@@ -11,9 +11,11 @@ export default class TreeItemBehavior extends Component {
 
   handleClick = (event) => {
     console.log("from ITEM BEHAVIOR handleClick");
-    if (onClick) {
+    if (this.props.onClick) {
       onClick(event);
     }
+
+    this.props.getActiveTreeId();
   };
 
   handleMouseEnter = (event) => {

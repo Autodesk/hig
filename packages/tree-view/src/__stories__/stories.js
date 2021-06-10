@@ -6,7 +6,7 @@ const FileTreeCollection = {
   parentId: null,
   meta: {
     label: "Tree Item 1",
-    toggled: false,
+    collapsed: false,
     active: false,
   },
   children: [
@@ -15,7 +15,7 @@ const FileTreeCollection = {
       parentId: 1,
       meta: {
         label: "Tree Item 2",
-        toggled: false,
+        collapsed: false,
         active: false,
       },
       children: [
@@ -24,7 +24,7 @@ const FileTreeCollection = {
           parentId: 2,
           meta: {
             label: "Tree Item 3",
-            toggled: false,
+            collapsed: false,
             active: false,
           },
         },
@@ -33,7 +33,7 @@ const FileTreeCollection = {
           parentId: 2,
           meta: {
             label: "Tree Item 4",
-            toggled: false,
+            collapsed: false,
             active: false,
           },
         },
@@ -42,7 +42,7 @@ const FileTreeCollection = {
           parentId: 2,
           meta: {
             label: "Tree Item 5",
-            toggled: false,
+            collapsed: false,
             active: false,
           },
           children: [
@@ -51,7 +51,7 @@ const FileTreeCollection = {
               parentId: 5,
               meta: {
                 label: "Tree Item 6",
-                toggled: false,
+                collapsed: false,
                 active: false,
               },
             },
@@ -60,7 +60,7 @@ const FileTreeCollection = {
               parentId: 5,
               meta: {
                 label: "Tree Item 7",
-                toggled: false,
+                collapsed: false,
                 active: false,
               },
               children: [
@@ -69,7 +69,7 @@ const FileTreeCollection = {
                   parentId: 7,
                   meta: {
                     label: "Tree Item 8",
-                    toggled: false,
+                    collapsed: false,
                     active: false,
                   },
                 },
@@ -78,7 +78,7 @@ const FileTreeCollection = {
                   parentId: 7,
                   meta: {
                     label: "Tree Item 9",
-                    toggled: false,
+                    collapsed: false,
                     active: false,
                   },
                 },
@@ -87,7 +87,7 @@ const FileTreeCollection = {
                   parentId: 7,
                   meta: {
                     label: "Tree Item 10",
-                    toggled: false,
+                    collapsed: false,
                     active: false,
                   },
                 },
