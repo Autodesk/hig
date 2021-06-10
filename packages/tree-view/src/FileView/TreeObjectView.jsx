@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
-import TreeItemBehaviorRR from "../behaviors/TreeItemBehaviorRR";
+import TreeItemBehavior from "../behaviors/TreeItemBehavior";
 
 import {
   CaretRightMUI,
@@ -18,6 +18,7 @@ import stylesheet from "../presenters/stylesheet";
 
 function SubTreeItem(props) {
   const {
+    treeItem,
     treeItem: {
       children,
       id,
@@ -25,7 +26,7 @@ function SubTreeItem(props) {
       payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex },
     },
     themeData,
-    handleClick,
+    onClick,
   } = props;
 
   const styleTreeItem = {
@@ -36,6 +37,7 @@ function SubTreeItem(props) {
     themeData,
     getActiveTreeItemId,
     getActiveTreeItemIndex,
+    selected: getActiveTreeItemId() === id,
   };
   const styles = stylesheet(styleTreeItem, themeData);
   return (
@@ -43,7 +45,7 @@ function SubTreeItem(props) {
       className={css(styles.higTreeItem)}
       id={id}
       role="treeitem"
-      onClick={handleClick}
+      onClick={(event) => onClick(event, treeItem)}
     >
       <div className={css(styles.higTreeItemContentWrapper)}>{label}</div>
     </li>
@@ -61,14 +63,12 @@ function NestedSubTreeItem(props) {
       payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex },
     },
     themeData,
-    handleClick,
+    onClick,
     onFocus,
     onMouseEnter,
     onMouseLeave,
   } = props;
-  console.log("id", id);
-  console.log("checking click events", props);
-  // console.log("treeItem", treeItem);
+
   const styleTreeItem = {
     children,
     id,
@@ -77,6 +77,7 @@ function NestedSubTreeItem(props) {
     themeData,
     getActiveTreeItemId,
     getActiveTreeItemIndex,
+    selected: getActiveTreeItemId() === id,
   };
 
   const styles = stylesheet(styleTreeItem, themeData);
@@ -90,7 +91,7 @@ function NestedSubTreeItem(props) {
       id={id}
       role="treeitem"
     >
-      <span onClick={handleClick}>
+      <span onClick={(event) => onClick(event, treeItem)}>
         <IconIndicator /> {label}
       </span>
       <div>
@@ -100,7 +101,7 @@ function NestedSubTreeItem(props) {
               <NestedSubTreeItem
                 treeItem={{ ...child, payload }}
                 themeData={themeData}
-                onClick={handleClick}
+                onClick={onClick}
                 onFocus={onFocus}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
@@ -109,7 +110,7 @@ function NestedSubTreeItem(props) {
               <SubTreeItem
                 treeItem={{ ...child, payload }}
                 themeData={themeData}
-                onClick={handleClick}
+                onClick={onClick}
                 onFocus={onFocus}
                 onMouseEnter={onMouseEnter}
                 onMouseLeave={onMouseLeave}
@@ -123,42 +124,19 @@ function NestedSubTreeItem(props) {
 }
 
 class TreeObjectView extends Component {
-  state = {
-    treeNode: this.props.tree,
-  };
-
-  handleClickParent(treeNode) {
-    // console.log("this.props", this.props);
-    console.log("treeNode Info: ", treeNode);
-
-    // this.setState({
-    //   treeNode: {
-    //     ...treeNode,
-    //     meta: { ...treeNode.meta, toggled: !treeNode.meta.toggled },
-    //   },
-    // });
-  }
-
   render() {
-    const { treeNode } = this.state;
-    console.log("this.props", this.props);
     const {
       tree: {
         id,
+        payload,
         payload: { getActiveTreeItemId },
       },
       ...otherProps
     } = this.props;
-    const {
-      onFocus,
-      onMouseDown,
-      onMouseLeave,
-      onMouseUp,
-      onClick,
-    } = otherProps;
-    const TreeItemBehavior = TreeItemBehaviorRR;
+    const { onFocus, onMouseDown, onMouseLeave, onMouseUp } = otherProps;
+
     return (
-      <TreeItemBehavior {...otherProps} id={id}>
+      <TreeItemBehavior {...otherProps} id={id} payload={payload}>
         {({ handleClick, handleMouseEnter, handleMouseLeave }) => (
           <ThemeContext.Consumer>
             {({ resolvedRoles, metadata }) => {

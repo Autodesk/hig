@@ -3,91 +3,101 @@ import { TreeItem } from "../index";
 
 const FileTreeCollection = {
   id: 1,
+  index: 0,
   parentId: null,
   meta: {
     label: "Tree Item 1",
-    toggled: false,
+    collapsed: false,
     active: false,
   },
   children: [
     {
       id: 2,
+      index: 1,
       parentId: 1,
       meta: {
         label: "Tree Item 2",
-        toggled: false,
+        collapsed: false,
         active: false,
       },
       children: [
         {
           id: 3,
+          index: 2,
           parentId: 2,
           meta: {
             label: "Tree Item 3",
-            toggled: false,
+            collapsed: false,
             active: false,
           },
         },
         {
           id: 4,
+          index: 3,
           parentId: 2,
           meta: {
             label: "Tree Item 4",
-            toggled: false,
+            collapsed: false,
             active: false,
           },
         },
         {
           id: 5,
+          index: 4,
           parentId: 2,
           meta: {
             label: "Tree Item 5",
-            toggled: false,
+            collapsed: false,
             active: false,
           },
           children: [
             {
               id: 6,
+              index: 5,
               parentId: 5,
               meta: {
                 label: "Tree Item 6",
-                toggled: false,
+                collapsed: false,
                 active: false,
               },
             },
             {
               id: 7,
+              index: 6,
               parentId: 5,
               meta: {
                 label: "Tree Item 7",
-                toggled: false,
+                collapsed: false,
                 active: false,
               },
               children: [
                 {
                   id: 8,
+                  index: 7,
                   parentId: 7,
                   meta: {
                     label: "Tree Item 8",
-                    toggled: false,
+                    collapsed: false,
                     active: false,
                   },
                 },
                 {
                   id: 9,
+                  index: 8,
                   parentId: 7,
                   meta: {
                     label: "Tree Item 9",
-                    toggled: false,
+                    collapsed: false,
                     active: false,
                   },
                 },
                 {
                   id: 10,
+                  index: 9,
                   parentId: 7,
                   meta: {
                     label: "Tree Item 10",
-                    toggled: false,
+                    collapsed: false,
                     active: false,
                   },
                 },
@@ -102,7 +112,7 @@ const FileTreeCollection = {
 
 export default [
   {
-    description: "WM",
+    description: "default",
     getProps: () => ({
       guidelines: false,
       indicator: "caret",
@@ -173,44 +183,12 @@ export default [
     }),
   },
   {
-    description: "RR",
+    description: "tree object",
     getProps: () => ({
       guidelines: false,
       indicator: "caret",
       test: "RR",
       dataObject: FileTreeCollection,
-    }),
-  },
-  {
-    description: "test",
-    getProps: () => ({
-      test: "RR",
-      children: [
-        <TreeItem
-          id="option-1"
-          key="option-1"
-          test="RR"
-          label="Tree Item Nested Parent"
-        >
-          <TreeItem test="RR" label="Tree Item Level 2">
-            <TreeItem test="RR">
-              Tree Item Level 3<TreeItem label="Level 4" test="RR" />
-            </TreeItem>
-          </TreeItem>
-        </TreeItem>,
-        <TreeItem id="option-2" key="option-2" label="test label" test="RR">
-          TreeItem 2
-        </TreeItem>,
-        <TreeItem id="option-3" key="option-3" test="RR">
-          TreeItem 3
-        </TreeItem>,
-        <TreeItem id="option-4" key="option-4" test="RR">
-          TreeItem 4
-        </TreeItem>,
-        <TreeItem id="option-5" key="option-5" test="RR">
-          TreeItem 5
-        </TreeItem>,
-      ],
     }),
   },
 ];

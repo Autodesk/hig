@@ -51,58 +51,73 @@ function checkScroll(optionId, menu) {
 function buildTreeItemIdArray(list) {
   const ids = [];
 
-  list.map(item => {
+  list.map((item) => {
     ids.push(item.id);
-  })
+  });
 
   return ids;
 }
 
-export default class TreeViewBehaviorWM extends Component {
+export default class TreeViewBehaviorRR extends Component {
   static propTypes = {
     children: PropTypes.func,
     onBlur: PropTypes.func,
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onKeyDown: PropTypes.func,
+    onClick: PropTypes.func,
   };
 
-  static defaultProps = {
-  
-  };
+  static defaultProps = {};
 
   constructor(props) {
     super(props);
 
     this.state = {
       treeItemArray: null,
-      activeTreeItemIndex: 4
+      activeTreeItemIndex: 1,
+      currentItemClicked: null,
     };
 
-    this.treeViewRef = null
+    this.treeViewRef = null;
   }
 
-  setTreeViewRef = element => {
+  setTreeViewRef = (element) => {
     if (this.props.treeViewRef) {
       this.props.treeViewRef(element);
     }
 
-    console.log('set tree view ref');
+    console.log("set tree view ref");
+    console.log("THIS PROPS", this.props);
     this.setState({
-      treeItemArray: 
-      buildTreeItemIdArray(
-        Array.prototype.slice.call(element.querySelectorAll('li'))
-      )
+      treeItemArray: buildTreeItemIdArray(
+        Array.prototype.slice.call(element.querySelectorAll("li"))
+      ),
     });
     this.treeViewRef = element;
   };
 
+  setTreeItemArray = (objectArray) => {
+    this.setState({ treeItemArray: [...objectArray] });
+  };
+
   getActiveTreeItemId = () => {
-    return this.state.treeItemArray && this.state.treeItemArray[this.getActiveTreeItemIndex()];
+    return (
+      this.state.treeItemArray &&
+      this.state.treeItemArray[this.getActiveTreeItemIndex()]
+    );
+  };
+
+  setActiveTreeItemId = (id) => {
+    this.setState({ currentItemClicked: id });
   };
 
   getActiveTreeItemIndex = () => {
     return this.state.activeTreeItemIndex;
+  };
+
+  setActiveTreeItemIndex = (index) => {
+    this.setState({ activeTreeItemIndex: index });
   };
 
   /* getPreviousEvent = () => this.state.previousEvent;
@@ -111,37 +126,51 @@ export default class TreeViewBehaviorWM extends Component {
     this.setState({ previousEvent });
   }; */
 
-  handleFocus = event => {
+  handleFocus = (event) => {
     if (this.props.onFocus) {
       this.props.onFocus(event);
     }
   };
 
-  handleBlur = event => {
+  handleBlur = (event) => {
     if (this.props.onBlur) {
       this.props.onBlur(event);
     }
   };
 
-  handleKeyDown = event => {
+  handleKeyDown = (event) => {
     if (this.props.onKeyDown) {
       onKeyDown(event);
     }
 
-    console.log('on key down');
+    console.log("on key down");
+    console.log("getActiveTreeItemIndex", this.getActiveTreeItemIndex());
+    const lowerLimit = 0;
+    const upperLimit = this.state.treeItemArray.length - 1;
 
     switch (event.keyCode) {
       // Arrow Down
       case 40: {
         event.preventDefault();
-        this.setState({activeTreeItemIndex: this.state.activeTreeItemIndex + 1})
+
+        this.setState({
+          activeTreeItemIndex:
+            this.state.activeTreeItemIndex + 1 > upperLimit
+              ? lowerLimit
+              : this.state.activeTreeItemIndex + 1,
+        });
         break;
       }
 
       // Arrow Up
       case 38: {
         event.preventDefault();
-        this.setState({activeTreeItemIndex: this.state.activeTreeItemIndex - 1})
+        this.setState({
+          activeTreeItemIndex:
+            this.state.activeTreeItemIndex - 1 < lowerLimit
+              ? upperLimit
+              : this.state.activeTreeItemIndex - 1,
+        });
         break;
       }
 
@@ -154,6 +183,17 @@ export default class TreeViewBehaviorWM extends Component {
       }
 
       default:
+    }
+  };
+
+  handleClick = (event, treeItem) => {
+    if (treeItem) {
+      const { id, index } = treeItem;
+      this.setActiveTreeItemId(id);
+      this.setActiveTreeItemIndex(index);
+    }
+    if (this.props.onClick) {
+      this.props.onClick(event);
     }
   };
 
@@ -176,7 +216,9 @@ export default class TreeViewBehaviorWM extends Component {
       handleFocus,
       handleKeyDown,
       setTreeViewRef,
-      treeViewRef
+      treeViewRef,
+      handleClick,
+      setTreeItemArray,
     } = this;
 
     return this.props.children({
@@ -186,7 +228,9 @@ export default class TreeViewBehaviorWM extends Component {
       handleFocus,
       handleKeyDown,
       setTreeViewRef,
-      treeViewRef
+      treeViewRef,
+      handleClick,
+      setTreeItemArray,
     });
   }
 }

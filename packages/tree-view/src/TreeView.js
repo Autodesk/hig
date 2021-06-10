@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { FocusBehavior } from "@hig/behaviors";
 
-import TreeViewBehaviorWM from "./behaviors/TreeViewBehaviorWM";
-import TreeViewBehaviorRR from "./behaviors/TreeViewBehaviorRR";
+import TreeViewBehavior from "./behaviors/TreeViewBehavior";
+
 import TreeViewPresenter from "./presenters/TreeViewPresenter";
 import TreeViewPresenterObject from "./presenters/TreeViewPresenterObject";
 
@@ -35,10 +35,7 @@ export default class TreeView extends Component {
       ...otherProps
     } = this.props;
     const { onBlur, onClick, onFocus, onKeyDown } = otherProps;
-    console.log("OTHER", otherProps);
-    // Test mode
-    const TreeViewBehavior =
-      test === "WM" ? TreeViewBehaviorWM : TreeViewBehaviorRR;
+
     const TreeViewPresenterType = dataObject
       ? TreeViewPresenterObject
       : TreeViewPresenter;
@@ -57,6 +54,7 @@ export default class TreeView extends Component {
             {({
               getActiveTreeItemId,
               getActiveTreeItemIndex,
+              setTreeItemArray,
               handleBlur: handleMenuBehaviorBlur,
               handleFocus: handleMenuBehaviorFocus,
               handleKeyDown,
@@ -70,6 +68,7 @@ export default class TreeView extends Component {
                 dataObject={dataObject}
                 getActiveTreeItemId={getActiveTreeItemId}
                 getActiveTreeItemIndex={getActiveTreeItemIndex}
+                setTreeItemArray={setTreeItemArray}
                 guidelines={guidelines}
                 onBlur={handleMenuBehaviorBlur}
                 onFocus={handleMenuBehaviorFocus}
