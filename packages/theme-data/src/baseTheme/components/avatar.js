@@ -83,7 +83,7 @@ export default {
   },
   "avatar.backgroundColor9": {
     type: COLOR,
-    value: { ref: "dataVis.colors.blue.b.100" }
+    value: { ref: "dataVis.colors.blue.a.100" }
   },
   "avatar.backgroundColor10": {
     type: COLOR,
