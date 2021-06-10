@@ -10,8 +10,6 @@ export default class TreeItemBehavior extends Component {
   };
 
   handleClick = (event, treeItem) => {
-    console.log("handleClick TreeItemBehaviorRR");
-    console.log("treeItem", treeItem);
     this.props.payload.onClick(event, treeItem);
     if (this.props.onClick) {
       onClick(event);

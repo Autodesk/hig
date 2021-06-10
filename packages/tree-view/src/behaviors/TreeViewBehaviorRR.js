@@ -98,7 +98,7 @@ export default class TreeViewBehaviorRR extends Component {
   };
 
   setTreeItemArray = (objectArray) => {
-    this.setState({ treeItemArray: { ...objectArray } });
+    this.setState({ treeItemArray: [...objectArray] });
   };
 
   getActiveTreeItemId = () => {
@@ -106,19 +106,18 @@ export default class TreeViewBehaviorRR extends Component {
       this.state.treeItemArray &&
       this.state.treeItemArray[this.getActiveTreeItemIndex()]
     );
-    // return currentItemClicked;
   };
 
   setActiveTreeItemId = (id) => {
-    // this.setState({ currentItemClicked: id });
+    this.setState({ currentItemClicked: id });
   };
 
   getActiveTreeItemIndex = () => {
     return this.state.activeTreeItemIndex;
   };
 
-  setActiveTreeItemIndex = () => {
-    // this.setState({ activeTreeItemIndex:  activeTreeItemIndex });
+  setActiveTreeItemIndex = (index) => {
+    this.setState({ activeTreeItemIndex: index });
   };
 
   /* getPreviousEvent = () => this.state.previousEvent;
@@ -145,15 +144,20 @@ export default class TreeViewBehaviorRR extends Component {
     }
 
     console.log("on key down");
-    console.log("treeItemArrayRR", this.state.treeItemArray);
     console.log("getActiveTreeItemIndex", this.getActiveTreeItemIndex());
+    const lowerLimit = 0;
+    const upperLimit = this.state.treeItemArray.length - 1;
 
     switch (event.keyCode) {
       // Arrow Down
       case 40: {
         event.preventDefault();
+
         this.setState({
-          activeTreeItemIndex: this.state.activeTreeItemIndex + 1,
+          activeTreeItemIndex:
+            this.state.activeTreeItemIndex + 1 > upperLimit
+              ? lowerLimit
+              : this.state.activeTreeItemIndex + 1,
         });
         break;
       }
@@ -162,7 +166,10 @@ export default class TreeViewBehaviorRR extends Component {
       case 38: {
         event.preventDefault();
         this.setState({
-          activeTreeItemIndex: this.state.activeTreeItemIndex - 1,
+          activeTreeItemIndex:
+            this.state.activeTreeItemIndex - 1 < lowerLimit
+              ? upperLimit
+              : this.state.activeTreeItemIndex - 1,
         });
         break;
       }
@@ -180,10 +187,11 @@ export default class TreeViewBehaviorRR extends Component {
   };
 
   handleClick = (event, treeItem) => {
-    console.log("handleClick TreeViewBehaviorRR");
-    console.log("treeItem", treeItem);
-    // this.setActiveTreeItemIndex(treeItem.id);
-    console.log("treeARRRRRRRR", this.state.treeItemArray);
+    if (treeItem) {
+      const { id, index } = treeItem;
+      this.setActiveTreeItemId(id);
+      this.setActiveTreeItemIndex(index);
+    }
     if (this.props.onClick) {
       this.props.onClick(event);
     }
