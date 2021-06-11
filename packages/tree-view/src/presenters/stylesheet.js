@@ -162,7 +162,13 @@ export default function stylesheet(props, themeData) {
         alignItems: `center`,
         display: `inline-flex`,
         paddingLeft: themeData['treeView.row.paddingHorizontal'], 
-        ...(selected ? { background: themeData[`colorScheme.background.on.default`] } : {}),
+        ...(selected 
+          ? {
+              background: themeData[`colorScheme.background.on.default`],
+              marginLeft: themeData['treeView.row.paddingHorizontal'],
+              paddingLeft: 0
+            }
+          : {}),
         "& > svg": {
           marginRight: themeData[`treeView.icon.marginRight`]
         }
