@@ -43,6 +43,7 @@ export default class TreeView extends Component {
         {({
           getActiveTreeItemId,
           getActiveTreeItemIndex,
+          getTreeItemArray,
           setTreeItemArray,
           handleBlur,
           handleFocus,
@@ -57,6 +58,7 @@ export default class TreeView extends Component {
             treeNode={treeNode}
             getActiveTreeItemId={getActiveTreeItemId}
             getActiveTreeItemIndex={getActiveTreeItemIndex}
+            getTreeItemArray={getTreeItemArray}
             setTreeItemArray={setTreeItemArray}
             guidelines={guidelines}
             onBlur={handleBlur}
