@@ -80,6 +80,7 @@ export default class TreeViewPresenterObject extends Component {
           const {
             getActiveTreeItemId,
             getActiveTreeItemIndex,
+            guidelines,
             indicator,
             onClick,
           } = this.props;
@@ -104,6 +105,7 @@ export default class TreeViewPresenterObject extends Component {
                 {this.renderFileTree(dataObject, {
                   getActiveTreeItemId,
                   getActiveTreeItemIndex,
+                  guidelines,
                   indicator,
                   stylesheet,
                   onClick,

@@ -43,12 +43,14 @@ export default class TreeViewPresenter extends Component {
     const {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      guidelines,
       indicator
     } = this.props;
     const payload = {
       ...props,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      guidelines,
       indicator,
       key
     };
@@ -65,6 +67,7 @@ export default class TreeViewPresenter extends Component {
       alternateBg,
       children,
       guidelines,
+      hasFocus,
       setTreeViewRef,
       stylesheet: customStylesheet,
       ...otherProps

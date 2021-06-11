@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { PressedBehavior } from "@hig/behaviors";
 
 import TreeItemBehavior from "./behaviors/TreeItemBehavior";
 import TreeItemPresenter from "./presenters/TreeItemPresenter";
@@ -13,6 +12,13 @@ export default class TreeItem extends Component {
      * Content of the Option
      */
     children: PropTypes.node,
+    /**
+     * Presentational icon
+     */
+    icon: PropTypes.node,
+    /**
+     * Unique HTML id attribute
+     */
     id: PropTypes.string.required,
     /**
      * Labels the TreeItem, this is rendered before all children
@@ -25,7 +31,14 @@ export default class TreeItem extends Component {
   };
 
   render() {
-    const { children, id, label, stylesheet, test, ...otherProps } = this.props;
+    const {
+      children, 
+      icon,
+      id,
+      label,
+      stylesheet,
+      ...otherProps
+    } = this.props;
     const {
       getActiveTreeItemId,
       onFocus,
@@ -39,6 +52,7 @@ export default class TreeItem extends Component {
         {({ handleClick, handleMouseEnter, handleMouseLeave }) => (
           <TreeItemPresenter
             {...otherProps}
+            icon={icon}
             id={id}
             label={label}
             onClick={handleClick}

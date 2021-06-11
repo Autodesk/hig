@@ -89,6 +89,7 @@ export default class TreeViewBehaviorRR extends Component {
 
     console.log("set tree view ref");
     console.log("THIS PROPS", this.props);
+    console.log(Array.prototype.slice.call(element.querySelectorAll("li")));
     this.setState({
       treeItemArray: buildTreeItemIdArray(
         Array.prototype.slice.call(element.querySelectorAll("li"))
