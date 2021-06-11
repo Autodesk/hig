@@ -1,61 +1,51 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 
-/* function scrollInViewport(option) {
-  const optionBounding = option.getBoundingClientRect();
+function scrollInViewport(treeItem) {
+  const treeItemBounding = treeItem.getBoundingClientRect();
 
   if (
-    optionBounding.top < 0 ||
-    optionBounding.bottom >
+    treeItemBounding.top < 0 ||
+    treeItemBounding.bottom >
       (window.innerHeight || document.documentElement.clientHeight)
   ) {
     // align to the top if the top of Option is out of the viewport
-    if (optionBounding.top < 0) {
-      option.scrollIntoView(true);
+    if (treeItemBounding.top < 0) {
+      treeItem.scrollIntoView(true);
     }
     // align to the bottom if the bottom of Option is out of the viewport
     if (
-      optionBounding.bottom >
+      treeItemBounding.bottom >
       (window.innerHeight || document.documentElement.clientHeight)
     ) {
-      option.scrollIntoView(false);
+      treeItem.scrollIntoView(false);
     }
   }
 }
 
-function scrollInListbox(option, menu) {
-  if (option && menu.scrollHeight > menu.clientHeight) {
-    const scrollBottom = menu.clientHeight + menu.scrollTop;
-    const elementBottom = option.offsetTop + option.offsetHeight;
+function scrollInListbox(treeItem, treeView) {
+  if (treeItem && treeView.scrollHeight > treeView.clientHeight) {
+    const scrollBottom = treeView.clientHeight + treeView.scrollTop;
+    const elementBottom = treeItem.offsetTop + treeItem.offsetHeight;
     if (elementBottom > scrollBottom) {
       // eslint-disable-next-line no-param-reassign
-      menu.scrollTop = elementBottom - menu.clientHeight;
+      treeView.scrollTop = elementBottom - treeView.clientHeight;
     }
     if (option.offsetTop < menu.scrollTop) {
       // eslint-disable-next-line no-param-reassign
-      menu.scrollTop = option.offsetTop;
+      menu.scrollTop = treeItem.offsetTop;
     }
   }
 }
 
-function checkScroll(optionId, menu) {
-  const option = document.getElementById(optionId);
+function checkScroll(treeItemId, menu) {
+  const treeItem = document.getElementById(treeItemId);
 
   // scroll if out of viewport
-  scrollInViewport(option);
+  scrollInViewport(treeItem);
 
   // scroll within the menu
-  scrollInListbox(option, menu);
-} */
-
-function buildTreeItemIdArray(list) {
-  const ids = [];
-
-  list.map((item) => {
-    ids.push(item.id);
-  });
-
-  return ids;
+  scrollInListbox(treeItem, treeView);
 }
 
 export default class TreeViewBehaviorRR extends Component {
@@ -87,8 +77,8 @@ export default class TreeViewBehaviorRR extends Component {
       this.props.treeViewRef(element);
     }
 
-    console.log("set tree view ref");
-    console.log("THIS PROPS", this.props);
+    // console.log("set tree view ref");
+    // console.log("THIS PROPS", this.props);
     // console.log(Array.prototype.slice.call(element.querySelectorAll("li")));
     /* this.setState({
       treeItemArray: buildTreeItemIdArray(
@@ -221,6 +211,8 @@ export default class TreeViewBehaviorRR extends Component {
       handleBlur,
       handleFocus,
       handleKeyDown,
+      setActiveTreeItemId,
+      setActiveTreeItemIndex,
       setTreeViewRef,
       treeViewRef,
       handleClick,
@@ -234,6 +226,8 @@ export default class TreeViewBehaviorRR extends Component {
       handleBlur,
       handleFocus,
       handleKeyDown,
+      setActiveTreeItemId,
+      setActiveTreeItemIndex,
       setTreeViewRef,
       treeViewRef,
       handleClick,

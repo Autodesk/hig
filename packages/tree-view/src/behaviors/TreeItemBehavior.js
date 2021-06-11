@@ -1,6 +1,5 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
-import selectOption from "./selectOption";
 
 export default class TreeItemBehavior extends Component {
   static propTypes = {
@@ -10,9 +9,29 @@ export default class TreeItemBehavior extends Component {
   };
 
   handleClick = (event, treeItem) => {
-    this.props.payload.onClick(event, treeItem);
+    // console.log(this.props);
+    if (this.props.payload) {
+      this.props.payload.onClick(event, treeItem);
+    } else {
+      const {
+        id,
+        getTreeItemArray,
+        setActiveTreeItemId,
+        setActiveTreeItemIndex
+      } = treeItem;
+      const treeItemArray = getTreeItemArray();
+      const index = treeItemArray !== null && treeItemArray.indexOf(id);
+      console.log('handleclick treeitembehavior');
+      console.log(event);
+      console.log(treeItem);
+      console.log(treeItemArray);
+      console.log(index);
+      
+      setActiveTreeItemId(id);
+      setActiveTreeItemIndex(index);
+    }
     if (this.props.onClick) {
-      onClick(event);
+      this.props.onClick(event);
     }
   };
 
@@ -30,7 +49,7 @@ export default class TreeItemBehavior extends Component {
 
   render() {
     const { handleClick, handleMouseEnter, handleMouseLeave } = this;
-    console.log("TreeItem Behavior");
+    // console.log("TreeItem Behavior");
     return this.props.children({
       handleClick,
       handleMouseEnter,

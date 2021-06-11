@@ -42,22 +42,18 @@ export default class TreeViewPresenter extends Component {
 
   componentDidMount() {
     console.log('component did mount');
-    console.log(this.props.treeViewRef);
   }
 
   componentDidUpdate() {
-    console.log('component did update');
     const currentTreeArray = this.props.getTreeItemArray();
     const newTreeArray = buildTreeItemIdArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")));
     // console.log(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")));
     // this.props.setTreeItemArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")))
 
     if (JSON.stringify(newTreeArray) !== JSON.stringify(currentTreeArray)) {
-      console.log('hi');
       // this.props.setOptionsInfo(optionsInfo);
     }
     if (!currentTreeArray) {
-      console.log('null');
       this.props.setTreeItemArray(newTreeArray);
     }
   }
@@ -70,6 +66,9 @@ export default class TreeViewPresenter extends Component {
     const {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getTreeItemArray,
+      setActiveTreeItemId,
+      setActiveTreeItemIndex,
       guidelines,
       indicator
     } = this.props;
@@ -77,6 +76,9 @@ export default class TreeViewPresenter extends Component {
       ...props,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getTreeItemArray,
+      setActiveTreeItemId,
+      setActiveTreeItemIndex,
       guidelines,
       indicator,
       key
@@ -106,6 +108,10 @@ export default class TreeViewPresenter extends Component {
     delete payload.getActiveTreeItemIndex;
     delete payload.setTreeItemArray;
     delete payload.treeViewRef;
+    delete payload.treeNode;
+    delete payload.getTreeItemArray;
+    delete payload.setActiveTreeItemId;
+    delete payload.setActiveTreeItemIndex;
 
     return (
       <ThemeContext.Consumer>
