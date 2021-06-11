@@ -21,9 +21,10 @@ function SubTreeItem(props) {
     treeItem,
     treeItem: {
       children,
+      icon,
       id,
       meta: { label },
-      payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex },
+      payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex, guidelines },
     },
     themeData,
     onClick,
@@ -37,17 +38,21 @@ function SubTreeItem(props) {
     themeData,
     getActiveTreeItemId,
     getActiveTreeItemIndex,
+    guidelines,
     selected: getActiveTreeItemId() === id,
   };
   const styles = stylesheet(styleTreeItem, themeData);
   return (
     <li
-      className={css(styles.higTreeItem)}
+      className={css(styles.higTreeItemSubTreeItem)}
       id={id}
       role="treeitem"
       onClick={(event) => onClick(event, treeItem)}
     >
-      <div className={css(styles.higTreeItemContentWrapper)}>{label}</div>
+      <div className={css(styles.higTreeItemContentWrapper)}>
+        {icon}
+        {label}
+      </div>
     </li>
   );
 }
@@ -57,11 +62,13 @@ function NestedSubTreeItem(props) {
     treeItem,
     treeItem: {
       children,
+      icon,
       id,
       meta: { label },
       payload,
-      payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex },
+      payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex, guidelines },
     },
+    density,
     themeData,
     onClick,
     onFocus,
@@ -77,13 +84,14 @@ function NestedSubTreeItem(props) {
     themeData,
     getActiveTreeItemId,
     getActiveTreeItemIndex,
+    guidelines,
     selected: getActiveTreeItemId() === id,
   };
 
   const styles = stylesheet(styleTreeItem, themeData);
-  const IconIndicator =
-    indicator === "operator" ? OperatorPlusSUI : CaretRightMUI;
-
+  const OperatorPlusIcon = density === 'medium-density' ? OperatorPlusSUI : OperatorPlusXsUI;
+  const CaretRightIcon = density === 'medium-density' ? CaretRightMUI : CaretRightSUI;
+  const IconIndicator = indicator === 'operator' ? OperatorPlusIcon : CaretRightIcon;
   return (
     <li
       aria-expanded="true"
@@ -91,32 +99,40 @@ function NestedSubTreeItem(props) {
       id={id}
       role="treeitem"
     >
-      <span onClick={(event) => onClick(event, treeItem)}>
-        <IconIndicator /> {label}
-      </span>
-      <div>
-        <ul role="group">
-          {children.map((child) => {
-            return child.children ? (
-              <NestedSubTreeItem
-                treeItem={{ ...child, payload }}
-                themeData={themeData}
-                onClick={onClick}
-                onFocus={onFocus}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-              />
-            ) : (
-              <SubTreeItem
-                treeItem={{ ...child, payload }}
-                themeData={themeData}
-                onClick={onClick}
-                onFocus={onFocus}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-              />
-            );
-          })}
+      <div className={css(styles.higTreeItemSubTreeViewLabelWrapper)}>
+        <div
+          className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}
+          onClick={(event) => onClick(event, treeItem)}
+        >
+          <IconIndicator />
+          {icon}
+          <span>{label}</span>
+        </div>
+      </div>
+      <div className={css(styles.higTreeItemSubTreeViewWrapper)}>
+        <ul className={css(styles.higTreeItemSubTreeView)} role="group">
+        {children.map((child) => {
+          return child.children ? (
+            <NestedSubTreeItem
+              treeItem={{ ...child, payload }}
+              themeData={themeData}
+              density={density}
+              onClick={onClick}
+              onFocus={onFocus}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            />
+          ) : (
+            <SubTreeItem
+              treeItem={{ ...child, payload }}
+              themeData={themeData}
+              onClick={onClick}
+              onFocus={onFocus}
+              onMouseEnter={onMouseEnter}
+              onMouseLeave={onMouseLeave}
+            />
+          );
+        })}
         </ul>
       </div>
     </li>
@@ -142,6 +158,7 @@ class TreeObjectView extends Component {
             {({ resolvedRoles, metadata }) => {
               return (
                 <NestedSubTreeItem
+                  density={metadata.densityId}
                   treeItem={this.props.tree}
                   themeData={resolvedRoles}
                   onClick={handleClick}
