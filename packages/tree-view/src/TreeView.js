@@ -29,21 +29,17 @@ export default class TreeView extends Component {
       alternateBg,
       guidelines,
       stylesheet,
-      dataObject,
+      treeNode,
       ...otherProps
     } = this.props;
     const { onBlur, onClick, onFocus, onKeyDown } = otherProps;
 
-    const TreeViewPresenterType = dataObject
+    const TreeViewPresenterType = treeNode
       ? TreeViewPresenterObject
       : TreeViewPresenter;
 
     return (
-      <TreeViewBehavior
-        {...otherProps}
-        onKeyDown={onKeyDown}
-        onClick={onClick}
-      >
+      <TreeViewBehavior {...otherProps} onKeyDown={onKeyDown} onClick={onClick}>
         {({
           getActiveTreeItemId,
           getActiveTreeItemIndex,
@@ -58,7 +54,7 @@ export default class TreeView extends Component {
           <TreeViewPresenterType
             {...otherProps}
             alternateBg={alternateBg}
-            dataObject={dataObject}
+            treeNode={treeNode}
             getActiveTreeItemId={getActiveTreeItemId}
             getActiveTreeItemIndex={getActiveTreeItemIndex}
             setTreeItemArray={setTreeItemArray}

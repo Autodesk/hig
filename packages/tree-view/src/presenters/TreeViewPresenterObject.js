@@ -22,7 +22,7 @@ export default class TreeViewPresenterObject extends Component {
   };
 
   componentDidMount() {
-    this.getTreeItemArray(this.props.dataObject);
+    this.getTreeItemArray(this.props.treeNode);
     this.props.setTreeItemArray(objectArray);
   }
 
@@ -70,7 +70,7 @@ export default class TreeViewPresenterObject extends Component {
       guidelines,
       setTreeViewRef,
       stylesheet: customStylesheet,
-      dataObject,
+      treeNode,
       ...otherProps
     } = this.props;
 
@@ -102,7 +102,7 @@ export default class TreeViewPresenterObject extends Component {
                 role="tree"
                 tabIndex="0"
               >
-                {this.renderFileTree(dataObject, {
+                {this.renderFileTree(treeNode, {
                   getActiveTreeItemId,
                   getActiveTreeItemIndex,
                   guidelines,

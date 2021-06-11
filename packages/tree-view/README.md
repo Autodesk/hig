@@ -21,13 +21,13 @@ import TreeView from "@hig/tree-view";
 ## Basic usage
 
 ```jsx
-<TreeItem id="tree-item-0" key="tree-item-0" test="WM" label="Tree Item 0">
-  <TreeItem label="Tree Item 1" test="WM" id="tree-item-1">
+<TreeItem id="tree-item-0" key="tree-item-0" label="Tree Item 0">
+  <TreeItem label="Tree Item 1" id="tree-item-1">
     <TreeItem label="Tree Item 2" id="tree-item-2">
-      <TreeItem test="WM" label="Tree Item 3" id="tree-item-3">
-        <TreeItem test="WM" label="Tree Item 4" id="tree-item-4" />
-        <TreeItem test="WM" label="Tree Item 5" id="tree-item-5" />
-        <TreeItem test="WM" label="Tree Item 6" id="tree-item-6" />
+      <TreeItem label="Tree Item 3" id="tree-item-3">
+        <TreeItem label="Tree Item 4" id="tree-item-4" />
+        <TreeItem label="Tree Item 5" id="tree-item-5" />
+        <TreeItem label="Tree Item 6" id="tree-item-6" />
       </TreeItem>
     </TreeItem>
   </TreeItem>
@@ -36,7 +36,7 @@ import TreeView from "@hig/tree-view";
 
 ## Customization
 
-# Tree object
+# Tree Node Object
 
 ```jsx
 const FileTreeCollection = {
@@ -47,6 +47,8 @@ const FileTreeCollection = {
     label: "Tree Item 1",
     collapsed: false,
     active: false,
+    disabled: false,
+    icon: <Calendar24 />,
   },
   children: [
     {
@@ -57,6 +59,8 @@ const FileTreeCollection = {
         label: "Tree Item 2",
         collapsed: false,
         active: false,
+        disabled: false,
+        icon: null,
       },
     },
     {
@@ -67,6 +71,7 @@ const FileTreeCollection = {
         label: "Tree Item 3",
         collapsed: false,
         active: false,
+        icon: <Folder24 />,
       },
       children: [
         {
@@ -77,6 +82,7 @@ const FileTreeCollection = {
             label: "Tree Item 4",
             collapsed: false,
             active: false,
+            icon: null,
           },
         },
       ],
@@ -97,12 +103,12 @@ function customStylesheet(styles, props, themeData) {
 }
 
 <TreeItem stylesheet={customStylesheet}>
-  <TreeItem label="Tree Item 1" test="WM" id="tree-item-1">
+  <TreeItem label="Tree Item 1" id="tree-item-1">
     <TreeItem label="Tree Item 2" id="tree-item-2">
-      <TreeItem test="WM" label="Tree Item 3" id="tree-item-3">
-        <TreeItem test="WM" label="Tree Item 4" id="tree-item-4" />
-        <TreeItem test="WM" label="Tree Item 5" id="tree-item-5" />
-        <TreeItem test="WM" label="Tree Item 6" id="tree-item-6" />
+      <TreeItem label="Tree Item 3" id="tree-item-3">
+        <TreeItem label="Tree Item 4" id="tree-item-4" />
+        <TreeItem label="Tree Item 5" id="tree-item-5" />
+        <TreeItem label="Tree Item 6" id="tree-item-6" />
       </TreeItem>
     </TreeItem>
   </TreeItem>
