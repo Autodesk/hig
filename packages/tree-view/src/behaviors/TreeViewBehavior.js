@@ -193,9 +193,9 @@ export default class TreeViewBehaviorRR extends Component {
 
   handleClick = (event, treeItem) => {
     if (treeItem) {
-      const { id, index } = treeItem;
+      const { id } = treeItem;
       this.setActiveTreeItemId(id);
-      this.setActiveTreeItemIndex(index);
+      this.setActiveTreeItemIndex(this.state.treeItemArray.indexOf(id));
     }
     if (this.props.onClick) {
       this.props.onClick(event);
