@@ -1,6 +1,5 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
-import selectOption from "./selectOption";
 
 export default class TreeItemBehavior extends Component {
   static propTypes = {
@@ -9,10 +8,43 @@ export default class TreeItemBehavior extends Component {
     onMouseLeave: PropTypes.func,
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isCollapsed: this.props.defaultCollapsed,
+    };
+  }
+
+  isCollapsedControlled = () => this.props.collapsed !== undefined;
+
+  getIsCollapsed = () =>
+    this.isCollapsedControlled() ? this.props.collapsed : this.state.isCollapsed;
+
+  setIsCollapsed = isCollapsed => {
+    this.setState({isCollapsed})
+  }
+
   handleClick = (event, treeItem) => {
-    this.props.payload.onClick(event, treeItem);
     if (this.props.onClick) {
-      onClick(event);
+      this.props.onClick(event);
+    }
+
+    if (this.props.payload) {
+      this.props.payload.onClick(event, treeItem);
+    } else {
+      const {
+        id,
+        getTreeItemArray,
+        setActiveTreeItemId,
+        setActiveTreeItemIndex
+      } = this.props;
+      
+      const treeItemArray = getTreeItemArray();
+      const index = treeItemArray !== null && treeItemArray.indexOf(id);
+      setActiveTreeItemId(id);
+      setActiveTreeItemIndex(index);
+      this.setIsCollapsed(!this.getIsCollapsed());
     }
   };
 
@@ -29,12 +61,20 @@ export default class TreeItemBehavior extends Component {
   };
 
   render() {
-    const { handleClick, handleMouseEnter, handleMouseLeave } = this;
-    console.log("TreeItem Behavior");
-    return this.props.children({
+    const {
+      getIsCollapsed,
       handleClick,
       handleMouseEnter,
       handleMouseLeave,
+      setIsCollapsed
+    } = this;
+
+    return this.props.children({
+      getIsCollapsed,
+      handleClick,
+      handleMouseEnter,
+      handleMouseLeave,
+      setIsCollapsed
     });
   }
 }

@@ -1,6 +1,6 @@
 import React, { Children, Component } from "react";
 import PropTypes from "prop-types";
-import { css, cx } from "emotion";
+import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
@@ -40,24 +40,14 @@ export default class TreeViewPresenter extends Component {
     stylesheet: PropTypes.func
   };
 
-  componentDidMount() {
-    console.log('component did mount');
-    console.log(this.props.treeViewRef);
-  }
-
   componentDidUpdate() {
-    console.log('component did update');
     const currentTreeArray = this.props.getTreeItemArray();
     const newTreeArray = buildTreeItemIdArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")));
-    // console.log(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")));
-    // this.props.setTreeItemArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")))
-
+    
     if (JSON.stringify(newTreeArray) !== JSON.stringify(currentTreeArray)) {
-      console.log('hi');
-      // this.props.setOptionsInfo(optionsInfo);
+      this.props.setTreeItemArray(buildTreeItemIdArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li"))));
     }
     if (!currentTreeArray) {
-      console.log('null');
       this.props.setTreeItemArray(newTreeArray);
     }
   }
@@ -70,6 +60,11 @@ export default class TreeViewPresenter extends Component {
     const {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getKeyboardOpenId,
+      getTreeItemArray,
+      setActiveTreeItemId,
+      setActiveTreeItemIndex,
+      setKeyboardOpenId,
       guidelines,
       indicator
     } = this.props;
@@ -77,6 +72,11 @@ export default class TreeViewPresenter extends Component {
       ...props,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getKeyboardOpenId,
+      getTreeItemArray,
+      setActiveTreeItemId,
+      setActiveTreeItemIndex,
+      setKeyboardOpenId,
       guidelines,
       indicator,
       key
@@ -106,6 +106,10 @@ export default class TreeViewPresenter extends Component {
     delete payload.getActiveTreeItemIndex;
     delete payload.setTreeItemArray;
     delete payload.treeViewRef;
+    delete payload.treeNode;
+    delete payload.getTreeItemArray;
+    delete payload.setActiveTreeItemId;
+    delete payload.setActiveTreeItemIndex;
 
     return (
       <ThemeContext.Consumer>

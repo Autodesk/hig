@@ -1,16 +1,3 @@
-/* function getRulesByPresentation(themeData) {
-  return {
-    fontSize: themeData[`menu.header.fontSize`],
-    fontWeight: themeData[`menu.header.fontWeight`],
-    color: themeData[`menu.header.fontColor`],
-    opacity: 0.5,
-    textTransform: `uppercase`,
-    cursor: `default`,
-    padding: `0 
-        ${themeData["menu.item.paddingHorizontal"]}
-        ${themeData["menu.header.marginBottom"]}`
-  };
-} */
 // ADD TO THEME-DATA
 // MEDIUM DENSITY = 40PX TOTAL HEIGHT
 // HIGHT DENSITY = 24PX TOTAL HEIGHT
@@ -21,6 +8,7 @@ export default function stylesheet(props, themeData) {
   // console.log(props);
     const {
       alternateBg,
+      collapsed,
       guidelines,
       indicator,
       selected,
@@ -174,9 +162,11 @@ export default function stylesheet(props, themeData) {
           marginRight: themeData[`treeView.icon.marginRight`]
         }
       },
-      /* higTreeItemSubTreeViewWrapper: {
-        padding: `0 0 0 15px`
-      }, */
+      higTreeItemSubTreeViewWrapper: {
+        transitionProperty: "height",
+        transitionDuration: ".3s",
+        transitionTimingFunction: "ease-in-out"
+      },
       higTreeItemSubTreeView: {
         listStyle: `none`,
         margin: 0,

@@ -30,12 +30,20 @@ export default class TreeItem extends Component {
     stylesheet: PropTypes.func,
   };
 
+  static defaultProps = {
+    defaultCollapsed: true
+  };
+
   render() {
     const {
-      children, 
+      children,
+      collapsed,
+      defaultCollapsed,
+      getKeyboardOpenId,
       icon,
       id,
       label,
+      setKeyboardOpenId,
       stylesheet,
       ...otherProps
     } = this.props;
@@ -48,18 +56,35 @@ export default class TreeItem extends Component {
     } = otherProps;
 
     return (
-      <TreeItemBehavior {...otherProps} id={id}>
-        {({ handleClick, handleMouseEnter, handleMouseLeave }) => (
+      <TreeItemBehavior
+        {...otherProps}
+        collapsed={collapsed}
+        defaultCollapsed={defaultCollapsed}
+        id={id}
+      >
+        {({
+          getIsCollapsed,
+          handleClick,
+          handleMouseEnter,
+          handleMouseLeave,
+          setIsCollapsed
+        }) => (
           <TreeItemPresenter
             {...otherProps}
+            collapsed={getIsCollapsed()}
+            getIsCollapsed={getIsCollapsed}
+            getKeyboardOpenId={getKeyboardOpenId}
             icon={icon}
             id={id}
+            keyboardOpenId={getKeyboardOpenId()}
             label={label}
             onClick={handleClick}
             onFocus={onFocus}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             selected={getActiveTreeItemId() === id}
+            setIsCollapsed={setIsCollapsed}
+            setKeyboardOpenId={setKeyboardOpenId}
             // onMouseOver={handleMouseOver}
             stylesheet={stylesheet}
           >
