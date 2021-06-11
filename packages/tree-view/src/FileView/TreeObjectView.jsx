@@ -21,10 +21,14 @@ function SubTreeItem(props) {
     treeItem,
     treeItem: {
       children,
-      icon,
       id,
-      meta: { label },
-      payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex, guidelines },
+      meta: { label, icon },
+      payload: {
+        indicator,
+        getActiveTreeItemId,
+        getActiveTreeItemIndex,
+        guidelines,
+      },
     },
     themeData,
     onClick,
@@ -62,11 +66,15 @@ function NestedSubTreeItem(props) {
     treeItem,
     treeItem: {
       children,
-      icon,
       id,
-      meta: { label },
+      meta: { label, icon },
       payload,
-      payload: { indicator, getActiveTreeItemId, getActiveTreeItemIndex, guidelines },
+      payload: {
+        indicator,
+        getActiveTreeItemId,
+        getActiveTreeItemIndex,
+        guidelines,
+      },
     },
     density,
     themeData,
@@ -89,9 +97,12 @@ function NestedSubTreeItem(props) {
   };
 
   const styles = stylesheet(styleTreeItem, themeData);
-  const OperatorMinusIcon = density === 'medium-density' ? OperatorMinusSUI : OperatorMinusXsUI;
-  const CaretDownIcon = density === 'medium-density' ? CaretDownMUI : CaretDownSUI;
-  const IconIndicator = indicator === 'operator' ? OperatorMinusIcon : CaretDownIcon;
+  const OperatorMinusIcon =
+    density === "medium-density" ? OperatorMinusSUI : OperatorMinusXsUI;
+  const CaretDownIcon =
+    density === "medium-density" ? CaretDownMUI : CaretDownSUI;
+  const IconIndicator =
+    indicator === "operator" ? OperatorMinusIcon : CaretDownIcon;
   return (
     <li
       aria-expanded="true"
@@ -111,28 +122,28 @@ function NestedSubTreeItem(props) {
       </div>
       <div className={css(styles.higTreeItemSubTreeViewWrapper)}>
         <ul className={css(styles.higTreeItemSubTreeView)} role="group">
-        {children.map((child) => {
-          return child.children ? (
-            <NestedSubTreeItem
-              treeItem={{ ...child, payload }}
-              themeData={themeData}
-              density={density}
-              onClick={onClick}
-              onFocus={onFocus}
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-            />
-          ) : (
-            <SubTreeItem
-              treeItem={{ ...child, payload }}
-              themeData={themeData}
-              onClick={onClick}
-              onFocus={onFocus}
-              onMouseEnter={onMouseEnter}
-              onMouseLeave={onMouseLeave}
-            />
-          );
-        })}
+          {children.map((child) => {
+            return child.children ? (
+              <NestedSubTreeItem
+                treeItem={{ ...child, payload }}
+                themeData={themeData}
+                density={density}
+                onClick={onClick}
+                onFocus={onFocus}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+              />
+            ) : (
+              <SubTreeItem
+                treeItem={{ ...child, payload }}
+                themeData={themeData}
+                onClick={onClick}
+                onFocus={onFocus}
+                onMouseEnter={onMouseEnter}
+                onMouseLeave={onMouseLeave}
+              />
+            );
+          })}
         </ul>
       </div>
     </li>

@@ -3,118 +3,16 @@ import { TreeItem } from "../index";
 import {
   AddFolder24,
   Folder24,
+  Calendar24,
+  ProductsAndServices24,
+  Report24,
+  FileImage24,
+  FileVideo24,
   AddFolder16,
-  Folder16
+  Folder16,
 } from "@hig/icons";
 
-const FileTreeCollection = {
-  id: 1,
-  index: 0,
-  parentId: null,
-  meta: {
-    label: "Tree Item 1",
-    collapsed: false,
-    active: false,
-  },
-  children: [
-    {
-      id: 2,
-      index: 1,
-      parentId: 1,
-      meta: {
-        label: "Tree Item 2",
-        collapsed: false,
-        active: false,
-      },
-      children: [
-        {
-          id: 3,
-          index: 2,
-          parentId: 2,
-          meta: {
-            label: "Tree Item 3",
-            collapsed: false,
-            active: false,
-          },
-        },
-        {
-          id: 4,
-          index: 3,
-          parentId: 2,
-          meta: {
-            label: "Tree Item 4",
-            collapsed: false,
-            active: false,
-          },
-        },
-        {
-          id: 5,
-          index: 4,
-          parentId: 2,
-          meta: {
-            label: "Tree Item 5",
-            collapsed: false,
-            active: false,
-          },
-          children: [
-            {
-              id: 6,
-              index: 5,
-              parentId: 5,
-              meta: {
-                label: "Tree Item 6",
-                collapsed: false,
-                active: false,
-              },
-            },
-            {
-              id: 7,
-              index: 6,
-              parentId: 5,
-              meta: {
-                label: "Tree Item 7",
-                collapsed: false,
-                active: false,
-              },
-              children: [
-                {
-                  id: 8,
-                  index: 7,
-                  parentId: 7,
-                  meta: {
-                    label: "Tree Item 8",
-                    collapsed: false,
-                    active: false,
-                  },
-                },
-                {
-                  id: 9,
-                  index: 8,
-                  parentId: 7,
-                  meta: {
-                    label: "Tree Item 9",
-                    collapsed: false,
-                    active: false,
-                  },
-                },
-                {
-                  id: 10,
-                  index: 9,
-                  parentId: 7,
-                  meta: {
-                    label: "Tree Item 10",
-                    collapsed: false,
-                    active: false,
-                  },
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-  ],
-};
+import { FileTreeCollection } from "../constants";
 
 export default [
   {
@@ -123,15 +21,15 @@ export default [
       guidelines: false,
       indicator: "caret",
       children: [
-        <TreeItem
-          id="tree-item-0"
-          key="tree-item-0"
-          label="Tree Item 0"
-        >
+        <TreeItem id="tree-item-0" key="tree-item-0" label="Tree Item 0">
           <TreeItem label="Tree Item 1" id="tree-item-1">
             <TreeItem label="Tree Item 2" id="tree-item-2" icon={<Folder24 />}>
               <TreeItem label="Tree Item 3" id="tree-item-3">
-                <TreeItem label="Tree Item 4" id="tree-item-4" icon={<AddFolder24 />} />
+                <TreeItem
+                  label="Tree Item 4"
+                  id="tree-item-4"
+                  icon={<AddFolder24 />}
+                />
                 <TreeItem label="Tree Item 5" id="tree-item-5" />
                 <TreeItem label="Tree Item 6" id="tree-item-6" />
               </TreeItem>
@@ -191,7 +89,7 @@ export default [
     getProps: () => ({
       guidelines: false,
       indicator: "caret",
-      dataObject: FileTreeCollection,
+      treeNode: FileTreeCollection,
     }),
   },
 ];
