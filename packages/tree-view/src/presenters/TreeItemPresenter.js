@@ -1,6 +1,6 @@
-import React, { Children, Component } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { css, cx } from "emotion";
+import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 import {
   CaretDownMUI,
@@ -14,16 +14,16 @@ import {
 import TreeItem from "../TreeItem";
 // import createChildren from "../behaviors/createChildren";
 import stylesheet from "./stylesheet";
-import { AVAILABLE_ROLES } from "../constants";
 
 function SubTreeItem(props) {
-  const { icon, id, label, themeData } = props;
+  const { icon, id, label, onClick, themeData } = props;
   const styles = stylesheet(props, themeData);
 
   return (
     <li
       className={css(styles.higTreeItemSubTreeItem)}
       id={id}
+      onClick={event => { onClick(event, props) }}
       role="treeitem"
     >
       <div className={css(styles.higTreeItemContentWrapper)}>
@@ -40,19 +40,26 @@ function NestedSubTreeItem(props) {
     density,
     getActiveTreeItemId,
     getActiveTreeItemIndex,
+    getTreeItemArray,
     guidelines,
     icon,
     id,
     indicator,
     label,
+    onClick,
+    setActiveTreeItemId,
+    setActiveTreeItemIndex,
     themeData
   } = props;
   const styles = stylesheet(props, themeData);
   const clonedChildren = React.cloneElement(children, {
     getActiveTreeItemId,
     getActiveTreeItemIndex,
+    getTreeItemArray,
     guidelines,
-    indicator
+    indicator,
+    setActiveTreeItemId,
+    setActiveTreeItemIndex
   });
   const OperatorMinusIcon = density === 'medium-density' ? OperatorMinusSUI : OperatorMinusXsUI;
   const CaretDownIcon = density === 'medium-density' ? CaretDownMUI : CaretDownSUI;
@@ -65,7 +72,9 @@ function NestedSubTreeItem(props) {
       id={id}
       role="treeitem"
     >
-      <div className={css(styles.higTreeItemSubTreeViewLabelWrapper)}>
+      <div
+        className={css(styles.higTreeItemSubTreeViewLabelWrapper)}
+        onClick={event => { onClick(event, props) }}>
         <div className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}>
           <IconIndicator />
           {icon}
@@ -87,11 +96,15 @@ function NestedSubTreeItemGroup(props) {
     density,
     getActiveTreeItemId,
     getActiveTreeItemIndex,
+    getTreeItemArray,
     guidelines,
     icon,
     id,
     indicator,
     label,
+    onClick,
+    setActiveTreeItemId,
+    setActiveTreeItemIndex,
     themeData
   } = props;
   const styles = stylesheet(props, themeData);
@@ -100,9 +113,13 @@ function NestedSubTreeItemGroup(props) {
     {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getTreeItemArray,
       guidelines,
       indicator,
-      selected: getActiveTreeItemId() === child.props.id
+      onClick,
+      selected: getActiveTreeItemId() === child.props.id,
+      setActiveTreeItemId,
+      setActiveTreeItemIndex
     }
   )));
   const OperatorMinusIcon = density === 'medium-density' ? OperatorMinusSUI : OperatorMinusXsUI;
@@ -116,7 +133,10 @@ function NestedSubTreeItemGroup(props) {
       id={id}
       role="treeitem"
     >
-      <div className={css(styles.higTreeItemSubTreeViewLabelWrapper)}>
+      <div
+        className={css(styles.higTreeItemSubTreeViewLabelWrapper)}
+        onClick={event => { onClick(event, props) }}
+      >
         <div className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}>
           <IconIndicator />
           {icon}
@@ -126,6 +146,7 @@ function NestedSubTreeItemGroup(props) {
       <div className={css(styles.higTreeItemSubTreeViewWrapper)}>
         <ul className={css(styles.higTreeItemSubTreeView)} role="group">
           {clonedChildren.map((child, index) => {
+
             // if it has a label then the children array should be of TreeItems
             if (child.props
               && child.props.children
