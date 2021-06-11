@@ -18,6 +18,15 @@ function createTreeItems(children) {
   }, []);
 }
 
+function buildTreeItemIdArray(list) {
+  const ids = [];
+
+  list.map((item) => {
+    ids.push(item.id);
+  });
+
+  return ids;
+}
 
 export default class TreeViewPresenter extends Component {
   static propTypes = {
@@ -33,6 +42,24 @@ export default class TreeViewPresenter extends Component {
 
   componentDidMount() {
     console.log('component did mount');
+    console.log(this.props.treeViewRef);
+  }
+
+  componentDidUpdate() {
+    console.log('component did update');
+    const currentTreeArray = this.props.getTreeItemArray();
+    const newTreeArray = buildTreeItemIdArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")));
+    // console.log(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")));
+    // this.props.setTreeItemArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")))
+
+    if (JSON.stringify(newTreeArray) !== JSON.stringify(currentTreeArray)) {
+      console.log('hi');
+      // this.props.setOptionsInfo(optionsInfo);
+    }
+    if (!currentTreeArray) {
+      console.log('null');
+      this.props.setTreeItemArray(newTreeArray);
+    }
   }
 
   getTreeItems() {
@@ -72,6 +99,13 @@ export default class TreeViewPresenter extends Component {
       stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
+    const payload = { ...otherProps };
+    delete payload.indicator;
+    delete payload.dataObject;
+    delete payload.getActiveTreeItemId;
+    delete payload.getActiveTreeItemIndex;
+    delete payload.setTreeItemArray;
+    delete payload.treeViewRef;
 
     return (
       <ThemeContext.Consumer>
@@ -87,7 +121,7 @@ export default class TreeViewPresenter extends Component {
           return (
             <div className={css(styles.higTreeViewWrapper)}>
               <ul
-                {...otherProps}
+                {...payload}
                 className={css(styles.higTreeView)}
                 ref={setTreeViewRef}
                 role="tree"

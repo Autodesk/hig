@@ -131,14 +131,14 @@ function NestedSubTreeItemGroup(props) {
               && child.props.children
               && Array.isArray(child.props.children)
             ) {
-              return <NestedSubTreeItemGroup {...child.props} themeData={themeData} density={density} />
+              return <NestedSubTreeItemGroup {...child.props} themeData={themeData} density={density} key={index} />
               // return this.buildNestedTreeItemArrays(child.props, themeData, index);
             }
             if (child.props && child.props.children && child.props.children.type === TreeItem) {
-              return <NestedSubTreeItem {...child.props} themeData={themeData} density={density} />
+              return <NestedSubTreeItem {...child.props} themeData={themeData} density={density} key={index} />
               // return this.buildNestedTreeItem(child.props, themeData, index);
             } else {
-              return <SubTreeItem {...child.props} themeData={themeData} density={density} />
+              return <SubTreeItem {...child.props} themeData={themeData} density={density} key={index} />
               // return this.buildTreeItem(child.props, themeData, index);
             }
           })}

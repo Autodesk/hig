@@ -71,6 +71,7 @@ export default function stylesheet(props, themeData) {
             "& > div": {
               "&:first-of-type": {
                 "&:last-child": {
+                  margin: 0,
                   paddingLeft: 0
                 }
               }
@@ -114,12 +115,12 @@ export default function stylesheet(props, themeData) {
         margin: 0,
         // padding: `${themeData['treeView.row.paddingVertical']} ${themeData['treeView.row.paddingHorizontal']}`,
         position: `relative`,
-        "& [aria-expanded='true']": {
+        /* "& [aria-expanded='true']": {
           padding: 0
         },
         "& [aria-expanded='false']": {
           padding: 0
-        },
+        }, */
         "&::before": {
           ...(guidelines ? { borderTop: `1px dashed ${themeData['treeView.guideLine.backgroundColor']}` } : {}),
           display: `inline-block`,
@@ -162,7 +163,13 @@ export default function stylesheet(props, themeData) {
         alignItems: `center`,
         display: `inline-flex`,
         paddingLeft: themeData['treeView.row.paddingHorizontal'], 
-        ...(selected ? { background: themeData[`colorScheme.background.on.default`] } : {}),
+        ...(selected 
+          ? {
+              background: themeData[`colorScheme.background.on.default`],
+              marginLeft: themeData['treeView.row.paddingHorizontal'],
+              paddingLeft: 0
+            }
+          : {}),
         "& > svg": {
           marginRight: themeData[`treeView.icon.marginRight`]
         }
@@ -192,16 +199,19 @@ export default function stylesheet(props, themeData) {
         display: `flex`,
         ...(selected ? { background: themeData[`colorScheme.background.on.default`] } : {}),
         "& > svg": {
-          marginRight: themeData[`treeView.icon.marginRight`]
+          marginRight: themeData[`treeView.icon.marginRight`],
+          "&:first-of-type": {
+            fill: themeData[`treeView.indicatorColor`]
+          }
         }
       },
-      higTreeItemSubTreeViewIndicatorWrapper: {
+      /* higTreeItemSubTreeViewIndicatorWrapper: {
         alignItems: `center`,
         display: `flex`,
         height: itemHeight,
         justifyContent: `center`,
         width: itemHeight
-      },
+      }, */
       higTreeItemSubTreeItem: {
         height: itemHeight,
         padding: `${themeData['treeView.row.paddingVertical']} ${themeData['treeView.row.paddingHorizontal']}`,

@@ -19,7 +19,7 @@ export default class TreeItem extends Component {
     /**
      * Unique HTML id attribute
      */
-    id: PropTypes.string.required,
+    id: PropTypes.string,
     /**
      * Labels the TreeItem, this is rendered before all children
      */

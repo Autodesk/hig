@@ -89,17 +89,21 @@ export default class TreeViewBehaviorRR extends Component {
 
     console.log("set tree view ref");
     console.log("THIS PROPS", this.props);
-    console.log(Array.prototype.slice.call(element.querySelectorAll("li")));
-    this.setState({
+    // console.log(Array.prototype.slice.call(element.querySelectorAll("li")));
+    /* this.setState({
       treeItemArray: buildTreeItemIdArray(
         Array.prototype.slice.call(element.querySelectorAll("li"))
       ),
-    });
+    }); */
     this.treeViewRef = element;
   };
 
   setTreeItemArray = (objectArray) => {
     this.setState({ treeItemArray: [...objectArray] });
+  };
+
+  getTreeItemArray = () => {
+    return this.state.treeItemArray;
   };
 
   getActiveTreeItemId = () => {
@@ -213,6 +217,7 @@ export default class TreeViewBehaviorRR extends Component {
     const {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getTreeItemArray,
       handleBlur,
       handleFocus,
       handleKeyDown,
@@ -225,6 +230,7 @@ export default class TreeViewBehaviorRR extends Component {
     return this.props.children({
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getTreeItemArray,
       handleBlur,
       handleFocus,
       handleKeyDown,
