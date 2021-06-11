@@ -6,8 +6,8 @@ import { ThemeContext } from "@hig/theme-context";
 import TreeItemBehavior from "../behaviors/TreeItemBehavior";
 
 import {
-  CaretRightMUI,
-  CaretRightSUI,
+  CaretDownMUI,
+  CaretDownSUI,
   OperatorMinusSUI,
   OperatorMinusXsUI,
   OperatorPlusSUI,
@@ -89,9 +89,9 @@ function NestedSubTreeItem(props) {
   };
 
   const styles = stylesheet(styleTreeItem, themeData);
-  const OperatorPlusIcon = density === 'medium-density' ? OperatorPlusSUI : OperatorPlusXsUI;
-  const CaretRightIcon = density === 'medium-density' ? CaretRightMUI : CaretRightSUI;
-  const IconIndicator = indicator === 'operator' ? OperatorPlusIcon : CaretRightIcon;
+  const OperatorMinusIcon = density === 'medium-density' ? OperatorMinusSUI : OperatorMinusXsUI;
+  const CaretDownIcon = density === 'medium-density' ? CaretDownMUI : CaretDownSUI;
+  const IconIndicator = indicator === 'operator' ? OperatorMinusIcon : CaretDownIcon;
   return (
     <li
       aria-expanded="true"

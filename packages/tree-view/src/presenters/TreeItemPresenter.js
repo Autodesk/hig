@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 import {
-  CaretRightMUI,
-  CaretRightSUI,
+  CaretDownMUI,
+  CaretDownSUI,
   OperatorMinusSUI,
   OperatorMinusXsUI,
   OperatorPlusSUI,
@@ -54,9 +54,9 @@ function NestedSubTreeItem(props) {
     guidelines,
     indicator
   });
-  const OperatorPlusIcon = density === 'medium-density' ? OperatorPlusSUI : OperatorPlusXsUI;
-  const CaretRightIcon = density === 'medium-density' ? CaretRightMUI : CaretRightSUI;
-  const IconIndicator = indicator === 'operator' ? OperatorPlusIcon : CaretRightIcon;
+  const OperatorMinusIcon = density === 'medium-density' ? OperatorMinusSUI : OperatorMinusXsUI;
+  const CaretDownIcon = density === 'medium-density' ? CaretDownMUI : CaretDownSUI;
+  const IconIndicator = indicator === 'operator' ? OperatorMinusIcon : CaretDownIcon;
 
   return (
     <li
@@ -105,9 +105,9 @@ function NestedSubTreeItemGroup(props) {
       selected: getActiveTreeItemId() === child.props.id
     }
   )));
-  const OperatorPlusIcon = density === 'medium-density' ? OperatorPlusSUI : OperatorPlusXsUI;
-  const CaretRightIcon = density === 'medium-density' ? CaretRightMUI : CaretRightSUI;
-  const IconIndicator = indicator === 'operator' ? OperatorPlusIcon : CaretRightIcon;
+  const OperatorMinusIcon = density === 'medium-density' ? OperatorMinusSUI : OperatorMinusXsUI;
+  const CaretDownIcon = density === 'medium-density' ? CaretDownMUI : CaretDownSUI;
+  const IconIndicator = indicator === 'operator' ? OperatorMinusIcon : CaretDownIcon;
 
   return (
     <li
