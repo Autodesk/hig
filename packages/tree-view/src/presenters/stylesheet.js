@@ -71,6 +71,7 @@ export default function stylesheet(props, themeData) {
             "& > div": {
               "&:first-of-type": {
                 "&:last-child": {
+                  margin: 0,
                   paddingLeft: 0
                 }
               }
