@@ -32,7 +32,8 @@ export default class TreeItem extends Component {
 
   render() {
     const {
-      children, 
+      children,
+      collapsed,
       icon,
       id,
       label,
@@ -48,10 +49,18 @@ export default class TreeItem extends Component {
     } = otherProps;
 
     return (
-      <TreeItemBehavior {...otherProps} id={id}>
-        {({ handleClick, handleMouseEnter, handleMouseLeave }) => (
+      <TreeItemBehavior {...otherProps} id={id} collapsed={collapsed}>
+        {({
+          getIsCollapsed,
+          handleClick,
+          handleMouseEnter,
+          handleMouseLeave,
+          setIsCollapsed
+        }) => (
           <TreeItemPresenter
             {...otherProps}
+            collapsed={getIsCollapsed()}
+            getIsCollapsed={getIsCollapsed}
             icon={icon}
             id={id}
             label={label}
@@ -60,6 +69,7 @@ export default class TreeItem extends Component {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             selected={getActiveTreeItemId() === id}
+            setIsCollapsed={setIsCollapsed}
             // onMouseOver={handleMouseOver}
             stylesheet={stylesheet}
           >

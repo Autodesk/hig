@@ -37,9 +37,11 @@ function SubTreeItem(props) {
 function NestedSubTreeItem(props) {
   const {
     children,
+    collapsed,
     density,
     getActiveTreeItemId,
     getActiveTreeItemIndex,
+    getIsCollapsed,
     getTreeItemArray,
     guidelines,
     icon,
@@ -49,6 +51,7 @@ function NestedSubTreeItem(props) {
     onClick,
     setActiveTreeItemId,
     setActiveTreeItemIndex,
+    setIsCollapsed,
     themeData
   } = props;
   const styles = stylesheet(props, themeData);
@@ -74,7 +77,13 @@ function NestedSubTreeItem(props) {
     >
       <div
         className={css(styles.higTreeItemSubTreeViewLabelWrapper)}
-        onClick={event => { onClick(event, props) }}>
+        onClick={event => {
+          console.log('nested sub tree item');
+          console.log(props);
+          onClick(event, props);
+          setIsCollapsed(!getIsCollapsed());
+        }}
+      >
         <div className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}>
           <IconIndicator />
           {icon}
@@ -82,9 +91,9 @@ function NestedSubTreeItem(props) {
         </div>
       </div>
       <div className={css(styles.higTreeItemSubTreeViewWrapper)}>
-        <ul className={css(styles.higTreeItemSubTreeView)} role="group">
+        {!collapsed && <ul className={css(styles.higTreeItemSubTreeView)} role="group">
           {clonedChildren}
-        </ul>
+        </ul>}
       </div>
     </li>
   );
@@ -93,9 +102,11 @@ function NestedSubTreeItem(props) {
 function NestedSubTreeItemGroup(props) {
   const {
     children,
+    collapsed,
     density,
     getActiveTreeItemId,
     getActiveTreeItemIndex,
+    getIsCollapsed,
     getTreeItemArray,
     guidelines,
     icon,
@@ -105,6 +116,7 @@ function NestedSubTreeItemGroup(props) {
     onClick,
     setActiveTreeItemId,
     setActiveTreeItemIndex,
+    setIsCollapsed,
     themeData
   } = props;
   const styles = stylesheet(props, themeData);
@@ -135,7 +147,11 @@ function NestedSubTreeItemGroup(props) {
     >
       <div
         className={css(styles.higTreeItemSubTreeViewLabelWrapper)}
-        onClick={event => { onClick(event, props) }}
+        onClick={event => {
+          onClick(event, props);
+          setIsCollapsed(!getIsCollapsed());
+          console.log('open/close');
+        }}
       >
         <div className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}>
           <IconIndicator />
@@ -144,7 +160,7 @@ function NestedSubTreeItemGroup(props) {
         </div>
       </div>
       <div className={css(styles.higTreeItemSubTreeViewWrapper)}>
-        <ul className={css(styles.higTreeItemSubTreeView)} role="group">
+        {!collapsed && <ul className={css(styles.higTreeItemSubTreeView)} role="group">
           {clonedChildren.map((child, index) => {
 
             // if it has a label then the children array should be of TreeItems
@@ -163,7 +179,7 @@ function NestedSubTreeItemGroup(props) {
               // return this.buildTreeItem(child.props, themeData, index);
             }
           })}
-        </ul>
+        </ul>}
       </div>
     </li>
   );

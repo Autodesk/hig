@@ -8,8 +8,31 @@ export default class TreeItemBehavior extends Component {
     onMouseLeave: PropTypes.func,
   };
 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isCollapsed: true,
+    };
+
+  }
+
+  setIsCollapsed = isCollapsed => {
+    this.setState({isCollapsed})
+  }
+
+  getIsCollapsed = () => {
+    if (this.props.collapsed) {
+      return this.props.collapsed;
+    }
+    return this.state.isCollapsed;
+  }
+
   handleClick = (event, treeItem) => {
-    // console.log(this.props);
+    if (this.props.onClick) {
+      this.props.onClick(event);
+    }
+
     if (this.props.payload) {
       this.props.payload.onClick(event, treeItem);
     } else {
@@ -22,16 +45,9 @@ export default class TreeItemBehavior extends Component {
       const treeItemArray = getTreeItemArray();
       const index = treeItemArray !== null && treeItemArray.indexOf(id);
       console.log('handleclick treeitembehavior');
-      console.log(event);
-      console.log(treeItem);
-      console.log(treeItemArray);
-      console.log(index);
-      
+
       setActiveTreeItemId(id);
       setActiveTreeItemIndex(index);
-    }
-    if (this.props.onClick) {
-      this.props.onClick(event);
     }
   };
 
@@ -48,12 +64,20 @@ export default class TreeItemBehavior extends Component {
   };
 
   render() {
-    const { handleClick, handleMouseEnter, handleMouseLeave } = this;
-    // console.log("TreeItem Behavior");
-    return this.props.children({
+    const {
+      getIsCollapsed,
       handleClick,
       handleMouseEnter,
       handleMouseLeave,
+      setIsCollapsed
+    } = this;
+
+    return this.props.children({
+      getIsCollapsed,
+      handleClick,
+      handleMouseEnter,
+      handleMouseLeave,
+      setIsCollapsed
     });
   }
 }

@@ -51,7 +51,8 @@ export default class TreeViewPresenter extends Component {
     // this.props.setTreeItemArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")))
 
     if (JSON.stringify(newTreeArray) !== JSON.stringify(currentTreeArray)) {
-      // this.props.setOptionsInfo(optionsInfo);
+      console.log('update');
+      this.props.setTreeItemArray(buildTreeItemIdArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li"))));
     }
     if (!currentTreeArray) {
       this.props.setTreeItemArray(newTreeArray);
