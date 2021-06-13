@@ -41,13 +41,15 @@ export default class TreeItemBehavior extends Component {
         getTreeItemArray,
         setActiveTreeItemId,
         setActiveTreeItemIndex
-      } = treeItem;
+      } = this.props;
+      event.stopPropagation();
       const treeItemArray = getTreeItemArray();
       const index = treeItemArray !== null && treeItemArray.indexOf(id);
-      console.log('handleclick treeitembehavior');
-
+      console.log('handle click');
+      console.log(this.props);
       setActiveTreeItemId(id);
       setActiveTreeItemIndex(index);
+      this.setIsCollapsed(!this.getIsCollapsed());
     }
   };
 
@@ -71,7 +73,8 @@ export default class TreeItemBehavior extends Component {
       handleMouseLeave,
       setIsCollapsed
     } = this;
-
+// console.log('treeitem behavior');
+// console.log(this.props.id);
     return this.props.children({
       getIsCollapsed,
       handleClick,

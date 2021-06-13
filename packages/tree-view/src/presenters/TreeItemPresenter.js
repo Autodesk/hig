@@ -12,178 +12,9 @@ import {
 } from "@hig/icons";
 // import { createCustomClassNames } from "@hig/utils";
 import TreeItem from "../TreeItem";
-// import createChildren from "../behaviors/createChildren";
-import stylesheet from "./stylesheet";
-
-function SubTreeItem(props) {
-  const { icon, id, label, onClick, themeData } = props;
-  const styles = stylesheet(props, themeData);
-
-  return (
-    <li
-      className={css(styles.higTreeItemSubTreeItem)}
-      id={id}
-      onClick={event => { onClick(event, props) }}
-      role="treeitem"
-    >
-      <div className={css(styles.higTreeItemContentWrapper)}>
-        {icon}
-        {label}
-      </div>
-    </li>
-  );
-}
-
-function NestedSubTreeItem(props) {
-  const {
-    children,
-    collapsed,
-    density,
-    getActiveTreeItemId,
-    getActiveTreeItemIndex,
-    getIsCollapsed,
-    getTreeItemArray,
-    guidelines,
-    icon,
-    id,
-    indicator,
-    label,
-    onClick,
-    setActiveTreeItemId,
-    setActiveTreeItemIndex,
-    setIsCollapsed,
-    themeData
-  } = props;
-  const styles = stylesheet(props, themeData);
-  const clonedChildren = React.cloneElement(children, {
-    getActiveTreeItemId,
-    getActiveTreeItemIndex,
-    getTreeItemArray,
-    guidelines,
-    indicator,
-    setActiveTreeItemId,
-    setActiveTreeItemIndex
-  });
-  const OperatorMinusIcon = density === 'medium-density' ? OperatorMinusSUI : OperatorMinusXsUI;
-  const CaretDownIcon = density === 'medium-density' ? CaretDownMUI : CaretDownSUI;
-  const IconIndicator = indicator === 'operator' ? OperatorMinusIcon : CaretDownIcon;
-
-  return (
-    <li
-      aria-expanded="true"
-      className={css(styles.higTreeItem)}
-      id={id}
-      role="treeitem"
-    >
-      <div
-        className={css(styles.higTreeItemSubTreeViewLabelWrapper)}
-        onClick={event => {
-          console.log('nested sub tree item');
-          console.log(props);
-          onClick(event, props);
-          setIsCollapsed(!getIsCollapsed());
-        }}
-      >
-        <div className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}>
-          <IconIndicator />
-          {icon}
-          <span>{label}</span>
-        </div>
-      </div>
-      <div className={css(styles.higTreeItemSubTreeViewWrapper)}>
-        {!collapsed && <ul className={css(styles.higTreeItemSubTreeView)} role="group">
-          {clonedChildren}
-        </ul>}
-      </div>
-    </li>
-  );
-}
-
-function NestedSubTreeItemGroup(props) {
-  const {
-    children,
-    collapsed,
-    density,
-    getActiveTreeItemId,
-    getActiveTreeItemIndex,
-    getIsCollapsed,
-    getTreeItemArray,
-    guidelines,
-    icon,
-    id,
-    indicator,
-    label,
-    onClick,
-    setActiveTreeItemId,
-    setActiveTreeItemIndex,
-    setIsCollapsed,
-    themeData
-  } = props;
-  const styles = stylesheet(props, themeData);
-  const clonedChildren = React.Children.map(children, (child => React.cloneElement(
-    child,
-    {
-      getActiveTreeItemId,
-      getActiveTreeItemIndex,
-      getTreeItemArray,
-      guidelines,
-      indicator,
-      onClick,
-      selected: getActiveTreeItemId() === child.props.id,
-      setActiveTreeItemId,
-      setActiveTreeItemIndex
-    }
-  )));
-  const OperatorMinusIcon = density === 'medium-density' ? OperatorMinusSUI : OperatorMinusXsUI;
-  const CaretDownIcon = density === 'medium-density' ? CaretDownMUI : CaretDownSUI;
-  const IconIndicator = indicator === 'operator' ? OperatorMinusIcon : CaretDownIcon;
-
-  return (
-    <li
-      aria-expanded="true"
-      className={css(styles.higTreeItem)}
-      id={id}
-      role="treeitem"
-    >
-      <div
-        className={css(styles.higTreeItemSubTreeViewLabelWrapper)}
-        onClick={event => {
-          onClick(event, props);
-          setIsCollapsed(!getIsCollapsed());
-          console.log('open/close');
-        }}
-      >
-        <div className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}>
-          <IconIndicator />
-          {icon}
-          <span>{label}</span>
-        </div>
-      </div>
-      <div className={css(styles.higTreeItemSubTreeViewWrapper)}>
-        {!collapsed && <ul className={css(styles.higTreeItemSubTreeView)} role="group">
-          {clonedChildren.map((child, index) => {
-
-            // if it has a label then the children array should be of TreeItems
-            if (child.props
-              && child.props.children
-              && Array.isArray(child.props.children)
-            ) {
-              return <NestedSubTreeItemGroup {...child.props} themeData={themeData} density={density} key={index} />
-              // return this.buildNestedTreeItemArrays(child.props, themeData, index);
-            }
-            if (child.props && child.props.children && child.props.children.type === TreeItem) {
-              return <NestedSubTreeItem {...child.props} themeData={themeData} density={density} key={index} />
-              // return this.buildNestedTreeItem(child.props, themeData, index);
-            } else {
-              return <SubTreeItem {...child.props} themeData={themeData} density={density} key={index} />
-              // return this.buildTreeItem(child.props, themeData, index);
-            }
-          })}
-        </ul>}
-      </div>
-    </li>
-  );
-}
+import SingleTreeNodePresenter from "./SingleTreeNodePresenter";
+import SingleTreeNodeFolderPresenter from "./SingleTreeNodeFolderPresenter";
+import GroupTreeNodeFolderPresenter from "./GroupTreeNodeFolderPresenter";
 
 export default class TreeItemPresenter extends Component {
   static propTypes = {
@@ -193,9 +24,13 @@ export default class TreeItemPresenter extends Component {
      * child of another TreeItem. If your TreeItem has any
      * other elements as children this prop will not render
      */
-    label: PropTypes.string,
+    label: PropTypes.node,
     stylesheet: PropTypes.func
   };
+
+  componentDidMount() {
+    // console.log('tree item presenter did mount');
+  }
 
   renderTreeItem() {
     const { children } = this.props;
@@ -206,15 +41,15 @@ export default class TreeItemPresenter extends Component {
         {({ resolvedRoles, metadata }) => {
           // if it has a label then the children array should be of TreeItems
           if (Array.isArray(children)) {
-            return <NestedSubTreeItemGroup {...this.props} themeData={resolvedRoles} density={metadata.densityId} />
+            return <GroupTreeNodeFolderPresenter {...this.props} themeData={resolvedRoles} density={metadata.densityId} />
             // return this.buildNestedTreeItemArrays(this.props, resolvedRoles);
           }
           if (children && children.type === TreeItem) {
             // return this.buildNestedTreeItem(this.props, resolvedRoles);
-            return <NestedSubTreeItem {...this.props} themeData={resolvedRoles} density={metadata.densityId} />
+            return <SingleTreeNodeFolderPresenter {...this.props} themeData={resolvedRoles} density={metadata.densityId} />
           } else {
             // return this.buildTreeItem(this.props, resolvedRoles);
-            return <SubTreeItem {...this.props} themeData={resolvedRoles} />
+            return <SingleTreeNodePresenter {...this.props} themeData={resolvedRoles} />
           }
         }}
       </ThemeContext.Consumer>
@@ -222,22 +57,6 @@ export default class TreeItemPresenter extends Component {
   }
 
   render() {
-    const {
-      children,
-      indicator,
-      isPressed,
-      stylesheet: customStylesheet,
-      ...otherProps
-    } = this.props;
-    const {
-      role,
-    } = otherProps;
-    const treeA11y = {
-      tabIndex: `-1`,
-      role: role || `treeitem`
-    }
-    // console.log('tree item presenter');
-    // console.log(this.props);
     return this.renderTreeItem();
   }
 }

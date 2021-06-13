@@ -139,7 +139,7 @@ export default class TreeViewBehaviorRR extends Component {
     }
 
     console.log("on key down");
-    console.log("getActiveTreeItemIndex", this.getActiveTreeItemIndex());
+    // console.log("getActiveTreeItemIndex", this.getActiveTreeItemIndex());
     const lowerLimit = 0;
     const upperLimit = this.state.treeItemArray.length - 1;
 
