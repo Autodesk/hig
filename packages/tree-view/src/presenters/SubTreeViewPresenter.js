@@ -130,14 +130,11 @@ export default class SubTreeViewPresenter extends Component {
       density,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
-      getIsCollapsed,
       getTreeItemArray,
       guidelines,
       indicator,
-      onClick,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
-      setIsCollapsed,
       themeData
     } = this.props;
     const styles = stylesheet(this.props, themeData);
@@ -151,8 +148,6 @@ export default class SubTreeViewPresenter extends Component {
           getTreeItemArray,
           guidelines,
           indicator,
-          // onClick,
-          // selected: getActiveTreeItemId() === child.props.id,
           setActiveTreeItemId,
           setActiveTreeItemIndex
         }
@@ -165,16 +160,13 @@ export default class SubTreeViewPresenter extends Component {
             getTreeItemArray,
             guidelines,
             indicator,
-            // onClick,
             setActiveTreeItemId,
             setActiveTreeItemIndex
           }
         );
     const { status } = this.state;
     const transitionStyles = this.getTransitionStyles(status);
-// console.log(this.props.collapsed);
-console.log(this.props.id);
-console.log(this.state.mount);
+
     return (
       <div
         className={cx([css(styles.higTreeItemSubTreeViewWrapper), css(transitionStyles)])}

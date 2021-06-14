@@ -12,20 +12,17 @@ export default class TreeItemBehavior extends Component {
     super(props);
 
     this.state = {
-      isCollapsed: true,
+      isCollapsed: this.props.defaultCollapsed,
     };
-
   }
+
+  isCollapsedControlled = () => this.props.collapsed !== undefined;
+
+  getIsCollapsed = () =>
+    this.isCollapsedControlled() ? this.props.collapsed : this.state.isCollapsed;
 
   setIsCollapsed = isCollapsed => {
     this.setState({isCollapsed})
-  }
-
-  getIsCollapsed = () => {
-    if (this.props.collapsed) {
-      return this.props.collapsed;
-    }
-    return this.state.isCollapsed;
   }
 
   handleClick = (event, treeItem) => {
@@ -47,8 +44,6 @@ export default class TreeItemBehavior extends Component {
       
       const treeItemArray = getTreeItemArray();
       const index = treeItemArray !== null && treeItemArray.indexOf(id);
-      console.log('handle click set collapsed');
-      console.log(!this.getIsCollapsed());
       setActiveTreeItemId(id);
       setActiveTreeItemIndex(index);
       this.setIsCollapsed(!this.getIsCollapsed());
@@ -75,8 +70,7 @@ export default class TreeItemBehavior extends Component {
       handleMouseLeave,
       setIsCollapsed
     } = this;
-// console.log('treeitem behavior');
-// console.log(this.props.id);
+
     return this.props.children({
       getIsCollapsed,
       handleClick,

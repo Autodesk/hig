@@ -29,9 +29,3 @@ export default function IconIndicatorPresenter(props) {
 
   return <IconIndicator stylesheet={customStylesheet} />;
 }
-
-
-/*
-higTreeItemSubTreeIndicator: {
-        ,
-      },*/

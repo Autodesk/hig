@@ -34,7 +34,7 @@ export default [
           label="Tree Item 0"
           icon={<Hierarchy24 />}
         >
-          <TreeItem label="Tree Item 1" id="tree-item-1" key="tree-item-1" icon={<Calendar24 />}>
+          <TreeItem label="Tree Item 1" id="tree-item-1" key="tree-item-1" icon={<Calendar24 />} defaultCollapsed={false}>
             <TreeItem label="Tree Item 2" id="tree-item-2" key="tree-item-2" icon={<Folder24 />}>
               <TreeItem label="Tree Item 3" id="tree-item-3" key="tree-item-3" icon={<ProductsAndServices24 />}>
                 <TreeItem label="Tree Item 4" id="tree-item-4" key="tree-item-4" icon={<AddFolder24 />} />

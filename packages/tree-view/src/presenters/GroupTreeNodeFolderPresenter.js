@@ -1,13 +1,5 @@
 import React from "react";
 import { css } from "emotion";
-import {
-  CaretDownMUI,
-  CaretDownSUI,
-  OperatorMinusSUI,
-  OperatorMinusXsUI,
-  OperatorPlusSUI,
-  OperatorPlusXsUI
-} from "@hig/icons";
 
 import SubTreeViewPresenter from "./SubTreeViewPresenter";
 import IconIndicatorPresenter from "./IconIndicatorPresenter";
@@ -18,13 +10,11 @@ export default function GroupTreeNodeFolderPresenter(props) {
   const {
     collapsed,
     density,
-    getIsCollapsed,
     icon,
     id,
     indicator,
     label,
     onClick,
-    setIsCollapsed,
     themeData
   } = props;
   const styles = stylesheet(props, themeData);

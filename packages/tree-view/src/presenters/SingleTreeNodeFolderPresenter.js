@@ -10,13 +10,11 @@ export default function SingleTreeNodeFolderPresenter(props) {
   const {
     collapsed,
     density,
-    getIsCollapsed,
     icon,
     id,
     indicator,
     label,
     onClick,
-    setIsCollapsed,
     themeData
   } = props;
   const styles = stylesheet(props, themeData);

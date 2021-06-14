@@ -30,10 +30,15 @@ export default class TreeItem extends Component {
     stylesheet: PropTypes.func,
   };
 
+  static defaultProps = {
+    defaultCollapsed: true
+  };
+
   render() {
     const {
       children,
       collapsed,
+      defaultCollapsed,
       icon,
       id,
       label,
@@ -49,7 +54,12 @@ export default class TreeItem extends Component {
     } = otherProps;
 
     return (
-      <TreeItemBehavior {...otherProps} id={id} collapsed={collapsed}>
+      <TreeItemBehavior
+        {...otherProps}
+        collapsed={collapsed}
+        defaultCollapsed={defaultCollapsed}
+        id={id}
+      >
         {({
           getIsCollapsed,
           handleClick,

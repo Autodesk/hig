@@ -66,7 +66,7 @@ export default class TreeViewBehaviorRR extends Component {
     this.state = {
       treeItemArray: null,
       activeTreeItemIndex: 1,
-      currentItemClicked: null,
+      currentItemClicked: null
     };
 
     this.treeViewRef = null;

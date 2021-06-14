@@ -1,6 +1,6 @@
 import React, { Children, Component } from "react";
 import PropTypes from "prop-types";
-import { css, cx } from "emotion";
+import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
@@ -40,16 +40,10 @@ export default class TreeViewPresenter extends Component {
     stylesheet: PropTypes.func
   };
 
-  componentDidMount() {
-    console.log('component did mount');
-  }
-
   componentDidUpdate() {
     const currentTreeArray = this.props.getTreeItemArray();
     const newTreeArray = buildTreeItemIdArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")));
-    // console.log(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")));
-    // this.props.setTreeItemArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")))
-
+    
     if (JSON.stringify(newTreeArray) !== JSON.stringify(currentTreeArray)) {
       this.props.setTreeItemArray(buildTreeItemIdArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li"))));
     }
