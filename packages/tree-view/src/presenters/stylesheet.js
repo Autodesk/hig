@@ -21,6 +21,7 @@ export default function stylesheet(props, themeData) {
   // console.log(props);
     const {
       alternateBg,
+      collapsed,
       guidelines,
       indicator,
       selected,

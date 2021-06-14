@@ -10,11 +10,13 @@ import {
 } from "@hig/icons";
 
 import SubTreeViewPresenter from "./SubTreeViewPresenter";
+import IconIndicatorPresenter from "./IconIndicatorPresenter";
 
 import stylesheet from "./stylesheet";
 
 export default function GroupTreeNodeFolderPresenter(props) {
   const {
+    collapsed,
     density,
     getIsCollapsed,
     icon,
@@ -26,10 +28,6 @@ export default function GroupTreeNodeFolderPresenter(props) {
     themeData
   } = props;
   const styles = stylesheet(props, themeData);
-  
-  const OperatorMinusIcon = density === 'medium-density' ? OperatorMinusSUI : OperatorMinusXsUI;
-  const CaretDownIcon = density === 'medium-density' ? CaretDownMUI : CaretDownSUI;
-  const IconIndicator = indicator === 'operator' ? OperatorMinusIcon : CaretDownIcon;
 
   return (
     <li
@@ -43,7 +41,7 @@ export default function GroupTreeNodeFolderPresenter(props) {
         onClick={onClick}
       >
         <div className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}>
-          <IconIndicator />
+          <IconIndicatorPresenter collapsed={collapsed} density={density} indicator={indicator} />
           {icon}
           <span>{label}</span>
         </div>
