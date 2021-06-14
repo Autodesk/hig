@@ -31,7 +31,7 @@ export default function GroupTreeNodeFolderPresenter(props) {
 
   return (
     <li
-      aria-expanded="true"
+      aria-expanded={!collapsed}
       className={css(styles.higTreeItem)}
       id={id}
       role="treeitem"
