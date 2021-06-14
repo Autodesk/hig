@@ -29,6 +29,8 @@ export default class TreeItemBehavior extends Component {
   }
 
   handleClick = (event, treeItem) => {
+    // event.stopPropagation();
+
     if (this.props.onClick) {
       this.props.onClick(event);
     }
@@ -42,11 +44,11 @@ export default class TreeItemBehavior extends Component {
         setActiveTreeItemId,
         setActiveTreeItemIndex
       } = this.props;
-      event.stopPropagation();
+      
       const treeItemArray = getTreeItemArray();
       const index = treeItemArray !== null && treeItemArray.indexOf(id);
-      console.log('handle click');
-      console.log(this.props);
+      console.log('handle click set collapsed');
+      console.log(!this.getIsCollapsed());
       setActiveTreeItemId(id);
       setActiveTreeItemIndex(index);
       this.setIsCollapsed(!this.getIsCollapsed());

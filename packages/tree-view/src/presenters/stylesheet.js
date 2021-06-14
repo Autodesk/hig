@@ -174,9 +174,11 @@ export default function stylesheet(props, themeData) {
           marginRight: themeData[`treeView.icon.marginRight`]
         }
       },
-      /* higTreeItemSubTreeViewWrapper: {
-        padding: `0 0 0 15px`
-      }, */
+      higTreeItemSubTreeViewWrapper: {
+        transitionProperty: "height",
+        transitionDuration: ".3s",
+        transitionTimingFunction: "ease-in-out"
+      },
       higTreeItemSubTreeView: {
         listStyle: `none`,
         margin: 0,
