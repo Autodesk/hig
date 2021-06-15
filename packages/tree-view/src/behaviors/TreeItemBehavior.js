@@ -16,6 +16,15 @@ export default class TreeItemBehavior extends Component {
     };
   }
 
+  componentDidUpdate({ keyboardOpenId: previousKeyboardOpenId }) {
+    const { id, keyboardOpenId } = this.props;
+
+    if (keyboardOpenId === id && keyboardOpenId !== previousKeyboardOpenId) {
+      this.setState({ isCollapsed: !this.state.isCollapsed });
+      this.props.setKeyboardOpenId('');
+    }
+  }
+
   isCollapsedControlled = () => this.props.collapsed !== undefined;
 
   getIsCollapsed = () =>
@@ -26,8 +35,6 @@ export default class TreeItemBehavior extends Component {
   }
 
   handleClick = (event, treeItem) => {
-    // event.stopPropagation();
-
     if (this.props.onClick) {
       this.props.onClick(event);
     }

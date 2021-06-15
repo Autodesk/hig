@@ -43,9 +43,11 @@ export default class TreeView extends Component {
         {({
           getActiveTreeItemId,
           getActiveTreeItemIndex,
+          getKeyboardOpenId,
           getTreeItemArray,
           setActiveTreeItemId,
           setActiveTreeItemIndex,
+          setKeyboardOpenId,
           setTreeItemArray,
           handleBlur,
           handleFocus,
@@ -60,9 +62,11 @@ export default class TreeView extends Component {
             treeNode={treeNode}
             getActiveTreeItemId={getActiveTreeItemId}
             getActiveTreeItemIndex={getActiveTreeItemIndex}
+            getKeyboardOpenId={getKeyboardOpenId}
             getTreeItemArray={getTreeItemArray}
             setActiveTreeItemId={setActiveTreeItemId}
             setActiveTreeItemIndex={setActiveTreeItemIndex}
+            setKeyboardOpenId={setKeyboardOpenId}
             setTreeItemArray={setTreeItemArray}
             guidelines={guidelines}
             onBlur={handleBlur}

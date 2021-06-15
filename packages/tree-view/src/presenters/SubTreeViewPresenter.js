@@ -130,11 +130,13 @@ export default class SubTreeViewPresenter extends Component {
       density,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getKeyboardOpenId,
       getTreeItemArray,
       guidelines,
       indicator,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
+      setKeyboardOpenId,
       themeData
     } = this.props;
     const styles = stylesheet(this.props, themeData);
@@ -145,11 +147,13 @@ export default class SubTreeViewPresenter extends Component {
 
           getActiveTreeItemId,
           getActiveTreeItemIndex,
+          getKeyboardOpenId,
           getTreeItemArray,
           guidelines,
           indicator,
           setActiveTreeItemId,
-          setActiveTreeItemIndex
+          setActiveTreeItemIndex,
+          setKeyboardOpenId
         }
       ))
       : React.cloneElement(
@@ -157,11 +161,13 @@ export default class SubTreeViewPresenter extends Component {
           {
             getActiveTreeItemId,
             getActiveTreeItemIndex,
+            getKeyboardOpenId,
             getTreeItemArray,
             guidelines,
             indicator,
             setActiveTreeItemId,
-            setActiveTreeItemIndex
+            setActiveTreeItemIndex,
+            setKeyboardOpenId
           }
         );
     const { status } = this.state;

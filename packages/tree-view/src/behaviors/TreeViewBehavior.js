@@ -66,7 +66,8 @@ export default class TreeViewBehaviorRR extends Component {
     this.state = {
       treeItemArray: null,
       activeTreeItemIndex: 1,
-      currentItemClicked: null
+      currentItemClicked: null,
+      keyboardOpenId: ''
     };
 
     this.treeViewRef = null;
@@ -77,14 +78,6 @@ export default class TreeViewBehaviorRR extends Component {
       this.props.treeViewRef(element);
     }
 
-    // console.log("set tree view ref");
-    // console.log("THIS PROPS", this.props);
-    // console.log(Array.prototype.slice.call(element.querySelectorAll("li")));
-    /* this.setState({
-      treeItemArray: buildTreeItemIdArray(
-        Array.prototype.slice.call(element.querySelectorAll("li"))
-      ),
-    }); */
     this.treeViewRef = element;
   };
 
@@ -115,6 +108,12 @@ export default class TreeViewBehaviorRR extends Component {
     this.setState({ activeTreeItemIndex: index });
   };
 
+  getKeyboardOpenId = () => this.state.keyboardOpenId;
+
+  setKeyboardOpenId = (id) => {
+    this.setState({ keyboardOpenId: id });
+  }
+
   /* getPreviousEvent = () => this.state.previousEvent;
 
   setPreviousEvent = previousEvent => {
@@ -138,8 +137,6 @@ export default class TreeViewBehaviorRR extends Component {
       onKeyDown(event);
     }
 
-    console.log("on key down");
-    // console.log("getActiveTreeItemIndex", this.getActiveTreeItemIndex());
     const lowerLimit = 0;
     const upperLimit = this.state.treeItemArray.length - 1;
 
@@ -174,6 +171,7 @@ export default class TreeViewBehaviorRR extends Component {
       case 13:
       case 32: {
         event.preventDefault();
+        this.setState({ keyboardOpenId: this.getActiveTreeItemId() });
         break;
       }
 
@@ -207,12 +205,14 @@ export default class TreeViewBehaviorRR extends Component {
     const {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getKeyboardOpenId,
       getTreeItemArray,
       handleBlur,
       handleFocus,
       handleKeyDown,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
+      setKeyboardOpenId,
       setTreeViewRef,
       treeViewRef,
       handleClick,
@@ -222,12 +222,14 @@ export default class TreeViewBehaviorRR extends Component {
     return this.props.children({
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getKeyboardOpenId,
       getTreeItemArray,
       handleBlur,
       handleFocus,
       handleKeyDown,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
+      setKeyboardOpenId,
       setTreeViewRef,
       treeViewRef,
       handleClick,

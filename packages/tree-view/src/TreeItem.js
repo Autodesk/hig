@@ -39,9 +39,11 @@ export default class TreeItem extends Component {
       children,
       collapsed,
       defaultCollapsed,
+      getKeyboardOpenId,
       icon,
       id,
       label,
+      setKeyboardOpenId,
       stylesheet,
       ...otherProps
     } = this.props;
@@ -59,6 +61,8 @@ export default class TreeItem extends Component {
         collapsed={collapsed}
         defaultCollapsed={defaultCollapsed}
         id={id}
+        keyboardOpenId={getKeyboardOpenId()}
+        setKeyboardOpenId={setKeyboardOpenId}
       >
         {({
           getIsCollapsed,
@@ -71,6 +75,7 @@ export default class TreeItem extends Component {
             {...otherProps}
             collapsed={getIsCollapsed()}
             getIsCollapsed={getIsCollapsed}
+            getKeyboardOpenId={getKeyboardOpenId}
             icon={icon}
             id={id}
             label={label}
@@ -80,6 +85,7 @@ export default class TreeItem extends Component {
             onMouseLeave={handleMouseLeave}
             selected={getActiveTreeItemId() === id}
             setIsCollapsed={setIsCollapsed}
+            setKeyboardOpenId={setKeyboardOpenId}
             // onMouseOver={handleMouseOver}
             stylesheet={stylesheet}
           >

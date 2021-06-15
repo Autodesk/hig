@@ -60,9 +60,11 @@ export default class TreeViewPresenter extends Component {
     const {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getKeyboardOpenId,
       getTreeItemArray,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
+      setKeyboardOpenId,
       guidelines,
       indicator
     } = this.props;
@@ -70,9 +72,11 @@ export default class TreeViewPresenter extends Component {
       ...props,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getKeyboardOpenId,
       getTreeItemArray,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
+      setKeyboardOpenId,
       guidelines,
       indicator,
       key
