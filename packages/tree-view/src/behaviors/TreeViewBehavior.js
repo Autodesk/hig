@@ -31,16 +31,17 @@ function scrollInListbox(treeItem, treeView) {
       // eslint-disable-next-line no-param-reassign
       treeView.scrollTop = elementBottom - treeView.clientHeight;
     }
-    if (option.offsetTop < menu.scrollTop) {
+    if (treeItem.offsetTop < treeView.scrollTop) {
       // eslint-disable-next-line no-param-reassign
-      menu.scrollTop = treeItem.offsetTop;
+      treeView.scrollTop = treeItem.offsetTop;
     }
   }
 }
 
-function checkScroll(treeItemId, menu) {
+function checkScroll(treeItemId, treeView) {
   const treeItem = document.getElementById(treeItemId);
-
+console.log(treeItemId);
+console.log(treeItem);
   // scroll if out of viewport
   scrollInViewport(treeItem);
 
@@ -114,12 +115,6 @@ export default class TreeViewBehaviorRR extends Component {
     this.setState({ keyboardOpenId: id });
   }
 
-  /* getPreviousEvent = () => this.state.previousEvent;
-
-  setPreviousEvent = previousEvent => {
-    this.setState({ previousEvent });
-  }; */
-
   handleFocus = (event) => {
     if (this.props.onFocus) {
       this.props.onFocus(event);
@@ -138,31 +133,48 @@ export default class TreeViewBehaviorRR extends Component {
     }
 
     const lowerLimit = 0;
-    const upperLimit = this.state.treeItemArray.length - 1;
+    const upperLimit = this.getTreeItemArray().length - 1;
 
     switch (event.keyCode) {
       // Arrow Down
       case 40: {
         event.preventDefault();
+        if (this.getActiveTreeItemIndex() === upperLimit) {
+          this.setActiveTreeItemIndex(lowerLimit);
 
-        this.setState({
-          activeTreeItemIndex:
-            this.state.activeTreeItemIndex + 1 > upperLimit
-              ? lowerLimit
-              : this.state.activeTreeItemIndex + 1,
-        });
+          checkScroll(
+            this.getTreeItemArray()[lowerLimit],
+            this.treeViewRef
+          );
+        } else {
+          this.setActiveTreeItemIndex(this.getActiveTreeItemIndex() + 1);
+
+          checkScroll(
+            this.getTreeItemArray()[this.getActiveTreeItemIndex() + 1],
+            this.treeViewRef
+          );
+        }
         break;
       }
 
       // Arrow Up
       case 38: {
         event.preventDefault();
-        this.setState({
-          activeTreeItemIndex:
-            this.state.activeTreeItemIndex - 1 < lowerLimit
-              ? upperLimit
-              : this.state.activeTreeItemIndex - 1,
-        });
+        if (this.getActiveTreeItemIndex() <= lowerLimit) {
+          this.setActiveTreeItemIndex(upperLimit);
+
+          checkScroll(
+            this.getTreeItemArray()[upperLimit],
+            this.treeViewRef
+          );
+        } else {
+          this.setActiveTreeItemIndex(this.getActiveTreeItemIndex() - 1);
+
+          checkScroll(
+            this.getTreeItemArray()[this.getActiveTreeItemIndex() - 1],
+            this.treeViewRef
+          );
+        }
         break;
       }
 
@@ -171,7 +183,7 @@ export default class TreeViewBehaviorRR extends Component {
       case 13:
       case 32: {
         event.preventDefault();
-        this.setState({ keyboardOpenId: this.getActiveTreeItemId() });
+        this.setKeyboardOpenId(this.getActiveTreeItemId());
         break;
       }
 
@@ -183,23 +195,12 @@ export default class TreeViewBehaviorRR extends Component {
     if (treeItem) {
       const { id } = treeItem;
       this.setActiveTreeItemId(id);
-      this.setActiveTreeItemIndex(this.state.treeItemArray.indexOf(id));
+      this.setActiveTreeItemIndex(this.getTreeItemArray().indexOf(id));
     }
     if (this.props.onClick) {
       this.props.onClick(event);
     }
   };
-
-  /* handleMouseMove = event => {
-    // don't let this bubble up from Menu to MenuGroup
-    event.stopPropagation();
-
-    if (this.getPreviousEvent() === event.type) {
-      return;
-    }
-
-    this.setPreviousEvent(event.type);
-  }; */
 
   render() {
     const {
