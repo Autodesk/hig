@@ -19,6 +19,15 @@ export default class TreeItemPresenter extends Component {
     stylesheet: PropTypes.func
   };
 
+  componentDidUpdate({ keyboardOpenId: previousKeyboardOpenId }) {
+    const { id, keyboardOpenId } = this.props;
+
+    if (keyboardOpenId === id && keyboardOpenId !== previousKeyboardOpenId) {
+      this.props.setIsCollapsed(!this.props.getIsCollapsed());
+      this.props.setKeyboardOpenId('');
+    }
+  }
+
   renderTreeItem() {
     const { children } = this.props;
 

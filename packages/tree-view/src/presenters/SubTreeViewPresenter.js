@@ -151,6 +151,7 @@ export default class SubTreeViewPresenter extends Component {
           getTreeItemArray,
           guidelines,
           indicator,
+          keyboardOpenId: getKeyboardOpenId(),
           setActiveTreeItemId,
           setActiveTreeItemIndex,
           setKeyboardOpenId
@@ -164,6 +165,7 @@ export default class SubTreeViewPresenter extends Component {
             getKeyboardOpenId,
             getTreeItemArray,
             guidelines,
+            keyboardOpenId: getKeyboardOpenId(),
             indicator,
             setActiveTreeItemId,
             setActiveTreeItemIndex,

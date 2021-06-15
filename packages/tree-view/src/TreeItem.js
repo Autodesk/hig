@@ -61,8 +61,6 @@ export default class TreeItem extends Component {
         collapsed={collapsed}
         defaultCollapsed={defaultCollapsed}
         id={id}
-        keyboardOpenId={getKeyboardOpenId()}
-        setKeyboardOpenId={setKeyboardOpenId}
       >
         {({
           getIsCollapsed,
@@ -78,6 +76,7 @@ export default class TreeItem extends Component {
             getKeyboardOpenId={getKeyboardOpenId}
             icon={icon}
             id={id}
+            keyboardOpenId={getKeyboardOpenId()}
             label={label}
             onClick={handleClick}
             onFocus={onFocus}
