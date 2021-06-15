@@ -40,13 +40,21 @@ function scrollInListbox(treeItem, treeView) {
 
 function checkScroll(treeItemId, treeView) {
   const treeItem = document.getElementById(treeItemId);
-console.log(treeItemId);
-console.log(treeItem);
   // scroll if out of viewport
   scrollInViewport(treeItem);
 
   // scroll within the menu
   scrollInListbox(treeItem, treeView);
+}
+
+function buildTreeItemIdArray(list) {
+  const ids = [];
+
+  list.map((item) => {
+    ids.push(item.id);
+  });
+
+  return ids;
 }
 
 export default class TreeViewBehaviorRR extends Component {
@@ -131,9 +139,13 @@ export default class TreeViewBehaviorRR extends Component {
     if (this.props.onKeyDown) {
       onKeyDown(event);
     }
-
+//  const newTreeArray = buildTreeItemIdArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")));
+    const domNodeList = this.treeViewRef.querySelectorAll("li");
+    const treeItemArrayControl = this.getTreeItemArray().length !== domNodeList.length
+      ? buildTreeItemIdArray(Array.prototype.slice.call(domNodeList))
+      : this.getTreeItemArray();
     const lowerLimit = 0;
-    const upperLimit = this.getTreeItemArray().length - 1;
+    const upperLimit = treeItemArrayControl.length - 1;
 
     switch (event.keyCode) {
       // Arrow Down
@@ -141,16 +153,16 @@ export default class TreeViewBehaviorRR extends Component {
         event.preventDefault();
         if (this.getActiveTreeItemIndex() === upperLimit) {
           this.setActiveTreeItemIndex(lowerLimit);
-
+          
           checkScroll(
-            this.getTreeItemArray()[lowerLimit],
+            treeItemArrayControl[lowerLimit],
             this.treeViewRef
           );
         } else {
           this.setActiveTreeItemIndex(this.getActiveTreeItemIndex() + 1);
 
           checkScroll(
-            this.getTreeItemArray()[this.getActiveTreeItemIndex() + 1],
+            treeItemArrayControl[this.getActiveTreeItemIndex() + 1],
             this.treeViewRef
           );
         }
@@ -164,14 +176,14 @@ export default class TreeViewBehaviorRR extends Component {
           this.setActiveTreeItemIndex(upperLimit);
 
           checkScroll(
-            this.getTreeItemArray()[upperLimit],
+            treeItemArrayControl[upperLimit],
             this.treeViewRef
           );
         } else {
           this.setActiveTreeItemIndex(this.getActiveTreeItemIndex() - 1);
 
           checkScroll(
-            this.getTreeItemArray()[this.getActiveTreeItemIndex() - 1],
+            treeItemArrayControl[this.getActiveTreeItemIndex() - 1],
             this.treeViewRef
           );
         }

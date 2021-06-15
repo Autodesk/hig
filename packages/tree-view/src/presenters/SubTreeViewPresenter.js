@@ -109,7 +109,7 @@ export default class SubTreeViewPresenter extends Component {
   collapse = () => {
     this.setState({ status: collapseStatus.BEFORE_COLLAPSE });
     window.requestAnimationFrame(() => {
-      setTimeout(() => this.setState({ status: collapseStatus.COLLAPSED }));
+      setTimeout(() => this.setState({ status: collapseStatus.COLLAPSED, mount: false }));
     });
   };
 
