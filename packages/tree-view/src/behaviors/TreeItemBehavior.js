@@ -4,42 +4,53 @@ import PropTypes from "prop-types";
 export default class TreeItemBehavior extends Component {
   static propTypes = {
     children: PropTypes.func,
+    collapsed: PropTypes.bool,
+    defaultCollapsed: PropTypes.bool,
+    id: PropTypes.string,
+    getTreeItemArray: PropTypes.func,
+    onClick: PropTypes.func,
     onMouseEnter: PropTypes.func,
     onMouseLeave: PropTypes.func,
+    setActiveTreeItemId: PropTypes.func,
+    setActiveTreeItemIndex: PropTypes.func
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      isCollapsed: this.props.defaultCollapsed,
+      isCollapsed: this.props.defaultCollapsed
     };
   }
 
-  isCollapsedControlled = () => this.props.collapsed !== undefined;
-
   getIsCollapsed = () =>
-    this.isCollapsedControlled() ? this.props.collapsed : this.state.isCollapsed;
+    this.isCollapsedControlled()
+      ? this.props.collapsed
+      : this.state.isCollapsed;
 
   setIsCollapsed = isCollapsed => {
-    this.setState({isCollapsed})
-  }
+    this.setState({ isCollapsed });
+  };
+
+  isCollapsedControlled = () => this.props.collapsed !== undefined;
 
   handleClick = (event, treeItem) => {
-    if (this.props.onClick) {
-      this.props.onClick(event);
+    const {
+      getTreeItemArray,
+      id,
+      onClick,
+      setActiveTreeItemId,
+      setActiveTreeItemIndex,
+      ...otherProps
+    } = this.props;
+    const { payload } = otherProps;
+    if (onClick) {
+      onClick(event);
     }
 
-    if (this.props.payload) {
-      this.props.payload.onClick(event, treeItem);
+    if (payload) {
+      payload.onClick(event, treeItem);
     } else {
-      const {
-        id,
-        getTreeItemArray,
-        setActiveTreeItemId,
-        setActiveTreeItemIndex
-      } = this.props;
-      
       const treeItemArray = getTreeItemArray();
       const index = treeItemArray !== null && treeItemArray.indexOf(id);
       setActiveTreeItemId(id);
@@ -48,13 +59,13 @@ export default class TreeItemBehavior extends Component {
     }
   };
 
-  handleMouseEnter = (event) => {
+  handleMouseEnter = event => {
     if (this.props.onMouseEnter) {
       this.props.onMouseEnter(event);
     }
   };
 
-  handleMouseLeave = (event) => {
+  handleMouseLeave = event => {
     if (this.props.onMouseLeave) {
       this.props.onMouseLeave(event);
     }

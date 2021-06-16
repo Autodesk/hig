@@ -13,6 +13,10 @@ export default class TreeItem extends Component {
      */
     children: PropTypes.node,
     /**
+     * Specifies whether the TreeItem is default collapsed or not
+     */
+    defaultCollapsed: PropTypes.bool,
+    /**
      * Presentational icon
      */
     icon: PropTypes.node,
@@ -27,7 +31,7 @@ export default class TreeItem extends Component {
     /**
      * Adds custom/overriding styles
      */
-    stylesheet: PropTypes.func,
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -47,13 +51,7 @@ export default class TreeItem extends Component {
       stylesheet,
       ...otherProps
     } = this.props;
-    const {
-      getActiveTreeItemId,
-      onFocus,
-      onMouseDown,
-      onMouseLeave,
-      onMouseUp,
-    } = otherProps;
+    const { getActiveTreeItemId, onFocus } = otherProps;
 
     return (
       <TreeItemBehavior
@@ -85,7 +83,6 @@ export default class TreeItem extends Component {
             selected={getActiveTreeItemId() === id}
             setIsCollapsed={setIsCollapsed}
             setKeyboardOpenId={setKeyboardOpenId}
-            // onMouseOver={handleMouseOver}
             stylesheet={stylesheet}
           >
             {children}

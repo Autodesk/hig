@@ -1,6 +1,5 @@
-import { select } from "@storybook/addon-knobs/react";
+import { boolean, select } from "@storybook/addon-knobs/react";
 import { action } from "@storybook/addon-actions";
-import { boolean } from "@storybook/addon-knobs/react";
 import { makeSelectOptions } from "@hig/storybook/utils";
 
 import { indicators } from "../constants";
@@ -11,7 +10,7 @@ const knobGroupIds = { basic: "Basic" };
 const knobLabels = {
   alternateBg: "Alternate Background",
   guidelines: "Guidelines",
-  indicator: "Indicators",
+  indicator: "Indicators"
 };
 
 export default function getKnobs(props) {
@@ -31,6 +30,6 @@ export default function getKnobs(props) {
       indicator,
       knobGroupIds.basic
     ),
-    onChange: action(knobLabels.onChange),
+    onChange: action(knobLabels.onChange)
   };
 }

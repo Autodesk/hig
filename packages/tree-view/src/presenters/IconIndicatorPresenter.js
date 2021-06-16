@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from "prop-types";
 import {
   CaretRightMUI,
   CaretRightSUI,
@@ -10,22 +10,28 @@ import {
 } from "@hig/icons";
 
 export default function IconIndicatorPresenter(props) {
-  const { collapsed, density, indicator} = props;
-  const OperatorMinusIcon = density === 'medium-density' ? OperatorMinusSUI : OperatorMinusXsUI;
-  const OperatorPlusIcon = density === 'medium-density' ? OperatorPlusSUI : OperatorPlusXsUI;
+  const { collapsed, indicator, ...otherProps } = props;
+  const { density } = otherProps;
+  const OperatorMinusIcon =
+    density === `medium-density` ? OperatorMinusSUI : OperatorMinusXsUI;
+  const OperatorPlusIcon =
+    density === `medium-density` ? OperatorPlusSUI : OperatorPlusXsUI;
   const OperatorIcon = collapsed ? OperatorPlusIcon : OperatorMinusIcon;
-  const CaretDownIcon = density === 'medium-density' ? CaretRightMUI : CaretRightSUI;
-  const IconIndicator = indicator === 'operator' ? OperatorIcon : CaretDownIcon;
-  const customStylesheet = (styles) => {
-    return {
-      ...styles,
-      ...(!collapsed && indicator === `caret`
-        ? { transform: `rotate(90deg)`}
-        : {}
-      ),
-      transition: `transform 0.3s ease-in-out`
-    };
-  }
+  const CaretDownIcon =
+    density === `medium-density` ? CaretRightMUI : CaretRightSUI;
+  const IconIndicator = indicator === `operator` ? OperatorIcon : CaretDownIcon;
+  const customStylesheet = styles => ({
+    ...styles,
+    ...(!collapsed && indicator === `caret`
+      ? { transform: `rotate(90deg)` }
+      : {}),
+    transition: `transform 0.3s ease-in-out`
+  });
 
   return <IconIndicator stylesheet={customStylesheet} />;
 }
+
+IconIndicatorPresenter.propTypes = {
+  collapsed: PropTypes.bool,
+  indicator: PropTypes.node
+};

@@ -5,7 +5,6 @@ import { ThemeContext } from "@hig/theme-context";
 import TreeItem from "../TreeItem";
 import SingleTreeNodePresenter from "./SingleTreeNodePresenter";
 import SingleTreeNodeFolderPresenter from "./SingleTreeNodeFolderPresenter";
-import GroupTreeNodeFolderPresenter from "./GroupTreeNodeFolderPresenter";
 
 export default class TreeItemPresenter extends Component {
   static propTypes = {
@@ -24,7 +23,7 @@ export default class TreeItemPresenter extends Component {
 
     if (keyboardOpenId === id && keyboardOpenId !== previousKeyboardOpenId) {
       this.props.setIsCollapsed(!this.props.getIsCollapsed());
-      this.props.setKeyboardOpenId('');
+      this.props.setKeyboardOpenId("");
     }
   }
 
@@ -34,18 +33,25 @@ export default class TreeItemPresenter extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
-          // if it has a label then the children array should be of TreeItems
-          /* if (Array.isArray(children)) {
-            return <GroupTreeNodeFolderPresenter {...this.props} themeData={resolvedRoles} density={metadata.densityId} />
-            // return this.buildNestedTreeItemArrays(this.props, resolvedRoles);
-          } */
-          if ((children && children.type === TreeItem) || Array.isArray(children)) {
-            // return this.buildNestedTreeItem(this.props, resolvedRoles);
-            return <SingleTreeNodeFolderPresenter {...this.props} themeData={resolvedRoles} density={metadata.densityId} />
-          } else {
-            // return this.buildTreeItem(this.props, resolvedRoles);
-            return <SingleTreeNodePresenter {...this.props} themeData={resolvedRoles} />
+          if (
+            (children && children.type === TreeItem) ||
+            Array.isArray(children)
+          ) {
+            return (
+              <SingleTreeNodeFolderPresenter
+                {...this.props}
+                themeData={resolvedRoles}
+                density={metadata.densityId}
+              />
+            );
           }
+
+          return (
+            <SingleTreeNodePresenter
+              {...this.props}
+              themeData={resolvedRoles}
+            />
+          );
         }}
       </ThemeContext.Consumer>
     );

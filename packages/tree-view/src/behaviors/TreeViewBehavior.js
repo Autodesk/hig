@@ -48,23 +48,17 @@ function checkScroll(treeItemId, treeView) {
 }
 
 function buildTreeItemIdArray(list) {
-  const ids = [];
-
-  list.map((item) => {
-    ids.push(item.id);
-  });
-
-  return ids;
+  return list.map(item => item.id);
 }
 
 export default class TreeViewBehaviorRR extends Component {
   static propTypes = {
     children: PropTypes.func,
     onBlur: PropTypes.func,
-    onChange: PropTypes.func,
     onFocus: PropTypes.func,
     onKeyDown: PropTypes.func,
     onClick: PropTypes.func,
+    treeViewRef: PropTypes.node
   };
 
   static defaultProps = {};
@@ -76,13 +70,13 @@ export default class TreeViewBehaviorRR extends Component {
       treeItemArray: null,
       activeTreeItemIndex: 1,
       currentItemClicked: null,
-      keyboardOpenId: ''
+      keyboardOpenId: ""
     };
 
     this.treeViewRef = null;
   }
 
-  setTreeViewRef = (element) => {
+  setTreeViewRef = element => {
     if (this.props.treeViewRef) {
       this.props.treeViewRef(element);
     }
@@ -90,60 +84,57 @@ export default class TreeViewBehaviorRR extends Component {
     this.treeViewRef = element;
   };
 
-  setTreeItemArray = (objectArray) => {
+  setTreeItemArray = objectArray => {
     this.setState({ treeItemArray: [...objectArray] });
   };
 
-  getTreeItemArray = () => {
-    return this.state.treeItemArray;
+  getTreeItemArray = () => this.state.treeItemArray;
+
+  getActiveTreeItemId = () =>
+    this.state.treeItemArray &&
+    this.state.treeItemArray[this.getActiveTreeItemIndex()];
+
+  // repeat of func above?
+  getCurrentItemClicked = () => this.state.currentItemClicked;
+
+  setActiveTreeItemId = currentItemClicked => {
+    this.setState({ currentItemClicked });
   };
 
-  getActiveTreeItemId = () => {
-    return (
-      this.state.treeItemArray &&
-      this.state.treeItemArray[this.getActiveTreeItemIndex()]
-    );
-  };
+  getActiveTreeItemIndex = () => this.state.activeTreeItemIndex;
 
-  setActiveTreeItemId = (id) => {
-    this.setState({ currentItemClicked: id });
-  };
-
-  getActiveTreeItemIndex = () => {
-    return this.state.activeTreeItemIndex;
-  };
-
-  setActiveTreeItemIndex = (index) => {
+  setActiveTreeItemIndex = index => {
     this.setState({ activeTreeItemIndex: index });
   };
 
   getKeyboardOpenId = () => this.state.keyboardOpenId;
 
-  setKeyboardOpenId = (id) => {
+  setKeyboardOpenId = id => {
     this.setState({ keyboardOpenId: id });
-  }
+  };
 
-  handleFocus = (event) => {
+  handleFocus = event => {
     if (this.props.onFocus) {
       this.props.onFocus(event);
     }
   };
 
-  handleBlur = (event) => {
+  handleBlur = event => {
     if (this.props.onBlur) {
       this.props.onBlur(event);
     }
   };
 
-  handleKeyDown = (event) => {
+  handleKeyDown = event => {
     if (this.props.onKeyDown) {
-      onKeyDown(event);
+      this.props.onKeyDown(event);
     }
-//  const newTreeArray = buildTreeItemIdArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")));
+
     const domNodeList = this.treeViewRef.querySelectorAll("li");
-    const treeItemArrayControl = this.getTreeItemArray().length !== domNodeList.length
-      ? buildTreeItemIdArray(Array.prototype.slice.call(domNodeList))
-      : this.getTreeItemArray();
+    const treeItemArrayControl =
+      this.getTreeItemArray().length !== domNodeList.length
+        ? buildTreeItemIdArray(Array.prototype.slice.call(domNodeList))
+        : this.getTreeItemArray();
     const lowerLimit = 0;
     const upperLimit = treeItemArrayControl.length - 1;
 
@@ -153,11 +144,8 @@ export default class TreeViewBehaviorRR extends Component {
         event.preventDefault();
         if (this.getActiveTreeItemIndex() === upperLimit) {
           this.setActiveTreeItemIndex(lowerLimit);
-          
-          checkScroll(
-            treeItemArrayControl[lowerLimit],
-            this.treeViewRef
-          );
+
+          checkScroll(treeItemArrayControl[lowerLimit], this.treeViewRef);
         } else {
           this.setActiveTreeItemIndex(this.getActiveTreeItemIndex() + 1);
 
@@ -175,10 +163,7 @@ export default class TreeViewBehaviorRR extends Component {
         if (this.getActiveTreeItemIndex() <= lowerLimit) {
           this.setActiveTreeItemIndex(upperLimit);
 
-          checkScroll(
-            treeItemArrayControl[upperLimit],
-            this.treeViewRef
-          );
+          checkScroll(treeItemArrayControl[upperLimit], this.treeViewRef);
         } else {
           this.setActiveTreeItemIndex(this.getActiveTreeItemIndex() - 1);
 
@@ -229,7 +214,7 @@ export default class TreeViewBehaviorRR extends Component {
       setTreeViewRef,
       treeViewRef,
       handleClick,
-      setTreeItemArray,
+      setTreeItemArray
     } = this;
 
     return this.props.children({
@@ -246,7 +231,7 @@ export default class TreeViewBehaviorRR extends Component {
       setTreeViewRef,
       treeViewRef,
       handleClick,
-      setTreeItemArray,
+      setTreeItemArray
     });
   }
 }

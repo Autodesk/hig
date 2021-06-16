@@ -18,7 +18,7 @@ export default class TreeView extends Component {
     /**
      * Adds custom/overriding styles
      */
-    stylesheet: PropTypes.func,
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {};
@@ -32,7 +32,7 @@ export default class TreeView extends Component {
       treeNode,
       ...otherProps
     } = this.props;
-    const { onBlur, onClick, onFocus, onKeyDown } = otherProps;
+    const { onClick, onKeyDown } = otherProps;
 
     const TreeViewPresenterType = treeNode
       ? TreeViewPresenterObject
@@ -54,7 +54,7 @@ export default class TreeView extends Component {
           handleKeyDown,
           handleClick,
           setTreeViewRef,
-          treeViewRef,
+          treeViewRef
         }) => (
           <TreeViewPresenterType
             {...otherProps}

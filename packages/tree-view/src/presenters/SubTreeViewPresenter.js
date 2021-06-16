@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 
 import TreeItem from "../TreeItem";
@@ -19,7 +19,7 @@ export default class SubTreeViewPresenter extends Component {
   constructor(props) {
     super(props);
 
-    this.subTreeWrapper;
+    this.subTreeWrapper = null;
     this.setSubTreeWrapperRef = element => {
       this.subTreeWrapper = element;
     };
@@ -48,7 +48,7 @@ export default class SubTreeViewPresenter extends Component {
     if (!currentCollapsed && previousCollapsed) {
       this.expand();
     }
-  } 
+  }
 
   onTransitionEnd = ({ target, propertyName }) => {
     if (target === this.subTreeWrapper && propertyName === "height") {
@@ -109,7 +109,9 @@ export default class SubTreeViewPresenter extends Component {
   collapse = () => {
     this.setState({ status: collapseStatus.BEFORE_COLLAPSE });
     window.requestAnimationFrame(() => {
-      setTimeout(() => this.setState({ status: collapseStatus.COLLAPSED, mount: false }));
+      setTimeout(() =>
+        this.setState({ status: collapseStatus.COLLAPSED, mount: false })
+      );
     });
   };
 
@@ -141,56 +143,63 @@ export default class SubTreeViewPresenter extends Component {
     } = this.props;
     const styles = stylesheet(this.props, themeData);
     const clonedChildren = Array.isArray(children)
-      ? children.map(child => React.cloneElement(
-        child,
-        {
-
-          getActiveTreeItemId,
-          getActiveTreeItemIndex,
-          getKeyboardOpenId,
-          getTreeItemArray,
-          guidelines,
-          indicator,
-          keyboardOpenId: getKeyboardOpenId(),
-          setActiveTreeItemId,
-          setActiveTreeItemIndex,
-          setKeyboardOpenId
-        }
-      ))
-      : React.cloneElement(
-          children,
-          {
+      ? children.map(child =>
+          React.cloneElement(child, {
             getActiveTreeItemId,
             getActiveTreeItemIndex,
             getKeyboardOpenId,
             getTreeItemArray,
             guidelines,
-            keyboardOpenId: getKeyboardOpenId(),
             indicator,
+            keyboardOpenId: getKeyboardOpenId(),
             setActiveTreeItemId,
             setActiveTreeItemIndex,
             setKeyboardOpenId
-          }
-        );
+          })
+        )
+      : React.cloneElement(children, {
+          getActiveTreeItemId,
+          getActiveTreeItemIndex,
+          getKeyboardOpenId,
+          getTreeItemArray,
+          guidelines,
+          keyboardOpenId: getKeyboardOpenId(),
+          indicator,
+          setActiveTreeItemId,
+          setActiveTreeItemIndex,
+          setKeyboardOpenId
+        });
     const { status } = this.state;
     const transitionStyles = this.getTransitionStyles(status);
 
     return (
       <div
-        className={cx([css(styles.higTreeItemSubTreeViewWrapper), css(transitionStyles)])}
+        className={cx([
+          css(styles.higTreeItemSubTreeViewWrapper),
+          css(transitionStyles)
+        ])}
         onTransitionEnd={this.onTransitionEnd}
         ref={this.setSubTreeWrapperRef}
       >
-        {(!collapsed || this.state.mount) && Array.isArray(clonedChildren) &&
-          <ul className={css(styles.higTreeItemSubTreeView)} role="group">
-            {clonedChildren.map((child, index) => <TreeItem {...child.props} themeData={themeData} density={density} key={index} />)}
-          </ul>
-          } 
-        {(!collapsed || this.state.mount) && !Array.isArray(clonedChildren ) && 
-          <ul className={css(styles.higTreeItemSubTreeView)} role="group">
-            {clonedChildren}
-          </ul>
-        }
+        {(!collapsed || this.state.mount) &&
+          Array.isArray(clonedChildren) && (
+            <ul className={css(styles.higTreeItemSubTreeView)} role="group">
+              {clonedChildren.map(child => (
+                <TreeItem
+                  {...child.props}
+                  density={density}
+                  key={child.props.id}
+                  themeData={themeData}
+                />
+              ))}
+            </ul>
+          )}
+        {(!collapsed || this.state.mount) &&
+          !Array.isArray(clonedChildren) && (
+            <ul className={css(styles.higTreeItemSubTreeView)} role="group">
+              {clonedChildren}
+            </ul>
+          )}
       </div>
     );
   }

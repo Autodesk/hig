@@ -19,13 +19,7 @@ function createTreeItems(children) {
 }
 
 function buildTreeItemIdArray(list) {
-  const ids = [];
-
-  list.map((item) => {
-    ids.push(item.id);
-  });
-
-  return ids;
+  return list.map(item => item.id);
 }
 
 export default class TreeViewPresenter extends Component {
@@ -42,10 +36,12 @@ export default class TreeViewPresenter extends Component {
 
   componentDidUpdate() {
     const currentTreeArray = this.props.getTreeItemArray();
-    const newTreeArray = buildTreeItemIdArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")));
-    
+    const newTreeArray = buildTreeItemIdArray(
+      Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li"))
+    );
+
     if (JSON.stringify(newTreeArray) !== JSON.stringify(currentTreeArray)) {
-      this.props.setTreeItemArray(buildTreeItemIdArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li"))));
+      this.props.setTreeItemArray(newTreeArray);
     }
     if (!currentTreeArray) {
       this.props.setTreeItemArray(newTreeArray);

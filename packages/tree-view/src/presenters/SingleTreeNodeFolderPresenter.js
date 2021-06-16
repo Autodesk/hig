@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import { css } from "emotion";
 
@@ -31,7 +32,11 @@ export default function SingleTreeNodeFolderPresenter(props) {
         onClick={onClick}
       >
         <div className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}>
-          <IconIndicatorPresenter collapsed={collapsed} density={density} indicator={indicator} />
+          <IconIndicatorPresenter
+            collapsed={collapsed}
+            density={density}
+            indicator={indicator}
+          />
           {icon}
           <span>{label}</span>
         </div>
