@@ -2,8 +2,8 @@
 
 exports[`top-nav/presenters/ProfileButtonPresenter  1`] = `
 .emotion-1 {
-  background-color: #5bc9bd;
-  color: #3c3c3c;
+  background-color: #1932af;
+  color: #ffffff;
   width: 32px;
   height: 32px;
   line-height: 32px;
@@ -42,9 +42,15 @@ exports[`top-nav/presenters/ProfileButtonPresenter  1`] = `
 `;
 
 exports[`top-nav/presenters/ProfileButtonPresenter  2`] = `
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
 .emotion-1 {
-  background-color: #5bc9bd;
-  color: #3c3c3c;
+  background-color: #5b5bc2;
+  color: #ffffff;
   width: 32px;
   height: 32px;
   line-height: 32px;
@@ -55,12 +61,6 @@ exports[`top-nav/presenters/ProfileButtonPresenter  2`] = `
   overflow: hidden;
   border-radius: 50%;
   text-align: center;
-}
-
-.emotion-0 {
-  width: 32px;
-  height: 32px;
-  font-family: ArtifaktElement,sans-serif;
 }
 
 <button
@@ -83,9 +83,15 @@ exports[`top-nav/presenters/ProfileButtonPresenter  2`] = `
 `;
 
 exports[`top-nav/presenters/ProfileButtonPresenter  3`] = `
+.emotion-2 {
+  width: 32px;
+  height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
 .emotion-3 {
-  background-color: #5bc9bd;
-  color: #3c3c3c;
+  background-color: #5b5bc2;
+  color: #ffffff;
   width: 32px;
   height: 32px;
   line-height: 32px;
@@ -96,12 +102,6 @@ exports[`top-nav/presenters/ProfileButtonPresenter  3`] = `
   overflow: hidden;
   border-radius: 50%;
   text-align: center;
-}
-
-.emotion-2 {
-  width: 32px;
-  height: 32px;
-  font-family: ArtifaktElement,sans-serif;
 }
 
 .emotion-1 {

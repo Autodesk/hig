@@ -1,3 +1,10 @@
+# [@hig/profile-flyout-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@2.1.0...@hig/profile-flyout@2.2.0) (2021-05-25)
+
+
+### Features
+
+* **avatar:** Implement new avatar BG colors (ACWB-8852) ([ec8a934](https://github.com/Autodesk/hig/commit/ec8a934))
+
 # [@hig/profile-flyout-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@2.0.5...@hig/profile-flyout@2.1.0) (2020-12-08)
 
 

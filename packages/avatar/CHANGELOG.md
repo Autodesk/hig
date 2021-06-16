@@ -1,3 +1,12 @@
+# [@hig/avatar-v1.4.0](https://github.com/Autodesk/hig/compare/@hig/avatar@1.3.0...@hig/avatar@1.4.0) (2021-05-25)
+
+
+### Features
+
+* **avatar:** Implement new avatar BG colors (ACWB-8852) ([ec8a934](https://github.com/Autodesk/hig/commit/ec8a934))
+* **avatar:** Remove unneeded function ([d8de162](https://github.com/Autodesk/hig/commit/d8de162))
+* Small refactors to make usage by avatarBundle possible ([09d6bf9](https://github.com/Autodesk/hig/commit/09d6bf9))
+
 # [@hig/avatar-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/avatar@1.2.0...@hig/avatar@1.3.0) (2021-02-02)
 
 
