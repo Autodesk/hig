@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "emotion";
 
-import SubTreeViewPresenter from "./SubTreeViewPresenter";
+import SubTreeViewCombined from "../FileView/SubTreeViewCombined";
 import IconIndicatorPresenter from "./IconIndicatorPresenter";
 
 import stylesheet from "./stylesheet";
@@ -15,7 +15,7 @@ export default function SingleTreeNodeFolderPresenter(props) {
     indicator,
     label,
     onClick,
-    themeData
+    themeData,
   } = props;
   const styles = stylesheet(props, themeData);
 
@@ -31,12 +31,16 @@ export default function SingleTreeNodeFolderPresenter(props) {
         onClick={onClick}
       >
         <div className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}>
-          <IconIndicatorPresenter collapsed={collapsed} density={density} indicator={indicator} />
+          <IconIndicatorPresenter
+            collapsed={collapsed}
+            density={density}
+            indicator={indicator}
+          />
           {icon}
           <span>{label}</span>
         </div>
       </div>
-      <SubTreeViewPresenter {...props} />
+      <SubTreeViewCombined {...props} isObject={false} />
     </li>
   );
 }

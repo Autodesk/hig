@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import TreeViewBehavior from "./behaviors/TreeViewBehavior";
 
 import TreeViewPresenter from "./presenters/TreeViewPresenter";
-import TreeViewPresenterObject from "./presenters/TreeViewPresenterObject";
 
 import { AVAILABLE_INDICATORS } from "./constants";
 
@@ -19,6 +18,16 @@ export default class TreeView extends Component {
      * Adds custom/overriding styles
      */
     stylesheet: PropTypes.func,
+    treeNode: PropTypes.shape({
+      id: PropTypes.number,
+      parentId: PropTypes.number,
+      meta: PropTypes.shape({
+        label: PropTypes.string,
+        collapsed: PropTypes.bool,
+        active: PropTypes.bool,
+        icon: PropTypes.elementType,
+      }),
+    }),
   };
 
   static defaultProps = {};
@@ -33,10 +42,6 @@ export default class TreeView extends Component {
       ...otherProps
     } = this.props;
     const { onBlur, onClick, onFocus, onKeyDown } = otherProps;
-
-    const TreeViewPresenterType = treeNode
-      ? TreeViewPresenterObject
-      : TreeViewPresenter;
 
     return (
       <TreeViewBehavior {...otherProps} onKeyDown={onKeyDown} onClick={onClick}>
@@ -56,7 +61,7 @@ export default class TreeView extends Component {
           setTreeViewRef,
           treeViewRef,
         }) => (
-          <TreeViewPresenterType
+          <TreeViewPresenter
             {...otherProps}
             alternateBg={alternateBg}
             treeNode={treeNode}
@@ -78,7 +83,7 @@ export default class TreeView extends Component {
             treeViewRef={treeViewRef}
           >
             {children}
-          </TreeViewPresenterType>
+          </TreeViewPresenter>
         )}
       </TreeViewBehavior>
     );
