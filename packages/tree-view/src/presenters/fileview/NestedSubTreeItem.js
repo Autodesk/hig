@@ -5,7 +5,7 @@ import { css, cx } from "emotion";
 
 // import SubTreeViewObjectPresenter from "./SubTreeViewObjectPresenter";
 import SubTreeViewCombined from "./SubTreeViewCombined";
-import IconIndicatorPresenter from "../presenters/IconIndicatorPresenter";
+import IconIndicatorPresenter from "../IconIndicatorPresenter";
 
 import {
   CaretDownMUI,
@@ -16,7 +16,7 @@ import {
   OperatorPlusXsUI,
 } from "@hig/icons";
 
-import stylesheet from "../presenters/stylesheet";
+import stylesheet from "../stylesheet";
 
 export class SubTreeItem extends Component {
   componentDidUpdate({ keyboardOpenId: previousKeyboardOpenId }) {

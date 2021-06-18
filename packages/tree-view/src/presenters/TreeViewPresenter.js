@@ -1,9 +1,9 @@
 import React, { Children, Component } from "react";
 import PropTypes from "prop-types";
-import { css, cx } from "emotion";
+import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
 
-import TreeObjectView from "../FileView/TreeObjectView";
+import TreeObjectView from "./fileview/TreeObjectView";
 import TreeItem from "../TreeItem";
 
 import stylesheet from "./stylesheet";
@@ -25,7 +25,7 @@ function createTreeItems(children) {
 function buildTreeItemIdArray(list, isTreeNode) {
   const ids = [];
 
-  list.map((item) => {
+  list.map(item => {
     ids.push(isTreeNode ? Number(item.id) : item.id);
   });
 
@@ -41,7 +41,7 @@ export default class TreeViewPresenterObject extends Component {
     indicator: PropTypes.string,
     selected: PropTypes.bool,
     setTreeViewRef: PropTypes.func,
-    stylesheet: PropTypes.func,
+    stylesheet: PropTypes.func
   };
 
   componentDidMount() {
@@ -106,7 +106,7 @@ export default class TreeViewPresenterObject extends Component {
       setActiveTreeItemIndex,
       setKeyboardOpenId,
       guidelines,
-      indicator,
+      indicator
     } = this.props;
     const payload = {
       ...props,
@@ -119,7 +119,7 @@ export default class TreeViewPresenterObject extends Component {
       setKeyboardOpenId,
       guidelines,
       indicator,
-      key,
+      key
     };
 
     return <TreeItem {...payload} />;
@@ -158,7 +158,7 @@ export default class TreeViewPresenterObject extends Component {
             {
               alternateBg,
               guidelines,
-              stylesheet: customStylesheet,
+              stylesheet: customStylesheet
             },
             resolvedRoles
           );
@@ -188,7 +188,7 @@ export default class TreeViewPresenterObject extends Component {
     objectArray.push(collection.id);
 
     if (collection.children) {
-      collection.children.map((child) => {
+      collection.children.map(child => {
         this.getTreeItemArray(child);
       });
     }
@@ -216,7 +216,7 @@ export default class TreeViewPresenterObject extends Component {
   renderFileTree(tree, payload) {
     const appendPayload = {
       ...tree,
-      payload,
+      payload
     };
     return (
       <TreeObjectView
@@ -255,13 +255,13 @@ export default class TreeViewPresenterObject extends Component {
             getActiveTreeItemIndex,
             guidelines,
             indicator,
-            onClick,
+            onClick
           } = this.props;
           const styles = stylesheet(
             {
               alternateBg,
               guidelines,
-              stylesheet: customStylesheet,
+              stylesheet: customStylesheet
             },
             resolvedRoles
           );
@@ -288,7 +288,7 @@ export default class TreeViewPresenterObject extends Component {
                   setActiveTreeItemIndex,
                   setKeyboardOpenId,
                   setTreeItemArray,
-                  ...otherProps,
+                  ...otherProps
                 })}
               </ul>
             </div>

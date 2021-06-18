@@ -1,5 +1,4 @@
 import React from "react";
-import { TreeItem } from "../index";
 import {
   AddFolder24,
   Folder24,
@@ -19,7 +18,8 @@ import {
   Hierarchy16
 } from "@hig/icons";
 
-import { FileTreeCollection } from "../constants";
+import { TreeItem } from "../index";
+import sampleTreeNodeObject from "../__fixtures__/sampleTreeNodeObject";
 
 export default [
   {
@@ -34,15 +34,56 @@ export default [
           label="Tree Item 0"
           icon={<Hierarchy24 />}
         >
-          <TreeItem label="Tree Item 1" id="tree-item-1" key="tree-item-1" icon={<Calendar24 />} collapsed={false}>
-            <TreeItem label="Tree Item 2" id="tree-item-2" key="tree-item-2" icon={<Folder24 />}>
-              <TreeItem label="Tree Item 3" id="tree-item-3" key="tree-item-3" icon={<ProductsAndServices24 />}>
-                <TreeItem label="Tree Item 4" id="tree-item-4" key="tree-item-4" icon={<AddFolder24 />} />
-                <TreeItem label="Tree Item 5" id="tree-item-5" key="tree-item-5" icon={<Report24 />} />
-                <TreeItem label="Tree Item 6" id="tree-item-6" key="tree-item-6" icon={<ProductsAndServices24 />} />
+          <TreeItem
+            label="Tree Item 1"
+            id="tree-item-1"
+            key="tree-item-1"
+            icon={<Calendar24 />}
+            collapsed={false}
+          >
+            <TreeItem
+              label="Tree Item 2"
+              id="tree-item-2"
+              key="tree-item-2"
+              icon={<Folder24 />}
+            >
+              <TreeItem
+                label="Tree Item 3"
+                id="tree-item-3"
+                key="tree-item-3"
+                icon={<ProductsAndServices24 />}
+              >
+                <TreeItem
+                  label="Tree Item 4"
+                  id="tree-item-4"
+                  key="tree-item-4"
+                  icon={<AddFolder24 />}
+                />
+                <TreeItem
+                  label="Tree Item 5"
+                  id="tree-item-5"
+                  key="tree-item-5"
+                  icon={<Report24 />}
+                />
+                <TreeItem
+                  label="Tree Item 6"
+                  id="tree-item-6"
+                  key="tree-item-6"
+                  icon={<ProductsAndServices24 />}
+                />
               </TreeItem>
-              <TreeItem label="Tree Item 7" id="tree-item-7" key="tree-item-7" icon={<Calendar24 />} />
-              <TreeItem label="Tree Item 8" id="tree-item-8" key="tree-item-8" icon={<Report24 />} />
+              <TreeItem
+                label="Tree Item 7"
+                id="tree-item-7"
+                key="tree-item-7"
+                icon={<Calendar24 />}
+              />
+              <TreeItem
+                label="Tree Item 8"
+                id="tree-item-8"
+                key="tree-item-8"
+                icon={<Report24 />}
+              />
               <TreeItem
                 label={
                   <div>
@@ -53,8 +94,16 @@ export default [
                 id="tree-item-9"
                 key="tree-item-9"
               />
-              <TreeItem label="Tree Item 10" id="tree-item-10" key="tree-item-10" />
-              <TreeItem label="Tree Item 11" id="tree-item-11" key="tree-item-11" />
+              <TreeItem
+                label="Tree Item 10"
+                id="tree-item-10"
+                key="tree-item-10"
+              />
+              <TreeItem
+                label="Tree Item 11"
+                id="tree-item-11"
+                key="tree-item-11"
+              />
             </TreeItem>
           </TreeItem>
         </TreeItem>,
@@ -70,8 +119,18 @@ export default [
           key="tree-item-13"
           icon={<FileVideo24 />}
         >
-          <TreeItem label="Tree Item 14" id="tree-item-14" key="tree-item-14" icon={<FileImage24 />} />
-          <TreeItem label="Tree Item 15" id="tree-item-15" key="tree-item-15" icon={<FileVideo24 />} />
+          <TreeItem
+            label="Tree Item 14"
+            id="tree-item-14"
+            key="tree-item-14"
+            icon={<FileImage24 />}
+          />
+          <TreeItem
+            label="Tree Item 15"
+            id="tree-item-15"
+            key="tree-item-15"
+            icon={<FileVideo24 />}
+          />
         </TreeItem>,
         <TreeItem
           id="tree-item-16"
@@ -79,7 +138,12 @@ export default [
           label="Tree Item 16"
           icon={<Hierarchy24 />}
         >
-          <TreeItem label="Tree Item 17" id="tree-item-17" key="tree-item-17" icon={<ProductsAndServices24 />} />
+          <TreeItem
+            label="Tree Item 17"
+            id="tree-item-17"
+            key="tree-item-17"
+            icon={<ProductsAndServices24 />}
+          />
         </TreeItem>,
         <TreeItem
           id="tree-item-18"
@@ -87,10 +151,15 @@ export default [
           label="Tree Item 18"
           icon={<Report24 />}
         >
-          <TreeItem label="Tree Item 19" id="tree-item-19" key="tree-item-19" icon={<ProductsAndServices24 />} />
+          <TreeItem
+            label="Tree Item 19"
+            id="tree-item-19"
+            key="tree-item-19"
+            icon={<ProductsAndServices24 />}
+          />
         </TreeItem>
-      ],
-    }),
+      ]
+    })
   },
   {
     description: "high density icons",
@@ -104,15 +173,55 @@ export default [
           label="Tree Item 0"
           icon={<Hierarchy16 />}
         >
-          <TreeItem label="Tree Item 1" id="tree-item-1" key="tree-item-1" icon={<Calendar16 />}>
-            <TreeItem label="Tree Item 2" id="tree-item-2" key="tree-item-2" icon={<Folder16 />}>
-              <TreeItem label="Tree Item 3" id="tree-item-3" key="tree-item-3" icon={<ProductsAndServices16 />}>
-                <TreeItem label="Tree Item 4" id="tree-item-4" key="tree-item-4" icon={<AddFolder16 />} />
-                <TreeItem label="Tree Item 5" id="tree-item-5" key="tree-item-5" icon={<Report16 />} />
-                <TreeItem label="Tree Item 6" id="tree-item-6" key="tree-item-6" icon={<ProductsAndServices16 />} />
+          <TreeItem
+            label="Tree Item 1"
+            id="tree-item-1"
+            key="tree-item-1"
+            icon={<Calendar16 />}
+          >
+            <TreeItem
+              label="Tree Item 2"
+              id="tree-item-2"
+              key="tree-item-2"
+              icon={<Folder16 />}
+            >
+              <TreeItem
+                label="Tree Item 3"
+                id="tree-item-3"
+                key="tree-item-3"
+                icon={<ProductsAndServices16 />}
+              >
+                <TreeItem
+                  label="Tree Item 4"
+                  id="tree-item-4"
+                  key="tree-item-4"
+                  icon={<AddFolder16 />}
+                />
+                <TreeItem
+                  label="Tree Item 5"
+                  id="tree-item-5"
+                  key="tree-item-5"
+                  icon={<Report16 />}
+                />
+                <TreeItem
+                  label="Tree Item 6"
+                  id="tree-item-6"
+                  key="tree-item-6"
+                  icon={<ProductsAndServices16 />}
+                />
               </TreeItem>
-              <TreeItem label="Tree Item 7" id="tree-item-7" key="tree-item-7" icon={<Calendar16 />} />
-              <TreeItem label="Tree Item 8" id="tree-item-8" key="tree-item-8" icon={<Report16 />} />
+              <TreeItem
+                label="Tree Item 7"
+                id="tree-item-7"
+                key="tree-item-7"
+                icon={<Calendar16 />}
+              />
+              <TreeItem
+                label="Tree Item 8"
+                id="tree-item-8"
+                key="tree-item-8"
+                icon={<Report16 />}
+              />
               <TreeItem
                 label={
                   <div>
@@ -123,8 +232,16 @@ export default [
                 id="tree-item-9"
                 key="tree-item-9"
               />
-              <TreeItem label="Tree Item 10" id="tree-item-10" key="tree-item-10" />
-              <TreeItem label="Tree Item 11" id="tree-item-11" key="tree-item-11" />
+              <TreeItem
+                label="Tree Item 10"
+                id="tree-item-10"
+                key="tree-item-10"
+              />
+              <TreeItem
+                label="Tree Item 11"
+                id="tree-item-11"
+                key="tree-item-11"
+              />
             </TreeItem>
           </TreeItem>
         </TreeItem>,
@@ -140,8 +257,18 @@ export default [
           key="tree-item-13"
           icon={<FileVideo16 />}
         >
-          <TreeItem label="Tree Item 14" id="tree-item-14" key="tree-item-14" icon={<FileImage16 />} />
-          <TreeItem label="Tree Item 15" id="tree-item-15" key="tree-item-15" icon={<FileVideo16 />} />
+          <TreeItem
+            label="Tree Item 14"
+            id="tree-item-14"
+            key="tree-item-14"
+            icon={<FileImage16 />}
+          />
+          <TreeItem
+            label="Tree Item 15"
+            id="tree-item-15"
+            key="tree-item-15"
+            icon={<FileVideo16 />}
+          />
         </TreeItem>,
         <TreeItem
           id="tree-item-16"
@@ -149,7 +276,12 @@ export default [
           label="Tree Item 16"
           icon={<Hierarchy16 />}
         >
-          <TreeItem label="Tree Item 17" id="tree-item-17" key="tree-item-17" icon={<ProductsAndServices16 />} />
+          <TreeItem
+            label="Tree Item 17"
+            id="tree-item-17"
+            key="tree-item-17"
+            icon={<ProductsAndServices16 />}
+          />
         </TreeItem>,
         <TreeItem
           id="tree-item-18"
@@ -157,17 +289,22 @@ export default [
           label="Tree Item 18"
           icon={<Report16 />}
         >
-          <TreeItem label="Tree Item 19" id="tree-item-19" key="tree-item-19" icon={<ProductsAndServices16 />} />
+          <TreeItem
+            label="Tree Item 19"
+            id="tree-item-19"
+            key="tree-item-19"
+            icon={<ProductsAndServices16 />}
+          />
         </TreeItem>
-      ],
-    }),
+      ]
+    })
   },
   {
     description: "tree object",
     getProps: () => ({
       guidelines: false,
       indicator: "caret",
-      treeNode: FileTreeCollection,
-    }),
-  },
+      treeNode: sampleTreeNodeObject
+    })
+  }
 ];

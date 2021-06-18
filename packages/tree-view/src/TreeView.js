@@ -9,15 +9,25 @@ import { AVAILABLE_INDICATORS } from "./constants";
 
 export default class TreeView extends Component {
   static propTypes = {
+    alternateBg: PropTypes.bool,
     /**
-     * Sets the icon padding on children TreeItems
+     * Content of the TreeView
+     * Accepts TreeItem components
      */
-    iconAlignment: PropTypes.bool,
+    children: PropTypes.node,
+    guidelines: PropTypes.bool,
+    /**
+     * Indicator icon
+     */
     indicator: PropTypes.oneOf(AVAILABLE_INDICATORS),
     /**
      * Adds custom/overriding styles
      */
     stylesheet: PropTypes.func,
+    /**
+     * If treeNode prop is used it will render instead
+     * of children.
+     */
     treeNode: PropTypes.shape({
       id: PropTypes.number,
       parentId: PropTypes.number,
@@ -25,9 +35,9 @@ export default class TreeView extends Component {
         label: PropTypes.string,
         collapsed: PropTypes.bool,
         active: PropTypes.bool,
-        icon: PropTypes.elementType,
-      }),
-    }),
+        icon: PropTypes.node
+      })
+    })
   };
 
   static defaultProps = {};
@@ -41,7 +51,7 @@ export default class TreeView extends Component {
       treeNode,
       ...otherProps
     } = this.props;
-    const { onBlur, onClick, onFocus, onKeyDown } = otherProps;
+    const { onClick, onKeyDown } = otherProps;
 
     return (
       <TreeViewBehavior {...otherProps} onKeyDown={onKeyDown} onClick={onClick}>
@@ -54,12 +64,9 @@ export default class TreeView extends Component {
           setActiveTreeItemIndex,
           setKeyboardOpenId,
           setTreeItemArray,
-          handleBlur,
-          handleFocus,
           handleKeyDown,
-          handleClick,
           setTreeViewRef,
-          treeViewRef,
+          treeViewRef
         }) => (
           <TreeViewPresenter
             {...otherProps}
@@ -74,10 +81,7 @@ export default class TreeView extends Component {
             setKeyboardOpenId={setKeyboardOpenId}
             setTreeItemArray={setTreeItemArray}
             guidelines={guidelines}
-            onBlur={handleBlur}
-            onFocus={handleFocus}
             onKeyDown={handleKeyDown}
-            onClick={handleClick}
             setTreeViewRef={setTreeViewRef}
             stylesheet={stylesheet}
             treeViewRef={treeViewRef}

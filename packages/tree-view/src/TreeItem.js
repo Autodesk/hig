@@ -4,14 +4,14 @@ import PropTypes from "prop-types";
 import TreeItemBehavior from "./behaviors/TreeItemBehavior";
 import TreeItemPresenter from "./presenters/TreeItemPresenter";
 
-// import { roles, AVAILABLE_ROLES } from "./constants";
-
 export default class TreeItem extends Component {
   static propTypes = {
     /**
-     * Content of the Option
+     * Accepts other TreeItem components
      */
     children: PropTypes.node,
+    collapsed: PropTypes.bool,
+    defaultCollapsed: PropTypes.bool,
     /**
      * Presentational icon
      */
@@ -19,7 +19,7 @@ export default class TreeItem extends Component {
     /**
      * Unique HTML id attribute
      */
-    id: PropTypes.string,
+    id: PropTypes.string.isRequired,
     /**
      * Labels the TreeItem, this is rendered before all children
      */
@@ -27,7 +27,7 @@ export default class TreeItem extends Component {
     /**
      * Adds custom/overriding styles
      */
-    stylesheet: PropTypes.func,
+    stylesheet: PropTypes.func
   };
 
   static defaultProps = {
@@ -47,13 +47,7 @@ export default class TreeItem extends Component {
       stylesheet,
       ...otherProps
     } = this.props;
-    const {
-      getActiveTreeItemId,
-      onFocus,
-      onMouseDown,
-      onMouseLeave,
-      onMouseUp,
-    } = otherProps;
+    const { getActiveTreeItemId, onFocus } = otherProps;
 
     return (
       <TreeItemBehavior
@@ -62,13 +56,7 @@ export default class TreeItem extends Component {
         defaultCollapsed={defaultCollapsed}
         id={id}
       >
-        {({
-          getIsCollapsed,
-          handleClick,
-          handleMouseEnter,
-          handleMouseLeave,
-          setIsCollapsed
-        }) => (
+        {({ getIsCollapsed, handleClick, setIsCollapsed }) => (
           <TreeItemPresenter
             {...otherProps}
             collapsed={getIsCollapsed()}
@@ -80,12 +68,9 @@ export default class TreeItem extends Component {
             label={label}
             onClick={handleClick}
             onFocus={onFocus}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
             selected={getActiveTreeItemId() === id}
             setIsCollapsed={setIsCollapsed}
             setKeyboardOpenId={setKeyboardOpenId}
-            // onMouseOver={handleMouseOver}
             stylesheet={stylesheet}
           >
             {children}

@@ -2,9 +2,9 @@ import React, { Component } from "react";
 
 import PropTypes from "prop-types";
 import { ThemeContext } from "@hig/theme-context";
-import TreeItemBehavior from "../behaviors/TreeItemBehavior";
+import TreeItemBehavior from "../../behaviors/TreeItemBehavior";
 
-import stylesheet from "../presenters/stylesheet";
+import stylesheet from "../stylesheet";
 
 import { NestedSubTreeItem } from "./NestedSubTreeItem";
 

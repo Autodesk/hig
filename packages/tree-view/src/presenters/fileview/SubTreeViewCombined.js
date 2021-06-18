@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 
 import { NestedSubTreeItem, SubTreeItem } from "./NestedSubTreeItem";
-import TreeItem from "../TreeItem";
+import TreeItem from "../../TreeItem";
 
-import stylesheet from "../presenters/stylesheet";
+import stylesheet from "../stylesheet";
 
 const collapseStatus = {
   BEFORE_COLLAPSE: "before_collapse",

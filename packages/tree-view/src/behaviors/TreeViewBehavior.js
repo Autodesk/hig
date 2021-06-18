@@ -48,23 +48,14 @@ function checkScroll(treeItemId, treeView) {
 }
 
 function buildTreeItemIdArray(list) {
-  const ids = [];
-
-  list.map((item) => {
-    ids.push(item.id);
-  });
-
-  return ids;
+  return list.map(item => item.id);
 }
 
 export default class TreeViewBehaviorRR extends Component {
   static propTypes = {
     children: PropTypes.func,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
     onKeyDown: PropTypes.func,
-    onClick: PropTypes.func,
+    treeViewRef: PropTypes.func
   };
 
   static defaultProps = {};
@@ -76,13 +67,13 @@ export default class TreeViewBehaviorRR extends Component {
       treeItemArray: null,
       activeTreeItemIndex: 1,
       currentItemClicked: null,
-      keyboardOpenId: "",
+      keyboardOpenId: ""
     };
 
     this.treeViewRef = null;
   }
 
-  setTreeViewRef = (element) => {
+  setTreeViewRef = element => {
     if (this.props.treeViewRef) {
       this.props.treeViewRef(element);
     }
@@ -90,56 +81,37 @@ export default class TreeViewBehaviorRR extends Component {
     this.treeViewRef = element;
   };
 
-  setTreeItemArray = (objectArray) => {
+  setTreeItemArray = objectArray => {
     this.setState({ treeItemArray: [...objectArray] });
   };
 
-  getTreeItemArray = () => {
-    return this.state.treeItemArray;
+  getTreeItemArray = () => this.state.treeItemArray;
+
+  getActiveTreeItemId = () =>
+    this.state.treeItemArray &&
+    this.state.treeItemArray[this.getActiveTreeItemIndex()];
+
+  setActiveTreeItemId = currentItemClicked => {
+    this.setState({ currentItemClicked });
   };
 
-  getActiveTreeItemId = () => {
-    return (
-      this.state.treeItemArray &&
-      this.state.treeItemArray[this.getActiveTreeItemIndex()]
-    );
-  };
+  getActiveTreeItemIndex = () => this.state.activeTreeItemIndex;
 
-  setActiveTreeItemId = (id) => {
-    this.setState({ currentItemClicked: id });
-  };
-
-  getActiveTreeItemIndex = () => {
-    return this.state.activeTreeItemIndex;
-  };
-
-  setActiveTreeItemIndex = (index) => {
+  setActiveTreeItemIndex = index => {
     this.setState({ activeTreeItemIndex: index });
   };
 
   getKeyboardOpenId = () => this.state.keyboardOpenId;
 
-  setKeyboardOpenId = (id) => {
+  setKeyboardOpenId = id => {
     this.setState({ keyboardOpenId: id });
   };
 
-  handleFocus = (event) => {
-    if (this.props.onFocus) {
-      this.props.onFocus(event);
-    }
-  };
-
-  handleBlur = (event) => {
-    if (this.props.onBlur) {
-      this.props.onBlur(event);
-    }
-  };
-
-  handleKeyDown = (event) => {
+  handleKeyDown = event => {
     if (this.props.onKeyDown) {
-      onKeyDown(event);
+      this.props.onKeyDown(event);
     }
-    //  const newTreeArray = buildTreeItemIdArray(Array.prototype.slice.call(this.props.treeViewRef.querySelectorAll("li")));
+
     const domNodeList = this.treeViewRef.querySelectorAll("li");
     const treeItemArrayControl =
       this.getTreeItemArray().length !== domNodeList.length
@@ -199,33 +171,20 @@ export default class TreeViewBehaviorRR extends Component {
     }
   };
 
-  handleClick = (event, treeItem) => {
-    if (treeItem) {
-      // const { id } = treeItem;
-      // this.setActiveTreeItemId(id);
-      // this.setActiveTreeItemIndex(this.getTreeItemArray().indexOf(id));
-    }
-    if (this.props.onClick) {
-      this.props.onClick(event);
-    }
-  };
-
   render() {
     const {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
       getKeyboardOpenId,
       getTreeItemArray,
-      handleBlur,
-      handleFocus,
+      handleClick,
       handleKeyDown,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
       setKeyboardOpenId,
-      setTreeViewRef,
-      treeViewRef,
-      handleClick,
       setTreeItemArray,
+      setTreeViewRef,
+      treeViewRef
     } = this;
 
     return this.props.children({
@@ -233,16 +192,14 @@ export default class TreeViewBehaviorRR extends Component {
       getActiveTreeItemIndex,
       getKeyboardOpenId,
       getTreeItemArray,
-      handleBlur,
-      handleFocus,
+      handleClick,
       handleKeyDown,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
       setKeyboardOpenId,
-      setTreeViewRef,
-      treeViewRef,
-      handleClick,
       setTreeItemArray,
+      setTreeViewRef,
+      treeViewRef
     });
   }
 }
