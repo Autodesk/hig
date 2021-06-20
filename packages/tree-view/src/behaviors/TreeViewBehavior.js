@@ -95,6 +95,8 @@ export default class TreeViewBehaviorRR extends Component {
     this.setState({ currentItemClicked });
   };
 
+  getCurrentItemClicked = () => this.state.currentItemClicked;
+
   getActiveTreeItemIndex = () => this.state.activeTreeItemIndex;
 
   setActiveTreeItemIndex = index => {

@@ -27,6 +27,7 @@ function buildTreeItemIdArray(list, isTreeNode) {
 
   list.map(item => {
     ids.push(isTreeNode ? Number(item.id) : item.id);
+    return null;
   });
 
   return ids;
@@ -188,10 +189,11 @@ export default class TreeViewPresenterObject extends Component {
     objectArray.push(collection.id);
 
     if (collection.children) {
-      collection.children.map(child => {
+      collection.children.forEach(child => {
         this.getTreeItemArray(child);
       });
     }
+    return null;
   }
 
   getTreeObject(collection) {
@@ -201,7 +203,7 @@ export default class TreeViewPresenterObject extends Component {
       return acc;
     }, {});
 
-    collection.forEach(function(el) {
+    collection.forEach(el => {
       if (el.parentId === null) {
         fileTree = el;
         return;
@@ -250,13 +252,7 @@ export default class TreeViewPresenterObject extends Component {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
-          const {
-            getActiveTreeItemId,
-            getActiveTreeItemIndex,
-            guidelines,
-            indicator,
-            onClick
-          } = this.props;
+          const { onClick } = this.props;
           const styles = stylesheet(
             {
               alternateBg,

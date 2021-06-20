@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import PropTypes from "prop-types";
 import { ThemeContext } from "@hig/theme-context";
 import TreeItemBehavior from "../../behaviors/TreeItemBehavior";
 
@@ -15,11 +14,11 @@ class TreeObjectView extends Component {
         id,
         payload,
         payload: { getActiveTreeItemId, getKeyboardOpenId, setKeyboardOpenId },
-        meta: { collapsed },
+        meta: { collapsed }
       },
       ...otherProps
     } = this.props;
-    const { onFocus, onMouseDown, onMouseLeave, onMouseUp } = otherProps;
+    const { onFocus } = otherProps;
 
     return (
       <TreeItemBehavior
@@ -27,14 +26,14 @@ class TreeObjectView extends Component {
         id={id}
         payload={payload}
         collapsed={collapsed}
-        defaultCollapsed={true}
+        defaultCollapsed
       >
         {({
           getIsCollapsed,
           handleClick,
           handleMouseEnter,
           handleMouseLeave,
-          setIsCollapsed,
+          setIsCollapsed
         }) => (
           <ThemeContext.Consumer>
             {({ resolvedRoles, metadata }) => {

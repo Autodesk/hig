@@ -7,10 +7,15 @@ export default class TreeItemBehavior extends Component {
     collapsed: PropTypes.bool,
     defaultCollapsed: PropTypes.bool,
     getTreeItemArray: PropTypes.func,
-    id: PropTypes.string,
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     onClick: PropTypes.func,
     setActiveTreeItemId: PropTypes.func,
-    setActiveTreeItemIndex: PropTypes.func
+    setActiveTreeItemIndex: PropTypes.func,
+    payload: PropTypes.shape({
+      getTreeItemArray: PropTypes.func,
+      setActiveTreeItemId: PropTypes.func,
+      setActiveTreeItemIndex: PropTypes.func
+    })
   };
 
   constructor(props) {
@@ -44,6 +49,7 @@ export default class TreeItemBehavior extends Component {
           setActiveTreeItemIndex
         }
       } = this.props;
+      // eslint-disable-next-line no-param-reassign
       treeItem.meta.collapsed = !treeItem.meta.collapsed;
       const treeItemArray = getTreeItemArray();
       const index =

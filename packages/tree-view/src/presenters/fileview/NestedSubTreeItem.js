@@ -1,28 +1,38 @@
 import React, { Component } from "react";
 
 import PropTypes from "prop-types";
-import { css, cx } from "emotion";
+import { css } from "emotion";
 
 // import SubTreeViewObjectPresenter from "./SubTreeViewObjectPresenter";
 import SubTreeViewCombined from "./SubTreeViewCombined";
 import IconIndicatorPresenter from "../IconIndicatorPresenter";
 
-import {
-  CaretDownMUI,
-  CaretDownSUI,
-  OperatorMinusSUI,
-  OperatorMinusXsUI,
-  OperatorPlusSUI,
-  OperatorPlusXsUI,
-} from "@hig/icons";
-
 import stylesheet from "../stylesheet";
 
 export class SubTreeItem extends Component {
+  static propTypes = {
+    treeItem: PropTypes.shape({
+      id: PropTypes.number,
+      meta: PropTypes.shape({
+        label: PropTypes.string,
+        collapsed: PropTypes.bool,
+        active: PropTypes.bool,
+        icon: PropTypes.element
+      })
+    }),
+    keyboardOpenId: PropTypes.string,
+    themeData: PropTypes.shape({
+      fontColor: PropTypes.string
+    }),
+    onClick: PropTypes.func,
+    setIsCollapsed: PropTypes.func,
+    setKeyboardOpenId: PropTypes.func
+  };
+
   componentDidUpdate({ keyboardOpenId: previousKeyboardOpenId }) {
     const {
       treeItem: { id },
-      keyboardOpenId,
+      keyboardOpenId
     } = this.props;
 
     if (keyboardOpenId === id && keyboardOpenId !== previousKeyboardOpenId) {
@@ -42,11 +52,11 @@ export class SubTreeItem extends Component {
           indicator,
           getActiveTreeItemId,
           getActiveTreeItemIndex,
-          guidelines,
-        },
+          guidelines
+        }
       },
       themeData,
-      onClick,
+      onClick
     } = this.props;
 
     const styleTreeItem = {
@@ -58,7 +68,7 @@ export class SubTreeItem extends Component {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
       guidelines,
-      selected: getActiveTreeItemId() === id,
+      selected: getActiveTreeItemId() === id
     };
     const styles = stylesheet(styleTreeItem, themeData);
     return (
@@ -66,7 +76,7 @@ export class SubTreeItem extends Component {
         className={css(styles.higTreeItemSubTreeItem)}
         id={id}
         role="treeitem"
-        onClick={(event) => onClick(event, treeItem)}
+        onClick={event => onClick(event, treeItem)}
         key={id}
       >
         <div className={css(styles.higTreeItemContentWrapper)}>
@@ -82,7 +92,7 @@ export class NestedSubTreeItem extends Component {
   componentDidUpdate({ keyboardOpenId: previousKeyboardOpenId }) {
     const {
       treeItem: { id },
-      keyboardOpenId,
+      keyboardOpenId
     } = this.props;
 
     if (keyboardOpenId === id && keyboardOpenId !== previousKeyboardOpenId) {
@@ -98,17 +108,16 @@ export class NestedSubTreeItem extends Component {
         children,
         id,
         meta: { label, icon, collapsed },
-        payload,
         payload: {
           indicator,
           getActiveTreeItemId,
           getActiveTreeItemIndex,
-          guidelines,
-        },
+          guidelines
+        }
       },
       density,
       themeData,
-      onClick,
+      onClick
     } = this.props;
 
     const styleTreeItem = {
@@ -120,16 +129,10 @@ export class NestedSubTreeItem extends Component {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
       guidelines,
-      selected: getActiveTreeItemId() === id,
+      selected: getActiveTreeItemId() === id
     };
 
     const styles = stylesheet(styleTreeItem, themeData);
-    const OperatorMinusIcon =
-      density === "medium-density" ? OperatorMinusSUI : OperatorMinusXsUI;
-    const CaretDownIcon =
-      density === "medium-density" ? CaretDownMUI : CaretDownSUI;
-    const IconIndicator =
-      indicator === "operator" ? OperatorMinusIcon : CaretDownIcon;
     return (
       <li
         aria-expanded={!collapsed}
@@ -141,7 +144,7 @@ export class NestedSubTreeItem extends Component {
         <div className={css(styles.higTreeItemSubTreeViewLabelWrapper)}>
           <div
             className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}
-            onClick={(event) => onClick(event, treeItem)}
+            onClick={event => onClick(event, treeItem)}
           >
             <IconIndicatorPresenter
               collapsed={collapsed}
@@ -152,7 +155,7 @@ export class NestedSubTreeItem extends Component {
             <span>{label}</span>
           </div>
         </div>
-        <SubTreeViewCombined {...this.props} isObject={true} />
+        <SubTreeViewCombined {...this.props} isObject />
       </li>
     );
   }
