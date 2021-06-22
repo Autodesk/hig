@@ -6,6 +6,7 @@ import accordion from "./components/accordion";
 import avatarBundle from "./components/avatarBundle";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
+import illustration from "./components/illustration";
 import input from "./components/input";
 import segmentedButton from "./components/segmentedButton";
 import slider from "./components/slider";
@@ -24,6 +25,7 @@ const darkGrayThemeConfig = extendTheme(
     avatarBundle,
     button,
     checkbox,
+    illustration,
     input,
     segmentedButton,
     slider,

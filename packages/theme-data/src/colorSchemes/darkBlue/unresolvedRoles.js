@@ -10,6 +10,7 @@ import banner from "./components/banner";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
 import iconButton from "./components/iconButton";
+import illustration from "./components/illustration";
 import input from "./components/input";
 import label from "./components/label";
 import progressBar from "./components/progressBar";
@@ -41,6 +42,7 @@ const darkBlueThemeConfig = extendTheme(
     button,
     checkbox,
     iconButton,
+    illustration,
     input,
     label,
     progressBar,
