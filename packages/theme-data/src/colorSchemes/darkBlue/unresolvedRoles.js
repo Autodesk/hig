@@ -5,6 +5,7 @@ import baseTheme from "../../baseTheme";
 import mediumDensityTheme from "../../densities/mediumDensity";
 import accordion from "./components/accordion";
 import avatarBundle from "./components/avatarBundle";
+import badge from "./components/badge";
 import banner from "./components/banner";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
@@ -35,6 +36,7 @@ const darkBlueThemeConfig = extendTheme(
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     accordion,
     avatarBundle,
+    badge,
     banner,
     button,
     checkbox,

@@ -6,6 +6,7 @@ import system from "./system";
 import accordion from "./components/accordion";
 import avatar from "./components/avatar";
 import avatarBundle from "./components/avatarBundle";
+import badge from "./components/badge";
 import banner from "./components/banner";
 import breadcrumb from "./components/breadcrumb";
 import button from "./components/button";
@@ -65,6 +66,7 @@ const baseThemeConfig = extendTheme(
     accordion,
     avatar,
     avatarBundle,
+    badge,
     banner,
     breadcrumb,
     button,
