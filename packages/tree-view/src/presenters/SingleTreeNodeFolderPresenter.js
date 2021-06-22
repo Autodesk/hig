@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { css } from "emotion";
 import { createButtonEventHandlers } from "@hig/utils";
 
-import SubTreeViewCombined from "./fileview/SubTreeViewCombined";
+import SubTreeViewCombined from "./SubTreeViewCombined";
 import IconIndicatorPresenter from "./IconIndicatorPresenter";
 
 import stylesheet from "./stylesheet";
@@ -25,14 +25,19 @@ export default function SingleTreeNodeFolderPresenter(props) {
         className={css(styles.higTreeItemSubTreeViewLabelWrapper)}
         onClick={handleClick}
         onKeyDown={handleKeyDown}
+        role="presentation"
       >
         <div className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}>
-          <IconIndicatorPresenter
-            collapsed={collapsed}
-            density={density}
-            indicator={indicator}
-          />
-          {icon}
+          <div className={css(styles.higTreeItemIndicatorWrapper)}>
+            <IconIndicatorPresenter
+              collapsed={collapsed}
+              density={density}
+              indicator={indicator}
+            />
+          </div>
+          {icon && (
+            <div className={css(styles.higTreeItemIconWrapper)}>{icon}</div>
+          )}
           <span>{label}</span>
         </div>
       </div>

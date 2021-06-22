@@ -20,11 +20,17 @@ describe("tree-view/stylesheet", () => {
   });
 
   it("returned object contains property of higTreeItemContentWrapper", () => {
-    expect(styles).toHaveProperty("higTreeItemContentWrapper", expect.any(Object));
+    expect(styles).toHaveProperty(
+      "higTreeItemContentWrapper",
+      expect.any(Object)
+    );
   });
 
   it("returned object contains property of higTreeItemSubTreeViewWrapper", () => {
-    expect(styles).toHaveProperty("higTreeItemSubTreeViewWrapper", expect.any(Object));
+    expect(styles).toHaveProperty(
+      "higTreeItemSubTreeViewWrapper",
+      expect.any(Object)
+    );
   });
 
   it("returned object contains property of higTreeItemSubTreeView", () => {
@@ -32,11 +38,17 @@ describe("tree-view/stylesheet", () => {
   });
 
   it("returned object contains property of higTreeItemSubTreeViewLabelWrapper", () => {
-    expect(styles).toHaveProperty("higTreeItemSubTreeViewLabelWrapper", expect.any(Object));
+    expect(styles).toHaveProperty(
+      "higTreeItemSubTreeViewLabelWrapper",
+      expect.any(Object)
+    );
   });
 
   it("returned object contains property of higTreeItemSubTreeViewLabelContentWrapper", () => {
-    expect(styles).toHaveProperty("higTreeItemSubTreeViewLabelContentWrapper", expect.any(Object));
+    expect(styles).toHaveProperty(
+      "higTreeItemSubTreeViewLabelContentWrapper",
+      expect.any(Object)
+    );
   });
 
   it("returned object contains property of higTreeItemSubTreeItem", () => {

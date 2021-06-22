@@ -3,8 +3,6 @@ import React, { Component } from "react";
 import { ThemeContext } from "@hig/theme-context";
 import TreeItemBehavior from "../../behaviors/TreeItemBehavior";
 
-import stylesheet from "../stylesheet";
-
 import { NestedSubTreeItem } from "./NestedSubTreeItem";
 
 class TreeObjectView extends Component {
@@ -47,7 +45,6 @@ class TreeObjectView extends Component {
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                   selected={getActiveTreeItemId() === id}
-                  stylesheet={stylesheet}
                   collapsed={getIsCollapsed()}
                   getIsCollapsed={getIsCollapsed}
                   getKeyboardOpenId={getKeyboardOpenId}

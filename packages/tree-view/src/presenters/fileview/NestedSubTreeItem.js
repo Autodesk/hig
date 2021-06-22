@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-
 import PropTypes from "prop-types";
 import { css } from "emotion";
 
-// import SubTreeViewObjectPresenter from "./SubTreeViewObjectPresenter";
-import SubTreeViewCombined from "./SubTreeViewCombined";
+import SubTreeViewCombined from "../SubTreeViewCombined";
 import IconIndicatorPresenter from "../IconIndicatorPresenter";
 
 import stylesheet from "../stylesheet";
@@ -80,8 +78,10 @@ export class SubTreeItem extends Component {
         key={id}
       >
         <div className={css(styles.higTreeItemContentWrapper)}>
-          {icon}
-          {label}
+          {icon && (
+            <div className={css(styles.higTreeItemIconWrapper)}>{icon}</div>
+          )}
+          <span>{label}</span>
         </div>
       </li>
     );
@@ -133,6 +133,7 @@ export class NestedSubTreeItem extends Component {
     };
 
     const styles = stylesheet(styleTreeItem, themeData);
+
     return (
       <li
         aria-expanded={!collapsed}
@@ -145,13 +146,18 @@ export class NestedSubTreeItem extends Component {
           <div
             className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}
             onClick={event => onClick(event, treeItem)}
+            role="presentation"
           >
-            <IconIndicatorPresenter
-              collapsed={collapsed}
-              density={density}
-              indicator={indicator}
-            />
-            {icon}
+            <div className={css(styles.higTreeItemIndicatorWrapper)}>
+              <IconIndicatorPresenter
+                collapsed={collapsed}
+                density={density}
+                indicator={indicator}
+              />
+            </div>
+            {icon && (
+              <div className={css(styles.higTreeItemIconWrapper)}>{icon}</div>
+            )}
             <span>{label}</span>
           </div>
         </div>

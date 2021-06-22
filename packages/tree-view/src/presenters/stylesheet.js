@@ -7,17 +7,14 @@ export default function stylesheet(props, themeData) {
   const {
     alternateBg,
     guidelines,
-    indicator,
     selected,
     stylesheet: customStylesheet
   } = props;
   const isMediumDensity = themeData[`treeView.row.paddingVertical`] === `8px`;
   const itemHeight = isMediumDensity ? `24px` : `16px`;
   const bgHeight = isMediumDensity ? `160px` : `96px`;
-  const guideLineVerticalOffsetLeft = isMediumDensity ? `0` : `-3px`;
+  const guideLineVerticalOffsetLeft = isMediumDensity ? `-8px` : `-5px`;
   const guideLineHorizontalOffsetTop = isMediumDensity ? `9px` : `2px`;
-  const operatorPadding = isMediumDensity ? `20px` : `19px`;
-  const caretPadding = isMediumDensity ? `15px` : `12px`;
   const styles = {
     higTreeViewWrapper: {
       ...(alternateBg
@@ -48,11 +45,11 @@ export default function stylesheet(props, themeData) {
       outline: 0,
       padding: 0,
       "& > li": {
+        paddingLeft: 0,
         "& > div": {
           "&:first-of-type": {
             "&:last-child": {
-              margin: 0,
-              paddingLeft: 0
+              margin: `0 0 0 ${themeData["treeView.row.paddingHorizontal"]}`
             }
           }
         },
@@ -66,6 +63,7 @@ export default function stylesheet(props, themeData) {
     },
     higTreeItem: {
       margin: 0,
+      padding: 0,
       position: `relative`,
       "&::before": {
         ...(guidelines
@@ -77,14 +75,12 @@ export default function stylesheet(props, themeData) {
           : {}),
         display: `inline-block`,
         content: `""`,
-        left: 0,
+        left: isMediumDensity ? `-7px` : `-4px`,
         margin: 0,
         position: `absolute`,
         top: guideLineHorizontalOffsetTop,
         transform: `translateY(10px)`,
-        width: isMediumDensity
-          ? themeData["treeView.row.paddingHorizontal"]
-          : `calc(${themeData["treeView.row.paddingHorizontal"]} - 1px)`
+        width: isMediumDensity ? `20px` : `12px`
       },
       "&::after": {
         ...(guidelines
@@ -120,11 +116,9 @@ export default function stylesheet(props, themeData) {
     higTreeItemContentWrapper: {
       alignItems: `center`,
       display: `inline-flex`,
-      paddingLeft: themeData[`treeView.row.paddingHorizontal`],
       ...(selected
         ? {
             background: themeData[`colorScheme.background.on.default`],
-            marginLeft: themeData[`treeView.row.paddingHorizontal`],
             paddingLeft: 0
           }
         : {}),
@@ -140,10 +134,9 @@ export default function stylesheet(props, themeData) {
     higTreeItemSubTreeView: {
       listStyle: `none`,
       margin: 0,
-      padding:
-        indicator === `caret`
-          ? `0 0 0 ${caretPadding}`
-          : `0 0 0 ${operatorPadding}`
+      paddingLeft: `calc(${itemHeight} + ${
+        themeData["treeView.icon.marginRight"]
+      })`
     },
     higTreeItemSubTreeViewLabelWrapper: {
       display: `flex`,
@@ -173,7 +166,10 @@ export default function stylesheet(props, themeData) {
       height: itemHeight,
       padding: `${themeData["treeView.row.paddingVertical"]} ${
         themeData["treeView.row.paddingHorizontal"]
-      }`,
+      } ${themeData["treeView.row.paddingVertical"]}
+        calc(${itemHeight} + ${themeData["treeView.row.paddingHorizontal"]} + ${
+        themeData["treeView.icon.marginRight"]
+      })`,
       position: `relative`,
       "&::before": {
         ...(guidelines
@@ -185,12 +181,12 @@ export default function stylesheet(props, themeData) {
           : {}),
         display: `inline-block`,
         content: `""`,
-        left: 0,
+        left: isMediumDensity ? `-7px` : `-4px`,
         margin: 0,
         position: `absolute`,
         top: guideLineHorizontalOffsetTop,
         transform: `translateY(10px)`,
-        width: themeData[`treeView.row.paddingHorizontal`]
+        width: isMediumDensity ? `42px` : `24px`
       },
       "&::after": {
         ...(guidelines
@@ -222,6 +218,22 @@ export default function stylesheet(props, themeData) {
             : { top: `-3px`, height: `15px` })
         }
       }
+    },
+    higTreeItemIndicatorWrapper: {
+      alignItems: `center`,
+      display: `flex`,
+      height: itemHeight,
+      justifyContent: `center`,
+      marginRight: themeData[`treeView.icon.marginRight`],
+      width: itemHeight
+    },
+    higTreeItemIconWrapper: {
+      alignItems: `center`,
+      display: `flex`,
+      height: itemHeight,
+      justifyContent: `center`,
+      marginRight: themeData[`treeView.icon.marginRight`],
+      width: itemHeight
     }
   };
 

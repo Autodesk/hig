@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { css, cx } from "emotion";
 
-import { NestedSubTreeItem, SubTreeItem } from "./NestedSubTreeItem";
-import TreeItem from "../../TreeItem";
+import { NestedSubTreeItem, SubTreeItem } from "./fileview/NestedSubTreeItem";
+import TreeItem from "../TreeItem";
 
-import stylesheet from "../stylesheet";
+import stylesheet from "./stylesheet";
 
 const collapseStatus = {
   BEFORE_COLLAPSE: "before_collapse",
@@ -15,7 +15,7 @@ const collapseStatus = {
   EXPANDED: "expanded"
 };
 
-export default class SubTreeViewObjectPresenter extends Component {
+export default class SubTreeViewCombined extends Component {
   constructor(props) {
     super(props);
 
@@ -236,8 +236,8 @@ export default class SubTreeViewObjectPresenter extends Component {
           getKeyboardOpenId,
           getTreeItemArray,
           guidelines,
-          keyboardOpenId: getKeyboardOpenId(),
           indicator,
+          keyboardOpenId: getKeyboardOpenId(),
           setActiveTreeItemId,
           setActiveTreeItemIndex,
           setKeyboardOpenId

@@ -145,12 +145,14 @@ export default class TreeViewPresenterObject extends Component {
     delete payload.dataObject;
     delete payload.getActiveTreeItemId;
     delete payload.getActiveTreeItemIndex;
+    delete payload.getKeyboardOpenId;
     delete payload.setTreeItemArray;
     delete payload.treeViewRef;
     delete payload.treeNode;
     delete payload.getTreeItemArray;
     delete payload.setActiveTreeItemId;
     delete payload.setActiveTreeItemIndex;
+    delete payload.setKeyboardOpenId;
 
     return (
       <ThemeContext.Consumer>
