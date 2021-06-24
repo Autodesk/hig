@@ -1,6 +1,4 @@
-import {
-  COLOR
-} from "../../consts/types";
+import { COLOR } from "../../consts/types";
 
 export default {
   "illustration.colors.100": {
