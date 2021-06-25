@@ -26,7 +26,7 @@ export default {
     }
   },
   "table.borderRightColor": {
-    type: LENGTH,
+    type: COLOR,
     value: {
       ref: "colorScheme.divider.lightweight"
     }
@@ -38,7 +38,7 @@ export default {
     }
   },
   "table.focus.haloWidth": {
-    type: COLOR,
+    type: LENGTH,
     value: {
       ref: "basics.borderWidths.medium"
     }
