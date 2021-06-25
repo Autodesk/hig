@@ -368,6 +368,7 @@ export const AddFolder24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <AddFolder24SVG {...propsClone} />
       );
@@ -383,6 +384,7 @@ export const AddMember24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <AddMember24SVG {...propsClone} />
       );
@@ -398,6 +400,7 @@ export const AddPage24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <AddPage24SVG {...propsClone} />
       );
@@ -413,6 +416,7 @@ export const Add24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Add24SVG {...propsClone} />
       );
@@ -428,6 +432,7 @@ export const Alert24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Alert24SVG {...propsClone} />
       );
@@ -443,6 +448,7 @@ export const Archive24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Archive24SVG {...propsClone} />
       );
@@ -458,6 +464,7 @@ export const AreaPost24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <AreaPost24SVG {...propsClone} />
       );
@@ -473,6 +480,7 @@ export const Attach24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Attach24SVG {...propsClone} />
       );
@@ -488,6 +496,7 @@ export const Attachment24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Attachment24SVG {...propsClone} />
       );
@@ -503,6 +512,7 @@ export const Back24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Back24SVG {...propsClone} />
       );
@@ -518,6 +528,7 @@ export const BillStack24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <BillStack24SVG {...propsClone} />
       );
@@ -533,6 +544,7 @@ export const Billing24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Billing24SVG {...propsClone} />
       );
@@ -548,6 +560,7 @@ export const Bookmark24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Bookmark24SVG {...propsClone} />
       );
@@ -563,6 +576,7 @@ export const Building24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Building24SVG {...propsClone} />
       );
@@ -578,6 +592,7 @@ export const Calendar24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Calendar24SVG {...propsClone} />
       );
@@ -593,6 +608,7 @@ export const CaretDown24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretDown24SVG {...propsClone} />
       );
@@ -608,6 +624,7 @@ export const CaretLeft24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretLeft24SVG {...propsClone} />
       );
@@ -623,6 +640,7 @@ export const CaretRight24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretRight24SVG {...propsClone} />
       );
@@ -638,6 +656,7 @@ export const CaretUp24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretUp24SVG {...propsClone} />
       );
@@ -653,6 +672,7 @@ export const CartEmpty24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CartEmpty24SVG {...propsClone} />
       );
@@ -668,6 +688,7 @@ export const CartFull24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CartFull24SVG {...propsClone} />
       );
@@ -683,6 +704,7 @@ export const Chat24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Chat24SVG {...propsClone} />
       );
@@ -698,6 +720,7 @@ export const Checklist24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Checklist24SVG {...propsClone} />
       );
@@ -713,6 +736,7 @@ export const Checkmark24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Checkmark24SVG {...propsClone} />
       );
@@ -728,6 +752,7 @@ export const Clock24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Clock24SVG {...propsClone} />
       );
@@ -743,6 +768,7 @@ export const ClosedCaptioning24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ClosedCaptioning24SVG {...propsClone} />
       );
@@ -758,6 +784,7 @@ export const Cloud24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Cloud24SVG {...propsClone} />
       );
@@ -773,6 +800,7 @@ export const Collaboration24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Collaboration24SVG {...propsClone} />
       );
@@ -788,6 +816,7 @@ export const CollapsePanel24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CollapsePanel24SVG {...propsClone} />
       );
@@ -803,6 +832,7 @@ export const Comment24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Comment24SVG {...propsClone} />
       );
@@ -818,6 +848,7 @@ export const Compare24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Compare24SVG {...propsClone} />
       );
@@ -833,6 +864,7 @@ export const Complete24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Complete24SVG {...propsClone} />
       );
@@ -848,6 +880,7 @@ export const Copy24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Copy24SVG {...propsClone} />
       );
@@ -863,6 +896,7 @@ export const CtaArrowRight24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CtaArrowRight24SVG {...propsClone} />
       );
@@ -878,6 +912,7 @@ export const Dashboard24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Dashboard24SVG {...propsClone} />
       );
@@ -893,6 +928,7 @@ export const DeviceDesktop24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <DeviceDesktop24SVG {...propsClone} />
       );
@@ -908,6 +944,7 @@ export const DeviceMobile24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <DeviceMobile24SVG {...propsClone} />
       );
@@ -923,6 +960,7 @@ export const DeviceTablet24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <DeviceTablet24SVG {...propsClone} />
       );
@@ -938,6 +976,7 @@ export const Devices24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Devices24SVG {...propsClone} />
       );
@@ -953,6 +992,7 @@ export const DocumentManagement24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <DocumentManagement24SVG {...propsClone} />
       );
@@ -968,6 +1008,7 @@ export const Down24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Down24SVG {...propsClone} />
       );
@@ -983,6 +1024,7 @@ export const Download24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Download24SVG {...propsClone} />
       );
@@ -998,6 +1040,7 @@ export const EditProfile24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <EditProfile24SVG {...propsClone} />
       );
@@ -1013,6 +1056,7 @@ export const Edit24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Edit24SVG {...propsClone} />
       );
@@ -1028,6 +1072,7 @@ export const Education24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Education24SVG {...propsClone} />
       );
@@ -1043,6 +1088,7 @@ export const Error24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Error24SVG {...propsClone} />
       );
@@ -1058,6 +1104,7 @@ export const ExpandPanel24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ExpandPanel24SVG {...propsClone} />
       );
@@ -1073,6 +1120,7 @@ export const ExportMove24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ExportMove24SVG {...propsClone} />
       );
@@ -1088,6 +1136,7 @@ export const ExternalLink24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ExternalLink24SVG {...propsClone} />
       );
@@ -1103,6 +1152,7 @@ export const External24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <External24SVG {...propsClone} />
       );
@@ -1118,6 +1168,7 @@ export const Favorite24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Favorite24SVG {...propsClone} />
       );
@@ -1133,6 +1184,7 @@ export const Featured24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Featured24SVG {...propsClone} />
       );
@@ -1148,6 +1200,7 @@ export const Feedback24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Feedback24SVG {...propsClone} />
       );
@@ -1163,6 +1216,7 @@ export const Field24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Field24SVG {...propsClone} />
       );
@@ -1178,6 +1232,7 @@ export const FileAssembly24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileAssembly24SVG {...propsClone} />
       );
@@ -1193,6 +1248,7 @@ export const FileAudio24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileAudio24SVG {...propsClone} />
       );
@@ -1208,6 +1264,7 @@ export const FileDocument24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileDocument24SVG {...propsClone} />
       );
@@ -1223,6 +1280,7 @@ export const FileGeneric24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileGeneric24SVG {...propsClone} />
       );
@@ -1238,6 +1296,7 @@ export const FileImage24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileImage24SVG {...propsClone} />
       );
@@ -1253,6 +1312,7 @@ export const FilePart24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FilePart24SVG {...propsClone} />
       );
@@ -1268,6 +1328,7 @@ export const FilePdf24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FilePdf24SVG {...propsClone} />
       );
@@ -1283,6 +1344,7 @@ export const FilePresentation24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FilePresentation24SVG {...propsClone} />
       );
@@ -1298,6 +1360,7 @@ export const FileSpreadsheet24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileSpreadsheet24SVG {...propsClone} />
       );
@@ -1313,6 +1376,7 @@ export const FileVideo24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileVideo24SVG {...propsClone} />
       );
@@ -1328,6 +1392,7 @@ export const FileZip24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileZip24SVG {...propsClone} />
       );
@@ -1343,6 +1408,7 @@ export const FilterTokens24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FilterTokens24SVG {...propsClone} />
       );
@@ -1358,6 +1424,7 @@ export const Filter24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Filter24SVG {...propsClone} />
       );
@@ -1373,6 +1440,7 @@ export const Flag24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Flag24SVG {...propsClone} />
       );
@@ -1388,6 +1456,7 @@ export const FolderOpen24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FolderOpen24SVG {...propsClone} />
       );
@@ -1403,6 +1472,7 @@ export const Folder24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Folder24SVG {...propsClone} />
       );
@@ -1418,6 +1488,7 @@ export const Forums24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Forums24SVG {...propsClone} />
       );
@@ -1433,6 +1504,7 @@ export const Forward24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Forward24SVG {...propsClone} />
       );
@@ -1448,6 +1520,7 @@ export const Globe24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Globe24SVG {...propsClone} />
       );
@@ -1463,6 +1536,7 @@ export const Graph24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Graph24SVG {...propsClone} />
       );
@@ -1478,6 +1552,7 @@ export const Grid24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Grid24SVG {...propsClone} />
       );
@@ -1493,6 +1568,7 @@ export const Help24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Help24SVG {...propsClone} />
       );
@@ -1508,6 +1584,7 @@ export const Hidden24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Hidden24SVG {...propsClone} />
       );
@@ -1523,6 +1600,7 @@ export const Hierarchy24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Hierarchy24SVG {...propsClone} />
       );
@@ -1538,6 +1616,7 @@ export const Home24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Home24SVG {...propsClone} />
       );
@@ -1553,6 +1632,7 @@ export const Import24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Import24SVG {...propsClone} />
       );
@@ -1568,6 +1648,7 @@ export const Inbox24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Inbox24SVG {...propsClone} />
       );
@@ -1583,6 +1664,7 @@ export const Info24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Info24SVG {...propsClone} />
       );
@@ -1598,6 +1680,7 @@ export const Item24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Item24SVG {...propsClone} />
       );
@@ -1613,6 +1696,7 @@ export const Link24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Link24SVG {...propsClone} />
       );
@@ -1628,6 +1712,7 @@ export const List24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <List24SVG {...propsClone} />
       );
@@ -1643,6 +1728,7 @@ export const Location24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Location24SVG {...propsClone} />
       );
@@ -1658,6 +1744,7 @@ export const Lock24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Lock24SVG {...propsClone} />
       );
@@ -1673,6 +1760,7 @@ export const Mail24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Mail24SVG {...propsClone} />
       );
@@ -1688,6 +1776,7 @@ export const ManageAccess24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ManageAccess24SVG {...propsClone} />
       );
@@ -1703,6 +1792,7 @@ export const Maximize24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Maximize24SVG {...propsClone} />
       );
@@ -1718,6 +1808,7 @@ export const Minimize24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Minimize24SVG {...propsClone} />
       );
@@ -1733,6 +1824,7 @@ export const MoreVertical24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <MoreVertical24SVG {...propsClone} />
       );
@@ -1748,6 +1840,7 @@ export const More24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <More24SVG {...propsClone} />
       );
@@ -1763,6 +1856,7 @@ export const Mute24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Mute24SVG {...propsClone} />
       );
@@ -1778,6 +1872,7 @@ export const NotEditable24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <NotEditable24SVG {...propsClone} />
       );
@@ -1793,6 +1888,7 @@ export const NotificationOff24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <NotificationOff24SVG {...propsClone} />
       );
@@ -1808,6 +1904,7 @@ export const Notification24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Notification24SVG {...propsClone} />
       );
@@ -1823,6 +1920,7 @@ export const OnlineViewers24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <OnlineViewers24SVG {...propsClone} />
       );
@@ -1838,6 +1936,7 @@ export const Paste24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Paste24SVG {...propsClone} />
       );
@@ -1853,6 +1952,7 @@ export const PermissionGroup24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PermissionGroup24SVG {...propsClone} />
       );
@@ -1868,6 +1968,7 @@ export const PermissionIndividual24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PermissionIndividual24SVG {...propsClone} />
       );
@@ -1883,6 +1984,7 @@ export const Photos24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Photos24SVG {...propsClone} />
       );
@@ -1898,6 +2000,7 @@ export const Pin24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Pin24SVG {...propsClone} />
       );
@@ -1913,6 +2016,7 @@ export const Placeholder24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Placeholder24SVG {...propsClone} />
       );
@@ -1928,6 +2032,7 @@ export const PlaybackFastForward24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackFastForward24SVG {...propsClone} />
       );
@@ -1943,6 +2048,7 @@ export const PlaybackGoToEnd24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackGoToEnd24SVG {...propsClone} />
       );
@@ -1958,6 +2064,7 @@ export const PlaybackGoToStart24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackGoToStart24SVG {...propsClone} />
       );
@@ -1973,6 +2080,7 @@ export const PlaybackLoop24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackLoop24SVG {...propsClone} />
       );
@@ -1988,6 +2096,7 @@ export const PlaybackNext24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackNext24SVG {...propsClone} />
       );
@@ -2003,6 +2112,7 @@ export const PlaybackPause24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackPause24SVG {...propsClone} />
       );
@@ -2018,6 +2128,7 @@ export const PlaybackPlay24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackPlay24SVG {...propsClone} />
       );
@@ -2033,6 +2144,7 @@ export const PlaybackPrevious24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackPrevious24SVG {...propsClone} />
       );
@@ -2048,6 +2160,7 @@ export const PlaybackRecord24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackRecord24SVG {...propsClone} />
       );
@@ -2063,6 +2176,7 @@ export const PlaybackRewind24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackRewind24SVG {...propsClone} />
       );
@@ -2078,6 +2192,7 @@ export const PlaybackShuffle24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackShuffle24SVG {...propsClone} />
       );
@@ -2093,6 +2208,7 @@ export const PlaybackStop24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackStop24SVG {...propsClone} />
       );
@@ -2108,6 +2224,7 @@ export const Print24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Print24SVG {...propsClone} />
       );
@@ -2123,6 +2240,7 @@ export const ProductsAndServices24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ProductsAndServices24SVG {...propsClone} />
       );
@@ -2138,6 +2256,7 @@ export const Profile24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Profile24SVG {...propsClone} />
       );
@@ -2153,6 +2272,7 @@ export const ProjectManagement24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ProjectManagement24SVG {...propsClone} />
       );
@@ -2168,6 +2288,7 @@ export const Properties24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Properties24SVG {...propsClone} />
       );
@@ -2183,6 +2304,7 @@ export const Publish24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Publish24SVG {...propsClone} />
       );
@@ -2198,6 +2320,7 @@ export const Quantities24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Quantities24SVG {...propsClone} />
       );
@@ -2213,6 +2336,7 @@ export const Recommend24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Recommend24SVG {...propsClone} />
       );
@@ -2228,6 +2352,7 @@ export const Redo24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Redo24SVG {...propsClone} />
       );
@@ -2243,6 +2368,7 @@ export const Report24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Report24SVG {...propsClone} />
       );
@@ -2258,6 +2384,7 @@ export const SaveAs24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SaveAs24SVG {...propsClone} />
       );
@@ -2273,6 +2400,7 @@ export const Save24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Save24SVG {...propsClone} />
       );
@@ -2288,6 +2416,7 @@ export const Search24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Search24SVG {...propsClone} />
       );
@@ -2303,6 +2432,7 @@ export const Security24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Security24SVG {...propsClone} />
       );
@@ -2318,6 +2448,7 @@ export const SelectAll24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SelectAll24SVG {...propsClone} />
       );
@@ -2333,6 +2464,7 @@ export const SelectNone24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SelectNone24SVG {...propsClone} />
       );
@@ -2348,6 +2480,7 @@ export const Service24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Service24SVG {...propsClone} />
       );
@@ -2363,6 +2496,7 @@ export const Settings24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Settings24SVG {...propsClone} />
       );
@@ -2378,6 +2512,7 @@ export const Share24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Share24SVG {...propsClone} />
       );
@@ -2393,6 +2528,7 @@ export const SocialBlog24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SocialBlog24SVG {...propsClone} />
       );
@@ -2408,6 +2544,7 @@ export const SocialFacebook24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SocialFacebook24SVG {...propsClone} />
       );
@@ -2423,6 +2560,7 @@ export const SocialInstagram24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SocialInstagram24SVG {...propsClone} />
       );
@@ -2438,6 +2576,7 @@ export const SocialLinkedin24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SocialLinkedin24SVG {...propsClone} />
       );
@@ -2453,6 +2592,7 @@ export const SocialTwitter24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SocialTwitter24SVG {...propsClone} />
       );
@@ -2468,6 +2608,7 @@ export const SocialYoutube24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SocialYoutube24SVG {...propsClone} />
       );
@@ -2483,6 +2624,7 @@ export const Sort24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Sort24SVG {...propsClone} />
       );
@@ -2498,6 +2640,7 @@ export const Subscription24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Subscription24SVG {...propsClone} />
       );
@@ -2513,6 +2656,7 @@ export const Support24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Support24SVG {...propsClone} />
       );
@@ -2528,6 +2672,7 @@ export const SurveyEquipment24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SurveyEquipment24SVG {...propsClone} />
       );
@@ -2543,6 +2688,7 @@ export const Sync24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Sync24SVG {...propsClone} />
       );
@@ -2558,6 +2704,7 @@ export const Tag24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Tag24SVG {...propsClone} />
       );
@@ -2573,6 +2720,7 @@ export const Trash24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Trash24SVG {...propsClone} />
       );
@@ -2603,6 +2751,7 @@ export const Unavailable24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Unavailable24SVG {...propsClone} />
       );
@@ -2618,6 +2767,7 @@ export const Undo24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Undo24SVG {...propsClone} />
       );
@@ -2633,6 +2783,7 @@ export const Unlink24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Unlink24SVG {...propsClone} />
       );
@@ -2648,6 +2799,7 @@ export const Unlock24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Unlock24SVG {...propsClone} />
       );
@@ -2663,6 +2815,7 @@ export const Unpin24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Unpin24SVG {...propsClone} />
       );
@@ -2678,6 +2831,7 @@ export const Up24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Up24SVG {...propsClone} />
       );
@@ -2693,6 +2847,7 @@ export const Upload24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Upload24SVG {...propsClone} />
       );
@@ -2708,6 +2863,7 @@ export const UserInactive24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <UserInactive24SVG {...propsClone} />
       );
@@ -2723,6 +2879,7 @@ export const Visible24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Visible24SVG {...propsClone} />
       );
@@ -2738,6 +2895,7 @@ export const Volume24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Volume24SVG {...propsClone} />
       );
@@ -2753,6 +2911,7 @@ export const ZoomIn24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ZoomIn24SVG {...propsClone} />
       );
@@ -2768,6 +2927,7 @@ export const ZoomOut24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ZoomOut24SVG {...propsClone} />
       );
@@ -2783,6 +2943,7 @@ export const AddFolder16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <AddFolder16SVG {...propsClone} />
       );
@@ -2798,6 +2959,7 @@ export const AddMember16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <AddMember16SVG {...propsClone} />
       );
@@ -2813,6 +2975,7 @@ export const AddPage16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <AddPage16SVG {...propsClone} />
       );
@@ -2828,6 +2991,7 @@ export const Add16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Add16SVG {...propsClone} />
       );
@@ -2843,6 +3007,7 @@ export const Alert16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Alert16SVG {...propsClone} />
       );
@@ -2858,6 +3023,7 @@ export const Archive16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Archive16SVG {...propsClone} />
       );
@@ -2873,6 +3039,7 @@ export const AreaPost16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <AreaPost16SVG {...propsClone} />
       );
@@ -2888,6 +3055,7 @@ export const Attach16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Attach16SVG {...propsClone} />
       );
@@ -2903,6 +3071,7 @@ export const Attachment16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Attachment16SVG {...propsClone} />
       );
@@ -2933,6 +3102,7 @@ export const Back16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Back16SVG {...propsClone} />
       );
@@ -2948,6 +3118,7 @@ export const BillStack16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <BillStack16SVG {...propsClone} />
       );
@@ -2963,6 +3134,7 @@ export const Billing16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Billing16SVG {...propsClone} />
       );
@@ -2978,6 +3150,7 @@ export const Bookmark16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Bookmark16SVG {...propsClone} />
       );
@@ -2993,6 +3166,7 @@ export const Building16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Building16SVG {...propsClone} />
       );
@@ -3008,6 +3182,7 @@ export const Calendar16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Calendar16SVG {...propsClone} />
       );
@@ -3023,6 +3198,7 @@ export const CaretDown16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretDown16SVG {...propsClone} />
       );
@@ -3038,6 +3214,7 @@ export const CaretLeft16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretLeft16SVG {...propsClone} />
       );
@@ -3053,6 +3230,7 @@ export const CaretRight16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretRight16SVG {...propsClone} />
       );
@@ -3068,6 +3246,7 @@ export const CaretUp16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretUp16SVG {...propsClone} />
       );
@@ -3083,6 +3262,7 @@ export const CartEmpty16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CartEmpty16SVG {...propsClone} />
       );
@@ -3098,6 +3278,7 @@ export const CartFull16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CartFull16SVG {...propsClone} />
       );
@@ -3113,6 +3294,7 @@ export const Chat16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Chat16SVG {...propsClone} />
       );
@@ -3128,6 +3310,7 @@ export const Checklist16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Checklist16SVG {...propsClone} />
       );
@@ -3143,6 +3326,7 @@ export const Checkmark16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Checkmark16SVG {...propsClone} />
       );
@@ -3158,6 +3342,7 @@ export const Clock16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Clock16SVG {...propsClone} />
       );
@@ -3173,6 +3358,7 @@ export const ClosedCaptioning16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ClosedCaptioning16SVG {...propsClone} />
       );
@@ -3188,6 +3374,7 @@ export const Cloud16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Cloud16SVG {...propsClone} />
       );
@@ -3203,6 +3390,7 @@ export const Collaboration16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Collaboration16SVG {...propsClone} />
       );
@@ -3218,6 +3406,7 @@ export const CollapsePanel16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CollapsePanel16SVG {...propsClone} />
       );
@@ -3233,6 +3422,7 @@ export const Comment16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Comment16SVG {...propsClone} />
       );
@@ -3248,6 +3438,7 @@ export const Compare16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Compare16SVG {...propsClone} />
       );
@@ -3263,6 +3454,7 @@ export const Complete16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Complete16SVG {...propsClone} />
       );
@@ -3278,6 +3470,7 @@ export const Copy16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Copy16SVG {...propsClone} />
       );
@@ -3293,6 +3486,7 @@ export const CtaArrowRight16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CtaArrowRight16SVG {...propsClone} />
       );
@@ -3308,6 +3502,7 @@ export const Dashboard16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Dashboard16SVG {...propsClone} />
       );
@@ -3323,6 +3518,7 @@ export const DeviceDesktop16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <DeviceDesktop16SVG {...propsClone} />
       );
@@ -3338,6 +3534,7 @@ export const DeviceMobile16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <DeviceMobile16SVG {...propsClone} />
       );
@@ -3353,6 +3550,7 @@ export const DeviceTablet16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <DeviceTablet16SVG {...propsClone} />
       );
@@ -3368,6 +3566,7 @@ export const Devices16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Devices16SVG {...propsClone} />
       );
@@ -3383,6 +3582,7 @@ export const DocumentManagement16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <DocumentManagement16SVG {...propsClone} />
       );
@@ -3398,6 +3598,7 @@ export const Down16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Down16SVG {...propsClone} />
       );
@@ -3413,6 +3614,7 @@ export const Download16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Download16SVG {...propsClone} />
       );
@@ -3428,6 +3630,7 @@ export const EditProfile16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <EditProfile16SVG {...propsClone} />
       );
@@ -3443,6 +3646,7 @@ export const Edit16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Edit16SVG {...propsClone} />
       );
@@ -3458,6 +3662,7 @@ export const Education16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Education16SVG {...propsClone} />
       );
@@ -3473,6 +3678,7 @@ export const Error16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Error16SVG {...propsClone} />
       );
@@ -3488,6 +3694,7 @@ export const ExpandPanel16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ExpandPanel16SVG {...propsClone} />
       );
@@ -3503,6 +3710,7 @@ export const ExportMove16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ExportMove16SVG {...propsClone} />
       );
@@ -3518,6 +3726,7 @@ export const ExternalLink16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ExternalLink16SVG {...propsClone} />
       );
@@ -3533,6 +3742,7 @@ export const External16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <External16SVG {...propsClone} />
       );
@@ -3548,6 +3758,7 @@ export const Favorite16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Favorite16SVG {...propsClone} />
       );
@@ -3563,6 +3774,7 @@ export const Featured16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Featured16SVG {...propsClone} />
       );
@@ -3578,6 +3790,7 @@ export const Feedback16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Feedback16SVG {...propsClone} />
       );
@@ -3593,6 +3806,7 @@ export const Field16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Field16SVG {...propsClone} />
       );
@@ -3608,6 +3822,7 @@ export const FileAssembly16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileAssembly16SVG {...propsClone} />
       );
@@ -3623,6 +3838,7 @@ export const FileAudio16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileAudio16SVG {...propsClone} />
       );
@@ -3638,6 +3854,7 @@ export const FileDocument16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileDocument16SVG {...propsClone} />
       );
@@ -3653,6 +3870,7 @@ export const FileGeneric16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileGeneric16SVG {...propsClone} />
       );
@@ -3668,6 +3886,7 @@ export const FileImage16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileImage16SVG {...propsClone} />
       );
@@ -3683,6 +3902,7 @@ export const FilePart16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FilePart16SVG {...propsClone} />
       );
@@ -3698,6 +3918,7 @@ export const FilePdf16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FilePdf16SVG {...propsClone} />
       );
@@ -3713,6 +3934,7 @@ export const FilePresentation16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FilePresentation16SVG {...propsClone} />
       );
@@ -3728,6 +3950,7 @@ export const FileSpreadsheet16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileSpreadsheet16SVG {...propsClone} />
       );
@@ -3743,6 +3966,7 @@ export const FileVideo16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileVideo16SVG {...propsClone} />
       );
@@ -3758,6 +3982,7 @@ export const FileZip16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FileZip16SVG {...propsClone} />
       );
@@ -3773,6 +3998,7 @@ export const FilterTokens16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FilterTokens16SVG {...propsClone} />
       );
@@ -3788,6 +4014,7 @@ export const Filter16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Filter16SVG {...propsClone} />
       );
@@ -3803,6 +4030,7 @@ export const Flag16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Flag16SVG {...propsClone} />
       );
@@ -3818,6 +4046,7 @@ export const FolderOpen16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <FolderOpen16SVG {...propsClone} />
       );
@@ -3833,6 +4062,7 @@ export const Folder16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Folder16SVG {...propsClone} />
       );
@@ -3848,6 +4078,7 @@ export const Forums16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Forums16SVG {...propsClone} />
       );
@@ -3863,6 +4094,7 @@ export const Forward16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Forward16SVG {...propsClone} />
       );
@@ -3878,6 +4110,7 @@ export const Globe16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Globe16SVG {...propsClone} />
       );
@@ -3893,6 +4126,7 @@ export const Graph16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Graph16SVG {...propsClone} />
       );
@@ -3908,6 +4142,7 @@ export const Grid16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Grid16SVG {...propsClone} />
       );
@@ -3923,6 +4158,7 @@ export const Help16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Help16SVG {...propsClone} />
       );
@@ -3938,6 +4174,7 @@ export const Hidden16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Hidden16SVG {...propsClone} />
       );
@@ -3953,6 +4190,7 @@ export const Hierarchy16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Hierarchy16SVG {...propsClone} />
       );
@@ -3968,6 +4206,7 @@ export const Home16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Home16SVG {...propsClone} />
       );
@@ -3983,6 +4222,7 @@ export const Import16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Import16SVG {...propsClone} />
       );
@@ -3998,6 +4238,7 @@ export const Inbox16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Inbox16SVG {...propsClone} />
       );
@@ -4013,6 +4254,7 @@ export const Info16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Info16SVG {...propsClone} />
       );
@@ -4028,6 +4270,7 @@ export const Item16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Item16SVG {...propsClone} />
       );
@@ -4043,6 +4286,7 @@ export const Link16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Link16SVG {...propsClone} />
       );
@@ -4058,6 +4302,7 @@ export const List16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <List16SVG {...propsClone} />
       );
@@ -4073,6 +4318,7 @@ export const Location16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Location16SVG {...propsClone} />
       );
@@ -4088,6 +4334,7 @@ export const Lock16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Lock16SVG {...propsClone} />
       );
@@ -4103,6 +4350,7 @@ export const Mail16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Mail16SVG {...propsClone} />
       );
@@ -4118,6 +4366,7 @@ export const ManageAccess16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ManageAccess16SVG {...propsClone} />
       );
@@ -4133,6 +4382,7 @@ export const Maximize16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Maximize16SVG {...propsClone} />
       );
@@ -4148,6 +4398,7 @@ export const Minimize16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Minimize16SVG {...propsClone} />
       );
@@ -4163,6 +4414,7 @@ export const MoreVertical16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <MoreVertical16SVG {...propsClone} />
       );
@@ -4178,6 +4430,7 @@ export const More16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <More16SVG {...propsClone} />
       );
@@ -4193,6 +4446,7 @@ export const Mute16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Mute16SVG {...propsClone} />
       );
@@ -4208,6 +4462,7 @@ export const NotEditable16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <NotEditable16SVG {...propsClone} />
       );
@@ -4223,6 +4478,7 @@ export const NotificationOff16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <NotificationOff16SVG {...propsClone} />
       );
@@ -4238,6 +4494,7 @@ export const Notification16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Notification16SVG {...propsClone} />
       );
@@ -4253,6 +4510,7 @@ export const OnlineViewers16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <OnlineViewers16SVG {...propsClone} />
       );
@@ -4268,6 +4526,7 @@ export const Paste16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Paste16SVG {...propsClone} />
       );
@@ -4283,6 +4542,7 @@ export const PermissionGroup16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PermissionGroup16SVG {...propsClone} />
       );
@@ -4298,6 +4558,7 @@ export const PermissionIndividual16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PermissionIndividual16SVG {...propsClone} />
       );
@@ -4313,6 +4574,7 @@ export const Photos16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Photos16SVG {...propsClone} />
       );
@@ -4328,6 +4590,7 @@ export const Pin16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Pin16SVG {...propsClone} />
       );
@@ -4343,6 +4606,7 @@ export const Placeholder16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Placeholder16SVG {...propsClone} />
       );
@@ -4358,6 +4622,7 @@ export const PlaybackFastForward16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackFastForward16SVG {...propsClone} />
       );
@@ -4373,6 +4638,7 @@ export const PlaybackGoToEnd16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackGoToEnd16SVG {...propsClone} />
       );
@@ -4388,6 +4654,7 @@ export const PlaybackGoToStart16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackGoToStart16SVG {...propsClone} />
       );
@@ -4403,6 +4670,7 @@ export const PlaybackLoop16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackLoop16SVG {...propsClone} />
       );
@@ -4418,6 +4686,7 @@ export const PlaybackNext16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackNext16SVG {...propsClone} />
       );
@@ -4433,6 +4702,7 @@ export const PlaybackPause16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackPause16SVG {...propsClone} />
       );
@@ -4448,6 +4718,7 @@ export const PlaybackPlay16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackPlay16SVG {...propsClone} />
       );
@@ -4463,6 +4734,7 @@ export const PlaybackPrevious16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackPrevious16SVG {...propsClone} />
       );
@@ -4478,6 +4750,7 @@ export const PlaybackRecord16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackRecord16SVG {...propsClone} />
       );
@@ -4493,6 +4766,7 @@ export const PlaybackRewind16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackRewind16SVG {...propsClone} />
       );
@@ -4508,6 +4782,7 @@ export const PlaybackShuffle16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackShuffle16SVG {...propsClone} />
       );
@@ -4523,6 +4798,7 @@ export const PlaybackStop16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <PlaybackStop16SVG {...propsClone} />
       );
@@ -4538,6 +4814,7 @@ export const Print16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Print16SVG {...propsClone} />
       );
@@ -4553,6 +4830,7 @@ export const ProductsAndServices16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ProductsAndServices16SVG {...propsClone} />
       );
@@ -4568,6 +4846,7 @@ export const Profile16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Profile16SVG {...propsClone} />
       );
@@ -4583,6 +4862,7 @@ export const ProjectManagement16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ProjectManagement16SVG {...propsClone} />
       );
@@ -4598,6 +4878,7 @@ export const Properties16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Properties16SVG {...propsClone} />
       );
@@ -4613,6 +4894,7 @@ export const Publish16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Publish16SVG {...propsClone} />
       );
@@ -4628,6 +4910,7 @@ export const Quantities16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Quantities16SVG {...propsClone} />
       );
@@ -4643,6 +4926,7 @@ export const Recommend16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Recommend16SVG {...propsClone} />
       );
@@ -4658,6 +4942,7 @@ export const Redo16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Redo16SVG {...propsClone} />
       );
@@ -4673,6 +4958,7 @@ export const Report16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Report16SVG {...propsClone} />
       );
@@ -4688,6 +4974,7 @@ export const SaveAs16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SaveAs16SVG {...propsClone} />
       );
@@ -4703,6 +4990,7 @@ export const Save16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Save16SVG {...propsClone} />
       );
@@ -4718,6 +5006,7 @@ export const Search16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Search16SVG {...propsClone} />
       );
@@ -4733,6 +5022,7 @@ export const Security16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Security16SVG {...propsClone} />
       );
@@ -4748,6 +5038,7 @@ export const SelectAll16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SelectAll16SVG {...propsClone} />
       );
@@ -4763,6 +5054,7 @@ export const SelectNone16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SelectNone16SVG {...propsClone} />
       );
@@ -4778,6 +5070,7 @@ export const Service16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Service16SVG {...propsClone} />
       );
@@ -4793,6 +5086,7 @@ export const Settings16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Settings16SVG {...propsClone} />
       );
@@ -4808,6 +5102,7 @@ export const Share16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Share16SVG {...propsClone} />
       );
@@ -4823,6 +5118,7 @@ export const SocialBlog16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SocialBlog16SVG {...propsClone} />
       );
@@ -4838,6 +5134,7 @@ export const SocialFacebook16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SocialFacebook16SVG {...propsClone} />
       );
@@ -4853,6 +5150,7 @@ export const SocialInstagram16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SocialInstagram16SVG {...propsClone} />
       );
@@ -4868,6 +5166,7 @@ export const SocialLinkedin16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SocialLinkedin16SVG {...propsClone} />
       );
@@ -4883,6 +5182,7 @@ export const SocialTwitter16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SocialTwitter16SVG {...propsClone} />
       );
@@ -4898,6 +5198,7 @@ export const SocialYoutube16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SocialYoutube16SVG {...propsClone} />
       );
@@ -4913,6 +5214,7 @@ export const Sort16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Sort16SVG {...propsClone} />
       );
@@ -4928,6 +5230,7 @@ export const Subscription16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Subscription16SVG {...propsClone} />
       );
@@ -4943,6 +5246,7 @@ export const Support16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Support16SVG {...propsClone} />
       );
@@ -4958,6 +5262,7 @@ export const SurveyEquipment16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <SurveyEquipment16SVG {...propsClone} />
       );
@@ -4973,6 +5278,7 @@ export const Sync16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Sync16SVG {...propsClone} />
       );
@@ -4988,6 +5294,7 @@ export const Tag16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Tag16SVG {...propsClone} />
       );
@@ -5003,6 +5310,7 @@ export const Trash16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Trash16SVG {...propsClone} />
       );
@@ -5033,6 +5341,7 @@ export const Unavailable16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Unavailable16SVG {...propsClone} />
       );
@@ -5048,6 +5357,7 @@ export const Undo16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Undo16SVG {...propsClone} />
       );
@@ -5063,6 +5373,7 @@ export const Unlink16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Unlink16SVG {...propsClone} />
       );
@@ -5078,6 +5389,7 @@ export const Unlock16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Unlock16SVG {...propsClone} />
       );
@@ -5093,6 +5405,7 @@ export const Unpin16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Unpin16SVG {...propsClone} />
       );
@@ -5108,6 +5421,7 @@ export const Up16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Up16SVG {...propsClone} />
       );
@@ -5123,6 +5437,7 @@ export const Upload16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Upload16SVG {...propsClone} />
       );
@@ -5138,6 +5453,7 @@ export const UserInactive16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <UserInactive16SVG {...propsClone} />
       );
@@ -5153,6 +5469,7 @@ export const Visible16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Visible16SVG {...propsClone} />
       );
@@ -5168,6 +5485,7 @@ export const Volume16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Volume16SVG {...propsClone} />
       );
@@ -5183,6 +5501,7 @@ export const ZoomIn16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ZoomIn16SVG {...propsClone} />
       );
@@ -5198,6 +5517,7 @@ export const ZoomOut16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <ZoomOut16SVG {...propsClone} />
       );
@@ -5213,6 +5533,7 @@ export const CaretDownMUI = props => (
         height: "10px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretDownMUISVG {...propsClone} />
       );
@@ -5228,6 +5549,7 @@ export const CaretDownSUI = props => (
         height: "4px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretDownSUISVG {...propsClone} />
       );
@@ -5243,6 +5565,7 @@ export const CaretDownXsUI = props => (
         height: "3px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretDownXsUISVG {...propsClone} />
       );
@@ -5258,6 +5581,7 @@ export const CaretLeftMUI = props => (
         height: "10px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretLeftMUISVG {...propsClone} />
       );
@@ -5273,6 +5597,7 @@ export const CaretLeftSUI = props => (
         height: "7px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretLeftSUISVG {...propsClone} />
       );
@@ -5288,6 +5613,7 @@ export const CaretLeftXsUI = props => (
         height: "5px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretLeftXsUISVG {...propsClone} />
       );
@@ -5303,6 +5629,7 @@ export const CaretRightMUI = props => (
         height: "10px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretRightMUISVG {...propsClone} />
       );
@@ -5318,6 +5645,7 @@ export const CaretRightSUI = props => (
         height: "7px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretRightSUISVG {...propsClone} />
       );
@@ -5333,6 +5661,7 @@ export const CaretRightXsUI = props => (
         height: "5px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretRightXsUISVG {...propsClone} />
       );
@@ -5348,6 +5677,7 @@ export const CaretUpMUI = props => (
         height: "10px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretUpMUISVG {...propsClone} />
       );
@@ -5363,6 +5693,7 @@ export const CaretUpSUI = props => (
         height: "4px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretUpSUISVG {...propsClone} />
       );
@@ -5378,6 +5709,7 @@ export const CaretUpXsUI = props => (
         height: "3px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CaretUpXsUISVG {...propsClone} />
       );
@@ -5393,6 +5725,7 @@ export const CheckmarkSUI = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CheckmarkSUISVG {...propsClone} />
       );
@@ -5408,6 +5741,7 @@ export const CheckmarkXsUI = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CheckmarkXsUISVG {...propsClone} />
       );
@@ -5423,6 +5757,7 @@ export const CloseLUI = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CloseLUISVG {...propsClone} />
       );
@@ -5438,6 +5773,7 @@ export const CloseMUI = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CloseMUISVG {...propsClone} />
       );
@@ -5453,6 +5789,7 @@ export const CloseSUI = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CloseSUISVG {...propsClone} />
       );
@@ -5468,6 +5805,7 @@ export const CloseXsUI = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <CloseXsUISVG {...propsClone} />
       );
@@ -5483,6 +5821,7 @@ export const HamburgerCloseUI = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <HamburgerCloseUISVG {...propsClone} />
       );
@@ -5498,6 +5837,7 @@ export const HamburgerDefaultUI = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <HamburgerDefaultUISVG {...propsClone} />
       );
@@ -5513,6 +5853,7 @@ export const OperatorMinusSUI = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <OperatorMinusSUISVG {...propsClone} />
       );
@@ -5528,6 +5869,7 @@ export const OperatorMinusXsUI = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <OperatorMinusXsUISVG {...propsClone} />
       );
@@ -5543,6 +5885,7 @@ export const OperatorPlusSUI = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <OperatorPlusSUISVG {...propsClone} />
       );
@@ -5558,6 +5901,7 @@ export const OperatorPlusXsUI = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <OperatorPlusXsUISVG {...propsClone} />
       );
