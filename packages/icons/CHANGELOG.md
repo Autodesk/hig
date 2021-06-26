@@ -1,3 +1,10 @@
+# [@hig/icons-v3.4.1](https://github.com/Autodesk/hig/compare/@hig/icons@3.4.0...@hig/icons@3.4.1) (2021-06-26)
+
+
+### Bug Fixes
+
+* do not spread unknown props to svg ([ee223d1](https://github.com/Autodesk/hig/commit/ee223d1))
+
 # [@hig/icons-v3.4.0](https://github.com/Autodesk/hig/compare/@hig/icons@3.3.0...@hig/icons@3.4.0) (2021-02-22)
 
 

@@ -31,7 +31,7 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.1",
-    "@hig/theme-data": "^2.20.0",
+    "@hig/theme-data": "^2.21.0",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
