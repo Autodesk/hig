@@ -8,5 +8,8 @@ export default {
     value: {
       ref: "basics.lineHeights.highExtraLarge"
     }
+  },
+  "treeView.row.height": {
+    value: "24px"
   }
 };

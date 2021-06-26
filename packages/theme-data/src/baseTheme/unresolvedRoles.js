@@ -6,6 +6,7 @@ import system from "./system";
 import accordion from "./components/accordion";
 import avatar from "./components/avatar";
 import avatarBundle from "./components/avatarBundle";
+import badge from "./components/badge";
 import banner from "./components/banner";
 import breadcrumb from "./components/breadcrumb";
 import button from "./components/button";
@@ -18,6 +19,7 @@ import divider from "./components/divider";
 import flyout from "./components/flyout";
 import formField from "./components/formField";
 import iconButton from "./components/iconButton";
+import illustration from "./components/illustration";
 import input from "./components/input";
 import label from "./components/label";
 import menu from "./components/menu";
@@ -65,6 +67,7 @@ const baseThemeConfig = extendTheme(
     accordion,
     avatar,
     avatarBundle,
+    badge,
     banner,
     breadcrumb,
     button,
@@ -76,6 +79,7 @@ const baseThemeConfig = extendTheme(
     divider,
     flyout,
     formField,
+    illustration,
     iconButton,
     input,
     label,

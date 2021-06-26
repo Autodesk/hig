@@ -5,10 +5,12 @@ import baseTheme from "../../baseTheme";
 import mediumDensityTheme from "../../densities/mediumDensity";
 import accordion from "./components/accordion";
 import avatarBundle from "./components/avatarBundle";
+import badge from "./components/badge";
 import banner from "./components/banner";
 import button from "./components/button";
 import checkbox from "./components/checkbox";
 import iconButton from "./components/iconButton";
+import illustration from "./components/illustration";
 import input from "./components/input";
 import label from "./components/label";
 import progressBar from "./components/progressBar";
@@ -35,10 +37,12 @@ const darkBlueThemeConfig = extendTheme(
     mapKeys(system.colorScheme, key => `colorScheme.${key}`),
     accordion,
     avatarBundle,
+    badge,
     banner,
     button,
     checkbox,
     iconButton,
+    illustration,
     input,
     label,
     progressBar,
