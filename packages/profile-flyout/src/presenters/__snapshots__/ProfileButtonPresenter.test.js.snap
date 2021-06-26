@@ -28,7 +28,7 @@ exports[`profile-flyout/presenters/ProfileButtonPresenter  1`] = `
 }
 
 .emotion-1 {
-  background-color: #1932af;
+  background-color: #163b84;
   color: #ffffff;
   width: 32px;
   height: 32px;
