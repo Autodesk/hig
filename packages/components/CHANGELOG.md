@@ -1,3 +1,10 @@
+# [@hig/components-v2.6.0](https://github.com/Autodesk/hig/compare/@hig/components@2.5.0...@hig/components@2.6.0) (2021-06-26)
+
+
+### Features
+
+* add avatar-bundle ([2463693](https://github.com/Autodesk/hig/commit/2463693))
+
 # [@hig/components-v2.5.0](https://github.com/Autodesk/hig/compare/@hig/components@2.4.0...@hig/components@2.5.0) (2021-01-15)
 
 
