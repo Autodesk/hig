@@ -1,3 +1,18 @@
+# [@hig/theme-data-v2.21.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.20.0...@hig/theme-data@2.21.0) (2021-06-26)
+
+
+### Bug Fixes
+
+* **avatar:** Correct one Avatar color ([47fcd98](https://github.com/Autodesk/hig/commit/47fcd98))
+
+
+### Features
+
+* add new treeview roles ([7aab2c7](https://github.com/Autodesk/hig/commit/7aab2c7))
+* added badge theme data ([cc0da5b](https://github.com/Autodesk/hig/commit/cc0da5b))
+* added illustration theme data ([a1d3df0](https://github.com/Autodesk/hig/commit/a1d3df0))
+* added new theme data for table ([95400c7](https://github.com/Autodesk/hig/commit/95400c7))
+
 # [@hig/theme-data-v2.20.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.19.3...@hig/theme-data@2.20.0) (2021-05-25)
 
 
