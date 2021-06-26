@@ -3,6 +3,7 @@ import {
   FONT_FAMILY,
   FONT_SIZE,
   FONT_WEIGHT,
+  LENGTH,
   LINE_HEIGHT,
   SPACING
 } from "../../consts/types";
@@ -31,6 +32,10 @@ export default {
     value: {
       ref: "density.spacings.extraSmall"
     }
+  },
+  "treeView.row.height": {
+    type: LENGTH,
+    value: "40px"
   },
   "treeView.row.paddingHorizontal": {
     type: SPACING,

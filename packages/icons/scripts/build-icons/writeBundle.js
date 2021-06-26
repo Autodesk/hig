@@ -10,6 +10,7 @@ function stylize(svgName, width, height) {
     '        height: "' + height + 'px"\n' + 
     '      }\n' +
     '      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });\n' +
+    '      if (props.stylesheet) delete propsClone.stylesheet;\n' +
     '      return (\n' +
     `        <${svgName} {...propsClone} />\n` +
     '      );\n' +

@@ -7,6 +7,7 @@ import menu from "./components/menu";
 import modal from "./components/modal";
 import panel from "./components/panel";
 import slider from "./components/slider";
+import table from "./components/table";
 import tabs from "./components/tabs";
 import toggle from "./components/toggle";
 import treeView from "./components/treeView";
@@ -20,6 +21,7 @@ const highDensityThemeConfig = Object.assign(
   modal,
   panel,
   slider,
+  table,
   tabs,
   toggle,
   treeView,
