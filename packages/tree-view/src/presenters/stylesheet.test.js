@@ -1,5 +1,6 @@
 import stylesheet from "./stylesheet";
 
+/* eslint-disable */
 describe("tree-view/stylesheet", () => {
   const styles = stylesheet({}, {}, {}, {});
 
