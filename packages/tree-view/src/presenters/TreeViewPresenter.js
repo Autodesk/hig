@@ -218,16 +218,18 @@ export default class TreeViewPresenterObject extends Component {
   }
 
   renderFileTree(tree, payload) {
-    const appendPayload = {
-      ...tree,
-      payload
-    };
-    return (
-      <TreeObjectView
-        tree={appendPayload}
-        keyboardOpenId={payload.getKeyboardOpenId()}
-      />
-    );
+    return tree.map(treeNode => {
+      const appendPayload = {
+        ...treeNode,
+        payload
+      };
+      return (
+        <TreeObjectView
+          tree={appendPayload}
+          keyboardOpenId={payload.getKeyboardOpenId()}
+        />
+      );
+    });
   }
 
   renderTreeViewObject = () => {

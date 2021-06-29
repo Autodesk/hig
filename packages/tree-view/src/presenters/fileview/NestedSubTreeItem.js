@@ -10,15 +10,18 @@ import stylesheet from "../stylesheet";
 export class SubTreeItem extends Component {
   static propTypes = {
     treeItem: PropTypes.shape({
-      id: PropTypes.number,
-      meta: PropTypes.shape({
+        id: PropTypes.number,
+        meta: PropTypes.shape({
         label: PropTypes.string,
         collapsed: PropTypes.bool,
         active: PropTypes.bool,
         icon: PropTypes.element
       })
     }),
-    keyboardOpenId: PropTypes.string,
+    keyboardOpenId: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.number
+    ]),
     themeData: PropTypes.shape({
       fontColor: PropTypes.string
     }),

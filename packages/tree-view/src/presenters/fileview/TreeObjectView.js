@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { ThemeContext } from "@hig/theme-context";
 import TreeItemBehavior from "../../behaviors/TreeItemBehavior";
 
-import { NestedSubTreeItem } from "./NestedSubTreeItem";
+import { NestedSubTreeItem, SubTreeItem } from "./NestedSubTreeItem";
 
 class TreeObjectView extends Component {
   render() {
@@ -36,22 +36,42 @@ class TreeObjectView extends Component {
           <ThemeContext.Consumer>
             {({ resolvedRoles, metadata }) => {
               return (
-                <NestedSubTreeItem
-                  density={metadata.densityId}
-                  treeItem={this.props.tree}
-                  themeData={resolvedRoles}
-                  onClick={handleClick}
-                  onFocus={onFocus}
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                  selected={getActiveTreeItemId() === id}
-                  collapsed={getIsCollapsed()}
-                  getIsCollapsed={getIsCollapsed}
-                  getKeyboardOpenId={getKeyboardOpenId}
-                  keyboardOpenId={getKeyboardOpenId()}
-                  setIsCollapsed={setIsCollapsed}
-                  setKeyboardOpenId={setKeyboardOpenId}
-                />
+                this.props.tree.children ? 
+                  (
+                    <NestedSubTreeItem
+                      density={metadata.densityId}
+                      treeItem={this.props.tree}
+                      themeData={resolvedRoles}
+                      onClick={handleClick}
+                      onFocus={onFocus}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                      selected={getActiveTreeItemId() === id}
+                      collapsed={getIsCollapsed()}
+                      getIsCollapsed={getIsCollapsed}
+                      getKeyboardOpenId={getKeyboardOpenId}
+                      keyboardOpenId={getKeyboardOpenId()}
+                      setIsCollapsed={setIsCollapsed}
+                      setKeyboardOpenId={setKeyboardOpenId}
+                    />
+                  ) : (
+                    <SubTreeItem
+                      density={metadata.densityId}
+                      treeItem={{ ...this.props.tree, payload }}
+                      themeData={resolvedRoles}
+                      onClick={handleClick}
+                      onFocus={onFocus}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                      selected={getActiveTreeItemId() === id}
+                      collapsed={getIsCollapsed()}
+                      getIsCollapsed={getIsCollapsed}
+                      getKeyboardOpenId={getKeyboardOpenId}
+                      keyboardOpenId={getKeyboardOpenId()}
+                      setIsCollapsed={setIsCollapsed}
+                      setKeyboardOpenId={setKeyboardOpenId}
+                    />
+                  )
               );
             }}
           </ThemeContext.Consumer>

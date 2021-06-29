@@ -28,16 +28,18 @@ export default class TreeView extends Component {
      * If treeNode prop is used it will render instead
      * of children.
      */
-    treeNode: PropTypes.shape({
-      id: PropTypes.number,
-      parentId: PropTypes.number,
-      meta: PropTypes.shape({
-        label: PropTypes.string,
-        collapsed: PropTypes.bool,
-        active: PropTypes.bool,
-        icon: PropTypes.node
+    treeNode: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number,
+        parentId: PropTypes.number,
+        meta: PropTypes.shape({
+          label: PropTypes.string,
+          collapsed: PropTypes.bool,
+          active: PropTypes.bool,
+          icon: PropTypes.node
+        })
       })
-    })
+    )
   };
 
   static defaultProps = {};
