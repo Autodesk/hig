@@ -1,8 +1,3 @@
-// ADD TO THEME-DATA
-// MEDIUM DENSITY = 40PX TOTAL HEIGHT
-// HIGHT DENSITY = 24PX TOTAL HEIGHT
-// indicator wrapper - 16/12 accordion.header.indicatorSize
-
 export default function stylesheet(props, themeData) {
   const {
     alternateBg,
