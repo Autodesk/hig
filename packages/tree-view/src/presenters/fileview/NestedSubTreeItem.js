@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
+import { HoverBehavior } from "@hig/behaviors";
+import { createButtonEventHandlers } from "@hig/utils";
 
 import SubTreeViewCombined from "../SubTreeViewCombined";
 import IconIndicatorPresenter from "../IconIndicatorPresenter";
@@ -10,18 +12,16 @@ import stylesheet from "../stylesheet";
 export class SubTreeItem extends Component {
   static propTypes = {
     treeItem: PropTypes.shape({
-        id: PropTypes.number,
-        meta: PropTypes.shape({
+      id: PropTypes.number,
+      meta: PropTypes.shape({
         label: PropTypes.string,
         collapsed: PropTypes.bool,
         active: PropTypes.bool,
         icon: PropTypes.element
       })
     }),
-    keyboardOpenId: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
+    keyboardOpenId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    level: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     themeData: PropTypes.shape({
       fontColor: PropTypes.string
     }),
@@ -33,10 +33,15 @@ export class SubTreeItem extends Component {
   componentDidUpdate({ keyboardOpenId: previousKeyboardOpenId }) {
     const {
       treeItem: { id },
-      keyboardOpenId
+      keyboardOpenId,
+      setIsCollapsed
     } = this.props;
 
-    if (keyboardOpenId === id && keyboardOpenId !== previousKeyboardOpenId) {
+    if (
+      keyboardOpenId === id &&
+      keyboardOpenId !== previousKeyboardOpenId &&
+      setIsCollapsed
+    ) {
       this.props.treeItem.meta.collapsed = !this.props.treeItem.meta.collapsed;
       this.props.setIsCollapsed(this.props.treeItem.meta.collapsed);
       this.props.setKeyboardOpenId("");
@@ -53,40 +58,65 @@ export class SubTreeItem extends Component {
           indicator,
           getActiveTreeItemId,
           getActiveTreeItemIndex,
+          getCurrentItemClicked,
           guidelines
         }
       },
       themeData,
-      onClick
+      level,
+      onClick,
+      ...otherProps
     } = this.props;
-
+    const { onMouseEnter, onMouseLeave } = otherProps;
     const styleTreeItem = {
       children,
       id,
       label,
+      level,
+      highlighted: getActiveTreeItemId() === id,
       indicator,
       themeData,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
       guidelines,
-      selected: getActiveTreeItemId() === id
+      selected: getCurrentItemClicked() === id
     };
-    const styles = stylesheet(styleTreeItem, themeData);
+    const { handleClick, handleKeyDown } = createButtonEventHandlers(onClick);
+
     return (
-      <li
-        className={css(styles.higTreeItemSubTreeItem)}
-        id={id}
-        role="treeitem"
-        onClick={event => onClick(event, treeItem)}
-        key={id}
-      >
-        <div className={css(styles.higTreeItemContentWrapper)}>
-          {icon && (
-            <div className={css(styles.higTreeItemIconWrapper)}>{icon}</div>
-          )}
-          <span>{label}</span>
-        </div>
-      </li>
+      <HoverBehavior onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        {({
+          hasHover,
+          onMouseEnter: handleMouseEnter,
+          onMouseLeave: handleMouseLeave
+        }) => {
+          const styleProps = { ...styleTreeItem, hasHover };
+          const styles = stylesheet(styleProps, themeData);
+          return (
+            <li
+              className={css(styles.higTreeItemSubTreeItem)}
+              id={id}
+              role="treeitem"
+              onClick={event => handleClick(event, treeItem)}
+              onKeyDown={handleKeyDown}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              key={id}
+            >
+              <div className={css(styles.higTreeItemContentWrapper)}>
+                {icon && (
+                  <div className={css(styles.higTreeItemIconWrapper)}>
+                    {icon}
+                  </div>
+                )}
+                <span className={css(styles.higTreeItemLabelWrapper)}>
+                  {label}
+                </span>
+              </div>
+            </li>
+          );
+        }}
+      </HoverBehavior>
     );
   }
 }
@@ -110,60 +140,101 @@ export class NestedSubTreeItem extends Component {
       treeItem: {
         children,
         id,
-        meta: { label, icon, collapsed },
+        meta: { label, icon },
         payload: {
           indicator,
           getActiveTreeItemId,
           getActiveTreeItemIndex,
+          getCurrentItemClicked,
           guidelines
         }
       },
+      collapsed,
       density,
       themeData,
-      onClick
+      level,
+      onClick,
+      onOperatorClick,
+      ...otherProps
     } = this.props;
+    const { onMouseEnter, onMouseLeave } = otherProps;
 
     const styleTreeItem = {
       children,
       id,
       label,
+      level,
       indicator,
       themeData,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
       guidelines,
-      selected: getActiveTreeItemId() === id
+      highlighted: getActiveTreeItemId() === id,
+      selected: getCurrentItemClicked() === id
     };
-
-    const styles = stylesheet(styleTreeItem, themeData);
 
     return (
       <li
         aria-expanded={!collapsed}
-        className={css(styles.higTreeItem)}
+        className={css(stylesheet(styleTreeItem, themeData).higTreeItem)}
         id={id}
         role="treeitem"
         key={id}
       >
-        <div className={css(styles.higTreeItemSubTreeViewLabelWrapper)}>
-          <div
-            className={css(styles.higTreeItemSubTreeViewLabelContentWrapper)}
-            onClick={event => onClick(event, treeItem)}
-            role="presentation"
-          >
-            <div className={css(styles.higTreeItemIndicatorWrapper)}>
-              <IconIndicatorPresenter
-                collapsed={collapsed}
-                density={density}
-                indicator={indicator}
-              />
-            </div>
-            {icon && (
-              <div className={css(styles.higTreeItemIconWrapper)}>{icon}</div>
-            )}
-            <span>{label}</span>
-          </div>
-        </div>
+        <HoverBehavior onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+          {({
+            hasHover,
+            onMouseEnter: handleMouseEnter,
+            onMouseLeave: handleMouseLeave
+          }) => {
+            const styleProps = { ...styleTreeItem, hasHover };
+            const styles = stylesheet(styleProps, themeData);
+            const { handleClick, handleKeyDown } = createButtonEventHandlers(
+              onClick
+            );
+            const {
+              handleClick: handleOperatorClick,
+              handleKeyDown: handleOperatorKeyDown
+            } = createButtonEventHandlers(onOperatorClick);
+
+            return (
+              <div className={css(styles.higTreeItemSubTreeViewLabelWrapper)}>
+                <div
+                  className={css(
+                    styles.higTreeItemSubTreeViewLabelContentWrapper
+                  )}
+                  onClick={event => handleClick(event, treeItem)}
+                  onKeyDown={handleKeyDown}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  role="presentation"
+                >
+                  <div
+                    className={css(styles.higTreeItemIndicatorWrapper)}
+                    onClick={event => handleOperatorClick(event, treeItem)}
+                    onKeyDown={handleOperatorKeyDown}
+                    role="button"
+                    tabIndex="-1"
+                  >
+                    <IconIndicatorPresenter
+                      collapsed={collapsed}
+                      density={density}
+                      indicator={indicator}
+                    />
+                  </div>
+                  {icon && (
+                    <div className={css(styles.higTreeItemIconWrapper)}>
+                      {icon}
+                    </div>
+                  )}
+                  <span className={css(styles.higTreeItemLabelWrapper)}>
+                    {label}
+                  </span>
+                </div>
+              </div>
+            );
+          }}
+        </HoverBehavior>
         <SubTreeViewCombined {...this.props} isObject />
       </li>
     );

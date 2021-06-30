@@ -10,7 +10,14 @@ export default class TreeItem extends Component {
      * Accepts other TreeItem components
      */
     children: PropTypes.node,
+    /**
+     * Controlled value, specifies whether the TreeItem is collapsed or not
+     * When provided, it overrides the TreeItem's collapsed state
+     */
     collapsed: PropTypes.bool,
+    /**
+     * Specifies whether the TreeItem is initially collapsed
+     */
     defaultCollapsed: PropTypes.bool,
     /**
      * Presentational icon
@@ -47,7 +54,7 @@ export default class TreeItem extends Component {
       stylesheet,
       ...otherProps
     } = this.props;
-    const { getActiveTreeItemId, onFocus } = otherProps;
+    const { getActiveTreeItemId, getCurrentItemClicked, onFocus } = otherProps;
 
     return (
       <TreeItemBehavior
@@ -56,19 +63,26 @@ export default class TreeItem extends Component {
         defaultCollapsed={defaultCollapsed}
         id={id}
       >
-        {({ getIsCollapsed, handleClick, setIsCollapsed }) => (
+        {({
+          getIsCollapsed,
+          handleClick,
+          handleOperatorClick,
+          setIsCollapsed
+        }) => (
           <TreeItemPresenter
             {...otherProps}
             collapsed={getIsCollapsed()}
             getIsCollapsed={getIsCollapsed}
             getKeyboardOpenId={getKeyboardOpenId}
+            highlighted={getActiveTreeItemId() === id}
             icon={icon}
             id={id}
             keyboardOpenId={getKeyboardOpenId()}
             label={label}
             onClick={handleClick}
             onFocus={onFocus}
-            selected={getActiveTreeItemId() === id}
+            onOperatorClick={handleOperatorClick}
+            selected={getCurrentItemClicked() === id}
             setIsCollapsed={setIsCollapsed}
             setKeyboardOpenId={setKeyboardOpenId}
             stylesheet={stylesheet}

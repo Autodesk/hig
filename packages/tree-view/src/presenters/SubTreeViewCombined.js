@@ -3,6 +3,7 @@ import { css, cx } from "emotion";
 
 import { NestedSubTreeItem, SubTreeItem } from "./fileview/NestedSubTreeItem";
 import TreeItem from "../TreeItem";
+import TreeItemBehavior from "../behaviors/TreeItemBehavior";
 
 import stylesheet from "./stylesheet";
 
@@ -35,7 +36,8 @@ export default class SubTreeViewCombined extends Component {
     }
   }
 
-  componentDidUpdate({ collapsed: previousCollapsed }) {
+  componentDidUpdate(previousProps) {
+    const { collapsed: previousCollapsed } = previousProps;
     const { collapsed: currentCollapsed } = this.props;
 
     if (!this.subTreeWrapper) {
@@ -65,7 +67,7 @@ export default class SubTreeViewCombined extends Component {
   getTransitionStyles = status => {
     const defaultCollapsedStyles = {
       height: "0",
-      overflow: "visible",
+      overflow: "hidden",
       visibility: "hidden"
     };
 
@@ -126,22 +128,15 @@ export default class SubTreeViewCombined extends Component {
 
   renderSubTreeViewObject = () => {
     const {
-      treeItem,
-      treeItem: {
-        children,
-        meta: { collapsed },
-        payload
-      },
+      treeItem: { children, payload },
+      collapsed,
       density,
+      id,
       themeData,
-      onClick,
       onFocus,
-      onMouseEnter,
-      onMouseLeave,
       getKeyboardOpenId,
       setKeyboardOpenId,
-      setIsCollapsed,
-      getIsCollapsed
+      level
     } = this.props;
     const styles = stylesheet(this.props, themeData);
 
@@ -159,42 +154,65 @@ export default class SubTreeViewCombined extends Component {
       >
         {(!collapsed || this.state.mount) && (
           <ul className={css(styles.higTreeItemSubTreeView)} role="group">
-            {children ? 
-              children.map(child => {
-                return child.children ? (
-                  <NestedSubTreeItem
-                    treeItem={{ ...child, payload }}
-                    themeData={themeData}
-                    density={density}
-                    onClick={onClick}
-                    onFocus={onFocus}
-                    onMouseEnter={onMouseEnter}
-                    onMouseLeave={onMouseLeave}
-                    collapsed={getIsCollapsed()}
-                    getIsCollapsed={getIsCollapsed}
-                    getKeyboardOpenId={getKeyboardOpenId}
-                    keyboardOpenId={getKeyboardOpenId()}
-                    setIsCollapsed={setIsCollapsed}
-                    setKeyboardOpenId={setKeyboardOpenId}
-                  />
-                ) : (
-                  <SubTreeItem
-                    treeItem={{ ...child, payload }}
-                    themeData={themeData}
-                    onClick={onClick}
-                    onFocus={onFocus}
-                    onMouseEnter={onMouseEnter}
-                    onMouseLeave={onMouseLeave}
-                    collapsed={getIsCollapsed()}
-                    getIsCollapsed={getIsCollapsed}
-                    getKeyboardOpenId={getKeyboardOpenId}
-                    keyboardOpenId={getKeyboardOpenId()}
-                    setIsCollapsed={setIsCollapsed}
-                    setKeyboardOpenId={setKeyboardOpenId}
-                  />
-                );
-              }) : null
-            }
+            {children
+              ? children.map(
+                  (child, index) =>
+                    child.children ? (
+                      <TreeItemBehavior
+                        key={`${id}-${index}`}
+                        {...child}
+                        {...payload}
+                      >
+                        {({
+                          getIsCollapsed,
+                          handleClick,
+                          handleOperatorClick,
+                          setIsCollapsed
+                        }) => (
+                          <NestedSubTreeItem
+                            treeItem={{ ...child, payload }}
+                            themeData={themeData}
+                            density={density}
+                            onClick={handleClick}
+                            onFocus={onFocus}
+                            onOperatorClick={handleOperatorClick}
+                            collapsed={getIsCollapsed()}
+                            getIsCollapsed={getIsCollapsed}
+                            getKeyboardOpenId={getKeyboardOpenId}
+                            keyboardOpenId={getKeyboardOpenId()}
+                            setIsCollapsed={setIsCollapsed}
+                            setKeyboardOpenId={setKeyboardOpenId}
+                            key={`${id}-${index}`}
+                            level={level + 1}
+                          />
+                        )}
+                      </TreeItemBehavior>
+                    ) : (
+                      <TreeItemBehavior
+                        key={`${id}-${index}`}
+                        {...child}
+                        {...payload}
+                      >
+                        {({ getIsCollapsed, handleClick, setIsCollapsed }) => (
+                          <SubTreeItem
+                            treeItem={{ ...child, payload }}
+                            themeData={themeData}
+                            onClick={handleClick}
+                            onFocus={onFocus}
+                            collapsed={getIsCollapsed()}
+                            getIsCollapsed={getIsCollapsed}
+                            getKeyboardOpenId={getKeyboardOpenId}
+                            keyboardOpenId={getKeyboardOpenId()}
+                            setIsCollapsed={setIsCollapsed}
+                            setKeyboardOpenId={setKeyboardOpenId}
+                            key={`${id}-${index}`}
+                            level={level + 1}
+                          />
+                        )}
+                      </TreeItemBehavior>
+                    )
+                )
+              : null}
           </ul>
         )}
       </div>
@@ -208,10 +226,13 @@ export default class SubTreeViewCombined extends Component {
       density,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getCurrentItemClicked,
       getKeyboardOpenId,
       getTreeItemArray,
       guidelines,
+      id,
       indicator,
+      level,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
       setKeyboardOpenId,
@@ -223,11 +244,13 @@ export default class SubTreeViewCombined extends Component {
           React.cloneElement(child, {
             getActiveTreeItemId,
             getActiveTreeItemIndex,
+            getCurrentItemClicked,
             getKeyboardOpenId,
             getTreeItemArray,
             guidelines,
             indicator,
             keyboardOpenId: getKeyboardOpenId(),
+            level: level + 1,
             setActiveTreeItemId,
             setActiveTreeItemIndex,
             setKeyboardOpenId
@@ -236,11 +259,13 @@ export default class SubTreeViewCombined extends Component {
       : React.cloneElement(children, {
           getActiveTreeItemId,
           getActiveTreeItemIndex,
+          getCurrentItemClicked,
           getKeyboardOpenId,
           getTreeItemArray,
           guidelines,
           indicator,
           keyboardOpenId: getKeyboardOpenId(),
+          level: level + 1,
           setActiveTreeItemId,
           setActiveTreeItemIndex,
           setKeyboardOpenId
@@ -265,7 +290,7 @@ export default class SubTreeViewCombined extends Component {
                   {...child.props}
                   themeData={themeData}
                   density={density}
-                  key={index}
+                  key={`${id}-${index}`}
                 />
               ))}
             </ul>

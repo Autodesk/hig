@@ -50,13 +50,11 @@ export default class TreeItemBehavior extends Component {
         }
       } = this.props;
       // eslint-disable-next-line no-param-reassign
-      treeItem.meta.collapsed = !treeItem.meta.collapsed;
       const treeItemArray = getTreeItemArray();
       const index =
         treeItemArray !== null && treeItemArray.indexOf(treeItem.id);
       setActiveTreeItemId(treeItem.id);
       setActiveTreeItemIndex(index);
-      this.setIsCollapsed(treeItem.meta.collapsed);
     } else {
       const {
         id,
@@ -69,16 +67,29 @@ export default class TreeItemBehavior extends Component {
       const index = treeItemArray !== null && treeItemArray.indexOf(id);
       setActiveTreeItemId(id);
       setActiveTreeItemIndex(index);
+    }
+  };
+
+  handleOperatorClick = () => {
+    if (this.props.payload) {
+      this.setIsCollapsed(!this.getIsCollapsed());
+    } else {
       this.setIsCollapsed(!this.getIsCollapsed());
     }
   };
 
   render() {
-    const { getIsCollapsed, handleClick, setIsCollapsed } = this;
+    const {
+      getIsCollapsed,
+      handleClick,
+      handleOperatorClick,
+      setIsCollapsed
+    } = this;
 
     return this.props.children({
       getIsCollapsed,
       handleClick,
+      handleOperatorClick,
       setIsCollapsed
     });
   }

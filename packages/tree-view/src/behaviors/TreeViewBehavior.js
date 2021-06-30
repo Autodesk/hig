@@ -18,7 +18,7 @@ function scrollInViewport(treeItem) {
       treeItemBounding.bottom >
       (window.innerHeight || document.documentElement.clientHeight)
     ) {
-      treeItem.scrollIntoView(false);
+      treeItem.scrollIntoView(true);
     }
   }
 }
@@ -51,10 +51,22 @@ function buildTreeItemIdArray(list) {
   return list.map(item => item.id);
 }
 
-export default class TreeViewBehaviorRR extends Component {
+export default class TreeViewBehavior extends Component {
   static propTypes = {
     children: PropTypes.func,
     onKeyDown: PropTypes.func,
+    treeNode: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number,
+        parentId: PropTypes.number,
+        meta: PropTypes.shape({
+          label: PropTypes.string,
+          collapsed: PropTypes.bool,
+          active: PropTypes.bool,
+          icon: PropTypes.node
+        })
+      })
+    ),
     treeViewRef: PropTypes.func
   };
 
@@ -65,7 +77,7 @@ export default class TreeViewBehaviorRR extends Component {
 
     this.state = {
       treeItemArray: null,
-      activeTreeItemIndex: 1,
+      activeTreeItemIndex: null,
       currentItemClicked: null,
       keyboardOpenId: ""
     };
@@ -116,7 +128,8 @@ export default class TreeViewBehaviorRR extends Component {
 
     const domNodeList = this.treeViewRef.querySelectorAll("li");
     const treeItemArrayControl =
-      this.getTreeItemArray().length !== domNodeList.length
+      this.getTreeItemArray().length !== domNodeList.length ||
+      this.props.treeNode
         ? buildTreeItemIdArray(Array.prototype.slice.call(domNodeList))
         : this.getTreeItemArray();
 
@@ -161,11 +174,15 @@ export default class TreeViewBehaviorRR extends Component {
       }
 
       // Enter
-      // Space
-      case 13:
-      case 32: {
+      case 13: {
         event.preventDefault();
         this.setKeyboardOpenId(this.getActiveTreeItemId());
+        break;
+      }
+      // Space
+      case 32: {
+        event.preventDefault();
+        this.setActiveTreeItemId(this.getActiveTreeItemId());
         break;
       }
 
@@ -177,6 +194,7 @@ export default class TreeViewBehaviorRR extends Component {
     const {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getCurrentItemClicked,
       getKeyboardOpenId,
       getTreeItemArray,
       handleClick,
@@ -192,6 +210,7 @@ export default class TreeViewBehaviorRR extends Component {
     return this.props.children({
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getCurrentItemClicked,
       getKeyboardOpenId,
       getTreeItemArray,
       handleClick,

@@ -2,13 +2,23 @@ export default function stylesheet(props, themeData) {
   const {
     alternateBg,
     guidelines,
+    hasHover,
+    highlighted,
+    level,
     selected,
     stylesheet: customStylesheet
   } = props;
+  const levelOffset = Number(level) - 1;
   const isMediumDensity = themeData[`treeView.row.paddingVertical`] === `8px`;
-  const itemHeight = isMediumDensity ? `24px` : `16px`;
+  const contentHeight = isMediumDensity ? `24px` : `16px`;
   const bgHeight = isMediumDensity ? `160px` : `96px`;
-  const guideLineVerticalOffsetLeft = isMediumDensity ? `-8px` : `-5px`;
+  const guideLineVerticalOffsetLeft = isMediumDensity
+    ? `calc(24px + ((${contentHeight} + ${
+        themeData["treeView.icon.marginRight"]
+      }) * ${levelOffset}))`
+    : `calc(15px + ((${contentHeight} + ${
+        themeData["treeView.icon.marginRight"]
+      }) * ${levelOffset}))`;
   const guideLineHorizontalOffsetTop = isMediumDensity ? `9px` : `2px`;
   const styles = {
     higTreeViewWrapper: {
@@ -16,14 +26,14 @@ export default function stylesheet(props, themeData) {
         ? {
             backgroundImage: `repeating-linear-gradient(
               0deg,
-              ${themeData["colorScheme.surface.level200"]},
-              ${themeData["colorScheme.surface.level200"]} 25%,
-              ${themeData["colorScheme.surface.level100"]} 25%,
-              ${themeData["colorScheme.surface.level100"]} 50%,
-              ${themeData["colorScheme.surface.level200"]} 50%,
-              ${themeData["colorScheme.surface.level200"]} 75%,
-              ${themeData["colorScheme.surface.level100"]} 75%,
-              ${themeData["colorScheme.surface.level100"]} 100%
+              ${themeData["table.zebraStripe.backgroundColor"]},
+              ${themeData["table.zebraStripe.backgroundColor"]} 25%,
+              ${themeData["table.row.backgroundColor"]} 25%,
+              ${themeData["table.row.backgroundColor"]} 50%,
+              ${themeData["table.zebraStripe.backgroundColor"]} 50%,
+              ${themeData["table.zebraStripe.backgroundColor"]} 75%,
+              ${themeData["table.row.backgroundColor"]} 75%,
+              ${themeData["table.row.backgroundColor"]} 100%
             )`,
             backgroundSize: `${bgHeight} ${bgHeight}`
           }
@@ -41,13 +51,6 @@ export default function stylesheet(props, themeData) {
       padding: 0,
       "& > li": {
         paddingLeft: 0,
-        "& > div": {
-          "&:first-of-type": {
-            "&:last-child": {
-              margin: `0 0 0 ${themeData["treeView.row.paddingHorizontal"]}`
-            }
-          }
-        },
         "&::before": {
           border: `none`
         },
@@ -70,7 +73,9 @@ export default function stylesheet(props, themeData) {
           : {}),
         display: `inline-block`,
         content: `""`,
-        left: isMediumDensity ? `-7px` : `-4px`,
+        left: isMediumDensity
+          ? `calc((24px * ${Number(level)}) + (8px * ${levelOffset}))`
+          : `calc((16px * ${Number(level)}) + (4px * ${levelOffset}))`,
         margin: 0,
         position: `absolute`,
         top: guideLineHorizontalOffsetTop,
@@ -110,13 +115,9 @@ export default function stylesheet(props, themeData) {
     },
     higTreeItemContentWrapper: {
       alignItems: `center`,
-      display: `inline-flex`,
-      ...(selected
-        ? {
-            background: themeData[`colorScheme.background.on.default`],
-            paddingLeft: 0
-          }
-        : {}),
+      display: `flex`,
+      padding: `0 ${themeData["treeView.row.paddingHorizontal"]}`,
+      width: `calc(100% - ${themeData["treeView.row.paddingHorizontal"]})`,
       "& > svg": {
         marginRight: themeData[`treeView.icon.marginRight`]
       }
@@ -129,27 +130,44 @@ export default function stylesheet(props, themeData) {
     higTreeItemSubTreeView: {
       listStyle: `none`,
       margin: 0,
-      paddingLeft: `calc(${itemHeight} + ${
-        themeData["treeView.icon.marginRight"]
-      })`
+      paddingLeft: 0
     },
     higTreeItemSubTreeViewLabelWrapper: {
+      border: `1px solid transparent`,
+      boxSizing: `border-box`,
       display: `flex`,
-      height: itemHeight,
-      lineHeight: itemHeight,
-      maxWidth: `calc(100% - 10px)`,
+      height: themeData[`treeView.row.height`],
+      lineHeight: themeData[`treeView.item.lineHeight`],
       padding: `${themeData["treeView.row.paddingVertical"]}
-        ${themeData["treeView.row.paddingHorizontal"]}`,
-      overflow: `hidden`,
-      textOverflow: `ellipsis`,
-      whiteSpace: `nowrap`
+        ${themeData["treeView.row.paddingHorizontal"]}
+        ${themeData["treeView.row.paddingVertical"]}
+        calc((${contentHeight} + ${
+        themeData["treeView.icon.marginRight"]
+      }) * ${Number(level)})`,
+      transition: `background-color 0.3s cubic-bezier(0.4,0,0.2,1), border-color 0.3s cubic-bezier(0.4,0,0.2,1)`,
+      ...(hasHover || highlighted
+        ? {
+            background:
+              themeData[`colorScheme.background.empty.level100To250.hover`]
+          }
+        : {}),
+      ...(selected
+        ? {
+            background: themeData[`colorScheme.background.on.default`],
+            border: `1px solid ${themeData["colorScheme.border.on"]}`
+          }
+        : {}),
+      ...(selected && (hasHover || highlighted)
+        ? {
+            background: themeData[`colorScheme.background.on.hover`]
+          }
+        : {})
     },
     higTreeItemSubTreeViewLabelContentWrapper: {
       alignItems: `center`,
       display: `flex`,
-      ...(selected
-        ? { background: themeData[`colorScheme.background.on.default`] }
-        : {}),
+      padding: `0 ${themeData["treeView.row.paddingHorizontal"]}`,
+      width: `calc(100% - ${themeData["treeView.row.paddingHorizontal"]})`,
       "& > svg": {
         marginRight: themeData[`treeView.icon.marginRight`],
         "&:first-of-type": {
@@ -158,14 +176,36 @@ export default function stylesheet(props, themeData) {
       }
     },
     higTreeItemSubTreeItem: {
-      height: itemHeight,
+      border: `1px solid transparent`,
+      boxSizing: `border-box`,
+      height: themeData[`treeView.row.height`],
       padding: `${themeData["treeView.row.paddingVertical"]} ${
         themeData["treeView.row.paddingHorizontal"]
       } ${themeData["treeView.row.paddingVertical"]}
-        calc(${itemHeight} + ${themeData["treeView.row.paddingHorizontal"]} + ${
+        calc((${contentHeight} + ${
         themeData["treeView.icon.marginRight"]
-      })`,
+      }) + ((${contentHeight} + ${
+        themeData["treeView.icon.marginRight"]
+      }) * ${level}))`,
       position: `relative`,
+      transition: `background-color 0.3s cubic-bezier(0.4,0,0.2,1), border-color 0.3s cubic-bezier(0.4,0,0.2,1)`,
+      ...(hasHover || highlighted
+        ? {
+            background:
+              themeData[`colorScheme.background.empty.level100To250.hover`]
+          }
+        : {}),
+      ...(selected
+        ? {
+            background: themeData[`colorScheme.background.on.default`],
+            border: `1px solid ${themeData["colorScheme.border.on"]}`
+          }
+        : {}),
+      ...(selected && (hasHover || highlighted)
+        ? {
+            background: themeData[`colorScheme.background.on.hover`]
+          }
+        : {}),
       "&::before": {
         ...(guidelines
           ? {
@@ -176,7 +216,9 @@ export default function stylesheet(props, themeData) {
           : {}),
         display: `inline-block`,
         content: `""`,
-        left: isMediumDensity ? `-7px` : `-4px`,
+        left: isMediumDensity
+          ? `calc((24px * ${Number(level)}) + (8px * ${levelOffset}))`
+          : `calc((16px * ${Number(level)}) + (4px * ${levelOffset}))`,
         margin: 0,
         position: `absolute`,
         top: guideLineHorizontalOffsetTop,
@@ -216,19 +258,29 @@ export default function stylesheet(props, themeData) {
     },
     higTreeItemIndicatorWrapper: {
       alignItems: `center`,
+      cursor: `pointer`,
       display: `flex`,
-      height: itemHeight,
+      flex: `0 0 ${contentHeight}`,
+      height: contentHeight,
       justifyContent: `center`,
       marginRight: themeData[`treeView.icon.marginRight`],
-      width: itemHeight
+      outline: 0,
+      width: contentHeight
     },
     higTreeItemIconWrapper: {
       alignItems: `center`,
       display: `flex`,
-      height: itemHeight,
+      flex: `0 0 ${contentHeight}`,
+      height: contentHeight,
       justifyContent: `center`,
       marginRight: themeData[`treeView.icon.marginRight`],
-      width: itemHeight
+      width: contentHeight
+    },
+    higTreeItemLabelWrapper: {
+      display: `block`,
+      overflow: `hidden`,
+      textOverflow: `ellipsis`,
+      whiteSpace: `nowrap`
     }
   };
 

@@ -5,16 +5,22 @@ import TreeViewBehavior from "./behaviors/TreeViewBehavior";
 
 import TreeViewPresenter from "./presenters/TreeViewPresenter";
 
-import { AVAILABLE_INDICATORS } from "./constants";
+import { AVAILABLE_INDICATORS, indicators } from "./constants";
 
 export default class TreeView extends Component {
   static propTypes = {
+    /**
+     * Alternating background stripes
+     */
     alternateBg: PropTypes.bool,
     /**
      * Content of the TreeView
      * Accepts TreeItem components
      */
     children: PropTypes.node,
+    /**
+     * Visual guidelines for each TreeItem
+     */
     guidelines: PropTypes.bool,
     /**
      * Indicator icon
@@ -42,7 +48,9 @@ export default class TreeView extends Component {
     )
   };
 
-  static defaultProps = {};
+  static defaultProps = {
+    indicator: indicators.CARET
+  };
 
   render() {
     const {
@@ -56,10 +64,16 @@ export default class TreeView extends Component {
     const { onClick, onKeyDown } = otherProps;
 
     return (
-      <TreeViewBehavior {...otherProps} onKeyDown={onKeyDown} onClick={onClick}>
+      <TreeViewBehavior
+        {...otherProps}
+        onKeyDown={onKeyDown}
+        onClick={onClick}
+        treeNode={treeNode}
+      >
         {({
           getActiveTreeItemId,
           getActiveTreeItemIndex,
+          getCurrentItemClicked,
           getKeyboardOpenId,
           getTreeItemArray,
           setActiveTreeItemId,
@@ -76,6 +90,7 @@ export default class TreeView extends Component {
             treeNode={treeNode}
             getActiveTreeItemId={getActiveTreeItemId}
             getActiveTreeItemIndex={getActiveTreeItemIndex}
+            getCurrentItemClicked={getCurrentItemClicked}
             getKeyboardOpenId={getKeyboardOpenId}
             getTreeItemArray={getTreeItemArray}
             setActiveTreeItemId={setActiveTreeItemId}

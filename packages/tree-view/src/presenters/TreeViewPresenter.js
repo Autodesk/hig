@@ -33,6 +33,22 @@ function buildTreeItemIdArray(list, isTreeNode) {
   return ids;
 }
 
+function renderFileTree(tree, payload) {
+  return tree.map(treeNode => {
+    const appendPayload = {
+      ...treeNode,
+      payload
+    };
+    return (
+      <TreeObjectView
+        tree={appendPayload}
+        keyboardOpenId={payload.getKeyboardOpenId()}
+        key={treeNode.id}
+      />
+    );
+  });
+}
+
 export default class TreeViewPresenterObject extends Component {
   static propTypes = {
     alternateBg: PropTypes.bool,
@@ -101,6 +117,7 @@ export default class TreeViewPresenterObject extends Component {
     const {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getCurrentItemClicked,
       getKeyboardOpenId,
       getTreeItemArray,
       setActiveTreeItemId,
@@ -113,6 +130,7 @@ export default class TreeViewPresenterObject extends Component {
       ...props,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
+      getCurrentItemClicked,
       getKeyboardOpenId,
       getTreeItemArray,
       setActiveTreeItemId,
@@ -120,7 +138,8 @@ export default class TreeViewPresenterObject extends Component {
       setKeyboardOpenId,
       guidelines,
       indicator,
-      key
+      key,
+      level: 0
     };
 
     return <TreeItem {...payload} />;
@@ -145,6 +164,7 @@ export default class TreeViewPresenterObject extends Component {
     delete payload.dataObject;
     delete payload.getActiveTreeItemId;
     delete payload.getActiveTreeItemIndex;
+    delete payload.getCurrentItemClicked;
     delete payload.getKeyboardOpenId;
     delete payload.setTreeItemArray;
     delete payload.treeViewRef;
@@ -198,40 +218,6 @@ export default class TreeViewPresenterObject extends Component {
     return null;
   }
 
-  getTreeObject(collection) {
-    let fileTree = {};
-    const mapTreeObject = collection.reduce((acc, el, i) => {
-      acc[el.id] = i;
-      return acc;
-    }, {});
-
-    collection.forEach(el => {
-      if (el.parentId === null) {
-        fileTree = el;
-        return;
-      }
-      const parentEl = collection[mapTreeObject[el.parentId]];
-      parentEl.children = [...(parentEl.children || []), el];
-    });
-
-    return fileTree;
-  }
-
-  renderFileTree(tree, payload) {
-    return tree.map(treeNode => {
-      const appendPayload = {
-        ...treeNode,
-        payload
-      };
-      return (
-        <TreeObjectView
-          tree={appendPayload}
-          keyboardOpenId={payload.getKeyboardOpenId()}
-        />
-      );
-    });
-  }
-
   renderTreeViewObject = () => {
     const {
       alternateBg,
@@ -240,6 +226,7 @@ export default class TreeViewPresenterObject extends Component {
       setTreeViewRef,
       stylesheet: customStylesheet,
       treeNode,
+      getCurrentItemClicked,
       getKeyboardOpenId,
       getTreeItemArray,
       setActiveTreeItemId,
@@ -275,13 +262,14 @@ export default class TreeViewPresenterObject extends Component {
                 role="tree"
                 tabIndex="0"
               >
-                {this.renderFileTree(treeNode, {
+                {renderFileTree(treeNode, {
                   getActiveTreeItemId,
                   getActiveTreeItemIndex,
                   guidelines,
                   indicator,
                   stylesheet,
                   onClick,
+                  getCurrentItemClicked,
                   getKeyboardOpenId,
                   getTreeItemArray,
                   setActiveTreeItemId,

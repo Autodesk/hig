@@ -39,7 +39,6 @@ export default [
             id="tree-item-1"
             key="tree-item-1"
             icon={<Calendar24 />}
-            collapsed={false}
           >
             <TreeItem
               label="Tree Item 2"

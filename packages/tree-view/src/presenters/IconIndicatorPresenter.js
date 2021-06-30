@@ -26,6 +26,7 @@ export default function IconIndicatorPresenter(props) {
     ...(!collapsed && indicator === `caret`
       ? { transform: `rotate(90deg)` }
       : {}),
+    cursor: `pointer`,
     transition: `transform 0.3s ease-in-out`
   });
 
