@@ -1,3 +1,10 @@
+# [@hig/menu-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/menu@1.1.0...@hig/menu@1.2.0) (2021-07-21)
+
+
+### Features
+
+* add unselect prop to control option select ability ([45b6e56](https://github.com/Autodesk/hig/commit/45b6e56))
+
 # [@hig/menu-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/menu@1.0.0...@hig/menu@1.1.0) (2021-05-25)
 
 
