@@ -15,13 +15,13 @@ yarn add @hig/TreeView @hig/theme-context @hig/theme-data
 ### Import the component
 
 ```js
-import TreeView from "@hig/tree-view";
+import TreeView, { TreeItem } from "@hig/tree-view";
 ```
 
 ## Basic usage
 
 ```jsx
-<TreeItem id="tree-item-0" key="tree-item-0" label="Tree Item 0">
+<TreeView>
   <TreeItem label="Tree Item 1" id="tree-item-1">
     <TreeItem label="Tree Item 2" id="tree-item-2">
       <TreeItem label="Tree Item 3" id="tree-item-3">
@@ -31,7 +31,7 @@ import TreeView from "@hig/tree-view";
       </TreeItem>
     </TreeItem>
   </TreeItem>
-</TreeItem>
+</TreeView>
 ```
 
 ## Customization
@@ -99,11 +99,61 @@ TreeView also has a `stylesheet` prop that accepts a function wherein you can mo
 
 ```jsx
 function customStylesheet(styles, props, themeData) {
-  return {};
+  return return {
+    ...styles,
+    higTreeViewWrapper: {
+      ...styles.higTreeViewWrapper,
+      backgroundColor: "yellow"
+    },
+    higTreeView: {
+      ...styles.higTreeView,
+      backgroundColor: "black"
+    },
+    higTreeItem: {
+      ...styles.higTreeItem,
+      backgroundColor: themeData["basics.colors.green100"]
+    },
+    higTreeItemContentWrapper: {
+      ...styles.higTreeItemContentWrapper,
+      padding: 0
+    },
+    higTreeItemSubTreeViewWrapper: {
+      ...styles.higTreeItemSubTreeViewWrapper,
+      margin: 0
+    },
+    higTreeItemSubTreeView: {
+      ...styles.higTreeItemSubTreeView,
+      fontSize: "14px"
+    },
+    higTreeItemSubTreeViewLabelWrapper: {
+      ...styles.shortcutWrapper,
+      overflow: "hidden"
+    },
+    higTreeItemSubTreeViewLabelContentWrapper: {
+      ...styles.higTreeItemSubTreeViewLabelContentWrapper,
+      width: "100%"
+    },
+    higTreeItemSubTreeItem: {
+      ...styles.higTreeItemSubTreeItem,
+      textAlign: "center"
+    },
+    higTreeItemIndicatorWrapper: {
+      ...styles.higTreeItemIndicatorWrapper,
+      backgroundColor: "transparent"
+    },
+    higTreeItemIconWrapper: {
+      ...styles.higTreeItemIconWrapper,
+      height: "36px"
+    },
+    higTreeItemLabelWrapper: {
+      ...styles.higTreeItemLabelWrapper,
+      fontWeight: 900
+    }
+  };
 }
 
-<TreeItem stylesheet={customStylesheet}>
-  <TreeItem label="Tree Item 1" id="tree-item-1">
+<TreeView stylesheet={customStylesheet}>
+  <TreeItem label="Tree Item 1" id="tree-item-1" stylesheet={customStylesheet}>
     <TreeItem label="Tree Item 2" id="tree-item-2">
       <TreeItem label="Tree Item 3" id="tree-item-3">
         <TreeItem label="Tree Item 4" id="tree-item-4" />
@@ -112,5 +162,5 @@ function customStylesheet(styles, props, themeData) {
       </TreeItem>
     </TreeItem>
   </TreeItem>
-</TreeItem>;
+</TreeView>;
 ```

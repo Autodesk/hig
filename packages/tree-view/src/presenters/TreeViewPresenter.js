@@ -1,7 +1,8 @@
 import React, { Children, Component } from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 
 import TreeObjectView from "./fileview/TreeObjectView";
 import TreeItem from "../TreeItem";
@@ -113,6 +114,7 @@ export default class TreeViewPresenterObject extends Component {
     return createTreeItems(this.props.children);
   }
 
+  // eslint-disable-next-line react/sort-comp
   renderTreeItem = ({ key, props }) => {
     const {
       getActiveTreeItemId,
@@ -159,7 +161,13 @@ export default class TreeViewPresenterObject extends Component {
       stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
+    const { className } = otherProps;
     const payload = { ...otherProps };
+    const higTreeViewClassName = createCustomClassNames(
+      className,
+      `hig-tree-view`
+    );
+
     delete payload.indicator;
     delete payload.dataObject;
     delete payload.getActiveTreeItemId;
@@ -186,10 +194,10 @@ export default class TreeViewPresenterObject extends Component {
             resolvedRoles
           );
           return (
-            <div className={css(styles.higTreeViewWrapper)}>
+            <div className={cx([css(styles.higTreeViewWrapper), className])}>
               <ul
                 {...payload}
-                className={css(styles.higTreeView)}
+                className={cx([css(styles.higTreeView), higTreeViewClassName])}
                 ref={setTreeViewRef}
                 role="tree"
                 tabIndex="0"
@@ -239,6 +247,11 @@ export default class TreeViewPresenterObject extends Component {
       treeViewRef,
       ...otherProps
     } = this.props;
+    const { className } = otherProps;
+    const higTreeViewClassName = createCustomClassNames(
+      className,
+      `hig-tree-view`
+    );
 
     return (
       <ThemeContext.Consumer>
@@ -254,10 +267,10 @@ export default class TreeViewPresenterObject extends Component {
           );
 
           return (
-            <div className={css(styles.higTreeViewWrapper)}>
+            <div className={cx([css(styles.higTreeViewWrapper), className])}>
               <ul
                 {...otherProps}
-                className={css(styles.higTreeView)}
+                className={cx([css(styles.higTreeView), higTreeViewClassName])}
                 ref={setTreeViewRef}
                 role="tree"
                 tabIndex="0"

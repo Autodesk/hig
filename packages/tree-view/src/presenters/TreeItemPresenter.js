@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { ThemeContext } from "@hig/theme-context";
-// import { createCustomClassNames } from "@hig/utils";
+
 import TreeItem from "../TreeItem";
 import SingleTreeNodePresenter from "./SingleTreeNodePresenter";
 import SingleTreeNodeFolderPresenter from "./SingleTreeNodeFolderPresenter";

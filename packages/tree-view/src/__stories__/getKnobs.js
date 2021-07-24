@@ -1,5 +1,4 @@
 import { boolean, select } from "@storybook/addon-knobs/react";
-import { action } from "@storybook/addon-actions";
 import { makeSelectOptions } from "@hig/storybook/utils";
 
 import { indicators } from "../constants";
@@ -29,7 +28,6 @@ export default function getKnobs(props) {
       indicatorOptions,
       indicator,
       knobGroupIds.basic
-    ),
-    onChange: action(knobLabels.onChange)
+    )
   };
 }

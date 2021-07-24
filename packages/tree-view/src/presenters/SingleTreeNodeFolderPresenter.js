@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import { HoverBehavior } from "@hig/behaviors";
-import { createButtonEventHandlers } from "@hig/utils";
+import { createButtonEventHandlers, createCustomClassNames } from "@hig/utils";
 
 import SubTreeViewCombined from "./SubTreeViewCombined";
 import IconIndicatorPresenter from "./IconIndicatorPresenter";
@@ -12,6 +12,7 @@ import stylesheet from "./stylesheet";
 export default function SingleTreeNodeFolderPresenter(props) {
   const { collapsed, icon, id, indicator, label, ...otherProps } = props;
   const {
+    className,
     density,
     onClick,
     onMouseEnter,
@@ -24,11 +25,35 @@ export default function SingleTreeNodeFolderPresenter(props) {
     handleClick: handleOperatorClick,
     handleKeyDown: handleOperatorKeyDown
   } = createButtonEventHandlers(onOperatorClick);
+  const higTreeItemSubTreeViewLabelWrapperClassName = createCustomClassNames(
+    className,
+    `hig-tree-item-sub-tree-view-label-wrapper`
+  );
+  const higTreeItemSubTreeViewLabelContentWrapperClassName = createCustomClassNames(
+    className,
+    `hig-tree-item-sub-tree-view-label-content-wrapper`
+  );
+  const higTreeItemIndicatorWrapperClassName = createCustomClassNames(
+    className,
+    `hig-tree-item-indicator-wrapper`
+  );
+  const higTreeItemIndicatorIconClassName = createCustomClassNames(
+    className,
+    `hig-tree-item-indicator-icon`
+  );
+  const higTreeItemIconWrapperClassName = createCustomClassNames(
+    className,
+    `hig-tree-item-icon-wrapper`
+  );
+  const higTreeItemLabelWrapperClassName = createCustomClassNames(
+    className,
+    `hig-tree-item-label-wrapper`
+  );
 
   return (
     <li
       aria-expanded={!collapsed}
-      className={css(stylesheet(props, themeData).higTreeItem)}
+      className={cx([css(stylesheet(props, themeData).higTreeItem), className])}
       id={id}
       role="treeitem"
     >
@@ -42,7 +67,10 @@ export default function SingleTreeNodeFolderPresenter(props) {
           const styles = stylesheet(styleProps, themeData);
           return (
             <div
-              className={css(styles.higTreeItemSubTreeViewLabelWrapper)}
+              className={cx([
+                css(styles.higTreeItemSubTreeViewLabelWrapper),
+                higTreeItemSubTreeViewLabelWrapperClassName
+              ])}
               onClick={handleClick}
               onKeyDown={handleKeyDown}
               onMouseEnter={handleMouseEnter}
@@ -50,29 +78,44 @@ export default function SingleTreeNodeFolderPresenter(props) {
               role="presentation"
             >
               <div
-                className={css(
-                  styles.higTreeItemSubTreeViewLabelContentWrapper
-                )}
+                className={cx([
+                  css(styles.higTreeItemSubTreeViewLabelContentWrapper),
+                  higTreeItemSubTreeViewLabelContentWrapperClassName
+                ])}
               >
                 <div
-                  className={css(styles.higTreeItemIndicatorWrapper)}
+                  className={cx([
+                    css(styles.higTreeItemIndicatorWrapper),
+                    higTreeItemIndicatorWrapperClassName
+                  ])}
                   onClick={handleOperatorClick}
                   onKeyDown={handleOperatorKeyDown}
                   role="button"
                   tabIndex="-1"
                 >
                   <IconIndicatorPresenter
+                    className={higTreeItemIndicatorIconClassName}
                     collapsed={collapsed}
                     density={density}
                     indicator={indicator}
                   />
                 </div>
                 {icon && (
-                  <div className={css(styles.higTreeItemIconWrapper)}>
+                  <div
+                    className={cx([
+                      css(styles.higTreeItemIconWrapper),
+                      higTreeItemIconWrapperClassName
+                    ])}
+                  >
                     {icon}
                   </div>
                 )}
-                <span className={css(styles.higTreeItemLabelWrapper)}>
+                <span
+                  className={cx([
+                    css(styles.higTreeItemLabelWrapper),
+                    higTreeItemLabelWrapperClassName
+                  ])}
+                >
                   {label}
                 </span>
               </div>

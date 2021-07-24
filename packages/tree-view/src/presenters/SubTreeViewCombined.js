@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { css, cx } from "emotion";
+import { createCustomClassNames } from "@hig/utils";
 
-import { NestedSubTreeItem, SubTreeItem } from "./fileview/NestedSubTreeItem";
+import TreeObjectNestedSubTreeItem from "./fileview/TreeObjectNestedSubTreeItem";
+import TreeObjectSubTreeItem from "./fileview/TreeObjectSubTreeItem";
 import TreeItem from "../TreeItem";
 import TreeItemBehavior from "../behaviors/TreeItemBehavior";
 
@@ -128,7 +130,11 @@ export default class SubTreeViewCombined extends Component {
 
   renderSubTreeViewObject = () => {
     const {
-      treeItem: { children, payload },
+      treeItem: {
+        children,
+        meta: { className },
+        payload
+      },
       collapsed,
       density,
       id,
@@ -142,23 +148,39 @@ export default class SubTreeViewCombined extends Component {
 
     const { status } = this.state;
     const transitionStyles = this.getTransitionStyles(status);
+    const higTreeItemSubTreeViewWrapperClassName = createCustomClassNames(
+      className,
+      `hig-tree-item-sub-tree-view-wrapper`
+    );
+    const higTreeItemSubTreeViewClassName = createCustomClassNames(
+      className,
+      `hig-tree-item-sub-tree-view`
+    );
 
     return (
       <div
         className={cx([
           css(styles.higTreeItemSubTreeViewWrapper),
-          css(transitionStyles)
+          css(transitionStyles),
+          higTreeItemSubTreeViewWrapperClassName
         ])}
         onTransitionEnd={this.onTransitionEnd}
         ref={this.setSubTreeWrapperRef}
       >
         {(!collapsed || this.state.mount) && (
-          <ul className={css(styles.higTreeItemSubTreeView)} role="group">
+          <ul
+            className={cx([
+              css(styles.higTreeItemSubTreeView),
+              higTreeItemSubTreeViewClassName
+            ])}
+            role="group"
+          >
             {children
               ? children.map(
                   (child, index) =>
                     child.children ? (
                       <TreeItemBehavior
+                        // eslint-disable-next-line react/no-array-index-key
                         key={`${id}-${index}`}
                         {...child}
                         {...payload}
@@ -169,7 +191,7 @@ export default class SubTreeViewCombined extends Component {
                           handleOperatorClick,
                           setIsCollapsed
                         }) => (
-                          <NestedSubTreeItem
+                          <TreeObjectNestedSubTreeItem
                             treeItem={{ ...child, payload }}
                             themeData={themeData}
                             density={density}
@@ -182,6 +204,7 @@ export default class SubTreeViewCombined extends Component {
                             keyboardOpenId={getKeyboardOpenId()}
                             setIsCollapsed={setIsCollapsed}
                             setKeyboardOpenId={setKeyboardOpenId}
+                            // eslint-disable-next-line react/no-array-index-key
                             key={`${id}-${index}`}
                             level={level + 1}
                           />
@@ -189,12 +212,13 @@ export default class SubTreeViewCombined extends Component {
                       </TreeItemBehavior>
                     ) : (
                       <TreeItemBehavior
+                        // eslint-disable-next-line react/no-array-index-key
                         key={`${id}-${index}`}
                         {...child}
                         {...payload}
                       >
                         {({ getIsCollapsed, handleClick, setIsCollapsed }) => (
-                          <SubTreeItem
+                          <TreeObjectSubTreeItem
                             treeItem={{ ...child, payload }}
                             themeData={themeData}
                             onClick={handleClick}
@@ -205,6 +229,7 @@ export default class SubTreeViewCombined extends Component {
                             keyboardOpenId={getKeyboardOpenId()}
                             setIsCollapsed={setIsCollapsed}
                             setKeyboardOpenId={setKeyboardOpenId}
+                            // eslint-disable-next-line react/no-array-index-key
                             key={`${id}-${index}`}
                             level={level + 1}
                           />
@@ -236,8 +261,10 @@ export default class SubTreeViewCombined extends Component {
       setActiveTreeItemId,
       setActiveTreeItemIndex,
       setKeyboardOpenId,
-      themeData
+      themeData,
+      ...otherProps
     } = this.props;
+    const { className } = otherProps;
     const styles = stylesheet(this.props, themeData);
     const clonedChildren = Array.isArray(children)
       ? children.map(child =>
@@ -272,24 +299,40 @@ export default class SubTreeViewCombined extends Component {
         });
     const { status } = this.state;
     const transitionStyles = this.getTransitionStyles(status);
+    const higTreeItemSubTreeViewWrapperClassName = createCustomClassNames(
+      className,
+      `hig-tree-item-sub-tree-view-wrapper`
+    );
+    const higTreeItemSubTreeViewClassName = createCustomClassNames(
+      className,
+      `hig-tree-item-sub-tree-view`
+    );
 
     return (
       <div
         className={cx([
           css(styles.higTreeItemSubTreeViewWrapper),
-          css(transitionStyles)
+          css(transitionStyles),
+          higTreeItemSubTreeViewWrapperClassName
         ])}
         onTransitionEnd={this.onTransitionEnd}
         ref={this.setSubTreeWrapperRef}
       >
         {(!collapsed || this.state.mount) &&
           Array.isArray(clonedChildren) && (
-            <ul className={css(styles.higTreeItemSubTreeView)} role="group">
+            <ul
+              className={cx([
+                css(styles.higTreeItemSubTreeView),
+                higTreeItemSubTreeViewClassName
+              ])}
+              role="group"
+            >
               {clonedChildren.map((child, index) => (
                 <TreeItem
                   {...child.props}
                   themeData={themeData}
                   density={density}
+                  // eslint-disable-next-line react/no-array-index-key
                   key={`${id}-${index}`}
                 />
               ))}
@@ -297,7 +340,13 @@ export default class SubTreeViewCombined extends Component {
           )}
         {(!collapsed || this.state.mount) &&
           !Array.isArray(clonedChildren) && (
-            <ul className={css(styles.higTreeItemSubTreeView)} role="group">
+            <ul
+              className={cx([
+                css(styles.higTreeItemSubTreeView),
+                higTreeItemSubTreeViewClassName
+              ])}
+              role="group"
+            >
               {clonedChildren}
             </ul>
           )}

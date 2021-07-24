@@ -40,6 +40,7 @@ export default class TreeItemBehavior extends Component {
     if (this.props.onClick) {
       this.props.onClick(event);
     }
+    // eslint-disable-next-line no-param-reassign
     treeItem = treeItem || {};
     if (this.props.payload) {
       const {
@@ -52,7 +53,7 @@ export default class TreeItemBehavior extends Component {
       // eslint-disable-next-line no-param-reassign
       const treeItemArray = getTreeItemArray();
       const index =
-      treeItemArray !== null && treeItemArray.indexOf(treeItem.id);
+        treeItemArray !== null && treeItemArray.indexOf(treeItem.id);
       setActiveTreeItemId(treeItem.id);
       setActiveTreeItemIndex(index);
     } else {

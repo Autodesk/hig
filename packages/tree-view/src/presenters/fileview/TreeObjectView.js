@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import { ThemeContext } from "@hig/theme-context";
 import TreeItemBehavior from "../../behaviors/TreeItemBehavior";
 
-import { NestedSubTreeItem, SubTreeItem } from "./NestedSubTreeItem";
+import TreeObjectNestedSubTreeItem from "./TreeObjectNestedSubTreeItem";
+import TreeObjectSubTreeItem from "./TreeObjectSubTreeItem";
 
 class TreeObjectView extends Component {
   render() {
@@ -15,7 +16,6 @@ class TreeObjectView extends Component {
       },
       ...otherProps
     } = this.props;
-    const { onFocus } = otherProps;
 
     return (
       <TreeItemBehavior {...otherProps} id={id} payload={payload}>
@@ -28,14 +28,13 @@ class TreeObjectView extends Component {
           <ThemeContext.Consumer>
             {({ resolvedRoles, metadata }) =>
               this.props.tree.children ? (
-                <NestedSubTreeItem
+                <TreeObjectNestedSubTreeItem
                   density={metadata.densityId}
                   highlighted={getActiveTreeItemId() === id}
                   treeItem={this.props.tree}
                   themeData={resolvedRoles}
                   onClick={handleClick}
                   onOperatorClick={handleOperatorClick}
-                  onFocus={onFocus}
                   selected={getActiveTreeItemId() === id}
                   collapsed={getIsCollapsed()}
                   getIsCollapsed={getIsCollapsed}
@@ -46,13 +45,12 @@ class TreeObjectView extends Component {
                   level={0}
                 />
               ) : (
-                <SubTreeItem
+                <TreeObjectSubTreeItem
                   density={metadata.densityId}
                   highlighted={getActiveTreeItemId() === id}
                   treeItem={{ ...this.props.tree, payload }}
                   themeData={resolvedRoles}
                   onClick={handleClick}
-                  onFocus={onFocus}
                   selected={getActiveTreeItemId() === id}
                   collapsed={getIsCollapsed()}
                   getKeyboardOpenId={getKeyboardOpenId}

@@ -12,7 +12,7 @@ import {
 
 export default function IconIndicatorPresenter(props) {
   const { collapsed, indicator, ...otherProps } = props;
-  const { density } = otherProps;
+  const { className, density } = otherProps;
   const OperatorMinusIcon =
     density === "medium-density" ? OperatorMinusSUI : OperatorMinusXsUI;
   const OperatorPlusIcon =
@@ -30,7 +30,7 @@ export default function IconIndicatorPresenter(props) {
     transition: `transform 0.3s ease-in-out`
   });
 
-  return <IconIndicator stylesheet={customStylesheet} />;
+  return <IconIndicator stylesheet={customStylesheet} className={className} />;
 }
 
 IconIndicatorPresenter.propTypes = {
