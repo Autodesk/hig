@@ -89,6 +89,7 @@ Each HIG pattern is implemented as a set of React components. Each pattern is pu
 - [`<Toggle>`](./packages/toggle/README.md) - A control for a single action with a clear on/off or start/stop.
 - [`<Tooltip>`](./packages/tooltip/README.md) - Provides context in a small popup container
 - [`<TopNav>`](./packages/top-nav/README.md) - Navigation across the top of the screen
+- [`<TreeView>`](./packages/tree-view/README.md - A way to view and manipulate a list of data
 - [`<Typography>`](./packages/typography/README.md) - A set of components in many typographical variations
 
 ## Contributing
