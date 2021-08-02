@@ -55,6 +55,7 @@
     "@hig/toggle": "^1.0.1",
     "@hig/tooltip": "^1.1.0",
     "@hig/top-nav": "^3.2.0",
+    "@hig/tree-view": "^1.0.0",
     "@hig/typography": "^1.2.0"
   },
   "peerDependencies": {

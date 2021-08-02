@@ -9,7 +9,7 @@ Read more about when and how to use the TreeView component [on the internal wiki
 ### Install the package
 
 ```bash
-yarn add @hig/TreeView @hig/theme-context @hig/theme-data
+yarn add @hig/tree-view @hig/theme-context @hig/theme-data
 ```
 
 ### Import the component
