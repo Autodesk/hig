@@ -44,7 +44,7 @@ The following dependencies must be available to be begin project development.
 
 * [Unix-like][] operating system _— [Windows Subsystem for Linux][] also works_
 * [Git][]
-* [Node][] `^9.7.1`
+* [Node][] `^9.7.1` (don't use a version higher than ~10.0.0 or you may hit errors during setup)
 * [Yarn][] `>=1.5.1`
 * [Python][] `^2.7` _— Some dependencies require `node-gyp` which uses Python_
 * [Additional instruction for Windows](WindowsSetup.md)
@@ -58,6 +58,8 @@ The following dependencies must be available to be begin project development.
 
 ## Getting Started
 
+For internal Autodesk folks, make sure to be _off_ the company VPN while setting up and developing.
+
 To get set up, run the following commands:
 
 ```bash
@@ -66,6 +68,8 @@ cd hig
 yarn
 yarn build
 ```
+
+If you see an error about `#!/usr/bin/env: No such file or directory`, there is likely an issue with conflicting `LF` and `CF/LF` line endings. Do a search for `/usr/bin/env` and convert any found files to use `LF` line endings.
 
 ## Project structure
 
