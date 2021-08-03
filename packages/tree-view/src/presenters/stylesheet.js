@@ -12,13 +12,19 @@ export default function stylesheet(props, themeData) {
   const isMediumDensity = themeData[`treeView.row.paddingVertical`] === `8px`;
   const contentHeight = isMediumDensity ? `24px` : `16px`;
   const bgHeight = isMediumDensity ? `160px` : `96px`;
-  const guideLineVerticalOffsetLeft = isMediumDensity
-    ? `calc(24px + ((${contentHeight} + ${
-        themeData["treeView.icon.marginRight"]
-      }) * ${levelOffset}))`
-    : `calc(15px + ((${contentHeight} + ${
-        themeData["treeView.icon.marginRight"]
-      }) * ${levelOffset}))`;
+  const guideLineVerticalOffsetLeft = (offset) => {
+    const defaultOffset = offset ? offset : 0;
+
+    return (
+      isMediumDensity
+        ? `calc(24px + ((${contentHeight} + ${
+            themeData["treeView.icon.marginRight"]
+          }) * ${levelOffset}) - ${defaultOffset}px)`
+        : `calc(15px + ((${contentHeight} + ${
+            themeData["treeView.icon.marginRight"]
+          }) * ${levelOffset}) - ${defaultOffset}px)`
+    );
+  };
   const guideLineHorizontalOffsetTop = isMediumDensity ? `9px` : `2px`;
   const styles = {
     higTreeViewWrapper: {
@@ -93,7 +99,7 @@ export default function stylesheet(props, themeData) {
         display: `inline-block`,
         content: `""`,
         height: `100%`,
-        left: guideLineVerticalOffsetLeft,
+        left: guideLineVerticalOffsetLeft(),
         position: `absolute`,
         top: `0`,
         width: `20px`
@@ -236,7 +242,7 @@ export default function stylesheet(props, themeData) {
         display: `inline-block`,
         content: `""`,
         height: `100%`,
-        left: guideLineVerticalOffsetLeft,
+        left: guideLineVerticalOffsetLeft(1),
         position: `absolute`,
         top: `0`,
         width: `20px`
