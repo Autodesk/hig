@@ -19,6 +19,8 @@ export default class Notification extends Component {
     image: PropTypes.node,
     /** A callback called when user dismisses a featured notification */
     onDismiss: PropTypes.func,
+    /** A callback when the user clicks anywhere within the notification */
+    onNotificationClick: PropTypes.func,
     /**
      * Triggers when the user's mouse is over the notification
      */
@@ -44,7 +46,8 @@ export default class Notification extends Component {
      * This is an action that's provided to the consumer,
      * as a result a value must always be available.
      */
-    hideFlyout: () => {}
+    hideFlyout: () => {},
+    onNotificationClick: () => {}
   };
 
   /**
@@ -67,6 +70,7 @@ export default class Notification extends Component {
       featured,
       image,
       onDismiss,
+      onNotificationClick,
       onMouseEnter,
       onMouseLeave,
       // Featured notifications show the dismiss button by default
@@ -100,6 +104,7 @@ export default class Notification extends Component {
                 image={image}
                 innerRef={innerRef}
                 onDismissButtonClick={handleDismissButtonClick}
+                onNotificationClick={onNotificationClick}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 showDismissButton={showDismissButton}

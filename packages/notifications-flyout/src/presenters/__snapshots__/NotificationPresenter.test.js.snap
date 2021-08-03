@@ -198,6 +198,7 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
 
 <div
   className="emotion-6"
+  onClick={undefined}
   onMouseEnter={undefined}
   onMouseLeave={undefined}
   role="listitem"
@@ -396,6 +397,7 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders without p
 
 <div
   className="emotion-3"
+  onClick={undefined}
   onMouseEnter={undefined}
   onMouseLeave={undefined}
   role="listitem"

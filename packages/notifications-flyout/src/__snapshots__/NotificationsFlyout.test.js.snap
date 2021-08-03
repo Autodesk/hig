@@ -435,6 +435,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
           >
             <div
               className="emotion-12"
+              onClick={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
               role="listitem"
@@ -909,6 +910,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
           >
             <div
               className="emotion-12"
+              onClick={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
               role="listitem"
@@ -1383,6 +1385,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
           >
             <div
               className="emotion-12"
+              onClick={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
               role="listitem"
@@ -1407,6 +1410,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
             </div>
             <div
               className="emotion-12"
+              onClick={[Function]}
               onMouseEnter={[Function]}
               onMouseLeave={[Function]}
               role="listitem"

@@ -27,6 +27,7 @@ function createNotificationRenderer({ hideFlyout, dismissNotification }) {
       image,
       key,
       onDismiss,
+      onNotificationClick,
       showDismissButton,
       stylesheet,
       timestamp,
@@ -49,6 +50,7 @@ function createNotificationRenderer({ hideFlyout, dismissNotification }) {
         image={image}
         key={key}
         onDismiss={handleDismiss}
+        onNotificationClick={onNotificationClick}
         showDismissButton={showDismissButton}
         stylesheet={stylesheet}
         timestamp={timestamp}

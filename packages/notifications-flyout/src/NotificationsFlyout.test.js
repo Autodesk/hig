@@ -46,12 +46,16 @@ describe("notifications-flyout/NotificationsFlyout", () => {
   describe("notification rendering props", () => {
     describe("handleDismiss", () => {
       const onDismiss = jest.fn();
+      const clickCallback = jest.fn();
       let wrapper;
 
       beforeEach(() => {
         wrapper = mount(
           <NotificationsFlyout>
-            <Notification onDismiss={onDismiss} />
+            <Notification
+              onDismiss={onDismiss}
+              onNotificationClick={clickCallback}
+            />
           </NotificationsFlyout>
         );
 
@@ -78,6 +82,14 @@ describe("notifications-flyout/NotificationsFlyout", () => {
           .onDismiss();
 
         expect(onDismiss).toHaveBeenCalledTimes(1);
+      });
+
+      it("calls the passed in function when clicked", () => {
+        expect(clickCallback).not.toHaveBeenCalled();
+
+        wrapper.find(Notification).simulate("click");
+
+        expect(clickCallback).toHaveBeenCalledTimes(1);
       });
     });
   });

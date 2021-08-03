@@ -8,6 +8,7 @@ Array [
     "hideFlyout": [Function],
     "id": "1",
     "key": "0",
+    "onNotificationClick": [Function],
     "unread": true,
   },
   Object {
@@ -15,6 +16,7 @@ Array [
     "hideFlyout": [Function],
     "id": "2",
     "key": "1",
+    "onNotificationClick": [Function],
     "unread": true,
   },
   Object {
@@ -22,6 +24,7 @@ Array [
     "hideFlyout": [Function],
     "id": "3",
     "key": "2",
+    "onNotificationClick": [Function],
     "unread": true,
   },
 ]
@@ -35,6 +38,7 @@ Array [
     "hideFlyout": [Function],
     "id": "1",
     "key": "0",
+    "onNotificationClick": [Function],
     "unread": true,
   },
   Object {
@@ -42,6 +46,7 @@ Array [
     "hideFlyout": [Function],
     "id": "2",
     "key": "1",
+    "onNotificationClick": [Function],
     "unread": true,
   },
   Object {
@@ -49,6 +54,7 @@ Array [
     "hideFlyout": [Function],
     "id": "3",
     "key": "2",
+    "onNotificationClick": [Function],
     "unread": true,
   },
 ]
