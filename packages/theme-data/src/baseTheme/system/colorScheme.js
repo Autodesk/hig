@@ -126,7 +126,7 @@ export default {
   },
   "status.success": {
     value: {
-      ref: "basics.colors.secondary.green.600"
+      ref: "basics.colors.secondary.green.500"
     },
     type: COLOR
   },

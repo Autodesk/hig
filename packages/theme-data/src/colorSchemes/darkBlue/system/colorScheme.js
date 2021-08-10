@@ -357,10 +357,5 @@ export default {
     value: {
       ref: "basics.colors.secondary.yellowOrange.400"
     }
-  },
-  "status.success": {
-    value: {
-      ref: "basics.colors.secondary.green.500"
-    }
   }
 };
