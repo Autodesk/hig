@@ -17,6 +17,7 @@ export default function NotificationPresenter(props) {
     image,
     innerRef,
     onDismissButtonClick,
+    onNotificationClick,
     onMouseEnter,
     onMouseLeave,
     showDismissButton,
@@ -39,12 +40,14 @@ export default function NotificationPresenter(props) {
   );
 
   return (
+    /* eslint-disable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
         const styles = stylesheet(props, resolvedRoles);
         return (
           <div
             className={cx([className, css(styles.notification)])}
+            onClick={onNotificationClick}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
             ref={innerRef}
@@ -90,6 +93,7 @@ export default function NotificationPresenter(props) {
         );
       }}
     </ThemeContext.Consumer>
+    /* eslint-enable jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions */
   );
 }
 
@@ -101,6 +105,7 @@ NotificationPresenter.propTypes = {
   image: PropTypes.node,
   innerRef: PropTypes.func,
   onDismissButtonClick: PropTypes.func,
+  onNotificationClick: PropTypes.func,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   showDismissButton: PropTypes.bool,

@@ -23,6 +23,7 @@ const groups = {
 const labels = {
   featured: "Featured",
   onDismiss: "Notification dismissed",
+  onNotificationClick: "Notification clicked",
   showDismissButton: "Show dismiss button",
   type: "Variant",
   unread: "Unread"
@@ -47,6 +48,7 @@ storiesOf("Notifications|Flyout/Notification", module).add(
         timestamp={<Timestamp timestamp={new Date().toISOString()} />}
         featured={boolean(labels.featured, defaults.featured, groups.basic)}
         onDismiss={action(labels.onDismiss)}
+        onNotificationClick={action(labels.onNotificationClick)}
         showDismissButton={controlledBool(
           labels.showDismissButton,
           defaults.showDismissButton,

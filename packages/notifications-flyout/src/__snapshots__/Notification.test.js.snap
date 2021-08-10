@@ -198,6 +198,7 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
 
 <div
   className="emotion-6"
+  onClick={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   role="listitem"
@@ -410,6 +411,7 @@ exports[`notifications-flyout/Notification renders correctly with the unread pro
 
 <div
   className="emotion-3"
+  onClick={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   role="listitem"

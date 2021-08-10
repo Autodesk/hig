@@ -18,10 +18,11 @@ export default function createSampleNotifications() {
 
   return [
     {
-      id: "featured",
+      id: "0",
       featured: true,
       unread: true,
       onDismiss: action("Notification dismissed"),
+      onNotificationClick: action("Notification clicked"),
       timestamp: <Timestamp timestamp={new Date(updatedDate1).toISOString()} />,
       image: (
         <Avatar
@@ -47,8 +48,9 @@ export default function createSampleNotifications() {
             <TextLink
               link="https://github.com/Autodesk/hig"
               onClick={() => {
-                console.log("notifications id 1");
+                console.log("notifications id: 0");
               }}
+              target="_blank"
             >
               Manage renewal
             </TextLink>
@@ -79,8 +81,9 @@ export default function createSampleNotifications() {
             <TextLink
               link="https://github.com/Autodesk/hig"
               onClick={() => {
-                console.log("notifications id 1");
+                console.log("notifications id: 1");
               }}
+              target="_blank"
             >
               Manage renewal
             </TextLink>
@@ -89,7 +92,7 @@ export default function createSampleNotifications() {
       )
     },
     {
-      id: "1",
+      id: "2",
       unread: true,
       timestamp: <Timestamp timestamp={new Date(updatedDate2).toISOString()} />,
       type: "success",
@@ -110,8 +113,9 @@ export default function createSampleNotifications() {
             <TextLink
               link="https://github.com/Autodesk/hig"
               onClick={() => {
-                console.log("notifications id 2");
+                console.log("notifications id: 2");
               }}
+              target="_blank"
             >
               Manage renewal
             </TextLink>
@@ -141,8 +145,9 @@ export default function createSampleNotifications() {
             <TextLink
               link="https://github.com/Autodesk/hig"
               onClick={() => {
-                console.log("notifications id 2");
+                console.log("notifications id: 3");
               }}
+              target="_blank"
             >
               Manage Renewal
             </TextLink>
@@ -165,8 +170,9 @@ export default function createSampleNotifications() {
             <TextLink
               link="https://github.com/Autodesk/hig"
               onClick={() => {
-                console.log("notifications id 2");
+                console.log("notifications id: 4");
               }}
+              target="_blank"
             >
               Manage renewal
             </TextLink>
