@@ -28,7 +28,7 @@ export default function SingleTreeNodePresenter(props) {
     className,
     `hig-tree-item-label-wrapper`
   );
-  const payload = {...otherProps};
+  const payload = { ...otherProps };
 
   delete payload.collapsed;
   delete payload.getActiveTreeItemId;

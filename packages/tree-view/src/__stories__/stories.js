@@ -33,8 +33,6 @@ export default [
           key="tree-item-0"
           label="Tree Item 0"
           icon={<Hierarchy24 />}
-          onClick={() => {console.log('onclick item 0')}}
-          onDragStart={() => {console.log('drag start item 0')}}
           draggable="true"
         >
           <TreeItem
@@ -115,7 +113,6 @@ export default [
           label="Tree Item 12"
           icon={<FileImage24 />}
           draggable="true"
-          onDragStart={() => {console.log('drag start 12')}}
         />,
         <TreeItem
           id="tree-item-13"

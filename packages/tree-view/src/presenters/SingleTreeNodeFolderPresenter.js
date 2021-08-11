@@ -49,7 +49,7 @@ export default function SingleTreeNodeFolderPresenter(props) {
     className,
     `hig-tree-item-label-wrapper`
   );
-  const payload = {...otherProps};
+  const payload = { ...otherProps };
 
   delete payload.density;
   delete payload.getActiveTreeItemId;

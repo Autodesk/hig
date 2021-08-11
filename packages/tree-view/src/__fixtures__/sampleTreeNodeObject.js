@@ -24,7 +24,6 @@ const sampleTreeNodeObject = [
       {
         id: 2,
         parentId: 1,
-        onDragStart: () => {console.log('drag start')},
         draggable: true,
         meta: {
           label: "Tree Item 2",
@@ -47,7 +46,6 @@ const sampleTreeNodeObject = [
             id: 4,
             parentId: 2,
             draggable: "true",
-            onDragStart: () => {console.log('drag start 4')},
             meta: {
               label: "Tree Item 4",
               collapsed: false,
