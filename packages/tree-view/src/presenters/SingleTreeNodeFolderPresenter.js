@@ -49,6 +49,26 @@ export default function SingleTreeNodeFolderPresenter(props) {
     className,
     `hig-tree-item-label-wrapper`
   );
+  const payload = { ...otherProps };
+
+  delete payload.density;
+  delete payload.getActiveTreeItemId;
+  delete payload.getActiveTreeItemIndex;
+  delete payload.getCurrentItemClicked;
+  delete payload.getIsCollapsed;
+  delete payload.getKeyboardOpenId;
+  delete payload.getTreeItemArray;
+  delete payload.guidelines;
+  delete payload.highlighted;
+  delete payload.keyboardOpenId;
+  delete payload.level;
+  delete payload.onOperatorClick;
+  delete payload.setActiveTreeItemId;
+  delete payload.setActiveTreeItemIndex;
+  delete payload.setIsCollapsed;
+  delete payload.setKeyboardOpenId;
+  delete payload.stylesheet;
+  delete payload.themeData;
 
   return (
     <li
@@ -67,6 +87,7 @@ export default function SingleTreeNodeFolderPresenter(props) {
           const styles = stylesheet(styleProps, themeData);
           return (
             <div
+              {...payload}
               className={cx([
                 css(styles.higTreeItemSubTreeViewLabelWrapper),
                 higTreeItemSubTreeViewLabelWrapperClassName

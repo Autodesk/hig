@@ -33,6 +33,9 @@ export default class TreeView extends Component {
     /**
      * If treeNode prop is used it will render instead
      * of children.
+     * Additional info can be passed into the meta property
+     * Additional HTML attributes can be added to the top
+     * level of and spread to the HTML elements
      */
     treeNode: PropTypes.arrayOf(
       PropTypes.shape({
