@@ -1,6 +1,6 @@
 {
   "name": "@hig/components",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "description": "HIG Components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -32,7 +32,7 @@
     "@hig/label": "^1.2.0",
     "@hig/menu": "^1.0.0",
     "@hig/modal": "^2.2.2",
-    "@hig/notifications-flyout": "^2.1.2",
+    "@hig/notifications-flyout": "^2.1.3",
     "@hig/notifications-toast": "^2.2.0",
     "@hig/numeric-input": "^1.0.0",
     "@hig/profile-flyout": "^2.1.0",
@@ -50,12 +50,12 @@
     "@hig/text-area": "^1.3.0",
     "@hig/text-link": "^1.1.0",
     "@hig/theme-context": "^3.0.1",
-    "@hig/theme-data": "^2.21.0",
+    "@hig/theme-data": "^2.21.1",
     "@hig/timestamp": "^1.3.0",
     "@hig/toggle": "^1.0.1",
     "@hig/tooltip": "^1.1.0",
     "@hig/top-nav": "^3.2.0",
-    "@hig/tree-view": "^1.0.0",
+    "@hig/tree-view": "^1.1.0",
     "@hig/typography": "^1.2.0"
   },
   "peerDependencies": {
