@@ -34,7 +34,9 @@ export default class TreeObjectNestedSubTreeItem extends Component {
           getActiveTreeItemIndex,
           getCurrentItemClicked,
           guidelines
-        }
+        },
+        onClick: userOnClick,
+        ...otherTreeItemProps
       },
       collapsed,
       density,
@@ -83,6 +85,8 @@ export default class TreeObjectNestedSubTreeItem extends Component {
       className,
       `hig-tree-item-label-wrapper`
     );
+    const htmlProps = { ...otherTreeItemProps };
+    delete htmlProps.parentId;
 
     return (
       <li
@@ -112,18 +116,27 @@ export default class TreeObjectNestedSubTreeItem extends Component {
             } = createButtonEventHandlers(onOperatorClick);
 
             return (
+              // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
               <div
+                {...htmlProps}
                 className={cx([
                   css(styles.higTreeItemSubTreeViewLabelWrapper),
                   higTreeItemSubTreeViewLabelWrapperClassName
                 ])}
+                onClick={event => {
+                  if (userOnClick) {
+                    userOnClick(event);
+                  }
+                }}
               >
                 <div
                   className={cx([
                     css(styles.higTreeItemSubTreeViewLabelContentWrapper),
                     higTreeItemSubTreeViewLabelContentWrapperClassName
                   ])}
-                  onClick={event => handleClick(event, treeItem)}
+                  onClick={event => {
+                    handleClick(event, treeItem);
+                  }}
                   onKeyDown={handleKeyDown}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}

@@ -33,6 +33,7 @@ export default [
           key="tree-item-0"
           label="Tree Item 0"
           icon={<Hierarchy24 />}
+          draggable="true"
         >
           <TreeItem
             label="Tree Item 1"
@@ -111,6 +112,7 @@ export default [
           key="tree-item-2"
           label="Tree Item 12"
           icon={<FileImage24 />}
+          draggable="true"
         />,
         <TreeItem
           id="tree-item-13"
