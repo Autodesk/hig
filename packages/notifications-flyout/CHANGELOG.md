@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v2.1.3](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.1.2...@hig/notifications-flyout@2.1.3) (2021-08-11)
+
+
+### Bug Fixes
+
+* set success color for light gray to correct value ([3552329](https://github.com/Autodesk/hig/commit/3552329))
+
 # [@hig/notifications-flyout-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.1.1...@hig/notifications-flyout@2.1.2) (2020-12-15)
 
 

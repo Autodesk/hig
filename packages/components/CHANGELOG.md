@@ -1,3 +1,10 @@
+# [@hig/components-v2.7.0](https://github.com/Autodesk/hig/compare/@hig/components@2.6.0...@hig/components@2.7.0) (2021-08-11)
+
+
+### Features
+
+* add [@hig](https://github.com/hig)/tree-view package ([a352299](https://github.com/Autodesk/hig/commit/a352299))
+
 # [@hig/components-v2.6.0](https://github.com/Autodesk/hig/compare/@hig/components@2.5.0...@hig/components@2.6.0) (2021-06-26)
 
 
