@@ -1,3 +1,11 @@
+# [@hig/theme-data-v2.21.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.21.0...@hig/theme-data@2.21.1) (2021-08-11)
+
+
+### Bug Fixes
+
+* set success color for light gray to correct value ([3552329](https://github.com/Autodesk/hig/commit/3552329))
+* set success color for light gray to correct value ([38136f3](https://github.com/Autodesk/hig/commit/38136f3))
+
 # [@hig/theme-data-v2.21.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.20.0...@hig/theme-data@2.21.0) (2021-06-26)
 
 
