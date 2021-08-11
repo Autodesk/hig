@@ -28,6 +28,27 @@ export default function SingleTreeNodePresenter(props) {
     className,
     `hig-tree-item-label-wrapper`
   );
+  const payload = {...otherProps};
+
+  delete payload.collapsed;
+  delete payload.getActiveTreeItemId;
+  delete payload.getActiveTreeItemIndex;
+  delete payload.getCurrentItemClicked;
+  delete payload.getIsCollapsed;
+  delete payload.getKeyboardOpenId;
+  delete payload.getTreeItemArray;
+  delete payload.guidelines;
+  delete payload.highlighted;
+  delete payload.indicator;
+  delete payload.keyboardOpenId;
+  delete payload.level;
+  delete payload.onOperatorClick;
+  delete payload.setActiveTreeItemId;
+  delete payload.setActiveTreeItemIndex;
+  delete payload.setIsCollapsed;
+  delete payload.setKeyboardOpenId;
+  delete payload.stylesheet;
+  delete payload.themeData;
 
   return (
     <HoverBehavior onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
@@ -40,6 +61,7 @@ export default function SingleTreeNodePresenter(props) {
         const styles = stylesheet(styleProps, themeData);
         return (
           <li
+            {...payload}
             className={cx([css(styles.higTreeItemSubTreeItem), className])}
             id={id}
             onClick={event => {

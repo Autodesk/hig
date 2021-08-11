@@ -57,7 +57,9 @@ export default class TreeObjectSubTreeItem extends Component {
           getCurrentItemClicked,
           guidelines,
           indicator
-        }
+        },
+        onClick: userOnClick,
+        ...otherTreeItemProps
       },
       themeData,
       level,
@@ -91,6 +93,8 @@ export default class TreeObjectSubTreeItem extends Component {
       className,
       `hig-tree-item-label-wrapper`
     );
+    const htmlProps = { ...otherTreeItemProps };
+    delete htmlProps.parentId;
 
     return (
       <HoverBehavior onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
@@ -103,10 +107,16 @@ export default class TreeObjectSubTreeItem extends Component {
           const styles = stylesheet(styleProps, themeData);
           return (
             <li
+              {...htmlProps}
               className={cx([css(styles.higTreeItemSubTreeItem), className])}
               id={id}
               role="treeitem"
-              onClick={event => handleClick(event, treeItem)}
+              onClick={event => {
+                if (userOnClick) {
+                  userOnClick(event);
+                }
+                handleClick(event, treeItem);
+              }}
               onKeyDown={handleKeyDown}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
