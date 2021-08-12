@@ -2,7 +2,7 @@
 
 The tree view component provides a way to view and manipulate a list of data, often with complex nested structures.
 
-Read more about when and how to use the TreeView component [on the internal wiki](https://hig.autodesk.com/web/components/TreeView).
+Read more about when and how to use the TreeView component [on the internal wiki](https://hig.autodesk.com/web/components/tree-view).
 
 ## Getting started
 
