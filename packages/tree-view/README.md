@@ -99,7 +99,7 @@ TreeView also has a `stylesheet` prop that accepts a function wherein you can mo
 
 ```jsx
 function customStylesheet(styles, props, themeData) {
-  return return {
+  return {
     ...styles,
     higTreeViewWrapper: {
       ...styles.higTreeViewWrapper,
