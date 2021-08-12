@@ -35,12 +35,8 @@
     "registry-url": "^4.0.0"
   },
   "workspaces": {
-    "packages": [
-      "packages/*"
-    ],
-    "nohoist": [
-      "acceptance"
-    ]
+    "packages": ["packages/*"],
+    "nohoist": ["acceptance"]
   },
   "jest": {
     "preset": "@hig/jest-preset"
