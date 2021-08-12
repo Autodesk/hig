@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
-import { Search24, CloseSUI } from "@hig/icons";
+import { Search24, CloseLUI } from "@hig/icons";
 import {
   createCustomClassNames,
   memoizeCreateButtonEventHandlers
@@ -123,7 +123,7 @@ export default class Search extends Component {
                     role="button"
                     tabIndex={0}
                   >
-                    <CloseSUI />
+                    <CloseLUI />
                   </div>
                 )}
             </div>
