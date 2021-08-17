@@ -43,8 +43,9 @@ export default function stylesheet(props, themeData) {
     }),
 
     clear: {
+      display: "flex",
       position: "absolute",
-      right: "12px",
+      right: "18px",
       cursor: "pointer"
     }
   };
