@@ -1,3 +1,10 @@
+# [@hig/side-nav-v2.2.2](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.2.1...@hig/side-nav@2.2.2) (2021-08-17)
+
+
+### Bug Fixes
+
+* **side-nav:** replace clean icon and updated its position ([#2489](https://github.com/Autodesk/hig/issues/2489)) ([bdb638d](https://github.com/Autodesk/hig/commit/bdb638d))
+
 # [@hig/side-nav-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.2.0...@hig/side-nav@2.2.1) (2020-08-21)
 
 
