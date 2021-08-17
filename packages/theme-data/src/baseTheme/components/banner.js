@@ -4,7 +4,10 @@ export default {
   "banner.error.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.tertiary.salmon.100"
+      ref: "colorScheme.status.error"
+    },
+    transform: {
+      alpha: 0.2
     }
   },
   "banner.error.borderColor": {
@@ -22,7 +25,10 @@ export default {
   "banner.info.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.autodeskBlue.100"
+      ref: "colorScheme.status.info"
+    },
+    transform: {
+      alpha: 0.2
     }
   },
   "banner.info.borderColor": {
@@ -40,7 +46,10 @@ export default {
   "banner.success.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.secondary.green.100"
+      ref: "colorScheme.status.success"
+    },
+    transform: {
+      alpha: 0.2
     }
   },
   "banner.success.borderColor": {
@@ -58,7 +67,10 @@ export default {
   "banner.warning.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.secondary.yellowOrange.100"
+      ref: "colorScheme.status.warning"
+    },
+    transform: {
+      alpha: 0.2
     }
   },
   "banner.warning.borderColor": {
