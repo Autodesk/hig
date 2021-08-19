@@ -277,6 +277,9 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.surface.level350"
+    },
+    transform: {
+      alpha: 0.4
     }
   },
   "table.header.iconColor": {
