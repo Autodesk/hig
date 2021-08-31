@@ -1,5 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import { mount } from "enzyme";
 import { Settings24 } from "@hig/icons";
 import Avatar from "@hig/avatar";
 import Menu from "./Menu";
@@ -110,5 +111,23 @@ describe("menu/Option", () => {
     );
     const tree = renderer.create(wrapper).toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  it("passes down the optionRef", () => {
+    let optionEl = null;
+    const setOptionEl = el => {
+      optionEl = el;
+    };
+    const wrapper = (
+      <Menu>
+        <Option optionRef={setOptionEl} id="option-1">
+          Option 1
+        </Option>
+        <Option id="option-2">Option 2</Option>
+        <Option id="option-3">Option 3</Option>
+      </Menu>
+    );
+
+    expect(mount(wrapper).containsMatchingElement(optionEl)).toBe(true);
   });
 });

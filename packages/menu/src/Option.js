@@ -20,6 +20,10 @@ export default class Option extends Component {
      */
     children: PropTypes.node.isRequired,
     /**
+     * A callback ref that gets passed to the HTML 'li' element
+     */
+    optionRef: PropTypes.func,
+    /**
      * Disables the Option
      */
     disabled: PropTypes.bool,
