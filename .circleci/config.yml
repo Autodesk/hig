@@ -1,6 +1,6 @@
 defaults: &defaults
   docker:
-    - image: circleci/node:8.10-stretch
+    - image: circleci/node:12.22-stretch
 
 version: 2
 jobs:
