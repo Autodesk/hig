@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Transition from "react-transition-group/Transition";
 
@@ -6,74 +6,71 @@ import { transitionStatuses } from "../transitionStatuses";
 
 const TRANSITION_DURATION = 300;
 
-export default class ContainerTransition extends Component {
-  static propTypes = {
-    children: PropTypes.func.isRequired,
-    open: PropTypes.bool
-  };
-
-  static defaultProps = {
-    open: false
-  };
-
-  state = {
-    in: this.props.open,
-    isVisible: this.props.open
-  };
-
-  componentDidUpdate(prevProps) {
-    if (!prevProps.open && this.props.open) {
-      this.show();
-    } else if (prevProps.open && !this.props.open) {
-      this.beginExit();
-    }
-  }
+const ContainerTransition = props => {
+  const { open } = props;
+  const [inside, setInside] = useState(open);
+  const [isVisible, setIsVisible] = useState(open);
 
   /**
    * @param {string} transitionState
    * @returns {string}
    */
-  getTransitionStatus(transitionState) {
-    return !this.state.isVisible ? transitionStatuses.HIDDEN : transitionState;
-  }
-
-  beginExit() {
-    window.requestAnimationFrame(() => {
-      this.setState({ in: false });
-    });
-  }
-
-  show() {
-    window.requestAnimationFrame(() => {
-      this.setState({ isVisible: true }, () => {
-        window.requestAnimationFrame(() => {
-          this.setState({ in: true });
-        });
-      });
-    });
-  }
-
-  hide() {
-    window.requestAnimationFrame(() => {
-      this.setState({ isVisible: false });
-    });
-  }
-
-  handleExit = () => {
-    this.hide();
+  const getTransitionStatus = transitionState => {
+    return !isVisible ? transitionStatuses.HIDDEN : transitionState;
   };
 
-  render() {
-    return (
-      <Transition
-        in={this.state.in}
-        onExited={this.handleExit}
-        timeout={TRANSITION_DURATION}
-      >
-        {transitionState =>
-          this.props.children(this.getTransitionStatus(transitionState))
-        }
-      </Transition>
-    );
-  }
-}
+  const beginExit = () => {
+    window.requestAnimationFrame(() => {
+      setInside(false);
+    });
+  };
+
+  const show = () => {
+    window.requestAnimationFrame(() => {
+      setIsVisible(true);
+    });
+  };
+
+  const hide = () => {
+    window.requestAnimationFrame(() => {
+      setIsVisible(false);
+    });
+  };
+
+  const handleExit = () => hide();
+
+  useEffect(() => {
+      if (open) {
+        show();
+      } else if (!open) {
+        beginExit();
+      }
+    },
+    [open]
+  );
+
+  useEffect(() => {
+      if (isVisible) window.requestAnimationFrame(() => setInside(true));
+    },
+    [isVisible]
+  );
+
+  return (
+    <Transition in={inside} onExited={handleExit} timeout={TRANSITION_DURATION}>
+      {transitionState => props.children(getTransitionStatus(transitionState))}
+    </Transition>
+  );
+};
+
+ContainerTransition.displayName = "ContainerTransition";
+
+ContainerTransition.propTypes = {
+  children: PropTypes.func.isRequired,
+  open: PropTypes.bool
+};
+
+ContainerTransition.defaultProps = {
+  open: false
+};
+
+export default ContainerTransition;

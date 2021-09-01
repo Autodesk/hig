@@ -1,90 +1,83 @@
-import { Component } from "react";
 import PropTypes from "prop-types";
+import { useState, useEffect } from "react";
 
 /**
  * @typedef {Object} State
  * @property {boolean} checked
  */
 
-export default class CheckboxBehavior extends Component {
-  static propTypes = {
-    /**
-     * Checks the checkbox
-     */
-    checked: PropTypes.bool,
-    /**
-     * Initially checks the checkbox, but allows user action to change it
-     */
-    defaultChecked: PropTypes.bool,
-    /**
-     * Called when user clicks on the field
-     */
-    onClick: PropTypes.func,
-    /**
-     * Called when user changes the value of the field
-     */
-    onChange: PropTypes.func,
-    /**
-     * Render prop
-     */
-    children: PropTypes.func
-  };
+const CheckboxBehavior = props => {
+  const { onClick: handleClick, defaultChecked, children } = props;
+  const [checked, setChecked] = useState(defaultChecked);
 
-  static defaultProps = {
-    defaultChecked: false
-  };
-
-  /**
-   * @type {State}
-   */
-  state = {
-    checked: this.props.defaultChecked
-  };
+  const isControlled = () => props.checked !== undefined;
 
   /**
    * @returns {boolean}
    */
-  getChecked() {
-    if (this.isControlled()) {
-      return this.props.checked;
+  const getChecked = () => {
+    if (isControlled()) {
+      return props.checked;
     }
 
-    return this.state.checked;
-  }
+    return checked;
+  };
 
   /**
    * @param {boolean} checked
    */
-  setChecked(checked) {
-    const { onChange } = this.props;
+  const setBehaviorChecked = value => {
+    const { onChange } = props;
+    if (onChange) onChange(value);
 
-    if (onChange) onChange(checked);
-
-    if (!this.isControlled()) {
-      this.setState({ checked });
+    if (!isControlled()) {
+      setChecked(value);
     }
-  }
-
-  isControlled() {
-    return this.props.checked !== undefined;
-  }
+  };
 
   /**
    * @param {UIEvent} event
    */
-  handleChange = event => {
-    this.setChecked(event.target.checked);
+  const handleChange = event => {
+    setBehaviorChecked(event.target.checked);
   };
 
-  render() {
-    const { handleChange } = this;
-    const { onClick: handleClick } = this.props;
-    const checked = this.getChecked();
+  useEffect(() => {
+    setChecked(getChecked());
+  }, []);
 
-    return this.props.children({
-      checked,
-      handleChange,
-      handleClick
-    });
-  }
-}
+  return children({
+    checked,
+    handleChange,
+    handleClick
+  });
+};
+
+CheckboxBehavior.propTypes = {
+  /**
+   * Checks the checkbox
+   */
+  checked: PropTypes.bool,
+  /**
+   * Initially checks the checkbox, but allows user action to change it
+   */
+  defaultChecked: PropTypes.bool,
+  /**
+   * Called when user clicks on the field
+   */
+  onClick: PropTypes.func,
+  /**
+   * Called when user changes the value of the field
+   */
+  onChange: PropTypes.func,
+  /**
+   * Render prop
+   */
+  children: PropTypes.func
+};
+
+CheckboxBehavior.defaultProps = {
+  defaultChecked: false
+};
+
+export default CheckboxBehavior;
