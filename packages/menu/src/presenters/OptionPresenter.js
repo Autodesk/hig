@@ -29,6 +29,7 @@ export default class OptionPresenter extends Component {
       asset,
       checkmark,
       children,
+      optionRef,
       disabled,
       highlighted,
       id,
@@ -99,6 +100,7 @@ export default class OptionPresenter extends Component {
               className={cx([menuOptionClassName, css(styles.menuOption)])}
               disabled={disabled}
               id={id}
+              ref={optionRef}
               role={role}
               selected={selected}
             >

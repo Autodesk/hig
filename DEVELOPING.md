@@ -44,7 +44,7 @@ The following dependencies must be available to be begin project development.
 
 * [Unix-like][] operating system _— [Windows Subsystem for Linux][] also works_
 * [Git][]
-* [Node][] `^9.7.1` (don't use a version higher than ~10.0.0 or you may hit errors during setup)
+* [Node][] `^12` (higher versions are not yet supported)
 * [Yarn][] `>=1.5.1`
 * [Python][] `^2.7` _— Some dependencies require `node-gyp` which uses Python_
 * [Additional instruction for Windows](WindowsSetup.md)
