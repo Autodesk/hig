@@ -1,3 +1,10 @@
+# [@hig/menu-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/menu@1.2.0...@hig/menu@1.3.0) (2021-09-01)
+
+
+### Features
+
+* **menu:** Add optionRef to Option component ([bedfc97](https://github.com/Autodesk/hig/commit/bedfc97))
+
 # [@hig/menu-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/menu@1.1.0...@hig/menu@1.2.0) (2021-07-21)
 
 
