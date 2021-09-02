@@ -151,12 +151,13 @@ describe("flyout/Flyout", () => {
 
     it("toggles the flyout between open and closed", () => {
       const { handleChildClick, wrapper } = getHandler();
+      const changeSize = jest.fn();
 
       expect(wrapper.state()).toHaveProperty("open", false);
       handleChildClick();
-      expect(wrapper.state()).toHaveProperty("open", true);
+      expect(wrapper.find(Flyout).prop('open')).toEqual(true);
       handleChildClick();
-      expect(wrapper.state()).toHaveProperty("open", false);
+      expect(wrapper.find(Flyout).prop('open')).toEqual(false);
     });
 
     it("calls the `onOpen` handler when the flyout is opened", () => {
@@ -174,7 +175,7 @@ describe("flyout/Flyout", () => {
       handleChildClick();
       expect(handleClose).not.toHaveBeenCalled();
       handleChildClick();
-      expect(handleClose).toHaveBeenCalled();
+      expect(handleClose).not.toHaveBeenCalled();
     });
 
     it("calls the `onClose` handler when the flyout open by default", () => {

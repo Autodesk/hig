@@ -1,5 +1,5 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
-import { useState, useEffect } from "react";
 
 /**
  * @typedef {Object} State
@@ -42,12 +42,8 @@ const CheckboxBehavior = props => {
     setBehaviorChecked(event.target.checked);
   };
 
-  useEffect(() => {
-    setChecked(getChecked());
-  }, []);
-
   return children({
-    checked,
+    checked: getChecked(),
     handleChange,
     handleClick
   });

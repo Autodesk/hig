@@ -271,6 +271,8 @@ const Flyout = props => {
   );
 };
 
+Flyout.displayName = "Flyout";
+
 Flyout.propTypes = {
   /** Manipulate flyout coordinates before rendering */
   alterCoordinates: PropTypes.func,

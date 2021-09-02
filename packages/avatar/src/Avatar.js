@@ -219,20 +219,6 @@ Initials.propTypes = {
 const Avatar = props => {
   const [imageUrl, setImageUrl] = useState(undefined);
   const [hasImageError, setHasImageError] = useState(false);
-
-  /**
-   * @param {Event} errorEvent
-   */
-  const handleImageError = errorEvent => {
-    const { onImageError } = props;
-
-    if (onImageError) {
-      onImageError(errorEvent);
-      return;
-    }
-    setHasImageError(true);
-  };
-
   const {
     size,
     name,
@@ -264,6 +250,24 @@ const Avatar = props => {
   const showImage = imageUrl && !hasImageError;
   const styles = roles =>
     stylesheet({ size, backgroundId, stylesheet: customStylesheet }, roles);
+
+  /**
+   * @param {Event} errorEvent
+   */
+  const handleImageError = errorEvent => {
+    const { onImageError } = props;
+
+    if (onImageError) {
+      onImageError(errorEvent);
+      return;
+    }
+    setHasImageError(true);
+  };
+
+  if (imageUrl !== props.image) {
+    setImageUrl(props.image);
+    setHasImageError(false);
+  }
 
   return (
     <ThemeContext.Consumer>
@@ -299,6 +303,8 @@ const Avatar = props => {
     </ThemeContext.Consumer>
   );
 };
+
+Avatar.displayName = "Avatar";
 
 Avatar.propTypes = {
   /** The name for the avatar, in one string

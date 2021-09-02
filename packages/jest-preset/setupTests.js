@@ -3,7 +3,7 @@ require("jest-extended");
 const createSerializer = require("jest-emotion").createSerializer;
 const emotion = require("emotion");
 var enzyme = require('enzyme');
-var Adapter = require('enzyme-adapter-react-16');
+var Adapter = require('@wojtekmaj/enzyme-adapter-react-17');
 
 enzyme.configure({ adapter: new Adapter() });
 
