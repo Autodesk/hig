@@ -152,11 +152,11 @@ describe("flyout/Flyout", () => {
     it("toggles the flyout between open and closed", () => {
       const { handleChildClick, wrapper } = getHandler();
 
-      expect(wrapper.find(Flyout).prop('open')).toEqual(false);
+      expect(wrapper.find(Flyout).prop("open")).toEqual(false);
       handleChildClick();
-      expect(wrapper.find(Flyout).prop('open')).toEqual(true);
+      expect(wrapper.find(Flyout).prop("open")).toEqual(true);
       handleChildClick();
-      expect(wrapper.find(Flyout).prop('open')).toEqual(false);
+      expect(wrapper.find(Flyout).prop("open")).toEqual(false);
     });
 
     it("calls the `onOpen` handler when the flyout is opened", () => {

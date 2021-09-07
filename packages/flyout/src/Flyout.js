@@ -328,6 +328,7 @@ Flyout.defaultProps = {
   /**
    * @param {PanelRendererPayload} payload
    */
+  // eslint-disable-next-line react/prop-types
   panel({ innerRef, content, handleScroll, maxHeight, className, stylesheet }) {
     return (
       <PanelContainerPresenter

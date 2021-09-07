@@ -15,9 +15,8 @@ const ContainerTransition = props => {
    * @param {string} transitionState
    * @returns {string}
    */
-  const getTransitionStatus = transitionState => {
-    return !isVisible ? transitionStatuses.HIDDEN : transitionState;
-  };
+  const getTransitionStatus = transitionState =>
+    !isVisible ? transitionStatuses.HIDDEN : transitionState;
 
   const beginExit = () => {
     window.requestAnimationFrame(() => {
@@ -39,7 +38,8 @@ const ContainerTransition = props => {
 
   const handleExit = () => hide();
 
-  useEffect(() => {
+  useEffect(
+    () => {
       if (open) {
         show();
       } else if (!open) {
@@ -49,7 +49,8 @@ const ContainerTransition = props => {
     [open]
   );
 
-  useEffect(() => {
+  useEffect(
+    () => {
       if (isVisible) window.requestAnimationFrame(() => setInside(true));
     },
     [isVisible]
