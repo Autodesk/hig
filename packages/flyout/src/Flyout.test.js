@@ -151,9 +151,8 @@ describe("flyout/Flyout", () => {
 
     it("toggles the flyout between open and closed", () => {
       const { handleChildClick, wrapper } = getHandler();
-      const changeSize = jest.fn();
 
-      expect(wrapper.state()).toHaveProperty("open", false);
+      expect(wrapper.find(Flyout).prop('open')).toEqual(false);
       handleChildClick();
       expect(wrapper.find(Flyout).prop('open')).toEqual(true);
       handleChildClick();
