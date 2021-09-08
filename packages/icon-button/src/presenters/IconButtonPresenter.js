@@ -9,6 +9,7 @@ import { AVAILABLE_SURFACES, AVAILABLE_VARIANTS } from "../constants";
 
 export default class IconButtonPresenter extends Component {
   static propTypes = {
+    className: PropTypes.string,
     disabled: PropTypes.bool,
     hasFocus: PropTypes.bool,
     hasHover: PropTypes.bool,
@@ -31,9 +32,11 @@ export default class IconButtonPresenter extends Component {
 
   render() {
     const {
+      className,
       disabled,
       hasFocus,
       hasHover,
+      icon: higIcon,
       isPressed,
       link,
       on,
@@ -50,7 +53,6 @@ export default class IconButtonPresenter extends Component {
       variant,
       ...otherProps
     } = this.props;
-    const { className } = otherProps;
 
     return (
       <ThemeContext.Consumer>
@@ -66,6 +68,7 @@ export default class IconButtonPresenter extends Component {
             disabled,
             hasFocus,
             hasHover,
+            higIcon,
             isPressed,
             on,
             onClick,
@@ -86,13 +89,14 @@ export default class IconButtonPresenter extends Component {
           );
           const Element = this.props.link ? "a" : "button";
           const styles = stylesheet(props, resolvedRoles, metadata.densityId);
-          const icon = React.cloneElement(this.props.icon, {
+          const icon = React.cloneElement(higIcon, {
             className: cx(css(styles.iconButtonIcon), iconButtonIconClassName)
           });
           const tabIndex = disabled ? "-1" : "0";
 
           return (
             <Element
+              {...otherProps}
               className={cx(css(styles.iconButton), className)}
               disabled={disabled}
               onClick={onClick}
