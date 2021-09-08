@@ -9,9 +9,11 @@ import { AVAILABLE_SURFACES, AVAILABLE_VARIANTS } from "../constants";
 
 const IconButtonPresenter = props => {
   const {
+    className,
     disabled,
     hasFocus,
     hasHover,
+    icon: higIcon,
     isPressed,
     link,
     on,
@@ -28,7 +30,6 @@ const IconButtonPresenter = props => {
     variant,
     ...otherProps
   } = props;
-  const { className } = otherProps;
 
   return (
     <ThemeContext.Consumer>
@@ -45,13 +46,14 @@ const IconButtonPresenter = props => {
         );
         const Element = props.link ? "a" : "button";
         const styles = stylesheet(props, resolvedRoles, metadata.densityId);
-        const icon = React.cloneElement(props.icon, {
+        const icon = React.cloneElement(higIcon, {
           className: cx(css(styles.iconButtonIcon), iconButtonIconClassName)
         });
         const tabIndex = disabled ? "-1" : "0";
 
         return (
           <Element
+            {...otherProps}
             className={cx(css(styles.iconButton), className)}
             disabled={disabled}
             onClick={onClick}
@@ -76,6 +78,7 @@ const IconButtonPresenter = props => {
 IconButtonPresenter.displayName = "IconButtonPresenter";
 
 IconButtonPresenter.propTypes = {
+  className: PropTypes.string,
   disabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,

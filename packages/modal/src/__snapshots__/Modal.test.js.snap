@@ -212,6 +212,7 @@ exports[`modal/Modal integration renders correctly 1`] = `
             HIG Modal
           </p>
           <button
+            aria-label="Close"
             className="emotion-2"
             disabled={undefined}
             onBlur={[Function]}
@@ -462,6 +463,7 @@ exports[`modal/Modal integration renders with a custom css class name 1`] = `
             HIG Modal
           </p>
           <button
+            aria-label="Close"
             className="emotion-2"
             disabled={undefined}
             onBlur={[Function]}
@@ -712,6 +714,7 @@ exports[`modal/Modal integration renders with styles customized 1`] = `
             HIG Modal
           </p>
           <button
+            aria-label="Close"
             className="emotion-2"
             disabled={undefined}
             onBlur={[Function]}

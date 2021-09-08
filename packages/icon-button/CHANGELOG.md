@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.6.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.5.0...@hig/icon-button@2.6.0) (2021-09-08)
+
+
+### Features
+
+* pass ...otherProps to the root element ([980fc5c](https://github.com/Autodesk/hig/commit/980fc5c))
+
 # [@hig/icon-button-v2.5.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.4.2...@hig/icon-button@2.5.0) (2020-12-07)
 
 
