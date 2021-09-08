@@ -73,7 +73,6 @@ const Flyout = props => {
         pointerRect,
         viewportRect
       };
-
       return alterCoordinates(coordinates, rects);
     }
 
@@ -95,7 +94,7 @@ const Flyout = props => {
 
   const isOpenControlled = () => props.open !== undefined;
 
-  const isOpen = isOpenControlled() ? props.open : open;
+  const isOpen = () => (isOpenControlled() ? props.open : open);
 
   const handleChildMouseEnter = () => {
     if (props.openOnHover) {
@@ -231,7 +230,6 @@ const Flyout = props => {
       containerPosition,
       pointerPosition
     } = getCoordinatesMethod();
-
     return (
       <DelayedHoverBehavior
         onMouseEnter={handleChildMouseEnter}
@@ -267,7 +265,7 @@ const Flyout = props => {
   }, []);
 
   return (
-    <ContainerTransition open={isOpen}>{renderPresenter}</ContainerTransition>
+    <ContainerTransition open={isOpen()}>{renderPresenter}</ContainerTransition>
   );
 };
 
