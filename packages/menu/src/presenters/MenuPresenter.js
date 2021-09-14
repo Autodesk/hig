@@ -31,19 +31,14 @@ const MenuPresenter = props => {
 
   const renderOption = ({ key, props: propsOrigin }) => {
     const {
-      checkmark,
       getActiveOption,
-      getHighlightIndex,
-      getOptionsInfo,
       getPreviousEvent,
-      multiple,
       onFocus,
       selected,
       setActiveOption,
       setHighlightIndex,
       unselect
     } = props;
-
     const payload = {
       ...propsOrigin,
       checkmark,

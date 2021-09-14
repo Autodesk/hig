@@ -109,6 +109,7 @@ const MenuBehavior = props => {
     setPreviousEventHook(previousEvent);
   };
 
+  // eslint-disable-next-line no-unused-vars
   const getTotalOptions = () => Object.keys(optionInfoHook).length;
 
   const handleFocus = event => {

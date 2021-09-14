@@ -121,9 +121,7 @@ Option.propTypes = {
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func,
-
-  titan: PropTypes.bool
+  stylesheet: PropTypes.func
 };
 
 Option.defaultProps = {
