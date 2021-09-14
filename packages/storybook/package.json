@@ -60,6 +60,8 @@
     "@hig/typography": "^1.2.0",
     "faker": "^4.1.0",
     "prop-types": "^15.6.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "wait-port": "^0.2.2"
   },
   "eslintConfig": {
