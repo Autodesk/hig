@@ -18,12 +18,14 @@
   ],
   "dependencies": {
     "@hig/behaviors": "^1.1.1",
-    "@hig/typography": "^1.2.0",
     "@hig/icons": "^3.4.0",
+    "@hig/typography": "^1.2.0",
     "@hig/utils": "^0.4.0",
     "emotion": "^10.0.0",
     "lodash.memoize": "^4.1.2",
     "prop-types": "^15.7.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "react-lifecycles-compat": "^3.0.4"
   },
   "peerDependencies": {

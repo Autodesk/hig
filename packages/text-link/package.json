@@ -19,6 +19,8 @@
   "dependencies": {
     "@hig/behaviors": "^1.1.1",
     "prop-types": "^15.7.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "react-lifecycles-compat": "^3.0.4"
   },
   "peerDependencies": {

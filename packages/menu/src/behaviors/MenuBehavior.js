@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import selectOption from "./selectOption";
 
@@ -49,135 +49,88 @@ function checkScroll(optionId, menu) {
   scrollInListbox(option, menu);
 }
 
-export default class MenuBehavior extends Component {
-  static propTypes = {
-    children: PropTypes.func,
-    defaultSelected: PropTypes.arrayOf(PropTypes.any),
-    getActiveOption: PropTypes.func,
-    getHighlightIndex: PropTypes.func,
-    getOptionsInfo: PropTypes.func,
-    getPreviousEvent: PropTypes.func,
-    handleBlur: PropTypes.func,
-    handleFocus: PropTypes.func,
-    handleKeyDown: PropTypes.func,
-    handleMouseMove: PropTypes.func,
-    menuRef: PropTypes.func,
-    multiple: PropTypes.bool,
-    onBlur: PropTypes.func,
-    onChange: PropTypes.func,
-    onFocus: PropTypes.func,
-    onKeyDown: PropTypes.func,
-    selected: PropTypes.arrayOf(PropTypes.any),
-    setActiveOption: PropTypes.func,
-    setHighlightIndex: PropTypes.func,
-    setOptionsInfo: PropTypes.func,
-    setPreviousEvent: PropTypes.func,
-    unselect: PropTypes.bool
-  };
+const MenuBehavior = props => {
+  const isControlled = () => props.selected !== undefined;
+  const [activeOptionHook, setActiveOptionHook] = useState(
+    isControlled() ? props.selected : props.defaultSelected
+  );
+  const [highlightIndexHook, setHighlightIndexHook] = useState(0);
+  const [optionInfoHook, setOptionInfoHook] = useState(null);
+  const [previousEventHook, setPreviousEventHook] = useState(null);
+  const menuRef = useRef(null);
 
-  static defaultProps = {
-    defaultSelected: []
-  };
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      activeOption: this.isControlled()
-        ? this.props.selected
-        : this.props.defaultSelected,
-      highlightIndex: 0,
-      optionInfo: null,
-      previousEvent: null
-    };
-
-    this.menuRef = null;
-  }
-
-  setMenuRef = element => {
-    if (this.props.menuRef) {
-      this.props.menuRef(element);
+  const setMenuRef = element => {
+    if (props.menuRef) {
+      props.menuRef(element);
     }
-
-    this.menuRef = element;
+    menuRef.current = element;
   };
 
-  setOptionsInfo = optionInfo => {
-    this.setState({ optionInfo });
+  const setOptionsInfo = optionInfo => {
+    setOptionInfoHook(optionInfo);
   };
 
-  getOptionsInfo = () => this.state.optionInfo;
+  const getOptionsInfo = () => optionInfoHook;
 
-  setActiveOption = activeOption => {
-    const { onChange, unselect } = this.props;
+  const setActiveOption = activeOption => {
+    const { onChange, unselect } = props;
     if (onChange) {
       if (unselect) {
-        this.props.onChange(activeOption);
-        this.setState({ activeOption });
+        props.onChange(activeOption);
+        setActiveOptionHook(activeOption);
       } else {
         let newActiveOption;
         if (
           activeOption.length === 0 ||
-          activeOption.length < this.state.activeOption.length
+          activeOption.length < activeOptionHook.length
         ) {
-          newActiveOption = this.state.activeOption;
-          this.props.onChange(this.state.activeOption);
+          newActiveOption = activeOptionHook;
+          props.onChange(activeOptionHook);
         } else {
           newActiveOption = activeOption;
-          this.props.onChange(activeOption);
+          props.onChange(activeOption);
         }
-        this.setState({ activeOption: newActiveOption });
+        setActiveOptionHook(newActiveOption);
       }
     }
   };
 
-  getActiveOption = () => this.state.activeOption;
+  const getActiveOption = () => activeOptionHook;
 
-  setHighlightIndex = highlightIndex => {
-    this.setState({ highlightIndex });
+  const setHighlightIndex = highlightIndex => {
+    setHighlightIndexHook(highlightIndex);
   };
 
-  getHighlightIndex = () => this.state.highlightIndex;
+  const getHighlightIndex = () => highlightIndexHook;
 
-  getPreviousEvent = () => this.state.previousEvent;
+  const getPreviousEvent = () => previousEventHook;
 
-  setPreviousEvent = previousEvent => {
-    this.setState({ previousEvent });
+  const setPreviousEvent = previousEvent => {
+    setPreviousEventHook(previousEvent);
   };
 
-  getTotalOptions = () => Object.keys(this.state.optionInfo).length;
+  const getTotalOptions = () => Object.keys(optionInfoHook).length;
 
-  isControlled() {
-    return this.props.selected !== undefined;
-  }
-
-  handleFocus = event => {
-    if (this.props.onFocus) {
-      this.props.onFocus(event);
+  const handleFocus = event => {
+    if (props.onFocus) {
+      props.onFocus(event);
     }
 
     event.stopPropagation();
   };
 
-  handleBlur = event => {
-    if (this.props.onBlur) {
-      this.props.onBlur(event);
+  const handleBlur = event => {
+    if (props.onBlur) {
+      props.onBlur(event);
     }
 
     event.stopPropagation();
-    this.setHighlightIndex(0);
+    setHighlightIndex(0);
   };
 
-  handleKeyDown = event => {
-    const {
-      getHighlightIndex,
-      getOptionsInfo,
-      setActiveOption,
-      setHighlightIndex,
-      setPreviousEvent
-    } = this;
-    const { multiple, onKeyDown } = this.props;
-    const options = this.state.optionInfo;
+  const handleKeyDown = event => {
+    const { multiple, onKeyDown } = props;
+    const options = optionInfoHook;
     const highlightableIndexes = [];
 
     if (onKeyDown) {
@@ -203,14 +156,14 @@ export default class MenuBehavior extends Component {
 
           checkScroll(
             getOptionsInfo()[highlightableIndexes[0] - 1].id,
-            this.menuRef
+            menuRef.current
           );
         } else {
           setHighlightIndex(highlightableIndexes[currentIndex + 1]);
 
           checkScroll(
             getOptionsInfo()[highlightableIndexes[currentIndex + 1] - 1].id,
-            this.menuRef
+            menuRef.current
           );
         }
         event.preventDefault();
@@ -227,14 +180,14 @@ export default class MenuBehavior extends Component {
 
           checkScroll(
             getOptionsInfo()[highlightableIndexes[lastIndex] - 1].id,
-            this.menuRef
+            menuRef.current
           );
         } else {
           setHighlightIndex(highlightableIndexes[currentIndex - 1]);
 
           checkScroll(
             getOptionsInfo()[highlightableIndexes[currentIndex - 1] - 1].id,
-            this.menuRef
+            menuRef.current
           );
         }
         event.preventDefault();
@@ -245,11 +198,11 @@ export default class MenuBehavior extends Component {
       // Space
       case 13:
       case 32: {
-        const activeOptionsArray = [...this.state.activeOption];
-        const { id } = this.state.optionInfo[getHighlightIndex() - 1];
+        const activeOptionsArray = [...activeOptionHook];
+        const { id } = optionInfoHook[getHighlightIndex() - 1];
         const activeOptions = selectOption(id, activeOptionsArray, multiple);
 
-        if (this.isControlled()) {
+        if (isControlled()) {
           return;
         }
 
@@ -263,70 +216,96 @@ export default class MenuBehavior extends Component {
     }
   };
 
-  handleMouseMove = event => {
+  const handleMouseMove = event => {
     // don't let this bubble up from Menu to MenuGroup
     event.stopPropagation();
 
-    if (this.getPreviousEvent() === event.type) {
+    if (getPreviousEvent() === event.type) {
       return;
     }
 
-    this.setPreviousEvent(event.type);
+    setPreviousEvent(event.type);
   };
 
-  render() {
-    const getActiveOption = this.props.getActiveOption
-      ? this.props.getActiveOption
-      : this.getActiveOption;
-    const getHighlightIndex = this.props.getHighlightIndex
-      ? this.props.getHighlightIndex
-      : this.getHighlightIndex;
-    const getOptionsInfo = this.props.getOptionsInfo
-      ? this.props.getOptionsInfo
-      : this.getOptionsInfo;
-    const getPreviousEvent = this.props.getPreviousEvent
-      ? this.props.getPreviousEvent
-      : this.getPreviousEvent;
-    const handleBlur = this.props.handleBlur
-      ? this.props.handleBlur
-      : this.handleBlur;
-    const handleFocus = this.props.handleFocus
-      ? this.props.handleFocus
-      : this.handleFocus;
-    const handleKeyDown = this.props.handleKeyDown
-      ? this.props.handleKeyDown
-      : this.handleKeyDown;
-    const handleMouseMove = this.props.handleMouseMove
-      ? this.props.handleMouseMove
-      : this.handleMouseMove;
-    const setActiveOption = this.props.setActiveOption
-      ? this.props.setActiveOption
-      : this.setActiveOption;
-    const setHighlightIndex = this.props.setHighlightIndex
-      ? this.props.setHighlightIndex
-      : this.setHighlightIndex;
-    const setOptionsInfo = this.props.setOptionsInfo
-      ? this.props.setOptionsInfo
-      : this.setOptionsInfo;
-    const setPreviousEvent = this.props.setPreviousEvent
-      ? this.props.setPreviousEvent
-      : this.setPreviousEvent;
-    const { setMenuRef } = this;
+  const getActiveOptionMethod = props.getActiveOption
+    ? props.getActiveOption
+    : getActiveOption;
+  const getHighlightIndexMethod = props.getHighlightIndex
+    ? props.getHighlightIndex
+    : getHighlightIndex;
+  const getOptionsInfoMethod = props.getOptionsInfo
+    ? props.getOptionsInfo
+    : getOptionsInfo;
+  const getPreviousEventMethod = props.getPreviousEvent
+    ? props.getPreviousEvent
+    : getPreviousEvent;
+  const handleBlurMethod = props.handleBlur ? props.handleBlur : handleBlur;
+  const handleFocusMethod = props.handleFocus ? props.handleFocus : handleFocus;
+  const handleKeyDownMethod = props.handleKeyDown
+    ? props.handleKeyDown
+    : handleKeyDown;
+  const handleMouseMoveMethod = props.handleMouseMove
+    ? props.handleMouseMove
+    : handleMouseMove;
+  const setActiveOptionMethod = props.setActiveOption
+    ? props.setActiveOption
+    : setActiveOption;
+  const setHighlightIndexMethod = props.setHighlightIndex
+    ? props.setHighlightIndex
+    : setHighlightIndex;
+  const setOptionsInfoMethod = props.setOptionsInfo
+    ? props.setOptionsInfo
+    : setOptionsInfo;
+  const setPreviousEventMethod = props.setPreviousEvent
+    ? props.setPreviousEvent
+    : setPreviousEvent;
 
-    return this.props.children({
-      getActiveOption,
-      getHighlightIndex,
-      getOptionsInfo,
-      getPreviousEvent,
-      handleBlur,
-      handleFocus,
-      handleKeyDown,
-      handleMouseMove,
-      setActiveOption,
-      setHighlightIndex,
-      setMenuRef,
-      setOptionsInfo,
-      setPreviousEvent
-    });
-  }
-}
+  return props.children({
+    getActiveOption: getActiveOptionMethod,
+    getHighlightIndex: getHighlightIndexMethod,
+    getOptionsInfo: getOptionsInfoMethod,
+    getPreviousEvent: getPreviousEventMethod,
+    handleBlur: handleBlurMethod,
+    handleFocus: handleFocusMethod,
+    handleKeyDown: handleKeyDownMethod,
+    handleMouseMove: handleMouseMoveMethod,
+    setActiveOption: setActiveOptionMethod,
+    setHighlightIndex: setHighlightIndexMethod,
+    setMenuRef,
+    setOptionsInfo: setOptionsInfoMethod,
+    setPreviousEvent: setPreviousEventMethod
+  });
+};
+
+MenuBehavior.displayName = "MenuBehavior";
+
+MenuBehavior.propTypes = {
+  children: PropTypes.func,
+  defaultSelected: PropTypes.arrayOf(PropTypes.any),
+  getActiveOption: PropTypes.func,
+  getHighlightIndex: PropTypes.func,
+  getOptionsInfo: PropTypes.func,
+  getPreviousEvent: PropTypes.func,
+  handleBlur: PropTypes.func,
+  handleFocus: PropTypes.func,
+  handleKeyDown: PropTypes.func,
+  handleMouseMove: PropTypes.func,
+  menuRef: PropTypes.func,
+  multiple: PropTypes.bool,
+  onBlur: PropTypes.func,
+  onChange: PropTypes.func,
+  onFocus: PropTypes.func,
+  onKeyDown: PropTypes.func,
+  selected: PropTypes.arrayOf(PropTypes.any),
+  setActiveOption: PropTypes.func,
+  setHighlightIndex: PropTypes.func,
+  setOptionsInfo: PropTypes.func,
+  setPreviousEvent: PropTypes.func,
+  unselect: PropTypes.bool
+};
+
+MenuBehavior.defaultProps = {
+  defaultSelected: []
+};
+
+export default MenuBehavior;
