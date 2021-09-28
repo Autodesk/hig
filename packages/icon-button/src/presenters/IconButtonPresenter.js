@@ -92,7 +92,7 @@ export default class IconButtonPresenter extends Component {
           const icon = React.cloneElement(higIcon, {
             className: cx(css(styles.iconButtonIcon), iconButtonIconClassName)
           });
-          const tabIndex = disabled ? "-1" : "0";
+          const tabIndex = disabled ? "-1" : otherProps.tabIndex || "0";
 
           return (
             <Element
