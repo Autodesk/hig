@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.6.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.6.0...@hig/icon-button@2.6.1) (2021-09-28)
+
+
+### Bug Fixes
+
+* allow tabindex to be passed down to root ([8784d15](https://github.com/Autodesk/hig/commit/8784d15))
+
 # [@hig/icon-button-v2.6.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.5.0...@hig/icon-button@2.6.0) (2021-09-08)
 
 
