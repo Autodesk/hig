@@ -101,6 +101,7 @@ export default class MenuPresenter extends Component {
       divider,
       menuRef,
       multiple,
+      unselect,
       stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
