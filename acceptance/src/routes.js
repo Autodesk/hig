@@ -23,6 +23,7 @@ import TextAreaPage from "./pages/TextAreaPage";
 import TextLinkPage from "./pages/TextLinkPage";
 import TogglePage from "./pages/TogglePage";
 import TooltipPage from "./pages/TooltipPage";
+import TreeViewPage from "./pages/TreeViewPage";
 import TypographyPage from "./pages/TypographyPage";
 
 export default [
@@ -50,6 +51,7 @@ export default [
   { path: "/text-link/", component: TextLinkPage, label: "Text Link" },
   { path: "/toggle/", component: TogglePage, label: "Toggle" },
   { path: "/tooltip/", component: TooltipPage, label: "Tooltip" },
+  { path: "/tree-view", component: TreeViewPage, label: "TreeView" },
   { path: "/typography/", component: TypographyPage, label: "Typography" },
   { path: "/material-ui/buttons/", component: MuiButtonsPage, label: "Material Buttons" },
 ];
