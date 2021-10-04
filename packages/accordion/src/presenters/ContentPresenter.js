@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import { createCustomClassNames } from "@hig/utils";
@@ -13,76 +13,65 @@ const collapseStatus = {
   EXPANDED: "expanded"
 };
 
-export default class ContentPresenter extends Component {
-  static propTypes = {
-    children: PropTypes.node.isRequired,
-    collapsed: PropTypes.bool
+// Helper hook
+function usePrevious(value) {
+  const ref = useRef();
+  useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
+}
+
+
+// Desired hook
+function useCompare (val) {
+  const prevVal = usePrevious(val);
+  return prevVal !== val;
+}
+
+function ContentPresenter(props){
+  const { collapsed } = props;
+  const [status, setStatus] = useState(collapseStatus.COLLAPSED);
+  const contentWrapper = useRef(null);
+
+  const expand = () => setStatus(collapseStatus.EXPANDING);
+  const afterCollapsed = () => setStatus(collapseStatus.COLLAPSED);
+  const afterExpanded = () => setStatus(collapseStatus.EXPANDED);
+
+  // const prevCollapsed = useCompare(collapsed);
+
+  const setContentWrapperRef = element => {
+    contentWrapper.current = element;
   };
 
-  static defaultProps = {
-    collapsed: false
-  };
-
-  constructor(props) {
-    super(props);
-    this.contentWrapper = null;
-    this.setContentWrapperRef = element => {
-      this.contentWrapper = element;
-    };
-
-    this.state = {
-      status: collapseStatus.COLLAPSED
-    };
-  }
-
-  componentDidMount() {
-    if (!this.props.collapsed && this.contentWrapper) {
-      this.afterExpanded();
-    }
-  }
-
-  componentDidUpdate({ collapsed: previousCollapsed }) {
-    const { collapsed: currentCollapsed } = this.props;
-
-    if (!this.contentWrapper) {
-      return;
-    }
-    if (currentCollapsed && !previousCollapsed) {
-      this.collapse();
-    }
-    if (!currentCollapsed && previousCollapsed) {
-      this.expand();
-    }
-  }
-
-  onTransitionEnd = ({ target, propertyName }) => {
-    if (target === this.contentWrapper && propertyName === "height") {
-      if (this.props.collapsed) {
-        this.afterCollapsed();
+  const onTransitionEnd = ({ target, propertyName }) => {
+    if (target === contentWrapper && propertyName === "height") {
+      if (collapsed) {
+        afterCollapsed();
       } else {
-        this.afterExpanded();
+        afterExpanded();
       }
     }
   };
 
-  getContentHeight = () => `${this.contentWrapper.scrollHeight}px`;
+  const getContentHeight = () => `${contentWrapper.clientHeight}px`;
 
-  getTransitionStyles = status => {
+  const getTransitionStyles = statusParam => {
     const defaultCollapsedStyles = {
       height: "0",
       overflow: "hidden",
       visibility: "hidden"
     };
 
-    if (status === collapseStatus.EXPANDING) {
+    if (statusParam === collapseStatus.EXPANDING) {
       return {
         ...defaultCollapsedStyles,
-        height: this.getContentHeight(),
+        height: getContentHeight(),
         visibility: "visible",
         overflow: "hidden"
       };
     }
-    if (status === collapseStatus.EXPANDED) {
+    if (statusParam === collapseStatus.EXPANDED) {
       return {
         ...defaultCollapsedStyles,
         height: "auto",
@@ -90,15 +79,15 @@ export default class ContentPresenter extends Component {
         overflow: "visible"
       };
     }
-    if (status === collapseStatus.BEFORE_COLLAPSE) {
+    if (statusParam === collapseStatus.BEFORE_COLLAPSE) {
       return {
         ...defaultCollapsedStyles,
-        height: this.getContentHeight(),
+        height: getContentHeight(),
         visibility: "visible",
         overflow: "visible"
       };
     }
-    if (status === collapseStatus.COLLAPSING) {
+    if (statusParam === collapseStatus.COLLAPSING) {
       return {
         ...defaultCollapsedStyles,
         height: "0",
@@ -106,43 +95,65 @@ export default class ContentPresenter extends Component {
         overflow: "hidden"
       };
     }
-
     return defaultCollapsedStyles;
   };
 
-  collapse = () => {
-    this.setState({ status: collapseStatus.BEFORE_COLLAPSE });
+  const collapse = () => {
+    setStatus(collapseStatus.BEFORE_COLLAPSE);
     window.requestAnimationFrame(() => {
-      setTimeout(() => this.setState({ status: collapseStatus.COLLAPSED }));
+      setTimeout(() => setStatus(collapseStatus.COLLAPSED));
     });
   };
 
-  expand = () => this.setState({ status: collapseStatus.EXPANDING });
+  useEffect(() => {
+    if (!collapsed && contentWrapper) {
+      afterExpanded();
+    }
+  },[]);
 
-  afterCollapsed = () => this.setState({ status: collapseStatus.COLLAPSED });
-  afterExpanded = () => this.setState({ status: collapseStatus.EXPANDED });
+  useEffect(() => {
+    if (!contentWrapper) {
+        return;
+      }
+    if (collapsed) {
+        collapse();
+      }
+    if (!collapsed) {
+       expand();
+     }
+    },[collapsed]);
 
-  render() {
-    const { children, ...otherProps } = this.props;
-    const { className } = otherProps;
-    const { status } = this.state;
+  const { children, ...otherProps } = props;
+  const { className } = otherProps;
 
-    const contentClassName = createCustomClassNames(className, "content");
-    const styles = stylesheet();
-    const transitionStyles = this.getTransitionStyles(status);
+  const contentClassName = createCustomClassNames(className, "content");
+  const styles = stylesheet();
+  const transitionStyles = getTransitionStyles(status);
 
-    return (
-      <div
-        ref={this.setContentWrapperRef}
-        className={cx(
-          css(styles.contentTransitionWrapper),
-          css(transitionStyles),
-          contentClassName
-        )}
-        onTransitionEnd={this.onTransitionEnd}
-      >
-        {children}
-      </div>
-    );
-  }
+  return (
+    <div
+      ref={setContentWrapperRef}
+      className={cx(
+        css(styles.contentTransitionWrapper),
+        css(transitionStyles),
+        contentClassName
+      )}
+      onTransitionEnd={onTransitionEnd}
+    >
+      {children}
+    </div>
+  );
 }
+
+ContentPresenter.displayName = "ContentPresenter";
+
+ContentPresenter.propTypes = {
+  children: PropTypes.node.isRequired,
+  collapsed: PropTypes.bool
+};
+
+ContentPresenter.defaultProps = {
+  collapsed: false
+};
+
+export default ContentPresenter;

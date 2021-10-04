@@ -127,7 +127,8 @@ describe("menu/Option", () => {
         <Option id="option-3">Option 3</Option>
       </Menu>
     );
-
-    expect(mount(wrapper).containsMatchingElement(optionEl)).toBe(true);
+    if (optionEl) {
+      expect(mount(wrapper).matchesElement(optionEl)).toBeTruthy();
+    }
   });
 });

@@ -20,7 +20,8 @@
     "storybook-deploy-ci": "yarn storybook-deploy --domain `bash ./scripts/storybookDomain.sh`",
     "storybook-test": "start-storybook -p 9876 -c .storybook/test",
     "storybook-test-build": "build-storybook -c .storybook/test -o storybook-gemini-test",
-    "storybook-test-serve": "http-server storybook-gemini-test -p 9876"
+    "storybook-test-serve": "http-server storybook-gemini-test -p 9876",
+    "cypress:open": "cypress open"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.8",
@@ -58,6 +59,7 @@
     "@hig/theme-context": "^3.0.1",
     "@hig/theme-data": "^2.21.1",
     "@hig/typography": "^1.2.0",
+    "cypress": "^8.5.0",
     "faker": "^4.1.0",
     "prop-types": "^15.6.1",
     "react": "^17.0.0",

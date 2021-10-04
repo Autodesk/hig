@@ -19,7 +19,9 @@
   "dependencies": {
     "@hig/behaviors": "1.1.1",
     "emotion": "^10.0.0",
-    "prop-types": "^15.7.1"
+    "prop-types": "^15.7.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.1",

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import IconButton from "@hig/icon-button";
@@ -12,50 +12,11 @@ import { STATUS_ICONS, AVAILABLE_STATUSES } from "./statuses";
 
 import stylesheet from "./NotificationsToast.stylesheet";
 
-export default class NotificationsToast extends Component {
-  static propTypes = {
-    /**
-     * Message content for the Toast. It's recommended to keep the content to no more than 20 words.
-     */
-    children: PropTypes.node,
-    /**
-     * An Avatar or Thumbnail to precede the notification content.
-     * If an image is provided and showStatusIcon is true, the image will take priority.
-     */
-    image: PropTypes.node,
-    /**
-     * Function to call when Toast is dismissed
-     */
-    onDismiss: PropTypes.func,
-    /**
-     * The tooltip text shown for the close icon
-     */
-    onDismissTitle: PropTypes.string,
-    /**
-     * Indicate whether to show the icon associated with the provided status.
-     * An icon will not be shown for a null status.
-     */
-    showStatusIcon: PropTypes.bool,
-    /**
-     * Indicates the style of toast notification
-     */
-    status: PropTypes.oneOf(AVAILABLE_STATUSES),
-    /**
-     * Function to modify the component's styles
-     */
-    stylesheet: PropTypes.func
-  };
-
-  static defaultProps = {
-    onDismissTitle: "Dismiss",
-    showStatusIcon: true,
-    status: "primary"
-  };
-
-  _renderImage = (themeData, metadata) => {
-    const { showStatusIcon, image, status, ...otherProps } = this.props;
+const NotificationsToast = props => {
+  const _renderImage = (themeData, metadata) => {
+    const { showStatusIcon, image, status, ...otherProps } = props;
     const { className } = otherProps;
-    const styles = stylesheet(this.props, themeData);
+    const styles = stylesheet(props, themeData);
     const iconFill =
       status === "primary"
         ? themeData["basics.colors.primary.autodeskBlue.500"]
@@ -95,87 +56,128 @@ export default class NotificationsToast extends Component {
     return null;
   };
 
-  render() {
-    return (
-      <ThemeContext.Consumer>
-        {({ resolvedRoles, metadata }) => {
-          const {
-            onDismissTitle,
-            status,
-            stylesheet: customStylesheet,
-            ...otherProps
-          } = this.props;
-          const { className } = otherProps;
-          const styles = stylesheet(
-            { status, stylesheet: customStylesheet },
-            resolvedRoles
-          );
-          const toastBodyClassName = createCustomClassNames(
-            className,
-            "toast-body"
-          );
-          const toastMessageClassName = createCustomClassNames(
-            className,
-            "toast-message"
-          );
-          const toastDismissClassName = createCustomClassNames(
-            className,
-            "toast-dismiss"
-          );
-          const toastTypographyClassName = createCustomClassNames(
-            className,
-            "toast-typography"
-          );
-          const toastIconButtonClassName = createCustomClassNames(
-            className,
-            "toast-icon-button"
-          );
-          const CloseIcon =
-            metadata.densityId === "medium-density" ? CloseSUI : CloseXsUI;
+  return (
+    <ThemeContext.Consumer>
+      {({ resolvedRoles, metadata }) => {
+        const {
+          onDismissTitle,
+          status,
+          stylesheet: customStylesheet,
+          ...otherProps
+        } = props;
+        const { className } = otherProps;
+        const styles = stylesheet(
+          { status, stylesheet: customStylesheet },
+          resolvedRoles
+        );
+        const toastBodyClassName = createCustomClassNames(
+          className,
+          "toast-body"
+        );
+        const toastMessageClassName = createCustomClassNames(
+          className,
+          "toast-message"
+        );
+        const toastDismissClassName = createCustomClassNames(
+          className,
+          "toast-dismiss"
+        );
+        const toastTypographyClassName = createCustomClassNames(
+          className,
+          "toast-typography"
+        );
+        const toastIconButtonClassName = createCustomClassNames(
+          className,
+          "toast-icon-button"
+        );
+        const CloseIcon =
+          metadata.densityId === "medium-density" ? CloseSUI : CloseXsUI;
 
-          return (
-            <div className={cx([css(styles.toast), className])}>
-              {this._renderImage(resolvedRoles, metadata)}
-              <div className={cx([css(styles.toastBody), toastBodyClassName])}>
+        return (
+          <div className={cx([css(styles.toast), className])}>
+            {_renderImage(resolvedRoles, metadata)}
+            <div className={cx([css(styles.toastBody), toastBodyClassName])}>
+              <div
+                className={cx([
+                  css(styles.toastMessage),
+                  toastMessageClassName
+                ])}
+              >
+                <RichText>
+                  <Typography
+                    style={{
+                      fontSize: "12px",
+                      maxWidth: "220px",
+                      textOverflow: "ellipsis",
+                      overflow: "hidden"
+                    }}
+                    className={toastTypographyClassName}
+                  >
+                    {props.children}
+                  </Typography>
+                </RichText>
                 <div
                   className={cx([
-                    css(styles.toastMessage),
-                    toastMessageClassName
+                    css(styles.toastDismiss),
+                    toastDismissClassName
                   ])}
                 >
-                  <RichText>
-                    <Typography
-                      style={{
-                        fontSize: "12px",
-                        maxWidth: "220px",
-                        textOverflow: "ellipsis",
-                        overflow: "hidden"
-                      }}
-                      className={toastTypographyClassName}
-                    >
-                      {this.props.children}
-                    </Typography>
-                  </RichText>
-                  <div
-                    className={cx([
-                      css(styles.toastDismiss),
-                      toastDismissClassName
-                    ])}
-                  >
-                    <IconButton
-                      title={onDismissTitle}
-                      icon={<CloseIcon />}
-                      type="transparent"
-                      onClick={this.props.onDismiss}
-                      className={toastIconButtonClassName}
-                    />
-                  </div>
+                  <IconButton
+                    title={onDismissTitle}
+                    icon={<CloseIcon />}
+                    type="transparent"
+                    onClick={props.onDismiss}
+                    className={toastIconButtonClassName}
+                  />
                 </div>
               </div>
             </div>
-          );
-        }}
-      </ThemeContext.Consumer>
-    );
-  }
-}
+          </div>
+        );
+      }}
+    </ThemeContext.Consumer>
+  );
+};
+
+NotificationsToast.displayName = "NotificationsToast";
+
+NotificationsToast.propTypes = {
+  /**
+   * Message content for the Toast. It's recommended to keep the content to no more than 20 words.
+   */
+  children: PropTypes.node,
+  /**
+   * An Avatar or Thumbnail to precede the notification content.
+   * If an image is provided and showStatusIcon is true, the image will take priority.
+   */
+  image: PropTypes.node,
+  /**
+   * Function to call when Toast is dismissed
+   */
+  onDismiss: PropTypes.func,
+  /**
+   * The tooltip text shown for the close icon
+   */
+  onDismissTitle: PropTypes.string,
+  /**
+   * Indicate whether to show the icon associated with the provided status.
+   * An icon will not be shown for a null status.
+   */
+  showStatusIcon: PropTypes.bool,
+  /**
+   * Indicates the style of toast notification
+   */
+  status: PropTypes.oneOf(AVAILABLE_STATUSES),
+  /**
+   * Function to modify the component's styles
+   */
+  stylesheet: PropTypes.func
+};
+
+NotificationsToast.defaultProps = {
+  onDismissTitle: "Dismiss",
+  showStatusIcon: true,
+  status: "primary"
+};
+
+export default NotificationsToast;

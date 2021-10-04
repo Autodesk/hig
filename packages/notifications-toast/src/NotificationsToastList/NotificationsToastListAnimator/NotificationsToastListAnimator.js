@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import FlipMove from "react-flip-move";
@@ -17,37 +17,37 @@ const onScreenStyles = () => ({
   transform: ""
 });
 
-export default class NotificationsToastListAnimator extends Component {
-  render() {
-    const { children, ...otherProps } = this.props;
-    const { className } = otherProps;
-    const styles = stylesheet(this.props);
+const NotificationsToastListAnimator = props => {
+  const { children, ...otherProps } = props;
+  const { className } = otherProps;
+  const styles = stylesheet(props);
 
-    const enterAnimation = {
-      from: offScreenStyles(this.props),
-      to: onScreenStyles()
-    };
+  const enterAnimation = {
+    from: offScreenStyles(props),
+    to: onScreenStyles()
+  };
 
-    const leaveAnimation = {
-      from: onScreenStyles(),
-      to: offScreenStyles(this.props)
-    };
+  const leaveAnimation = {
+    from: onScreenStyles(),
+    to: offScreenStyles(props)
+  };
 
-    return (
-      <FlipMove
-        className={cx([css(styles.toastList), className])}
-        duration={_ANIMATION_DURATION}
-        staggerDelayBy={_ANIMATION_STAGGER_DELAY_BY}
-        easing="ease-out"
-        appearAnimation={enterAnimation}
-        enterAnimation={enterAnimation}
-        leaveAnimation={leaveAnimation}
-      >
-        {children}
-      </FlipMove>
-    );
-  }
-}
+  return (
+    <FlipMove
+      className={cx([css(styles.toastList), className])}
+      duration={_ANIMATION_DURATION}
+      staggerDelayBy={_ANIMATION_STAGGER_DELAY_BY}
+      easing="ease-out"
+      appearAnimation={enterAnimation}
+      enterAnimation={enterAnimation}
+      leaveAnimation={leaveAnimation}
+    >
+      {children}
+    </FlipMove>
+  );
+};
+
+NotificationsToastListAnimator.displayName = "NotificationsToastListAnimator";
 
 NotificationsToastListAnimator.propTypes = {
   /**
@@ -55,3 +55,5 @@ NotificationsToastListAnimator.propTypes = {
    */
   children: PropTypes.node
 };
+
+export default NotificationsToastListAnimator;

@@ -42,6 +42,9 @@ jspm_packages
 # Gemini Report
 gemini-report/
 
+# Cypress Regression Testing
+packages/storybook/cypress
+
 # Files created by CircleCI
 nohup.out
 

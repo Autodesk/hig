@@ -191,18 +191,6 @@ exports[`Accordion/Accordion renders default expanded accordion 1`] = `
   overflow: hidden;
 }
 
-.emotion-3 {
-  -webkit-transition-property: height;
-  transition-property: height;
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-}
-
 .emotion-0 {
   fill: #808080;
   -webkit-order: -1;

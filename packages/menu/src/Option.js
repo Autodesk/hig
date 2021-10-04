@@ -14,7 +14,6 @@ const Option = props => {
     disabled,
     id,
     role,
-    titan,
     shortcut,
     stylesheet,
     unselect,

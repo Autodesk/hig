@@ -1,102 +1,21 @@
-import React, { Component } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { CSSTransition } from "react-transition-group";
 
 const CYCLE_DURATION = 1000;
 const FADE_DURATION = 416;
 
-export default class ProgressRingIndeterminateBehavior extends Component {
-  static propTypes = {
-    /** Render prop */
-    children: PropTypes.func.isRequired
-  };
+const ProgressRingIndeterminateBehavior = props => {
+  const [cssTransitionState, setcssTransitionState] = useState(null);
+  const [playing, setPlaying] = useState(null);
+  const containerRef = useRef(null);
+  let startTime;
+  let segments;
+  let SEGMENT_COUNT;
+  let SEGMENT_DELAY_FACTOR;
 
-  constructor(props) {
-    super(props);
-
-    this.startTime = undefined;
-  }
-
-  state = {
-    cssTransitionState: null
-  };
-
-  componentDidUpdate() {
-    this.initSegments();
-    this.step(1);
-  }
-
-  setSegmentOpacities(elapsedThisCycle) {
-    this.segments.forEach((segment, i) => {
-      const index = Math.abs(i - this.SEGMENT_COUNT) - 1;
-      const eachSegment = segment;
-
-      eachSegment.style.opacity = this.opacityForSegment(
-        index,
-        elapsedThisCycle
-      );
-    });
-  }
-
-  initSegments() {
-    this.segments = Array.from(
-      this.containerRef.querySelectorAll(".hig__progress-ring__segment")
-    );
-
-    this.containerRef.querySelector(
-      ".hig__progress-ring__mask"
-    ).style.opacity = null;
-    this.SEGMENT_COUNT = this.segments.length;
-    this.SEGMENT_DELAY_FACTOR = CYCLE_DURATION / this.SEGMENT_COUNT;
-  }
-
-  step = timestamp => {
-    if (!this.playing) {
-      return;
-    }
-    if (this.state.cssTransitionState !== "entered") {
-      window.requestAnimationFrame(this.step);
-      return;
-    }
-
-    if (!this.startTime) this.startTime = timestamp;
-    const elapsed = timestamp - this.startTime;
-    const elapsedThisCycle = elapsed % CYCLE_DURATION;
-
-    this.setSegmentOpacities(elapsedThisCycle);
-
-    window.requestAnimationFrame(this.step);
-  };
-
-  handleEntering = () => {
-    this.setState({ cssTransitionState: "entering" });
-  };
-
-  handleEntered = () => {
-    this.setState({ cssTransitionState: "entered" });
-    this.start();
-  };
-
-  handleExiting = () => {
-    this.setState({ cssTransitionState: "exiting" });
-  };
-
-  handleExited = () => {
-    this.setState({ cssTransitionState: "exited" });
-  };
-
-  /** @type {HTMLDivElement} */
-  containerRef;
-
-  /**
-   * @param {HTMLDivElement} containerRef
-   */
-  refContainer = containerRef => {
-    this.containerRef = containerRef;
-  };
-
-  opacityForSegment(index, elapsedThisCycle) {
-    const segmentFadeStartTime = index * this.SEGMENT_DELAY_FACTOR;
+  const opacityForSegment = (index, elapsedThisCycle) => {
+    const segmentFadeStartTime = index * SEGMENT_DELAY_FACTOR;
 
     // Fade continuing from previous cycle
     if (
@@ -123,35 +42,106 @@ export default class ProgressRingIndeterminateBehavior extends Component {
     return Math.abs(
       (elapsedThisCycle - segmentFadeStartTime) / FADE_DURATION - 1
     );
-  }
+  };
 
-  start() {
-    this.playing = true;
-    this.startTime = undefined;
-    window.requestAnimationFrame(this.step);
-  }
+  const setSegmentOpacities = elapsedThisCycle => {
+    segments.forEach((segment, i) => {
+      const index = Math.abs(i - SEGMENT_COUNT) - 1;
+      const eachSegment = segment;
+      eachSegment.style.opacity = opacityForSegment(index, elapsedThisCycle);
+    });
+  };
 
-  render() {
-    const { refContainer: innerRef } = this;
-
-    return (
-      <CSSTransition
-        in
-        timeout={{ enter: 650, exit: 466 }}
-        appear
-        classNames="hig__progress-ring--"
-        onEntering={this.handleEntering}
-        onEntered={this.handleEntered}
-        onExiting={this.handleExiting}
-        onExited={this.handleExited}
-      >
-        {status =>
-          this.props.children({
-            innerRef,
-            cssTransitionState: status
-          })
-        }
-      </CSSTransition>
+  const initSegments = () => {
+    const { current } = containerRef;
+    segments = Array.from(
+      current.querySelectorAll(".hig__progress-ring__segment")
     );
-  }
-}
+    current.querySelector(".hig__progress-ring__mask").style.opacity = null;
+    SEGMENT_COUNT = segments.length;
+    SEGMENT_DELAY_FACTOR = CYCLE_DURATION / SEGMENT_COUNT;
+  };
+
+  const step = timestamp => {
+    if (!playing) {
+      return;
+    }
+    if (cssTransitionState !== "entered") {
+      window.requestAnimationFrame(step);
+      return;
+    }
+
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const elapsedThisCycle = elapsed % CYCLE_DURATION;
+    setSegmentOpacities(elapsedThisCycle);
+
+    window.requestAnimationFrame(step);
+  };
+
+  const start = () => {
+    setPlaying(true);
+    startTime = undefined;
+    window.requestAnimationFrame(step);
+  };
+
+  const handleEntering = () => {
+    setcssTransitionState("entering");
+  };
+
+  const handleEntered = () => {
+    setcssTransitionState("entered");
+    start();
+  };
+
+  const handleExiting = () => {
+    setcssTransitionState("exited");
+  };
+
+  const handleExited = () => {
+    setcssTransitionState("exited");
+  };
+
+  /** @type {HTMLDivElement} */
+  containerRef;
+  /**
+   * @param {HTMLDivElement} containerRef
+   */
+  const refContainer = value => {
+    containerRef.current = value;
+  };
+
+  useEffect(() => {
+    initSegments();
+    step(1);
+  });
+
+  return (
+    <CSSTransition
+      in
+      timeout={{ enter: 650, exit: 466 }}
+      appear
+      classNames="hig__progress-ring--"
+      onEntering={handleEntering}
+      onEntered={handleEntered}
+      onExiting={handleExiting}
+      onExited={handleExited}
+    >
+      {status =>
+        props.children({
+          innerRef: refContainer,
+          cssTransitionState: status
+        })
+      }
+    </CSSTransition>
+  );
+};
+
+ProgressRingIndeterminateBehavior.displayName = "ProgressRingIndeterminateBehavior";
+
+ProgressRingIndeterminateBehavior.propTypes = {
+  /** Render prop */
+  children: PropTypes.func.isRequired
+};
+
+export default ProgressRingIndeterminateBehavior;
