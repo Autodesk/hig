@@ -15,9 +15,9 @@ const ProgressRingDeterminateBehavior = props => {
   let SEGMENT_COUNT;
   let FADE_DELAY_FACTOR;
 
-
   const wait = () => {
     prevTimestamp = window.performance.now();
+    // eslint-disable-next-line no-use-before-define
     window.requestAnimationFrame(step);
   };
 
@@ -75,6 +75,7 @@ const ProgressRingDeterminateBehavior = props => {
     prevTimestamp = timestamp;
     value = interrumValue;
 
+    // eslint-disable-next-line no-use-before-define
     window.requestAnimationFrame(step);
   };
 
@@ -133,6 +134,7 @@ const ProgressRingDeterminateBehavior = props => {
   };
 
   /** @type {HTMLDivElement} */
+  // eslint-disable-next-line no-unused-expressions
   containerRef;
   /**
    * @param {HTMLDivElement} containerRef
@@ -168,7 +170,7 @@ const ProgressRingDeterminateBehavior = props => {
       }
     </CSSTransition>
   );
-}
+};
 
 ProgressRingDeterminateBehavior.displayName = "ProgressRingDeterminateBehavior";
 

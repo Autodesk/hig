@@ -103,6 +103,7 @@ const ProgressRingIndeterminateBehavior = props => {
   };
 
   /** @type {HTMLDivElement} */
+  // eslint-disable-next-line no-unused-expressions
   containerRef;
   /**
    * @param {HTMLDivElement} containerRef
@@ -137,7 +138,8 @@ const ProgressRingIndeterminateBehavior = props => {
   );
 };
 
-ProgressRingIndeterminateBehavior.displayName = "ProgressRingIndeterminateBehavior";
+ProgressRingIndeterminateBehavior.displayName =
+  "ProgressRingIndeterminateBehavior";
 
 ProgressRingIndeterminateBehavior.propTypes = {
   /** Render prop */

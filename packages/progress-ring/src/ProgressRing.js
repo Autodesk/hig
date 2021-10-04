@@ -44,7 +44,7 @@ ProgressRing.propTypes = {
   /**
    * Specifies a background color
    * If both surface & mask are provided, the value of mask will be used
-  */
+   */
   mask: PropTypes.string,
   /**
    * An integer from 0 to 100 representing the percent the delayed operation has completed.
