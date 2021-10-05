@@ -96,21 +96,6 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@cypress/mount-utils@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@cypress/mount-utils/-/mount-utils-1.0.2.tgz#afbc4f8c350b7cd86edc5ad0db0cbe1e0181edc8"
-  integrity sha512-Fn3fdTiyayHoy8Ol0RSu4MlBH2maQ2ZEXeEVKl/zHHXEQpld5HX3vdNLhK5YLij8cLynA4DxOT/nO9iEnIiOXw==
-
-"@cypress/react@^5.10.0":
-  version "5.10.0"
-  resolved "https://registry.yarnpkg.com/@cypress/react/-/react-5.10.0.tgz#0b7ff42681a47a75e91c34e82ef3fb2858cfd2ff"
-  integrity sha512-OglTE8C7iHplyg8frKxy5yJkAF0+eR7qxtCbYZSnhhxeEn97NEBeHjqzpMLgtQoTE12jEYZkXiq6HDxZBc5rQg==
-  dependencies:
-    "@cypress/mount-utils" "1.0.2"
-    debug "4.3.2"
-    find-webpack "2.2.1"
-    find-yarn-workspace-root "2.0.0"
-
 "@cypress/request@^2.88.6":
   version "2.88.6"
   resolved "https://registry.yarnpkg.com/@cypress/request/-/request-2.88.6.tgz#a970dd675befc6bdf8a8921576c01f51cc5798e9"
@@ -532,11 +517,6 @@
     util-deprecate "^1.0.2"
     webpack "^3.11.0"
     webpack-hot-middleware "^2.22.1"
-
-"@storybook/testing-react@^0.0.22":
-  version "0.0.22"
-  resolved "https://registry.yarnpkg.com/@storybook/testing-react/-/testing-react-0.0.22.tgz#65d3defefbac0183eded0dafb601241d8f135c66"
-  integrity sha512-XBJpH1cROXkwwKwD89kIcyhyMPEN5zfSyOUanrN+/Tx4nB5IwzVc/Om+7mtSFvh4UTSNOk5G42Y12KE/HbH7VA==
 
 "@storybook/ui@3.4.11":
   version "3.4.11"
@@ -2474,13 +2454,6 @@ braces@^2.3.0, braces@^2.3.1:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
-braces@^3.0.1:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/braces/-/braces-3.0.2.tgz#3454e1a462ee8d599e236df336cd9ea4f8afe107"
-  integrity sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==
-  dependencies:
-    fill-range "^7.0.1"
-
 brcast@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/brcast/-/brcast-3.0.1.tgz#6256a8349b20de9eed44257a9b24d71493cd48dd"
@@ -2973,7 +2946,7 @@ check-error@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/check-error/-/check-error-1.0.2.tgz#574d312edd88bb5dd8912e9286dd6c0aed4aac82"
 
-check-more-types@2.24.0, check-more-types@^2.24.0:
+check-more-types@^2.24.0:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/check-more-types/-/check-more-types-2.24.0.tgz#1420ffb10fd444dcfc79b43891bbfffd32a84600"
   integrity sha1-FCD/sQ/URNz8ebQ4kbv//TKoRgA=
@@ -4203,26 +4176,19 @@ debug@3.1.0:
   dependencies:
     ms "2.0.0"
 
-debug@4.1.1:
-  version "4.1.1"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz#3b72260255109c6b589cee050f1d516139664791"
-  integrity sha512-pYAIzeRo8J6KPEaJ0VWOh5Pzkbw/RetuzehGM7QRRX5he4fPHx2rdKMB256ehJCkX+XRQm16eZLqLNS8RSZXZw==
-  dependencies:
-    ms "^2.1.1"
-
-debug@4.3.2, debug@^4.1.1, debug@^4.3.2:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
-  integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
-  dependencies:
-    ms "2.1.2"
-
 debug@^3.1.0:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
   integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
   dependencies:
     ms "^2.1.1"
+
+debug@^4.1.1, debug@^4.3.2:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
+  integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
+  dependencies:
+    ms "2.1.2"
 
 decamelize-keys@^1.0.0:
   version "1.1.0"
@@ -5642,13 +5608,6 @@ fill-range@^4.0.0:
     repeat-string "^1.6.1"
     to-regex-range "^2.1.0"
 
-fill-range@^7.0.1:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/fill-range/-/fill-range-7.0.1.tgz#1919a6a7c75fe38b2c7c77e5198535da9acdda40"
-  integrity sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==
-  dependencies:
-    to-regex-range "^5.0.1"
-
 finalhandler@1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/finalhandler/-/finalhandler-1.1.1.tgz#eebf4ed840079c83f4249038c9d703008301b105"
@@ -5693,28 +5652,12 @@ find-versions@^2.0.0:
     array-uniq "^1.0.0"
     semver-regex "^1.0.0"
 
-find-webpack@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/find-webpack/-/find-webpack-2.2.1.tgz#96e7b701a2d37c3500cae30d4dc59e14923ba460"
-  integrity sha512-OdDtn2AzQvu3l9U1TS5ALc7uTVcLK/yv3fhjo+Pz7yuv4hG3ANKnbkKnPIPZ5ofd9mpYe6wRf5g5H4X9Lx48vQ==
-  dependencies:
-    debug "4.1.1"
-    find-yarn-workspace-root "1.2.1"
-    mocked-env "1.3.2"
-
-find-yarn-workspace-root@1.2.1, find-yarn-workspace-root@^1.1.0:
+find-yarn-workspace-root@^1.1.0:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/find-yarn-workspace-root/-/find-yarn-workspace-root-1.2.1.tgz#40eb8e6e7c2502ddfaa2577c176f221422f860db"
   dependencies:
     fs-extra "^4.0.3"
     micromatch "^3.1.4"
-
-find-yarn-workspace-root@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/find-yarn-workspace-root/-/find-yarn-workspace-root-2.0.0.tgz#f47fb8d239c900eb78179aa81b66673eac88f7bd"
-  integrity sha512-1IMnbjt4KzsQfnhnzNd8wUEgXZ44IzZaZmnLYx7D5FZlaHt2gW20Cri8Q+E/t5tIj4+epTBub+2Zxu/vNILzqQ==
-  dependencies:
-    micromatch "^4.0.2"
 
 flat-cache@^1.2.1:
   version "1.3.0"
@@ -7359,11 +7302,6 @@ is-number@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-4.0.0.tgz#0026e37f5454d73e356dfe6564699867c6a7f0ff"
 
-is-number@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
-  integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
-
 is-obj@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
@@ -8174,7 +8112,7 @@ labeled-stream-splicer@^2.0.0:
     isarray "^2.0.4"
     stream-splicer "^2.0.0"
 
-lazy-ass@1.6.0, lazy-ass@^1.6.0:
+lazy-ass@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/lazy-ass/-/lazy-ass-1.6.0.tgz#7999655e8646c17f089fdd187d150d3324d54513"
   integrity sha1-eZllXoZGwX8In90YfRUNMyTVRRM=
@@ -8837,14 +8775,6 @@ micromatch@^3.1.10, micromatch@^3.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
-micromatch@^4.0.2:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-4.0.4.tgz#896d519dfe9db25fce94ceb7a500919bf881ebf9"
-  integrity sha512-pRmzw/XUcwXGpD9aI9q/0XOwLNygjETJ8y0ao0wdqprrzDa4YnxLcz7fQRZr8voh8V10kGhABbNcHVk5wHgWwg==
-  dependencies:
-    braces "^3.0.1"
-    picomatch "^2.2.3"
-
 miller-rabin@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/miller-rabin/-/miller-rabin-4.0.1.tgz#f080351c865b0dc562a8462966daa53543c78a4d"
@@ -9003,16 +8933,6 @@ mocha@^4.0.1:
 mockdate@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/mockdate/-/mockdate-2.0.2.tgz#5ae0c0eaf8fe23e009cd01f9889b42c4f634af12"
-
-mocked-env@1.3.2:
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/mocked-env/-/mocked-env-1.3.2.tgz#548eb2fde141d083de70dc6b231cd9f3210d8731"
-  integrity sha512-jwm3ziowCjpbLNhUNYwn2G0tawV/ZGRuWeEGt6PItrkQT74Nk3pDldL2pmwm9sQZw6a/x+ZBGeBVYq54acTauQ==
-  dependencies:
-    check-more-types "2.24.0"
-    debug "4.1.1"
-    lazy-ass "1.6.0"
-    ramda "0.26.1"
 
 modify-values@^1.0.0:
   version "1.0.1"
@@ -9950,11 +9870,6 @@ performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
 
-picomatch@^2.2.3:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.0.tgz#f1f061de8f6a4bf022892e2d128234fb98302972"
-  integrity sha512-lY1Q/PiJGC2zOv/z391WOTD+Z02bCgsFfvxoXXf6h7kv9o+WmsmzYqrAwY63sNgOxE4xEdq0WyUnXfKeBrSvYw==
-
 pify@^2.0.0, pify@^2.2.0, pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
@@ -10697,11 +10612,6 @@ railroad-diagrams@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/railroad-diagrams/-/railroad-diagrams-1.0.0.tgz#eb7e6267548ddedfb899c1b90e57374559cddb7e"
   integrity sha1-635iZ1SN3t+4mcG5Dlc3RVnN234=
-
-ramda@0.26.1:
-  version "0.26.1"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
-  integrity sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
 
 ramda@^0.25.0:
   version "0.25.0"
@@ -13041,13 +12951,6 @@ to-regex-range@^2.1.0:
   dependencies:
     is-number "^3.0.0"
     repeat-string "^1.6.1"
-
-to-regex-range@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/to-regex-range/-/to-regex-range-5.0.1.tgz#1648c44aae7c8d988a326018ed72f5b4dd0392e4"
-  integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
-  dependencies:
-    is-number "^7.0.0"
 
 to-regex@^3.0.1, to-regex@^3.0.2:
   version "3.0.2"

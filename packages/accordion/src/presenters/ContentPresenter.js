@@ -13,23 +13,7 @@ const collapseStatus = {
   EXPANDED: "expanded"
 };
 
-// Helper hook
-function usePrevious(value) {
-  const ref = useRef();
-  useEffect(() => {
-    ref.current = value;
-  });
-  return ref.current;
-}
-
-
-// Desired hook
-function useCompare (val) {
-  const prevVal = usePrevious(val);
-  return prevVal !== val;
-}
-
-function ContentPresenter(props){
+function ContentPresenter(props) {
   const { collapsed } = props;
   const [status, setStatus] = useState(collapseStatus.COLLAPSED);
   const contentWrapper = useRef(null);
@@ -109,19 +93,22 @@ function ContentPresenter(props){
     if (!collapsed && contentWrapper) {
       afterExpanded();
     }
-  },[]);
+  }, []);
 
-  useEffect(() => {
-    if (!contentWrapper) {
+  useEffect(
+    () => {
+      if (!contentWrapper) {
         return;
       }
-    if (collapsed) {
+      if (collapsed) {
         collapse();
       }
-    if (!collapsed) {
-       expand();
-     }
-    },[collapsed]);
+      if (!collapsed) {
+        expand();
+      }
+    },
+    [collapsed]
+  );
 
   const { children, ...otherProps } = props;
   const { className } = otherProps;
