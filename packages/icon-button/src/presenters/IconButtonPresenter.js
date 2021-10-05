@@ -50,7 +50,6 @@ const IconButtonPresenter = props => {
           className: cx(css(styles.iconButtonIcon), iconButtonIconClassName)
         });
         const tabIndex = disabled ? "-1" : "0";
-
         return (
           <Element
             {...otherProps}
