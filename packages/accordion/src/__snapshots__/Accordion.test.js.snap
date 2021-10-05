@@ -222,6 +222,18 @@ exports[`Accordion/Accordion renders default expanded accordion 1`] = `
   fill: rgba(102,102,102,0.7);
 }
 
+.emotion-3 {
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  height: undefinedpx;
+  overflow: visible;
+  visibility: visible;
+}
+
 <div
   className="emotion-4"
 >
@@ -302,9 +314,9 @@ exports[`Accordion/Accordion renders indicator in the right 1`] = `
   transition-duration: .3s;
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
+  height: undefinedpx;
+  overflow: visible;
+  visibility: visible;
 }
 
 .emotion-2 {

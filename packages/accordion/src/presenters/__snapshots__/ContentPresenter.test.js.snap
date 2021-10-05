@@ -29,9 +29,9 @@ exports[`Accordion/ContentPresenter renders expanded content 1`] = `
   transition-duration: .3s;
   -webkit-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
-  height: 0;
+  height: undefinedpx;
   overflow: hidden;
-  visibility: hidden;
+  visibility: visible;
 }
 
 <div
