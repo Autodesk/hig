@@ -231,6 +231,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
         placeholder={undefined}
         readOnly={true}
         required={undefined}
+        tabIndex={undefined}
         value=""
       />
       <div
@@ -750,6 +751,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
         placeholder={undefined}
         readOnly={true}
         required={undefined}
+        tabIndex={undefined}
         value="foo"
       />
       <div
@@ -1032,6 +1034,7 @@ exports[`Dropdown renders with an ID 1`] = `
         placeholder={undefined}
         readOnly={true}
         required={undefined}
+        tabIndex={undefined}
         value=""
       />
       <div
@@ -1220,6 +1223,7 @@ exports[`Dropdown renders with className prop 1`] = `
         placeholder={undefined}
         readOnly={true}
         required={undefined}
+        tabIndex={undefined}
         value=""
       />
       <div
@@ -1467,6 +1471,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
         placeholder={undefined}
         readOnly={true}
         required={undefined}
+        tabIndex={undefined}
         value=""
       />
       <div
@@ -1749,6 +1754,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
         placeholder={undefined}
         readOnly={true}
         required={undefined}
+        tabIndex={undefined}
         value=""
       />
       <div
@@ -2038,6 +2044,7 @@ exports[`Dropdown renders with default value 1`] = `
         placeholder={undefined}
         readOnly={true}
         required={undefined}
+        tabIndex={undefined}
         value="foo"
       />
       <div
@@ -2380,6 +2387,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
         placeholder={undefined}
         readOnly={true}
         required={undefined}
+        tabIndex={undefined}
         value=""
       />
       <div
@@ -2745,6 +2753,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
         placeholder={undefined}
         readOnly={true}
         required={undefined}
+        tabIndex={undefined}
         value="foo, bar"
       />
       <div
@@ -3027,6 +3036,7 @@ exports[`Dropdown renders with option specific and general option render functio
         placeholder={undefined}
         readOnly={true}
         required={undefined}
+        tabIndex={undefined}
         value=""
       />
       <div
@@ -3243,6 +3253,7 @@ exports[`Dropdown renders with option specific render function 1`] = `
         placeholder={undefined}
         readOnly={true}
         required={undefined}
+        tabIndex={undefined}
         value=""
       />
       <div
@@ -3495,6 +3506,7 @@ exports[`Dropdown renders with option specific, general and format rendering 1`]
         placeholder={undefined}
         readOnly={true}
         required={undefined}
+        tabIndex={undefined}
         value=""
       />
       <div
@@ -3711,6 +3723,7 @@ exports[`Dropdown renders without props 1`] = `
         placeholder={undefined}
         readOnly={true}
         required={undefined}
+        tabIndex={undefined}
         value=""
       />
       <div

@@ -197,7 +197,7 @@ export default class Dropdown extends Component {
       ...otherProps
     } = this.props;
 
-    const { className } = otherProps;
+    const { className, tabIndex } = otherProps;
     const inputClassName =
       className &&
       className
@@ -215,6 +215,7 @@ export default class Dropdown extends Component {
       onFocus,
       onClick: toggleMenu,
       onInputChange,
+      tabIndex,
       variant,
       className: inputClassName,
       stylesheet: customStylesheet,
@@ -302,6 +303,7 @@ export default class Dropdown extends Component {
       placeholder,
       renderOption,
       required,
+      tabIndex,
       typable,
       value,
       variant,
