@@ -138,7 +138,7 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
   display: flex;
   border-bottom: 1px solid rgba(60,60,60,0.25);
   border-left: 3px solid #bec8d2;
-  border-left-color: #6a9728;
+  border-left-color: #87b340;
 }
 
 .emotion-3 {
