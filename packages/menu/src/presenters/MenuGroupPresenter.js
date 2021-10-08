@@ -136,6 +136,7 @@ export default class MenuGroupPresenter extends Component {
       getOptionsInfo,
       menuRef,
       multiple,
+      unselect,
       stylesheet: customStylesheet,
       ...otherProps
     } = this.props;
