@@ -59,10 +59,10 @@ export default class ButtonPresenter extends Component {
       ...otherProps
     } = this.props;
 
-    const { className } = otherProps;
+    const { className, tabIndex: htmlTabIndex } = otherProps;
 
     const href = link || undefined;
-    const tabIndex = disabled ? "-1" : "0";
+    const tabIndex = disabled ? "-1" : htmlTabIndex || "0";
     const Wrapper = link ? "a" : "button";
     const wrapperTarget = link ? target : undefined;
     const iconClassName = createCustomClassNames(className, "icon");
