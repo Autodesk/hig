@@ -60,6 +60,7 @@
     "@hig/theme-data": "^2.21.1",
     "@hig/typography": "^1.2.0",
     "cypress": "^8.5.0",
+    "cypress-image-snapshot": "^4.0.1",
     "faker": "^4.1.0",
     "prop-types": "^15.6.1",
     "wait-port": "^0.2.2"
