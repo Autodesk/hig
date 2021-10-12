@@ -1,3 +1,10 @@
+# [@hig/dropdown-v2.4.1](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.4.0...@hig/dropdown@2.4.1) (2021-10-06)
+
+
+### Bug Fixes
+
+* tabindex should go to input ([02f9f1b](https://github.com/Autodesk/hig/commit/02f9f1b))
+
 # [@hig/dropdown-v2.4.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@2.3.1...@hig/dropdown@2.4.0) (2021-01-14)
 
 

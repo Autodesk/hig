@@ -1,3 +1,10 @@
+# [@hig/icons-v3.4.2](https://github.com/Autodesk/hig/compare/@hig/icons@3.4.1...@hig/icons@3.4.2) (2021-10-11)
+
+
+### Bug Fixes
+
+* removed blue background from alert and error icons ([#2525](https://github.com/Autodesk/hig/issues/2525)) ([e85ba49](https://github.com/Autodesk/hig/commit/e85ba49))
+
 # [@hig/icons-v3.4.1](https://github.com/Autodesk/hig/compare/@hig/icons@3.4.0...@hig/icons@3.4.1) (2021-06-26)
 
 
