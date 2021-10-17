@@ -113,7 +113,6 @@ export default class MenuGroup extends Component {
             setHighlightIndex={setHighlightIndex}
             setOptionsInfo={setOptionsInfo}
             setPreviousEvent={setPreviousEvent}
-            unselect={unselect}
             stylesheet={stylesheet}
           >
             {children}

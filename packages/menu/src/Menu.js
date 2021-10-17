@@ -124,7 +124,6 @@ export default class Menu extends Component {
                 setHighlightIndex={setHighlightIndex}
                 setOptionsInfo={setOptionsInfo}
                 setPreviousEvent={setPreviousEvent}
-                unselect={unselect}
                 stylesheet={stylesheet}
               >
                 {children}
