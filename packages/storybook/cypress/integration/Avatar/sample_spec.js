@@ -8,6 +8,7 @@ describe("Storybook/Avatar", () => {
       .each((element, index) => {
         const name = `avatar-default-${index}`;
         // eslint-disable-next-line no-undef
+        cy.viewport(1280, 1162);
         cy.wrap(element).matchImageSnapshot(name);
       });
   });
@@ -21,6 +22,7 @@ describe("Storybook/Avatar", () => {
       .each((element, index) => {
         const name = `avatar-picture-${index}`;
         // eslint-disable-next-line no-undef
+        cy.viewport(1280, 1162);
         cy.wrap(element).matchImageSnapshot(name);
       });
   });
@@ -36,6 +38,7 @@ describe("Storybook/Avatar", () => {
       .each((element, index) => {
         const name = `avatar-background-${index}`;
         // eslint-disable-next-line no-undef
+        cy.viewport(1280, 1162);
         cy.wrap(element).matchImageSnapshot(name);
       });
   });

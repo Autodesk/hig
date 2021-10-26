@@ -25,7 +25,9 @@ describe("slider/Slider", () => {
 
       expect(input.prop("value")).toEqual("10");
       input.simulate("change", { target: { value: "20" } });
-      expect(input.prop("value")).toEqual("20");
+
+      const inputAfter = wrapper.find("input");
+      expect(inputAfter.prop("value")).toEqual("20");
     });
   });
 
@@ -44,7 +46,9 @@ describe("slider/Slider", () => {
 
       expect(input.prop("value")).toEqual("10");
       input.simulate("change", { target: { value: "20" } });
-      expect(input.prop("value")).toEqual("10");
+
+      const inputAfter = wrapper.find("input");
+      expect(inputAfter.prop("value")).toEqual("10");
     });
 
     it("recognizes changes to the value prop", () => {
@@ -53,7 +57,9 @@ describe("slider/Slider", () => {
 
       expect(input.prop("value")).toEqual("10");
       wrapper.setProps({ value: "20" });
-      expect(input.prop("value")).toEqual("20");
+
+      const inputAfter = wrapper.find("input");
+      expect(inputAfter.prop("value")).toEqual("20");
     });
   });
 

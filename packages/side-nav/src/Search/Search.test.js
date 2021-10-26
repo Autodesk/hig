@@ -1,5 +1,5 @@
 import React from "react";
-import { mount } from "enzyme";
+import { mount, shallow } from "enzyme";
 import Search from "./Search";
 
 describe("side-nav/Search", () => {
@@ -9,10 +9,12 @@ describe("side-nav/Search", () => {
 
     expect(input.prop("value")).toEqual("foo");
     input.simulate("change", { target: { value: "bar" } });
-    expect(input.prop("value")).toEqual("bar");
+    const inputAfter = wrapper.find("input");
+    expect(inputAfter.prop("value")).toEqual("bar");
 
     wrapper.setProps({ value: "baz" });
-    expect(input.prop("value")).toEqual("bar"); // Incoming props are ignored
+    const inputReAfter = wrapper.find("input");
+    expect(inputReAfter.prop("value")).toEqual("bar"); // Incoming props are ignored
   });
 
   it("renders a button to clear input", () => {
@@ -25,7 +27,8 @@ describe("side-nav/Search", () => {
 
     wrapper
       .find("CloseLUI")
-      .parent()
+      .parents()
+      .first()
       .simulate("click");
     expect(input.prop("value")).toEqual("");
     expect(wrapper.find("CloseLUI").parent()).toHaveLength(0);

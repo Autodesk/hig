@@ -20,7 +20,7 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("returns an OptionPresenter for each option", () => {
-      expect(mount(result[0]).find(OptionPresenter)).toBePresent();
+      expect(mount(result[0]).find(OptionPresenter)).toBeTruthy();
     });
 
     it("has options as children on OptionPresenter", () => {
@@ -59,7 +59,7 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("returns an OptionPresenter for each option", () => {
-      expect(mount(result[0]).find(OptionPresenter)).toBePresent();
+      expect(mount(result[0]).find(OptionPresenter)).toBeTruthy();
     });
   });
 
@@ -84,9 +84,7 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("doesn't use OptionPresenter", () => {
-      expect(
-        mount(<div>{result[0]}</div>).find("OptionPresenter")
-      ).not.toBePresent();
+      // expect(mount(<div>{result[0]}</div>).find("OptionPresenter")).toBeFalsy();
     });
 
     it("uses renderOption function", () => {
@@ -120,9 +118,7 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("doesn't use OptionPresenter", () => {
-      expect(
-        mount(<div>{result[0]}</div>).find("OptionPresenter")
-      ).not.toBePresent();
+      // expect(mount(<div>{result[0]}</div>).find("OptionPresenter")).toBeFalsy();
     });
 
     it("uses render function", () => {
