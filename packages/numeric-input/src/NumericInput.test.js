@@ -79,6 +79,5 @@ describe("event handlers", () => {
 
     expect(onChangeMock).toHaveBeenCalledTimes(1);
     expect(onChangeMock).toHaveBeenCalledWith(22);
-    
   });
 });

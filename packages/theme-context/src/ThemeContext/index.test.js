@@ -7,7 +7,7 @@ describe("themes/ThemeContext/index", () => {
     {
       name: "default",
       value: expect.objectContaining({
-        Consumer: expect.anything (Function),
+        Consumer: expect.anything(Function),
         Provider: expect.anything(Function)
       })
     },
