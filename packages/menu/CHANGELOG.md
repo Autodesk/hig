@@ -1,3 +1,10 @@
+# [@hig/menu-v1.3.1](https://github.com/Autodesk/hig/compare/@hig/menu@1.3.0...@hig/menu@1.3.1) (2021-10-27)
+
+
+### Bug Fixes
+
+* destruct unselect prop in menu to fix menu console error ([16c60a1](https://github.com/Autodesk/hig/commit/16c60a1))
+
 # [@hig/menu-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/menu@1.2.0...@hig/menu@1.3.0) (2021-09-01)
 
 
