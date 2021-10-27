@@ -80,165 +80,90 @@ export default {
    */
   "slider.halo.width": {
     type: LENGTH,
-    value: 0,
-    metadata: {
-      deprecated: {
-        equivalent: "slider.hover.haloWidth"
-      }
-    }
+    value: 0
   },
   "slider.halo.color": {
     type: COLOR,
     value: {
       ref: "slider.hover.haloColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.hover.haloColor"
-      }
     }
   },
   "slider.thumb.width": {
     type: LENGTH,
     value: {
       ref: "slider.thumb.minWidth"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.thumb.minWidth"
-      }
     }
   },
   "slider.focused.halo.color": {
     type: COLOR,
     value: {
       ref: "slider.focus.haloColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.focus.haloColor"
-      }
     }
   },
   "slider.focused.halo.width": {
     type: LENGTH,
     value: {
       ref: "slider.focus.haloWidth"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.focus.haloWidth"
-      }
     }
   },
   "slider.focused.thumb.color": {
     type: COLOR,
     value: {
       ref: "slider.thumb.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.thumb.backgroundColor"
-      }
     }
   },
   "slider.hover.halo.color": {
     type: COLOR,
     value: {
       ref: "slider.hover.haloColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.hover.haloColor"
-      }
     }
   },
   "slider.hover.halo.width": {
     type: LENGTH,
     value: {
       ref: "slider.hover.haloWidth"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.hover.haloWidth"
-      }
     }
   },
   "slider.hover.thumb.color": {
     type: COLOR,
     value: {
       ref: "slider.thumb.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.thumb.backgroundColor"
-      }
     }
   },
   "slider.pressed.halo.color": {
     type: COLOR,
     value: {
       ref: "slider.pressed.haloColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.pressed.haloColor"
-      }
     }
   },
   "slider.pressed.halo.width": {
     type: LENGTH,
     value: {
       ref: "slider.pressed.haloWidth"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.pressed.haloWidth"
-      }
     }
   },
   "slider.pressed.thumb.color": {
     type: COLOR,
     value: {
       ref: "slider.thumb.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.thumb.backgroundColor"
-      }
     }
   },
   "slider.track.color": {
     type: COLOR,
     value: {
       ref: "slider.track.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.track.backgroundColor"
-      }
     }
   },
   "slider.track.width": {
     type: LENGTH,
     value: {
       ref: "slider.track.minHeight"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.track.minHeight"
-      }
     }
   },
   "slider.value.color": {
     type: COLOR,
     value: {
       ref: "slider.value.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "slider.value.backgroundColor"
-      }
     }
   }
 };

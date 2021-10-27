@@ -40,11 +40,6 @@ export default {
     type: LENGTH,
     value: {
       ref: "skeletonItem.minHeight"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "skeletonItem.minHeight"
-      }
     }
   }
 };

@@ -33,12 +33,7 @@ const densities = [
     },
     unresolvedRoles: {
       "density.textSize": {
-        value: "10px",
-        metadata: {
-          deprecated: {
-            equivalent: "density.base.textSize"
-          }
-        }
+        value: "10px"
       }
     }
   },

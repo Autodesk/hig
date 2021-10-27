@@ -35,44 +35,24 @@ export default {
     type: COLOR,
     value: {
       ref: "progress.bar.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "progress.bar.backgroundColor"
-      }
     }
   },
   "progressBar.highlightColor": {
     type: COLOR,
     value: {
       ref: "progress.bar.highlightColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "progress.bar.highlightColor"
-      }
     }
   },
   "progressBar.borderRadius": {
     type: BORDER_RADIUS,
     value: {
       ref: "progress.bar.borderRadius"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "progress.bar.borderRadius"
-      }
     }
   },
   "progressBar.height": {
     type: LENGTH,
     value: {
       ref: "progress.bar.minHeight"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "progress.bar.minHeight"
-      }
     }
   }
 };

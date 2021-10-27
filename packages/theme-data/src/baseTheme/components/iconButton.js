@@ -247,209 +247,114 @@ export default {
     type: COLOR,
     value: {
       ref: "iconButton.focus.haloColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.focus.haloColor"
-      }
     }
   },
   "iconButton.focus.halo.width": {
     type: LENGTH,
     value: {
       ref: "iconButton.focus.haloWidth"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.focus.haloWidth"
-      }
     }
   },
   "iconButton.focus.iconColor": {
     type: COLOR,
     value: {
       ref: "iconButton.dynamic.focus.iconColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.dynamic.focus.iconColor"
-      }
     }
   },
   "iconButton.focus.on.iconColor": {
     type: COLOR,
     value: {
       ref: "iconButton.dynamic.on.focus.iconColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.dynamic.on.focus.iconColor"
-      }
     }
   },
   "iconButton.hover.iconColor": {
     type: COLOR,
     value: {
       ref: "iconButton.dynamic.hover.iconColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.dynamic.hover.iconColor"
-      }
     }
   },
   "iconButton.hover.on.iconColor": {
     type: COLOR,
     value: {
       ref: "iconButton.dynamic.on.hover.iconColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.dynamic.on.hover.iconColor"
-      }
     }
   },
   "iconButton.iconColor": {
     type: COLOR,
     value: {
       ref: "iconButton.dynamic.default.iconColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.dynamic.default.iconColor"
-      }
     }
   },
   "iconButton.on.iconColor": {
     type: COLOR,
     value: {
       ref: "iconButton.dynamic.on.default.iconColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.dynamic.on.default.iconColor"
-      }
     }
   },
   "iconButton.pressed.backgroundColor": {
     type: COLOR,
     value: {
       ref: "iconButton.dynamic.pressed.100To250BackgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.dynamic.pressed.100To250BackgroundColor"
-      }
     }
   },
   "iconButton.pressed.iconColor": {
     type: COLOR,
     value: {
       ref: "iconButton.dynamic.pressed.iconColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.dynamic.pressed.iconColor"
-      }
     }
   },
   "iconButton.pressed.level100To250.backgroundColor": {
     type: COLOR,
     value: {
       ref: "iconButton.dynamic.pressed.100To250BackgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.dynamic.pressed.100To250BackgroundColor"
-      }
     }
   },
   "iconButton.pressed.level300To350.backgroundColor": {
     type: COLOR,
     value: {
       ref: "iconButton.dynamic.pressed.300To350BackgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.dynamic.pressed.300To350BackgroundColor"
-      }
     }
   },
   "iconButton.pressed.on.iconColor": {
     type: COLOR,
     value: {
       ref: "iconButton.dynamic.on.pressed.iconColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.dynamic.on.pressed.iconColor"
-      }
     }
   },
   "iconButton.static.hover.level100To250.backgroundColor": {
     type: COLOR,
     value: {
       ref: "iconButton.static.hover.100To250BackgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.static.hover.100To250BackgroundColor"
-      }
     }
   },
   "iconButton.static.hover.level300To350.backgroundColor": {
     type: COLOR,
     value: {
       ref: "iconButton.static.hover.300To350BackgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.static.hover.300To350BackgroundColor"
-      }
     }
   },
   "iconButton.static.on.backgroundColor": {
     type: COLOR,
     value: {
       ref: "iconButton.static.on.default.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.static.on.default.backgroundColor"
-      }
     }
   },
   "iconButton.static.on.borderColor": {
     type: COLOR,
     value: {
       ref: "iconButton.static.on.default.borderColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.static.on.default.borderColor"
-      }
     }
   },
   "iconButton.static.on.hover.level100To250.backgroundColor": {
     type: COLOR,
     value: {
       ref: "iconButton.static.on.hover.100To250BackgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.static.on.hover.100To250BackgroundColor"
-      }
     }
   },
   "iconButton.static.on.hover.level300To350.backgroundColor": {
     type: COLOR,
     value: {
       ref: "iconButton.static.on.hover.300To350BackgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "iconButton.static.on.hover.300To350BackgroundColor"
-      }
     }
   }
 };

@@ -101,22 +101,12 @@ export default {
     type: COLOR,
     value: {
       ref: "tooltip.title.fontColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "tooltip.title.fontColor"
-      }
     }
   },
   "tooltip.borderColor": {
     type: COLOR,
     value: {
       ref: "tooltip.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "tooltip.backgroundColor"
-      }
     }
   }
 };

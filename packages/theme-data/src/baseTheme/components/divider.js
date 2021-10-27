@@ -26,11 +26,6 @@ export default {
     type: LENGTH,
     value: {
       ref: "divider.borderWidth"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "divider.borderWidth"
-      }
     }
   }
 };

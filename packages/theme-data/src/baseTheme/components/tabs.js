@@ -191,152 +191,114 @@ export default {
    */
   "tabs.general.tab.fontFamily": {
     type: FONT_FAMILY,
-    value: { ref: "tabs.label.fontFamily" },
-    metadata: { deprecated: { equivalent: "tabs.label.fontFamily" } }
+    value: { ref: "tabs.label.fontFamily" }
   },
   "tabs.general.tab.fontSize": {
     type: FONT_SIZE,
-    value: { ref: "tabs.label.fontSize" },
-    metadata: { deprecated: { equivalent: "tabs.label.fontSize" } }
+    value: { ref: "tabs.label.fontSize" }
   },
   "tabs.general.tab.fontWeight": {
     type: FONT_WEIGHT,
-    value: { ref: "tabs.label.inactive.fontWeight" },
-    metadata: { deprecated: { equivalent: "tabs.label.inactive.fontWeight" } }
+    value: { ref: "tabs.label.inactive.fontWeight" }
   },
   "tabs.general.tab.active.fontWeight": {
     type: FONT_WEIGHT,
-    value: { ref: "tabs.label.active.fontWeight" },
-    metadata: { deprecated: { equivalent: "tabs.label.active.fontWeight" } }
+    value: { ref: "tabs.label.active.fontWeight" }
   },
   "tabs.general.tab.color": {
     type: COLOR,
-    value: { ref: "tabs.label.fontColor" },
-    metadata: { deprecated: { equivalent: "tabs.label.fontColor" } }
+    value: { ref: "tabs.label.fontColor" }
   },
   "tabs.general.tab.lineHeight": {
     type: LINE_HEIGHT,
-    value: { ref: "tabs.label.active.lineHeight" },
-    metadata: { deprecated: { equivalent: "tabs.label.active.lineHeight" } }
+    value: { ref: "tabs.label.active.lineHeight" }
   },
   "tabs.general.halo.size": {
     type: LENGTH,
-    value: { ref: "tabs.focus.haloWidth" },
-    metadata: {
-      deprecated: { equivalent: "tabs.focus.haloWidth" }
-    }
+    value: { ref: "tabs.focus.haloWidth" }
   },
   "tabs.general.halo.color": {
     type: COLOR,
-    value: { ref: "tabs.focus.haloColor" },
-    metadata: {
-      deprecated: { equivalent: "tabs.focus.haloColor" }
-    }
+    value: { ref: "tabs.focus.haloColor" }
   },
   "tabs.general.icon.size": {
     type: LENGTH,
-    value: { ref: "tabs.iconSize" },
-    metadata: { deprecated: { equivalent: "tabs.iconSize" } }
+    value: { ref: "tabs.iconSize" }
   },
   "tabs.general.icon.color": {
     type: COLOR,
-    value: { ref: "tabs.iconColor" },
-    metadata: { deprecated: { equivalent: "tabs.iconColor" } }
+    value: { ref: "tabs.iconColor" }
   },
   "tabs.general.icon.gutter": {
     type: LENGTH,
-    value: { ref: "tabs.iconGutter" },
-    metadata: { deprecated: { equivalent: "tabs.iconGutter" } }
+    value: { ref: "tabs.iconGutter" }
   },
   "tabs.general.closeButton.size": {
     type: LENGTH,
-    value: { ref: "tabs.closeButton.minSize" },
-    metadata: { deprecated: { equivalent: "tabs.closeButton.minSize" } }
+    value: { ref: "tabs.closeButton.minSize" }
   },
   "tabs.general.closeButton.gutter": {
     type: LENGTH,
-    value: { ref: "tabs.closeButton.gutter" },
-    metadata: { deprecated: { equivalent: "tabs.closeButton.gutter" } }
+    value: { ref: "tabs.closeButton.gutter" }
   },
   "tabs.general.closeButton.color": {
     type: COLOR,
-    value: { ref: "tabs.closeButton.default.iconColor" },
-    metadata: {
-      deprecated: { equivalent: "tabs.closeButton.default.iconColor" }
-    }
+    value: { ref: "tabs.closeButton.default.iconColor" }
   },
   "tabs.general.closeButton.hover.color": {
     type: COLOR,
-    value: { ref: "tabs.closeButton.hover.iconColor" },
-    metadata: { deprecated: { equivalent: "tabs.closeButton.hover.iconColor" } }
+    value: { ref: "tabs.closeButton.hover.iconColor" }
   },
   "tabs.general.closeButton.pressed.color": {
     type: COLOR,
-    value: { ref: "tabs.closeButton.pressed.iconColor" },
-    metadata: {
-      deprecated: { equivalent: "tabs.closeButton.pressed.iconColor" }
-    }
+    value: { ref: "tabs.closeButton.pressed.iconColor" }
   },
   "tabs.underline.halo.hover.color": {
     type: COLOR,
-    value: { ref: "tabs.underline.hover.haloColor" },
-    metadata: { deprecated: { equivalent: "tabs.underline.hover.haloColor" } }
+    value: { ref: "tabs.underline.hover.haloColor" }
   },
   "tabs.underline.halo.active.color": {
     type: COLOR,
-    value: { ref: "tabs.underline.active.haloColor" },
-    metadata: { deprecated: { equivalent: "tabs.underline.active.haloColor" } }
+    value: { ref: "tabs.underline.active.haloColor" }
   },
   "tabs.box.tab.horizontalPadding": {
     type: LENGTH,
-    value: { ref: "tabs.box.tab.paddingHorizontal" },
-    metadata: { deprecated: { equivalent: "tabs.box.tab.paddingHorizontal" } }
+    value: { ref: "tabs.box.tab.paddingHorizontal" }
   },
   "tabs.box.tab.verticalPadding": {
     type: LENGTH,
-    value: { ref: "tabs.box.tab.paddingVertical" },
-    metadata: { deprecated: { equivalent: "tabs.box.tab.paddingVertical" } }
+    value: { ref: "tabs.box.tab.paddingVertical" }
   },
   "tabs.box.divider.color": {
     type: COLOR,
-    value: { ref: "tabs.box.divider.borderColor" },
-    metadata: { deprecated: { equivalent: "tabs.box.divider.borderColor" } }
+    value: { ref: "tabs.box.divider.borderColor" }
   },
   "tabs.box.divider.width": {
     type: LENGTH,
-    value: { ref: "tabs.box.dividerWidth" },
-    metadata: { deprecated: { equivalent: "tabs.box.dividerWidth" } }
+    value: { ref: "tabs.box.dividerWidth" }
   },
   "tabs.box.divider.height": {
     type: LENGTH,
-    value: { ref: "tabs.box.dividerHeight" },
-    metadata: { deprecated: { equivalent: "tabs.box.dividerHeight" } }
+    value: { ref: "tabs.box.dividerHeight" }
   },
   "tabs.canvas.tab.horizontalPadding": {
     type: LENGTH,
-    value: { ref: "tabs.canvas.tab.paddingHorizontal" },
-    metadata: {
-      deprecated: { equivalent: "tabs.canvas.tab.paddingHorizontal" }
-    }
+    value: { ref: "tabs.canvas.tab.paddingHorizontal" }
   },
   "tabs.canvas.tab.verticalPadding": {
     type: LENGTH,
-    value: { ref: "tabs.canvas.tab.paddingVertical" },
-    metadata: { deprecated: { equivalent: "tabs.canvas.tab.paddingVertical" } }
+    value: { ref: "tabs.canvas.tab.paddingVertical" }
   },
   "tabs.canvas.divider.color": {
     type: COLOR,
-    value: { ref: "tabs.canvas.divider.borderColor" },
-    metadata: { deprecated: { equivalent: "tabs.canvas.divider.borderColor" } }
+    value: { ref: "tabs.canvas.divider.borderColor" }
   },
   "tabs.canvas.divider.width": {
     type: LENGTH,
-    value: { ref: "tabs.canvas.dividerWidth" },
-    metadata: { deprecated: { equivalent: "tabs.canvas.dividerWidth" } }
+    value: { ref: "tabs.canvas.dividerWidth" }
   },
   "tabs.canvas.divider.height": {
     type: LENGTH,
-    value: { ref: "tabs.canvas.dividerHeight" },
-    metadata: { deprecated: { equivalent: "tabs.canvas.dividerHeight" } }
+    value: { ref: "tabs.canvas.dividerHeight" }
   }
 };

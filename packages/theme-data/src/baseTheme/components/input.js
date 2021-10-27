@@ -318,253 +318,138 @@ export default {
     type: COLOR,
     value: {
       ref: "input.focus.haloColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.focus.haloColor"
-      }
     }
   },
   "input.borderBottomColor": {
     type: COLOR,
     value: {
       ref: "input.line.default.borderBottomColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.line.default.borderBottomColor"
-      }
     }
   },
   "input.active.halo.width": {
     type: LENGTH,
     value: {
       ref: "input.haloWidth"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.haloWidth"
-      }
     }
   },
   "input.box.backgroundColor": {
     type: COLOR,
     value: {
       ref: "input.box.default.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.box.default.backgroundColor"
-      }
     }
   },
   "input.box.borderBottomColor": {
     type: COLOR,
     value: {
       ref: "input.box.default.borderBottomColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.box.default.borderBottomColor"
-      }
     }
   },
   "input.boxType.horizontalPadding": {
     type: LENGTH,
     value: {
       ref: "input.box.paddingHorizontal"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.box.paddingHorizontal"
-      }
     }
   },
   "input.focus.borderBottomColor": {
     type: COLOR,
     value: {
       ref: "input.line.focus.borderBottomColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.line.focus.borderBottomColor"
-      }
     }
   },
   "input.focus.halo.color": {
     type: COLOR,
     value: {
       ref: "input.focus.haloColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.focus.haloColor"
-      }
     }
   },
   "input.focus.halo.width": {
     type: LENGTH,
     value: {
       ref: "input.haloWidth"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.haloWidth"
-      }
     }
   },
   "input.fontColor": {
     type: COLOR,
     value: {
       ref: "input.value.fontColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.value.fontColor"
-      }
     }
   },
   "input.fontFamily": {
     type: FONT_FAMILY,
     value: {
       ref: "input.value.fontFamily"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.value.fontFamily"
-      }
     }
   },
   "input.fontSize": {
     type: FONT_SIZE,
     value: {
       ref: "input.value.fontSize"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.value.fontSize"
-      }
     }
   },
   "input.fontWeight": {
     type: FONT_WEIGHT,
     value: {
       ref: "input.value.fontWeight"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.value.fontWeight"
-      }
     }
   },
   "input.halo.color": {
     type: COLOR,
     value: {
       ref: "input.hover.haloColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.hover.haloColor"
-      }
     }
   },
   "input.halo.width": {
     type: LENGTH,
     value: {
       ref: "input.haloWidth"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.haloWidth"
-      }
     }
   },
   "input.height": {
     type: LENGTH,
     value: {
       ref: "input.minHeight"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.minHeight"
-      }
     }
   },
   "input.highlightColor": {
     type: COLOR,
     value: {
       ref: "input.value.highlightColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.value.highlightColor"
-      }
     }
   },
   "input.horizontalPadding": {
     type: LENGTH,
     value: {
       ref: "input.line.paddingHorizontal"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.line.paddingHorizontal"
-      }
     }
   },
   "input.hover.borderBottomColor": {
     type: COLOR,
     value: {
       ref: "input.box.hover.borderBottomColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.box.hover.borderBottomColor"
-      }
     }
   },
   "input.hover.halo.width": {
     type: LENGTH,
     value: {
       ref: "input.haloWidth"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.haloWidth"
-      }
     }
   },
   "input.lineHeight": {
     type: LINE_HEIGHT,
     value: {
       ref: "input.value.lineHeight"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.value.lineHeight"
-      }
     }
   },
   "input.placeholder.fontColor": {
     type: COLOR,
     value: {
       ref: "input.value.placeholderFontColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.value.placeholderFontColor"
-      }
     }
   },
   "input.verticalPadding": {
     type: LENGTH,
     value: {
       ref: "input.paddingVertical"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "input.paddingVertical"
-      }
     }
   }
 };

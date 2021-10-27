@@ -68,66 +68,36 @@ export default {
     type: COLOR,
     value: {
       ref: "textLink.primary.default.fontColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "textLink.primary.default.fontColor"
-      }
     }
   },
   "textLink.hover.textColor": {
     type: COLOR,
     value: {
       ref: "textLink.primary.hover.fontColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "textLink.primary.hover.fontColor"
-      }
     }
   },
   "textLink.focus.textColor": {
     type: COLOR,
     value: {
       ref: "textLink.primary.focus.fontColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "textLink.primary.focus.fontColor"
-      }
     }
   },
   "textLink.hover.underline.color": {
     type: COLOR,
     value: {
       ref: "textLink.primary.hover.underlineColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "textLink.primary.hover.underlineColor"
-      }
     }
   },
   "textLink.focus.halo.color": {
     type: COLOR,
     value: {
       ref: "textLink.focus.haloColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "textLink.focus.haloColor"
-      }
     }
   },
   "textLink.focus.halo.width": {
     type: LENGTH,
     value: {
       ref: "textLink.focus.haloWidth"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "textLink.focus.haloWidth"
-      }
     }
   }
 };

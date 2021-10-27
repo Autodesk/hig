@@ -72,11 +72,6 @@ export default {
    */
   "accordion.header.indicatorColor": {
     type: COLOR,
-    value: { ref: "accordion.header.default.indicatorColor" },
-    metadata: {
-      deprecated: {
-        equivalent: "accordion.header.default.indicatorColor"
-      }
-    }
+    value: { ref: "accordion.header.default.indicatorColor" }
   }
 };

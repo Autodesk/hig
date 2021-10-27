@@ -57,57 +57,46 @@ export default {
    */
   "modal.overlay.color": {
     type: COLOR,
-    value: { ref: "modal.overlayColor" },
-    metadata: { deprecated: { equivalent: "modal.overlayColor" } }
+    value: { ref: "modal.overlayColor" }
   },
   "modal.textColor": {
     type: COLOR,
-    value: { ref: "modal.fontColor" },
-    metadata: { deprecated: { equivalent: "modal.fontColor" } }
+    value: { ref: "modal.fontColor" }
   },
   "modal.body.height": {
     type: LENGTH,
-    value: { ref: "modal.body.minHeight" },
-    metadata: { deprecated: { equivalent: "modal.body.minHeight" } }
+    value: { ref: "modal.body.minHeight" }
   },
   "modal.horizontalPadding": {
     type: SPACING,
-    value: { ref: "modal.paddingHorizontal" },
-    metadata: { deprecated: { equivalent: "modal.paddingHorizontal" } }
+    value: { ref: "modal.paddingHorizontal" }
   },
   "modal.header.borderColor": {
     type: COLOR,
-    value: { ref: "modal.header.borderBottomColor" },
-    metadata: { deprecated: { equivalent: "modal.header.borderBottomColor" } }
+    value: { ref: "modal.header.borderBottomColor" }
   },
   "modal.header.height": {
     type: LENGTH,
-    value: { ref: "modal.header.minHeight" },
-    metadata: { deprecated: { equivalent: "modal.header.minHeight" } }
+    value: { ref: "modal.header.minHeight" }
   },
   "modal.window.backgroundColor": {
     type: COLOR,
-    value: { ref: "modal.shell.backgroundColor" },
-    metadata: { deprecated: { equivalent: "modal.shell.backgroundColor" } }
+    value: { ref: "modal.shell.backgroundColor" }
   },
   "modal.window.borderRadius": {
     type: BORDER_RADIUS,
-    value: { ref: "modal.shell.borderRadius" },
-    metadata: { deprecated: { equivalent: "modal.shell.borderRadius" } }
+    value: { ref: "modal.shell.borderRadius" }
   },
   "modal.window.height": {
     type: LENGTH,
-    value: { ref: "modal.shell.minHeight" },
-    metadata: { deprecated: { equivalent: "modal.shell.minHeight" } }
+    value: { ref: "modal.shell.minHeight" }
   },
   "modal.window.width": {
     type: LENGTH,
-    value: { ref: "modal.shell.minWidth" },
-    metadata: { deprecated: { equivalent: "modal.shell.minWidth" } }
+    value: { ref: "modal.shell.minWidth" }
   },
   "modal.window.shadowColor": {
     type: COLOR,
-    value: { ref: "modal.shell.shadowColor" },
-    metadata: { deprecated: { equivalent: "modal.shell.shadowColor" } }
+    value: { ref: "modal.shell.shadowColor" }
   }
 };

@@ -169,85 +169,44 @@ export default {
    *
    */
   accentColor: {
-    type: COLOR,
-    metadata: {
-      deprecated: { equivalent: "colorScheme.reference.accent" }
-    }
+    type: COLOR
   },
   baseColor: {
-    type: COLOR,
-    metadata: {
-      deprecated: { equivalent: "colorScheme.reference.base" }
-    }
+    type: COLOR
   },
   surfaceLevel100Color: {
-    type: COLOR,
-    metadata: {
-      deprecated: { equivalent: "colorScheme.surface.level100" }
-    }
+    type: COLOR
   },
   surfaceLevel200Color: {
-    type: COLOR,
-    metadata: {
-      deprecated: { equivalent: "colorScheme.surface.level200" }
-    }
+    type: COLOR
   },
   surfaceLevel250Color: {
-    type: COLOR,
-    metadata: {
-      deprecated: { equivalent: "colorScheme.surface.level250" }
-    }
+    type: COLOR
   },
   surfaceLevel300Color: {
-    type: COLOR,
-    metadata: {
-      deprecated: { equivalent: "colorScheme.surface.level300" }
-    }
+    type: COLOR
   },
   surfaceLevel350Color: {
-    type: COLOR,
-    metadata: {
-      deprecated: { equivalent: "colorScheme.surface.level350" }
-    }
+    type: COLOR
   },
   highShadowColor: {
-    type: COLOR,
-    metadata: {
-      deprecated: { equivalent: "colorScheme.shadow.high" }
-    }
+    type: COLOR
   },
   lowShadowColor: {
-    type: COLOR,
-    metadata: {
-      deprecated: { equivalent: "colorScheme.shadow.low" }
-    }
+    type: COLOR
   },
   textColor: {
-    type: COLOR,
-    metadata: {
-      deprecated: { equivalent: "colorScheme.text.default" }
-    }
+    type: COLOR
   },
   textColorDim: {
-    type: COLOR,
-    metadata: {
-      deprecated: { equivalent: "colorScheme.text.dim" }
-    }
+    type: COLOR
   },
   iconColor: {
-    type: COLOR,
-    metadata: {
-      deprecated: { equivalent: "colorScheme.icon.default" }
-    }
+    type: COLOR
   },
   errorColor: {
     value: {
       ref: "colorScheme.status.error"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "colorScheme.status.error"
-      }
     },
     type: COLOR
   },
@@ -255,21 +214,11 @@ export default {
     value: {
       ref: "colorScheme.status.success"
     },
-    metadata: {
-      deprecated: {
-        equivalent: "colorScheme.status.success"
-      }
-    },
     type: COLOR
   },
   warningColor: {
     value: {
       ref: "colorScheme.status.warning"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "colorScheme.status.warning"
-      }
     },
     type: COLOR
   },
@@ -277,17 +226,9 @@ export default {
     value: {
       ref: "colorScheme.status.info"
     },
-    metadata: {
-      deprecated: {
-        equivalent: "colorScheme.status.info"
-      }
-    },
     type: COLOR
   },
   "component.backgroundColor": {
-    type: COLOR,
-    metadata: {
-      deprecated: { equivalent: "colorScheme.surface.level" }
-    }
+    type: COLOR
   }
 };

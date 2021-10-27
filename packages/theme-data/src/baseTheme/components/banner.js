@@ -82,44 +82,24 @@ export default {
     type: COLOR,
     value: {
       ref: "banner.info.iconField.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "banner.info.iconField.backgroundColor"
-      }
     }
   },
   "banner.success.iconBackground": {
     type: COLOR,
     value: {
       ref: "banner.success.iconField.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "banner.success.iconField.backgroundColor"
-      }
     }
   },
   "banner.warning.iconBackground": {
     type: COLOR,
     value: {
       ref: "banner.warning.iconField.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "banner.warning.iconField.backgroundColor"
-      }
     }
   },
   "banner.error.iconBackground": {
     type: COLOR,
     value: {
       ref: "banner.error.iconField.backgroundColor"
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "banner.error.iconField.backgroundColor"
-      }
     }
   }
 };
