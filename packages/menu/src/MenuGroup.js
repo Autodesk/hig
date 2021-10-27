@@ -49,7 +49,7 @@ export default class MenuGroup extends Component {
     /**
      * Shows a ability of checkmark to be unchecked if required
      */
-     unselect: PropTypes.bool
+    unselect: PropTypes.bool
   };
 
   static defaultProps = {
