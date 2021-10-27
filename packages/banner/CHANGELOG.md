@@ -1,3 +1,10 @@
+# [@hig/banner-v2.3.1](https://github.com/Autodesk/hig/compare/@hig/banner@2.3.0...@hig/banner@2.3.1) (2021-10-11)
+
+
+### Bug Fixes
+
+* removed blue background from alert and error icons ([#2525](https://github.com/Autodesk/hig/issues/2525)) ([e85ba49](https://github.com/Autodesk/hig/commit/e85ba49))
+
 # [@hig/banner-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/banner@2.2.0...@hig/banner@2.3.0) (2021-05-03)
 
 

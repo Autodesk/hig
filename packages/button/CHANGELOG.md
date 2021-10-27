@@ -1,3 +1,10 @@
+# [@hig/button-v1.4.5](https://github.com/Autodesk/hig/compare/@hig/button@1.4.4...@hig/button@1.4.5) (2021-10-11)
+
+
+### Bug Fixes
+
+* allow tabindex to be passed down ([2d0baca](https://github.com/Autodesk/hig/commit/2d0baca))
+
 # [@hig/button-v1.4.4](https://github.com/Autodesk/hig/compare/@hig/button@1.4.3...@hig/button@1.4.4) (2020-05-12)
 
 
