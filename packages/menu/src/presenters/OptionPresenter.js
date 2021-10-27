@@ -84,7 +84,7 @@ export default class OptionPresenter extends Component {
               selected,
               shortcut,
               stylesheet: customStylesheet,
-              unselect,
+              unselect
             },
             resolvedRoles
           );
