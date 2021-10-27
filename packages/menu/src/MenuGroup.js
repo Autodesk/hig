@@ -49,12 +49,12 @@ export default class MenuGroup extends Component {
     /**
      * Shows a ability of checkmark to be unchecked if required
      */
-     unselect: PropTypes.bool
+    unselect: PropTypes.bool,
   };
 
   static defaultProps = {
     multiple: false,
-    unselect: true
+    unselect: true,
   };
 
   render() {
@@ -93,7 +93,7 @@ export default class MenuGroup extends Component {
           setHighlightIndex,
           setMenuRef,
           setOptionsInfo,
-          setPreviousEvent
+          setPreviousEvent,
         }) => (
           <MenuGroupPresenter
             {...otherProps}

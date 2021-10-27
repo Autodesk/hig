@@ -21,7 +21,7 @@ export default class OptionPresenter extends Component {
     selected: PropTypes.bool,
     shortcut: PropTypes.node,
     stylesheet: PropTypes.func,
-    unselect: PropTypes.bool
+    unselect: PropTypes.bool,
   };
 
   render() {
@@ -108,7 +108,7 @@ export default class OptionPresenter extends Component {
                 <div
                   className={cx([
                     checkmarkWrapperClassName,
-                    css(styles.checkmarkWrapper)
+                    css(styles.checkmarkWrapper),
                   ])}
                 >
                   <Checkmark />
@@ -118,7 +118,7 @@ export default class OptionPresenter extends Component {
                 <div
                   className={cx([
                     assetWrapperClassName,
-                    css(styles.assetWrapper)
+                    css(styles.assetWrapper),
                   ])}
                 >
                   {asset}
@@ -127,7 +127,7 @@ export default class OptionPresenter extends Component {
               <div
                 className={cx([
                   optionContentWrapperClassName,
-                  css(styles.optionContentWrapper)
+                  css(styles.optionContentWrapper),
                 ])}
               >
                 {children}
@@ -135,7 +135,7 @@ export default class OptionPresenter extends Component {
                   <span
                     className={cx([
                       shortcutWrapperClassName,
-                      css(styles.shortcutWrapper)
+                      css(styles.shortcutWrapper),
                     ])}
                   >
                     {shortcut}
