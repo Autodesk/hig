@@ -23,10 +23,6 @@ export default class MenuGroup extends Component {
      */
     menuRef: PropTypes.func,
     /**
-     * Shows a ability of checkmark to be unchecked if required
-     */
-    unselect: PropTypes.bool,
-    /**
      * Enables multiple selection
      * This will take precedent over the Menu prop
      * of the same name
@@ -49,7 +45,11 @@ export default class MenuGroup extends Component {
      * This will take precedent over the Menu prop of the
      * same name
      */
-    stylesheet: PropTypes.func
+    stylesheet: PropTypes.func,
+    /**
+     * Shows a ability of checkmark to be unchecked if required
+     */
+    unselect: PropTypes.bool
   };
 
   static defaultProps = {
@@ -65,8 +65,8 @@ export default class MenuGroup extends Component {
       multiple,
       onChange,
       selected,
-      unselect,
       stylesheet,
+      unselect,
       ...otherProps
     } = this.props;
 
@@ -113,7 +113,6 @@ export default class MenuGroup extends Component {
             setHighlightIndex={setHighlightIndex}
             setOptionsInfo={setOptionsInfo}
             setPreviousEvent={setPreviousEvent}
-            unselect={unselect}
             stylesheet={stylesheet}
           >
             {children}

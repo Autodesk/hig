@@ -96,7 +96,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
-  unselect={true}
 >
   <ul
     className="emotion-12"
@@ -108,7 +107,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -232,7 +230,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -311,7 +308,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -524,7 +520,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
-  unselect={true}
 >
   <ul
     className="emotion-12"
@@ -536,7 +531,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -660,7 +654,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -739,7 +732,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -908,7 +900,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
-  unselect={true}
 >
   <ul
     className="emotion-6"
@@ -920,7 +911,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -999,7 +989,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1078,7 +1067,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1234,7 +1222,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
   role="listbox"
   selected={undefined}
   tabIndex="0"
-  unselect={true}
 >
   <ul
     className="emotion-12"
@@ -1246,7 +1233,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1370,7 +1356,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1449,7 +1434,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1700,7 +1684,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     ]
   }
   tabIndex="0"
-  unselect={true}
 >
   <ul
     className="emotion-12"
@@ -1718,7 +1701,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       ]
     }
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1848,7 +1830,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       ]
     }
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -1933,7 +1914,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       ]
     }
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -2178,7 +2158,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
   role="listbox"
   selected={undefined}
   tabIndex="0"
-  unselect={true}
 >
   <ul
     className="emotion-12"
@@ -2190,7 +2169,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -2314,7 +2292,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}
@@ -2393,7 +2370,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
     role="group"
     selected={undefined}
     tabIndex="-1"
-    unselect={true}
   >
     <li
       aria-selected={false}

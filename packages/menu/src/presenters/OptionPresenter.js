@@ -37,8 +37,8 @@ export default class OptionPresenter extends Component {
       role,
       selected,
       shortcut,
-      unselect,
       stylesheet: customStylesheet,
+      unselect,
       ...otherProps
     } = this.props;
     const { className } = otherProps;
@@ -83,8 +83,8 @@ export default class OptionPresenter extends Component {
               role,
               selected,
               shortcut,
-              unselect,
-              stylesheet: customStylesheet
+              stylesheet: customStylesheet,
+              unselect
             },
             resolvedRoles
           );
