@@ -66,6 +66,7 @@ exports[`menu/Menu renders Menu and Options with checkmark and unselect 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={false}
 >
   <li
     aria-selected={false}
@@ -202,6 +203,7 @@ exports[`menu/Menu renders Menu and Options with defaultSelected 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}
@@ -395,6 +397,7 @@ exports[`menu/Menu renders Menu and Options with defaultSelected and checkmark v
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}
@@ -590,6 +593,7 @@ exports[`menu/Menu renders checkmark indicator Menu and Options 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}
@@ -753,6 +757,7 @@ exports[`menu/Menu renders default Menu and Options 1`] = `
   role="listbox"
   selected={undefined}
   tabIndex="0"
+  unselect={true}
 >
   <li
     aria-selected={false}
