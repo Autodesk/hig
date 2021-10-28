@@ -939,7 +939,7 @@ export default {
   success: {
     value: {
       ref: "colorScheme.status.success"
-    }
+    },
     type: COLOR
   },
   warning: {
