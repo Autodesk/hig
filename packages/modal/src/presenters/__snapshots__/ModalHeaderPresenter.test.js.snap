@@ -198,6 +198,7 @@ exports[`modal/presenters/ModalHeaderPresenter  3`] = `
       HELLO
     </p>
     <button
+      aria-label="Close"
       className="emotion-2"
       disabled={undefined}
       onBlur={[Function]}
