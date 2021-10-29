@@ -37,8 +37,7 @@ const MenuPresenter = props => {
       onFocus,
       selected,
       setActiveOption,
-      setHighlightIndex,
-      unselect
+      setHighlightIndex
     } = props;
     const payload = {
       ...propsOrigin,
