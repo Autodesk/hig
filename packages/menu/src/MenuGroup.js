@@ -60,7 +60,6 @@ const MenuGroup = props => {
           setHighlightIndex={setHighlightIndex}
           setOptionsInfo={setOptionsInfo}
           setPreviousEvent={setPreviousEvent}
-          unselect={unselect}
           stylesheet={stylesheet}
         >
           {children}
@@ -90,10 +89,6 @@ MenuGroup.propTypes = {
    */
   menuRef: PropTypes.func,
   /**
-   * Shows a ability of checkmark to be unchecked if required
-   */
-  unselect: PropTypes.bool,
-  /**
    * Enables multiple selection
    * This will take precedent over the Menu prop
    * of the same name
@@ -116,7 +111,11 @@ MenuGroup.propTypes = {
    * This will take precedent over the Menu prop of the
    * same name
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
+  /**
+   * Shows a ability of checkmark to be unchecked if required
+   */
+  unselect: PropTypes.bool
 };
 
 MenuGroup.defaultProps = {

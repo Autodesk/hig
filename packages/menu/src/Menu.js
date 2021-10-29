@@ -8,7 +8,6 @@ import MenuPresenter from "./presenters/MenuPresenter";
 const Menu = props => {
   const {
     checkmark,
-    unselect,
     children,
     defaultSelected,
     divider,
@@ -17,6 +16,7 @@ const Menu = props => {
     onChange,
     selected,
     stylesheet,
+    unselect,
     ...otherProps
   } = props;
   const { onBlur, onFocus, onKeyDown } = otherProps;
@@ -70,7 +70,6 @@ const Menu = props => {
               setHighlightIndex={setHighlightIndex}
               setOptionsInfo={setOptionsInfo}
               setPreviousEvent={setPreviousEvent}
-              unselect={unselect}
               stylesheet={stylesheet}
             >
               {children}
@@ -89,10 +88,6 @@ Menu.propTypes = {
    * Shows a checkmark selection indicator
    */
   checkmark: PropTypes.bool,
-  /**
-   * Shows a ability of checkmark to be unchecked if required
-   */
-  unselect: PropTypes.bool,
   /**
    * Accepts Option components
    */
@@ -128,7 +123,11 @@ Menu.propTypes = {
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
+  /**
+   * Shows a ability of checkmark to be unchecked if required
+   */
+  unselect: PropTypes.bool
 };
 
 Menu.defaultProps = {

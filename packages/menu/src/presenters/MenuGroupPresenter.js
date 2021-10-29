@@ -64,6 +64,7 @@ const MenuGroupPresenter = props => {
     menuRef,
     multiple,
     stylesheet: customStylesheet,
+    unselect,
     ...otherProps
   } = props;
   const { className } = otherProps;
@@ -103,7 +104,6 @@ const MenuGroupPresenter = props => {
       });
 
       props.setOptionsInfo(mergedOptions);
-
       mounted.current = true;
     } else {
       // update options if they change

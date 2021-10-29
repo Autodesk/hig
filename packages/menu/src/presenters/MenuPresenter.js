@@ -15,6 +15,7 @@ const MenuPresenter = props => {
     menuRef,
     multiple,
     stylesheet: customStylesheet,
+    unselect,
     ...otherProps
   } = props;
   const {
@@ -81,6 +82,7 @@ const MenuPresenter = props => {
   delete payload.setHighlightIndex;
   delete payload.setOptionsInfo;
   delete payload.setPreviousEvent;
+  delete payload.unselect;
 
   const renderOptions = () => getOptions().map(renderOption);
 

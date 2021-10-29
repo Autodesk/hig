@@ -21,8 +21,8 @@ const OptionPresenter = props => {
     role,
     selected,
     shortcut,
-    unselect,
     stylesheet: customStylesheet,
+    unselect,
     ...otherProps
   } = props;
   const { className } = otherProps;
@@ -64,8 +64,8 @@ const OptionPresenter = props => {
             role,
             selected,
             shortcut,
-            unselect,
-            stylesheet: customStylesheet
+            stylesheet: customStylesheet,
+            unselect
           },
           resolvedRoles
         );
