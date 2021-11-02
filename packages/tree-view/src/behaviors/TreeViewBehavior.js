@@ -122,16 +122,36 @@ export default class TreeViewBehavior extends Component {
   };
 
   handleKeyDown = event => {
+    const {
+      getActiveTreeItemId,
+      getActiveTreeItemIndex,
+      getTreeItemArray,
+      setActiveTreeItemId,
+      setActiveTreeItemIndex,
+      setKeyboardOpenId,
+      props,
+      treeViewRef
+    } = this;
     if (this.props.onKeyDown) {
-      this.props.onKeyDown(event);
+      this.props.onKeyDown(
+        event,
+        {
+          getActiveTreeItemId,
+          getActiveTreeItemIndex,
+          getTreeItemArray,
+          setActiveTreeItemId,
+          setActiveTreeItemIndex,
+          setKeyboardOpenId
+        }
+      );
     }
 
-    const domNodeList = this.treeViewRef.querySelectorAll("li");
+    const domNodeList = treeViewRef.querySelectorAll("li");
     const treeItemArrayControl =
-      this.getTreeItemArray().length !== domNodeList.length ||
-      this.props.treeNode
+      getTreeItemArray().length !== domNodeList.length ||
+      props.treeNode
         ? buildTreeItemIdArray(Array.prototype.slice.call(domNodeList))
-        : this.getTreeItemArray();
+        : getTreeItemArray();
 
     const lowerLimit = 0;
     const upperLimit = treeItemArrayControl.length - 1;
@@ -140,16 +160,16 @@ export default class TreeViewBehavior extends Component {
       // Arrow Down
       case 40: {
         event.preventDefault();
-        if (this.getActiveTreeItemIndex() === upperLimit) {
-          this.setActiveTreeItemIndex(lowerLimit);
+        if (getActiveTreeItemIndex() === upperLimit) {
+          setActiveTreeItemIndex(lowerLimit);
 
-          checkScroll(treeItemArrayControl[lowerLimit], this.treeViewRef);
+          checkScroll(treeItemArrayControl[lowerLimit], treeViewRef);
         } else {
-          this.setActiveTreeItemIndex(this.getActiveTreeItemIndex() + 1);
+          setActiveTreeItemIndex(getActiveTreeItemIndex() + 1);
 
           checkScroll(
-            treeItemArrayControl[this.getActiveTreeItemIndex() + 1],
-            this.treeViewRef
+            treeItemArrayControl[getActiveTreeItemIndex() + 1],
+            treeViewRef
           );
         }
         break;
@@ -158,16 +178,16 @@ export default class TreeViewBehavior extends Component {
       // Arrow Up
       case 38: {
         event.preventDefault();
-        if (this.getActiveTreeItemIndex() <= lowerLimit) {
-          this.setActiveTreeItemIndex(upperLimit);
+        if (getActiveTreeItemIndex() <= lowerLimit) {
+          setActiveTreeItemIndex(upperLimit);
 
-          checkScroll(treeItemArrayControl[upperLimit], this.treeViewRef);
+          checkScroll(treeItemArrayControl[upperLimit], treeViewRef);
         } else {
-          this.setActiveTreeItemIndex(this.getActiveTreeItemIndex() - 1);
+          setActiveTreeItemIndex(getActiveTreeItemIndex() - 1);
 
           checkScroll(
-            treeItemArrayControl[this.getActiveTreeItemIndex() - 1],
-            this.treeViewRef
+            treeItemArrayControl[getActiveTreeItemIndex() - 1],
+            treeViewRef
           );
         }
         break;
@@ -176,13 +196,13 @@ export default class TreeViewBehavior extends Component {
       // Enter
       case 13: {
         event.preventDefault();
-        this.setKeyboardOpenId(this.getActiveTreeItemId());
+        setKeyboardOpenId(getActiveTreeItemId());
         break;
       }
       // Space
       case 32: {
         event.preventDefault();
-        this.setActiveTreeItemId(this.getActiveTreeItemId());
+        setActiveTreeItemId(getActiveTreeItemId());
         break;
       }
 
