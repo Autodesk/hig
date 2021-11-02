@@ -29,7 +29,7 @@ export default class TreeView extends Component {
     /**
      * Triggers when a key is pressed
      * In addition to passing back the event you get the
-     * following internal methods:
+     * following internal methods in an object:
      *  - getActiveTreeItemId(): => gets the active treeitem's id
      *  - getActiveTreeItemIndex(): =>  gets the active treeitem's index
      *  - getTreeItemArray(): => gets the array of treeitems that are visible
