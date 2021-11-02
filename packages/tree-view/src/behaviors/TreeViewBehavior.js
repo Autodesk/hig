@@ -129,27 +129,22 @@ export default class TreeViewBehavior extends Component {
       setActiveTreeItemId,
       setActiveTreeItemIndex,
       setKeyboardOpenId,
-      props,
       treeViewRef
     } = this;
     if (this.props.onKeyDown) {
-      this.props.onKeyDown(
-        event,
-        {
-          getActiveTreeItemId,
-          getActiveTreeItemIndex,
-          getTreeItemArray,
-          setActiveTreeItemId,
-          setActiveTreeItemIndex,
-          setKeyboardOpenId
-        }
-      );
+      this.props.onKeyDown(event, {
+        getActiveTreeItemId,
+        getActiveTreeItemIndex,
+        getTreeItemArray,
+        setActiveTreeItemId,
+        setActiveTreeItemIndex,
+        setKeyboardOpenId
+      });
     }
 
     const domNodeList = treeViewRef.querySelectorAll("li");
     const treeItemArrayControl =
-      getTreeItemArray().length !== domNodeList.length ||
-      props.treeNode
+      getTreeItemArray().length !== domNodeList.length || this.props.treeNode
         ? buildTreeItemIdArray(Array.prototype.slice.call(domNodeList))
         : getTreeItemArray();
 

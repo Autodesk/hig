@@ -35,7 +35,7 @@ export default class TreeView extends Component {
      *  - getTreeItemArray(): => gets the array of treeitems that are visible
      *  - setActiveTreeItemId(id: string): => sets the active treeitem's id
      *  - setActiveTreeItemIndex(index: number) => sets the active treeitem's index
-     *  - setKeyboardOpenId(id: string) => opens the treeitem  
+     *  - setKeyboardOpenId(id: string) => opens the treeitem
      */
     onKeyDown: PropTypes.func,
     /**
