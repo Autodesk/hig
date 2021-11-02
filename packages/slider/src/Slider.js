@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
 
@@ -13,193 +13,189 @@ import { AVAILABLE_SLIDER_TYPES } from "./constants";
  * @typedef {Object} State
  * @property {Value} value
  */
+const Slider = props => {
+  const [valueHook, setValueHook] = useState(
+    props.defaultValue || (props.max - props.min) / 2
+  );
 
-export default class Slider extends Component {
-  static propTypes = {
-    /**
-     * Initial value of the field. User action will override
-     */
-    defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    /**
-     * Prevents user actions on the field
-     */
-    disabled: PropTypes.bool,
-    /**
-     * HTML ID attribute
-     */
-    id: PropTypes.string,
-    /**
-     * Maximum value of the slider
-     */
-    max: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    /**
-     * Minimum value of the slider
-     */
-    min: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    /**
-     * Name of the field when submitted with a form
-     */
-    name: PropTypes.string,
-    /**
-     * Called when user moves focus from the field
-     */
-    onBlur: PropTypes.func,
-    /**
-     * Called after user changes the value of the field
-     */
-    onChange: PropTypes.func,
-    /**
-     * Called when user puts focus onto the field
-     */
-    onFocus: PropTypes.func,
-    /**
-     * Called as user changes the value of the field
-     */
-    onInput: PropTypes.func,
-    /**
-     * Called when user presses their mouse over the field
-     */
-    onMouseDown: PropTypes.func,
-    /**
-     * Called when user moves their mouse over the field
-     */
-    onMouseEnter: PropTypes.func,
-    /**
-     * Called when user moves their mouse out of the field
-     */
-    onMouseLeave: PropTypes.func,
-    /**
-     * Called when user releases their mouse press over the field
-     */
-    onMouseUp: PropTypes.func,
-    /**
-     * A callback ref that gets passed to the HTML input
-     */
-    sliderRef: PropTypes.func,
-    /**
-     * The granularity of each step on the slider
-     */
-    step: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    /**
-     * Adds custom/overriding styles
-     */
-    stylesheet: PropTypes.func,
-    /**
-     * Value of the field
-     */
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    /**
-     * Type of the slider
-     */
-    variant: PropTypes.oneOf(AVAILABLE_SLIDER_TYPES)
-  };
-
-  static defaultProps = {
-    disabled: false,
-    variant: "continuous",
-    max: "100",
-    min: "0",
-    step: "1"
-  };
-
-  /**
-   * @type {State}
-   */
-  state = {
-    value: this.props.defaultValue || (this.props.max - this.props.min) / 2
-  };
+  const isControlled = () => props.value !== undefined;
 
   /**
    * @returns {Value}
    */
-  getValue() {
-    if (this.isControlled()) {
-      return this.props.value || 0;
+  const getValue = () => {
+    if (isControlled()) {
+      return props.value || 0;
     }
 
-    return this.state.value;
-  }
+    return valueHook;
+  };
 
   /**
    * @param {Value} value
    */
-  setValue(value) {
-    const { onChange } = this.props;
+  const setValue = valueParams => {
+    const { onChange } = props;
 
-    if (onChange) onChange(Number(value));
+    if (onChange) onChange(Number(valueParams));
 
-    if (!this.isControlled()) {
-      this.setState({ value });
+    if (!isControlled()) {
+      setValueHook(valueParams);
     }
-  }
-
-  isControlled() {
-    return this.props.value !== undefined;
-  }
+  };
 
   /**
    * @param {event} Event
    */
-  handleChange = event => {
-    this.setValue(event.target.value);
+  const handleChange = event => {
+    setValue(event.target.value);
   };
 
-  render() {
-    const {
-      defaultValue, // exclude from otherProps
-      onBlur,
-      onChange, // exclude from otherProps
-      onFocus,
-      onMouseDown,
-      onMouseEnter,
-      onMouseLeave,
-      onMouseUp,
-      sliderRef,
-      stylesheet,
-      value, // exclude from otherProps
-      ...otherProps
-    } = this.props;
+  const {
+    defaultValue, // exclude from otherProps
+    onBlur,
+    onChange, // exclude from otherProps
+    onFocus,
+    onMouseDown,
+    onMouseEnter,
+    onMouseLeave,
+    onMouseUp,
+    sliderRef,
+    stylesheet,
+    value, // exclude from otherProps
+    ...otherProps
+  } = props;
 
-    const currentValue = this.getValue();
+  const currentValue = getValue();
 
-    return (
-      <ControlBehavior
-        onBlur={onBlur}
-        onFocus={onFocus}
-        onMouseDown={onMouseDown}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        onMouseUp={onMouseUp}
-      >
-        {({
-          hasFocus,
-          hasHover,
-          isPressed,
-          onBlur: handleBlur,
-          onFocus: handleFocus,
-          onMouseDown: handleMouseDown,
-          onMouseEnter: handleMouseEnter,
-          onMouseLeave: handleMouseLeave,
-          onMouseUp: handleMouseUp
-        }) => (
-          <SliderPresenter
-            hasFocus={hasFocus}
-            hasHover={hasHover}
-            isPressed={isPressed}
-            onBlur={handleBlur}
-            onChange={this.handleChange}
-            onFocus={handleFocus}
-            onMouseDown={handleMouseDown}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onMouseUp={handleMouseUp}
-            sliderRef={sliderRef}
-            stylesheet={stylesheet}
-            value={currentValue}
-            {...otherProps}
-          />
-        )}
-      </ControlBehavior>
-    );
-  }
-}
+  return (
+    <ControlBehavior
+      onBlur={onBlur}
+      onFocus={onFocus}
+      onMouseDown={onMouseDown}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onMouseUp={onMouseUp}
+    >
+      {({
+        hasFocus,
+        hasHover,
+        isPressed,
+        onBlur: handleBlur,
+        onFocus: handleFocus,
+        onMouseDown: handleMouseDown,
+        onMouseEnter: handleMouseEnter,
+        onMouseLeave: handleMouseLeave,
+        onMouseUp: handleMouseUp
+      }) => (
+        <SliderPresenter
+          hasFocus={hasFocus}
+          hasHover={hasHover}
+          isPressed={isPressed}
+          onBlur={handleBlur}
+          onChange={handleChange}
+          onFocus={handleFocus}
+          onMouseDown={handleMouseDown}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          sliderRef={sliderRef}
+          stylesheet={stylesheet}
+          value={currentValue}
+          {...otherProps}
+        />
+      )}
+    </ControlBehavior>
+  );
+};
+
+Slider.displayName = "Slider";
+
+Slider.propTypes = {
+  /**
+   * Initial value of the field. User action will override
+   */
+  defaultValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /**
+   * Prevents user actions on the field
+   */
+  disabled: PropTypes.bool,
+  /**
+   * HTML ID attribute
+   */
+  id: PropTypes.string,
+  /**
+   * Maximum value of the slider
+   */
+  max: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /**
+   * Minimum value of the slider
+   */
+  min: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /**
+   * Name of the field when submitted with a form
+   */
+  name: PropTypes.string,
+  /**
+   * Called when user moves focus from the field
+   */
+  onBlur: PropTypes.func,
+  /**
+   * Called after user changes the value of the field
+   */
+  onChange: PropTypes.func,
+  /**
+   * Called when user puts focus onto the field
+   */
+  onFocus: PropTypes.func,
+  /**
+   * Called as user changes the value of the field
+   */
+  onInput: PropTypes.func,
+  /**
+   * Called when user presses their mouse over the field
+   */
+  onMouseDown: PropTypes.func,
+  /**
+   * Called when user moves their mouse over the field
+   */
+  onMouseEnter: PropTypes.func,
+  /**
+   * Called when user moves their mouse out of the field
+   */
+  onMouseLeave: PropTypes.func,
+  /**
+   * Called when user releases their mouse press over the field
+   */
+  onMouseUp: PropTypes.func,
+  /**
+   * A callback ref that gets passed to the HTML input
+   */
+  sliderRef: PropTypes.func,
+  /**
+   * The granularity of each step on the slider
+   */
+  step: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /**
+   * Adds custom/overriding styles
+   */
+  stylesheet: PropTypes.func,
+  /**
+   * Value of the field
+   */
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  /**
+   * Type of the slider
+   */
+  variant: PropTypes.oneOf(AVAILABLE_SLIDER_TYPES)
+};
+
+Slider.defaultProps = {
+  disabled: false,
+  variant: "continuous",
+  max: "100",
+  min: "0",
+  step: "1"
+};
+
+export default Slider;
