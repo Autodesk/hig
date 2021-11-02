@@ -27,6 +27,18 @@ export default class TreeView extends Component {
      */
     indicator: PropTypes.oneOf(AVAILABLE_INDICATORS),
     /**
+     * Triggers when a key is pressed
+     * In addition to passing back the event you get the
+     * following internal methods:
+     *  - getActiveTreeItemId(): => gets the active treeitem's id
+     *  - getActiveTreeItemIndex(): =>  gets the active treeitem's index
+     *  - getTreeItemArray(): => gets the array of treeitems that are visible
+     *  - setActiveTreeItemId(id: string): => sets the active treeitem's id
+     *  - setActiveTreeItemIndex(index: number) => sets the active treeitem's index
+     *  - setKeyboardOpenId(id: string) => opens the treeitem  
+     */
+    onKeyDown: PropTypes.func,
+    /**
      * Adds custom/overriding styles
      */
     stylesheet: PropTypes.func,
@@ -60,17 +72,16 @@ export default class TreeView extends Component {
       children,
       alternateBg,
       guidelines,
+      onKeyDown,
       stylesheet,
       treeNode,
       ...otherProps
     } = this.props;
-    const { onClick, onKeyDown } = otherProps;
 
     return (
       <TreeViewBehavior
         {...otherProps}
         onKeyDown={onKeyDown}
-        onClick={onClick}
         treeNode={treeNode}
       >
         {({
