@@ -1,3 +1,10 @@
+# [@hig/tree-view-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@1.1.0...@hig/tree-view@1.2.0) (2021-11-05)
+
+
+### Features
+
+* pass internal method to table events ([3431295](https://github.com/Autodesk/hig/commit/3431295))
+
 # [@hig/tree-view-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@1.0.0...@hig/tree-view@1.1.0) (2021-08-11)
 
 

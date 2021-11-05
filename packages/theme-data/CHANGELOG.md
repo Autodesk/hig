@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.21.2](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.21.1...@hig/theme-data@2.21.2) (2021-11-05)
+
+
+### Bug Fixes
+
+* added transform to table header theme data ([83b0266](https://github.com/Autodesk/hig/commit/83b0266))
+
 # [@hig/theme-data-v2.21.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.21.0...@hig/theme-data@2.21.1) (2021-08-11)
 
 
