@@ -12,12 +12,10 @@ import breadcrumb from "./components/breadcrumb";
 import button from "./components/button";
 import canvasFrame from "./components/canvasFrame";
 import checkbox from "./components/checkbox";
-import component from "./components/component";
 import dataVis from "./components/dataVis";
 import datePicker from "./components/datePicker";
 import divider from "./components/divider";
 import flyout from "./components/flyout";
-import formField from "./components/formField";
 import iconButton from "./components/iconButton";
 import illustration from "./components/illustration";
 import input from "./components/input";
@@ -73,12 +71,10 @@ const baseThemeConfig = extendTheme(
     button,
     canvasFrame,
     checkbox,
-    component,
     dataVis,
     datePicker,
     divider,
     flyout,
-    formField,
     illustration,
     iconButton,
     input,

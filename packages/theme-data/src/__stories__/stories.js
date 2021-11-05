@@ -69,11 +69,6 @@ export default [
     readme: densityReadme
   },
   {
-    description: "Component",
-    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^component./),
-    readme: undefined
-  },
-  {
     description: "Component - Accordion",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^accordion./),
     readme: undefined
@@ -106,11 +101,6 @@ export default [
   {
     description: "Component - Flyout",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^flyout./),
-    readme: undefined
-  },
-  {
-    description: "Component - Form field",
-    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^formField./),
     readme: undefined
   },
   {
