@@ -72,34 +72,5 @@ export default {
     value: {
       ref: "colorScheme.status.warning"
     }
-  },
-  /**
-   *  ## Deprecated
-   *
-   *
-   */
-  "banner.info.iconBackground": {
-    type: COLOR,
-    value: {
-      ref: "banner.info.iconField.backgroundColor"
-    }
-  },
-  "banner.success.iconBackground": {
-    type: COLOR,
-    value: {
-      ref: "banner.success.iconField.backgroundColor"
-    }
-  },
-  "banner.warning.iconBackground": {
-    type: COLOR,
-    value: {
-      ref: "banner.warning.iconField.backgroundColor"
-    }
-  },
-  "banner.error.iconBackground": {
-    type: COLOR,
-    value: {
-      ref: "banner.error.iconField.backgroundColor"
-    }
   }
 };

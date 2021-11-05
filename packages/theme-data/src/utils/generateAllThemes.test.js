@@ -30,11 +30,6 @@ const densities = [
     metadata: {
       densityId: "high-density",
       densityName: "High density"
-    },
-    unresolvedRoles: {
-      "density.textSize": {
-        value: "10px"
-      }
     }
   },
   {

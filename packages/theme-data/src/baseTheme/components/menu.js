@@ -186,34 +186,5 @@ export default {
     value: {
       ref: "colorScheme.indicator.default"
     }
-  },
-  /**
-   *  ## Deprecated
-   *
-   *
-   */
-  "menu.item.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "menu.item.default.backgroundColor"
-    }
-  },
-  "menu.item.active.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "menu.item.pressed.backgroundColor"
-    }
-  },
-  "menu.item.horizontalPadding": {
-    type: SPACING,
-    value: {
-      ref: "menu.item.paddingHorizontal"
-    }
-  },
-  "menu.item.verticalPadding": {
-    type: SPACING,
-    value: {
-      ref: "menu.item.paddingVertical"
-    }
   }
 };

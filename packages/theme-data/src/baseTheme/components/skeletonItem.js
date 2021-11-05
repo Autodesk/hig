@@ -30,16 +30,5 @@ export default {
     transform: {
       alpha: 0.3
     }
-  },
-  /**
-   * ## Deprecated
-   *
-   *
-   */
-  "skeletonItem.defaultHeight": {
-    type: LENGTH,
-    value: {
-      ref: "skeletonItem.minHeight"
-    }
   }
 };

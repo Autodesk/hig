@@ -64,14 +64,5 @@ export default {
   "accordion.header.indicatorRight.paddingRight": {
     type: LENGTH,
     value: { ref: "density.spacings.medium" }
-  },
-  /**
-   *  ## Deprecated
-   *
-   *
-   */
-  "accordion.header.indicatorColor": {
-    type: COLOR,
-    value: { ref: "accordion.header.default.indicatorColor" }
   }
 };

@@ -557,46 +557,5 @@ export default {
     transform: {
       alpha: 0.2
     }
-  },
-  /**
-   * ## Deprecated
-   *
-   *
-   */
-  "table.item.fontWeight": {
-    type: FONT_WEIGHT,
-    value: {
-      ref: "table.cell.fontWeight"
-    }
-  },
-  "table.row.hover.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "table.row.unselected.hover.backgroundColor"
-    }
-  },
-  "table.row.pressed.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "table.row.unselected.pressed.backgroundColor"
-    }
-  },
-  "table.row.selected.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "table.row.selected.default.backgroundColor"
-    }
-  },
-  "table.header.borderTopColor": {
-    type: COLOR,
-    value: {
-      ref: "table.row.unselected.default.borderColor"
-    }
-  },
-  "table.header.borderBottomColor": {
-    type: COLOR,
-    value: {
-      ref: "table.row.unselected.default.borderColor"
-    }
   }
 };

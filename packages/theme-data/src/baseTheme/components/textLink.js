@@ -58,46 +58,5 @@ export default {
     value: {
       ref: "basics.colors.textLink.secondary.againstLight"
     }
-  },
-  /**
-   * ## Deprecated
-   *
-   *
-   */
-  "textLink.textColor": {
-    type: COLOR,
-    value: {
-      ref: "textLink.primary.default.fontColor"
-    }
-  },
-  "textLink.hover.textColor": {
-    type: COLOR,
-    value: {
-      ref: "textLink.primary.hover.fontColor"
-    }
-  },
-  "textLink.focus.textColor": {
-    type: COLOR,
-    value: {
-      ref: "textLink.primary.focus.fontColor"
-    }
-  },
-  "textLink.hover.underline.color": {
-    type: COLOR,
-    value: {
-      ref: "textLink.primary.hover.underlineColor"
-    }
-  },
-  "textLink.focus.halo.color": {
-    type: COLOR,
-    value: {
-      ref: "textLink.focus.haloColor"
-    }
-  },
-  "textLink.focus.halo.width": {
-    type: LENGTH,
-    value: {
-      ref: "textLink.focus.haloWidth"
-    }
   }
 };

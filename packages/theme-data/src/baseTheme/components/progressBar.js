@@ -25,34 +25,5 @@ export default {
   "progress.bar.minHeight": {
     type: LENGTH,
     value: "4px"
-  },
-  /**
-   *  ## Deprecated
-   *
-   *
-   */
-  "progressBar.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "progress.bar.backgroundColor"
-    }
-  },
-  "progressBar.highlightColor": {
-    type: COLOR,
-    value: {
-      ref: "progress.bar.highlightColor"
-    }
-  },
-  "progressBar.borderRadius": {
-    type: BORDER_RADIUS,
-    value: {
-      ref: "progress.bar.borderRadius"
-    }
-  },
-  "progressBar.height": {
-    type: LENGTH,
-    value: {
-      ref: "progress.bar.minHeight"
-    }
   }
 };
