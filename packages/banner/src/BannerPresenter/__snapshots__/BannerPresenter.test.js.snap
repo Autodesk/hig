@@ -15,7 +15,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
   border-width: 1px 0;
   border-style: solid;
   border-color: #9bd5ef;
-  background-color: #cdeaf7;
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-1 {
@@ -231,7 +231,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
   border-width: 1px 0;
   border-style: solid;
   border-color: #f9b4b4;
-  background-color: #ffefec;
+  background-color: rgba(221,34,34,0.2);
 }
 
 .emotion-1 {
@@ -327,7 +327,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
   border-width: 1px 0;
   border-style: solid;
   border-color: #9bd5ef;
-  background-color: #cdeaf7;
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-1 {
@@ -489,7 +489,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
   border-width: 1px 0;
   border-style: solid;
   border-color: #9bd5ef;
-  background-color: #cdeaf7;
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-1 {
@@ -649,7 +649,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with custom className 1`
   border-width: 1px 0;
   border-style: solid;
   border-color: #9bd5ef;
-  background-color: #cdeaf7;
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-1 {
@@ -943,7 +943,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
   border-width: 1px 0;
   border-style: solid;
   border-color: #9bd5ef;
-  background-color: #cdeaf7;
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-1 {
@@ -1198,7 +1198,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders without onDismiss functi
   border-width: 1px 0;
   border-style: solid;
   border-color: #9bd5ef;
-  background-color: #cdeaf7;
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-1 {
@@ -1345,7 +1345,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
   border-width: 1px 0;
   border-style: solid;
   border-color: #9bd5ef;
-  background-color: #cdeaf7;
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-1 {
