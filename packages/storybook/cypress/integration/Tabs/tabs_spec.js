@@ -1,36 +1,38 @@
-describe("Storybook/Spacer", () => {
-  it("Default", () => {
+describe("Storybook/Tabs", () => {
+  it("Render default", () => {
     // eslint-disable-next-line no-undef
-    cy.visit("iframe.html?selectedKind=Spacer&selectedStory=default");
+    cy.visit("iframe.html?selectedKind=Tabs&selectedStory=default");
     // eslint-disable-next-line no-undef
-    cy.get("#root > div > div")
+    cy.get("#root > div > div > div")
       .first()
       .each((element, index) => {
-        const name = `spacer-default-${index}`;
+        const name = `tabs-default-${index}`;
         // eslint-disable-next-line no-undef
         cy.wrap(element).matchImageSnapshot(name);
       });
   });
-  it("With spacing", () => {
+
+  it("Render complex tab", () => {
     // eslint-disable-next-line no-undef
-    cy.visit("iframe.html?selectedKind=Spacer&selectedStory=with%20spacing");
+    cy.visit("iframe.html?selectedKind=Tabs&selectedStory=complex%20tab");
     // eslint-disable-next-line no-undef
-    cy.get("#root > div > div")
+    cy.get("#root > div > div > div")
       .first()
       .each((element, index) => {
-        const name = `spacer-spacing-${index}`;
+        const name = `tabs-complex-${index}`;
         // eslint-disable-next-line no-undef
         cy.wrap(element).matchImageSnapshot(name);
       });
   });
-  it("With size", () => {
+
+  it("Render custom tab", () => {
     // eslint-disable-next-line no-undef
-    cy.visit("iframe.html?selectedKind=Spacer&selectedStory=with%20size");
+    cy.visit("iframe.html?selectedKind=Tabs&selectedStory=custom%20tab");
     // eslint-disable-next-line no-undef
-    cy.get("#root > div > div")
+    cy.get("#root > div > div > div")
       .first()
       .each((element, index) => {
-        const name = `spacer-size-${index}`;
+        const name = `tabs-custom-${index}`;
         // eslint-disable-next-line no-undef
         cy.wrap(element).matchImageSnapshot(name);
       });

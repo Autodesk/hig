@@ -1,12 +1,12 @@
-describe("Storybook/Skeleton Item", () => {
-  it("Rendering", () => {
+describe("Storybook/Surface", () => {
+  it("Render default", () => {
     // eslint-disable-next-line no-undef
-    cy.visit("iframe.html?selectedKind=SkeletonItem&selectedStory=default");
+    cy.visit("iframe.html?selectedKind=Surface&selectedStory=default");
     // eslint-disable-next-line no-undef
     cy.get("#root > div > div > div")
       .first()
       .each((element, index) => {
-        const name = `skeleton-item-${index}`;
+        const name = `surface-default-${index}`;
         // eslint-disable-next-line no-undef
         cy.wrap(element).matchImageSnapshot(name);
       });
