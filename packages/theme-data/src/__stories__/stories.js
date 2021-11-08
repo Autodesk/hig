@@ -154,6 +154,11 @@ export default [
     readme: undefined
   },
   {
+    description: "Component - Table",
+    schema: filterMatchByKey(baseTheme.unresolvedRoles, /^table./),
+    readme: undefined
+  },
+  {
     description: "Component - Tabs",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^tabs./),
     readme: undefined

@@ -1,7 +1,10 @@
 export default {
   "banner.error.backgroundColor": {
     value: {
-      ref: "basics.colors.secondary.red.700"
+      ref: "basics.colors.secondary.red.800"
+    },
+    transform: {
+      alpha: 0.27
     }
   },
   "banner.error.borderColor": {
@@ -11,7 +14,10 @@ export default {
   },
   "banner.info.backgroundColor": {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.800"
+      ref: "basics.colors.primary.autodeskBlue.900"
+    },
+    transform: {
+      alpha: 0.3
     }
   },
   "banner.info.borderColor": {
@@ -21,7 +27,10 @@ export default {
   },
   "banner.success.backgroundColor": {
     value: {
-      ref: "basics.colors.secondary.green.800"
+      ref: "basics.colors.secondary.green.900"
+    },
+    transform: {
+      alpha: 0.4
     }
   },
   "banner.success.borderColor": {
@@ -31,7 +40,10 @@ export default {
   },
   "banner.warning.backgroundColor": {
     value: {
-      ref: "basics.colors.secondary.yellowOrange.700"
+      ref: "basics.colors.secondary.yellowOrange.800"
+    },
+    transform: {
+      alpha: 0.25
     }
   },
   "banner.warning.borderColor": {

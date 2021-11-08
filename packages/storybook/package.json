@@ -57,7 +57,7 @@
     "@hig/rich-text": "^1.2.0",
     "@hig/spacer": "^1.1.0",
     "@hig/theme-context": "^3.0.1",
-    "@hig/theme-data": "^2.21.1",
+    "@hig/theme-data": "^2.21.2",
     "@hig/typography": "^1.2.0",
     "cypress": "^8.5.0",
     "cypress-image-snapshot": "^4.0.1",
