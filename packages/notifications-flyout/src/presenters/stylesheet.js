@@ -74,7 +74,14 @@ export default function stylesheet(props, themeData) {
       } ${themeData["density.spacings.small"]}`
     },
     notificationContentText: {
-      margin: `${themeData["density.spacings.small"]}`
+      margin: `${themeData["density.spacings.small"]}`,
+      overflowWrap: `break-word`,
+      flexDirection: `row`,
+      flex: 1,
+      flexShrink: 1,
+      flexWrap: `wrap`,
+      wordWrap: `break-word`,
+      overflow: `hidden`
     },
     panelTitle: {
       padding: `${themeData["density.spacings.small"]}

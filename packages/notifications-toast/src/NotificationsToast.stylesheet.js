@@ -53,7 +53,14 @@ export default function stylesheet(props, themeData) {
       flexGrow: 1,
       display: `flex`,
       position: `relative`,
-      paddingRight: `36px`
+      paddingRight: `36px`,
+      overflowWrap: `break-word`,
+      flexDirection: `row`,
+      flex: 1,
+      flexShrink: 1,
+      flexWrap: `wrap`,
+      wordWrap: `break-word`,
+      overflow: `hidden`
     },
     toastDismiss: {
       position: `absolute`,
