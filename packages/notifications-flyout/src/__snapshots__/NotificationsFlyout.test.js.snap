@@ -209,6 +209,8 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 
 .emotion-10 {
   margin: 12px;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .emotion-9 {
@@ -684,6 +686,8 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 
 .emotion-10 {
   margin: 12px;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .emotion-9 {
@@ -1112,6 +1116,8 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
 
 .emotion-10 {
   margin: 12px;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .emotion-9 {
