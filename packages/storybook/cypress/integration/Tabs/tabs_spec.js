@@ -8,6 +8,7 @@ describe("Storybook/Tabs", () => {
       .each((element, index) => {
         const name = `tabs-default-${index}`;
         // eslint-disable-next-line no-undef
+        cy.viewport(1280, 1162);
         cy.wrap(element).matchImageSnapshot(name);
       });
   });
@@ -21,6 +22,7 @@ describe("Storybook/Tabs", () => {
       .each((element, index) => {
         const name = `tabs-complex-${index}`;
         // eslint-disable-next-line no-undef
+        cy.viewport(1280, 1162);
         cy.wrap(element).matchImageSnapshot(name);
       });
   });
@@ -34,6 +36,7 @@ describe("Storybook/Tabs", () => {
       .each((element, index) => {
         const name = `tabs-custom-${index}`;
         // eslint-disable-next-line no-undef
+        cy.viewport(1280, 1162);
         cy.wrap(element).matchImageSnapshot(name);
       });
   });

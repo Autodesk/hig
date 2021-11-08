@@ -8,6 +8,8 @@ describe("Storybook/Spacer", () => {
       .each((element, index) => {
         const name = `spacer-default-${index}`;
         // eslint-disable-next-line no-undef
+        cy.viewport(1280, 1162);
+        // eslint-disable-next-line no-undef
         cy.wrap(element).matchImageSnapshot(name);
       });
   });
@@ -20,6 +22,8 @@ describe("Storybook/Spacer", () => {
       .each((element, index) => {
         const name = `spacer-spacing-${index}`;
         // eslint-disable-next-line no-undef
+        cy.viewport(1280, 1162);
+        // eslint-disable-next-line no-undef
         cy.wrap(element).matchImageSnapshot(name);
       });
   });
@@ -31,6 +35,8 @@ describe("Storybook/Spacer", () => {
       .first()
       .each((element, index) => {
         const name = `spacer-size-${index}`;
+        // eslint-disable-next-line no-undef
+        cy.viewport(1280, 1162);
         // eslint-disable-next-line no-undef
         cy.wrap(element).matchImageSnapshot(name);
       });

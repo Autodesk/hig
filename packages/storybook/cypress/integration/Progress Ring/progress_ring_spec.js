@@ -6,6 +6,8 @@ describe("Storybook/Progress Ring", () => {
     cy.get("#root > div > div > div")
       .first()
       .each((element, index) => {
+        // eslint-disable-next-line no-undef
+        cy.viewport(1280, 1162);
         const name = `progress-ring-determinate-${index}`;
         // eslint-disable-next-line no-undef
         cy.wrap(element).matchImageSnapshot(name);

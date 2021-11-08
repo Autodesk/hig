@@ -1,30 +1,27 @@
-describe("Storybook/TreeView", () => {
+describe("Storybook/Input", () => {
   it("Render default", () => {
     // eslint-disable-next-line no-undef
-    cy.visit("iframe.html?selectedKind=TreeView&selectedStory=default");
+    cy.visit("iframe.html?selectedKind=Forms%7CInput&selectedStory=default");
     // eslint-disable-next-line no-undef
-    cy.get("#root > div > div > div")
+    cy.get("#root > div > div > div > div")
       .first()
       .each((element, index) => {
-        const name = `treeview-default-${index}`;
+        const name = `input-default-${index}`;
         // eslint-disable-next-line no-undef
         cy.viewport(1280, 1162);
-        // eslint-disable-next-line no-undef
         cy.wrap(element).matchImageSnapshot(name);
       });
   });
-
-  it("Render Tree Object", () => {
+  it("Render disabled", () => {
     // eslint-disable-next-line no-undef
-    cy.visit("iframe.html?selectedKind=TreeView&selectedStory=tree%20object");
+    cy.visit("iframe.html?selectedKind=Forms%7CInput&selectedStory=disabled");
     // eslint-disable-next-line no-undef
-    cy.get("#root > div > div > div")
+    cy.get("#root > div > div > div > div")
       .first()
       .each((element, index) => {
-        const name = `treeview-object-${index}`;
+        const name = `input-disabled-${index}`;
         // eslint-disable-next-line no-undef
         cy.viewport(1280, 1162);
-        // eslint-disable-next-line no-undef
         cy.wrap(element).matchImageSnapshot(name);
       });
   });

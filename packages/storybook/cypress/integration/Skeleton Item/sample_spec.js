@@ -8,6 +8,8 @@ describe("Storybook/Skeleton Item", () => {
       .each((element, index) => {
         const name = `skeleton-item-${index}`;
         // eslint-disable-next-line no-undef
+        cy.viewport(1280, 1162);
+        // eslint-disable-next-line no-undef
         cy.wrap(element).matchImageSnapshot(name);
       });
   });

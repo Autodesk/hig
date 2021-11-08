@@ -8,6 +8,8 @@ describe("Storybook/Progress Bar", () => {
       .each((element, index) => {
         const name = `progress-bar-determinate-${index}`;
         // eslint-disable-next-line no-undef
+        cy.viewport(1280, 1162);
+        // eslint-disable-next-line no-undef
         cy.wrap(element).matchImageSnapshot(name);
       });
   });

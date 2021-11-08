@@ -8,6 +8,7 @@ describe("Storybook/Menu", () => {
       .each((element, index) => {
         const name = `menu-${index}`;
         // eslint-disable-next-line no-undef
+        cy.viewport(1280, 1162);
         cy.wrap(element).matchImageSnapshot(name);
       });
   });

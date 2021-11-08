@@ -1,58 +1,43 @@
-describe("Storybook/CheckboxPresenter", () => {
-  it("default", () => {
+describe("Storybook/Label", () => {
+  it("Render default", () => {
     // eslint-disable-next-line no-undef
-    cy.visit("iframe.html?selectedKind=Forms%7CCheckbox&selectedStory=default");
+    cy.visit("iframe.html?selectedKind=Forms%7CLabel&selectedStory=default");
     // eslint-disable-next-line no-undef
     cy.get("#root > div > div > div > div")
       .first()
       .each((element, index) => {
-        const name = `checkbox-default-${index}`;
+        const name = `label-default-${index}`;
         // eslint-disable-next-line no-undef
         cy.viewport(1280, 1162);
         cy.wrap(element).matchImageSnapshot(name);
       });
   });
-
-  it("checked", () => {
-    // eslint-disable-next-line no-undef
-    cy.visit("iframe.html?selectedKind=Forms%7CCheckbox&selectedStory=checked");
-    // eslint-disable-next-line no-undef
-    cy.get("#root > div > div > div > div")
-      .first()
-      .each((element, index) => {
-        const name = `checkbox-checked${index}`;
-        // eslint-disable-next-line no-undef
-        cy.viewport(1280, 1162);
-        cy.wrap(element).matchImageSnapshot(name);
-      });
-  });
-
-  it("disabled", () => {
+  it("Render top label", () => {
     // eslint-disable-next-line no-undef
     cy.visit(
-      "iframe.html?selectedKind=Forms%7CCheckbox&selectedStory=disabled"
+      "iframe.html?selectedKind=Forms%7CLabel&selectedStory=top%20label"
     );
     // eslint-disable-next-line no-undef
     cy.get("#root > div > div > div > div")
       .first()
       .each((element, index) => {
-        const name = `checkbox-disabled${index}`;
+        const name = `label-top-${index}`;
         // eslint-disable-next-line no-undef
         cy.viewport(1280, 1162);
         cy.wrap(element).matchImageSnapshot(name);
       });
   });
 
-  it("indeterminate", () => {
+  it("Render side label", () => {
     // eslint-disable-next-line no-undef
     cy.visit(
-      "iframe.html?selectedKind=Forms%7CCheckbox&selectedStory=indeterminate"
+      "iframe.html?selectedKind=Forms%7CLabel&selectedStory=side%20label"
     );
     // eslint-disable-next-line no-undef
     cy.get("#root > div > div > div > div")
       .first()
       .each((element, index) => {
-        const name = `checkbox-indeterminate${index}`;
+        const name = `label-side-${index}`;
         // eslint-disable-next-line no-undef
         cy.viewport(1280, 1162);
         cy.wrap(element).matchImageSnapshot(name);
