@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v2.1.4](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.1.3...@hig/notifications-flyout@2.1.4) (2021-11-19)
+
+
+### Bug Fixes
+
+* change notifications to wrap long words properly ([174b4ad](https://github.com/Autodesk/hig/commit/174b4ad))
+
 # [@hig/notifications-flyout-v2.1.3](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.1.2...@hig/notifications-flyout@2.1.3) (2021-08-11)
 
 
