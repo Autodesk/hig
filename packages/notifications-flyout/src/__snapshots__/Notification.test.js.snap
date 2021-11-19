@@ -18,6 +18,8 @@ exports[`notifications-flyout/Notification renders correctly with the featured p
 
 .emotion-4 {
   margin: 12px;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .emotion-0 {
@@ -296,6 +298,8 @@ exports[`notifications-flyout/Notification renders correctly with the unread pro
 
 .emotion-1 {
   margin: 12px;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .emotion-0 {
