@@ -15,7 +15,7 @@ exports[`banner/Banner snapshot tests renders with custom className 1`] = `
   border-width: 1px 0;
   border-style: solid;
   border-color: #9bd5ef;
-  background-color: #cdeaf7;
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-1 {
@@ -353,7 +353,7 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
   border-width: 1px 0;
   border-style: solid;
   border-color: #9bd5ef;
-  background-color: #cdeaf7;
+  background-color: rgba(6,150,215,0.2);
 }
 
 .emotion-1 {
