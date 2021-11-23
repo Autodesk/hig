@@ -15,7 +15,7 @@ exports[`banner/Banner snapshot tests renders with custom className 1`] = `
   border-width: 1px 0;
   border-style: solid;
   border-color: #9bd5ef;
-  background-color: rgba(6,150,215,0.2);
+  background-color: #cdeaf7;
 }
 
 .emotion-1 {
@@ -101,23 +101,12 @@ exports[`banner/Banner snapshot tests renders with custom className 1`] = `
 
 <div
   aria-busy={false}
-  aria-expanded={true}
+  aria-expanded={false}
   onTransitionEnd={[Function]}
-  style={
-    Object {
-      "height": "",
-      "overflow": "",
-      "transition": "",
-    }
-  }
+  style={null}
 >
   <div
-    style={
-      Object {
-        "transform": "",
-        "transition": "",
-      }
-    }
+    style={null}
   >
     <div
       className="emotion-6 custom"
@@ -353,7 +342,7 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
   border-width: 1px 0;
   border-style: solid;
   border-color: #9bd5ef;
-  background-color: rgba(6,150,215,0.2);
+  background-color: #cdeaf7;
 }
 
 .emotion-1 {
@@ -439,23 +428,12 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
 
 <div
   aria-busy={false}
-  aria-expanded={true}
+  aria-expanded={false}
   onTransitionEnd={[Function]}
-  style={
-    Object {
-      "height": "",
-      "overflow": "",
-      "transition": "",
-    }
-  }
+  style={null}
 >
   <div
-    style={
-      Object {
-        "transform": "",
-        "transition": "",
-      }
-    }
+    style={null}
   >
     <div
       className="emotion-6"

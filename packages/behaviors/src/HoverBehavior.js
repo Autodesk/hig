@@ -1,50 +1,43 @@
-import { Component } from "react";
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-export default class HoverBehavior extends Component {
-  static propTypes = {
-    children: PropTypes.func.isRequired,
-    onMouseEnter: PropTypes.func,
-    onMouseLeave: PropTypes.func
+const HoverBehavior = props => {
+  const [hasHover, setHasHover] = useState(false);
+
+  const handleFocus = event => {
+    if (props.onMouseEnter) {
+      props.onMouseEnter(event);
+    }
+
+    if (!event.defaultPrevented) {
+      setHasHover(true);
+    }
   };
 
-  constructor(props) {
-    super(props);
-
-    // Binding in the constructor because performance
-    this.handleFocus = this.handleFocus.bind(this);
-    this.handleBlur = this.handleBlur.bind(this);
-
-    this.state = {
-      hasHover: false
-    };
-  }
-
-  handleFocus(event) {
-    if (this.props.onMouseEnter) {
-      this.props.onMouseEnter(event);
+  const handleBlur = event => {
+    if (props.onMouseLeave) {
+      props.onMouseLeave(event);
     }
 
     if (!event.defaultPrevented) {
-      this.setState({ hasHover: true });
+      setHasHover(false);
     }
-  }
+  };
 
-  handleBlur(event) {
-    if (this.props.onMouseLeave) {
-      this.props.onMouseLeave(event);
-    }
+  return props.children({
+    hasHover,
+    onMouseEnter: handleFocus,
+    onMouseLeave: handleBlur
+  });
+};
 
-    if (!event.defaultPrevented) {
-      this.setState({ hasHover: false });
-    }
-  }
+HoverBehavior.displayName = "HoverBehavior";
 
-  render() {
-    return this.props.children({
-      hasHover: this.state.hasHover,
-      onMouseEnter: this.handleFocus,
-      onMouseLeave: this.handleBlur
-    });
-  }
-}
+HoverBehavior.propTypes = {
+  children: PropTypes.func.isRequired,
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func
+};
+
+export default HoverBehavior;
