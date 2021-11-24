@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.22.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.21.2...@hig/theme-data@2.22.0) (2021-11-19)
+
+
+### Features
+
+* updated banner background color values ([7c9af44](https://github.com/Autodesk/hig/commit/7c9af44))
+
 # [@hig/theme-data-v2.21.2](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.21.1...@hig/theme-data@2.21.2) (2021-11-05)
 
 

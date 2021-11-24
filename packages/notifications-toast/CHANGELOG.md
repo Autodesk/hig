@@ -1,3 +1,10 @@
+# [@hig/notifications-toast-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.2.0...@hig/notifications-toast@2.2.1) (2021-11-19)
+
+
+### Bug Fixes
+
+* change notifications to wrap long words properly ([174b4ad](https://github.com/Autodesk/hig/commit/174b4ad))
+
 # [@hig/notifications-toast-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.1.1...@hig/notifications-toast@2.2.0) (2020-10-13)
 
 

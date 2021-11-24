@@ -18,6 +18,8 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders with all 
 
 .emotion-4 {
   margin: 12px;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .emotion-0 {
@@ -282,6 +284,8 @@ exports[`notifications-flyout/presenters/NotificationPresenter renders without p
 
 .emotion-1 {
   margin: 12px;
+  word-wrap: break-word;
+  overflow: hidden;
 }
 
 .emotion-0 {
