@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-shadow */
 import React, { useState, useEffect, Children } from "react";
 import PropTypes from "prop-types";
 import { cx, css } from "emotion";
@@ -104,6 +106,7 @@ const Tabs = props => {
    */
   const onTabSelection = (selectedTabIndex, { disabled }) => {
     props.onTabChange(selectedTabIndex);
+    // eslint-disable-next-line no-use-before-define
     const prevActiveTabIndex = getActiveTabIndex();
     if (!disabled && prevActiveTabIndex !== selectedTabIndex) {
       setActiveTabIndex(selectedTabIndex);
@@ -158,6 +161,7 @@ const Tabs = props => {
   const renderTab = ({ key, props: propsParams }, index) => {
     const { disabled, className: tabClassName } = propsParams;
     const { variant, className: tabsClassName } = props;
+    // eslint-disable-next-line no-shadow
     const activeTabIndex = getActiveTabIndex();
 
     let showTabDivider = effectiveShowTabDivider;
@@ -192,6 +196,7 @@ const Tabs = props => {
    * @returns {JSX.Element}
    */
   const renderTabs = () => {
+    // eslint-disable-next-line react/prop-types
     const { className, variant, stylesheet: customStylesheet } = props;
     return (
       <TabsPresenter
@@ -210,6 +215,7 @@ const Tabs = props => {
    * @returns {JSX.Element}
    */
   const renderContent = () => {
+    // eslint-disable-next-line react/prop-types
     const { className, stylesheet: customStylesheet } = props;
     const activeTab = getActiveTab();
 
@@ -234,6 +240,7 @@ const Tabs = props => {
 
       const nextTabs = createTabs(children);
       const nextActiveTabIndex = nextTabs.findIndex(
+        // eslint-disable-next-line react/prop-types
         ({ props }) => props.active
       );
       if (
@@ -306,6 +313,7 @@ Tabs.propTypes = {
    * Specify how to justify the tabs within their container
    * When variant is set to "canvas", the effective alignment will always be "left"
    */
+  // eslint-disable-next-line react/no-unused-prop-types
   align: PropTypes.oneOf(AVAILABLE_ALIGNMENTS),
   /**
    * Accepts Tab components
@@ -328,19 +336,23 @@ Tabs.propTypes = {
    * The list orientation of the tabs
    * Vertical tabs only works when variant is set to "box"
    */
+  // eslint-disable-next-line react/no-unused-prop-types
   orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
   /**
    * Show dividers between tabs
    * Only works in horizontal tabs and when variant is set to "box" or "canvas"
    */
+  // eslint-disable-next-line react/no-unused-prop-types
   showTabDivider: PropTypes.bool,
   /**
    * Function to modify the component's styles
    */
+  // eslint-disable-next-line react/no-unused-prop-types
   stylesheet: PropTypes.func,
   /**
    * The visual variant of the tabs
    */
+  // eslint-disable-next-line react/no-unused-prop-types
   variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
 };
 
