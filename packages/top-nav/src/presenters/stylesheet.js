@@ -30,8 +30,7 @@ export default function stylesheet(props, themeData) {
     topNavLogoWrapper: {
       display: `flex`,
       padding: `0 12px 0 5px`,
-      alignItems: `center`,
-      lineHeight: 0
+      alignItems: `center`
     },
     topNavSeparator: {
       width: 0,
