@@ -192,6 +192,9 @@ import Add16SVG from "./icons/information-dense/add.svg";
 import AddPage16SVG from "./icons/information-dense/add-page.svg";
 import AddMember16SVG from "./icons/information-dense/add-member.svg";
 import AddFolder16SVG from "./icons/information-dense/add-folder.svg";
+import Error20SVG from "./icons/size20/error.svg";
+import Complete20SVG from "./icons/size20/complete.svg";
+import Alert20SVG from "./icons/size20/alert.svg";
 import ZoomOut24SVG from "./icons/regular/zoom-out.svg";
 import ZoomIn24SVG from "./icons/regular/zoom-in.svg";
 import Volume24SVG from "./icons/regular/volume.svg";
@@ -5954,4 +5957,48 @@ export const Error12 = props => (
   </ThemeContext.Consumer>
 )
 
+export const Alert20 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "20px",
+        height: "20px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Alert20SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const Complete20 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "20px",
+        height: "20px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Complete20SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const Error20 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "20px",
+        height: "20px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      return (
+        <Error20SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
 /* eslint-enable */
