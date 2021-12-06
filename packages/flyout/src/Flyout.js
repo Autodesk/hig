@@ -194,15 +194,21 @@ export default class Flyout extends Component {
   }
 
   handleChildMouseEnter = () => {
+    const { props } = this.props.children;
     if (this.props.openOnHover) {
       this.setOpen(true);
+      return props.onMouseEnter();
     }
+    return null;
   };
 
   handleChildMouseLeave = () => {
+    const { props } = this.props.children;
     if (this.props.openOnHover) {
       this.setOpen(false);
+      return props.onMouseLeave();
     }
+    return null;
   };
 
   handleChildClick = () => {
