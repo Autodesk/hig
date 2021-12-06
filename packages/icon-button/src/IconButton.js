@@ -108,6 +108,8 @@ export default class IconButton extends Component {
           onBlur: handleBlur,
           onFocus: handleFocus,
           onMouseDown: handleMouseDown,
+          onMouseEnter: handleMouseEnter,
+          onMouseLeave: handleMouseLeave,
           onMouseUp: handleMouseUp
         }) => (
           <IconButtonPresenter
@@ -118,8 +120,8 @@ export default class IconButton extends Component {
             onBlur={handleBlur}
             onFocus={handleFocus}
             onMouseDown={handleMouseDown}
-            onMouseEnter
-            onMouseLeave
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
             stylesheet={stylesheet}
             {...props}
