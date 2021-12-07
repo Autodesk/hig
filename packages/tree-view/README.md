@@ -95,7 +95,7 @@ const FileTreeCollection = {
 
 Use the `className` prop to pass in a css class name to the outermost container of the component. The class name will also pass down to most of the other styled elements within the component.
 
-TreeView also has a `stylesheet` prop that accepts a function wherein you can modify TreeView's styles. The original styles, props, current theme data and theme meta will be passed to your custom stylesheet function, and it should return an object with the same structure as the original styles. For instance
+TreeView also has a `stylesheet` prop that accepts a function wherein you can modify TreeView's styles. The original styles, props, current theme data and theme meta will be passed to your custom stylesheet function, and it should return an object with the same structure as the original styles. For instance:
 
 ```jsx
 function customStylesheet(styles, props, themeData) {
