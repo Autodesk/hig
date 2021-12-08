@@ -1,3 +1,10 @@
+# [@hig/tree-view-v1.2.2](https://github.com/Autodesk/hig/compare/@hig/tree-view@1.2.1...@hig/tree-view@1.2.2) (2021-12-08)
+
+
+### Bug Fixes
+
+* label prop for subtree ([389dca7](https://github.com/Autodesk/hig/commit/389dca7))
+
 # [@hig/tree-view-v1.2.1](https://github.com/Autodesk/hig/compare/@hig/tree-view@1.2.0...@hig/tree-view@1.2.1) (2021-12-07)
 
 
