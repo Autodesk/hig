@@ -141,7 +141,7 @@ TreeObjectSubTreeItem.propTypes = {
   treeItem: PropTypes.shape({
     id: PropTypes.number,
     meta: PropTypes.shape({
-      label: PropTypes.string,
+      label: PropTypes.node,
       collapsed: PropTypes.bool,
       active: PropTypes.bool,
       icon: PropTypes.element
