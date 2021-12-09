@@ -197,6 +197,8 @@ export default class Flyout extends Component {
     const { props } = this.props.children;
     if (this.props.openOnHover) {
       this.setOpen(true);
+    }
+    if (props.onMouseEnter) {
       return props.onMouseEnter();
     }
     return null;
@@ -206,6 +208,8 @@ export default class Flyout extends Component {
     const { props } = this.props.children;
     if (this.props.openOnHover) {
       this.setOpen(false);
+    }
+    if (props.onMouseLeave) {
       return props.onMouseLeave();
     }
     return null;
