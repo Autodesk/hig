@@ -235,12 +235,15 @@ exports[`numeric-input/NumericInput renders with custom className 1`] = `
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
       step={undefined}
-      type="number"
+      type="text"
       value="0"
     />
     <div
@@ -486,12 +489,15 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
       step={undefined}
-      type="number"
+      type="text"
       value="0"
     />
     <div
@@ -736,12 +742,15 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
       step={undefined}
-      type="number"
+      type="text"
       value="10"
     />
     <div
@@ -983,12 +992,15 @@ exports[`numeric-input/NumericInput renders with disabled 1`] = `
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
       step={undefined}
-      type="number"
+      type="text"
       value="0"
     />
     <div
@@ -1260,12 +1272,15 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
       step={undefined}
-      type="number"
+      type="text"
       value="0"
     />
     <div
@@ -1510,12 +1525,15 @@ exports[`numeric-input/NumericInput renders without props 1`] = `
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
       step={undefined}
-      type="number"
+      type="text"
       value="0"
     />
     <div

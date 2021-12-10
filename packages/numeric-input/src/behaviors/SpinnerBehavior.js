@@ -6,7 +6,7 @@ export default class SpinnerBehavior extends Component {
     children: PropTypes.func,
     onChange: PropTypes.func,
     onMouseLeave: PropTypes.func,
-    value: PropTypes.number,
+    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     initialValue: PropTypes.number,
     step: PropTypes.number,
     disabled: PropTypes.bool
@@ -22,6 +22,7 @@ export default class SpinnerBehavior extends Component {
     super(props);
 
     this.state = {
+      isNum: true,
       value: props.initialValue
     };
 
@@ -32,7 +33,9 @@ export default class SpinnerBehavior extends Component {
 
   onDirectChange = event => {
     const newValue = event.target.value;
-    this.setValue(newValue);
+    if (this.state.isNum) {
+      this.setValue(newValue);
+    }
   };
 
   getValue() {
@@ -41,6 +44,7 @@ export default class SpinnerBehavior extends Component {
     }
     return this.state.value;
   }
+
   setValue = value => {
     this.props.onChange(value);
 
@@ -53,6 +57,11 @@ export default class SpinnerBehavior extends Component {
     this.inputRef = element;
   };
 
+  getFixedValue = (value, stepLength) => Number(value.toFixed(stepLength));
+
+  isValueControlled = () =>
+    this.props.value !== undefined && this.props.value !== null;
+
   updateValue = value => {
     // Do nothing if the input is currently disabled
     if (this.props.disabled) {
@@ -62,15 +71,67 @@ export default class SpinnerBehavior extends Component {
     this.inputRef.focus();
   };
 
-  isValueControlled = () =>
-    this.props.value !== undefined && this.props.value !== null;
+  handleInputNumber = event => {
+    const charCode = event.which ? event.which : event.keyCode;
+    if (
+      charCode > 31 &&
+      (charCode < 48 || charCode > 57) &&
+      charCode !== 45 &&
+      charCode !== 46
+    ) {
+      this.setState({
+        isNum: false
+      });
+      return false;
+    }
+    this.setState({
+      isNum: true
+    });
+
+    return true;
+  };
+
+  handleStepArrowKeys = event => {
+    // up arrow
+    if (event.keyCode === 38) {
+      this.increment();
+    }
+
+    // down arrow
+    if (event.keyCode === 40) {
+      this.decrement();
+    }
+
+    return false;
+  };
+
+  handleNumericOnly = () => false;
+
+  calculateStepValues = operation => {
+    const decimalArray = String(this.props.step).split(".");
+    const stepLength =
+      decimalArray.length === 1 ? decimalArray.length : decimalArray[1].length;
+    const stepMultiplier = 10 ** stepLength;
+    const convertedValue = Number(this.getValue()) * stepMultiplier;
+    const convertedStep = this.props.step * stepMultiplier;
+    let convertedOperation = 0;
+    let updatedValue = 0;
+    if (operation === "increment") {
+      convertedOperation = convertedValue + convertedStep;
+    } else {
+      convertedOperation = convertedValue - convertedStep;
+    }
+    convertedOperation /= stepMultiplier;
+    updatedValue = this.getFixedValue(convertedOperation, stepLength);
+    return updatedValue === 0 ? String(0) : String(updatedValue);
+  };
 
   increment = () => {
-    this.updateValue(Number(this.getValue()) + this.props.step);
+    this.updateValue(this.calculateStepValues("increment"));
   };
 
   decrement = () => {
-    this.updateValue(Number(this.getValue()) - this.props.step);
+    this.updateValue(this.calculateStepValues("decrement"));
   };
 
   mouseDownIncrement = () => {
@@ -106,6 +167,9 @@ export default class SpinnerBehavior extends Component {
   render() {
     return this.props.children({
       onDirectChange: this.onDirectChange,
+      handleStepArrowKeys: this.handleStepArrowKeys,
+      handleInputNumber: this.handleInputNumber,
+      handleNumericOnly: this.handleNumericOnly,
       increment: this.increment,
       decrement: this.decrement,
       value: this.getValue(),
