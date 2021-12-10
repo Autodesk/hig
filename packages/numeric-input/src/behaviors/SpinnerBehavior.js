@@ -6,7 +6,7 @@ export default class SpinnerBehavior extends Component {
     children: PropTypes.func,
     onChange: PropTypes.func,
     onMouseLeave: PropTypes.func,
-    value: PropTypes.number,
+    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     initialValue: PropTypes.number,
     step: PropTypes.number,
     disabled: PropTypes.bool
