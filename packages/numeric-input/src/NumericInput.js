@@ -63,6 +63,7 @@ export default class NumericInput extends Component {
     const {
       className,
       disabled,
+      onKeyDown,
       onMouseDown,
       onMouseEnter,
       onMouseLeave,
@@ -105,10 +106,12 @@ export default class NumericInput extends Component {
             initialValue={defaultValue}
             step={step}
             disabled={disabled}
+            onKeyDown={onKeyDown}
             onMouseLeave={handleMouseLeave}
           >
             {({
               onDirectChange,
+              handleNegativeNumbers,
               increment,
               decrement,
               value: controlledValue,
@@ -156,6 +159,7 @@ export default class NumericInput extends Component {
                   onChange={onDirectChange}
                   onBlur={handleBlur}
                   onFocus={handleFocus}
+                  onKeyDown={handleNegativeNumbers}
                   onMouseDown={handleMouseDown}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}

@@ -22,6 +22,7 @@ export default class SpinnerBehavior extends Component {
     super(props);
 
     this.state = {
+      isNegative: false,
       value: props.initialValue
     };
 
@@ -29,10 +30,41 @@ export default class SpinnerBehavior extends Component {
     this.timerSet = false;
     this.inputRef = null;
   }
-
+ 
   onDirectChange = event => {
-    const newValue = event.target.value;
+    // const newValue = event.target.value;
+    // this.setValue(newValue);
+    console.log('onchange');
+    console.log(event.target.value);
+    const newValue = event.target.value === '' ? event.target.value : event.target.valueAsNumber;
+    console.log(newValue);
+    if (this.state.isNegative && newValue >= 0) {
+    //   this.setValue(Number(newValue) * -1);
+    //   // this.setState({isNegative: false});
+    //   return;
+      console.log('use neg');
+      this.setValue(newValue * -1);
+      return;
+    }
     this.setValue(newValue);
+  };
+
+  handleNegativeNumbers = event => {
+    if (this.props.onKeyDown) {
+      this.props.onKeyDown(event);
+    }
+
+    if (event.keyCode === 189) {
+      console.log('negative');
+      this.setState({isNegative: true});
+    }
+
+    if (event.keyCode === 8) {
+      console.log('backspace');
+      this.setState({isNegative: false});
+    }
+
+    console.log('onkeydown');
   };
 
   getValue() {
@@ -41,6 +73,7 @@ export default class SpinnerBehavior extends Component {
     }
     return this.state.value;
   }
+
   setValue = value => {
     this.props.onChange(value);
 
@@ -106,6 +139,7 @@ export default class SpinnerBehavior extends Component {
   render() {
     return this.props.children({
       onDirectChange: this.onDirectChange,
+      handleNegativeNumbers: this.handleNegativeNumbers,
       increment: this.increment,
       decrement: this.decrement,
       value: this.getValue(),
