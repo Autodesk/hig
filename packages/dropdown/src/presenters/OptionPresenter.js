@@ -101,7 +101,7 @@ export default class OptionPresenter extends Component {
 
           return (
             <OptionWrapper selected={selected} {...otherProps}>
-              <span>{children}</span>
+              <span className={css(styles.optionSpan)}>{children}</span>
               <div className={css(styles.optionCheckWrapper)}>
                 <Icon />
               </div>

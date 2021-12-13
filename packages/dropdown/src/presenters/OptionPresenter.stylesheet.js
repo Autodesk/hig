@@ -28,6 +28,11 @@ export default function stylesheet(props, themeData) {
         backgroundColor: themeData[`menu.item.pressed.backgroundColor`]
       }
     },
+    optionSpan: {
+      whiteSpace: `nowrap`,
+      overflow: `hidden`,
+      textOverflow: `ellipsis`
+    },
     optionCheckWrapper: {
       height: themeData[`menu.item.minHeight`],
       marginRight: themeData[`menu.item.paddingHorizontal`],
