@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import { createCustomClassNames } from "@hig/utils";
@@ -16,13 +16,11 @@ const collapseStatus = {
 function ContentPresenter(props) {
   const { collapsed } = props;
   const [status, setStatus] = useState(collapseStatus.COLLAPSED);
+  const previousCollapsed = useRef(collapsed);
   const contentWrapper = useRef(null);
-
   const expand = () => setStatus(collapseStatus.EXPANDING);
   const afterCollapsed = () => setStatus(collapseStatus.COLLAPSED);
   const afterExpanded = () => setStatus(collapseStatus.EXPANDED);
-
-  // const prevCollapsed = useCompare(collapsed);
 
   const setContentWrapperRef = element => {
     contentWrapper.current = element;
@@ -95,15 +93,20 @@ function ContentPresenter(props) {
     }
   }, []);
 
-  useEffect(
+  useEffect(() => {
+    previousCollapsed.current = collapsed;
+  });
+
+  useLayoutEffect(
     () => {
+      const { current: currentCollapsed } = previousCollapsed;
       if (!contentWrapper) {
         return;
       }
-      if (collapsed) {
+      if (!currentCollapsed && collapsed) {
         collapse();
       }
-      if (!collapsed) {
+      if (currentCollapsed && !collapsed) {
         expand();
       }
     },
