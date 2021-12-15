@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Dropdown renders non-undefined values as options 1`] = `
-.emotion-30 {
+.emotion-38 {
   position: relative;
   width: 100%;
 }
@@ -97,7 +97,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   fill: rgba(102,102,102,0.7);
 }
 
-.emotion-29 {
+.emotion-37 {
   display: none;
   position: absolute;
   width: 100%;
@@ -115,7 +115,13 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
-.emotion-6 {
+.emotion-5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-7 {
   height: 18px;
   margin-right: 12px;
   display: -webkit-box;
@@ -131,13 +137,13 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   align-items: center;
 }
 
-.emotion-6 > svg * {
+.emotion-7 > svg * {
   -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   opacity: 0;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -162,19 +168,19 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
-.emotion-7:active {
+.emotion-8:active {
   background-color: rgba(128,128,128,0.2);
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: #808080;
 }
 
-.emotion-5 > * {
+.emotion-6 > * {
   fill: #808080;
 }
 
-.emotion-18 {
+.emotion-23 {
   height: 18px;
   margin-right: 12px;
   display: -webkit-box;
@@ -190,7 +196,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   align-items: center;
 }
 
-.emotion-18 > svg * {
+.emotion-23 > svg * {
   -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   opacity: 1;
@@ -202,7 +208,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-2-label"
   aria-owns={null}
-  className="emotion-30"
+  className="emotion-38"
   role="combobox"
 >
   <div
@@ -264,13 +270,13 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
   </div>
   <div
     aria-labelledby="downshift-2-label"
-    className="emotion-29"
+    className="emotion-37"
     id="downshift-2-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-2-item-0"
       onClick={[Function]}
@@ -280,14 +286,16 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         foo
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -301,7 +309,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-2-item-1"
       onClick={[Function]}
@@ -311,14 +319,16 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         1
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -332,7 +342,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-2-item-2"
       onClick={[Function]}
@@ -342,14 +352,16 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         true
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -363,7 +375,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-2-item-3"
       onClick={[Function]}
@@ -373,14 +385,16 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -394,7 +408,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-2-item-4"
       onClick={[Function]}
@@ -404,14 +418,16 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         
       </span>
       <div
-        className="emotion-18"
+        className="emotion-23"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -425,7 +441,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-2-item-5"
       onClick={[Function]}
@@ -435,14 +451,16 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -456,7 +474,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-2-item-6"
       onClick={[Function]}
@@ -466,14 +484,16 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         [object Object]
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -487,7 +507,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-2-item-7"
       onClick={[Function]}
@@ -497,14 +517,16 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         [object Map]
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -521,7 +543,7 @@ exports[`Dropdown renders non-undefined values as options 1`] = `
 `;
 
 exports[`Dropdown renders with a controlled value 1`] = `
-.emotion-15 {
+.emotion-18 {
   position: relative;
   width: 100%;
 }
@@ -617,7 +639,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   fill: rgba(102,102,102,0.7);
 }
 
-.emotion-14 {
+.emotion-17 {
   display: none;
   position: absolute;
   width: 100%;
@@ -635,7 +657,13 @@ exports[`Dropdown renders with a controlled value 1`] = `
   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
-.emotion-6 {
+.emotion-5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-7 {
   height: 18px;
   margin-right: 12px;
   display: -webkit-box;
@@ -651,13 +679,13 @@ exports[`Dropdown renders with a controlled value 1`] = `
   align-items: center;
 }
 
-.emotion-6 > svg * {
+.emotion-7 > svg * {
   -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   opacity: 0;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -682,19 +710,19 @@ exports[`Dropdown renders with a controlled value 1`] = `
   transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
-.emotion-7:active {
+.emotion-8:active {
   background-color: rgba(128,128,128,0.2);
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: #808080;
 }
 
-.emotion-5 > * {
+.emotion-6 > * {
   fill: #808080;
 }
 
-.emotion-12 {
+.emotion-15 {
   height: 18px;
   margin-right: 12px;
   display: -webkit-box;
@@ -710,7 +738,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   align-items: center;
 }
 
-.emotion-12 > svg * {
+.emotion-15 > svg * {
   -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   opacity: 1;
@@ -722,7 +750,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-9-label"
   aria-owns={null}
-  className="emotion-15"
+  className="emotion-18"
   role="combobox"
 >
   <div
@@ -784,13 +812,13 @@ exports[`Dropdown renders with a controlled value 1`] = `
   </div>
   <div
     aria-labelledby="downshift-9-label"
-    className="emotion-14"
+    className="emotion-17"
     id="downshift-9-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-9-item-0"
       onClick={[Function]}
@@ -800,14 +828,16 @@ exports[`Dropdown renders with a controlled value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         bar
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -821,7 +851,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-9-item-1"
       onClick={[Function]}
@@ -831,14 +861,16 @@ exports[`Dropdown renders with a controlled value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         baz
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -852,7 +884,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-9-item-2"
       onClick={[Function]}
@@ -862,14 +894,16 @@ exports[`Dropdown renders with a controlled value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         foo
       </span>
       <div
-        className="emotion-12"
+        className="emotion-15"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -1264,7 +1298,7 @@ exports[`Dropdown renders with className prop 1`] = `
 `;
 
 exports[`Dropdown renders with custom option formatting 1`] = `
-.emotion-15 {
+.emotion-18 {
   position: relative;
   width: 100%;
 }
@@ -1360,7 +1394,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   fill: rgba(102,102,102,0.7);
 }
 
-.emotion-14 {
+.emotion-17 {
   display: none;
   position: absolute;
   width: 100%;
@@ -1378,7 +1412,13 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
-.emotion-6 {
+.emotion-5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-7 {
   height: 18px;
   margin-right: 12px;
   display: -webkit-box;
@@ -1394,13 +1434,13 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   align-items: center;
 }
 
-.emotion-6 > svg * {
+.emotion-7 > svg * {
   -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   opacity: 0;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1425,15 +1465,15 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
-.emotion-7:active {
+.emotion-8:active {
   background-color: rgba(128,128,128,0.2);
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: #808080;
 }
 
-.emotion-5 > * {
+.emotion-6 > * {
   fill: #808080;
 }
 
@@ -1442,7 +1482,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-1-label"
   aria-owns={null}
-  className="emotion-15"
+  className="emotion-18"
   role="combobox"
 >
   <div
@@ -1504,13 +1544,13 @@ exports[`Dropdown renders with custom option formatting 1`] = `
   </div>
   <div
     aria-labelledby="downshift-1-label"
-    className="emotion-14"
+    className="emotion-17"
     id="downshift-1-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-1-item-0"
       onClick={[Function]}
@@ -1520,14 +1560,16 @@ exports[`Dropdown renders with custom option formatting 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         Bar
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -1541,7 +1583,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-1-item-1"
       onClick={[Function]}
@@ -1551,14 +1593,16 @@ exports[`Dropdown renders with custom option formatting 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         Baz
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -1572,7 +1616,7 @@ exports[`Dropdown renders with custom option formatting 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-1-item-2"
       onClick={[Function]}
@@ -1582,14 +1626,16 @@ exports[`Dropdown renders with custom option formatting 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         Foo
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -1814,7 +1860,7 @@ exports[`Dropdown renders with custom option render function 1`] = `
 `;
 
 exports[`Dropdown renders with default value 1`] = `
-.emotion-15 {
+.emotion-18 {
   position: relative;
   width: 100%;
 }
@@ -1910,7 +1956,7 @@ exports[`Dropdown renders with default value 1`] = `
   fill: rgba(102,102,102,0.7);
 }
 
-.emotion-14 {
+.emotion-17 {
   display: none;
   position: absolute;
   width: 100%;
@@ -1928,7 +1974,13 @@ exports[`Dropdown renders with default value 1`] = `
   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
-.emotion-6 {
+.emotion-5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-7 {
   height: 18px;
   margin-right: 12px;
   display: -webkit-box;
@@ -1944,13 +1996,13 @@ exports[`Dropdown renders with default value 1`] = `
   align-items: center;
 }
 
-.emotion-6 > svg * {
+.emotion-7 > svg * {
   -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   opacity: 0;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1975,19 +2027,19 @@ exports[`Dropdown renders with default value 1`] = `
   transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
-.emotion-7:active {
+.emotion-8:active {
   background-color: rgba(128,128,128,0.2);
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: #808080;
 }
 
-.emotion-5 > * {
+.emotion-6 > * {
   fill: #808080;
 }
 
-.emotion-12 {
+.emotion-15 {
   height: 18px;
   margin-right: 12px;
   display: -webkit-box;
@@ -2003,7 +2055,7 @@ exports[`Dropdown renders with default value 1`] = `
   align-items: center;
 }
 
-.emotion-12 > svg * {
+.emotion-15 > svg * {
   -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   opacity: 1;
@@ -2015,7 +2067,7 @@ exports[`Dropdown renders with default value 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-7-label"
   aria-owns={null}
-  className="emotion-15"
+  className="emotion-18"
   role="combobox"
 >
   <div
@@ -2077,13 +2129,13 @@ exports[`Dropdown renders with default value 1`] = `
   </div>
   <div
     aria-labelledby="downshift-7-label"
-    className="emotion-14"
+    className="emotion-17"
     id="downshift-7-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-7-item-0"
       onClick={[Function]}
@@ -2093,14 +2145,16 @@ exports[`Dropdown renders with default value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         bar
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -2114,7 +2168,7 @@ exports[`Dropdown renders with default value 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-7-item-1"
       onClick={[Function]}
@@ -2124,14 +2178,16 @@ exports[`Dropdown renders with default value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         baz
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -2145,7 +2201,7 @@ exports[`Dropdown renders with default value 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-7-item-2"
       onClick={[Function]}
@@ -2155,14 +2211,16 @@ exports[`Dropdown renders with default value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         foo
       </span>
       <div
-        className="emotion-12"
+        className="emotion-15"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -2179,7 +2237,7 @@ exports[`Dropdown renders with default value 1`] = `
 `;
 
 exports[`Dropdown renders with multiple selection 1`] = `
-.emotion-15 {
+.emotion-18 {
   position: relative;
   width: 100%;
 }
@@ -2223,7 +2281,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
   fill: rgba(102,102,102,0.7);
 }
 
-.emotion-14 {
+.emotion-17 {
   display: none;
   position: absolute;
   width: 100%;
@@ -2241,7 +2299,13 @@ exports[`Dropdown renders with multiple selection 1`] = `
   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
-.emotion-6 {
+.emotion-5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-7 {
   height: 18px;
   margin-right: 12px;
   display: -webkit-box;
@@ -2257,13 +2321,13 @@ exports[`Dropdown renders with multiple selection 1`] = `
   align-items: center;
 }
 
-.emotion-6 > svg * {
+.emotion-7 > svg * {
   -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   opacity: 0;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2288,15 +2352,15 @@ exports[`Dropdown renders with multiple selection 1`] = `
   transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
-.emotion-7:active {
+.emotion-8:active {
   background-color: rgba(128,128,128,0.2);
 }
 
-.emotion-5 {
+.emotion-6 {
   fill: #808080;
 }
 
-.emotion-5 > * {
+.emotion-6 > * {
   fill: #808080;
 }
 
@@ -2358,7 +2422,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-8-label"
   aria-owns={null}
-  className="emotion-15"
+  className="emotion-18"
   role="combobox"
 >
   <div
@@ -2420,13 +2484,13 @@ exports[`Dropdown renders with multiple selection 1`] = `
   </div>
   <div
     aria-labelledby="downshift-8-label"
-    className="emotion-14"
+    className="emotion-17"
     id="downshift-8-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-8-item-0"
       onClick={[Function]}
@@ -2436,14 +2500,16 @@ exports[`Dropdown renders with multiple selection 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         bar
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -2457,7 +2523,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-8-item-1"
       onClick={[Function]}
@@ -2467,14 +2533,16 @@ exports[`Dropdown renders with multiple selection 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         baz
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -2488,7 +2556,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-8-item-2"
       onClick={[Function]}
@@ -2498,14 +2566,16 @@ exports[`Dropdown renders with multiple selection 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         foo
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -2522,7 +2592,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
 `;
 
 exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
-.emotion-15 {
+.emotion-18 {
   position: relative;
   width: 100%;
 }
@@ -2566,7 +2636,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   fill: rgba(102,102,102,0.7);
 }
 
-.emotion-14 {
+.emotion-17 {
   display: none;
   position: absolute;
   width: 100%;
@@ -2584,7 +2654,13 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   box-shadow: 0 1px 4px rgba(0,0,0,0.2);
 }
 
-.emotion-9 {
+.emotion-5 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-11 {
   height: 18px;
   margin-right: 12px;
   display: -webkit-box;
@@ -2600,13 +2676,13 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   align-items: center;
 }
 
-.emotion-9 > svg * {
+.emotion-11 > svg * {
   -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   opacity: 0;
 }
 
-.emotion-7 {
+.emotion-8 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2631,19 +2707,19 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
-.emotion-7:active {
+.emotion-8:active {
   background-color: rgba(128,128,128,0.2);
 }
 
-.emotion-5 {
-  fill: #808080;
-}
-
-.emotion-5 > * {
-  fill: #808080;
-}
-
 .emotion-6 {
+  fill: #808080;
+}
+
+.emotion-6 > * {
+  fill: #808080;
+}
+
+.emotion-7 {
   height: 18px;
   margin-right: 12px;
   display: -webkit-box;
@@ -2659,7 +2735,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   align-items: center;
 }
 
-.emotion-6 > svg * {
+.emotion-7 > svg * {
   -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   opacity: 1;
@@ -2724,7 +2800,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   aria-haspopup="listbox"
   aria-labelledby="downshift-10-label"
   aria-owns={null}
-  className="emotion-15"
+  className="emotion-18"
   role="combobox"
 >
   <div
@@ -2786,13 +2862,13 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
   </div>
   <div
     aria-labelledby="downshift-10-label"
-    className="emotion-14"
+    className="emotion-17"
     id="downshift-10-menu"
     role="listbox"
   >
     <div
       aria-selected={true}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-10-item-0"
       onClick={[Function]}
@@ -2802,14 +2878,16 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         bar
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -2823,7 +2901,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     </div>
     <div
       aria-selected={false}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-10-item-1"
       onClick={[Function]}
@@ -2833,14 +2911,16 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         baz
       </span>
       <div
-        className="emotion-9"
+        className="emotion-11"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"
@@ -2854,7 +2934,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     </div>
     <div
       aria-selected={true}
-      className="emotion-7"
+      className="emotion-8"
       disabled={false}
       id="downshift-10-item-2"
       onClick={[Function]}
@@ -2864,14 +2944,16 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       role="option"
       tabIndex="0"
     >
-      <span>
+      <span
+        className="emotion-5"
+      >
         foo
       </span>
       <div
-        className="emotion-6"
+        className="emotion-7"
       >
         <svg
-          className="emotion-5"
+          className="emotion-6"
           height="16px"
           viewBox="0 0 16 16"
           width="16px"

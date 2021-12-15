@@ -2,14 +2,20 @@
 
 exports[`Dropdown/presenters/OptionPresenter renders with all props 1`] = `
 .emotion-0 {
-  fill: #808080;
-}
-
-.emotion-0 > * {
-  fill: #808080;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .emotion-1 {
+  fill: #808080;
+}
+
+.emotion-1 > * {
+  fill: #808080;
+}
+
+.emotion-2 {
   height: 18px;
   margin-right: 12px;
   display: -webkit-box;
@@ -25,14 +31,14 @@ exports[`Dropdown/presenters/OptionPresenter renders with all props 1`] = `
   align-items: center;
 }
 
-.emotion-1 > svg * {
+.emotion-2 > svg * {
   -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   opacity: 1;
   fill: #0696d7;
 }
 
-.emotion-2 {
+.emotion-3 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -57,13 +63,13 @@ exports[`Dropdown/presenters/OptionPresenter renders with all props 1`] = `
   transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
-.emotion-2:active {
+.emotion-3:active {
   background-color: rgba(128,128,128,0.2);
 }
 
 <div
   aria-selected={true}
-  className="emotion-2"
+  className="emotion-3"
   disabled={undefined}
   id={undefined}
   onClick={[Function]}
@@ -73,16 +79,18 @@ exports[`Dropdown/presenters/OptionPresenter renders with all props 1`] = `
   role="option"
   tabIndex="0"
 >
-  <span>
+  <span
+    className="emotion-0"
+  >
     <p>
       hi
     </p>
   </span>
   <div
-    className="emotion-1"
+    className="emotion-2"
   >
     <svg
-      className="emotion-0"
+      className="emotion-1"
       height="16px"
       viewBox="0 0 16 16"
       width="16px"
@@ -97,7 +105,13 @@ exports[`Dropdown/presenters/OptionPresenter renders with all props 1`] = `
 `;
 
 exports[`Dropdown/presenters/OptionPresenter renders without props 1`] = `
-.emotion-1 {
+.emotion-0 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.emotion-2 {
   height: 18px;
   margin-right: 12px;
   display: -webkit-box;
@@ -113,13 +127,13 @@ exports[`Dropdown/presenters/OptionPresenter renders without props 1`] = `
   align-items: center;
 }
 
-.emotion-1 > svg * {
+.emotion-2 > svg * {
   -webkit-transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1);
   opacity: 0;
 }
 
-.emotion-2 {
+.emotion-3 {
   margin: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -144,21 +158,21 @@ exports[`Dropdown/presenters/OptionPresenter renders without props 1`] = `
   transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
-.emotion-2:active {
+.emotion-3:active {
   background-color: rgba(128,128,128,0.2);
 }
 
-.emotion-0 {
+.emotion-1 {
   fill: #808080;
 }
 
-.emotion-0 > * {
+.emotion-1 > * {
   fill: #808080;
 }
 
 <div
   aria-selected={undefined}
-  className="emotion-2"
+  className="emotion-3"
   disabled={undefined}
   id={undefined}
   onClick={undefined}
@@ -168,12 +182,14 @@ exports[`Dropdown/presenters/OptionPresenter renders without props 1`] = `
   role="option"
   tabIndex="0"
 >
-  <span />
+  <span
+    className="emotion-0"
+  />
   <div
-    className="emotion-1"
+    className="emotion-2"
   >
     <svg
-      className="emotion-0"
+      className="emotion-1"
       height="16px"
       viewBox="0 0 16 16"
       width="16px"
