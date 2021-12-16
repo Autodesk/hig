@@ -93,13 +93,10 @@ function ContentPresenter(props) {
     }
   }, []);
 
-  useEffect(() => {
-    previousCollapsed.current = collapsed;
-  });
-
   useLayoutEffect(
     () => {
       const { current: currentCollapsed } = previousCollapsed;
+      previousCollapsed.current = collapsed;
       if (!contentWrapper) {
         return;
       }
