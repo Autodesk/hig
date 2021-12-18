@@ -34,14 +34,12 @@ export default class SpinnerBehavior extends Component {
   onDirectChange = event => {
     // const newValue = event.target.value;
     // this.setValue(newValue);
-    console.log('onchange');
-    console.log(event.target.value);
+
+    // console.log('onchange');
+    // console.log(event.target.value);
     const newValue = event.target.value === '' ? event.target.value : event.target.valueAsNumber;
-    console.log(newValue);
+    // console.log(newValue);
     if (this.state.isNegative && newValue >= 0) {
-    //   this.setValue(Number(newValue) * -1);
-    //   // this.setState({isNegative: false});
-    //   return;
       console.log('use neg');
       this.setValue(newValue * -1);
       return;
@@ -99,11 +97,15 @@ export default class SpinnerBehavior extends Component {
     this.props.value !== undefined && this.props.value !== null;
 
   increment = () => {
-    this.updateValue(Number(this.getValue()) + this.props.step);
+    const convertedValue = Number(this.getValue()) * 10000000000000000;
+    const convertedStep = this.props.step * 10000000000000000;
+    this.updateValue((convertedValue + convertedStep) / 10000000000000000);
   };
 
   decrement = () => {
-    this.updateValue(Number(this.getValue()) - this.props.step);
+    const convertedValue = Number(this.getValue()) * 10000000000000000;
+    const convertedStep = this.props.step * 10000000000000000;
+    this.updateValue((convertedValue - convertedStep) / 10000000000000000);
   };
 
   mouseDownIncrement = () => {
