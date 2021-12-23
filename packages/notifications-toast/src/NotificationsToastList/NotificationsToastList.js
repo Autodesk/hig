@@ -9,33 +9,35 @@ import stylesheet from "./NotificationsToastList.stylesheet";
 
 const MAX_TOASTS_ONSCREEN = 3;
 
-const NotificationsToastList = props => {
-  const {
-    children,
-    placement,
-    stylesheet: customStylesheet,
-    ...otherProps
-  } = props;
-  const { className } = otherProps;
-  const keyedChildren = React.Children.toArray(children);
-  const styles = stylesheet(props);
-  const toastListClassName = createCustomClassNames(className, "toast-list");
+export default class NotificationsToastList extends React.Component {
+  static AVAILABLE_PLACEMENTS = AVAILABLE_PLACEMENTS;
+  static placements = placements;
 
-  return (
-    <div className={cx([css(styles.toastListWrapper), className])}>
-      <NotificationsToastListAnimator
-        placement={placement}
-        stylesheet={customStylesheet}
-        className={toastListClassName}
-      >
-        {keyedChildren.slice(0, MAX_TOASTS_ONSCREEN)}
-      </NotificationsToastListAnimator>
-    </div>
-  );
-};
+  render() {
+    const {
+      children,
+      placement,
+      stylesheet: customStylesheet,
+      ...otherProps
+    } = this.props;
+    const { className } = otherProps;
+    const keyedChildren = React.Children.toArray(children);
+    const styles = stylesheet(this.props);
+    const toastListClassName = createCustomClassNames(className, "toast-list");
 
-NotificationsToastList.AVAILABLE_PLACEMENTS = AVAILABLE_PLACEMENTS;
-NotificationsToastList.placements = placements;
+    return (
+      <div className={cx([css(styles.toastListWrapper), className])}>
+        <NotificationsToastListAnimator
+          placement={placement}
+          stylesheet={customStylesheet}
+          className={toastListClassName}
+        >
+          {keyedChildren.slice(0, MAX_TOASTS_ONSCREEN)}
+        </NotificationsToastListAnimator>
+      </div>
+    );
+  }
+}
 
 NotificationsToastList.propTypes = {
   /**
@@ -53,5 +55,3 @@ NotificationsToastList.propTypes = {
    */
   stylesheet: PropTypes.func
 };
-
-export default NotificationsToastList;
