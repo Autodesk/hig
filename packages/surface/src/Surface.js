@@ -41,9 +41,11 @@ const Surface = props => {
         const Element = tagName;
 
         return (
-          <Element className={cx(css(styles.surface), className)}>
-            {children}
-          </Element>
+          Element && (
+            <Element className={cx(css(styles.surface), className)}>
+              {children}
+            </Element>
+          )
         );
       }}
     </ThemeContext.Consumer>
