@@ -14,7 +14,7 @@ const Module = props => {
    */
   const createMinimizeToggler = callback => () => {
     setMinimized(!minimized);
-    setCallbackMinimized(callback());
+    setCallbackMinimized(callback);
   };
 
   /**
@@ -47,18 +47,7 @@ const Module = props => {
     [callBackMinimized]
   );
 
-  useEffect(
-    () => {
-      const { children, link } = props;
-      if (children && link) {
-        /* eslint-disable-next-line no-console */
-        console.error(
-          "A module shouldn't be both a link and contain sub-modules"
-        );
-      }
-    },
-    [props.children, props.link]
-  );
+  useEffect(() => {}, [props.children, props.link]);
 
   return renderPresenter(presenterBag);
 };
