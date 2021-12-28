@@ -262,7 +262,7 @@ const Flyout = props => {
     return () => {
       window.document.body.removeEventListener("click", handleBodyClick);
     };
-  }, []);
+  });
 
   return (
     <ContainerTransition open={isOpen()}>{renderPresenter}</ContainerTransition>
