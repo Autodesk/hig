@@ -37,7 +37,7 @@ function getParams(prevState = {}, props = {}) {
 /** @type {BannerAnimatorUpdater} */
 export function startExpand(setState) {
   const { setStatus } = setState;
-  
+
   setStatus(statuses.EXPANDING);
 }
 

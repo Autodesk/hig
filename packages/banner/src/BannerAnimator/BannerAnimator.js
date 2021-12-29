@@ -105,7 +105,7 @@ const BannerAnimator = props => {
   useEffect(
     () => {
       const { isVisible } = props;
-      
+
       if (!status) {
         return isVisible
           ? endExpand(setState)
@@ -128,7 +128,7 @@ const BannerAnimator = props => {
     [props]
   );
 
-  function usePreviousStatus(value){
+  function usePreviousStatus(value) {
     const ref = useRef(null);
     useEffect(() => {
       ref.current = value;
@@ -140,8 +140,9 @@ const BannerAnimator = props => {
 
   useEffect(
     () => {
-      const expandStatuses = prevStatus === statuses.COLLAPSED && status === statuses.EXPANDING ||
-      prevStatus === statuses.COLLAPSING && status === statuses.EXPANDING; 
+      const expandStatuses =
+        (prevStatus === statuses.COLLAPSED && status === statuses.EXPANDING) ||
+        (prevStatus === statuses.COLLAPSING && status === statuses.EXPANDING);
 
       if (prevStatus === statuses.EXPANDED && status === statuses.COLLAPSING) {
         collapseFromExpanded();
@@ -154,9 +155,8 @@ const BannerAnimator = props => {
       if (prevStatus === statuses.EXPANDING && status === statuses.COLLAPSING) {
         collapse();
       }
-     
     },
-    [props,prevStatus, status]
+    [props, prevStatus, status]
   );
 
   const { children: renderChildren } = props;
