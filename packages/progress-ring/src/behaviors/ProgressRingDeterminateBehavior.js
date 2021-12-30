@@ -29,7 +29,9 @@ const ProgressRingDeterminateBehavior = props => {
     setTransitionEnter(true);
     wait();
   };
-
+  /**
+   * @todo The exit function is associated with the final state of the animation.
+   */
   const exit = () => {
     segments.forEach(segment => {
       const eachSegment = segment;
@@ -89,8 +91,10 @@ const ProgressRingDeterminateBehavior = props => {
       enter();
       return;
     }
-
-    if (targetValue === 1 && value === 1 && cssTransitionState !== "exited") {
+    /**
+     * @todo The condition associated with the final state of the animation was modified to prevent it from running. The exited state of the animation is the origin of an infinite loop. The component must be refactored to optimize the component life cycle.
+     */
+    if (targetValue === 1 && value === 1 && cssTransitionState === "exited") {
       exit();
       return;
     }
