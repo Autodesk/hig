@@ -35,17 +35,17 @@ function getParams(prevState = {}, props = {}) {
 }
 
 /** @type {BannerAnimatorUpdater} */
-export function startExpand() {
-  return {
-    status: statuses.EXPANDING
-  };
+export function startExpand(setState) {
+  const { setStatus } = setState;
+
+  setStatus(statuses.EXPANDING);
 }
 
 /** @type {BannerAnimatorUpdater} */
-export function startCollapse() {
-  return {
-    status: statuses.COLLAPSING
-  };
+export function startCollapse(setState) {
+  const { setStatus } = setState;
+
+  setStatus(statuses.COLLAPSING);
 }
 
 /** @type {BannerAnimatorUpdater} */

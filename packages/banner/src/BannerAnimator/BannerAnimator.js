@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
 import { positions, AVAILABLE_POSITIONS } from "./positions";
@@ -115,10 +115,10 @@ const BannerAnimator = props => {
       switch (status) {
         case statuses.COLLAPSED:
         case statuses.COLLAPSING:
-          return isVisible ? startExpand() : null;
+          return isVisible ? startExpand(setState) : null;
         case statuses.EXPANDED:
         case statuses.EXPANDING:
-          return isVisible ? null : startCollapse();
+          return isVisible ? null : startCollapse(setState);
         default:
           // eslint-disable-next-line no-console
           console.warn("Invalid status", { status });
@@ -128,15 +128,27 @@ const BannerAnimator = props => {
     [props]
   );
 
+  function usePreviousStatus(value) {
+    const ref = useRef(null);
+    useEffect(() => {
+      ref.current = value;
+    });
+    return ref.current;
+  }
+
+  const prevStatus = usePreviousStatus(status);
+
   useEffect(
     () => {
-      const { status: prevStatus } = props;
+      const expandStatuses =
+        (prevStatus === statuses.COLLAPSED && status === statuses.EXPANDING) ||
+        (prevStatus === statuses.COLLAPSING && status === statuses.EXPANDING);
 
       if (prevStatus === statuses.EXPANDED && status === statuses.COLLAPSING) {
         collapseFromExpanded();
         return;
       }
-      if (prevStatus === statuses.COLLAPSING && status === statuses.EXPANDING) {
+      if (expandStatuses) {
         expand();
         return;
       }
@@ -144,7 +156,7 @@ const BannerAnimator = props => {
         collapse();
       }
     },
-    [props]
+    [props, prevStatus, status]
   );
 
   const { children: renderChildren } = props;
