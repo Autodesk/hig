@@ -6,8 +6,6 @@ export default function stylesheet(props, themeData) {
       alignItems: `center`,
       justifyContent: `center`,
       flexDirection: `column`,
-      width: `32px`,
-      height: `32px`,
       padding: 0,
       margin: 0,
       border: 0,

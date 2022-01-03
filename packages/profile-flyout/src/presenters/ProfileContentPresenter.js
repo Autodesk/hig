@@ -4,6 +4,7 @@ import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
 import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
+import { AVAILABLE_SIZES } from "../sizes";
 
 export default function ProfileContentPresenter(props) {
   const {
@@ -13,7 +14,7 @@ export default function ProfileContentPresenter(props) {
     stylesheet: customStylesheet,
     ...otherProps
   } = props;
-  const { className } = otherProps;
+  const { className, size } = otherProps;
   const profileNameClassName = createCustomClassNames(
     className,
     "profile-name"
@@ -27,7 +28,7 @@ export default function ProfileContentPresenter(props) {
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
         const styles = stylesheet(
-          { stylesheet: customStylesheet },
+          { size, stylesheet: customStylesheet },
           resolvedRoles
         );
 
@@ -63,5 +64,7 @@ ProfileContentPresenter.propTypes = {
   /** The displayed name */
   profileName: PropTypes.string,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
+  /** Set the size of the avatar */
+  size: PropTypes.oneOf(AVAILABLE_SIZES)
 };

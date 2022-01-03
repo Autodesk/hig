@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Flyout, { AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
 import { combineEventHandlers } from "@hig/utils";
+import { sizes, AVAILABLE_SIZES } from "./sizes";
 
 import ProfileButtonPresenter from "./presenters/ProfileButtonPresenter";
 
@@ -34,13 +35,16 @@ export default class ProfileFlyout extends Component {
     /** Renders a custom flyout panel. Can be either a node or a render function */
     panel: PropTypes.func,
     /** Function to modify the component's styles */
-    stylesheet: PropTypes.func
+    stylesheet: PropTypes.func,
+    /** Set the size of the avatar */
+    size: PropTypes.oneOf(AVAILABLE_SIZES)
   };
 
   static defaultProps = {
     panel: ({ content, innerRef }) => (
       <Flyout.Panel innerRef={innerRef}>{content}</Flyout.Panel>
-    )
+    ),
+    size: sizes.MEDIUM_32
   };
 
   render() {
@@ -55,11 +59,11 @@ export default class ProfileFlyout extends Component {
       onProfileImageClick,
       open,
       panel,
+      size,
       stylesheet,
       ...otherProps
     } = this.props;
     const { className } = otherProps;
-
     return (
       <Flyout
         alterCoordinates={alterCoordinates}
@@ -79,6 +83,7 @@ export default class ProfileFlyout extends Component {
             className={className}
             onClick={combineEventHandlers(handleClick, onProfileImageClick)}
             stylesheet={stylesheet}
+            size={size}
           />
         )}
       </Flyout>

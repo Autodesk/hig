@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Avatar, { sizes } from "@hig/avatar";
+import Avatar from "@hig/avatar";
 import { createCustomClassNames } from "@hig/utils";
 import { css, cx } from "emotion";
 import stylesheet from "./stylesheet";
+import { AVAILABLE_SIZES } from "../sizes";
 
 export default function ProfileButtonPresenter({
   avatarImage,
@@ -12,7 +13,7 @@ export default function ProfileButtonPresenter({
   stylesheet: customStylesheet,
   ...otherProps
 }) {
-  const { className } = otherProps;
+  const { className, size } = otherProps;
   const profileFlyoutButtonClassName = createCustomClassNames(
     className,
     "profile-flyout-button"
@@ -21,7 +22,8 @@ export default function ProfileButtonPresenter({
     className,
     "profile-flyout-avatar"
   );
-  const styles = stylesheet({ stylesheet: customStylesheet });
+
+  const styles = stylesheet({ size, stylesheet: customStylesheet });
 
   return (
     <button
@@ -36,7 +38,7 @@ export default function ProfileButtonPresenter({
         className={profileFlyoutAvatarClassName}
         image={avatarImage}
         name={avatarName}
-        size={sizes.MEDIUM_32}
+        size={size}
       />
     </button>
   );
@@ -50,5 +52,7 @@ ProfileButtonPresenter.propTypes = {
   /** Callback when the flyout is opened */
   onClick: PropTypes.func,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
+  /** Set the size of the avatar */
+  size: PropTypes.oneOf(AVAILABLE_SIZES)
 };
