@@ -17,8 +17,6 @@ exports[`profile-flyout/presenters/ProfileButtonPresenter  1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 32px;
-  height: 32px;
   padding: 0;
   margin: 0;
   border: 0;
@@ -85,8 +83,6 @@ exports[`profile-flyout/presenters/ProfileButtonPresenter  2`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 32px;
-  height: 32px;
   padding: 0;
   margin: 0;
   border: 0;
