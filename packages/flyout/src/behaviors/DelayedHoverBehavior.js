@@ -5,12 +5,11 @@ const HoverBehavior = props => {
   const { openOnHoverDelay, onMouseEnter } = props;
   const [hasHover, setHasHover] = useState(false);
 
-  const focusTimeout = event => {
+  const focusTimeout = event =>
     setTimeout(() => {
       setHasHover(true);
       onMouseEnter(event);
     }, openOnHoverDelay);
-  };
 
   const handleFocus = event => {
     if (onMouseEnter) {
