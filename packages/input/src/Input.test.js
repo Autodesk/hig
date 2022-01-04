@@ -124,8 +124,7 @@ describe("Input", () => {
     expect(wrapper.find("input").hasClass(`${className}__input`)).toBe(true);
   });
 
-  /*
-  it("passes down the inputRef", () => {
+  it.skip("passes down the inputRef", () => {
     let inputRef;
 
     function setInputRef(element) {
@@ -136,5 +135,4 @@ describe("Input", () => {
       mount(<Input inputRef={setInputRef} />).containsMatchingElement(inputRef)
     ).toBe(true);
   });
-  */
 });
