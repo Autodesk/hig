@@ -21,7 +21,11 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("returns an OptionPresenter for each option", () => {
-      expect(mount(result[0]).find(OptionPresenter)).toBeTruthy();
+      expect(
+        mount(result[0])
+          .find(OptionPresenter)
+          .exists()
+      );
     });
 
     it("has options as children on OptionPresenter", () => {
@@ -60,7 +64,11 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("returns an OptionPresenter for each option", () => {
-      expect(mount(result[0]).find(OptionPresenter)).toBeTruthy();
+      expect(
+        mount(result[0])
+          .find(OptionPresenter)
+          .exists()
+      );
     });
   });
 
