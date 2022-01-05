@@ -108,7 +108,7 @@ const Accordion = props => {
               )}
             </ControlBehavior>
             <ContentPresenter
-              collapsed={collapsed}
+              collapsed={isCollapsed()}
               stylesheet={customStylesheet}
               className={className}
             >
