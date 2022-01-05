@@ -19,7 +19,8 @@ const IconButton = props => {
     onMouseEnter,
     onMouseLeave,
     onMouseUp,
-    stylesheet
+    stylesheet,
+    ...otherProps
   } = props;
 
   return (
@@ -54,7 +55,7 @@ const IconButton = props => {
           onMouseLeave={handleMouseLeave}
           onMouseUp={handleMouseUp}
           stylesheet={stylesheet}
-          {...props}
+          {...otherProps}
         />
       )}
     </ControlBehavior>
