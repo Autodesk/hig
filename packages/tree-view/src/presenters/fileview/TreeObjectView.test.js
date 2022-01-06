@@ -11,8 +11,6 @@ import {AddFolder24,
     Report24,
     FileImage24} from "@hig/icons";
   
-jest.mock("./TreeObjectView.js");
-
 describe("tree-view/TreeObjectView", () => {
   it("takes a treeNodeObject", () => {
     const sampleTreeNodeObject = {
@@ -23,6 +21,12 @@ describe("tree-view/TreeObjectView", () => {
         collapsed: false,
         active: false,
         icon: <Report24 />
+      },
+      payload : {
+        getActiveTreeItemId : () => {},
+        getKeyboardOpenId: () => {},
+        setKeyboardOpenId: () => {},
+        getCurrentItemClicked: () => {},
       },
       children: [
         {
@@ -82,10 +86,8 @@ describe("tree-view/TreeObjectView", () => {
       ]
     };
 
-    const wrapper = (
-        <TreeObjectView tree={sampleTreeNodeObject} />
-    );
-    // const tree = renderer.create(wrapper);
-    // expect(tree).toMatchSnapshot();
+    const wrapper = <TreeObjectView tree={sampleTreeNodeObject} />;
+    const tree = renderer.create(wrapper);
+    expect(tree).toMatchSnapshot();
   });
 });
