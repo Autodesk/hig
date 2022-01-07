@@ -30,7 +30,7 @@ export default class SpinnerBehavior extends Component {
     this.timerSet = false;
     this.inputRef = null;
   }
- 
+
   onDirectChange = event => {
     // const newValue = event.target.value;
     // this.setValue(newValue);
@@ -96,16 +96,31 @@ export default class SpinnerBehavior extends Component {
   isValueControlled = () =>
     this.props.value !== undefined && this.props.value !== null;
 
+  getFixedValue = (value, stepLength) => Number(value.toFixed(stepLength));
+
+  calculateStepValues = operation => {
+    const stepLength = String(this.props.step).split(".")[1].length;
+    const stepMultiplier = 10 ** stepLength;
+    const convertedValue = Number(this.getValue()) * stepMultiplier;
+    const convertedStep = this.props.step * stepMultiplier;
+    let convertedOperation = 0;
+    let updatedValue = 0;
+    if (operation === "increment") {
+      convertedOperation = convertedValue + convertedStep;
+    } else {
+      convertedOperation = convertedValue - convertedStep;
+    }
+    convertedOperation /= stepMultiplier;
+    updatedValue = this.getFixedValue(convertedOperation, stepLength);
+    return updatedValue === 0 ? 0 : updatedValue;
+  };
+
   increment = () => {
-    const convertedValue = Number(this.getValue()) * 10000000000000000;
-    const convertedStep = this.props.step * 10000000000000000;
-    this.updateValue((convertedValue + convertedStep) / 10000000000000000);
+    this.updateValue(this.calculateStepValues("increment"));
   };
 
   decrement = () => {
-    const convertedValue = Number(this.getValue()) * 10000000000000000;
-    const convertedStep = this.props.step * 10000000000000000;
-    this.updateValue((convertedValue - convertedStep) / 10000000000000000);
+    this.updateValue(this.calculateStepValues("decrement"));
   };
 
   mouseDownIncrement = () => {
