@@ -12,9 +12,16 @@ import {
   Hierarchy24
 } from "@hig/icons";
 
-import TreeItem from "./TreeItem";
+import TreeItemComponent from "./TreeItem";
 
-jest.mock("./TreeItem");
+const mockFunctions = {
+  getActiveTreeItemId : () => {},
+  getCurrentItemClicked : () => {},
+  onFocus : () => {},
+  getKeyboardOpenId: () => {},
+}
+
+const TreeItem = ({...props}) => <TreeItemComponent {...props} {...mockFunctions}/>
 
 describe("tree-view/TreeView", () => {
   it("renders default TreeView", () => {
@@ -151,7 +158,7 @@ describe("tree-view/TreeView", () => {
       </TreeItem>
     ));
 
-    // const tree = renderer.create(wrapper).toJSON();
-    // expect(tree).toMatchSnapshot();
+    const tree = renderer.create(wrapper).toJSON();
+    expect(tree).toMatchSnapshot();
   });
 });
