@@ -33,7 +33,7 @@ export default class NumericInputPage extends Component {
           step={0.3}
           onChange={value => {
             console.log(value);
-            console.log(typeof value);
+            // console.log(typeof value);
             this.setState({value})
           }}
         />
