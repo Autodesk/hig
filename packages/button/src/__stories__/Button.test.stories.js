@@ -5,11 +5,12 @@ import Button, { availableTypes, availableWidths } from "../index";
 
 const buttonVariations = props =>
   availableTypes.map(type =>
-    availableWidths.map(width => {
+    availableWidths.map((width, index) => {
       const identifier = `${type} ${width}`;
 
       return (
-        <div>
+        // eslint-disable-next-line react/no-array-index-key
+        <div key={index}>
           <Button title={identifier} type={type} width={width} {...props} />
         </div>
       );
