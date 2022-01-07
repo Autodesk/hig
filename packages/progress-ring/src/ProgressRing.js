@@ -62,7 +62,10 @@ ProgressRing.propTypes = {
   /**
    * Specifies the surface level for the background
    */
-  surface: PropTypes.oneOf(availableSurfaces)
+  surface: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.oneOf(availableSurfaces)
+  ])
 };
 
 ProgressRing.defaultProps = {
