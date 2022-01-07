@@ -59,7 +59,7 @@ export default class SpinnerBehavior extends Component {
     if (event.keyCode === 189) {
       // console.log('negative');
       this.setState({isNegative: true});
-      // this.props.onChange(event.key);
+      this.props.onChange(event.key);
     }
 
     if (event.keyCode === 8) {
