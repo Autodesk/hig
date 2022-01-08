@@ -22,8 +22,7 @@ export default class SpinnerBehavior extends Component {
     super(props);
 
     this.state = {
-      isNegative: false,
-      keyName: null,
+      isNum: true,
       value: props.initialValue
     };
 
@@ -33,44 +32,10 @@ export default class SpinnerBehavior extends Component {
   }
 
   onDirectChange = event => {
-    // const newValue = event.target.value;
-    // this.setValue(newValue);
-
-    // console.log('onchange');
-    // console.log(event.target.value);
     const newValue = event.target.value;
-    // console.log('ondirectchange')
-    // console.log(newValue);
-    if (this.state.isNegative && newValue >= 0) {
-      // console.log('use neg');
-      this.setValue(newValue * -1);
-      return;
+    if (this.state.isNum) {
+      this.setValue(newValue);
     }
-    /**
-     * Might not need negative number logic above
-     */
-    this.setValue(newValue);
-  };
-
-  handleNegativeNumbers = event => { //onKeyDown
-    // console.log(event.code);
-    // console.log(event.key);
-    if (this.props.onKeyDown) {
-      this.props.onKeyDown(event);
-    }
-// Add up/down keycodes link to decrement/increment
-    if (event.keyCode === 189) {
-      // console.log('negative');
-      this.setState({isNegative: true});
-      // this.props.onChange(event.key);
-    }
-
-    if (event.keyCode === 8) {
-      // console.log('backspace');
-      this.setState({isNegative: false});
-    }
-
-    // console.log('onkeydown');
   };
 
   getValue() {
@@ -80,8 +45,7 @@ export default class SpinnerBehavior extends Component {
     return this.state.value;
   }
 
-  setValue = (value, event) => {
-    // console.log('set onchange');
+  setValue = value => {
     this.props.onChange(value);
 
     if (!this.isValueControlled()) {
@@ -93,6 +57,11 @@ export default class SpinnerBehavior extends Component {
     this.inputRef = element;
   };
 
+  getFixedValue = (value, stepLength) => Number(value.toFixed(stepLength));
+
+  isValueControlled = () =>
+    this.props.value !== undefined && this.props.value !== null;
+
   updateValue = value => {
     // Do nothing if the input is currently disabled
     if (this.props.disabled) {
@@ -102,10 +71,34 @@ export default class SpinnerBehavior extends Component {
     this.inputRef.focus();
   };
 
-  isValueControlled = () =>
-    this.props.value !== undefined && this.props.value !== null;
+  handleInputNumber = event => {
+    const charCode = event.which ? event.which : event.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode !== 45 && charCode !== 46) {
+      this.setState({
+        isNum: false
+      });
+      return false;
+    }
+    this.setState({
+      isNum: true
+    });
+  };
 
-  getFixedValue = (value, stepLength) => Number(value.toFixed(stepLength));
+  handleStepArrowKeys = event => {
+    // up arrow
+    if (event.keyCode === 38) {
+      this.increment();
+    }
+
+    // down arrow
+    if (event.keyCode === 40) {
+      this.decrement();
+    }
+
+    return false;
+  };
+
+  handleNumericOnly = () => false;
 
   calculateStepValues = operation => {
     const stepLength = String(this.props.step).split(".")[1].length;
@@ -165,7 +158,9 @@ export default class SpinnerBehavior extends Component {
   render() {
     return this.props.children({
       onDirectChange: this.onDirectChange,
-      handleNegativeNumbers: this.handleNegativeNumbers,
+      handleStepArrowKeys: this.handleStepArrowKeys,
+      handleInputNumber: this.handleInputNumber,
+      handleNumericOnly: this.handleNumericOnly,
       increment: this.increment,
       decrement: this.decrement,
       value: this.getValue(),
