@@ -46,20 +46,23 @@ export default class SpinnerBehavior extends Component {
       this.setValue(newValue * -1);
       return;
     }
+    /**
+     * Might not need negative number logic above
+     */
     this.setValue(newValue);
   };
 
-  handleNegativeNumbers = event => {
+  handleNegativeNumbers = event => { //onKeyDown
     // console.log(event.code);
     // console.log(event.key);
     if (this.props.onKeyDown) {
       this.props.onKeyDown(event);
     }
-
+// Add up/down keycodes link to decrement/increment
     if (event.keyCode === 189) {
       // console.log('negative');
       this.setState({isNegative: true});
-      this.props.onChange(event.key);
+      // this.props.onChange(event.key);
     }
 
     if (event.keyCode === 8) {
@@ -118,7 +121,7 @@ export default class SpinnerBehavior extends Component {
     }
     convertedOperation /= stepMultiplier;
     updatedValue = this.getFixedValue(convertedOperation, stepLength);
-    return updatedValue === 0 ? 0 : updatedValue;
+    return updatedValue === 0 ? String(0) : String(updatedValue);
   };
 
   increment = () => {

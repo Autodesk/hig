@@ -150,7 +150,7 @@ export default class NumericInput extends Component {
                   disabled={disabled}
                   step={step}
                   stylesheet={numericInputStylesheet}
-                  type="number"
+                  type="text"
                   variant={variant}
                   value={String(controlledValue)}
                   error={error}
@@ -165,6 +165,7 @@ export default class NumericInput extends Component {
                   onMouseLeave={handleMouseLeave}
                   onMouseUp={handleMouseUp}
                   inputRef={setInputRef}
+                  pattern="[0-9]*"
                 />
               </div>
             )}
