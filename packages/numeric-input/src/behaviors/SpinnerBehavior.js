@@ -73,7 +73,12 @@ export default class SpinnerBehavior extends Component {
 
   handleInputNumber = event => {
     const charCode = event.which ? event.which : event.keyCode;
-    if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode !== 45 && charCode !== 46) {
+    if (
+      charCode > 31 &&
+      (charCode < 48 || charCode > 57) &&
+      charCode !== 45 &&
+      charCode !== 46
+    ) {
       this.setState({
         isNum: false
       });
@@ -82,6 +87,8 @@ export default class SpinnerBehavior extends Component {
     this.setState({
       isNum: true
     });
+
+    return true;
   };
 
   handleStepArrowKeys = event => {
@@ -101,7 +108,9 @@ export default class SpinnerBehavior extends Component {
   handleNumericOnly = () => false;
 
   calculateStepValues = operation => {
-    const stepLength = String(this.props.step).split(".")[1].length;
+    const decimalArray = String(this.props.step).split(".");
+    const stepLength =
+      decimalArray.length === 1 ? decimalArray.length : decimalArray[1].length;
     const stepMultiplier = 10 ** stepLength;
     const convertedValue = Number(this.getValue()) * stepMultiplier;
     const convertedStep = this.props.step * stepMultiplier;
