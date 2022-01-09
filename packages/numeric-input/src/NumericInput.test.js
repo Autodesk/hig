@@ -70,7 +70,7 @@ describe("event handlers", () => {
     spinnerWrapper.props().increment();
 
     expect(onChangeMock).toHaveBeenCalledTimes(1);
-    expect(onChangeMock).toHaveBeenCalledWith(24);
+    expect(onChangeMock).toHaveBeenCalledWith("24");
 
     expect(interactiveElement).toHaveProp("value", "24");
   });
@@ -80,7 +80,7 @@ describe("event handlers", () => {
     spinnerWrapper.props().decrement();
 
     expect(onChangeMock).toHaveBeenCalledTimes(1);
-    expect(onChangeMock).toHaveBeenCalledWith(22);
+    expect(onChangeMock).toHaveBeenCalledWith("22");
 
     expect(interactiveElement).toHaveProp("value", "22");
   });
