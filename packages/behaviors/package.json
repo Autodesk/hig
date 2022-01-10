@@ -27,8 +27,7 @@
     "@hig/semantic-release-config": "^0.1.0"
   },
   "peerDependencies": {
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react": "^17.0.0"
   },
   "scripts": {
     "build": "hig-scripts-build",
