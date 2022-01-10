@@ -7,7 +7,7 @@ import { ControlBehavior } from "@hig/behaviors";
 import {
   indicators,
   indicatorPositions,
-  AVAILABLE_INDICATORS, 
+  AVAILABLE_INDICATORS,
   AVAILABLE_INDICATOR_POSITIONS
 } from "./constants";
 import stylesheet from "./stylesheet";
