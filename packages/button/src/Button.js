@@ -9,6 +9,7 @@ import {
   types,
   widths
 } from "./constants";
+
 import ButtonPresenter from "./presenters/ButtonPresenter";
 
 const Button = props => {
