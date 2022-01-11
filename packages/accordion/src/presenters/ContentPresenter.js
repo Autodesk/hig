@@ -18,6 +18,7 @@ function ContentPresenter(props) {
   const [status, setStatus] = useState(collapseStatus.COLLAPSED);
   const previousCollapsed = useRef(collapsed);
   const contentWrapper = useRef(null);
+
   const expand = () => setStatus(collapseStatus.EXPANDING);
   const afterCollapsed = () => setStatus(collapseStatus.COLLAPSED);
   const afterExpanded = () => setStatus(collapseStatus.EXPANDED);
@@ -36,7 +37,8 @@ function ContentPresenter(props) {
     }
   };
 
-  const getContentHeight = () => `${contentWrapper.clientHeight}px`;
+  const getContentHeight = () =>
+    `${contentWrapper.current && contentWrapper.current.scrollHeight}px`;
 
   const getTransitionStyles = statusParam => {
     const defaultCollapsedStyles = {
