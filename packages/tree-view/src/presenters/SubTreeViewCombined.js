@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { css, cx } from "emotion";
 import { createCustomClassNames } from "@hig/utils";
 
@@ -20,9 +20,11 @@ const collapseStatus = {
 };
 
 const SubTreeViewCombined = props => {
+  const { collapsed } = props;
   const [status, setStatus] = useState(collapseStatus.COLLAPSED);
   const [mount, setMount] = useState(false);
   const subTreeWrapper = useRef(null);
+  const previousCollapsed = useRef(collapsed);
 
   const setSubTreeWrapperRef = element => {
     subTreeWrapper.current = element;
@@ -32,7 +34,7 @@ const SubTreeViewCombined = props => {
   const afterExpanded = () => setStatus(collapseStatus.EXPANDED);
 
   const onTransitionEnd = ({ target, propertyName }) => {
-    if (target === subTreeWrapper && propertyName === "height") {
+    if (target === subTreeWrapper.current && propertyName === "height") {
       if (props.collapsed) {
         afterCollapsed();
         setMount(false);
@@ -42,7 +44,8 @@ const SubTreeViewCombined = props => {
     }
   };
 
-  const getContentHeight = () => `${subTreeWrapper.scrollHeight}px`;
+  const getContentHeight = () =>
+    `${subTreeWrapper.current && subTreeWrapper.current.scrollHeight}px`;
 
   const getTransitionStyles = statusParams => {
     const defaultCollapsedStyles = {
@@ -109,6 +112,7 @@ const SubTreeViewCombined = props => {
         meta: { className },
         payload
       },
+      // eslint-disable-next-line no-shadow
       collapsed,
       density,
       id,
@@ -220,6 +224,7 @@ const SubTreeViewCombined = props => {
   const renderSubTreeViewPresenter = () => {
     const {
       children,
+      // eslint-disable-next-line no-shadow
       collapsed,
       density,
       getActiveTreeItemId,
@@ -327,27 +332,27 @@ const SubTreeViewCombined = props => {
   };
 
   useEffect(() => {
-    if (!props.collapsed && subTreeWrapper) {
+    if (!collapsed && subTreeWrapper) {
       afterExpanded();
     }
   }, []);
 
-  useEffect(
+  useLayoutEffect(
     () => {
-      // const { collapsed: previousCollapsed } = previousProps;
-      const { collapsed: currentCollapsed } = props;
+      const { current: currentCollapsed } = previousCollapsed;
+      previousCollapsed.current = collapsed;
 
       if (!subTreeWrapper) {
         return;
       }
-      if (currentCollapsed) {
+      if (!currentCollapsed && collapsed) {
         collapse();
       }
-      if (!currentCollapsed) {
+      if (currentCollapsed && !collapsed) {
         expand();
       }
     },
-    [props]
+    [collapsed]
   );
 
   return props.isObject
