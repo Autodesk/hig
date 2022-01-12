@@ -1,3 +1,10 @@
+# [@hig/utils-v0.4.1](https://github.com/Autodesk/hig/compare/@hig/utils@0.4.0...@hig/utils@0.4.1) (2022-01-12)
+
+
+### Bug Fixes
+
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+
 # [@hig/utils-v0.4.0](https://github.com/Autodesk/hig/compare/@hig/utils@0.3.0...@hig/utils@0.4.0) (2019-08-02)
 
 
