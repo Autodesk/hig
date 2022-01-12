@@ -1,3 +1,12 @@
+# [@hig/progress-ring-v1.2.1](https://github.com/Autodesk/hig/compare/@hig/progress-ring@1.2.0...@hig/progress-ring@1.2.1) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* improve proptypes surface ([534a96b](https://github.com/Autodesk/hig/commit/534a96b))
+* Modification of the condition associated with the final state of the animation ([670aa99](https://github.com/Autodesk/hig/commit/670aa99))
+
 # [@hig/progress-ring-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/progress-ring@1.1.1...@hig/progress-ring@1.2.0) (2021-02-02)
 
 
