@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+/* eslint-disable react/prop-types */
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { css, cx } from "emotion";
 import { createCustomClassNames } from "@hig/utils";
 
@@ -18,70 +19,50 @@ const collapseStatus = {
   EXPANDED: "expanded"
 };
 
-export default class SubTreeViewCombined extends Component {
-  constructor(props) {
-    super(props);
+const SubTreeViewCombined = props => {
+  const { collapsed } = props;
+  const [status, setStatus] = useState(collapseStatus.COLLAPSED);
+  const [mount, setMount] = useState(false);
+  const subTreeWrapper = useRef(null);
+  const previousCollapsed = useRef(collapsed);
 
-    this.setSubTreeWrapperRef = element => {
-      this.subTreeWrapper = element;
-    };
+  const setSubTreeWrapperRef = element => {
+    subTreeWrapper.current = element;
+  };
 
-    this.state = {
-      status: collapseStatus.COLLAPSED,
-      mount: false
-    };
-  }
+  const afterCollapsed = () => setStatus(collapseStatus.COLLAPSED);
+  const afterExpanded = () => setStatus(collapseStatus.EXPANDED);
 
-  componentDidMount() {
-    if (!this.props.collapsed && this.subTreeWrapper) {
-      this.afterExpanded();
-    }
-  }
-
-  componentDidUpdate(previousProps) {
-    const { collapsed: previousCollapsed } = previousProps;
-    const { collapsed: currentCollapsed } = this.props;
-
-    if (!this.subTreeWrapper) {
-      return;
-    }
-    if (currentCollapsed && !previousCollapsed) {
-      this.collapse();
-    }
-    if (!currentCollapsed && previousCollapsed) {
-      this.expand();
-    }
-  }
-
-  onTransitionEnd = ({ target, propertyName }) => {
-    if (target === this.subTreeWrapper && propertyName === "height") {
-      if (this.props.collapsed) {
-        this.afterCollapsed();
-        this.setState({ mount: false });
+  const onTransitionEnd = ({ target, propertyName }) => {
+    if (target === subTreeWrapper.current && propertyName === "height") {
+      if (props.collapsed) {
+        afterCollapsed();
+        setMount(false);
       } else {
-        this.afterExpanded();
+        afterExpanded();
       }
     }
   };
 
-  getContentHeight = () => `${this.subTreeWrapper.scrollHeight}px`;
+  const getContentHeight = () =>
+    `${subTreeWrapper.current && subTreeWrapper.current.scrollHeight}px`;
 
-  getTransitionStyles = status => {
+  const getTransitionStyles = statusParams => {
     const defaultCollapsedStyles = {
       height: "0",
       overflow: "hidden",
       visibility: "hidden"
     };
 
-    if (status === collapseStatus.EXPANDING) {
+    if (statusParams === collapseStatus.EXPANDING) {
       return {
         ...defaultCollapsedStyles,
-        height: this.getContentHeight(),
+        height: getContentHeight(),
         visibility: "visible",
         overflow: "hidden"
       };
     }
-    if (status === collapseStatus.EXPANDED) {
+    if (statusParams === collapseStatus.EXPANDED) {
       return {
         ...defaultCollapsedStyles,
         height: "auto",
@@ -89,15 +70,15 @@ export default class SubTreeViewCombined extends Component {
         overflow: "visible"
       };
     }
-    if (status === collapseStatus.BEFORE_COLLAPSE) {
+    if (statusParams === collapseStatus.BEFORE_COLLAPSE) {
       return {
         ...defaultCollapsedStyles,
-        height: this.getContentHeight(),
+        height: getContentHeight(),
         visibility: "visible",
         overflow: "visible"
       };
     }
-    if (status === collapseStatus.COLLAPSING) {
+    if (statusParams === collapseStatus.COLLAPSING) {
       return {
         ...defaultCollapsedStyles,
         height: "0",
@@ -109,32 +90,29 @@ export default class SubTreeViewCombined extends Component {
     return defaultCollapsedStyles;
   };
 
-  collapse = () => {
-    this.setState({ status: collapseStatus.BEFORE_COLLAPSE });
+  const collapse = () => {
+    setStatus(collapseStatus.BEFORE_COLLAPSE);
     window.requestAnimationFrame(() => {
-      setTimeout(() =>
-        this.setState({ status: collapseStatus.COLLAPSED, mount: false })
-      );
+      setTimeout(() => {
+        setStatus(collapseStatus.COLLAPSED);
+        setMount(false);
+      });
     });
   };
 
-  expand = () => {
-    this.setState({
-      status: collapseStatus.EXPANDING,
-      mount: true
-    });
+  const expand = () => {
+    setStatus(collapseStatus.EXPANDING);
+    setMount(true);
   };
 
-  afterCollapsed = () => this.setState({ status: collapseStatus.COLLAPSED });
-  afterExpanded = () => this.setState({ status: collapseStatus.EXPANDED });
-
-  renderSubTreeViewObject = () => {
+  const renderSubTreeViewObject = () => {
     const {
       treeItem: {
         children,
         meta: { className },
         payload
       },
+      // eslint-disable-next-line no-shadow
       collapsed,
       density,
       id,
@@ -143,11 +121,10 @@ export default class SubTreeViewCombined extends Component {
       getKeyboardOpenId,
       setKeyboardOpenId,
       level
-    } = this.props;
-    const styles = stylesheet(this.props, themeData);
+    } = props;
+    const styles = stylesheet(props, themeData);
 
-    const { status } = this.state;
-    const transitionStyles = this.getTransitionStyles(status);
+    const transitionStyles = getTransitionStyles(status);
     const higTreeItemSubTreeViewWrapperClassName = createCustomClassNames(
       className,
       `hig-tree-item-sub-tree-view-wrapper`
@@ -164,10 +141,10 @@ export default class SubTreeViewCombined extends Component {
           css(transitionStyles),
           higTreeItemSubTreeViewWrapperClassName
         ])}
-        onTransitionEnd={this.onTransitionEnd}
-        ref={this.setSubTreeWrapperRef}
+        onTransitionEnd={onTransitionEnd}
+        ref={setSubTreeWrapperRef}
       >
-        {(!collapsed || this.state.mount) && (
+        {(!collapsed || mount) && (
           <ul
             className={cx([
               css(styles.higTreeItemSubTreeView),
@@ -244,9 +221,10 @@ export default class SubTreeViewCombined extends Component {
     );
   };
 
-  renderSubTreeViewPresenter = () => {
+  const renderSubTreeViewPresenter = () => {
     const {
       children,
+      // eslint-disable-next-line no-shadow
       collapsed,
       density,
       getActiveTreeItemId,
@@ -263,9 +241,9 @@ export default class SubTreeViewCombined extends Component {
       setKeyboardOpenId,
       themeData,
       ...otherProps
-    } = this.props;
+    } = props;
     const { className } = otherProps;
-    const styles = stylesheet(this.props, themeData);
+    const styles = stylesheet(props, themeData);
     const clonedChildren = Array.isArray(children)
       ? children.map(child =>
           React.cloneElement(child, {
@@ -297,8 +275,7 @@ export default class SubTreeViewCombined extends Component {
           setActiveTreeItemIndex,
           setKeyboardOpenId
         });
-    const { status } = this.state;
-    const transitionStyles = this.getTransitionStyles(status);
+    const transitionStyles = getTransitionStyles(status);
     const higTreeItemSubTreeViewWrapperClassName = createCustomClassNames(
       className,
       `hig-tree-item-sub-tree-view-wrapper`
@@ -315,10 +292,10 @@ export default class SubTreeViewCombined extends Component {
           css(transitionStyles),
           higTreeItemSubTreeViewWrapperClassName
         ])}
-        onTransitionEnd={this.onTransitionEnd}
-        ref={this.setSubTreeWrapperRef}
+        onTransitionEnd={onTransitionEnd}
+        ref={setSubTreeWrapperRef}
       >
-        {(!collapsed || this.state.mount) &&
+        {(!collapsed || mount) &&
           Array.isArray(clonedChildren) && (
             <ul
               className={cx([
@@ -338,7 +315,7 @@ export default class SubTreeViewCombined extends Component {
               ))}
             </ul>
           )}
-        {(!collapsed || this.state.mount) &&
+        {(!collapsed || mount) &&
           !Array.isArray(clonedChildren) && (
             <ul
               className={cx([
@@ -354,9 +331,33 @@ export default class SubTreeViewCombined extends Component {
     );
   };
 
-  render() {
-    return this.props.isObject
-      ? this.renderSubTreeViewObject()
-      : this.renderSubTreeViewPresenter();
-  }
-}
+  useEffect(() => {
+    if (!collapsed && subTreeWrapper) {
+      afterExpanded();
+    }
+  }, []);
+
+  useLayoutEffect(
+    () => {
+      const { current: currentCollapsed } = previousCollapsed;
+      previousCollapsed.current = collapsed;
+
+      if (!subTreeWrapper) {
+        return;
+      }
+      if (!currentCollapsed && collapsed) {
+        collapse();
+      }
+      if (currentCollapsed && !collapsed) {
+        expand();
+      }
+    },
+    [collapsed]
+  );
+
+  return props.isObject
+    ? renderSubTreeViewObject()
+    : renderSubTreeViewPresenter();
+};
+
+export default SubTreeViewCombined;

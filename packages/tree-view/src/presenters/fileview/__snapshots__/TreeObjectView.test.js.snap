@@ -1,3 +1,700 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `null`;
+exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
+.emotion-44 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.emotion-44::before {
+  display: inline-block;
+  content: "";
+  left: calc((24px * 0) + (8px * -1));
+  margin: 0;
+  position: absolute;
+  top: 9px;
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  width: 20px;
+}
+
+.emotion-44::after {
+  display: inline-block;
+  content: "";
+  height: 100%;
+  left: calc(24px + ((24px + 8px) * -1) - 0px);
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.emotion-44:first-of-type::after {
+  top: -10px;
+  height: calc(100% + 10px);
+}
+
+.emotion-44:last-child::after {
+  top: -9px;
+  height: 24px;
+}
+
+.emotion-6 {
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  line-height: 1.428571429;
+  padding: 8px 12px 8px calc((24px + 8px) * 0);
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 12px;
+  width: calc(100% - 12px);
+}
+
+.emotion-5 > svg {
+  margin-right: 8px;
+}
+
+.emotion-5 > svg:first-of-type {
+  fill: #3c3c3c;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 24px;
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px;
+  height: 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 8px;
+  outline: 0;
+  width: 24px;
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 24px;
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px;
+  height: 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 8px;
+  width: 24px;
+}
+
+.emotion-4 {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-0 {
+  fill: #808080;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-2 {
+  fill: #808080;
+}
+
+.emotion-2 > * {
+  fill: #808080;
+}
+
+.emotion-37 {
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.emotion-36 {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.emotion-41 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.emotion-41::before {
+  display: inline-block;
+  content: "";
+  left: calc((24px * 1) + (8px * 0));
+  margin: 0;
+  position: absolute;
+  top: 9px;
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  width: 20px;
+}
+
+.emotion-41::after {
+  display: inline-block;
+  content: "";
+  height: 100%;
+  left: calc(24px + ((24px + 8px) * 0) - 0px);
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.emotion-41:first-of-type::after {
+  top: -10px;
+  height: calc(100% + 10px);
+}
+
+.emotion-41:last-child::after {
+  top: -9px;
+  height: 24px;
+}
+
+.emotion-13 {
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  line-height: 1.428571429;
+  padding: 8px 12px 8px calc((24px + 8px) * 1);
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-18 {
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 8px 12px 8px calc((24px + 8px) + ((24px + 8px) * 2));
+  position: relative;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-18::before {
+  display: inline-block;
+  content: "";
+  left: calc((24px * 2) + (8px * 1));
+  margin: 0;
+  position: absolute;
+  top: 9px;
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  width: 42px;
+}
+
+.emotion-18::after {
+  display: inline-block;
+  content: "";
+  height: 100%;
+  left: calc(24px + ((24px + 8px) * 1) - 1px);
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.emotion-18:first-of-type::after {
+  top: -10px;
+  height: calc(100% + 10px);
+}
+
+.emotion-18:last-child::after {
+  top: -9px;
+  height: 24px;
+}
+
+.emotion-17 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 12px;
+  width: calc(100% - 12px);
+}
+
+.emotion-17 > svg {
+  margin-right: 8px;
+}
+
+.emotion-38 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.emotion-38::before {
+  display: inline-block;
+  content: "";
+  left: calc((24px * 2) + (8px * 1));
+  margin: 0;
+  position: absolute;
+  top: 9px;
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  width: 20px;
+}
+
+.emotion-38::after {
+  display: inline-block;
+  content: "";
+  height: 100%;
+  left: calc(24px + ((24px + 8px) * 1) - 0px);
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.emotion-38:first-of-type::after {
+  top: -10px;
+  height: calc(100% + 10px);
+}
+
+.emotion-38:last-child::after {
+  top: -9px;
+  height: 24px;
+}
+
+.emotion-30 {
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  line-height: 1.428571429;
+  padding: 8px 12px 8px calc((24px + 8px) * 2);
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-35 {
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 8px 12px 8px calc((24px + 8px) + ((24px + 8px) * 3));
+  position: relative;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-35::before {
+  display: inline-block;
+  content: "";
+  left: calc((24px * 3) + (8px * 2));
+  margin: 0;
+  position: absolute;
+  top: 9px;
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  width: 42px;
+}
+
+.emotion-35::after {
+  display: inline-block;
+  content: "";
+  height: 100%;
+  left: calc(24px + ((24px + 8px) * 2) - 1px);
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.emotion-35:first-of-type::after {
+  top: -10px;
+  height: calc(100% + 10px);
+}
+
+.emotion-35:last-child::after {
+  top: -9px;
+  height: 24px;
+}
+
+<li
+  aria-expanded={true}
+  className="emotion-44"
+  id={1}
+  role="treeitem"
+>
+  <div
+    className="emotion-6"
+    onClick={[Function]}
+  >
+    <div
+      className="emotion-5"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      role="presentation"
+    >
+      <div
+        className="emotion-1"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+        tabIndex="-1"
+      >
+        <svg
+          className="emotion-0"
+          height="10px"
+          viewBox="0 0 10 10"
+          width="10px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
+          />
+        </svg>
+      </div>
+      <div
+        className="emotion-3"
+      >
+        <svg
+          className="emotion-2"
+          height="24px"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 2v20h17V2zm16 19H4V3h15z"
+          />
+          <path
+            d="M18 19h-1v-7h-3v7h-1v-5h-3v5H9v-9H6v9H5v1h13zM8 19H7v-8h1zm4 0h-1v-4h1zm4 0h-1v-6h1zM5 5h13v1H5zm0 2h6v1H5z"
+          />
+        </svg>
+      </div>
+      <span
+        className="emotion-4"
+      >
+        Tree Item 1
+      </span>
+    </div>
+  </div>
+  <div
+    className="emotion-37"
+    onTransitionEnd={[Function]}
+  >
+    <ul
+      className="emotion-36"
+      role="group"
+    >
+      <li
+        aria-expanded={true}
+        className="emotion-41"
+        id={2}
+        role="treeitem"
+      >
+        <div
+          className="emotion-13"
+          onClick={[Function]}
+        >
+          <div
+            className="emotion-5"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            role="presentation"
+          >
+            <div
+              className="emotion-1"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex="-1"
+            >
+              <svg
+                className="emotion-0"
+                height="10px"
+                viewBox="0 0 10 10"
+                width="10px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
+                />
+              </svg>
+            </div>
+            <div
+              className="emotion-3"
+            >
+              <svg
+                className="emotion-2"
+                height="24px"
+                viewBox="0 0 24 24"
+                width="24px"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.79 6L9 4H2v16h19V6zM3 5h6l1.8 1.42L10 7H3zm17 14H3V8h7.26l1.52-1H20z"
+                />
+              </svg>
+            </div>
+            <span
+              className="emotion-4"
+            >
+              Tree Item 2
+            </span>
+          </div>
+        </div>
+        <div
+          className="emotion-37"
+          onTransitionEnd={[Function]}
+        >
+          <ul
+            className="emotion-36"
+            role="group"
+          >
+            <li
+              className="emotion-18"
+              id={3}
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              role="treeitem"
+            >
+              <div
+                className="emotion-17"
+              >
+                <div
+                  className="emotion-3"
+                >
+                  <svg
+                    className="emotion-2"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 4v16h16V4zm1 4h4v3H5zm0 4h4v3H5zm0 7v-3h4v3zm5 0v-3h4v3zm4-8h-4V8h4zm0 1v3h-4v-3zm5 7h-4v-3h4zm0-4h-4v-3h4zm0-4h-4V8h4zM5 7V5h14v2z"
+                    />
+                  </svg>
+                </div>
+                <span
+                  className="emotion-4"
+                >
+                  Tree Item 3
+                </span>
+              </div>
+            </li>
+            <li
+              className="emotion-18"
+              id={4}
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              role="treeitem"
+            >
+              <div
+                className="emotion-17"
+              >
+                <div
+                  className="emotion-3"
+                >
+                  <svg
+                    className="emotion-2"
+                    height="24px"
+                    viewBox="0 0 24 24"
+                    width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3 3v18h18V3zm17 17H4v-3.82l2.75-3.39A2 2 0 0 1 8.34 12a2 2 0 0 1 1.59.76l.3.4 3.35 4.31a1.41 1.41 0 0 0 2.17.06L17.13 16a.84.84 0 0 1 .65-.29.83.83 0 0 1 .73.41L20 18.48zm0-3.41l-.61-1a1.85 1.85 0 0 0-1.61-.92 1.89 1.89 0 0 0-1.4.62L15 16.87a.42.42 0 0 1-.63 0l-3.65-4.7a3 3 0 0 0-4.76 0L4 14.59V4h16z"
+                    />
+                    <path
+                      d="M15.5 11A2.5 2.5 0 1 0 13 8.5a2.5 2.5 0 0 0 2.5 2.5zm0-4A1.5 1.5 0 1 1 14 8.5 1.5 1.5 0 0 1 15.5 7z"
+                    />
+                  </svg>
+                </div>
+                <span
+                  className="emotion-4"
+                >
+                  Tree Item 4
+                </span>
+              </div>
+            </li>
+            <li
+              aria-expanded={true}
+              className="emotion-38"
+              id={5}
+              role="treeitem"
+            >
+              <div
+                className="emotion-30"
+                onClick={[Function]}
+              >
+                <div
+                  className="emotion-5"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onMouseEnter={[Function]}
+                  onMouseLeave={[Function]}
+                  role="presentation"
+                >
+                  <div
+                    className="emotion-1"
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    role="button"
+                    tabIndex="-1"
+                  >
+                    <svg
+                      className="emotion-0"
+                      height="10px"
+                      viewBox="0 0 10 10"
+                      width="10px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    className="emotion-3"
+                  >
+                    <svg
+                      className="emotion-2"
+                      height="24px"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20.42 5.89l-8-3.7a1 1 0 0 0-.84 0l-8 3.7a1 1 0 0 0-.58.9v8.91a1 1 0 0 0 .47.84l8 5a1 1 0 0 0 1.06 0l8-5a1 1 0 0 0 .47-.84V6.79a1 1 0 0 0-.58-.9zM20 15.56a.24.24 0 0 1-.12.21l-7.75 4.82a.24.24 0 0 1-.26 0l-7.75-4.82a.24.24 0 0 1-.12-.21V7a.24.24 0 0 1 .15-.22l7.75-3.63a.23.23 0 0 1 .2 0l7.75 3.58A.24.24 0 0 1 20 7z"
+                      />
+                      <path
+                        d="M18.93 7.4l-.39-.18a.08.08 0 0 0-.09 0l-6.45 4-6.45-4a.07.07 0 0 0-.09 0l-.39.18a.12.12 0 0 0-.07.11V8a.11.11 0 0 0 0 .08l6.46 4v7a.11.11 0 0 0 0 .08l.4.24a.09.09 0 0 0 .12 0l.4-.24a.11.11 0 0 0 0-.08v-7l6.46-4A.14.14 0 0 0 19 8v-.5a.12.12 0 0 0-.07-.1z"
+                      />
+                    </svg>
+                  </div>
+                  <span
+                    className="emotion-4"
+                  >
+                    Tree Item 5
+                  </span>
+                </div>
+              </div>
+              <div
+                className="emotion-37"
+                onTransitionEnd={[Function]}
+              >
+                <ul
+                  className="emotion-36"
+                  role="group"
+                >
+                  <li
+                    className="emotion-35"
+                    id={6}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    role="treeitem"
+                  >
+                    <div
+                      className="emotion-17"
+                    >
+                      <div
+                        className="emotion-3"
+                      >
+                        <svg
+                          className="emotion-2"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M3 8h7.26l1.52-1H20v9h1V6h-9.21L9 4H2v16h11v-1H3zm0-3h6l1.8 1.42L10 7H3z"
+                          />
+                          <path
+                            d="M19 17v-3h-2v3h-3v2h3v3h2v-3h3v-2h-3z"
+                          />
+                        </svg>
+                      </div>
+                      <span
+                        className="emotion-4"
+                      >
+                        Tree Item 6
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</li>
+`;

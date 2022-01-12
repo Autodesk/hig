@@ -29,16 +29,23 @@
     "lerna": "^2.11.0",
     "mkdirp": "^0.5.1",
     "node-fetch": "^2.2.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-test-renderer": "^15.6.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-test-renderer": "^16.0.0-alpha.12",
     "registry-url": "^4.0.0"
   },
   "workspaces": {
-    "packages": ["packages/*"],
-    "nohoist": ["acceptance"]
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "acceptance"
+    ]
   },
   "jest": {
     "preset": "@hig/jest-preset"
+  },
+  "dependencies": {
+    "enzyme-adapter-react-16": "^1.15.6"
   }
 }
