@@ -143,6 +143,25 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
 
+"@hig/avatar@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-1.4.0.tgz#6aca8bfcd04f66e3bf272e1948f2e3e1f3fd2049"
+  integrity sha512-Tj75UsV51itPkEiskeYoUvWzH2SMgH8KA3L/hG7BbFbI25OryLgxho8OhBuvKnswo54mIXxuqvGClyzHB2UKFQ==
+  dependencies:
+    "@hig/utils" "^0.4.0"
+    prop-types "^15.7.1"
+    react-lifecycles-compat "^3.0.4"
+
+"@hig/button@^1.4.4":
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/@hig/button/-/button-1.4.5.tgz#59cb84e53cb30c134caace04c76d158dedea1f2e"
+  integrity sha512-/ESMsxVrWkRoxG2hrn1dIMlWY+nWUsy9cVBczVh7pb3xST0lMnjlQQgiYpqbLJ1e18COZS0nh7CVgD8EPYyJPg==
+  dependencies:
+    "@hig/behaviors" "^1.1.1"
+    "@hig/utils" "^0.4.0"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
@@ -11694,8 +11713,9 @@ typedarray@^0.0.6, typedarray@~0.0.5:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
 ua-parser-js@^0.7.18:
-  version "0.7.18"
-  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.18.tgz#a7bfd92f56edfb117083b69e31d2aa8882d4b1ed"
+  version "0.7.31"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.31.tgz#649a656b191dffab4f21d5e053e27ca17cbff5c6"
+  integrity sha512-qLK/Xe9E2uzmYI3qLeOmI0tEOt+TBBQyUIAh4aAgU05FVYzeZrKUdkAZfBNVGRaHVgV0TDkdEngJSw/SyQchkQ==
 
 uglify-es@^3.3.4:
   version "3.3.9"
