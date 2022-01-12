@@ -1,3 +1,11 @@
+# [@hig/notifications-flyout-v2.1.5](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.1.4...@hig/notifications-flyout@2.1.5) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* unit testing ([29a1a1b](https://github.com/Autodesk/hig/commit/29a1a1b))
+
 # [@hig/notifications-flyout-v2.1.4](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.1.3...@hig/notifications-flyout@2.1.4) (2021-11-19)
 
 
