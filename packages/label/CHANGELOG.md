@@ -1,3 +1,10 @@
+# [@hig/label-v1.2.1](https://github.com/Autodesk/hig/compare/@hig/label@1.2.0...@hig/label@1.2.1) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+
 # [@hig/label-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/label@1.1.1...@hig/label@1.2.0) (2021-01-25)
 
 
