@@ -33,7 +33,7 @@ describe("timestamp", () => {
       const wrapper = mount(
         <Timestamp timestamp={tenSecondsAgo.toISOString()} />
       );
-      expect(wrapper).toHaveText("10 seconds ago");
+      expect(wrapper.text()).toBe("10 seconds ago");
     });
     it("displays when second is localized", () => {
       const tenSecondsAgo = new Date(mayFifth);
@@ -47,7 +47,7 @@ describe("timestamp", () => {
           wordSpace={false}
         />
       );
-      expect(localizedWrapper).toHaveText(
+      expect(localizedWrapper.text()).toBe(
         `10${timeObject.second}${timeObject.ago}`
       );
     });
@@ -61,7 +61,7 @@ describe("timestamp", () => {
       const wrapper = mount(
         <Timestamp timestamp={tenMinutesAgo.toISOString()} />
       );
-      expect(wrapper).toHaveText("10 minutes ago");
+      expect(wrapper.text()).toBe("10 minutes ago");
     });
     it("displays when minute is localized", () => {
       const tenMinutesAgo = new Date(mayFifth);
@@ -75,7 +75,7 @@ describe("timestamp", () => {
           wordSpace={false}
         />
       );
-      expect(localizedWrapper).toHaveText(
+      expect(localizedWrapper.text()).toBe(
         `10${timeObject.minute}${timeObject.ago}`
       );
     });
@@ -89,7 +89,7 @@ describe("timestamp", () => {
       const wrapper = mount(
         <Timestamp timestamp={tenHoursAgo.toISOString()} />
       );
-      expect(wrapper).toHaveText("10 hours ago");
+      expect(wrapper.text()).toBe("10 hours ago");
     });
     it("displays when hour is localized", () => {
       const tenHoursAgo = new Date(mayFifth);
@@ -103,7 +103,7 @@ describe("timestamp", () => {
           wordSpace={false}
         />
       );
-      expect(localizedWrapper).toHaveText(
+      expect(localizedWrapper.text()).toBe(
         `10${timeObject.hour}${timeObject.ago}`
       );
     });
@@ -117,7 +117,7 @@ describe("timestamp", () => {
       const wrapper = mount(
         <Timestamp timestamp={threeDaysAgo.toISOString()} />
       );
-      expect(wrapper).toHaveText("3 days ago");
+      expect(wrapper.text()).toBe("3 days ago");
     });
     it("displays when day is localized", () => {
       const threeDaysAgo = new Date(mayFifth);
@@ -131,7 +131,7 @@ describe("timestamp", () => {
           wordSpace={false}
         />
       );
-      expect(localizedWrapper).toHaveText(
+      expect(localizedWrapper.text()).toBe(
         `3${timeObject.day}${timeObject.ago}`
       );
     });
@@ -145,7 +145,7 @@ describe("timestamp", () => {
       const wrapper = mount(
         <Timestamp timestamp={thirtyDaysAgo.toISOString()} />
       );
-      expect(wrapper).toHaveText("4 weeks ago");
+      expect(wrapper.text()).toBe("4 weeks ago");
     });
     it("displays when week is localized", () => {
       const thirtyDaysAgo = new Date(mayFifth);
@@ -159,7 +159,7 @@ describe("timestamp", () => {
           wordSpace={false}
         />
       );
-      expect(localizedWrapper).toHaveText(
+      expect(localizedWrapper.text()).toBe(
         `4${timeObject.week}${timeObject.ago}`
       );
     });
@@ -173,7 +173,7 @@ describe("timestamp", () => {
       const wrapper = mount(
         <Timestamp timestamp={tenMonthsAgo.toISOString()} />
       );
-      expect(wrapper).toHaveText("10 months ago");
+      expect(wrapper.text()).toBe("10 months ago");
     });
     it("displays when month is localized", () => {
       const tenMonthsAgo = new Date(mayFifth);
@@ -187,7 +187,7 @@ describe("timestamp", () => {
           wordSpace={false}
         />
       );
-      expect(localizedWrapper).toHaveText(
+      expect(localizedWrapper.text()).toBe(
         `10${timeObject.month}${timeObject.ago}`
       );
     });
@@ -199,7 +199,7 @@ describe("timestamp", () => {
       oneYearAgo.setFullYear(mayFifth.getFullYear() - 1);
 
       const wrapper = mount(<Timestamp timestamp={oneYearAgo.toISOString()} />);
-      expect(wrapper).toHaveText("1 year ago");
+      expect(wrapper.text()).toBe("1 year ago");
     });
 
     it("displays when year is localized", () => {
@@ -214,7 +214,7 @@ describe("timestamp", () => {
           wordSpace={false}
         />
       );
-      expect(localizedWrapper).toHaveText(
+      expect(localizedWrapper.text()).toBe(
         `1${timeObject.year}${timeObject.ago}`
       );
     });
@@ -228,7 +228,7 @@ describe("timestamp", () => {
       const wrapper = mount(
         <Timestamp timestamp={tenMonthsAgo.toISOString()} plural={false} />
       );
-      expect(wrapper).toHaveText("10 month ago");
+      expect(wrapper.text()).toBe("10 month ago");
     });
   });
 
@@ -240,7 +240,7 @@ describe("timestamp", () => {
       const wrapper = mount(
         <Timestamp timestamp={tenMonthsAgo.toISOString()} wordSpace={false} />
       );
-      expect(wrapper).toHaveText("10monthsago");
+      expect(wrapper.text()).toBe("10monthsago");
     });
   });
 
@@ -255,7 +255,7 @@ describe("timestamp", () => {
           timestampSequence="cab"
         />
       );
-      expect(wrapper).toHaveText("ago 10 months");
+      expect(wrapper.text()).toBe("ago 10 months");
     });
   });
 });

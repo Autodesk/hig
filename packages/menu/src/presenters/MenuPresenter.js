@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
@@ -7,72 +7,40 @@ import Option from "../Option";
 import createChildren from "../behaviors/createChildren";
 import stylesheet from "./stylesheet";
 
-export default class MenuPresenter extends Component {
-  static propTypes = {
-    children: PropTypes.node,
-    divider: PropTypes.bool,
-    stylesheet: PropTypes.func
-  };
+const MenuPresenter = props => {
+  const {
+    checkmark,
+    children,
+    divider,
+    menuRef,
+    multiple,
+    stylesheet: customStylesheet,
+    unselect,
+    ...otherProps
+  } = props;
+  const {
+    id,
+    className,
+    getHighlightIndex,
+    getOptionsInfo,
+    role,
+    tabIndex
+  } = otherProps;
+  const mounted = useRef();
 
-  componentDidMount() {
-    const optionsInfo = [];
+  const getOptions = () => createChildren(props.children, Option);
 
-    if (this.props.role !== `group`) {
-      React.Children.forEach(this.props.children, child => {
-        if (child.type === Option) {
-          optionsInfo.push(child.props);
-        }
-      });
-
-      this.props.setOptionsInfo(optionsInfo);
-    }
-  }
-
-  componentDidUpdate() {
-    // update options if they change, but do not run if the menu is part of a menugroup
-    if (this.props.role !== `group`) {
-      const previousOptions = this.props.getOptionsInfo();
-      const optionsInfo = [];
-      const currentIds = [];
-      const prevIds = [];
-
-      React.Children.forEach(this.props.children, child => {
-        if (child.type === Option) {
-          optionsInfo.push(child.props);
-          currentIds.push(child.props.id);
-        }
-      });
-
-      Object.keys(previousOptions).forEach(index => {
-        prevIds.push(previousOptions[index].id);
-      });
-
-      if (JSON.stringify(currentIds) !== JSON.stringify(prevIds)) {
-        this.props.setOptionsInfo(optionsInfo);
-      }
-    }
-  }
-
-  getOptions() {
-    return createChildren(this.props.children, Option);
-  }
-
-  renderOption = ({ key, props }) => {
+  const renderOption = ({ key, props: propsOrigin }) => {
     const {
-      checkmark,
       getActiveOption,
-      getHighlightIndex,
-      getOptionsInfo,
       getPreviousEvent,
-      multiple,
       onFocus,
       selected,
       setActiveOption,
-      setHighlightIndex,
-      unselect
-    } = this.props;
+      setHighlightIndex
+    } = props;
     const payload = {
-      ...props,
+      ...propsOrigin,
       checkmark,
       getActiveOption,
       getHighlightIndex,
@@ -90,80 +58,102 @@ export default class MenuPresenter extends Component {
     return <Option {...payload} />;
   };
 
-  renderOptions() {
-    return this.getOptions().map(this.renderOption);
-  }
+  const ariaPayload =
+    role !== `group`
+      ? {
+          ...(getHighlightIndex() !== 0 && {
+            "aria-activedescendant": getOptionsInfo()[getHighlightIndex() - 1]
+              .id
+          }),
+          ...(multiple && { "aria-multiselectable": multiple })
+        }
+      : {};
+  const payload = { ...otherProps };
+  delete payload.getActiveOption;
+  delete payload.getHighlightIndex;
+  delete payload.getOptionsInfo;
+  delete payload.getPreviousEvent;
+  delete payload.handleBlur;
+  delete payload.handleFocus;
+  delete payload.handleKeyDown;
+  delete payload.handleMouseMove;
+  delete payload.setActiveOption;
+  delete payload.setHighlightIndex;
+  delete payload.setOptionsInfo;
+  delete payload.setPreviousEvent;
+  delete payload.unselect;
 
-  render() {
-    const {
-      checkmark,
-      children,
-      divider,
-      menuRef,
-      multiple,
-      stylesheet: customStylesheet,
-      unselect,
-      ...otherProps
-    } = this.props;
-    const {
-      id,
-      className,
-      getHighlightIndex,
-      getOptionsInfo,
-      role,
-      tabIndex
-    } = otherProps;
-    const ariaPayload =
-      role !== `group`
-        ? {
-            ...(getHighlightIndex() !== 0 && {
-              "aria-activedescendant": getOptionsInfo()[getHighlightIndex() - 1]
-                .id
-            }),
-            ...(multiple && { "aria-multiselectable": multiple })
+  const renderOptions = () => getOptions().map(renderOption);
+
+  useEffect(() => {
+    if (!mounted.current) {
+      const optionsInfo = [];
+      if (role !== `group`) {
+        React.Children.forEach(props.children, child => {
+          if (child.type === Option) {
+            optionsInfo.push(child.props);
           }
-        : {};
-    const payload = { ...otherProps };
-    delete payload.getActiveOption;
-    delete payload.getHighlightIndex;
-    delete payload.getOptionsInfo;
-    delete payload.getPreviousEvent;
-    delete payload.handleBlur;
-    delete payload.handleFocus;
-    delete payload.handleKeyDown;
-    delete payload.handleMouseMove;
-    delete payload.setActiveOption;
-    delete payload.setHighlightIndex;
-    delete payload.setOptionsInfo;
-    delete payload.setPreviousEvent;
-    delete payload.unselect;
+        });
+        props.setOptionsInfo(optionsInfo);
+      }
+      mounted.current = true;
+    } else if (props.role !== `group`) {
+      const previousOptions = props.getOptionsInfo();
+      const optionsInfo = [];
+      const currentIds = [];
+      const prevIds = [];
+      React.Children.forEach(props.children, child => {
+        if (child.type === Option) {
+          optionsInfo.push(child.props);
+          currentIds.push(child.props.id);
+        }
+      });
 
-    return (
-      <ThemeContext.Consumer>
-        {({ resolvedRoles }) => {
-          const styles = stylesheet(
-            {
-              checkmark,
-              divider,
-              stylesheet: customStylesheet
-            },
-            resolvedRoles
-          );
-          return (
-            <ul
-              {...ariaPayload}
-              {...payload}
-              className={cx([className, css(styles.menu)])}
-              id={id}
-              ref={menuRef}
-              role={role || `listbox`} // set to group if it is w/in a MenuGroup
-              tabIndex={tabIndex || `0`} // not focusable if w/in a MenuGroup
-            >
-              {this.renderOptions()}
-            </ul>
-          );
-        }}
-      </ThemeContext.Consumer>
-    );
-  }
-}
+      Object.keys(previousOptions).forEach(index => {
+        prevIds.push(previousOptions[index].id);
+      });
+
+      if (JSON.stringify(currentIds) !== JSON.stringify(prevIds)) {
+        props.setOptionsInfo(optionsInfo);
+      }
+    }
+  });
+
+  return (
+    <ThemeContext.Consumer>
+      {({ resolvedRoles }) => {
+        const styles = stylesheet(
+          {
+            checkmark,
+            divider,
+            stylesheet: customStylesheet
+          },
+          resolvedRoles
+        );
+        return (
+          <ul
+            {...ariaPayload}
+            {...payload}
+            className={cx([className, css(styles.menu)])}
+            id={id}
+            ref={menuRef}
+            role={role || `listbox`} // set to group if it is w/in a MenuGroup
+            tabIndex={tabIndex || `0`} // not focusable if w/in a MenuGroup
+          >
+            {renderOptions()}
+          </ul>
+        );
+      }}
+    </ThemeContext.Consumer>
+  );
+};
+
+MenuPresenter.displayName = "MenuPresenter";
+
+MenuPresenter.propTypes = {
+  children: PropTypes.node,
+  divider: PropTypes.bool,
+  stylesheet: PropTypes.func
+};
+
+export default MenuPresenter;

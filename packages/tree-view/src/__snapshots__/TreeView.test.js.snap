@@ -1,3 +1,139 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tree-view/TreeView renders default TreeView 1`] = `null`;
+exports[`tree-view/TreeView renders default TreeView 1`] = `
+.emotion-4 {
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 8px 12px 8px calc((24px + 8px) + ((24px + 8px) * undefined));
+  position: relative;
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-4::before {
+  display: inline-block;
+  content: "";
+  left: calc((24px * NaN) + (8px * NaN));
+  margin: 0;
+  position: absolute;
+  top: 9px;
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  width: 42px;
+}
+
+.emotion-4::after {
+  display: inline-block;
+  content: "";
+  height: 100%;
+  left: calc(24px + ((24px + 8px) * NaN) - 1px);
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.emotion-4:first-of-type::after {
+  top: -10px;
+  height: calc(100% + 10px);
+}
+
+.emotion-4:last-child::after {
+  top: -9px;
+  height: 24px;
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 12px;
+  width: calc(100% - 12px);
+}
+
+.emotion-3 > svg {
+  margin-right: 8px;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 24px;
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px;
+  height: 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 8px;
+  width: 24px;
+}
+
+.emotion-2 {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+<li
+  className="emotion-4"
+  id="tree-item-18"
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  role="treeitem"
+  selected={false}
+>
+  <div
+    className="emotion-3"
+  >
+    <div
+      className="emotion-1"
+    >
+      <svg
+        className="emotion-0"
+        height="24px"
+        viewBox="0 0 24 24"
+        width="24px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3 2v20h17V2zm16 19H4V3h15z"
+        />
+        <path
+          d="M18 19h-1v-7h-3v7h-1v-5h-3v5H9v-9H6v9H5v1h13zM8 19H7v-8h1zm4 0h-1v-4h1zm4 0h-1v-6h1zM5 5h13v1H5zm0 2h6v1H5z"
+        />
+      </svg>
+    </div>
+    <span
+      className="emotion-2"
+    >
+      Tree Item 18
+    </span>
+  </div>
+</li>
+`;

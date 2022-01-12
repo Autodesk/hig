@@ -8,14 +8,14 @@ import Flyout, {
 import PanelPresenter from "./presenters/PanelPresenter";
 import PointerPresenter from "./presenters/PointerPresenter";
 
-export default function Tooltip(props) {
-  return (
-    <Flyout
-      pointer={<PointerPresenter stylesheet={props.stylesheet} />}
-      {...props}
-    />
-  );
-}
+const Tooltip = props => (
+  <Flyout
+    pointer={<PointerPresenter stylesheet={props.stylesheet} />}
+    {...props}
+  />
+);
+
+Tooltip.displayName = "Tooltip";
 
 Tooltip.defaultProps = {
   /**
@@ -94,3 +94,5 @@ Tooltip.propTypes = {
   /** Function to modify the component's styles */
   stylesheet: PropTypes.func
 };
+
+export default Tooltip;
