@@ -24,7 +24,7 @@ describe("Input", () => {
         const wrapper = mount(<Input variant="line" />);
 
         const decoration = wrapper.find(InputHaloPresenter);
-        expect(decoration.props().variant).toEqual("line");
+        expect(decoration).toHaveProp("variant", "line");
       });
     });
 
@@ -33,7 +33,7 @@ describe("Input", () => {
         const wrapper = mount(<Input variant="box" />);
 
         const decoration = wrapper.find(InputHaloPresenter);
-        expect(decoration.props().variant).toEqual("box");
+        expect(decoration).toHaveProp("variant", "box");
       });
     });
 
@@ -58,7 +58,7 @@ describe("Input", () => {
     });
 
     it("sets the value", () => {
-      expect(interactiveElement.props().value).toEqual("foo");
+      expect(interactiveElement).toHaveProp("value", "foo");
     });
 
     describe("typing into the field", () => {
@@ -91,7 +91,7 @@ describe("Input", () => {
     });
 
     it("sets the defaultValue", () => {
-      expect(interactiveElement.props().defaultValue).toEqual("foo");
+      expect(interactiveElement).toHaveProp("defaultValue", "foo");
     });
 
     describe("typing into the field", () => {
@@ -114,7 +114,7 @@ describe("Input", () => {
 
   it("passes arbitrary props to input element", () => {
     const wrapper = mount(<Input data-my-attr="foo" />);
-    expect(wrapper.find("input").props()["data-my-attr"]).toEqual("foo");
+    expect(wrapper.find("input")).toHaveProp("data-my-attr", "foo");
   });
 
   it("passes className prop to input element", () => {
@@ -124,7 +124,7 @@ describe("Input", () => {
     expect(wrapper.find("input").hasClass(`${className}__input`)).toBe(true);
   });
 
-  it.skip("passes down the inputRef", () => {
+  it("passes down the inputRef", () => {
     let inputRef;
 
     function setInputRef(element) {

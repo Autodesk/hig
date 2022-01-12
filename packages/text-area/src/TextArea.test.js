@@ -1,4 +1,4 @@
-import { mount, shallow } from "enzyme";
+import { mount } from "enzyme";
 import React from "react";
 import renderer from "react-test-renderer";
 import TextArea from "./TextArea";
@@ -76,7 +76,7 @@ describe("TextArea", () => {
 
   it("passes className prop to textarea element", () => {
     const className = "custom-class";
-    const wrapper = shallow(<TextArea className={className} />);
+    const wrapper = mount(<TextArea className={className} />);
     expect(wrapper.hasClass(className)).toBe(true);
     expect(wrapper.childAt(0).hasClass(`${className}-textarea`)).toBe(true);
   });

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Transition from "react-transition-group/Transition";
 import { transitionStatuses, AVAILABLE_TRANSITION_STATUSES } from "@hig/flyout";
@@ -22,70 +22,79 @@ function calculateListMaxHeight(listWrapper) {
   return `${height}px`;
 }
 
-const PanelBehavior = props => {
-  const [listMaxHeight, setListMaxHeight] = useState("");
-  const listWrapperRef = useRef(null);
-
-  const updateMaxHeight = () => {
-    setListMaxHeight(calculateListMaxHeight(listWrapperRef.current));
+export default class PanelBehavior extends Component {
+  state = {
+    listMaxHeight: ""
   };
 
-  const handleResize = () => {
-    updateMaxHeight();
+  componentDidMount() {
+    this.bindResize();
+    this.updateMaxHeight();
+  }
+
+  componentDidUpdate(previousProps) {
+    if (
+      previousProps.transitionStatus === transitionStatuses.HIDDEN &&
+      this.props.transitionStatus === transitionStatuses.EXITED
+    ) {
+      window.requestAnimationFrame(() => {
+        this.updateMaxHeight();
+      });
+    }
+  }
+
+  componentWillUnmount() {
+    this.unbindResize();
+  }
+
+  /**
+   * @type {HTMLDivElement}
+   */
+  listWrapperRef;
+
+  updateMaxHeight() {
+    this.setState({
+      listMaxHeight: calculateListMaxHeight(this.listWrapperRef)
+    });
+  }
+
+  handleResize = () => {
+    this.updateMaxHeight();
   };
 
-  const bindResize = () => {
-    window.addEventListener("resize", handleResize);
-  };
+  bindResize() {
+    window.addEventListener("resize", this.handleResize);
+  }
 
-  const unbindResize = () => {
-    window.removeEventListener("resize", handleResize);
-  };
+  unbindResize() {
+    window.removeEventListener("resize", this.handleResize);
+  }
 
   /**
    * @param {HTMLDivElement} listWrapperRef
    */
-  const refListWrapper = value => {
-    listWrapperRef.current = value;
+  refListWrapper = listWrapperRef => {
+    this.listWrapperRef = listWrapperRef;
   };
 
-  const { children, loading } = props;
+  render() {
+    const { refListWrapper } = this;
+    const { children, loading } = this.props;
+    const { listMaxHeight } = this.state;
 
-  useEffect(() => {
-    bindResize();
-    updateMaxHeight();
-
-    return () => {
-      unbindResize();
-    };
-  }, []);
-
-  useEffect(
-    () => {
-      if (
-        props.transitionStatus === transitionStatuses.HIDDEN ||
-        props.transitionStatus === transitionStatuses.EXITED
-      ) {
-        window.requestAnimationFrame(() => {
-          updateMaxHeight();
-        });
-      }
-    },
-    [props]
-  );
-
-  return (
-    <Transition in={loading} timeout={TRANSITION_DURATION}>
-      {loadingTransitionState =>
-        children({
-          loadingTransitionState,
-          listMaxHeight,
-          refListWrapper
-        })
-      }
-    </Transition>
-  );
-};
+    return (
+      <Transition in={loading} timeout={TRANSITION_DURATION}>
+        {loadingTransitionState =>
+          children({
+            loadingTransitionState,
+            listMaxHeight,
+            refListWrapper
+          })
+        }
+      </Transition>
+    );
+  }
+}
 
 PanelBehavior.propTypes = {
   children: PropTypes.func.isRequired,
@@ -96,5 +105,3 @@ PanelBehavior.propTypes = {
 PanelBehavior.defaultProps = {
   loading: false
 };
-
-export default PanelBehavior;

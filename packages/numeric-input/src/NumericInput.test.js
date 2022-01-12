@@ -62,21 +62,23 @@ describe("event handlers", () => {
   });
 
   it("sets the value", () => {
-    expect(interactiveElement.props().value).toEqual("23");
+    expect(interactiveElement).toHaveProp("value", "23");
   });
 
-  it.skip("increments value", () => {
+  it("increments value", () => {
     const spinnerWrapper = wrapper.find(SpinnerPresenter);
     spinnerWrapper.props().increment();
+
     expect(onChangeMock).toHaveBeenCalledTimes(1);
     expect(onChangeMock).toHaveBeenCalledWith(24);
 
-    expect(interactiveElement.props().value).toEqual("24");
+    expect(interactiveElement).toHaveProp("value", "24");
   });
 
-  it.skip("decrements value", () => {
+  it("decrements value", () => {
     const spinnerWrapper = wrapper.find(SpinnerPresenter);
     spinnerWrapper.props().decrement();
+
     expect(onChangeMock).toHaveBeenCalledTimes(1);
     expect(onChangeMock).toHaveBeenCalledWith(22);
 
