@@ -1,3 +1,10 @@
+# [@hig/multi-downshift-v1.0.1](https://github.com/Autodesk/hig/compare/@hig/multi-downshift@1.0.0...@hig/multi-downshift@1.0.1) (2022-01-12)
+
+
+### Bug Fixes
+
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+
 # [@hig/multi-downshift-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/multi-downshift@0.1.2...@hig/multi-downshift@1.0.0) (2020-10-30)
 
 
