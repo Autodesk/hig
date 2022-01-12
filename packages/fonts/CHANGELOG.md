@@ -1,3 +1,10 @@
+# [@hig/fonts-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/fonts@1.0.2...@hig/fonts@1.0.3) (2022-01-12)
+
+
+### Bug Fixes
+
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+
 # [@hig/fonts-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/fonts@1.0.1...@hig/fonts@1.0.2) (2019-03-05)
 
 
