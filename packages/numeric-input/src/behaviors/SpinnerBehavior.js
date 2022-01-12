@@ -1,119 +1,119 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState, useRef } from "react";
+import { Component } from "react";
 import PropTypes from "prop-types";
 
-const SpinnerBehavior = props => {
-  const [valueHook, setValueHook] = useState(props.initialValue);
-  const [timerSet, setTimerSet] = useState(false);
-  const [timer, setTimer] = useState(null);
-  const inputRef = useRef(null);
-  const isValueControlled = () =>
-    props.value !== undefined && props.value !== null;
-
-  const getValue = () => {
-    if (props.value !== undefined && props.value !== null) {
-      return props.value;
-    }
-    return valueHook;
+export default class SpinnerBehavior extends Component {
+  static propTypes = {
+    children: PropTypes.func,
+    onChange: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+    value: PropTypes.number,
+    initialValue: PropTypes.number,
+    step: PropTypes.number,
+    disabled: PropTypes.bool
+  };
+  static defaultProps = {
+    step: 1,
+    initialValue: 0,
+    value: undefined,
+    onChange: () => {}
   };
 
-  const setValue = valueRef => {
-    props.onChange(valueRef);
+  constructor(props) {
+    super(props);
 
-    if (!isValueControlled()) {
-      setValueHook(valueRef);
+    this.state = {
+      value: props.initialValue
+    };
+
+    this.timer = null;
+    this.timerSet = false;
+    this.inputRef = null;
+  }
+
+  onDirectChange = event => {
+    const newValue = event.target.value;
+    this.setValue(newValue);
+  };
+
+  getValue() {
+    if (this.props.value !== undefined && this.props.value !== null) {
+      return this.props.value;
+    }
+    return this.state.value;
+  }
+  setValue = value => {
+    this.props.onChange(value);
+
+    if (!this.isValueControlled()) {
+      this.setState({ value });
     }
   };
 
-  const updateValue = valueRef => {
+  setInputRef = element => {
+    this.inputRef = element;
+  };
+
+  updateValue = value => {
     // Do nothing if the input is currently disabled
-    if (props.disabled) {
+    if (this.props.disabled) {
       return;
     }
-    setValue(valueRef);
-    inputRef.current.focus();
+    this.setValue(value);
+    this.inputRef.focus();
   };
 
-  const increment = () => {
-    updateValue(Number(getValue()) + props.step);
+  isValueControlled = () =>
+    this.props.value !== undefined && this.props.value !== null;
+
+  increment = () => {
+    this.updateValue(Number(this.getValue()) + this.props.step);
   };
 
-  const decrement = () => {
-    updateValue(Number(getValue()) - props.step);
+  decrement = () => {
+    this.updateValue(Number(this.getValue()) - this.props.step);
   };
 
-  const mouseDownIncrement = () => {
-    if (!timerSet) {
-      setTimer(
-        setInterval(() => {
-          increment();
-        }, 150)
-      );
-      setTimerSet(true);
+  mouseDownIncrement = () => {
+    if (!this.timerSet) {
+      this.timer = setInterval(() => {
+        this.increment();
+      }, 150);
+      this.timerSet = true;
     }
   };
 
-  const mouseDownDecrement = () => {
-    if (!timerSet) {
-      setTimer(
-        setInterval(() => {
-          decrement();
-        }, 150)
-      );
-      setTimerSet(true);
+  mouseDownDecrement = () => {
+    if (!this.timerSet) {
+      this.timer = setInterval(() => {
+        this.decrement();
+      }, 150);
+      this.timerSet = true;
     }
   };
 
-  const clearTimer = () => {
-    clearInterval(timer);
-    setTimerSet(false);
+  clearTimer = () => {
+    clearInterval(this.timer);
+    this.timerSet = false;
   };
 
-  const mouseLeaveClearTimer = event => {
-    if (props.onMouseLeave) {
-      props.onMouseLeave(event);
+  mouseLeaveClearTimer = event => {
+    if (this.props.onMouseLeave) {
+      this.props.onMouseLeave(event);
     }
-    clearTimer();
+    this.clearTimer();
   };
 
-  const onDirectChange = event => {
-    const newValue = event.target.value;
-    setValueHook(newValue);
-  };
-
-  const setInputRef = element => {
-    inputRef.current = element;
-  };
-
-  return props.children({
-    onDirectChange,
-    increment,
-    decrement,
-    value: getValue(),
-    mouseDownDecrement,
-    mouseDownIncrement,
-    clearTimer,
-    mouseLeaveClearTimer,
-    setInputRef
-  });
-};
-
-SpinnerBehavior.displayName = "SpinnerBehavior";
-
-SpinnerBehavior.propTypes = {
-  children: PropTypes.func,
-  onChange: PropTypes.func,
-  onMouseLeave: PropTypes.func,
-  value: PropTypes.number,
-  initialValue: PropTypes.number,
-  step: PropTypes.number,
-  disabled: PropTypes.bool
-};
-SpinnerBehavior.defaultProps = {
-  step: 1,
-  initialValue: 0,
-  value: undefined,
-  onChange: () => {}
-};
-
-export default SpinnerBehavior;
+  render() {
+    return this.props.children({
+      onDirectChange: this.onDirectChange,
+      increment: this.increment,
+      decrement: this.decrement,
+      value: this.getValue(),
+      mouseDownDecrement: this.mouseDownDecrement,
+      mouseDownIncrement: this.mouseDownIncrement,
+      clearTimer: this.clearTimer,
+      mouseLeaveClearTimer: this.mouseLeaveClearTimer,
+      setInputRef: this.setInputRef
+    });
+  }
+}

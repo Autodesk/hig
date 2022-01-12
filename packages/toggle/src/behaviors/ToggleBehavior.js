@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Component } from "react";
 import PropTypes from "prop-types";
 
 /**
@@ -6,83 +6,91 @@ import PropTypes from "prop-types";
  * @property {boolean} on
  */
 
-const ToggleBehavior = props => {
-  const [onHook, setOnHook] = useState(props.defaultOn);
-  const isControlled = () => props.on !== undefined;
+export default class ToggleBehavior extends Component {
+  static propTypes = {
+    /**
+     * Turns on the toggle
+     */
+    on: PropTypes.bool,
+    /**
+     * Initially checks the checkbox, but allows user action to change it
+     */
+    defaultOn: PropTypes.bool,
+    /**
+     * Called when user changes the value of the field
+     */
+    onChange: PropTypes.func,
+    /**
+     * Called when user releases a keyboard key
+     */
+    onKeyUp: PropTypes.func,
+    /**
+     * Render prop
+     */
+    children: PropTypes.func
+  };
+
+  static defaultProps = {
+    defaultOn: false
+  };
+
+  /**
+   * @type {State}
+   */
+  state = {
+    on: this.props.defaultOn
+  };
+
   /**
    * @returns {boolean}
    */
-  const getChecked = () => {
-    if (isControlled()) {
-      return props.on;
+  getChecked() {
+    if (this.isControlled()) {
+      return this.props.on;
     }
 
-    return onHook;
-  };
+    return this.state.on;
+  }
 
   /**
    * @param {boolean} on
    */
-  const setChecked = onParam => {
-    const { onChange, onKeyUp } = props;
+  setChecked(on) {
+    const { onChange, onKeyUp } = this.props;
 
-    if (onChange) onChange(onParam);
-    if (onKeyUp) onKeyUp(onParam);
+    if (onChange) onChange(on);
+    if (onKeyUp) onKeyUp(on);
 
-    if (!isControlled()) {
-      setOnHook(onParam);
+    if (!this.isControlled()) {
+      this.setState({ on });
     }
-  };
+  }
+
+  isControlled() {
+    return this.props.on !== undefined;
+  }
 
   /**
    * @param {UIEvent} event
    */
-  const handleChange = event => {
-    setChecked(event.target.checked);
+  handleChange = event => {
+    this.setChecked(event.target.checked);
   };
 
-  const handleKeyUp = event => {
+  handleKeyUp = event => {
     if (event.keyCode === 13) {
-      setChecked(!event.target.checked);
+      this.setChecked(!event.target.checked);
     }
   };
 
-  const on = getChecked();
+  render() {
+    const { handleChange, handleKeyUp } = this;
+    const on = this.getChecked();
 
-  return props.children({
-    on,
-    handleChange,
-    handleKeyUp
-  });
-};
-
-ToggleBehavior.displayName = "ToggleBehavior";
-
-ToggleBehavior.propTypes = {
-  /**
-   * Turns on the toggle
-   */
-  on: PropTypes.bool,
-  /**
-   * Initially checks the checkbox, but allows user action to change it
-   */
-  defaultOn: PropTypes.bool,
-  /**
-   * Called when user changes the value of the field
-   */
-  onChange: PropTypes.func,
-  /**
-   * Called when user releases a keyboard key
-   */
-  onKeyUp: PropTypes.func,
-  /**
-   * Render prop
-   */
-  children: PropTypes.func
-};
-
-ToggleBehavior.defaultProps = {
-  defaultOn: false
-};
-
-export default ToggleBehavior;
+    return this.props.children({
+      on,
+      handleChange,
+      handleKeyUp
+    });
+  }
+}

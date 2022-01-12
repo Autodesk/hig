@@ -1,41 +1,50 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import { Component } from "react";
 import PropTypes from "prop-types";
 
-const FocusBehavior = props => {
-  const [hasFocus, setHasFocus] = useState(false);
+export default class FocusBehavior extends Component {
+  static propTypes = {
+    children: PropTypes.func.isRequired,
+    onFocus: PropTypes.func,
+    onBlur: PropTypes.func
+  };
 
-  const handleFocus = event => {
-    if (props.onFocus) {
-      props.onFocus(event);
+  constructor(props) {
+    super(props);
+
+    // Binding in the constructor because performance
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
+
+    this.state = {
+      hasFocus: false
+    };
+  }
+
+  handleFocus(event) {
+    if (this.props.onFocus) {
+      this.props.onFocus(event);
     }
 
     if (!event.defaultPrevented) {
-      setHasFocus(true);
+      this.setState({ hasFocus: true });
     }
-  };
+  }
 
-  const handleBlur = event => {
-    if (props.onBlur) {
-      props.onBlur(event);
+  handleBlur(event) {
+    if (this.props.onBlur) {
+      this.props.onBlur(event);
     }
 
     if (!event.defaultPrevented) {
-      setHasFocus(false);
+      this.setState({ hasFocus: false });
     }
-  };
+  }
 
-  return props.children({
-    hasFocus,
-    onFocus: handleFocus,
-    onBlur: handleBlur
-  });
-};
-
-FocusBehavior.propTypes = {
-  children: PropTypes.func.isRequired,
-  onFocus: PropTypes.func,
-  onBlur: PropTypes.func
-};
-
-export default FocusBehavior;
+  render() {
+    return this.props.children({
+      hasFocus: this.state.hasFocus,
+      onFocus: this.handleFocus,
+      onBlur: this.handleBlur
+    });
+  }
+}

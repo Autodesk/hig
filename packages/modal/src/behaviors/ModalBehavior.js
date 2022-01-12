@@ -1,11 +1,27 @@
+import { Component } from "react";
 import PropTypes from "prop-types";
 
-const ModalBehavior = props => {
+export default class ModalBehavior extends Component {
+  static propTypes = {
+    /**
+     * Triggers when you click the close button
+     */
+    onCloseClick: PropTypes.func,
+    /**
+     * Triggers when you click the overlay behind the modal
+     */
+    onOverlayClick: PropTypes.func,
+    /**
+     * A function to render content of the modal
+     */
+    children: PropTypes.func
+  };
+
   /**
    * @param {MouseEvent} event
    */
-  const handleCloseClick = event => {
-    const { onCloseClick } = props;
+  handleCloseClick = event => {
+    const { onCloseClick } = this.props;
 
     if (onCloseClick) {
       onCloseClick(event);
@@ -15,8 +31,8 @@ const ModalBehavior = props => {
   /**
    * @param {MouseEvent} event
    */
-  const handleOverlayClick = event => {
-    const { onOverlayClick } = props;
+  handleOverlayClick = event => {
+    const { onOverlayClick } = this.props;
 
     if (onOverlayClick) {
       onOverlayClick(event);
@@ -26,32 +42,15 @@ const ModalBehavior = props => {
   /**
    * @param {MouseEvent} event
    */
-  const handleWindowClick = event => {
+  handleWindowClick = event => {
     event.stopPropagation();
   };
 
-  return props.children({
-    handleCloseClick,
-    handleOverlayClick,
-    handleWindowClick
-  });
-};
-
-ModalBehavior.displayName = "ModalBehavior";
-
-ModalBehavior.propTypes = {
-  /**
-   * Triggers when you click the close button
-   */
-  onCloseClick: PropTypes.func,
-  /**
-   * Triggers when you click the overlay behind the modal
-   */
-  onOverlayClick: PropTypes.func,
-  /**
-   * A function to render content of the modal
-   */
-  children: PropTypes.func
-};
-
-export default ModalBehavior;
+  render() {
+    return this.props.children({
+      handleCloseClick: this.handleCloseClick,
+      handleOverlayClick: this.handleOverlayClick,
+      handleWindowClick: this.handleWindowClick
+    });
+  }
+}

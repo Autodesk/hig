@@ -1,5 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`flyout/Flyout alterCoordinates is called when rendering 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      Object {
+        "anchorPoint": "top-left",
+        "containerPosition": Object {
+          "left": 0,
+          "top": 0,
+        },
+        "pointerPosition": Object {
+          "left": 0,
+          "top": 1,
+        },
+      },
+      Object {
+        "actionRect": Object {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+        },
+        "panelRect": Object {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+        },
+        "pointerRect": Object {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+        },
+        "viewportRect": Object {
+          "bottom": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "width": 0,
+        },
+      },
+    ],
+  ],
+}
+`;
+
 exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
 .emotion-7 {
   position: relative;

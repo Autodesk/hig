@@ -10,8 +10,8 @@ describe("TextLink", () => {
         <TextLink link="https://www.autodesk.com/">
           This is a text link
         </TextLink>
-      ).text()
-    ).toBe("This is a text link");
+      )
+    ).toHaveText("This is a text link");
   });
 
   it("allows a click handler", () => {
@@ -58,8 +58,8 @@ describe("TextLink", () => {
           <TextLink link="https://www.autodesk.com/" target="_parent">
             Link
           </TextLink>
-        ).props().target
-      ).toEqual("_parent");
+        )
+      ).toHaveProp("target", "_parent");
     });
   });
 

@@ -47,8 +47,7 @@
     "raw-loader": "^0.5.1",
     "react-svg-loader": "^2.1.0",
     "sass-loader": "^7.1.0",
-    "surge": "^0.20.1",
-    "wd": "^1.14.0"
+    "surge": "^0.20.1"
   },
   "dependencies": {
     "@hig/fonts": "^1.0.2",

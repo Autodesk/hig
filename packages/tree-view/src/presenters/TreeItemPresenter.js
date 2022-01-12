@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { ThemeContext } from "@hig/theme-context";
 
@@ -6,20 +6,29 @@ import TreeItem from "../TreeItem";
 import SingleTreeNodePresenter from "./SingleTreeNodePresenter";
 import SingleTreeNodeFolderPresenter from "./SingleTreeNodeFolderPresenter";
 
-const TreeItemPresenter = props => {
-  const renderTreeItem = () => {
-    const { children } = props;
-    useEffect(
-      () => {
-        const { id, keyboardOpenId } = props;
+export default class TreeItemPresenter extends Component {
+  static propTypes = {
+    children: PropTypes.node,
+    /**
+     * This only appears as a label when a TreeItem is the
+     * child of another TreeItem. If your TreeItem has any
+     * other elements as children this prop will not render
+     */
+    label: PropTypes.node,
+    stylesheet: PropTypes.func
+  };
 
-        if (keyboardOpenId === id) {
-          props.setIsCollapsed(!props.getIsCollapsed());
-          props.setKeyboardOpenId("");
-        }
-      },
-      [props.keyboardOpenId]
-    );
+  componentDidUpdate({ keyboardOpenId: previousKeyboardOpenId }) {
+    const { id, keyboardOpenId } = this.props;
+
+    if (keyboardOpenId === id && keyboardOpenId !== previousKeyboardOpenId) {
+      this.props.setIsCollapsed(!this.props.getIsCollapsed());
+      this.props.setKeyboardOpenId("");
+    }
+  }
+
+  renderTreeItem() {
+    const { children } = this.props;
 
     return (
       <ThemeContext.Consumer>
@@ -30,34 +39,24 @@ const TreeItemPresenter = props => {
           ) {
             return (
               <SingleTreeNodeFolderPresenter
-                {...props}
+                {...this.props}
                 density={metadata.densityId}
                 themeData={resolvedRoles}
               />
             );
           }
           return (
-            <SingleTreeNodePresenter {...props} themeData={resolvedRoles} />
+            <SingleTreeNodePresenter
+              {...this.props}
+              themeData={resolvedRoles}
+            />
           );
         }}
       </ThemeContext.Consumer>
     );
-  };
+  }
 
-  return renderTreeItem();
-};
-
-TreeItemPresenter.displayName = "TreeItemPresenter";
-
-TreeItemPresenter.propTypes = {
-  children: PropTypes.node,
-  /**
-   * This only appears as a label when a TreeItem is the
-   * child of another TreeItem. If your TreeItem has any
-   * other elements as children this prop will not render
-   */
-  label: PropTypes.node,
-  stylesheet: PropTypes.func
-};
-
-export default TreeItemPresenter;
+  render() {
+    return this.renderTreeItem();
+  }
+}
