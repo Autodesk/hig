@@ -63,7 +63,7 @@ describe("avatar/Avatar", () => {
       }"`, () => {
         const wrapper = mount(<Avatar name={nameData.name} />);
 
-        expect(wrapper.find("Initials")).toHaveText(nameData.expectedInitials);
+        expect(wrapper.find("Initials").text()).toBe(nameData.expectedInitials);
       });
     });
 
@@ -126,7 +126,7 @@ describe("avatar/Avatar", () => {
           <Avatar firstName={nameData.firstName} lastName={nameData.lastName} />
         );
 
-        expect(wrapper.find("Initials")).toHaveText(nameData.expectedInitials);
+        expect(wrapper.find("Initials").text()).toBe(nameData.expectedInitials);
       });
     });
   });
@@ -163,10 +163,12 @@ describe("avatar/Avatar", () => {
     it("uses the default aria-label message", () => {
       const wrapper = mount(<Avatar firstName="John" lastName="Snow" />);
 
-      expect(wrapper.find("span").first()).toHaveProp(
-        "aria-label",
-        "Avatar for John Snow"
-      );
+      expect(
+        wrapper
+          .find("span")
+          .first()
+          .props()["aria-label"]
+      ).toEqual("Avatar for John Snow");
     });
   });
 
@@ -176,10 +178,12 @@ describe("avatar/Avatar", () => {
         <Avatar firstName="John" lastName="Snow" label="Avatar en Español" />
       );
 
-      expect(wrapper.find("span").first()).toHaveProp(
-        "aria-label",
-        "Avatar en Español"
-      );
+      expect(
+        wrapper
+          .find("span")
+          .first()
+          .props()["aria-label"]
+      ).toEqual("Avatar en Español");
     });
   });
 
@@ -193,8 +197,7 @@ describe("avatar/Avatar", () => {
         />
       );
 
-      expect(wrapper.find("Image")).toHaveProp(
-        "alt",
+      expect(wrapper.find("Image").props().alt).toEqual(
         "Avatar image of John Snow"
       );
     });
@@ -211,7 +214,7 @@ describe("avatar/Avatar", () => {
         />
       );
 
-      expect(wrapper.find("Image")).toHaveProp("alt", "Comment dit-ons");
+      expect(wrapper.find("Image").props().alt).toEqual("Comment dit-ons");
     });
   });
 
@@ -221,7 +224,7 @@ describe("avatar/Avatar", () => {
         <Avatar firstName="John" lastName="Snow" size={sizes.LARGE_48} />
       );
 
-      expect(wrapper.find("Initials")).toHaveText("JS");
+      expect(wrapper.find("Initials").text()).toBe("JS");
     });
   });
 
@@ -237,11 +240,11 @@ describe("avatar/Avatar", () => {
           />
         );
 
-        expect(wrapper.find("img")).toBePresent();
+        expect(wrapper.find("img").exists());
 
         wrapper.find("img").simulate("error");
 
-        expect(wrapper.find("img")).not.toBePresent();
+        expect(wrapper.find("img")).not.toBe();
       });
     });
   });
