@@ -4,6 +4,7 @@ Accordions can make content-heavy pages appear less so by vertically stacking it
 
 Read more about when and how to use the Accordion component [on the internal wiki](https://wiki.autodesk.com/display/HIG/accordion).
 
+
 ## Getting started
 
 ### Install the package

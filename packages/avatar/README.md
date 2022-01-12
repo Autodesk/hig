@@ -6,6 +6,7 @@ Initials are dynamically generated from the provided name and always rendered. T
 
 Read more about when and how to use the Avatar component [on the hig website](https://hig.autodesk.com/web/components/avatars).
 
+
 ## Getting started
 
 ### Install the package

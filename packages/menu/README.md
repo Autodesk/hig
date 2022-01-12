@@ -4,6 +4,7 @@ A menu is a mechanism to display a list of choices through interaction with a bu
 
 Read more about when and how to use the Menu component [on the internal wiki](https://hig.autodesk.com/web/components/menus).
 
+
 ## Getting started
 
 ### Install the package

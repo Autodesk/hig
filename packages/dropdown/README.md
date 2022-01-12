@@ -4,6 +4,7 @@ Dropdowns provide a menu to select one or many from a list of more than 4 items.
 
 Read more about when and how to use the Dropdown component [on the website](https://hig.autodesk.com/web/components/form-elements).
 
+
 ## Getting started
 
 ### Install the package

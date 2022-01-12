@@ -17,6 +17,7 @@ export default MyComponent
 
 Read more about where and how to use icons on [the website](https://hig.autodesk.com/web/basics/icons).
 
+
 ## Getting started
 
 ### Install the package
