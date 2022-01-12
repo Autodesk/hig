@@ -1,3 +1,10 @@
+# [@hig/top-nav-v3.4.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.4.0...@hig/top-nav@3.4.1) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+
 # [@hig/top-nav-v3.4.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.3.0...@hig/top-nav@3.4.0) (2021-05-25)
 
 
