@@ -1,3 +1,12 @@
+# [@hig/banner-v2.3.2](https://github.com/Autodesk/hig/compare/@hig/banner@2.3.1...@hig/banner@2.3.2) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* Added animation support for visible prop ([3956cba](https://github.com/Autodesk/hig/commit/3956cba))
+* change functions enzyme ([99b2ff5](https://github.com/Autodesk/hig/commit/99b2ff5))
+
 # [@hig/banner-v2.3.1](https://github.com/Autodesk/hig/compare/@hig/banner@2.3.0...@hig/banner@2.3.1) (2021-10-11)
 
 

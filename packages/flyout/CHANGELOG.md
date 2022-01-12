@@ -1,3 +1,19 @@
+# [@hig/flyout-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/flyout@1.2.2...@hig/flyout@1.3.0) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* control errors , space lines ([1367496](https://github.com/Autodesk/hig/commit/1367496))
+* improve useEffect manage state ([0deebd0](https://github.com/Autodesk/hig/commit/0deebd0))
+* onmouseover not working flyout ([cecb453](https://github.com/Autodesk/hig/commit/cecb453))
+
+
+### Features
+
+* fix lint errors ([2b94e12](https://github.com/Autodesk/hig/commit/2b94e12))
+* update Flyout test ([24d8a58](https://github.com/Autodesk/hig/commit/24d8a58))
+
 # [@hig/flyout-v1.2.2](https://github.com/Autodesk/hig/compare/@hig/flyout@1.2.1...@hig/flyout@1.2.2) (2021-02-05)
 
 

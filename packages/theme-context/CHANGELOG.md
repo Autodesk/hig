@@ -1,3 +1,10 @@
+# [@hig/theme-context-v3.0.2](https://github.com/Autodesk/hig/compare/@hig/theme-context@3.0.1...@hig/theme-context@3.0.2) (2022-01-12)
+
+
+### Bug Fixes
+
+* unit testing ([29a1a1b](https://github.com/Autodesk/hig/commit/29a1a1b))
+
 # [@hig/theme-context-v3.0.1](https://github.com/Autodesk/hig/compare/@hig/theme-context@3.0.0...@hig/theme-context@3.0.1) (2020-10-14)
 
 

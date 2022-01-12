@@ -1,3 +1,11 @@
+# [@hig/surface-v1.2.1](https://github.com/Autodesk/hig/compare/@hig/surface@1.2.0...@hig/surface@1.2.1) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* add validation render Element ([2b77595](https://github.com/Autodesk/hig/commit/2b77595))
+
 # [@hig/surface-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/surface@1.1.1...@hig/surface@1.2.0) (2021-02-24)
 
 

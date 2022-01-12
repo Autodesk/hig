@@ -1,3 +1,11 @@
+# [@hig/side-nav-v2.2.3](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.2.2...@hig/side-nav@2.2.3) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* improve call function and remove console error ([61bbbcc](https://github.com/Autodesk/hig/commit/61bbbcc))
+
 # [@hig/side-nav-v2.2.2](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.2.1...@hig/side-nav@2.2.2) (2021-08-17)
 
 

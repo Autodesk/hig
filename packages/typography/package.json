@@ -1,6 +1,6 @@
 {
   "name": "@hig/typography",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "HIG Typography components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -29,7 +29,7 @@
     "@hig/semantic-release-config": "^0.1.0"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.1",
+    "@hig/theme-context": "^3.0.2",
     "@hig/theme-data": "^2.22.0",
     "react": "^17.0.0"
   },

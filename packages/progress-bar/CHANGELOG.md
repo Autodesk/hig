@@ -1,3 +1,10 @@
+# [@hig/progress-bar-v1.1.2](https://github.com/Autodesk/hig/compare/@hig/progress-bar@1.1.1...@hig/progress-bar@1.1.2) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+
 # [@hig/progress-bar-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/progress-bar@1.1.0...@hig/progress-bar@1.1.1) (2020-05-12)
 
 

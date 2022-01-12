@@ -1,3 +1,10 @@
+# [@hig/spacer-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/spacer@1.1.0...@hig/spacer@1.1.1) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+
 # [@hig/spacer-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/spacer@1.0.8...@hig/spacer@1.1.0) (2021-02-24)
 
 

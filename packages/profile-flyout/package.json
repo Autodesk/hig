@@ -1,6 +1,6 @@
 {
   "name": "@hig/profile-flyout",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "HIG Profile Flyout",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -17,14 +17,14 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/avatar": "^1.4.0",
-    "@hig/flyout": "^1.2.2",
+    "@hig/avatar": "^1.4.1",
+    "@hig/flyout": "^1.3.0",
     "@hig/utils": "^0.4.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.1",
+    "@hig/theme-context": "^3.0.2",
     "@hig/theme-data": "^2.22.0",
     "react": "^17.0.0"
   },

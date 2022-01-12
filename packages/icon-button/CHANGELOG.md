@@ -1,3 +1,10 @@
+# [@hig/icon-button-v2.6.2](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.6.1...@hig/icon-button@2.6.2) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+
 # [@hig/icon-button-v2.6.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.6.0...@hig/icon-button@2.6.1) (2021-09-28)
 
 

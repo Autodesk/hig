@@ -1,3 +1,11 @@
+# [@hig/tree-view-v1.2.3](https://github.com/Autodesk/hig/compare/@hig/tree-view@1.2.2...@hig/tree-view@1.2.3) (2022-01-12)
+
+
+### Bug Fixes
+
+* refactor componendDIdupdate in functional ([215ba42](https://github.com/Autodesk/hig/commit/215ba42))
+* unit testing ([29a1a1b](https://github.com/Autodesk/hig/commit/29a1a1b))
+
 # [@hig/tree-view-v1.2.2](https://github.com/Autodesk/hig/compare/@hig/tree-view@1.2.1...@hig/tree-view@1.2.2) (2021-12-08)
 
 
