@@ -1,3 +1,15 @@
+# [@hig/button-v2.0.1](https://github.com/Autodesk/hig/compare/@hig/button@2.0.0...@hig/button@2.0.1) (2022-01-12)
+
+
+### Bug Fixes
+
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
 # [@hig/button-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/button@1.4.5...@hig/button@2.0.0) (2022-01-12)
 
 
