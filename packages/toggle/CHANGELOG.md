@@ -1,3 +1,15 @@
+# [@hig/toggle-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/toggle@1.0.2...@hig/toggle@1.0.3) (2022-01-12)
+
+
+### Bug Fixes
+
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
 # [@hig/toggle-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/toggle@1.0.1...@hig/toggle@1.0.2) (2022-01-12)
 
 
