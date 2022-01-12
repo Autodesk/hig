@@ -1,27 +1,11 @@
-import { Component } from "react";
 import PropTypes from "prop-types";
 
-export default class ModalBehavior extends Component {
-  static propTypes = {
-    /**
-     * Triggers when you click the close button
-     */
-    onCloseClick: PropTypes.func,
-    /**
-     * Triggers when you click the overlay behind the modal
-     */
-    onOverlayClick: PropTypes.func,
-    /**
-     * A function to render content of the modal
-     */
-    children: PropTypes.func
-  };
-
+const ModalBehavior = props => {
   /**
    * @param {MouseEvent} event
    */
-  handleCloseClick = event => {
-    const { onCloseClick } = this.props;
+  const handleCloseClick = event => {
+    const { onCloseClick } = props;
 
     if (onCloseClick) {
       onCloseClick(event);
@@ -31,8 +15,8 @@ export default class ModalBehavior extends Component {
   /**
    * @param {MouseEvent} event
    */
-  handleOverlayClick = event => {
-    const { onOverlayClick } = this.props;
+  const handleOverlayClick = event => {
+    const { onOverlayClick } = props;
 
     if (onOverlayClick) {
       onOverlayClick(event);
@@ -42,15 +26,32 @@ export default class ModalBehavior extends Component {
   /**
    * @param {MouseEvent} event
    */
-  handleWindowClick = event => {
+  const handleWindowClick = event => {
     event.stopPropagation();
   };
 
-  render() {
-    return this.props.children({
-      handleCloseClick: this.handleCloseClick,
-      handleOverlayClick: this.handleOverlayClick,
-      handleWindowClick: this.handleWindowClick
-    });
-  }
-}
+  return props.children({
+    handleCloseClick,
+    handleOverlayClick,
+    handleWindowClick
+  });
+};
+
+ModalBehavior.displayName = "ModalBehavior";
+
+ModalBehavior.propTypes = {
+  /**
+   * Triggers when you click the close button
+   */
+  onCloseClick: PropTypes.func,
+  /**
+   * Triggers when you click the overlay behind the modal
+   */
+  onOverlayClick: PropTypes.func,
+  /**
+   * A function to render content of the modal
+   */
+  children: PropTypes.func
+};
+
+export default ModalBehavior;

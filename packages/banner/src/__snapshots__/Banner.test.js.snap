@@ -101,23 +101,12 @@ exports[`banner/Banner snapshot tests renders with custom className 1`] = `
 
 <div
   aria-busy={false}
-  aria-expanded={true}
+  aria-expanded={false}
   onTransitionEnd={[Function]}
-  style={
-    Object {
-      "height": "",
-      "overflow": "",
-      "transition": "",
-    }
-  }
+  style={null}
 >
   <div
-    style={
-      Object {
-        "transform": "",
-        "transition": "",
-      }
-    }
+    style={null}
   >
     <div
       className="emotion-6 custom"
@@ -439,23 +428,12 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
 
 <div
   aria-busy={false}
-  aria-expanded={true}
+  aria-expanded={false}
   onTransitionEnd={[Function]}
-  style={
-    Object {
-      "height": "",
-      "overflow": "",
-      "transition": "",
-    }
-  }
+  style={null}
 >
   <div
-    style={
-      Object {
-        "transform": "",
-        "transition": "",
-      }
-    }
+    style={null}
   >
     <div
       className="emotion-6"

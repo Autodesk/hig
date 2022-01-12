@@ -34,7 +34,7 @@ storybook.add(
     const avatarArray = [];
     for (let i = 0; i < COLOR_VARIANT_COUNT; i += 1) {
       avatarArray.push(
-        <div style={{ padding: "10px", height: "48px" }}>
+        <div style={{ padding: "10px", height: "48px" }} key={i}>
           {renderStory({
             firstName: String.fromCharCode(105 + i), // calculates backgroundIdFromName() = 1 at start
             lastName: "",
