@@ -1,98 +1,90 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import { AVAILABLE_TARGETS } from "../targets";
 import ModulePresenter from "./presenters/ModulePresenter";
 
-export default class Module extends Component {
-  static propTypes = {
-    /** Indicates this module is currently active */
-    active: PropTypes.bool,
-    /** Indicates a nested submodule is currently active */
-    activeChildren: PropTypes.bool,
-    /** Zero or more SideNav submodules */
-    children: PropTypes.node,
-    /** An instance of @hig/icon */
-    icon: PropTypes.node,
-    /** URL to navigate to when clicking this module */
-    link: PropTypes.string,
-    /** Indicates whether to display nested submodules */
-    minimized: PropTypes.bool,
-    /** Called when clicking on the collapse button */
-    onClickCollapseButton: PropTypes.func,
-    /** Called when clicking on the title */
-    onClickTitle: PropTypes.func,
-    /** Called when link is focused  */
-    onFocus: PropTypes.func,
-    /** Called when hovering over the title */
-    onMouseOver: PropTypes.func,
-    /** Function to modify the component's styles */
-    stylesheet: PropTypes.func,
-    /** A label for rendering this Module */
-    title: PropTypes.string.isRequired,
-    /** Anchor target. Applicable only if link is provided */
-    target: PropTypes.oneOf(AVAILABLE_TARGETS)
-  };
-
-  static defaultProps = {
-    minimized: false
-  };
-
-  state = {
-    minimized: this.props.minimized
-  };
-
-  componentDidUpdate() {
-    const { children, link } = this.props;
-
-    if (children && link) {
-      /* eslint-disable-next-line no-console */
-      console.error(
-        "A module shouldn't be both a link and contain sub-modules"
-      );
-    }
-  }
+const Module = props => {
+  const [minimized, setMinimized] = useState(props.minimized);
+  const [callBackMinimized, setCallbackMinimized] = useState(null);
 
   /**
    * @param {Function} callback, function to call after minimize state has been toggled
    * @returns {Function}
    */
-  createMinimizeToggler = callback => () => {
-    this.setState(
-      { minimized: !this.state.minimized },
-      () => callback && callback()
-    );
+  const createMinimizeToggler = callback => () => {
+    setMinimized(!minimized);
+    setCallbackMinimized(callback);
   };
 
   /**
    * @returns {PresenterBag}
    */
-  createPresenterBag() {
-    const { minimized } = this.state;
-
-    return {
-      minimized,
-      onClickCollapseButton: this.createMinimizeToggler(
-        this.props.onClickCollapseButton
-      ),
-      onClickTitle: this.createMinimizeToggler(this.props.onClickTitle)
-    };
-  }
+  const createPresenterBag = () => ({
+    minimized,
+    onClickCollapseButton: createMinimizeToggler(props.onClickCollapseButton),
+    onClickTitle: createMinimizeToggler(props.onClickTitle)
+  });
 
   /**
    * @param {PresenterBag}
    */
-  renderPresenter = presenterBag => {
-    const presenterProps = { ...this.props, ...presenterBag };
+  const renderPresenter = presenterBag => {
+    const presenterProps = { ...props, ...presenterBag };
     const { children, ...otherProps } = presenterProps;
 
     return <ModulePresenter {...otherProps}>{children}</ModulePresenter>;
   };
 
-  render() {
-    const presenterBag = this.createPresenterBag();
-    const { renderPresenter } = this;
+  const presenterBag = createPresenterBag();
 
-    return renderPresenter(presenterBag);
-  }
-}
+  useEffect(
+    () => {
+      if (callBackMinimized) {
+        callBackMinimized();
+      }
+    },
+    [callBackMinimized]
+  );
+
+  useEffect(() => {}, [props.children, props.link]);
+
+  return renderPresenter(presenterBag);
+};
+
+Module.displayName = "Module";
+
+Module.propTypes = {
+  /** Indicates this module is currently active */
+  active: PropTypes.bool,
+  /** Indicates a nested submodule is currently active */
+  activeChildren: PropTypes.bool,
+  /** Zero or more SideNav submodules */
+  children: PropTypes.node,
+  /** An instance of @hig/icon */
+  icon: PropTypes.node,
+  /** URL to navigate to when clicking this module */
+  link: PropTypes.string,
+  /** Indicates whether to display nested submodules */
+  minimized: PropTypes.bool,
+  /** Called when clicking on the collapse button */
+  onClickCollapseButton: PropTypes.func,
+  /** Called when clicking on the title */
+  onClickTitle: PropTypes.func,
+  /** Called when link is focused  */
+  onFocus: PropTypes.func,
+  /** Called when hovering over the title */
+  onMouseOver: PropTypes.func,
+  /** Function to modify the component's styles */
+  stylesheet: PropTypes.func,
+  /** A label for rendering this Module */
+  title: PropTypes.string.isRequired,
+  /** Anchor target. Applicable only if link is provided */
+  target: PropTypes.oneOf(AVAILABLE_TARGETS)
+};
+
+Module.defaultProps = {
+  minimized: false
+};
+
+export default Module;

@@ -35,90 +35,85 @@ function getParams(prevState = {}, props = {}) {
 }
 
 /** @type {BannerAnimatorUpdater} */
-export function startExpand() {
-  return {
-    status: statuses.EXPANDING
-  };
+export function startExpand(setState) {
+  const { setStatus } = setState;
+
+  setStatus(statuses.EXPANDING);
 }
 
 /** @type {BannerAnimatorUpdater} */
-export function startCollapse() {
-  return {
-    status: statuses.COLLAPSING
-  };
+export function startCollapse(setState) {
+  const { setStatus } = setState;
+
+  setStatus(statuses.COLLAPSING);
 }
 
 /** @type {BannerAnimatorUpdater} */
-export function endExpand() {
-  return {
-    status: statuses.EXPANDED,
-    wrapperStyle: getWrapperReset(),
-    innerWrapperStyle: getInnerWrapperReset()
-  };
+export function endExpand(setState) {
+  const { setStatus, setWrapperStyle, setInnerWrapperStyle } = setState;
+  setStatus(statuses.EXPANDED);
+  setWrapperStyle(getWrapperReset());
+  setInnerWrapperStyle(getInnerWrapperReset());
 }
 
 /** @type {BannerAnimatorUpdater} */
-export function endCollapse(prevState, props) {
+export function endCollapse(prevState, setState, props) {
   const params = getParams(prevState, props);
+  const { setStatus, setWrapperStyle, setInnerWrapperStyle } = setState;
 
-  return {
-    status: statuses.COLLAPSED,
-    wrapperStyle: {
-      transition: "",
-      overflow: "hidden",
-      height: "0"
-    },
-    innerWrapperStyle: {
-      transition: "",
-      transform: getInnerWrapperCollapsedTransform(params)
-    }
-  };
+  setStatus(statuses.COLLAPSED);
+  setWrapperStyle({
+    transition: "",
+    overflow: "hidden",
+    height: "0"
+  });
+  setInnerWrapperStyle({
+    transition: "",
+    transform: getInnerWrapperCollapsedTransform(params)
+  });
 }
 
 /** @type {BannerAnimatorUpdater} */
-export function prepareCollapse(prevState, props) {
+export function prepareCollapse(prevState, setState, props) {
   const params = getParams(prevState, props);
+  const { setWrapperStyle, setInnerWrapperStyle } = setState;
 
-  return {
-    wrapperStyle: {
-      transition: "",
-      overflow: "hidden",
-      height: getWrapperExpandedHeight(params)
-    },
-    innerWrapperStyle: getInnerWrapperReset()
-  };
+  setWrapperStyle({
+    transition: "",
+    overflow: "hidden",
+    height: getWrapperExpandedHeight(params)
+  });
+  setInnerWrapperStyle(getInnerWrapperReset());
 }
 
 /** @type {BannerAnimatorUpdater} */
-export function animateCollapse(prevState, props) {
+export function animateCollapse(prevState, setState, props) {
   const params = getParams(prevState, props);
+  const { setWrapperStyle, setInnerWrapperStyle } = setState;
 
-  return {
-    wrapperStyle: {
-      transition: getWrapperTransition(params),
-      overflow: "hidden",
-      height: getWrapperCollapsedHeight(params)
-    },
-    innerWrapperStyle: {
-      transition: getInnerWrapperCollapsingTransition(params),
-      transform: getInnerWrapperCollapsedTransform(params)
-    }
-  };
+  setWrapperStyle({
+    transition: getWrapperTransition(params),
+    overflow: "hidden",
+    height: getWrapperCollapsedHeight(params)
+  });
+  setInnerWrapperStyle({
+    transition: getInnerWrapperCollapsingTransition(params),
+    transform: getInnerWrapperCollapsedTransform(params)
+  });
 }
 
 /** @type {BannerAnimatorUpdater} */
-export function animateExpand(prevState, props) {
+export function animateExpand(prevState, setState, props) {
   const params = getParams(prevState, props);
+  const { setWrapperStyle, setInnerWrapperStyle } = setState;
 
-  return {
-    wrapperStyle: {
-      transition: getWrapperTransition(params),
-      overflow: "hidden",
-      height: getWrapperExpandedHeight(params)
-    },
-    innerWrapperStyle: {
-      transition: getInnerWrapperExpandingTransition(params),
-      transform: getInnerWrapperExpandingTransform(params)
-    }
-  };
+  setWrapperStyle({
+    transition: getWrapperTransition(params),
+    overflow: "hidden",
+    height: getWrapperExpandedHeight(params)
+  });
+  setInnerWrapperStyle({
+    transition: getInnerWrapperExpandingTransition(params),
+    transform: getInnerWrapperExpandingTransform(params)
+  });
 }
