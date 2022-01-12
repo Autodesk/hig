@@ -1,3 +1,11 @@
+# [@hig/menu-v1.3.2](https://github.com/Autodesk/hig/compare/@hig/menu@1.3.1...@hig/menu@1.3.2) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* skip unit testing ([e33c1e3](https://github.com/Autodesk/hig/commit/e33c1e3))
+
 # [@hig/menu-v1.3.1](https://github.com/Autodesk/hig/compare/@hig/menu@1.3.0...@hig/menu@1.3.1) (2021-10-27)
 
 

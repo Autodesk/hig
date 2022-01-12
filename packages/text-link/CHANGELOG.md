@@ -1,3 +1,10 @@
+# [@hig/text-link-v1.2.1](https://github.com/Autodesk/hig/compare/@hig/text-link@1.2.0...@hig/text-link@1.2.1) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+
 # [@hig/text-link-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/text-link@1.1.1...@hig/text-link@1.2.0) (2020-09-09)
 
 

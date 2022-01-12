@@ -1,3 +1,11 @@
+# [@hig/avatar-v1.4.1](https://github.com/Autodesk/hig/compare/@hig/avatar@1.4.0...@hig/avatar@1.4.1) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* remove key duplicated ([2683acc](https://github.com/Autodesk/hig/commit/2683acc))
+
 # [@hig/avatar-v1.4.0](https://github.com/Autodesk/hig/compare/@hig/avatar@1.3.0...@hig/avatar@1.4.0) (2021-05-25)
 
 

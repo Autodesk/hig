@@ -1,3 +1,11 @@
+# [@hig/input-v1.3.1](https://github.com/Autodesk/hig/compare/@hig/input@1.3.0...@hig/input@1.3.1) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* skip unit testing ([e33c1e3](https://github.com/Autodesk/hig/commit/e33c1e3))
+
 # [@hig/input-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/input@1.2.2...@hig/input@1.3.0) (2020-08-06)
 
 

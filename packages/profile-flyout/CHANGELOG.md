@@ -1,3 +1,10 @@
+# [@hig/profile-flyout-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@2.2.0...@hig/profile-flyout@2.2.1) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+
 # [@hig/profile-flyout-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@2.1.0...@hig/profile-flyout@2.2.0) (2021-05-25)
 
 
