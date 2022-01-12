@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { mount } from "enzyme";
 import renderOptions from "./renderOptions";
@@ -21,11 +20,7 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("returns an OptionPresenter for each option", () => {
-      expect(
-        mount(result[0])
-          .find(OptionPresenter)
-          .exists()
-      );
+      expect(mount(result[0]).find(OptionPresenter)).toBePresent();
     });
 
     it("has options as children on OptionPresenter", () => {
@@ -64,11 +59,7 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("returns an OptionPresenter for each option", () => {
-      expect(
-        mount(result[0])
-          .find(OptionPresenter)
-          .exists()
-      );
+      expect(mount(result[0]).find(OptionPresenter)).toBePresent();
     });
   });
 
@@ -93,7 +84,9 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("doesn't use OptionPresenter", () => {
-      // expect(mount(<div>{result[0]}</div>).find("OptionPresenter")).toBeFalsy();
+      expect(
+        mount(<div>{result[0]}</div>).find("OptionPresenter")
+      ).not.toBePresent();
     });
 
     it("uses renderOption function", () => {
@@ -127,7 +120,9 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("doesn't use OptionPresenter", () => {
-      // expect(mount(<div>{result[0]}</div>).find("OptionPresenter")).toBeFalsy();
+      expect(
+        mount(<div>{result[0]}</div>).find("OptionPresenter")
+      ).not.toBePresent();
     });
 
     it("uses render function", () => {

@@ -1,60 +1,68 @@
-import { useState } from "react";
+import { Component } from "react";
 import PropTypes from "prop-types";
 
-const HoverBehavior = props => {
-  const { openOnHoverDelay, onMouseEnter } = props;
-  const [hasHover, setHasHover] = useState(false);
+export default class HoverBehavior extends Component {
+  static propTypes = {
+    /**
+     * Generally the Flyout target and presenter
+     */
+    children: PropTypes.func.isRequired,
+    /**
+     * Amount of time between mouse enter is reported and when
+     * onMouseEnter event should fire
+     */
+    openOnHoverDelay: PropTypes.number,
+    /**
+     * Function called when the user enters the visual space
+     * occupied by the component
+     */
+    onMouseEnter: PropTypes.func,
+    /**
+     * Function called when the user leaves the visual space
+     * occupied by the component
+     */
+    onMouseLeave: PropTypes.func
+  };
 
-  const focusTimeout = event =>
-    setTimeout(() => {
-      setHasHover(true);
-      onMouseEnter(event);
-    }, openOnHoverDelay);
+  constructor(props) {
+    super(props);
 
-  const handleFocus = event => {
+    // Binding in the constructor because performance
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
+
+    this.state = {
+      hasHover: false
+    };
+  }
+
+  handleFocus(event) {
+    const { openOnHoverDelay, onMouseEnter } = this.props;
+
     if (onMouseEnter) {
-      focusTimeout(event);
+      this.focusTimeout = setTimeout(() => {
+        this.setState({ hasHover: true });
+        onMouseEnter(event);
+      }, openOnHoverDelay);
     }
-    setHasHover(true);
-  };
 
-  const handleBlur = event => {
-    clearTimeout(focusTimeout(event));
-    setHasHover(false);
-    if (props.onMouseLeave) {
-      props.onMouseLeave(event);
+    this.setState({ hasHover: true });
+  }
+
+  handleBlur(event) {
+    clearTimeout(this.focusTimeout);
+    this.setState({ hasHover: false });
+
+    if (this.props.onMouseLeave) {
+      this.props.onMouseLeave(event);
     }
-  };
+  }
 
-  return props.children({
-    hasHover,
-    onMouseEnter: handleFocus,
-    onMouseLeave: handleBlur
-  });
-};
-
-HoverBehavior.displayName = "HoverBehavior";
-
-HoverBehavior.propTypes = {
-  /**
-   * Generally the Flyout target and presenter
-   */
-  children: PropTypes.func.isRequired,
-  /**
-   * Amount of time between mouse enter is reported and when
-   * onMouseEnter event should fire
-   */
-  openOnHoverDelay: PropTypes.number,
-  /**
-   * Function called when the user enters the visual space
-   * occupied by the component
-   */
-  onMouseEnter: PropTypes.func,
-  /**
-   * Function called when the user leaves the visual space
-   * occupied by the component
-   */
-  onMouseLeave: PropTypes.func
-};
-
-export default HoverBehavior;
+  render() {
+    return this.props.children({
+      hasHover: this.state.hasHover,
+      onMouseEnter: this.handleFocus,
+      onMouseLeave: this.handleBlur
+    });
+  }
+}

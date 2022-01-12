@@ -7,7 +7,7 @@ import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./InputHaloPresenter.stylesheet";
 import { availableVariants } from "../constants";
 
-const InputHaloPresenter = props => {
+function InputHaloPresenter(props) {
   const {
     children,
     hasFocus,
@@ -55,8 +55,7 @@ const InputHaloPresenter = props => {
       }}
     </ThemeContext.Consumer>
   );
-};
-InputHaloPresenter.displayName = "InputHaloPresenter";
+}
 
 InputHaloPresenter.propTypes = {
   children: PropTypes.node,

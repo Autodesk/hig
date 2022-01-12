@@ -8,7 +8,7 @@ describe("themes/ThemeContext/index", () => {
       name: "default",
       value: expect.objectContaining({
         Consumer: expect.any(Function),
-        Provider: expect.any(Object)
+        Provider: expect.any(Function)
       })
     },
     {
@@ -17,7 +17,7 @@ describe("themes/ThemeContext/index", () => {
     },
     {
       name: "Provider",
-      value: expect.any(Object)
+      value: expect.any(Function)
     }
   ]);
 });
