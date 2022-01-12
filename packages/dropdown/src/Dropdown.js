@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import Downshift from "downshift";
 import { cx } from "emotion";
@@ -14,140 +14,14 @@ import renderOptions from "./presenters/renderOptions";
 
 const variantTypes = ["line", "box"];
 
-export default class Dropdown extends Component {
-  static propTypes = {
-    /**
-     * The default value when the component is uncontrolled
-     */
-    defaultValue: PropTypes.oneOfType([
-      PropTypes.any,
-      PropTypes.arrayOf(PropTypes.any)
-    ]),
-    /**
-     * Prevents user actions on the field
-     */
-    disabled: PropTypes.bool,
-    /**
-     * Specifies if the value provided is wrong
-     */
-    error: PropTypes.bool,
-    /**
-     * Used to format options into human readable strings
-     *
-     * Note that if both formatOption and renderOption are provided,
-     * renderOption will take precedence
-     */
-    formatOption: PropTypes.func,
-    /**
-     * HTML ID attribute
-     */
-    id: PropTypes.string,
-    /**
-     * Enables multiple selection
-     */
-    multiple: PropTypes.bool,
-    /**
-     * Called when the text field is blurred
-     */
-    onBlur: PropTypes.func,
-    /**
-     * Called with the selected option when the value changes
-     */
-    onChange: PropTypes.func,
-    /**
-     * Called when the text field is focused
-     */
-    onFocus: PropTypes.func,
-    /**
-     * Called when the input field value changes via typing
-     * Meant to be used when the `typable` prop is set to `true`,
-     * otherwise use `onChange`
-     */
-    onInputChange: PropTypes.func,
-    /**
-     * An array of unique values of any type except `undefined`
-     * If you use an array of objects, the object must contain the property `item`,
-     * the option's disabled state can be controlled with a `disabled` property.
-     */
-    options: PropTypes.arrayOf(PropTypes.any),
-    /**
-     * Placeholder text to render when an option has not been selected
-     */
-    placeholder: PropTypes.string,
-    /**
-     * When present, this function is used to render each option.  Each
-     * option is passed as an argument. If any option has Option.render
-     * prop present, that will take precedence and this
-     * function will not be called for that option.
-     *
-     * In  addition to the option passed as an argument, props
-     * are also passed in that can be used for each option to help
-     * maintain some of the built-in `Dropdown` option functionality.
-     *
-     * Similarly if both formatOption and renderOption are provided,
-     * renderOption will take precedence
-     */
-    renderOption: PropTypes.func,
-    /**
-     * Text describing why the field is required
-     */
-    required: PropTypes.string,
-    /**
-     * Adds custom/overriding styles
-     */
-    stylesheet: PropTypes.func,
-    /**
-     * Allows the input to be typable
-     */
-    typable: PropTypes.bool,
-    /**
-     * The value of the control
-     */
-    value: PropTypes.oneOfType([
-      PropTypes.any,
-      PropTypes.arrayOf(PropTypes.any)
-    ]),
-    /**
-     * The visual variant of the textarea
-     */
-    variant: PropTypes.oneOf(variantTypes)
-  };
-
-  static defaultProps = {
-    /**
-     * @param {OptionMeta} option
-     * @returns {string}
-     */
-    formatOption(option) {
-      return option ? String(option) : "";
-    },
-    typable: false
-  };
-
-  getBehaviorProps() {
-    const { id, multiple, formatOption, value, defaultValue } = this.props;
-    const valuePropName = multiple ? "selectedItems" : "selectedItem";
-    const defaultValuePropName = multiple
-      ? "initialSelectedItems"
-      : "initialSelectedItem";
-
-    return {
-      id,
-      onChange: this.handleChange,
-      itemToString: formatOption,
-      [valuePropName]: value,
-      [defaultValuePropName]: defaultValue,
-      inputValue: this.getInputValue()
-    };
-  }
-
+const Dropdown = props => {
   /**
    * The controlled value for the input element
    * @see https://github.com/paypal/downshift#inputvalue
    * @returns {string|undefined}
    */
-  getInputValue() {
-    const { multiple, formatOption, value } = this.props;
+  const getInputValue = () => {
+    const { multiple, formatOption, value } = props;
 
     if (value === undefined) {
       return undefined;
@@ -157,7 +31,7 @@ export default class Dropdown extends Component {
     }
 
     return formatOption(value);
-  }
+  };
 
   /**
    * > Why not just pass the `props.onChange` directly to Downshift?
@@ -168,19 +42,36 @@ export default class Dropdown extends Component {
    * @param {OptionMeta | OptionMeta[]} value
    * @param {DownshiftHelpers} downshift
    */
-  handleChange = value => {
-    const { onChange } = this.props;
+  const handleChange = value => {
+    const { onChange } = props;
 
     if (onChange) {
       onChange(value);
     }
   };
 
+  const getBehaviorProps = () => {
+    const { id, multiple, formatOption, value, defaultValue } = props;
+    const valuePropName = multiple ? "selectedItems" : "selectedItem";
+    const defaultValuePropName = multiple
+      ? "initialSelectedItems"
+      : "initialSelectedItem";
+
+    return {
+      id,
+      onChange: handleChange,
+      itemToString: formatOption,
+      [valuePropName]: value,
+      [defaultValuePropName]: defaultValue,
+      inputValue: getInputValue()
+    };
+  };
+
   /**
    * @param {DownshiftHelpers} downshift
    * @returns {JSX.Element}
    */
-  renderInput(downshift) {
+  const renderInput = downshift => {
     const { id, isOpen, toggleMenu, getInputProps } = downshift;
     const {
       placeholder,
@@ -195,7 +86,7 @@ export default class Dropdown extends Component {
       typable,
       multiple,
       ...otherProps
-    } = this.props;
+    } = props;
 
     const { className, tabIndex } = otherProps;
     const inputClassName =
@@ -224,13 +115,13 @@ export default class Dropdown extends Component {
     });
 
     return <InputPresenter key="input" {...inputProps} />;
-  }
+  };
 
   /**
    * @param {DownshiftHelpers} downshift
    * @returns {JSX.Element}
    */
-  renderMenu(downshift) {
+  const renderMenu = downshift => {
     const {
       getItemProps,
       getMenuProps,
@@ -247,7 +138,7 @@ export default class Dropdown extends Component {
       renderOption,
       stylesheet: customStylesheet,
       ...otherProps
-    } = this.props;
+    } = props;
 
     const { className } = otherProps;
 
@@ -281,13 +172,13 @@ export default class Dropdown extends Component {
         {children}
       </MenuPresenter>
     );
-  }
+  };
 
   /**
    * @param {DownshiftHelpers} downshift
    * @returns {JSX.Element}
    */
-  renderPresenter = downshift => {
+  const renderPresenter = downshift => {
     const {
       children,
       defaultValue,
@@ -309,7 +200,7 @@ export default class Dropdown extends Component {
       variant,
       error,
       ...otherProps
-    } = this.props;
+    } = props;
 
     /**
      * The `Wrapper` presenter is used as a function to avoid having to
@@ -318,17 +209,123 @@ export default class Dropdown extends Component {
      */
     return renderWrapper({
       disabled,
-      children: [this.renderInput(downshift), this.renderMenu(downshift)],
+      children: [renderInput(downshift), renderMenu(downshift)],
       ...otherProps
     });
   };
 
-  render() {
-    const { multiple } = this.props;
-    const Behavior = multiple ? MultiDownshift : Downshift;
+  const { multiple } = props;
+  const Behavior = multiple ? MultiDownshift : Downshift;
 
-    return (
-      <Behavior {...this.getBehaviorProps()}>{this.renderPresenter}</Behavior>
-    );
-  }
-}
+  return <Behavior {...getBehaviorProps()}>{renderPresenter}</Behavior>;
+};
+
+Dropdown.displayName = "Dropdown";
+
+Dropdown.propTypes = {
+  /**
+   * The default value when the component is uncontrolled
+   */
+  defaultValue: PropTypes.oneOfType([
+    PropTypes.any,
+    PropTypes.arrayOf(PropTypes.any)
+  ]),
+  /**
+   * Prevents user actions on the field
+   */
+  disabled: PropTypes.bool,
+  /**
+   * Specifies if the value provided is wrong
+   */
+  error: PropTypes.bool,
+  /**
+   * Used to format options into human readable strings
+   *
+   * Note that if both formatOption and renderOption are provided,
+   * renderOption will take precedence
+   */
+  formatOption: PropTypes.func,
+  /**
+   * HTML ID attribute
+   */
+  id: PropTypes.string,
+  /**
+   * Enables multiple selection
+   */
+  multiple: PropTypes.bool,
+  /**
+   * Called when the text field is blurred
+   */
+  onBlur: PropTypes.func,
+  /**
+   * Called with the selected option when the value changes
+   */
+  onChange: PropTypes.func,
+  /**
+   * Called when the text field is focused
+   */
+  onFocus: PropTypes.func,
+  /**
+   * Called when the input field value changes via typing
+   * Meant to be used when the `typable` prop is set to `true`,
+   * otherwise use `onChange`
+   */
+  onInputChange: PropTypes.func,
+  /**
+   * An array of unique values of any type except `undefined`
+   * If you use an array of objects, the object must contain the property `item`,
+   * the option's disabled state can be controlled with a `disabled` property.
+   */
+  options: PropTypes.arrayOf(PropTypes.any),
+  /**
+   * Placeholder text to render when an option has not been selected
+   */
+  placeholder: PropTypes.string,
+  /**
+   * When present, this function is used to render each option.  Each
+   * option is passed as an argument. If any option has Option.render
+   * prop present, that will take precedence and this
+   * function will not be called for that option.
+   *
+   * In  addition to the option passed as an argument, props
+   * are also passed in that can be used for each option to help
+   * maintain some of the built-in `Dropdown` option functionality.
+   *
+   * Similarly if both formatOption and renderOption are provided,
+   * renderOption will take precedence
+   */
+  renderOption: PropTypes.func,
+  /**
+   * Text describing why the field is required
+   */
+  required: PropTypes.string,
+  /**
+   * Adds custom/overriding styles
+   */
+  stylesheet: PropTypes.func,
+  /**
+   * Allows the input to be typable
+   */
+  typable: PropTypes.bool,
+  /**
+   * The value of the control
+   */
+  value: PropTypes.oneOfType([PropTypes.any, PropTypes.arrayOf(PropTypes.any)]),
+  /**
+   * The visual variant of the textarea
+   */
+  variant: PropTypes.oneOf(variantTypes)
+};
+
+Dropdown.defaultProps = {
+  /**
+   * @param {OptionMeta} option
+   * @returns {string}
+   */
+  formatOption(option) {
+    return option ? String(option) : "";
+  },
+  typable: false
+};
+
+export default Dropdown;

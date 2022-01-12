@@ -1,7 +1,6 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { cx, css } from "emotion";
-import { polyfill } from "react-lifecycles-compat";
 
 import { ThemeContext } from "@hig/theme-context";
 import { createCustomClassNames } from "@hig/utils";
@@ -217,142 +216,123 @@ Initials.propTypes = {
  * @property {string} [imageUrl]
  */
 
-class Avatar extends Component {
-  static propTypes = {
-    /** The name for the avatar, in one string
-     * If firstName/lastName used then those
-     * take precedent over this prop
-     */
-    name: PropTypes.string,
-    /** The first name for the avatar */
-    firstName: PropTypes.string,
-    /** The last name for the avatar */
-    lastName: PropTypes.string,
-    /** Set the size of the avatar */
-    size: PropTypes.oneOf(AVAILABLE_SIZES),
-    /** URL to a profile image */
-    image: PropTypes.string,
-    /** Called when an error occurs on the image  */
-    onImageError: PropTypes.func,
-    /** Optional label message override for Avatar  */
-    label: PropTypes.string,
-    /** Optional alt message override for Avatar Image  */
-    imageAlt: PropTypes.string,
-    /** Function to modify the component's styles */
-    stylesheet: PropTypes.func
-  };
+const Avatar = props => {
+  const [imageUrl, setImageUrl] = useState(undefined);
+  const [hasImageError, setHasImageError] = useState(false);
+  const {
+    size,
+    name,
+    firstName,
+    lastName,
+    stylesheet: customStylesheet,
+    ...otherProps
+  } = props;
+  const { className } = otherProps;
 
-  static defaultProps = {
-    name: "Anonymous User",
-    size: sizes.MEDIUM_32
-  };
+  const nameObj =
+    !firstName && !lastName
+      ? buildFirstAndLastName(name)
+      : {
+          firstName,
+          lastName
+        };
 
-  /** @type {AvatarState} */
-  state = {
-    hasImageError: false,
-    imageUrl: undefined
-  };
-
-  /**
-   * @param {AvatarProps} nextProps
-   * @param {AvatarState} prevState
-   * @returns {AvatarState | null}
-   */
-  static getDerivedStateFromProps(nextProps, prevState) {
-    const { image } = nextProps;
-    const { imageUrl } = prevState;
-
-    if (image === imageUrl) return null;
-
-    return {
-      hasImageError: false,
-      imageUrl: image
-    };
-  }
+  const backgroundId = backgroundIdFromName(nameObj);
+  const nameStringWithLeadingSpace = `${
+    nameObj.firstName ? ` ${nameObj.firstName}` : ""
+  }${nameObj.lastName ? ` ${nameObj.lastName}` : ""}`;
+  const label = props.label
+    ? props.label
+    : `Avatar for${nameStringWithLeadingSpace}`;
+  const imageAlt = props.imageAlt
+    ? props.imageAlt
+    : `Avatar image of${nameStringWithLeadingSpace}`;
+  const showImage = imageUrl && !hasImageError;
+  const styles = roles =>
+    stylesheet({ size, backgroundId, stylesheet: customStylesheet }, roles);
 
   /**
    * @param {Event} errorEvent
    */
-  handleImageError = errorEvent => {
-    const { onImageError } = this.props;
+  const handleImageError = errorEvent => {
+    const { onImageError } = props;
 
     if (onImageError) {
       onImageError(errorEvent);
       return;
     }
-
-    this.setState({ hasImageError: true });
+    setHasImageError(true);
   };
 
-  render() {
-    const {
-      size,
-      name,
-      firstName,
-      lastName,
-      stylesheet: customStylesheet,
-      ...otherProps
-    } = this.props;
-    const { className } = otherProps;
-    const { imageUrl, hasImageError } = this.state;
-    const { handleImageError } = this;
+  if (imageUrl !== props.image) {
+    setImageUrl(props.image);
+    setHasImageError(false);
+  }
 
-    const nameObj =
-      !firstName && !lastName
-        ? buildFirstAndLastName(name)
-        : {
-            firstName,
-            lastName
-          };
-
-    const backgroundId = backgroundIdFromName(nameObj);
-    const nameStringWithLeadingSpace = `${
-      nameObj.firstName ? ` ${nameObj.firstName}` : ""
-    }${nameObj.lastName ? ` ${nameObj.lastName}` : ""}`;
-    const label = this.props.label
-      ? this.props.label
-      : `Avatar for${nameStringWithLeadingSpace}`;
-    const imageAlt = this.props.imageAlt
-      ? this.props.imageAlt
-      : `Avatar image of${nameStringWithLeadingSpace}`;
-    const showImage = imageUrl && !hasImageError;
-    const styles = roles =>
-      stylesheet({ size, backgroundId, stylesheet: customStylesheet }, roles);
-
-    return (
-      <ThemeContext.Consumer>
-        {({ resolvedRoles }) => (
-          <span
-            aria-label={label}
-            className={cx(
-              css(styles(resolvedRoles)[StyleItems.avatarContainer]),
-              className
-            )}
-            role="img"
-          >
-            {!showImage ? null : (
-              <Image
-                resolvedRoles={resolvedRoles}
-                size={size}
-                image={imageUrl}
-                className={className}
-                onError={handleImageError}
-                alt={imageAlt}
-                stylesheet={customStylesheet}
-              />
-            )}
-            <Initials
-              name={nameObj}
-              size={size}
+  return (
+    <ThemeContext.Consumer>
+      {({ resolvedRoles }) => (
+        <span
+          aria-label={label}
+          className={cx(
+            css(styles(resolvedRoles)[StyleItems.avatarContainer]),
+            className
+          )}
+          role="img"
+        >
+          {!showImage ? null : (
+            <Image
               resolvedRoles={resolvedRoles}
+              size={size}
+              image={imageUrl}
               className={className}
+              onError={handleImageError}
+              alt={imageAlt}
               stylesheet={customStylesheet}
             />
-          </span>
-        )}
-      </ThemeContext.Consumer>
-    );
-  }
-}
+          )}
+          <Initials
+            name={nameObj}
+            size={size}
+            resolvedRoles={resolvedRoles}
+            className={className}
+            stylesheet={customStylesheet}
+          />
+        </span>
+      )}
+    </ThemeContext.Consumer>
+  );
+};
 
-export default polyfill(Avatar);
+Avatar.displayName = "Avatar";
+
+Avatar.propTypes = {
+  /** The name for the avatar, in one string
+   * If firstName/lastName used then those
+   * take precedent over this prop
+   */
+  name: PropTypes.string,
+  /** The first name for the avatar */
+  firstName: PropTypes.string,
+  /** The last name for the avatar */
+  lastName: PropTypes.string,
+  /** Set the size of the avatar */
+  size: PropTypes.oneOf(AVAILABLE_SIZES),
+  /** URL to a profile image */
+  image: PropTypes.string,
+  /** Called when an error occurs on the image  */
+  onImageError: PropTypes.func,
+  /** Optional label message override for Avatar  */
+  label: PropTypes.string,
+  /** Optional alt message override for Avatar Image  */
+  imageAlt: PropTypes.string,
+  /** Function to modify the component's styles */
+  stylesheet: PropTypes.func
+};
+
+Avatar.defaultProps = {
+  name: "Anonymous User",
+  size: sizes.MEDIUM_32
+};
+
+export default Avatar;

@@ -10,7 +10,7 @@ export default [
       open: true,
       type: "standard",
       children: [
-        <Typography>
+        <Typography key="t1">
           Curabitur id auctor leo, ut posuere felis. Aliquam erat volutpat.
           Nullam id lorem in metus fermentum aliquam.
         </Typography>
@@ -24,7 +24,7 @@ export default [
       open: true,
       type: "alternate",
       children: [
-        <Typography>
+        <Typography key="t1">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
           mattis neque. Proin ipsum ex, hendrerit ac egestas at, consectetur nec
           lorem. Donec finibus eu est in pretium. Praesent id sollicitudin
@@ -80,7 +80,7 @@ export default [
       open: true,
       type: "alternate",
       children: [
-        <Typography>
+        <Typography key="t1">
           Etiam ac diam vel ex imperdiet blandit. Cras enim leo, consectetur ut
           turpis ac, ultricies suscipit neque. Duis sit amet feugiat quam.
           Nullam mi eros, tempus id interdum rutrum, gravida nec urna. Integer

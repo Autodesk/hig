@@ -1,7 +1,9 @@
-import React, { Component, Children } from "react";
+/* eslint-disable react/prop-types */
+/* eslint-disable no-shadow */
+import React, { useState, useEffect, Children } from "react";
 import PropTypes from "prop-types";
 import { cx, css } from "emotion";
-import { polyfill } from "react-lifecycles-compat";
+// import { polyfill } from "react-lifecycles-compat";
 import memoize from "lodash.memoize";
 import { createButtonEventHandlers, createCustomClassNames } from "@hig/utils";
 
@@ -85,203 +87,70 @@ function findInitialStateActiveTab(tabsProps) {
   return FIRST_TAB_INDEX;
 }
 
-class Tabs extends Component {
-  static propTypes = {
-    /**
-     * Control the active tab.
-     * Overrides the deprecated active property on the Tab component.
-     */
-    activeTabIndex: PropTypes.number,
-    /**
-     * Specify how to justify the tabs within their container
-     * When variant is set to "canvas", the effective alignment will always be "left"
-     */
-    align: PropTypes.oneOf(AVAILABLE_ALIGNMENTS),
-    /**
-     * Accepts Tab components
-     */
-    children: PropTypes.node,
-    /**
-     * Sets the initial active tab.
-     * Overrides the deprecated active property on the Tab component.
-     */
-    defaultActiveTabIndex: PropTypes.number,
-    /**
-     * Called when user activates a tab
-     */
-    onTabChange: PropTypes.func,
-    /**
-     * Called when user closes a tab
-     */
-    onTabClose: PropTypes.func,
-    /**
-     * The list orientation of the tabs
-     * Vertical tabs only works when variant is set to "box"
-     */
-    orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
-    /**
-     * Show dividers between tabs
-     * Only works in horizontal tabs and when variant is set to "box" or "canvas"
-     */
-    showTabDivider: PropTypes.bool,
-    /**
-     * Function to modify the component's styles
-     */
-    stylesheet: PropTypes.func,
-    /**
-     * The visual variant of the tabs
-     */
-    variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
-  };
-
-  static defaultProps = {
-    align: alignments.LEFT,
-    onTabChange: () => {},
-    onTabClose: () => {},
-    variant: variants.UNDERLINE,
-    orientation: orientations.HORIZONTAL,
-    showTabDivider: true
-  };
-
-  /** @type {TabsState} */
-  state = {
-    /**
-     * We maintain the active tab index in the state in case it was not
-     * provided as a prop.
-     */
-    activeTabIndex: findInitialStateActiveTab(this.props),
-    hoveredTabIndex: DEFAULT_HOVERED_TAB_INDEX,
-    effectiveAlign: alignments.LEFT,
-    effectiveShowTabDivider: true,
-    effectiveOrientation: orientations.HORIZONTAL
-  };
-
-  /**
-   * @param {TabsProps} nextProps
-   * @param {TabsState} prevState
-   * @returns {TabsState | null}
-   */
-  static getDerivedStateFromProps(nextProps, prevState) {
-    const { children, align, variant, orientation, showTabDivider } = nextProps;
-    const {
-      activeTabIndex: prevActiveTabIndex,
-      effectiveAlign: prevEffectiveAlign,
-      effectiveOrientation: prevEffectiveOrientation,
-      effectiveShowTabDivider: prevEffectiveShowTabDivider
-    } = prevState;
-
-    let hasStateChanged = false;
-    const newState = {};
-
-    const nextTabs = createTabs(children);
-    const nextActiveTabIndex = nextTabs.findIndex(({ props }) => props.active);
-    if (
-      nextActiveTabIndex >= 0 &&
-      nextActiveTabIndex !== prevActiveTabIndex &&
-      nextProps.defaultActiveTabIndex === undefined
-    ) {
-      newState.activeTabIndex = nextActiveTabIndex;
-      hasStateChanged = true;
-    }
-
-    // vertical tabs will only work when variant is "box"
-    const nextEffectiveOrientation =
-      variant === variants.BOX ? orientation : orientations.HORIZONTAL;
-    if (nextEffectiveOrientation !== prevEffectiveOrientation) {
-      newState.effectiveOrientation = nextEffectiveOrientation;
-      hasStateChanged = true;
-    }
-
-    // align prop will not take effect when orientation is "vertical" or variant is "canvas"
-    const nextEffectiveAlign =
-      nextEffectiveOrientation === orientations.VERTICAL ||
-      variant === variants.CANVAS
-        ? alignments.LEFT
-        : align;
-    if (nextEffectiveAlign !== prevEffectiveAlign) {
-      newState.effectiveAlign = nextEffectiveAlign;
-      hasStateChanged = true;
-    }
-
-    // tab divider will not show when orientation is "vertical" or variant is "underline"
-    const nextEffectiveShowTabDivider =
-      nextEffectiveOrientation === orientations.VERTICAL ||
-      variant === variants.UNDERLINE
-        ? false
-        : showTabDivider;
-    if (nextEffectiveShowTabDivider !== prevEffectiveShowTabDivider) {
-      newState.effectiveShowTabDivider = nextEffectiveShowTabDivider;
-      hasStateChanged = true;
-    }
-
-    if (hasStateChanged) {
-      return newState;
-    }
-
-    return null;
-  }
+const Tabs = props => {
+  const [activeTabIndex, setActiveTabIndex] = useState(
+    findInitialStateActiveTab(props)
+  );
+  const [hoveredTabIndex, setHoveredTabIndex] = useState(
+    DEFAULT_HOVERED_TAB_INDEX
+  );
+  const [effectiveAlign, setEffectiveAlign] = useState(alignments.LEFT);
+  const [effectiveShowTabDivider, setEffectiveShowTabDivider] = useState(true);
+  const [effectiveOrientation, setEffectiveOrientation] = useState(
+    orientations.HORIZONTAL
+  );
 
   /**
    * @param {number} nextActiveTabIndex
    * @param {TabMeta} tab
    */
-  onTabSelection(selectedTabIndex, { disabled }) {
-    this.props.onTabChange(selectedTabIndex);
-
-    const prevActiveTabIndex = this.getActiveTabIndex();
+  const onTabSelection = (selectedTabIndex, { disabled }) => {
+    props.onTabChange(selectedTabIndex);
+    // eslint-disable-next-line no-use-before-define
+    const prevActiveTabIndex = getActiveTabIndex();
     if (!disabled && prevActiveTabIndex !== selectedTabIndex) {
-      this.setState({ activeTabIndex: selectedTabIndex });
+      setActiveTabIndex(selectedTabIndex);
     }
-  }
+  };
 
   /**
    * If the activeTabIndex has been passed, use it. Otherwise, use our
    * internally managed activeTabIndex.
    * @returns {number}
    */
-  getActiveTabIndex() {
-    return this.props.activeTabIndex !== undefined
-      ? this.props.activeTabIndex
-      : this.state.activeTabIndex;
-  }
-
-  /** @returns {TabMeta|undefined} */
-  getActiveTab() {
-    return this.getTabs()[this.getActiveTabIndex()];
-  }
+  const getActiveTabIndex = () =>
+    props.activeTabIndex !== undefined ? props.activeTabIndex : activeTabIndex;
 
   /** @returns {TabMeta[]} */
-  getTabs() {
-    return createTabs(this.props.children);
-  }
+  const getTabs = () => createTabs(props.children);
+
+  /** @returns {TabMeta|undefined} */
+  const getActiveTab = () => getTabs()[getActiveTabIndex()];
 
   /**
    * @param {number} nextHoveredTabIndex
    * @param {TabMeta} tab
    */
-  setHoveredTab(nextHoveredTabIndex, { disabled }) {
-    const { hoveredTabIndex: prevHoveredTabIndex } = this.state;
+  const setHoveredTab = (nextHoveredTabIndex, { disabled }) => {
+    const prevHoveredTabIndex = hoveredTabIndex;
     if (disabled || prevHoveredTabIndex === nextHoveredTabIndex) return;
-    this.setState({ hoveredTabIndex: nextHoveredTabIndex });
-  }
+    setHoveredTabIndex(nextHoveredTabIndex);
+  };
 
   /**
    * @param {number} index
    */
-  removeHoveredTab(index) {
-    const { hoveredTabIndex } = this.state;
+  const removeHoveredTab = index => {
     if (hoveredTabIndex === index) {
-      this.setState({ hoveredTabIndex: DEFAULT_HOVERED_TAB_INDEX });
+      setHoveredTabIndex(DEFAULT_HOVERED_TAB_INDEX);
     }
-  }
+  };
 
-  createTabEventHandlers = memoize((index, { disabled }) => ({
-    ...createButtonEventHandlers(() =>
-      this.onTabSelection(index, { disabled })
-    ),
-    onMouseEnter: () => this.setHoveredTab(index, { disabled }),
-    onMouseLeave: () => this.removeHoveredTab(index),
-    onClose: () => this.props.onTabClose(index)
+  const createTabEventHandlers = memoize((index, { disabled }) => ({
+    ...createButtonEventHandlers(() => onTabSelection(index, { disabled })),
+    onMouseEnter: () => setHoveredTab(index, { disabled }),
+    onMouseLeave: () => removeHoveredTab(index),
+    onClose: () => props.onTabClose(index)
   }));
 
   /**
@@ -289,16 +158,11 @@ class Tabs extends Component {
    * @param {number} index
    * @returns {JSX.Element}
    */
-  renderTab = ({ key, props }, index) => {
-    const { disabled, className: tabClassName } = props;
-    const { variant, className: tabsClassName } = this.props;
-    const {
-      hoveredTabIndex,
-      effectiveAlign,
-      effectiveOrientation,
-      effectiveShowTabDivider
-    } = this.state;
-    const activeTabIndex = this.getActiveTabIndex();
+  const renderTab = ({ key, props: propsParams }, index) => {
+    const { disabled, className: tabClassName } = propsParams;
+    const { variant, className: tabsClassName } = props;
+    // eslint-disable-next-line no-shadow
+    const activeTabIndex = getActiveTabIndex();
 
     let showTabDivider = effectiveShowTabDivider;
     if (index === activeTabIndex || index === activeTabIndex - 1) {
@@ -314,7 +178,7 @@ class Tabs extends Component {
     );
 
     const payload = {
-      ...props,
+      ...propsParams,
       key,
       variant,
       className,
@@ -322,7 +186,7 @@ class Tabs extends Component {
       align: effectiveAlign,
       orientation: effectiveOrientation,
       active: activeTabIndex === index,
-      ...this.createTabEventHandlers(index, { disabled })
+      ...createTabEventHandlers(index, { disabled })
     };
 
     return <Tab {...payload} />;
@@ -331,9 +195,9 @@ class Tabs extends Component {
   /**
    * @returns {JSX.Element}
    */
-  renderTabs() {
-    const { className, variant, stylesheet: customStylesheet } = this.props;
-    const { effectiveAlign, effectiveOrientation } = this.state;
+  const renderTabs = () => {
+    // eslint-disable-next-line react/prop-types
+    const { className, variant, stylesheet: customStylesheet } = props;
     return (
       <TabsPresenter
         variant={variant}
@@ -342,36 +206,163 @@ class Tabs extends Component {
         className={className}
         stylesheet={customStylesheet}
       >
-        {this.getTabs().map(this.renderTab)}
+        {getTabs().map(renderTab)}
       </TabsPresenter>
     );
-  }
+  };
 
   /**
    * @returns {JSX.Element}
    */
-  renderContent() {
-    const { className, stylesheet: customStylesheet } = this.props;
-    const activeTab = this.getActiveTab();
+  const renderContent = () => {
+    // eslint-disable-next-line react/prop-types
+    const { className, stylesheet: customStylesheet } = props;
+    const activeTab = getActiveTab();
 
     return (
       <ContentPresenter className={className} stylesheet={customStylesheet}>
         {activeTab ? activeTab.props.children : null}
       </ContentPresenter>
     );
-  }
+  };
 
-  render() {
-    const { effectiveOrientation } = this.state;
-    const styles = stylesheet({ orientation: effectiveOrientation });
+  const styles = stylesheet({ orientation: effectiveOrientation });
 
-    return (
-      <div className={cx(css(styles.wrapper), this.props.className)}>
-        {this.renderTabs()}
-        {this.renderContent()}
-      </div>
-    );
-  }
-}
+  useEffect(
+    () => {
+      const { children, align, variant, orientation, showTabDivider } = props;
+      const prevActiveTabIndex = activeTabIndex;
+      const prevEffectiveAlign = effectiveAlign;
+      const prevEffectiveOrientation = effectiveOrientation;
+      const prevEffectiveShowTabDivider = effectiveShowTabDivider;
 
-export default polyfill(Tabs);
+      let hasStateChanged = false;
+
+      const nextTabs = createTabs(children);
+      const nextActiveTabIndex = nextTabs.findIndex(
+        // eslint-disable-next-line react/prop-types
+        ({ props }) => props.active
+      );
+      if (
+        nextActiveTabIndex >= 0 &&
+        nextActiveTabIndex !== prevActiveTabIndex &&
+        props.defaultActiveTabIndex === undefined
+      ) {
+        setActiveTabIndex(nextActiveTabIndex);
+        // newState.activeTabIndex = nextActiveTabIndex;
+        hasStateChanged = true;
+      }
+
+      // vertical tabs will only work when variant is "box"
+      const nextEffectiveOrientation =
+        variant === variants.BOX ? orientation : orientations.HORIZONTAL;
+      if (nextEffectiveOrientation !== prevEffectiveOrientation) {
+        setEffectiveOrientation(nextEffectiveOrientation);
+        // newState.effectiveOrientation = nextEffectiveOrientation;
+        hasStateChanged = true;
+      }
+
+      // align prop will not take effect when orientation is "vertical" or variant is "canvas"
+      const nextEffectiveAlign =
+        nextEffectiveOrientation === orientations.VERTICAL ||
+        variant === variants.CANVAS
+          ? alignments.LEFT
+          : align;
+      if (nextEffectiveAlign !== prevEffectiveAlign) {
+        setEffectiveAlign(nextEffectiveAlign);
+        // newState.effectiveAlign = nextEffectiveAlign;
+        hasStateChanged = true;
+      }
+
+      // tab divider will not show when orientation is "vertical" or variant is "underline"
+      const nextEffectiveShowTabDivider =
+        nextEffectiveOrientation === orientations.VERTICAL ||
+        variant === variants.UNDERLINE
+          ? false
+          : showTabDivider;
+      if (nextEffectiveShowTabDivider !== prevEffectiveShowTabDivider) {
+        setEffectiveShowTabDivider(nextEffectiveShowTabDivider);
+        // newState.effectiveShowTabDivider = nextEffectiveShowTabDivider;
+        hasStateChanged = true;
+      }
+
+      if (hasStateChanged) {
+        // return newState;
+      }
+    },
+    [props]
+  );
+
+  return (
+    <div className={cx(css(styles.wrapper), props.className)}>
+      {renderTabs()}
+      {renderContent()}
+    </div>
+  );
+};
+
+Tabs.displayName = "Tabs";
+
+Tabs.propTypes = {
+  /**
+   * Control the active tab.
+   * Overrides the deprecated active property on the Tab component.
+   */
+  activeTabIndex: PropTypes.number,
+  /**
+   * Specify how to justify the tabs within their container
+   * When variant is set to "canvas", the effective alignment will always be "left"
+   */
+  // eslint-disable-next-line react/no-unused-prop-types
+  align: PropTypes.oneOf(AVAILABLE_ALIGNMENTS),
+  /**
+   * Accepts Tab components
+   */
+  children: PropTypes.node,
+  /**
+   * Sets the initial active tab.
+   * Overrides the deprecated active property on the Tab component.
+   */
+  defaultActiveTabIndex: PropTypes.number,
+  /**
+   * Called when user activates a tab
+   */
+  onTabChange: PropTypes.func,
+  /**
+   * Called when user closes a tab
+   */
+  onTabClose: PropTypes.func,
+  /**
+   * The list orientation of the tabs
+   * Vertical tabs only works when variant is set to "box"
+   */
+  // eslint-disable-next-line react/no-unused-prop-types
+  orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
+  /**
+   * Show dividers between tabs
+   * Only works in horizontal tabs and when variant is set to "box" or "canvas"
+   */
+  // eslint-disable-next-line react/no-unused-prop-types
+  showTabDivider: PropTypes.bool,
+  /**
+   * Function to modify the component's styles
+   */
+  // eslint-disable-next-line react/no-unused-prop-types
+  stylesheet: PropTypes.func,
+  /**
+   * The visual variant of the tabs
+   */
+  // eslint-disable-next-line react/no-unused-prop-types
+  variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
+};
+
+Tabs.defaultProps = {
+  align: alignments.LEFT,
+  onTabChange: () => {},
+  onTabClose: () => {},
+  variant: variants.UNDERLINE,
+  orientation: orientations.HORIZONTAL,
+  showTabDivider: true
+};
+
+export default Tabs;
