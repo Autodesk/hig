@@ -1,4 +1,4 @@
-import React, { Children, useEffect } from "react";
+import React, { Children, Component } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
@@ -50,45 +50,86 @@ function renderFileTree(tree, payload) {
   });
 }
 
-/**
- *
- * treeObject methods
- */
-const getTreeItemArray = collection => {
-  objectArray.push(collection.id);
+export default class TreeViewPresenterObject extends Component {
+  static propTypes = {
+    alternateBg: PropTypes.bool,
+    children: PropTypes.node,
+    getActiveTreeItemIndex: PropTypes.func,
+    guidelines: PropTypes.bool,
+    indicator: PropTypes.string,
+    selected: PropTypes.bool,
+    setTreeViewRef: PropTypes.func,
+    stylesheet: PropTypes.func
+  };
 
-  if (collection.children) {
-    collection.children.forEach(child => {
-      getTreeItemArray(child);
-    });
+  componentDidMount() {
+    if (this.props.treeNode) {
+      this.getTreeItemArray(this.props.treeNode);
+      this.props.setTreeItemArray(objectArray);
+    }
   }
-  return null;
-};
 
-const TreeViewPresenterObject = props => {
+  componentDidUpdate() {
+    if (this.props.treeNode) {
+      const domNodeList = this.props.treeViewRef.querySelectorAll("li");
+
+      const treeItemArrayControl =
+        this.props.getTreeItemArray().length !== domNodeList.length
+          ? buildTreeItemIdArray(Array.prototype.slice.call(domNodeList), true)
+          : this.props.getTreeItemArray();
+
+      if (this.props.getTreeItemArray().length !== domNodeList.length) {
+        this.props.setTreeItemArray(treeItemArrayControl);
+      }
+    } else {
+      const currentTreeArray = this.props.getTreeItemArray();
+      const newTreeArray = buildTreeItemIdArray(
+        Array.prototype.slice.call(
+          this.props.treeViewRef.querySelectorAll("li")
+        ),
+        false
+      );
+
+      if (JSON.stringify(newTreeArray) !== JSON.stringify(currentTreeArray)) {
+        this.props.setTreeItemArray(
+          buildTreeItemIdArray(
+            Array.prototype.slice.call(
+              this.props.treeViewRef.querySelectorAll("li")
+            ),
+            false
+          )
+        );
+      }
+      if (!currentTreeArray) {
+        this.props.setTreeItemArray(newTreeArray);
+      }
+    }
+  }
+
   /**
    *
    * treeRender methods
    */
-  const getTreeItems = () => createTreeItems(props.children);
+  getTreeItems() {
+    return createTreeItems(this.props.children);
+  }
 
   // eslint-disable-next-line react/sort-comp
-  const renderTreeItem = ({ key, props: propsRef }) => {
+  renderTreeItem = ({ key, props }) => {
     const {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
       getCurrentItemClicked,
       getKeyboardOpenId,
-      // eslint-disable-next-line no-shadow
       getTreeItemArray,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
       setKeyboardOpenId,
       guidelines,
       indicator
-    } = props;
+    } = this.props;
     const payload = {
-      ...propsRef,
+      ...props,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
       getCurrentItemClicked,
@@ -106,9 +147,11 @@ const TreeViewPresenterObject = props => {
     return <TreeItem {...payload} />;
   };
 
-  const renderTreeItems = () => getTreeItems().map(renderTreeItem);
+  renderTreeItems() {
+    return this.getTreeItems().map(this.renderTreeItem);
+  }
 
-  const renderTreeView = () => {
+  renderTreeView = () => {
     const {
       alternateBg,
       children,
@@ -117,7 +160,7 @@ const TreeViewPresenterObject = props => {
       setTreeViewRef,
       stylesheet: customStylesheet,
       ...otherProps
-    } = props;
+    } = this.props;
     const { className } = otherProps;
     const payload = { ...otherProps };
     const higTreeViewClassName = createCustomClassNames(
@@ -159,7 +202,7 @@ const TreeViewPresenterObject = props => {
                 role="tree"
                 tabIndex="0"
               >
-                {renderTreeItems()}
+                {this.renderTreeItems()}
               </ul>
             </div>
           );
@@ -168,7 +211,22 @@ const TreeViewPresenterObject = props => {
     );
   };
 
-  const renderTreeViewObject = () => {
+  /**
+   *
+   * treeObject methods
+   */
+  getTreeItemArray(collection) {
+    objectArray.push(collection.id);
+
+    if (collection.children) {
+      collection.children.forEach(child => {
+        this.getTreeItemArray(child);
+      });
+    }
+    return null;
+  }
+
+  renderTreeViewObject = () => {
     const {
       alternateBg,
       children,
@@ -178,7 +236,6 @@ const TreeViewPresenterObject = props => {
       treeNode,
       getCurrentItemClicked,
       getKeyboardOpenId,
-      // eslint-disable-next-line no-shadow
       getTreeItemArray,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
@@ -189,7 +246,7 @@ const TreeViewPresenterObject = props => {
       setTreeItemArray,
       treeViewRef,
       ...otherProps
-    } = props;
+    } = this.props;
     const { className } = otherProps;
     const higTreeViewClassName = createCustomClassNames(
       className,
@@ -199,7 +256,7 @@ const TreeViewPresenterObject = props => {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles }) => {
-          const { onClick } = props;
+          const { onClick } = this.props;
           const styles = stylesheet(
             {
               alternateBg,
@@ -242,67 +299,9 @@ const TreeViewPresenterObject = props => {
     );
   };
 
-  useEffect(() => {
-    if (props.treeNode) {
-      getTreeItemArray(props.treeNode);
-      props.setTreeItemArray(objectArray);
-    }
-  }, []);
-
-  useEffect(() => {
-    const { treeViewRef } = props;
-    if (treeViewRef) {
-      if (props.treeNode) {
-        const domNodeList = props.treeViewRef.querySelectorAll("li");
-
-        const treeItemArrayControl =
-          props.getTreeItemArray().length !== domNodeList.length
-            ? buildTreeItemIdArray(
-                Array.prototype.slice.call(domNodeList),
-                true
-              )
-            : props.getTreeItemArray();
-
-        if (props.getTreeItemArray().length !== domNodeList.length) {
-          props.setTreeItemArray(treeItemArrayControl);
-        }
-      } else {
-        const currentTreeArray = props.getTreeItemArray();
-        const newTreeArray = buildTreeItemIdArray(
-          Array.prototype.slice.call(props.treeViewRef.querySelectorAll("li")),
-          false
-        );
-        if (JSON.stringify(newTreeArray) !== JSON.stringify(currentTreeArray)) {
-          props.setTreeItemArray(
-            buildTreeItemIdArray(
-              Array.prototype.slice.call(
-                props.treeViewRef.querySelectorAll("li")
-              ),
-              false
-            )
-          );
-        }
-        if (!currentTreeArray) {
-          props.setTreeItemArray(newTreeArray);
-        }
-      }
-    }
-  });
-
-  return props.treeNode ? renderTreeViewObject() : renderTreeView();
-};
-
-TreeViewPresenterObject.displayName = "TreeViewPresenterObject";
-
-TreeViewPresenterObject.propTypes = {
-  alternateBg: PropTypes.bool,
-  children: PropTypes.node,
-  getActiveTreeItemIndex: PropTypes.func,
-  guidelines: PropTypes.bool,
-  indicator: PropTypes.string,
-  selected: PropTypes.bool,
-  setTreeViewRef: PropTypes.func,
-  stylesheet: PropTypes.func
-};
-
-export default TreeViewPresenterObject;
+  render() {
+    return this.props.treeNode
+      ? this.renderTreeViewObject()
+      : this.renderTreeView();
+  }
+}

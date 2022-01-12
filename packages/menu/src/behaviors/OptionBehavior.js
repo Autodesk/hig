@@ -1,9 +1,27 @@
+import { Component } from "react";
 import PropTypes from "prop-types";
 import selectOption from "./selectOption";
 
-const OptionBehavior = props => {
-  const getIndexFromId = id => {
-    const options = props.getOptionsInfo();
+export default class OptionBehavior extends Component {
+  static propTypes = {
+    children: PropTypes.func,
+    disabled: PropTypes.bool,
+    id: PropTypes.string,
+    getActiveOption: PropTypes.func,
+    getOptionsInfo: PropTypes.func,
+    getPreviousEvent: PropTypes.func,
+    multiple: PropTypes.bool,
+    onClick: PropTypes.func,
+    onMouseEnter: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+    role: PropTypes.string,
+    selected: PropTypes.arrayOf(PropTypes.any),
+    setActiveOption: PropTypes.func,
+    setHighlightIndex: PropTypes.func
+  };
+
+  getIndexFromId = id => {
+    const options = this.props.getOptionsInfo();
     const optionIds = [];
 
     if (options !== null) {
@@ -15,7 +33,7 @@ const OptionBehavior = props => {
     return optionIds.indexOf(id) > -1 ? optionIds.indexOf(id) : null;
   };
 
-  const handleClick = event => {
+  handleClick = event => {
     const {
       disabled,
       getActiveOption,
@@ -25,7 +43,7 @@ const OptionBehavior = props => {
       role,
       selected,
       setActiveOption
-    } = props;
+    } = this.props;
     const activeOptionsArray = [...getActiveOption()];
     const activeOptions = selectOption(id, activeOptionsArray, multiple);
 
@@ -45,42 +63,44 @@ const OptionBehavior = props => {
     setActiveOption(activeOptions);
   };
 
-  const handleMouseEnter = event => {
-    if (props.onMouseEnter) {
-      props.onMouseEnter(event);
+  handleMouseEnter = event => {
+    if (this.props.onMouseEnter) {
+      this.props.onMouseEnter(event);
     }
 
     // we don't want to set the highlight state on hover when scrolling via keyboard
-    if (props.getPreviousEvent() === `keydown`) {
+    if (this.props.getPreviousEvent() === `keydown`) {
       return;
     }
 
-    if (props.disabled || props.role === `presentation`) {
+    if (this.props.disabled || this.props.role === `presentation`) {
       return;
     }
 
-    if (props.setHighlightIndex) {
-      props.setHighlightIndex(Number(getIndexFromId(props.id)) + 1);
+    if (this.props.setHighlightIndex) {
+      this.props.setHighlightIndex(
+        Number(this.getIndexFromId(this.props.id)) + 1
+      );
     }
   };
 
-  const handleMouseLeave = event => {
-    if (props.onMouseLeave) {
-      props.onMouseLeave(event);
+  handleMouseLeave = event => {
+    if (this.props.onMouseLeave) {
+      this.props.onMouseLeave(event);
     }
 
     // we don't want to set the highlight state on hover when scrolling via keyboard
-    if (props.getPreviousEvent() === `keydown`) {
+    if (this.props.getPreviousEvent() === `keydown`) {
       return;
     }
 
-    if (props.setHighlightIndex) {
-      props.setHighlightIndex(0);
+    if (this.props.setHighlightIndex) {
+      this.props.setHighlightIndex(0);
     }
   };
 
-  const isActive = () => {
-    const { id, getActiveOption, multiple } = props;
+  isActive = () => {
+    const { id, getActiveOption, multiple } = this.props;
 
     if (multiple) {
       return getActiveOption().indexOf(id) > -1;
@@ -89,32 +109,21 @@ const OptionBehavior = props => {
     return id === getActiveOption()[0];
   };
 
-  return props.children({
-    getIndexFromId,
-    handleClick,
-    handleMouseEnter,
-    handleMouseLeave,
-    isActive
-  });
-};
+  render() {
+    const {
+      getIndexFromId,
+      handleClick,
+      handleMouseEnter,
+      handleMouseLeave,
+      isActive
+    } = this;
 
-OptionBehavior.displayName = "OptionBehavior";
-
-OptionBehavior.propTypes = {
-  children: PropTypes.func,
-  disabled: PropTypes.bool,
-  id: PropTypes.string,
-  getActiveOption: PropTypes.func,
-  getOptionsInfo: PropTypes.func,
-  getPreviousEvent: PropTypes.func,
-  multiple: PropTypes.bool,
-  onClick: PropTypes.func,
-  onMouseEnter: PropTypes.func,
-  onMouseLeave: PropTypes.func,
-  role: PropTypes.string,
-  selected: PropTypes.arrayOf(PropTypes.any),
-  setActiveOption: PropTypes.func,
-  setHighlightIndex: PropTypes.func
-};
-
-export default OptionBehavior;
+    return this.props.children({
+      getIndexFromId,
+      handleClick,
+      handleMouseEnter,
+      handleMouseLeave,
+      isActive
+    });
+  }
+}

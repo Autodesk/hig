@@ -27,12 +27,23 @@ exports[`banner/BannerAnimator/BannerAnimator snapshot tests renders hidden 1`] 
 exports[`banner/BannerAnimator/BannerAnimator snapshot tests renders in the bottom position 1`] = `
 <div
   aria-busy={false}
-  aria-expanded={false}
+  aria-expanded={true}
   onTransitionEnd={[Function]}
-  style={null}
+  style={
+    Object {
+      "height": "",
+      "overflow": "",
+      "transition": "",
+    }
+  }
 >
   <div
-    style={null}
+    style={
+      Object {
+        "transform": "",
+        "transition": "",
+      }
+    }
   >
     <div />
   </div>
@@ -42,12 +53,23 @@ exports[`banner/BannerAnimator/BannerAnimator snapshot tests renders in the bott
 exports[`banner/BannerAnimator/BannerAnimator snapshot tests renders with only children 1`] = `
 <div
   aria-busy={false}
-  aria-expanded={false}
+  aria-expanded={true}
   onTransitionEnd={[Function]}
-  style={null}
+  style={
+    Object {
+      "height": "",
+      "overflow": "",
+      "transition": "",
+    }
+  }
 >
   <div
-    style={null}
+    style={
+      Object {
+        "transform": "",
+        "transition": "",
+      }
+    }
   >
     <div />
   </div>

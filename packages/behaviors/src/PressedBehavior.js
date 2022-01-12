@@ -1,54 +1,63 @@
-import { useState } from "react";
+import { Component } from "react";
 import PropTypes from "prop-types";
 
-const PressedBehavior = props => {
-  const [isPressed, setIsPressed] = useState(false);
+export default class PressedBehavior extends Component {
+  static propTypes = {
+    children: PropTypes.func.isRequired,
+    onMouseDown: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+    onMouseUp: PropTypes.func
+  };
 
-  const handleMouseDown = event => {
-    if (props.onMouseDown) {
-      props.onMouseDown(event);
+  constructor(props) {
+    super(props);
+
+    // Binding in the constructor because performance
+    this.handleMouseDown = this.handleMouseDown.bind(this);
+    this.handleMouseUp = this.handleMouseUp.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
+
+    this.state = {
+      isPressed: false
+    };
+  }
+
+  handleMouseDown(event) {
+    if (this.props.onMouseDown) {
+      this.props.onMouseDown(event);
     }
 
     if (!event.defaultPrevented) {
-      setIsPressed(true);
+      this.setState({ isPressed: true });
     }
-  };
+  }
 
-  const handleMouseLeave = event => {
-    if (props.onMouseLeave) {
-      props.onMouseLeave(event);
-    }
-
-    if (!event.defaultPrevented) {
-      setIsPressed(false);
-    }
-  };
-
-  const handleMouseUp = event => {
-    if (props.onMouseUp) {
-      props.onMouseUp(event);
+  handleMouseLeave(event) {
+    if (this.props.onMouseLeave) {
+      this.props.onMouseLeave(event);
     }
 
     if (!event.defaultPrevented) {
-      setIsPressed(false);
+      this.setState({ isPressed: false });
     }
-  };
+  }
 
-  return props.children({
-    isPressed,
-    onMouseDown: handleMouseDown,
-    onMouseUp: handleMouseUp,
-    onPressedMouseLeave: handleMouseLeave
-  });
-};
+  handleMouseUp(event) {
+    if (this.props.onMouseUp) {
+      this.props.onMouseUp(event);
+    }
 
-PressedBehavior.displayName = "PressedBehavior";
+    if (!event.defaultPrevented) {
+      this.setState({ isPressed: false });
+    }
+  }
 
-PressedBehavior.propTypes = {
-  children: PropTypes.func.isRequired,
-  onMouseDown: PropTypes.func,
-  onMouseLeave: PropTypes.func,
-  onMouseUp: PropTypes.func
-};
-
-export default PressedBehavior;
+  render() {
+    return this.props.children({
+      isPressed: this.state.isPressed,
+      onMouseDown: this.handleMouseDown,
+      onMouseUp: this.handleMouseUp,
+      onPressedMouseLeave: this.handleMouseLeave
+    });
+  }
+}

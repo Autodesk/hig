@@ -32,7 +32,7 @@ describe("banner/Banner", () => {
     renderedComponents.forEach(componentName => {
       describe(componentName, () => {
         it(`renders a \`${componentName}\` component`, () => {
-          expect(wrapper.find(componentName).exists());
+          expect(wrapper.find(componentName)).toBePresent();
         });
       });
     });

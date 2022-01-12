@@ -22,29 +22,6 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   flex-direction: column;
 }
 
-.emotion-34 {
-  box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  border-bottom: 0;
-  background-color: rgba(128,128,128,0);
-}
-
 .emotion-3 {
   position: relative;
   display: -webkit-box;
@@ -325,6 +302,29 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   -webkit-flex-shrink: 1;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+}
+
+.emotion-34 {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  border-bottom: 0;
+  background-color: rgba(128,128,128,0);
 }
 
 .emotion-2 {
@@ -735,10 +735,10 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   display: flex;
   padding: 0;
   margin: 0;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   border-bottom: 0;
   background-color: rgba(128,128,128,0);
 }
@@ -1411,7 +1411,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
 `;
 
 exports[`tabs/Tabs renders underline style tabs 1`] = `
-.emotion-18 {
+.emotion-17 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1568,7 +1568,7 @@ exports[`tabs/Tabs renders underline style tabs 1`] = `
   visibility: hidden;
 }
 
-.emotion-17 {
+.emotion-16 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1578,7 +1578,7 @@ exports[`tabs/Tabs renders underline style tabs 1`] = `
   flex-shrink: 1;
 }
 
-.emotion-16 {
+.emotion-15 {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -1697,7 +1697,7 @@ exports[`tabs/Tabs renders underline style tabs 1`] = `
   transition-property: height;
 }
 
-.emotion-14 {
+.emotion-13 {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1719,15 +1719,15 @@ exports[`tabs/Tabs renders underline style tabs 1`] = `
   padding: 0 0 4px 0;
 }
 
-.emotion-14:focus {
+.emotion-13:focus {
   outline: none;
 }
 
 <div
-  className="emotion-18"
+  className="emotion-17"
 >
   <ul
-    className="emotion-16"
+    className="emotion-15"
   >
     <li
       className="emotion-4"
@@ -1791,7 +1791,7 @@ exports[`tabs/Tabs renders underline style tabs 1`] = `
       className="emotion-4"
     >
       <div
-        className="emotion-14"
+        className="emotion-13"
         disabled={true}
         onBlur={[Function]}
         onClick={[Function]}
@@ -1814,14 +1814,11 @@ exports[`tabs/Tabs renders underline style tabs 1`] = `
         <div
           className="emotion-2"
         />
-        <div
-          className="emotion-13"
-        />
       </div>
     </li>
   </ul>
   <div
-    className="emotion-17"
+    className="emotion-16"
   >
     active
   </div>
@@ -1848,6 +1845,29 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.emotion-40 {
+  box-sizing: border-box;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  border-bottom: 0;
+  background-color: rgba(128,128,128,0);
 }
 
 .emotion-4 {
@@ -2254,29 +2274,6 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   flex-shrink: 1;
 }
 
-.emotion-40 {
-  box-sizing: border-box;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0;
-  margin: 0;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  border-bottom: 0;
-  background-color: rgba(128,128,128,0);
-}
-
 <div
   className="emotion-42"
 >
@@ -2540,7 +2537,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
 `;
 
 exports[`tabs/Tabs renders with custom className 1`] = `
-.emotion-13 {
+.emotion-12 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2578,7 +2575,7 @@ exports[`tabs/Tabs renders with custom className 1`] = `
   display: flex;
 }
 
-.emotion-12 {
+.emotion-11 {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -2588,7 +2585,7 @@ exports[`tabs/Tabs renders with custom className 1`] = `
   flex-shrink: 1;
 }
 
-.emotion-11 {
+.emotion-10 {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex-grow: 0;
@@ -2776,10 +2773,10 @@ exports[`tabs/Tabs renders with custom className 1`] = `
 }
 
 <div
-  className="emotion-13 class1 class2"
+  className="emotion-12 class1 class2"
 >
   <ul
-    className="emotion-11 class1__tabs class2__tabs"
+    className="emotion-10 class1__tabs class2__tabs"
   >
     <li
       className="emotion-4 class1__tab class2__tab"
@@ -2837,14 +2834,11 @@ exports[`tabs/Tabs renders with custom className 1`] = `
         <div
           className="emotion-7 class1__tab__halo class2__tab__halo"
         />
-        <div
-          className="emotion-8 class1__tab__divider class2__tab__divider"
-        />
       </div>
     </li>
   </ul>
   <div
-    className="emotion-12 class1__content class2__content"
+    className="emotion-11 class1__content class2__content"
   >
     bar
   </div>
