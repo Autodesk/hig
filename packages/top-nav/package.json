@@ -1,6 +1,6 @@
 {
   "name": "@hig/top-nav",
-  "version": "3.4.1",
+  "version": "3.4.2",
   "description": "HIG Top Navigation",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,13 +18,13 @@
   ],
   "dependencies": {
     "@hig/avatar": "1.4.0",
-    "@hig/flyout": "^1.3.0",
-    "@hig/icon-button": "^2.6.2",
-    "@hig/icons": "^3.4.3",
-    "@hig/notifications-flyout": "^2.1.5",
-    "@hig/profile-flyout": "^2.2.1",
-    "@hig/typography": "^1.2.1",
-    "@hig/utils": "^0.4.0",
+    "@hig/flyout": "^1.3.1",
+    "@hig/icon-button": "^2.6.3",
+    "@hig/icons": "^3.4.4",
+    "@hig/notifications-flyout": "^2.1.6",
+    "@hig/profile-flyout": "^2.2.2",
+    "@hig/typography": "^1.2.2",
+    "@hig/utils": "^0.4.1",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
@@ -36,8 +36,8 @@
     "@hig/semantic-release-config": "^0.1.0"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.2",
-    "@hig/theme-data": "^2.22.0",
+    "@hig/theme-context": "^3.0.3",
+    "@hig/theme-data": "^2.22.1",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {
