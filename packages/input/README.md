@@ -4,6 +4,7 @@ Inputs allow the user to input a small amount of freeform text (100 characters o
 
 Read more about when and how to use the Input component [on the website](https://hig.autodesk.com/web/components/form-elements).
 
+
 ## Getting started
 
 ### Install the package

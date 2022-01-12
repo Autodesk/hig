@@ -4,6 +4,7 @@ A slider allows selecting a single numeric value from a range using a small slid
 
 Read more about when and how to use the Slider component [on the website](https://hig.autodesk.com/web/components/form-elements).
 
+
 ## Getting started
 
 ### Install the package

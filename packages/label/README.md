@@ -2,6 +2,7 @@
 
 Label represents a caption for an item in a user interface
 
+
 ## Getting started
 
 ### Install the package
@@ -46,4 +47,3 @@ function YourComponent() {
   );
 }
 ```
-

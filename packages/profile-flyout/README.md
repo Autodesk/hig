@@ -4,6 +4,7 @@ The profile flyout is a component to use with the top navigation. When clicking 
 
 Read more about when and how to use the Profile Flyout component [on the website](https://hig.autodesk.com/web/components/top-nav).
 
+
 ## Getting started
 
 ### Install the package

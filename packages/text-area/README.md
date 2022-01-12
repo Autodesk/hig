@@ -4,6 +4,7 @@ Text areas allow the user to input a larger amount of freeform text (over 100 ch
 
 Read more about when and how to use the Text Area component [on the website](https://hig.autodesk.com/web/components/form-elements).
 
+
 ## Getting started
 
 ### Install the package
