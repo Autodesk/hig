@@ -4,6 +4,7 @@ The Avatar Bundle is a "stack" of up to three Avatars, meant to represent a coll
 
 Read more about when and how to use the Avatar Bundle component [on the internal wiki](https://hig.autodesk.com/web/components/avatar-bundle) (currently out of date).
 
+
 ## Getting started
 
 ### Install the package
