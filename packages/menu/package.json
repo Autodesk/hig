@@ -1,6 +1,6 @@
 {
   "name": "@hig/menu",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "HIG Menu",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,17 +18,17 @@
   ],
   "dependencies": {
     "@hig/behaviors": "^1.1.1",
-    "@hig/icons": "^3.4.0",
+    "@hig/icons": "^3.4.3",
     "@hig/utils": "^0.4.0",
     "prop-types": "^15.7.1"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.1",
+    "@hig/theme-context": "^3.0.2",
     "@hig/theme-data": "^2.22.0",
     "react": "^17.0.0"
   },
   "devDependencies": {
-    "@hig/avatar": "^1.4.0",
+    "@hig/avatar": "^1.4.1",
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
