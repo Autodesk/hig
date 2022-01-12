@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.22.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.22.0...@hig/theme-data@2.22.1) (2022-01-12)
+
+
+### Bug Fixes
+
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+
 # [@hig/theme-data-v2.22.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.21.2...@hig/theme-data@2.22.0) (2021-11-19)
 
 

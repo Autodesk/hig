@@ -1,3 +1,15 @@
+# [@hig/notifications-flyout-v2.1.6](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.1.5...@hig/notifications-flyout@2.1.6) (2022-01-12)
+
+
+### Bug Fixes
+
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
 # [@hig/notifications-flyout-v2.1.5](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.1.4...@hig/notifications-flyout@2.1.5) (2022-01-12)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@hig/utils",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Non-component specific utility functions for HIG components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",

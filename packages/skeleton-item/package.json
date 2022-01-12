@@ -1,6 +1,6 @@
 {
   "name": "@hig/skeleton-item",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "HIG SkeletonItem component",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -30,7 +30,7 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^3.0.1",
-    "@hig/theme-data": "^2.22.0",
+    "@hig/theme-data": "^2.22.1",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {

@@ -1,3 +1,15 @@
+# [@hig/icon-button-v2.6.3](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.6.2...@hig/icon-button@2.6.3) (2022-01-12)
+
+
+### Bug Fixes
+
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
 # [@hig/icon-button-v2.6.2](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.6.1...@hig/icon-button@2.6.2) (2022-01-12)
 
 

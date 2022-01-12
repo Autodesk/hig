@@ -1,6 +1,6 @@
 {
   "name": "@hig/button",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "HIG Button",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -17,8 +17,8 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/behaviors": "^1.1.1",
-    "@hig/utils": "^0.4.0",
+    "@hig/behaviors": "^1.1.2",
+    "@hig/utils": "^0.4.1",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
@@ -30,8 +30,8 @@
     "@hig/semantic-release-config": "^0.1.0"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.2",
-    "@hig/theme-data": "^2.22.0",
+    "@hig/theme-context": "^3.0.3",
+    "@hig/theme-data": "^2.22.1",
     "react": "^15.4.1 || ^16.3.2"
   },
   "scripts": {

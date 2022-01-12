@@ -1,6 +1,6 @@
 {
   "name": "@hig/checkbox",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "HIG Checkbox",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -17,16 +17,16 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/behaviors": "^1.1.1",
-    "@hig/icons": "^3.4.3",
-    "@hig/utils": "^0.4.0",
+    "@hig/behaviors": "^1.1.2",
+    "@hig/icons": "^3.4.4",
+    "@hig/utils": "^0.4.1",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
     "react-lifecycles-compat": "^3.0.4"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.2",
-    "@hig/theme-data": "^2.22.0",
+    "@hig/theme-context": "^3.0.3",
+    "@hig/theme-data": "^2.22.1",
     "react": "^15.4.1 || ^16.3.2"
   },
   "devDependencies": {

@@ -1,3 +1,15 @@
+# [@hig/banner-v2.3.3](https://github.com/Autodesk/hig/compare/@hig/banner@2.3.2...@hig/banner@2.3.3) (2022-01-12)
+
+
+### Bug Fixes
+
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
 # [@hig/banner-v2.3.2](https://github.com/Autodesk/hig/compare/@hig/banner@2.3.1...@hig/banner@2.3.2) (2022-01-12)
 
 
