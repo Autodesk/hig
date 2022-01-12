@@ -1,3 +1,15 @@
+# [@hig/slider-v1.3.2](https://github.com/Autodesk/hig/compare/@hig/slider@1.3.1...@hig/slider@1.3.2) (2022-01-12)
+
+
+### Bug Fixes
+
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
 # [@hig/slider-v1.3.1](https://github.com/Autodesk/hig/compare/@hig/slider@1.3.0...@hig/slider@1.3.1) (2022-01-12)
 
 
