@@ -1,3 +1,11 @@
+# [@hig/modal-v2.2.3](https://github.com/Autodesk/hig/compare/@hig/modal@2.2.2...@hig/modal@2.2.3) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* remove key duplicated ([2683acc](https://github.com/Autodesk/hig/commit/2683acc))
+
 # [@hig/modal-v2.2.2](https://github.com/Autodesk/hig/compare/@hig/modal@2.2.1...@hig/modal@2.2.2) (2020-11-17)
 
 
