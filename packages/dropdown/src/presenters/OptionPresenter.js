@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
@@ -57,59 +57,58 @@ OptionWrapper.propTypes = {
   onMouseMove: PropTypes.func,
   selected: PropTypes.bool
 };
-const OptionPresenter = props => {
-  const { children, selected, ...otherProps } = props;
 
-  return (
-    <ThemeContext.Consumer>
-      {({ resolvedRoles, metadata }) => {
-        const Icon =
-          metadata.densityId === "medium-density"
-            ? CheckmarkSUI
-            : CheckmarkXsUI;
-        const styles = stylesheet(props, resolvedRoles);
+export default class OptionPresenter extends Component {
+  static propTypes = {
+    /**
+     * Visual representation of the option
+     */
+    children: PropTypes.node,
+    /**
+     * Indicates the option is currently highlighted.
+     * This is comparable to hover state, but useful when interacting by keyboard.
+     */
+    highlighted: PropTypes.bool,
+    /**
+     * Called when user finishes clicking on an option
+     */
+    onClick: PropTypes.func,
+    /**
+     * Called when user begins clicking on an option
+     */
+    onMouseDown: PropTypes.func,
+    /**
+     * Called when user moves mouse over the option
+     */
+    onMouseMove: PropTypes.func,
+    /**
+     * Indicates the option is currently selected
+     */
+    selected: PropTypes.bool
+  };
 
-        return (
-          <OptionWrapper selected={selected} {...otherProps}>
-            <span>{children}</span>
-            <div className={css(styles.optionCheckWrapper)}>
-              <Icon />
-            </div>
-          </OptionWrapper>
-        );
-      }}
-    </ThemeContext.Consumer>
-  );
-};
+  render() {
+    const { children, selected, ...otherProps } = this.props;
 
-OptionPresenter.displayName = "OptionPresenter";
+    return (
+      <ThemeContext.Consumer>
+        {({ resolvedRoles, metadata }) => {
+          const Icon =
+            metadata.densityId === "medium-density"
+              ? CheckmarkSUI
+              : CheckmarkXsUI;
+          const styles = stylesheet(this.props, resolvedRoles);
 
-OptionPresenter.propTypes = {
-  /**
-   * Visual representation of the option
-   */
-  children: PropTypes.node,
-  /**
-   * Indicates the option is currently highlighted.
-   * This is comparable to hover state, but useful when interacting by keyboard.
-   */
-  highlighted: PropTypes.bool,
-  /**
-   * Called when user finishes clicking on an option
-   */
-  onClick: PropTypes.func,
-  /**
-   * Called when user begins clicking on an option
-   */
-  onMouseDown: PropTypes.func,
-  /**
-   * Called when user moves mouse over the option
-   */
-  onMouseMove: PropTypes.func,
-  /**
-   * Indicates the option is currently selected
-   */
-  selected: PropTypes.bool
-};
-
-export default OptionPresenter;
+          return (
+            <OptionWrapper selected={selected} {...otherProps}>
+              <span>{children}</span>
+              <div className={css(styles.optionCheckWrapper)}>
+                <Icon />
+              </div>
+            </OptionWrapper>
+          );
+        }}
+      </ThemeContext.Consumer>
+    );
+  }
+}

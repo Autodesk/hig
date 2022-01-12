@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import { placements, AVAILABLE_PLACEMENTS } from "./placements";
@@ -25,12 +25,49 @@ import BannerPresenter from "./BannerPresenter";
  */
 
 /** @type {Component<BannerProps>} */
-const Banner = props => {
+export default class Banner extends Component {
+  static AVAILABLE_PLACEMENTS = AVAILABLE_PLACEMENTS;
+  static AVAILABLE_TYPES = AVAILABLE_TYPES;
+  static placements = placements;
+  static types = types;
+
+  static Action = BannerAction;
+  static Interactions = BannerInteractions;
+  static Presenter = BannerPresenter;
+
+  static propTypes = {
+    /** Indicates the style of banner */
+    type: PropTypes.oneOf(AVAILABLE_TYPES),
+    /** Determines the intended placement of banner */
+    placement: PropTypes.oneOf(AVAILABLE_PLACEMENTS),
+    /** The label of the message displayed */
+    label: PropTypes.string,
+    /** The ID used for ARIA labeling */
+    labelledBy: PropTypes.string,
+    /** Banner actions; Any JSX, or a render prop function */
+    actions: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    /** Accessibility text for the dismiss button */
+    dismissButtonTitle: PropTypes.string,
+    /** Called when the banner is dismissed
+     *  If this is not supplied the close button will not appear
+     */
+    onDismiss: PropTypes.func,
+    /** Animation; Determines the visibility of the banner */
+    isVisible: PropTypes.bool,
+    /** The displayed message */
+    children: PropTypes.node,
+    /* Adds custom/overriding style */
+    stylesheet: PropTypes.func
+  };
+
+  /** @type {BannerProps | any} */
+  props;
+
   /**
    * @param {import("./BannerContainer").PresenterBag} presenterBag
    */
-  const renderPresenter = presenterBag => {
-    const presenterProps = { ...props, ...presenterBag };
+  renderPresenter = presenterBag => {
+    const presenterProps = { ...this.props, ...presenterBag };
     const {
       children,
       stylesheet: customStylesheet,
@@ -47,9 +84,9 @@ const Banner = props => {
   /**
    * @param {import("./BannerAnimator").ContainerBag} containerBag
    */
-  // eslint-disable-next-line react/prop-types
-  const renderContainer = ({ handleReady }) => {
-    const { actions } = props;
+  renderContainer = ({ handleReady }) => {
+    const { actions } = this.props;
+    const { renderPresenter } = this;
 
     return (
       <BannerContainer actions={actions} onReady={handleReady}>
@@ -58,52 +95,17 @@ const Banner = props => {
     );
   };
 
-  const { isVisible, placement } = props;
+  render() {
+    const { isVisible, placement } = this.props;
+    const { renderContainer } = this;
 
-  return (
-    <BannerAnimator
-      isVisible={isVisible}
-      {...animatorPropsByPlacement[placement]}
-    >
-      {renderContainer}
-    </BannerAnimator>
-  );
-};
-
-Banner.displayName = "Banner";
-
-Banner.AVAILABLE_PLACEMENTS = AVAILABLE_PLACEMENTS;
-Banner.AVAILABLE_TYPES = AVAILABLE_TYPES;
-Banner.placements = placements;
-Banner.types = types;
-
-Banner.Action = BannerAction;
-Banner.Interactions = BannerInteractions;
-Banner.Presenter = BannerPresenter;
-
-Banner.propTypes = {
-  /** Indicates the style of banner */
-  type: PropTypes.oneOf(AVAILABLE_TYPES),
-  /** Determines the intended placement of banner */
-  placement: PropTypes.oneOf(AVAILABLE_PLACEMENTS),
-  /** The label of the message displayed */
-  label: PropTypes.string,
-  /** The ID used for ARIA labeling */
-  labelledBy: PropTypes.string,
-  /** Banner actions; Any JSX, or a render prop function */
-  actions: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  /** Accessibility text for the dismiss button */
-  dismissButtonTitle: PropTypes.string,
-  /** Called when the banner is dismissed
-   *  If this is not supplied the close button will not appear
-   */
-  onDismiss: PropTypes.func,
-  /** Animation; Determines the visibility of the banner */
-  isVisible: PropTypes.bool,
-  /** The displayed message */
-  children: PropTypes.node,
-  /* Adds custom/overriding style */
-  stylesheet: PropTypes.func
-};
-
-export default Banner;
+    return (
+      <BannerAnimator
+        isVisible={isVisible}
+        {...animatorPropsByPlacement[placement]}
+      >
+        {renderContainer}
+      </BannerAnimator>
+    );
+  }
+}

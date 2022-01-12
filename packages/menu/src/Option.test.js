@@ -113,7 +113,7 @@ describe("menu/Option", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it.skip("passes down the optionRef", () => {
+  it("passes down the optionRef", () => {
     let optionEl = null;
     const setOptionEl = el => {
       optionEl = el;
