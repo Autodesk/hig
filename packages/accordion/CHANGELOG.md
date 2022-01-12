@@ -1,3 +1,15 @@
+# [@hig/accordion-v1.1.3](https://github.com/Autodesk/hig/compare/@hig/accordion@1.1.2...@hig/accordion@1.1.3) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* control prevProps in ContentPresenter ([3af1ed3](https://github.com/Autodesk/hig/commit/3af1ed3))
+* props collapsed is not passed correctly ([b6ef2b5](https://github.com/Autodesk/hig/commit/b6ef2b5))
+* remove space blank lint ([8658b0b](https://github.com/Autodesk/hig/commit/8658b0b))
+* replace location prevState ([764efde](https://github.com/Autodesk/hig/commit/764efde))
+* transition accordion missing ([62f379c](https://github.com/Autodesk/hig/commit/62f379c))
+
 # [@hig/accordion-v1.1.2](https://github.com/Autodesk/hig/compare/@hig/accordion@1.1.1...@hig/accordion@1.1.2) (2020-09-16)
 
 
