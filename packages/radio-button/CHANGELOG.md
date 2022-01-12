@@ -1,3 +1,10 @@
+# [@hig/radio-button-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.1.0...@hig/radio-button@1.1.1) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+
 # [@hig/radio-button-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/radio-button@1.0.9...@hig/radio-button@1.1.0) (2020-12-07)
 
 
