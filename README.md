@@ -94,4 +94,4 @@ Each HIG pattern is implemented as a set of React components. Each pattern is pu
 
 ## Contributing
 
-Read our contribution guidelines here: [CONTRIBUTING.md](CONTRIBUTING.md).
+Read our contribution guidelines here: [CONTRIBUTING.md](CONTRIBUTING.md)
