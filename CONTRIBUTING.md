@@ -6,7 +6,7 @@
 
 - [Filing Issues](#filing-issues)
   - [Suggestions](#suggestions)
-  - [Bugs](#bugs)
+  - [Bug Reports](#bug-reports)
 - [Contributing Code](#contributing-code)
 - [Contributing Features](#contributing-features)
   - [Fork the project](#fork-the-project)
