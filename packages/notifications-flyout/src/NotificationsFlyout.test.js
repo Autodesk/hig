@@ -62,8 +62,9 @@ describe("notifications-flyout/NotificationsFlyout", () => {
         jest.clearAllMocks();
       });
 
-      it.skip("removes the notification from the list", () => {
+      it("removes the notification from the list", () => {
         expect(wrapper.find(Notification)).toHaveLength(1);
+
         wrapper
           .find(Notification)
           .props()

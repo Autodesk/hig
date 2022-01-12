@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import { combineEventHandlers } from "@hig/utils";
@@ -31,31 +31,121 @@ import PanelPresenter from "./presenters/PanelPresenter";
  * @property {HTMLDivElement} [wrapperRef]
  */
 
-const Flyout = props => {
-  const [open, setOpen] = useState(props.defaultOpen);
-  const actionRef = useRef();
-  const panelRef = useRef();
-  const pointerRef = useRef();
-  const wrapperRef = useRef();
+export default class Flyout extends Component {
+  static propTypes = {
+    /** Manipulate flyout coordinates before rendering */
+    alterCoordinates: PropTypes.func,
+    /** Where the flyout will be anchored relative to target */
+    anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS),
+    /** Target component to open the flyout. Can be either a node or a render function */
+    children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    /** Content for the flyout. Can be either a node or a render function */
+    content: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    /** Default uncontrolled open state */
+    defaultOpen: PropTypes.bool,
+    /**
+     * When the flyout overflows the viewport, it'll attempt to
+     * use the given anchor points in order to keep the flyout
+     * within the viewport.
+     */
+    fallbackAnchorPoints: PropTypes.arrayOf(
+      PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS)
+    ),
+    /** Renders a custom flyout panel. Can be either a node or a render function */
+    panel: PropTypes.func,
+    /** A custom pointer */
+    pointer: PropTypes.node,
+    /** Max height of the flyout content, in pixels */
+    maxHeight: PropTypes.number,
+    /** Function called when the flyout is open, and a click event occurs outside the flyout */
+    onClickOutside: PropTypes.func,
+    /** Function called when the flyout closes */
+    onClose: PropTypes.func,
+    /** Function called when the flyout opens */
+    onOpen: PropTypes.func,
+    /** Function called when the flyout panel is scrolled */
+    onScroll: PropTypes.func,
+    /** When provided, it overrides the flyout's open state */
+    open: PropTypes.bool,
+    /** Whether flyout should open when the target is hovered over */
+    openOnHover: PropTypes.bool,
+    /**
+     * If openOnHover is true, this prop will determine the delay
+     * from when mouseEnter begins until the flyout visually opens
+     */
+    openOnHoverDelay: PropTypes.number,
+    /** Function to modify the component's styles */
+    stylesheet: PropTypes.func
+  };
+
+  static defaultProps = {
+    anchorPoint: DEFAULT_COORDINATES.anchorPoint,
+    defaultOpen: false,
+    fallbackAnchorPoints: AVAILABLE_ANCHOR_POINTS,
+    openOnHover: false,
+    openOnHoverDelay: 500,
+    /**
+     * @param {PanelRendererPayload} payload
+     */
+    panel({
+      innerRef,
+      content,
+      handleScroll,
+      maxHeight,
+      className,
+      stylesheet
+    }) {
+      return (
+        <PanelContainerPresenter
+          innerRef={innerRef}
+          maxHeight={maxHeight}
+          className={className}
+          stylesheet={stylesheet}
+        >
+          <PanelPresenter
+            onScroll={handleScroll}
+            className={className}
+            stylesheet={stylesheet}
+          >
+            {content}
+          </PanelPresenter>
+        </PanelContainerPresenter>
+      );
+    }
+  };
+
+  /** @type {State} */
+  state = {
+    open: this.props.defaultOpen
+  };
+
+  componentDidMount() {
+    window.document.body.addEventListener("click", this.handleBodyClick);
+  }
+
+  componentWillUnmount() {
+    window.document.body.removeEventListener("click", this.handleBodyClick);
+  }
 
   /**
    * @returns {Coordinates}
    */
-  const getCoordinatesMethod = () => {
-    const { alterCoordinates, anchorPoint, fallbackAnchorPoints } = props;
+  getCoordinates() {
+    const { alterCoordinates, anchorPoint, fallbackAnchorPoints } = this.props;
+    const { actionRef, panelRef, pointerRef } = this.state;
 
     if (
-      !actionRef.current ||
-      !panelRef.current ||
-      !pointerRef.current ||
+      !actionRef ||
+      !panelRef ||
+      !pointerRef ||
       typeof window === "undefined"
     ) {
       return DEFAULT_COORDINATES;
     }
 
-    const actionRect = actionRef.current.getBoundingClientRect();
-    const panelRect = panelRef.current.getBoundingClientRect();
-    const pointerRect = pointerRef.current.getBoundingClientRect();
+    const actionRect = actionRef.getBoundingClientRect();
+    const panelRect = panelRef.getBoundingClientRect();
+    const pointerRect = pointerRef.getBoundingClientRect();
     const viewportRect = window.document.documentElement.getBoundingClientRect();
     const coordinates = getCoordinates({
       anchorPoint,
@@ -73,139 +163,151 @@ const Flyout = props => {
         pointerRect,
         viewportRect
       };
+
       return alterCoordinates(coordinates, rects);
     }
 
     return coordinates;
-  };
+  }
 
   /**
    * @param {boolean} open
    */
-  const setOpenMethod = openRef => {
-    const { onClose, onOpen } = props;
-    if (openRef && onOpen) {
+  setOpen(open) {
+    const { onClose, onOpen } = this.props;
+
+    if (open && onOpen) {
       onOpen();
-    } else if (!openRef && onClose) {
+    } else if (!open && onClose) {
       onClose();
     }
-    setOpen(openRef);
-  };
 
-  const isOpenControlled = () => props.open !== undefined;
+    this.setState({ open });
+  }
 
-  const isOpen = () => (isOpenControlled() ? props.open : open);
+  isOpenControlled() {
+    return this.props.open !== undefined;
+  }
 
-  const handleChildMouseEnter = () => {
-    if (props.openOnHover) {
-      setOpenMethod(true);
+  isOpen() {
+    return this.isOpenControlled() ? this.props.open : this.state.open;
+  }
+
+  handleChildMouseEnter = () => {
+    if (this.props.openOnHover) {
+      this.setOpen(true);
     }
   };
 
-  const handleChildMouseLeave = () => {
-    if (props.openOnHover) {
-      setOpenMethod(false);
+  handleChildMouseLeave = () => {
+    if (this.props.openOnHover) {
+      this.setOpen(false);
     }
+  };
+
+  handleChildClick = () => {
+    if (!this.isOpenControlled()) {
+      this.toggleOpen();
+    }
+  };
+
+  /**
+   * @param {MouseEvent} event
+   */
+  handleBodyClick = event => {
+    const { wrapperRef } = this.state;
+    const { onClickOutside } = this.props;
+    const flyoutClicked =
+      event.target === wrapperRef || wrapperRef.contains(event.target);
+
+    if (flyoutClicked || !this.isOpen()) return;
+    if (onClickOutside) onClickOutside(event);
+    if (!this.isOpenControlled()) this.toggleOpen();
   };
 
   /**
    * @param {HTMLElement} actionRef
    */
-  const refAction = actionRefParam => {
-    actionRef.current = actionRefParam;
+  refAction = actionRef => {
+    this.setState({ actionRef });
   };
 
   /**
    * @param {SVGSVGElement} pointerRef
    */
-  const refPointer = pointerRefParam => {
-    pointerRef.current = pointerRefParam;
+  refPointer = pointerRef => {
+    this.setState({ pointerRef });
   };
 
   /**
    * @param {HTMLElement} panelRef
    */
-  const refPanel = panelRefParam => {
-    panelRef.current = panelRefParam;
+  refPanel = panelRef => {
+    this.setState({ panelRef });
   };
 
   /**
    * @param {HTMLDivElement} wrapperRef
    */
-  const refWrapper = wrapperRefParam => {
-    wrapperRef.current = wrapperRefParam;
+  refWrapper = wrapperRef => {
+    this.setState({ wrapperRef });
   };
 
-  const hideFlyout = () => {
-    setOpenMethod(false);
+  hideFlyout = () => {
+    this.setOpen(false);
   };
 
-  const toggleOpen = () => {
-    setOpenMethod(!open);
-  };
+  toggleOpen() {
+    this.setOpen(!this.state.open);
+  }
 
-  const renderContent = () => {
-    const { content } = props;
+  /**
+   * @returns {PanelRendererPayload}
+   */
+  createPanelPayload() {
+    const { hideFlyout } = this;
+    const { maxHeight, onScroll, stylesheet, ...otherProps } = this.props;
+    const { className } = otherProps;
+
+    return {
+      hideFlyout,
+      maxHeight,
+      content: this.renderContent(),
+      handleScroll: onScroll,
+      innerRef: this.refPanel,
+      className,
+      stylesheet
+    };
+  }
+
+  renderContent() {
+    const { content } = this.props;
+    const { hideFlyout } = this;
 
     if (typeof content === "function") {
       return content({ hideFlyout });
     }
 
     return content;
-  };
+  }
 
-  /**
-   * @param {MouseEvent} event
-   */
-  const handleBodyClick = event => {
-    const { onClickOutside } = props;
-    const flyoutClicked =
-      event.target === wrapperRef || wrapperRef.current.contains(event.target);
-
-    if (flyoutClicked || !isOpen()) return;
-    if (onClickOutside) onClickOutside(event);
-    if (!isOpenControlled()) toggleOpen();
-  };
-
-  const handleChildClick = () => {
-    if (!isOpenControlled()) {
-      toggleOpen();
-    }
-  };
-
-  /**
-   * @returns {PanelRendererPayload}
-   */
-  const createPanelPayload = () => {
-    const { maxHeight, onScroll, stylesheet, ...otherProps } = props;
-    const { className } = otherProps;
-
-    return {
-      hideFlyout,
-      maxHeight,
-      content: renderContent(),
-      handleScroll: onScroll,
-      innerRef: refPanel,
-      className,
-      stylesheet
-    };
-  };
-
-  const renderPanel = ({ transitionStatus }) => {
-    const { panel } = props;
+  renderPanel({ transitionStatus }) {
+    const { panel } = this.props;
 
     if (typeof panel === "function") {
       return panel({
-        ...createPanelPayload(),
+        ...this.createPanelPayload(),
         transitionStatus
       });
     }
 
     return panel;
-  };
+  }
 
-  const renderChildren = (onMouseEnter, onMouseLeave) => {
-    const { children } = props;
+  renderChildren(onMouseEnter, onMouseLeave) {
+    const { children } = this.props;
+    const { handleChildClick } = this;
+
     if (typeof children === "function") {
       return children({ handleClick: handleChildClick });
     }
@@ -219,17 +321,25 @@ const Flyout = props => {
     }
 
     return children;
-  };
+  }
 
-  const renderPresenter = transitionStatus => {
-    const { openOnHoverDelay, pointer, stylesheet, ...otherProps } = props;
+  renderPresenter = transitionStatus => {
+    const {
+      handleChildMouseEnter,
+      handleChildMouseLeave,
+      refAction,
+      refPointer,
+      refWrapper
+    } = this;
+    const { openOnHoverDelay, pointer, stylesheet, ...otherProps } = this.props;
     const { className } = otherProps;
-    const panel = renderPanel({ transitionStatus });
+    const panel = this.renderPanel({ transitionStatus });
     const {
       anchorPoint,
       containerPosition,
       pointerPosition
-    } = getCoordinatesMethod();
+    } = this.getCoordinates();
+
     return (
       <DelayedHoverBehavior
         onMouseEnter={handleChildMouseEnter}
@@ -250,101 +360,18 @@ const Flyout = props => {
             refWrapper={refWrapper}
             transitionStatus={transitionStatus}
           >
-            {renderChildren(onMouseEnter, onMouseLeave)}
+            {this.renderChildren(onMouseEnter, onMouseLeave)}
           </FlyoutPresenter>
         )}
       </DelayedHoverBehavior>
     );
   };
 
-  useEffect(() => {
-    window.document.body.addEventListener("click", handleBodyClick);
-    return () => {
-      window.document.body.removeEventListener("click", handleBodyClick);
-    };
-  });
-
-  return (
-    <ContainerTransition open={isOpen()}>{renderPresenter}</ContainerTransition>
-  );
-};
-
-Flyout.displayName = "Flyout";
-
-Flyout.propTypes = {
-  /** Manipulate flyout coordinates before rendering */
-  alterCoordinates: PropTypes.func,
-  /** Where the flyout will be anchored relative to target */
-  anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS),
-  /** Target component to open the flyout. Can be either a node or a render function */
-  children: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  /** Content for the flyout. Can be either a node or a render function */
-  content: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  /** Default uncontrolled open state */
-  defaultOpen: PropTypes.bool,
-  /**
-   * When the flyout overflows the viewport, it'll attempt to
-   * use the given anchor points in order to keep the flyout
-   * within the viewport.
-   */
-  fallbackAnchorPoints: PropTypes.arrayOf(
-    PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS)
-  ),
-  /** Renders a custom flyout panel. Can be either a node or a render function */
-  panel: PropTypes.func,
-  /** A custom pointer */
-  pointer: PropTypes.node,
-  /** Max height of the flyout content, in pixels */
-  maxHeight: PropTypes.number,
-  /** Function called when the flyout is open, and a click event occurs outside the flyout */
-  onClickOutside: PropTypes.func,
-  /** Function called when the flyout closes */
-  onClose: PropTypes.func,
-  /** Function called when the flyout opens */
-  onOpen: PropTypes.func,
-  /** Function called when the flyout panel is scrolled */
-  onScroll: PropTypes.func,
-  /** When provided, it overrides the flyout's open state */
-  open: PropTypes.bool,
-  /** Whether flyout should open when the target is hovered over */
-  openOnHover: PropTypes.bool,
-  /**
-   * If openOnHover is true, this prop will determine the delay
-   * from when mouseEnter begins until the flyout visually opens
-   */
-  openOnHoverDelay: PropTypes.number,
-  /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
-};
-
-Flyout.defaultProps = {
-  anchorPoint: DEFAULT_COORDINATES.anchorPoint,
-  defaultOpen: false,
-  fallbackAnchorPoints: AVAILABLE_ANCHOR_POINTS,
-  openOnHover: false,
-  openOnHoverDelay: 500,
-  /**
-   * @param {PanelRendererPayload} payload
-   */
-  // eslint-disable-next-line react/prop-types
-  panel({ innerRef, content, handleScroll, maxHeight, className, stylesheet }) {
+  render() {
     return (
-      <PanelContainerPresenter
-        innerRef={innerRef}
-        maxHeight={maxHeight}
-        className={className}
-        stylesheet={stylesheet}
-      >
-        <PanelPresenter
-          onScroll={handleScroll}
-          className={className}
-          stylesheet={stylesheet}
-        >
-          {content}
-        </PanelPresenter>
-      </PanelContainerPresenter>
+      <ContainerTransition open={this.isOpen()}>
+        {this.renderPresenter}
+      </ContainerTransition>
     );
   }
-};
-
-export default Flyout;
+}

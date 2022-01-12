@@ -1,25 +1,25 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import { Consumer as BaseConsumer } from "./BaseContext";
 import createThemeProxy from "./createThemeProxy";
 
-const Consumer = props => (
-  <BaseConsumer>
-    {theme => {
-      const isDebugging = process.env.NODE_ENV !== "production";
-      const result = isDebugging ? createThemeProxy(theme) : theme;
+export default class Consumer extends Component {
+  static propTypes = {
+    /** A theme provided to the consumer within */
+    children: PropTypes.func
+  };
 
-      return props.children(result);
-    }}
-  </BaseConsumer>
-);
+  render() {
+    return (
+      <BaseConsumer>
+        {theme => {
+          const isDebugging = process.env.NODE_ENV !== "production";
+          const result = isDebugging ? createThemeProxy(theme) : theme;
 
-Consumer.displayName = "Consumer";
-
-Consumer.propTypes = {
-  /** A theme provided to the consumer within */
-  children: PropTypes.func
-};
-
-export default Consumer;
+          return this.props.children(result);
+        }}
+      </BaseConsumer>
+    );
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { Component } from "react";
 import Transition from "react-transition-group/Transition";
 import PropTypes from "prop-types";
 
@@ -10,33 +10,55 @@ const TRANSITION_DURATION = 300;
  * @property {function(MouseEvent): void} handleDismissButtonClick
  */
 
-const NotificationBehavior = props => {
-  const [height, setHeight] = useState("");
-  const [isVisible, setIsVisible] = useState(true);
-  const containerRef = useRef(null);
+export default class NotificationBehavior extends Component {
+  static propTypes = {
+    /** Notification content */
+    children: PropTypes.func.isRequired,
+    /** A callback called when user dismisses a featured notification */
+    onDismiss: PropTypes.func
+  };
+
+  /**
+   * @type {Object}
+   * @property {string} height Inline style height of the Notification wrapper
+   * @property {boolean} isVisible Determines whether the state of the visibility transition
+   */
+  state = {
+    height: "",
+    isVisible: true
+  };
+
+  /** @type {HTMLDivElement} */
+  containerRef;
 
   /**
    * @param {HTMLDivElement} containerRef
    */
-  const refContainer = containerRefParams => {
-    containerRef.current = containerRefParams;
+  refContainer = containerRef => {
+    this.containerRef = containerRef;
   };
 
-  const handleExit = () => {
-    const { onDismiss } = props;
+  handleExit = () => {
+    const { onDismiss } = this.props;
 
     if (onDismiss) onDismiss();
+  };
+
+  handleDismissButtonClick = () => {
+    this.hide();
   };
 
   /**
    * Sets the current height of the notification
    * so that the height transition can occur
    */
-  const prepareHideTransition = () =>
-    new Promise(resolve => {
-      setHeight(`${containerRef.current.clientHeight}px`);
-      window.requestAnimationFrame(resolve);
+  prepareHideTransition() {
+    return new Promise(resolve => {
+      this.setState({ height: `${this.containerRef.clientHeight}px` }, () => {
+        window.requestAnimationFrame(resolve);
+      });
     });
+  }
 
   /**
    * Begins the hide transition by setting the `isVisible` prop
@@ -45,49 +67,39 @@ const NotificationBehavior = props => {
    * This method calls `requestAnimationFrame` again to ensure that a repaint occurs.
    * @see https://stackoverflow.com/a/42302185
    */
-  const startHideTransition = () => {
+  startHideTransition() {
     window.requestAnimationFrame(() => {
-      setHeight("");
-      setIsVisible(false);
+      this.setState({
+        height: "",
+        isVisible: false
+      });
     });
-  };
+  }
 
-  const hide = () => {
-    prepareHideTransition().then(() => startHideTransition());
-  };
+  hide() {
+    this.prepareHideTransition().then(() => this.startHideTransition());
+  }
 
-  const handleDismissButtonClick = () => {
-    hide();
-  };
+  render() {
+    const { refContainer: innerRef, handleDismissButtonClick } = this;
+    const { children } = this.props;
+    const { height, isVisible } = this.state;
 
-  const innerRef = refContainer;
-  const { children } = props;
-
-  return (
-    <Transition
-      in={isVisible}
-      onExited={handleExit}
-      timeout={TRANSITION_DURATION}
-    >
-      {transitionStatus =>
-        children({
-          handleDismissButtonClick,
-          height,
-          innerRef,
-          transitionStatus
-        })
-      }
-    </Transition>
-  );
-};
-
-NotificationBehavior.displayName = "NotificationBehavior";
-
-NotificationBehavior.propTypes = {
-  /** Notification content */
-  children: PropTypes.func.isRequired,
-  /** A callback called when user dismisses a featured notification */
-  onDismiss: PropTypes.func
-};
-
-export default NotificationBehavior;
+    return (
+      <Transition
+        in={isVisible}
+        onExited={this.handleExit}
+        timeout={TRANSITION_DURATION}
+      >
+        {transitionStatus =>
+          children({
+            handleDismissButtonClick,
+            height,
+            innerRef,
+            transitionStatus
+          })
+        }
+      </Transition>
+    );
+  }
+}

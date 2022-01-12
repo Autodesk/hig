@@ -8,7 +8,7 @@ describe("NotificationsToast", () => {
     const wrapper = mount(
       <NotificationsToast>Who wants toast?</NotificationsToast>
     );
-    expect(wrapper.text()).toBe("Who wants toast?");
+    expect(wrapper).toIncludeText("Who wants toast?");
   });
 
   it("passes onDismiss to the dismiss IconButton", () => {
@@ -19,7 +19,7 @@ describe("NotificationsToast", () => {
       </NotificationsToast>
     );
 
-    expect(wrapper.find(IconButton).props().onClick).toEqual(onDismissFn);
+    expect(wrapper.find(IconButton)).toHaveProp("onClick", onDismissFn);
   });
 
   describe("images", () => {
@@ -59,7 +59,7 @@ describe("NotificationsToast", () => {
       const wrapper = mount(
         <NotificationsToast>Who wants toast?</NotificationsToast>
       );
-      expect(wrapper.props().status).toEqual("primary");
+      expect(wrapper).toHaveProp("status", "primary");
     });
   });
 
@@ -68,7 +68,7 @@ describe("NotificationsToast", () => {
       const wrapper = mount(
         <NotificationsToast>Who wants toast?</NotificationsToast>
       );
-      expect(wrapper.props().showStatusIcon).toEqual(true);
+      expect(wrapper).toHaveProp("showStatusIcon", true);
     });
   });
 });

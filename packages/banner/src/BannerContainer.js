@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect, useRef } from "react";
+import { Component } from "react";
 import PropTypes from "prop-types";
 
 /**
@@ -32,40 +31,92 @@ const MIN_NOTIFICATION_WIDTH = 200;
 const ACTIONS_WRAPPING_THRESHOLD = 300;
 
 /** @type {Component<BannerContainerProps, BannerContainerState>} */
-const BannerContainer = props => {
-  const [isWrappingActions, setIsWrappingActions] = useState(false);
-  const [isWrappingContent, setIsWrappingContent] = useState(false);
-  const [callBack, setCallBack] = useState(null);
+export default class BannerContainer extends Component {
+  static propTypes = {
+    /** Banner actions; Any JSX, or a render prop function */
+    actions: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    /** Called after the component has been mounted, and dynamically resized */
+    onReady: PropTypes.func,
+    /** A render prop function to render a `BannerPresenter` */
+    children: PropTypes.func.isRequired
+  };
 
+  /** @type {BannerContainerState} */
+  state = {
+    isWrappingActions: false,
+    isWrappingContent: false
+  };
+
+  componentDidMount() {
+    this.bindResize();
+    this.updateWrapping(this.props.onReady);
+  }
+
+  componentWillUnmount() {
+    this.unbindResize();
+    this.cancelWrappingUpdate();
+  }
+
+  /** @type {BannerContainerProps | any} */
+  props;
   /** @type {HTMLDivElement | undefined} */
-  const content = useRef(null);
+  content;
   /** @type {HTMLDivElement | undefined} */
-  const interactionsWrapper = useRef(null);
+  interactionsWrapper;
   /** @type {HTMLParagraphElement | undefined} */
-  const notification = useRef(null);
+  notification;
   /** @type {number | undefined} */
-  const wrappingFrame = useRef(null);
+  wrappingFrame;
 
   /**
    * @param {HTMLDivElement} element
    */
-  const refContent = element => {
-    content.current = element;
+  refContent = element => {
+    this.content = element;
   };
 
   /**
    * @param {HTMLParagraphElement} element
    */
-  const refNotification = element => {
-    notification.current = element;
+  refNotification = element => {
+    this.notification = element;
   };
 
   /**
    * @param {HTMLDivElement} element
    */
-  const refInteractionsWrapper = element => {
-    interactionsWrapper.current = element;
+  refInteractionsWrapper = element => {
+    this.interactionsWrapper = element;
   };
+
+  handleResize = () => {
+    this.updateWrapping();
+  };
+
+  /**
+   * Determines whether actions should wrap on the next repaint
+   * @returns {boolean}
+   */
+  shouldWrapActions() {
+    const { interactionsWrapper } = this;
+
+    if (!interactionsWrapper) return false;
+
+    const { isWrappingActions } = this.state;
+    const notificationWidth = isWrappingActions
+      ? ACTIONS_WRAPPING_THRESHOLD + interactionsWrapper.offsetWidth * 2
+      : ACTIONS_WRAPPING_THRESHOLD;
+
+    return this.willContentOverflow(notificationWidth);
+  }
+
+  /**
+   * Determines whether content should wrap on the next repaint
+   * @returns {boolean}
+   */
+  shouldWrapContent() {
+    return this.willContentOverflow(MIN_NOTIFICATION_WIDTH);
+  }
 
   /**
    * Determines whether the content will overflow its container
@@ -74,8 +125,10 @@ const BannerContainer = props => {
    * @param {number} notificationWidth
    * @returns {boolean}
    */
-  const willContentOverflow = notificationWidth => {
-    if (!content.current || !interactionsWrapper.current) return false;
+  willContentOverflow(notificationWidth) {
+    const { content, interactionsWrapper } = this;
+
+    if (!content || !interactionsWrapper) return false;
 
     const contentWidth = content.offsetWidth;
     const actionsWidth = interactionsWrapper.offsetWidth;
@@ -83,143 +136,92 @@ const BannerContainer = props => {
       notificationWidth + MIN_CONTENT_SPACING + actionsWidth;
 
     return contentChildrenWidth > contentWidth;
+  }
+
+  /**
+   * @param {Function} callback
+   */
+  updateContentWrapping = callback => {
+    const update = { isWrappingContent: this.shouldWrapContent() };
+
+    this.setState(update, () => {
+      delete this.wrappingFrame;
+
+      if (callback) callback();
+    });
   };
 
   /**
-   * Determines whether actions should wrap on the next repaint
-   * @returns {boolean}
+   * @param {Function} callback
    */
-  const shouldWrapActions = () => {
-    if (!interactionsWrapper) return false;
-    const notificationWidth = isWrappingActions
-      ? ACTIONS_WRAPPING_THRESHOLD + interactionsWrapper.offsetWidth * 2
-      : ACTIONS_WRAPPING_THRESHOLD;
+  updateActionWrapping = callback => {
+    const update = { isWrappingActions: this.shouldWrapActions() };
 
-    return willContentOverflow(notificationWidth);
-  };
-
-  const updateActionWrapping = callBackParam => {
-    const update = { isWrappingActions: shouldWrapActions() };
-    setIsWrappingActions(update);
-    setCallBack(callBackParam);
+    this.setState(update, () => {
+      this.wrappingFrame = window.requestAnimationFrame(() => {
+        this.updateContentWrapping(callback);
+      });
+    });
   };
 
   /**
    * Asynchronously updates the wrapping behavior of the presenter
    * @param {Function} callback
    */
-  const updateWrapping = callback => {
-    if (wrappingFrame.current !== undefined) return;
+  updateWrapping(callback) {
+    if (this.wrappingFrame !== undefined) return;
 
-    wrappingFrame.current = window.requestAnimationFrame(() => {
-      updateActionWrapping(callback);
+    this.wrappingFrame = window.requestAnimationFrame(() => {
+      this.updateActionWrapping(callback);
     });
-  };
+  }
 
-  const handleResize = () => {
-    updateWrapping();
-  };
-
-  /**
-   * Determines whether content should wrap on the next repaint
-   * @returns {boolean}
-   */
-  const shouldWrapContent = () => willContentOverflow(MIN_NOTIFICATION_WIDTH);
-
-  /**
-   * @param {Function} callback
-   */
-  const updateContentWrapping = callback => {
-    const update = { isWrappingContent: shouldWrapContent() };
-    setIsWrappingContent(update);
-    setCallBack(callback);
-  };
-
-  /**
-   * @param {Function} callback
-   */
-
-  const cancelWrappingUpdate = () => {
-    if (wrappingFrame !== undefined) {
-      window.cancelAnimationFrame(wrappingFrame);
+  cancelWrappingUpdate() {
+    if (this.wrappingFrame !== undefined) {
+      window.cancelAnimationFrame(this.wrappingFrame);
     }
-  };
+  }
 
-  const bindResize = () => {
-    window.addEventListener("resize", handleResize);
-  };
+  bindResize() {
+    window.addEventListener("resize", this.handleResize);
+  }
 
-  const unbindResize = () => {
-    window.removeEventListener("resize", handleResize);
-  };
-
-  /** @returns {any} */
-  const renderActions = () => {
-    const { actions } = props;
-
-    if (typeof actions !== "function") return actions;
-
-    const actionsBag = { isWrappingContent, isWrappingActions };
-
-    return actions(actionsBag);
-  };
+  unbindResize() {
+    window.removeEventListener("resize", this.handleResize);
+  }
 
   /**
    * @returns {PresenterBag}
    */
-  const createPresenterBag = () => ({
-    isWrappingContent,
-    refContent,
-    refNotification,
-    refInteractionsWrapper,
-    actions: renderActions()
-  });
+  createPresenterBag() {
+    const { isWrappingContent } = this.state;
+    const { refContent, refNotification, refInteractionsWrapper } = this;
 
-  useEffect(
-    () => {
-      if (isWrappingContent) {
-        // delete wrappingFrame;
-        if (callBack) callBack();
-      }
-    },
-    [isWrappingContent]
-  );
-
-  useEffect(
-    () => {
-      if (isWrappingActions) {
-        wrappingFrame.current = window.requestAnimationFrame(() => {
-          updateContentWrapping(callBack);
-        });
-      }
-    },
-    [isWrappingActions]
-  );
-
-  useEffect(() => {
-    bindResize();
-    updateWrapping(props.onReady);
-    return () => {
-      unbindResize();
-      cancelWrappingUpdate();
+    return {
+      isWrappingContent,
+      refContent,
+      refNotification,
+      refInteractionsWrapper,
+      actions: this.renderActions()
     };
-  }, []);
+  }
 
-  const { children: renderPresenter } = props;
-  const presenterBag = createPresenterBag();
+  /** @returns {any} */
+  renderActions() {
+    const { actions } = this.props;
 
-  return renderPresenter(presenterBag);
-};
+    if (typeof actions !== "function") return actions;
 
-BannerContainer.displayName = "BannerContainer";
+    const { isWrappingContent, isWrappingActions } = this.state;
+    const actionsBag = { isWrappingContent, isWrappingActions };
 
-BannerContainer.propTypes = {
-  /** Banner actions; Any JSX, or a render prop function */
-  actions: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  /** Called after the component has been mounted, and dynamically resized */
-  onReady: PropTypes.func,
-  /** A render prop function to render a `BannerPresenter` */
-  children: PropTypes.func.isRequired
-};
+    return actions(actionsBag);
+  }
 
-export default BannerContainer;
+  render() {
+    const { children: renderPresenter } = this.props;
+    const presenterBag = this.createPresenterBag();
+
+    return renderPresenter(presenterBag);
+  }
+}
