@@ -1,3 +1,10 @@
+# [@hig/tooltip-v1.1.1](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.1.0...@hig/tooltip@1.1.1) (2022-01-12)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+
 # [@hig/tooltip-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.0.6...@hig/tooltip@1.1.0) (2021-02-24)
 
 
