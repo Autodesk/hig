@@ -1,55 +1,33 @@
-import { Component } from "react";
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-export default class TreeItemBehavior extends Component {
-  static propTypes = {
-    children: PropTypes.func,
-    collapsed: PropTypes.bool,
-    defaultCollapsed: PropTypes.bool,
-    getTreeItemArray: PropTypes.func,
-    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    onClick: PropTypes.func,
-    setActiveTreeItemId: PropTypes.func,
-    setActiveTreeItemIndex: PropTypes.func,
-    payload: PropTypes.shape({
-      getTreeItemArray: PropTypes.func,
-      setActiveTreeItemId: PropTypes.func,
-      setActiveTreeItemIndex: PropTypes.func
-    })
+const TreeItemBehavior = props => {
+  const [isCollapsed, setIsCollapsedHook] = useState(props.defaultCollapsed);
+
+  const setIsCollapsed = value => {
+    setIsCollapsedHook(value);
   };
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isCollapsed: this.props.defaultCollapsed
-    };
-  }
+  const isCollapsedControlled = () => props.collapsed !== undefined;
 
-  setIsCollapsed = isCollapsed => {
-    this.setState({ isCollapsed });
-  };
+  const getIsCollapsed = () =>
+    isCollapsedControlled() ? props.collapsed : isCollapsed;
 
-  getIsCollapsed = () =>
-    this.isCollapsedControlled()
-      ? this.props.collapsed
-      : this.state.isCollapsed;
-
-  isCollapsedControlled = () => this.props.collapsed !== undefined;
-
-  handleClick = (event, treeItem) => {
-    if (this.props.onClick) {
-      this.props.onClick(event);
+  const handleClick = (event, treeItem) => {
+    if (props.onClick) {
+      props.onClick(event);
     }
     // eslint-disable-next-line no-param-reassign
     treeItem = treeItem || {};
-    if (this.props.payload) {
+    if (props.payload) {
       const {
         payload: {
           getTreeItemArray,
           setActiveTreeItemId,
           setActiveTreeItemIndex
         }
-      } = this.props;
+      } = props;
       // eslint-disable-next-line no-param-reassign
       const treeItemArray = getTreeItemArray();
       const index =
@@ -62,7 +40,7 @@ export default class TreeItemBehavior extends Component {
         getTreeItemArray,
         setActiveTreeItemId,
         setActiveTreeItemIndex
-      } = this.props;
+      } = props;
 
       const treeItemArray = getTreeItemArray();
       const index = treeItemArray !== null && treeItemArray.indexOf(id);
@@ -71,27 +49,38 @@ export default class TreeItemBehavior extends Component {
     }
   };
 
-  handleOperatorClick = () => {
-    if (this.props.payload) {
-      this.setIsCollapsed(!this.getIsCollapsed());
+  const handleOperatorClick = () => {
+    if (props.payload) {
+      setIsCollapsedHook(!getIsCollapsed());
     } else {
-      this.setIsCollapsed(!this.getIsCollapsed());
+      setIsCollapsedHook(!getIsCollapsed());
     }
   };
 
-  render() {
-    const {
-      getIsCollapsed,
-      handleClick,
-      handleOperatorClick,
-      setIsCollapsed
-    } = this;
+  return props.children({
+    getIsCollapsed,
+    handleClick,
+    handleOperatorClick,
+    setIsCollapsed
+  });
+};
 
-    return this.props.children({
-      getIsCollapsed,
-      handleClick,
-      handleOperatorClick,
-      setIsCollapsed
-    });
-  }
-}
+TreeItemBehavior.displayName = "TreeItemBehavior";
+
+TreeItemBehavior.propTypes = {
+  children: PropTypes.func,
+  collapsed: PropTypes.bool,
+  defaultCollapsed: PropTypes.bool,
+  getTreeItemArray: PropTypes.func,
+  id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  onClick: PropTypes.func,
+  setActiveTreeItemId: PropTypes.func,
+  setActiveTreeItemIndex: PropTypes.func,
+  payload: PropTypes.shape({
+    getTreeItemArray: PropTypes.func,
+    setActiveTreeItemId: PropTypes.func,
+    setActiveTreeItemIndex: PropTypes.func
+  })
+};
+
+export default TreeItemBehavior;

@@ -12,7 +12,7 @@ import {
   variants
 } from "../constants";
 
-export default function InputPresenter(props) {
+const InputPresenter = props => {
   const {
     disabled,
     hasFocus,
@@ -74,7 +74,9 @@ export default function InputPresenter(props) {
       }}
     </ThemeContext.Consumer>
   );
-}
+};
+
+InputPresenter.displayName = "InputPresenter";
 
 InputPresenter.propTypes = {
   disabled: PropTypes.bool,
@@ -92,3 +94,5 @@ InputPresenter.propTypes = {
 InputPresenter.defaultProps = {
   tagName: tagNames.INPUT
 };
+
+export default InputPresenter;

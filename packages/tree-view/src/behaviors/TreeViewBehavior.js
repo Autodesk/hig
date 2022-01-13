@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { useState, useRef } from "react";
 import PropTypes from "prop-types";
 
 function scrollInViewport(treeItem) {
@@ -44,95 +44,58 @@ function checkScroll(treeItemId, treeView) {
   scrollInViewport(treeItem);
 
   // scroll within the menu
-  scrollInListbox(treeItem, treeView);
+  scrollInListbox(treeItem, treeView.current);
 }
 
 function buildTreeItemIdArray(list) {
   return list.map(item => item.id);
 }
 
-export default class TreeViewBehavior extends Component {
-  static propTypes = {
-    children: PropTypes.func,
-    onKeyDown: PropTypes.func,
-    treeNode: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number,
-        parentId: PropTypes.number,
-        meta: PropTypes.shape({
-          label: PropTypes.node,
-          collapsed: PropTypes.bool,
-          active: PropTypes.bool,
-          icon: PropTypes.node
-        })
-      })
-    ),
-    treeViewRef: PropTypes.func
-  };
+const TreeViewBehavior = props => {
+  const [treeItemArray, setTreeItemArrayHook] = useState(null);
+  const [activeTreeItemIndex, setActiveTreeItemIndexHook] = useState(null);
+  const [currentItemClicked, setCurrentItemClickedHook] = useState(null);
+  const [keyboardOpenId, setKeyboardOpenIdHook] = useState("");
+  const treeViewRef = useRef(null);
 
-  static defaultProps = {};
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      treeItemArray: null,
-      activeTreeItemIndex: null,
-      currentItemClicked: null,
-      keyboardOpenId: ""
-    };
-
-    this.treeViewRef = null;
-  }
-
-  setTreeViewRef = element => {
-    if (this.props.treeViewRef) {
-      this.props.treeViewRef(element);
+  const setTreeViewRef = element => {
+    if (props.treeViewRef) {
+      props.treeViewRef(element);
     }
 
-    this.treeViewRef = element;
+    treeViewRef.current = element;
   };
 
-  setTreeItemArray = objectArray => {
-    this.setState({ treeItemArray: [...objectArray] });
+  const setTreeItemArray = objectArray => {
+    setTreeItemArrayHook([...objectArray]);
   };
 
-  getTreeItemArray = () => this.state.treeItemArray;
+  const getTreeItemArray = () => treeItemArray;
 
-  getActiveTreeItemId = () =>
-    this.state.treeItemArray &&
-    this.state.treeItemArray[this.getActiveTreeItemIndex()];
+  const getActiveTreeItemIndex = () => activeTreeItemIndex;
 
-  setActiveTreeItemId = currentItemClicked => {
-    this.setState({ currentItemClicked });
+  const getActiveTreeItemId = () =>
+    treeItemArray && treeItemArray[getActiveTreeItemIndex()];
+
+  const setActiveTreeItemId = currentItemclicked => {
+    setCurrentItemClickedHook(currentItemclicked);
   };
 
-  getCurrentItemClicked = () => this.state.currentItemClicked;
+  const getCurrentItemClicked = () => currentItemClicked;
 
-  getActiveTreeItemIndex = () => this.state.activeTreeItemIndex;
-
-  setActiveTreeItemIndex = index => {
-    this.setState({ activeTreeItemIndex: index });
+  const setActiveTreeItemIndex = index => {
+    setActiveTreeItemIndexHook(index);
   };
 
-  getKeyboardOpenId = () => this.state.keyboardOpenId;
+  const getKeyboardOpenId = () => keyboardOpenId;
 
-  setKeyboardOpenId = id => {
-    this.setState({ keyboardOpenId: id });
+  const setKeyboardOpenId = id => {
+    setKeyboardOpenIdHook(id);
   };
 
-  handleKeyDown = event => {
-    const {
-      getActiveTreeItemId,
-      getActiveTreeItemIndex,
-      getTreeItemArray,
-      setActiveTreeItemId,
-      setActiveTreeItemIndex,
-      setKeyboardOpenId,
-      treeViewRef
-    } = this;
-    if (this.props.onKeyDown) {
-      this.props.onKeyDown(event, {
+  const handleKeyDown = event => {
+    if (props.onKeyDown) {
+      props.onKeyDown(event, {
         getActiveTreeItemId,
         getActiveTreeItemIndex,
         getTreeItemArray,
@@ -142,9 +105,9 @@ export default class TreeViewBehavior extends Component {
       });
     }
 
-    const domNodeList = treeViewRef.querySelectorAll("li");
+    const domNodeList = treeViewRef.current.querySelectorAll("li");
     const treeItemArrayControl =
-      getTreeItemArray().length !== domNodeList.length || this.props.treeNode
+      getTreeItemArray().length !== domNodeList.length || props.treeNode
         ? buildTreeItemIdArray(Array.prototype.slice.call(domNodeList))
         : getTreeItemArray();
 
@@ -205,37 +168,42 @@ export default class TreeViewBehavior extends Component {
     }
   };
 
-  render() {
-    const {
-      getActiveTreeItemId,
-      getActiveTreeItemIndex,
-      getCurrentItemClicked,
-      getKeyboardOpenId,
-      getTreeItemArray,
-      handleClick,
-      handleKeyDown,
-      setActiveTreeItemId,
-      setActiveTreeItemIndex,
-      setKeyboardOpenId,
-      setTreeItemArray,
-      setTreeViewRef,
-      treeViewRef
-    } = this;
+  return props.children({
+    getActiveTreeItemId,
+    getActiveTreeItemIndex,
+    getCurrentItemClicked,
+    getKeyboardOpenId,
+    getTreeItemArray,
+    handleKeyDown,
+    setActiveTreeItemId,
+    setActiveTreeItemIndex,
+    setKeyboardOpenId,
+    setTreeItemArray,
+    setTreeViewRef,
+    treeViewRef: treeViewRef.current
+  });
+};
 
-    return this.props.children({
-      getActiveTreeItemId,
-      getActiveTreeItemIndex,
-      getCurrentItemClicked,
-      getKeyboardOpenId,
-      getTreeItemArray,
-      handleClick,
-      handleKeyDown,
-      setActiveTreeItemId,
-      setActiveTreeItemIndex,
-      setKeyboardOpenId,
-      setTreeItemArray,
-      setTreeViewRef,
-      treeViewRef
-    });
-  }
-}
+TreeViewBehavior.displayName = "TreeViewBehavior";
+
+TreeViewBehavior.propTypes = {
+  children: PropTypes.func,
+  onKeyDown: PropTypes.func,
+  treeNode: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      parentId: PropTypes.number,
+      meta: PropTypes.shape({
+        label: PropTypes.node,
+        collapsed: PropTypes.bool,
+        active: PropTypes.bool,
+        icon: PropTypes.node
+      })
+    })
+  ),
+  treeViewRef: PropTypes.func
+};
+
+TreeViewBehavior.defaultProps = {};
+
+export default TreeViewBehavior;
