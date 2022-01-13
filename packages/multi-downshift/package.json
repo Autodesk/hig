@@ -28,7 +28,7 @@
   },
   "peerDependencies": {
     "downshift": "^3.2.0",
-    "react": "^15.4.1 || ^16.3.2"
+    "react": "^17.0.0"
   },
   "scripts": {
     "build": "hig-scripts-build",
