@@ -1,3 +1,15 @@
+# [@hig/components-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/components@2.7.1...@hig/components@3.0.0) (2022-01-13)
+
+
+### Code Refactoring
+
+* Major Release - React 17 Upgrade ([ef8f133](https://github.com/Autodesk/hig/commit/ef8f133))
+
+
+### BREAKING CHANGES
+
+* This release includes upgrading to React 17 and all associated libraries. The components have also had structural changes, utilizing stateless components and hooks. There should be no change in look or behavior of components. The code usage is the same so if you’re already on react 17 you can bump the version directly. If you’re on an old version of react you’ll need to upgrade your project’s react first to 17 and then the HIG components. This upgrade also means no more fixes for the react 15 version but it will still be available for download from NPM. You can fork the repo and make fixes with the older version if there is something critical past this release date.
+
 # [@hig/components-v2.7.1](https://github.com/Autodesk/hig/compare/@hig/components@2.7.0...@hig/components@2.7.1) (2022-01-12)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@hig/notifications-flyout",
-  "version": "2.1.6",
+  "version": "3.0.0",
   "description": "HIG NotificationsFlyout",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
