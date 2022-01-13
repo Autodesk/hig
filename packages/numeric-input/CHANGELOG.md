@@ -1,3 +1,10 @@
+# [@hig/numeric-input-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/numeric-input@1.0.2...@hig/numeric-input@1.0.3) (2022-01-12)
+
+
+### Bug Fixes
+
+*  fix: handling of negative numbers and spinner consistency ([0c951e9](https://github.com/Autodesk/hig/commit/0c951e9))
+
 # [@hig/numeric-input-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/numeric-input@1.0.1...@hig/numeric-input@1.0.2) (2022-01-12)
 
 
