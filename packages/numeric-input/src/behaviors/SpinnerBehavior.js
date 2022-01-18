@@ -1,119 +1,200 @@
-// eslint-disable-next-line no-unused-vars
-import React, { useState, useRef } from "react";
+import { Component } from "react";
 import PropTypes from "prop-types";
 
-const SpinnerBehavior = props => {
-  const [valueHook, setValueHook] = useState(props.initialValue);
-  const [timerSet, setTimerSet] = useState(false);
-  const [timer, setTimer] = useState(null);
-  const inputRef = useRef(null);
-  const isValueControlled = () =>
-    props.value !== undefined && props.value !== null;
-
-  const getValue = () => {
-    if (props.value !== undefined && props.value !== null) {
-      return props.value;
-    }
-    return valueHook;
+export default class SpinnerBehavior extends Component {
+  static propTypes = {
+    children: PropTypes.func,
+    onChange: PropTypes.func,
+    onMouseLeave: PropTypes.func,
+    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    initialValue: PropTypes.number,
+    step: PropTypes.number,
+    disabled: PropTypes.bool,
+    min: PropTypes.number,
+    max: PropTypes.number,
+  };
+  static defaultProps = {
+    step: 1,
+    initialValue: 0,
+    value: undefined,
+    onChange: () => {}
   };
 
-  const setValue = valueRef => {
-    props.onChange(valueRef);
+  constructor(props) {
+    super(props);
 
-    if (!isValueControlled()) {
-      setValueHook(valueRef);
+    this.state = {
+      isNum: true,
+      value: props.initialValue
+    };
+
+    this.timer = null;
+    this.timerSet = false;
+    this.inputRef = null;
+  }
+
+  onDirectChange = event => {
+    const newValue = event.target.value;
+    if (this.state.isNum) {
+      this.setValue(newValue);
     }
   };
 
-  const updateValue = valueRef => {
+  getValue() {
+    if (this.props.value !== undefined && this.props.value !== null) {
+      return this.props.value;
+    }
+    return this.state.value;
+  }
+
+  setValue = value => {
+    const minMax = this.checkMinMax(value);
+    this.props.onChange(minMax);
+
+    if (!this.isValueControlled()) {
+      this.setState({ value: minMax });
+    }
+  };
+
+  setInputRef = element => {
+    this.inputRef = element;
+  };
+
+  getFixedValue = (value, stepLength) => Number(value.toFixed(stepLength));
+
+  checkMinMax = value => {
+    let minMax = value;
+
+    if (minMax < this.props.min) {
+      minMax = this.props.min;
+    }
+
+    if (minMax > this.props.max) {
+      minMax = this.props.max;
+    }
+
+    return minMax;
+  };
+
+  isValueControlled = () =>
+    this.props.value !== undefined && this.props.value !== null;
+
+  updateValue = value => {
     // Do nothing if the input is currently disabled
-    if (props.disabled) {
+    if (this.props.disabled) {
       return;
     }
-    setValue(valueRef);
-    inputRef.current.focus();
+    this.setValue(this.checkMinMax(value));
+    this.inputRef.focus();
   };
 
-  const increment = () => {
-    updateValue(Number(getValue()) + props.step);
+  handleInputNumber = event => {
+    const charCode = event.which ? event.which : event.keyCode;
+    if (
+      charCode > 31 &&
+      (charCode < 48 || charCode > 57) &&
+      charCode !== 45 &&
+      charCode !== 46
+    ) {
+      this.setState({
+        isNum: false
+      });
+      return false;
+    }
+    this.setState({
+      isNum: true
+    });
+
+    return true;
   };
 
-  const decrement = () => {
-    updateValue(Number(getValue()) - props.step);
+  handleStepArrowKeys = event => {
+    // up arrow
+    if (event.keyCode === 38) {
+      this.increment();
+    }
+
+    // down arrow
+    if (event.keyCode === 40) {
+      this.decrement();
+    }
+
+    return false;
   };
 
-  const mouseDownIncrement = () => {
-    if (!timerSet) {
-      setTimer(
-        setInterval(() => {
-          increment();
-        }, 150)
-      );
-      setTimerSet(true);
+  handleNumericOnly = () => false;
+
+  calculateStepValues = operation => {
+    const decimalArray = String(this.props.step).split(".");
+    const stepLength =
+      decimalArray.length === 1 ? decimalArray.length : decimalArray[1].length;
+    const stepMultiplier = 10 ** stepLength;
+    const convertedValue = Number(this.getValue()) * stepMultiplier;
+    const convertedStep = this.props.step * stepMultiplier;
+    let convertedOperation = 0;
+    let updatedValue = 0;
+    if (operation === "increment") {
+      convertedOperation = convertedValue + convertedStep;
+    } else {
+      convertedOperation = convertedValue - convertedStep;
+    }
+    convertedOperation /= stepMultiplier;
+    updatedValue = this.getFixedValue(convertedOperation, stepLength);
+    return updatedValue === 0 ? String(0) : String(updatedValue);
+  };
+
+  increment = () => {
+    this.updateValue(this.calculateStepValues("increment"));
+  };
+
+  decrement = () => {
+    this.updateValue(this.calculateStepValues("decrement"));
+  };
+
+  mouseDownIncrement = () => {
+    if (!this.timerSet) {
+      this.timer = setInterval(() => {
+        this.increment();
+      }, 150);
+      this.timerSet = true;
     }
   };
 
-  const mouseDownDecrement = () => {
-    if (!timerSet) {
-      setTimer(
-        setInterval(() => {
-          decrement();
-        }, 150)
-      );
-      setTimerSet(true);
+  mouseDownDecrement = () => {
+    if (!this.timerSet) {
+      this.timer = setInterval(() => {
+        this.decrement();
+      }, 150);
+      this.timerSet = true;
     }
   };
 
-  const clearTimer = () => {
-    clearInterval(timer);
-    setTimerSet(false);
+  clearTimer = () => {
+    clearInterval(this.timer);
+    this.timerSet = false;
   };
 
-  const mouseLeaveClearTimer = event => {
-    if (props.onMouseLeave) {
-      props.onMouseLeave(event);
+  mouseLeaveClearTimer = event => {
+    if (this.props.onMouseLeave) {
+      this.props.onMouseLeave(event);
     }
-    clearTimer();
+    this.clearTimer();
   };
 
-  const onDirectChange = event => {
-    const newValue = event.target.value;
-    setValueHook(newValue);
-  };
-
-  const setInputRef = element => {
-    inputRef.current = element;
-  };
-
-  return props.children({
-    onDirectChange,
-    increment,
-    decrement,
-    value: getValue(),
-    mouseDownDecrement,
-    mouseDownIncrement,
-    clearTimer,
-    mouseLeaveClearTimer,
-    setInputRef
-  });
-};
-
-SpinnerBehavior.displayName = "SpinnerBehavior";
-
-SpinnerBehavior.propTypes = {
-  children: PropTypes.func,
-  onChange: PropTypes.func,
-  onMouseLeave: PropTypes.func,
-  value: PropTypes.number,
-  initialValue: PropTypes.number,
-  step: PropTypes.number,
-  disabled: PropTypes.bool
-};
-SpinnerBehavior.defaultProps = {
-  step: 1,
-  initialValue: 0,
-  value: undefined,
-  onChange: () => {}
-};
-
-export default SpinnerBehavior;
+  render() {
+    return this.props.children({
+      onDirectChange: this.onDirectChange,
+      handleStepArrowKeys: this.handleStepArrowKeys,
+      handleInputNumber: this.handleInputNumber,
+      handleNumericOnly: this.handleNumericOnly,
+      increment: this.increment,
+      decrement: this.decrement,
+      value: this.getValue(),
+      mouseDownDecrement: this.mouseDownDecrement,
+      mouseDownIncrement: this.mouseDownIncrement,
+      clearTimer: this.clearTimer,
+      mouseLeaveClearTimer: this.mouseLeaveClearTimer,
+      setInputRef: this.setInputRef
+    });
+  }
+}

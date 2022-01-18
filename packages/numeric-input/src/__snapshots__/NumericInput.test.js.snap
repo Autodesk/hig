@@ -232,15 +232,20 @@ exports[`numeric-input/NumericInput renders with custom className 1`] = `
     <input
       className="emotion-6 custom__numeric_input__input"
       disabled={undefined}
+      max={undefined}
+      min={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
       step={undefined}
-      type="number"
+      type="text"
       value="0"
     />
     <div
@@ -483,15 +488,20 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
     <input
       className="emotion-6"
       disabled={undefined}
+      max={undefined}
+      min={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
       step={undefined}
-      type="number"
+      type="text"
       value="0"
     />
     <div
@@ -733,15 +743,20 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
     <input
       className="emotion-6"
       disabled={undefined}
+      max={undefined}
+      min={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
       step={undefined}
-      type="number"
+      type="text"
       value="10"
     />
     <div
@@ -980,15 +995,20 @@ exports[`numeric-input/NumericInput renders with disabled 1`] = `
     <input
       className="emotion-6"
       disabled={true}
+      max={undefined}
+      min={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
       step={undefined}
-      type="number"
+      type="text"
       value="0"
     />
     <div
@@ -1257,15 +1277,20 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
     <input
       className="emotion-6"
       disabled={undefined}
+      max={undefined}
+      min={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
       step={undefined}
-      type="number"
+      type="text"
       value="0"
     />
     <div
@@ -1507,15 +1532,20 @@ exports[`numeric-input/NumericInput renders without props 1`] = `
     <input
       className="emotion-6"
       disabled={undefined}
+      max={undefined}
+      min={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyPress={[Function]}
+      onKeyUp={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
       step={undefined}
-      type="number"
+      type="text"
       value="0"
     />
     <div
