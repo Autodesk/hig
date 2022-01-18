@@ -73,9 +73,9 @@ export default class NumericInput extends Component {
       step,
       value,
       min,
-      max,
+      max
     } = otherProps;
-    console.log('otherProps', otherProps);
+
     const inputClassName = createCustomClassNames(className, "numeric_input");
 
     const numericInputStylesheet = (styles, props, themeData) => {

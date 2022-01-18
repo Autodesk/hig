@@ -11,7 +11,7 @@ export default class SpinnerBehavior extends Component {
     step: PropTypes.number,
     disabled: PropTypes.bool,
     min: PropTypes.number,
-    max: PropTypes.number,
+    max: PropTypes.number
   };
   static defaultProps = {
     step: 1,
