@@ -61,7 +61,7 @@ const Search = props => {
 
   useEffect(
     () => {
-      setValue(props.value)
+      setValue(props.value);
     },
     [props.value]
   );
