@@ -14,7 +14,7 @@ describe("side-nav/Search", () => {
 
     wrapper.setProps({ value: "baz" });
     const inputReAfter = wrapper.find("input");
-    expect(inputReAfter.prop("value")).toEqual("bar"); // Incoming props are ignored
+    expect(inputReAfter.prop("value")).toEqual("baz");
   });
 
   it("renders a button to clear input", () => {
