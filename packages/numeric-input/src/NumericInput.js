@@ -71,6 +71,8 @@ export default class NumericInput extends Component {
       onMouseLeave,
       onMouseUp,
       step,
+      min,
+      max,
       value
     } = otherProps;
 
@@ -107,6 +109,8 @@ export default class NumericInput extends Component {
             onChange={onChange}
             initialValue={defaultValue}
             step={step}
+            min={min}
+            max={max}
             disabled={disabled}
             onKeyDown={onKeyDown}
             onKeyPress={onKeyPress}
@@ -155,6 +159,8 @@ export default class NumericInput extends Component {
                   className={inputClassName}
                   disabled={disabled}
                   step={step}
+                  min={min}
+                  max={max}
                   stylesheet={numericInputStylesheet}
                   type="text"
                   variant={variant}

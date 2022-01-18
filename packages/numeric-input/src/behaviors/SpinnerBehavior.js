@@ -9,6 +9,8 @@ export default class SpinnerBehavior extends Component {
     value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     initialValue: PropTypes.number,
     step: PropTypes.number,
+    min: PropTypes.number,
+    max: PropTypes.number,
     disabled: PropTypes.bool
   };
   static defaultProps = {
@@ -46,10 +48,11 @@ export default class SpinnerBehavior extends Component {
   }
 
   setValue = value => {
-    this.props.onChange(value);
+    const minMax = this.checkMinMax(value);
+    this.props.onChange(minMax);
 
     if (!this.isValueControlled()) {
-      this.setState({ value });
+      this.setState({ value: minMax });
     }
   };
 
@@ -59,6 +62,20 @@ export default class SpinnerBehavior extends Component {
 
   getFixedValue = (value, stepLength) => Number(value.toFixed(stepLength));
 
+  checkMinMax = value => {
+    let minMax = value;
+
+    if (minMax < this.props.min) {
+      minMax = this.props.min;
+    }
+
+    if (minMax > this.props.max) {
+      minMax = this.props.max;
+    }
+
+    return minMax;
+  };
+
   isValueControlled = () =>
     this.props.value !== undefined && this.props.value !== null;
 
@@ -67,7 +84,7 @@ export default class SpinnerBehavior extends Component {
     if (this.props.disabled) {
       return;
     }
-    this.setValue(value);
+    this.setValue(this.checkMinMax(value));
     this.inputRef.focus();
   };
 
