@@ -31,7 +31,7 @@
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/typography": "^1.2.2",
+    "@hig/typography": "^2.0.0",
     "babel-cli": "^6.26.0",
     "camelcase": "^5.0.0",
     "style-dictionary": "^2.6.2"

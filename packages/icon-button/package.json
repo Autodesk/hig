@@ -18,7 +18,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/behaviors": "^1.1.2",
+    "@hig/behaviors": "^2.0.0",
     "@hig/utils": "^0.4.1",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
@@ -31,7 +31,7 @@
     "@hig/semantic-release-config": "^0.1.0"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.3",
+    "@hig/theme-context": "^4.0.0",
     "@hig/theme-data": "^2.22.1",
     "react": "^17.0.0"
   },
