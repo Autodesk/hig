@@ -58,6 +58,13 @@ const Search = props => {
     },
     [value]
   );
+
+  useEffect(
+    () => {
+      setValue(props.value);
+    },
+    [props.value]
+  );
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
