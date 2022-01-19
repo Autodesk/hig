@@ -10,6 +10,13 @@
 
 * This release includes upgrading to React 17 and all associated libraries. The components have also had structural changes, utilizing stateless components and hooks. There should be no change in look or behavior of components. The code usage is the same so if you’re already on react 17 you can bump the version directly. If you’re on an old version of react you’ll need to upgrade your project’s react first to 17 and then the HIG components. This upgrade also means no more fixes for the react 15 version but it will still be available for download from NPM. You can fork the repo and make fixes with the older version if there is something critical past this release date.
 
+# [@hig/numeric-input-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/numeric-input@1.0.2...@hig/numeric-input@1.0.3) (2022-01-12)
+
+
+### Bug Fixes
+
+* handling of negative numbers and spinner consistency ([0c951e9](https://github.com/Autodesk/hig/commit/0c951e9))
+
 # [@hig/numeric-input-v1.0.2](https://github.com/Autodesk/hig/compare/@hig/numeric-input@1.0.1...@hig/numeric-input@1.0.2) (2022-01-12)
 
 
