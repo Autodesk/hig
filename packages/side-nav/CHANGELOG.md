@@ -1,3 +1,10 @@
+# [@hig/side-nav-v3.0.1](https://github.com/Autodesk/hig/compare/@hig/side-nav@3.0.0...@hig/side-nav@3.0.1) (2022-01-19)
+
+
+### Bug Fixes
+
+* **SideNav.Search:** change value in SideNav.Search update with props ([e785ddf](https://github.com/Autodesk/hig/commit/e785ddf))
+
 # [@hig/side-nav-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/side-nav@2.2.4...@hig/side-nav@3.0.0) (2022-01-13)
 
 
