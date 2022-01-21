@@ -17,18 +17,18 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/behaviors": "^1.1.2",
-    "@hig/icons": "^3.4.4",
+    "@hig/behaviors": "^2.0.0",
+    "@hig/icons": "^4.0.0",
     "@hig/utils": "^0.4.1",
     "prop-types": "^15.7.1"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.3",
+    "@hig/theme-context": "^4.0.0",
     "@hig/theme-data": "^2.22.1",
     "react": "^17.0.0"
   },
   "devDependencies": {
-    "@hig/avatar": "^1.4.2",
+    "@hig/avatar": "^2.0.0",
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
