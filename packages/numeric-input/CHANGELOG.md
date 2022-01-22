@@ -5,7 +5,6 @@
 
 *  fix: add max/min functionality ([1ab9ec3](https://github.com/Autodesk/hig/commit/1ab9ec3))
 
-
 # [@hig/numeric-input-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/numeric-input@1.0.2...@hig/numeric-input@2.0.0) (2022-01-13)
 
 
@@ -17,7 +16,6 @@
 ### BREAKING CHANGES
 
 * This release includes upgrading to React 17 and all associated libraries. The components have also had structural changes, utilizing stateless components and hooks. There should be no change in look or behavior of components. The code usage is the same so if you’re already on react 17 you can bump the version directly. If you’re on an old version of react you’ll need to upgrade your project’s react first to 17 and then the HIG components. This upgrade also means no more fixes for the react 15 version but it will still be available for download from NPM. You can fork the repo and make fixes with the older version if there is something critical past this release date.
-
 
 # [@hig/numeric-input-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/numeric-input@1.0.3...@hig/numeric-input@1.0.4) (2022-01-12)
 
