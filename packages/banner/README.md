@@ -4,7 +4,6 @@ Banners are notifications alerting an event that requires a user action. They ar
 
 Read more about when and how to use the Banner component [on the internal wiki](https://wiki.autodesk.com/display/HIG/Banners).
 
-
 ## Getting started
 
 ```

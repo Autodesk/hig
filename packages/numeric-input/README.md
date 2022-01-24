@@ -4,7 +4,6 @@ Numeric inputs allow the user to input a number of their choosing and use the up
 
 Read more about when and how to use the Numeric Input component [on the website](https://hig.autodesk.com/web/components/form-elements).
 
-
 ## Getting started
 
 ### Install the package

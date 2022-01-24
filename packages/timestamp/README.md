@@ -2,7 +2,6 @@
 
 The timestamp component presents a date in the past with humanized phrasing in English: "10 minutes/hours/days/months ago".
 
-
 ## Getting started
 
 ```

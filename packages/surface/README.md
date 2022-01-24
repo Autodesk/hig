@@ -2,7 +2,6 @@
 
 The Surface component renders a themable container with the appropriate background color for the current theme. It is intended to wrap other HIG components, however may also be used independently. 
 
-
 ## Getting started
 
 ```

@@ -4,7 +4,6 @@ The Components package exports all of the available HIG components for easy acce
 
 Please view the individual components packages for component specific documentation.
 
-
 ## Getting started
 
 ### Install the package
