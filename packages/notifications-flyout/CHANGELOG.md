@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@3.0.0...@hig/notifications-flyout@3.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/notifications-flyout-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@2.1.6...@hig/notifications-flyout@3.0.0) (2022-01-13)
 
 
