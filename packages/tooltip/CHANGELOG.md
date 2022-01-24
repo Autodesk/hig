@@ -1,3 +1,10 @@
+# [@hig/tooltip-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@2.0.0...@hig/tooltip@2.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/tooltip-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@1.1.2...@hig/tooltip@2.0.0) (2022-01-13)
 
 
