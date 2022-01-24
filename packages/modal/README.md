@@ -4,7 +4,6 @@ A modal is an overlay that focuses the customer's attention on a single task or 
 
 Read more about when and how to use the Modal component [on the internal wiki](https://hig.autodesk.com/web/components/modal-shells).
 
-
 ## Getting started
 
 ### Install the package

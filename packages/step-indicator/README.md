@@ -4,7 +4,6 @@ Step indicator is a UI element that enables and displays progress through a sequ
 
 Read more about when and how to use the Step Indicator component [on the wiki](https://wiki.autodesk.com/display/HIG/Step+Indicator).
 
-
 ## Getting started
 
 ### Install the package
