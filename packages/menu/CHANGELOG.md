@@ -1,3 +1,10 @@
+# [@hig/menu-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/menu@2.0.0...@hig/menu@2.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/menu-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/menu@1.3.3...@hig/menu@2.0.0) (2022-01-13)
 
 
