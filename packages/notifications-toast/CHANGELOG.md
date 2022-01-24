@@ -1,3 +1,10 @@
+# [@hig/notifications-toast-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@3.0.0...@hig/notifications-toast@3.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/notifications-toast-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@2.2.3...@hig/notifications-toast@3.0.0) (2022-01-13)
 
 
