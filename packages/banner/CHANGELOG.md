@@ -1,3 +1,10 @@
+# [@hig/banner-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/banner@3.0.0...@hig/banner@3.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/banner-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/banner@2.3.3...@hig/banner@3.0.0) (2022-01-13)
 
 

@@ -1,3 +1,10 @@
+# [@hig/modal-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/modal@3.0.0...@hig/modal@3.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/modal-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/modal@2.2.4...@hig/modal@3.0.0) (2022-01-13)
 
 

@@ -1,3 +1,10 @@
+# [@hig/input-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/input@2.0.0...@hig/input@2.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/input-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/input@1.3.2...@hig/input@2.0.0) (2022-01-13)
 
 

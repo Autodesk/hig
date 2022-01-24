@@ -1,3 +1,10 @@
+# [@hig/project-account-switcher-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@3.0.0...@hig/project-account-switcher@3.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/project-account-switcher-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/project-account-switcher@2.1.2...@hig/project-account-switcher@3.0.0) (2022-01-13)
 
 

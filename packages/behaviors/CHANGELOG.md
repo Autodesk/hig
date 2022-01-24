@@ -1,3 +1,10 @@
+# [@hig/behaviors-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/behaviors@2.0.0...@hig/behaviors@2.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/behaviors-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/behaviors@1.1.2...@hig/behaviors@2.0.0) (2022-01-13)
 
 

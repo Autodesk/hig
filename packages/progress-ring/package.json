@@ -1,6 +1,6 @@
 {
   "name": "@hig/progress-ring",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "HIG Progress Ring",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -24,7 +24,7 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^4.0.0",
-    "@hig/theme-data": "^2.22.1",
+    "@hig/theme-data": "^2.23.0",
     "react": "^17.0.0"
   },
   "devDependencies": {

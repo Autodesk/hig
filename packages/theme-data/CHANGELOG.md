@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.23.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.22.1...@hig/theme-data@2.23.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/theme-data-v2.22.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.22.0...@hig/theme-data@2.22.1) (2022-01-12)
 
 

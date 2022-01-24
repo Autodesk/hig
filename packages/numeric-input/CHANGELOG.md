@@ -1,3 +1,10 @@
+# [@hig/numeric-input-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/numeric-input@2.0.0...@hig/numeric-input@2.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/numeric-input-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/numeric-input@1.0.3...@hig/numeric-input@1.0.4) (2022-01-22)
 
 
