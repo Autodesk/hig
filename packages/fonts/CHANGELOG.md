@@ -1,3 +1,10 @@
+# [@hig/fonts-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/fonts@1.0.3...@hig/fonts@1.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/fonts-v1.0.3](https://github.com/Autodesk/hig/compare/@hig/fonts@1.0.2...@hig/fonts@1.0.3) (2022-01-12)
 
 
