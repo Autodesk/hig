@@ -2,7 +2,6 @@
 
 > Shared component behaviors used across component
 
-
 ## Getting started
 
 ```bash

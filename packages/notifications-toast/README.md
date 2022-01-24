@@ -4,7 +4,6 @@ Toasts are floating message boxes that appear up to a maximum of three at a time
 
 Read more about when and how to use the Toast component [on the internal wiki](https://wiki.autodesk.com/display/HIG/Toasts).
 
-
 ## Getting started
 
 ### Install the package

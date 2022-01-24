@@ -2,7 +2,6 @@
 
 The Skeleton Item component renders a rectangular loading indicator, meant to serve as a placeholder until your actual content is ready to be rendered.
 
-
 ## Getting started
 
 ```

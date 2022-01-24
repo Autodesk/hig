@@ -4,7 +4,6 @@ The Side Navigation component provides the highest level navigation tier and all
 
 Read more about when and how to use the SideNav component [on the internal wiki](https://wiki.autodesk.com/x/S3n2Eg).
 
-
 ## Getting started
 
 ```bash

@@ -4,7 +4,6 @@ Toggle switches provide a control for a single action with a clear on/off or sta
 
 Read more about when and how to use the Toggle component [on the website](https://hig.autodesk.com/web/components/toggle-switches).
 
-
 ## Getting started
 
 ### Install the package

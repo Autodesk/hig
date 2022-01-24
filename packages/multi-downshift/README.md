@@ -4,7 +4,6 @@
 
 [Downshift]: https://github.com/paypal/downshift
 
-
 ## Getting started
 
 ```bash
