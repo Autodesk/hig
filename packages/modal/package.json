@@ -1,6 +1,6 @@
 {
   "name": "@hig/modal",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "HIG Modal",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -17,17 +17,17 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon-button": "^3.0.0",
-    "@hig/icons": "^4.0.0",
-    "@hig/typography": "^2.0.0",
+    "@hig/icon-button": "^3.1.0",
+    "@hig/icons": "^4.1.0",
+    "@hig/typography": "^2.1.0",
     "@hig/utils": "^0.4.1",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
     "react-lifecycles-compat": "^3.0.4"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.0.0",
-    "@hig/theme-data": "^2.22.1",
+    "@hig/theme-context": "^4.1.0",
+    "@hig/theme-data": "^2.23.0",
     "react": "^17.0.0"
   },
   "devDependencies": {
