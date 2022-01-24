@@ -1,3 +1,10 @@
+# [@hig/icons-v4.1.0](https://github.com/Autodesk/hig/compare/@hig/icons@4.0.0...@hig/icons@4.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/icons-v4.0.0](https://github.com/Autodesk/hig/compare/@hig/icons@3.4.4...@hig/icons@4.0.0) (2022-01-13)
 
 
