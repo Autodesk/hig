@@ -1,3 +1,10 @@
+# [@hig/icon-button-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@3.0.0...@hig/icon-button@3.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/icon-button-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@2.6.3...@hig/icon-button@3.0.0) (2022-01-13)
 
 
