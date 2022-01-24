@@ -17,16 +17,16 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icons": "^3.4.4",
-    "@hig/input": "^1.3.2",
-    "@hig/multi-downshift": "^1.0.1",
+    "@hig/icons": "^4.0.0",
+    "@hig/input": "^2.0.0",
+    "@hig/multi-downshift": "^2.0.0",
     "downshift": "^3.2.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
     "react-lifecycles-compat": "^3.0.4"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.3",
+    "@hig/theme-context": "^4.0.0",
     "@hig/theme-data": "^2.22.1",
     "react": "^17.0.0"
   },

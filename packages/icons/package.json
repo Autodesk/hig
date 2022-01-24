@@ -23,11 +23,11 @@
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/typography": "^1.2.2",
+    "@hig/typography": "^2.0.0",
     "svgo": "^1.0.5"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.3",
+    "@hig/theme-context": "^4.0.0",
     "@hig/theme-data": "^2.22.1",
     "react": "^17.0.0"
   },

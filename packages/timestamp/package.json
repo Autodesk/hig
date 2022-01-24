@@ -30,7 +30,7 @@
     "mockdate": "^2.0.2"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.3",
+    "@hig/theme-context": "^4.0.0",
     "@hig/theme-data": "^2.22.1",
     "react": "^17.0.0"
   },

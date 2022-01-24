@@ -1,3 +1,10 @@
+# [@hig/numeric-input-v1.0.4](https://github.com/Autodesk/hig/compare/@hig/numeric-input@1.0.3...@hig/numeric-input@1.0.4) (2022-01-22)
+
+
+### Bug Fixes
+
+*  fix: add max/min functionality ([1ab9ec3](https://github.com/Autodesk/hig/commit/1ab9ec3))
+
 # [@hig/numeric-input-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/numeric-input@1.0.2...@hig/numeric-input@2.0.0) (2022-01-13)
 
 
