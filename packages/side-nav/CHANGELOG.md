@@ -1,3 +1,10 @@
+# [@hig/side-nav-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/side-nav@3.0.1...@hig/side-nav@3.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/side-nav-v3.0.1](https://github.com/Autodesk/hig/compare/@hig/side-nav@3.0.0...@hig/side-nav@3.0.1) (2022-01-19)
 
 
