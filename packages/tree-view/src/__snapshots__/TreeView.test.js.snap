@@ -101,6 +101,7 @@ exports[`tree-view/TreeView renders default TreeView 1`] = `
   className="emotion-4"
   id="tree-item-18"
   onClick={[Function]}
+  onDoubleClick={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
   onMouseEnter={[Function]}

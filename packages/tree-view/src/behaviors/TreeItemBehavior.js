@@ -57,9 +57,20 @@ const TreeItemBehavior = props => {
     }
   };
 
+  const handleDoubleClick = event => {
+    if (props.onDoubleClick) {
+      props.onDoubleClick(event);
+    }
+
+    if (props.expandByDoubleClick) {
+      setIsCollapsedHook(!getIsCollapsed());
+    }
+  };
+
   return props.children({
     getIsCollapsed,
     handleClick,
+    handleDoubleClick,
     handleOperatorClick,
     setIsCollapsed
   });
@@ -71,9 +82,11 @@ TreeItemBehavior.propTypes = {
   children: PropTypes.func,
   collapsed: PropTypes.bool,
   defaultCollapsed: PropTypes.bool,
+  expandByDoubleClick: PropTypes.bool,
   getTreeItemArray: PropTypes.func,
   id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onClick: PropTypes.func,
+  onDoubleClick: PropTypes.func,
   setActiveTreeItemId: PropTypes.func,
   setActiveTreeItemIndex: PropTypes.func,
   payload: PropTypes.shape({
