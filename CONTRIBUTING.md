@@ -108,7 +108,6 @@ In the event there are no Core Committers, Autodesk Inc. will appoint one.
 Core Committers:
 
 - Tech Lead: Stacey Shkuratoff (@staceyshk)
-- Core Committer: Wilbert Mui (@wmui51)
 
 ### See Also
 
