@@ -14,9 +14,10 @@ const sampleTreeNodeObject = [
     id: 1,
     parentId: null,
     meta: {
-      label: "Tree Item 1",
+      label: "dbl click to expand/collapse",
       collapsed: false,
       active: false,
+      expandByDoubleClick: true,
       icon: <Report24 />
     },
     draggable: true,

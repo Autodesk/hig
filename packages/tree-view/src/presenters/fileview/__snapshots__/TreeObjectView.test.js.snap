@@ -382,6 +382,7 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
   <div
     className="emotion-6"
     onClick={[Function]}
+    onDoubleClick={[Function]}
   >
     <div
       className="emotion-5"
@@ -452,6 +453,7 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
         <div
           className="emotion-13"
           onClick={[Function]}
+          onDoubleClick={[Function]}
         >
           <div
             className="emotion-5"
@@ -590,6 +592,7 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
               <div
                 className="emotion-30"
                 onClick={[Function]}
+                onDoubleClick={[Function]}
               >
                 <div
                   className="emotion-5"
