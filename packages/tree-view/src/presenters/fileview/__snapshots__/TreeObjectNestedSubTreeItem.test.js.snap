@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tree-view/TreeView renders default TreeView 1`] = `
+exports[`tree-view/TreeObjectNestedSubTreeItem renders tree with tree node 1`] = `
 .emotion-4 {
   border: 1px solid transparent;
   box-sizing: border-box;
   height: 40px;
-  padding: 8px 12px 8px calc((24px + 8px) + ((24px + 8px) * undefined));
+  padding: 8px 12px 8px calc((24px + 8px) + ((24px + 8px) * 0));
   position: relative;
   -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
@@ -14,7 +14,7 @@ exports[`tree-view/TreeView renders default TreeView 1`] = `
 .emotion-4::before {
   display: inline-block;
   content: "";
-  left: calc((24px * NaN) + (8px * NaN));
+  left: calc((24px * 0) + (8px * -1));
   margin: 0;
   position: absolute;
   top: 9px;
@@ -28,7 +28,7 @@ exports[`tree-view/TreeView renders default TreeView 1`] = `
   display: inline-block;
   content: "";
   height: 100%;
-  left: calc(24px + ((24px + 8px) * NaN) - 1px);
+  left: calc(24px + ((24px + 8px) * -1) - 1px);
   position: absolute;
   top: 0;
   width: 20px;
@@ -99,15 +99,12 @@ exports[`tree-view/TreeView renders default TreeView 1`] = `
 
 <li
   className="emotion-4"
-  id="tree-item-18"
+  id={1}
   onClick={[Function]}
-  onDoubleClick={[Function]}
-  onFocus={[Function]}
   onKeyDown={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
   role="treeitem"
-  selected={false}
 >
   <div
     className="emotion-3"
@@ -133,7 +130,7 @@ exports[`tree-view/TreeView renders default TreeView 1`] = `
     <span
       className="emotion-2"
     >
-      Tree Item 18
+      Tree Item 1
     </span>
   </div>
 </li>

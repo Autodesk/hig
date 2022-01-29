@@ -9,6 +9,7 @@ const TreeItem = props => {
     children,
     collapsed,
     defaultCollapsed,
+    expandByDoubleClick,
     getKeyboardOpenId,
     icon,
     id,
@@ -24,11 +25,13 @@ const TreeItem = props => {
       {...otherProps}
       collapsed={collapsed}
       defaultCollapsed={defaultCollapsed}
+      expandByDoubleClick={expandByDoubleClick}
       id={id}
     >
       {({
         getIsCollapsed,
         handleClick,
+        handleDoubleClick,
         handleOperatorClick,
         setIsCollapsed
       }) => (
@@ -43,6 +46,7 @@ const TreeItem = props => {
           keyboardOpenId={getKeyboardOpenId()}
           label={label}
           onClick={handleClick}
+          onDoubleClick={handleDoubleClick}
           onFocus={onFocus}
           onOperatorClick={handleOperatorClick}
           selected={getCurrentItemClicked() === id}
@@ -74,6 +78,10 @@ TreeItem.propTypes = {
    */
   defaultCollapsed: PropTypes.bool,
   /**
+   * Double click to expand or collapse tree item
+   */
+  expandByDoubleClick: PropTypes.bool,
+  /**
    * Presentational icon
    */
   icon: PropTypes.node,
@@ -92,7 +100,8 @@ TreeItem.propTypes = {
 };
 
 TreeItem.defaultProps = {
-  defaultCollapsed: true
+  defaultCollapsed: true,
+  expandByDoubleClick: false
 };
 
 export default TreeItem;
