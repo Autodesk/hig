@@ -194,10 +194,11 @@ TreeViewBehavior.propTypes = {
       id: PropTypes.number,
       parentId: PropTypes.number,
       meta: PropTypes.shape({
-        label: PropTypes.node,
-        collapsed: PropTypes.bool,
         active: PropTypes.bool,
-        icon: PropTypes.node
+        collapsed: PropTypes.bool,
+        expandByDoubleClick: PropTypes.bool,
+        icon: PropTypes.node,
+        label: PropTypes.node
       })
     })
   ),
