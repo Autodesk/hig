@@ -1,3 +1,10 @@
+# [@hig/theme-context-v4.1.0](https://github.com/Autodesk/hig/compare/@hig/theme-context@4.0.0...@hig/theme-context@4.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/theme-context-v4.0.0](https://github.com/Autodesk/hig/compare/@hig/theme-context@3.0.3...@hig/theme-context@4.0.0) (2022-01-13)
 
 

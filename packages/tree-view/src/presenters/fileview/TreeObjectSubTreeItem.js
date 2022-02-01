@@ -141,10 +141,11 @@ TreeObjectSubTreeItem.propTypes = {
   treeItem: PropTypes.shape({
     id: PropTypes.number,
     meta: PropTypes.shape({
-      label: PropTypes.node,
-      collapsed: PropTypes.bool,
       active: PropTypes.bool,
-      icon: PropTypes.element
+      collapsed: PropTypes.bool,
+      expandByDoubleClick: PropTypes.bool,
+      icon: PropTypes.node,
+      label: PropTypes.node
     })
   }),
   keyboardOpenId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

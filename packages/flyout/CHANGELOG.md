@@ -1,3 +1,10 @@
+# [@hig/flyout-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/flyout@2.0.0...@hig/flyout@2.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/flyout-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/flyout@1.3.1...@hig/flyout@2.0.0) (2022-01-13)
 
 

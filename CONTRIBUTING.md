@@ -107,8 +107,7 @@ In the event the Tech Lead is unable to perform his or her duties, or abdicates,
 In the event there are no Core Committers, Autodesk Inc. will appoint one.
 Core Committers:
 
-- Tech Lead: Scott Morrison (@scmm17)
-- Core Committer: Wilbert Mui (@wmui51)
+- Tech Lead: Stacey Shkuratoff (@staceyshk)
 
 ### See Also
 

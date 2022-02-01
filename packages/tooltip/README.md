@@ -4,7 +4,6 @@ Tooltips generally describe what a tool or feature does, or when or how to use i
 
 Read more about when and how to use the Tooltip component [on the internal wiki](https://hig.autodesk.com/web/components/tooltips).
 
-
 ## Getting started
 
 ### Install the package

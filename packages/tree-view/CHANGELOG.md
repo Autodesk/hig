@@ -1,3 +1,17 @@
+# [@hig/tree-view-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.1.0...@hig/tree-view@2.2.0) (2022-01-31)
+
+
+### Features
+
+* **dblClick:** double click to expand or collapse tree item ([#2580](https://github.com/Autodesk/hig/issues/2580)) ([8a2fd84](https://github.com/Autodesk/hig/commit/8a2fd84))
+
+# [@hig/tree-view-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.0.0...@hig/tree-view@2.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/tree-view-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@1.2.4...@hig/tree-view@2.0.0) (2022-01-13)
 
 

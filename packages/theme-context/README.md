@@ -12,7 +12,6 @@ Themable HIG components within a `ThemeContext.Provider` will have access to the
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-
 ## Getting started
 
 ```bash

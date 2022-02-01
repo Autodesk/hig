@@ -1,6 +1,6 @@
 {
   "name": "@hig/notifications-toast",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "HIG Toast",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -17,18 +17,18 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon-button": "^2.6.3",
-    "@hig/icons": "^3.4.4",
-    "@hig/rich-text": "^1.2.2",
-    "@hig/typography": "^1.2.2",
+    "@hig/icon-button": "^3.1.0",
+    "@hig/icons": "^4.1.0",
+    "@hig/rich-text": "^2.1.0",
+    "@hig/typography": "^2.1.0",
     "@hig/utils": "^0.4.1",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
     "react-flip-move": "^3.0.1"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.3",
-    "@hig/theme-data": "^2.22.1",
+    "@hig/theme-context": "^4.1.0",
+    "@hig/theme-data": "^2.23.0",
     "react": "^17.0.0"
   },
   "devDependencies": {

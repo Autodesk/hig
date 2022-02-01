@@ -51,13 +51,13 @@
     "wd": "^1.14.0"
   },
   "dependencies": {
-    "@hig/fonts": "^1.0.2",
-    "@hig/icons": "^3.4.0",
-    "@hig/rich-text": "^1.2.0",
-    "@hig/spacer": "^1.1.0",
-    "@hig/theme-context": "^3.0.1",
-    "@hig/theme-data": "^2.22.1",
-    "@hig/typography": "^1.2.0",
+    "@hig/fonts": "^1.0.3",
+    "@hig/icons": "^4.0.0",
+    "@hig/rich-text": "^2.0.0",
+    "@hig/spacer": "^2.0.0",
+    "@hig/theme-context": "^4.0.0",
+    "@hig/theme-data": "^2.23.0",
+    "@hig/typography": "^2.0.0",
     "faker": "^4.1.0",
     "prop-types": "^15.6.1",
     "wait-port": "^0.2.2"

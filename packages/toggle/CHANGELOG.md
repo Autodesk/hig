@@ -1,3 +1,10 @@
+# [@hig/toggle-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/toggle@2.0.0...@hig/toggle@2.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/toggle-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/toggle@1.0.3...@hig/toggle@2.0.0) (2022-01-13)
 
 

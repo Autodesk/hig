@@ -1,3 +1,17 @@
+# [@hig/top-nav-v4.1.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@4.1.0...@hig/top-nav@4.1.1) (2022-01-31)
+
+
+### Bug Fixes
+
+* updated the number version of the avatar dependencie of the top-nav component ([a8c8db7](https://github.com/Autodesk/hig/commit/a8c8db7))
+
+# [@hig/top-nav-v4.1.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@4.0.0...@hig/top-nav@4.1.0) (2022-01-24)
+
+
+### Features
+
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
 # [@hig/top-nav-v4.0.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@3.4.2...@hig/top-nav@4.0.0) (2022-01-13)
 
 
