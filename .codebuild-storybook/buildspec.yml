@@ -1,0 +1,18 @@
+version: 0.2
+
+env:
+    secrets-manager:
+        HIG_DOCKERHUB_PASS: HIG_DOCKERHUB_PASS
+
+phases:
+    pre_build:
+        commands:
+            - printenv HIG_DOCKERHUB_PASS | docker login -u autodeskhig --password-stdin
+    build:
+        commands:
+            - docker build --progress plain -t latest -f .codebuild-storybook/Dockerfile .
+            - docker create --name latest latest
+            - docker cp latest:/usr/src/hig/packages/storybook/storybook-static packages/storybook/storybook-static
+    post_build:
+        commands:
+            - aws s3 cp --recursive --acl public-read packages/storybook/storybook-static s3://adsk-hig-storybook-prod/

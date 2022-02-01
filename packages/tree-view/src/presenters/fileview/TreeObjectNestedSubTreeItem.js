@@ -14,7 +14,7 @@ const TreeObjectNestedSubTreeItem = props => {
     treeItem: {
       children,
       id,
-      meta: { className, icon, label },
+      meta: { className, icon, label, expandByDoubleClick },
       payload: {
         indicator,
         getActiveTreeItemId,
@@ -23,6 +23,7 @@ const TreeObjectNestedSubTreeItem = props => {
         guidelines
       },
       onClick: userOnClick,
+      onDoubleClick: userOnDoubleClick,
       ...otherTreeItemProps
     },
     collapsed,
@@ -131,6 +132,14 @@ const TreeObjectNestedSubTreeItem = props => {
               onClick={event => {
                 if (userOnClick) {
                   userOnClick(event);
+                }
+              }}
+              onDoubleClick={event => {
+                if (userOnDoubleClick) {
+                  userOnDoubleClick(event);
+                }
+                if (expandByDoubleClick) {
+                  handleOperatorClick(event, treeItem);
                 }
               }}
             >
