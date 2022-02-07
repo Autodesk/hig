@@ -5,7 +5,6 @@ import { createCustomClassNames } from "@hig/utils";
 
 import TreeObjectNestedSubTreeItem from "./fileview/TreeObjectNestedSubTreeItem";
 import TreeObjectSubTreeItem from "./fileview/TreeObjectSubTreeItem";
-import TreeItem from "../TreeItem";
 import TreeItemBehavior from "../behaviors/TreeItemBehavior";
 
 import stylesheet from "./stylesheet";
@@ -304,15 +303,23 @@ const SubTreeViewCombined = props => {
               ])}
               role="group"
             >
-              {clonedChildren.map((child, index) => (
-                <TreeItem
-                  {...child.props}
-                  themeData={themeData}
-                  density={density}
-                  // eslint-disable-next-line react/no-array-index-key
-                  key={`${id}-${index}`}
-                />
-              ))}
+              {clonedChildren.map((child, index) => {
+                const { type: ComponentType } = child;
+                /*
+                  this is different to TreeViewPresenter.js
+                  all the props has been extracted in the file above and passed to the child.props
+                  so, we don't need to extract and assign again
+                */
+                return (
+                  <ComponentType
+                    {...child.props}
+                    themeData={themeData}
+                    density={density}
+                    // eslint-disable-next-line react/no-array-index-key
+                    key={`${id}-${index}`}
+                  />
+                );
+              })}
             </ul>
           )}
         {(!collapsed || mount) &&

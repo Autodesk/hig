@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import {
   AddFolder24,
   Folder24,
@@ -20,6 +22,30 @@ import {
 
 import { TreeItem } from "../index";
 import sampleTreeNodeObject from "../__fixtures__/sampleTreeNodeObject";
+
+// test that the TreeView can render a high-order TreeItem component or a function TreeItem component
+export class HighOrderComponentWrappedTreeItem extends React.Component {
+  render() {
+    return <TreeItem {...this.props}>{this.props.children}</TreeItem>;
+  }
+}
+HighOrderComponentWrappedTreeItem.propTypes = {
+  /**
+   * Accepts other high order TreeItem components
+   */
+  children: PropTypes.node
+};
+
+export const FunctionComponentWrappedTreeItem = props => (
+  <TreeItem {...props}>{props.children}</TreeItem>
+);
+FunctionComponentWrappedTreeItem.defaultName = "FuncTreeItem";
+FunctionComponentWrappedTreeItem.propTypes = {
+  /**
+   * Accepts other Function TreeItem components
+   */
+  children: PropTypes.node
+};
 
 export default [
   {
@@ -306,6 +332,83 @@ export default [
       guidelines: false,
       indicator: "caret",
       treeNode: sampleTreeNodeObject
+    })
+  },
+  {
+    description: "high order TreeItem",
+    getProps: () => ({
+      guidelines: false,
+      indicator: "caret",
+      children: [
+        <FunctionComponentWrappedTreeItem
+          id="tree-item-1"
+          key="tree-item-1"
+          label="Func Tree Item"
+          icon={<ProductsAndServices16 />}
+          expandByDoubleClick="true"
+        >
+          <FunctionComponentWrappedTreeItem
+            id="tree-item-2"
+            key="tree-item-2"
+            label="Func Tree Item"
+            icon={<ProductsAndServices16 />}
+            expandByDoubleClick="true"
+          >
+            <FunctionComponentWrappedTreeItem
+              label="Func Tree Item 3"
+              id="tree-item-3"
+              key="tree-item-3"
+              icon={<ProductsAndServices24 />}
+              expandByDoubleClick="true"
+            >
+              <FunctionComponentWrappedTreeItem
+                label="Func Tree Item 4"
+                id="tree-item-4"
+                key="tree-item-4"
+                icon={<AddFolder24 />}
+              />
+              <FunctionComponentWrappedTreeItem
+                label="Func Tree Item 5"
+                id="tree-item-5"
+                key="tree-item-5"
+                icon={<Report24 />}
+              />
+              <FunctionComponentWrappedTreeItem
+                label="Func Tree Item 6"
+                id="tree-item-6"
+                key="tree-item-6"
+                icon={<ProductsAndServices24 />}
+              />
+            </FunctionComponentWrappedTreeItem>
+          </FunctionComponentWrappedTreeItem>
+        </FunctionComponentWrappedTreeItem>,
+        <HighOrderComponentWrappedTreeItem
+          label="Hoc Tree Item 7"
+          id="tree-item-7"
+          key="tree-item-7"
+          icon={<ProductsAndServices24 />}
+          expandByDoubleClick="true"
+        >
+          <HighOrderComponentWrappedTreeItem
+            label="Hoc Tree Item 8"
+            id="tree-item-8"
+            key="tree-item-8"
+            icon={<AddFolder24 />}
+          />
+          <HighOrderComponentWrappedTreeItem
+            label="Hoc Tree Item 9"
+            id="tree-item-9"
+            key="tree-item-9"
+            icon={<Report24 />}
+          />
+          <HighOrderComponentWrappedTreeItem
+            label="Hoc Tree Item 10"
+            id="tree-item-10"
+            key="tree-item-10"
+            icon={<ProductsAndServices24 />}
+          />
+        </HighOrderComponentWrappedTreeItem>
+      ]
     })
   },
   {
