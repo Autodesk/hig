@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.23.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.23.0...@hig/theme-data@2.23.1) (2022-02-07)
+
+
+### Bug Fixes
+
+* set transform on menu header to correct value ([fd2528d](https://github.com/Autodesk/hig/commit/fd2528d))
+
 # [@hig/theme-data-v2.23.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.22.1...@hig/theme-data@2.23.0) (2022-01-24)
 
 
