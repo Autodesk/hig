@@ -5,7 +5,6 @@ import { ThemeContext } from "@hig/theme-context";
 import { createCustomClassNames } from "@hig/utils";
 
 import TreeObjectView from "./fileview/TreeObjectView";
-import TreeItem from "../TreeItem";
 
 import stylesheet from "./stylesheet";
 
@@ -15,9 +14,7 @@ function createTreeItems(children) {
   return Children.toArray(children).reduce((result, child) => {
     const { type, key, props = {} } = child;
 
-    if (type === TreeItem) {
-      result.push({ key, props });
-    }
+    result.push({ key, props, ComponentType: type });
 
     return result;
   }, []);
@@ -73,7 +70,7 @@ const TreeViewPresenterObject = props => {
   const getTreeItems = () => createTreeItems(props.children);
 
   // eslint-disable-next-line react/sort-comp
-  const renderTreeItem = ({ key, props: propsRef }) => {
+  const renderTreeItem = ({ key, props: propsRef, ComponentType }) => {
     const {
       getActiveTreeItemId,
       getActiveTreeItemIndex,
@@ -103,7 +100,11 @@ const TreeViewPresenterObject = props => {
       level: 0
     };
 
-    return <TreeItem {...payload} />;
+    /*
+      all the methods and properties have been extracted from props and passed to payload
+      and then render the ComponentType (e.g. TreeItem) with the payload
+    */
+    return <ComponentType {...payload} />;
   };
 
   const renderTreeItems = () => getTreeItems().map(renderTreeItem);

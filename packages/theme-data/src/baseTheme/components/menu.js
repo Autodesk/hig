@@ -67,6 +67,9 @@ export default {
     type: COLOR,
     value: {
       ref: "colorScheme.text.default"
+    },
+    transform: {
+      alpha: 0.5
     }
   },
   "menu.header.marginBottom": {
