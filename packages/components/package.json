@@ -50,7 +50,7 @@
     "@hig/text-area": "^1.3.2",
     "@hig/text-link": "^2.1.0",
     "@hig/theme-context": "^4.1.0",
-    "@hig/theme-data": "^2.23.0",
+    "@hig/theme-data": "^2.23.1",
     "@hig/timestamp": "^1.3.2",
     "@hig/toggle": "^1.0.3",
     "@hig/tooltip": "^1.1.2",

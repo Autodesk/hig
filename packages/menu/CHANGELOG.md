@@ -1,3 +1,10 @@
+# [@hig/menu-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/menu@2.1.0...@hig/menu@2.1.1) (2022-02-07)
+
+
+### Bug Fixes
+
+* set transform on menu header to correct value ([fd2528d](https://github.com/Autodesk/hig/commit/fd2528d))
+
 # [@hig/menu-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/menu@2.0.0...@hig/menu@2.1.0) (2022-01-24)
 
 

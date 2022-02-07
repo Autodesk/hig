@@ -1,3 +1,10 @@
+# [@hig/tree-view-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.2.0...@hig/tree-view@2.3.0) (2022-02-07)
+
+
+### Features
+
+* **HOC:** TreeView can contain high order TreeItem ([d2fca9a](https://github.com/Autodesk/hig/commit/d2fca9a))
+
 # [@hig/tree-view-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.1.0...@hig/tree-view@2.2.0) (2022-01-31)
 
 
