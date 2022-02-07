@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { ThemeContext } from "@hig/theme-context";
 
-import TreeItem from "../TreeItem";
 import SingleTreeNodePresenter from "./SingleTreeNodePresenter";
 import SingleTreeNodeFolderPresenter from "./SingleTreeNodeFolderPresenter";
 
@@ -24,10 +23,7 @@ const TreeItemPresenter = props => {
     return (
       <ThemeContext.Consumer>
         {({ resolvedRoles, metadata }) => {
-          if (
-            (children && children.type === TreeItem) ||
-            Array.isArray(children)
-          ) {
+          if (children || Array.isArray(children)) {
             return (
               <SingleTreeNodeFolderPresenter
                 {...props}
