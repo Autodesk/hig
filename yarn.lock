@@ -172,15 +172,6 @@
     prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/avatar@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-2.0.0.tgz#2c1eb5898b44098ee0bfb1d8d471ec88665a8c6e"
-  integrity sha512-uQeUAvJ5YZo4/ZHMtfltU0Byn1pLOCLgEc5o7UwOOZ1G33rM+SCiMq0hSh/YfT/yVxK1hFLJ8VPkILkZKz0hzg==
-  dependencies:
-    "@hig/utils" "^0.4.1"
-    prop-types "^15.7.1"
-    react-lifecycles-compat "^3.0.4"
-
 "@hig/avatar@^1.4.2":
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/@hig/avatar/-/avatar-1.4.2.tgz#cbbcf9baea3a2409b6df23df908d51943b17a7fb"
@@ -9752,8 +9743,9 @@ path-type@^3.0.0:
     pify "^3.0.0"
 
 pathval@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/pathval/-/pathval-1.1.0.tgz#b942e6d4bde653005ef6b71361def8727d0645e0"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/pathval/-/pathval-1.1.1.tgz#8534e77a77ce7ac5a2512ea21e0fdb8fcf6c3d8d"
+  integrity sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==
 
 pbkdf2@^3.0.3:
   version "3.0.17"
