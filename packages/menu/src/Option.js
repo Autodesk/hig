@@ -120,7 +120,11 @@ Option.propTypes = {
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
+  /**
+   * Allows unselecting an Option
+   */
+  unselect: PropTypes.bool
 };
 
 Option.defaultProps = {

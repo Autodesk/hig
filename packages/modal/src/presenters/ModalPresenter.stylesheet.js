@@ -64,9 +64,7 @@ export default function stylesheet(props, themeData) {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        borderBottom: `1px solid ${
-          themeData["modal.header.borderBottomColor"]
-        }`,
+        borderBottom: `1px solid ${themeData["modal.header.borderBottomColor"]}`,
         minHeight: themeData["modal.header.minHeight"],
         zIndex: MODAL_HEADER_LAYER,
 

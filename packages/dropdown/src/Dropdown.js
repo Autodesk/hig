@@ -180,7 +180,6 @@ const Dropdown = props => {
    */
   const renderPresenter = downshift => {
     const {
-      children,
       defaultValue,
       disabled,
       formatOption,
@@ -194,7 +193,6 @@ const Dropdown = props => {
       placeholder,
       renderOption,
       required,
-      tabIndex,
       typable,
       value,
       variant,

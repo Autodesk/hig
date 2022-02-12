@@ -33,6 +33,9 @@ import parseNotifications from "./parseNotifications";
  */
 
 class NotificationFlyoutBehavior extends Component {
+  /** @type {Props} */
+  props;
+
   static propTypes = {
     /** Render prop */
     children: PropTypes.func.isRequired,
@@ -94,6 +97,24 @@ class NotificationFlyoutBehavior extends Component {
   }
 
   /**
+   * Action to dismiss a notification
+   * @param {string} id
+   */
+  dismissNotification = id => {
+    this.setState({
+      // eslint-disable-next-line react/no-access-state-in-setstate
+      dismissedNotifications: this.state.dismissedNotifications.concat(id)
+    });
+  };
+
+  /**
+   * Handler for when the flyout opens
+   */
+  handleClose = () => {
+    this.markAllNotificationsRead();
+  };
+
+  /**
    * @param {ParsedNotification[]} notifications
    */
   deriveUnreadCount() {
@@ -102,9 +123,6 @@ class NotificationFlyoutBehavior extends Component {
       0
     );
   }
-
-  /** @type {Props} */
-  props;
 
   markAllNotificationsRead() {
     const notifications = this.getNotifications();
@@ -119,23 +137,6 @@ class NotificationFlyoutBehavior extends Component {
 
     this.setState({ readNotifications: nextRead });
   }
-
-  /**
-   * Action to dismiss a notification
-   * @param {string} id
-   */
-  dismissNotification = id => {
-    this.setState({
-      dismissedNotifications: this.state.dismissedNotifications.concat(id)
-    });
-  };
-
-  /**
-   * Handler for when the flyout opens
-   */
-  handleClose = () => {
-    this.markAllNotificationsRead();
-  };
 
   /**
    * @returns {import("react").ReactElement}

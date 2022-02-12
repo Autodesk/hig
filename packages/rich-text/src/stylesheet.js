@@ -55,9 +55,7 @@ export default function stylesheet(props, themeData) {
 
       "&:focus": {
         color: themeData["textLink.primary.focus.fontColor"],
-        outline: `solid ${themeData["textLink.focus.haloWidth"]} ${
-          themeData["textLink.focus.haloColor"]
-        }`
+        outline: `solid ${themeData["textLink.focus.haloWidth"]} ${themeData["textLink.focus.haloColor"]}`
       }
     }
   };
@@ -70,9 +68,7 @@ export default function stylesheet(props, themeData) {
     p: typographyStyle("body", `0 0 ${themeData["density.spacings.small"]} 0`),
     "h1 + p, h2 + p, h3 + p": typographyStyle(
       "body",
-      `${themeData["density.spacings.medium"]} 0 ${
-        themeData["density.spacings.small"]
-      } 0`
+      `${themeData["density.spacings.medium"]} 0 ${themeData["density.spacings.small"]} 0`
     )
   };
 
