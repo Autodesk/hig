@@ -1,8 +1,6 @@
 export default function stylesheet(props, themeData) {
   const { stylesheet: customStylesheet } = props;
-  const activeBorderLeft = `2px solid ${
-    themeData["colorScheme.reference.accent"]
-  }`;
+  const activeBorderLeft = `2px solid ${themeData["colorScheme.reference.accent"]}`;
   const activeBorderBefore = active => ({
     content: '""',
     position: "absolute",

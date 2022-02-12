@@ -40,31 +40,23 @@ const Search = props => {
   const inputClassName = createCustomClassNames(className, "input");
   const clearClassName = createCustomClassNames(className, "clear");
 
-  useEffect(
-    () => {
-      if (onHandleChange) {
-        callPropsOnChange(onHandleChange);
-      }
-    },
-    [onHandleChange]
-  );
+  useEffect(() => {
+    if (onHandleChange) {
+      callPropsOnChange(onHandleChange);
+    }
+  }, [onHandleChange]);
 
-  useEffect(
-    () => {
-      if (value === "") {
-        // eslint-disable-next-line no-unused-expressions
-        props.onClearIconClick && props.onClearIconClick();
-      }
-    },
-    [value]
-  );
+  useEffect(() => {
+    if (value === "") {
+      // eslint-disable-next-line no-unused-expressions
+      props.onClearIconClick && props.onClearIconClick();
+    }
+  }, [value]);
 
-  useEffect(
-    () => {
-      setValue(props.value);
-    },
-    [props.value]
-  );
+  useEffect(() => {
+    setValue(props.value);
+  }, [props.value]);
+
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
@@ -92,18 +84,17 @@ const Search = props => {
               />
             </div>
 
-            {value &&
-              value.length > 0 && (
-                <div
-                  className={cx([css(styles.clear), clearClassName])}
-                  onClick={handleClick}
-                  onKeyDown={handleKeyDown}
-                  role="button"
-                  tabIndex={0}
-                >
-                  <CloseLUI />
-                </div>
-              )}
+            {value && value.length > 0 && (
+              <div
+                className={cx([css(styles.clear), clearClassName])}
+                onClick={handleClick}
+                onKeyDown={handleKeyDown}
+                role="button"
+                tabIndex={0}
+              >
+                <CloseLUI />
+              </div>
+            )}
           </div>
         );
       }}

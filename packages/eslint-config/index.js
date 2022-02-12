@@ -32,6 +32,7 @@ module.exports = {
       2,
       {
         "allowArrowFunctions": true,
+        "allowFunctions": true,
         "ignoreRefs": true
       }
     ],

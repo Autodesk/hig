@@ -228,70 +228,67 @@ const Tabs = props => {
 
   const styles = stylesheet({ orientation: effectiveOrientation });
 
-  useEffect(
-    () => {
-      const { children, align, variant, orientation, showTabDivider } = props;
-      const prevActiveTabIndex = activeTabIndex;
-      const prevEffectiveAlign = effectiveAlign;
-      const prevEffectiveOrientation = effectiveOrientation;
-      const prevEffectiveShowTabDivider = effectiveShowTabDivider;
+  useEffect(() => {
+    const { children, align, variant, orientation, showTabDivider } = props;
+    const prevActiveTabIndex = activeTabIndex;
+    const prevEffectiveAlign = effectiveAlign;
+    const prevEffectiveOrientation = effectiveOrientation;
+    const prevEffectiveShowTabDivider = effectiveShowTabDivider;
 
-      let hasStateChanged = false;
+    let hasStateChanged = false;
 
-      const nextTabs = createTabs(children);
-      const nextActiveTabIndex = nextTabs.findIndex(
-        // eslint-disable-next-line react/prop-types
-        ({ props }) => props.active
-      );
-      if (
-        nextActiveTabIndex >= 0 &&
-        nextActiveTabIndex !== prevActiveTabIndex &&
-        props.defaultActiveTabIndex === undefined
-      ) {
-        setActiveTabIndex(nextActiveTabIndex);
-        // newState.activeTabIndex = nextActiveTabIndex;
-        hasStateChanged = true;
-      }
+    const nextTabs = createTabs(children);
+    const nextActiveTabIndex = nextTabs.findIndex(
+      // eslint-disable-next-line react/prop-types
+      ({ props }) => props.active
+    );
+    if (
+      nextActiveTabIndex >= 0 &&
+      nextActiveTabIndex !== prevActiveTabIndex &&
+      props.defaultActiveTabIndex === undefined
+    ) {
+      setActiveTabIndex(nextActiveTabIndex);
+      // newState.activeTabIndex = nextActiveTabIndex;
+      hasStateChanged = true;
+    }
 
-      // vertical tabs will only work when variant is "box"
-      const nextEffectiveOrientation =
-        variant === variants.BOX ? orientation : orientations.HORIZONTAL;
-      if (nextEffectiveOrientation !== prevEffectiveOrientation) {
-        setEffectiveOrientation(nextEffectiveOrientation);
-        // newState.effectiveOrientation = nextEffectiveOrientation;
-        hasStateChanged = true;
-      }
+    // vertical tabs will only work when variant is "box"
+    const nextEffectiveOrientation =
+      variant === variants.BOX ? orientation : orientations.HORIZONTAL;
+    if (nextEffectiveOrientation !== prevEffectiveOrientation) {
+      setEffectiveOrientation(nextEffectiveOrientation);
+      // newState.effectiveOrientation = nextEffectiveOrientation;
+      hasStateChanged = true;
+    }
 
-      // align prop will not take effect when orientation is "vertical" or variant is "canvas"
-      const nextEffectiveAlign =
-        nextEffectiveOrientation === orientations.VERTICAL ||
-        variant === variants.CANVAS
-          ? alignments.LEFT
-          : align;
-      if (nextEffectiveAlign !== prevEffectiveAlign) {
-        setEffectiveAlign(nextEffectiveAlign);
-        // newState.effectiveAlign = nextEffectiveAlign;
-        hasStateChanged = true;
-      }
+    // align prop will not take effect when orientation is "vertical" or variant is "canvas"
+    const nextEffectiveAlign =
+      nextEffectiveOrientation === orientations.VERTICAL ||
+      variant === variants.CANVAS
+        ? alignments.LEFT
+        : align;
+    if (nextEffectiveAlign !== prevEffectiveAlign) {
+      setEffectiveAlign(nextEffectiveAlign);
+      // newState.effectiveAlign = nextEffectiveAlign;
+      hasStateChanged = true;
+    }
 
-      // tab divider will not show when orientation is "vertical" or variant is "underline"
-      const nextEffectiveShowTabDivider =
-        nextEffectiveOrientation === orientations.VERTICAL ||
-        variant === variants.UNDERLINE
-          ? false
-          : showTabDivider;
-      if (nextEffectiveShowTabDivider !== prevEffectiveShowTabDivider) {
-        setEffectiveShowTabDivider(nextEffectiveShowTabDivider);
-        // newState.effectiveShowTabDivider = nextEffectiveShowTabDivider;
-        hasStateChanged = true;
-      }
+    // tab divider will not show when orientation is "vertical" or variant is "underline"
+    const nextEffectiveShowTabDivider =
+      nextEffectiveOrientation === orientations.VERTICAL ||
+      variant === variants.UNDERLINE
+        ? false
+        : showTabDivider;
+    if (nextEffectiveShowTabDivider !== prevEffectiveShowTabDivider) {
+      setEffectiveShowTabDivider(nextEffectiveShowTabDivider);
+      // newState.effectiveShowTabDivider = nextEffectiveShowTabDivider;
+      hasStateChanged = true;
+    }
 
-      if (hasStateChanged) {
-        // return newState;
-      }
-    },
-    [props]
-  );
+    if (hasStateChanged) {
+      // return newState;
+    }
+  }, [props]);
 
   return (
     <div className={cx(css(styles.wrapper), props.className)}>

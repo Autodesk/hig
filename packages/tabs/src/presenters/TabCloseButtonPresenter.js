@@ -59,17 +59,18 @@ const TabCloseButtonPresenter = props => {
 
             return (
               <button
+                className={cx(css(styles.button), className)}
+                disabled={disabled}
                 onBlur={handleBlur}
+                onClick={handleClick}
                 onFocus={handleFocus}
                 onMouseDown={handleMouseDown}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onMouseUp={handleMouseUp}
-                className={cx(css(styles.button), className)}
                 tabIndex="-1"
-                onClick={handleClick}
-                disabled={disabled}
                 title="close"
+                type="button"
               >
                 <CloseIcon />
               </button>

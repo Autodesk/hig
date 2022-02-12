@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
@@ -58,24 +59,21 @@ const TreeObjectSubTreeItem = props => {
   const htmlProps = { ...otherTreeItemProps };
   delete htmlProps.parentId;
 
-  useEffect(
-    () => {
-      const {
-        // eslint-disable-next-line no-shadow
-        treeItem: { id },
-        keyboardOpenId,
-        setIsCollapsed
-      } = props;
+  useEffect(() => {
+    const {
+      // eslint-disable-next-line no-shadow
+      treeItem: { id },
+      keyboardOpenId,
+      setIsCollapsed
+    } = props;
 
-      if (keyboardOpenId === id && setIsCollapsed) {
-        // eslint-disable-next-line no-param-reassign
-        props.treeItem.meta.collapsed = !props.treeItem.meta.collapsed;
-        props.setIsCollapsed(props.treeItem.meta.collapsed);
-        props.setKeyboardOpenId("");
-      }
-    },
-    [props.keyboardOpenId]
-  );
+    if (keyboardOpenId === id && setIsCollapsed) {
+      // eslint-disable-next-line no-param-reassign
+      props.treeItem.meta.collapsed = !props.treeItem.meta.collapsed;
+      props.setIsCollapsed(props.treeItem.meta.collapsed);
+      props.setKeyboardOpenId("");
+    }
+  }, [props.keyboardOpenId]);
 
   return (
     <HoverBehavior onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>

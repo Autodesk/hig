@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
 import React, { useEffect } from "react";
 import { css, cx } from "emotion";
 import { HoverBehavior } from "@hig/behaviors";
 import { createCustomClassNames, createButtonEventHandlers } from "@hig/utils";
-
+// eslint-disable-next-line import/no-cycle
 import SubTreeViewCombined from "../SubTreeViewCombined";
 import IconIndicatorPresenter from "../IconIndicatorPresenter";
 
@@ -76,23 +77,20 @@ const TreeObjectNestedSubTreeItem = props => {
   const htmlProps = { ...otherTreeItemProps };
   delete htmlProps.parentId;
 
-  useEffect(
-    () => {
-      const {
-        // eslint-disable-next-line no-shadow
-        treeItem: { id },
-        keyboardOpenId
-      } = props;
+  useEffect(() => {
+    const {
+      // eslint-disable-next-line no-shadow
+      treeItem: { id },
+      keyboardOpenId
+    } = props;
 
-      if (keyboardOpenId === id) {
-        // eslint-disable-next-line no-param-reassign
-        props.treeItem.meta.collapsed = !props.treeItem.meta.collapsed;
-        props.setIsCollapsed(props.treeItem.meta.collapsed);
-        props.setKeyboardOpenId("");
-      }
-    },
-    [props.keyboardOpenId]
-  );
+    if (keyboardOpenId === id) {
+      // eslint-disable-next-line no-param-reassign
+      props.treeItem.meta.collapsed = !props.treeItem.meta.collapsed;
+      props.setIsCollapsed(props.treeItem.meta.collapsed);
+      props.setKeyboardOpenId("");
+    }
+  }, [props.keyboardOpenId]);
 
   return (
     <li

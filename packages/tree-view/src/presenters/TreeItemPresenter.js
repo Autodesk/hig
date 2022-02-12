@@ -8,17 +8,14 @@ import SingleTreeNodeFolderPresenter from "./SingleTreeNodeFolderPresenter";
 const TreeItemPresenter = props => {
   const renderTreeItem = () => {
     const { children } = props;
-    useEffect(
-      () => {
-        const { id, keyboardOpenId } = props;
+    useEffect(() => {
+      const { id, keyboardOpenId } = props;
 
-        if (keyboardOpenId === id) {
-          props.setIsCollapsed(!props.getIsCollapsed());
-          props.setKeyboardOpenId("");
-        }
-      },
-      [props.keyboardOpenId]
-    );
+      if (keyboardOpenId === id) {
+        props.setIsCollapsed(!props.getIsCollapsed());
+        props.setKeyboardOpenId("");
+      }
+    }, [props.keyboardOpenId]);
 
     return (
       <ThemeContext.Consumer>

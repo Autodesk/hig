@@ -9,9 +9,7 @@ function _header(props, themeData, styles) {
     { display: "block" },
     props.isLink
       ? {
-          padding: `0 ${themeData["density.spacings.small"]} 0 ${
-            themeData["density.spacings.medium"]
-          }`,
+          padding: `0 ${themeData["density.spacings.small"]} 0 ${themeData["density.spacings.medium"]}`,
           fontWeight: "600",
           textDecoration: "none",
           cursor: "pointer"
