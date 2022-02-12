@@ -95,22 +95,19 @@ function ContentPresenter(props) {
     }
   }, []);
 
-  useLayoutEffect(
-    () => {
-      const { current: currentCollapsed } = previousCollapsed;
-      previousCollapsed.current = collapsed;
-      if (!contentWrapper) {
-        return;
-      }
-      if (!currentCollapsed && collapsed) {
-        collapse();
-      }
-      if (currentCollapsed && !collapsed) {
-        expand();
-      }
-    },
-    [collapsed]
-  );
+  useLayoutEffect(() => {
+    const { current: currentCollapsed } = previousCollapsed;
+    previousCollapsed.current = collapsed;
+    if (!contentWrapper) {
+      return;
+    }
+    if (!currentCollapsed && collapsed) {
+      collapse();
+    }
+    if (currentCollapsed && !collapsed) {
+      expand();
+    }
+  }, [collapsed]);
 
   const { children, ...otherProps } = props;
   const { className } = otherProps;

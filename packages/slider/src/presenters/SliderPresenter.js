@@ -124,6 +124,7 @@ const SliderPresenter = props => {
 SliderPresenter.displayName = "SliderPresenter";
 
 SliderPresenter.propTypes = {
+  className: PropTypes.string,
   disabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,

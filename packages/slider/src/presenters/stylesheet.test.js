@@ -147,9 +147,7 @@ describe("stylesheet", () => {
       const styles = stylesheet(props, themeData);
 
       expect(styles.slider["&::-webkit-slider-thumb"].boxShadow).toMatch(
-        `0 0 0 ${themeData["slider.hover.haloWidth"]} ${
-          themeData["slider.hover.haloColor"]
-        }`
+        `0 0 0 ${themeData["slider.hover.haloWidth"]} ${themeData["slider.hover.haloColor"]}`
       );
     });
   });

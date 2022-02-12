@@ -48,8 +48,7 @@ const ContainerTransition = props => {
 
   useEffect(() => {
     if (isVisible) window.requestAnimationFrame(() => setInside(true));
-    }, [isVisible]
-  );
+  }, [isVisible]);
 
   return (
     <Transition in={inside} onExited={handleExit} timeout={TRANSITION_DURATION}>

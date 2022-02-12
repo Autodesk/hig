@@ -13,9 +13,7 @@ function Role(props) {
           style={{
             display: "flex",
             marginBottom: resolvedRoles["density.spacings.extraLarge"],
-            borderTop: `${resolvedRoles["basics.borderWidths.small"]} solid ${
-              resolvedRoles["colorScheme.text.dim"]
-            }`,
+            borderTop: `${resolvedRoles["basics.borderWidths.small"]} solid ${resolvedRoles["colorScheme.text.dim"]}`,
             paddingTop: resolvedRoles["density.spacings.medium"]
           }}
         >
@@ -24,7 +22,9 @@ function Role(props) {
               <InlineCode>{props.role}</InlineCode>
             </Text>
           </div>
-          <div style={{ flex: "1 1 0" }}>{<Example {...props} />}</div>
+          <div style={{ flex: "1 1 0" }}>
+            <Example {...props} />
+          </div>
         </div>
       )}
     </ThemeContext.Consumer>

@@ -13,30 +13,18 @@ export default function stylesheet(props, themeData) {
     hasFocus && !hasHover
       ? themeData["checkbox.unchecked.focus.borderColor"]
       : themeData["checkbox.unchecked.default.borderColor"];
-  const checkedInnerShadow = `inset 0 0 0 ${
-    themeData["checkbox.pressed.haloWidth"]
-  } ${themeData["checkbox.checked.default.backgroundColor"]}`;
-  const uncheckedInnerShadow = `inset 0 0 0 ${
-    themeData["checkbox.borderWidth"]
-  } 
-    ${borderColor}
-  `;
+  const checkedInnerShadow = `inset 0 0 0 ${themeData["checkbox.pressed.haloWidth"]} ${themeData["checkbox.checked.default.backgroundColor"]}`;
+  const uncheckedInnerShadow = `inset 0 0 0 ${themeData["checkbox.borderWidth"]} ${borderColor}`;
   let outerShadow = "0 0 0 0px transparent";
 
   if (disabled) {
     // do nothing
   } else if (isPressed) {
-    outerShadow = `0 0 0 ${themeData["checkbox.pressed.haloWidth"]} ${
-      themeData["checkbox.pressed.haloColor"]
-    }`;
+    outerShadow = `0 0 0 ${themeData["checkbox.pressed.haloWidth"]} ${themeData["checkbox.pressed.haloColor"]}`;
   } else if (hasHover) {
-    outerShadow = `0 0 0 ${themeData["checkbox.hover.haloWidth"]} ${
-      themeData["checkbox.hover.haloColor"]
-    }`;
+    outerShadow = `0 0 0 ${themeData["checkbox.hover.haloWidth"]} ${themeData["checkbox.hover.haloColor"]}`;
   } else if (hasFocus) {
-    outerShadow = `0 0 0 ${themeData["checkbox.focus.haloWidth"]} ${
-      themeData["checkbox.focus.haloColor"]
-    }`;
+    outerShadow = `0 0 0 ${themeData["checkbox.focus.haloWidth"]} ${themeData["checkbox.focus.haloColor"]}`;
   }
 
   const styles = {

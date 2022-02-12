@@ -28,12 +28,8 @@ export default function Swatch({
               height: "32px",
               backgroundColor: renderedBackgroundColor,
               borderRadius: renderedBorderRadius,
-              border: `${resolvedRoles["basics.borderWidths.small"]} solid ${
-                resolvedRoles["colorScheme.surface.level100"]
-              }`,
-              boxShadow: `0 0 0 ${renderedBorderWidth} ${
-                resolvedRoles["colorScheme.surface.level350"]
-              }, ${renderedBoxShadow}`,
+              border: `${resolvedRoles["basics.borderWidths.small"]} solid ${resolvedRoles["colorScheme.surface.level100"]}`,
+              boxShadow: `0 0 0 ${renderedBorderWidth} ${resolvedRoles["colorScheme.surface.level350"]}, ${renderedBoxShadow}`,
               marginBottom: resolvedRoles["density.spacings.small"]
             }}
           />

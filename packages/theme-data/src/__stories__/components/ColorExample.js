@@ -15,6 +15,7 @@ export default function ColorExample({ value }) {
 ColorExample.propTypes = {
   value: PropTypes.string,
   basics: PropTypes.shape({
+    // eslint-disable-next-line react/forbid-prop-types
     colors: PropTypes.object
   })
 };

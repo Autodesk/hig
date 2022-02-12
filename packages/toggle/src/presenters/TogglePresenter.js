@@ -60,7 +60,11 @@ TogglePresenter.propTypes = {
   /**
    * Returns whether or not the toggle is currently pressed
    */
-  isPressed: PropTypes.bool
+  isPressed: PropTypes.bool,
+  /**
+   *  Function to modify the component's styles
+   */
+  stylesheet: PropTypes.func
 };
 
 export default TogglePresenter;

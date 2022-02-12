@@ -3,6 +3,16 @@ import React from "react";
 import renderer from "react-test-renderer";
 import TextArea from "./TextArea";
 
+function stylesheet(styles, props, themeData) {
+  return {
+    ...styles,
+    input: {
+      ...styles.input,
+      background: themeData[`basics.colors.secondary.green.100`]
+    }
+  };
+}
+
 describe("TextArea", () => {
   describe("integration", () => {
     it("renders correctly", () => {
@@ -12,15 +22,6 @@ describe("TextArea", () => {
     });
 
     it("renders with stylesheet prop", () => {
-      function stylesheet(styles, props, themeData) {
-        return {
-          ...styles,
-          input: {
-            ...styles.input,
-            background: themeData[`basics.colors.secondary.green.100`]
-          }
-        };
-      }
       const tree = renderer
         .create(<TextArea stylesheet={stylesheet} />)
         .toJSON();
