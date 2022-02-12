@@ -1033,10 +1033,10 @@
     prop-types "^15.7.1"
     react-transition-group "^2.3.1"
 
-"@hig/fonts@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@hig/fonts/-/fonts-1.0.2.tgz#84ffc16b9c15806b97e3d8627e5962bd75b6b81e"
-  integrity sha512-XcO0vd0yg3sfxG0GCdn5IUosArQUf7H16yh0l/wrb5SIT9cvGxW2c91ue/30BVvbdNHZZrkMkAX4XCs5oDm/Yg==
+"@hig/fonts@^1.0.3":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/fonts/-/fonts-1.1.0.tgz#1fadd37e8571c9c71d91de976af6c4204ee9426f"
+  integrity sha512-hVKBYggIsLVA9JqKVpjvDK1hF3kxiemaLch88kPFl5zChbsU11Ln08kRaX4zqJTPTl3v+eyYAFOvvKjQWAQeeQ==
 
 "@hig/icon-button@^2.4.1":
   version "2.4.1"
@@ -1065,10 +1065,10 @@
   dependencies:
     emotion "^10.0.0"
 
-"@hig/icons@^3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-3.4.0.tgz#dc4f63e1f8a72228741e0dabaef3eeaf6175066b"
-  integrity sha512-oKM6Qf1uRRwgPFiNxXSmQuiLX8Bw7khqmuq1rUCheRlY+GZiX2IM45AQ8EREqRip8yAU/wKPkxP9RUaQFsrdAw==
+"@hig/icons@^4.0.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-4.1.0.tgz#01e603f5604b4519eb5e20447339bbc79d52a1d0"
+  integrity sha512-bKwP9RNUUfDxd71K650hAD1Rclmh6LDModW5RDSXUQx37vlfsq0ps72Pbhmz9xqqE0bcm1Qa2vhy8dBfhfCZsA==
   dependencies:
     emotion "^10.0.0"
 
@@ -1149,10 +1149,10 @@
     prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/rich-text@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@hig/rich-text/-/rich-text-1.2.0.tgz#3685e47c20e86fb9c87f6d7d571f9393807d3eb9"
-  integrity sha512-9yVas7d22VVTDws5U5cuDfTcJbxAV1JCyyC3LETVM2v7jymrlIlok7NATP1ata/hVR+XK2mu4BO+fR1UETMr1A==
+"@hig/rich-text@^2.0.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/rich-text/-/rich-text-2.1.0.tgz#67b73c114c5288326802f00ea36e4e57a4f9d3ca"
+  integrity sha512-LiliNGYaSy28B1snPsghG7od26CCRlSI5kdUf+vvrYtswTE4O7VYM/lZ0JQyGZ8Rq2UFyBy5gjp6R/JRHTTl6g==
   dependencies:
     emotion "^10.0.0"
     prop-types "^15.7.1"
@@ -1214,10 +1214,10 @@
     prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/theme-context@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/@hig/theme-context/-/theme-context-3.0.1.tgz#a0a6fee2a0eda39e0845b6cf50a93612481123fe"
-  integrity sha512-cv7GrxkpQ2moiynJYrhdJnJ0D+0IDNMQuGusWhj7d2vy1REeFKNf1YP89nIgUZQDZVxRoau1fA7i/bkm+9d/yw==
+"@hig/theme-context@^4.0.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/theme-context/-/theme-context-4.1.0.tgz#eba093f707bbdbd90b26dfeb4124241bf9ec450a"
+  integrity sha512-ScjULoelvh1rK1xt1q/tRKi6bEMSjFJXRSdT8gcmEM09gbiPWQhq1+N+pcAIfJKNVBZeG2n0/i1Ra1/OGojJbA==
   dependencies:
     create-react-context "^0.3.0"
     prop-types "^15.6.1"
@@ -4529,9 +4529,9 @@ flush-write-stream@^1.0.0:
     readable-stream "^2.3.6"
 
 follow-redirects@^1.0.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.0.tgz#b42e8d93a2a7eea5ed88633676d6597bc8e384db"
-  integrity sha512-aq6gF1BEKje4a9i9+5jimNFIpq4Q1WiwBToeRK5NvZBd/TRsmW8BsJfOEGkr76TbOyPVD3OVDN910EcUNtRYEA==
+  version "1.14.8"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.8.tgz#016996fb9a11a100566398b1c6839337d7bfa8fc"
+  integrity sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==
 
 for-in@^0.1.3:
   version "0.1.8"
