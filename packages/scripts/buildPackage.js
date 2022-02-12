@@ -5,11 +5,8 @@ const rollup = require("rollup");
 const babel = require("rollup-plugin-babel");
 const commonjs = require("rollup-plugin-commonjs");
 const nodeResolve = require("rollup-plugin-node-resolve");
-const postcss = require("rollup-plugin-postcss");
 const json = require("rollup-plugin-json");
-const postcssFunctions = require("postcss-functions");
-const postcssImport = require("postcss-import");
-const reactSvg = require("rollup-plugin-react-svg");
+const svgr = require("@svgr/rollup");
 const createBuildPreset = require("@hig/babel-preset/build");
 
 const createExternalDeterminer = require("./createExternalDeterminer");
@@ -23,8 +20,7 @@ const {
   peerDependencies = {},
   dependencies = {},
   main: mainOutputFile = "build/index.js",
-  module: esOutputFile = "build/index.es.js",
-  css: cssOutputFile = "build/index.css"
+  module: esOutputFile = "build/index.es.js"
 } = packageMeta;
 
 const externalDependencies = Object.keys(peerDependencies).concat(
@@ -36,16 +32,7 @@ const inputOptions = {
   external: createExternalDeterminer(externalDependencies),
   plugins: [
     nodeResolve(),
-    reactSvg({
-      svgo: {
-        multipass: true
-      }
-    }),
-    postcss({
-      extract: true,
-      output: cssOutputFile,
-      plugins: [postcssFunctions, postcssImport]
-    }),
+    svgr.default(),
     json(),
     babel({
       babelrc: false,
@@ -58,7 +45,7 @@ const inputOptions = {
 const esModulesOutputOptions = {
   name: "HIG",
   file: esOutputFile,
-  format: "es"
+  format: "esm"
 };
 
 const cjsOutputOptions = {

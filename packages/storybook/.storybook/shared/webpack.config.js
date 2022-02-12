@@ -7,28 +7,24 @@ module.exports = storybookBaseConfig => {
 
   storybookBaseConfig.module.rules.push(
     {
-      test: /\.(scss|css)$/,
-      use: ["style-loader", "css-loader", "sass-loader"]
-    },
-    {
       test: /\.json$/,
       use: ["json-loader"]
     },
     {
       test: /\.svg$/,
       issuer: /\.js$/,
-      use: [
+      loaders: [
         {
           loader: "babel-loader"
         },
         {
-          loader: "react-svg-loader"
+          loader: "@svgr/webpack"
         }
       ]
     },
     {
       test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
-      use: [
+      loaders: [
         {
           loader: "file-loader",
           options: {
