@@ -10,6 +10,12 @@ import Input from "./Input";
 import InputPresenter from "./presenters/InputPresenter";
 import InputHaloPresenter from "./presenters/InputHaloPresenter";
 
+let inputRef;
+
+const setInputRef = element => {
+  inputRef = element;
+};
+
 describe("Input", () => {
   behavesLikeFocusBehavior(<Input />);
   behavesLikeHoverBehavior(<Input />);
@@ -125,12 +131,6 @@ describe("Input", () => {
   });
 
   it.skip("passes down the inputRef", () => {
-    let inputRef;
-
-    function setInputRef(element) {
-      inputRef = element;
-    }
-
     expect(
       mount(<Input inputRef={setInputRef} />).containsMatchingElement(inputRef)
     ).toBe(true);

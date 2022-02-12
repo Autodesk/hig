@@ -97,24 +97,18 @@ function getButtonHoverRulesByType(type, themeData) {
     case types.PRIMARY:
       return {
         background: themeData["button.solid.hover.backgroundColor"],
-        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${
-          themeData["button.hover.haloColor"]
-        }`
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${themeData["button.hover.haloColor"]}`
       };
     case types.OUTLINE:
     case types.SECONDARY:
       return {
         borderColor: themeData["button.outline.hover.borderColor"],
-        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${
-          themeData["button.hover.haloColor"]
-        }`
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${themeData["button.hover.haloColor"]}`
       };
     case types.FLAT:
       return {
         borderColor: themeData["button.flat.hover.borderColor"],
-        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${
-          themeData["button.hover.haloColor"]
-        }`
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${themeData["button.hover.haloColor"]}`
       };
     default:
       return {};
@@ -127,9 +121,7 @@ function getButtonFocusRulesByType(type, themeData) {
     case types.PRIMARY:
       return {
         background: themeData["button.solid.focus.backgroundColor"],
-        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${
-          themeData["button.focus.haloColor"]
-        }`,
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${themeData["button.focus.haloColor"]}`,
         outline: `none`
       };
     case types.OUTLINE:
@@ -137,9 +129,7 @@ function getButtonFocusRulesByType(type, themeData) {
       return {
         background: themeData["button.outline.focus.backgroundColor"],
         borderColor: themeData["button.outline.focus.borderColor"],
-        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${
-          themeData["button.focus.haloColor"]
-        }`,
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${themeData["button.focus.haloColor"]}`,
         color: themeData["button.outline.label.fontColor"],
         outline: `none`,
         "svg *": {
@@ -150,9 +140,7 @@ function getButtonFocusRulesByType(type, themeData) {
       return {
         background: themeData["button.flat.focus.backgroundColor"],
         borderColor: themeData["button.flat.focus.borderColor"],
-        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${
-          themeData["button.focus.haloColor"]
-        }`,
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${themeData["button.focus.haloColor"]}`,
         color: themeData["button.flat.label.fontColor"],
         outline: `none`,
         "svg *": {
@@ -169,23 +157,17 @@ function getButtonPressedRulesByType(type, themeData) {
     case types.SOLID:
     case types.PRIMARY:
       return {
-        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${
-          themeData["button.pressed.haloColor"]
-        }`
+        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${themeData["button.pressed.haloColor"]}`
       };
     case types.OUTLINE:
     case types.SECONDARY:
       return {
         borderColor: themeData["button.outline.pressed.borderColor"],
-        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${
-          themeData["button.pressed.haloColor"]
-        }`
+        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${themeData["button.pressed.haloColor"]}`
       };
     case types.FLAT:
       return {
-        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${
-          themeData["button.pressed.haloColor"]
-        }`
+        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${themeData["button.pressed.haloColor"]}`
       };
     default:
       return {};

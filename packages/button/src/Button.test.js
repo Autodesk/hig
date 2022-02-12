@@ -133,7 +133,7 @@ describe("Button", () => {
       });
 
       it("is a <button> tag", () => {
-        expect(wrapper.matchesElement(<button>Button</button>));
+        expect(wrapper.matchesElement(<button type="button">Button</button>));
       });
     });
   });

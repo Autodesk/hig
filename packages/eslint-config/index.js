@@ -28,6 +28,13 @@ module.exports = {
     "prettier/prettier": "error",
     "react/destructuring-assignment": 0,
     "react/jsx-filename-extension": 0,
+    "react/jsx-no-bind": [
+      2,
+      {
+        "allowArrowFunctions": true,
+        "ignoreRefs": true
+      }
+    ],
     "react/no-danger": 2,
     "react/prefer-stateless-function": 0,
     "react/prop-types": 2,

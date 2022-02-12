@@ -5,6 +5,17 @@ import { composesLikeControlBehavior } from "@hig/behaviors/test";
 
 import InputPresenter from "./InputPresenter";
 
+let inputRef;
+const onInputHandler = () => {};
+const onChangeHandler = () => {};
+const onFocusHandler = () => {};
+const onBlurHandler = () => {};
+const onMouseEnterHandler = () => {};
+const onMouseLeaveHandler = () => {};
+const setInputRef = element => {
+  inputRef = element;
+};
+
 describe("InputPresenter", () => {
   composesLikeControlBehavior({
     Subject: InputPresenter,
@@ -40,12 +51,6 @@ describe("InputPresenter", () => {
   });
 
   it("sets event handlers on the input", () => {
-    const onInputHandler = () => {};
-    const onChangeHandler = () => {};
-    const onFocusHandler = () => {};
-    const onBlurHandler = () => {};
-    const onMouseEnterHandler = () => {};
-    const onMouseLeaveHandler = () => {};
     const wrapper = mount(
       <InputPresenter
         onChange={onChangeHandler}
@@ -67,12 +72,6 @@ describe("InputPresenter", () => {
   });
 
   it("passes down the inputRef", () => {
-    let inputRef;
-
-    function setInputRef(element) {
-      inputRef = element;
-    }
-
     expect(
       mount(<InputPresenter inputRef={setInputRef} />).getDOMNode()
     ).toEqual(inputRef);

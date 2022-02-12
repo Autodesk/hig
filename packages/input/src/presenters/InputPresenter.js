@@ -82,6 +82,7 @@ InputPresenter.propTypes = {
   disabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
+  inputRef: PropTypes.func,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
   onMouseEnter: PropTypes.func,

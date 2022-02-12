@@ -51,9 +51,7 @@ function getStylesByFocus(themeData, on, variant) {
 
   return {
     borderColor,
-    boxShadow: `0 0 0 ${themeData["iconButton.focus.haloWidth"]} ${
-      themeData["iconButton.focus.haloColor"]
-    }`,
+    boxShadow: `0 0 0 ${themeData["iconButton.focus.haloWidth"]} ${themeData["iconButton.focus.haloColor"]}`,
     transitionDuration: `0.3s, 0.3s`,
     "& svg *": {
       ...getDefaultIconTransitionProperties(),
@@ -135,15 +133,9 @@ export default function stylesheet(props, themeData, density) {
       boxSizing: `border-box`,
       borderRadius: themeData["iconButton.borderRadius"],
       padding: `0`,
-      height: `calc(${contentHeight} + (${
-        themeData["density.spacings.extraSmall"]
-      } * 2))`,
-      lineHeight: `calc(${contentHeight} + (${
-        themeData["density.spacings.extraSmall"]
-      } * 2))`,
-      width: `calc(${contentHeight} + (${
-        themeData["density.spacings.extraSmall"]
-      } * 2))`,
+      height: `calc(${contentHeight} + (${themeData["density.spacings.extraSmall"]} * 2))`,
+      lineHeight: `calc(${contentHeight} + (${themeData["density.spacings.extraSmall"]} * 2))`,
+      width: `calc(${contentHeight} + (${themeData["density.spacings.extraSmall"]} * 2))`,
       outline: 0,
       transitionProperty: `box-shadow, background-color`,
       transitionDuration: `0.3s, 0.3s`,
