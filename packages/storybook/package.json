@@ -49,10 +49,10 @@
     "file-loader": "^1.1.11",
     "html-reporter": "^2.23.0",
     "http-server": "^0.11.1",
-    "json-loader": "^0.5.7",
     "raw-loader": "^0.5.1",
     "react-svg-loader": "^2.1.0",
-    "sass-loader": "^7.1.0",
+    "sass": "^1.49.7",
+    "sass-loader": "^9.0.0",
     "surge": "^0.20.1",
     "wd": "^1.14.0"
   },
