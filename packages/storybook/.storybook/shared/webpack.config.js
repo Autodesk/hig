@@ -4,8 +4,20 @@ module.exports = storybookBaseConfig => {
   // Ensure Babel transpiles story source in adjacent packages
   const babelRule = storybookBaseConfig.module.rules[0];
   babelRule.include = [path.resolve(__dirname, "../../../../packages")];
-
+  babelRule.use[0].options = {sourceType: "unambiguous", babelrc: false, presets: ['react-app']};
+  console.log(babelRule);
   storybookBaseConfig.module.rules.push(
+    // {
+    //   test: /\.jsx?$/,
+    //   include: path.resolve(__dirname, "../../../../packages"),
+    //   exclude: /(node_modules|dist)/, // exclude any commonjs files
+    //   loader: 'babel-loader',
+    //   options: {
+    //     sourceType: 'unambiguous',
+    //     babelrc: false,
+    //     presets: ['react-app']
+    //   }
+    // },
     {
       test: /\.(scss|css)$/,
       loaders: ["style-loader", "css-loader", "sass-loader"]
