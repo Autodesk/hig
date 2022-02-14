@@ -4,7 +4,11 @@ module.exports = storybookBaseConfig => {
   // Ensure Babel transpiles story source in adjacent packages
   const babelRule = storybookBaseConfig.module.rules[0];
   babelRule.include = [path.resolve(__dirname, "../../../../packages")];
-  babelRule.use[0].options = {sourceType: "unambiguous", babelrc: false, presets: ["react-app"]};
+  babelRule.use[0].options = {
+    sourceType: "unambiguous",
+    babelrc: false,
+    presets: ["react-app"]
+  };
   storybookBaseConfig.module.rules.push(
     {
       test: /\.(scss|css)$/,
