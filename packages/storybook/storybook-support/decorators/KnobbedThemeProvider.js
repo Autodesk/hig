@@ -24,8 +24,8 @@ const themes = {
 };
 
 const densityOptions = {
-  "high-density": "High",
-  "medium-density": "Medium"
+  "high-density": "high-density",
+  "medium-density": "medium-density"
 };
 
 const DEFAULT_THEME_ID = "hig-light-gray";
@@ -42,7 +42,7 @@ function themeOptions(themeIds) {
     const theme = themes[DEFAULT_DENSITY_ID][id];
     return {
       ...acc,
-      [theme.metadata.colorSchemeId]: theme.metadata.colorSchemeName
+      [theme.metadata.colorSchemeId]: theme.metadata.colorSchemeId
     };
   }, {});
 }
@@ -88,6 +88,7 @@ const KnobbedThemeProvider = ({ children, supportedThemes }) => {
     knobGroup
   );
   const theme = themes[densityId][themeId];
+
   return (
     <ThemeContext.Provider value={theme}>
       <Surface>{children}</Surface>

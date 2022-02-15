@@ -12,7 +12,7 @@ export default function makeSelectOptions(constants) {
       .join(" ");
 
     // eslint-disable-next-line no-param-reassign
-    options[key] = value;
+    options[value] = key;
 
     return options;
   }, {});
