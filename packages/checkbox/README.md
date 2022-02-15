@@ -28,7 +28,7 @@ import Checkbox from '@hig/checkbox';
 
 Use the `className` prop to pass in a css class name to the outermost container of the component. The class name will also pass down to most of the other styled elements within the component. 
 
-Checkbox also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
+Checkbox also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance:
 
 ```jsx
 import Checkbox from '@hig/checkbox';

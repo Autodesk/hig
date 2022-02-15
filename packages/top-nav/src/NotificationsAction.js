@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { offsetContainerVertical, offsetPanelHorizontal } from "@hig/flyout";
 import NotificationsFlyout, { anchorPoints } from "@hig/notifications-flyout";
 import { createCustomClassNames } from "@hig/utils";
@@ -7,39 +7,41 @@ import ActionPresenter from "./presenters/ActionPresenter";
 
 /** @typedef {import("@hig/flyout").Coordinates} Coordinates */
 
-export default class NotificationsAction extends Component {
-  static propTypes = NotificationsFlyout.propTypes;
+const NotificationsAction = props => {
+  const { children, ...otherProps } = props;
+  const { className, stylesheet } = otherProps;
+  const topNavNotificationsFlyoutClassName = createCustomClassNames(
+    className,
+    "top-nav__notifications-flyout"
+  );
 
-  static defaultProps = {
-    /**
-     * @param {Coordinates} coordinates
-     * @returns {Coordinates}
-     */
-    alterCoordinates(coordinates) {
-      return offsetPanelHorizontal(offsetContainerVertical(coordinates, 8), 93);
-    },
-    anchorPoint: anchorPoints.TOP_RIGHT,
-    fallbackAnchorPoints: []
-  };
+  return (
+    <ActionPresenter stylesheet={stylesheet} className={className}>
+      <NotificationsFlyout
+        {...otherProps}
+        stylesheet={stylesheet}
+        className={topNavNotificationsFlyoutClassName}
+      >
+        {children}
+      </NotificationsFlyout>
+    </ActionPresenter>
+  );
+};
 
-  render() {
-    const { children, ...otherProps } = this.props;
-    const { className, stylesheet } = otherProps;
-    const topNavNotificationsFlyoutClassName = createCustomClassNames(
-      className,
-      "top-nav__notifications-flyout"
-    );
+NotificationsAction.displayName = "NotificationsAction";
 
-    return (
-      <ActionPresenter stylesheet={stylesheet} className={className}>
-        <NotificationsFlyout
-          {...otherProps}
-          stylesheet={stylesheet}
-          className={topNavNotificationsFlyoutClassName}
-        >
-          {children}
-        </NotificationsFlyout>
-      </ActionPresenter>
-    );
-  }
-}
+NotificationsAction.propTypes = NotificationsFlyout.propTypes;
+
+NotificationsAction.defaultProps = {
+  /**
+   * @param {Coordinates} coordinates
+   * @returns {Coordinates}
+   */
+  alterCoordinates(coordinates) {
+    return offsetPanelHorizontal(offsetContainerVertical(coordinates, 8), 93);
+  },
+  anchorPoint: anchorPoints.TOP_RIGHT,
+  fallbackAnchorPoints: []
+};
+
+export default NotificationsAction;

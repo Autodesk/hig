@@ -1,6 +1,6 @@
 {
   "name": "@hig/input",
-  "version": "1.3.0",
+  "version": "2.1.0",
   "description": "HIG Input",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -17,7 +17,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/behaviors": "1.1.1",
+    "@hig/behaviors": "2.0.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
@@ -29,9 +29,9 @@
     "@hig/semantic-release-config": "^0.1.0"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.1",
-    "@hig/theme-data": "^2.22.0",
-    "react": "^15.4.1 || ^16.3.2"
+    "@hig/theme-context": "^4.1.0",
+    "@hig/theme-data": "^2.23.1",
+    "react": "^17.0.0"
   },
   "scripts": {
     "build": "hig-scripts-build",

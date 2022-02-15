@@ -1,6 +1,6 @@
 {
   "name": "@hig/side-nav",
-  "version": "2.2.2",
+  "version": "3.1.0",
   "description": "HIG SideNav components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,13 +18,13 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon-button": "^2.5.0",
-    "@hig/icons": "^3.4.0",
-    "@hig/skeleton-item": "^1.2.0",
-    "@hig/surface": "^1.2.0",
-    "@hig/text-link": "^1.1.0",
-    "@hig/typography": "^1.2.0",
-    "@hig/utils": "^0.4.0",
+    "@hig/icon-button": "^3.1.0",
+    "@hig/icons": "^4.1.0",
+    "@hig/skeleton-item": "^2.1.0",
+    "@hig/surface": "^2.1.0",
+    "@hig/text-link": "^2.1.0",
+    "@hig/typography": "^2.1.0",
+    "@hig/utils": "^0.4.1",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
@@ -36,9 +36,9 @@
     "@hig/semantic-release-config": "^0.1.0"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.1",
-    "@hig/theme-data": "^2.22.0",
-    "react": "^15.4.1 || ^16.3.2"
+    "@hig/theme-context": "^4.1.0",
+    "@hig/theme-data": "^2.23.1",
+    "react": "^17.0.0"
   },
   "scripts": {
     "build": "hig-scripts-build",

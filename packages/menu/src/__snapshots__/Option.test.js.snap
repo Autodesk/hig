@@ -563,7 +563,7 @@ exports[`menu/Option renders Menu and Options with Headers 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  color: #3c3c3c;
+  color: rgba(60,60,60,0.5);
   font-size: 12px;
   -webkit-align-items: center;
   -webkit-box-align: center;

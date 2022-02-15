@@ -1,3 +1,230 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`tree-view/TreeView renders default TreeView 1`] = `null`;
+exports[`tree-view/TreeView renders default TreeView 1`] = `
+.emotion-8 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.emotion-8::before {
+  display: inline-block;
+  content: "";
+  left: calc((24px * NaN) + (8px * NaN));
+  margin: 0;
+  position: absolute;
+  top: 9px;
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  width: 20px;
+}
+
+.emotion-8::after {
+  display: inline-block;
+  content: "";
+  height: 100%;
+  left: calc(24px + ((24px + 8px) * NaN) - 0px);
+  position: absolute;
+  top: 0;
+  width: 20px;
+}
+
+.emotion-8:first-of-type::after {
+  top: -10px;
+  height: calc(100% + 10px);
+}
+
+.emotion-8:last-child::after {
+  top: -9px;
+  height: 24px;
+}
+
+.emotion-6 {
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  line-height: 1.428571429;
+  padding: 8px 12px 8px calc((24px + 8px) * NaN);
+  -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-5 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 12px;
+  width: calc(100% - 12px);
+}
+
+.emotion-5 > svg {
+  margin-right: 8px;
+}
+
+.emotion-5 > svg:first-of-type {
+  fill: #3c3c3c;
+}
+
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 24px;
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px;
+  height: 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 8px;
+  outline: 0;
+  width: 24px;
+}
+
+.emotion-3 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 24px;
+  -ms-flex: 0 0 24px;
+  flex: 0 0 24px;
+  height: 24px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 8px;
+  width: 24px;
+}
+
+.emotion-4 {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-0 {
+  fill: #808080;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+.emotion-2 {
+  fill: #808080;
+}
+
+.emotion-2 > * {
+  fill: #808080;
+}
+
+.emotion-7 {
+  -webkit-transition-property: height;
+  transition-property: height;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+<li
+  aria-expanded={false}
+  className="emotion-8"
+  id="tree-item-18"
+  role="treeitem"
+>
+  <div
+    className="emotion-6"
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    role="presentation"
+    selected={false}
+  >
+    <div
+      className="emotion-5"
+    >
+      <div
+        className="emotion-1"
+        onClick={[Function]}
+        onKeyDown={[Function]}
+        role="button"
+        tabIndex="-1"
+      >
+        <svg
+          className="emotion-0"
+          height="10px"
+          viewBox="0 0 10 10"
+          width="10px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
+          />
+        </svg>
+      </div>
+      <div
+        className="emotion-3"
+      >
+        <svg
+          className="emotion-2"
+          height="24px"
+          viewBox="0 0 24 24"
+          width="24px"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 2v20h17V2zm16 19H4V3h15z"
+          />
+          <path
+            d="M18 19h-1v-7h-3v7h-1v-5h-3v5H9v-9H6v9H5v1h13zM8 19H7v-8h1zm4 0h-1v-4h1zm4 0h-1v-6h1zM5 5h13v1H5zm0 2h6v1H5z"
+          />
+        </svg>
+      </div>
+      <span
+        className="emotion-4"
+      >
+        Tree Item 18
+      </span>
+    </div>
+  </div>
+  <div
+    className="emotion-7"
+    onTransitionEnd={[Function]}
+  />
+</li>
+`;

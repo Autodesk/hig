@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { css, cx } from "emotion";
 import { HoverBehavior } from "@hig/behaviors";
 import { createCustomClassNames, createButtonEventHandlers } from "@hig/utils";
@@ -8,182 +8,199 @@ import IconIndicatorPresenter from "../IconIndicatorPresenter";
 
 import stylesheet from "../stylesheet";
 
-export default class TreeObjectNestedSubTreeItem extends Component {
-  componentDidUpdate({ keyboardOpenId: previousKeyboardOpenId }) {
-    const {
-      treeItem: { id },
-      keyboardOpenId
-    } = this.props;
-
-    if (keyboardOpenId === id && keyboardOpenId !== previousKeyboardOpenId) {
-      this.props.treeItem.meta.collapsed = !this.props.treeItem.meta.collapsed;
-      this.props.setIsCollapsed(this.props.treeItem.meta.collapsed);
-      this.props.setKeyboardOpenId("");
-    }
-  }
-  render() {
-    const {
-      treeItem,
-      treeItem: {
-        children,
-        id,
-        meta: { className, icon, label },
-        payload: {
-          indicator,
-          getActiveTreeItemId,
-          getActiveTreeItemIndex,
-          getCurrentItemClicked,
-          guidelines
-        },
-        onClick: userOnClick,
-        ...otherTreeItemProps
-      },
-      collapsed,
-      density,
-      themeData,
-      level,
-      onClick,
-      onOperatorClick,
-      ...otherProps
-    } = this.props;
-    const { onMouseEnter, onMouseLeave } = otherProps;
-
-    const styleTreeItem = {
+const TreeObjectNestedSubTreeItem = props => {
+  const {
+    treeItem,
+    treeItem: {
       children,
       id,
-      label,
-      level,
-      indicator,
-      themeData,
-      getActiveTreeItemId,
-      getActiveTreeItemIndex,
-      guidelines,
-      highlighted: getActiveTreeItemId() === id,
-      selected: getCurrentItemClicked() === id
-    };
-    const higTreeItemSubTreeViewLabelWrapperClassName = createCustomClassNames(
-      className,
-      `hig-tree-item-sub-tree-view-label-wrapper`
-    );
-    const higTreeItemSubTreeViewLabelContentWrapperClassName = createCustomClassNames(
-      className,
-      `hig-tree-item-sub-tree-view-label-content-wrapper`
-    );
-    const higTreeItemIndicatorWrapperClassName = createCustomClassNames(
-      className,
-      `hig-tree-item-indicator-wrapper`
-    );
-    const higTreeItemIndicatorIconClassName = createCustomClassNames(
-      className,
-      `hig-tree-item-indicator-icon`
-    );
-    const higTreeItemIconWrapperClassName = createCustomClassNames(
-      className,
-      `hig-tree-item-icon-wrapper`
-    );
-    const higTreeItemLabelWrapperClassName = createCustomClassNames(
-      className,
-      `hig-tree-item-label-wrapper`
-    );
-    const htmlProps = { ...otherTreeItemProps };
-    delete htmlProps.parentId;
+      meta: { className, icon, label, expandByDoubleClick },
+      payload: {
+        indicator,
+        getActiveTreeItemId,
+        getActiveTreeItemIndex,
+        getCurrentItemClicked,
+        guidelines
+      },
+      onClick: userOnClick,
+      onDoubleClick: userOnDoubleClick,
+      ...otherTreeItemProps
+    },
+    collapsed,
+    density,
+    themeData,
+    level,
+    onClick,
+    onOperatorClick,
+    ...otherProps
+  } = props;
+  const { onMouseEnter, onMouseLeave } = otherProps;
 
-    return (
-      <li
-        aria-expanded={!collapsed}
-        className={cx([
-          css(stylesheet(styleTreeItem, themeData).higTreeItem),
-          className
-        ])}
-        id={id}
-        role="treeitem"
-        key={id}
-      >
-        <HoverBehavior onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-          {({
-            hasHover,
-            onMouseEnter: handleMouseEnter,
-            onMouseLeave: handleMouseLeave
-          }) => {
-            const styleProps = { ...styleTreeItem, hasHover };
-            const styles = stylesheet(styleProps, themeData);
-            const { handleClick, handleKeyDown } = createButtonEventHandlers(
-              onClick
-            );
-            const {
-              handleClick: handleOperatorClick,
-              handleKeyDown: handleOperatorKeyDown
-            } = createButtonEventHandlers(onOperatorClick);
+  const styleTreeItem = {
+    children,
+    id,
+    label,
+    level,
+    indicator,
+    themeData,
+    getActiveTreeItemId,
+    getActiveTreeItemIndex,
+    guidelines,
+    highlighted: getActiveTreeItemId() === id,
+    selected: getCurrentItemClicked() === id
+  };
+  const higTreeItemSubTreeViewLabelWrapperClassName = createCustomClassNames(
+    className,
+    `hig-tree-item-sub-tree-view-label-wrapper`
+  );
+  const higTreeItemSubTreeViewLabelContentWrapperClassName = createCustomClassNames(
+    className,
+    `hig-tree-item-sub-tree-view-label-content-wrapper`
+  );
+  const higTreeItemIndicatorWrapperClassName = createCustomClassNames(
+    className,
+    `hig-tree-item-indicator-wrapper`
+  );
+  const higTreeItemIndicatorIconClassName = createCustomClassNames(
+    className,
+    `hig-tree-item-indicator-icon`
+  );
+  const higTreeItemIconWrapperClassName = createCustomClassNames(
+    className,
+    `hig-tree-item-icon-wrapper`
+  );
+  const higTreeItemLabelWrapperClassName = createCustomClassNames(
+    className,
+    `hig-tree-item-label-wrapper`
+  );
+  const htmlProps = { ...otherTreeItemProps };
+  delete htmlProps.parentId;
 
-            return (
-              // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+  useEffect(
+    () => {
+      const {
+        // eslint-disable-next-line no-shadow
+        treeItem: { id },
+        keyboardOpenId
+      } = props;
+
+      if (keyboardOpenId === id) {
+        // eslint-disable-next-line no-param-reassign
+        props.treeItem.meta.collapsed = !props.treeItem.meta.collapsed;
+        props.setIsCollapsed(props.treeItem.meta.collapsed);
+        props.setKeyboardOpenId("");
+      }
+    },
+    [props.keyboardOpenId]
+  );
+
+  return (
+    <li
+      aria-expanded={!collapsed}
+      className={cx([
+        css(stylesheet(styleTreeItem, themeData).higTreeItem),
+        className
+      ])}
+      id={id}
+      role="treeitem"
+      key={id}
+    >
+      <HoverBehavior onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+        {({
+          hasHover,
+          onMouseEnter: handleMouseEnter,
+          onMouseLeave: handleMouseLeave
+        }) => {
+          const styleProps = { ...styleTreeItem, hasHover };
+          const styles = stylesheet(styleProps, themeData);
+          const { handleClick, handleKeyDown } = createButtonEventHandlers(
+            onClick
+          );
+          const {
+            handleClick: handleOperatorClick,
+            handleKeyDown: handleOperatorKeyDown
+          } = createButtonEventHandlers(onOperatorClick);
+
+          return (
+            // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+            <div
+              {...htmlProps}
+              className={cx([
+                css(styles.higTreeItemSubTreeViewLabelWrapper),
+                higTreeItemSubTreeViewLabelWrapperClassName
+              ])}
+              onClick={event => {
+                if (userOnClick) {
+                  userOnClick(event);
+                }
+              }}
+              onDoubleClick={event => {
+                if (userOnDoubleClick) {
+                  userOnDoubleClick(event);
+                }
+                if (expandByDoubleClick) {
+                  handleOperatorClick(event, treeItem);
+                }
+              }}
+            >
               <div
-                {...htmlProps}
                 className={cx([
-                  css(styles.higTreeItemSubTreeViewLabelWrapper),
-                  higTreeItemSubTreeViewLabelWrapperClassName
+                  css(styles.higTreeItemSubTreeViewLabelContentWrapper),
+                  higTreeItemSubTreeViewLabelContentWrapperClassName
                 ])}
                 onClick={event => {
-                  if (userOnClick) {
-                    userOnClick(event);
-                  }
+                  handleClick(event, treeItem);
                 }}
+                onKeyDown={handleKeyDown}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                role="presentation"
               >
                 <div
                   className={cx([
-                    css(styles.higTreeItemSubTreeViewLabelContentWrapper),
-                    higTreeItemSubTreeViewLabelContentWrapperClassName
+                    css(styles.higTreeItemIndicatorWrapper),
+                    higTreeItemIndicatorWrapperClassName
                   ])}
-                  onClick={event => {
-                    handleClick(event, treeItem);
-                  }}
-                  onKeyDown={handleKeyDown}
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                  role="presentation"
+                  onClick={event => handleOperatorClick(event, treeItem)}
+                  onKeyDown={handleOperatorKeyDown}
+                  role="button"
+                  tabIndex="-1"
                 >
+                  <IconIndicatorPresenter
+                    className={higTreeItemIndicatorIconClassName}
+                    collapsed={collapsed}
+                    density={density}
+                    indicator={indicator}
+                  />
+                </div>
+                {icon && (
                   <div
                     className={cx([
-                      css(styles.higTreeItemIndicatorWrapper),
-                      higTreeItemIndicatorWrapperClassName
+                      css(styles.higTreeItemIconWrapper),
+                      higTreeItemIconWrapperClassName
                     ])}
-                    onClick={event => handleOperatorClick(event, treeItem)}
-                    onKeyDown={handleOperatorKeyDown}
-                    role="button"
-                    tabIndex="-1"
                   >
-                    <IconIndicatorPresenter
-                      className={higTreeItemIndicatorIconClassName}
-                      collapsed={collapsed}
-                      density={density}
-                      indicator={indicator}
-                    />
+                    {icon}
                   </div>
-                  {icon && (
-                    <div
-                      className={cx([
-                        css(styles.higTreeItemIconWrapper),
-                        higTreeItemIconWrapperClassName
-                      ])}
-                    >
-                      {icon}
-                    </div>
-                  )}
-                  <span
-                    className={cx([
-                      css(styles.higTreeItemLabelWrapper),
-                      higTreeItemLabelWrapperClassName
-                    ])}
-                  >
-                    {label}
-                  </span>
-                </div>
+                )}
+                <span
+                  className={cx([
+                    css(styles.higTreeItemLabelWrapper),
+                    higTreeItemLabelWrapperClassName
+                  ])}
+                >
+                  {label}
+                </span>
               </div>
-            );
-          }}
-        </HoverBehavior>
-        <SubTreeViewCombined {...this.props} isObject />
-      </li>
-    );
-  }
-}
+            </div>
+          );
+        }}
+      </HoverBehavior>
+      <SubTreeViewCombined {...props} isObject />
+    </li>
+  );
+};
+
+TreeObjectNestedSubTreeItem.displayName = "TreeObjectNestedSubTreeItem";
+
+export default TreeObjectNestedSubTreeItem;
