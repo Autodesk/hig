@@ -23,7 +23,7 @@ export default function composesLikeControlBehavior({ Subject, Receiver }) {
         const wrapper = mount(<Subject {...props} />);
 
         const receiverComponent = wrapper.find(Receiver);
-        expect(receiverComponent).toHaveProp(attr, value);
+        expect(receiverComponent.props()[attr]).toEqual(value);
       });
     });
   });

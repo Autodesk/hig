@@ -1,6 +1,6 @@
 {
   "name": "@hig/multi-downshift",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "description": "Multi-selection support for Downshift",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -17,7 +17,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/utils": "^0.4.0",
+    "@hig/utils": "^0.4.1",
     "prop-types": "^15.7.1"
   },
   "devDependencies": {
@@ -28,7 +28,7 @@
   },
   "peerDependencies": {
     "downshift": "^3.2.0",
-    "react": "^15.4.1 || ^16.3.2"
+    "react": "^17.0.0"
   },
   "scripts": {
     "build": "hig-scripts-build",

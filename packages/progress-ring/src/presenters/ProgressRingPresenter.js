@@ -79,5 +79,8 @@ ProgressRingPresenter.propTypes = {
   percentComplete: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   size: PropTypes.oneOf(availableSizes),
   stylesheet: PropTypes.func,
-  surface: PropTypes.oneOf(availableSurfaces)
+  surface: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.oneOf(availableSurfaces)
+  ])
 };

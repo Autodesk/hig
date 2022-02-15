@@ -1,6 +1,6 @@
 {
   "name": "@hig/icons",
-  "version": "3.4.2",
+  "version": "4.1.0",
   "description": "HIG icon assets",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -23,13 +23,13 @@
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/typography": "^1.2.0",
+    "@hig/typography": "^2.1.0",
     "svgo": "^1.0.5"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.1",
-    "@hig/theme-data": "^2.22.0",
-    "react": "^15.4.1 || ^16.3.2"
+    "@hig/theme-context": "^4.1.0",
+    "@hig/theme-data": "^2.23.1",
+    "react": "^17.0.0"
   },
   "scripts": {
     "build": "yarn build:core && yarn dist:icons",

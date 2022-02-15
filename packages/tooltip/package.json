@@ -1,6 +1,6 @@
 {
   "name": "@hig/tooltip",
-  "version": "1.1.0",
+  "version": "2.1.0",
   "description": "HIG Tooltip",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -17,16 +17,16 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/flyout": "^1.2.2",
-    "@hig/typography": "^1.2.0",
-    "@hig/utils": "^0.4.0",
+    "@hig/flyout": "^2.1.0",
+    "@hig/typography": "^2.1.0",
+    "@hig/utils": "^0.4.1",
     "prop-types": "^15.7.1",
     "react-lifecycles-compat": "^3.0.4"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^3.0.1",
-    "@hig/theme-data": "^2.22.0",
-    "react": "^15.4.1 || ^16.3.2"
+    "@hig/theme-context": "^4.1.0",
+    "@hig/theme-data": "^2.23.1",
+    "react": "^17.0.0"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.1",
