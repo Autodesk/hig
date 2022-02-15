@@ -38,25 +38,25 @@ export default {
   "textLink.secondary.default.fontColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.textLink.secondary.againstLight"
+      ref: "colorScheme.text.default"
     }
   },
   "textLink.secondary.hover.fontColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.textLink.secondary.againstLight"
+      ref: "colorScheme.text.default"
     }
   },
   "textLink.secondary.focus.fontColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.textLink.secondary.againstLight"
+      ref: "colorScheme.text.default"
     }
   },
   "textLink.secondary.hover.underlineColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.textLink.secondary.againstLight"
+      ref: "colorScheme.text.default"
     }
   },
   /**
