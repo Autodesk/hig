@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React from "react";
+import React, { forwardRef, createRef } from "react";
 import { mount } from "enzyme";
 
 import TreeItem from "./TreeItem";
@@ -16,6 +16,14 @@ const FuncTreeItem = props => {
     <TreeItem {...props}>{props.children}</TreeItem>
   );
 };
+
+const RefTreeItem = forwardRef((props, ref) => {
+  return (
+    <TreeView>
+      <TreeItem itemRef={ref} id="tree-item-1" key="tree-item-1" label="Func Tree Item" />
+    </TreeView>
+  );
+});
 
 describe("tree-view/TreeItem", () => {
   it("support high order component", () => {
@@ -54,5 +62,19 @@ describe("tree-view/TreeItem", () => {
 
     const items = wrapper.find("TreeItem");
     expect(items.length).toEqual(6);
+  });
+
+  it("Ref TreeItem component", () => {
+    const itemRef = createRef();
+    const wrapper = mount(<RefTreeItem ref={itemRef}>
+      </RefTreeItem>);
+
+    const item = wrapper.find("TreeItem");
+    expect(item).toHaveLength(1);
+    expect(item.at(0).props().id).toEqual("tree-item-1");
+    expect(item.at(0).props().label).toEqual("Func Tree Item");
+    expect(itemRef).not.toBeNull();
+    expect(itemRef.current).not.toBeNull();
+    expect(itemRef.current.id).toEqual("tree-item-1");
   });
 });

@@ -7,7 +7,7 @@ import { createButtonEventHandlers, createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
 export default function SingleTreeNodePresenter(props) {
-  const { icon, id, label, ...otherProps } = props;
+  const { icon, id, label, itemRef, ...otherProps } = props;
   const {
     className,
     onClick,
@@ -73,6 +73,7 @@ export default function SingleTreeNodePresenter(props) {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             role="treeitem"
+            ref={itemRef}
           >
             <div
               className={cx([

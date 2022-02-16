@@ -10,7 +10,15 @@ import IconIndicatorPresenter from "./IconIndicatorPresenter";
 import stylesheet from "./stylesheet";
 
 export default function SingleTreeNodeFolderPresenter(props) {
-  const { collapsed, icon, id, indicator, label, ...otherProps } = props;
+  const {
+    collapsed,
+    icon,
+    id,
+    indicator,
+    label,
+    itemRef,
+    ...otherProps
+  } = props;
   const {
     className,
     density,
@@ -97,6 +105,7 @@ export default function SingleTreeNodeFolderPresenter(props) {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
               role="presentation"
+              ref={itemRef}
             >
               <div
                 className={cx([

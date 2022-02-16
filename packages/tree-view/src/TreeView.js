@@ -97,11 +97,10 @@ TreeView.propTypes = {
    */
   stylesheet: PropTypes.func,
   /**
-   * If treeNode prop is used it will render instead
-   * of children.
+   * If treeNode prop is used it will render instead of children.
    * Additional info can be passed into the meta property
-   * Additional HTML attributes can be added to the top
-   * level of and spread to the HTML elements
+   * Additional HTML attributes can be added to the top level of and spread to the HTML elements
+   * Assigning ref(s) to the treeNode is not supported, please use the children instead of treeNode if needed.
    */
   treeNode: PropTypes.arrayOf(
     PropTypes.shape({
