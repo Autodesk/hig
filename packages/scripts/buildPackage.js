@@ -36,6 +36,7 @@ const inputOptions = {
     json(),
     babel({
       babelrc: false,
+      babelHelpers: 'bundled',
       ...createBuildPreset()
     }),
     commonjs()
