@@ -96,7 +96,14 @@ TreeItem.propTypes = {
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
+  /**
+   * Used to assign a ref object to the current tree item
+   */
+  itemRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.any })
+  ])
 };
 
 TreeItem.defaultProps = {
