@@ -1,11 +1,11 @@
 /** @todo Refactor this module to not have side effects */
 
 const path = require("path");
-const rollup = require("rollup");
-const babel = require("rollup-plugin-babel");
-const commonjs = require("rollup-plugin-commonjs");
-const nodeResolve = require("rollup-plugin-node-resolve");
-const json = require("rollup-plugin-json");
+const { rollup } = require("rollup");
+const { babel } = require("@rollup/plugin-babel");
+const commonjs = require("@rollup/plugin-commonjs");
+const { nodeResolve } = require("@rollup/plugin-node-resolve");
+const json = require("@rollup/plugin-json");
 const svgr = require("@svgr/rollup");
 const createBuildPreset = require("@hig/babel-preset/build");
 
@@ -45,7 +45,7 @@ const inputOptions = {
 const esModulesOutputOptions = {
   name: "HIG",
   file: esOutputFile,
-  format: "esm"
+  format: "es"
 };
 
 const cjsOutputOptions = {
@@ -58,7 +58,7 @@ module.exports = async function buildPackage() {
   /* eslint-disable-next-line no-console */
   console.log(`Bundling ${packageName} v${packageVersion}.`);
 
-  const bundle = await rollup.rollup(inputOptions);
+  const bundle = await rollup(inputOptions);
 
   return Promise.all([
     bundle.write(esModulesOutputOptions),
