@@ -1,3 +1,10 @@
+# [@hig/tree-view-v2.4.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.3.0...@hig/tree-view@2.4.0) (2022-02-16)
+
+
+### Features
+
+* make TreeItem support 'ref' property ([2151107](https://github.com/Autodesk/hig/commit/2151107))
+
 # [@hig/tree-view-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.2.0...@hig/tree-view@2.3.0) (2022-02-07)
 
 
