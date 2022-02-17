@@ -56,7 +56,7 @@ describe("notification-flyout/behaviors/NotificationBehavior", () => {
     describe("handleDismissButtonClick", () => {
       it("eventually calls the `onDismiss` handler", async () => {
         const { innerRef, handleDismissButtonClick } = payload;
-        console.log('payload', payload);
+
         const container = document.createElement("div");
         const event = new window.MouseEvent("click");
 
