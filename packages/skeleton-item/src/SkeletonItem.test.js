@@ -5,11 +5,11 @@ describe("skeleton-item/SkeletonItem", () => {
   describe("snapshot tests", () => {
     takeSnapshotsOf(SkeletonItem, [
       {
-        description: "renders with no props",
+        desc: "renders with no props",
         props: {}
       },
       {
-        description: "renders with props",
+        desc: "renders with props",
         props: {
           maxWidth: "100px",
           marginBottom: "12px",
@@ -17,7 +17,7 @@ describe("skeleton-item/SkeletonItem", () => {
         }
       },
       {
-        description: "renders with custom className",
+        desc: "renders with custom className",
         props: {
           maxWidth: "100px",
           marginBottom: "12px",

@@ -51,9 +51,7 @@ exports[`top-nav/presenters/NavActionButtonPresenter  1`] = `
 
 <button
   className="emotion-1"
-  disabled={undefined}
   onBlur={[Function]}
-  onClick={undefined}
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseEnter={[Function]}
@@ -65,12 +63,10 @@ exports[`top-nav/presenters/NavActionButtonPresenter  1`] = `
   <svg
     className="emotion-0"
     height="24px"
-    viewBox="0 0 24 24"
     width="24px"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M2 3v4h4V3zm3 3H3V4h2zm2-3v4h15V3zm14 3H8V4h13zM2 10v4h4v-4zm3 3H3v-2h2zm2-3v4h15v-4zm14 3H8v-2h13zM2 17v4h4v-4zm3 3H3v-2h2zm2-3v4h15v-4zm14 3H8v-2h13z"
+      d="M2 3v4h4V3zm3 3H3V4h2zM7 3v4h15V3zm14 3H8V4h13zM2 10v4h4v-4zm3 3H3v-2h2zM7 10v4h15v-4zm14 3H8v-2h13zM2 17v4h4v-4zm3 3H3v-2h2zM7 17v4h15v-4zm14 3H8v-2h13z"
     />
   </svg>
 </button>
@@ -127,9 +123,7 @@ exports[`top-nav/presenters/NavActionButtonPresenter  2`] = `
 
 <button
   className="emotion-1"
-  disabled={undefined}
   onBlur={[Function]}
-  onClick={undefined}
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseEnter={[Function]}
@@ -141,12 +135,10 @@ exports[`top-nav/presenters/NavActionButtonPresenter  2`] = `
   <svg
     className="emotion-0"
     height="24px"
-    viewBox="0 0 24 24"
     width="24px"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M2 3v4h4V3zm3 3H3V4h2zm2-3v4h15V3zm14 3H8V4h13zM2 10v4h4v-4zm3 3H3v-2h2zm2-3v4h15v-4zm14 3H8v-2h13zM2 17v4h4v-4zm3 3H3v-2h2zm2-3v4h15v-4zm14 3H8v-2h13z"
+      d="M2 3v4h4V3zm3 3H3V4h2zM7 3v4h15V3zm14 3H8V4h13zM2 10v4h4v-4zm3 3H3v-2h2zM7 10v4h15v-4zm14 3H8v-2h13zM2 17v4h4v-4zm3 3H3v-2h2zM7 17v4h15v-4zm14 3H8v-2h13z"
     />
   </svg>
 </button>
@@ -203,7 +195,6 @@ exports[`top-nav/presenters/NavActionButtonPresenter  3`] = `
 
 <button
   className="emotion-1"
-  disabled={undefined}
   onBlur={[Function]}
   onClick={[Function]}
   onFocus={[Function]}
@@ -217,12 +208,227 @@ exports[`top-nav/presenters/NavActionButtonPresenter  3`] = `
   <svg
     className="emotion-0"
     height="24px"
-    viewBox="0 0 24 24"
     width="24px"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M2 3v4h4V3zm3 3H3V4h2zm2-3v4h15V3zm14 3H8V4h13zM2 10v4h4v-4zm3 3H3v-2h2zm2-3v4h15v-4zm14 3H8v-2h13zM2 17v4h4v-4zm3 3H3v-2h2zm2-3v4h15v-4zm14 3H8v-2h13z"
+      d="M2 3v4h4V3zm3 3H3V4h2zM7 3v4h15V3zm14 3H8V4h13zM2 10v4h4v-4zm3 3H3v-2h2zM7 10v4h15v-4zm14 3H8v-2h13zM2 17v4h4v-4zm3 3H3v-2h2zM7 17v4h15v-4zm14 3H8v-2h13z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`top-nav/presenters/NavActionButtonPresenter renders with children 1`] = `
+.emotion-1 {
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-1 svg * {
+  fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
+
+.emotion-0 {
+  fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+<button
+  className="emotion-1"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  tabIndex="0"
+  title=""
+>
+  <svg
+    className="emotion-0"
+    height="24px"
+    width="24px"
+  >
+    <path
+      d="M2 3v4h4V3zm3 3H3V4h2zM7 3v4h15V3zm14 3H8V4h13zM2 10v4h4v-4zm3 3H3v-2h2zM7 10v4h15v-4zm14 3H8v-2h13zM2 17v4h4v-4zm3 3H3v-2h2zM7 17v4h15v-4zm14 3H8v-2h13z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`top-nav/presenters/NavActionButtonPresenter renders with children, icon, onClick and title 1`] = `
+.emotion-1 {
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-1 svg * {
+  fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
+
+.emotion-0 {
+  fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+<button
+  className="emotion-1"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  tabIndex="0"
+  title="title"
+>
+  <svg
+    className="emotion-0"
+    height="24px"
+    width="24px"
+  >
+    <path
+      d="M2 3v4h4V3zm3 3H3V4h2zM7 3v4h15V3zm14 3H8V4h13zM2 10v4h4v-4zm3 3H3v-2h2zM7 10v4h15v-4zm14 3H8v-2h13zM2 17v4h4v-4zm3 3H3v-2h2zM7 17v4h15v-4zm14 3H8v-2h13z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`top-nav/presenters/NavActionButtonPresenter renders with no props 1`] = `
+.emotion-1 {
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-1 svg * {
+  fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
+
+.emotion-0 {
+  fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+<button
+  className="emotion-1"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  tabIndex="0"
+  title=""
+>
+  <svg
+    className="emotion-0"
+    height="24px"
+    width="24px"
+  >
+    <path
+      d="M2 3v4h4V3zm3 3H3V4h2zM7 3v4h15V3zm14 3H8V4h13zM2 10v4h4v-4zm3 3H3v-2h2zM7 10v4h15v-4zm14 3H8v-2h13zM2 17v4h4v-4zm3 3H3v-2h2zM7 17v4h15v-4zm14 3H8v-2h13z"
     />
   </svg>
 </button>

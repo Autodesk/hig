@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`notifications-flyout/presenters/ImagePresenter  1`] = `
+.emotion-0 {
+  height: 48px;
+  width: 48px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+<img
+  alt="hello"
+  className="emotion-0"
+  data-something="anything"
+  src="//example.com/random.png"
+/>
+`;
+
 exports[`notifications-flyout/presenters/ImagePresenter renders with img props 1`] = `
 .emotion-0 {
   height: 48px;

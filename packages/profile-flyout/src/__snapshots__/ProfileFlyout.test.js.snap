@@ -1,5 +1,377 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`profile-flyout/ProfileFlyout  1`] = `
+.emotion-10 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-9 {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-4 {
+  fill: rgba(128,128,128,0);
+}
+
+.emotion-5 {
+  fill: #ffffff;
+}
+
+.emotion-8 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 16px rgba(0,0,0,0.2);
+}
+
+.emotion-7 {
+  position: relative;
+}
+
+.emotion-1 {
+  background-color: #1d6328;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
+<div
+  className="emotion-10"
+>
+  <div
+    className="emotion-3"
+  >
+    <button
+      className="emotion-2"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        aria-label="Avatar for Anonymous User"
+        className="emotion-1"
+        role="img"
+      >
+        <span
+          aria-hidden="true"
+          className="emotion-0"
+        >
+          AU
+        </span>
+      </span>
+    </button>
+  </div>
+  <div
+    className="emotion-9"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="emotion-6"
+      role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          className="emotion-4"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          className="emotion-5"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
+    <div
+      className="emotion-8"
+      style={
+        Object {
+          "maxHeight": undefined,
+        }
+      }
+    >
+      <div
+        className="emotion-7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`profile-flyout/ProfileFlyout  2`] = `
+.emotion-10 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-4 {
+  fill: rgba(128,128,128,0);
+}
+
+.emotion-5 {
+  fill: #ffffff;
+}
+
+.emotion-8 {
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 16px rgba(0,0,0,0.2);
+}
+
+.emotion-7 {
+  position: relative;
+}
+
+.emotion-9 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-1 {
+  background-color: #1d6328;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
+<div
+  className="emotion-10"
+>
+  <div
+    className="emotion-3"
+  >
+    <button
+      className="emotion-2"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        aria-label="Avatar for Anonymous User"
+        className="emotion-1"
+        role="img"
+      >
+        <span
+          aria-hidden="true"
+          className="emotion-0"
+        >
+          AU
+        </span>
+      </span>
+    </button>
+  </div>
+  <div
+    className="emotion-9"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="emotion-6"
+      role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
+    >
+      <svg
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+      >
+        <polygon
+          className="emotion-4"
+          points="0,12 12,0 24,12"
+        />
+        <polygon
+          className="emotion-5"
+          points="2.5,12 12,2.5 21.5,12"
+        />
+      </svg>
+    </div>
+    <div
+      className="emotion-8"
+      style={
+        Object {
+          "maxHeight": undefined,
+        }
+      }
+    >
+      <div
+        className="emotion-7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
 .emotion-10 {
   position: relative;

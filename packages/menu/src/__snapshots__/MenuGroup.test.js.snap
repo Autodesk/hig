@@ -94,24 +94,20 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
   onKeyDown={[Function]}
   onMouseMove={[Function]}
   role="listbox"
-  selected={undefined}
   tabIndex="0"
 >
   <ul
     className="emotion-12"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-1"
       multiple={false}
       onClick={[Function]}
@@ -119,7 +115,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -130,9 +125,7 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -148,7 +141,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-2"
       multiple={false}
       onClick={[Function]}
@@ -156,7 +148,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -167,9 +158,7 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -185,7 +174,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-3"
       multiple={false}
       onClick={[Function]}
@@ -193,7 +181,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -204,9 +191,7 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -222,19 +207,16 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
   </ul>
   <ul
     className="emotion-19"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-4"
       multiple={false}
       onClick={[Function]}
@@ -242,7 +224,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -256,7 +237,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-5"
       multiple={false}
       onClick={[Function]}
@@ -264,7 +244,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -278,7 +257,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-6"
       multiple={false}
       onClick={[Function]}
@@ -286,7 +264,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -300,19 +277,16 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
   </ul>
   <ul
     className="emotion-12"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-7"
       multiple={false}
       onClick={[Function]}
@@ -320,7 +294,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -331,9 +304,7 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -349,7 +320,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-8"
       multiple={false}
       onClick={[Function]}
@@ -357,7 +327,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -368,9 +337,7 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -386,7 +353,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-9"
       multiple={false}
       onClick={[Function]}
@@ -394,7 +360,6 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -405,9 +370,7 @@ exports[`menu/MenuGroup renders Menus with checkmark and unselect 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -518,24 +481,20 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
   onKeyDown={[Function]}
   onMouseMove={[Function]}
   role="listbox"
-  selected={undefined}
   tabIndex="0"
 >
   <ul
     className="emotion-12"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-1"
       multiple={false}
       onClick={[Function]}
@@ -543,7 +502,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -554,9 +512,7 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -572,7 +528,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-2"
       multiple={false}
       onClick={[Function]}
@@ -580,7 +535,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -591,9 +545,7 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -609,7 +561,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-3"
       multiple={false}
       onClick={[Function]}
@@ -617,7 +568,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -628,9 +578,7 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -646,19 +594,16 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
   </ul>
   <ul
     className="emotion-12"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-4"
       multiple={false}
       onClick={[Function]}
@@ -666,7 +611,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -680,7 +624,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-5"
       multiple={false}
       onClick={[Function]}
@@ -688,7 +631,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -702,7 +644,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-6"
       multiple={false}
       onClick={[Function]}
@@ -710,7 +651,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -724,19 +664,16 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
   </ul>
   <ul
     className="emotion-32"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-7"
       multiple={false}
       onClick={[Function]}
@@ -744,7 +681,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -755,9 +691,7 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -773,7 +707,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-8"
       multiple={false}
       onClick={[Function]}
@@ -781,7 +714,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -792,9 +724,7 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -810,7 +740,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-9"
       multiple={false}
       onClick={[Function]}
@@ -818,7 +747,6 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -829,9 +757,7 @@ exports[`menu/MenuGroup renders Menus with dividers and Options 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -898,24 +824,20 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
   onKeyDown={[Function]}
   onMouseMove={[Function]}
   role="listbox"
-  selected={undefined}
   tabIndex="0"
 >
   <ul
     className="emotion-6"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-1"
-      disabled={undefined}
       id="option-1"
       multiple={false}
       onClick={[Function]}
@@ -923,7 +845,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -937,7 +858,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-1"
-      disabled={undefined}
       id="option-2"
       multiple={false}
       onClick={[Function]}
@@ -945,7 +865,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -959,7 +878,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-1"
-      disabled={undefined}
       id="option-3"
       multiple={false}
       onClick={[Function]}
@@ -967,7 +885,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -981,19 +898,16 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
   </ul>
   <ul
     className="emotion-6"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-1"
-      disabled={undefined}
       id="option-4"
       multiple={false}
       onClick={[Function]}
@@ -1001,7 +915,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1015,7 +928,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-1"
-      disabled={undefined}
       id="option-5"
       multiple={false}
       onClick={[Function]}
@@ -1023,7 +935,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1037,7 +948,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-1"
-      disabled={undefined}
       id="option-6"
       multiple={false}
       onClick={[Function]}
@@ -1045,7 +955,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1059,19 +968,16 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
   </ul>
   <ul
     className="emotion-6"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-1"
-      disabled={undefined}
       id="option-7"
       multiple={false}
       onClick={[Function]}
@@ -1079,7 +985,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1093,7 +998,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-1"
-      disabled={undefined}
       id="option-8"
       multiple={false}
       onClick={[Function]}
@@ -1101,7 +1005,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1115,7 +1018,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-1"
-      disabled={undefined}
       id="option-9"
       multiple={false}
       onClick={[Function]}
@@ -1123,7 +1025,6 @@ exports[`menu/MenuGroup renders default Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1220,24 +1121,20 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
   onKeyDown={[Function]}
   onMouseMove={[Function]}
   role="listbox"
-  selected={undefined}
   tabIndex="0"
 >
   <ul
     className="emotion-12"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-1"
       multiple={false}
       onClick={[Function]}
@@ -1245,7 +1142,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1256,9 +1152,7 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -1274,7 +1168,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-2"
       multiple={false}
       onClick={[Function]}
@@ -1282,7 +1175,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1293,9 +1185,7 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -1311,7 +1201,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-3"
       multiple={false}
       onClick={[Function]}
@@ -1319,7 +1208,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1330,9 +1218,7 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -1348,19 +1234,16 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
   </ul>
   <ul
     className="emotion-12"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-4"
       multiple={false}
       onClick={[Function]}
@@ -1368,7 +1251,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1382,7 +1264,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-5"
       multiple={false}
       onClick={[Function]}
@@ -1390,7 +1271,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1404,7 +1284,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-6"
       multiple={false}
       onClick={[Function]}
@@ -1412,7 +1291,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1426,19 +1304,16 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
   </ul>
   <ul
     className="emotion-12"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-7"
       multiple={false}
       onClick={[Function]}
@@ -1446,7 +1321,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1457,9 +1331,7 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -1475,7 +1347,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-8"
       multiple={false}
       onClick={[Function]}
@@ -1483,7 +1354,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1494,9 +1364,7 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -1512,7 +1380,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-9"
       multiple={false}
       onClick={[Function]}
@@ -1520,7 +1387,6 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1531,9 +1397,7 @@ exports[`menu/MenuGroup renders mixed default and checkmark Menu and Options 1`]
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -1687,7 +1551,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
 >
   <ul
     className="emotion-12"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -1705,7 +1568,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-1"
       multiple={true}
       onClick={[Function]}
@@ -1713,7 +1575,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1724,9 +1585,7 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -1742,7 +1601,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-2"
       multiple={true}
       onClick={[Function]}
@@ -1750,7 +1608,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1761,9 +1618,7 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -1779,7 +1634,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     <li
       aria-selected={true}
       className="emotion-11"
-      disabled={undefined}
       id="option-3"
       multiple={true}
       onClick={[Function]}
@@ -1787,7 +1641,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={true}
@@ -1798,9 +1651,7 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -1816,7 +1667,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
   </ul>
   <ul
     className="emotion-12"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -1834,7 +1684,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-4"
       multiple={true}
       onClick={[Function]}
@@ -1842,7 +1691,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1856,7 +1704,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-5"
       multiple={true}
       onClick={[Function]}
@@ -1864,7 +1711,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1878,7 +1724,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     <li
       aria-selected={true}
       className="emotion-11"
-      disabled={undefined}
       id="option-6"
       multiple={true}
       onClick={[Function]}
@@ -1886,7 +1731,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={true}
@@ -1900,7 +1744,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
   </ul>
   <ul
     className="emotion-12"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
@@ -1918,7 +1761,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-7"
       multiple={true}
       onClick={[Function]}
@@ -1926,7 +1768,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1937,9 +1778,7 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -1955,7 +1794,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-8"
       multiple={true}
       onClick={[Function]}
@@ -1963,7 +1801,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -1974,9 +1811,7 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -1992,7 +1827,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     <li
       aria-selected={true}
       className="emotion-11"
-      disabled={undefined}
       id="option-9"
       multiple={true}
       onClick={[Function]}
@@ -2000,7 +1834,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={true}
@@ -2011,9 +1844,7 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -2156,24 +1987,20 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
   onKeyDown={[Function]}
   onMouseMove={[Function]}
   role="listbox"
-  selected={undefined}
   tabIndex="0"
 >
   <ul
     className="emotion-12"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-1"
       multiple={true}
       onClick={[Function]}
@@ -2181,7 +2008,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -2192,9 +2018,7 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -2210,7 +2034,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-2"
       multiple={true}
       onClick={[Function]}
@@ -2218,7 +2041,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -2229,9 +2051,7 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -2247,7 +2067,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
     <li
       aria-selected={true}
       className="emotion-11"
-      disabled={undefined}
       id="option-3"
       multiple={true}
       onClick={[Function]}
@@ -2255,7 +2074,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={true}
@@ -2266,9 +2084,7 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -2284,19 +2100,16 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
   </ul>
   <ul
     className="emotion-12"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-4"
       multiple={true}
       onClick={[Function]}
@@ -2304,7 +2117,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -2318,7 +2130,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-5"
       multiple={true}
       onClick={[Function]}
@@ -2326,7 +2137,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -2340,7 +2150,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
     <li
       aria-selected={true}
       className="emotion-11"
-      disabled={undefined}
       id="option-6"
       multiple={true}
       onClick={[Function]}
@@ -2348,7 +2157,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={true}
@@ -2362,19 +2170,16 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
   </ul>
   <ul
     className="emotion-12"
-    id={undefined}
     onBlur={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={undefined}
     tabIndex="-1"
   >
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-7"
       multiple={true}
       onClick={[Function]}
@@ -2382,7 +2187,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -2393,9 +2197,7 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -2411,7 +2213,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
     <li
       aria-selected={false}
       className="emotion-3"
-      disabled={undefined}
       id="option-8"
       multiple={true}
       onClick={[Function]}
@@ -2419,7 +2220,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={false}
@@ -2430,9 +2230,7 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -2448,7 +2246,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
     <li
       aria-selected={true}
       className="emotion-11"
-      disabled={undefined}
       id="option-9"
       multiple={true}
       onClick={[Function]}
@@ -2456,7 +2253,6 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       role="option"
       selected={true}
@@ -2467,9 +2263,7 @@ exports[`menu/MenuGroup renders multiple and defaultSelected Menu and Options 1`
         <svg
           className="emotion-0"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"

@@ -8,7 +8,7 @@ describe("icons/index", () => {
       const element = icons[x];
       takeSnapshotsOf(element, [
         {
-          description: "renders with no props",
+          desc: "renders with no props",
           props: {
             color: "white"
           }

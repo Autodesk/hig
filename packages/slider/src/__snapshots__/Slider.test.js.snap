@@ -1,5 +1,302 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`slider/Slider  1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent;
+  box-sizing: content-box;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  outline: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-moz-focus-outer {
+  border: 0;
+}
+
+.emotion-0::-ms-thumb {
+  box-sizing: content-box;
+  height: 20px;
+  width: 6px;
+  background-color: #808080;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  position: relative;
+  top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-appearance: none;
+}
+
+.emotion-0::-moz-range-thumb {
+  box-sizing: content-box;
+  height: 20px;
+  width: 6px;
+  background-color: #808080;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  position: relative;
+  top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-appearance: none;
+}
+
+.emotion-0::-webkit-slider-thumb {
+  box-sizing: content-box;
+  height: 20px;
+  width: 6px;
+  background-color: #808080;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  position: relative;
+  top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-appearance: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-0::-ms-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(128,128,128,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(128,128,128,0.2);
+  color: transparent;
+  outline: none;
+}
+
+.emotion-0::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(128,128,128,0.2);
+  color: transparent;
+  outline: none;
+  background-image: linear-gradient(#808080,#808080);
+  background-position: 0;
+  background-size: calc((0.5 * 6px)  + (0.5 * (100% - 6px))) 100%;
+  background-repeat: no-repeat;
+}
+
+.emotion-0::-ms-fill-lower {
+  border: none;
+  background-color: #808080;
+}
+
+.emotion-0::-moz-range-progress {
+  border: none;
+  background-color: #808080;
+}
+
+<input
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow={50}
+  className="emotion-0"
+  disabled={false}
+  max="100"
+  min="0"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  step="1"
+  type="range"
+  value={50}
+/>
+`;
+
+exports[`slider/Slider  2`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: transparent;
+  box-sizing: content-box;
+  height: 20px;
+  margin: 0;
+  position: relative;
+  outline: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-ms-tooltip {
+  display: none;
+}
+
+.emotion-0::-moz-focus-outer {
+  border: 0;
+}
+
+.emotion-0::-ms-thumb {
+  box-sizing: content-box;
+  height: 20px;
+  width: 6px;
+  background-color: #808080;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  position: relative;
+  top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-appearance: none;
+}
+
+.emotion-0::-moz-range-thumb {
+  box-sizing: content-box;
+  height: 20px;
+  width: 6px;
+  background-color: #808080;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  position: relative;
+  top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-appearance: none;
+  opacity: 0.4;
+}
+
+.emotion-0::-webkit-slider-thumb {
+  box-sizing: content-box;
+  height: 20px;
+  width: 6px;
+  background-color: #808080;
+  border: 0;
+  border-radius: 1px;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  position: relative;
+  top: 50%;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-appearance: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.emotion-0::-ms-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(128,128,128,0.2);
+  color: transparent;
+  outline: none;
+  opacity: 0.4;
+}
+
+.emotion-0::-moz-range-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(128,128,128,0.2);
+  color: transparent;
+  outline: none;
+  opacity: 0.4;
+}
+
+.emotion-0::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: rgba(128,128,128,0.2);
+  color: transparent;
+  outline: none;
+  opacity: 0.4;
+  background-image: linear-gradient(#808080,#808080);
+  background-position: 0;
+  background-size: calc((0.5 * 6px)  + (0.5 * (100% - 6px))) 100%;
+  background-repeat: no-repeat;
+}
+
+.emotion-0::-ms-fill-lower {
+  border: none;
+  background-color: #808080;
+}
+
+.emotion-0::-moz-range-progress {
+  border: none;
+  background-color: #808080;
+  opacity: 0.4;
+}
+
+<input
+  aria-valuemax="100"
+  aria-valuemin="0"
+  aria-valuenow={50}
+  className="emotion-0"
+  disabled={true}
+  max="100"
+  min="0"
+  onBlur={[Function]}
+  onChange={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  step="1"
+  type="range"
+  value={50}
+/>
+`;
+
 exports[`slider/Slider renders 1`] = `
 .emotion-0 {
   -webkit-appearance: none;

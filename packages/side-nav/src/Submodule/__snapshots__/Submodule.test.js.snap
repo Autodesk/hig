@@ -1,5 +1,400 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`side-nav/Submodule snapshot tests  1`] = `
+.emotion-0 {
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-right: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #3c3c3c;
+}
+
+.emotion-0:first-of-type {
+  margin-top: 8px;
+}
+
+.emotion-0:last-of-type {
+  margin-bottom: 16px;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-0 externalIcon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 6px 10px;
+}
+
+.emotion-0 externalIcon svg {
+  fill: #3c3c3c;
+}
+
+.emotion-0 externalIcon:hover svg * {
+  fill: #0696d7;
+}
+
+<div
+  className="emotion-0"
+  role="button"
+  tabIndex="0"
+/>
+`;
+
+exports[`side-nav/Submodule snapshot tests  2`] = `
+.emotion-0 {
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-right: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #3c3c3c;
+}
+
+.emotion-0:first-of-type {
+  margin-top: 8px;
+}
+
+.emotion-0:last-of-type {
+  margin-bottom: 16px;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-0 externalIcon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 6px 10px;
+}
+
+.emotion-0 externalIcon svg {
+  fill: #3c3c3c;
+}
+
+.emotion-0 externalIcon:hover svg * {
+  fill: #0696d7;
+}
+
+<div
+  className="emotion-0"
+  role="button"
+  tabIndex="0"
+>
+  Module
+</div>
+`;
+
+exports[`side-nav/Submodule snapshot tests  3`] = `
+.emotion-2 {
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-right: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #3c3c3c;
+}
+
+.emotion-2:first-of-type {
+  margin-top: 8px;
+}
+
+.emotion-2:last-of-type {
+  margin-bottom: 16px;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-2 externalIcon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 6px 10px;
+}
+
+.emotion-2 externalIcon svg {
+  fill: #3c3c3c;
+}
+
+.emotion-2 externalIcon:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+<a
+  className="emotion-2"
+  href="http://example.com"
+  tabIndex="0"
+  target="_blank"
+>
+  Module
+  <div
+    className="emotion-1"
+  >
+    <svg
+      className="emotion-0"
+      height="24px"
+      width="24px"
+    >
+      <path
+        d="M18 18H6V6h4V5H5v14h14v-5h-1v4z"
+        fillRule="evenodd"
+      />
+      <path
+        d="M11.88 5.05L14 7.17l-3.54 3.54 2.83 2.83L16.83 10 19 12.12l1.41-8.48zm6.36 5l-1.43-1.48-3.53 3.54-1.4-1.4 3.53-3.54L14 5.76l5.15-.91z"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+</a>
+`;
+
+exports[`side-nav/Submodule snapshot tests  4`] = `
+.emotion-0 {
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-right: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #3c3c3c;
+}
+
+.emotion-0:first-of-type {
+  margin-top: 8px;
+}
+
+.emotion-0:last-of-type {
+  margin-bottom: 16px;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-0 externalIcon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 6px 10px;
+}
+
+.emotion-0 externalIcon svg {
+  fill: #3c3c3c;
+}
+
+.emotion-0 externalIcon:hover svg * {
+  fill: #0696d7;
+}
+
+<a
+  className="emotion-0"
+  href="http://example.com"
+  tabIndex="0"
+>
+  Module
+</a>
+`;
+
+exports[`side-nav/Submodule snapshot tests  5`] = `
+.emotion-0 {
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-right: 16px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #3c3c3c;
+}
+
+.emotion-0:first-of-type {
+  margin-top: 8px;
+}
+
+.emotion-0:last-of-type {
+  margin-bottom: 16px;
+}
+
+.emotion-0:focus,
+.emotion-0:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-0 externalIcon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 6px 10px;
+}
+
+.emotion-0 externalIcon svg {
+  fill: #3c3c3c;
+}
+
+.emotion-0 externalIcon:hover svg * {
+  fill: #0696d7;
+}
+
+<div
+  className="emotion-0"
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  role="button"
+  tabIndex="0"
+/>
+`;
+
 exports[`side-nav/Submodule snapshot tests renders a link 1`] = `
 .emotion-0 {
   font-family: ArtifaktElement,sans-serif;
@@ -68,13 +463,7 @@ exports[`side-nav/Submodule snapshot tests renders a link 1`] = `
 <a
   className="emotion-0"
   href="http://example.com"
-  onClick={undefined}
-  onFocus={undefined}
-  onKeyDown={undefined}
-  onMouseOver={undefined}
-  role={undefined}
   tabIndex="0"
-  target={undefined}
 >
   Module
 </a>
@@ -156,11 +545,6 @@ exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
 <a
   className="emotion-2"
   href="http://example.com"
-  onClick={undefined}
-  onFocus={undefined}
-  onKeyDown={undefined}
-  onMouseOver={undefined}
-  role={undefined}
   tabIndex="0"
   target="_blank"
 >
@@ -170,11 +554,8 @@ exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
   >
     <svg
       className="emotion-0"
-      color={undefined}
       height="24px"
-      viewBox="0 0 24 24"
       width="24px"
-      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         d="M18 18H6V6h4V5H5v14h14v-5h-1v4z"
@@ -256,14 +637,10 @@ exports[`side-nav/Submodule snapshot tests renders with a click handler 1`] = `
 
 <div
   className="emotion-0"
-  href={undefined}
   onClick={[Function]}
-  onFocus={undefined}
   onKeyDown={[Function]}
-  onMouseOver={undefined}
   role="button"
   tabIndex="0"
-  target={undefined}
 />
 `;
 
@@ -334,14 +711,8 @@ exports[`side-nav/Submodule snapshot tests renders with minimal props 1`] = `
 
 <div
   className="emotion-0"
-  href={undefined}
-  onClick={undefined}
-  onFocus={undefined}
-  onKeyDown={undefined}
-  onMouseOver={undefined}
   role="button"
   tabIndex="0"
-  target={undefined}
 >
   Module
 </div>
@@ -414,13 +785,7 @@ exports[`side-nav/Submodule snapshot tests renders with no props 1`] = `
 
 <div
   className="emotion-0"
-  href={undefined}
-  onClick={undefined}
-  onFocus={undefined}
-  onKeyDown={undefined}
-  onMouseOver={undefined}
   role="button"
   tabIndex="0"
-  target={undefined}
 />
 `;

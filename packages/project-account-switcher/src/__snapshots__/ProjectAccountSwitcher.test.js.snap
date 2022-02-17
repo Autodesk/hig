@@ -253,12 +253,10 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
         <svg
           className="emotion-5"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+            d="M8.71 3.22a.75.75 0 00-1.06 0L5 5.87 2.35 3.22a.75.75 0 00-1.06 0 .74.74 0 000 1.06l3.36 3.36a.5.5 0 00.7 0l3.36-3.36a.74.74 0 000-1.06z"
           />
         </svg>
       </div>
@@ -353,7 +351,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-15"
                   onBlur={[Function]}
-                  onClick={undefined}
                   onFocus={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -389,7 +386,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-15"
                   onBlur={[Function]}
-                  onClick={undefined}
                   onFocus={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -440,7 +436,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-15"
                   onBlur={[Function]}
-                  onClick={undefined}
                   onFocus={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -476,7 +471,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-15"
                   onBlur={[Function]}
-                  onClick={undefined}
                   onFocus={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -749,12 +743,10 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
         <svg
           className="emotion-5"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+            d="M8.71 3.22a.75.75 0 00-1.06 0L5 5.87 2.35 3.22a.75.75 0 00-1.06 0 .74.74 0 000 1.06l3.36 3.36a.5.5 0 00.7 0l3.36-3.36a.74.74 0 000-1.06z"
           />
         </svg>
       </div>
@@ -849,7 +841,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-15"
                   onBlur={[Function]}
-                  onClick={undefined}
                   onFocus={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -885,7 +876,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-15"
                   onBlur={[Function]}
-                  onClick={undefined}
                   onFocus={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -936,7 +926,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-15"
                   onBlur={[Function]}
-                  onClick={undefined}
                   onFocus={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}
@@ -972,7 +961,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
                 <span
                   className="emotion-15"
                   onBlur={[Function]}
-                  onClick={undefined}
                   onFocus={[Function]}
                   onMouseDown={[Function]}
                   onMouseEnter={[Function]}

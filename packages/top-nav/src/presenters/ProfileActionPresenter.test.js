@@ -5,7 +5,7 @@ import ProfileActionPresenter from "./ProfileActionPresenter";
 describe("top-nav/presenters/ProfileActionPresenter", () => {
   takeSnapshotsOf(ProfileActionPresenter, [
     {
-      description: "renders with children",
+      desc: "renders with children",
       props: {
         children: "Peter Parker"
       }

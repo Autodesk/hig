@@ -41,13 +41,12 @@ exports[`tabs/TabCloseButtonPresenter renders with all props 1`] = `
   onMouseUp={[Function]}
   tabIndex="-1"
   title="close"
+  type="button"
 >
   <svg
     className="emotion-0"
     height="16px"
-    viewBox="0 0 16 16"
     width="16px"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
       d="M13.4 3.4l-.8-.8L8 7.3 3.4 2.6l-.8.8L7.3 8l-4.7 4.6.8.8L8 8.7l4.6 4.7.8-.8L8.7 8l4.7-4.6z"
@@ -87,7 +86,6 @@ exports[`tabs/TabCloseButtonPresenter renders without props 1`] = `
 
 <button
   className="emotion-1"
-  disabled={undefined}
   onBlur={[Function]}
   onClick={[Function]}
   onFocus={[Function]}
@@ -97,13 +95,12 @@ exports[`tabs/TabCloseButtonPresenter renders without props 1`] = `
   onMouseUp={[Function]}
   tabIndex="-1"
   title="close"
+  type="button"
 >
   <svg
     className="emotion-0"
     height="16px"
-    viewBox="0 0 16 16"
     width="16px"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
       d="M13.4 3.4l-.8-.8L8 7.3 3.4 2.6l-.8.8L7.3 8l-4.7 4.6.8.8L8 8.7l4.6 4.7.8-.8L8.7 8l4.7-4.6z"

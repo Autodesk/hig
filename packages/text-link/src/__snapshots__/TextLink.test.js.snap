@@ -17,7 +17,6 @@ exports[`TextLink snapshot tests  1`] = `
 <span
   className="emotion-0"
   onBlur={[Function]}
-  onClick={undefined}
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseEnter={[Function]}
@@ -45,7 +44,6 @@ exports[`TextLink snapshot tests  2`] = `
   className="emotion-0"
   href="https://www.autodesk.com/"
   onBlur={[Function]}
-  onClick={undefined}
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseEnter={[Function]}
@@ -75,7 +73,90 @@ exports[`TextLink snapshot tests  3`] = `
   className="emotion-0 test-classname"
   href="https://www.autodesk.com/"
   onBlur={[Function]}
-  onClick={undefined}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  target="_parent"
+>
+  This is a link
+</a>
+`;
+
+exports[`TextLink snapshot tests renders with custom className 1`] = `
+.emotion-0 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  font-family: ArtifaktElement,sans-serif;
+  margin: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #006eaf;
+  outline: none;
+}
+
+<a
+  className="emotion-0 test-classname"
+  href="https://www.autodesk.com/"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  target="_parent"
+>
+  This is a link
+</a>
+`;
+
+exports[`TextLink snapshot tests renders with no props 1`] = `
+.emotion-0 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  font-family: ArtifaktElement,sans-serif;
+  margin: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #006eaf;
+  outline: none;
+}
+
+<span
+  className="emotion-0"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="button"
+/>
+`;
+
+exports[`TextLink snapshot tests renders with props 1`] = `
+.emotion-0 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.428571429;
+  font-family: ArtifaktElement,sans-serif;
+  margin: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #006eaf;
+  outline: none;
+}
+
+<a
+  className="emotion-0"
+  href="https://www.autodesk.com/"
+  onBlur={[Function]}
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseEnter={[Function]}

@@ -23,7 +23,6 @@ exports[`top-nav/presenters/ProfileButtonPresenter  1`] = `
 }
 
 <button
-  onClick={undefined}
   type="button"
 >
   <span
@@ -64,7 +63,6 @@ exports[`top-nav/presenters/ProfileButtonPresenter  2`] = `
 }
 
 <button
-  onClick={undefined}
   type="button"
 >
   <span
@@ -144,6 +142,153 @@ exports[`top-nav/presenters/ProfileButtonPresenter  3`] = `
       className="emotion-2"
     >
       RF
+    </span>
+  </span>
+</button>
+`;
+
+exports[`top-nav/presenters/ProfileButtonPresenter renders with all props 1`] = `
+.emotion-2 {
+  width: 32px;
+  height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
+.emotion-3 {
+  background-color: #5b5bc2;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-1 {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 2;
+  font-size: 14px;
+}
+
+.emotion-0 {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+
+<button
+  onClick={[Function]}
+  type="button"
+>
+  <span
+    aria-label="Avatar for Richard Feynman"
+    className="emotion-3"
+    role="img"
+  >
+    <span
+      className="emotion-1"
+    >
+      <img
+        alt="Avatar image of Richard Feynman"
+        className="emotion-0"
+        onError={[Function]}
+        src="richard_phillips_feynman.png"
+      />
+    </span>
+    <span
+      aria-hidden="true"
+      className="emotion-2"
+    >
+      RF
+    </span>
+  </span>
+</button>
+`;
+
+exports[`top-nav/presenters/ProfileButtonPresenter renders with avatarName 1`] = `
+.emotion-1 {
+  background-color: #163b84;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
+<button
+  type="button"
+>
+  <span
+    aria-label="Avatar for Wolfgang Pauli"
+    className="emotion-1"
+    role="img"
+  >
+    <span
+      aria-hidden="true"
+      className="emotion-0"
+    >
+      WP
+    </span>
+  </span>
+</button>
+`;
+
+exports[`top-nav/presenters/ProfileButtonPresenter renders with children and avatarName 1`] = `
+.emotion-0 {
+  width: 32px;
+  height: 32px;
+  font-family: ArtifaktElement,sans-serif;
+}
+
+.emotion-1 {
+  background-color: #5b5bc2;
+  color: #ffffff;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  display: block;
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  text-align: center;
+}
+
+<button
+  type="button"
+>
+  <span
+    aria-label="Avatar for Hans Hellmann"
+    className="emotion-1"
+    role="img"
+  >
+    <span
+      aria-hidden="true"
+      className="emotion-0"
+    >
+      HH
     </span>
   </span>
 </button>

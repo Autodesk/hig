@@ -125,14 +125,147 @@ exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter  2`
     <svg
       className="emotion-5"
       height="10px"
-      viewBox="0 0 10 10"
       width="10px"
-      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+        d="M8.71 3.22a.75.75 0 00-1.06 0L5 5.87 2.35 3.22a.75.75 0 00-1.06 0 .74.74 0 000 1.06l3.36 3.36a.5.5 0 00.7 0l3.36-3.36a.74.74 0 000-1.06z"
       />
     </svg>
   </div>
 </div>
 `;
+
+exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter renders with all props 1`] = `
+.emotion-7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.emotion-4 {
+  margin: 0;
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 34px;
+  line-height: 34px;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.emotion-2 {
+  display: inline-block;
+  position: relative;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  overflow: hidden;
+  height: 32px;
+  width: 32px;
+  border-radius: 2px;
+  border: 1px solid #bec8d2;
+  color: #485366;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.emotion-0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  cursor: pointer;
+  color: transparent;
+}
+
+.emotion-0[src=''] {
+  display: none;
+}
+
+.emotion-6 {
+  margin: 0 12px;
+}
+
+.emotion-1 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-5 {
+  fill: #808080;
+}
+
+.emotion-5 > * {
+  fill: #808080;
+}
+
+<div
+  className="emotion-7"
+  onClick={[Function]}
+  onKeyDown={[Function]}
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="emotion-4"
+  >
+    <span
+      className="emotion-2"
+    >
+      <img
+        alt="Foo"
+        className="emotion-0"
+        src=""
+      />
+      <span
+        className="emotion-1"
+        style={
+          Object {
+            "lineHeight": "32px",
+            "textAlign": "center",
+          }
+        }
+      >
+        A1/P2
+      </span>
+    </span>
+    <p
+      className="emotion-1"
+    >
+      Foo
+    </p>
+  </div>
+  <div
+    className="emotion-6"
+  >
+    <svg
+      className="emotion-5"
+      height="10px"
+      width="10px"
+    >
+      <path
+        d="M8.71 3.22a.75.75 0 00-1.06 0L5 5.87 2.35 3.22a.75.75 0 00-1.06 0 .74.74 0 000 1.06l3.36 3.36a.5.5 0 00.7 0l3.36-3.36a.74.74 0 000-1.06z"
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`project-account-switcher/presenters/ProjectAccountSwitcherPresenter renders without props 1`] = `null`;

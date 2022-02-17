@@ -81,7 +81,6 @@ exports[`TextArea integration renders correctly 1`] = `
 }
 
 <div
-  className={undefined}
   style={
     Object {
       "position": "relative",
@@ -93,7 +92,6 @@ exports[`TextArea integration renders correctly 1`] = `
   >
     <textarea
       className="emotion-0"
-      disabled={undefined}
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseEnter={[Function]}
@@ -187,7 +185,6 @@ exports[`TextArea integration renders with stylesheet prop 1`] = `
 }
 
 <div
-  className={undefined}
   style={
     Object {
       "position": "relative",
@@ -199,7 +196,6 @@ exports[`TextArea integration renders with stylesheet prop 1`] = `
   >
     <textarea
       className="emotion-0"
-      disabled={undefined}
       onBlur={[Function]}
       onFocus={[Function]}
       onMouseEnter={[Function]}

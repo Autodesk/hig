@@ -101,7 +101,6 @@ exports[`tooltip/Tooltip  1`] = `
     </div>
     <div
       className="emotion-5"
-      onScroll={undefined}
     >
       <div
         className="emotion-4"
@@ -224,17 +223,14 @@ exports[`tooltip/Tooltip  2`] = `
     <button
       className="emotion-0"
       disabled={false}
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className=""
@@ -287,6 +283,294 @@ exports[`tooltip/Tooltip  2`] = `
       >
         Hello World
       </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`tooltip/Tooltip renders with props 1`] = `
+.emotion-8 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-2 {
+  fill: #535353;
+}
+
+.emotion-5 {
+  position: relative;
+}
+
+.emotion-7 {
+  position: absolute;
+  display: table;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  position: relative;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0 svg * {
+  fill: #ffffff;
+}
+
+.emotion-6 {
+  border: 1px solid #535353;
+  background-color: #535353;
+  border-radius: 2px;
+  max-height: 150px;
+}
+
+<div
+  className="emotion-8"
+>
+  <div
+    className="emotion-1"
+  >
+    <button
+      className="emotion-0"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      tabIndex="0"
+    >
+      <span
+        className=""
+      >
+        Click Me
+      </span>
+    </button>
+  </div>
+  <div
+    className="emotion-7"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="emotion-4"
+      role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
+    >
+      <svg
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+      >
+        <polygon
+          className="emotion-2"
+          points="0,6 6,0 12,6"
+        />
+        <polygon
+          className="emotion-2"
+          points="2.5,6 6,2.5 9.5,6"
+        />
+      </svg>
+    </div>
+    <div
+      className="emotion-6"
+      onScroll={[Function]}
+    >
+      <div
+        className="emotion-5"
+      >
+        Hello World
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`tooltip/Tooltip renders without props 1`] = `
+.emotion-7 {
+  position: relative;
+  display: inline-block;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-6 {
+  position: absolute;
+  display: none;
+  width: 100%;
+  z-index: 9999;
+  -webkit-transition-property: opacity,-webkit-transform;
+  -webkit-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  -webkit-transition-duration: 250ms;
+  transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  transition-timing-function: cubic-bezier(0.77,0,0.265,2);
+  touch-action: auto;
+  pointer-events: auto;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-1 {
+  fill: #535353;
+}
+
+.emotion-5 {
+  border: 1px solid #535353;
+  background-color: #535353;
+  border-radius: 2px;
+}
+
+.emotion-4 {
+  position: relative;
+}
+
+<div
+  className="emotion-7"
+>
+  <div
+    className="emotion-0"
+  />
+  <div
+    className="emotion-6"
+    style={
+      Object {
+        "left": "0px",
+        "top": "0px",
+      }
+    }
+  >
+    <div
+      aria-hidden="true"
+      className="emotion-3"
+      role="presentation"
+      style={
+        Object {
+          "left": "0px",
+          "top": "0px",
+        }
+      }
+    >
+      <svg
+        height="12"
+        viewBox="0 0 12 12"
+        width="12"
+      >
+        <polygon
+          className="emotion-1"
+          points="0,6 6,0 12,6"
+        />
+        <polygon
+          className="emotion-1"
+          points="2.5,6 6,2.5 9.5,6"
+        />
+      </svg>
+    </div>
+    <div
+      className="emotion-5"
+    >
+      <div
+        className="emotion-4"
+      />
     </div>
   </div>
 </div>

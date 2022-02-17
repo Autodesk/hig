@@ -6,7 +6,7 @@ import LogoTextPresenter from "./LogoTextPresenter";
 describe("top-nav/presenters/LogoTextPresenter", () => {
   takeSnapshotsOf(LogoTextPresenter, [
     {
-      description: "renders with children",
+      desc: "renders with children",
       props: {
         children: <span>Autodesk HIG</span>
       }

@@ -4,11 +4,11 @@ import ContentPresenter from "./ContentPresenter";
 describe("project-account-switcher/presenters/ContentPresenter", () => {
   takeSnapshotsOf(ContentPresenter, [
     {
-      description: "renders without props",
+      desc: "renders without props",
       props: {}
     },
     {
-      description: "renders with all props",
+      desc: "renders with all props",
       props: {
         accountTitle: "Accounts",
         accounts: [

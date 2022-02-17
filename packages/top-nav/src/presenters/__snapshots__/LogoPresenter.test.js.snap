@@ -12,16 +12,12 @@ exports[`top-nav/presenters/LogoPresenter dangerously sets inner HTML 1`] = `
 }
 
 <div
-  aria-label={undefined}
   className="emotion-0"
   dangerouslySetInnerHTML={
     Object {
       "__html": "hi",
     }
   }
-  href={undefined}
-  onClick={undefined}
-  title={undefined}
 />
 `;
 
@@ -37,12 +33,8 @@ exports[`top-nav/presenters/LogoPresenter renders as a link when a link is provi
 }
 
 <a
-  aria-label={undefined}
   className="emotion-0"
-  dangerouslySetInnerHTML={undefined}
   href="https://autodesk.com"
-  onClick={undefined}
-  title={undefined}
 />
 `;
 
@@ -60,9 +52,6 @@ exports[`top-nav/presenters/LogoPresenter renders attributes for a11y 1`] = `
 <div
   aria-label="a11y label"
   className="emotion-0"
-  dangerouslySetInnerHTML={undefined}
-  href={undefined}
-  onClick={undefined}
   title="a11y title"
 />
 `;
@@ -90,12 +79,7 @@ exports[`top-nav/presenters/LogoPresenter renders children that are strings with
 }
 
 <div
-  aria-label={undefined}
   className="emotion-1"
-  dangerouslySetInnerHTML={undefined}
-  href={undefined}
-  onClick={undefined}
-  title={undefined}
 >
   <h1
     className="emotion-0"
@@ -126,12 +110,7 @@ exports[`top-nav/presenters/LogoPresenter renders with child components 1`] = `
 }
 
 <div
-  aria-label={undefined}
   className="emotion-0"
-  dangerouslySetInnerHTML={undefined}
-  href={undefined}
-  onClick={undefined}
-  title={undefined}
 >
   <span
     data-test="child-component"
@@ -151,11 +130,6 @@ exports[`top-nav/presenters/LogoPresenter renders without props 1`] = `
 }
 
 <div
-  aria-label={undefined}
   className="emotion-0"
-  dangerouslySetInnerHTML={undefined}
-  href={undefined}
-  onClick={undefined}
-  title={undefined}
 />
 `;

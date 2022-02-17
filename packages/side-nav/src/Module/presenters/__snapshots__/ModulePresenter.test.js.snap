@@ -120,20 +120,14 @@ exports[`side-nav/Module/presenters/ModulePresenter snapshot tests renders with 
 
 <div
   className="emotion-5"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="emotion-3"
   >
     <div
       className="emotion-2"
-      href={undefined}
-      onClick={undefined}
-      onKeyDown={undefined}
       role="button"
       tabIndex="0"
-      target={undefined}
     >
       <div
         className="emotion-0"

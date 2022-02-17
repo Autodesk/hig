@@ -1,5 +1,985 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`side-nav/Module snapshot tests  1`] = `
+.emotion-5 {
+  outline: none;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  position: relative;
+  margin: 8px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 32px;
+  margin-right: 8px;
+}
+
+.emotion-3:hover svg * {
+  fill: #0696d7;
+  pointer-events: none;
+}
+
+.emotion-4 {
+  padding-left: 16px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding-left: 2px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #3c3c3c;
+}
+
+.emotion-2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  border-left: 2px solid transparent;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-2:focus svg *,
+.emotion-2:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-2:focus:before,
+.emotion-2:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  color: #0696d7;
+  border-left: 2px solid #0696d7;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 38px;
+}
+
+.emotion-0 svg {
+  pointer-events: none;
+}
+
+.emotion-1 {
+  font-weight: 700;
+  font-size: 14px;
+  padding-left: 4px;
+  padding-top: 5px;
+  line-height: 20px;
+}
+
+<div
+  className="emotion-5"
+>
+  <div
+    className="emotion-3"
+  >
+    <div
+      className="emotion-2"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="emotion-0"
+      />
+      <div
+        className="emotion-1"
+      >
+        Module
+      </div>
+    </div>
+  </div>
+  <div
+    className="emotion-4"
+  />
+</div>
+`;
+
+exports[`side-nav/Module snapshot tests  2`] = `
+.emotion-7 {
+  outline: none;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  position: relative;
+  margin: 8px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 32px;
+  margin-right: 8px;
+}
+
+.emotion-5:hover svg * {
+  fill: #0696d7;
+  pointer-events: none;
+}
+
+.emotion-6 {
+  padding-left: 16px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding-left: 2px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #3c3c3c;
+}
+
+.emotion-4:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  border-left: 2px solid transparent;
+}
+
+.emotion-4:focus,
+.emotion-4:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-4:focus svg *,
+.emotion-4:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-4:focus:before,
+.emotion-4:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  color: #0696d7;
+  border-left: 2px solid #0696d7;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 38px;
+}
+
+.emotion-0 svg {
+  pointer-events: none;
+}
+
+.emotion-1 {
+  font-weight: 700;
+  font-size: 14px;
+  padding-left: 4px;
+  padding-top: 5px;
+  line-height: 20px;
+}
+
+.emotion-2 {
+  fill: #808080;
+}
+
+.emotion-2 > * {
+  fill: #808080;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: auto;
+  padding: 6px 10px;
+}
+
+<div
+  className="emotion-7"
+>
+  <div
+    className="emotion-5"
+  >
+    <a
+      className="emotion-4"
+      href="http://example.com"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      tabIndex="0"
+      target="_blank"
+    >
+      <div
+        className="emotion-0"
+      />
+      <div
+        className="emotion-1"
+      >
+        Module
+      </div>
+      <div
+        className="emotion-3"
+      >
+        <svg
+          className="emotion-2"
+          height="24px"
+          width="24px"
+        >
+          <path
+            d="M18 18H6V6h4V5H5v14h14v-5h-1v4z"
+            fillRule="evenodd"
+          />
+          <path
+            d="M11.88 5.05L14 7.17l-3.54 3.54 2.83 2.83L16.83 10 19 12.12l1.41-8.48zm6.36 5l-1.43-1.48-3.53 3.54-1.4-1.4 3.53-3.54L14 5.76l5.15-.91z"
+            fillRule="evenodd"
+          />
+        </svg>
+      </div>
+    </a>
+  </div>
+  <div
+    className="emotion-6"
+  />
+</div>
+`;
+
+exports[`side-nav/Module snapshot tests  3`] = `
+.emotion-5 {
+  outline: none;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  position: relative;
+  margin: 8px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 32px;
+  margin-right: 8px;
+}
+
+.emotion-3:hover svg * {
+  fill: #0696d7;
+  pointer-events: none;
+}
+
+.emotion-4 {
+  padding-left: 16px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding-left: 2px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #3c3c3c;
+}
+
+.emotion-2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  border-left: 2px solid transparent;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-2:focus svg *,
+.emotion-2:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-2:focus:before,
+.emotion-2:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  color: #0696d7;
+  border-left: 2px solid #0696d7;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 38px;
+}
+
+.emotion-0 svg {
+  pointer-events: none;
+}
+
+.emotion-1 {
+  font-weight: 700;
+  font-size: 14px;
+  padding-left: 4px;
+  padding-top: 5px;
+  line-height: 20px;
+}
+
+<div
+  className="emotion-5"
+>
+  <div
+    className="emotion-3"
+  >
+    <a
+      className="emotion-2"
+      href="http://example.com"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      tabIndex="0"
+      target="_self"
+    >
+      <div
+        className="emotion-0"
+      />
+      <div
+        className="emotion-1"
+      >
+        Module
+      </div>
+    </a>
+  </div>
+  <div
+    className="emotion-4"
+  />
+</div>
+`;
+
+exports[`side-nav/Module snapshot tests  4`] = `
+.emotion-7 {
+  outline: none;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  position: relative;
+  margin: 8px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 32px;
+  margin-right: 8px;
+}
+
+.emotion-5:hover svg * {
+  fill: #0696d7;
+  pointer-events: none;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 38px;
+}
+
+.emotion-0 svg {
+  pointer-events: none;
+}
+
+.emotion-1 {
+  font-weight: 700;
+  font-size: 14px;
+  padding-left: 4px;
+  padding-top: 5px;
+  line-height: 20px;
+}
+
+.emotion-4 {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  height: 100%;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.emotion-3 {
+  fill: #808080;
+}
+
+.emotion-3 > * {
+  fill: #808080;
+}
+
+.emotion-6 {
+  padding-left: 46px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding-left: 2px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #3c3c3c;
+}
+
+.emotion-2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  color: #0696d7;
+  border-left: 2px solid #0696d7;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-2:focus svg *,
+.emotion-2:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-2:focus:before,
+.emotion-2:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  color: #0696d7;
+  border-left: 2px solid #0696d7;
+}
+
+.emotion-2 svg * {
+  fill: #0696d7;
+}
+
+<div
+  className="emotion-7"
+>
+  <div
+    className="emotion-5"
+  >
+    <div
+      className="emotion-2"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex="-1"
+    >
+      <div
+        className="emotion-0"
+      >
+        <div
+          data-test="icon"
+        />
+      </div>
+      <div
+        className="emotion-1"
+      >
+        Module
+      </div>
+    </div>
+    <div
+      aria-pressed={true}
+      className="emotion-4"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <svg
+        className="emotion-3"
+        height="10px"
+        width="10px"
+      >
+        <path
+          d="M8.71 3.22a.75.75 0 00-1.06 0L5 5.87 2.35 3.22a.75.75 0 00-1.06 0 .74.74 0 000 1.06l3.36 3.36a.5.5 0 00.7 0l3.36-3.36a.74.74 0 000-1.06z"
+        />
+      </svg>
+    </div>
+  </div>
+  <div
+    className="emotion-6"
+  >
+    <div
+      data-test="children"
+    />
+  </div>
+</div>
+`;
+
+exports[`side-nav/Module snapshot tests  5`] = `
+.emotion-5 {
+  outline: none;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  position: relative;
+  margin: 8px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 32px;
+  margin-right: 8px;
+}
+
+.emotion-3:hover svg * {
+  fill: #0696d7;
+  pointer-events: none;
+}
+
+.emotion-4 {
+  padding-left: 16px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding-left: 2px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #3c3c3c;
+}
+
+.emotion-2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  border-left: 2px solid transparent;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-2:focus svg *,
+.emotion-2:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-2:focus:before,
+.emotion-2:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  color: #0696d7;
+  border-left: 2px solid #0696d7;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 38px;
+}
+
+.emotion-0 svg {
+  pointer-events: none;
+}
+
+.emotion-1 {
+  font-weight: 700;
+  font-size: 14px;
+  padding-left: 4px;
+  padding-top: 5px;
+  line-height: 20px;
+}
+
+<div
+  className="emotion-5"
+>
+  <div
+    className="emotion-3"
+  >
+    <div
+      className="emotion-2"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="emotion-0"
+      />
+      <div
+        className="emotion-1"
+      >
+        Module
+      </div>
+    </div>
+  </div>
+  <div
+    className="emotion-4"
+  />
+</div>
+`;
+
+exports[`side-nav/Module snapshot tests  6`] = `
+.emotion-5 {
+  outline: none;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  position: relative;
+  margin: 8px 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  min-height: 32px;
+  margin-right: 8px;
+}
+
+.emotion-3:hover svg * {
+  fill: #0696d7;
+  pointer-events: none;
+}
+
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 38px;
+}
+
+.emotion-0 svg {
+  pointer-events: none;
+}
+
+.emotion-1 {
+  font-weight: 700;
+  font-size: 14px;
+  padding-left: 4px;
+  padding-top: 5px;
+  line-height: 20px;
+}
+
+.emotion-4 {
+  padding-left: 46px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  padding-left: 2px;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  cursor: pointer;
+  color: #3c3c3c;
+}
+
+.emotion-2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  color: #0696d7;
+  border-left: 2px solid #0696d7;
+}
+
+.emotion-2:focus,
+.emotion-2:hover {
+  outline: none;
+  color: #0696d7;
+}
+
+.emotion-2:focus svg *,
+.emotion-2:hover svg * {
+  fill: #0696d7;
+}
+
+.emotion-2:focus:before,
+.emotion-2:hover:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  color: #0696d7;
+  border-left: 2px solid #0696d7;
+}
+
+.emotion-2 svg * {
+  fill: #0696d7;
+}
+
+<div
+  className="emotion-5"
+>
+  <div
+    className="emotion-3"
+  >
+    <div
+      className="emotion-2"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="button"
+      tabIndex="0"
+    >
+      <div
+        className="emotion-0"
+      >
+        <span
+          data-test="icon"
+        />
+      </div>
+      <div
+        className="emotion-1"
+      >
+        Module
+      </div>
+    </div>
+  </div>
+  <div
+    className="emotion-4"
+  />
+</div>
+`;
+
 exports[`side-nav/Module snapshot tests renders a expanded menu with active children 1`] = `
 .emotion-7 {
   outline: none;
@@ -142,20 +1122,16 @@ exports[`side-nav/Module snapshot tests renders a expanded menu with active chil
 
 <div
   className="emotion-7"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="emotion-5"
   >
     <div
       className="emotion-2"
-      href={undefined}
       onClick={[Function]}
       onKeyDown={[Function]}
       role="button"
       tabIndex="-1"
-      target={undefined}
     >
       <div
         className="emotion-0"
@@ -181,12 +1157,10 @@ exports[`side-nav/Module snapshot tests renders a expanded menu with active chil
       <svg
         className="emotion-3"
         height="10px"
-        viewBox="0 0 10 10"
         width="10px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+          d="M8.71 3.22a.75.75 0 00-1.06 0L5 5.87 2.35 3.22a.75.75 0 00-1.06 0 .74.74 0 000 1.06l3.36 3.36a.5.5 0 00.7 0l3.36-3.36a.74.74 0 000-1.06z"
         />
       </svg>
     </div>
@@ -321,8 +1295,6 @@ exports[`side-nav/Module snapshot tests renders a link 1`] = `
 
 <div
   className="emotion-5"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="emotion-3"
@@ -332,7 +1304,6 @@ exports[`side-nav/Module snapshot tests renders a link 1`] = `
       href="http://example.com"
       onClick={[Function]}
       onKeyDown={[Function]}
-      role={undefined}
       tabIndex="0"
       target="_self"
     >
@@ -477,20 +1448,16 @@ exports[`side-nav/Module snapshot tests renders an active button 1`] = `
 
 <div
   className="emotion-5"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="emotion-3"
   >
     <div
       className="emotion-2"
-      href={undefined}
       onClick={[Function]}
       onKeyDown={[Function]}
       role="button"
       tabIndex="0"
-      target={undefined}
     >
       <div
         className="emotion-0"
@@ -653,8 +1620,6 @@ exports[`side-nav/Module snapshot tests renders an external link 1`] = `
 
 <div
   className="emotion-7"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="emotion-5"
@@ -664,7 +1629,6 @@ exports[`side-nav/Module snapshot tests renders an external link 1`] = `
       href="http://example.com"
       onClick={[Function]}
       onKeyDown={[Function]}
-      role={undefined}
       tabIndex="0"
       target="_blank"
     >
@@ -681,11 +1645,8 @@ exports[`side-nav/Module snapshot tests renders an external link 1`] = `
       >
         <svg
           className="emotion-2"
-          color={undefined}
           height="24px"
-          viewBox="0 0 24 24"
           width="24px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M18 18H6V6h4V5H5v14h14v-5h-1v4z"
@@ -825,20 +1786,16 @@ exports[`side-nav/Module snapshot tests renders with a click handlers 1`] = `
 
 <div
   className="emotion-5"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="emotion-3"
   >
     <div
       className="emotion-2"
-      href={undefined}
       onClick={[Function]}
       onKeyDown={[Function]}
       role="button"
       tabIndex="0"
-      target={undefined}
     >
       <div
         className="emotion-0"
@@ -976,20 +1933,16 @@ exports[`side-nav/Module snapshot tests renders with minimal props 1`] = `
 
 <div
   className="emotion-5"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="emotion-3"
   >
     <div
       className="emotion-2"
-      href={undefined}
       onClick={[Function]}
       onKeyDown={[Function]}
       role="button"
       tabIndex="0"
-      target={undefined}
     >
       <div
         className="emotion-0"

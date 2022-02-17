@@ -28,38 +28,37 @@ describe("Typography", () => {
 
   takeSnapshotsOf(Typography, [
     // new API tests
-    { description: "renders default Typography", props: props() },
+    { desc: "renders default Typography", props: props() },
     {
-      description: "renders Typography with align and fontWeight props",
+      desc: "renders Typography with align and fontWeight props",
       props: props({ align: "center", fontWeight: "bold", variant: "body" })
     },
     {
-      description: "renders body variant Typography",
+      desc: "renders body variant Typography",
       props: props({ variant: "body" })
     },
     {
-      description: "renders caption variant Typography",
+      desc: "renders caption variant Typography",
       props: props({ variant: "caption" })
     },
     {
-      description: "renders h1 variant Typography",
+      desc: "renders h1 variant Typography",
       props: props({ variant: "h1" })
     },
     {
-      description: "renders h2 variant Typography",
+      desc: "renders h2 variant Typography",
       props: props({ variant: "h2" })
     },
     {
-      description: "renders h3 variant Typography",
+      desc: "renders h3 variant Typography",
       props: props({ variant: "h3" })
     },
     {
-      description:
-        "renders h3 variant Typography with any arbitrary semantic element",
+      desc: "renders h3 variant Typography with any arbitrary semantic element",
       props: props({ variant: "h3", elementType: "figcaption" })
     },
     {
-      description: "renders Typography with className props",
+      desc: "renders Typography with className props",
       props: props({ className: "additonal-class" })
     }
   ]);

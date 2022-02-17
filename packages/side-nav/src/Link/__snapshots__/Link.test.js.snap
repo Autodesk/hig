@@ -44,11 +44,8 @@ exports[`side-nav/Link snapshot tests renders with no props 1`] = `
 
 <div
   className="emotion-1"
-  href={undefined}
   onClick={[Function]}
-  onFocus={undefined}
   onMouseOver={[Function]}
-  target={undefined}
 >
   <span
     className="emotion-0"

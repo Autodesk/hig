@@ -28,11 +28,11 @@ describe("TextLink", () => {
   describe("snapshot tests", () => {
     takeSnapshotsOf(TextLink, [
       {
-        description: "renders with no props",
+        desc: "renders with no props",
         props: {}
       },
       {
-        description: "renders with props",
+        desc: "renders with props",
         props: {
           link: "https://www.autodesk.com/",
           target: "_parent",
@@ -40,7 +40,7 @@ describe("TextLink", () => {
         }
       },
       {
-        description: "renders with custom className",
+        desc: "renders with custom className",
         props: {
           link: "https://www.autodesk.com/",
           target: "_parent",

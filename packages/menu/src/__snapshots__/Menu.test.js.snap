@@ -58,19 +58,16 @@ exports[`menu/Menu renders Menu and Options with checkmark and unselect 1`] = `
 
 <ul
   className="emotion-6"
-  id={undefined}
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
   onMouseMove={[Function]}
   role="listbox"
-  selected={undefined}
   tabIndex="0"
 >
   <li
     aria-selected={false}
     className="emotion-1"
-    disabled={undefined}
     id="option-1"
     multiple={false}
     onClick={[Function]}
@@ -78,7 +75,6 @@ exports[`menu/Menu renders Menu and Options with checkmark and unselect 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={false}
@@ -92,7 +88,6 @@ exports[`menu/Menu renders Menu and Options with checkmark and unselect 1`] = `
   <li
     aria-selected={true}
     className="emotion-3"
-    disabled={undefined}
     id="option-2"
     multiple={false}
     onClick={[Function]}
@@ -100,7 +95,6 @@ exports[`menu/Menu renders Menu and Options with checkmark and unselect 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={true}
@@ -114,7 +108,6 @@ exports[`menu/Menu renders Menu and Options with checkmark and unselect 1`] = `
   <li
     aria-selected={false}
     className="emotion-1"
-    disabled={undefined}
     id="option-3"
     multiple={false}
     onClick={[Function]}
@@ -122,7 +115,6 @@ exports[`menu/Menu renders Menu and Options with checkmark and unselect 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={false}
@@ -194,19 +186,16 @@ exports[`menu/Menu renders Menu and Options with defaultSelected 1`] = `
 
 <ul
   className="emotion-6"
-  id={undefined}
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
   onMouseMove={[Function]}
   role="listbox"
-  selected={undefined}
   tabIndex="0"
 >
   <li
     aria-selected={false}
     className="emotion-1"
-    disabled={undefined}
     id="option-1"
     multiple={false}
     onClick={[Function]}
@@ -214,7 +203,6 @@ exports[`menu/Menu renders Menu and Options with defaultSelected 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={false}
@@ -228,7 +216,6 @@ exports[`menu/Menu renders Menu and Options with defaultSelected 1`] = `
   <li
     aria-selected={true}
     className="emotion-3"
-    disabled={undefined}
     id="option-2"
     multiple={false}
     onClick={[Function]}
@@ -236,7 +223,6 @@ exports[`menu/Menu renders Menu and Options with defaultSelected 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={true}
@@ -250,7 +236,6 @@ exports[`menu/Menu renders Menu and Options with defaultSelected 1`] = `
   <li
     aria-selected={false}
     className="emotion-1"
-    disabled={undefined}
     id="option-3"
     multiple={false}
     onClick={[Function]}
@@ -258,7 +243,6 @@ exports[`menu/Menu renders Menu and Options with defaultSelected 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={false}
@@ -387,19 +371,16 @@ exports[`menu/Menu renders Menu and Options with defaultSelected and checkmark v
 
 <ul
   className="emotion-12"
-  id={undefined}
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
   onMouseMove={[Function]}
   role="listbox"
-  selected={undefined}
   tabIndex="0"
 >
   <li
     aria-selected={false}
     className="emotion-3"
-    disabled={undefined}
     id="option-1"
     multiple={false}
     onClick={[Function]}
@@ -407,7 +388,6 @@ exports[`menu/Menu renders Menu and Options with defaultSelected and checkmark v
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={false}
@@ -418,9 +398,7 @@ exports[`menu/Menu renders Menu and Options with defaultSelected and checkmark v
       <svg
         className="emotion-0"
         height="16px"
-        viewBox="0 0 16 16"
         width="16px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -436,7 +414,6 @@ exports[`menu/Menu renders Menu and Options with defaultSelected and checkmark v
   <li
     aria-selected={true}
     className="emotion-7"
-    disabled={undefined}
     id="option-2"
     multiple={false}
     onClick={[Function]}
@@ -444,7 +421,6 @@ exports[`menu/Menu renders Menu and Options with defaultSelected and checkmark v
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={true}
@@ -455,9 +431,7 @@ exports[`menu/Menu renders Menu and Options with defaultSelected and checkmark v
       <svg
         className="emotion-0"
         height="16px"
-        viewBox="0 0 16 16"
         width="16px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -473,7 +447,6 @@ exports[`menu/Menu renders Menu and Options with defaultSelected and checkmark v
   <li
     aria-selected={false}
     className="emotion-3"
-    disabled={undefined}
     id="option-3"
     multiple={false}
     onClick={[Function]}
@@ -481,7 +454,6 @@ exports[`menu/Menu renders Menu and Options with defaultSelected and checkmark v
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={false}
@@ -492,9 +464,7 @@ exports[`menu/Menu renders Menu and Options with defaultSelected and checkmark v
       <svg
         className="emotion-0"
         height="16px"
-        viewBox="0 0 16 16"
         width="16px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -582,19 +552,16 @@ exports[`menu/Menu renders checkmark indicator Menu and Options 1`] = `
 
 <ul
   className="emotion-12"
-  id={undefined}
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
   onMouseMove={[Function]}
   role="listbox"
-  selected={undefined}
   tabIndex="0"
 >
   <li
     aria-selected={false}
     className="emotion-3"
-    disabled={undefined}
     id="option-1"
     multiple={false}
     onClick={[Function]}
@@ -602,7 +569,6 @@ exports[`menu/Menu renders checkmark indicator Menu and Options 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={false}
@@ -613,9 +579,7 @@ exports[`menu/Menu renders checkmark indicator Menu and Options 1`] = `
       <svg
         className="emotion-0"
         height="16px"
-        viewBox="0 0 16 16"
         width="16px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -631,7 +595,6 @@ exports[`menu/Menu renders checkmark indicator Menu and Options 1`] = `
   <li
     aria-selected={false}
     className="emotion-3"
-    disabled={undefined}
     id="option-2"
     multiple={false}
     onClick={[Function]}
@@ -639,7 +602,6 @@ exports[`menu/Menu renders checkmark indicator Menu and Options 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={false}
@@ -650,9 +612,7 @@ exports[`menu/Menu renders checkmark indicator Menu and Options 1`] = `
       <svg
         className="emotion-0"
         height="16px"
-        viewBox="0 0 16 16"
         width="16px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -668,7 +628,6 @@ exports[`menu/Menu renders checkmark indicator Menu and Options 1`] = `
   <li
     aria-selected={false}
     className="emotion-3"
-    disabled={undefined}
     id="option-3"
     multiple={false}
     onClick={[Function]}
@@ -676,7 +635,6 @@ exports[`menu/Menu renders checkmark indicator Menu and Options 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={false}
@@ -687,9 +645,7 @@ exports[`menu/Menu renders checkmark indicator Menu and Options 1`] = `
       <svg
         className="emotion-0"
         height="16px"
-        viewBox="0 0 16 16"
         width="16px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M6.2 12L2 8.1l1.3-1.3 2.9 2.7L12.7 3 14 4.3 6.2 12z"
@@ -745,19 +701,16 @@ exports[`menu/Menu renders default Menu and Options 1`] = `
 
 <ul
   className="emotion-6"
-  id={undefined}
   onBlur={[Function]}
   onFocus={[Function]}
   onKeyDown={[Function]}
   onMouseMove={[Function]}
   role="listbox"
-  selected={undefined}
   tabIndex="0"
 >
   <li
     aria-selected={false}
     className="emotion-1"
-    disabled={undefined}
     id="option-1"
     multiple={false}
     onClick={[Function]}
@@ -765,7 +718,6 @@ exports[`menu/Menu renders default Menu and Options 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={false}
@@ -779,7 +731,6 @@ exports[`menu/Menu renders default Menu and Options 1`] = `
   <li
     aria-selected={false}
     className="emotion-1"
-    disabled={undefined}
     id="option-2"
     multiple={false}
     onClick={[Function]}
@@ -787,7 +738,6 @@ exports[`menu/Menu renders default Menu and Options 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={false}
@@ -801,7 +751,6 @@ exports[`menu/Menu renders default Menu and Options 1`] = `
   <li
     aria-selected={false}
     className="emotion-1"
-    disabled={undefined}
     id="option-3"
     multiple={false}
     onClick={[Function]}
@@ -809,7 +758,6 @@ exports[`menu/Menu renders default Menu and Options 1`] = `
     onMouseDown={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
-    onMouseOver={undefined}
     onMouseUp={[Function]}
     role="option"
     selected={false}

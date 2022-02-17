@@ -16,11 +16,11 @@ describe("modal/presenters/ModalPresenter", () => {
 
   [
     {
-      description: "renders without props",
+      desc: "renders without props",
       props: { styles }
     },
     {
-      description: "renders with header children",
+      desc: "renders with header children",
       props: {
         children: [<p key="p">Body</p>],
         headerChildren: [<h1 key="h1">Title</h1>],
@@ -29,7 +29,7 @@ describe("modal/presenters/ModalPresenter", () => {
       }
     },
     {
-      description: "renders with all props",
+      desc: "renders with all props",
       props: {
         children: [<p key="p">Body</p>],
         onCloseClick: function onCloseClick() {},

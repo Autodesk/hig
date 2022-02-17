@@ -55,3 +55,59 @@ exports[`spacer/Spacer  4`] = `
   className="emotion-0"
 />
 `;
+
+exports[`spacer/Spacer renders with no props 1`] = `
+.emotion-0 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex: 0 0 16px;
+  -ms-flex: 0 0 16px;
+  flex: 0 0 16px;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`spacer/Spacer renders with size 1`] = `
+.emotion-0 {
+  width: 40px;
+  height: 40px;
+  -webkit-flex: 0 0 40px;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`spacer/Spacer renders with size and spacing 1`] = `
+.emotion-0 {
+  width: 40px;
+  height: 40px;
+  -webkit-flex: 0 0 40px;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`spacer/Spacer renders with spacing 1`] = `
+.emotion-0 {
+  width: 16px;
+  height: 16px;
+  -webkit-flex: 0 0 16px;
+  -ms-flex: 0 0 16px;
+  flex: 0 0 16px;
+}
+
+<div
+  className="emotion-0"
+/>
+`;

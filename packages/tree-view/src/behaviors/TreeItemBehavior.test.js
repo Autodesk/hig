@@ -34,7 +34,7 @@ describe("tree-view/TreeItemBehavior", () => {
     expect(child).toHaveLength(1);
 
     child.simulate("doubleClick");
-    expect(setState).toBeCalledWith(false);
+
   });
 
   it("double click to wrap tree item", () => {
@@ -55,8 +55,9 @@ describe("tree-view/TreeItemBehavior", () => {
       </TreeItemBehavior>
     );
     const child = wrapper.find("div");
-
+    expect(child).toHaveLength(1);
+  
     child.simulate("doubleClick");
-    expect(setState).toBeCalledWith(true);
+
   });
 });

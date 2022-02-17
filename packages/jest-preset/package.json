@@ -5,8 +5,8 @@
   "dependencies": {
     "@babel/core": "^7.0.0",
     "babel-jest": "^22.4.3",
+    "babel-polyfill": "^6.26.0",
     "enzyme": "^3.0.0",
-    "enzyme-adapter-react-16": "^1.15.6",
     "jest-emotion": "^10.0.0",
     "jest-enzyme": "^3.8.3",
     "jest-extended": "^0.8.1",
@@ -15,7 +15,6 @@
   "devDependencies": {
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
     "enzyme": "^3.0.0",
-    "enzyme-adapter-react-16": "^1.0.0",
     "jest-enzyme": "^3.8.3",
     "raf": "^3.3.2",
     "react-test-renderer": "^16.0.0"
