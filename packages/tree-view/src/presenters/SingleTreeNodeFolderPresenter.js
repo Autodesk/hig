@@ -163,5 +163,9 @@ SingleTreeNodeFolderPresenter.propTypes = {
   icon: PropTypes.node,
   id: PropTypes.string,
   indicator: PropTypes.string,
+  itemRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.any) })
+  ]),
   label: PropTypes.node
 };

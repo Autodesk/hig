@@ -98,7 +98,7 @@ TreeItem.propTypes = {
    */
   itemRef: PropTypes.oneOfType([
     PropTypes.func,
-    PropTypes.shape({ current: PropTypes.any })
+    PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.any) })
   ]),
   /**
    * Labels the TreeItem, this is rendered before all children
