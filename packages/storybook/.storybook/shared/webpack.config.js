@@ -4,31 +4,31 @@ module.exports = storybookBaseConfig => {
   // Ensure Babel transpiles story source in adjacent packages
   const babelRule = storybookBaseConfig.module.rules[0];
   babelRule.include = [path.resolve(__dirname, "../../../../packages")];
-  babelRule.use[0].options = {
-    sourceType: "unambiguous",
-    babelrc: false,
-    presets: ["react-app"]
-  };
+  
   storybookBaseConfig.module.rules.push(
     {
       test: /\.(scss|css)$/,
-      loaders: ["style-loader", "css-loader", "sass-loader"]
+      use: ["style-loader", "css-loader", "sass-loader"]
+    },
+    {
+      test: /\.json$/,
+      use: ["json-loader"]
     },
     {
       test: /\.svg$/,
       issuer: /\.js$/,
-      loaders: [
+      use: [
         {
           loader: "babel-loader"
         },
         {
-          loader: "@svgr/webpack"
+          loader: "react-svg-loader"
         }
       ]
     },
     {
       test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
-      loaders: [
+      use: [
         {
           loader: "file-loader",
           options: {
@@ -38,10 +38,8 @@ module.exports = storybookBaseConfig => {
       ]
     }
   );
-
   storybookBaseConfig.resolve.modules.push(
     path.resolve(__dirname, "../../../../packages")
   );
-
   return storybookBaseConfig;
 };
