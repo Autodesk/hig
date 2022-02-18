@@ -4,7 +4,7 @@ module.exports = storybookBaseConfig => {
   // Ensure Babel transpiles story source in adjacent packages
   const babelRule = storybookBaseConfig.module.rules[0];
   babelRule.include = [path.resolve(__dirname, "../../../../packages")];
-  
+
   storybookBaseConfig.module.rules.push(
     {
       test: /\.(scss|css)$/,
