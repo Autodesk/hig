@@ -7,6 +7,9 @@ This package is for use by developers and designers to get feedback on component
 Rendering components in development on the current branch requires some set up.
 
 ```
+cd ../node_modules/react
+yarn link react
+cd ../acceptance
 yarn bootstrap
 ```
 
