@@ -1,5 +1,15 @@
 import React, { useEffect, useState, useMemo, useCallback } from "react";
-import { useTable, useSortBy, useGlobalFilter, usePagination, useFilters, useRowSelect, useResizeColumns, useFlexLayout } from "react-table";
+import { css } from "emotion";
+import {
+  useResizeColumns,
+  useFilters,
+  useFlexLayout,
+  useGlobalFilter,
+  usePagination,
+  useRowSelect,
+  useSortBy,
+  useTable
+} from "react-table";
 import { useSticky } from 'react-table-sticky';
 import { format } from "date-fns";
 import isValid from "date-fns/isValid";
@@ -275,7 +285,7 @@ const TableWithSticky = ({
           }
             <div
               {...getTableProps()}
-              css={styles.higTable}
+              className={css(styles.higTable)}
               onFocus={handleFocus}
               onKeyDown={handleKeyDown}
               ref={setTableRef}
@@ -283,9 +293,13 @@ const TableWithSticky = ({
               style={handleStickyToggle()}
               {...tableSpreadProps}
             >
-              <div css={styles.higTableHeaderWrapper} ref={setHeaderRef}>
+              <div className={css(styles.higTableHeaderWrapper)} ref={setHeaderRef}>
                 {headerGroups.map(headerGroup => (
-                  <div {...headerGroup.getHeaderGroupProps()} {...headerRowSpreadProps} css={styles.higTableHeaderRow}>
+                  <div
+                    {...headerGroup.getHeaderGroupProps()}
+                    {...headerRowSpreadProps}
+                    className={css(styles.higTableHeaderRow)}
+                  >
                     {headerGroup.headers.map(column => {
                       const resizingStyles = column.canResize
                         ? stylesheet({isResizing: column.isResizing}, resolvedRoles, metadata)
@@ -309,7 +323,7 @@ const TableWithSticky = ({
                           {// column.canResize && (
                             <div
                               {...(column.canResize ? {...column.getResizerProps()} : {})}
-                              css={resizingStyles?.higTableHeaderResizer}
+                              className={css(resizingStyles?.higTableHeaderResizer)}
                               onClick={event => event.stopPropagation()}
                             />
                           /* ) */}
@@ -325,7 +339,7 @@ const TableWithSticky = ({
                   </div>
                 ))}
               </div>
-              <div {...getTableBodyProps()} css={styles.higTableBody}>
+              <div {...getTableBodyProps()} className={css(styles.higTableBody)}>
                 {/* <VariableSizeList
                   height={windowHeight}
                   itemCount={rows.length}
@@ -348,8 +362,10 @@ const TableWithSticky = ({
                     prepareRow(row);
 
                     return (
-                      <div /* onClick={() => handleRowExpandClick(i)} */>
-                        <div {...row.getRowProps()} css={rowStyles.higTableRow} {...rowSpreadProps}>
+                      <div
+                        // onClick={() => handleRowExpandClick(i)}
+                      >
+                        <div {...row.getRowProps()} {...rowSpreadProps} className={css(rowStyles.higTableRow)}>
                           {row.cells.map(cell => {
                             const cellColumnIndex = getColumnHeaderArray.indexOf(cell.column.Header);
                             const cellRowIndex = rowIndex;

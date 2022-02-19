@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
@@ -31,12 +32,12 @@ export default function TableHeaderCellPresenter(props) {
                 return (
             	    <div
             	      {...props}
-            	      css={styles.higTableHeader}
+            	      className={css(styles.higTableHeader)}
                       onClick={handleClick}
                       className="th"
                       {...(isSelectableHeader ? {'data-cell-coords': `${headerIndex}_-1`} : {})}
             	    >
-                        <div css={styles.higTableHeaderContentWrapper}>
+                        <div className={css(styles.higTableHeaderContentWrapper)}>
                             {children}
                         </div>
             	    </div>

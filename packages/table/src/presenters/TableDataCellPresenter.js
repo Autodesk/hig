@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
@@ -33,12 +34,11 @@ export default function TableDataCellPresenter(props) {
                 return (
             		<div
                         {...otherProps}
-                        css={styles.higTableCell}
+                        className={css(styles.higTableCell)}
                         data-cell-coords={`${cellColumnIndex}_${cellRowIndex}`}
                         onClick={handleCellClick}
-                        className="td"
                     >
-                        <div css={styles.higTableCellContentWrapper}>
+                        <div className={css(styles.higTableCellContentWrapper)}>
                             {children}
                         </div>
                     </div>

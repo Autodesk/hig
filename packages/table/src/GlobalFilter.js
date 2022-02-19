@@ -1,16 +1,12 @@
-import React from 'react';
-import styled from "@emotion/styled";
+import React from "react";
+import { css } from "emotion";
 
-const SearchField = styled.div`
-  margin-bottom: 20px;
-`;
+const styles = {
+  marginBottom: "20px"
+};
 
-const GlobalFilter = ({filter, setFilter, children}) => {
-  return (
-    <SearchField>
-      {children({filter, setFilter})}
-    </SearchField>
-  )
-}
+const GlobalFilter = ({filter, setFilter, children}) => (
+  <div className={css(styles)}>{children({filter, setFilter})}</div>
+);
 
 export default GlobalFilter;
