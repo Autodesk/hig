@@ -11,7 +11,6 @@ import InputPage from "./pages/InputPage";
 import LabelPage from "./pages/LabelPage";
 import MenuPage from "./pages/MenuPage";
 import ModalPage from "./pages/ModalPage";
-import MuiButtonsPage from "./pages/material-ui/ButtonsPage";
 import NumericInputPage from "./pages/NumericInputPage";
 import ProgressBarPage from "./pages/ProgressBarPage";
 import ProgressRingPage from "./pages/ProgressRingPage";
@@ -51,5 +50,4 @@ export default [
   { path: "/toggle/", component: TogglePage, label: "Toggle" },
   { path: "/tooltip/", component: TooltipPage, label: "Tooltip" },
   { path: "/typography/", component: TypographyPage, label: "Typography" },
-  { path: "/material-ui/buttons/", component: MuiButtonsPage, label: "Material Buttons" },
 ];
