@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { ThemeContext } from "@hig/theme-context";
 import TableWithSticky from "./TableWithSticky";
 import TableBehavior from './behaviors/TableBehavior';

@@ -1399,7 +1399,7 @@
     prop-types "^15.7.1"
     react-lifecycles-compat "^3.0.4"
 
-"@hig/dropdown@^2.4.0", "@hig/dropdown@^2.4.3":
+"@hig/dropdown@^2.4.3":
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/@hig/dropdown/-/dropdown-2.4.3.tgz#769c60863126db600d4d19d4e9359df2bdf0ebf5"
   integrity sha512-YWzWMyertXdiiVtxlwnWl5qa1d3m08m0lsgm3FckwQqc6R0jZ+o4J3VzyBDpWYbPjNqwLcoYM70U1E3aFI4Nyg==
@@ -1606,7 +1606,7 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
-"@hig/surface@^1.2.0", "@hig/surface@^1.2.2":
+"@hig/surface@^1.2.2":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@hig/surface/-/surface-1.2.2.tgz#e105eef038da9d9194e543086277d5fb5c7c3e05"
   integrity sha512-PEkZt/Cmw5OOkRnvBDnS47UJd6Hj8SPW/STIwXKcwvLCMqoGQVk7x1EjvALhzW/RPsac/XViDBV5dt2tU5y7bA==
