@@ -1,6 +1,10 @@
 module.exports = function createTestPreset() {
   return {
-    presets: [["@babel/preset-env", { modules: "commonjs" }], "@babel/preset-react"],
+    presets: [
+      ["@babel/preset-env", { modules: "commonjs" }],
+      "@babel/preset-react",
+      "@emotion/babel-preset-css-prop"
+    ],
     plugins: [
       "react-docgen",
       "@babel/plugin-proposal-object-rest-spread",

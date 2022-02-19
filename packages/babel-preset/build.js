@@ -11,7 +11,8 @@ module.exports = function createBuildPreset() {
           targets: ">1%"
         }
       ],
-      "@babel/preset-react"
+      "@babel/preset-react",
+      "@emotion/babel-preset-css-prop"
     ],
     plugins: [
       "react-docgen",
