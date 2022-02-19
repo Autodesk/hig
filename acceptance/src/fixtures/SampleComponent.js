@@ -1,35 +1,30 @@
 import React from "react";
-import styled from "@emotion/styled";
+import { css } from "emotion";
 
 import {Complete16} from '@hig/icons';
 
-const StylesButton = styled.button`
-  padding: 6px;
-  border: none;
-  background: none;
-  margin-right: 10px;
-`;
-
-const StylesItems = styled.div`
-  border: 0px solid palevioletred;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-
-  label {
-    margin-top: 4px;
-    margin-right: 10px;
+const styles = {
+  button: {
+    height: "90%",
+    padding: "6px",
+    border: "none",
+    background: "none",
+    marginRight: "10px"
+  },
+  label: {
+    marginTop: "4px",
+    marginRight: "10px"
+  },
+  nameWrapper: {
+    marginTop: "4px"
+  },
+  items: {
+    border: "0px solid palevioletred",
+    borderRadius: "10px",
+    display: "flex",
+    justifyContent: "space-between"
   }
-
-  button {
-    height: 90%
-  }
-`;
-
-const StylesName = styled.div`
-  margin-top: 4px;
-`;
-
+}
 const SampleComponent = props => {
   const curItem = props.passedData.data[props.passedData.value - 1];
   const handleClick = () => {
@@ -37,11 +32,11 @@ const SampleComponent = props => {
   }
 
   return (
-    <StylesItems>
-        <StylesButton onClick={handleClick()}><Complete16/></StylesButton>
-        <label>{props.passedData.value}</label>
-        <StylesName>{curItem?.name}</StylesName>
-    </StylesItems>
+    <div className={css(styles.items)}>
+        <button className={css(styles.button)} onClick={handleClick()}><Complete16/></button>
+        <label className={css(styles.label)}>{props.passedData.value}</label>
+        <div className={css(styles.nameWrapper)}>{curItem?.name}</div>
+    </div>
   );
 };
 

@@ -1,20 +1,20 @@
 import React from 'react';
+import { css } from "emotion";
 import { MultiCheckbox } from './MultiCheckbox';
-import styled from "@emotion/styled";
 
-const ShowHideStyles = styled.div`
-  width: 300px;
-  border-spacing: 0;
-  border: 1px solid palevioletred;
-  color: black;
-  font-family: sans-serif;
-  margin-bottom: 50px;
-  padding: 10px;
-`;
+const styles = {
+  width: "300px",
+  borderSpacing: 0,
+  border: "1px solid palevioletred",
+  color: "black",
+  fontFamily: "sans-serif",
+  marginBottom: "50px",
+  padding: "10px"
+};
 
 const ColumnShowHideComponent = (props) => {
     return (
-        <ShowHideStyles>
+        <div className={css(styles)}>
             <div>
             <MultiCheckbox {...props.passedData?.toggleHideAllColumnsProps()} /> Toggle All
             </div>
@@ -26,7 +26,7 @@ const ColumnShowHideComponent = (props) => {
                     </div>
                     ))
             }
-        </ShowHideStyles>
+        </div>
     )
 }
 

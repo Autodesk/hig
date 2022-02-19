@@ -1,16 +1,16 @@
 import React from 'react';
-import styled from "@emotion/styled";
+import { css } from "emotion";
 
-const StylesExpanded = styled.div`
-    height: 500px;
-    padding: 20px;
-`
+const styles = {
+    height: "500px",
+    padding: "20px"
+}
 
 const ExpandedComponent = () => {
     return (
-        <StylesExpanded>
+        <div className={css(styles)}>
             Custom Expanded Content
-        </StylesExpanded>
+        </div>
     )
 }
 

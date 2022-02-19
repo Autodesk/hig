@@ -1,28 +1,25 @@
 import React from 'react';
-import styled from "@emotion/styled";
+import { css } from "emotion";
 
-const PaginationHolder = styled.div`
-  font-family: sans-serif;
-  margin: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 700px;
-`;
-
-const PaginationButton = styled.button`
-  background-color: palevioletred;
-  border: 1px solid palevioletred;
-  border-radius: 10px;
-  cursor: pointer;
-  margin-left: 10px;
-  color: white;
-  padding: 10px;
-`;
-
-const PaginationLabel = styled.span`
-  
-`;
+const styles = {
+  PaginationHolder: {
+    fontFamily: "sans-serif",
+    margin: "20px",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "700px"
+  },
+  PaginationButton: {
+    backgroundColor: "palevioletred",
+    border: "1px solid palevioletred",
+    borderRadius: "10px",
+    cursor: "pointer",
+    marginLeft: "10px",
+    color: "white",
+    padding: "10px"
+  },
+};
 
 const PaginationInput = (pageDetails) => {
   const {
@@ -35,18 +32,30 @@ const PaginationInput = (pageDetails) => {
   } = pageDetails?.passedData;
   
   return (
-    <PaginationHolder>
-      <PaginationLabel>
+    <div className={css(styles.PaginationHolder)}>
+      <span>
         Page{' '}
         <strong>
           {pageIndex + 1} of {pageOptions.length}
         </strong>{' '}
-      </PaginationLabel>
+      </span>
       <div>
-        <PaginationButton onClick={() => previousPage()} disabled={!canPreviousPage}>Previous</PaginationButton>
-        <PaginationButton onClick={() => nextPage()} disabled={!canNextPage}>Next</PaginationButton>
+        <button
+          className={css(styles.PaginationButton)}
+          onClick={() => previousPage()}
+          disabled={!canPreviousPage}
+        >
+          Previous
+        </button>
+        <button
+          className={css(styles.PaginationButton)}
+          onClick={() => nextPage()}
+          disabled={!canNextPage}
+        >
+          Next
+        </button>
       </div>
-    </PaginationHolder>
+    </div>
   )
 }
 
