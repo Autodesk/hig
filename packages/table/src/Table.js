@@ -36,7 +36,6 @@ const Table = (props) => {
             getActiveRowIndex,
             getAllMultiSelectedRows,
             getColumnHeaderArray,
-            handleFocus,
             handleKeyDown,
             setActiveColumnIndex,
             setActiveMultiSelectColumn,
@@ -63,7 +62,6 @@ const Table = (props) => {
               getActiveRowIndex={getActiveRowIndex}
               getAllMultiSelectedRows={getAllMultiSelectedRows}
               getColumnHeaderArray={getColumnHeaderArray}
-              handleFocus={handleFocus}
               handleKeyDown={handleKeyDown}
               setActiveColumnIndex={setActiveColumnIndex}
               setActiveMultiSelectColumn={setActiveMultiSelectColumn}
