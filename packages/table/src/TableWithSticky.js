@@ -11,9 +11,9 @@ import {
   useTable
 } from "react-table";
 import { useSticky } from 'react-table-sticky';
+import {useWindowSize} from '@react-hook/window-size';
 import { format } from "date-fns";
 import isValid from "date-fns/isValid";
-import { VariableSizeList } from 'react-window'
 
 import { ThemeContext } from "@hig/theme-context";
 import Checkbox from '@hig/checkbox';
@@ -27,8 +27,6 @@ import SortColumns from './SortColumns';
 import Pagination from './Pagination';
 
 import stylesheet from "./presenters/stylesheet";
-
-import {useWindowSize} from '@react-hook/window-size';
 
 const renderCellData = cell => {
   const cellDate = new Date(cell.render("Cell").props.value);
