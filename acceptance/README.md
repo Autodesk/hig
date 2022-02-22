@@ -8,9 +8,10 @@ Rendering components in development on the current branch requires some set up.
 
 ```
 cd ../node_modules/react
-yarn link react
+yarn link
 cd ../acceptance
 yarn bootstrap
+yarn link react
 ```
 
 ## Starting the server
