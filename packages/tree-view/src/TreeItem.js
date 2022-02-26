@@ -90,20 +90,20 @@ TreeItem.propTypes = {
    */
   id: PropTypes.string.isRequired,
   /**
+   * Used to assign a ref object to the current tree item
+   */
+  itemRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.any })
+  ]),
+  /**
    * Labels the TreeItem, this is rendered before all children
    */
   label: PropTypes.node,
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func,
-  /**
-   * Used to assign a ref object to the current tree item
-   */
-  itemRef: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.shape({ current: PropTypes.any })
-  ])
+  stylesheet: PropTypes.func
 };
 
 TreeItem.defaultProps = {

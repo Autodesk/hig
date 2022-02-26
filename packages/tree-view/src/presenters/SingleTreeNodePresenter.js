@@ -7,7 +7,7 @@ import { createButtonEventHandlers, createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
 export default function SingleTreeNodePresenter(props) {
-  const { icon, id, label, itemRef, ...otherProps } = props;
+  const { icon, id, itemRef, label, ...otherProps } = props;
   const {
     className,
     onClick,
