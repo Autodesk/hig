@@ -1,19 +1,31 @@
 import React from "react";
 import { ThemeContext } from "@hig/theme-context";
 import TileBehavior from './behaviors/TileBehavior';
+import TilePresenter from './presenters/TilePresenter';
 
-const Tile = () => {
+const Tile = (props) => {
+  const {
+    headerContainer,
+    backgroundColor,
+    divider,
+    title,
+    subtitle,
+    orientation,
+  } = props;
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => (
         <TileBehavior>
           {
             () => (
-              <>
-                <div>Container</div>
-                <div>Title</div>
-                <div>Subtitle</div>
-              </>
+              <TilePresenter 
+                headerContainer={headerContainer}
+                backgroundColor={backgroundColor}
+                divider={divider}
+                title={title}
+                subtitle={subtitle}
+                orientation={orientation}
+              />
             )
           }
         </TileBehavior>
