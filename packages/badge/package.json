@@ -1,0 +1,60 @@
+{
+  "name": "@hig/badge",
+  "version": "1.0.0-alpha",
+  "description": "HIG Badge component",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "files": [
+    "build/*"
+  ],
+  "dependencies": {
+    "emotion": "^10.0.0",
+    "prop-types": "^15.7.1"
+  },
+  "devDependencies": {
+    "@hig/babel-preset": "^0.1.1",
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/icons": "^4.1.0",
+    "@hig/jest-preset": "^0.1.0",
+    "@hig/scripts": "^0.1.2",
+    "@hig/semantic-release-config": "^0.1.0"
+  },
+  "peerDependencies": {
+    "@hig/theme-context": "^4.1.0",
+    "@hig/theme-data": "^2.23.1",
+    "react": "^17.0.0"
+  },
+  "scripts": {
+    "build": "hig-scripts-build",
+    "lint": "hig-scripts-lint",
+    "test": "hig-scripts-test",
+    "release": "hig-scripts-release"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "jest": {
+    "preset": "@hig/jest-preset"
+  },
+  "release": {
+    "extends": "@hig/semantic-release-config"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
+      }
+    }
+  }
+}
