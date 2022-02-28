@@ -19,6 +19,7 @@ const TilePresenter = (props) => {
     notification,
     overflowMenu,
     cta,
+    actionClarifier,
     showCheckbox,
     showPin,
   } = props;
@@ -58,7 +59,16 @@ const TilePresenter = (props) => {
                 </div>
               )}
             </div>
-            <div className={css(styles.higTileHeader)}><HeaderContainer /></div>
+            <div className={css(styles.higTileHeader)}>
+              <HeaderContainer />
+              {actionClarifier && (
+                <div className={css(styles.higTileActionClarifier)}>
+                  <div className={css(styles.higTileActionClarifierButton)}>
+                    <Button title={actionClarifier} />
+                  </div>
+                </div>
+              )}
+            </div>
             
             <div className={css(styles.higTileContent)}>
               <div className={css(styles.higTileIdentifierContainer)}>

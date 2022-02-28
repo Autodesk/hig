@@ -37,10 +37,25 @@ export default function stylesheet(props, themeData, metadata) {
 
     },
     higTileHeader: {
+      position: 'relative',
       margin: '0',
       padding: backgroundColor ? '0' : '10px',
       backgroundColor: backgroundColor ? backgroundColor : 'none',
       borderBottom: divider && backgroundColor ? `1px solid ${divider}` : 'none'
+    },
+    higTileActionClarifier: {
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    },
+    higTileActionClarifierButton: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      padding: '50% 0',
     },
     higTileIdentifierContainer: {
       position: 'absolute',
