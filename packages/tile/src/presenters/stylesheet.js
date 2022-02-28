@@ -20,9 +20,21 @@ export default function stylesheet(props, themeData, metadata) {
       right: '-5px',
     },
     higTileNotificationBadge: {
-      backgroundColor: 'grey',
-      width: '50px',
-      color: '#fff',
+
+    },
+    higTileSelectionOptions: {
+      display: 'flex',
+      justifyContent: 'space-evenly',
+      position: 'absolute',
+      zIndex: '3',
+      top: '10px',
+      left: '10px',
+    },
+    higTileSelectionOptionCheckbox: {
+      padding: '0 5px 0 0'
+    },
+    higTileSelectionOptionPin: {
+
     },
     higTileHeader: {
       margin: '0',
@@ -58,6 +70,14 @@ export default function stylesheet(props, themeData, metadata) {
     },
     higTileAdditionalContent: {
       padding: '5px 0',
+    },
+    higGroupIcons: {
+      display: 'flex',
+      justifyContent: 'space-evenly',
+      alignItems: 'center',
+    },
+    higGroupIconItem: {
+      // padding: '0 5px',
     },
     higVersionHolder: {
       marginTop: '5px',
