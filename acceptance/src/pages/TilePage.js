@@ -17,7 +17,7 @@ function TilePage() {
   const tooltip = 'click here';
   const overflowMenu = <MoreVertical16 />;
   const cta = {type: 'button', text: 'click here', action: () => {console.log('testing click')}}
-  const actionClarifier = 'click on clarififier';
+  const actionClarifier = 'click on clarifier';
   const showCheckbox = true;
   const showPin = true;
   return (
