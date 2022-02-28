@@ -11,6 +11,20 @@ const Tile = (props) => {
     title,
     subtitle,
     orientation,
+    version,
+    identifier,
+    statusIcons,
+    actionIcons,
+    notification,
+    tooltip,
+    overflowMenu,
+    cta,
+    ctaType,
+    actionClarifier,
+    checkbox,
+    showCheckbox,
+    pinIcon,
+    showPin,
   } = props;
   return (
     <ThemeContext.Consumer>
@@ -25,6 +39,20 @@ const Tile = (props) => {
                 title={title}
                 subtitle={subtitle}
                 orientation={orientation}
+                version={version}
+                identifier={identifier}
+                statusIcons={statusIcons}
+                actionIcons={actionIcons}
+                notification={notification}
+                tooltip={tooltip}
+                overflowMenu={overflowMenu}
+                cta={cta}
+                ctaType={ctaType}
+                actionClarifier={actionClarifier}
+                checkbox={checkbox}
+                showCheckbox={showCheckbox}
+                pinIcon={pinIcon}
+                showPin={showPin}
               />
             )
           }
