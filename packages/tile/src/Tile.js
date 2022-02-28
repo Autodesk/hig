@@ -13,13 +13,11 @@ const Tile = (props) => {
     orientation,
     version,
     identifier,
-    statusIcons,
-    actionIcons,
+    statusAndActionIcons,
     notification,
     tooltip,
     overflowMenu,
     cta,
-    ctaType,
     actionClarifier,
     checkbox,
     showCheckbox,
@@ -41,13 +39,11 @@ const Tile = (props) => {
                 orientation={orientation}
                 version={version}
                 identifier={identifier}
-                statusIcons={statusIcons}
-                actionIcons={actionIcons}
+                statusAndActionIcons={statusAndActionIcons}
                 notification={notification}
                 tooltip={tooltip}
                 overflowMenu={overflowMenu}
                 cta={cta}
-                ctaType={ctaType}
                 actionClarifier={actionClarifier}
                 checkbox={checkbox}
                 showCheckbox={showCheckbox}

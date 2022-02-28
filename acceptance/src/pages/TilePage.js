@@ -2,26 +2,24 @@ import React from 'react';
 import Tile from '@hig/tile';
 import Spacer from '@hig/spacer';
 
+import { Alert16, Complete16, Download16, Edit16, MoreVertical16, Archive16 } from "@hig/icons"
+
 import ImageHolder from '../fixtures/tile/ImageHolder';
 import ThemeRepeater from '../components/ThemeRepeater';
 
 function TilePage() {
   const orientation = "vertical";
   const backgroundColor = "blue";
-  const version = "V1";
-  const identifier = "pdf"; // should take icon
-  const statusIcons = ['icon1', 'icon2', 'icon3']; // array of icons
-  const actionIcons = [{icon: 'actionIcon1', action: ''}, {icon: 'actionIcon2', action: ''}, {icon: 'actionIcon3', action: ''}];
-  const notification = {type: 'pill', component: ''};
+  const version = <Complete16 />;
+  const identifier = <Archive16 />;
+  const statusAndActionIcons =[{type: 'status', icon: <Alert16 />}, {type: 'status', icon: <Complete16 />}, {type: 'action', icon: <Download16 />, action: () => {console.log('testing download')}}, {type: 'action', icon: <Edit16 />, action: () => {console.log('testing edit')}}];
+  const notification = {type: 'pill', component: <Complete16 />};
   const tooltip = 'click here';
-  const overflowMenu = 'SN';
-  const cta = 'click here';
-  const ctaType = 'button';
+  const overflowMenu = <MoreVertical16 />;
+  const cta = {type: 'button', text: 'click here', action: () => {console.log('testing click')}}
   const actionClarifier = 'click on clarififier';
-  const checkbox = true;
-  const showCheckbox = false;
-  const pinIcon = true;
-  const showPin = false;
+  const showCheckbox = true;
+  const showPin = true;
   return (
     <ThemeRepeater>{() => (
       <div>
@@ -36,17 +34,13 @@ function TilePage() {
           orientation={orientation}
           version={version}
           identifier={identifier}
-          statusIcons={statusIcons}
-          actionIcons={actionIcons}
+          statusAndActionIcons={statusAndActionIcons}
           notification={notification}
           tooltip={tooltip}
           overflowMenu={overflowMenu}
           cta={cta}
-          ctaType={ctaType}
           actionClarifier={actionClarifier}
-          checkbox={checkbox}
           showCheckbox={showCheckbox}
-          pinIcon={pinIcon}
           showPin={showPin}
         />
         <Spacer spacing="l" />
@@ -61,17 +55,13 @@ function TilePage() {
           orientation={orientation}
           version={version}
           identifier={identifier}
-          statusIcons={statusIcons}
-          actionIcons={actionIcons}
+          statusAndActionIcons={statusAndActionIcons}
           notification={notification}
           tooltip={tooltip}
           overflowMenu={overflowMenu}
           cta={cta}
-          ctaType={ctaType}
           actionClarifier={actionClarifier}
-          checkbox={checkbox}
           showCheckbox={showCheckbox}
-          pinIcon={pinIcon}
           showPin={showPin} 
         />
         <Spacer spacing="l" />
@@ -86,17 +76,13 @@ function TilePage() {
           orientation={orientation}
           version={version}
           identifier={identifier}
-          statusIcons={statusIcons}
-          actionIcons={actionIcons}
+          statusAndActionIcons={statusAndActionIcons}
           notification={notification}
           tooltip={tooltip}
           overflowMenu={overflowMenu}
           cta={cta}
-          ctaType={ctaType}
           actionClarifier={actionClarifier}
-          checkbox={checkbox}
           showCheckbox={showCheckbox}
-          pinIcon={pinIcon}
           showPin={showPin}
         />
         <Spacer spacing="l" />
@@ -111,17 +97,13 @@ function TilePage() {
           orientation={orientation}
           version={version}
           identifier={identifier}
-          statusIcons={statusIcons}
-          actionIcons={actionIcons}
+          statusAndActionIcons={statusAndActionIcons}
           notification={notification}
           tooltip={tooltip}
           overflowMenu={overflowMenu}
           cta={cta}
-          ctaType={ctaType}
           actionClarifier={actionClarifier}
-          checkbox={checkbox}
           showCheckbox={showCheckbox}
-          pinIcon={pinIcon}
           showPin={showPin}
         />
         <Spacer spacing="l" />
@@ -137,17 +119,13 @@ function TilePage() {
           orientation={orientation}
           version={version}
           identifier={identifier}
-          statusIcons={statusIcons}
-          actionIcons={actionIcons}
+          statusAndActionIcons={statusAndActionIcons}
           notification={notification}
           tooltip={tooltip}
           overflowMenu={overflowMenu}
           cta={cta}
-          ctaType={ctaType}
           actionClarifier={actionClarifier}
-          checkbox={checkbox}
           showCheckbox={showCheckbox}
-          pinIcon={pinIcon}
           showPin={showPin}
         />
         <Spacer spacing="l" />
@@ -163,17 +141,13 @@ function TilePage() {
           orientation={orientation}
           version={version}
           identifier={identifier}
-          statusIcons={statusIcons}
-          actionIcons={actionIcons}
+          statusAndActionIcons={statusAndActionIcons}
           notification={notification}
           tooltip={tooltip}
           overflowMenu={overflowMenu}
           cta={cta}
-          ctaType={ctaType}
           actionClarifier={actionClarifier}
-          checkbox={checkbox}
           showCheckbox={showCheckbox}
-          pinIcon={pinIcon}
           showPin={showPin}
         />
       </div>
