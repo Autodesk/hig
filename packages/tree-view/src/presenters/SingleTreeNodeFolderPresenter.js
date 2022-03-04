@@ -15,8 +15,8 @@ export default function SingleTreeNodeFolderPresenter(props) {
     icon,
     id,
     indicator,
-    label,
     itemRef,
+    label,
     ...otherProps
   } = props;
   const {
