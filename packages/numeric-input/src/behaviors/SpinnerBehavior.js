@@ -78,7 +78,7 @@ const SpinnerBehavior = props => {
 
   const onDirectChange = event => {
     const newValue = event.target.value;
-    setValueHook(newValue);
+    setValue(newValue);
   };
 
   const setInputRef = element => {
