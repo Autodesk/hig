@@ -10,22 +10,31 @@ import { AVAILABLE_INDICATORS, indicators } from "./constants";
 const TreeView = props => {
   const {
     children,
+    defaultSelected,
     alternateBg,
     guidelines,
     onKeyDown,
+    selected,
     stylesheet,
     treeNode,
     ...otherProps
   } = props;
 
   return (
-    <TreeViewBehavior {...otherProps} onKeyDown={onKeyDown} treeNode={treeNode}>
+    <TreeViewBehavior
+      {...otherProps}
+      defaultSelected={defaultSelected}
+      onKeyDown={onKeyDown}
+      selected={selected}
+      treeNode={treeNode}
+    >
       {({
         getActiveTreeItemId,
         getActiveTreeItemIndex,
         getCurrentItemClicked,
         getKeyboardOpenId,
         getTreeItemArray,
+        isControlled,
         setActiveTreeItemId,
         setActiveTreeItemIndex,
         setKeyboardOpenId,
@@ -37,20 +46,23 @@ const TreeView = props => {
         <TreeViewPresenter
           {...otherProps}
           alternateBg={alternateBg}
-          treeNode={treeNode}
+          defaultSelected={defaultSelected}
           getActiveTreeItemId={getActiveTreeItemId}
           getActiveTreeItemIndex={getActiveTreeItemIndex}
           getCurrentItemClicked={getCurrentItemClicked}
           getKeyboardOpenId={getKeyboardOpenId}
           getTreeItemArray={getTreeItemArray}
+          guidelines={guidelines}
+          isControlled={isControlled}
+          onKeyDown={handleKeyDown}
           setActiveTreeItemId={setActiveTreeItemId}
           setActiveTreeItemIndex={setActiveTreeItemIndex}
           setKeyboardOpenId={setKeyboardOpenId}
           setTreeItemArray={setTreeItemArray}
-          guidelines={guidelines}
-          onKeyDown={handleKeyDown}
+          selected={selected}
           setTreeViewRef={setTreeViewRef}
           stylesheet={stylesheet}
+          treeNode={treeNode}
           treeViewRef={treeViewRef}
         >
           {children}

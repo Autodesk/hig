@@ -14,11 +14,14 @@ const TreeObjectSubTreeItem = props => {
       id,
       meta: { className, icon, label },
       payload: {
+        defaultSelected,
         getActiveTreeItemId,
         getActiveTreeItemIndex,
         getCurrentItemClicked,
         guidelines,
-        indicator
+        indicator,
+        isControlled,
+        selected
       },
       onClick: userOnClick,
       ...otherTreeItemProps
@@ -29,6 +32,12 @@ const TreeObjectSubTreeItem = props => {
     ...otherProps
   } = props;
   const { onMouseEnter, onMouseLeave } = otherProps;
+  const getActiveId = () => {
+    if (isControlled()) {
+      return selected;
+    }
+    return getCurrentItemClicked() || defaultSelected;
+  };
   const styleTreeItem = {
     children,
     id,
@@ -40,7 +49,7 @@ const TreeObjectSubTreeItem = props => {
     getActiveTreeItemId,
     getActiveTreeItemIndex,
     guidelines,
-    selected: getCurrentItemClicked() === id
+    selected: getActiveId() === id
   };
   const { handleClick, handleKeyDown } = createButtonEventHandlers(onClick);
   const higTreeItemContentWrapperClassName = createCustomClassNames(
