@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "@hig/behaviors": "^2.1.0",
+    "@hig/icons": "^4.1.0",
     "@hig/input": "^2.1.0",
     "@hig/utils": "^0.4.1",
     "prop-types": "^15.7.1"
