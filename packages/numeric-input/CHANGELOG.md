@@ -1,3 +1,10 @@
+# [@hig/numeric-input-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/numeric-input@2.1.1...@hig/numeric-input@2.1.2) (2022-03-09)
+
+
+### Bug Fixes
+
+* add [@hig](https://github.com/hig)/icons as a dependency ([9372f37](https://github.com/Autodesk/hig/commit/9372f37))
+
 # [@hig/numeric-input-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/numeric-input@2.1.0...@hig/numeric-input@2.1.1) (2022-03-05)
 
 
