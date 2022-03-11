@@ -10,7 +10,7 @@ export default function stylesheet(props, themeData, metadata) {
       position: 'relative',
       display: 'flex',
       flexDirection: isColumn ? 'column' : 'row',
-      backgroundColor: backgroundColor ? backgroundColor : 'none',
+      backgroundColor: backgroundColor ? themeData['tile.default.level300To350BackgroundColor'] : 'none',
       width: '100%',
     },
     higTileNotifications: {
@@ -75,13 +75,18 @@ export default function stylesheet(props, themeData, metadata) {
     higTileTitleContainer: {
       display: 'flex',
       justifyContent: 'space-between',
-      marginTop: '10px',
+      marginTop: themeData["tile.title.marginBottom"],
+      marginBottom: themeData["tile.title.marginBottom"],
     },
     higTileTitle: {
-
+      fontSize: themeData["tile.title.fontSize"],
+      fontWeight: themeData["tile.title.fontWeight"],
+      lineHeight: themeData["tile.title.lineHeight"],
     },
     higTileSubTitle: {
-
+      fontSize: themeData["tile.subTitle.fontSize"],
+      fontWeight: themeData["tile.subTitle.fontWeight"],
+      lineHeight: themeData["tile.subTitle.lineHeight"],
     },
     higTileAdditionalContent: {
       padding: '5px 0',
