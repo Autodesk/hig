@@ -3,6 +3,8 @@ import { css } from "emotion";
 import {
   useResizeColumns,
   useFilters,
+  useGroupBy,
+  useExpanded,
   useFlexLayout,
   useGlobalFilter,
   usePagination,
@@ -24,6 +26,8 @@ import TableHeaderCell from './TableHeaderCell';
 import ExpandedContent from './ExpandedContent';
 import ColumnShowHide from './ColumnShowHide';
 import SortColumns from './SortColumns';
+import GroupElements from './GroupElements';
+import GroupHeaderElements from './GroupHeaderElements';
 import Pagination from './Pagination';
 
 import stylesheet from "./presenters/stylesheet";
@@ -115,7 +119,9 @@ const TableWithSticky = ({
       useSticky, 
       useFilters, 
       useGlobalFilter, 
-      useSortBy, 
+      useGroupBy,
+      useSortBy,
+      useExpanded, 
       usePagination,
       useRowSelect,
       (hooks) => {
@@ -317,7 +323,14 @@ const TableWithSticky = ({
                             selected={getActiveColumnIndex === headerIndex && getActiveRowIndex === -1}
                             setActiveMultiSelectColumn={setActiveMultiSelectColumn}
                         >
-                          {column.render("Header")}
+                          <div css={styles.headerHolder}>
+                            {column.canGroupBy  && meta.groupElements ? (
+                              <span {...column.getGroupByToggleProps()}>
+                                {<GroupHeaderElements isGrouped={column.isGrouped} groupHeaderElementStyles={styles.groupHeaderElement}/>}
+                              </span>
+                            ) : null}
+                            {column.render("Header")}
+                          </div>
                           {// column.canResize && (
                             <div
                               {...(column.canResize ? {...column.getResizerProps()} : {})}
@@ -391,12 +404,23 @@ const TableWithSticky = ({
                                 setActiveMultiSelectColumn={setActiveMultiSelectColumn}
                                 setActiveRowIndex={setActiveRowIndex}
                               >
-                                {renderCellData(cell)}
+                                {cell.isGrouped ? (
+                                  <>
+                                    <span {...row.getToggleRowExpandedProps()}>
+                                      {<GroupElements isExpanded={row.isExpanded ? true : false}>{meta.groupElements}</GroupElements>}
+                                    </span>{' '}
+                                    {renderCellData(cell)} ({row.subRows.length})
+                                  </>
+                                ) : cell.isAggregated ? (
+                                  cell.render('Aggregated')
+                                ) : cell.isPlaceholder ? null : (
+                                  renderCellData(cell)
+                                )}
                               </TableDataCell>
                             );
                           })}
                         </div>
-                        {meta.expandedComponent && <ExpandedContent expandedContentStyles={rowStyles}>{meta.expandedComponent}</ExpandedContent>}
+                        {meta.expandedComponent && <ExpandedContent curItem={customContentArray[rowIndex]} expandedContentStyles={rowStyles}>{meta.expandedComponent}</ExpandedContent>}
                       </div>
                     );
                   })}

@@ -262,7 +262,6 @@ export default function TableBehavior(props) {
   }, [getActiveColumnIndex, getActiveMultiSelectRowArray, getActiveRowIndex, getAllMultiSelectedRows, setActiveRowIndex, setActiveColumnIndex]);
 
   useEffect(() => {
-    console.log('table behavior use effect');
     setColumnHeaderArray(getHeaders(tableObject.columns));
   }, [tableObject]);
 

@@ -240,6 +240,12 @@ export default function stylesheet(props, themeData, metadata) {
 			borderLeft: `${themeData['table.borderWidth']} solid ${themeData['colorScheme.divider.lightweight']}`,
 			borderRight: `${themeData['table.borderWidth']} solid ${themeData['colorScheme.divider.lightweight']}`,
 			...(!isCustomeContentExpanded ? {display: `none`} : {})
+		},
+		headerHolder: {
+			display: `flex`,
+		},
+		groupHeaderElement: {
+			padding: `3px 3px 0 0`,
 		}
 	}
 }
