@@ -402,10 +402,12 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
         <svg
           className="emotion-0"
           height="10px"
+          viewBox="0 0 10 10"
           width="10px"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
+            d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
           />
         </svg>
       </div>
@@ -415,13 +417,15 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
         <svg
           className="emotion-2"
           height="24px"
+          viewBox="0 0 24 24"
           width="24px"
+          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M3 2v20h17V2zm16 19H4V3h15z"
           />
           <path
-            d="M18 19h-1v-7h-3v7h-1v-5h-3v5H9v-9H6v9H5v1h13zM8 19H7v-8h1zm4 0h-1v-4h1zm4 0h-1v-6h1zM5 5h13v1H5zM5 7h6v1H5z"
+            d="M18 19h-1v-7h-3v7h-1v-5h-3v5H9v-9H6v9H5v1h13zM8 19H7v-8h1zm4 0h-1v-4h1zm4 0h-1v-6h1zM5 5h13v1H5zm0 2h6v1H5z"
           />
         </svg>
       </div>
@@ -469,10 +473,12 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
               <svg
                 className="emotion-0"
                 height="10px"
+                viewBox="0 0 10 10"
                 width="10px"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
+                  d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
                 />
               </svg>
             </div>
@@ -482,7 +488,9 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
               <svg
                 className="emotion-2"
                 height="24px"
+                viewBox="0 0 24 24"
                 width="24px"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M11.79 6L9 4H2v16h19V6zM3 5h6l1.8 1.42L10 7H3zm17 14H3V8h7.26l1.52-1H20z"
@@ -522,7 +530,9 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
                   <svg
                     className="emotion-2"
                     height="24px"
+                    viewBox="0 0 24 24"
                     width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
                       d="M4 4v16h16V4zm1 4h4v3H5zm0 4h4v3H5zm0 7v-3h4v3zm5 0v-3h4v3zm4-8h-4V8h4zm0 1v3h-4v-3zm5 7h-4v-3h4zm0-4h-4v-3h4zm0-4h-4V8h4zM5 7V5h14v2z"
@@ -554,13 +564,15 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
                   <svg
                     className="emotion-2"
                     height="24px"
+                    viewBox="0 0 24 24"
                     width="24px"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M3 3v18h18V3zm17 17H4v-3.82l2.75-3.39A2 2 0 018.34 12a2 2 0 011.59.76l.3.4 3.35 4.31a1.41 1.41 0 002.17.06L17.13 16a.84.84 0 01.65-.29.83.83 0 01.73.41L20 18.48zm0-3.41l-.61-1a1.85 1.85 0 00-1.61-.92 1.89 1.89 0 00-1.4.62L15 16.87a.42.42 0 01-.63 0l-3.65-4.7a3 3 0 00-4.76 0L4 14.59V4h16z"
+                      d="M3 3v18h18V3zm17 17H4v-3.82l2.75-3.39A2 2 0 0 1 8.34 12a2 2 0 0 1 1.59.76l.3.4 3.35 4.31a1.41 1.41 0 0 0 2.17.06L17.13 16a.84.84 0 0 1 .65-.29.83.83 0 0 1 .73.41L20 18.48zm0-3.41l-.61-1a1.85 1.85 0 0 0-1.61-.92 1.89 1.89 0 0 0-1.4.62L15 16.87a.42.42 0 0 1-.63 0l-3.65-4.7a3 3 0 0 0-4.76 0L4 14.59V4h16z"
                     />
                     <path
-                      d="M15.5 11A2.5 2.5 0 1013 8.5a2.5 2.5 0 002.5 2.5zm0-4A1.5 1.5 0 1114 8.5 1.5 1.5 0 0115.5 7z"
+                      d="M15.5 11A2.5 2.5 0 1 0 13 8.5a2.5 2.5 0 0 0 2.5 2.5zm0-4A1.5 1.5 0 1 1 14 8.5 1.5 1.5 0 0 1 15.5 7z"
                     />
                   </svg>
                 </div>
@@ -600,10 +612,12 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
                     <svg
                       className="emotion-0"
                       height="10px"
+                      viewBox="0 0 10 10"
                       width="10px"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
+                        d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
                       />
                     </svg>
                   </div>
@@ -613,13 +627,15 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
                     <svg
                       className="emotion-2"
                       height="24px"
+                      viewBox="0 0 24 24"
                       width="24px"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
                       <path
-                        d="M20.42 5.89l-8-3.7a1 1 0 00-.84 0l-8 3.7a1 1 0 00-.58.9v8.91a1 1 0 00.47.84l8 5a1 1 0 001.06 0l8-5a1 1 0 00.47-.84V6.79a1 1 0 00-.58-.9zM20 15.56a.24.24 0 01-.12.21l-7.75 4.82a.24.24 0 01-.26 0l-7.75-4.82a.24.24 0 01-.12-.21V7a.24.24 0 01.15-.22l7.75-3.63a.23.23 0 01.2 0l7.75 3.58A.24.24 0 0120 7z"
+                        d="M20.42 5.89l-8-3.7a1 1 0 0 0-.84 0l-8 3.7a1 1 0 0 0-.58.9v8.91a1 1 0 0 0 .47.84l8 5a1 1 0 0 0 1.06 0l8-5a1 1 0 0 0 .47-.84V6.79a1 1 0 0 0-.58-.9zM20 15.56a.24.24 0 0 1-.12.21l-7.75 4.82a.24.24 0 0 1-.26 0l-7.75-4.82a.24.24 0 0 1-.12-.21V7a.24.24 0 0 1 .15-.22l7.75-3.63a.23.23 0 0 1 .2 0l7.75 3.58A.24.24 0 0 1 20 7z"
                       />
                       <path
-                        d="M18.93 7.4l-.39-.18a.08.08 0 00-.09 0l-6.45 4-6.45-4a.07.07 0 00-.09 0l-.39.18a.12.12 0 00-.07.11V8a.11.11 0 000 .08l6.46 4v7a.11.11 0 000 .08l.4.24a.09.09 0 00.12 0l.4-.24a.11.11 0 000-.08v-7l6.46-4A.14.14 0 0019 8v-.5a.12.12 0 00-.07-.1z"
+                        d="M18.93 7.4l-.39-.18a.08.08 0 0 0-.09 0l-6.45 4-6.45-4a.07.07 0 0 0-.09 0l-.39.18a.12.12 0 0 0-.07.11V8a.11.11 0 0 0 0 .08l6.46 4v7a.11.11 0 0 0 0 .08l.4.24a.09.09 0 0 0 .12 0l.4-.24a.11.11 0 0 0 0-.08v-7l6.46-4A.14.14 0 0 0 19 8v-.5a.12.12 0 0 0-.07-.1z"
                       />
                     </svg>
                   </div>
@@ -656,7 +672,9 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
                         <svg
                           className="emotion-2"
                           height="24px"
+                          viewBox="0 0 24 24"
                           width="24px"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
                             d="M3 8h7.26l1.52-1H20v9h1V6h-9.21L9 4H2v16h11v-1H3zm0-3h6l1.8 1.42L10 7H3z"
