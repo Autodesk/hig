@@ -34,9 +34,11 @@ const TilePresenter = (props) => {
         const styles = stylesheet(props, resolvedRoles);
         return (
           <div className={css(styles.higTileContainer)}>
-            <div className={css(styles.higTileNotifications)}>
-              <div className={css(styles.higTileNotificationBadge)}>{notification?.component}</div>
-            </div>
+            {notification && 
+              <div className={css(styles.higTileNotifications)}>
+                <div className={css(styles.higTileNotificationBadge)}>{notification?.component}</div>
+              </div>
+            }
             <div className={css(styles.higTileSelectionOptions)}>
               {showCheckbox && (
                 <div className={css(styles.higTileSelectionOptionCheckbox)}>
@@ -71,44 +73,48 @@ const TilePresenter = (props) => {
             </div>
             
             <div className={css(styles.higTileContent)}>
-              <div className={css(styles.higTileIdentifierContainer)}>
-                <div className={css(styles.higTileIdentifierIcon)}>{identifier}</div>
-              </div>
+              {identifier && 
+                <div className={css(styles.higTileIdentifierContainer)}>
+                  <div className={css(styles.higTileIdentifierIcon)}>{identifier}</div>
+                </div>
+              }
               <div className={css(styles.higTileTitleContainer)}>
                 <div className={css(styles.higTileTitle)}>{title}</div>
-                <div className={css(styles.higTileOverflowMenu)}>{overflowMenu}</div>
+                {overflowMenu && <div className={css(styles.higTileOverflowMenu)}>{overflowMenu}</div>}
               </div>
               <div className={css(styles.higTileSubTitle)}>{subtitle}</div>
 
               <div className={css(styles.higTileAdditionalContent)}>
-                <div className={css(styles.higVersionHolder)}>{version}</div>
-                <div className={css(styles.higGroupIcons)}>
-                  {statusAndActionIcons.map((item, index) => {
-                    return (
-                      item.type === 'status'
-                        ? <div className={css(styles.higGroupIconItem)} key={index}>{item?.icon}</div>
-                        : <div className={css(styles.higGroupIconItem)} key={index}>
-                            <IconButton
-                              icon={item?.icon}
-                              onClick={item?.action}
-                              title=""
-                            />
-                          </div>
-                    )
-                  })}
-                </div>
+                {version && <div className={css(styles.higVersionHolder)}>{version}</div>}
+                {statusAndActionIcons && 
+                  <div className={css(styles.higGroupIcons)}>
+                    {statusAndActionIcons?.map((item, index) => {
+                      return (
+                        item.type === 'status'
+                          ? <div className={css(styles.higGroupIconItem)} key={index}>{item?.icon}</div>
+                          : <div className={css(styles.higGroupIconItem)} key={index}>
+                              <IconButton
+                                icon={item?.icon}
+                                onClick={item?.action}
+                                title=""
+                              />
+                            </div>
+                      )
+                    })}
+                  </div>
+                }
               </div>
-              <div className={css(styles.higTileCTAHolder)}>
-                <div className={css(styles.higTileCTA)} >
-                  {cta.type === 'button' 
-                    ? <Button title={cta?.text} onClick={() => handleClickCTA(cta?.action)} />
-                    : <TextLink onClick={() => handleClickCTA(cta?.action)}>{cta?.text}</TextLink>
-                  }
+              {cta && 
+                <div className={css(styles.higTileCTAHolder)}>
+                  <div className={css(styles.higTileCTA)} >
+                    {cta?.type === 'button' 
+                      ? <Button title={cta?.text} onClick={() => handleClickCTA(cta?.action)} />
+                      : <TextLink onClick={() => handleClickCTA(cta?.action)}>{cta?.text}</TextLink>
+                    }
+                  </div>
                 </div>
-              </div>
-            </div>
-            
-            
+              }
+            </div> 
           </div>
         )
       }}
