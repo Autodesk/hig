@@ -21,6 +21,7 @@ function TilePage() {
   const showCheckbox = true;
   const showPin = true;
   const level = 300;
+  const disabled = false;
 
   const onKeyDown = () => {
     console.log('from tile page KEYDOWN');
@@ -188,6 +189,7 @@ function TilePage() {
           showCheckbox={showCheckbox}
           showPin={showPin}
           surface={level}
+          disabled={disabled}
           onKeyDown={onKeyDown}
           onFocus={onFocus}
           onBlur={onBlur}
