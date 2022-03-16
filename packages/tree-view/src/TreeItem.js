@@ -10,6 +10,7 @@ const TreeItem = props => {
     collapsed,
     defaultCollapsed,
     expandByDoubleClick,
+    getKeyboardOpenId,
     icon,
     id,
     label,
