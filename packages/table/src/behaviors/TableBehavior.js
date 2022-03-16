@@ -10,14 +10,14 @@ const verticalScrollInViewport = (cell) => {
   ) {
     // align to the top if the top of cell is out of the viewport
     if (cellBounding.top < 0) {
-          cell.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
+      cell.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
     }
     // align to the bottom if the bottom of cell is out of the viewport
     if (
     cellBounding.bottom >
     (window.innerHeight || document.documentElement.clientHeight)
     ) {
-          cell.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
+      cell.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
     }
   }
 };
@@ -37,7 +37,7 @@ const horizontalScrollInViewport = (cell) => {
     cellBounding.right >
     (window.innerWidth || document.documentElement.clientWidth)
     ) {
-          cell.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
+      cell.scrollIntoView({behavior: "smooth", block: "nearest", inline: "nearest"});
     }
   }
 };
@@ -63,12 +63,12 @@ const horizontalScrollInContainer = (cell, table) => {
     const scrollRight = table.clientWidth + table.scrollLeft;
     const elementRight = cell.offsetLeft + cell.offsetWidth;
     if (elementRight > scrollRight) {
-          // eslint-disable-next-line no-param-reassign
-          table.scrollLeft = elementRight - table.clientWidth;
+      // eslint-disable-next-line no-param-reassign
+      table.scrollLeft = elementRight - table.clientWidth;
     }
     if (cell.offsetLeft < table.scrollLeft) {
-          // eslint-disable-next-line no-param-reassign
-          table.scrollLeft = cell.offsetLeft;
+      // eslint-disable-next-line no-param-reassign
+      table.scrollLeft = cell.offsetLeft;
     }
   }
 };
@@ -161,7 +161,7 @@ export default function TableBehavior(props) {
     const scrollDownOffset = headerMultiplier * height + 1;
 
     if (onKeyDown) {
-          onKeyDown(event);
+      onKeyDown(event);
     }
     setActiveMultiSelectColumn(null);
     if (!getActiveColumnIndex) {

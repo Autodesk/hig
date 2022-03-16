@@ -125,7 +125,7 @@ const TablePresenter = ({
                 minWidth: 35,
                 width: 35,
                 maxWidth: 35,
-                Header: ({ getToggleAllRowsSelectedProps }) => (
+                Header: () => (
                   <Checkbox
                     checked={getAllMultiSelectedRows}
                     indeterminate={!!getActiveMultiSelectRowArray?.length && !getAllMultiSelectedRows}
