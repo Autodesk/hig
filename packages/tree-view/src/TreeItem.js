@@ -10,11 +10,9 @@ const TreeItem = props => {
     collapsed,
     defaultCollapsed,
     expandByDoubleClick,
-    getKeyboardOpenId,
     icon,
     id,
     label,
-    setKeyboardOpenId,
     stylesheet,
     ...otherProps
   } = props;
@@ -22,9 +20,11 @@ const TreeItem = props => {
     defaultSelected,
     getActiveTreeItemId,
     getCurrentItemClicked,
+    getKeyboardOpenId,
     isControlled,
     onFocus,
-    selected
+    selected,
+    setKeyboardOpenId
   } = otherProps;
   const getActiveId = () => {
     if (isControlled()) {
