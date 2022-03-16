@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react';
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
@@ -8,7 +10,7 @@ import Checkbox from '@hig/checkbox';
 
 import stylesheet from "./stylesheet";
 
-const TilePresenter = (props) => {
+const TilePresenter = props => {
   const {
     headerContainer: HeaderContainer,
     title,
@@ -22,6 +24,18 @@ const TilePresenter = (props) => {
     actionClarifier,
     showCheckbox,
     showPin,
+    surface,
+    hasFocus,
+    hasHover,
+    isPressed,
+    onBlur,
+    onClick,
+    onFocus,
+    onHover,
+    onMouseDown,
+    onMouseEnter,
+    onMouseLeave,
+    onMouseUp,
   } = props;
 
   const handleClickCTA = action => {
@@ -33,7 +47,17 @@ const TilePresenter = (props) => {
       {({ resolvedRoles, metadata }) => {
         const styles = stylesheet(props, resolvedRoles);
         return (
-          <div className={css(styles.higTileContainer)}>
+          <div
+            className={css(styles.higTileContainer)}
+            tabIndex={0}
+            onFocus={onFocus}
+            onBlur={onBlur}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            onMouseDown={onMouseDown}
+            onMouseUp={onMouseUp}
+            onClick={onClick}
+          >
             {notification && 
               <div className={css(styles.higTileNotifications)}>
                 <div className={css(styles.higTileNotificationBadge)}>{notification?.component}</div>
@@ -71,7 +95,7 @@ const TilePresenter = (props) => {
                 </div>
               )}
             </div>
-            
+
             <div className={css(styles.higTileContent)}>
               {identifier && 
                 <div className={css(styles.higTileIdentifierContainer)}>

@@ -1,12 +1,12 @@
 import React from "react";
 import { ThemeContext } from "@hig/theme-context";
-import TileBehavior from './behaviors/TileBehavior';
 import TilePresenter from './presenters/TilePresenter';
+import { ControlBehavior } from "@hig/behaviors";
 
 const Tile = (props) => {
   const {
     headerContainer,
-    backgroundColor,
+    background,
     divider,
     title,
     subtitle,
@@ -23,16 +23,42 @@ const Tile = (props) => {
     showCheckbox,
     pinIcon,
     showPin,
+    surface,
+    onBlur,
+    onClick,
+    onFocus,
+    onHover,
+    onMouseDown,
+    onMouseEnter,
+    onMouseLeave,
+    onMouseUp,
   } = props;
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => (
-        <TileBehavior>
+        <ControlBehavior
+          onBlur={onBlur}
+          onFocus={onFocus}
+          onMouseDown={onMouseDown}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          onMouseUp={onMouseUp}
+        >
           {
-            () => (
+            ({
+              hasFocus,
+              hasHover,
+              isPressed,
+              onBlur: handleBlur,
+              onFocus: handleFocus,
+              onMouseDown: handleMouseDown,
+              onMouseEnter: handleMouseEnter,
+              onMouseLeave: handleMouseLeave,
+              onMouseUp: handleMouseUp
+            }) => (
               <TilePresenter 
                 headerContainer={headerContainer}
-                backgroundColor={backgroundColor}
+                background={background}
                 divider={divider}
                 title={title}
                 subtitle={subtitle}
@@ -49,10 +75,22 @@ const Tile = (props) => {
                 showCheckbox={showCheckbox}
                 pinIcon={pinIcon}
                 showPin={showPin}
+                surface={surface}
+                hasFocus={hasFocus}
+                hasHover={hasHover}
+                isPressed={isPressed}
+                onBlur={handleBlur}
+                onClick={onClick}
+                onFocus={handleFocus}
+                onHover={onHover}
+                onMouseDown={handleMouseDown}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                onMouseUp={handleMouseUp}
               />
             )
           }
-        </TileBehavior>
+        </ControlBehavior>
       )}
     </ThemeContext.Consumer>
   );
