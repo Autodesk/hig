@@ -7,11 +7,11 @@ import Tooltip from "./Tooltip";
 describe("tooltip/Tooltip", () => {
   takeSnapshotsOf(Tooltip, [
     {
-      description: "renders without props",
+      desc: "renders without props",
       props: {}
     },
     {
-      description: "renders with props",
+      desc: "renders with props",
       props: {
         anchorPoint: anchorPoints.TOP_CENTER,
         children: <Button title="Click Me" />,

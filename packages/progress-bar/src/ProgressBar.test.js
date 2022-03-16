@@ -5,18 +5,18 @@ describe("progress-bar/ProgressBar", () => {
   describe("snapshot tests", () => {
     takeSnapshotsOf(ProgressBar, [
       {
-        description: "indeterminate"
+        desc: "indeterminate"
       },
       {
-        description: "determinate",
+        desc: "determinate",
         props: { percentComplete: 33 }
       },
       {
-        description: "passing className",
+        desc: "passing className",
         props: { className: "myClass-a myClass-b" }
       },
       {
-        description: "custom stylesheet",
+        desc: "custom stylesheet",
         props: {
           stylesheet: styles => ({
             ...styles,

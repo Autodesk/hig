@@ -30,9 +30,7 @@ export default function stylesheet(props, themeData) {
     ...(hasFocus
       ? {
           color: themeData["textLink.primary.focus.fontColor"],
-          outline: `solid ${themeData["textLink.focus.haloWidth"]} ${
-            themeData["textLink.focus.haloColor"]
-          }`
+          outline: `solid ${themeData["textLink.focus.haloWidth"]} ${themeData["textLink.focus.haloColor"]}`
         }
       : {})
   };

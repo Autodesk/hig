@@ -9,11 +9,11 @@ describe("project-account-switcher/presenters/ProjectAccountSwitcherPresenter", 
 
   takeSnapshotsOf(ProjectAccountSwitcherPresenter, [
     {
-      description: "renders without props",
+      desc: "renders without props",
       props: {}
     },
     {
-      description: "renders with all props",
+      desc: "renders with all props",
       props: {
         accounts: [
           { id: "1", label: "Account 1" },

@@ -151,9 +151,22 @@ const MenuPresenter = props => {
 MenuPresenter.displayName = "MenuPresenter";
 
 MenuPresenter.propTypes = {
+  checkmark: PropTypes.bool,
   children: PropTypes.node,
   divider: PropTypes.bool,
-  stylesheet: PropTypes.func
+  getActiveOption: PropTypes.func,
+  getOptionsInfo: PropTypes.func,
+  getPreviousEvent: PropTypes.func,
+  menuRef: PropTypes.func,
+  multiple: PropTypes.bool,
+  onFocus: PropTypes.func,
+  role: PropTypes.string,
+  selected: PropTypes.func,
+  setActiveOption: PropTypes.func,
+  setHighlightIndex: PropTypes.func,
+  setOptionsInfo: PropTypes.func,
+  stylesheet: PropTypes.func,
+  unselect: PropTypes.bool
 };
 
 export default MenuPresenter;

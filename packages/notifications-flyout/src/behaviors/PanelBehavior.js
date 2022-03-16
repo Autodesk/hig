@@ -60,19 +60,16 @@ const PanelBehavior = props => {
     };
   }, []);
 
-  useEffect(
-    () => {
-      if (
-        props.transitionStatus === transitionStatuses.HIDDEN ||
-        props.transitionStatus === transitionStatuses.EXITED
-      ) {
-        window.requestAnimationFrame(() => {
-          updateMaxHeight();
-        });
-      }
-    },
-    [props]
-  );
+  useEffect(() => {
+    if (
+      props.transitionStatus === transitionStatuses.HIDDEN ||
+      props.transitionStatus === transitionStatuses.EXITED
+    ) {
+      window.requestAnimationFrame(() => {
+        updateMaxHeight();
+      });
+    }
+  }, [props]);
 
   return (
     <Transition in={loading} timeout={TRANSITION_DURATION}>

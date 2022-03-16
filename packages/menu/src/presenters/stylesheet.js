@@ -59,7 +59,7 @@ export default function stylesheet(props, themeData) {
             transition: `background-color 0.3s cubic-bezier(0.4,0,0.2,1)`
           }
         : {}),
-      ...(isPressed && (!disabled && role !== `presentation`)
+      ...(isPressed && !disabled && role !== `presentation`
         ? {
             backgroundColor: themeData[`menu.item.pressed.backgroundColor`],
             transition: `background-color 0.3s cubic-bezier(0.4,0,0.2,1)`

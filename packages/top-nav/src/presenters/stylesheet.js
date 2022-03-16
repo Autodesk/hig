@@ -2,9 +2,7 @@ function getTopNavThemeData(themeData) {
   return {
     background: themeData["colorScheme.surface.level100"],
     fontFamily: themeData["basics.fontFamilies.main"],
-    boxShadow: `0 4px ${
-      themeData["basics.shadows.lowBlur"]
-    } -4px rgba(0, 0, 0, 0.25)`
+    boxShadow: `0 4px ${themeData["basics.shadows.lowBlur"]} -4px rgba(0, 0, 0, 0.25)`
   };
 }
 

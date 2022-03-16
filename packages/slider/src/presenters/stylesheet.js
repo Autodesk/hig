@@ -161,9 +161,7 @@ function stylesheet(props, themeData) {
       // This produces the same visual effect.
       webkit: {
         backgroundColor: themeData["slider.track.backgroundColor"],
-        backgroundImage: `linear-gradient(${
-          themeData["slider.value.backgroundColor"]
-        }, ${themeData["slider.value.backgroundColor"]})`,
+        backgroundImage: `linear-gradient(${themeData["slider.value.backgroundColor"]}, ${themeData["slider.value.backgroundColor"]})`,
         backgroundPosition: 0,
         backgroundSize: `${trackValueWidth} 100%`,
         backgroundRepeat: "no-repeat"

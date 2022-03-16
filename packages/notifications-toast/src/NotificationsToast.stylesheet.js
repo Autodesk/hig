@@ -23,12 +23,8 @@ export default function stylesheet(props, themeData) {
       width: `340px`,
       minHeight: `53px`,
       padding: `16px 0`,
-      boxShadow: `0 0 ${
-        themeData["notifications.container.shadowBlur"]
-      } 0 rgba(0, 0, 0, 0.25)`,
-      borderRadius: `3px ${themeData["notifications.borderRadius"]} ${
-        themeData["notifications.borderRadius"]
-      } 3px`,
+      boxShadow: `0 0 ${themeData["notifications.container.shadowBlur"]} 0 rgba(0, 0, 0, 0.25)`,
+      borderRadius: `3px ${themeData["notifications.borderRadius"]} ${themeData["notifications.borderRadius"]} 3px`,
       borderLeft: `3px solid transparent`,
       backgroundColor: themeData["colorScheme.surface.level100"],
       ...(status ? getRulesByStatus(themeData, status) : {})

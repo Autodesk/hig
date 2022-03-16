@@ -15,12 +15,8 @@ export default function stylesheet(props, themeData) {
   const guideLineVerticalOffsetLeft = offset => {
     const defaultOffset = offset || 0;
     return isMediumDensity
-      ? `calc(24px + ((${contentHeight} + ${
-          themeData["treeView.icon.marginRight"]
-        }) * ${levelOffset}) - ${defaultOffset}px)`
-      : `calc(15px + ((${contentHeight} + ${
-          themeData["treeView.icon.marginRight"]
-        }) * ${levelOffset}) - ${defaultOffset}px)`;
+      ? `calc(24px + ((${contentHeight} + ${themeData["treeView.icon.marginRight"]}) * ${levelOffset}) - ${defaultOffset}px)`
+      : `calc(15px + ((${contentHeight} + ${themeData["treeView.icon.marginRight"]}) * ${levelOffset}) - ${defaultOffset}px)`;
   };
   const guideLineHorizontalOffsetTop = isMediumDensity ? `9px` : `2px`;
   const styles = {
@@ -69,9 +65,7 @@ export default function stylesheet(props, themeData) {
       "&::before": {
         ...(guidelines
           ? {
-              borderTop: `1px dashed ${
-                themeData["treeView.guideLine.backgroundColor"]
-              }`
+              borderTop: `1px dashed ${themeData["treeView.guideLine.backgroundColor"]}`
             }
           : {}),
         display: `inline-block`,
@@ -88,9 +82,7 @@ export default function stylesheet(props, themeData) {
       "&::after": {
         ...(guidelines
           ? {
-              borderLeft: `1px dashed ${
-                themeData["treeView.guideLine.backgroundColor"]
-              }`
+              borderLeft: `1px dashed ${themeData["treeView.guideLine.backgroundColor"]}`
             }
           : {}),
         display: `inline-block`,
@@ -182,14 +174,8 @@ export default function stylesheet(props, themeData) {
       border: `1px solid transparent`,
       boxSizing: `border-box`,
       height: themeData[`treeView.row.height`],
-      padding: `${themeData["treeView.row.paddingVertical"]} ${
-        themeData["treeView.row.paddingHorizontal"]
-      } ${themeData["treeView.row.paddingVertical"]}
-        calc((${contentHeight} + ${
-        themeData["treeView.icon.marginRight"]
-      }) + ((${contentHeight} + ${
-        themeData["treeView.icon.marginRight"]
-      }) * ${level}))`,
+      padding: `${themeData["treeView.row.paddingVertical"]} ${themeData["treeView.row.paddingHorizontal"]} ${themeData["treeView.row.paddingVertical"]}
+        calc((${contentHeight} + ${themeData["treeView.icon.marginRight"]}) + ((${contentHeight} + ${themeData["treeView.icon.marginRight"]}) * ${level}))`,
       position: `relative`,
       transition: `background-color 0.3s cubic-bezier(0.4,0,0.2,1), border-color 0.3s cubic-bezier(0.4,0,0.2,1)`,
       ...(hasHover || highlighted
@@ -212,9 +198,7 @@ export default function stylesheet(props, themeData) {
       "&::before": {
         ...(guidelines
           ? {
-              borderTop: `1px dashed ${
-                themeData["treeView.guideLine.backgroundColor"]
-              }`
+              borderTop: `1px dashed ${themeData["treeView.guideLine.backgroundColor"]}`
             }
           : {}),
         display: `inline-block`,
@@ -231,9 +215,7 @@ export default function stylesheet(props, themeData) {
       "&::after": {
         ...(guidelines
           ? {
-              borderLeft: `1px dashed ${
-                themeData["treeView.guideLine.backgroundColor"]
-              }`
+              borderLeft: `1px dashed ${themeData["treeView.guideLine.backgroundColor"]}`
             }
           : {}),
         display: `inline-block`,

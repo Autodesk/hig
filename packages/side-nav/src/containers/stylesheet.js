@@ -25,9 +25,7 @@ export default function stylesheet(props, themeData) {
 
     docked: reset({
       transition: `left 150ms cubic-bezier(0.000, 0.775, 0.775, 0.680)`,
-      boxShadow: `inset -5px 0px 8px -5px ${
-        themeData["colorScheme.shadow.low"]
-      }`,
+      boxShadow: `inset -5px 0px 8px -5px ${themeData["colorScheme.shadow.low"]}`,
       position: "fixed",
       top: "0",
       left: "0",

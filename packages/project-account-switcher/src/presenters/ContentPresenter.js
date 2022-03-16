@@ -192,6 +192,8 @@ ContentPresenter.propTypes = {
     image: PropTypes.string,
     label: PropTypes.string
   }),
+  /** HTML attribute class */
+  className: PropTypes.string,
   /** Handles Account selection, passed from Behavior */
   onAccountClick: PropTypes.func,
   /** Handles Project selection, passed from Behavior */

@@ -38,23 +38,17 @@ const ContainerTransition = props => {
 
   const handleExit = () => hide();
 
-  useEffect(
-    () => {
-      if (open) {
-        show();
-      } else if (!open) {
-        beginExit();
-      }
-    },
-    [open]
-  );
+  useEffect(() => {
+    if (open) {
+      show();
+    } else if (!open) {
+      beginExit();
+    }
+  }, [open]);
 
-  useEffect(
-    () => {
-      if (isVisible) window.requestAnimationFrame(() => setInside(true));
-    },
-    [isVisible]
-  );
+  useEffect(() => {
+    if (isVisible) window.requestAnimationFrame(() => setInside(true));
+  }, [isVisible]);
 
   return (
     <Transition in={inside} onExited={handleExit} timeout={TRANSITION_DURATION}>

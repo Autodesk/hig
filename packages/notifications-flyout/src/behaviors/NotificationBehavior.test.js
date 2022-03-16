@@ -1,4 +1,5 @@
 import React from "react";
+import "babel-polyfill";
 import { ENTERED } from "react-transition-group/Transition";
 import { mount } from "enzyme";
 
@@ -55,6 +56,7 @@ describe("notification-flyout/behaviors/NotificationBehavior", () => {
     describe("handleDismissButtonClick", () => {
       it("eventually calls the `onDismiss` handler", async () => {
         const { innerRef, handleDismissButtonClick } = payload;
+
         const container = document.createElement("div");
         const event = new window.MouseEvent("click");
 

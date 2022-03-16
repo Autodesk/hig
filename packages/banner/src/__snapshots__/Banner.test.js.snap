@@ -122,20 +122,18 @@ exports[`banner/Banner snapshot tests renders with custom className 1`] = `
           <svg
             className="emotion-0 custom__icon-background-image"
             height="24px"
-            viewBox="0 0 24 24"
             width="24px"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+              d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"
             />
             <path
               d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
             />
             <circle
-              cx="12"
-              cy="8"
-              r="1.25"
+              cx={12}
+              cy={8}
+              r={1.25}
             />
           </svg>
         </figure>
@@ -291,20 +289,18 @@ exports[`banner/Banner snapshot tests renders with custom stylesheet 1`] = `
           <svg
             className="emotion-0"
             height="24px"
-            viewBox="0 0 24 24"
             width="24px"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+              d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"
             />
             <path
               d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
             />
             <circle
-              cx="12"
-              cy="8"
-              r="1.25"
+              cx={12}
+              cy={8}
+              r={1.25}
             />
           </svg>
         </figure>
@@ -449,20 +445,18 @@ exports[`banner/Banner snapshot tests renders with no props 1`] = `
           <svg
             className="emotion-0"
             height="24px"
-            viewBox="0 0 24 24"
             width="24px"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+              d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"
             />
             <path
               d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
             />
             <circle
-              cx="12"
-              cy="8"
-              r="1.25"
+              cx={12}
+              cy={8}
+              r={1.25}
             />
           </svg>
         </figure>

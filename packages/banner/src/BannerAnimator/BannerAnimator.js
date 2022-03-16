@@ -102,31 +102,28 @@ const BannerAnimator = props => {
     setInnerWrapper(innerWrapperParams);
   };
 
-  useEffect(
-    () => {
-      const { isVisible } = props;
+  useEffect(() => {
+    const { isVisible } = props;
 
-      if (!status) {
-        return isVisible
-          ? endExpand(setState)
-          : endCollapse(prevState, setState, props);
-      }
+    if (!status) {
+      return isVisible
+        ? endExpand(setState)
+        : endCollapse(prevState, setState, props);
+    }
 
-      switch (status) {
-        case statuses.COLLAPSED:
-        case statuses.COLLAPSING:
-          return isVisible ? startExpand(setState) : null;
-        case statuses.EXPANDED:
-        case statuses.EXPANDING:
-          return isVisible ? null : startCollapse(setState);
-        default:
-          // eslint-disable-next-line no-console
-          console.warn("Invalid status", { status });
-          return null;
-      }
-    },
-    [props]
-  );
+    switch (status) {
+      case statuses.COLLAPSED:
+      case statuses.COLLAPSING:
+        return isVisible ? startExpand(setState) : null;
+      case statuses.EXPANDED:
+      case statuses.EXPANDING:
+        return isVisible ? null : startCollapse(setState);
+      default:
+        // eslint-disable-next-line no-console
+        console.warn("Invalid status", { status });
+        return null;
+    }
+  }, [props]);
 
   function usePreviousStatus(value) {
     const ref = useRef(null);
@@ -138,26 +135,23 @@ const BannerAnimator = props => {
 
   const prevStatus = usePreviousStatus(status);
 
-  useEffect(
-    () => {
-      const expandStatuses =
-        (prevStatus === statuses.COLLAPSED && status === statuses.EXPANDING) ||
-        (prevStatus === statuses.COLLAPSING && status === statuses.EXPANDING);
+  useEffect(() => {
+    const expandStatuses =
+      (prevStatus === statuses.COLLAPSED && status === statuses.EXPANDING) ||
+      (prevStatus === statuses.COLLAPSING && status === statuses.EXPANDING);
 
-      if (prevStatus === statuses.EXPANDED && status === statuses.COLLAPSING) {
-        collapseFromExpanded();
-        return;
-      }
-      if (expandStatuses) {
-        expand();
-        return;
-      }
-      if (prevStatus === statuses.EXPANDING && status === statuses.COLLAPSING) {
-        collapse();
-      }
-    },
-    [props, prevStatus, status]
-  );
+    if (prevStatus === statuses.EXPANDED && status === statuses.COLLAPSING) {
+      collapseFromExpanded();
+      return;
+    }
+    if (expandStatuses) {
+      expand();
+      return;
+    }
+    if (prevStatus === statuses.EXPANDING && status === statuses.COLLAPSING) {
+      collapse();
+    }
+  }, [props, prevStatus, status]);
 
   const { children: renderChildren } = props;
   const children =

@@ -6,13 +6,13 @@ describe("project-account-switcher/presenters/PanelPresenter", () => {
 
   takeSnapshotsOf(PanelPresenter, [
     {
-      description: "renders with minimal props",
+      desc: "renders with minimal props",
       props: {
         innerRef: handleRef
       }
     },
     {
-      description: "renders with all props",
+      desc: "renders with all props",
       props: {
         children: "hello",
         innerRef: handleRef

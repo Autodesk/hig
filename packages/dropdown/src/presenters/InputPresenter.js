@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { css } from "emotion";
 import { CaretDownMUI, CaretDownSUI } from "@hig/icons";
 import Input from "@hig/input";
@@ -19,12 +20,8 @@ function customStylesheet(inputStylesheet, props, themeData) {
       fontStyle: multiple ? `italic` : {},
       paddingRight:
         variant === `line`
-          ? `calc(${themeData["density.spacings.large"]} + ${
-              themeData["input.line.paddingHorizontal"]
-            }px)`
-          : `calc(${themeData["density.spacings.large"]} + ${
-              themeData["input.box.paddingHorizontal"]
-            })`
+          ? `calc(${themeData["density.spacings.large"]} + ${themeData["input.line.paddingHorizontal"]}px)`
+          : `calc(${themeData["density.spacings.large"]} + ${themeData["input.box.paddingHorizontal"]})`
     }
   };
 }
@@ -85,3 +82,12 @@ export default function InputPresenter(props) {
     </ThemeContext.Consumer>
   );
 }
+
+InputPresenter.propTypes = {
+  isOpen: PropTypes.bool,
+  multiple: PropTypes.bool,
+  onChange: PropTypes.func,
+  onInputChange: PropTypes.func,
+  stylesheet: PropTypes.func,
+  typable: PropTypes.bool
+};

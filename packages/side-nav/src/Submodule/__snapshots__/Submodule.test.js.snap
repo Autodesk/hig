@@ -68,13 +68,7 @@ exports[`side-nav/Submodule snapshot tests renders a link 1`] = `
 <a
   className="emotion-0"
   href="http://example.com"
-  onClick={undefined}
-  onFocus={undefined}
-  onKeyDown={undefined}
-  onMouseOver={undefined}
-  role={undefined}
   tabIndex="0"
-  target={undefined}
 >
   Module
 </a>
@@ -156,11 +150,6 @@ exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
 <a
   className="emotion-2"
   href="http://example.com"
-  onClick={undefined}
-  onFocus={undefined}
-  onKeyDown={undefined}
-  onMouseOver={undefined}
-  role={undefined}
   tabIndex="0"
   target="_blank"
 >
@@ -170,11 +159,8 @@ exports[`side-nav/Submodule snapshot tests renders an external link 1`] = `
   >
     <svg
       className="emotion-0"
-      color={undefined}
       height="24px"
-      viewBox="0 0 24 24"
       width="24px"
-      xmlns="http://www.w3.org/2000/svg"
     >
       <path
         d="M18 18H6V6h4V5H5v14h14v-5h-1v4z"
@@ -256,14 +242,10 @@ exports[`side-nav/Submodule snapshot tests renders with a click handler 1`] = `
 
 <div
   className="emotion-0"
-  href={undefined}
   onClick={[Function]}
-  onFocus={undefined}
   onKeyDown={[Function]}
-  onMouseOver={undefined}
   role="button"
   tabIndex="0"
-  target={undefined}
 />
 `;
 
@@ -334,14 +316,8 @@ exports[`side-nav/Submodule snapshot tests renders with minimal props 1`] = `
 
 <div
   className="emotion-0"
-  href={undefined}
-  onClick={undefined}
-  onFocus={undefined}
-  onKeyDown={undefined}
-  onMouseOver={undefined}
   role="button"
   tabIndex="0"
-  target={undefined}
 >
   Module
 </div>
@@ -414,13 +390,7 @@ exports[`side-nav/Submodule snapshot tests renders with no props 1`] = `
 
 <div
   className="emotion-0"
-  href={undefined}
-  onClick={undefined}
-  onFocus={undefined}
-  onKeyDown={undefined}
-  onMouseOver={undefined}
   role="button"
   tabIndex="0"
-  target={undefined}
 />
 `;

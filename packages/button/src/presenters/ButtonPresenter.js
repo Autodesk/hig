@@ -54,7 +54,7 @@ const ButtonPresenter = props => {
           metadata
         );
         const cssStyles = customStylesheet
-          ? customStylesheet(styles, this.props, resolvedRoles, metadata)
+          ? customStylesheet(styles, props, resolvedRoles, metadata)
           : styles;
 
         return (

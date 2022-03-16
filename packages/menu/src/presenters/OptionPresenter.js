@@ -140,6 +140,7 @@ OptionPresenter.propTypes = {
   highlighted: PropTypes.bool,
   id: PropTypes.string,
   isPressed: PropTypes.bool,
+  optionRef: PropTypes.func,
   role: PropTypes.oneOf(AVAILABLE_ROLES),
   selected: PropTypes.bool,
   shortcut: PropTypes.node,

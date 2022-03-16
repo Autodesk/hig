@@ -24,7 +24,7 @@ describe("tabs/Tabs", () => {
         <Tab
           key="render"
           label="render"
-          render={({ key }) => <button key={key} />}
+          render={({ key }) => <button key={key} type="button" />}
         >
           render
         </Tab>

@@ -175,26 +175,20 @@ const BannerContainer = props => {
     actions: renderActions()
   });
 
-  useEffect(
-    () => {
-      if (isWrappingContent) {
-        // delete wrappingFrame;
-        if (callBack) callBack();
-      }
-    },
-    [isWrappingContent]
-  );
+  useEffect(() => {
+    if (isWrappingContent) {
+      // delete wrappingFrame;
+      if (callBack) callBack();
+    }
+  }, [isWrappingContent]);
 
-  useEffect(
-    () => {
-      if (isWrappingActions) {
-        wrappingFrame.current = window.requestAnimationFrame(() => {
-          updateContentWrapping(callBack);
-        });
-      }
-    },
-    [isWrappingActions]
-  );
+  useEffect(() => {
+    if (isWrappingActions) {
+      wrappingFrame.current = window.requestAnimationFrame(() => {
+        updateContentWrapping(callBack);
+      });
+    }
+  }, [isWrappingActions]);
 
   useEffect(() => {
     bindResize();

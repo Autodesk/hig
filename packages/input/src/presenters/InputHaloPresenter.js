@@ -10,12 +10,12 @@ import { availableVariants } from "../constants";
 const InputHaloPresenter = props => {
   const {
     children,
+    error,
     hasFocus,
     hasHover,
     isDisabled,
     stylesheet: customStylesheet,
     variant,
-    error,
     ...otherProps
   } = props;
 

@@ -1,9 +1,7 @@
 function getToggleFocusRules(themeData) {
   return {
     borderColor: themeData["toggle.off.focus.borderColor"],
-    boxShadow: `0 0 0 ${themeData["toggle.focus.haloWidth"]} ${
-      themeData["toggle.focus.haloColor"]
-    }`
+    boxShadow: `0 0 0 ${themeData["toggle.focus.haloWidth"]} ${themeData["toggle.focus.haloColor"]}`
   };
 }
 
@@ -12,9 +10,7 @@ function getToggleHoverRules(themeData, on) {
     borderColor: on
       ? themeData[`toggle.on.default.borderColor`]
       : themeData["toggle.off.hover.borderColor"],
-    boxShadow: `0 0 0 ${themeData["toggle.hover.haloWidth"]} ${
-      themeData["toggle.hover.haloColor"]
-    }`
+    boxShadow: `0 0 0 ${themeData["toggle.hover.haloWidth"]} ${themeData["toggle.hover.haloColor"]}`
   };
 }
 
@@ -23,9 +19,7 @@ function getTogglePressedRules(themeData, on) {
     borderColor: on
       ? themeData[`toggle.on.default.borderColor`]
       : themeData["toggle.off.pressed.borderColor"],
-    boxShadow: `0 0 0 ${themeData["toggle.pressed.haloWidth"]} ${
-      themeData["toggle.pressed.haloColor"]
-    }`
+    boxShadow: `0 0 0 ${themeData["toggle.pressed.haloWidth"]} ${themeData["toggle.pressed.haloColor"]}`
   };
 }
 

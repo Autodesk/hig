@@ -6,20 +6,20 @@ import ProfileButtonPresenter from "./ProfileButtonPresenter";
 describe("top-nav/presenters/ProfileButtonPresenter", () => {
   takeSnapshotsOf(ProfileButtonPresenter, [
     {
-      description: "renders with avatarName",
+      desc: "renders with avatarName",
       props: {
         avatarName: "Wolfgang Pauli"
       }
     },
     {
-      description: "renders with children and avatarName",
+      desc: "renders with children and avatarName",
       props: {
         avatarName: "Hans Hellmann",
         children: <div className="logo" />
       }
     },
     {
-      description: "renders with all props",
+      desc: "renders with all props",
       props: {
         avatarName: "Richard Feynman",
         avatarImage: "richard_phillips_feynman.png",

@@ -1,6 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`skeleton-item/SkeletonItem snapshot tests  1`] = `
+exports[`skeleton-item/SkeletonItem snapshot tests renders with custom className 1`] = `
+.emotion-0 {
+  background-color: rgba(0,0,0,0.06);
+  border-radius: 2px;
+  height: 90px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 12px;
+  max-width: 100px;
+}
+
+.emotion-0:after {
+  -webkit-animation: 3s ease-in infinite shine;
+  animation: 3s ease-in infinite shine;
+  background-image: linear-gradient(135deg,transparent 0%,transparent 40%,rgba(255,255,255,0.3) 50%,transparent 60%,transparent 100%);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 300px;
+}
+
+<div
+  className="emotion-0 test-classname"
+/>
+`;
+
+exports[`skeleton-item/SkeletonItem snapshot tests renders with no props 1`] = `
 .emotion-0 {
   background-color: rgba(0,0,0,0.06);
   border-radius: 2px;
@@ -26,7 +54,7 @@ exports[`skeleton-item/SkeletonItem snapshot tests  1`] = `
 />
 `;
 
-exports[`skeleton-item/SkeletonItem snapshot tests  2`] = `
+exports[`skeleton-item/SkeletonItem snapshot tests renders with props 1`] = `
 .emotion-0 {
   background-color: rgba(0,0,0,0.06);
   border-radius: 2px;
@@ -51,33 +79,5 @@ exports[`skeleton-item/SkeletonItem snapshot tests  2`] = `
 
 <div
   className="emotion-0"
-/>
-`;
-
-exports[`skeleton-item/SkeletonItem snapshot tests  3`] = `
-.emotion-0 {
-  background-color: rgba(0,0,0,0.06);
-  border-radius: 2px;
-  height: 90px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 12px;
-  max-width: 100px;
-}
-
-.emotion-0:after {
-  -webkit-animation: 3s ease-in infinite shine;
-  animation: 3s ease-in infinite shine;
-  background-image: linear-gradient(135deg,transparent 0%,transparent 40%,rgba(255,255,255,0.3) 50%,transparent 60%,transparent 100%);
-  bottom: 0;
-  content: "";
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 300px;
-}
-
-<div
-  className="emotion-0 test-classname"
 />
 `;

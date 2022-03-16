@@ -126,15 +126,8 @@ exports[`Slider/presenters/SliderPresenter renders 1`] = `
 }
 
 <input
-  aria-valuemax={undefined}
-  aria-valuemin={undefined}
-  aria-valuenow={undefined}
   className="emotion-0"
-  disabled={undefined}
-  max={undefined}
-  min={undefined}
   type="range"
-  value={undefined}
 />
 `;
 
@@ -269,15 +262,9 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
 }
 
 <input
-  aria-valuemax={undefined}
-  aria-valuemin={undefined}
-  aria-valuenow={undefined}
   className="emotion-0"
   disabled={true}
-  max={undefined}
-  min={undefined}
   type="range"
-  value={undefined}
 />
 `;
 
@@ -429,14 +416,11 @@ exports[`Slider/presenters/SliderPresenter renders discrete slider 1`] = `
   <input
     aria-valuemax={5}
     aria-valuemin={0}
-    aria-valuenow={undefined}
     className="emotion-0"
-    disabled={undefined}
     max={5}
     min={0}
     step={1}
     type="range"
-    value={undefined}
   />
   <div
     className="emotion-7"
@@ -639,16 +623,9 @@ exports[`Slider/presenters/SliderPresenter renders discrete slider with step 0 1
   className="emotion-4"
 >
   <input
-    aria-valuemax={undefined}
-    aria-valuemin={undefined}
-    aria-valuenow={undefined}
     className="emotion-0"
-    disabled={undefined}
-    max={undefined}
-    min={undefined}
     step={0}
     type="range"
-    value={undefined}
   />
   <div
     className="emotion-3"
@@ -799,15 +776,8 @@ exports[`Slider/presenters/SliderPresenter renders focused 1`] = `
 }
 
 <input
-  aria-valuemax={undefined}
-  aria-valuemin={undefined}
-  aria-valuenow={undefined}
   className="emotion-0"
-  disabled={undefined}
-  max={undefined}
-  min={undefined}
   type="range"
-  value={undefined}
 />
 `;
 
@@ -937,15 +907,8 @@ exports[`Slider/presenters/SliderPresenter renders hovered 1`] = `
 }
 
 <input
-  aria-valuemax={undefined}
-  aria-valuemin={undefined}
-  aria-valuenow={undefined}
   className="emotion-0"
-  disabled={undefined}
-  max={undefined}
-  min={undefined}
   type="range"
-  value={undefined}
 />
 `;
 
@@ -1075,14 +1038,7 @@ exports[`Slider/presenters/SliderPresenter renders pressed 1`] = `
 }
 
 <input
-  aria-valuemax={undefined}
-  aria-valuemin={undefined}
-  aria-valuenow={undefined}
   className="emotion-0"
-  disabled={undefined}
-  max={undefined}
-  min={undefined}
   type="range"
-  value={undefined}
 />
 `;

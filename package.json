@@ -31,7 +31,7 @@
     "node-fetch": "^2.2.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
-    "react-test-renderer": "^16.0.0-alpha.12",
+    "react-test-renderer": "^17.0.2",
     "registry-url": "^4.0.0"
   },
   "workspaces": {
@@ -43,9 +43,12 @@
     ]
   },
   "jest": {
-    "preset": "@hig/jest-preset"
+    "preset": "@hig/jest-preset",
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest"
+    }
   },
   "dependencies": {
-    "enzyme-adapter-react-16": "^1.15.6"
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6"
   }
 }

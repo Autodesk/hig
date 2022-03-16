@@ -5,11 +5,11 @@ import PointerWrapperPresenter from "./PointerWrapperPresenter";
 describe("flyout/presenters/PointerWrapperPresenter", () => {
   takeSnapshotsOf(PointerWrapperPresenter, [
     {
-      description: "renders without props",
+      desc: "renders without props",
       props: {}
     },
     {
-      description: "renders with all props",
+      desc: "renders with all props",
       props: {
         children: "whoa there",
         innerRef: function handleRef() {},

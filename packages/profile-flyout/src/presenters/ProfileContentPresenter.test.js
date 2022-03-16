@@ -6,23 +6,23 @@ import ProfileContentPresenter from "./ProfileContentPresenter";
 describe("profile-flyout/presenters/ProfileContentPresenter", () => {
   takeSnapshotsOf(ProfileContentPresenter, [
     {
-      description: "renders with no props",
+      desc: "renders with no props",
       props: {}
     },
     {
-      description: "renders with a name",
+      desc: "renders with a name",
       props: {
         profileName: "Pete Parker"
       }
     },
     {
-      description: "renders with an email",
+      desc: "renders with an email",
       props: {
         profileEmail: "spyder-man@autodesk.com"
       }
     },
     {
-      description: "renders with all props",
+      desc: "renders with all props",
       props: {
         profileName: "Pete Parker",
         profileEmail: "spyder-man@autodesk.com",

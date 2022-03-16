@@ -10,11 +10,9 @@ const TreeItem = props => {
     collapsed,
     defaultCollapsed,
     expandByDoubleClick,
-    getKeyboardOpenId,
     icon,
     id,
     label,
-    setKeyboardOpenId,
     stylesheet,
     ...otherProps
   } = props;
@@ -22,9 +20,11 @@ const TreeItem = props => {
     defaultSelected,
     getActiveTreeItemId,
     getCurrentItemClicked,
+    getKeyboardOpenId,
     isControlled,
     onFocus,
-    selected
+    selected,
+    setKeyboardOpenId
   } = otherProps;
   const getActiveId = () => {
     if (isControlled()) {
@@ -107,7 +107,7 @@ TreeItem.propTypes = {
    */
   itemRef: PropTypes.oneOfType([
     PropTypes.func,
-    PropTypes.shape({ current: PropTypes.any })
+    PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.any) })
   ]),
   /**
    * Labels the TreeItem, this is rendered before all children

@@ -7,17 +7,17 @@ import NavButtonPresenter from "./NavButtonPresenter";
 describe("top-nav/presenters/NavActionButtonPresenter", () => {
   takeSnapshotsOf(NavButtonPresenter, [
     {
-      description: "renders with no props",
+      desc: "renders with no props",
       props: {}
     },
     {
-      description: "renders with children",
+      desc: "renders with children",
       props: {
         children: <div className="logo" />
       }
     },
     {
-      description: "renders with children, icon, onClick and title",
+      desc: "renders with children, icon, onClick and title",
       props: {
         children: <div className="logo" />,
         onClick: () => {},
