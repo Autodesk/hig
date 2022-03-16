@@ -11,10 +11,11 @@ export default function stylesheet(props, themeData, metadata) {
     surface,
     disabled,
   } = props;
-  const surfaceLevel = surface < 300 ? '100To250' : '300To350';
+  const surfaceLevel = Number(surface) < 300 ? '100To250' : '300To350';
   const bgType = background === 'solid' ? 'filled' : 'empty';
   const isColumn = orientation === 'vertical';
   const isNoBg = background === 'flat' && !hasFocus;
+  const isHorizontal = orientation === 'horizontal';
 
   const getDefaultOutline = () => {
     const color = themeData[`tile.${bgType}.default.level${surfaceLevel}.borderColor`];
@@ -48,6 +49,23 @@ export default function stylesheet(props, themeData, metadata) {
     }
   }
 
+  const getDivider = () => {
+    const dividerStyle = `${themeData['tile.borderWidth']} solid ${divider}`;
+    if (isHorizontal) {
+      return {
+        borderRight: dividerStyle
+      }
+    }
+    return {
+      borderBottom: dividerStyle
+    }
+  }
+
+  const getIdentifierHorizontal = () => ({ top: '20px', left: '-20px' });
+  const getNotificationHorizontal = () => ({ left: '-5px' });
+  const getSelectionOptionsHorizontal = () => ({ top: '22px' });
+  const getActionClarifierHorizontal = () => ({ width: '50%', paddingTop: '50%', paddingLeft: '20px' });
+
   return {
     higTileContainer: {
       position: 'relative',
@@ -69,6 +87,7 @@ export default function stylesheet(props, themeData, metadata) {
       zIndex: '3',
       top: '-10px',
       right: '-5px',
+      ...(isHorizontal ? getNotificationHorizontal() : {})
     },
     higTileNotificationBadge: {
 
@@ -80,6 +99,7 @@ export default function stylesheet(props, themeData, metadata) {
       zIndex: '3',
       top: '10px',
       left: '10px',
+      ...(isHorizontal ? getSelectionOptionsHorizontal() : {})
     },
     higTileSelectionOptionCheckbox: {
       padding: '0 5px 0 0'
@@ -91,12 +111,12 @@ export default function stylesheet(props, themeData, metadata) {
       position: 'relative',
       margin: '0',
       padding: background ? '0' : themeData['tile.padding'],
-      borderBottom: divider && background ? `1px solid ${divider}` : 'none',
-      maxHeight: orientation === 'vertical' ? '164px' : '85px',
-      maxWidth: orientation === 'vertical' ? 'none' : '85px',
+      maxHeight: orientation === 'vertical' ? '164px' : 'none',
       overflow: 'hidden',
+      ...(divider && background ? getDivider() : {})
     },
     higTileActionClarifier: {
+      display: hasHover ? 'block' : 'none',
       position: 'absolute',
       top: '0',
       left: '0',
@@ -108,13 +128,15 @@ export default function stylesheet(props, themeData, metadata) {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: '50% 0',
+      padding: '30% 0',
+      ...(isHorizontal ? getActionClarifierHorizontal() : {})
     },
     higTileIdentifierContainer: {
       position: 'absolute',
       zIndex: '3',
       top: '-10px',
       left: '0px',
+      ...(isHorizontal ? getIdentifierHorizontal() : {})
     },
     higTileIdentifierIcon: {
       width: '50px',
@@ -123,7 +145,8 @@ export default function stylesheet(props, themeData, metadata) {
     },
     higTileContent: {
       position: 'relative',
-      padding: themeData['tile.padding'],
+      padding: isHorizontal ? '20px' : themeData['tile.padding'],
+      width: '100%',
     },
     higTileTitleContainer: {
       display: 'flex',
@@ -141,16 +164,19 @@ export default function stylesheet(props, themeData, metadata) {
       fontWeight: themeData["tile.subTitle.fontWeight"],
       lineHeight: themeData["tile.subTitle.lineHeight"],
     },
+    higTileOverflowMenu: {
+      paddingRight: '20px',
+    },
     higTileAdditionalContent: {
       padding: '5px 0',
     },
     higGroupIcons: {
       display: 'flex',
-      justifyContent: 'space-evenly',
       alignItems: 'center',
+      paddingTop: themeData['tile.padding'],
     },
     higGroupIconItem: {
-      // padding: '0 5px',
+      paddingRight: themeData['tile.padding'],
     },
     higVersionHolder: {
       marginTop: themeData["tile.title.marginBottom"],
@@ -158,6 +184,7 @@ export default function stylesheet(props, themeData, metadata) {
     higTileCTAHolder: {
       zIndex: '10',
       marginTop: themeData["tile.title.marginBottom"],
+      marginBottom: themeData["tile.title.marginBottom"],
     }
   }
 }
