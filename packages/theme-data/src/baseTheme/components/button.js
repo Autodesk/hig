@@ -329,6 +329,78 @@ export default {
     }
   },
   /**
+   * ## Variants
+   *
+   * ### Segmented
+   *
+   */
+  "button.segmented.label.fontColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.label.fontColor"
+    }
+  },
+  "button.segmented.indicatorColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.indicatorColor"
+    }
+  },
+  "button.segmented.iconColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.iconColor"
+    }
+  },
+  "button.segmented.default.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.backgroundColor"
+    }
+  },
+  "button.segmented.hover.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.backgroundColor"
+    }
+  },
+  "button.segmented.focus.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.backgroundColor"
+    }
+  },
+  "button.segmented.active.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.on.default"
+    }
+  },
+  "button.segmented.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.borderColor"
+    }
+  },
+  "button.segmented.hover.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.borderColor"
+    }
+  },
+  "button.segmented.focus.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "button.outline.focus.borderColor"
+    }
+  },
+  "button.segmented.active.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.border.on"
+    }
+  },
+  /**
    *  ## Deprecated
    *
    *

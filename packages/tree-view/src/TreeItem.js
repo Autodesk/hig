@@ -18,7 +18,20 @@ const TreeItem = props => {
     stylesheet,
     ...otherProps
   } = props;
-  const { getActiveTreeItemId, getCurrentItemClicked, onFocus } = otherProps;
+  const {
+    defaultSelected,
+    getActiveTreeItemId,
+    getCurrentItemClicked,
+    isControlled,
+    onFocus,
+    selected
+  } = otherProps;
+  const getActiveId = () => {
+    if (isControlled()) {
+      return selected;
+    }
+    return getCurrentItemClicked() || defaultSelected;
+  };
 
   return (
     <TreeItemBehavior
@@ -49,7 +62,7 @@ const TreeItem = props => {
           onDoubleClick={handleDoubleClick}
           onFocus={onFocus}
           onOperatorClick={handleOperatorClick}
-          selected={getCurrentItemClicked() === id}
+          selected={getActiveId() === id}
           setIsCollapsed={setIsCollapsed}
           setKeyboardOpenId={setKeyboardOpenId}
           stylesheet={stylesheet}

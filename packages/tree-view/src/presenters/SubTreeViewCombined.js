@@ -225,6 +225,7 @@ const SubTreeViewCombined = props => {
       children,
       // eslint-disable-next-line no-shadow
       collapsed,
+      defaultSelected,
       density,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
@@ -234,7 +235,9 @@ const SubTreeViewCombined = props => {
       guidelines,
       id,
       indicator,
+      isControlled,
       level,
+      selected,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
       setKeyboardOpenId,
@@ -246,6 +249,7 @@ const SubTreeViewCombined = props => {
     const clonedChildren = Array.isArray(children)
       ? children.map(child =>
           React.cloneElement(child, {
+            defaultSelected,
             getActiveTreeItemId,
             getActiveTreeItemIndex,
             getCurrentItemClicked,
@@ -253,14 +257,17 @@ const SubTreeViewCombined = props => {
             getTreeItemArray,
             guidelines,
             indicator,
+            isControlled,
             keyboardOpenId: getKeyboardOpenId(),
             level: level + 1,
+            selected,
             setActiveTreeItemId,
             setActiveTreeItemIndex,
             setKeyboardOpenId
           })
         )
       : React.cloneElement(children, {
+          defaultSelected,
           getActiveTreeItemId,
           getActiveTreeItemIndex,
           getCurrentItemClicked,
@@ -268,8 +275,10 @@ const SubTreeViewCombined = props => {
           getTreeItemArray,
           guidelines,
           indicator,
+          isControlled,
           keyboardOpenId: getKeyboardOpenId(),
           level: level + 1,
+          selected,
           setActiveTreeItemId,
           setActiveTreeItemIndex,
           setKeyboardOpenId

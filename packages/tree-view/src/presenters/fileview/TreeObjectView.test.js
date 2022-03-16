@@ -27,6 +27,7 @@ describe("tree-view/TreeObjectView", () => {
         getKeyboardOpenId: () => {},
         setKeyboardOpenId: () => {},
         getCurrentItemClicked: () => {},
+        isControlled: () => {}
       },
       children: [
         {

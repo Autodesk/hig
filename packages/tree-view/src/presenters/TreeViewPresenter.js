@@ -72,32 +72,38 @@ const TreeViewPresenterObject = props => {
   // eslint-disable-next-line react/sort-comp
   const renderTreeItem = ({ key, props: propsRef, ComponentType }) => {
     const {
+      defaultSelected,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
       getCurrentItemClicked,
       getKeyboardOpenId,
       // eslint-disable-next-line no-shadow
       getTreeItemArray,
+      guidelines,
+      indicator,
+      isControlled,
+      selected,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
-      setKeyboardOpenId,
-      guidelines,
-      indicator
+      setKeyboardOpenId
     } = props;
     const payload = {
       ...propsRef,
+      defaultSelected,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
       getCurrentItemClicked,
       getKeyboardOpenId,
       getTreeItemArray,
-      setActiveTreeItemId,
-      setActiveTreeItemIndex,
-      setKeyboardOpenId,
       guidelines,
       indicator,
+      isControlled,
       key,
-      level: 0
+      level: 0,
+      selected,
+      setActiveTreeItemId,
+      setActiveTreeItemIndex,
+      setKeyboardOpenId
     };
 
     /*
@@ -126,19 +132,21 @@ const TreeViewPresenterObject = props => {
       `hig-tree-view`
     );
 
-    delete payload.indicator;
     delete payload.dataObject;
+    delete payload.defaultSelected;
     delete payload.getActiveTreeItemId;
     delete payload.getActiveTreeItemIndex;
     delete payload.getCurrentItemClicked;
     delete payload.getKeyboardOpenId;
-    delete payload.setTreeItemArray;
-    delete payload.treeViewRef;
-    delete payload.treeNode;
     delete payload.getTreeItemArray;
+    delete payload.indicator;
+    delete payload.isControlled;
     delete payload.setActiveTreeItemId;
     delete payload.setActiveTreeItemIndex;
     delete payload.setKeyboardOpenId;
+    delete payload.setTreeItemArray;
+    delete payload.treeViewRef;
+    delete payload.treeNode;
 
     return (
       <ThemeContext.Consumer>
@@ -173,6 +181,7 @@ const TreeViewPresenterObject = props => {
     const {
       alternateBg,
       children,
+      defaultSelected,
       guidelines,
       setTreeViewRef,
       stylesheet: customStylesheet,
@@ -185,6 +194,7 @@ const TreeViewPresenterObject = props => {
       setActiveTreeItemIndex,
       setKeyboardOpenId,
       indicator,
+      isControlled,
       getActiveTreeItemId,
       getActiveTreeItemIndex,
       setTreeItemArray,
@@ -220,6 +230,7 @@ const TreeViewPresenterObject = props => {
                 tabIndex="0"
               >
                 {renderFileTree(treeNode, {
+                  defaultSelected,
                   getActiveTreeItemId,
                   getActiveTreeItemIndex,
                   guidelines,
@@ -229,6 +240,7 @@ const TreeViewPresenterObject = props => {
                   getCurrentItemClicked,
                   getKeyboardOpenId,
                   getTreeItemArray,
+                  isControlled,
                   setActiveTreeItemId,
                   setActiveTreeItemIndex,
                   setKeyboardOpenId,

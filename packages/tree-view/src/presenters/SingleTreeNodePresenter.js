@@ -31,6 +31,7 @@ export default function SingleTreeNodePresenter(props) {
   const payload = { ...otherProps };
 
   delete payload.collapsed;
+  delete payload.defaultSelected;
   delete payload.getActiveTreeItemId;
   delete payload.getActiveTreeItemIndex;
   delete payload.getCurrentItemClicked;
@@ -39,6 +40,7 @@ export default function SingleTreeNodePresenter(props) {
   delete payload.getTreeItemArray;
   delete payload.guidelines;
   delete payload.highlighted;
+  delete payload.isControlled;
   delete payload.indicator;
   delete payload.keyboardOpenId;
   delete payload.level;
