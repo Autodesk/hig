@@ -1,17 +1,67 @@
+/* eslint-disable */
+
 export default function stylesheet(props, themeData, metadata) {
   const {
     orientation,
-    backgroundColor,
-    divider
+    background,
+    divider,
+    hasFocus,
+    hasHover,
+    isPressed,
+    surface,
   } = props;
+  const surfaceLevel = surface < 300 ? '100To250' : '300To350';
+  const bgType = background === 'solid' ? 'filled' : 'empty';
   const isColumn = orientation === 'vertical';
+  const isNoBg = background === 'flat' && !hasFocus;
+  const disabled = false;
+  const getDefaultOutline = () => {
+    const color = themeData[`tile.${bgType}.default.level${surfaceLevel}.borderColor`];
+    return `1px solid ${color}`;
+  }
+
+  const getStylesByFocus = () => {
+    if (isNoBg) return 'none';
+    const outlineThickness = hasHover ? themeData['tile.borderWidth'] : '10px';
+    const color = themeData[`tile.selected.hover.borderColor`];
+    return {
+      backgroundColor: hasHover ? themeData['tile.selected.hover.backgroundColor'] : themeData[`tile.${bgType}.focus.level${surfaceLevel}.backgroundColor`],
+      outline: `${outlineThickness} solid ${color}`
+    }
+  }
+
+  const getStylesByStatus = (status) => {
+    if (isNoBg) return 'none';
+    const color = themeData[`tile.${bgType}.${status}.level${surfaceLevel}.borderColor`];
+    const borderWidth = themeData['tile.borderWidth'];
+    return {
+      backgroundColor: themeData[`tile.${bgType}.${status}.level${surfaceLevel}.backgroundColor`],
+      outline: `${borderWidth} solid ${color}`
+    }
+  }
+
+  const getStylesByDisabled = () => {
+    return {
+      opacity: themeData["colorScheme.opacity.disabled"],
+      pointerEvents: 'none',
+    }
+  }
+
   return {
     higTileContainer: {
       position: 'relative',
+      boxSizing: 'border-box',
       display: 'flex',
       flexDirection: isColumn ? 'column' : 'row',
-      backgroundColor: backgroundColor ? themeData['tile.default.level300To350BackgroundColor'] : 'none',
+      backgroundColor: isNoBg ? 'none' : themeData[`tile.${bgType}.default.level${surfaceLevel}.backgroundColor`],
       width: '100%',
+      minWidth: orientation === 'vertical' ? 'none' : '233px',
+      outline: getDefaultOutline(),
+      cursor: 'pointer',
+      ...(hasHover ? getStylesByStatus('hover') : {}),
+      ...(isPressed ? getStylesByStatus('pressed') : {}),
+      ...(hasFocus ? getStylesByFocus() : {}),
+      ...(disabled ? getStylesByDisabled() : {})
     },
     higTileNotifications: {
       position: 'absolute',
@@ -39,9 +89,11 @@ export default function stylesheet(props, themeData, metadata) {
     higTileHeader: {
       position: 'relative',
       margin: '0',
-      padding: backgroundColor ? '0' : '10px',
-      backgroundColor: backgroundColor ? backgroundColor : 'none',
-      borderBottom: divider && backgroundColor ? `1px solid ${divider}` : 'none'
+      padding: background ? '0' : themeData['tile.padding'],
+      borderBottom: divider && background ? `1px solid ${divider}` : 'none',
+      maxHeight: orientation === 'vertical' ? '164px' : '85px',
+      maxWidth: orientation === 'vertical' ? 'none' : '85px',
+      overflow: 'hidden',
     },
     higTileActionClarifier: {
       position: 'absolute',
@@ -64,13 +116,13 @@ export default function stylesheet(props, themeData, metadata) {
       left: '0px',
     },
     higTileIdentifierIcon: {
-      backgroundColor: 'white',
       width: '50px',
       color: '#000',
+      paddingLeft: themeData['tile.padding'],
     },
     higTileContent: {
       position: 'relative',
-      padding: '10px'
+      padding: themeData['tile.padding'],
     },
     higTileTitleContainer: {
       display: 'flex',
@@ -100,10 +152,11 @@ export default function stylesheet(props, themeData, metadata) {
       // padding: '0 5px',
     },
     higVersionHolder: {
-      marginTop: '5px',
+      marginTop: themeData["tile.title.marginBottom"],
     },
     higTileCTAHolder: {
-      marginTop: '5px',
+      zIndex: '10',
+      marginTop: themeData["tile.title.marginBottom"],
     }
   }
 }
