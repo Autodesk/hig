@@ -1,3 +1,10 @@
+# [@hig/tree-view-v2.5.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.4.0...@hig/tree-view@2.5.0) (2022-03-16)
+
+
+### Features
+
+* add selected and defaultSelected props ([a60ebec](https://github.com/Autodesk/hig/commit/a60ebec))
+
 # [@hig/tree-view-v2.4.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.3.0...@hig/tree-view@2.4.0) (2022-02-16)
 
 

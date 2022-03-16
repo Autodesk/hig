@@ -60,6 +60,7 @@ export default function SingleTreeNodeFolderPresenter(props) {
   const payload = { ...otherProps };
 
   delete payload.density;
+  delete payload.defaultSelected;
   delete payload.getActiveTreeItemId;
   delete payload.getActiveTreeItemIndex;
   delete payload.getCurrentItemClicked;
@@ -68,6 +69,7 @@ export default function SingleTreeNodeFolderPresenter(props) {
   delete payload.getTreeItemArray;
   delete payload.guidelines;
   delete payload.highlighted;
+  delete payload.isControlled;
   delete payload.keyboardOpenId;
   delete payload.level;
   delete payload.onOperatorClick;

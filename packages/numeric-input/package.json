@@ -1,6 +1,6 @@
 {
   "name": "@hig/numeric-input",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "HIG Numeric Input",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,13 +18,14 @@
   ],
   "dependencies": {
     "@hig/behaviors": "^2.1.0",
+    "@hig/icons": "^4.1.0",
     "@hig/input": "^2.1.0",
     "@hig/utils": "^0.4.1",
     "prop-types": "^15.7.1"
   },
   "peerDependencies": {
     "@hig/theme-context": "^4.1.0",
-    "@hig/theme-data": "^2.23.1",
+    "@hig/theme-data": "^2.24.0",
     "react": "^17.0.0"
   },
   "devDependencies": {

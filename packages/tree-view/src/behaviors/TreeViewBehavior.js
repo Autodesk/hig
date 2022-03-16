@@ -52,6 +52,7 @@ function buildTreeItemIdArray(list) {
 }
 
 const TreeViewBehavior = props => {
+  const isControlled = () => props.selected !== undefined;
   const [treeItemArray, setTreeItemArrayHook] = useState(null);
   const [activeTreeItemIndex, setActiveTreeItemIndexHook] = useState(null);
   const [currentItemClicked, setCurrentItemClickedHook] = useState(null);
@@ -74,8 +75,13 @@ const TreeViewBehavior = props => {
 
   const getActiveTreeItemIndex = () => activeTreeItemIndex;
 
-  const getActiveTreeItemId = () =>
-    treeItemArray && treeItemArray[getActiveTreeItemIndex()];
+  const getActiveTreeItemId = () => {
+    if (isControlled()) {
+      return props.selected;
+    }
+
+    return treeItemArray && treeItemArray[getActiveTreeItemIndex()];
+  };
 
   const setActiveTreeItemId = currentItemclicked => {
     setCurrentItemClickedHook(currentItemclicked);
@@ -160,6 +166,9 @@ const TreeViewBehavior = props => {
       // Space
       case 32: {
         event.preventDefault();
+        if (isControlled()) {
+          return;
+        }
         setActiveTreeItemId(getActiveTreeItemId());
         break;
       }
@@ -175,6 +184,7 @@ const TreeViewBehavior = props => {
     getKeyboardOpenId,
     getTreeItemArray,
     handleKeyDown,
+    isControlled,
     setActiveTreeItemId,
     setActiveTreeItemIndex,
     setKeyboardOpenId,
@@ -188,7 +198,9 @@ TreeViewBehavior.displayName = "TreeViewBehavior";
 
 TreeViewBehavior.propTypes = {
   children: PropTypes.func,
+  defaultSelected: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onKeyDown: PropTypes.func,
+  selected: PropTypes.string,
   treeNode: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
