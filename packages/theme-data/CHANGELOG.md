@@ -1,3 +1,15 @@
+# [@hig/theme-data-v2.24.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.23.1...@hig/theme-data@2.24.0) (2022-03-16)
+
+
+### Bug Fixes
+
+* updated accordion spacing token ref ([3f5056d](https://github.com/Autodesk/hig/commit/3f5056d))
+
+
+### Features
+
+* created theme data for segmented button ([da4ccf0](https://github.com/Autodesk/hig/commit/da4ccf0))
+
 # [@hig/theme-data-v2.23.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.23.0...@hig/theme-data@2.23.1) (2022-02-07)
 
 
