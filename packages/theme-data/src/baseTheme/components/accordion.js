@@ -63,7 +63,7 @@ export default {
   },
   "accordion.header.indicatorRight.paddingRight": {
     type: LENGTH,
-    value: { ref: "density.spacings.medium" }
+    value: { ref: "density.spacings.small" }
   },
   /**
    *  ## Deprecated
