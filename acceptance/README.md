@@ -9,7 +9,7 @@ Rendering components in development on the current branch requires some set up.
 ```
 cd ../node_modules/react
 yarn link
-cd ../acceptance
+cd ../../acceptance
 yarn bootstrap
 yarn link react
 ```
