@@ -9,12 +9,13 @@ export default function stylesheet(props, themeData, metadata) {
     hasHover,
     isPressed,
     surface,
+    disabled,
   } = props;
   const surfaceLevel = surface < 300 ? '100To250' : '300To350';
   const bgType = background === 'solid' ? 'filled' : 'empty';
   const isColumn = orientation === 'vertical';
   const isNoBg = background === 'flat' && !hasFocus;
-  const disabled = false;
+
   const getDefaultOutline = () => {
     const color = themeData[`tile.${bgType}.default.level${surfaceLevel}.borderColor`];
     return `1px solid ${color}`;

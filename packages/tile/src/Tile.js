@@ -24,6 +24,7 @@ const Tile = (props) => {
     pinIcon,
     showPin,
     surface,
+    disabled,
     onBlur,
     onClick,
     onFocus,
@@ -76,6 +77,7 @@ const Tile = (props) => {
                 pinIcon={pinIcon}
                 showPin={showPin}
                 surface={surface}
+                disabled={disabled}
                 hasFocus={hasFocus}
                 hasHover={hasHover}
                 isPressed={isPressed}
