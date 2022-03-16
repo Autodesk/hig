@@ -323,7 +323,7 @@ const TableWithSticky = ({
                             selected={getActiveColumnIndex === headerIndex && getActiveRowIndex === -1}
                             setActiveMultiSelectColumn={setActiveMultiSelectColumn}
                         >
-                          <div css={styles.headerHolder}>
+                          <div className={css(styles.headerHolder)}>
                             {column.canGroupBy  && meta.groupElements ? (
                               <span {...column.getGroupByToggleProps()}>
                                 {<GroupHeaderElements isGrouped={column.isGrouped} groupHeaderElementStyles={styles.groupHeaderElement}/>}
