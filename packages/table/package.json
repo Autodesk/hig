@@ -19,7 +19,6 @@
   "dependencies": {
     "@hig/behaviors": "^1.1.1",
     "@hig/checkbox": "^2.1.0",
-    "@react-hook/window-size": "^3.0.7",
     "date-fns": "^2.23.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",

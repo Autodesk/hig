@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ThemeContext } from "@hig/theme-context";
-import TableWithSticky from "./TableWithSticky";
+
+import TablePresenter from "./presenters/TablePresenter";
 import TableBehavior from './behaviors/TableBehavior';
 
 const Table = (props) => {
@@ -46,7 +47,7 @@ const Table = (props) => {
             setTableRef,
             setTotalRows,
           }) =>
-            <TableWithSticky
+            <TablePresenter
               alternateBg={alternateBg}
               columnSelection={columnSelection}
               frozenHeader={frozenHeader}

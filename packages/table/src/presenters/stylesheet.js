@@ -28,7 +28,6 @@ export default function stylesheet(props, themeData, metadata) {
 
 	return {
 		higTable: {
-			// borderTop: `${themeData['table.borderWidth']} solid ${themeData['colorScheme.divider.lightweight']}`,
 			color: themeData['table.fontColor'],
 			fontFamily: themeData['table.fontFamily'],
 			fontSize: themeData['table.fontSize'],
@@ -39,27 +38,22 @@ export default function stylesheet(props, themeData, metadata) {
 			...(isStickyColumn || isStickyHeader ? {overflow: `auto`} : {})
 		},
 		higTableRow: {
-			// borderBottom: `${themeData['table.borderWidth']} solid ${themeData['colorScheme.divider.lightweight']}`,
-			// borderLeft: `${themeData['table.borderWidth']} solid ${themeData['colorScheme.divider.lightweight']}`,
-			// borderRight: `${themeData['table.borderWidth']} solid ${themeData['colorScheme.divider.lightweight']}`,
 			boxSizing: `border-box`,
 			width: `100%`,
 			...(alternateBg ? {background: alternateBgColor} : {background: themeData["table.row.backgroundColor"]}),
 		},
 		higTableHeaderWrapper: {
-			// borderBottom: `${themeData['table.borderWidth']} solid ${themeData['colorScheme.divider.lightweight']}`,
 			...(isStickyColumn || isStickyHeader
 				? {
 					position: `sticky`,
 					top: 0,
-              		zIndex: 10
+          zIndex: 10
 				}
 				: {}
 			)
 		},
 		higTableHeader: {
 			backgroundColor: headerBackgroundColor ? headerBackgroundColor : themeData['colorScheme.surface.level100'],
-			// borderRight: `${themeData['table.borderWidth']} solid ${themeData['colorScheme.divider.lightweight']}`,
 			fontWeight: themeData['table.cell.fontWeight'],
 			margin: 0,
 			opacity: 1,
@@ -71,8 +65,6 @@ export default function stylesheet(props, themeData, metadata) {
 					}
 				} 
 				: {}),
-			// ...(headerIndex === -1 ? {display: 'flex', justifyContent: 'center', alignItems: 'center'} : {}),
-			
 			"&:first-of-type": {
 				"& > div": {
 					borderLeft: `${themeData['table.borderWidth']} solid ${themeData['colorScheme.divider.lightweight']}`
@@ -104,7 +96,6 @@ export default function stylesheet(props, themeData, metadata) {
 			)
 		},
 		higTableHeaderRow: {
-			// borderLeft: `${themeData['table.borderWidth']} solid ${themeData['colorScheme.divider.lightweight']}`,
 			"&:not(:last-child)": {
 				pointerEvents: `none`
 			}
@@ -121,26 +112,19 @@ export default function stylesheet(props, themeData, metadata) {
 			transition: `background-color 0.1s ease-in-out`,
 			width: `5px`,
 			zIndex: 1,
-			// "&:hover": {
-			// 	background: themeData[`table.resize.hover.borderColor`],
-			// 	// transition: `background-color 0.1s ease-in-out`,
-			// },
 			...(isResizing
 				? {
-					"&::before": {
-						content: `""`,
-						borderRight: `1px solid ${themeData[`table.resize.pressed.borderColor`]}`
-					}
-					// background: themeData[`table.resize.pressed.borderColor`],
-					// transition: `background-color 0.1s ease-in-out`
-				}
+            "&::before": {
+              content: `""`,
+              borderRight: `1px solid ${themeData[`table.resize.pressed.borderColor`]}`
+            }
+          }
 				: {}
 			)
 		},
 		higTableBody: {
 			position: `relative`,
 			...(frozenHeader ? {
-					// overflowY: `scroll`,
 					maxHeight: `calc((${themeData['table.cell.minHeight']} * ${frozenHeaderCount || 50}) + 1px)`
 				} :
 				{}
@@ -148,7 +132,6 @@ export default function stylesheet(props, themeData, metadata) {
 		},
 		higTableCell: {
 			alignItems: `center`,
-			// backgroundColor: themeData['table.background.backgroundColor'],
 			borderRight: `${themeData['table.borderWidth']} solid ${themeData['colorScheme.divider.lightweight']}`,
 			borderTop: `${themeData['table.borderWidth']} solid ${themeData['colorScheme.divider.lightweight']}`,
 			boxSizing: `border-box`,
@@ -166,8 +149,7 @@ export default function stylesheet(props, themeData, metadata) {
 			...(isPressed && cellColumnIndex !== -1 ? {backgroundColor: themeData['table.cell.unselected.pressed.backgroundColor']} : {}),
 			...(selected
 				? {
-					// backgroundColor: themeData['table.row.selected.focus.backgroundColor'],
-					backgroundColor: `transparent`, // theme-data is incorrect so using hard-coded transparent
+					backgroundColor: `transparent`,
 					borderRight: `1px solid ${themeData['table.row.selected.default.borderColor']}`,
 					borderTop: `1px solid ${themeData['table.row.selected.default.borderColor']}`
 					}
@@ -179,7 +161,6 @@ export default function stylesheet(props, themeData, metadata) {
 				? {
 					backgroundColor: themeData['table.cell.multiSelect.default.backgroundColor'],
 					borderRight: `1px solid ${themeData['table.cell.multiSelect.focus.borderColor']}`
-					// borderRight: `1px solid ${themeData['table.cell.multiSelect.focus.borderColor']}`,
 				}
 				: {}),
 			...(multiSelectedColumn && isLast ? {borderBottom: `1px solid ${themeData['table.cell.multiSelect.focus.borderColor']}`} : {}),

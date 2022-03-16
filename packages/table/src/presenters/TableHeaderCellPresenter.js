@@ -34,7 +34,6 @@ export default function TableHeaderCellPresenter(props) {
             {...props}
             className={css(styles.higTableHeader)}
             onClick={handleClick}
-            className="th"
             {...(isSelectableHeader ? {'data-cell-coords': `${headerIndex}_-1`} : {})}
           >
             <div className={css(styles.higTableHeaderContentWrapper)}>
