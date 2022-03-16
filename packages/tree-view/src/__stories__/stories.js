@@ -422,7 +422,7 @@ export default [
           key="tree-item-0"
           label="Tree Item 0"
           icon={<Hierarchy24 />}
-          expandByDoubleClick="true"
+          expandByDoubleClick
           draggable="true"
         >
           <TreeItem
@@ -430,21 +430,21 @@ export default [
             id="tree-item-1"
             key="tree-item-1"
             icon={<Calendar24 />}
-            expandByDoubleClick="true"
+            expandByDoubleClick
           >
             <TreeItem
               label="Tree Item 2"
               id="tree-item-2"
               key="tree-item-2"
               icon={<Folder24 />}
-              expandByDoubleClick="true"
+              expandByDoubleClick
             >
               <TreeItem
                 label="Tree Item 3"
                 id="tree-item-3"
                 key="tree-item-3"
                 icon={<ProductsAndServices24 />}
-                expandByDoubleClick="true"
+                expandByDoubleClick
               >
                 <TreeItem
                   label="Tree Item 4"

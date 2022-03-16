@@ -20,7 +20,8 @@ describe("tree-view/TreeObjectNestedSubTreeItem", () => {
         getActiveTreeItemId: () => {},
         getKeyboardOpenId: () => {},
         setKeyboardOpenId: () => {},
-        getCurrentItemClicked: () => {}
+        getCurrentItemClicked: () => {},
+        isControlled: () => {}
       }
     };
 

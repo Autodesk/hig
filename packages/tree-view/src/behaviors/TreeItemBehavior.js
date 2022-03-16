@@ -18,6 +18,14 @@ const TreeItemBehavior = props => {
     if (props.onClick) {
       props.onClick(event);
     }
+    // do nothing if controlled and using treeNode
+    if (props.payload && props.payload.isControlled()) {
+      return;
+    }
+    // do nothing if controlled and using TreeItem
+    if (props.isControlled && props.isControlled()) {
+      return;
+    }
     // eslint-disable-next-line no-param-reassign
     treeItem = treeItem || {};
     if (props.payload) {
