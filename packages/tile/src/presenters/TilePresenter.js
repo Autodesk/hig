@@ -56,7 +56,7 @@ const TilePresenter = props => {
             onMouseLeave={onMouseLeave}
             onMouseDown={onMouseDown}
             onMouseUp={onMouseUp}
-            onClick={onClick}
+            onClick={cta ? () => handleClickCTA(cta?.action) : onClick}
           >
             {notification && 
               <div className={css(styles.higTileNotifications)}>
