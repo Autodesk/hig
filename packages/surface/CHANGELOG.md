@@ -1,3 +1,10 @@
+# [@hig/surface-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/surface@2.1.0...@hig/surface@2.1.1) (2022-03-17)
+
+
+### Bug Fixes
+
+* typo in component displayName ([1c58da1](https://github.com/Autodesk/hig/commit/1c58da1))
+
 # [@hig/surface-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/surface@2.0.0...@hig/surface@2.1.0) (2022-01-24)
 
 
