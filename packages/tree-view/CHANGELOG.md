@@ -1,3 +1,10 @@
+# [@hig/tree-view-v2.5.1](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.5.0...@hig/tree-view@2.5.1) (2022-03-17)
+
+
+### Bug Fixes
+
+* add PropType validation for selected and defaultSelected ([b489459](https://github.com/Autodesk/hig/commit/b489459))
+
 # [@hig/tree-view-v2.5.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.4.0...@hig/tree-view@2.5.0) (2022-03-16)
 
 
