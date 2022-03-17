@@ -1,3 +1,10 @@
+# [@hig/button-v3.1.1](https://github.com/Autodesk/hig/compare/@hig/button@3.1.0...@hig/button@3.1.1) (2022-03-17)
+
+
+### Bug Fixes
+
+* passing in wrong props to stylesheet ([d52f528](https://github.com/Autodesk/hig/commit/d52f528))
+
 # [@hig/button-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/button@3.0.0...@hig/button@3.1.0) (2022-01-24)
 
 
