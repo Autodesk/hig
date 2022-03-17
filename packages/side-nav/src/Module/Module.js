@@ -38,14 +38,11 @@ const Module = props => {
 
   const presenterBag = createPresenterBag();
 
-  useEffect(
-    () => {
-      if (callBackMinimized) {
-        callBackMinimized();
-      }
-    },
-    [callBackMinimized]
-  );
+  useEffect(() => {
+    if (callBackMinimized) {
+      callBackMinimized();
+    }
+  }, [callBackMinimized]);
 
   useEffect(() => {}, [props.children, props.link]);
 

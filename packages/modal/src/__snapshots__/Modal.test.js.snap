@@ -214,7 +214,6 @@ exports[`modal/Modal integration renders correctly 1`] = `
           <button
             aria-label="Close"
             className="emotion-2"
-            disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -228,9 +227,7 @@ exports[`modal/Modal integration renders correctly 1`] = `
             <svg
               className="emotion-1"
               height="16px"
-              viewBox="0 0 16 16"
               width="16px"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
@@ -465,7 +462,6 @@ exports[`modal/Modal integration renders with a custom css class name 1`] = `
           <button
             aria-label="Close"
             className="emotion-2"
-            disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -479,9 +475,7 @@ exports[`modal/Modal integration renders with a custom css class name 1`] = `
             <svg
               className="emotion-1"
               height="16px"
-              viewBox="0 0 16 16"
               width="16px"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
@@ -716,7 +710,6 @@ exports[`modal/Modal integration renders with styles customized 1`] = `
           <button
             aria-label="Close"
             className="emotion-2"
-            disabled={undefined}
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -730,9 +723,7 @@ exports[`modal/Modal integration renders with styles customized 1`] = `
             <svg
               className="emotion-1"
               height="16px"
-              viewBox="0 0 16 16"
               width="16px"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"

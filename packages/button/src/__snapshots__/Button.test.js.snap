@@ -1,213 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button  1`] = `
-.emotion-0 {
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
-  border-radius: 2px;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: ArtifaktElement,sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 18px;
-  margin: 0;
-  overflow: hidden;
-  padding: 8px 16px;
-  position: relative;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow;
-  transition-property: box-shadow;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  background: #0696d7;
-}
-
-.emotion-0:visited {
-  color: #ffffff;
-}
-
-.emotion-0 svg * {
-  fill: #ffffff;
-}
-
-<button
-  className="emotion-0"
-  disabled={false}
-  href={undefined}
-  onBlur={[Function]}
-  onClick={undefined}
-  onFocus={[Function]}
-  onMouseDown={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  onMouseOver={undefined}
-  onMouseUp={[Function]}
-  tabIndex="0"
-  target={undefined}
->
-  <span
-    className=""
-  >
-    Settings
-  </span>
-</button>
-`;
-
-exports[`Button  2`] = `
-.emotion-0 {
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
-  border-radius: 2px;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: ArtifaktElement,sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 18px;
-  margin: 0;
-  overflow: hidden;
-  padding: 8px 16px;
-  position: relative;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow;
-  transition-property: box-shadow;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  background: #0696d7;
-}
-
-.emotion-0:visited {
-  color: #ffffff;
-}
-
-.emotion-0 svg * {
-  fill: #ffffff;
-}
-
-<button
-  className="emotion-0"
-  disabled={false}
-  href={undefined}
-  onBlur={[Function]}
-  onClick={undefined}
-  onFocus={[Function]}
-  onMouseDown={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  onMouseOver={undefined}
-  onMouseUp={[Function]}
-  tabIndex="0"
-  target={undefined}
->
-  <span
-    className=""
-  >
-    Settings
-  </span>
-</button>
-`;
-
-exports[`Button  3`] = `
-.emotion-0 {
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(128,128,128,0.5);
-  border-radius: 2px;
-  box-sizing: border-box;
-  color: #3c3c3c;
-  cursor: pointer;
-  display: inline-block;
-  font-family: ArtifaktElement,sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 18px;
-  margin: 0;
-  overflow: hidden;
-  padding: 8px 16px;
-  position: relative;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow;
-  transition-property: box-shadow;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  background: none;
-}
-
-.emotion-0:visited {
-  color: #3c3c3c;
-}
-
-.emotion-0 svg * {
-  fill: #808080;
-}
-
-<button
-  className="emotion-0"
-  disabled={false}
-  href={undefined}
-  onBlur={[Function]}
-  onClick={undefined}
-  onFocus={[Function]}
-  onMouseDown={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  onMouseOver={undefined}
-  onMouseUp={[Function]}
-  tabIndex="0"
-  target={undefined}
->
-  <span
-    className=""
-  >
-    Settings
-  </span>
-</button>
-`;
-
-exports[`Button  4`] = `
+exports[`Button renders as button type flat 1`] = `
 .emotion-0 {
   border-width: 1px;
   border-style: solid;
@@ -256,17 +49,13 @@ exports[`Button  4`] = `
 <button
   className="emotion-0"
   disabled={false}
-  href={undefined}
   onBlur={[Function]}
-  onClick={undefined}
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
-  onMouseOver={undefined}
   onMouseUp={[Function]}
   tabIndex="0"
-  target={undefined}
 >
   <span
     className=""
@@ -276,7 +65,268 @@ exports[`Button  4`] = `
 </button>
 `;
 
-exports[`Button  5`] = `
+exports[`Button renders as button type outline 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(128,128,128,0.5);
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #3c3c3c;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  position: relative;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: none;
+}
+
+.emotion-0:visited {
+  color: #3c3c3c;
+}
+
+.emotion-0 svg * {
+  fill: #808080;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  tabIndex="0"
+>
+  <span
+    className=""
+  >
+    Settings
+  </span>
+</button>
+`;
+
+exports[`Button renders as button type solid 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  position: relative;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0 svg * {
+  fill: #ffffff;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  tabIndex="0"
+>
+  <span
+    className=""
+  >
+    Settings
+  </span>
+</button>
+`;
+
+exports[`Button renders as default button 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  position: relative;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0 svg * {
+  fill: #ffffff;
+}
+
+<button
+  className="emotion-0"
+  disabled={false}
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  tabIndex="0"
+>
+  <span
+    className=""
+  >
+    Settings
+  </span>
+</button>
+`;
+
+exports[`Button renders with a link 1`] = `
+.emotion-0 {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  margin: 0;
+  overflow: hidden;
+  padding: 8px 16px;
+  position: relative;
+  text-align: center;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background: #0696d7;
+}
+
+.emotion-0:visited {
+  color: #ffffff;
+}
+
+.emotion-0 svg * {
+  fill: #ffffff;
+}
+
+<a
+  className="emotion-0"
+  disabled={false}
+  href="https://hig.autodesk.com"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  tabIndex="0"
+>
+  <span
+    className=""
+  >
+    Settings
+  </span>
+</a>
+`;
+
+exports[`Button renders with an icon 1`] = `
 .emotion-2 {
   border-width: 1px;
   border-style: solid;
@@ -340,17 +390,13 @@ exports[`Button  5`] = `
 <button
   className="emotion-2"
   disabled={false}
-  href={undefined}
   onBlur={[Function]}
-  onClick={undefined}
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
-  onMouseOver={undefined}
   onMouseUp={[Function]}
   tabIndex="0"
-  target={undefined}
 >
   <span
     className="emotion-0"
@@ -365,7 +411,7 @@ exports[`Button  5`] = `
 </button>
 `;
 
-exports[`Button  6`] = `
+exports[`Button renders with className prop 1`] = `
 .emotion-0 {
   border-width: 1px;
   border-style: solid;
@@ -414,17 +460,13 @@ exports[`Button  6`] = `
 <button
   className="emotion-0 custom-class"
   disabled={false}
-  href={undefined}
   onBlur={[Function]}
-  onClick={undefined}
   onFocus={[Function]}
   onMouseDown={[Function]}
   onMouseEnter={[Function]}
   onMouseLeave={[Function]}
-  onMouseOver={undefined}
   onMouseUp={[Function]}
   tabIndex="0"
-  target={undefined}
 >
   <span
     className=""
@@ -432,73 +474,4 @@ exports[`Button  6`] = `
     Button Class
   </span>
 </button>
-`;
-
-exports[`Button  7`] = `
-.emotion-0 {
-  border-width: 1px;
-  border-style: solid;
-  border-color: transparent;
-  border-radius: 2px;
-  box-sizing: border-box;
-  color: #ffffff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: ArtifaktElement,sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 18px;
-  margin: 0;
-  overflow: hidden;
-  padding: 8px 16px;
-  position: relative;
-  text-align: center;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow;
-  transition-property: box-shadow;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  white-space: nowrap;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  background: #0696d7;
-}
-
-.emotion-0:visited {
-  color: #ffffff;
-}
-
-.emotion-0 svg * {
-  fill: #ffffff;
-}
-
-<a
-  className="emotion-0"
-  disabled={false}
-  href="https://hig.autodesk.com"
-  onBlur={[Function]}
-  onClick={undefined}
-  onFocus={[Function]}
-  onMouseDown={[Function]}
-  onMouseEnter={[Function]}
-  onMouseLeave={[Function]}
-  onMouseOver={undefined}
-  onMouseUp={[Function]}
-  tabIndex="0"
-  target={undefined}
->
-  <span
-    className=""
-  >
-    Settings
-  </span>
-</a>
 `;

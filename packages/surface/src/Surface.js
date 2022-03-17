@@ -52,7 +52,7 @@ const Surface = props => {
   );
 };
 
-Surface.displayName = "Surfacel";
+Surface.displayName = "Surface";
 
 Surface.propTypes = {
   /**

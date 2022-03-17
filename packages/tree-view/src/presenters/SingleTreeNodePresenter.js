@@ -112,5 +112,9 @@ export default function SingleTreeNodePresenter(props) {
 SingleTreeNodePresenter.propTypes = {
   icon: PropTypes.node,
   id: PropTypes.string,
+  itemRef: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.any) })
+  ]),
   label: PropTypes.node
 };

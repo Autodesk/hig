@@ -85,6 +85,10 @@ TreeView.propTypes = {
    */
   children: PropTypes.node,
   /**
+   * Default selected TreeItem
+   */
+  defaultSelected: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  /**
    * Visual guidelines for each TreeItem
    */
   guidelines: PropTypes.bool,
@@ -104,6 +108,10 @@ TreeView.propTypes = {
    *  - setKeyboardOpenId(id: string) => opens the treeitem
    */
   onKeyDown: PropTypes.func,
+  /**
+   * Controls the selected TreeItem
+   */
+  selected: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   /**
    * Adds custom/overriding styles
    */

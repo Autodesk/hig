@@ -1,31 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`flyout/presenters/PointerPresenter  1`] = `
-.emotion-0 {
-  fill: rgba(128,128,128,0);
-}
-
-.emotion-1 {
-  fill: #ffffff;
-}
-
-<svg
-  height="24"
-  viewBox="0 0 24 24"
-  width="24"
->
-  <polygon
-    className="emotion-0"
-    points="0,12 12,0 24,12"
-  />
-  <polygon
-    className="emotion-1"
-    points="2.5,12 12,2.5 21.5,12"
-  />
-</svg>
-`;
-
-exports[`flyout/presenters/PointerPresenter  2`] = `
+exports[`flyout/presenters/PointerPresenter renders with all props 1`] = `
 .emotion-0 {
   fill: rgba(128,128,128,0);
 }
@@ -46,6 +21,31 @@ exports[`flyout/presenters/PointerPresenter  2`] = `
   <polygon
     className="emotion-1"
     points="10,50 50,10 90,50"
+  />
+</svg>
+`;
+
+exports[`flyout/presenters/PointerPresenter renders without props 1`] = `
+.emotion-0 {
+  fill: rgba(128,128,128,0);
+}
+
+.emotion-1 {
+  fill: #ffffff;
+}
+
+<svg
+  height="24"
+  viewBox="0 0 24 24"
+  width="24"
+>
+  <polygon
+    className="emotion-0"
+    points="0,12 12,0 24,12"
+  />
+  <polygon
+    className="emotion-1"
+    points="2.5,12 12,2.5 21.5,12"
   />
 </svg>
 `;

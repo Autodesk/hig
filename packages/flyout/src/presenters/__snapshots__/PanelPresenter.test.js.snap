@@ -28,6 +28,5 @@ exports[`flyout/presenters/PanelPresenter renders without props 1`] = `
 
 <div
   className="emotion-0"
-  onScroll={undefined}
 />
 `;

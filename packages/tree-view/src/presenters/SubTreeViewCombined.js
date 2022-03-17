@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { css, cx } from "emotion";
 import { createCustomClassNames } from "@hig/utils";
-
+// eslint-disable-next-line import/no-cycle
 import TreeObjectNestedSubTreeItem from "./fileview/TreeObjectNestedSubTreeItem";
 import TreeObjectSubTreeItem from "./fileview/TreeObjectSubTreeItem";
 import TreeItemBehavior from "../behaviors/TreeItemBehavior";
@@ -152,66 +152,65 @@ const SubTreeViewCombined = props => {
             role="group"
           >
             {children
-              ? children.map(
-                  (child, index) =>
-                    child.children ? (
-                      <TreeItemBehavior
-                        // eslint-disable-next-line react/no-array-index-key
-                        key={`${id}-${index}`}
-                        {...child}
-                        {...payload}
-                      >
-                        {({
-                          getIsCollapsed,
-                          handleClick,
-                          handleOperatorClick,
-                          setIsCollapsed
-                        }) => (
-                          <TreeObjectNestedSubTreeItem
-                            treeItem={{ ...child, payload }}
-                            themeData={themeData}
-                            density={density}
-                            onClick={handleClick}
-                            onFocus={onFocus}
-                            onOperatorClick={handleOperatorClick}
-                            collapsed={getIsCollapsed()}
-                            getIsCollapsed={getIsCollapsed}
-                            getKeyboardOpenId={getKeyboardOpenId}
-                            keyboardOpenId={getKeyboardOpenId()}
-                            setIsCollapsed={setIsCollapsed}
-                            setKeyboardOpenId={setKeyboardOpenId}
-                            // eslint-disable-next-line react/no-array-index-key
-                            key={`${id}-${index}`}
-                            level={level + 1}
-                          />
-                        )}
-                      </TreeItemBehavior>
-                    ) : (
-                      <TreeItemBehavior
-                        // eslint-disable-next-line react/no-array-index-key
-                        key={`${id}-${index}`}
-                        {...child}
-                        {...payload}
-                      >
-                        {({ getIsCollapsed, handleClick, setIsCollapsed }) => (
-                          <TreeObjectSubTreeItem
-                            treeItem={{ ...child, payload }}
-                            themeData={themeData}
-                            onClick={handleClick}
-                            onFocus={onFocus}
-                            collapsed={getIsCollapsed()}
-                            getIsCollapsed={getIsCollapsed}
-                            getKeyboardOpenId={getKeyboardOpenId}
-                            keyboardOpenId={getKeyboardOpenId()}
-                            setIsCollapsed={setIsCollapsed}
-                            setKeyboardOpenId={setKeyboardOpenId}
-                            // eslint-disable-next-line react/no-array-index-key
-                            key={`${id}-${index}`}
-                            level={level + 1}
-                          />
-                        )}
-                      </TreeItemBehavior>
-                    )
+              ? children.map((child, index) =>
+                  child.children ? (
+                    <TreeItemBehavior
+                      // eslint-disable-next-line react/no-array-index-key
+                      key={`${id}-${index}`}
+                      {...child}
+                      {...payload}
+                    >
+                      {({
+                        getIsCollapsed,
+                        handleClick,
+                        handleOperatorClick,
+                        setIsCollapsed
+                      }) => (
+                        <TreeObjectNestedSubTreeItem
+                          treeItem={{ ...child, payload }}
+                          themeData={themeData}
+                          density={density}
+                          onClick={handleClick}
+                          onFocus={onFocus}
+                          onOperatorClick={handleOperatorClick}
+                          collapsed={getIsCollapsed()}
+                          getIsCollapsed={getIsCollapsed}
+                          getKeyboardOpenId={getKeyboardOpenId}
+                          keyboardOpenId={getKeyboardOpenId()}
+                          setIsCollapsed={setIsCollapsed}
+                          setKeyboardOpenId={setKeyboardOpenId}
+                          // eslint-disable-next-line react/no-array-index-key
+                          key={`${id}-${index}`}
+                          level={level + 1}
+                        />
+                      )}
+                    </TreeItemBehavior>
+                  ) : (
+                    <TreeItemBehavior
+                      // eslint-disable-next-line react/no-array-index-key
+                      key={`${id}-${index}`}
+                      {...child}
+                      {...payload}
+                    >
+                      {({ getIsCollapsed, handleClick, setIsCollapsed }) => (
+                        <TreeObjectSubTreeItem
+                          treeItem={{ ...child, payload }}
+                          themeData={themeData}
+                          onClick={handleClick}
+                          onFocus={onFocus}
+                          collapsed={getIsCollapsed()}
+                          getIsCollapsed={getIsCollapsed}
+                          getKeyboardOpenId={getKeyboardOpenId}
+                          keyboardOpenId={getKeyboardOpenId()}
+                          setIsCollapsed={setIsCollapsed}
+                          setKeyboardOpenId={setKeyboardOpenId}
+                          // eslint-disable-next-line react/no-array-index-key
+                          key={`${id}-${index}`}
+                          level={level + 1}
+                        />
+                      )}
+                    </TreeItemBehavior>
+                  )
                 )
               : null}
           </ul>
@@ -303,46 +302,44 @@ const SubTreeViewCombined = props => {
         onTransitionEnd={onTransitionEnd}
         ref={setSubTreeWrapperRef}
       >
-        {(!collapsed || mount) &&
-          Array.isArray(clonedChildren) && (
-            <ul
-              className={cx([
-                css(styles.higTreeItemSubTreeView),
-                higTreeItemSubTreeViewClassName
-              ])}
-              role="group"
-            >
-              {clonedChildren.map((child, index) => {
-                const { type: ComponentType } = child;
-                /*
-                  this is different to TreeViewPresenter.js
-                  all the props has been extracted in the file above and passed to the child.props
-                  so, we don't need to extract and assign again
-                */
-                return (
-                  <ComponentType
-                    {...child.props}
-                    themeData={themeData}
-                    density={density}
-                    // eslint-disable-next-line react/no-array-index-key
-                    key={`${id}-${index}`}
-                  />
-                );
-              })}
-            </ul>
-          )}
-        {(!collapsed || mount) &&
-          !Array.isArray(clonedChildren) && (
-            <ul
-              className={cx([
-                css(styles.higTreeItemSubTreeView),
-                higTreeItemSubTreeViewClassName
-              ])}
-              role="group"
-            >
-              {clonedChildren}
-            </ul>
-          )}
+        {(!collapsed || mount) && Array.isArray(clonedChildren) && (
+          <ul
+            className={cx([
+              css(styles.higTreeItemSubTreeView),
+              higTreeItemSubTreeViewClassName
+            ])}
+            role="group"
+          >
+            {clonedChildren.map((child, index) => {
+              const { type: ComponentType } = child;
+              /*
+                this is different to TreeViewPresenter.js
+                all the props has been extracted in the file above and passed to the child.props
+                so, we don't need to extract and assign again
+              */
+              return (
+                <ComponentType
+                  {...child.props}
+                  themeData={themeData}
+                  density={density}
+                  // eslint-disable-next-line react/no-array-index-key
+                  key={`${id}-${index}`}
+                />
+              );
+            })}
+          </ul>
+        )}
+        {(!collapsed || mount) && !Array.isArray(clonedChildren) && (
+          <ul
+            className={cx([
+              css(styles.higTreeItemSubTreeView),
+              higTreeItemSubTreeViewClassName
+            ])}
+            role="group"
+          >
+            {clonedChildren}
+          </ul>
+        )}
       </div>
     );
   };
@@ -353,23 +350,20 @@ const SubTreeViewCombined = props => {
     }
   }, []);
 
-  useLayoutEffect(
-    () => {
-      const { current: currentCollapsed } = previousCollapsed;
-      previousCollapsed.current = collapsed;
+  useLayoutEffect(() => {
+    const { current: currentCollapsed } = previousCollapsed;
+    previousCollapsed.current = collapsed;
 
-      if (!subTreeWrapper) {
-        return;
-      }
-      if (!currentCollapsed && collapsed) {
-        collapse();
-      }
-      if (currentCollapsed && !collapsed) {
-        expand();
-      }
-    },
-    [collapsed]
-  );
+    if (!subTreeWrapper) {
+      return;
+    }
+    if (!currentCollapsed && collapsed) {
+      collapse();
+    }
+    if (currentCollapsed && !collapsed) {
+      expand();
+    }
+  }, [collapsed]);
 
   return props.isObject
     ? renderSubTreeViewObject()

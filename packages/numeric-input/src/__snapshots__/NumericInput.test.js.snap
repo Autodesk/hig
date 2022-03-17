@@ -192,12 +192,10 @@ exports[`numeric-input/NumericInput renders with custom className 1`] = `
         <svg
           className="custom__spinner-icon-up emotion-0"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 6.78a.75.75 0 0 1-1.06 0L5 4.13 2.35 6.78a.75.75 0 0 1-1.06 0 .74.74 0 0 1 0-1.06l3.36-3.36a.5.5 0 0 1 .7 0l3.36 3.36a.74.74 0 0 1 0 1.06z"
+            d="M8.71 6.78a.75.75 0 01-1.06 0L5 4.13 2.35 6.78a.75.75 0 01-1.06 0 .74.74 0 010-1.06l3.36-3.36a.5.5 0 01.7 0l3.36 3.36a.74.74 0 010 1.06z"
           />
         </svg>
       </span>
@@ -215,12 +213,10 @@ exports[`numeric-input/NumericInput renders with custom className 1`] = `
         <svg
           className="custom__spinner-icon-down emotion-2"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+            d="M8.71 3.22a.75.75 0 00-1.06 0L5 5.87 2.35 3.22a.75.75 0 00-1.06 0 .74.74 0 000 1.06l3.36 3.36a.5.5 0 00.7 0l3.36-3.36a.74.74 0 000-1.06z"
           />
         </svg>
       </span>
@@ -231,7 +227,6 @@ exports[`numeric-input/NumericInput renders with custom className 1`] = `
   >
     <input
       className="emotion-6 custom__numeric_input__input"
-      disabled={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -239,7 +234,6 @@ exports[`numeric-input/NumericInput renders with custom className 1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
-      step={undefined}
       type="number"
       value="0"
     />
@@ -443,12 +437,10 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
         <svg
           className="emotion-0"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 6.78a.75.75 0 0 1-1.06 0L5 4.13 2.35 6.78a.75.75 0 0 1-1.06 0 .74.74 0 0 1 0-1.06l3.36-3.36a.5.5 0 0 1 .7 0l3.36 3.36a.74.74 0 0 1 0 1.06z"
+            d="M8.71 6.78a.75.75 0 01-1.06 0L5 4.13 2.35 6.78a.75.75 0 01-1.06 0 .74.74 0 010-1.06l3.36-3.36a.5.5 0 01.7 0l3.36 3.36a.74.74 0 010 1.06z"
           />
         </svg>
       </span>
@@ -466,12 +458,10 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
         <svg
           className="emotion-2"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+            d="M8.71 3.22a.75.75 0 00-1.06 0L5 5.87 2.35 3.22a.75.75 0 00-1.06 0 .74.74 0 000 1.06l3.36 3.36a.5.5 0 00.7 0l3.36-3.36a.74.74 0 000-1.06z"
           />
         </svg>
       </span>
@@ -482,7 +472,6 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
   >
     <input
       className="emotion-6"
-      disabled={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -490,7 +479,6 @@ exports[`numeric-input/NumericInput renders with custom stylesheet 1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
-      step={undefined}
       type="number"
       value="0"
     />
@@ -693,12 +681,10 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
         <svg
           className="emotion-0"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 6.78a.75.75 0 0 1-1.06 0L5 4.13 2.35 6.78a.75.75 0 0 1-1.06 0 .74.74 0 0 1 0-1.06l3.36-3.36a.5.5 0 0 1 .7 0l3.36 3.36a.74.74 0 0 1 0 1.06z"
+            d="M8.71 6.78a.75.75 0 01-1.06 0L5 4.13 2.35 6.78a.75.75 0 01-1.06 0 .74.74 0 010-1.06l3.36-3.36a.5.5 0 01.7 0l3.36 3.36a.74.74 0 010 1.06z"
           />
         </svg>
       </span>
@@ -716,12 +702,10 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
         <svg
           className="emotion-2"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+            d="M8.71 3.22a.75.75 0 00-1.06 0L5 5.87 2.35 3.22a.75.75 0 00-1.06 0 .74.74 0 000 1.06l3.36 3.36a.5.5 0 00.7 0l3.36-3.36a.74.74 0 000-1.06z"
           />
         </svg>
       </span>
@@ -732,7 +716,6 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
   >
     <input
       className="emotion-6"
-      disabled={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -740,7 +723,6 @@ exports[`numeric-input/NumericInput renders with default value 1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
-      step={undefined}
       type="number"
       value="10"
     />
@@ -940,12 +922,10 @@ exports[`numeric-input/NumericInput renders with disabled 1`] = `
         <svg
           className="emotion-0"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 6.78a.75.75 0 0 1-1.06 0L5 4.13 2.35 6.78a.75.75 0 0 1-1.06 0 .74.74 0 0 1 0-1.06l3.36-3.36a.5.5 0 0 1 .7 0l3.36 3.36a.74.74 0 0 1 0 1.06z"
+            d="M8.71 6.78a.75.75 0 01-1.06 0L5 4.13 2.35 6.78a.75.75 0 01-1.06 0 .74.74 0 010-1.06l3.36-3.36a.5.5 0 01.7 0l3.36 3.36a.74.74 0 010 1.06z"
           />
         </svg>
       </span>
@@ -963,12 +943,10 @@ exports[`numeric-input/NumericInput renders with disabled 1`] = `
         <svg
           className="emotion-2"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+            d="M8.71 3.22a.75.75 0 00-1.06 0L5 5.87 2.35 3.22a.75.75 0 00-1.06 0 .74.74 0 000 1.06l3.36 3.36a.5.5 0 00.7 0l3.36-3.36a.74.74 0 000-1.06z"
           />
         </svg>
       </span>
@@ -987,7 +965,6 @@ exports[`numeric-input/NumericInput renders with disabled 1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
-      step={undefined}
       type="number"
       value="0"
     />
@@ -1217,12 +1194,10 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
         <svg
           className="emotion-0"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 6.78a.75.75 0 0 1-1.06 0L5 4.13 2.35 6.78a.75.75 0 0 1-1.06 0 .74.74 0 0 1 0-1.06l3.36-3.36a.5.5 0 0 1 .7 0l3.36 3.36a.74.74 0 0 1 0 1.06z"
+            d="M8.71 6.78a.75.75 0 01-1.06 0L5 4.13 2.35 6.78a.75.75 0 01-1.06 0 .74.74 0 010-1.06l3.36-3.36a.5.5 0 01.7 0l3.36 3.36a.74.74 0 010 1.06z"
           />
         </svg>
       </span>
@@ -1240,12 +1215,10 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
         <svg
           className="emotion-2"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+            d="M8.71 3.22a.75.75 0 00-1.06 0L5 5.87 2.35 3.22a.75.75 0 00-1.06 0 .74.74 0 000 1.06l3.36 3.36a.5.5 0 00.7 0l3.36-3.36a.74.74 0 000-1.06z"
           />
         </svg>
       </span>
@@ -1256,7 +1229,6 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
   >
     <input
       className="emotion-6"
-      disabled={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -1264,7 +1236,6 @@ exports[`numeric-input/NumericInput renders with variant 1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
-      step={undefined}
       type="number"
       value="0"
     />
@@ -1467,12 +1438,10 @@ exports[`numeric-input/NumericInput renders without props 1`] = `
         <svg
           className="emotion-0"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 6.78a.75.75 0 0 1-1.06 0L5 4.13 2.35 6.78a.75.75 0 0 1-1.06 0 .74.74 0 0 1 0-1.06l3.36-3.36a.5.5 0 0 1 .7 0l3.36 3.36a.74.74 0 0 1 0 1.06z"
+            d="M8.71 6.78a.75.75 0 01-1.06 0L5 4.13 2.35 6.78a.75.75 0 01-1.06 0 .74.74 0 010-1.06l3.36-3.36a.5.5 0 01.7 0l3.36 3.36a.74.74 0 010 1.06z"
           />
         </svg>
       </span>
@@ -1490,12 +1459,10 @@ exports[`numeric-input/NumericInput renders without props 1`] = `
         <svg
           className="emotion-2"
           height="10px"
-          viewBox="0 0 10 10"
           width="10px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M8.71 3.22a.75.75 0 0 0-1.06 0L5 5.87 2.35 3.22a.75.75 0 0 0-1.06 0 .74.74 0 0 0 0 1.06l3.36 3.36a.5.5 0 0 0 .7 0l3.36-3.36a.74.74 0 0 0 0-1.06z"
+            d="M8.71 3.22a.75.75 0 00-1.06 0L5 5.87 2.35 3.22a.75.75 0 00-1.06 0 .74.74 0 000 1.06l3.36 3.36a.5.5 0 00.7 0l3.36-3.36a.74.74 0 000-1.06z"
           />
         </svg>
       </span>
@@ -1506,7 +1473,6 @@ exports[`numeric-input/NumericInput renders without props 1`] = `
   >
     <input
       className="emotion-6"
-      disabled={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}
@@ -1514,7 +1480,6 @@ exports[`numeric-input/NumericInput renders without props 1`] = `
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
       onMouseUp={[Function]}
-      step={undefined}
       type="number"
       value="0"
     />

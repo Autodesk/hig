@@ -58,17 +58,16 @@ const AvatarBundle = props => {
                 <Avatar size={size} {...avatars[1]} />
               </span>
             )}
-            {avatars.length > 2 &&
-              overflow === 0 && (
-                <span
-                  className={cx(
-                    css(styles.avatarWrapper),
-                    css(styles.avatarWrapperThirdItem)
-                  )}
-                >
-                  <Avatar size={size} {...avatars[2]} />
-                </span>
-              )}
+            {avatars.length > 2 && overflow === 0 && (
+              <span
+                className={cx(
+                  css(styles.avatarWrapper),
+                  css(styles.avatarWrapperThirdItem)
+                )}
+              >
+                <Avatar size={size} {...avatars[2]} />
+              </span>
+            )}
             {overflow > 0 && (
               <span
                 className={cx(

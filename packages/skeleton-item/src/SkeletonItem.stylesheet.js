@@ -16,9 +16,7 @@ export default function stylesheet(props, themeData) {
       maxWidth,
       "&:after": {
         animation: "3s ease-in infinite shine",
-        backgroundImage: `linear-gradient(135deg, transparent 0%, transparent 40%, ${
-          themeData["skeletonItem.highlightColor"]
-        } 50%, transparent 60%, transparent 100%)`,
+        backgroundImage: `linear-gradient(135deg, transparent 0%, transparent 40%, ${themeData["skeletonItem.highlightColor"]} 50%, transparent 60%, transparent 100%)`,
         bottom: 0,
         content: '""',
         left: 0,

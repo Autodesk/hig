@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
 
 import RadioButtonPresenter from "./presenters/RadioButtonPresenter";
@@ -11,6 +12,7 @@ export default function RadioButton(props) {
     onMouseEnter,
     onMouseLeave,
     onMouseUp,
+    stylesheet,
     ...otherProps
   } = props;
 
@@ -44,9 +46,41 @@ export default function RadioButton(props) {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           onMouseUp={handleMouseUp}
+          stylesheet={stylesheet}
           {...otherProps}
         />
       )}
     </ControlBehavior>
   );
 }
+
+RadioButton.propTypes = {
+  /**
+   * Triggers blur when focus is moved away from icon
+   */
+  onBlur: PropTypes.func,
+  /**
+   * Triggers when focus is moved to button
+   */
+  onFocus: PropTypes.func,
+  /**
+   * Triggers when the user's mouse is pressed over the button
+   */
+  onMouseDown: PropTypes.func,
+  /**
+   * Triggers when the user's mouse is over the button
+   */
+  onMouseEnter: PropTypes.func,
+  /**
+   * Triggers when the user's mouse is no longer over the button
+   */
+  onMouseLeave: PropTypes.func,
+  /**
+   * Triggers when the user's mouse is no longer pressed over the button
+   */
+  onMouseUp: PropTypes.func,
+  /**
+   *  Function to modify the component's styles
+   * */
+  stylesheet: PropTypes.func
+};

@@ -1,19 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`profile-flyout/presenters/ProfileContentPresenter  1`] = `
-.emotion-0 {
-  font-family: ArtifaktElement;
-  line-height: 1.6;
-  box-sizing: border-box;
-  padding: 12px;
-}
-
-<div
-  className="emotion-0"
-/>
-`;
-
-exports[`profile-flyout/presenters/ProfileContentPresenter  2`] = `
+exports[`profile-flyout/presenters/ProfileContentPresenter renders with a name 1`] = `
 .emotion-1 {
   font-family: ArtifaktElement;
   line-height: 1.6;
@@ -43,36 +30,7 @@ exports[`profile-flyout/presenters/ProfileContentPresenter  2`] = `
 </div>
 `;
 
-exports[`profile-flyout/presenters/ProfileContentPresenter  3`] = `
-.emotion-1 {
-  font-family: ArtifaktElement;
-  line-height: 1.6;
-  box-sizing: border-box;
-  padding: 12px;
-}
-
-.emotion-0 {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 12px;
-  line-height: 16px;
-  color: rgba(60,60,60,0.7);
-}
-
-<div
-  className="emotion-1"
->
-  <span
-    className="emotion-0"
-  >
-    spyder-man@autodesk.com
-  </span>
-</div>
-`;
-
-exports[`profile-flyout/presenters/ProfileContentPresenter  4`] = `
+exports[`profile-flyout/presenters/ProfileContentPresenter renders with all props 1`] = `
 .emotion-2 {
   font-family: ArtifaktElement;
   line-height: 1.6;
@@ -116,4 +74,46 @@ exports[`profile-flyout/presenters/ProfileContentPresenter  4`] = `
   </span>
   <span />
 </div>
+`;
+
+exports[`profile-flyout/presenters/ProfileContentPresenter renders with an email 1`] = `
+.emotion-1 {
+  font-family: ArtifaktElement;
+  line-height: 1.6;
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+.emotion-0 {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(60,60,60,0.7);
+}
+
+<div
+  className="emotion-1"
+>
+  <span
+    className="emotion-0"
+  >
+    spyder-man@autodesk.com
+  </span>
+</div>
+`;
+
+exports[`profile-flyout/presenters/ProfileContentPresenter renders with no props 1`] = `
+.emotion-0 {
+  font-family: ArtifaktElement;
+  line-height: 1.6;
+  box-sizing: border-box;
+  padding: 12px;
+}
+
+<div
+  className="emotion-0"
+/>
 `;

@@ -93,7 +93,6 @@ exports[`side-nav/presenters/SideNav snapshot tests renders headers with onClick
             "textDecoration": "none",
           }
         }
-        target={undefined}
       >
         HIG
       </a>

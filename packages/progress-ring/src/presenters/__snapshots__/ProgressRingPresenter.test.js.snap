@@ -63,8 +63,6 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders with all props 1
   >
     <polygon
       className="hig__progress-ring__background emotion-0"
-      fill={undefined}
-      fillRule={undefined}
       points="22.49 5.51 14 2 5.51 5.51 2 14 5.51 22.49 14 26 22.49 22.49 26 14"
     />
     <polygon
@@ -236,8 +234,6 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders with both surfac
   >
     <polygon
       className="hig__progress-ring__background emotion-0"
-      fill={undefined}
-      fillRule={undefined}
       points="54.81 10.11 36 4 17.19 10.11 5.57 26.11 5.57 45.89 17.19 61.89 36 68 54.81 61.89 66.43 45.89 66.43 26.11"
     />
     <polygon
@@ -433,8 +429,6 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders with mask prop 1
   >
     <polygon
       className="hig__progress-ring__background emotion-0"
-      fill={undefined}
-      fillRule={undefined}
       points="54.81 10.11 36 4 17.19 10.11 5.57 26.11 5.57 45.89 17.19 61.89 36 68 54.81 61.89 66.43 45.89 66.43 26.11"
     />
     <polygon
@@ -630,8 +624,6 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders with surface pro
   >
     <polygon
       className="hig__progress-ring__background emotion-0"
-      fill={undefined}
-      fillRule={undefined}
       points="54.81 10.11 36 4 17.19 10.11 5.57 26.11 5.57 45.89 17.19 61.89 36 68 54.81 61.89 66.43 45.89 66.43 26.11"
     />
     <polygon
@@ -813,7 +805,6 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders without props 1`
 <div
   aria-valuemax="100"
   aria-valuemin="0"
-  aria-valuenow={undefined}
   className="emotion-22"
   role="progressbar"
 >
@@ -827,8 +818,6 @@ exports[`progress-ring/presenters/ProgressRingPresenter renders without props 1`
   >
     <polygon
       className="hig__progress-ring__background emotion-0"
-      fill={undefined}
-      fillRule={undefined}
       points="54.81 10.11 36 4 17.19 10.11 5.57 26.11 5.57 45.89 17.19 61.89 36 68 54.81 61.89 66.43 45.89 66.43 26.11"
     />
     <polygon

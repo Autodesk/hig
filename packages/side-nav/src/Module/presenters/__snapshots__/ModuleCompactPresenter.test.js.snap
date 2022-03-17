@@ -100,16 +100,12 @@ exports[`side-nav/Module/presenters/ModuleCompactPresenter snapshot tests render
 
 <div
   className="emotion-4"
-  onFocus={undefined}
-  onMouseOver={undefined}
 >
   <div
     className="emotion-3"
   >
     <div
       className="emotion-2"
-      onClick={undefined}
-      onKeyDown={undefined}
       role="button"
       tabIndex={0}
     >
@@ -119,15 +115,13 @@ exports[`side-nav/Module/presenters/ModuleCompactPresenter snapshot tests render
         <svg
           className="emotion-0"
           height="24px"
-          viewBox="0 0 24 24"
           width="24px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M8 9v7h8V8H8zm1 0h6v6H9z"
           />
           <path
-            d="M21 3H8v4h1V4h11v11h-3v1h4zm-6 14v3H4V9h3V8H3v13h13v-4z"
+            d="M21 3H8v4h1V4h11v11h-3v1h4zM15 17v3H4V9h3V8H3v13h13v-4z"
           />
         </svg>
       </div>

@@ -38,10 +38,8 @@ module.exports = storybookBaseConfig => {
       ]
     }
   );
-
   storybookBaseConfig.resolve.modules.push(
     path.resolve(__dirname, "../../../../packages")
   );
-
   return storybookBaseConfig;
 };

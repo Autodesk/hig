@@ -31,9 +31,7 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
       backgroundColor: themeData["accordion.header.backgroundColor"],
       border: 0,
       outline: 0,
-      padding: `${themeData["accordion.header.paddingVertical"]} ${
-        themeData["accordion.header.paddingHorizontal"]
-      }`,
+      padding: `${themeData["accordion.header.paddingVertical"]} ${themeData["accordion.header.paddingHorizontal"]}`,
       ...(indicatorPosition === indicatorPositions.RIGHT && {
         paddingLeft: themeData["accordion.header.indicatorRight.paddingLeft"],
         paddingRight: themeData["accordion.header.indicatorRight.paddingRight"]

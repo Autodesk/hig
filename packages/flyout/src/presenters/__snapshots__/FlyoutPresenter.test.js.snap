@@ -98,17 +98,13 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
     <button
       className="emotion-0"
       disabled={false}
-      href={undefined}
       onBlur={[Function]}
-      onClick={undefined}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className=""

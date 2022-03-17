@@ -15,6 +15,6 @@ export default function ColorExample({ value }) {
 ColorExample.propTypes = {
   value: PropTypes.string,
   basics: PropTypes.shape({
-    colors: PropTypes.object
+    colors: PropTypes.arrayOf(PropTypes.any)
   })
 };

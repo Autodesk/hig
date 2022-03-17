@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`modal/presenters/ModalHeaderPresenter  1`] = `
+exports[`modal/presenters/ModalHeaderPresenter renders with all props 1`] = `
 .emotion-0 {
   color: #3c3c3c;
   display: block;
@@ -62,125 +62,6 @@ exports[`modal/presenters/ModalHeaderPresenter  1`] = `
 
 <header
   className="emotion-3"
-  id={undefined}
->
-  <div
-    className="emotion-3"
-  >
-    <p
-      className="emotion-0"
-      style={
-        Object {
-          "fontSize": "inherit",
-          "fontWeight": "inherit",
-          "lineHeight": "inherit",
-        }
-      }
-    />
-    <button
-      aria-label="Close"
-      className="emotion-2"
-      disabled={undefined}
-      onBlur={[Function]}
-      onClick={undefined}
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      tabIndex="0"
-      title="Close"
-    >
-      <svg
-        className="emotion-1"
-        height="16px"
-        viewBox="0 0 16 16"
-        width="16px"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
-        />
-      </svg>
-    </button>
-  </div>
-</header>
-`;
-
-exports[`modal/presenters/ModalHeaderPresenter  2`] = `
-<header
-  className="emotion-0"
-  id={undefined}
->
-  <p>
-    Title
-  </p>
-</header>
-`;
-
-exports[`modal/presenters/ModalHeaderPresenter  3`] = `
-.emotion-0 {
-  color: #3c3c3c;
-  display: block;
-  font-family: ArtifaktElement,sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.428571429;
-  margin: 0;
-  text-align: initial;
-}
-
-.emotion-2 {
-  background-color: transparent;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 1px;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  box-sizing: border-box;
-  border-radius: 2px;
-  padding: 0;
-  height: calc(20px + (8px * 2));
-  line-height: calc(20px + (8px * 2));
-  width: calc(20px + (8px * 2));
-  outline: 0;
-  -webkit-transition-property: box-shadow,background-color;
-  transition-property: box-shadow,background-color;
-  -webkit-transition-duration: 0.3s,0.3s;
-  transition-duration: 0.3s,0.3s;
-  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
-  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
-}
-
-.emotion-2 svg * {
-  fill: #808080;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: fill;
-  transition-property: fill;
-}
-
-.emotion-1 {
-  fill: #808080;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.emotion-1 > * {
-  fill: #808080;
-}
-
-<header
-  className="emotion-3"
-  id={undefined}
 >
   <div
     className="emotion-3"
@@ -200,7 +81,6 @@ exports[`modal/presenters/ModalHeaderPresenter  3`] = `
     <button
       aria-label="Close"
       className="emotion-2"
-      disabled={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
@@ -214,9 +94,119 @@ exports[`modal/presenters/ModalHeaderPresenter  3`] = `
       <svg
         className="emotion-1"
         height="16px"
-        viewBox="0 0 16 16"
         width="16px"
-        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
+        />
+      </svg>
+    </button>
+  </div>
+</header>
+`;
+
+exports[`modal/presenters/ModalHeaderPresenter renders with children 1`] = `
+<header
+  className="emotion-0"
+>
+  <p>
+    Title
+  </p>
+</header>
+`;
+
+exports[`modal/presenters/ModalHeaderPresenter renders without props 1`] = `
+.emotion-0 {
+  color: #3c3c3c;
+  display: block;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.428571429;
+  margin: 0;
+  text-align: initial;
+}
+
+.emotion-2 {
+  background-color: transparent;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: 2px;
+  padding: 0;
+  height: calc(20px + (8px * 2));
+  line-height: calc(20px + (8px * 2));
+  width: calc(20px + (8px * 2));
+  outline: 0;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+}
+
+.emotion-2 svg * {
+  fill: #808080;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: fill;
+  transition-property: fill;
+}
+
+.emotion-1 {
+  fill: #808080;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.emotion-1 > * {
+  fill: #808080;
+}
+
+<header
+  className="emotion-3"
+>
+  <div
+    className="emotion-3"
+  >
+    <p
+      className="emotion-0"
+      style={
+        Object {
+          "fontSize": "inherit",
+          "fontWeight": "inherit",
+          "lineHeight": "inherit",
+        }
+      }
+    />
+    <button
+      aria-label="Close"
+      className="emotion-2"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      tabIndex="0"
+      title="Close"
+    >
+      <svg
+        className="emotion-1"
+        height="16px"
+        width="16px"
       >
         <path
           d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"

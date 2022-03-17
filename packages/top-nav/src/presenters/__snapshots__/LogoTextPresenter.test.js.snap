@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`top-nav/presenters/LogoTextPresenter  1`] = `
+exports[`top-nav/presenters/LogoTextPresenter renders with children 1`] = `
 .emotion-0 {
   color: #3c3c3c;
   display: block;

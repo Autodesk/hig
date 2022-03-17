@@ -90,6 +90,7 @@ const HeaderPresenter = props => {
             onMouseUp={onMouseUp}
             disabled={disabled}
             tabIndex={disabled ? "-1" : "0"}
+            type="button"
           >
             <Indicator
               className={cx(css(styles.indicator), indicatorClassName)}

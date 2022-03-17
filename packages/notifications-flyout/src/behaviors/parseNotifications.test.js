@@ -4,9 +4,9 @@ import parseNotifications from "./parseNotifications";
 import Notification from "../Notification";
 import { types } from "../types";
 
-describe("notification-flyout/behaviors/parseNotifications", () => {
-  function handleDismiss() {}
+function handleDismiss() {}
 
+describe("notification-flyout/behaviors/parseNotifications", () => {
   [
     {
       desc: "returns an empty array when given `null`",
@@ -25,8 +25,14 @@ describe("notification-flyout/behaviors/parseNotifications", () => {
     },
     {
       desc: "returns notifications when given an array of objects",
-      input: [{ id: "1", type: types.PRIMARY }, { id: "2", unread: false }],
-      expected: [{ id: "1", type: types.PRIMARY }, { id: "2", unread: false }]
+      input: [
+        { id: "1", type: types.PRIMARY },
+        { id: "2", unread: false }
+      ],
+      expected: [
+        { id: "1", type: types.PRIMARY },
+        { id: "2", unread: false }
+      ]
     },
     {
       desc:

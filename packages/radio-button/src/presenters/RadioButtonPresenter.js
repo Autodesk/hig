@@ -68,6 +68,22 @@ RadioButtonPresenter.displayName = "RadioButtonPresenter";
 
 RadioButtonPresenter.propTypes = {
   /**
+   * Sets the component to a disabled state
+   */
+  disabled: PropTypes.bool,
+  /**
+   * Returns whether or not the button is currently focused
+   */
+  hasFocus: PropTypes.bool,
+  /**
+   * Returns whether or not the button is currently hovered
+   */
+  hasHover: PropTypes.bool,
+  /**
+   * Returns whether or not the button is currently pressed
+   */
+  isPressed: PropTypes.bool,
+  /**
    * Called when user moves focus from the field
    */
   onBlur: PropTypes.func,
@@ -83,18 +99,6 @@ RadioButtonPresenter.propTypes = {
    * Called when user puts focus on the field
    */
   onFocus: PropTypes.func,
-  /**
-   * Returns whether or not the button is currently focused
-   */
-  hasFocus: PropTypes.bool,
-  /**
-   * Returns whether or not the button is currently hovered
-   */
-  hasHover: PropTypes.bool,
-  /**
-   * Returns whether or not the button is currently pressed
-   */
-  isPressed: PropTypes.bool,
   /**
    * Adds custom/overriding styles
    */

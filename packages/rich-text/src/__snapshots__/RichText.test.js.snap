@@ -114,7 +114,6 @@ exports[`RichText renders 1`] = `
 
 <div
   className="emotion-0"
-  dangerouslySetInnerHTML={undefined}
 />
 `;
 

@@ -37,12 +37,12 @@ const ModalPresenter = props => {
     "modal-body-content"
   );
 
-  /*
-    * The "no-noninteractive-element-interactions" rule is disabled for this block.
-    * This is due to the modal being is a special case where its containers are to be considered
-    * as non-interactive, static content by screen-readers, but must also respond to `click`
-    * events. Additionally, even though they respond to `click` events, they're not focusable.
-    */
+  /**
+   * The "no-noninteractive-element-interactions" rule is disabled for this block.
+   * This is due to the modal being is a special case where its containers are to be considered
+   * as non-interactive, static content by screen-readers, but must also respond to `click`
+   * events. Additionally, even though they respond to `click` events, they're not focusable.
+   */
   /*
     eslint-disable
     jsx-a11y/no-noninteractive-element-interactions,

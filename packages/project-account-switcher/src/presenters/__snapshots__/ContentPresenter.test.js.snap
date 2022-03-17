@@ -1,8 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`project-account-switcher/presenters/ContentPresenter  1`] = `<div />`;
-
-exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
+exports[`project-account-switcher/presenters/ContentPresenter renders with all props 1`] = `
 .emotion-10 {
   margin-top: 30px;
   margin-bottom: 10px;
@@ -140,7 +138,6 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
       <span
         className="emotion-3"
         onBlur={[Function]}
-        onClick={undefined}
         onFocus={[Function]}
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
@@ -181,7 +178,6 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
       <span
         className="emotion-3"
         onBlur={[Function]}
-        onClick={undefined}
         onFocus={[Function]}
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
@@ -232,7 +228,6 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
       <span
         className="emotion-3"
         onBlur={[Function]}
-        onClick={undefined}
         onFocus={[Function]}
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
@@ -273,7 +268,6 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
       <span
         className="emotion-3"
         onBlur={[Function]}
-        onClick={undefined}
         onFocus={[Function]}
         onMouseDown={[Function]}
         onMouseEnter={[Function]}
@@ -287,3 +281,5 @@ exports[`project-account-switcher/presenters/ContentPresenter  2`] = `
   </ul>
 </div>
 `;
+
+exports[`project-account-switcher/presenters/ContentPresenter renders without props 1`] = `<div />`;

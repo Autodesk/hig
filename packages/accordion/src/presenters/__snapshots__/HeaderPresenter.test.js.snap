@@ -70,26 +70,16 @@ exports[`Accordion/HeaderPresenter renders defaut collapsed header 1`] = `
 
 <button
   className="emotion-2"
-  disabled={undefined}
-  onBlur={undefined}
-  onClick={undefined}
-  onFocus={undefined}
-  onMouseDown={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
-  onMouseOver={undefined}
-  onMouseUp={undefined}
   tabIndex="0"
+  type="button"
 >
   <svg
     className="emotion-0"
     height="10px"
-    viewBox="0 0 10 10"
     width="10px"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
+      d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
     />
   </svg>
   <div
@@ -170,26 +160,16 @@ exports[`Accordion/HeaderPresenter renders expanded header 1`] = `
 
 <button
   className="emotion-2"
-  disabled={undefined}
-  onBlur={undefined}
-  onClick={undefined}
-  onFocus={undefined}
-  onMouseDown={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
-  onMouseOver={undefined}
-  onMouseUp={undefined}
   tabIndex="0"
+  type="button"
 >
   <svg
     className="emotion-0"
     height="10px"
-    viewBox="0 0 10 10"
     width="10px"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
+      d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
     />
   </svg>
   <div
@@ -272,26 +252,16 @@ exports[`Accordion/HeaderPresenter renders indicator in the right 1`] = `
 
 <button
   className="emotion-2"
-  disabled={undefined}
-  onBlur={undefined}
-  onClick={undefined}
-  onFocus={undefined}
-  onMouseDown={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
-  onMouseOver={undefined}
-  onMouseUp={undefined}
   tabIndex="0"
+  type="button"
 >
   <svg
     className="emotion-0"
     height="10px"
-    viewBox="0 0 10 10"
     width="10px"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
+      d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
     />
   </svg>
   <div
@@ -372,26 +342,16 @@ exports[`Accordion/HeaderPresenter renders using operator as indicator 1`] = `
 
 <button
   className="emotion-2"
-  disabled={undefined}
-  onBlur={undefined}
-  onClick={undefined}
-  onFocus={undefined}
-  onMouseDown={undefined}
-  onMouseEnter={undefined}
-  onMouseLeave={undefined}
-  onMouseOver={undefined}
-  onMouseUp={undefined}
   tabIndex="0"
+  type="button"
 >
   <svg
     className="emotion-0"
     height="10px"
-    viewBox="0 0 10 10"
     width="10px"
-    xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M3.22 1.29a.75.75 0 0 0 0 1.06L5.87 5 3.22 7.65a.75.75 0 0 0 0 1.06.74.74 0 0 0 1.06 0l3.36-3.36a.5.5 0 0 0 0-.7L4.28 1.29a.74.74 0 0 0-1.06 0z"
+      d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
     />
   </svg>
   <div

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`progress-bar/ProgressBar snapshot tests  1`] = `
+exports[`progress-bar/ProgressBar snapshot tests custom stylesheet 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: translateX(-100%);
@@ -13,15 +13,6 @@ exports[`progress-bar/ProgressBar snapshot tests  1`] = `
     -ms-transform: translateX(200px);
     transform: translateX(200px);
   }
-}
-
-.emotion-3 {
-  position: relative;
-  border-radius: 2px;
-  background-color: rgba(0,0,0,0.05);
-  overflow: hidden;
-  width: 100%;
-  height: 4px;
 }
 
 .emotion-2 {
@@ -65,10 +56,18 @@ exports[`progress-bar/ProgressBar snapshot tests  1`] = `
   fill: #38abdf;
 }
 
+.emotion-3 {
+  position: relative;
+  border-radius: 2px;
+  background-color: red;
+  overflow: hidden;
+  width: 100%;
+  height: 4px;
+}
+
 <div
   aria-valuemax="100"
   aria-valuemin="0"
-  aria-valuenow={undefined}
   className="emotion-3"
   role="progressbar"
 >
@@ -96,7 +95,7 @@ exports[`progress-bar/ProgressBar snapshot tests  1`] = `
 </div>
 `;
 
-exports[`progress-bar/ProgressBar snapshot tests  2`] = `
+exports[`progress-bar/ProgressBar snapshot tests determinate 1`] = `
 .emotion-3 {
   position: relative;
   border-radius: 2px;
@@ -166,7 +165,7 @@ exports[`progress-bar/ProgressBar snapshot tests  2`] = `
 </div>
 `;
 
-exports[`progress-bar/ProgressBar snapshot tests  3`] = `
+exports[`progress-bar/ProgressBar snapshot tests indeterminate 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: translateX(-100%);
@@ -234,15 +233,14 @@ exports[`progress-bar/ProgressBar snapshot tests  3`] = `
 <div
   aria-valuemax="100"
   aria-valuemin="0"
-  aria-valuenow={undefined}
-  className="emotion-3 myClass-a myClass-b"
+  className="emotion-3"
   role="progressbar"
 >
   <div
-    className="emotion-2 myClass-a__progress-bar myClass-b__progress-bar"
+    className="emotion-2"
   >
     <div
-      className="emotion-0 myClass-a__fill myClass-b__fill"
+      className="emotion-0"
     />
     <svg
       height="4px"
@@ -253,7 +251,7 @@ exports[`progress-bar/ProgressBar snapshot tests  3`] = `
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <polygon
-        className="emotion-1 myClass-a__polygon myClass-b__polygon"
+        className="emotion-1"
         id="end-right"
         points="0 0 2.68 0 1 4 0 4"
       />
@@ -262,7 +260,7 @@ exports[`progress-bar/ProgressBar snapshot tests  3`] = `
 </div>
 `;
 
-exports[`progress-bar/ProgressBar snapshot tests  4`] = `
+exports[`progress-bar/ProgressBar snapshot tests passing className 1`] = `
 @keyframes animation-0 {
   from {
     -webkit-transform: translateX(-100%);
@@ -275,6 +273,15 @@ exports[`progress-bar/ProgressBar snapshot tests  4`] = `
     -ms-transform: translateX(200px);
     transform: translateX(200px);
   }
+}
+
+.emotion-3 {
+  position: relative;
+  border-radius: 2px;
+  background-color: rgba(0,0,0,0.05);
+  overflow: hidden;
+  width: 100%;
+  height: 4px;
 }
 
 .emotion-2 {
@@ -318,27 +325,17 @@ exports[`progress-bar/ProgressBar snapshot tests  4`] = `
   fill: #38abdf;
 }
 
-.emotion-3 {
-  position: relative;
-  border-radius: 2px;
-  background-color: red;
-  overflow: hidden;
-  width: 100%;
-  height: 4px;
-}
-
 <div
   aria-valuemax="100"
   aria-valuemin="0"
-  aria-valuenow={undefined}
-  className="emotion-3"
+  className="emotion-3 myClass-a myClass-b"
   role="progressbar"
 >
   <div
-    className="emotion-2"
+    className="emotion-2 myClass-a__progress-bar myClass-b__progress-bar"
   >
     <div
-      className="emotion-0"
+      className="emotion-0 myClass-a__fill myClass-b__fill"
     />
     <svg
       height="4px"
@@ -349,7 +346,7 @@ exports[`progress-bar/ProgressBar snapshot tests  4`] = `
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
       <polygon
-        className="emotion-1"
+        className="emotion-1 myClass-a__polygon myClass-b__polygon"
         id="end-right"
         points="0 0 2.68 0 1 4 0 4"
       />

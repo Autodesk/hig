@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`top-nav/presenters/ProfileActionPresenter  1`] = `
+exports[`top-nav/presenters/ProfileActionPresenter renders with children 1`] = `
 .emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;

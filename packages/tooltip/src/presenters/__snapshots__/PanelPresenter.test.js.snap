@@ -37,7 +37,6 @@ exports[`tooltip/presenters/PanelPresenter renders without props 1`] = `
 
 <div
   className="emotion-1"
-  onScroll={undefined}
 >
   <div
     className="emotion-0"

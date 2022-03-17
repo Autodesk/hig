@@ -115,15 +115,13 @@ exports[`tree-view/TreeObjectNestedSubTreeItem renders tree with tree node 1`] =
       <svg
         className="emotion-0"
         height="24px"
-        viewBox="0 0 24 24"
         width="24px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M3 2v20h17V2zm16 19H4V3h15z"
         />
         <path
-          d="M18 19h-1v-7h-3v7h-1v-5h-3v5H9v-9H6v9H5v1h13zM8 19H7v-8h1zm4 0h-1v-4h1zm4 0h-1v-6h1zM5 5h13v1H5zm0 2h6v1H5z"
+          d="M18 19h-1v-7h-3v7h-1v-5h-3v5H9v-9H6v9H5v1h13zM8 19H7v-8h1zm4 0h-1v-4h1zm4 0h-1v-6h1zM5 5h13v1H5zM5 7h6v1H5z"
         />
       </svg>
     </div>

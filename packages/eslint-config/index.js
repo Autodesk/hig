@@ -26,7 +26,16 @@ module.exports = {
     "max-len": [1, { code: 200 }],
     "no-underscore-dangle": 0,
     "prettier/prettier": "error",
+    "react/destructuring-assignment": 0,
     "react/jsx-filename-extension": 0,
+    "react/jsx-no-bind": [
+      2,
+      {
+        "allowArrowFunctions": true,
+        "allowFunctions": true,
+        "ignoreRefs": true
+      }
+    ],
     "react/no-danger": 2,
     "react/prefer-stateless-function": 0,
     "react/prop-types": 2,

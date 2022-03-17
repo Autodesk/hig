@@ -9,18 +9,14 @@ function getCheckboxRulesByFocus(themeData) {
 function getCheckboxRulesByHover(themeData) {
   return {
     borderColor: themeData["checkbox.unchecked.default.borderColor"],
-    boxShadow: `0 0 0 ${themeData["checkbox.hover.haloWidth"]} ${
-      themeData["checkbox.hover.haloColor"]
-    }`
+    boxShadow: `0 0 0 ${themeData["checkbox.hover.haloWidth"]} ${themeData["checkbox.hover.haloColor"]}`
   };
 }
 
 function getCheckboxRulesByPressed(themeData) {
   return {
     borderColor: themeData["checkbox.unchecked.default.borderColor"],
-    boxShadow: `0 0 0 ${themeData["checkbox.pressed.haloWidth"]} ${
-      themeData["checkbox.pressed.haloColor"]
-    }`
+    boxShadow: `0 0 0 ${themeData["checkbox.pressed.haloWidth"]} ${themeData["checkbox.pressed.haloColor"]}`
   };
 }
 

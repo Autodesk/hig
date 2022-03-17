@@ -5,11 +5,11 @@ import PointerPresenter from "./PointerPresenter";
 describe("flyout/presenters/PointerPresenter", () => {
   takeSnapshotsOf(PointerPresenter, [
     {
-      description: "renders without props",
+      desc: "renders without props",
       props: {}
     },
     {
-      description: "renders with all props",
+      desc: "renders with all props",
       props: {
         borderWidth: 10,
         size: 100

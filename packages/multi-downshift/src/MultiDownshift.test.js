@@ -3,11 +3,11 @@ import { mount } from "enzyme";
 
 import MultiDownshift from "./MultiDownshift";
 
-describe("multi-downshift/MultiDownshift", () => {
-  function itemToString(item) {
-    return JSON.stringify(item);
-  }
+function itemToString(item) {
+  return JSON.stringify(item);
+}
 
+describe("multi-downshift/MultiDownshift", () => {
   it("calls the `children` render prop with state and helpers", () => {
     const renderPresenter = jest.fn();
 

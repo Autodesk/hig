@@ -121,20 +121,18 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a fragment as actio
       <svg
         className="emotion-0"
         height="24px"
-        viewBox="0 0 24 24"
         width="24px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+          d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"
         />
         <path
           d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
         />
         <circle
-          cx="12"
-          cy="8"
-          r="1.25"
+          cx={12}
+          cy={8}
+          r={1.25}
         />
       </svg>
     </figure>
@@ -278,20 +276,18 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a label 1`] = `
       <svg
         className="emotion-0"
         height="24px"
-        viewBox="0 0 24 24"
         width="24px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M12 2L2 12l10 10 10-10zM3.41 12L12 3.41 20.59 12 12 20.59z"
         />
         <circle
-          cx="12"
-          cy="15"
-          r="1"
+          cx={12}
+          cy={15}
+          r={1}
         />
         <path
-          d="M11.88 13h.24a.55.55 0 0 0 .54-.5L13 8a1 1 0 0 0-2 0l.34 4.5a.55.55 0 0 0 .54.5z"
+          d="M11.88 13h.24a.55.55 0 00.54-.5L13 8a1 1 0 00-2 0l.34 4.5a.55.55 0 00.54.5z"
         />
       </svg>
     </figure>
@@ -433,20 +429,18 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a node as actions 1
       <svg
         className="emotion-0"
         height="24px"
-        viewBox="0 0 24 24"
         width="24px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+          d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"
         />
         <path
           d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
         />
         <circle
-          cx="12"
-          cy="8"
-          r="1.25"
+          cx={12}
+          cy={8}
+          r={1.25}
         />
       </svg>
     </figure>
@@ -595,20 +589,18 @@ exports[`banner/BannerPresenter/BannerPresenter renders with a string as actions
       <svg
         className="emotion-0"
         height="24px"
-        viewBox="0 0 24 24"
         width="24px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+          d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"
         />
         <path
           d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
         />
         <circle
-          cx="12"
-          cy="8"
-          r="1.25"
+          cx={12}
+          cy={8}
+          r={1.25}
         />
       </svg>
     </figure>
@@ -747,20 +739,18 @@ exports[`banner/BannerPresenter/BannerPresenter renders with custom className 1`
       <svg
         className="emotion-0 custom__icon-background-image"
         height="24px"
-        viewBox="0 0 24 24"
         width="24px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+          d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"
         />
         <path
           d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
         />
         <circle
-          cx="12"
-          cy="8"
-          r="1.25"
+          cx={12}
+          cy={8}
+          r={1.25}
         />
       </svg>
     </figure>
@@ -894,20 +884,18 @@ exports[`banner/BannerPresenter/BannerPresenter renders with custom stylesheet 1
       <svg
         className="emotion-0"
         height="24px"
-        viewBox="0 0 24 24"
         width="24px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+          d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"
         />
         <path
           d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
         />
         <circle
-          cx="12"
-          cy="8"
-          r="1.25"
+          cx={12}
+          cy={8}
+          r={1.25}
         />
       </svg>
     </figure>
@@ -1120,20 +1108,18 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
       <svg
         className="emotion-0"
         height="24px"
-        viewBox="0 0 24 24"
         width="24px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+          d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"
         />
         <path
           d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
         />
         <circle
-          cx="12"
-          cy="8"
-          r="1.25"
+          cx={12}
+          cy={8}
+          r={1.25}
         />
       </svg>
     </figure>
@@ -1155,7 +1141,6 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
     >
       <button
         className="emotion-6"
-        disabled={undefined}
         onBlur={[Function]}
         onClick={[Function]}
         onFocus={[Function]}
@@ -1169,9 +1154,7 @@ exports[`banner/BannerPresenter/BannerPresenter renders with onDismiss function 
         <svg
           className="emotion-5"
           height="16px"
-          viewBox="0 0 16 16"
           width="16px"
-          xmlns="http://www.w3.org/2000/svg"
         >
           <path
             d="M14.4 2.4l-.8-.8L8 7.3 2.4 1.6l-.8.8L7.3 8l-5.7 5.6.8.8L8 8.7l5.6 5.7.8-.8L8.7 8l5.7-5.6z"
@@ -1296,20 +1279,18 @@ exports[`banner/BannerPresenter/BannerPresenter renders without onDismiss functi
       <svg
         className="emotion-0"
         height="24px"
-        viewBox="0 0 24 24"
         width="24px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+          d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"
         />
         <path
           d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
         />
         <circle
-          cx="12"
-          cy="8"
-          r="1.25"
+          cx={12}
+          cy={8}
+          r={1.25}
         />
       </svg>
     </figure>
@@ -1443,20 +1424,18 @@ exports[`banner/BannerPresenter/BannerPresenter renders without props 1`] = `
       <svg
         className="emotion-0"
         height="24px"
-        viewBox="0 0 24 24"
         width="24px"
-        xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M12 3a9 9 0 1 0 9 9 9 9 0 0 0-9-9zm0 17a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"
+          d="M12 3a9 9 0 109 9 9 9 0 00-9-9zm0 17a8 8 0 118-8 8 8 0 01-8 8z"
         />
         <path
           d="M13 12v-1h-3v1h1v4h-1v1h4v-1h-1v-4z"
         />
         <circle
-          cx="12"
-          cy="8"
-          r="1.25"
+          cx={12}
+          cy={8}
+          r={1.25}
         />
       </svg>
     </figure>

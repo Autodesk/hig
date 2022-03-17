@@ -29,7 +29,7 @@ const Label = props => {
         );
 
         return (
-          // eslint-disable-next-line jsx-a11y/label-has-for
+          // eslint-disable-next-line jsx-a11y/label-has-associated-control, jsx-a11y/label-has-for
           <label {...otherProps} className={cx([className, css(styles.label)])}>
             {children}
           </label>

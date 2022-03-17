@@ -117,17 +117,14 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
     <button
       className="emotion-0"
       disabled={false}
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className=""
@@ -308,17 +305,14 @@ exports[`flyout/Flyout snapshots renders children from the given render function
     <button
       className="emotion-0"
       disabled={false}
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className=""
@@ -510,17 +504,14 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
     <button
       className="emotion-0"
       disabled={false}
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className=""
@@ -712,7 +703,6 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
       >
         <div
           className="emotion-4"
-          onScroll={undefined}
         />
       </div>
     </div>
@@ -826,17 +816,14 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
     <button
       className="emotion-0"
       disabled={false}
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className=""
@@ -1004,17 +991,14 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
     <button
       className="emotion-0"
       disabled={false}
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className=""
@@ -1211,17 +1195,14 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
     <button
       className="emotion-0"
       disabled={false}
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className=""
@@ -1413,17 +1394,14 @@ exports[`flyout/Flyout snapshots renders with className prop 1`] = `
     <button
       className="emotion-0"
       disabled={false}
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className=""
@@ -1616,17 +1594,14 @@ exports[`flyout/Flyout snapshots renders with custom stylesheet function 1`] = `
     <button
       className="emotion-0"
       disabled={false}
-      href={undefined}
       onBlur={[Function]}
       onClick={[Function]}
       onFocus={[Function]}
       onMouseDown={[Function]}
       onMouseEnter={[Function]}
       onMouseLeave={[Function]}
-      onMouseOver={undefined}
       onMouseUp={[Function]}
       tabIndex="0"
-      target={undefined}
     >
       <span
         className=""
@@ -1818,7 +1793,6 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
       >
         <div
           className="emotion-4"
-          onScroll={undefined}
         />
       </div>
     </div>

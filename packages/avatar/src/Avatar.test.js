@@ -58,9 +58,7 @@ describe("avatar/Avatar", () => {
     ];
 
     singleStringNames.forEach(nameData => {
-      it(`renders initials based on the single string name "${
-        nameData.name
-      }"`, () => {
+      it(`renders initials based on the single string name "${nameData.name}"`, () => {
         const wrapper = mount(<Avatar name={nameData.name} />);
 
         expect(wrapper.find("Initials").text()).toBe(nameData.expectedInitials);
@@ -119,9 +117,7 @@ describe("avatar/Avatar", () => {
     ];
 
     firstLastNames.forEach(nameData => {
-      it(`renders initials based on first and last names "${
-        nameData.firstName
-      }" "${nameData.lastName}"`, () => {
+      it(`renders initials based on first and last names "${nameData.firstName}" "${nameData.lastName}"`, () => {
         const wrapper = mount(
           <Avatar firstName={nameData.firstName} lastName={nameData.lastName} />
         );

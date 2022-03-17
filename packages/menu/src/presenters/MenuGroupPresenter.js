@@ -173,11 +173,25 @@ const MenuGroupPresenter = props => {
 MenuGroupPresenter.displayName = "MenuGroupPresenter";
 
 MenuGroupPresenter.propTypes = {
+  children: PropTypes.node,
+  defaultSelected: PropTypes.arrayOf(PropTypes.any),
+  getActiveOption: PropTypes.func,
   getHighlightIndex: PropTypes.func,
   getOptionsInfo: PropTypes.func,
+  getPreviousEvent: PropTypes.func,
   menuRef: PropTypes.func,
   multiple: PropTypes.bool,
-  stylesheet: PropTypes.func
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
+  onKeyDown: PropTypes.func,
+  onMouseMove: PropTypes.func,
+  selected: PropTypes.bool,
+  setActiveOption: PropTypes.func,
+  setHighlightIndex: PropTypes.func,
+  setOptionsInfo: PropTypes.func,
+  setPreviousEvent: PropTypes.func,
+  stylesheet: PropTypes.func,
+  unselect: PropTypes.bool
 };
 
 export default MenuGroupPresenter;
