@@ -33,10 +33,10 @@ import stylesheet from "./stylesheet";
 
 const renderCellData = cell => {
   const cellDate = new Date(cell.render("Cell").props.value);
-  const date = isValid(cellDate) ? format(cellDate, "dd/MM/yyyy") : "invalid date";
-  return cell.column.Header === "Date"
-    ? date
-    : cell.render("Cell");
+  const date = isValid(cellDate)
+    ? format(cellDate, "dd/MM/yyyy")
+    : "invalid date";
+  return cell.column.Header === "Date" ? date : cell.render("Cell");
 };
 
 const TablePresenter = ({
@@ -56,18 +56,13 @@ const TablePresenter = ({
   tableSpreadProps,
   ...otherProps
 }) => {
-  const { columns, data, meta } = useMemo(
-    () => tableObject,
-    [tableObject]
-  );
-  
-  const defaultColumn = React.useMemo(
-    () => ({
-        minswidth: 30,
-        width: 150,
-        maxWidth: 400,
-    })
-  );
+  const { columns, data, meta } = useMemo(() => tableObject, [tableObject]);
+
+  const defaultColumn = useMemo(() => ({
+    minswidth: 30,
+    width: 150,
+    maxWidth: 400
+  }));
 
   const {
     getActiveColumnIndex,
@@ -82,113 +77,123 @@ const TablePresenter = ({
     setActiveMultiSelectColumn,
     setActiveMultiSelectRowArray,
     setActiveRowIndex,
-    setAllMultiSelectedRows,
+    setAllMultiSelectedRows
   } = otherProps;
 
   const {
-    getTableProps, 
-    getTableBodyProps, 
-    headerGroups, 
-    rows, 
-    page, 
-    nextPage, 
-    previousPage, 
-    prepareRow,  
-    canNextPage, 
-    canPreviousPage, 
-    pageOptions, 
-    state, 
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    page,
+    nextPage,
+    previousPage,
+    prepareRow,
+    canNextPage,
+    canPreviousPage,
+    pageOptions,
+    state,
     setGlobalFilter,
     allColumns,
-    getToggleHideAllColumnsProps,
-    state: { expanded }
-  } =
-    useTable(
-      { columns, data, defaultColumn },
-      useResizeColumns,
-      useFlexLayout,
-      useSticky, 
-      useFilters, 
-      useGlobalFilter, 
-      useGroupBy,
-      useSortBy,
-      useExpanded, 
-      usePagination,
-      useRowSelect,
-      (hooks) => {
-        hooks.visibleColumns.push((columns) => {
-          if (rowSelection) {
-            return [
-              {
-                id: "selection",
-                disableResizing: true,
-                minWidth: 35,
-                width: 35,
-                maxWidth: 35,
-                Header: () => (
-                  <Checkbox
-                    checked={getAllMultiSelectedRows}
-                    indeterminate={!!getActiveMultiSelectRowArray?.length && !getAllMultiSelectedRows}
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      const allArray = tableObject.data.map((row, index) => index);
-                      const emptyArray = [];
+    getToggleHideAllColumnsProps
+  } = useTable(
+    { columns, data, defaultColumn },
+    useResizeColumns,
+    useFlexLayout,
+    useSticky,
+    useFilters,
+    useGlobalFilter,
+    useGroupBy,
+    useSortBy,
+    useExpanded,
+    usePagination,
+    useRowSelect,
+    hooks => {
+      hooks.visibleColumns.push(defaultColumns => {
+        if (rowSelection) {
+          return [
+            {
+              id: "selection",
+              disableResizing: true,
+              minWidth: 35,
+              width: 35,
+              maxWidth: 35,
+              Header: () => (
+                <Checkbox
+                  checked={getAllMultiSelectedRows}
+                  indeterminate={
+                    !!getActiveMultiSelectRowArray?.length &&
+                    !getAllMultiSelectedRows
+                  }
+                  onClick={event => {
+                    event.stopPropagation();
+                    const allArray = tableObject.data.map(
+                      (row, index) => index
+                    );
+                    const emptyArray = [];
 
-                      if (getAllMultiSelectedRows || getActiveMultiSelectRowArray?.length > 0) {
-                        setActiveMultiSelectRowArray(emptyArray);
-                        setAllMultiSelectedRows(false);
-                      } else {
-                        setActiveMultiSelectRowArray(allArray);
-                        setAllMultiSelectedRows(true);
+                    if (
+                      getAllMultiSelectedRows ||
+                      getActiveMultiSelectRowArray?.length > 0
+                    ) {
+                      setActiveMultiSelectRowArray(emptyArray);
+                      setAllMultiSelectedRows(false);
+                    } else {
+                      setActiveMultiSelectRowArray(allArray);
+                      setAllMultiSelectedRows(true);
+                    }
+                  }}
+                  tabIndex={-1}
+                />
+              ),
+              Cell: ({ row }) => {
+                const rowTypeToMap = paginateDynamic ? rows : page;
+                const rowIndex = rowTypeToMap.indexOf(row);
+
+                return (
+                  <Checkbox
+                    checked={getActiveMultiSelectRowArray?.includes(rowIndex)}
+                    onClick={event => {
+                      event.stopPropagation();
+                      const newArray = getActiveMultiSelectRowArray?.includes(
+                        rowIndex
+                      )
+                        ? getActiveMultiSelectRowArray.filter(
+                            item => item !== rowIndex
+                          )
+                        : (getActiveMultiSelectRowArray && [
+                            ...getActiveMultiSelectRowArray
+                          ]) ||
+                          [];
+
+                      if (!getActiveMultiSelectRowArray?.includes(rowIndex)) {
+                        newArray.push(rowIndex);
                       }
+                      if (rowTypeToMap.length === newArray.length) {
+                        setAllMultiSelectedRows(true);
+                      } else {
+                        setAllMultiSelectedRows(false);
+                      }
+                      setActiveMultiSelectRowArray(newArray);
                     }}
                     tabIndex={-1}
                   />
-                ),
-                Cell: ({ row }) => {
-                  const rowTypeToMap = paginateDynamic ? rows : page;
-                  const rowIndex = rowTypeToMap.indexOf(row);
-
-                  return(
-                    <Checkbox
-                      checked={getActiveMultiSelectRowArray?.includes(rowIndex)}
-                      onClick={(event) => {
-                        event.stopPropagation();
-                        const newArray = getActiveMultiSelectRowArray?.includes(rowIndex)
-                          ? getActiveMultiSelectRowArray.filter(item => item !== rowIndex)
-                          : getActiveMultiSelectRowArray && [...getActiveMultiSelectRowArray] || [];
-
-                        if (!getActiveMultiSelectRowArray?.includes(rowIndex)) {
-                          newArray.push(rowIndex);
-                        }
-                        if (rowTypeToMap.length === newArray.length) {
-                          setAllMultiSelectedRows(true);
-                        } else {
-                          setAllMultiSelectedRows(false);
-                        }
-                        setActiveMultiSelectRowArray(newArray);
-                      }}
-                      tabIndex={-1}
-                    />
-                  );
-                }
-                  
-              },
-              ...columns
-            ];
-          }
-          return [...columns];
-        })
-      },
-      );
-
+                );
+              }
+            },
+            ...defaultColumns
+          ];
+        }
+        return [...defaultColumns];
+      });
+    }
+  );
   const { globalFilter, pageIndex } = state;
-  const {isStickyHeader, isStickyColumns} = meta?.stickyItems;
-
+  const { isStickyHeader, isStickyColumns } = meta?.stickyItems;
   const handleStickyToggle = () => {
     const stickyObject = {};
     if (isStickyColumns) {
-     stickyObject.width = "100%";
+      stickyObject.width = "100%";
     }
 
     if (isStickyHeader) {
@@ -196,20 +201,17 @@ const TablePresenter = ({
     }
 
     return stickyObject;
-  }
-
-  const [customContentArray, setCustomContentArray] = useState([]);
-  
+  };
+  const [customContentArray] = useState([]);
   const pageDetails = {
-    previousPage: previousPage, 
-    nextPage: nextPage, 
-    canPreviousPage: canPreviousPage, 
-    canNextPage: canNextPage,
-    pageOptions: pageOptions,
-    pageIndex: pageIndex,
-    paginateDynamic: paginateDynamic,
-  }
-
+    canPreviousPage,
+    canNextPage,
+    nextPage,
+    pageOptions,
+    pageIndex,
+    paginateDynamic,
+    previousPage
+  };
   const rowTypeToMap = paginateDynamic ? rows : page;
 
   useEffect(() => {
@@ -218,19 +220,28 @@ const TablePresenter = ({
 
   return (
     <ThemeContext.Consumer>
-    {({ resolvedRoles, metadata }) => {
-    const styles = stylesheet({frozenHeader, frozenHeaderCount, isStickyColumns, isStickyHeader}, resolvedRoles);
-      return (
-        <>
-          {meta.globalFilter && <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter} children={meta.globalFilter} />}
-          {meta.columnShowHideComponent &&
-            <ColumnShowHide 
-              toggleHideAllColumnsProps={getToggleHideAllColumnsProps}
-              allColumns={allColumns} 
-            >
-              {meta.columnShowHideComponent}
-            </ColumnShowHide>
-          }
+      {({ resolvedRoles, metadata }) => {
+        const styles = stylesheet(
+          { frozenHeader, frozenHeaderCount, isStickyColumns, isStickyHeader },
+          resolvedRoles,
+          metadata
+        );
+
+        return (
+          <>
+            {meta.globalFilter && (
+              <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}>
+                {meta.globalFilter}
+              </GlobalFilter>
+            )}
+            {meta.columnShowHideComponent && (
+              <ColumnShowHide
+                toggleHideAllColumnsProps={getToggleHideAllColumnsProps}
+                allColumns={allColumns}
+              >
+                {meta.columnShowHideComponent}
+              </ColumnShowHide>
+            )}
             <div
               {...getTableProps()}
               className={css(styles.higTable)}
@@ -241,7 +252,10 @@ const TablePresenter = ({
               style={handleStickyToggle()}
               {...tableSpreadProps}
             >
-              <div className={css(styles.higTableHeaderWrapper)} ref={setHeaderRef}>
+              <div
+                className={css(styles.higTableHeaderWrapper)}
+                ref={setHeaderRef}
+              >
                 {headerGroups.map(headerGroup => (
                   <div
                     {...headerGroup.getHeaderGroupProps()}
@@ -250,67 +264,106 @@ const TablePresenter = ({
                   >
                     {headerGroup.headers.map(column => {
                       const resizingStyles = column.canResize
-                        ? stylesheet({isResizing: column.isResizing}, resolvedRoles, metadata)
+                        ? stylesheet(
+                            { isResizing: column.isResizing },
+                            resolvedRoles,
+                            metadata
+                          )
                         : null;
-                      const headerIndex = getColumnHeaderArray.indexOf(column.Header);
+                      const headerIndex = getColumnHeaderArray.indexOf(
+                        column.Header
+                      );
 
-                      return(
+                      return (
                         <TableHeaderCell
-                          {...column.getHeaderProps(column.getSortByToggleProps())}
+                          {...column.getHeaderProps(
+                            column.getSortByToggleProps()
+                          )}
                           columnSelection={columnSelection}
-                          getActiveMultiSelectColumn={getActiveMultiSelectColumn}
+                          getActiveMultiSelectColumn={
+                            getActiveMultiSelectColumn
+                          }
                           getColumnHeaderArray={getColumnHeaderArray}
                           headerBackgroundColor={headerBackgroundColor}
                           headerIndex={headerIndex}
                           isSelectableHeader={!column.headers}
                           isSortPassed={meta.sortColumns}
-                          selected={getActiveColumnIndex === headerIndex && getActiveRowIndex === -1}
-                          setActiveMultiSelectColumn={setActiveMultiSelectColumn}
+                          selected={
+                            getActiveColumnIndex === headerIndex &&
+                            getActiveRowIndex === -1
+                          }
+                          setActiveMultiSelectColumn={
+                            setActiveMultiSelectColumn
+                          }
                         >
                           <div className={css(styles.headerHolder)}>
-                            {column.canGroupBy  && meta.groupElements ? (
+                            {column.canGroupBy && meta.groupElements ? (
                               <span {...column.getGroupByToggleProps()}>
-                                {<GroupHeaderElements isGrouped={column.isGrouped} groupHeaderElementStyles={styles.groupHeaderElement}/>}
+                                <GroupHeaderElements
+                                  groupHeaderElementStyles={
+                                    styles.groupHeaderElement
+                                  }
+                                  isGrouped={column.isGrouped}
+                                />
                               </span>
                             ) : null}
                             {column.render("Header")}
                           </div>
                           <div
-                            {...(column.canResize ? {...column.getResizerProps()} : {})}
-                            className={css(resizingStyles?.higTableHeaderResizer)}
+                            {...(column.canResize
+                              ? { ...column.getResizerProps() }
+                              : {})}
+                            className={css(
+                              resizingStyles?.higTableHeaderResizer
+                            )}
                             onClick={event => event.stopPropagation()}
                           />
-                          {meta.sortColumns && column.id !== "selection"
-                            ? (<SortColumns isSorted={column.isSorted} isSortedDesc={column.isSortedDesc}>{meta.sortColumns}</SortColumns>)
-                            : ""
-                          }
+                          {meta.sortColumns && column.id !== "selection" ? (
+                            <SortColumns
+                              isSorted={column.isSorted}
+                              isSortedDesc={column.isSortedDesc}
+                            >
+                              {meta.sortColumns}
+                            </SortColumns>
+                          ) : (
+                            ""
+                          )}
                         </TableHeaderCell>
                       );
                     })}
                   </div>
                 ))}
               </div>
-              <div {...getTableBodyProps()} className={css(styles.higTableBody)}>
+              <div
+                {...getTableBodyProps()}
+                className={css(styles.higTableBody)}
+              >
                 {rowTypeToMap.map((row, rowIndex) => {
-                  const rowStyles =
-                    stylesheet(
-                      {
-                        alternateBg,
-                        isCustomeContentExpanded: customContentArray[rowIndex],
-                        rowIndex
-                      },
-                      resolvedRoles,
-                      metadata
-                    );
+                  const rowStyles = stylesheet(
+                    {
+                      alternateBg,
+                      isCustomeContentExpanded: customContentArray[rowIndex],
+                      rowIndex
+                    },
+                    resolvedRoles,
+                    metadata
+                  );
                   prepareRow(row);
 
                   return (
                     <div>
-                      <div {...row.getRowProps()} {...rowSpreadProps} className={css(rowStyles.higTableRow)}>
+                      <div
+                        {...row.getRowProps()}
+                        {...rowSpreadProps}
+                        className={css(rowStyles.higTableRow)}
+                      >
                         {row.cells.map(cell => {
-                          const cellColumnIndex = getColumnHeaderArray.indexOf(cell.column.Header);
+                          const cellColumnIndex = getColumnHeaderArray.indexOf(
+                            cell.column.Header
+                          );
                           const cellRowIndex = rowIndex;
-                          const totalRows = rowTypeToMap.length || tableObject.data.length;
+                          const totalRows =
+                            rowTypeToMap.length || tableObject.data.length;
 
                           return (
                             <TableDataCell
@@ -320,21 +373,45 @@ const TablePresenter = ({
                               getColumnHeaderArray={getColumnHeaderArray}
                               isLast={rowIndex + 1 === totalRows}
                               isResizing={cell?.column?.isResizing}
-                              multiSelectedColumn={getActiveMultiSelectColumn === cellColumnIndex}
-                              multiSelectedColumnLeft={getActiveMultiSelectColumn !== null && getActiveMultiSelectColumn - 1 === cellColumnIndex}
-                              multiSelectedRow={getActiveMultiSelectRowArray?.includes(cellRowIndex)}
-                              multiSelectedRowBottom={getActiveMultiSelectRowArray?.includes(cellRowIndex - 1)}
-                              selected={getActiveColumnIndex === cellColumnIndex && getActiveRowIndex === cellRowIndex}
-                              selectedBottom={getActiveColumnIndex === cellColumnIndex && getActiveRowIndex + 1 === cellRowIndex && getActiveRowIndex !== -1}
-                              selectedLeft={getActiveColumnIndex - 1 === cellColumnIndex && getActiveRowIndex === cellRowIndex}
+                              multiSelectedColumn={
+                                getActiveMultiSelectColumn === cellColumnIndex
+                              }
+                              multiSelectedColumnLeft={
+                                getActiveMultiSelectColumn !== null &&
+                                getActiveMultiSelectColumn - 1 ===
+                                  cellColumnIndex
+                              }
+                              multiSelectedRow={getActiveMultiSelectRowArray?.includes(
+                                cellRowIndex
+                              )}
+                              multiSelectedRowBottom={getActiveMultiSelectRowArray?.includes(
+                                cellRowIndex - 1
+                              )}
+                              selected={
+                                getActiveColumnIndex === cellColumnIndex &&
+                                getActiveRowIndex === cellRowIndex
+                              }
+                              selectedBottom={
+                                getActiveColumnIndex === cellColumnIndex &&
+                                getActiveRowIndex + 1 === cellRowIndex &&
+                                getActiveRowIndex !== -1
+                              }
+                              selectedLeft={
+                                getActiveColumnIndex - 1 === cellColumnIndex &&
+                                getActiveRowIndex === cellRowIndex
+                              }
                               setActiveColumnIndex={setActiveColumnIndex}
-                              setActiveMultiSelectColumn={setActiveMultiSelectColumn}
+                              setActiveMultiSelectColumn={
+                                setActiveMultiSelectColumn
+                              }
                               setActiveRowIndex={setActiveRowIndex}
                             >
                               {cell.isGrouped ? (
                                 <>
                                   <span {...row.getToggleRowExpandedProps()}>
-                                    {<GroupElements isExpanded={row.isExpanded}>{meta.groupElements}</GroupElements>}
+                                    <GroupElements isExpanded={row.isExpanded}>
+                                      {meta.groupElements}
+                                    </GroupElements>
                                   </span>{" "}
                                   {renderCellData(cell)} ({row.subRows.length})
                                 </>
