@@ -84,12 +84,11 @@ const checkHorizontalScroll = (cellObject, table) => {
 };
 
 const getCellObject = (activeColumnIndex, activeRowIndex) => {
-  // data-cell-coords={`${cellColumnIndex}_${cellRowIndex}`}
   return `[data-cell-coords="${activeColumnIndex}_${activeRowIndex}"]`;
 }
 
 const getHeaders = (columns) => {
-  const test = columns.map(item => {
+  const headers = columns.map(item => {
     if (item.columns) {
           return getHeaders(item.columns);
     } else {
@@ -97,22 +96,20 @@ const getHeaders = (columns) => {
     }
   });
 
-  return [].concat.apply([], test);
+  return [].concat.apply([], headers);
 };
 
 export default function TableBehavior(props) {
 	const {paginateDynamic, tableObject, ...otherProps} = props;
-  const {onBlur, onFocus, onKeyDown} = otherProps;
+  const {onKeyDown} = otherProps;
   const [getTotalRows, setTotalRows] = useState(tableObject.data.length)
 	const [getColumnHeaderArray, setColumnHeaderArray] = useState(getHeaders(tableObject.columns));
 	const [getActiveColumnIndex, setActiveColumnIndex] = useState(null);
   const [getActiveMultiSelectColumn, setActiveMultiSelectColumn] = useState(null);
   const [getActiveMultiSelectRowArray, setActiveMultiSelectRowArray] = useState(null);
   const [getAllMultiSelectedRows, setAllMultiSelectedRows] = useState(false);
-	// const [getHighlightColumnIndex, setHighlightColumnIndex] = useState(null);
 	const [getActiveRowIndex, setActiveRowIndex] = useState(null);
-	// const [getHighlightRowIndex, setHighlightRowIndex] = useState(null);
-  const [getInternalTableRef, setInternalTableRef] = useState(null);
+	const [getInternalTableRef, setInternalTableRef] = useState(null);
   const [getInternalHeaderRef, setInternalHeaderRef] = useState(null);
 
   const setTableRef = element => {
@@ -127,32 +124,7 @@ export default function TableBehavior(props) {
     setInternalHeaderRef(element);
   };
 
-  // const handleBlur = useCallback((event) => {
-  //   if (onBlur) {
-  //         onBlur(event);
-  //   }
-  //   /**
-  //    * Currently there is no deselection
-  //    * maybe we should do this when a user leaves focus
-  //    * that way there won't always be a visible selected cell
-  //    */
-  // }, []);
-
-  // const handleFocus = useCallback((event) => {
-  //   if (onFocus) {
-  //         onFocus(event);
-  //   }
-  //   // if (!getActiveColumnIndex) {
-  //   //       setActiveColumnIndex(0);
-  //   // }
-  //   // if (!getActiveRowIndex) {
-  //   //       setActiveRowIndex(0);
-  //   // }
-  // }, [getActiveColumnIndex, getActiveRowIndex, setActiveColumnIndex, setActiveRowIndex]);
-
   const handleKeyDown = useCallback((event) => {
-    // const currentHighlightColumnIndex = getHighlightColumnIndex || 0;
-    // const currentHighlightRowIndex = getHighlightRowIndex || 0;
     const { columnSelection, rowHeight, rowSelection } = props;
     const columnStart = rowSelection ? -1 : 0;
     const rowStart = columnSelection ? -1 : 0;
@@ -222,7 +194,7 @@ export default function TableBehavior(props) {
         break;
       // Enter Key
       case 13:
-        if (getActiveRowIndex > -1) {
+        if (getActiveRowIndex > -1 && getActiveColumnIndex === -1) {
           /**
            * Look into consolidating this w/ the row select onClick
            */

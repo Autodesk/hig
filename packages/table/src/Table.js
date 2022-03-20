@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { ThemeContext } from "@hig/theme-context";
 
 import TablePresenter from "./presenters/TablePresenter";
-import TableBehavior from './behaviors/TableBehavior';
+import TableBehavior from "./behaviors/TableBehavior";
 
-const Table = (props) => {
+const Table = props => {
   const {
     alternateBg,
     headerBackgroundColor,
@@ -17,10 +17,10 @@ const Table = (props) => {
     rowSpreadProps,
     tableObject,
     tableSpreadProps,
-    paginateDynamic,
+    paginateDynamic
   } = props;
 
-  return(
+  return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => (
         <TableBehavior
@@ -45,8 +45,8 @@ const Table = (props) => {
             setAllMultiSelectedRows,
             setHeaderRef,
             setTableRef,
-            setTotalRows,
-          }) =>
+            setTotalRows
+          }) => (
             <TablePresenter
               alternateBg={alternateBg}
               columnSelection={columnSelection}
@@ -75,7 +75,7 @@ const Table = (props) => {
               tableSpreadProps={tableSpreadProps}
               paginateDynamic={paginateDynamic}
             />
-          }
+          )}
         </TableBehavior>
       )}
     </ThemeContext.Consumer>

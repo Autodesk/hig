@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
-import stylesheet from "./stylesheet";
+import stylesheet from "../presenters/stylesheet";
 
 export default function TableHeaderCellPresenter(props) {
   const {
@@ -11,18 +11,20 @@ export default function TableHeaderCellPresenter(props) {
     getColumnHeaderArray,
     headerIndex,
     isSelectableHeader,
+    isSortPassed,
+    onClick,
     setActiveMultiSelectColumn
   } = props;
-  const handleClick = (event) => {
-    if (props.isSortPassed && props.onClick && !columnSelection) {
-        props.onClick(event);
+  const handleClick = useCallback((event) => {
+    if (isSortPassed && onClick && !columnSelection) {
+        onClick(event);
     }
     // no column selection for multirow selection checkboxes
     if (headerIndex === -1 || !columnSelection) {
         return;
     }
     setActiveMultiSelectColumn(headerIndex);
-  }
+  }, [columnSelection, headerIndex, isSortPassed, onClick, setActiveMultiSelectColumn]);
 
   return (
     <ThemeContext.Consumer>
