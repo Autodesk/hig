@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, { useCallback } from "react";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
@@ -8,35 +8,45 @@ export default function TableHeaderCellPresenter(props) {
   const {
     children,
     columnSelection,
-    getColumnHeaderArray,
     headerIndex,
     isSelectableHeader,
     isSortPassed,
     onClick,
     setActiveMultiSelectColumn
   } = props;
-  const handleClick = useCallback((event) => {
-    if (isSortPassed && onClick && !columnSelection) {
+  const handleClick = useCallback(
+    event => {
+      if (isSortPassed && onClick && !columnSelection) {
         onClick(event);
-    }
-    // no column selection for multirow selection checkboxes
-    if (headerIndex === -1 || !columnSelection) {
+      }
+      // no column selection for multirow selection checkboxes
+      if (headerIndex === -1 || !columnSelection) {
         return;
-    }
-    setActiveMultiSelectColumn(headerIndex);
-  }, [columnSelection, headerIndex, isSortPassed, onClick, setActiveMultiSelectColumn]);
+      }
+      setActiveMultiSelectColumn(headerIndex);
+    },
+    [
+      columnSelection,
+      headerIndex,
+      isSortPassed,
+      onClick,
+      setActiveMultiSelectColumn
+    ]
+  );
 
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
-        const styles = stylesheet(props, resolvedRoles);
+        const styles = stylesheet(props, resolvedRoles, metadata);
 
         return (
           <div
             {...props}
             className={css(styles.higTableHeader)}
             onClick={handleClick}
-            {...(isSelectableHeader ? {'data-cell-coords': `${headerIndex}_-1`} : {})}
+            {...(isSelectableHeader
+              ? { 'data-cell-coords': `${headerIndex}_-1` }
+              : {})}
           >
             <div className={css(styles.higTableHeaderContentWrapper)}>
               {children}

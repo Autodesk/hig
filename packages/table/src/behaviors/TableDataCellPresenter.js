@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback } from "react";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
@@ -25,25 +25,33 @@ export default function TableDataCellPresenter(props) {
     setActiveColumnIndex(cellColumnIndex);
     setActiveRowIndex(cellRowIndex);
     setActiveMultiSelectColumn(null);
-  }, [cellColumnIndex, cellRowIndex,setActiveColumnIndex, setActiveRowIndex, setActiveMultiSelectColumn]);
+  },
+  [
+    cellColumnIndex,
+    cellRowIndex,
+    setActiveColumnIndex,
+    setActiveRowIndex,
+    setActiveMultiSelectColumn
+  ]);
 
-	return (
-        <ThemeContext.Consumer>
-            {({ resolvedRoles, metadata }) => {
-                const styles = stylesheet(props, resolvedRoles);
-                return (
-            		<div
-                        {...otherProps}
-                        className={css(styles.higTableCell)}
-                        data-cell-coords={`${cellColumnIndex}_${cellRowIndex}`}
-                        onClick={handleCellClick}
-                    >
-                        <div className={css(styles.higTableCellContentWrapper)}>
-                            {children}
-                        </div>
-                    </div>
-                );
-            }}
-        </ThemeContext.Consumer>
-	)
+  return (
+    <ThemeContext.Consumer>
+      {({ resolvedRoles, metadata }) => {
+        const styles = stylesheet(props, resolvedRoles, metadata);
+
+        return (
+          <div
+            {...otherProps}
+            className={css(styles.higTableCell)}
+            data-cell-coords={`${cellColumnIndex}_${cellRowIndex}`}
+            onClick={handleCellClick}
+          >
+            <div className={css(styles.higTableCellContentWrapper)}>
+              {children}
+            </div>
+          </div>
+        );
+      }}
+    </ThemeContext.Consumer>
+  );
 }
