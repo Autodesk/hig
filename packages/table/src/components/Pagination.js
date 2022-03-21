@@ -6,7 +6,7 @@ const styles = {
   width: "100%"
 };
 
-const Pagination = ({pageDetails, children}) => (
+const Pagination = ({ pageDetails, children }) => (
   <div className={css(styles)}>{children(pageDetails)}</div>
 );
 

@@ -1,12 +1,9 @@
-import React from 'react';
+import React from "react";
 
-const ColumnFilter = (props) => {
-  const {filterValue, setFilter} = props.passedProps.column;
-  return (
-    <span>
-      {props.children({filterValue, setFilter})}
-    </span>
-  )
-}
+const ColumnFilter = props => {
+  const { filterValue, setFilter } = props.passedProps.column;
+
+  return <span>{props.children({ filterValue, setFilter })}</span>;
+};
 
 export default ColumnFilter;

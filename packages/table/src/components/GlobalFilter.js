@@ -5,8 +5,8 @@ const styles = {
   marginBottom: "20px"
 };
 
-const GlobalFilter = ({filter, setFilter, children}) => (
-  <div className={css(styles)}>{children({filter, setFilter})}</div>
+const GlobalFilter = ({ filter, setFilter, children }) => (
+  <div className={css(styles)}>{children({ filter, setFilter })}</div>
 );
 
 export default GlobalFilter;
