@@ -5,6 +5,7 @@ export default function stylesheet(props, themeData, metadata) {
     orientation,
     background,
     divider,
+    identifier,
     hasFocus,
     hasHover,
     isPressed,
@@ -16,6 +17,8 @@ export default function stylesheet(props, themeData, metadata) {
   const isColumn = orientation === 'vertical';
   const isNoBg = background === 'flat' && !hasFocus;
   const isHorizontal = orientation === 'horizontal';
+  
+  const isMediumDensity = metadata.densityId === `medium-density`;
 
   const getDefaultOutline = () => {
     const color = themeData[`tile.${bgType}.default.level${surfaceLevel}.borderColor`];
@@ -61,11 +64,19 @@ export default function stylesheet(props, themeData, metadata) {
     }
   }
 
-  const getIdentifierHorizontal = () => ({ top: '20px', left: '-20px' });
+  const getIdentifierHorizontal = () => {
+    const topPlacement = isMediumDensity ? '16px' : '12px';
+    return { top: `${topPlacement}`, left: '-18px' };
+  }
   const getNotificationHorizontal = () => ({ left: '-5px' });
   const getSelectionOptionsHorizontal = () => ({ top: '22px' });
-  const getActionClarifierHorizontal = () => ({ width: '50%', paddingTop: '50%', paddingLeft: '20px' });
-
+  const getActionClarifierHorizontal = () => ({ paddingTop: `${isMediumDensity ? '4rem' : '2rem'}`});
+  const getTileContentPadding = () => {
+    if (identifier) {
+      return isHorizontal ? '8px 8px 8px 36px' : '12px';
+    }
+    return isHorizontal ? '8px 8px 8px 16px' : '12px';
+  }
   return {
     higTileContainer: {
       position: 'relative',
@@ -74,9 +85,11 @@ export default function stylesheet(props, themeData, metadata) {
       flexDirection: isColumn ? 'column' : 'row',
       backgroundColor: isNoBg ? 'none' : themeData[`tile.${bgType}.default.level${surfaceLevel}.backgroundColor`],
       width: '100%',
-      minWidth: orientation === 'vertical' ? 'none' : '233px',
+      minWidth: isColumn ? 'none' : '233px',
       outline: getDefaultOutline(),
       cursor: 'pointer',
+      color: themeData["tile.fontColor"],
+      fontFamily: themeData["tile.fontFamily"],
       ...(hasHover ? getStylesByStatus('hover') : {}),
       ...(isPressed ? getStylesByStatus('pressed') : {}),
       ...(hasFocus ? getStylesByFocus() : {}),
@@ -102,7 +115,7 @@ export default function stylesheet(props, themeData, metadata) {
       ...(isHorizontal ? getSelectionOptionsHorizontal() : {})
     },
     higTileSelectionOptionCheckbox: {
-      padding: '0 5px 0 0'
+      padding: `0 ${isMediumDensity ? '4px' : '2px'} 0 0`
     },
     higTileSelectionOptionPin: {
 
@@ -111,48 +124,58 @@ export default function stylesheet(props, themeData, metadata) {
       position: 'relative',
       margin: '0',
       padding: background ? '0' : themeData['tile.padding'],
-      maxHeight: orientation === 'vertical' ? '164px' : 'none',
       overflow: 'hidden',
       ...(divider && background ? getDivider() : {})
     },
-    higTileActionClarifier: {
-      display: hasHover ? 'block' : 'none',
-      position: 'absolute',
-      top: '0',
-      left: '0',
+    higTileHeaderContainer: {
+      position: 'relative',
+      maxHeight: isColumn ? '140px' : '108px',
       width: '100%',
       height: '100%',
-      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      backgroundColor: hasHover ? 'rgba(0, 0, 0, 0.5)' : 'none',
+    },
+    higTileActionClarifier: {
+      zIndex: '10',
+      display: hasHover ? 'block' : 'none',
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
     },
     higTileActionClarifierButton: {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: '30% 0',
+      padding: `${isMediumDensity ? '48px' : '32px'} 0`,
       ...(isHorizontal ? getActionClarifierHorizontal() : {})
     },
     higTileIdentifierContainer: {
       position: 'absolute',
       zIndex: '3',
-      top: '-10px',
+      backgroundColor: 'white',
+      padding: '1px',
+      width: `${isMediumDensity ? '30px' : '30px'}`,
+      top: `${isMediumDensity ? '-25px' : '-20px'}`,
       left: '0px',
       ...(isHorizontal ? getIdentifierHorizontal() : {})
     },
     higTileIdentifierIcon: {
       width: '50px',
       color: '#000',
-      paddingLeft: themeData['tile.padding'],
+      padding: isMediumDensity ? '2px 4px 0px 4px' : '4px 8px 0px 8px',
     },
     higTileContent: {
+      boxSizing: 'border-box',
       position: 'relative',
-      padding: isHorizontal ? '20px' : themeData['tile.padding'],
+      padding: getTileContentPadding(),
       width: '100%',
     },
     higTileTitleContainer: {
       display: 'flex',
       justifyContent: 'space-between',
-      marginTop: themeData["tile.title.marginBottom"],
-      marginBottom: themeData["tile.title.marginBottom"],
+      alignItems: 'center',
+      marginTop: isMediumDensity ? '8px' : '4px',
+      marginBottom: isMediumDensity ? '4px' : '2px',
     },
     higTileTitle: {
       fontSize: themeData["tile.title.fontSize"],
@@ -165,26 +188,32 @@ export default function stylesheet(props, themeData, metadata) {
       lineHeight: themeData["tile.subTitle.lineHeight"],
     },
     higTileOverflowMenu: {
-      paddingRight: '20px',
+      paddingRight: isMediumDensity ? '12px' : '8px',
     },
     higTileAdditionalContent: {
-      padding: '5px 0',
+      padding: `${isMediumDensity ? '4px' : '2px'} 0`,
     },
     higGroupIcons: {
       display: 'flex',
       alignItems: 'center',
-      paddingTop: themeData['tile.padding'],
+      paddingTop: isMediumDensity ? '12px' : '8px',
+      "> div": {
+        alignItems: "center",
+        display: "flex",
+        minHeight: isMediumDensity ? '36px' : '24px',
+        minWidth: isMediumDensity ? '36px' : '24px',
+      }
     },
     higGroupIconItem: {
-      paddingRight: themeData['tile.padding'],
+      // paddingRight: themeData['tile.padding'],
     },
     higVersionHolder: {
-      marginTop: themeData["tile.title.marginBottom"],
+      marginTop: isMediumDensity ? '8px' : '4px',
     },
     higTileCTAHolder: {
       zIndex: '10',
-      marginTop: themeData["tile.title.marginBottom"],
-      marginBottom: themeData["tile.title.marginBottom"],
+      marginTop: isMediumDensity ? '8px' : '4px',
+      marginBottom: isMediumDensity ? '8px' : '4px',
     }
   }
 }
