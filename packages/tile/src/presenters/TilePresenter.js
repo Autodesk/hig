@@ -45,7 +45,7 @@ const TilePresenter = props => {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
-        const styles = stylesheet(props, resolvedRoles);
+        const styles = stylesheet(props, resolvedRoles, metadata);
         return (
           <div
             className={css(styles.higTileContainer)}
@@ -86,14 +86,16 @@ const TilePresenter = props => {
               )}
             </div>
             <div className={css(styles.higTileHeader)}>
-              <HeaderContainer />
-              {actionClarifier && (
-                <div className={css(styles.higTileActionClarifier)}>
-                  <div className={css(styles.higTileActionClarifierButton)}>
-                    <Button title={actionClarifier} />
+              <div className={css(styles.higTileHeaderContainer)}>
+                <HeaderContainer />
+                {actionClarifier && (
+                  <div className={css(styles.higTileActionClarifier)}>
+                    <div className={css(styles.higTileActionClarifierButton)}>
+                      <Button title={actionClarifier} />
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
 
             <div className={css(styles.higTileContent)}>

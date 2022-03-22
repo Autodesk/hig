@@ -9,6 +9,6 @@ const styles = {
     objectFit: 'cover'
   }
 };
-const ImageHolder = () => <div className={css(styles)}><img src="https://picsum.photos/id/122/200/300" alt="" /></div>
+const ImageHolder = () => <div className={css(styles)}><img src="https://picsum.photos/id/53/200/300" alt="" /></div>
 
 export default ImageHolder;
