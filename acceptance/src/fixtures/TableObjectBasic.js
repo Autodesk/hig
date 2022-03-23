@@ -40,7 +40,8 @@ export const TABLE_OBJECT_BASIC = {
     expandedComponent: props => <ExpandedComponent passedData={props} />,
     columnShowHideComponent: props => <ColumnShowHideComponent passedData={props} />,
     columnShowHide: true,
-    sortColumns: props => <SortColumns passedData={props} />, 
+    sortColumns: props => <SortColumns passedData={props} />,
+    formatDate: false, 
   },
   columns: [
       {

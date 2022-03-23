@@ -13,8 +13,6 @@ import {
   useTable
 } from "react-table";
 import { useSticky } from "react-table-sticky";
-import { format } from "date-fns";
-import isValid from "date-fns/isValid";
 
 import { ThemeContext } from "@hig/theme-context";
 import Checkbox from "@hig/checkbox";
@@ -28,15 +26,15 @@ import SortColumns from "../components/SortColumns";
 import GroupElements from "../components/GroupElements";
 import GroupHeaderElements from "../components/GroupHeaderElements";
 import Pagination from "../components/Pagination";
+import DateFormatter from "../util/DateFormatter";
 
 import stylesheet from "./stylesheet";
 
-const renderCellData = cell => {
-  const cellDate = new Date(cell.render("Cell").props.value);
-  const date = isValid(cellDate)
-    ? format(cellDate, "dd/MM/yyyy")
-    : "invalid date";
-  return cell.column.Header === "Date" ? date : cell.render("Cell");
+const renderCellData = (formatDate = false, cell) => {
+  if (!formatDate) return cell.render("Cell");
+  return cell.column.Header === "Date"
+    ? DateFormatter(cell)
+    : cell.render("Cell");
 };
 
 const TablePresenter = ({
@@ -417,12 +415,12 @@ const TablePresenter = ({
                                       {meta.groupElements}
                                     </GroupElements>
                                   </span>{" "}
-                                  {renderCellData(cell)} ({row.subRows.length})
+                                  {renderCellData(meta.formatDate, cell)} ({row.subRows.length})
                                 </>
                               ) : cell.isAggregated ? (
                                 cell.render("Aggregated")
                               ) : cell.isPlaceholder ? null : (
-                                renderCellData(cell)
+                                renderCellData(meta.formatDate, cell)
                               )}
                             </TableDataCell>
                           );
