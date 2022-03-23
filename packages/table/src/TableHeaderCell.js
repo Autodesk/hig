@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import { HoverBehavior, PressedBehavior } from "@hig/behaviors";
 
 import TableHeaderCellPresenter from "./behaviors/TableHeaderCellPresenter";
@@ -36,3 +38,10 @@ export default function TableHeaderCell(props) {
     </HoverBehavior>
   );
 }
+
+TableHeaderCell.propTypes = {
+  onMouseEnter: PropTypes.func,
+  onMouseLeave: PropTypes.func,
+  onMouseDown: PropTypes.func,
+  onMouseUp: PropTypes.func
+};
