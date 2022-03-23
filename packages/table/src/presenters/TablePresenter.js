@@ -322,6 +322,7 @@ const TablePresenter = ({
                             <SortColumns
                               isSorted={column.isSorted}
                               isSortedDesc={column.isSortedDesc}
+                              density={metadata.densityId}
                             >
                               {meta.sortColumns}
                             </SortColumns>
