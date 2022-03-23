@@ -13,7 +13,7 @@ const GlobalFilter = ({ filter, setFilter, children }) => (
 GlobalFilter.propTypes = {
   children: PropTypes.func,
   filter: PropTypes.string,
-  setFilter: PropTypes.bool
+  setFilter: PropTypes.func
 };
 
 export default GlobalFilter;

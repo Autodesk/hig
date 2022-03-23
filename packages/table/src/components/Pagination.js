@@ -15,9 +15,9 @@ Pagination.propTypes = {
   children: PropTypes.func,
   pageDetails: PropTypes.shape({
     pageIndex: PropTypes.number,
-    pageOptions: PropTypes.number,
-    previousPage: PropTypes.number,
-    nextPage: PropTypes.number,
+    pageOptions: PropTypes.array,
+    previousPage: PropTypes.func,
+    nextPage: PropTypes.func,
     canPreviousPage: PropTypes.bool,
     canNextPage: PropTypes.bool
   })

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { HoverBehavior, PressedBehavior } from "@hig/behaviors";
 
-import TableDataCellPresenter from "./behaviors/TableDataCellPresenter";
+import TableDataCellPresenter from "./presenters/TableDataCellPresenter";
 
 export default function TableDataCell(props) {
   return (

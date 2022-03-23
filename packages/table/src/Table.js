@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React from "react";
 import PropTypes from "prop-types";
 import { ThemeContext } from "@hig/theme-context";
@@ -80,6 +81,20 @@ const Table = props => {
       )}
     </ThemeContext.Consumer>
   );
+};
+
+Table.propTypes = {
+  alternateBg: PropTypes.bool,
+  headerBackgroundColor: PropTypes.string,
+  columnSelection: PropTypes.bool,
+  frozenHeader: PropTypes.bool,
+  frozenHeaderCount: PropTypes.number,
+  headerRowSpreadProps: PropTypes.any,
+  rowSelection: PropTypes.bool,
+  rowSpreadProps: PropTypes.any,
+  tableObject: PropTypes.any.isRequired,
+  tableSpreadProps: PropTypes.any,
+  paginateDynamic: PropTypes.bool
 };
 
 export default Table;

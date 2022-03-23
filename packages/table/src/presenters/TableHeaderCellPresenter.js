@@ -13,7 +13,8 @@ export default function TableHeaderCellPresenter(props) {
     isSelectableHeader,
     isSortPassed,
     onClick,
-    setActiveMultiSelectColumn
+    setActiveMultiSelectColumn,
+    ...otherProps
   } = props;
   const handleClick = useCallback(
     event => {
@@ -34,6 +35,15 @@ export default function TableHeaderCellPresenter(props) {
       setActiveMultiSelectColumn
     ]
   );
+  const payload = { ...otherProps };
+
+  delete payload.getActiveMultiSelectColumn;
+  delete payload.getColumnHeaderArray;
+  delete payload.hasHover;
+  delete payload.headerBackgroundColor;
+  delete payload.isPressed;
+  delete payload.isSortPassed;
+  delete payload.setActiveMultiSelectColumn
 
   return (
     <ThemeContext.Consumer>
@@ -43,7 +53,7 @@ export default function TableHeaderCellPresenter(props) {
         return (
           /* eslint-disable-next-line */
           <div
-            {...props}
+            {...payload}
             className={css(styles.higTableHeader)}
             onClick={handleClick}
             {...(isSelectableHeader
@@ -61,11 +71,11 @@ export default function TableHeaderCellPresenter(props) {
 }
 
 TableHeaderCellPresenter.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.node,
   columnSelection: PropTypes.bool,
   headerIndex: PropTypes.number,
   isSelectableHeader: PropTypes.bool,
-  isSortPassed: PropTypes.bool,
+  isSortPassed: PropTypes.func,
   onClick: PropTypes.func,
-  setActiveMultiSelectColumn: PropTypes.bool
+  setActiveMultiSelectColumn: PropTypes.func
 };

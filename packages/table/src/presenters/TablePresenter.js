@@ -1,4 +1,6 @@
+/* eslint-disable react/forbid-prop-types */
 import React, { useEffect, useMemo, useState } from "react";
+import PropTypes from "prop-types";
 import { css } from "emotion";
 import {
   useResizeColumns,
@@ -144,6 +146,7 @@ const TablePresenter = ({
                   tabIndex={-1}
                 />
               ),
+              // eslint-disable-next-line react/prop-types
               Cell: ({ row }) => {
                 const rowTypeToMap = paginateDynamic ? rows : page;
                 const rowIndex = rowTypeToMap.indexOf(row);
@@ -454,6 +457,23 @@ const TablePresenter = ({
       }}
     </ThemeContext.Consumer>
   );
+};
+
+TablePresenter.propTypes = {
+  alternateBg: PropTypes.bool,
+  headerBackgroundColor: PropTypes.string,
+  columnSelection: PropTypes.bool,
+  frozenHeader: PropTypes.bool,
+  frozenHeaderCount: PropTypes.number,
+  headerRowSpreadProps: PropTypes.any,
+  rowSelection: PropTypes.bool,
+  rowSpreadProps: PropTypes.any,
+  setHeaderRef: PropTypes.func,
+  setTableRef: PropTypes.func,
+  setTotalRows: PropTypes.func,
+  tableObject: PropTypes.any.isRequired,
+  tableSpreadProps: PropTypes.any,
+  paginateDynamic: PropTypes.bool
 };
 
 export default TablePresenter;

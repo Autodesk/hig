@@ -9,8 +9,8 @@ const ColumnShowHide = ({
 
 ColumnShowHide.propTypes = {
   children: PropTypes.func,
-  toggleHideAllColumnsProps: PropTypes.bool,
-  allColumns: PropTypes.bool
+  toggleHideAllColumnsProps: PropTypes.func,
+  allColumns: PropTypes.array
 };
 
 export default ColumnShowHide;

@@ -33,6 +33,18 @@ export default function TableDataCellPresenter(props) {
     setActiveRowIndex,
     setActiveMultiSelectColumn
   ]);
+  const payload = { ...otherProps };
+
+  delete payload.getColumnHeaderArray;
+  delete payload.hasHover;
+  delete payload.isLast;
+  delete payload.isPressed;
+  delete payload.isResizing;
+  delete payload.multiSelectedColumnLeft;
+  delete payload.multiSelectedRow;
+  delete payload.multiSelectedRowBottom;
+  delete payload.selectedBottom;
+  delete payload.selectedLeft;
 
   return (
     <ThemeContext.Consumer>
@@ -42,7 +54,7 @@ export default function TableDataCellPresenter(props) {
         return (
           /* eslint-disable-next-line */
           <div
-            {...otherProps}
+            {...payload}
             className={css(styles.higTableCell)}
             data-cell-coords={`${cellColumnIndex}_${cellRowIndex}`}
             onClick={handleCellClick}
@@ -60,10 +72,10 @@ export default function TableDataCellPresenter(props) {
 TableDataCellPresenter.propTypes = {
   cellColumnIndex: PropTypes.number,
   cellRowIndex: PropTypes.number,
-  children: PropTypes.func,
+  children: PropTypes.node,
   multiSelectedColumn: PropTypes.bool,
   selected: PropTypes.bool,
-  setActiveColumnIndex: PropTypes.bool,
-  setActiveMultiSelectColumn: PropTypes.bool,
-  setActiveRowIndex: PropTypes.bool
+  setActiveColumnIndex: PropTypes.func,
+  setActiveMultiSelectColumn: PropTypes.func,
+  setActiveRowIndex: PropTypes.func
 };
