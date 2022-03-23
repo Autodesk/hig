@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const verticalScrollInViewport = cell => {
   const cellBounding = cell.getBoundingClientRect();
@@ -111,7 +111,7 @@ const getHeaders = columns => {
     return item.Header;
   });
 
-  return [].concat.apply([], headers);
+  return [].concat(...headers);
 };
 
 export default function TableBehavior(props) {
@@ -268,7 +268,7 @@ export default function TableBehavior(props) {
           }
           break;
         default:
-          return;
+          break;
       }
     },
     [
