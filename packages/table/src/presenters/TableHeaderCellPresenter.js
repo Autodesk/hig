@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
-import stylesheet from "../presenters/stylesheet";
+import stylesheet from "./stylesheet";
 
 export default function TableHeaderCellPresenter(props) {
   const {
@@ -43,7 +43,7 @@ export default function TableHeaderCellPresenter(props) {
   delete payload.headerBackgroundColor;
   delete payload.isPressed;
   delete payload.isSortPassed;
-  delete payload.setActiveMultiSelectColumn
+  delete payload.setActiveMultiSelectColumn;
 
   return (
     <ThemeContext.Consumer>
