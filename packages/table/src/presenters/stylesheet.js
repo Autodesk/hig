@@ -1,4 +1,4 @@
-export default function stylesheet(props, themeData, metadata) {
+export default function stylesheet(props, themeData) {
   const {
     alternateBg,
     cellColumnIndex,

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { css } from "emotion";
 
 const styles = {
@@ -8,5 +9,11 @@ const styles = {
 const GlobalFilter = ({ filter, setFilter, children }) => (
   <div className={css(styles)}>{children({ filter, setFilter })}</div>
 );
+
+GlobalFilter.propTypes = {
+  children: PropTypes.func,
+  filter: PropTypes.string,
+  setFilter: PropTypes.bool
+};
 
 export default GlobalFilter;
