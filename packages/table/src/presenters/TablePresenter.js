@@ -242,6 +242,7 @@ const TablePresenter = ({
                 {meta.columnShowHideComponent}
               </ColumnShowHide>
             )}
+            {/* eslint-disable-next-line */}
             <div
               {...getTableProps()}
               className={css(styles.higTable)}
@@ -309,6 +310,7 @@ const TablePresenter = ({
                             ) : null}
                             {column.render("Header")}
                           </div>
+                          {/* eslint-disable-next-line */}
                           <div
                             {...(column.canResize
                               ? { ...column.getResizerProps() }
@@ -407,6 +409,7 @@ const TablePresenter = ({
                               }
                               setActiveRowIndex={setActiveRowIndex}
                             >
+                              {/* eslint-disable */}
                               {cell.isGrouped ? (
                                 <>
                                   <span {...row.getToggleRowExpandedProps()}>

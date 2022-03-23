@@ -1,4 +1,5 @@
 import React, { useCallback } from "react";
+import PropTypes from "prop-types";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
@@ -40,12 +41,13 @@ export default function TableHeaderCellPresenter(props) {
         const styles = stylesheet(props, resolvedRoles, metadata);
 
         return (
+          /* eslint-disable-next-line */
           <div
             {...props}
             className={css(styles.higTableHeader)}
             onClick={handleClick}
             {...(isSelectableHeader
-              ? { 'data-cell-coords': `${headerIndex}_-1` }
+              ? { "data-cell-coords": `${headerIndex}_-1` }
               : {})}
           >
             <div className={css(styles.higTableHeaderContentWrapper)}>
@@ -57,3 +59,13 @@ export default function TableHeaderCellPresenter(props) {
     </ThemeContext.Consumer>
   );
 }
+
+TableHeaderCellPresenter.propTypes = {
+  children: PropTypes.func,
+  columnSelection: PropTypes.bool,
+  headerIndex: PropTypes.number,
+  isSelectableHeader: PropTypes.bool,
+  isSortPassed: PropTypes.bool,
+  onClick: PropTypes.func,
+  setActiveMultiSelectColumn: PropTypes.bool
+};
