@@ -1387,7 +1387,7 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
-"@hig/checkbox@^2.1.0", "@hig/checkbox@^2.1.2":
+"@hig/checkbox@^2.1.2":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@hig/checkbox/-/checkbox-2.1.2.tgz#8671821944058aa751480c68c4acb74fe8b019ab"
   integrity sha512-vghtQ7tbmJ/xrf9axthjYhIblK5lPkkupk3d9ON6fI4hA+xjh6yXI85jUciDr7NGSjbe6bZJ5uUERMjVazNceg==

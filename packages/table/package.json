@@ -17,8 +17,8 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/behaviors": "^1.1.1",
-    "@hig/checkbox": "^2.1.0",
+    "@hig/behaviors": "^2.1.0",
+    "@hig/checkbox": "^3.1.0",
     "date-fns": "^2.23.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
@@ -27,7 +27,7 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^4.1.0",
-    "@hig/theme-data": "^2.23.1",
+    "@hig/theme-data": "^2.24.0",
     "react": "^17.0.0"
   },
   "devDependencies": {
