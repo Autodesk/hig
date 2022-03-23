@@ -95,7 +95,11 @@ export default {
   },
   "tabs.underline.tab.paddingBottom": {
     type: LENGTH,
-    value: { ref: "density.spacings.extraExtraSmall" }
+    value: { ref: "density.spacings.extraSmall" }
+  },
+  "tabs.underline.tab.paddingVertical": {
+    type: LENGTH,
+    value: { ref: "density.spacings.extraSmall" }
   },
   "tabs.underline.hover.haloColor": {
     type: COLOR,
