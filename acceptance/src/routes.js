@@ -11,13 +11,13 @@ import InputPage from "./pages/InputPage";
 import LabelPage from "./pages/LabelPage";
 import MenuPage from "./pages/MenuPage";
 import ModalPage from "./pages/ModalPage";
-import MuiButtonsPage from "./pages/material-ui/ButtonsPage";
 import NumericInputPage from "./pages/NumericInputPage";
 import ProgressBarPage from "./pages/ProgressBarPage";
 import ProgressRingPage from "./pages/ProgressRingPage";
 import RadioButtonPage from "./pages/RadioButtonPage";
 import RichTextPage from "./pages/RichTextPage";
 import SliderPage from "./pages/SliderPage";
+import TablePage from "./pages/TablePage";
 import TabsPage from "./pages/TabsPage";
 import TextAreaPage from "./pages/TextAreaPage";
 import TextLinkPage from "./pages/TextLinkPage";
@@ -45,11 +45,11 @@ export default [
   { path: "/radio-button/", component: RadioButtonPage, label: "Radio Button" },
   { path: "/rich-text/", component: RichTextPage, label: "Rich Text" },
   { path: "/slider/", component: SliderPage, label: "Slider" },
+  { path: "/table/", component: TablePage, label: "Table" },
   { path: "/tabs/", component: TabsPage, label: "Tabs" },
   { path: "/text-area/", component: TextAreaPage, label: "Text Area" },
   { path: "/text-link/", component: TextLinkPage, label: "Text Link" },
   { path: "/toggle/", component: TogglePage, label: "Toggle" },
   { path: "/tooltip/", component: TooltipPage, label: "Tooltip" },
   { path: "/typography/", component: TypographyPage, label: "Typography" },
-  { path: "/material-ui/buttons/", component: MuiButtonsPage, label: "Material Buttons" },
 ];
