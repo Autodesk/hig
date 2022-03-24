@@ -1,0 +1,64 @@
+{
+  "name": "@hig/table",
+  "version": "1.0.0",
+  "description": "HIG Table",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "files": [
+    "build/*"
+  ],
+  "dependencies": {
+    "@hig/behaviors": "^2.1.0",
+    "@hig/checkbox": "^3.1.0",
+    "date-fns": "^2.23.0",
+    "emotion": "^10.0.0",
+    "prop-types": "^15.7.1",
+    "react-table": "^7.7.0",
+    "react-table-sticky": "^1.1.3"
+  },
+  "peerDependencies": {
+    "@hig/theme-context": "^4.1.0",
+    "@hig/theme-data": "^2.24.0",
+    "react": "^17.0.0"
+  },
+  "devDependencies": {
+    "@hig/babel-preset": "^0.1.1",
+    "@hig/eslint-config": "^0.1.0",
+    "@hig/jest-preset": "^0.1.0",
+    "@hig/scripts": "^0.1.2",
+    "@hig/semantic-release-config": "^0.1.0"
+  },
+  "scripts": {
+    "build": "hig-scripts-build",
+    "lint": "hig-scripts-lint",
+    "test": "hig-scripts-test",
+    "release": "hig-scripts-release"
+  },
+  "eslintConfig": {
+    "extends": "@hig"
+  },
+  "jest": {
+    "preset": "@hig/jest-preset"
+  },
+  "release": {
+    "extends": "@hig/semantic-release-config"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@hig/babel-preset/test"
+        ]
+      }
+    }
+  }
+}

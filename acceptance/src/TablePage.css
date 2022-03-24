@@ -1,0 +1,50 @@
+.wrapper {
+    display: flex;
+    overflow: scroll;
+    padding: 20px;
+}
+
+.left-nav {
+    box-sizing: border-box;
+    flex: 0 0 250px;
+    margin: 0 20px 50px 0;
+    padding: 20px 20px 20px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.toggle-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+}
+
+.toggle-wrapper label {
+    margin-top: 10px;
+}
+
+.radio-wrapper {
+    display: flex;
+    margin: 10px 0;
+}
+
+.radio-wrapper label {
+    margin-left: 10px;
+    margin-top: 0;
+}
+
+.show {
+    display: block;
+    width: 935px;
+}
+
+.hide {
+    display: none;
+    width: 935px;
+}
+
+label {
+    display: block;
+    margin: 20px 0 0;
+}
