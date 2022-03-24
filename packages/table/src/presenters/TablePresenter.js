@@ -1,4 +1,5 @@
 /* eslint-disable react/forbid-prop-types */
+/* eslint-disable react/no-array-index-key */
 import React, { useEffect, useMemo, useState } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
@@ -258,13 +259,14 @@ const TablePresenter = ({
                 className={css(styles.higTableHeaderWrapper)}
                 ref={setHeaderRef}
               >
-                {headerGroups.map(headerGroup => (
+                {headerGroups.map((headerGroup, headerGroupIndex) => (
                   <div
                     {...headerGroup.getHeaderGroupProps()}
                     {...headerRowSpreadProps}
                     className={css(styles.higTableHeaderRow)}
+                    key={`header-group-${headerGroupIndex}`}
                   >
-                    {headerGroup.headers.map(column => {
+                    {headerGroup.headers.map((column, columnIndex) => {
                       const resizingStyles = column.canResize
                         ? stylesheet(
                             { isResizing: column.isResizing },
@@ -290,6 +292,7 @@ const TablePresenter = ({
                           headerIndex={headerIndex}
                           isSelectableHeader={!column.headers}
                           isSortPassed={meta.sortColumns}
+                          key={`table-header-cell-${columnIndex}`}
                           selected={
                             getActiveColumnIndex === headerIndex &&
                             getActiveRowIndex === -1
@@ -355,13 +358,13 @@ const TablePresenter = ({
                   prepareRow(row);
 
                   return (
-                    <div>
+                    <div key={`table-body-row-${rowIndex}`}>
                       <div
                         {...row.getRowProps()}
                         {...rowSpreadProps}
                         className={css(rowStyles.higTableRow)}
                       >
-                        {row.cells.map(cell => {
+                        {row.cells.map((cell, cellIndex) => {
                           const cellColumnIndex = getColumnHeaderArray.indexOf(
                             cell.column.Header
                           );
@@ -377,6 +380,7 @@ const TablePresenter = ({
                               getColumnHeaderArray={getColumnHeaderArray}
                               isLast={rowIndex + 1 === totalRows}
                               isResizing={cell?.column?.isResizing}
+                              key={`table-data-cell-${cellIndex}`}
                               multiSelectedColumn={
                                 getActiveMultiSelectColumn === cellColumnIndex
                               }
