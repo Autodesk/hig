@@ -55,6 +55,8 @@ const TablePresenter = ({
   setTotalRows,
   tableObject,
   tableSpreadProps,
+  onTableCellClick,
+  stylesheet: customStylesheet,
   ...otherProps
 }) => {
   const { columns, data, meta } = useMemo(() => tableObject, [tableObject]);
@@ -223,11 +225,37 @@ const TablePresenter = ({
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
-        const styles = stylesheet(
+        const tablePresenterStyles = stylesheet(
           { frozenHeader, frozenHeaderCount, isStickyColumns, isStickyHeader },
           resolvedRoles,
           metadata
         );
+        const styles = customStylesheet
+          ? customStylesheet(
+              tablePresenterStyles,
+              {
+                alternateBg,
+                columnSelection,
+                frozenHeader,
+                frozenHeaderCount,
+                headerBackgroundColor,
+                headerRowSpreadProps,
+                paginateDynamic,
+                rowSpreadProps,
+                rowSelection,
+                setHeaderRef,
+                setTableRef,
+                setTotalRows,
+                tableObject,
+                tableSpreadProps,
+                onTableCellClick,
+                stylesheet: customStylesheet,
+                ...otherProps
+              },
+              resolvedRoles,
+              metadata
+            )
+          : tablePresenterStyles;
 
         return (
           <>
@@ -413,6 +441,15 @@ const TablePresenter = ({
                                 setActiveMultiSelectColumn
                               }
                               setActiveRowIndex={setActiveRowIndex}
+                              onTableCellClick={onTableCellClick}
+                              getActiveMultiSelectRowArray={
+                                getActiveMultiSelectRowArray
+                              }
+                              setAllMultiSelectedRows={setAllMultiSelectedRows}
+                              setActiveMultiSelectRowArray={
+                                setActiveMultiSelectRowArray
+                              }
+                              rowTypeToMap={paginateDynamic ? rows : page}
                             >
                               {/* eslint-disable */}
                               {cell.isGrouped ? (
@@ -477,7 +514,9 @@ TablePresenter.propTypes = {
   setTotalRows: PropTypes.func,
   tableObject: PropTypes.any.isRequired,
   tableSpreadProps: PropTypes.any,
-  paginateDynamic: PropTypes.bool
+  paginateDynamic: PropTypes.bool,
+  onTableCellClick: PropTypes.func,
+  stylesheet: PropTypes.func
 };
 
 export default TablePresenter;
