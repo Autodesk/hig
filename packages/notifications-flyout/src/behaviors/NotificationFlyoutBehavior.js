@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unused-prop-types */
 
 import { Component } from "react";
-import PropTypes from "prop-types"; 
+import PropTypes from "prop-types";
 
 import parseNotifications from "./parseNotifications";
 
