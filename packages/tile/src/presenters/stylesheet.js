@@ -77,6 +77,9 @@ export default function stylesheet(props, themeData, metadata) {
     }
     return isHorizontal ? '8px 8px 8px 16px' : '12px';
   }
+  const getTileHeaderFlatPadding = () => {
+    return isMediumDensity ? '12px' : '8px';
+  }
   return {
     higTileContainer: {
       position: 'relative',
@@ -123,9 +126,9 @@ export default function stylesheet(props, themeData, metadata) {
     higTileHeader: {
       position: 'relative',
       margin: '0',
-      padding: background ? '0' : themeData['tile.padding'],
+      padding: background === 'solid' ? '0' : getTileHeaderFlatPadding(),
       overflow: 'hidden',
-      ...(divider && background ? getDivider() : {})
+      ...(divider && background === 'solid' ? getDivider() : {})
     },
     higTileHeaderContainer: {
       position: 'relative',
