@@ -25,7 +25,8 @@ const Table = props => {
 
   return (
     <ThemeContext.Consumer>
-      {({ resolvedRoles }) => (
+      {/* eslint-disable-next-line */}
+      {({ resolvedRoles, metadata }) => (
         <TableBehavior
           columnSelection={columnSelection}
           frozenHeader={frozenHeader}
