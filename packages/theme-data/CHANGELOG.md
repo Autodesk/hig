@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.25.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.24.0...@hig/theme-data@2.25.0) (2022-03-28)
+
+
+### Features
+
+* updated underline tab bottom padding ([0a79ef9](https://github.com/Autodesk/hig/commit/0a79ef9))
+
 # [@hig/theme-data-v2.24.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.23.1...@hig/theme-data@2.24.0) (2022-03-16)
 
 
