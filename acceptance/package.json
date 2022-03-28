@@ -24,7 +24,7 @@
     "@hig/slider": "^2.1.0",
     "@hig/spacer": "^2.1.0",
     "@hig/surface": "^2.1.0",
-    "@hig/table": "^0.3.3",
+    "@hig/table": "^1.0.0",
     "@hig/tabs": "^2.1.0",
     "@hig/text-area": "^2.1.0",
     "@hig/text-link": "^2.1.0",

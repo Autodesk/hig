@@ -19,8 +19,7 @@
     "build/*"
   ],
   "dependencies": {
-    "prop-types": "^15.6.1",
-    "react-lifecycles-compat": "^3.0.4"
+    "prop-types": "^15.6.1"
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.1",
