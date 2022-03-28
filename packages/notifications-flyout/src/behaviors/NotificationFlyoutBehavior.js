@@ -2,7 +2,6 @@
 
 import { Component } from "react";
 import PropTypes from "prop-types";
-import { polyfill } from "react-lifecycles-compat";
 
 import parseNotifications from "./parseNotifications";
 
@@ -32,7 +31,7 @@ import parseNotifications from "./parseNotifications";
  * @property {string[]} readNotifications An array of notification IDs that have been read
  */
 
-class NotificationFlyoutBehavior extends Component {
+export default class NotificationFlyoutBehavior extends Component {
   /** @type {Props} */
   props;
 
@@ -156,5 +155,3 @@ class NotificationFlyoutBehavior extends Component {
     });
   }
 }
-
-export default polyfill(NotificationFlyoutBehavior);

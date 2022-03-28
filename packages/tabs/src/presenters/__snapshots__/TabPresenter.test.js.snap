@@ -264,7 +264,7 @@ exports[`tabs/TabPresenter renders without props 1`] = `
   transition-property: background-color;
   background-color: transparent;
   margin-bottom: -1px;
-  padding: 0 0 4px 0;
+  padding: 0 0 8px 0;
 }
 
 .emotion-3:focus {

@@ -23,8 +23,7 @@
     "@hig/typography": "^2.1.0",
     "@hig/utils": "^0.4.1",
     "emotion": "^10.0.0",
-    "prop-types": "^15.7.1",
-    "react-lifecycles-compat": "^3.0.4"
+    "prop-types": "^15.7.1"
   },
   "peerDependencies": {
     "react": "^17.0.0"
