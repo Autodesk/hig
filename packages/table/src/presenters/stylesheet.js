@@ -21,7 +21,8 @@ export default function stylesheet(props, themeData) {
     rowIndex,
     selected,
     selectedBottom,
-    selectedLeft
+    selectedLeft,
+    customStylesheet
   } = props;
 
   const alternateBgColor =
@@ -29,7 +30,7 @@ export default function stylesheet(props, themeData) {
       ? themeData["table.row.backgroundColor"]
       : themeData["table.zebraStripe.backgroundColor"];
 
-  return {
+  const styles = {
     higTable: {
       color: themeData["table.fontColor"],
       fontFamily: themeData["table.fontFamily"],
@@ -300,4 +301,6 @@ export default function stylesheet(props, themeData) {
       padding: `3px 3px 0 0`
     }
   };
+
+  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

@@ -225,38 +225,17 @@ const TablePresenter = ({
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
-        const tablePresenterStyles = stylesheet(
-          { frozenHeader, frozenHeaderCount, isStickyColumns, isStickyHeader },
+        const styles = stylesheet(
+          {
+            frozenHeader,
+            frozenHeaderCount,
+            isStickyColumns,
+            isStickyHeader,
+            customStylesheet
+          },
           resolvedRoles,
           metadata
         );
-        const styles = customStylesheet
-          ? customStylesheet(
-              tablePresenterStyles,
-              {
-                alternateBg,
-                columnSelection,
-                frozenHeader,
-                frozenHeaderCount,
-                headerBackgroundColor,
-                headerRowSpreadProps,
-                paginateDynamic,
-                rowSpreadProps,
-                rowSelection,
-                setHeaderRef,
-                setTableRef,
-                setTotalRows,
-                tableObject,
-                tableSpreadProps,
-                onTableCellClick,
-                stylesheet: customStylesheet,
-                ...otherProps
-              },
-              resolvedRoles,
-              metadata
-            )
-          : tablePresenterStyles;
-
         return (
           <>
             {meta.globalFilter && (
