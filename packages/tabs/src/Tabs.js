@@ -3,7 +3,6 @@
 import React, { useState, useEffect, Children } from "react";
 import PropTypes from "prop-types";
 import { cx, css } from "emotion";
-// import { polyfill } from "react-lifecycles-compat";
 import memoize from "lodash.memoize";
 import { createButtonEventHandlers, createCustomClassNames } from "@hig/utils";
 

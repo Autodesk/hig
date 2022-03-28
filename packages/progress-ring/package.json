@@ -19,12 +19,11 @@
   "dependencies": {
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
-    "react-lifecycles-compat": "^3.0.4",
     "react-transition-group": "^2.4.0"
   },
   "peerDependencies": {
     "@hig/theme-context": "^4.0.0",
-    "@hig/theme-data": "^2.24.0",
+    "@hig/theme-data": "^2.25.0",
     "react": "^17.0.0"
   },
   "devDependencies": {

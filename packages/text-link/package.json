@@ -18,12 +18,11 @@
   ],
   "dependencies": {
     "@hig/behaviors": "^2.1.0",
-    "prop-types": "^15.7.1",
-    "react-lifecycles-compat": "^3.0.4"
+    "prop-types": "^15.7.1"
   },
   "peerDependencies": {
     "@hig/theme-context": "^4.1.0",
-    "@hig/theme-data": "^2.24.0",
+    "@hig/theme-data": "^2.25.0",
     "react": "^17.0.0"
   },
   "devDependencies": {

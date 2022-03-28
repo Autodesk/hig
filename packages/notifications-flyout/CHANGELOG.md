@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v3.1.1](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@3.1.0...@hig/notifications-flyout@3.1.1) (2022-03-28)
+
+
+### Bug Fixes
+
+* remove react-lifecycles-compat polyfill ([645ceab](https://github.com/Autodesk/hig/commit/645ceab))
+
 # [@hig/notifications-flyout-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@3.0.0...@hig/notifications-flyout@3.1.0) (2022-01-24)
 
 

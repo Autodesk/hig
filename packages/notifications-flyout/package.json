@@ -1,6 +1,6 @@
 {
   "name": "@hig/notifications-flyout",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "HIG NotificationsFlyout",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -41,7 +41,7 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^4.1.0",
-    "@hig/theme-data": "^2.24.0",
+    "@hig/theme-data": "^2.25.0",
     "react": "^17.0.0"
   },
   "scripts": {
