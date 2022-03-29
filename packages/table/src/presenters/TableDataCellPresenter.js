@@ -15,24 +15,36 @@ export default function TableDataCellPresenter(props) {
     setActiveColumnIndex,
     setActiveMultiSelectColumn,
     setActiveRowIndex,
+    onTableCellClick,
+    getActiveMultiSelectRowArray,
+    setAllMultiSelectedRows,
+    setActiveMultiSelectRowArray,
     ...otherProps
   } = props;
-  const handleCellClick = useCallback(() => {
-    // don't select when multi-select row cell clicked
-    // only select when checkbox is clicked
-    if (cellColumnIndex === -1) {
-      return;
-    }
-    setActiveColumnIndex(cellColumnIndex);
-    setActiveRowIndex(cellRowIndex);
-    setActiveMultiSelectColumn(null);
-  }, [
-    cellColumnIndex,
-    cellRowIndex,
-    setActiveColumnIndex,
-    setActiveRowIndex,
-    setActiveMultiSelectColumn
-  ]);
+  const handleCellClick = useCallback(
+    event => {
+      if (onTableCellClick) {
+        onTableCellClick(event, {
+          props
+        });
+      }
+      // don't select when multi-select row cell clicked
+      // only select when checkbox is clicked
+      if (cellColumnIndex === -1) {
+        return;
+      }
+      setActiveColumnIndex(cellColumnIndex);
+      setActiveRowIndex(cellRowIndex);
+      setActiveMultiSelectColumn(null);
+    },
+    [
+      cellColumnIndex,
+      cellRowIndex,
+      setActiveColumnIndex,
+      setActiveRowIndex,
+      setActiveMultiSelectColumn
+    ]
+  );
   const payload = { ...otherProps };
 
   delete payload.getColumnHeaderArray;
@@ -77,5 +89,9 @@ TableDataCellPresenter.propTypes = {
   selected: PropTypes.bool,
   setActiveColumnIndex: PropTypes.func,
   setActiveMultiSelectColumn: PropTypes.func,
-  setActiveRowIndex: PropTypes.func
+  setActiveRowIndex: PropTypes.func,
+  onTableCellClick: PropTypes.func,
+  getActiveMultiSelectRowArray: PropTypes.func,
+  setAllMultiSelectedRows: PropTypes.func,
+  setActiveMultiSelectRowArray: PropTypes.func
 };
