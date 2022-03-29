@@ -302,5 +302,7 @@ export default function stylesheet(props, themeData, themeMeta) {
     }
   };
 
-  return customStylesheet ? customStylesheet(styles, props, themeData, themeMeta) : styles;
+  return customStylesheet
+    ? customStylesheet(styles, props, themeData, themeMeta)
+    : styles;
 }
