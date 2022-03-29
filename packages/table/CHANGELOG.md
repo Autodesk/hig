@@ -1,3 +1,10 @@
+# [@hig/table-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/table@1.0.0...@hig/table@1.1.0) (2022-03-29)
+
+
+### Features
+
+* add table row select option ([b4190bf](https://github.com/Autodesk/hig/commit/b4190bf))
+
 # [@hig/table-v1.0.0](https://github.com/Autodesk/hig/compare/@hig/table@0.3.3...@hig/table@1.0.0) (2022-03-24)
 
 
