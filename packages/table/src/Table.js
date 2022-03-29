@@ -18,12 +18,15 @@ const Table = props => {
     rowSpreadProps,
     tableObject,
     tableSpreadProps,
-    paginateDynamic
+    paginateDynamic,
+    onTableCellClick,
+    stylesheet
   } = props;
 
   return (
     <ThemeContext.Consumer>
-      {({ resolvedRoles }) => (
+      {/* eslint-disable-next-line */}
+      {({ resolvedRoles, metadata }) => (
         <TableBehavior
           columnSelection={columnSelection}
           frozenHeader={frozenHeader}
@@ -75,6 +78,8 @@ const Table = props => {
               setTotalRows={setTotalRows}
               tableSpreadProps={tableSpreadProps}
               paginateDynamic={paginateDynamic}
+              onTableCellClick={onTableCellClick}
+              stylesheet={stylesheet}
             />
           )}
         </TableBehavior>
@@ -94,7 +99,9 @@ Table.propTypes = {
   rowSpreadProps: PropTypes.any,
   tableObject: PropTypes.any.isRequired,
   tableSpreadProps: PropTypes.any,
-  paginateDynamic: PropTypes.bool
+  paginateDynamic: PropTypes.bool,
+  onTableCellClick: PropTypes.func,
+  stylesheet: PropTypes.func
 };
 
 export default Table;

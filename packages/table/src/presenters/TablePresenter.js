@@ -55,6 +55,8 @@ const TablePresenter = ({
   setTotalRows,
   tableObject,
   tableSpreadProps,
+  onTableCellClick,
+  stylesheet: customStylesheet,
   ...otherProps
 }) => {
   const { columns, data, meta } = useMemo(() => tableObject, [tableObject]);
@@ -224,11 +226,16 @@ const TablePresenter = ({
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
         const styles = stylesheet(
-          { frozenHeader, frozenHeaderCount, isStickyColumns, isStickyHeader },
+          {
+            frozenHeader,
+            frozenHeaderCount,
+            isStickyColumns,
+            isStickyHeader,
+            customStylesheet
+          },
           resolvedRoles,
           metadata
         );
-
         return (
           <>
             {meta.globalFilter && (
@@ -413,6 +420,15 @@ const TablePresenter = ({
                                 setActiveMultiSelectColumn
                               }
                               setActiveRowIndex={setActiveRowIndex}
+                              onTableCellClick={onTableCellClick}
+                              getActiveMultiSelectRowArray={
+                                getActiveMultiSelectRowArray
+                              }
+                              setAllMultiSelectedRows={setAllMultiSelectedRows}
+                              setActiveMultiSelectRowArray={
+                                setActiveMultiSelectRowArray
+                              }
+                              rowTypeToMap={paginateDynamic ? rows : page}
                             >
                               {/* eslint-disable */}
                               {cell.isGrouped ? (
@@ -477,7 +493,9 @@ TablePresenter.propTypes = {
   setTotalRows: PropTypes.func,
   tableObject: PropTypes.any.isRequired,
   tableSpreadProps: PropTypes.any,
-  paginateDynamic: PropTypes.bool
+  paginateDynamic: PropTypes.bool,
+  onTableCellClick: PropTypes.func,
+  stylesheet: PropTypes.func
 };
 
 export default TablePresenter;
