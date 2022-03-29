@@ -1,4 +1,4 @@
-export default function stylesheet(props, themeData) {
+export default function stylesheet(props, themeData, themeMeta) {
   const {
     alternateBg,
     cellColumnIndex,
@@ -302,5 +302,5 @@ export default function stylesheet(props, themeData) {
     }
   };
 
-  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
+  return customStylesheet ? customStylesheet(styles, props, themeData, themeMeta) : styles;
 }
