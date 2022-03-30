@@ -30,6 +30,7 @@ export default function TableDataCell(props) {
               onMouseEnter={handleMouseEnter}
               onMouseUp={handleMouseUp}
               onMouseLeave={handlePressedMouseLeave}
+              getActiveMultiSelectRowArray={props.getActiveMultiSelectRowArray}
               {...props}
             />
           )}
@@ -43,5 +44,6 @@ TableDataCell.propTypes = {
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   onMouseDown: PropTypes.func,
-  onMouseUp: PropTypes.func
+  onMouseUp: PropTypes.func,
+  getActiveMultiSelectRowArray: PropTypes.arrayOf(PropTypes.number)
 };
