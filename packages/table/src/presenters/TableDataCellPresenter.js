@@ -19,6 +19,7 @@ export default function TableDataCellPresenter(props) {
     getActiveMultiSelectRowArray,
     setAllMultiSelectedRows,
     setActiveMultiSelectRowArray,
+    rowTypeToMap,
     ...otherProps
   } = props;
   const handleCellClick = useCallback(
@@ -42,7 +43,11 @@ export default function TableDataCellPresenter(props) {
       cellRowIndex,
       setActiveColumnIndex,
       setActiveRowIndex,
-      setActiveMultiSelectColumn
+      setActiveMultiSelectColumn,
+      getActiveMultiSelectRowArray,
+      setAllMultiSelectedRows,
+      setActiveMultiSelectRowArray,
+      rowTypeToMap
     ]
   );
   const payload = { ...otherProps };
@@ -91,7 +96,8 @@ TableDataCellPresenter.propTypes = {
   setActiveMultiSelectColumn: PropTypes.func,
   setActiveRowIndex: PropTypes.func,
   onTableCellClick: PropTypes.func,
-  getActiveMultiSelectRowArray: PropTypes.func,
+  getActiveMultiSelectRowArray: PropTypes.arrayOf(PropTypes.number),
   setAllMultiSelectedRows: PropTypes.func,
-  setActiveMultiSelectRowArray: PropTypes.func
+  setActiveMultiSelectRowArray: PropTypes.func,
+  rowTypeToMap: PropTypes.arrayOf(PropTypes.any)
 };
