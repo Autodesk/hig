@@ -1,3 +1,10 @@
+# [@hig/table-v1.2.0](https://github.com/Autodesk/hig/compare/@hig/table@1.1.0...@hig/table@1.2.0) (2022-03-30)
+
+
+### Features
+
+* add multi select functionality ([84bb347](https://github.com/Autodesk/hig/commit/84bb347))
+
 # [@hig/table-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/table@1.0.0...@hig/table@1.1.0) (2022-03-29)
 
 
