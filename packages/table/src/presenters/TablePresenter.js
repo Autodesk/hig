@@ -278,7 +278,8 @@ const TablePresenter = ({
                         ? stylesheet(
                             { isResizing: column.isResizing },
                             resolvedRoles,
-                            metadata
+                            metadata,
+                            customStylesheet
                           )
                         : null;
                       const headerIndex = getColumnHeaderArray.indexOf(
@@ -357,7 +358,8 @@ const TablePresenter = ({
                     {
                       alternateBg,
                       isCustomeContentExpanded: customContentArray[rowIndex],
-                      rowIndex
+                      rowIndex,
+                      customStylesheet
                     },
                     resolvedRoles,
                     metadata
@@ -429,6 +431,7 @@ const TablePresenter = ({
                                 setActiveMultiSelectRowArray
                               }
                               rowTypeToMap={paginateDynamic ? rows : page}
+                              customStylesheet={customStylesheet}
                             >
                               {/* eslint-disable */}
                               {cell.isGrouped ? (
