@@ -72,14 +72,10 @@ function stylesheet(props, themeData) {
 
     "&::-moz-focus-outer": {
       border: 0
-    }
-  };
+    },
 
-  const thumbDisabledRules = disabled
-    ? {
-        opacity: themeData["colorScheme.opacity.disabled"]
-      }
-    : {};
+    opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "initial"
+  };
 
   const thumbStateRules = () => {
     const isInActiveState = Object.values(activeStates).every(
@@ -127,7 +123,7 @@ function stylesheet(props, themeData) {
     },
     {
       mozilla: {
-        ...thumbDisabledRules
+        // ...thumbDisabledRules
       },
       webkit: {
         transform: "translateY(-50%)"
@@ -152,9 +148,9 @@ function stylesheet(props, themeData) {
       border: "none",
       backgroundColor: themeData["slider.track.backgroundColor"],
       color: "transparent",
-      outline: "none",
+      outline: "none"
 
-      ...trackDisabledRules
+      // ...trackDisabledRules
     },
     {
       // WebKit does not have a built-in way to target the progress/lower fill of a slider track.
@@ -177,7 +173,7 @@ function stylesheet(props, themeData) {
     },
     {
       mozilla: {
-        ...trackDisabledRules
+        // ...trackDisabledRules
       }
     }
   );
