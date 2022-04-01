@@ -102,11 +102,12 @@ describe("stylesheet", () => {
       );
     });
 
-    it("changes the track to the theme's disabled opacity ", () => {
-      expect(styles.slider["&::-webkit-slider-runnable-track"].opacity).toMatch(
-        themeData["colorScheme.opacity.disabled"]
-      );
-    });
+    // The theme's disabled opacity is now in the parent, this test is no longer necessary
+    // it("changes the track to the theme's disabled opacity ", () => {
+    //   expect(styles.slider["&::-webkit-slider-runnable-track"].opacity).toMatch(
+    //     themeData["colorScheme.opacity.disabled"]
+    //   );
+    // });
   });
 
   describe("when hasFocus", () => {
