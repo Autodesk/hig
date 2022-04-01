@@ -276,10 +276,9 @@ const TablePresenter = ({
                     {headerGroup.headers.map((column, columnIndex) => {
                       const resizingStyles = column.canResize
                         ? stylesheet(
-                            { isResizing: column.isResizing },
+                            { isResizing: column.isResizing, customStylesheet },
                             resolvedRoles,
-                            metadata,
-                            customStylesheet
+                            metadata
                           )
                         : null;
                       const headerIndex = getColumnHeaderArray.indexOf(
