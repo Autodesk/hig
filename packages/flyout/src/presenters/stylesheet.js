@@ -78,7 +78,6 @@ export default function(props, themeData) {
       position: `absolute`,
       // Resolves issues with negative positions and container overflow
       display: isHidden ? `none` : `table`,
-      width: `100%`,
       zIndex: 9999,
       transitionProperty: `opacity, transform`,
       transitionDuration: `250ms`,
