@@ -123,6 +123,5 @@ SingleTreeNodePresenter.propTypes = {
     PropTypes.func,
     PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.any) })
   ]),
-  label: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  highlighted: PropTypes.bool
+  label: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
 };
