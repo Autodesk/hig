@@ -59,6 +59,13 @@ export default function SingleTreeNodeFolderPresenter(props) {
   );
   const payload = { ...otherProps };
 
+  const renderLabel = () => {
+    if (typeof label === "function") {
+      return <div>{label(props)}</div>;
+    }
+    return label;
+  };
+
   delete payload.density;
   delete payload.defaultSelected;
   delete payload.getActiveTreeItemId;
@@ -148,7 +155,7 @@ export default function SingleTreeNodeFolderPresenter(props) {
                     higTreeItemLabelWrapperClassName
                   ])}
                 >
-                  {label}
+                  {renderLabel()}
                 </span>
               </div>
             </div>
@@ -169,5 +176,6 @@ SingleTreeNodeFolderPresenter.propTypes = {
     PropTypes.func,
     PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.any) })
   ]),
-  label: PropTypes.node
+  label: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  highlighted: PropTypes.bool
 };

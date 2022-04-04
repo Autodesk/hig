@@ -131,7 +131,7 @@ TreeView.propTypes = {
         collapsed: PropTypes.bool,
         expandByDoubleClick: PropTypes.bool,
         icon: PropTypes.node,
-        label: PropTypes.node
+        label: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
       })
     })
   )
