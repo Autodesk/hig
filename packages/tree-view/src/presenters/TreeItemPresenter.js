@@ -49,7 +49,7 @@ TreeItemPresenter.propTypes = {
    * child of another TreeItem. If your TreeItem has any
    * other elements as children this prop will not render
    */
-  label: PropTypes.node,
+  label: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   stylesheet: PropTypes.func
 };
 
