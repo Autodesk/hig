@@ -112,7 +112,7 @@ TreeItem.propTypes = {
   /**
    * Labels the TreeItem, this is rendered before all children
    */
-  label: PropTypes.node,
+  label: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
   /**
    * Adds custom/overriding styles
    */

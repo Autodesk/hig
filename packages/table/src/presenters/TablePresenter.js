@@ -276,7 +276,7 @@ const TablePresenter = ({
                     {headerGroup.headers.map((column, columnIndex) => {
                       const resizingStyles = column.canResize
                         ? stylesheet(
-                            { isResizing: column.isResizing },
+                            { isResizing: column.isResizing, customStylesheet },
                             resolvedRoles,
                             metadata
                           )
@@ -307,6 +307,7 @@ const TablePresenter = ({
                           setActiveMultiSelectColumn={
                             setActiveMultiSelectColumn
                           }
+                          customStylesheet={customStylesheet}
                         >
                           <div className={css(styles.headerHolder)}>
                             {column.canGroupBy && meta.groupElements ? (
@@ -357,7 +358,8 @@ const TablePresenter = ({
                     {
                       alternateBg,
                       isCustomeContentExpanded: customContentArray[rowIndex],
-                      rowIndex
+                      rowIndex,
+                      customStylesheet
                     },
                     resolvedRoles,
                     metadata
@@ -429,6 +431,7 @@ const TablePresenter = ({
                                 setActiveMultiSelectRowArray
                               }
                               rowTypeToMap={paginateDynamic ? rows : page}
+                              customStylesheet={customStylesheet}
                             >
                               {/* eslint-disable */}
                               {cell.isGrouped ? (

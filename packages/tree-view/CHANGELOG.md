@@ -1,3 +1,10 @@
+# [@hig/tree-view-v2.6.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.5.1...@hig/tree-view@2.6.0) (2022-04-05)
+
+
+### Features
+
+* tree view label to return props ([b1a93fd](https://github.com/Autodesk/hig/commit/b1a93fd))
+
 # [@hig/tree-view-v2.5.1](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.5.0...@hig/tree-view@2.5.1) (2022-03-17)
 
 
