@@ -14,10 +14,7 @@ export default function stylesheet(props, themeData) {
 
   const { stylesheet: customStylesheet } = props;
 
-  const baseStyles = typographyStyle(
-    "body",
-    `0 0 ${themeData["density.spacings.small"]} 0`
-  );
+  const baseStyles = typographyStyle("body", "0");
 
   const listStyles = {
     "ul, ol": { paddingLeft: themeData["density.spacings.large"] },
