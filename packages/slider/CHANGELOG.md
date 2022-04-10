@@ -1,3 +1,10 @@
+# [@hig/slider-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/slider@2.1.0...@hig/slider@2.1.1) (2022-04-10)
+
+
+### Bug Fixes
+
+* Fixing slider component bug, transparency in Firefox ([6084cbf](https://github.com/Autodesk/hig/commit/6084cbf))
+
 # [@hig/slider-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/slider@2.0.0...@hig/slider@2.1.0) (2022-01-24)
 
 
