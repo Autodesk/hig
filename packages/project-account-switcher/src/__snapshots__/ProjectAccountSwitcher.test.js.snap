@@ -16,7 +16,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 .emotion-35 {
   position: absolute;
   display: none;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -506,7 +505,6 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 .emotion-35 {
   position: absolute;
   display: none;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
