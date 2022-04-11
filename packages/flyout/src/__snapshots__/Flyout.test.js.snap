@@ -46,7 +46,6 @@ exports[`flyout/Flyout snapshots renders a custom pointer 1`] = `
 .emotion-6 {
   position: absolute;
   display: table;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -234,7 +233,6 @@ exports[`flyout/Flyout snapshots renders children from the given render function
 .emotion-8 {
   position: absolute;
   display: table;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -433,7 +431,6 @@ exports[`flyout/Flyout snapshots renders content from the given render function 
 .emotion-8 {
   position: absolute;
   display: table;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -632,7 +629,6 @@ exports[`flyout/Flyout snapshots renders open by default 1`] = `
 .emotion-7 {
   position: absolute;
   display: table;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -745,7 +741,6 @@ exports[`flyout/Flyout snapshots renders the panel from a basic render function 
 .emotion-5 {
   position: absolute;
   display: table;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -920,7 +915,6 @@ exports[`flyout/Flyout snapshots renders the panel from a complex render functio
 .emotion-7 {
   position: absolute;
   display: table;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -1124,7 +1118,6 @@ exports[`flyout/Flyout snapshots renders with a basic set of props 1`] = `
 .emotion-8 {
   position: absolute;
   display: table;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -1323,7 +1316,6 @@ exports[`flyout/Flyout snapshots renders with className prop 1`] = `
 .emotion-8 {
   position: absolute;
   display: table;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -1555,7 +1547,6 @@ exports[`flyout/Flyout snapshots renders with custom stylesheet function 1`] = `
 .emotion-8 {
   position: absolute;
   display: table;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -1684,7 +1675,6 @@ exports[`flyout/Flyout snapshots renders without props 1`] = `
 .emotion-7 {
   position: absolute;
   display: none;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
