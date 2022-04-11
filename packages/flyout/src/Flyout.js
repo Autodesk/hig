@@ -33,29 +33,40 @@ import PanelPresenter from "./presenters/PanelPresenter";
 
 const Flyout = props => {
   const [open, setOpen] = useState(props.defaultOpen);
-  const [actionRef, setActionRef] = useState(undefined);
-  const [panelRef, setPanelRef] = useState(undefined);
-  const [pointerRef, setPointerRef] = useState(undefined);
+  const [actionRect, setActionRect] = useState(undefined);
+  const [panelRect, setPanelRect] = useState(undefined);
+  const [pointerRect, setPointerRect] = useState(undefined);
+  const actionRef = useRef();
+  const panelRef = useRef();
+  const pointerRef = useRef();
   const wrapperRef = useRef();
+
+  useEffect(() => {
+    if (actionRef.current) {
+      setActionRect(actionRef.current.getBoundingClientRect());
+    }
+    if (panelRef.current) {
+      setPanelRect(panelRef.current.getBoundingClientRect());
+    }
+    if (pointerRef.current) {
+      setPointerRect(pointerRef.current.getBoundingClientRect());
+    }
+  }, [actionRef.current, panelRef.current, pointerRef.current]);
 
   /**
    * @returns {Coordinates}
    */
   const getCoordinatesMethod = () => {
     const { alterCoordinates, anchorPoint, fallbackAnchorPoints } = props;
-
     if (
-      !actionRef ||
-      !panelRef ||
-      !pointerRef ||
+      !actionRect ||
+      !panelRect ||
+      !pointerRect ||
       typeof window === "undefined"
     ) {
       return DEFAULT_COORDINATES;
     }
 
-    const actionRect = actionRef.getBoundingClientRect();
-    const panelRect = panelRef.getBoundingClientRect();
-    const pointerRect = pointerRef.getBoundingClientRect();
     const viewportRect = window.document.documentElement.getBoundingClientRect();
     const coordinates = getCoordinates({
       anchorPoint,
@@ -112,21 +123,21 @@ const Flyout = props => {
    * @param {HTMLElement} actionRef
    */
   const refAction = actionRefParam => {
-    setActionRef(actionRefParam);
+    actionRef.current = actionRefParam;
   };
 
   /**
    * @param {SVGSVGElement} pointerRef
    */
   const refPointer = pointerRefParam => {
-    setPointerRef(pointerRefParam);
+    pointerRef.current = pointerRefParam;
   };
 
   /**
    * @param {HTMLElement} panelRef
    */
   const refPanel = panelRefParam => {
-    setPanelRef(panelRefParam);
+    panelRef.current = panelRefParam;
   };
 
   /**
