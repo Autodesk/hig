@@ -43,7 +43,9 @@ const TableDataContents = ({
   meta,
   page,
   isGrouped,
-  tableObject
+  tableObject,
+  getGlobalColumns,
+  getGlobalResizeStyles
 }) => (
   <div {...getTableBodyProps()} className={css(styles.higTableBody)}>
     {rowTypeToMap.map((row, rowIndex) => {
@@ -74,6 +76,7 @@ const TableDataContents = ({
                 ? rowIndex + getOffset()
                 : rowIndex;
               const totalRows = rowTypeToMap.length || tableObject.data.length;
+
               return (
                 <TableDataCell
                   {...cell.getCellProps()}
@@ -81,7 +84,11 @@ const TableDataContents = ({
                   cellRowIndex={cellRowIndex}
                   getColumnHeaderArray={getColumnHeaderArray}
                   isLast={rowIndex + 1 === totalRows}
-                  isResizing={cell?.column?.isResizing}
+                  isResizing={
+                    getGlobalColumns &&
+                    getGlobalColumns[cellColumnIndex + 1] &&
+                    getGlobalColumns[cellColumnIndex + 1].isResizing
+                  }
                   key={`table-data-cell-${cellIndex}`}
                   multiSelectedColumn={
                     getActiveMultiSelectColumn === cellColumnIndex
@@ -118,6 +125,7 @@ const TableDataContents = ({
                   setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
                   rowTypeToMap={paginateDynamic ? rows : page}
                   customStylesheet={customStylesheet}
+                  getGlobalResizeStyles={getGlobalResizeStyles}
                 >
                   {/* eslint-disable */}
                   {cell.isGrouped ? (
@@ -155,7 +163,7 @@ TableDataContents.propTypes = {
   metadata: PropTypes.any,
   prepareRow: PropTypes.any,
   rowSpreadProps: PropTypes.any,
-  getColumnHeaderArray: PropTypes.func,
+  getColumnHeaderArray: PropTypes.any,
   getOffset: PropTypes.func,
   getActiveMultiSelectColumn: PropTypes.func,
   getActiveMultiSelectRowArray: PropTypes.func,
@@ -173,6 +181,8 @@ TableDataContents.propTypes = {
   page: PropTypes.any,
   isGrouped: PropTypes.bool,
   tableObject: PropTypes.any,
+  getGlobalColumns: PropTypes.any,
+  getGlobalResizeStyles: PropTypes.any
 };
 
 export default TableDataContents;

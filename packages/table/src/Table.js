@@ -49,7 +49,11 @@ const Table = props => {
             setAllMultiSelectedRows,
             setHeaderRef,
             setTableRef,
-            setTotalRows
+            setTotalRows,
+            getGlobalColumns,
+            setGlobalColumns,
+            getGlobalResizeStyles,
+            setGlobalResizeStyles
           }) => (
             <TablePresenter
               alternateBg={alternateBg}
@@ -80,6 +84,10 @@ const Table = props => {
               paginateDynamic={paginateDynamic}
               onTableCellClick={onTableCellClick}
               stylesheet={stylesheet}
+              getGlobalColumns={getGlobalColumns}
+              setGlobalColumns={setGlobalColumns}
+              getGlobalResizeStyles={getGlobalResizeStyles}
+              setGlobalResizeStyles={setGlobalResizeStyles}
             />
           )}
         </TableBehavior>

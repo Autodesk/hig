@@ -132,6 +132,8 @@ export default function TableBehavior(props) {
   const [getActiveRowIndex, setActiveRowIndex] = useState(null);
   const [getInternalTableRef, setInternalTableRef] = useState(null);
   const [getInternalHeaderRef, setInternalHeaderRef] = useState(null);
+  const [getGlobalColumns, setGlobalColumns] = useState(null);
+  const [getGlobalResizeStyles, setGlobalResizeStyles] = useState(null);
 
   const setTableRef = element => {
     if (props.tableRef) {
@@ -300,6 +302,10 @@ export default function TableBehavior(props) {
     setAllMultiSelectedRows,
     setHeaderRef,
     setTableRef,
-    setTotalRows
+    setTotalRows,
+    getGlobalColumns,
+    setGlobalColumns,
+    getGlobalResizeStyles,
+    setGlobalResizeStyles
   });
 }

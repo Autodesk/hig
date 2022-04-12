@@ -16,6 +16,7 @@ export default function TableHeaderCellPresenter(props) {
     setActiveMultiSelectColumn,
     ...otherProps
   } = props;
+  const { getGlobalResizeStyles } = otherProps;
   const handleClick = useCallback(
     event => {
       if (isSortPassed && onClick && !columnSelection) {
@@ -36,6 +37,8 @@ export default function TableHeaderCellPresenter(props) {
     ]
   );
   const payload = { ...otherProps };
+  const resizeStyles =
+    (getGlobalResizeStyles && getGlobalResizeStyles[headerIndex + 1]) || {};
 
   delete payload.getActiveMultiSelectColumn;
   delete payload.getColumnHeaderArray;
@@ -44,17 +47,25 @@ export default function TableHeaderCellPresenter(props) {
   delete payload.isPressed;
   delete payload.isSortPassed;
   delete payload.setActiveMultiSelectColumn;
+  delete payload.customStylesheet;
+  delete payload.getGlobalResizeStyles;
+  // remove resize inline style and move to emotion styles
+  delete payload.style;
 
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
         const styles = stylesheet(props, resolvedRoles, metadata);
+        const mergedStyles = {
+          ...styles.higTableHeader,
+          ...resizeStyles
+        };
 
         return (
           /* eslint-disable-next-line */
           <div
             {...payload}
-            className={css(styles.higTableHeader)}
+            className={css(mergedStyles)}
             onClick={handleClick}
             {...(isSelectableHeader
               ? { "data-cell-coords": `${headerIndex}_-1` }
