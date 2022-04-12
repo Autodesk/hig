@@ -19,6 +19,7 @@ const TextLink = props => {
     onMouseDown,
     onMouseLeave,
     onMouseEnter,
+    stylesheet: customStylesheet,
     ...otherProps
   } = props;
   const { className } = otherProps;
@@ -52,7 +53,6 @@ const TextLink = props => {
             onMouseLeave: handleMouseLeave,
             onMouseUp: handleMouseUp
           }) => {
-            const { stylesheet: customStylesheet } = props;
             const styles = stylesheet(
               {
                 stylesheet: customStylesheet,
