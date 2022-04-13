@@ -1,3 +1,10 @@
+# [@hig/flyout-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/flyout@2.1.0...@hig/flyout@2.1.1) (2022-04-13)
+
+
+### Bug Fixes
+
+* Fixing flyout component bug, extra space on the right ([6faaf2a](https://github.com/Autodesk/hig/commit/6faaf2a))
+
 # [@hig/flyout-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/flyout@2.0.0...@hig/flyout@2.1.0) (2022-01-24)
 
 
