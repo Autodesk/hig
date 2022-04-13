@@ -1,10 +1,3 @@
-# [@hig/rich-text-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/rich-text@2.1.0...@hig/rich-text@2.1.1) (2022-04-10)
-
-
-### Bug Fixes
-
-* margin bottom of the rich-text component deleted ([9db610c](https://github.com/Autodesk/hig/commit/9db610c))
-
 # [@hig/rich-text-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/rich-text@2.0.0...@hig/rich-text@2.1.0) (2022-01-24)
 
 

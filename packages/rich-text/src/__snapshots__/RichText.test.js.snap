@@ -8,7 +8,7 @@ exports[`RichText renders 1`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 1.428571429;
-  margin: 0;
+  margin: 0 0 12px 0;
   text-align: initial;
 }
 
@@ -125,7 +125,7 @@ exports[`RichText renders with children 1`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 1.428571429;
-  margin: 0;
+  margin: 0 0 12px 0;
   text-align: initial;
 }
 
@@ -246,7 +246,7 @@ exports[`RichText renders with custom className 1`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 1.428571429;
-  margin: 0;
+  margin: 0 0 12px 0;
   text-align: initial;
 }
 
@@ -367,7 +367,7 @@ exports[`RichText renders with dangerouslySetInnerHTML 1`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 1.428571429;
-  margin: 0;
+  margin: 0 0 12px 0;
   text-align: initial;
 }
 

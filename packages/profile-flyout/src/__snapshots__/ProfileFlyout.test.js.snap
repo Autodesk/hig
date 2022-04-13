@@ -72,6 +72,7 @@ exports[`profile-flyout/ProfileFlyout renders with all props 1`] = `
 .emotion-9 {
   position: absolute;
   display: table;
+  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -201,6 +202,7 @@ exports[`profile-flyout/ProfileFlyout renders with no props 1`] = `
 .emotion-9 {
   position: absolute;
   display: none;
+  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
