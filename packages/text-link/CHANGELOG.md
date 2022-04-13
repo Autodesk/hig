@@ -1,3 +1,10 @@
+# [@hig/text-link-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/text-link@2.1.0...@hig/text-link@2.1.1) (2022-04-13)
+
+
+### Bug Fixes
+
+* issue 2626-TextLink improperly passes stylesheet prop to inner <a> element ([e4e9ba0](https://github.com/Autodesk/hig/commit/e4e9ba0))
+
 # [@hig/text-link-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/text-link@2.0.0...@hig/text-link@2.1.0) (2022-01-24)
 
 
