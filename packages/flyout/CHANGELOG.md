@@ -1,3 +1,10 @@
+# [@hig/flyout-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/flyout@2.1.1...@hig/flyout@2.1.2) (2022-04-14)
+
+
+### Bug Fixes
+
+* Updating the Flyout refs after rendering to show tooltip ([0a54812](https://github.com/Autodesk/hig/commit/0a54812))
+
 # [@hig/flyout-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/flyout@2.1.0...@hig/flyout@2.1.1) (2022-04-13)
 
 
