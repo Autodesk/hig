@@ -33,29 +33,40 @@ import PanelPresenter from "./presenters/PanelPresenter";
 
 const Flyout = props => {
   const [open, setOpen] = useState(props.defaultOpen);
+  const [actionRect, setActionRect] = useState(undefined);
+  const [panelRect, setPanelRect] = useState(undefined);
+  const [pointerRect, setPointerRect] = useState(undefined);
   const actionRef = useRef();
   const panelRef = useRef();
   const pointerRef = useRef();
   const wrapperRef = useRef();
+
+  useEffect(() => {
+    if (actionRef.current) {
+      setActionRect(actionRef.current.getBoundingClientRect());
+    }
+    if (panelRef.current) {
+      setPanelRect(panelRef.current.getBoundingClientRect());
+    }
+    if (pointerRef.current) {
+      setPointerRect(pointerRef.current.getBoundingClientRect());
+    }
+  }, [actionRef.current, panelRef.current, pointerRef.current]);
 
   /**
    * @returns {Coordinates}
    */
   const getCoordinatesMethod = () => {
     const { alterCoordinates, anchorPoint, fallbackAnchorPoints } = props;
-
     if (
-      !actionRef.current ||
-      !panelRef.current ||
-      !pointerRef.current ||
+      !actionRect ||
+      !panelRect ||
+      !pointerRect ||
       typeof window === "undefined"
     ) {
       return DEFAULT_COORDINATES;
     }
 
-    const actionRect = actionRef.current.getBoundingClientRect();
-    const panelRect = panelRef.current.getBoundingClientRect();
-    const pointerRect = pointerRef.current.getBoundingClientRect();
     const viewportRect = window.document.documentElement.getBoundingClientRect();
     const coordinates = getCoordinates({
       anchorPoint,
