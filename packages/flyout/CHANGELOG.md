@@ -1,3 +1,10 @@
+# [@hig/flyout-v2.1.3](https://github.com/Autodesk/hig/compare/@hig/flyout@2.1.2...@hig/flyout@2.1.3) (2022-04-20)
+
+
+### Bug Fixes
+
+* Updating the Flyout refs in the callbacks sent as props to the child component ([0791e86](https://github.com/Autodesk/hig/commit/0791e86))
+
 # [@hig/flyout-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/flyout@2.1.1...@hig/flyout@2.1.2) (2022-04-14)
 
 
