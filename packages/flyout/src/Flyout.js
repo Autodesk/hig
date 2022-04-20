@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import { combineEventHandlers } from "@hig/utils";
@@ -33,10 +33,10 @@ import PanelPresenter from "./presenters/PanelPresenter";
 
 const Flyout = props => {
   const [open, setOpen] = useState(props.defaultOpen);
-  const actionRef = useRef();
-  const panelRef = useRef();
-  const pointerRef = useRef();
-  const wrapperRef = useRef();
+  const [actionRef, setActionRef] = useState(undefined);
+  const [panelRef, setPanelRef] = useState(undefined);
+  const [pointerRef, setPointerRef] = useState(undefined);
+  const [wrapperRef, setWrapperRef] = useState(undefined);
 
   /**
    * @returns {Coordinates}
@@ -45,17 +45,17 @@ const Flyout = props => {
     const { alterCoordinates, anchorPoint, fallbackAnchorPoints } = props;
 
     if (
-      !actionRef.current ||
-      !panelRef.current ||
-      !pointerRef.current ||
+      !actionRef ||
+      !panelRef ||
+      !pointerRef ||
       typeof window === "undefined"
     ) {
       return DEFAULT_COORDINATES;
     }
 
-    const actionRect = actionRef.current.getBoundingClientRect();
-    const panelRect = panelRef.current.getBoundingClientRect();
-    const pointerRect = pointerRef.current.getBoundingClientRect();
+    const actionRect = actionRef.getBoundingClientRect();
+    const panelRect = panelRef.getBoundingClientRect();
+    const pointerRect = pointerRef.getBoundingClientRect();
     const viewportRect = window.document.documentElement.getBoundingClientRect();
     const coordinates = getCoordinates({
       anchorPoint,
@@ -112,28 +112,28 @@ const Flyout = props => {
    * @param {HTMLElement} actionRef
    */
   const refAction = actionRefParam => {
-    actionRef.current = actionRefParam;
+    setActionRef(actionRefParam);
   };
 
   /**
    * @param {SVGSVGElement} pointerRef
    */
   const refPointer = pointerRefParam => {
-    pointerRef.current = pointerRefParam;
+    setPointerRef(pointerRefParam);
   };
 
   /**
    * @param {HTMLElement} panelRef
    */
   const refPanel = panelRefParam => {
-    panelRef.current = panelRefParam;
+    setPanelRef(panelRefParam);
   };
 
   /**
    * @param {HTMLDivElement} wrapperRef
    */
   const refWrapper = wrapperRefParam => {
-    wrapperRef.current = wrapperRefParam;
+    setWrapperRef(wrapperRefParam);
   };
 
   const hideFlyout = () => {
@@ -160,7 +160,7 @@ const Flyout = props => {
   const handleBodyClick = event => {
     const { onClickOutside } = props;
     const flyoutClicked =
-      event.target === wrapperRef || wrapperRef.current.contains(event.target);
+      event.target === wrapperRef || wrapperRef.contains(event.target);
 
     if (flyoutClicked || !isOpen()) return;
     if (onClickOutside) onClickOutside(event);
