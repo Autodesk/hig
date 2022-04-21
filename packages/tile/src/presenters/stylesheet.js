@@ -182,7 +182,7 @@ export default function stylesheet(props, themeData, metadata) {
     },
     higTileTitle: {
       fontSize: themeData["tile.title.fontSize"],
-      fontWeight: themeData["tile.title.fontWeight"],
+      fontWeight: '700',
       lineHeight: themeData["tile.title.lineHeight"],
     },
     higTileSubTitle: {
