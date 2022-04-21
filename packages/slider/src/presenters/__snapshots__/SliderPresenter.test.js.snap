@@ -10,6 +10,7 @@ exports[`Slider/presenters/SliderPresenter renders 1`] = `
   margin: 0;
   position: relative;
   outline: none;
+  opacity: initial;
 }
 
 .emotion-0::-ms-tooltip {
@@ -141,6 +142,7 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   margin: 0;
   position: relative;
   outline: none;
+  opacity: 0.4;
 }
 
 .emotion-0::-ms-tooltip {
@@ -191,7 +193,6 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   transition-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-appearance: none;
-  opacity: 0.4;
 }
 
 .emotion-0::-webkit-slider-thumb {
@@ -223,7 +224,6 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   background-color: rgba(128,128,128,0.2);
   color: transparent;
   outline: none;
-  opacity: 0.4;
 }
 
 .emotion-0::-moz-range-track {
@@ -233,7 +233,6 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   background-color: rgba(128,128,128,0.2);
   color: transparent;
   outline: none;
-  opacity: 0.4;
 }
 
 .emotion-0::-webkit-slider-runnable-track {
@@ -243,7 +242,6 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
   background-color: rgba(128,128,128,0.2);
   color: transparent;
   outline: none;
-  opacity: 0.4;
   background-image: linear-gradient(#808080,#808080);
   background-position: 0;
   background-size: calc((0.5 * 6px)  + (NaN * (100% - 6px))) 100%;
@@ -258,7 +256,6 @@ exports[`Slider/presenters/SliderPresenter renders disabled 1`] = `
 .emotion-0::-moz-range-progress {
   border: none;
   background-color: #808080;
-  opacity: 0.4;
 }
 
 <input
@@ -278,6 +275,7 @@ exports[`Slider/presenters/SliderPresenter renders discrete slider 1`] = `
   margin: 0;
   position: relative;
   outline: none;
+  opacity: initial;
 }
 
 .emotion-0::-ms-tooltip {
@@ -487,6 +485,7 @@ exports[`Slider/presenters/SliderPresenter renders discrete slider with step 0 1
   margin: 0;
   position: relative;
   outline: none;
+  opacity: initial;
 }
 
 .emotion-0::-ms-tooltip {
@@ -660,6 +659,7 @@ exports[`Slider/presenters/SliderPresenter renders focused 1`] = `
   margin: 0;
   position: relative;
   outline: none;
+  opacity: initial;
 }
 
 .emotion-0::-ms-tooltip {
@@ -791,6 +791,7 @@ exports[`Slider/presenters/SliderPresenter renders hovered 1`] = `
   margin: 0;
   position: relative;
   outline: none;
+  opacity: initial;
 }
 
 .emotion-0::-ms-tooltip {
@@ -922,6 +923,7 @@ exports[`Slider/presenters/SliderPresenter renders pressed 1`] = `
   margin: 0;
   position: relative;
   outline: none;
+  opacity: initial;
 }
 
 .emotion-0::-ms-tooltip {

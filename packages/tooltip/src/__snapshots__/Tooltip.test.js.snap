@@ -35,7 +35,6 @@ exports[`tooltip/Tooltip renders with props 1`] = `
 .emotion-7 {
   position: absolute;
   display: table;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -194,7 +193,6 @@ exports[`tooltip/Tooltip renders without props 1`] = `
 .emotion-6 {
   position: absolute;
   display: none;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;

@@ -102,8 +102,8 @@ describe("stylesheet", () => {
       );
     });
 
-    it("changes the track to the theme's disabled opacity ", () => {
-      expect(styles.slider["&::-webkit-slider-runnable-track"].opacity).toMatch(
+    it("changes the slider to the theme's disabled opacity ", () => {
+      expect(styles.slider.opacity).toMatch(
         themeData["colorScheme.opacity.disabled"]
       );
     });

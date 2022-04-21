@@ -27,7 +27,6 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders with all props 1`] = `
 .emotion-3 {
   position: absolute;
   display: table;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -157,7 +156,6 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
 .emotion-4 {
   position: absolute;
   display: table;
-  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;

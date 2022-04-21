@@ -1,3 +1,24 @@
+# [@hig/flyout-v2.1.3](https://github.com/Autodesk/hig/compare/@hig/flyout@2.1.2...@hig/flyout@2.1.3) (2022-04-20)
+
+
+### Bug Fixes
+
+* Updating the Flyout refs in the callbacks sent as props to the child component ([0791e86](https://github.com/Autodesk/hig/commit/0791e86))
+
+# [@hig/flyout-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/flyout@2.1.1...@hig/flyout@2.1.2) (2022-04-14)
+
+
+### Bug Fixes
+
+* Updating the Flyout refs after rendering to show tooltip ([0a54812](https://github.com/Autodesk/hig/commit/0a54812))
+
+# [@hig/flyout-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/flyout@2.1.0...@hig/flyout@2.1.1) (2022-04-13)
+
+
+### Bug Fixes
+
+* Fixing flyout component bug, extra space on the right ([6faaf2a](https://github.com/Autodesk/hig/commit/6faaf2a))
+
 # [@hig/flyout-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/flyout@2.0.0...@hig/flyout@2.1.0) (2022-01-24)
 
 
