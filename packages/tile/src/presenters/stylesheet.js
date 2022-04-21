@@ -73,13 +73,24 @@ export default function stylesheet(props, themeData, metadata) {
   const getActionClarifierHorizontal = () => ({ paddingTop: `${isMediumDensity ? '4rem' : '2rem'}`});
   const getTileContentPadding = () => {
     if (identifier) {
-      return isHorizontal ? '8px 8px 8px 36px' : '12px';
+      return isHorizontal ? '8px 8px 8px 36px' : '12px 12px 12px 8px';
     }
-    return isHorizontal ? '8px 8px 8px 8px' : '12px';
+    if (!isMediumDensity) {
+      return isHorizontal ? '8px' : '12px 12px 12px 8px';
+    }
+    return isHorizontal ? '8px' : '12px';
   }
   const getTileHeaderFlatPadding = () => {
     return isMediumDensity ? '12px' : '8px';
   }
+
+  const getTitleMarginTop = () => {
+    if (isHorizontal) {
+      return '0';
+    }
+    return isMediumDensity ? '8px' : '4px';
+  }
+
   return {
     higTileContainer: {
       position: 'relative',
@@ -177,7 +188,7 @@ export default function stylesheet(props, themeData, metadata) {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      marginTop: isMediumDensity ? '8px' : '4px',
+      marginTop: getTitleMarginTop(),
       marginBottom: isMediumDensity ? '4px' : '2px',
     },
     higTileTitle: {
