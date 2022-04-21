@@ -75,7 +75,7 @@ export default function stylesheet(props, themeData, metadata) {
     if (identifier) {
       return isHorizontal ? '8px 8px 8px 36px' : '12px';
     }
-    return isHorizontal ? '8px 8px 8px 16px' : '12px';
+    return isHorizontal ? '8px 8px 8px 8px' : '12px';
   }
   const getTileHeaderFlatPadding = () => {
     return isMediumDensity ? '12px' : '8px';
