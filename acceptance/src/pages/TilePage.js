@@ -14,7 +14,7 @@ function TilePage() {
   const [orientation, setOrientation] = useState("vertical");
   const [background, setBackground] = useState("solid");
   const [divider, setDivider] = useState(false);
-  const getDivider = colorSchemeId => colorSchemeId?.includes("light") ? "#1a1f25" : "white";
+  const getDivider = () => "#3C3C3C80";
   const [version, setVersion] = useState(false);
   const getVersion = isMediumDensity => isMediumDensity ? <Complete24 /> : <Complete16 />;
   const [identifier, setIdentifier] = useState(false);
@@ -307,7 +307,6 @@ function TilePage() {
       </div>
       <ThemeRepeater>{({id, level, theme}) => {
         const isMediumDensity = theme.metadata.densityId === `medium-density`;
-        console.log('themer', theme)
         return (
           <>
             <Tile 
