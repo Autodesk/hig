@@ -73,12 +73,12 @@ export default function stylesheet(props, themeData, metadata) {
   const getActionClarifierHorizontal = () => ({ paddingTop: `${isMediumDensity ? '4rem' : '2rem'}`});
   const getTileContentPadding = () => {
     if (identifier) {
-      return isHorizontal ? '8px 8px 8px 36px' : '12px 12px 12px 8px';
+      return isHorizontal ? '12px 12px 12px 36px' : '12px 12px 12px 8px';
     }
     if (!isMediumDensity) {
-      return isHorizontal ? '8px' : '12px 12px 12px 8px';
+      return isHorizontal ? '5px 12px 12px 12px' : '12px 12px 12px 8px';
     }
-    return isHorizontal ? '8px' : '12px';
+    return '12px';
   }
   const getTileHeaderFlatPadding = () => {
     return isMediumDensity ? '12px' : '8px';
