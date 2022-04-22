@@ -20,47 +20,59 @@ import { useSticky } from "react-table-sticky";
 import { ThemeContext } from "@hig/theme-context";
 import Checkbox from "@hig/checkbox";
 
-import TableDataCell from "../TableDataCell";
 import TableHeaderCell from "../TableHeaderCell";
 import GlobalFilter from "../components/GlobalFilter";
-import ExpandedContent from "../components/ExpandedContent";
 import ColumnShowHide from "../components/ColumnShowHide";
 import SortColumns from "../components/SortColumns";
-import GroupElements from "../components/GroupElements";
 import GroupHeaderElements from "../components/GroupHeaderElements";
 import Pagination from "../components/Pagination";
-import DateFormatter from "../util/DateFormatter";
+import DataGroupComponent from "../components/DataGroupComponent";
+import TableDataContents from "./TableDataContents";
 
 import stylesheet from "./stylesheet";
 
-const renderCellData = (formatDate = false, cell) => {
-  if (!formatDate) return cell.render("Cell");
-  return cell.column.Header === "Date"
-    ? DateFormatter(cell)
-    : cell.render("Cell");
-};
-
-const TablePresenter = ({
-  alternateBg,
-  columnSelection,
-  frozenHeader,
-  frozenHeaderCount,
-  headerBackgroundColor,
-  headerRowSpreadProps,
-  paginateDynamic,
-  rowSpreadProps,
-  rowSelection,
-  setHeaderRef,
-  setTableRef,
-  setTotalRows,
-  tableObject,
-  tableSpreadProps,
-  onTableCellClick,
-  stylesheet: customStylesheet,
-  ...otherProps
-}) => {
-  const { columns, data, meta } = useMemo(() => tableObject, [tableObject]);
-
+const renderTable = params => {
+  const {
+    dataArray,
+    isGrouped,
+    data = dataArray,
+    count = 0,
+    columns,
+    meta,
+    groupNames,
+    alternateBg,
+    columnSelection,
+    frozenHeader,
+    frozenHeaderCount,
+    headerBackgroundColor,
+    headerRowSpreadProps,
+    paginateDynamic,
+    rowSpreadProps,
+    rowSelection,
+    setHeaderRef,
+    setTableRef,
+    setTotalRows,
+    tableObject,
+    tableSpreadProps,
+    onTableCellClick,
+    customStylesheet,
+    otherProps
+  } = params;
+  const getOffset = () => {
+    const newDataArray = dataArray || [];
+    const totalArray = [];
+    if (!dataArray) {
+      return 0;
+    }
+    if (count === 0) {
+      return 0;
+    }
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < count; i++) {
+      totalArray.push(newDataArray[i].length);
+    }
+    return totalArray.reduce((a, b) => a + b, 0);
+  };
   const defaultColumn = useMemo(() => ({
     minswidth: 30,
     width: 150,
@@ -121,38 +133,43 @@ const TablePresenter = ({
               minWidth: 35,
               width: 35,
               maxWidth: 35,
-              Header: () => (
-                <Checkbox
-                  checked={getAllMultiSelectedRows}
-                  indeterminate={
-                    !!getActiveMultiSelectRowArray?.length &&
-                    !getAllMultiSelectedRows
-                  }
-                  onClick={event => {
-                    event.stopPropagation();
-                    const allArray = tableObject.data.map(
-                      (row, index) => index
-                    );
-                    const emptyArray = [];
-
-                    if (
-                      getAllMultiSelectedRows ||
-                      getActiveMultiSelectRowArray?.length > 0
-                    ) {
-                      setActiveMultiSelectRowArray(emptyArray);
-                      setAllMultiSelectedRows(false);
-                    } else {
-                      setActiveMultiSelectRowArray(allArray);
-                      setAllMultiSelectedRows(true);
+              Header: () => {
+                if (isGrouped) return null;
+                return (
+                  <Checkbox
+                    checked={getAllMultiSelectedRows}
+                    indeterminate={
+                      !!getActiveMultiSelectRowArray?.length &&
+                      !getAllMultiSelectedRows
                     }
-                  }}
-                  tabIndex={-1}
-                />
-              ),
+                    onClick={event => {
+                      event.stopPropagation();
+                      const allArray = tableObject.data.map(
+                        (row, index) => index
+                      );
+                      const emptyArray = [];
+
+                      if (
+                        getAllMultiSelectedRows ||
+                        getActiveMultiSelectRowArray?.length > 0
+                      ) {
+                        setActiveMultiSelectRowArray(emptyArray);
+                        setAllMultiSelectedRows(false);
+                      } else {
+                        setActiveMultiSelectRowArray(allArray);
+                        setAllMultiSelectedRows(true);
+                      }
+                    }}
+                    tabIndex={-1}
+                  />
+                );
+              },
               // eslint-disable-next-line react/prop-types
               Cell: ({ row }) => {
                 const rowTypeToMap = paginateDynamic ? rows : page;
-                const rowIndex = rowTypeToMap.indexOf(row);
+                const rowIndex = isGrouped
+                  ? rowTypeToMap.indexOf(row) + getOffset()
+                  : rowTypeToMap.indexOf(row);
 
                 return (
                   <Checkbox
@@ -238,12 +255,12 @@ const TablePresenter = ({
         );
         return (
           <>
-            {meta.globalFilter && (
+            {meta.globalFilter && count === 0 && (
               <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}>
                 {meta.globalFilter}
               </GlobalFilter>
             )}
-            {meta.columnShowHideComponent && (
+            {meta.columnShowHideComponent && count === 0 && (
               <ColumnShowHide
                 toggleHideAllColumnsProps={getToggleHideAllColumnsProps}
                 allColumns={allColumns}
@@ -266,220 +283,252 @@ const TablePresenter = ({
                 className={css(styles.higTableHeaderWrapper)}
                 ref={setHeaderRef}
               >
-                {headerGroups.map((headerGroup, headerGroupIndex) => (
-                  <div
-                    {...headerGroup.getHeaderGroupProps()}
-                    {...headerRowSpreadProps}
-                    className={css(styles.higTableHeaderRow)}
-                    key={`header-group-${headerGroupIndex}`}
-                  >
-                    {headerGroup.headers.map((column, columnIndex) => {
-                      const resizingStyles = column.canResize
-                        ? stylesheet(
-                            { isResizing: column.isResizing, customStylesheet },
-                            resolvedRoles,
-                            metadata
-                          )
-                        : null;
-                      const headerIndex = getColumnHeaderArray.indexOf(
-                        column.Header
-                      );
+                {count === 0 &&
+                  headerGroups.map((headerGroup, headerGroupIndex) => (
+                    <div
+                      {...headerGroup.getHeaderGroupProps()}
+                      {...headerRowSpreadProps}
+                      className={css(styles.higTableHeaderRow)}
+                      key={`header-group-${headerGroupIndex}`}
+                    >
+                      {headerGroup.headers.map((column, columnIndex) => {
+                        const resizingStyles = column.canResize
+                          ? stylesheet(
+                              {
+                                isResizing: column.isResizing,
+                                customStylesheet
+                              },
+                              resolvedRoles,
+                              metadata
+                            )
+                          : null;
+                        const headerIndex = getColumnHeaderArray.indexOf(
+                          column.Header
+                        );
 
-                      return (
-                        <TableHeaderCell
-                          {...column.getHeaderProps(
-                            column.getSortByToggleProps()
-                          )}
-                          columnSelection={columnSelection}
-                          getActiveMultiSelectColumn={
-                            getActiveMultiSelectColumn
-                          }
-                          getColumnHeaderArray={getColumnHeaderArray}
-                          headerBackgroundColor={headerBackgroundColor}
-                          headerIndex={headerIndex}
-                          isSelectableHeader={!column.headers}
-                          isSortPassed={meta.sortColumns}
-                          key={`table-header-cell-${columnIndex}`}
-                          selected={
-                            getActiveColumnIndex === headerIndex &&
-                            getActiveRowIndex === -1
-                          }
-                          setActiveMultiSelectColumn={
-                            setActiveMultiSelectColumn
-                          }
-                          customStylesheet={customStylesheet}
-                        >
-                          <div className={css(styles.headerHolder)}>
-                            {column.canGroupBy && meta.groupElements ? (
-                              <span {...column.getGroupByToggleProps()}>
-                                <GroupHeaderElements
-                                  groupHeaderElementStyles={
-                                    styles.groupHeaderElement
-                                  }
-                                  isGrouped={column.isGrouped}
-                                />
-                              </span>
-                            ) : null}
-                            {column.render("Header")}
-                          </div>
-                          {/* eslint-disable-next-line */}
-                          <div
-                            {...(column.canResize
-                              ? { ...column.getResizerProps() }
-                              : {})}
-                            className={css(
-                              resizingStyles?.higTableHeaderResizer
+                        return (
+                          <TableHeaderCell
+                            {...column.getHeaderProps(
+                              column.getSortByToggleProps()
                             )}
-                            onClick={event => event.stopPropagation()}
-                          />
-                          {meta.sortColumns && column.id !== "selection" ? (
-                            <SortColumns
-                              isSorted={column.isSorted}
-                              isSortedDesc={column.isSortedDesc}
-                              density={metadata.densityId}
-                            >
-                              {meta.sortColumns}
-                            </SortColumns>
-                          ) : (
-                            ""
-                          )}
-                        </TableHeaderCell>
-                      );
-                    })}
-                  </div>
-                ))}
-              </div>
-              <div
-                {...getTableBodyProps()}
-                className={css(styles.higTableBody)}
-              >
-                {rowTypeToMap.map((row, rowIndex) => {
-                  const rowStyles = stylesheet(
-                    {
-                      alternateBg,
-                      isCustomeContentExpanded: customContentArray[rowIndex],
-                      rowIndex,
-                      customStylesheet
-                    },
-                    resolvedRoles,
-                    metadata
-                  );
-                  prepareRow(row);
-
-                  return (
-                    <div key={`table-body-row-${rowIndex}`}>
-                      <div
-                        {...row.getRowProps()}
-                        {...rowSpreadProps}
-                        className={css(rowStyles.higTableRow)}
-                      >
-                        {row.cells.map((cell, cellIndex) => {
-                          const cellColumnIndex = getColumnHeaderArray.indexOf(
-                            cell.column.Header
-                          );
-                          const cellRowIndex = rowIndex;
-                          const totalRows =
-                            rowTypeToMap.length || tableObject.data.length;
-
-                          return (
-                            <TableDataCell
-                              {...cell.getCellProps()}
-                              cellColumnIndex={cellColumnIndex}
-                              cellRowIndex={cellRowIndex}
-                              getColumnHeaderArray={getColumnHeaderArray}
-                              isLast={rowIndex + 1 === totalRows}
-                              isResizing={cell?.column?.isResizing}
-                              key={`table-data-cell-${cellIndex}`}
-                              multiSelectedColumn={
-                                getActiveMultiSelectColumn === cellColumnIndex
-                              }
-                              multiSelectedColumnLeft={
-                                getActiveMultiSelectColumn !== null &&
-                                getActiveMultiSelectColumn - 1 ===
-                                  cellColumnIndex
-                              }
-                              multiSelectedRow={getActiveMultiSelectRowArray?.includes(
-                                cellRowIndex
+                            columnSelection={columnSelection}
+                            getActiveMultiSelectColumn={
+                              getActiveMultiSelectColumn
+                            }
+                            getColumnHeaderArray={getColumnHeaderArray}
+                            headerBackgroundColor={headerBackgroundColor}
+                            headerIndex={headerIndex}
+                            isSelectableHeader={!column.headers}
+                            isSortPassed={meta.sortColumns}
+                            key={`table-header-cell-${columnIndex}`}
+                            selected={
+                              getActiveColumnIndex === headerIndex &&
+                              getActiveRowIndex === -1
+                            }
+                            setActiveMultiSelectColumn={
+                              setActiveMultiSelectColumn
+                            }
+                            customStylesheet={customStylesheet}
+                          >
+                            <div className={css(styles.headerHolder)}>
+                              {column.canGroupBy && meta.groupElements ? (
+                                <span {...column.getGroupByToggleProps()}>
+                                  <GroupHeaderElements
+                                    groupHeaderElementStyles={
+                                      styles.groupHeaderElement
+                                    }
+                                    isGrouped={column.isGrouped}
+                                  />
+                                </span>
+                              ) : null}
+                              {column.render("Header")}
+                            </div>
+                            {/* eslint-disable-next-line */}
+                            <div
+                              {...(column.canResize
+                                ? { ...column.getResizerProps() }
+                                : {})}
+                              className={css(
+                                resizingStyles?.higTableHeaderResizer
                               )}
-                              multiSelectedRowBottom={getActiveMultiSelectRowArray?.includes(
-                                cellRowIndex - 1
-                              )}
-                              selected={
-                                getActiveColumnIndex === cellColumnIndex &&
-                                getActiveRowIndex === cellRowIndex
-                              }
-                              selectedBottom={
-                                getActiveColumnIndex === cellColumnIndex &&
-                                getActiveRowIndex + 1 === cellRowIndex &&
-                                getActiveRowIndex !== -1
-                              }
-                              selectedLeft={
-                                getActiveColumnIndex - 1 === cellColumnIndex &&
-                                getActiveRowIndex === cellRowIndex
-                              }
-                              setActiveColumnIndex={setActiveColumnIndex}
-                              setActiveMultiSelectColumn={
-                                setActiveMultiSelectColumn
-                              }
-                              setActiveRowIndex={setActiveRowIndex}
-                              onTableCellClick={onTableCellClick}
-                              getActiveMultiSelectRowArray={
-                                getActiveMultiSelectRowArray
-                              }
-                              setAllMultiSelectedRows={setAllMultiSelectedRows}
-                              setActiveMultiSelectRowArray={
-                                setActiveMultiSelectRowArray
-                              }
-                              rowTypeToMap={paginateDynamic ? rows : page}
-                              customStylesheet={customStylesheet}
-                            >
-                              {/* eslint-disable */}
-                              {cell.isGrouped ? (
-                                <>
-                                  <span {...row.getToggleRowExpandedProps()}>
-                                    <GroupElements isExpanded={row.isExpanded}>
-                                      {meta.groupElements}
-                                    </GroupElements>
-                                  </span>{" "}
-                                  {renderCellData(meta.formatDate, cell)} ({row.subRows.length})
-                                </>
-                              ) : cell.isAggregated ? (
-                                cell.render("Aggregated")
-                              ) : cell.isPlaceholder ? null : (
-                                renderCellData(meta.formatDate, cell)
-                              )}
-                            </TableDataCell>
-                          );
-                        })}
-                      </div>
-                      {meta.expandedComponent && (
-                        <ExpandedContent
-                          curItem={customContentArray[rowIndex]}
-                          expandedContentStyles={rowStyles}
-                        >
-                          {meta.expandedComponent}
-                        </ExpandedContent>
-                      )}
+                              onClick={event => event.stopPropagation()}
+                            />
+                            {meta.sortColumns && column.id !== "selection" ? (
+                              <SortColumns
+                                isSorted={column.isSorted}
+                                isSortedDesc={column.isSortedDesc}
+                                density={metadata.densityId}
+                              >
+                                {meta.sortColumns}
+                              </SortColumns>
+                            ) : (
+                              ""
+                            )}
+                          </TableHeaderCell>
+                        );
+                      })}
                     </div>
-                  );
-                })}
+                  ))}
               </div>
+              {isGrouped && meta.dataGroupComponent && (
+                <DataGroupComponent
+                  styles={styles}
+                  groupNames={groupNames}
+                  count={count}
+                  data={data}
+                  dataGroup={
+                    <TableDataContents
+                      getTableBodyProps={getTableBodyProps}
+                      styles={styles}
+                      rowTypeToMap={rowTypeToMap}
+                      alternateBg={alternateBg}
+                      customContentArray={customContentArray}
+                      customStylesheet={customStylesheet}
+                      resolvedRoles={resolvedRoles}
+                      metadata={metadata}
+                      prepareRow={prepareRow}
+                      rowSpreadProps={rowSpreadProps}
+                      getColumnHeaderArray={getColumnHeaderArray}
+                      getOffset={getOffset}
+                      getActiveMultiSelectColumn={getActiveMultiSelectColumn}
+                      getActiveMultiSelectRowArray={
+                        getActiveMultiSelectRowArray
+                      }
+                      getActiveColumnIndex={getActiveColumnIndex}
+                      getActiveRowIndex={getActiveRowIndex}
+                      setActiveColumnIndex={setActiveColumnIndex}
+                      setActiveMultiSelectColumn={setActiveMultiSelectColumn}
+                      setActiveRowIndex={setActiveRowIndex}
+                      onTableCellClick={onTableCellClick}
+                      setAllMultiSelectedRows={setAllMultiSelectedRows}
+                      setActiveMultiSelectRowArray={
+                        setActiveMultiSelectRowArray
+                      }
+                      paginateDynamic={paginateDynamic}
+                      rows={rows}
+                      meta={meta}
+                      page={page}
+                      isGrouped={isGrouped}
+                      tableObject={tableObject}
+                    />
+                  }
+                >
+                  {meta.dataGroupComponent}
+                </DataGroupComponent>
+              )}
+              {!isGrouped && (
+                <TableDataContents
+                  getTableBodyProps={getTableBodyProps}
+                  styles={styles}
+                  rowTypeToMap={rowTypeToMap}
+                  alternateBg={alternateBg}
+                  customContentArray={customContentArray}
+                  customStylesheet={customStylesheet}
+                  resolvedRoles={resolvedRoles}
+                  metadata={metadata}
+                  prepareRow={prepareRow}
+                  rowSpreadProps={rowSpreadProps}
+                  getColumnHeaderArray={getColumnHeaderArray}
+                  getOffset={getOffset}
+                  getActiveMultiSelectColumn={getActiveMultiSelectColumn}
+                  getActiveMultiSelectRowArray={getActiveMultiSelectRowArray}
+                  getActiveColumnIndex={getActiveColumnIndex}
+                  getActiveRowIndex={getActiveRowIndex}
+                  setActiveColumnIndex={setActiveColumnIndex}
+                  setActiveMultiSelectColumn={setActiveMultiSelectColumn}
+                  setActiveRowIndex={setActiveRowIndex}
+                  onTableCellClick={onTableCellClick}
+                  setAllMultiSelectedRows={setAllMultiSelectedRows}
+                  setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
+                  paginateDynamic={paginateDynamic}
+                  rows={rows}
+                  meta={meta}
+                  page={page}
+                  isGrouped={isGrouped}
+                  tableObject={tableObject}
+                />
+              )}
             </div>
-            {!paginateDynamic && meta.paginationComponent && (
-              <Pagination pageDetails={pageDetails}>
-                {meta.paginationComponent}
-              </Pagination>
-            )}
-            {paginateDynamic && meta.paginationDynamic && (
-              <Pagination pageDetails={pageDetails}>
-                {meta.paginationDynamic}
-              </Pagination>
-            )}
+            {!paginateDynamic &&
+              meta.paginationComponent &&
+              count === dataArray.length - 1 && (
+                <Pagination pageDetails={pageDetails}>
+                  {meta.paginationComponent}
+                </Pagination>
+              )}
+            {paginateDynamic &&
+              meta.paginationDynamic &&
+              count === dataArray.length - 1 && (
+                <Pagination pageDetails={pageDetails}>
+                  {meta.paginationDynamic}
+                </Pagination>
+              )}
           </>
         );
       }}
     </ThemeContext.Consumer>
   );
+};
+
+const TablePresenter = ({
+  alternateBg,
+  columnSelection,
+  frozenHeader,
+  frozenHeaderCount,
+  headerBackgroundColor,
+  headerRowSpreadProps,
+  paginateDynamic,
+  rowSpreadProps,
+  rowSelection,
+  setHeaderRef,
+  setTableRef,
+  setTotalRows,
+  tableObject,
+  tableSpreadProps,
+  onTableCellClick,
+  stylesheet: customStylesheet,
+  ...otherProps
+}) => {
+  const { columns, data: dataArray, meta, groupNames = [] } = useMemo(
+    () => tableObject,
+    [tableObject]
+  );
+  const isGrouped = Array.isArray(dataArray[0]);
+  const passedParams = {
+    dataArray,
+    isGrouped,
+    columns,
+    meta,
+    groupNames,
+    alternateBg,
+    columnSelection,
+    frozenHeader,
+    frozenHeaderCount,
+    headerBackgroundColor,
+    headerRowSpreadProps,
+    paginateDynamic,
+    rowSpreadProps,
+    rowSelection,
+    setHeaderRef,
+    setTableRef,
+    setTotalRows,
+    tableObject,
+    tableSpreadProps,
+    onTableCellClick,
+    customStylesheet,
+    otherProps
+  };
+  if (!isGrouped) {
+    return renderTable(passedParams);
+  }
+  const tableRender = dataArray?.map((data, count) => {
+    return renderTable({
+      ...passedParams,
+      data,
+      count
+    });
+  });
+  return tableRender;
 };
 
 TablePresenter.propTypes = {

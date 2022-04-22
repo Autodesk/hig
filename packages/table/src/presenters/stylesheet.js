@@ -8,7 +8,6 @@ export default function stylesheet(props, themeData, themeMeta) {
     hasHover,
     headerBackgroundColor,
     headerIndex,
-    isCustomeContentExpanded,
     isLast,
     isPressed,
     isResizing,
@@ -59,7 +58,8 @@ export default function stylesheet(props, themeData, themeMeta) {
             top: 0,
             zIndex: 10
           }
-        : {})
+        : {}),
+      borderBottom: `1px solid #ddd`
     },
     higTableHeader: {
       backgroundColor:
@@ -291,14 +291,20 @@ export default function stylesheet(props, themeData, themeMeta) {
     higTableCustomExpander: {
       display: `block`,
       borderLeft: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`,
-      borderRight: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`,
-      ...(!isCustomeContentExpanded ? { display: `none` } : {})
+      borderRight: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`
     },
     headerHolder: {
       display: `flex`
     },
     groupHeaderElement: {
       padding: `3px 3px 0 0`
+    },
+    higGroupedLabel: {
+      display: `flex`
+    },
+    higGroupedDataCount: {
+      paddingLeft: `5px`,
+      fontWeight: `500`
     }
   };
 

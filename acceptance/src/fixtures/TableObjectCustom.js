@@ -11,7 +11,8 @@ import ExpandedComponent from "./ExpandedComponent";
 import InlineEditor from "./InlineEditor";
 import ColumnShowHideComponent from "./ColumnShowHideComponent";
 import SortColumns from "./SortColumns";
-import {tableContent} from "./DataSourceMock";
+import {tableContent, tableContentTwo, tableContentThree} from "./DataSourceMock";
+import { generateId } from "@hig/utils"
 
 const ChangeText = (props) => {
 
@@ -93,5 +94,38 @@ export const TABLE_OBJECT_CUSTOM = {
         width: 180
       },
   ],
-  data: tableContent.data,
+  groupNames: ['Revit Model', 'CAD Formats', 'Sample Empty', 'Coordination Model'],
+  data: [
+    tableContentThree.data.map((row, index) => {
+      return {
+        "id": row.id,
+        "adskid": generateId('ADSK'),
+        "admin": index % 2 === 0 ? "true" : "false",
+        "status": row.status,
+        "date": row.date,
+        "author": row.author,
+      };
+    }),
+    tableContentTwo.data.map((row, index) => {
+      return {
+        "id": row.id,
+        "adskid": generateId('ADSK'),
+        "admin": index % 2 === 0 ? "true" : "false",
+        "status": row.status,
+        "date": row.date,
+        "author": row.author,
+      };
+    }),
+    [],
+    tableContent.data.map((row, index) => {
+      return {
+        "id": row.id,
+        "adskid": generateId('ADSK'),
+        "admin": index % 2 === 0 ? "true" : "false",
+        "status": row.status,
+        "date": row.date,
+        "author": row.author,
+      };
+    })
+  ],
 };
