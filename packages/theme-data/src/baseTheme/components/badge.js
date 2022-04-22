@@ -113,6 +113,12 @@ export default {
       ref: "basics.colors.primary.black"
     }
   },
+  "badge.orange.iconColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white"
+    }
+  },
   "badge.red.backgroundColor": {
     type: COLOR,
     value: {
