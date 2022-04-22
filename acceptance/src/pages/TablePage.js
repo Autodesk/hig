@@ -53,7 +53,7 @@ const TablePage = () => {
 	const [alternateBg, setAlternateBg] = useState(false);
 	const [headerBackgroundSelection, setHeaderBackgroundSelection] = useState('surface-levels');
 	const [headerBackgroundColor, setHeaderBackgroundColor] = useState(null)
-console.log(customComponents);
+
 	return (
 		<ThemeContext.Provider value={themes[theme]}>
 			<Surface
