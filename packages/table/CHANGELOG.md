@@ -1,3 +1,10 @@
+# [@hig/table-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/table@1.2.1...@hig/table@1.3.0) (2022-04-22)
+
+
+### Features
+
+* add table grouping logic ([83b49d8](https://github.com/Autodesk/hig/commit/83b49d8))
+
 # [@hig/table-v1.2.1](https://github.com/Autodesk/hig/compare/@hig/table@1.2.0...@hig/table@1.2.1) (2022-04-05)
 
 
