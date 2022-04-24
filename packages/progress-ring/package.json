@@ -23,7 +23,7 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^4.0.0",
-    "@hig/theme-data": "^2.25.0",
+    "@hig/theme-data": "^2.26.0",
     "react": "^17.0.0"
   },
   "devDependencies": {
