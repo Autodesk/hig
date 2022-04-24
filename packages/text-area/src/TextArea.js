@@ -16,10 +16,10 @@ const TextArea = props => {
       .split(" ")
       .reduce((acc, cur) => cx(acc, `${cur.trim()}-textarea`), "");
 
-  const textareaStylesheet = (styles, themeData) => {
-    const textareaStyles = customStylesheet(styles, props, themeData);
+  const textareaStylesheet = (styles, customProps, themeData) => {
+    const textareaStyles = customStylesheet(styles, customProps, themeData);
     return stylesheet
-      ? stylesheet(textareaStyles, props, themeData)
+      ? stylesheet(textareaStyles, customProps, themeData)
       : textareaStyles;
   };
 
