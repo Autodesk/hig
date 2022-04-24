@@ -1,3 +1,10 @@
+# [@hig/text-area-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/text-area@2.1.0...@hig/text-area@2.1.1) (2022-04-24)
+
+
+### Bug Fixes
+
+* Sending correct parameters in the textareaStylesheet callback function ([a143d9c](https://github.com/Autodesk/hig/commit/a143d9c))
+
 # [@hig/text-area-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/text-area@2.0.0...@hig/text-area@2.1.0) (2022-01-24)
 
 

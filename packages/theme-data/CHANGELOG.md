@@ -1,3 +1,10 @@
+# [@hig/theme-data-v2.26.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.25.0...@hig/theme-data@2.26.0) (2022-04-24)
+
+
+### Features
+
+* added icon color role for orange badge ([62b25c8](https://github.com/Autodesk/hig/commit/62b25c8))
+
 # [@hig/theme-data-v2.25.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.24.0...@hig/theme-data@2.25.0) (2022-03-28)
 
 
