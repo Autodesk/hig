@@ -19,6 +19,11 @@ export default {
       ref: "basics.colors.primary.black"
     }
   },
+  "badge.orange.iconColor": {
+    value: {
+      ref: "basics.colors.primary.black"
+    }
+  },
   "badge.yellow.fontColor": {
     value: {
       ref: "basics.colors.primary.black"
