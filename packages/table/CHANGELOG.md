@@ -1,3 +1,10 @@
+# [@hig/table-v1.3.1](https://github.com/Autodesk/hig/compare/@hig/table@1.3.0...@hig/table@1.3.1) (2022-04-26)
+
+
+### Bug Fixes
+
+* resize when grouping is used ([4c70b40](https://github.com/Autodesk/hig/commit/4c70b40))
+
 # [@hig/table-v1.3.0](https://github.com/Autodesk/hig/compare/@hig/table@1.2.1...@hig/table@1.3.0) (2022-04-22)
 
 
