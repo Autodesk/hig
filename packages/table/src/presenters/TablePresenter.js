@@ -1,6 +1,6 @@
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable react/no-array-index-key */
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import {
@@ -74,7 +74,7 @@ const renderTable = params => {
     return totalArray.reduce((a, b) => a + b, 0);
   };
   const defaultColumn = useMemo(() => ({
-    minswidth: 30,
+    minWidth: 30,
     width: 150,
     maxWidth: 400
   }));
@@ -92,7 +92,11 @@ const renderTable = params => {
     setActiveMultiSelectColumn,
     setActiveMultiSelectRowArray,
     setActiveRowIndex,
-    setAllMultiSelectedRows
+    setAllMultiSelectedRows,
+    getGlobalColumns,
+    setGlobalColumns,
+    getGlobalResizeStyles,
+    setGlobalResizeStyles
   } = otherProps;
 
   const {
@@ -239,8 +243,30 @@ const renderTable = params => {
     setTotalRows(rowTypeToMap.length);
   });
 
+  useEffect(() => {
+    if (!getGlobalColumns && count === 0) {
+      setGlobalColumns(headerGroups[0].headers);
+    }
+  });
+
+  useLayoutEffect(() => {
+    const currentHeaderStyles =
+      headerGroups &&
+      headerGroups[0].headers.map(item => {
+        return item.getHeaderProps().style;
+      });
+
+    if (
+      JSON.stringify(getGlobalResizeStyles) !==
+        JSON.stringify(currentHeaderStyles) &&
+      count === 0
+    ) {
+      setGlobalResizeStyles(currentHeaderStyles);
+    }
+  });
+
   return (
-    <ThemeContext.Consumer>
+    <ThemeContext.Consumer key={count}>
       {({ resolvedRoles, metadata }) => {
         const styles = stylesheet(
           {
@@ -292,19 +318,27 @@ const renderTable = params => {
                       key={`header-group-${headerGroupIndex}`}
                     >
                       {headerGroup.headers.map((column, columnIndex) => {
-                        const resizingStyles = column.canResize
-                          ? stylesheet(
-                              {
-                                isResizing: column.isResizing,
-                                customStylesheet
-                              },
-                              resolvedRoles,
-                              metadata
-                            )
-                          : null;
                         const headerIndex = getColumnHeaderArray.indexOf(
                           column.Header
                         );
+                        const resizingStyles =
+                          column.canResize ||
+                          (getGlobalColumns &&
+                            getGlobalColumns[headerIndex + 1].canResize)
+                            ? stylesheet(
+                                {
+                                  isResizing:
+                                    column.isResizing ||
+                                    (getGlobalColumns &&
+                                      getGlobalColumns[headerIndex + 1] &&
+                                      getGlobalColumns[headerIndex + 1]
+                                        .isResizing),
+                                  customStylesheet
+                                },
+                                resolvedRoles,
+                                metadata
+                              )
+                            : null;
 
                         return (
                           <TableHeaderCell
@@ -329,6 +363,7 @@ const renderTable = params => {
                               setActiveMultiSelectColumn
                             }
                             customStylesheet={customStylesheet}
+                            getGlobalResizeStyles={getGlobalResizeStyles}
                           >
                             <div className={css(styles.headerHolder)}>
                               {column.canGroupBy && meta.groupElements ? (
@@ -410,6 +445,8 @@ const renderTable = params => {
                       page={page}
                       isGrouped={isGrouped}
                       tableObject={tableObject}
+                      getGlobalResizeStyles={getGlobalResizeStyles}
+                      getGlobalColumns={getGlobalColumns}
                     />
                   }
                 >
@@ -446,6 +483,8 @@ const renderTable = params => {
                   page={page}
                   isGrouped={isGrouped}
                   tableObject={tableObject}
+                  getGlobalResizeStyles={getGlobalResizeStyles}
+                  getGlobalColumns={getGlobalColumns}
                 />
               )}
             </div>

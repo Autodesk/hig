@@ -22,6 +22,7 @@ export default function TableDataCellPresenter(props) {
     rowTypeToMap,
     ...otherProps
   } = props;
+  const { getGlobalResizeStyles } = otherProps;
   const handleCellClick = useCallback(
     event => {
       if (onTableCellClick) {
@@ -51,6 +52,8 @@ export default function TableDataCellPresenter(props) {
     ]
   );
   const payload = { ...otherProps };
+  const resizeStyles =
+    (getGlobalResizeStyles && getGlobalResizeStyles[cellColumnIndex + 1]) || {};
 
   delete payload.getColumnHeaderArray;
   delete payload.hasHover;
@@ -62,17 +65,25 @@ export default function TableDataCellPresenter(props) {
   delete payload.multiSelectedRowBottom;
   delete payload.selectedBottom;
   delete payload.selectedLeft;
+  delete payload.customStylesheet;
+  delete payload.getGlobalResizeStyles;
+  // remove resize inline style and move to emotion styles
+  delete payload.style;
 
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
         const styles = stylesheet(props, resolvedRoles, metadata);
+        const mergedStyles = {
+          ...styles.higTableCell,
+          ...resizeStyles
+        };
 
         return (
           /* eslint-disable-next-line */
           <div
             {...payload}
-            className={css(styles.higTableCell)}
+            className={css(mergedStyles)}
             data-cell-coords={`${cellColumnIndex}_${cellRowIndex}`}
             onClick={handleCellClick}
           >
