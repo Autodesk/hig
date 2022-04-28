@@ -55,6 +55,7 @@ const renderTable = params => {
     tableObject,
     tableSpreadProps,
     onTableCellClick,
+    onSortClick,
     customStylesheet,
     otherProps
   } = params;
@@ -364,6 +365,7 @@ const renderTable = params => {
                             }
                             customStylesheet={customStylesheet}
                             getGlobalResizeStyles={getGlobalResizeStyles}
+                            onSortClick={onSortClick}
                           >
                             <div className={css(styles.headerHolder)}>
                               {column.canGroupBy && meta.groupElements ? (
@@ -525,6 +527,7 @@ const TablePresenter = ({
   tableObject,
   tableSpreadProps,
   onTableCellClick,
+  onSortClick,
   stylesheet: customStylesheet,
   ...otherProps
 }) => {
@@ -554,6 +557,7 @@ const TablePresenter = ({
     tableObject,
     tableSpreadProps,
     onTableCellClick,
+    onSortClick,
     customStylesheet,
     otherProps
   };
@@ -586,6 +590,7 @@ TablePresenter.propTypes = {
   tableSpreadProps: PropTypes.any,
   paginateDynamic: PropTypes.bool,
   onTableCellClick: PropTypes.func,
+  onSortClick: PropTypes.func,
   stylesheet: PropTypes.func
 };
 
