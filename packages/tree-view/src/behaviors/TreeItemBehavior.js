@@ -24,9 +24,6 @@ const TreeItemBehavior = props => {
     } else if (isRightKey && props.onContextMenu) {
       props.onContextMenu(event);
     }
-    else if (event.button === 2 && props.onContextMenu) {
-      props.onContextMenu(event);
-    }
     // do nothing if controlled and using treeNode
     if (props.payload && props.payload.isControlled()) {
       return;
