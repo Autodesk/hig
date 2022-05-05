@@ -46,7 +46,6 @@ const TreeItem = props => {
         handleClick,
         handleDoubleClick,
         handleOperatorClick,
-        handleRightClick,
         setIsCollapsed
       }) => (
         <TreeItemPresenter
@@ -61,7 +60,7 @@ const TreeItem = props => {
           label={label}
           onClick={handleClick}
           onDoubleClick={handleDoubleClick}
-          onContextMenu={handleRightClick}
+          onContextMenu={handleClick}
           onFocus={onFocus}
           onOperatorClick={handleOperatorClick}
           selected={getActiveId() === id}
