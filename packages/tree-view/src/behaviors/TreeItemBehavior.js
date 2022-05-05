@@ -15,8 +15,11 @@ const TreeItemBehavior = props => {
     isCollapsedControlled() ? props.collapsed : isCollapsed;
 
   const handleClick = (event, treeItem) => {
-    if (props.onClick) {
+    if (event.button === 0 && props.onClick) {
       props.onClick(event);
+    }
+    else if (event.button === 2 && props.onContextMenu) {
+      props.onContextMenu(event);
     }
     // do nothing if controlled and using treeNode
     if (props.payload && props.payload.isControlled()) {
@@ -27,40 +30,6 @@ const TreeItemBehavior = props => {
       return;
     }
     // eslint-disable-next-line no-param-reassign
-    treeItem = treeItem || {};
-    if (props.payload) {
-      const {
-        payload: {
-          getTreeItemArray,
-          setActiveTreeItemId,
-          setActiveTreeItemIndex
-        }
-      } = props;
-      // eslint-disable-next-line no-param-reassign
-      const treeItemArray = getTreeItemArray();
-      const index =
-        treeItemArray !== null && treeItemArray.indexOf(treeItem.id);
-      setActiveTreeItemId(treeItem.id);
-      setActiveTreeItemIndex(index);
-    } else {
-      const {
-        id,
-        getTreeItemArray,
-        setActiveTreeItemId,
-        setActiveTreeItemIndex
-      } = props;
-
-      const treeItemArray = getTreeItemArray();
-      const index = treeItemArray !== null && treeItemArray.indexOf(id);
-      setActiveTreeItemId(id);
-      setActiveTreeItemIndex(index);
-    }
-  };
-
-  const handleRightClick = (event, treeItem) => {
-    if (props.onContextMenu) {
-      props.onContextMenu(event);
-    }
     treeItem = treeItem || {};
     if (props.payload) {
       const {
@@ -114,7 +83,6 @@ const TreeItemBehavior = props => {
     handleClick,
     handleDoubleClick,
     handleOperatorClick,
-    handleRightClick,
     setIsCollapsed
   });
 };
