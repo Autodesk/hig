@@ -19,6 +19,7 @@ export default function TableDataCellPresenter(props) {
     getActiveMultiSelectRowArray,
     setAllMultiSelectedRows,
     setActiveMultiSelectRowArray,
+    rowSelection,
     rowTypeToMap,
     ...otherProps
   } = props;
@@ -52,8 +53,9 @@ export default function TableDataCellPresenter(props) {
     ]
   );
   const payload = { ...otherProps };
+  const rowOffset = rowSelection ? 1 : 0;
   const resizeStyles =
-    (getGlobalResizeStyles && getGlobalResizeStyles[cellColumnIndex + 1]) || {};
+    getGlobalResizeStyles?.[cellColumnIndex + rowOffset] || {};
 
   delete payload.getColumnHeaderArray;
   delete payload.hasHover;
@@ -110,5 +112,6 @@ TableDataCellPresenter.propTypes = {
   getActiveMultiSelectRowArray: PropTypes.arrayOf(PropTypes.number),
   setAllMultiSelectedRows: PropTypes.func,
   setActiveMultiSelectRowArray: PropTypes.func,
-  rowTypeToMap: PropTypes.arrayOf(PropTypes.any)
+  rowTypeToMap: PropTypes.arrayOf(PropTypes.any),
+  rowSelection: PropTypes.bool
 };

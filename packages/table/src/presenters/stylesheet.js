@@ -18,6 +18,7 @@ export default function stylesheet(props, themeData, themeMeta) {
     multiSelectedRow,
     multiSelectedRowBottom,
     rowIndex,
+    rowSelection,
     selected,
     selectedBottom,
     selectedLeft,
@@ -110,6 +111,11 @@ export default function stylesheet(props, themeData, themeMeta) {
             overflow: `hidden`,
             textOverflow: `ellipsis`,
             whiteSpace: `nowrap`
+          }
+        : {}),
+      ...(rowSelection && headerIndex < 0
+        ? {
+            justifyContent: `center`
           }
         : {})
     },

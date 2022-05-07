@@ -251,11 +251,9 @@ const renderTable = params => {
   });
 
   useLayoutEffect(() => {
-    const currentHeaderStyles =
-      headerGroups &&
-      headerGroups[0].headers.map(item => {
-        return item.getHeaderProps().style;
-      });
+    const currentHeaderStyles = headerGroups?.[0].headers.map(item => {
+      return item.getHeaderProps().style;
+    });
 
     if (
       JSON.stringify(getGlobalResizeStyles) !==
@@ -324,16 +322,13 @@ const renderTable = params => {
                         );
                         const resizingStyles =
                           column.canResize ||
-                          (getGlobalColumns &&
-                            getGlobalColumns[headerIndex + 1].canResize)
+                          getGlobalColumns?.[headerIndex + 1]?.canResize
                             ? stylesheet(
                                 {
                                   isResizing:
                                     column.isResizing ||
-                                    (getGlobalColumns &&
-                                      getGlobalColumns[headerIndex + 1] &&
-                                      getGlobalColumns[headerIndex + 1]
-                                        .isResizing),
+                                    getGlobalColumns?.[headerIndex + 1]
+                                      ?.isResizing,
                                   customStylesheet
                                 },
                                 resolvedRoles,
@@ -366,6 +361,7 @@ const renderTable = params => {
                             customStylesheet={customStylesheet}
                             getGlobalResizeStyles={getGlobalResizeStyles}
                             onSortClick={onSortClick}
+                            rowSelection={rowSelection}
                           >
                             <div className={css(styles.headerHolder)}>
                               {column.canGroupBy && meta.groupElements ? (
@@ -449,6 +445,7 @@ const renderTable = params => {
                       tableObject={tableObject}
                       getGlobalResizeStyles={getGlobalResizeStyles}
                       getGlobalColumns={getGlobalColumns}
+                      rowSelection={rowSelection}
                     />
                   }
                 >
@@ -487,6 +484,7 @@ const renderTable = params => {
                   tableObject={tableObject}
                   getGlobalResizeStyles={getGlobalResizeStyles}
                   getGlobalColumns={getGlobalColumns}
+                  rowSelection={rowSelection}
                 />
               )}
             </div>
