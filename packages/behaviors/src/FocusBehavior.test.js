@@ -16,7 +16,7 @@ function renderExample(exampleProps) {
 
   return {
     renderPropSpy,
-    wrapper
+    wrapper,
   };
 }
 

@@ -11,7 +11,7 @@ import {
   endExpand,
   prepareCollapse,
   startCollapse,
-  startExpand
+  startExpand,
 } from "./updaters";
 
 /**
@@ -33,7 +33,7 @@ import {
  */
 
 /** @type {Component<BannerAnimatorProps, BannerAnimatorState>} */
-const BannerAnimator = props => {
+const BannerAnimator = (props) => {
   /** @type {BannerAnimatorState} */
   const [status, setStatus] = useState(null);
   const [innerWrapper, setInnerWrapper] = useState(null);
@@ -45,14 +45,14 @@ const BannerAnimator = props => {
     innerWrapper,
     innerWrapperStyle,
     wrapper,
-    wrapperStyle
+    wrapperStyle,
   };
   const setState = {
     setStatus,
     setInnerWrapper,
     setInnerWrapperStyle,
     setWrapper,
-    setWrapperStyle
+    setWrapperStyle,
   };
   const expand = () => {
     window.requestAnimationFrame(() => {
@@ -80,7 +80,7 @@ const BannerAnimator = props => {
   };
 
   /** @param {TransitionEvent} event */
-  const handleTransitionEnd = event => {
+  const handleTransitionEnd = (event) => {
     if (event.target !== innerWrapper) return;
 
     if (status === statuses.COLLAPSING) {
@@ -98,7 +98,7 @@ const BannerAnimator = props => {
   };
 
   /** @param {HTMLDivElement} innerWrapperParams */
-  const refInnerWrapper = innerWrapperParams => {
+  const refInnerWrapper = (innerWrapperParams) => {
     setInnerWrapper(innerWrapperParams);
   };
 
@@ -187,14 +187,14 @@ BannerAnimator.propTypes = {
   position: PropTypes.oneOf(AVAILABLE_POSITIONS),
   /* eslint-enable react/no-unused-prop-types */
   /** A render prop, that renders the component to be animated */
-  children: PropTypes.func.isRequired
+  children: PropTypes.func.isRequired,
 };
 
 BannerAnimator.defaultProps = {
   isVisible: true,
   hasBounce: true,
   hasPush: true,
-  position: positions.TOP
+  position: positions.TOP,
 };
 
 export default BannerAnimator;

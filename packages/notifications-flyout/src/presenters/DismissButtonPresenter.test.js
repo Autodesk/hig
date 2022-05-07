@@ -6,14 +6,14 @@ describe("notifications-flyout/presenters/DismissButtonPresenter", () => {
   takeSnapshotsOf(DismissButtonPresenter, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with all props",
       props: {
         onClick: () => {},
-        title: "HELLO"
-      }
-    }
+        title: "HELLO",
+      },
+    },
   ]);
 });

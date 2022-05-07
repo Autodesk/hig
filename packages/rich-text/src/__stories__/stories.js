@@ -20,15 +20,15 @@ export default [
           </ul>
           <b>Bolded text</b>
         </div>
-      )
-    })
+      ),
+    }),
   },
   {
     description: "dangerously setting inner HTML",
     getProps: () => ({
       dangerouslySetInnerHTML: {
-        __html: "<p>RichText works with HTML strings too.</p>"
-      }
-    })
-  }
+        __html: "<p>RichText works with HTML strings too.</p>",
+      },
+    }),
+  },
 ];

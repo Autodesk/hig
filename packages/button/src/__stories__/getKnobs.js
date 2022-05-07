@@ -10,7 +10,7 @@ const widthOptions = makeSelectOptions(widths);
 
 const knobGroupIds = {
   basic: "Basic",
-  linkOptions: "Link Options"
+  linkOptions: "Link Options",
 };
 
 const knobLabels = {
@@ -27,7 +27,7 @@ const knobLabels = {
   target: "Target",
   title: "Title",
   type: "Variant",
-  width: "Width"
+  width: "Width",
 };
 
 export default function getKnobs(props) {
@@ -53,6 +53,6 @@ export default function getKnobs(props) {
     ),
     title: text(knobLabels.title, title, knobGroupIds.basic),
     type: select(knobLabels.type, typeOptions, type, knobGroupIds.basic),
-    width: select(knobLabels.width, widthOptions, width, knobGroupIds.basic)
+    width: select(knobLabels.width, widthOptions, width, knobGroupIds.basic),
   };
 }

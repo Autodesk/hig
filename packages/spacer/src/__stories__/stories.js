@@ -1,18 +1,18 @@
 export default [
   {
     description: "default",
-    getProps: () => ({})
+    getProps: () => ({}),
   },
   {
     description: "with spacing",
     getProps: () => ({
-      spacing: "xl"
-    })
+      spacing: "xl",
+    }),
   },
   {
     description: "with size",
     getProps: () => ({
-      size: "53px"
-    })
-  }
+      size: "53px",
+    }),
+  },
 ];

@@ -5,7 +5,7 @@ import {
   AddFolder24,
   CartFull24,
   Cloud24,
-  Checklist24
+  Checklist24,
 } from "@hig/icons";
 import Avatar from "@hig/avatar";
 import ThemeContext from "@hig/theme-context";
@@ -25,13 +25,13 @@ const themes = [
   darkGrayHighTheme,
   darkGrayMediumTheme,
   darkBlueHighTheme,
-  darkBlueMediumTheme
+  darkBlueMediumTheme,
 ];
 
 function ThemeRepeater({ children }) {
   return (
     <div style={{ display: "flex", flexWrap: "wrap" }}>
-      {themes.map(theme => (
+      {themes.map((theme) => (
         <ThemeContext.Provider key={theme.metadata.id} value={theme}>
           <div>{children}</div>
         </ThemeContext.Provider>
@@ -48,7 +48,7 @@ function Surface({ children }) {
           backgroundColor: resolvedRoles["colorScheme.surface.level100"],
           marginBottom: resolvedRoles["density.spacings.large"],
           marginRight: resolvedRoles["density.spacings.large"],
-          width: "300px"
+          width: "300px",
         };
 
         return <div style={style}>{children}</div>;

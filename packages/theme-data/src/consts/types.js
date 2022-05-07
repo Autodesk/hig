@@ -21,5 +21,5 @@ export {
   LINE_HEIGHT,
   OPACITY,
   SHADOW,
-  SPACING
+  SPACING,
 };

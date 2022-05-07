@@ -5,7 +5,7 @@ import { ThemeContext } from "@hig/theme-context";
 
 import stylesheet from "./SkeletonItem.stylesheet";
 
-const SkeletonItem = props => {
+const SkeletonItem = (props) => {
   const {
     height,
     marginBottom,
@@ -23,7 +23,7 @@ const SkeletonItem = props => {
             maxWidth,
             marginBottom,
             height,
-            stylesheet: customStylesheet
+            stylesheet: customStylesheet,
           },
           resolvedRoles
         );
@@ -43,7 +43,7 @@ SkeletonItem.propTypes = {
   /** Sets spacing below the skeleton item */
   marginBottom: PropTypes.string,
   /** Adds custom/overriding styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default SkeletonItem;

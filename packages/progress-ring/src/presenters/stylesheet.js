@@ -33,7 +33,7 @@ const MaskEntering = keyframes`
   }
 `;
 
-const BackgroundExiting = color => keyframes`
+const BackgroundExiting = (color) => keyframes`
     from {
       opacity: 1;
       transform: scale(1);
@@ -89,7 +89,7 @@ export default function stylesheet(props, themeData) {
     cssTransitionState,
     mask,
     stylesheet: customStylesheet,
-    surface
+    surface,
   } = props;
 
   const styles = {
@@ -100,28 +100,28 @@ export default function stylesheet(props, themeData) {
       display: "flex",
       position: "relative",
       justifyContent: "center",
-      alignItems: "center"
+      alignItems: "center",
     },
 
     background: {
       transformOrigin: "center",
-      fill: themeData["progress.ring.backgroundColor"]
+      fill: themeData["progress.ring.backgroundColor"],
     },
 
     mask: {
       transformOrigin: "center",
-      fill: mask || themeData[`colorScheme.surface.level${surface}`]
+      fill: mask || themeData[`colorScheme.surface.level${surface}`],
     },
 
     segment: {
       opacity: 0,
       "&:nth-of-type(even)": {
-        fill: themeData["progress.ring.highlightColor1"]
+        fill: themeData["progress.ring.highlightColor1"],
       },
       "&:nth-of-type(odd)": {
-        fill: themeData["progress.ring.highlightColor2"]
-      }
-    }
+        fill: themeData["progress.ring.highlightColor2"],
+      },
+    },
   };
 
   if (cssTransitionState === "entering") {

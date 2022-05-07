@@ -8,7 +8,7 @@ const variantOptions = AVAILABLE_VARIANTS;
 
 const knobGroupIds = {
   basic: "Basic",
-  icon: "Icon to Render"
+  icon: "Icon to Render",
 };
 
 const knobLabels = {
@@ -24,7 +24,7 @@ const knobLabels = {
   onMouseUp: "onMouseUp",
   surface: "Surface",
   title: "Title",
-  variant: "Variant"
+  variant: "Variant",
 };
 
 export default function getKnobs(props) {
@@ -54,6 +54,6 @@ export default function getKnobs(props) {
       variant,
       knobGroupIds.basic
     ),
-    title: text(knobLabels.title, title, knobGroupIds.basic)
+    title: text(knobLabels.title, title, knobGroupIds.basic),
   };
 }

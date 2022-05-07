@@ -13,5 +13,5 @@ export default function FontFamilyExample({ value }) {
 }
 
 FontFamilyExample.propTypes = {
-  value: PropTypes.string
+  value: PropTypes.string,
 };

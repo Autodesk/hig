@@ -31,7 +31,7 @@ describe("toggle/behaviors/ToggleBehavior", () => {
       expect(children).toHaveBeenCalledWith({
         on: expect.any(Boolean),
         handleChange: expect.any(Function),
-        handleKeyUp: expect.any(Function)
+        handleKeyUp: expect.any(Function),
       });
     });
   });

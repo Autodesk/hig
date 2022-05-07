@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
  * @property {boolean} checked
  */
 
-const CheckboxBehavior = props => {
+const CheckboxBehavior = (props) => {
   const { onClick: handleClick, defaultChecked, children } = props;
   const [checked, setChecked] = useState(defaultChecked);
 
@@ -26,7 +26,7 @@ const CheckboxBehavior = props => {
   /**
    * @param {boolean} checked
    */
-  const setBehaviorChecked = value => {
+  const setBehaviorChecked = (value) => {
     const { onChange } = props;
     if (onChange) onChange(value);
 
@@ -38,14 +38,14 @@ const CheckboxBehavior = props => {
   /**
    * @param {UIEvent} event
    */
-  const handleChange = event => {
+  const handleChange = (event) => {
     setBehaviorChecked(event.target.checked);
   };
 
   return children({
     checked: getChecked(),
     handleChange,
-    handleClick
+    handleClick,
   });
 };
 
@@ -69,11 +69,11 @@ CheckboxBehavior.propTypes = {
   /**
    * Render prop
    */
-  children: PropTypes.func
+  children: PropTypes.func,
 };
 
 CheckboxBehavior.defaultProps = {
-  defaultChecked: false
+  defaultChecked: false,
 };
 
 export default CheckboxBehavior;

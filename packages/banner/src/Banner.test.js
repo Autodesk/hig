@@ -8,7 +8,7 @@ describe("banner/Banner", () => {
   const exposedComponents = ["Action", "Interactions", "Presenter"];
   const componentMatcher = expect.any(Function);
 
-  exposedComponents.forEach(componentName => {
+  exposedComponents.forEach((componentName) => {
     describe(componentName, () => {
       it(`exposes the \`${componentName}\` component`, () => {
         expect(Banner).toHaveProperty(componentName, componentMatcher);
@@ -20,7 +20,7 @@ describe("banner/Banner", () => {
     const renderedComponents = [
       "BannerAnimator",
       "BannerContainer",
-      "BannerPresenter"
+      "BannerPresenter",
     ];
 
     let wrapper;
@@ -29,7 +29,7 @@ describe("banner/Banner", () => {
       wrapper = mount(<Banner />);
     });
 
-    renderedComponents.forEach(componentName => {
+    renderedComponents.forEach((componentName) => {
       describe(componentName, () => {
         it(`renders a \`${componentName}\` component`, () => {
           expect(wrapper.find(componentName).exists());
@@ -42,26 +42,26 @@ describe("banner/Banner", () => {
     const cases = [
       {
         description: "renders with no props",
-        props: {}
+        props: {},
       },
       {
         description: "renders with custom stylesheet",
         props: {
-          stylesheet: styles => ({
+          stylesheet: (styles) => ({
             ...styles,
             banner: {
               ...styles.banner,
-              backgroundColor: "red"
-            }
-          })
-        }
+              backgroundColor: "red",
+            },
+          }),
+        },
       },
       {
         description: "renders with custom className",
         props: {
-          className: "custom"
-        }
-      }
+          className: "custom",
+        },
+      },
     ];
 
     cases.forEach(({ description, props: { children, ...otherProps } }) => {

@@ -13,9 +13,9 @@ export default [
         <Typography key="t1">
           Curabitur id auctor leo, ut posuere felis. Aliquam erat volutpat.
           Nullam id lorem in metus fermentum aliquam.
-        </Typography>
-      ]
-    })
+        </Typography>,
+      ],
+    }),
   },
   {
     description: "scrolling",
@@ -69,9 +69,9 @@ export default [
           rutrum ligula, vel imperdiet est urna in tellus. Curabitur id auctor
           leo, ut posuere felis. Aliquam erat volutpat. Nullam id lorem in metus
           fermentum aliquam.
-        </Typography>
-      ]
-    })
+        </Typography>,
+      ],
+    }),
   },
   {
     description: "header children",
@@ -87,8 +87,8 @@ export default [
           volutpat, velit et vulputate blandit, libero turpis rutrum ligula, vel
           imperdiet est urna in tellus. Curabitur id auctor leo, ut posuere
           felis.
-        </Typography>
-      ]
-    })
-  }
+        </Typography>,
+      ],
+    }),
+  },
 ];

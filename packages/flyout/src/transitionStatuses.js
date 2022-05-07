@@ -2,7 +2,7 @@ import {
   ENTERED,
   ENTERING,
   EXITED,
-  EXITING
+  EXITING,
 } from "react-transition-group/Transition";
 
 const HIDDEN = "hidden";
@@ -12,7 +12,7 @@ export const transitionStatuses = Object.freeze({
   ENTERING,
   EXITED,
   EXITING,
-  HIDDEN
+  HIDDEN,
 });
 
 export const AVAILABLE_TRANSITION_STATUSES = Object.freeze(

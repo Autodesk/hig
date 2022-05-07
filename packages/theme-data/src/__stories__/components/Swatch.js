@@ -7,7 +7,7 @@ export default function Swatch({
   borderWidth,
   borderRadius,
   boxShadowBlur,
-  boxShadowColor
+  boxShadowColor,
 }) {
   return (
     <ThemeContext.Consumer>
@@ -30,7 +30,7 @@ export default function Swatch({
               borderRadius: renderedBorderRadius,
               border: `${resolvedRoles["basics.borderWidths.small"]} solid ${resolvedRoles["colorScheme.surface.level100"]}`,
               boxShadow: `0 0 0 ${renderedBorderWidth} ${resolvedRoles["colorScheme.surface.level350"]}, ${renderedBoxShadow}`,
-              marginBottom: resolvedRoles["density.spacings.small"]
+              marginBottom: resolvedRoles["density.spacings.small"],
             }}
           />
         );
@@ -44,5 +44,5 @@ Swatch.propTypes = {
   borderWidth: PropTypes.string,
   borderRadius: PropTypes.string,
   boxShadowBlur: PropTypes.string,
-  boxShadowColor: PropTypes.string
+  boxShadowColor: PropTypes.string,
 };

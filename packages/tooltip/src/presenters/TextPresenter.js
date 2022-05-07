@@ -17,7 +17,7 @@ export default function TextPresenter({
       {({ resolvedRoles }) => {
         const typographyCustomStyles = {
           color: resolvedRoles["tooltip.title.fontColor"],
-          fontSize: resolvedRoles["tooltip.title.fontSize"]
+          fontSize: resolvedRoles["tooltip.title.fontSize"],
         };
         const styles = stylesheet(
           { stylesheet: customStylesheet },
@@ -46,12 +46,12 @@ export default function TextPresenter({
 }
 
 TextPresenter.defaultProps = {
-  children: ""
+  children: "",
 };
 
 TextPresenter.propTypes = {
   /** Text content */
   children: PropTypes.string,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

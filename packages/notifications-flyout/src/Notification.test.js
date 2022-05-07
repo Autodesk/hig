@@ -21,7 +21,7 @@ const sampleNotifications = [
           <br />2 more
         </p>
       </div>
-    )
+    ),
   },
   {
     id: 1,
@@ -40,8 +40,8 @@ const sampleNotifications = [
           <br />
         </p>
       </div>
-    )
-  }
+    ),
+  },
 ];
 
 describe("notifications-flyout/Notification", () => {

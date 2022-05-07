@@ -22,7 +22,7 @@ export default function TableHeaderCellPresenter(props) {
   } = props;
   const { getGlobalResizeStyles } = otherProps;
   const handleClick = useCallback(
-    event => {
+    (event) => {
       if (isSortPassed && onClick && !columnSelection) {
         if (onSortClick) {
           onSortClick(event, props, headerIndex);
@@ -42,7 +42,7 @@ export default function TableHeaderCellPresenter(props) {
       isSortPassed,
       onClick,
       setActiveMultiSelectColumn,
-      onSortClick
+      onSortClick,
     ]
   );
   const payload = { ...otherProps };
@@ -67,7 +67,7 @@ export default function TableHeaderCellPresenter(props) {
         const styles = stylesheet(props, resolvedRoles, metadata);
         const mergedStyles = {
           ...styles.higTableHeader,
-          ...resizeStyles
+          ...resizeStyles,
         };
 
         return (
@@ -101,5 +101,5 @@ TableHeaderCellPresenter.propTypes = {
   onSortClick: PropTypes.func,
   rowSelection: PropTypes.bool,
   setIsSortedDesc: PropTypes.func,
-  isSortedDesc: PropTypes.bool
+  isSortedDesc: PropTypes.bool,
 };

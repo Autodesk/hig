@@ -5,7 +5,7 @@ describe("Surface.stylesheet", () => {
     "basics.shadows.lowBlur": "16px",
     "basics.spacings.none": "0",
     "colorScheme.surfaceLevel300Color": "aliceblue",
-    "density.spacings.medium": "14px"
+    "density.spacings.medium": "14px",
   };
 
   it("returns an object", () => {
@@ -14,7 +14,7 @@ describe("Surface.stylesheet", () => {
       horizontalPadding: "m",
       verticalPadding: "m",
       level: 300,
-      shadow: "low"
+      shadow: "low",
     };
 
     expect(stylesheet(props, themeData)).toEqual(expect.any(Object));
@@ -31,7 +31,7 @@ describe("Surface.stylesheet", () => {
     expect(
       stylesheet({ stylesheet: () => ({ padding: 0 }) }, themeData)
     ).toEqual({
-      padding: 0
+      padding: 0,
     });
   });
 
@@ -41,7 +41,7 @@ describe("Surface.stylesheet", () => {
       horizontalPadding: "m",
       verticalPadding: "m",
       level: 300,
-      shadow: "low"
+      shadow: "low",
     };
 
     it("padding matches density spacing value in theme data", () => {
@@ -53,7 +53,7 @@ describe("Surface.stylesheet", () => {
     const props = {
       borderRadius: "m",
       level: 300,
-      shadow: "low"
+      shadow: "low",
     };
 
     it("padding matches the basics value in theme data", () => {

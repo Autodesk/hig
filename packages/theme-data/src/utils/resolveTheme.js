@@ -31,7 +31,7 @@ function dereferenceValue(theme, role, referencingRole) {
     return {
       ...dereferencedValue,
       ...valueData,
-      value: dereferencedValue.value
+      value: dereferencedValue.value,
     };
   }
   return valueData;
@@ -54,7 +54,7 @@ function transformColorValue(theme, role) {
   }
   return {
     ...valueData,
-    value: transformAlpha(role, valueData)
+    value: transformAlpha(role, valueData),
   };
 }
 

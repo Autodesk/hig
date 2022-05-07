@@ -5,7 +5,7 @@ import resolveRoles from "./resolveTheme";
 function buildName(colorScheme, density) {
   return [
     colorScheme.metadata.colorSchemeName,
-    density.metadata.densityName
+    density.metadata.densityName,
   ].join(", ");
 }
 
@@ -13,7 +13,7 @@ function buildFileName(colorScheme, density) {
   return camelcase([
     colorScheme.metadata.colorSchemeName,
     density.metadata.densityName,
-    "Theme"
+    "Theme",
   ]);
 }
 
@@ -26,14 +26,12 @@ function buildId(colorScheme, density) {
 function buildDeprecatedRoles(colorScheme, density) {
   const colorSchemeDensityRoles = Object.entries({
     ...colorScheme.unresolvedRoles,
-    ...density.unresolvedRoles
+    ...density.unresolvedRoles,
   });
 
   const reducer = (deprecatedRoles, [roleName, roleValue]) => {
     if (roleValue.metadata && roleValue.metadata.deprecated) {
-      return Object.assign({}, deprecatedRoles, {
-        [roleName]: roleValue.metadata.deprecated
-      });
+      return { ...deprecatedRoles, [roleName]: roleValue.metadata.deprecated };
     }
 
     return deprecatedRoles;
@@ -56,18 +54,18 @@ function buildTheme(colorScheme, density) {
       name: buildName(colorScheme, density),
       fileName: buildFileName(colorScheme, density),
       id: buildId(colorScheme, density),
-      __deprecated__: buildDeprecatedRoles(colorScheme, density)
+      __deprecated__: buildDeprecatedRoles(colorScheme, density),
     },
     unresolvedRoles,
-    resolvedRoles
+    resolvedRoles,
   };
 }
 
 export default function generateAllThemes(colorSchemes, densities) {
   const themes = [];
 
-  colorSchemes.forEach(colorScheme => {
-    densities.forEach(density => {
+  colorSchemes.forEach((colorScheme) => {
+    densities.forEach((density) => {
       themes.push(buildTheme(colorScheme, density));
     });
   });

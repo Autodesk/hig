@@ -4,7 +4,7 @@ export default function stylesheet(props, themeData) {
     content: {
       minHeight: `32px`,
       padding: `8px 12px`,
-      boxSizing: `border-box`
+      boxSizing: `border-box`,
     },
     panel: {
       border: themeData
@@ -14,14 +14,14 @@ export default function stylesheet(props, themeData) {
         ? themeData["tooltip.backgroundColor"]
         : `none`,
       borderRadius: themeData ? themeData["tooltip.borderRadius"] : 0,
-      maxHeight: maxHeight ? `${maxHeight}px` : undefined
+      maxHeight: maxHeight ? `${maxHeight}px` : undefined,
     },
     panelInner: {
-      position: `relative`
+      position: `relative`,
     },
     textContent: {
-      whiteSpace: `nowrap`
-    }
+      whiteSpace: `nowrap`,
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

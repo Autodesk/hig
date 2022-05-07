@@ -9,19 +9,19 @@ export default [
       avatars: [
         {
           firstName: "Joan",
-          lastName: "Jett"
+          lastName: "Jett",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
-        }
-      ]
-    })
+          lastName: "Shibuya",
+        },
+      ],
+    }),
   },
   {
     description: "single Avatar",
@@ -30,10 +30,10 @@ export default [
       avatars: [
         {
           firstName: "Hori",
-          lastName: "Miyamura"
-        }
-      ]
-    })
+          lastName: "Miyamura",
+        },
+      ],
+    }),
   },
   {
     description: "two Avatars",
@@ -43,14 +43,14 @@ export default [
         {
           firstName: "Hajime",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Alice",
-          lastName: "Wonderland"
-        }
-      ]
-    })
+          lastName: "Wonderland",
+        },
+      ],
+    }),
   },
   {
     description: "65 Avatars",
@@ -59,284 +59,284 @@ export default [
       avatars: [
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
-        }
-      ]
-    })
+          lastName: "Nevermind",
+        },
+      ],
+    }),
   },
   {
     description: "110 Avatars",
@@ -345,479 +345,479 @@ export default [
       avatars: [
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Clifford",
-          lastName: "Dog"
+          lastName: "Dog",
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hatsune",
-          lastName: "Miku"
+          lastName: "Miku",
         },
         {
           firstName: "Barak",
-          lastName: "Obama"
+          lastName: "Obama",
         },
         {
           firstName: "Nirvana",
-          lastName: "Nevermind"
+          lastName: "Nevermind",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
+          lastName: "Shibuya",
         },
         {
           firstName: "Maria",
           lastName: "Bamford",
-          image: avatarImagePath
+          image: avatarImagePath,
         },
         {
           firstName: "Hachi",
-          lastName: "Shibuya"
-        }
-      ]
-    })
-  }
+          lastName: "Shibuya",
+        },
+      ],
+    }),
+  },
 ];

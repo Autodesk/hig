@@ -13,6 +13,7 @@ import { STATUS_ICONS, AVAILABLE_STATUSES } from "./statuses";
 import stylesheet from "./NotificationsToast.stylesheet";
 
 export default class NotificationsToast extends Component {
+  // eslint-disable-next-line react/static-property-placement
   static propTypes = {
     /**
      * Message content for the Toast. It's recommended to keep the content to no more than 20 words.
@@ -43,13 +44,14 @@ export default class NotificationsToast extends Component {
     /**
      * Function to modify the component's styles
      */
-    stylesheet: PropTypes.func
+    stylesheet: PropTypes.func,
   };
 
+  // eslint-disable-next-line react/static-property-placement
   static defaultProps = {
     onDismissTitle: "Dismiss",
     showStatusIcon: true,
-    status: "primary"
+    status: "primary",
   };
 
   _renderImage = (themeData, metadata) => {
@@ -69,7 +71,7 @@ export default class NotificationsToast extends Component {
         <div
           className={cx([
             css(styles.toastImageContainer),
-            toastImageContainerClassName
+            toastImageContainerClassName,
           ])}
         >
           {image}
@@ -84,7 +86,7 @@ export default class NotificationsToast extends Component {
         <div
           className={cx([
             css(styles.toastImageContainer),
-            toastImageContainerClassName
+            toastImageContainerClassName,
           ])}
         >
           <Icon color={iconFill} />
@@ -140,7 +142,7 @@ export default class NotificationsToast extends Component {
                 <div
                   className={cx([
                     css(styles.toastMessage),
-                    toastMessageClassName
+                    toastMessageClassName,
                   ])}
                 >
                   <RichText>
@@ -149,7 +151,7 @@ export default class NotificationsToast extends Component {
                         fontSize: "12px",
                         maxWidth: "220px",
                         textOverflow: "ellipsis",
-                        overflow: "hidden"
+                        overflow: "hidden",
                       }}
                       className={toastTypographyClassName}
                     >
@@ -159,7 +161,7 @@ export default class NotificationsToast extends Component {
                   <div
                     className={cx([
                       css(styles.toastDismiss),
-                      toastDismissClassName
+                      toastDismissClassName,
                     ])}
                   >
                     <IconButton

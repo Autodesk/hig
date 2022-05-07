@@ -115,7 +115,7 @@ describe("menu/Option", () => {
 
   it.skip("passes down the optionRef", () => {
     let optionEl = null;
-    const setOptionEl = el => {
+    const setOptionEl = (el) => {
       optionEl = el;
     };
     const wrapper = (

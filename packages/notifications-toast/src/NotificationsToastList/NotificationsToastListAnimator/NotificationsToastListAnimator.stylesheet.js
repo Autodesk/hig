@@ -16,9 +16,9 @@ export default function stylesheet(props) {
       minWidth: `340px`,
       ...(placement ? getStylesByPlacement(placement) : {}),
       "& > div": {
-        marginBottom: `10px`
-      }
-    }
+        marginBottom: `10px`,
+      },
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props) : styles;

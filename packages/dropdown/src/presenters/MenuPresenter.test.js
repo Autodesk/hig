@@ -7,14 +7,14 @@ describe("Dropdown/presenters/MenuPresenter", () => {
   const rendererOptions = {
     createNodeMock(element) {
       return document.createElement(element.type);
-    }
+    },
   };
   const cases = [
     {
       desc: "renders with only required props",
       props: {
-        innerRef: () => {}
-      }
+        innerRef: () => {},
+      },
     },
     {
       desc: "renders with all props",
@@ -22,9 +22,9 @@ describe("Dropdown/presenters/MenuPresenter", () => {
         innerRef: () => {},
         isOpen: true,
         children: <p key="p">hi</p>,
-        className: "custom-class"
-      }
-    }
+        className: "custom-class",
+      },
+    },
   ];
 
   takeSnapshotsOf(MenuPresenter, cases, rendererOptions);

@@ -8,5 +8,5 @@ export default {
   propTables: [DefaultExport],
   propTablesExclude: [ThemeContext.Provider],
   source: true,
-  text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
+  text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />,
 };

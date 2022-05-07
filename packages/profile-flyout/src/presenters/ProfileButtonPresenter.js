@@ -50,5 +50,5 @@ ProfileButtonPresenter.propTypes = {
   /** Callback when the flyout is opened */
   onClick: PropTypes.func,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

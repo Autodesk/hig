@@ -10,7 +10,7 @@ import {
   variants,
   orientations,
   AVAILABLE_VARIANTS,
-  AVAILABLE_ORIENTATIONS
+  AVAILABLE_ORIENTATIONS,
 } from "../constants";
 
 export default function TabPresenter({
@@ -50,7 +50,7 @@ export default function TabPresenter({
             orientation,
             disabled,
             closable,
-            stylesheet: customStylesheet
+            stylesheet: customStylesheet,
           },
           resolvedRoles,
           metadata
@@ -159,11 +159,11 @@ TabPresenter.propTypes = {
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   onClose: PropTypes.func,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 TabPresenter.defaultProps = {
   variant: variants.UNDERLINE,
   label: "",
-  orientation: orientations.HORIZONTAL
+  orientation: orientations.HORIZONTAL,
 };

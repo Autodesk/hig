@@ -8,13 +8,13 @@ describe("top-nav/presenters/NavActionButtonPresenter", () => {
   takeSnapshotsOf(NavButtonPresenter, [
     {
       desc: "renders with no props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with children",
       props: {
-        children: <div className="logo" />
-      }
+        children: <div className="logo" />,
+      },
     },
     {
       desc: "renders with children, icon, onClick and title",
@@ -22,8 +22,8 @@ describe("top-nav/presenters/NavActionButtonPresenter", () => {
         children: <div className="logo" />,
         onClick: () => {},
         icon: <List24 />,
-        title: "title"
-      }
-    }
+        title: "title",
+      },
+    },
   ]);
 });

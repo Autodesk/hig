@@ -11,7 +11,7 @@ export default function FontSample({ fontWeight, fontSize, fontFamily }) {
           fontWeight: fontWeight || resolvedRoles["basics.fontWeights.regular"],
           fontSize: fontSize || resolvedRoles["density.fontSizes.medium"],
           fontFamily: fontFamily || resolvedRoles["basics.fontFamilies.main"],
-          marginBottom: resolvedRoles["density.spacings.extraSmall"]
+          marginBottom: resolvedRoles["density.spacings.extraSmall"],
         };
         return (
           <div style={style}>
@@ -26,5 +26,5 @@ export default function FontSample({ fontWeight, fontSize, fontFamily }) {
 FontSample.propTypes = {
   fontWeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   fontSize: PropTypes.string,
-  fontFamily: PropTypes.string
+  fontFamily: PropTypes.string,
 };

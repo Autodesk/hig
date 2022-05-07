@@ -5,7 +5,7 @@ import { FocusBehavior } from "@hig/behaviors";
 import MenuBehavior from "./behaviors/MenuBehavior";
 import MenuPresenter from "./presenters/MenuPresenter";
 
-const Menu = props => {
+const Menu = (props) => {
   const {
     checkmark,
     children,
@@ -49,7 +49,7 @@ const Menu = props => {
             setHighlightIndex,
             setMenuRef,
             setOptionsInfo,
-            setPreviousEvent
+            setPreviousEvent,
           }) => (
             <MenuPresenter
               {...otherProps}
@@ -96,6 +96,7 @@ Menu.propTypes = {
    * Default Selected Option(s)
    * Should be the HTML id of the Option
    */
+  // eslint-disable-next-line react/forbid-prop-types
   defaultSelected: PropTypes.arrayOf(PropTypes.any),
   /**
    * Shows a divider at the bottom of the menu
@@ -119,6 +120,7 @@ Menu.propTypes = {
    * This will not work if this is the child
    * of a MenuGroup component
    */
+  // eslint-disable-next-line react/forbid-prop-types
   selected: PropTypes.arrayOf(PropTypes.any),
   /**
    * Adds custom/overriding styles
@@ -127,12 +129,12 @@ Menu.propTypes = {
   /**
    * Shows a ability of checkmark to be unchecked if required
    */
-  unselect: PropTypes.bool
+  unselect: PropTypes.bool,
 };
 
 Menu.defaultProps = {
   multiple: false,
-  unselect: true
+  unselect: true,
 };
 
 export default Menu;

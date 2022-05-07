@@ -1,11 +1,11 @@
 export const indicators = Object.freeze({
   CARET: "caret",
-  OPERATOR: "operator"
+  OPERATOR: "operator",
 });
 
 export const indicatorPositions = Object.freeze({
   LEFT: "left",
-  RIGHT: "right"
+  RIGHT: "right",
 });
 
 export const AVAILABLE_INDICATORS = Object.freeze(Object.values(indicators));

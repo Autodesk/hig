@@ -7,16 +7,16 @@ describe("NotificationsToastListAnimator", () => {
     const topPlacementAnimation = {
       from: {
         transform: "translateY(-36px)",
-        opacity: 0
+        opacity: 0,
       },
-      to: { transform: "" }
+      to: { transform: "" },
     };
     const bottomPlacementAnimation = {
       from: {
         transform: "translateY(36px)",
-        opacity: 0
+        opacity: 0,
       },
-      to: { transform: "" }
+      to: { transform: "" },
     };
     expect(
       shallow(<NotificationsToastListAnimator placement="top" />).props()

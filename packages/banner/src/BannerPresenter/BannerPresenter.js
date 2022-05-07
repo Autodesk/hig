@@ -10,7 +10,7 @@ import {
   Message,
   Notification,
   Wrapper,
-  IconBackground
+  IconBackground,
 } from "./presenters";
 
 /**
@@ -101,7 +101,7 @@ BannerPresenter.defaultProps = {
   type: types.PRIMARY,
   dismissButtonTitle: "Close",
   isWrappingContent: false,
-  children: "Message"
+  children: "Message",
 };
 
 BannerPresenter.propTypes = {
@@ -124,5 +124,5 @@ BannerPresenter.propTypes = {
   /** The displayed message */
   children: PropTypes.node,
   /** Adds custom/overriding style */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

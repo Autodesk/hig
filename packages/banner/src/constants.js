@@ -1,4 +1,4 @@
-const constants = themeData => {
+const constants = (themeData) => {
   const base = {
     colorMapping: {
       error: "urgent",
@@ -7,7 +7,7 @@ const constants = themeData => {
       urgent: "error",
       warning: "warning",
       info: "primary",
-      success: "complete"
+      success: "complete",
     },
     bannerActionPaddingY: themeData["density.spacings.extraExtraSmall"],
     bannerActionSpacingX: themeData["density.spacings.large"],
@@ -20,7 +20,7 @@ const constants = themeData => {
     bannerMessageLineHeight: "20px",
     bannerNotificationWidthMax: "900px",
     bannerNotificationWidthMin: "200px",
-    bannerWrapperMinHeight: "50px"
+    bannerWrapperMinHeight: "50px",
   };
 
   const bannerDismissIconPadding = `calc((${base.bannerDismissIconButtonWidth} - ${base.bannerDismissIconWidth}) / 2)`;
@@ -35,7 +35,7 @@ const constants = themeData => {
     bannerDismissPaddingRightInteractive: `calc(${bannerDismissSpacingRightInteractive} - ${base.bannerDismissIconPadding})`,
     bannerDismissPaddingTopWrapping: `calc(${bannerContentSpacingY} - ${base.bannerDismissIconPadding})`,
     bannerInteractionsWrapperPaddingY: `calc(${bannerContentSpacingY} - ${base.bannerActionPaddingY})`,
-    bannerMessagePaddingY: `calc((${base.bannerWrapperMinHeight} - ${base.bannerMessageLineHeight}) / 2)`
+    bannerMessagePaddingY: `calc((${base.bannerWrapperMinHeight} - ${base.bannerMessageLineHeight}) / 2)`,
   });
 };
 

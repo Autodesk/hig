@@ -4,7 +4,7 @@ import {
   anchorPoints,
   AVAILABLE_ANCHOR_POINTS,
   offsetContainerVertical,
-  offsetPanelHorizontal
+  offsetPanelHorizontal,
 } from "@hig/flyout";
 import { Help16, Help24 } from "@hig/icons";
 import ThemeContext from "@hig/theme-context";
@@ -13,7 +13,7 @@ import NavAction from "./NavAction";
 
 /** @typedef {import("@hig/flyout").Coordinates} Coordinates */
 
-const HelpAction = props => {
+const HelpAction = (props) => {
   const {
     alterCoordinates,
     anchorPoint,
@@ -70,7 +70,7 @@ HelpAction.propTypes = {
   /** Callback when the flyout is opened */
   onClick: PropTypes.func,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 HelpAction.defaultProps = {
@@ -82,7 +82,7 @@ HelpAction.defaultProps = {
     return offsetPanelHorizontal(offsetContainerVertical(coordinates, 8), 57);
   },
   anchorPoint: anchorPoints.TOP_RIGHT,
-  fallbackAnchorPoints: []
+  fallbackAnchorPoints: [],
 };
 
 export default HelpAction;

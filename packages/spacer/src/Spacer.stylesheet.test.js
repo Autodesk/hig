@@ -11,7 +11,7 @@ describe("stylesheet", () => {
   });
   it("returns the custom stylesheet", () => {
     expect(stylesheet({ stylesheet: () => ({ padding: 0 }) }, {})).toEqual({
-      padding: 0
+      padding: 0,
     });
   });
 });

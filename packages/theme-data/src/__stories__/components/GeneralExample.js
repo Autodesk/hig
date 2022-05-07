@@ -7,5 +7,5 @@ export default function GeneralExample({ value }) {
 }
 
 GeneralExample.propTypes = {
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };

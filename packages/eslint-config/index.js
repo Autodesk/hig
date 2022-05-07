@@ -1,10 +1,14 @@
 module.exports = {
-  extends: ["airbnb", "prettier", "prettier/react"],
-  parser: "babel-eslint",
+  extends: ["airbnb", "prettier"],
+  parser: "@babel/eslint-parser",
+  parserOptions: {
+  babelOptions: {
+      presets: ["@babel/preset-react"]
+    }
+  },
   settings: {
     "import/resolver": {
-      "babel-module": {},
-      webpack: true
+      "babel-module": {}
     }
   },
   plugins: ["react", "prettier"],
@@ -49,7 +53,11 @@ module.exports = {
           every: ["id"]
         }
       }
-    ]
+    ],
+    "react/jsx-props-no-spreading": 0,
+    "import/no-unresolved": 0,
+    "no-restricted-exports": 0,
+    "react/function-component-definition": 0
   },
   overrides: [
     {

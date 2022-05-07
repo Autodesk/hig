@@ -7,15 +7,15 @@ describe("flyout/presenters/PanelPresenter", () => {
   [
     {
       description: "renders without props",
-      props: {}
+      props: {},
     },
     {
       description: "renders with all props",
       props: {
         onScroll: function onScroll() {},
-        children: "Hello World"
-      }
-    }
+        children: "Hello World",
+      },
+    },
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {
       const presenter = (

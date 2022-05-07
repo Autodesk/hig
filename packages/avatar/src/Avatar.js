@@ -22,7 +22,7 @@ function generateUniqueNumberFromName(name) {
   let firstNum = 0;
   if (firstName) {
     const firstArray = firstName.split("");
-    firstArray.forEach(char => {
+    firstArray.forEach((char) => {
       firstNum += char.charCodeAt(0);
     });
   }
@@ -30,7 +30,7 @@ function generateUniqueNumberFromName(name) {
   let lastNum = 0;
   if (lastName) {
     const lastArray = lastName.split("");
-    lastArray.forEach(char => {
+    lastArray.forEach((char) => {
       lastNum += char.charCodeAt(0);
     });
   }
@@ -75,7 +75,7 @@ function buildFirstAndLastName(name) {
     // No spaces - there is only a single name, return it as the firstName
     if (spaceIndex === -1) {
       return {
-        firstName: name
+        firstName: name,
       };
     }
 
@@ -87,7 +87,7 @@ function buildFirstAndLastName(name) {
     // Return new name structure, split into firstName and last
     return {
       firstName,
-      lastName
+      lastName,
     };
   }
 
@@ -108,7 +108,7 @@ function Image({
   onError,
   className,
   resolvedRoles,
-  stylesheet: customStylesheet
+  stylesheet: customStylesheet,
 }) {
   const styles = stylesheet(
     { size, stylesheet: customStylesheet },
@@ -152,7 +152,7 @@ Image.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   resolvedRoles: PropTypes.any,
   /** Optional style override */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 /**
@@ -168,7 +168,7 @@ function Initials({
   name,
   className,
   resolvedRoles,
-  stylesheet: customStylesheet
+  stylesheet: customStylesheet,
 }) {
   const styles = stylesheet(
     { size, stylesheet: customStylesheet },
@@ -192,7 +192,7 @@ Initials.propTypes = {
   /** First and Last name object */
   name: PropTypes.shape({
     firstName: PropTypes.string,
-    lastName: PropTypes.string
+    lastName: PropTypes.string,
   }),
   /** Optional className */
   className: PropTypes.string,
@@ -200,7 +200,7 @@ Initials.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   resolvedRoles: PropTypes.any,
   /** Optional style override */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 /**
@@ -216,7 +216,7 @@ Initials.propTypes = {
  * @property {string} [imageUrl]
  */
 
-const Avatar = props => {
+const Avatar = (props) => {
   const [imageUrl, setImageUrl] = useState(undefined);
   const [hasImageError, setHasImageError] = useState(false);
   const {
@@ -234,7 +234,7 @@ const Avatar = props => {
       ? buildFirstAndLastName(name)
       : {
           firstName,
-          lastName
+          lastName,
         };
 
   const backgroundId = backgroundIdFromName(nameObj);
@@ -248,13 +248,13 @@ const Avatar = props => {
     ? props.imageAlt
     : `Avatar image of${nameStringWithLeadingSpace}`;
   const showImage = imageUrl && !hasImageError;
-  const styles = roles =>
+  const styles = (roles) =>
     stylesheet({ size, backgroundId, stylesheet: customStylesheet }, roles);
 
   /**
    * @param {Event} errorEvent
    */
-  const handleImageError = errorEvent => {
+  const handleImageError = (errorEvent) => {
     const { onImageError } = props;
 
     if (onImageError) {
@@ -327,12 +327,12 @@ Avatar.propTypes = {
   /** Optional alt message override for Avatar Image  */
   imageAlt: PropTypes.string,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 Avatar.defaultProps = {
   name: "Anonymous User",
-  size: sizes.MEDIUM_32
+  size: sizes.MEDIUM_32,
 };
 
 export default Avatar;

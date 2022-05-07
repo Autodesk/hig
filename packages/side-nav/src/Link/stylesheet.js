@@ -1,4 +1,5 @@
-export default function(props, themeData) {
+// eslint-disable-next-line func-names
+export default function (props, themeData) {
   const { stylesheet: customStylesheet } = props;
   const styles = {
     wrapper: {
@@ -12,30 +13,30 @@ export default function(props, themeData) {
       // style prop, so we have to style the text from the
       // container element
       "&:hover span": {
-        color: themeData["colorScheme.reference.accent"]
+        color: themeData["colorScheme.reference.accent"],
       },
 
       // making sure to consitently use pointer cursor when
       // just implementing onClick and not setting link property
       "&:hover": {
-        cursor: "pointer"
+        cursor: "pointer",
       },
 
       "&:hover svg *": {
-        fill: themeData["colorScheme.reference.accent"]
-      }
+        fill: themeData["colorScheme.reference.accent"],
+      },
     },
 
     externalIcon: {
       display: "flex",
       alignItems: "center",
       marginLeft: "auto",
-      padding: "6px 2px"
+      padding: "6px 2px",
     },
 
     typography: {
-      lineHeight: "26px"
-    }
+      lineHeight: "26px",
+    },
   };
 
   if (customStylesheet) {

@@ -13,8 +13,8 @@ const GroupHeaderElements = ({ isGrouped, groupHeaderElementStyles }) => (
 GroupHeaderElements.propTypes = {
   isGrouped: PropTypes.bool,
   groupHeaderElementStyles: PropTypes.shape({
-    styles: PropTypes.string
-  })
+    styles: PropTypes.string,
+  }),
 };
 
 export default GroupHeaderElements;

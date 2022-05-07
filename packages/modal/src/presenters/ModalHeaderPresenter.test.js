@@ -13,23 +13,23 @@ describe("modal/presenters/ModalHeaderPresenter", () => {
   [
     {
       desc: "renders without props",
-      props: { styles }
+      props: { styles },
     },
     {
       desc: "renders with children",
       props: {
         children: [<p key="p">Title</p>],
-        styles
-      }
+        styles,
+      },
     },
     {
       desc: "renders with all props",
       props: {
         title: "HELLO",
         onCloseClick: function onCloseClick() {},
-        styles
-      }
-    }
+        styles,
+      },
+    },
   ].forEach(({ desc, props }) => {
     takeSnapshotsOf(ModalHeaderPresenter, [{ desc, props }]);
   });

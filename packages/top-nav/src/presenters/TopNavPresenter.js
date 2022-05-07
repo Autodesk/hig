@@ -35,7 +35,7 @@ export default function TopNav({
             <div
               className={cx([
                 topNavLogoWrapperClassName,
-                css(styles.topNavLogoWrapper)
+                css(styles.topNavLogoWrapper),
               ])}
             >
               {logo}
@@ -61,5 +61,5 @@ TopNav.propTypes = {
   /** Content to render as the logo */
   logo: PropTypes.node,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

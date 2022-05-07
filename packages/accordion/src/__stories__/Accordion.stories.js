@@ -12,12 +12,12 @@ storybook.add(
   "default",
   withInfo({
     ...infoOptions,
-    propTablesExclude: [KnobbedThemeProvider, Typography]
+    propTablesExclude: [KnobbedThemeProvider, Typography],
   })(() =>
     renderStory({
       label: "Foo",
       collapsed: undefined,
-      children: <Typography>Bar</Typography>
+      children: <Typography>Bar</Typography>,
     })
   )
 );

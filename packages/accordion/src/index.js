@@ -3,5 +3,5 @@ export {
   indicators,
   indicatorPositions,
   AVAILABLE_INDICATORS,
-  AVAILABLE_INDICATOR_POSITIONS
+  AVAILABLE_INDICATOR_POSITIONS,
 } from "./constants";

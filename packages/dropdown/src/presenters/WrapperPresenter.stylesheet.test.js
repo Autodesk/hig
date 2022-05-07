@@ -13,7 +13,7 @@ describe("dropdown/WrapperPresenter.styelsheet", () => {
 
   it("returns the custom stylesheet", () => {
     const props = {
-      stylesheet: () => ({ padding: 0 })
+      stylesheet: () => ({ padding: 0 }),
     };
     expect(stylesheet(props, {})).toEqual({ padding: 0 });
   });

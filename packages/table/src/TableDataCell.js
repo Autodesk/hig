@@ -21,7 +21,7 @@ export default function TableDataCell(props) {
             isPressed,
             onMouseDown: handleMouseDown,
             onMouseUp: handleMouseUp,
-            onPressedMouseLeave: handlePressedMouseLeave
+            onPressedMouseLeave: handlePressedMouseLeave,
           }) => (
             <TableDataCellPresenter
               hasHover={hasHover}
@@ -43,5 +43,5 @@ TableDataCell.propTypes = {
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   onMouseDown: PropTypes.func,
-  onMouseUp: PropTypes.func
+  onMouseUp: PropTypes.func,
 };

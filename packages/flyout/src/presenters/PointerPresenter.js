@@ -26,7 +26,7 @@ export default function PointerPresenter(props) {
               points={[
                 `0,${height}`,
                 `${widthMidpoint},0`,
-                `${width},${height}`
+                `${width},${height}`,
               ].join(" ")}
             />
             <polygon
@@ -34,7 +34,7 @@ export default function PointerPresenter(props) {
               points={[
                 `${borderWidth},${height}`,
                 `${widthMidpoint},${borderWidth}`,
-                `${width - borderWidth},${height}`
+                `${width - borderWidth},${height}`,
               ].join(" ")}
             />
           </svg>
@@ -46,10 +46,10 @@ export default function PointerPresenter(props) {
 
 PointerPresenter.defaultProps = {
   borderWidth: 2.5,
-  size: 24
+  size: 24,
 };
 
 PointerPresenter.propTypes = {
   borderWidth: PropTypes.number,
-  size: PropTypes.number
+  size: PropTypes.number,
 };

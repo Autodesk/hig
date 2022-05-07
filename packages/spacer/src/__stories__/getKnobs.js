@@ -3,13 +3,13 @@ import { select, text } from "@storybook/addon-knobs/react";
 import { AVAILABLE_SIZES } from "../availableSizes";
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
   size: "Size",
   spacing: "Spacing",
-  display: "Display"
+  display: "Display",
 };
 
 export default function getKnobs(props) {
@@ -18,6 +18,6 @@ export default function getKnobs(props) {
   return {
     ...otherProps,
     size: text(knobLabels.size, size, knobGroupIds.basic),
-    spacing: select(knobLabels.spacing, AVAILABLE_SIZES, "m")
+    spacing: select(knobLabels.spacing, AVAILABLE_SIZES, "m"),
   };
 }

@@ -6,8 +6,8 @@ describe("tabs/ContentPresenter", () => {
   const cases = [
     {
       description: "default renders",
-      props: {}
-    }
+      props: {},
+    },
   ];
 
   cases.forEach(({ description, props }) => {

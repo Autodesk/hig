@@ -2,13 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import Flyout, {
   dislocateContainer,
-  AVAILABLE_ANCHOR_POINTS
+  AVAILABLE_ANCHOR_POINTS,
 } from "@hig/flyout";
 
 import PanelPresenter from "./presenters/PanelPresenter";
 import PointerPresenter from "./presenters/PointerPresenter";
 
-const Tooltip = props => (
+const Tooltip = (props) => (
   <Flyout
     pointer={<PointerPresenter stylesheet={props.stylesheet} />}
     {...props}
@@ -41,7 +41,7 @@ Tooltip.defaultProps = {
         {content}
       </PanelPresenter>
     );
-  }
+  },
 };
 
 /**
@@ -92,7 +92,7 @@ Tooltip.propTypes = {
    */
   openOnHoverDelay: PropTypes.number,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default Tooltip;

@@ -8,14 +8,14 @@ describe("side-nav/presenters/SideNav", () => {
     const cases = [
       {
         description: "renders without props",
-        props: {}
+        props: {},
       },
       {
         description: "renders with headers",
         props: {
           headerLabel: "Storybook",
-          superHeaderLabel: "HIG"
-        }
+          superHeaderLabel: "HIG",
+        },
       },
       {
         description: "renders headers with onClick",
@@ -24,9 +24,9 @@ describe("side-nav/presenters/SideNav", () => {
           onClickHeader: () => jest.fn(),
           superHeaderLabel: "HIG",
           superHeaderLink: "/",
-          onClickSuperHeader: () => jest.fn()
-        }
-      }
+          onClickSuperHeader: () => jest.fn(),
+        },
+      },
     ];
 
     cases.forEach(({ description, props: { children, ...otherProps } }) => {

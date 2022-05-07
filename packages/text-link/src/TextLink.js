@@ -7,7 +7,7 @@ import { ControlBehavior } from "@hig/behaviors";
 import { availableTargets } from "./targets";
 import stylesheet from "./stylesheet";
 
-const TextLink = props => {
+const TextLink = (props) => {
   const {
     children,
     link,
@@ -27,7 +27,7 @@ const TextLink = props => {
   const linkProps = link
     ? {
         href: link,
-        target
+        target,
       }
     : { role: "button" };
 
@@ -51,7 +51,7 @@ const TextLink = props => {
             onMouseDown: handleMouseDown,
             onMouseEnter: handleMouseEnter,
             onMouseLeave: handleMouseLeave,
-            onMouseUp: handleMouseUp
+            onMouseUp: handleMouseUp,
           }) => {
             const styles = stylesheet(
               {
@@ -59,7 +59,7 @@ const TextLink = props => {
                 hasFocus,
                 hasHover,
                 isPressed,
-                ...props
+                ...props,
               },
               resolvedRoles
             );
@@ -129,7 +129,7 @@ TextLink.propTypes = {
    */
   stylesheet: PropTypes.func,
   /** Specify the anchor tag's target */
-  target: PropTypes.oneOf(availableTargets)
+  target: PropTypes.oneOf(availableTargets),
 };
 
 export default TextLink;

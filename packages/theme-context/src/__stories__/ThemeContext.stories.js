@@ -12,6 +12,6 @@ themeContextStories.add(
   withInfo({
     propTables: [Provider, Consumer],
     /* eslint-disable-next-line react/no-danger */
-    text: <div dangerouslySetInnerHTML={{ __html: readme }} />
+    text: <div dangerouslySetInnerHTML={{ __html: readme }} />,
   })(() => null)
 );

@@ -56,7 +56,7 @@ const ExampleSideNav = () => (
         title="Github"
         link="https://www.github.com/Autodesk/hig"
         target="_blank"
-      />
+      />,
     ]}
     search={<SideNav.Search />}
     copyright={<Typography>© 2018 Autodesk Inc.</Typography>}

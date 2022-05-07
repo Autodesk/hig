@@ -9,7 +9,7 @@ const knobGroupIds = { basic: "Basic" };
 const knobLabels = {
   alternateBg: "Alternate Background",
   guidelines: "Guidelines",
-  indicator: "Indicators"
+  indicator: "Indicators",
 };
 
 export default function getKnobs(props) {
@@ -28,6 +28,6 @@ export default function getKnobs(props) {
       indicatorOptions,
       indicator,
       knobGroupIds.basic
-    )
+    ),
   };
 }

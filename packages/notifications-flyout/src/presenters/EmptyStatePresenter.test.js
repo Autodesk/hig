@@ -6,13 +6,13 @@ describe("notifications-flyout/presenters/EmptyStatePresenter", () => {
   takeSnapshotsOf(EmptyStatePresenter, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with all props",
       props: {
-        message: "hello world"
-      }
-    }
+        message: "hello world",
+      },
+    },
   ]);
 });

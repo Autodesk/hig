@@ -13,7 +13,6 @@
     "gemini": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'gemini test --reporter flat' --kill-others --success first",
     "gemini-update": "yarn storybook-test-build && concurrently 'yarn storybook-test-serve' 'gemini update --reporter flat' --kill-others --success first",
     "gemini-ci": "yarn wait-port -t 60000 http://:9876/iframe.html && gemini test --reporter flat",
-    "lint": "eslint .storybook utils --color --ext .js",
     "storybook": "start-storybook -p 9001 -c .storybook/development",
     "storybook-build": "build-storybook -c .storybook/development",
     "storybook-deploy": "build-storybook -c .storybook/development && surge --project storybook-static",

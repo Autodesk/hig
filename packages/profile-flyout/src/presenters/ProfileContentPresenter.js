@@ -63,5 +63,5 @@ ProfileContentPresenter.propTypes = {
   /** The displayed name */
   profileName: PropTypes.string,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

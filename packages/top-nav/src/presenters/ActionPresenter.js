@@ -20,5 +20,5 @@ ActionPresenter.propTypes = {
   /** Content to render inside an action */
   children: PropTypes.node,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

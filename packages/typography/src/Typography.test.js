@@ -8,7 +8,7 @@ describe("Typography", () => {
     const { align, elementType, fontWeight, variant } = args;
     const variantDetails = variant ? `${variant} variant` : "Default";
     const definedArgs = [align, fontWeight, elementType].filter(
-      arg => arg !== undefined
+      (arg) => arg !== undefined
     );
     const otherDetails = definedArgs.length
       ? ` with ${definedArgs.join(" ")}`
@@ -16,7 +16,7 @@ describe("Typography", () => {
 
     return {
       ...args,
-      children: `${variantDetails} should render nicely${otherDetails}.`
+      children: `${variantDetails} should render nicely${otherDetails}.`,
     };
   }
 
@@ -31,35 +31,35 @@ describe("Typography", () => {
     { desc: "renders default Typography", props: props() },
     {
       desc: "renders Typography with align and fontWeight props",
-      props: props({ align: "center", fontWeight: "bold", variant: "body" })
+      props: props({ align: "center", fontWeight: "bold", variant: "body" }),
     },
     {
       desc: "renders body variant Typography",
-      props: props({ variant: "body" })
+      props: props({ variant: "body" }),
     },
     {
       desc: "renders caption variant Typography",
-      props: props({ variant: "caption" })
+      props: props({ variant: "caption" }),
     },
     {
       desc: "renders h1 variant Typography",
-      props: props({ variant: "h1" })
+      props: props({ variant: "h1" }),
     },
     {
       desc: "renders h2 variant Typography",
-      props: props({ variant: "h2" })
+      props: props({ variant: "h2" }),
     },
     {
       desc: "renders h3 variant Typography",
-      props: props({ variant: "h3" })
+      props: props({ variant: "h3" }),
     },
     {
       desc: "renders h3 variant Typography with any arbitrary semantic element",
-      props: props({ variant: "h3", elementType: "figcaption" })
+      props: props({ variant: "h3", elementType: "figcaption" }),
     },
     {
       desc: "renders Typography with className props",
-      props: props({ className: "additonal-class" })
-    }
+      props: props({ className: "additonal-class" }),
+    },
   ]);
 });

@@ -16,7 +16,7 @@ import {
   Info16,
   Info24,
   Alert16,
-  Alert24
+  Alert24,
 } from "@hig/icons";
 
 import { types } from "../types";
@@ -256,20 +256,20 @@ export function IconBackground({
   const iconNamesByType = {
     [types.PRIMARY]: {
       high: Info16,
-      medium: Info24
+      medium: Info24,
     },
     [types.COMPLETE]: {
       high: Complete16,
-      medium: Complete24
+      medium: Complete24,
     },
     [types.WARNING]: {
       high: Alert16,
-      medium: Alert24
+      medium: Alert24,
     },
     [types.URGENT]: {
       high: Error16,
-      medium: Error24
-    }
+      medium: Error24,
+    },
   };
   return (
     <ThemeContext.Consumer>

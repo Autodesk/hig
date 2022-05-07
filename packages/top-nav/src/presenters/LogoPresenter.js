@@ -60,5 +60,5 @@ LogoPresenter.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   dangerouslySetInnerHTML: PropTypes.any,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

@@ -4,7 +4,7 @@ import { anchorPoints } from "./anchorPoints";
 
 const offsetProperties = {
   TOP: "top",
-  LEFT: "left"
+  LEFT: "left",
 };
 
 /**
@@ -19,8 +19,8 @@ function offsetContainerProperty(offsetProperty, coordinates, diff) {
     ...coordinates,
     containerPosition: {
       ...coordinates.containerPosition,
-      [offsetProperty]: coordinates.containerPosition[offsetProperty] + diff
-    }
+      [offsetProperty]: coordinates.containerPosition[offsetProperty] + diff,
+    },
   };
 }
 
@@ -55,12 +55,12 @@ export function offsetPanelHorizontal(coordinates, diff) {
     ...coordinates,
     pointerPosition: {
       ...coordinates.pointerPosition,
-      left: coordinates.pointerPosition.left - diff
+      left: coordinates.pointerPosition.left - diff,
     },
     containerPosition: {
       ...coordinates.containerPosition,
-      left: coordinates.containerPosition.left + diff
-    }
+      left: coordinates.containerPosition.left + diff,
+    },
   };
 }
 

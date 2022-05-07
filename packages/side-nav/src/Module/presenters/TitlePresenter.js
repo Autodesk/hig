@@ -6,14 +6,14 @@ import { sizes as iconSizes } from "@hig/icons";
 import ThemeContext from "@hig/theme-context";
 import {
   createCustomClassNames,
-  memoizeCreateButtonEventHandlers
+  memoizeCreateButtonEventHandlers,
 } from "@hig/utils";
 
 import { targets, AVAILABLE_TARGETS } from "../../targets";
 import ExternalLinkIcon from "../../presenters/ExternalLinkIcon";
 import stylesheet from "./stylesheet";
 
-const TitlePresenter = props => {
+const TitlePresenter = (props) => {
   const createEventHandlers = memoizeCreateButtonEventHandlers();
 
   const {
@@ -30,7 +30,7 @@ const TitlePresenter = props => {
   const { className } = otherProps;
   const { handleClick, handleKeyDown } = createEventHandlers(onClick, {
     // Allow default on hyperlinks to trigger navigation
-    preventDefault: !link
+    preventDefault: !link,
   });
   const Wrapper = link ? "a" : "div";
   const isExternalLink = link && target === targets.BLANK;
@@ -69,7 +69,7 @@ const TitlePresenter = props => {
               <div
                 className={cx([
                   css(styles.externalIcon),
-                  externalIconClassName
+                  externalIconClassName,
                 ])}
               >
                 <ExternalLinkIcon
@@ -101,7 +101,7 @@ TitlePresenter.propTypes = {
   stylesheet: PropTypes.func,
   tabIndex: PropTypes.string.isRequired,
   target: PropTypes.oneOf(AVAILABLE_TARGETS),
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default TitlePresenter;

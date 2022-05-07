@@ -11,7 +11,7 @@ import stylesheet from "./stylesheet";
  * @todo Deprecate `minimized` prop, and replace it with "pressed" for ARIA consistency.
  * Also, this button shouldn't be concerned with the minimized state of its parent components.
  */
-const CollapseButton = props => {
+const CollapseButton = (props) => {
   const createEventHandlers = memoizeCreateButtonEventHandlers();
   const {
     minimized,
@@ -34,7 +34,7 @@ const CollapseButton = props => {
                 resolvedRoles
               )
             ),
-            className
+            className,
           ])}
           onClick={handleClick}
           onKeyDown={handleKeyDown}
@@ -60,11 +60,11 @@ CollapseButton.propTypes = {
   /** Called when element is clicked */
   onClick: PropTypes.func,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 CollapseButton.defaultProps = {
-  minimized: false
+  minimized: false,
 };
 
 export default CollapseButton;

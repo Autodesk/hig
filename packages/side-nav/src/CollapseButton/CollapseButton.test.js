@@ -7,20 +7,20 @@ describe("side-nav/CollapseButton", () => {
     takeSnapshotsOf(CollapseButton, [
       {
         desc: "renders with no props",
-        props: {}
+        props: {},
       },
       {
         desc: "renders minimized",
         props: {
-          minimized: true
-        }
+          minimized: true,
+        },
       },
       {
         desc: "renders with event handlers",
         props: {
-          onClick: function handleClick() {}
-        }
-      }
+          onClick: function handleClick() {},
+        },
+      },
     ]);
   });
 });

@@ -25,11 +25,7 @@ describe("side-nav/Search", () => {
     input.simulate("change", { target: { value: "bar" } });
     expect(wrapper.find("CloseLUI").parent()).toHaveLength(1);
 
-    wrapper
-      .find("CloseLUI")
-      .parents()
-      .first()
-      .simulate("click");
+    wrapper.find("CloseLUI").parents().first().simulate("click");
     expect(input.prop("value")).toEqual("");
     expect(wrapper.find("CloseLUI").parent()).toHaveLength(0);
   });

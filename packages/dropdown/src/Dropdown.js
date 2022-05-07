@@ -14,7 +14,7 @@ import renderOptions from "./presenters/renderOptions";
 
 const variantTypes = ["line", "box"];
 
-const Dropdown = props => {
+const Dropdown = (props) => {
   /**
    * The controlled value for the input element
    * @see https://github.com/paypal/downshift#inputvalue
@@ -42,7 +42,7 @@ const Dropdown = props => {
    * @param {OptionMeta | OptionMeta[]} value
    * @param {DownshiftHelpers} downshift
    */
-  const handleChange = value => {
+  const handleChange = (value) => {
     const { onChange } = props;
 
     if (onChange) {
@@ -63,7 +63,7 @@ const Dropdown = props => {
       itemToString: formatOption,
       [valuePropName]: value,
       [defaultValuePropName]: defaultValue,
-      inputValue: getInputValue()
+      inputValue: getInputValue(),
     };
   };
 
@@ -71,7 +71,7 @@ const Dropdown = props => {
    * @param {DownshiftHelpers} downshift
    * @returns {JSX.Element}
    */
-  const renderInput = downshift => {
+  const renderInput = (downshift) => {
     const { id, isOpen, toggleMenu, getInputProps } = downshift;
     const {
       placeholder,
@@ -111,7 +111,7 @@ const Dropdown = props => {
       className: inputClassName,
       stylesheet: customStylesheet,
       typable,
-      multiple
+      multiple,
     });
 
     return <InputPresenter key="input" {...inputProps} />;
@@ -121,14 +121,14 @@ const Dropdown = props => {
    * @param {DownshiftHelpers} downshift
    * @returns {JSX.Element}
    */
-  const renderMenu = downshift => {
+  const renderMenu = (downshift) => {
     const {
       getItemProps,
       getMenuProps,
       highlightedIndex,
       isOpen,
       selectedItem,
-      selectedItems
+      selectedItems,
     } = downshift;
 
     const {
@@ -152,7 +152,7 @@ const Dropdown = props => {
       isOpen,
       refKey: "innerRef",
       className: menuClassName,
-      stylesheet: customStylesheet
+      stylesheet: customStylesheet,
     });
 
     const children = renderOptions({
@@ -164,7 +164,7 @@ const Dropdown = props => {
       renderOption,
       selectedItem,
       selectedItems,
-      stylesheet: customStylesheet
+      stylesheet: customStylesheet,
     });
 
     return (
@@ -178,7 +178,7 @@ const Dropdown = props => {
    * @param {DownshiftHelpers} downshift
    * @returns {JSX.Element}
    */
-  const renderPresenter = downshift => {
+  const renderPresenter = (downshift) => {
     const {
       defaultValue,
       disabled,
@@ -208,7 +208,7 @@ const Dropdown = props => {
     return renderWrapper({
       disabled,
       children: [renderInput(downshift), renderMenu(downshift)],
-      ...otherProps
+      ...otherProps,
     });
   };
 
@@ -226,7 +226,7 @@ Dropdown.propTypes = {
    */
   defaultValue: PropTypes.oneOfType([
     PropTypes.any,
-    PropTypes.arrayOf(PropTypes.any)
+    PropTypes.arrayOf(PropTypes.any),
   ]),
   /**
    * Prevents user actions on the field
@@ -274,6 +274,7 @@ Dropdown.propTypes = {
    * If you use an array of objects, the object must contain the property `item`,
    * the option's disabled state can be controlled with a `disabled` property.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   options: PropTypes.arrayOf(PropTypes.any),
   /**
    * Placeholder text to render when an option has not been selected
@@ -312,7 +313,7 @@ Dropdown.propTypes = {
   /**
    * The visual variant of the textarea
    */
-  variant: PropTypes.oneOf(variantTypes)
+  variant: PropTypes.oneOf(variantTypes),
 };
 
 Dropdown.defaultProps = {
@@ -323,7 +324,7 @@ Dropdown.defaultProps = {
   formatOption(option) {
     return option ? String(option) : "";
   },
-  typable: false
+  typable: false,
 };
 
 export default Dropdown;

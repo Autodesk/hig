@@ -7,14 +7,14 @@ import { targets } from "../targets";
 const targetOptions = makeSelectOptions(targets);
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
   children: "Children",
   link: "Link",
   onClick: "onClick",
-  target: "Target"
+  target: "Target",
 };
 
 export default function getKnobs(props) {
@@ -25,6 +25,11 @@ export default function getKnobs(props) {
     children: text(knobLabels.children, children, knobGroupIds.basic),
     link: text(knobLabels.link, link, knobGroupIds.basic),
     onClick: action(knobLabels.onClick),
-    target: select(knobLabels.target, targetOptions, target, knobGroupIds.basic)
+    target: select(
+      knobLabels.target,
+      targetOptions,
+      target,
+      knobGroupIds.basic
+    ),
   };
 }

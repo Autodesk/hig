@@ -36,7 +36,7 @@ export function getWrapperReset() {
   return {
     transition: "",
     overflow: "",
-    height: ""
+    height: "",
   };
 }
 
@@ -44,7 +44,7 @@ export function getWrapperReset() {
 export function getInnerWrapperReset() {
   return {
     transition: "",
-    transform: ""
+    transform: "",
   };
 }
 

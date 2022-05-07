@@ -7,42 +7,42 @@ import stylesheet from "./stylesheet";
 const skeletonItemStyles = Object.freeze([
   {
     maxWidth: "180px",
-    marginBottom: "48px"
+    marginBottom: "48px",
   },
   {
     maxWidth: "180px",
-    marginBottom: "24px"
+    marginBottom: "24px",
   },
   {
     maxWidth: "180px",
-    marginBottom: "24px"
+    marginBottom: "24px",
   },
   {
     maxWidth: "124px",
-    marginBottom: "48px"
+    marginBottom: "48px",
   },
   {
     maxWidth: "180px",
-    marginBottom: "24px"
+    marginBottom: "24px",
   },
   {
     maxWidth: "180px",
-    marginBottom: "24px"
+    marginBottom: "24px",
   },
   {
     maxWidth: "180px",
-    marginBottom: "24px"
+    marginBottom: "24px",
   },
   {
     maxWidth: "180px",
-    marginBottom: "24px"
+    marginBottom: "24px",
   },
   {
-    maxWidth: "124px"
-  }
+    maxWidth: "124px",
+  },
 ]);
 
-const SideNavSkeleton = props => {
+const SideNavSkeleton = (props) => {
   const { stylesheet: customStylesheet, ...otherProps } = props;
   const { className } = otherProps;
 
@@ -50,7 +50,7 @@ const SideNavSkeleton = props => {
     <div
       className={cx([
         css(stylesheet({ stylesheet: customStylesheet, ...props })),
-        className
+        className,
       ])}
     >
       {skeletonItemStyles.map((style, index) => (
@@ -65,7 +65,7 @@ SideNavSkeleton.displayName = "SideNavSkeleton";
 
 SideNavSkeleton.propTypes = {
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default SideNavSkeleton;

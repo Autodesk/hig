@@ -17,13 +17,13 @@ const themes = [
   darkGrayHighTheme,
   darkGrayMediumTheme,
   darkBlueHighTheme,
-  darkBlueMediumTheme
+  darkBlueMediumTheme,
 ];
 
 function ThemeRepeater({ children }) {
   return (
     <div style={{ display: "flex" }}>
-      {themes.map(theme => (
+      {themes.map((theme) => (
         <ThemeContext.Provider key={theme.metadata.id} value={theme}>
           <div>{children}</div>
         </ThemeContext.Provider>
@@ -39,7 +39,7 @@ function Surface({ children }) {
         const style = {
           backgroundColor: resolvedRoles["colorScheme.surface.level100"],
           marginBottom: resolvedRoles["density.spacings.large"],
-          height: "50px"
+          height: "50px",
         };
 
         return <div style={style}>{children}</div>;

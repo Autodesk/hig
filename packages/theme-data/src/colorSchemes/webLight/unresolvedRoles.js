@@ -15,25 +15,21 @@ import slider from "./components/slider";
 import textLink from "./components/textLink";
 import tooltip from "./components/tooltip";
 
-const webLightThemeConfig = extendTheme(
-  lightGrayTheme.unresolvedRoles,
-  Object.assign(
-    {},
-    banner,
-    button,
-    checkbox,
-    flyout,
-    iconButton,
-    input,
-    label,
-    modal,
-    menu,
-    progressBar,
-    progressRing,
-    slider,
-    textLink,
-    tooltip
-  )
-);
+const webLightThemeConfig = extendTheme(lightGrayTheme.unresolvedRoles, {
+  ...banner,
+  ...button,
+  ...checkbox,
+  ...flyout,
+  ...iconButton,
+  ...input,
+  ...label,
+  ...modal,
+  ...menu,
+  ...progressBar,
+  ...progressRing,
+  ...slider,
+  ...textLink,
+  ...tooltip,
+});
 
 export default webLightThemeConfig;

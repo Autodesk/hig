@@ -10,25 +10,25 @@ describe("notifications-flyout/NotificationsFlyout", () => {
   takeSnapshotsOf(NotificationsFlyout, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders a notification with the `notifications` prop",
       props: {
-        notifications: [{}]
-      }
+        notifications: [{}],
+      },
     },
     {
       desc: "renders a notification with the `children` prop",
       props: {
-        children: <Notification />
-      }
+        children: <Notification />,
+      },
     },
     {
       desc: "renders with all props",
       props: {
         anchorPoint: anchorPoints.RIGHT_BOTTOM,
-        alterCoordinates: coordinates => coordinates,
+        alterCoordinates: (coordinates) => coordinates,
         fallbackAnchorPoints: [anchorPoints.LEFT_TOP],
         heading: "Hello",
         indicatorTitle: "World",
@@ -38,9 +38,9 @@ describe("notifications-flyout/NotificationsFlyout", () => {
         onClickOutside: function handleClickOutside() {},
         onScroll: function handleScroll() {},
         open: true,
-        unreadCount: 44
-      }
-    }
+        unreadCount: 44,
+      },
+    },
   ]);
 
   describe("notification rendering props", () => {
@@ -64,10 +64,7 @@ describe("notifications-flyout/NotificationsFlyout", () => {
 
       it.skip("removes the notification from the list", () => {
         expect(wrapper.find(Notification)).toHaveLength(1);
-        wrapper
-          .find(Notification)
-          .props()
-          .onDismiss();
+        wrapper.find(Notification).props().onDismiss();
 
         expect(wrapper.find(Notification)).toHaveLength(0);
       });
@@ -75,10 +72,7 @@ describe("notifications-flyout/NotificationsFlyout", () => {
       it("calls the notification `onDismiss` event handler", () => {
         expect(onDismiss).not.toHaveBeenCalled();
 
-        wrapper
-          .find(Notification)
-          .props()
-          .onDismiss();
+        wrapper.find(Notification).props().onDismiss();
 
         expect(onDismiss).toHaveBeenCalledTimes(1);
       });

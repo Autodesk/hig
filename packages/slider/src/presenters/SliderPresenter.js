@@ -7,7 +7,7 @@ import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 import { AVAILABLE_SLIDER_TYPES, sliderTypes } from "../constants";
 
-const SliderPresenter = props => {
+const SliderPresenter = (props) => {
   const {
     disabled,
     hasFocus,
@@ -67,7 +67,7 @@ const SliderPresenter = props => {
             max,
             min,
             stylesheet: customStylesheet,
-            value
+            value,
           },
           resolvedRoles
         );
@@ -95,7 +95,7 @@ const SliderPresenter = props => {
             <div
               className={cx([
                 markContainerClassName,
-                css(styles.markContainer)
+                css(styles.markContainer),
               ])}
             >
               {marks}
@@ -135,7 +135,7 @@ SliderPresenter.propTypes = {
   step: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   stylesheet: PropTypes.func,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  variant: PropTypes.oneOf(AVAILABLE_SLIDER_TYPES)
+  variant: PropTypes.oneOf(AVAILABLE_SLIDER_TYPES),
 };
 
 export default SliderPresenter;

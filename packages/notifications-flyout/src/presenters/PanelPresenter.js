@@ -10,7 +10,7 @@ import {
   EXITED,
   ENTERING,
   ENTERED,
-  EXITING
+  EXITING,
 } from "react-transition-group/Transition";
 
 import stylesheet from "./stylesheet";
@@ -23,7 +23,7 @@ export default function PanelPresenter({
   loadingTransitionState,
   onScroll,
   refListWrapper,
-  stylesheet: customStylesheet
+  stylesheet: customStylesheet,
 }) {
   return (
     <ThemeContext.Consumer>
@@ -32,7 +32,7 @@ export default function PanelPresenter({
           {
             transitionState: null,
             loadingTransitionState,
-            stylesheet: customStylesheet
+            stylesheet: customStylesheet,
           },
           resolvedRoles
         );
@@ -61,7 +61,7 @@ export default function PanelPresenter({
 }
 
 PanelPresenter.defaultProps = {
-  heading: "Notifications"
+  heading: "Notifications",
 };
 
 PanelPresenter.propTypes = {
@@ -74,9 +74,9 @@ PanelPresenter.propTypes = {
     EXITED,
     ENTERING,
     ENTERED,
-    EXITING
+    EXITING,
   ]),
   onScroll: PropTypes.func,
   refListWrapper: PropTypes.func,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

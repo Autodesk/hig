@@ -23,7 +23,7 @@ function createTreeItems(children) {
 function buildTreeItemIdArray(list, isTreeNode) {
   const ids = [];
 
-  list.map(item => {
+  list.map((item) => {
     ids.push(isTreeNode ? Number(item.id) : item.id);
     return null;
   });
@@ -32,10 +32,10 @@ function buildTreeItemIdArray(list, isTreeNode) {
 }
 
 function renderFileTree(tree, payload) {
-  return tree.map(treeNode => {
+  return tree.map((treeNode) => {
     const appendPayload = {
       ...treeNode,
-      payload
+      payload,
     };
     return (
       <TreeObjectView
@@ -51,18 +51,18 @@ function renderFileTree(tree, payload) {
  *
  * treeObject methods
  */
-const getTreeItemArray = collection => {
+const getTreeItemArray = (collection) => {
   objectArray.push(collection.id);
 
   if (collection.children) {
-    collection.children.forEach(child => {
+    collection.children.forEach((child) => {
       getTreeItemArray(child);
     });
   }
   return null;
 };
 
-const TreeViewPresenterObject = props => {
+const TreeViewPresenterObject = (props) => {
   /**
    *
    * treeRender methods
@@ -85,7 +85,7 @@ const TreeViewPresenterObject = props => {
       selected,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
-      setKeyboardOpenId
+      setKeyboardOpenId,
     } = props;
     const payload = {
       ...propsRef,
@@ -103,7 +103,7 @@ const TreeViewPresenterObject = props => {
       selected,
       setActiveTreeItemId,
       setActiveTreeItemIndex,
-      setKeyboardOpenId
+      setKeyboardOpenId,
     };
 
     /*
@@ -155,7 +155,7 @@ const TreeViewPresenterObject = props => {
             {
               alternateBg,
               guidelines,
-              stylesheet: customStylesheet
+              stylesheet: customStylesheet,
             },
             resolvedRoles
           );
@@ -215,7 +215,7 @@ const TreeViewPresenterObject = props => {
             {
               alternateBg,
               guidelines,
-              stylesheet: customStylesheet
+              stylesheet: customStylesheet,
             },
             resolvedRoles
           );
@@ -245,7 +245,7 @@ const TreeViewPresenterObject = props => {
                   setActiveTreeItemIndex,
                   setKeyboardOpenId,
                   setTreeItemArray,
-                  ...otherProps
+                  ...otherProps,
                 })}
               </ul>
             </div>
@@ -315,7 +315,7 @@ TreeViewPresenterObject.propTypes = {
   indicator: PropTypes.string,
   selected: PropTypes.bool,
   setTreeViewRef: PropTypes.func,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default TreeViewPresenterObject;

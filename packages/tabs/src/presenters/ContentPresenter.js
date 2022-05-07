@@ -19,5 +19,5 @@ export default function ContentPresenter({
 
 ContentPresenter.propTypes = {
   children: PropTypes.node,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

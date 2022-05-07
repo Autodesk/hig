@@ -7,7 +7,7 @@ import { CheckmarkXsUI, OperatorMinusXsUI } from "@hig/icons";
 
 import stylesheet from "./stylesheet";
 
-const CheckPresenter = props => {
+const CheckPresenter = (props) => {
   const {
     checked,
     disabled,
@@ -44,7 +44,7 @@ const CheckPresenter = props => {
             hasHover,
             indeterminate,
             isPressed,
-            stylesheet: customStylesheet
+            stylesheet: customStylesheet,
           },
           resolvedRoles
         );
@@ -53,13 +53,13 @@ const CheckPresenter = props => {
           <span
             className={cx([
               checkboxCheckWrapperClassName,
-              css(styles.checkboxCheckWrapper)
+              css(styles.checkboxCheckWrapper),
             ])}
           >
             <span
               className={cx([
                 checkboxCheckboxClassName,
-                css(styles.checkboxCheck)
+                css(styles.checkboxCheck),
               ])}
             >
               <CheckmarkXsUI />
@@ -67,7 +67,7 @@ const CheckPresenter = props => {
             <span
               className={cx([
                 checkboxIndeterminateClassName,
-                css(styles.checkboxIndeterminate)
+                css(styles.checkboxIndeterminate),
               ])}
             >
               <OperatorMinusXsUI />
@@ -107,13 +107,13 @@ CheckPresenter.propTypes = {
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 CheckPresenter.defaultProps = {
   checked: false,
   disabled: false,
-  indeterminate: false
+  indeterminate: false,
 };
 
 export default CheckPresenter;

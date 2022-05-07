@@ -40,23 +40,23 @@ describe("side-nav/Module", () => {
       {
         desc: "renders with minimal props",
         props: {
-          title: "Module"
-        }
+          title: "Module",
+        },
       },
       {
         desc: "renders an external link",
         props: {
           link: "http://example.com",
           target: "_blank",
-          title: "Module"
-        }
+          title: "Module",
+        },
       },
       {
         desc: "renders a link",
         props: {
           link: "http://example.com",
-          title: "Module"
-        }
+          title: "Module",
+        },
       },
       {
         desc: "renders a expanded menu with active children",
@@ -64,16 +64,16 @@ describe("side-nav/Module", () => {
           activeChildren: true,
           children: <div data-test="children" />,
           icon: <div data-test="icon" />,
-          title: "Module"
-        }
+          title: "Module",
+        },
       },
       {
         desc: "renders with a click handlers",
         props: {
           onClickCollapseButton: function handleClickCollapseButton() {},
           onClickTitle: function handleClickTitle() {},
-          title: "Module"
-        }
+          title: "Module",
+        },
       },
       {
         desc: "renders an active button",
@@ -82,9 +82,9 @@ describe("side-nav/Module", () => {
           icon: <span data-test="icon" />,
           onClickCollapseButton: function handleClickCollapseButton() {},
           onClickTitle: function handleClickTitle() {},
-          title: "Module"
-        }
-      }
+          title: "Module",
+        },
+      },
     ]);
   });
 });

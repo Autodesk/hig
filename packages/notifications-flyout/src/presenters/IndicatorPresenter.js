@@ -35,7 +35,7 @@ export default function IndicatorPresenter(props) {
             <div
               className={cx([
                 indicatorCountClassName,
-                css(styles.indicatorCount)
+                css(styles.indicatorCount),
               ])}
             >
               {count}
@@ -48,11 +48,11 @@ export default function IndicatorPresenter(props) {
 }
 
 IndicatorPresenter.defaultProps = {
-  title: "View notifications"
+  title: "View notifications",
 };
 
 IndicatorPresenter.propTypes = {
   count: PropTypes.number,
   onClick: PropTypes.func,
-  title: PropTypes.string
+  title: PropTypes.string,
 };

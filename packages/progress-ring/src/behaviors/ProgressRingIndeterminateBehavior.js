@@ -5,7 +5,7 @@ import { CSSTransition } from "react-transition-group";
 const CYCLE_DURATION = 1000;
 const FADE_DURATION = 416;
 
-const ProgressRingIndeterminateBehavior = props => {
+const ProgressRingIndeterminateBehavior = (props) => {
   const [cssTransitionState, setcssTransitionState] = useState(null);
   const [playing, setPlaying] = useState(null);
   const containerRef = useRef(null);
@@ -44,7 +44,7 @@ const ProgressRingIndeterminateBehavior = props => {
     );
   };
 
-  const setSegmentOpacities = elapsedThisCycle => {
+  const setSegmentOpacities = (elapsedThisCycle) => {
     segments.forEach((segment, i) => {
       const index = Math.abs(i - SEGMENT_COUNT) - 1;
       const eachSegment = segment;
@@ -62,7 +62,7 @@ const ProgressRingIndeterminateBehavior = props => {
     SEGMENT_DELAY_FACTOR = CYCLE_DURATION / SEGMENT_COUNT;
   };
 
-  const step = timestamp => {
+  const step = (timestamp) => {
     if (!playing) {
       return;
     }
@@ -108,7 +108,7 @@ const ProgressRingIndeterminateBehavior = props => {
   /**
    * @param {HTMLDivElement} containerRef
    */
-  const refContainer = value => {
+  const refContainer = (value) => {
     containerRef.current = value;
   };
 
@@ -128,10 +128,10 @@ const ProgressRingIndeterminateBehavior = props => {
       onExiting={handleExiting}
       onExited={handleExited}
     >
-      {status =>
+      {(status) =>
         props.children({
           innerRef: refContainer,
-          cssTransitionState: status
+          cssTransitionState: status,
         })
       }
     </CSSTransition>
@@ -143,7 +143,7 @@ ProgressRingIndeterminateBehavior.displayName =
 
 ProgressRingIndeterminateBehavior.propTypes = {
   /** Render prop */
-  children: PropTypes.func.isRequired
+  children: PropTypes.func.isRequired,
 };
 
 export default ProgressRingIndeterminateBehavior;

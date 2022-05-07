@@ -5,7 +5,7 @@ import FocusBehavior from "./FocusBehavior";
 import HoverBehavior from "./HoverBehavior";
 import PressedBehavior from "./PressedBehavior";
 
-const ControlBehavior = props => (
+const ControlBehavior = (props) => (
   <HoverBehavior
     onMouseEnter={props.onMouseEnter}
     onMouseLeave={props.onMouseLeave}
@@ -28,7 +28,7 @@ const ControlBehavior = props => (
                 onMouseDown,
                 onMouseEnter,
                 onMouseLeave: onPressedMouseLeave,
-                onMouseUp
+                onMouseUp,
               })
             }
           </PressedBehavior>
@@ -47,7 +47,7 @@ ControlBehavior.propTypes = {
   onMouseDown: PropTypes.func,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
-  onMouseUp: PropTypes.func
+  onMouseUp: PropTypes.func,
 };
 
 export default ControlBehavior;

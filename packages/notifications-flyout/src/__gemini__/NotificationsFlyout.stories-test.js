@@ -10,7 +10,7 @@ const captureStyle = {
   width: "400px",
   height: "700px",
   alignItems: "center",
-  flexDirection: "column"
+  flexDirection: "column",
 };
 
 storiesOf("NotificationsFlyout", module).add("default", () => (

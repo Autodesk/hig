@@ -4,27 +4,27 @@ export default {
   "progress.bar.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.black"
+      ref: "basics.colors.primary.black",
     },
     transform: {
-      alpha: "0.05"
-    }
+      alpha: "0.05",
+    },
   },
   "progress.bar.highlightColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue400"
-    }
+      ref: "basics.colors.autodeskBlue400",
+    },
   },
   "progress.bar.borderRadius": {
     type: BORDER_RADIUS,
     value: {
-      ref: "basics.borderRadii.medium"
-    }
+      ref: "basics.borderRadii.medium",
+    },
   },
   "progress.bar.minHeight": {
     type: LENGTH,
-    value: "4px"
+    value: "4px",
   },
   /**
    *  ## Deprecated
@@ -34,45 +34,45 @@ export default {
   "progressBar.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "progress.bar.backgroundColor"
+      ref: "progress.bar.backgroundColor",
     },
     metadata: {
       deprecated: {
-        equivalent: "progress.bar.backgroundColor"
-      }
-    }
+        equivalent: "progress.bar.backgroundColor",
+      },
+    },
   },
   "progressBar.highlightColor": {
     type: COLOR,
     value: {
-      ref: "progress.bar.highlightColor"
+      ref: "progress.bar.highlightColor",
     },
     metadata: {
       deprecated: {
-        equivalent: "progress.bar.highlightColor"
-      }
-    }
+        equivalent: "progress.bar.highlightColor",
+      },
+    },
   },
   "progressBar.borderRadius": {
     type: BORDER_RADIUS,
     value: {
-      ref: "progress.bar.borderRadius"
+      ref: "progress.bar.borderRadius",
     },
     metadata: {
       deprecated: {
-        equivalent: "progress.bar.borderRadius"
-      }
-    }
+        equivalent: "progress.bar.borderRadius",
+      },
+    },
   },
   "progressBar.height": {
     type: LENGTH,
     value: {
-      ref: "progress.bar.minHeight"
+      ref: "progress.bar.minHeight",
     },
     metadata: {
       deprecated: {
-        equivalent: "progress.bar.minHeight"
-      }
-    }
-  }
+        equivalent: "progress.bar.minHeight",
+      },
+    },
+  },
 };

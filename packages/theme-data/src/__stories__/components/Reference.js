@@ -19,5 +19,5 @@ export default function Reference({ children }) {
 }
 
 Reference.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };

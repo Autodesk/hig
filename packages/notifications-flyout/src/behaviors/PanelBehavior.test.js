@@ -36,7 +36,7 @@ describe("notification-flyout/behaviors/PanelBehavior", () => {
       expect(payload).toMatchObject({
         loadingTransitionState: ENTERED,
         listMaxHeight: "",
-        refListWrapper: expect.any(Function)
+        refListWrapper: expect.any(Function),
       });
     });
   });

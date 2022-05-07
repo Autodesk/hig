@@ -33,7 +33,7 @@ export default function PanelContainerPresenter(props) {
           {
             transitionStatus: null,
             anchorPoint: null,
-            stylesheet: customStylesheet
+            stylesheet: customStylesheet,
           },
           resolvedRoles,
           themeId
@@ -68,5 +68,5 @@ PanelContainerPresenter.propTypes = {
   /** Max height of the panel */
   maxHeight: PropTypes.number,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

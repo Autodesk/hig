@@ -8,16 +8,16 @@ export {
   anchorPoints,
   AVAILABLE_ANCHOR_POINTS,
   /** @todo Remove alias */
-  AVAILABLE_ANCHOR_POINTS as availableAnchorPoints
+  AVAILABLE_ANCHOR_POINTS as availableAnchorPoints,
 } from "./anchorPoints";
 export {
   dislocateContainer,
   offsetContainerHorizontal,
   offsetContainerVertical,
-  offsetPanelHorizontal
+  offsetPanelHorizontal,
 } from "./coordinateHelpers";
 export { default as Pointer } from "./presenters/PointerPresenter";
 export {
   transitionStatuses,
-  AVAILABLE_TRANSITION_STATUSES
+  AVAILABLE_TRANSITION_STATUSES,
 } from "./transitionStatuses";

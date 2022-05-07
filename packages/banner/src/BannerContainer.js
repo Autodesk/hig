@@ -32,7 +32,7 @@ const MIN_NOTIFICATION_WIDTH = 200;
 const ACTIONS_WRAPPING_THRESHOLD = 300;
 
 /** @type {Component<BannerContainerProps, BannerContainerState>} */
-const BannerContainer = props => {
+const BannerContainer = (props) => {
   const [isWrappingActions, setIsWrappingActions] = useState(false);
   const [isWrappingContent, setIsWrappingContent] = useState(false);
   const [callBack, setCallBack] = useState(null);
@@ -49,21 +49,21 @@ const BannerContainer = props => {
   /**
    * @param {HTMLDivElement} element
    */
-  const refContent = element => {
+  const refContent = (element) => {
     content.current = element;
   };
 
   /**
    * @param {HTMLParagraphElement} element
    */
-  const refNotification = element => {
+  const refNotification = (element) => {
     notification.current = element;
   };
 
   /**
    * @param {HTMLDivElement} element
    */
-  const refInteractionsWrapper = element => {
+  const refInteractionsWrapper = (element) => {
     interactionsWrapper.current = element;
   };
 
@@ -74,7 +74,7 @@ const BannerContainer = props => {
    * @param {number} notificationWidth
    * @returns {boolean}
    */
-  const willContentOverflow = notificationWidth => {
+  const willContentOverflow = (notificationWidth) => {
     if (!content.current || !interactionsWrapper.current) return false;
 
     const contentWidth = content.offsetWidth;
@@ -98,7 +98,7 @@ const BannerContainer = props => {
     return willContentOverflow(notificationWidth);
   };
 
-  const updateActionWrapping = callBackParam => {
+  const updateActionWrapping = (callBackParam) => {
     const update = { isWrappingActions: shouldWrapActions() };
     setIsWrappingActions(update);
     setCallBack(callBackParam);
@@ -108,7 +108,7 @@ const BannerContainer = props => {
    * Asynchronously updates the wrapping behavior of the presenter
    * @param {Function} callback
    */
-  const updateWrapping = callback => {
+  const updateWrapping = (callback) => {
     if (wrappingFrame.current !== undefined) return;
 
     wrappingFrame.current = window.requestAnimationFrame(() => {
@@ -129,7 +129,7 @@ const BannerContainer = props => {
   /**
    * @param {Function} callback
    */
-  const updateContentWrapping = callback => {
+  const updateContentWrapping = (callback) => {
     const update = { isWrappingContent: shouldWrapContent() };
     setIsWrappingContent(update);
     setCallBack(callback);
@@ -172,7 +172,7 @@ const BannerContainer = props => {
     refContent,
     refNotification,
     refInteractionsWrapper,
-    actions: renderActions()
+    actions: renderActions(),
   });
 
   useEffect(() => {
@@ -213,7 +213,7 @@ BannerContainer.propTypes = {
   /** Called after the component has been mounted, and dynamically resized */
   onReady: PropTypes.func,
   /** A render prop function to render a `BannerPresenter` */
-  children: PropTypes.func.isRequired
+  children: PropTypes.func.isRequired,
 };
 
 export default BannerContainer;

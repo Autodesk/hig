@@ -3,202 +3,202 @@ import {
   FONT_FAMILY,
   FONT_SIZE,
   FONT_WEIGHT,
-  LINE_HEIGHT
+  LINE_HEIGHT,
 } from "../../consts/types";
 
 export default {
   "sideNav.fontFamily": {
     type: FONT_FAMILY,
     value: {
-      ref: "basics.fontFamilies.main"
-    }
+      ref: "basics.fontFamilies.main",
+    },
   },
   "sideNav.container.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.surface.level100"
-    }
+      ref: "colorScheme.surface.level100",
+    },
   },
   "sideNav.account.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.default"
-    }
+      ref: "colorScheme.text.default",
+    },
   },
   "sideNav.account.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "density.fontSizes.small"
-    }
+      ref: "density.fontSizes.small",
+    },
   },
   "sideNav.account.fontWeight": {
     type: FONT_WEIGHT,
-    value: 500
+    value: 500,
   },
   "sideNav.account.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.mediumExtraLarge"
-    }
+      ref: "basics.lineHeights.mediumExtraLarge",
+    },
   },
   "sideNav.project.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.default"
-    }
+      ref: "colorScheme.text.default",
+    },
   },
   "sideNav.project.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "density.fontSizes.medium"
-    }
+      ref: "density.fontSizes.medium",
+    },
   },
   "sideNav.project.fontWeight": {
     type: FONT_WEIGHT,
     value: {
-      ref: "basics.fontWeights.bold"
-    }
+      ref: "basics.fontWeights.bold",
+    },
   },
   "sideNav.project.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.mediumExtraLarge"
-    }
+      ref: "basics.lineHeights.mediumExtraLarge",
+    },
   },
   "sideNav.module.default.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.default"
-    }
+      ref: "colorScheme.text.default",
+    },
   },
   "sideNav.module.default.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "density.fontSizes.medium"
-    }
+      ref: "density.fontSizes.medium",
+    },
   },
   "sideNav.module.default.fontWeight": {
     type: FONT_WEIGHT,
     value: {
-      ref: "basics.fontWeights.bold"
-    }
+      ref: "basics.fontWeights.bold",
+    },
   },
   "sideNav.module.default.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.mediumExtraLarge"
-    }
+      ref: "basics.lineHeights.mediumExtraLarge",
+    },
   },
   "sideNav.module.active.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.active"
-    }
+      ref: "colorScheme.text.active",
+    },
   },
   "sideNav.module.active.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "density.fontSizes.medium"
-    }
+      ref: "density.fontSizes.medium",
+    },
   },
   "sideNav.module.active.fontWeight": {
     type: FONT_WEIGHT,
     value: {
-      ref: "basics.fontWeights.bold"
-    }
+      ref: "basics.fontWeights.bold",
+    },
   },
   "sideNav.module.active.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.mediumExtraLarge"
-    }
+      ref: "basics.lineHeights.mediumExtraLarge",
+    },
   },
   "sideNav.subModule.default.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.default"
-    }
+      ref: "colorScheme.text.default",
+    },
   },
   "sideNav.subModule.default.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "density.fontSizes.medium"
-    }
+      ref: "density.fontSizes.medium",
+    },
   },
   "sideNav.subModule.default.fontWeight": {
     type: FONT_WEIGHT,
     value: {
-      ref: "basics.fontWeights.regular"
-    }
+      ref: "basics.fontWeights.regular",
+    },
   },
   "sideNav.subModule.default.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.mediumExtraLarge"
-    }
+      ref: "basics.lineHeights.mediumExtraLarge",
+    },
   },
   "sideNav.subModule.active.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.active"
-    }
+      ref: "colorScheme.text.active",
+    },
   },
   "sideNav.subModule.active.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "density.fontSizes.medium"
-    }
+      ref: "density.fontSizes.medium",
+    },
   },
   "sideNav.subModule.active.fontWeight": {
     type: FONT_WEIGHT,
     value: {
-      ref: "basics.fontWeights.regular"
-    }
+      ref: "basics.fontWeights.regular",
+    },
   },
   "sideNav.subModule.active.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.mediumExtraLarge"
-    }
+      ref: "basics.lineHeights.mediumExtraLarge",
+    },
   },
   "sideNav.legal.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.default"
-    }
+      ref: "colorScheme.text.default",
+    },
   },
   "sideNav.legal.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "density.fontSizes.small"
-    }
+      ref: "density.fontSizes.small",
+    },
   },
   "sideNav.legal.fontWeight": {
     type: FONT_WEIGHT,
-    value: 500
+    value: 500,
   },
   "sideNav.legal.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.mediumExtraExtraLarge"
-    }
+      ref: "basics.lineHeights.mediumExtraExtraLarge",
+    },
   },
   "sideNav.icon.defaultColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.text.againstLight"
-    }
+      ref: "basics.colors.text.againstLight",
+    },
   },
   "sideNav.icon.activeColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.autodeskBlue.500"
-    }
+      ref: "basics.colors.primary.autodeskBlue.500",
+    },
   },
   "sideNav.activeIndicator.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.accent"
-    }
-  }
+      ref: "colorScheme.reference.accent",
+    },
+  },
 };

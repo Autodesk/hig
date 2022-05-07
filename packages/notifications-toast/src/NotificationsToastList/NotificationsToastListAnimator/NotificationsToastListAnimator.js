@@ -10,11 +10,11 @@ const _ANIMATION_STAGGER_DELAY_BY = 1000;
 
 const offScreenStyles = ({ placement }) => ({
   transform: `translateY(${placement === "top" ? "-36px" : "36px"})`,
-  opacity: 0
+  opacity: 0,
 });
 
 const onScreenStyles = () => ({
-  transform: ""
+  transform: "",
 });
 
 export default class NotificationsToastListAnimator extends Component {
@@ -25,12 +25,12 @@ export default class NotificationsToastListAnimator extends Component {
 
     const enterAnimation = {
       from: offScreenStyles(this.props),
-      to: onScreenStyles()
+      to: onScreenStyles(),
     };
 
     const leaveAnimation = {
       from: onScreenStyles(),
-      to: offScreenStyles(this.props)
+      to: offScreenStyles(this.props),
     };
 
     return (
@@ -53,5 +53,5 @@ NotificationsToastListAnimator.propTypes = {
   /**
    * A list of Toast elements to render
    */
-  children: PropTypes.node
+  children: PropTypes.node,
 };

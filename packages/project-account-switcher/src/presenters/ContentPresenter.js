@@ -12,17 +12,17 @@ import stylesheet from "./stylesheet";
 function getTypographyPlaceholderStyles() {
   return {
     textAlign: `center`,
-    lineHeight: `32px`
+    lineHeight: `32px`,
   };
 }
 
-const ContentPresenter = props => {
-  const createAccountListItemHandlers = memoize(id =>
-    createButtonEventHandlers(event => props.onAccountClick(event, id))
+const ContentPresenter = (props) => {
+  const createAccountListItemHandlers = memoize((id) =>
+    createButtonEventHandlers((event) => props.onAccountClick(event, id))
   );
 
-  const createProjectListItemHandlers = memoize(id =>
-    createButtonEventHandlers(event => props.onProjectClick(event, id))
+  const createProjectListItemHandlers = memoize((id) =>
+    createButtonEventHandlers((event) => props.onProjectClick(event, id))
   );
 
   const renderAccountsList = () => {
@@ -55,7 +55,7 @@ const ContentPresenter = props => {
           <span
             className={cx([
               switcherAccountImageWrapperClassName,
-              css(styles.switcherAccountImageWrapper)
+              css(styles.switcherAccountImageWrapper),
             ])}
           >
             {Boolean(image) && (
@@ -127,18 +127,13 @@ const ContentPresenter = props => {
     });
   };
 
-  const {
-    accounts,
-    accountTitle,
-    projects,
-    projectTitle,
-    ...otherProps
-  } = props;
+  const { accounts, accountTitle, projects, projectTitle, ...otherProps } =
+    props;
   const { className } = otherProps;
   const styles = stylesheet(props);
   const typographyTitleStyles = {
     textTransform: `uppercase`,
-    fontSize: `11px`
+    fontSize: `11px`,
   };
   const switcherListClassName = createCustomClassNames(
     className,
@@ -177,20 +172,20 @@ ContentPresenter.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       image: PropTypes.string,
-      label: PropTypes.string
+      label: PropTypes.string,
     })
   ),
   /** Currently selected Account */
   activeAccountObj: PropTypes.shape({
     id: PropTypes.string,
     image: PropTypes.string,
-    label: PropTypes.string
+    label: PropTypes.string,
   }),
   /** Currently selected Project */
   activeProjectObj: PropTypes.shape({
     id: PropTypes.string,
     image: PropTypes.string,
-    label: PropTypes.string
+    label: PropTypes.string,
   }),
   /** HTML attribute class */
   className: PropTypes.string,
@@ -203,16 +198,16 @@ ContentPresenter.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       image: PropTypes.string,
-      label: PropTypes.string
+      label: PropTypes.string,
     })
   ),
   /** Heading title for the list of Projects */
-  projectTitle: PropTypes.string
+  projectTitle: PropTypes.string,
 };
 
 ContentPresenter.defaultProps = {
   accountTitle: "Accounts",
-  projectTitle: "Projects"
+  projectTitle: "Projects",
 };
 
 export default ContentPresenter;

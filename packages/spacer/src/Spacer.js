@@ -7,7 +7,7 @@ import { css, cx } from "emotion";
 import stylesheet from "./Spacer.stylesheet";
 import { AVAILABLE_SIZES } from "./availableSizes";
 
-const Spacer = props => {
+const Spacer = (props) => {
   const { size, spacing, stylesheet: customStylesheet, ...otherProps } = props;
   const { className } = otherProps;
   return (
@@ -31,11 +31,11 @@ Spacer.propTypes = {
   /** Sets the size of the spacer */
   spacing: PropTypes.oneOf(AVAILABLE_SIZES),
   /** Adds custom/overriding styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 Spacer.defaultProps = {
-  spacing: "m"
+  spacing: "m",
 };
 
 export default Spacer;

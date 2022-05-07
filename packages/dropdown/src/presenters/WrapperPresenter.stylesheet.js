@@ -3,8 +3,8 @@ export default function stylesheet(props) {
   const styles = {
     dropdownWrapper: {
       position: "relative",
-      width: "100%"
-    }
+      width: "100%",
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props) : styles;

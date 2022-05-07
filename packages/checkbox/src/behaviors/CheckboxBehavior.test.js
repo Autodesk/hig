@@ -32,7 +32,7 @@ describe("checkbox/behaviors/CheckboxBehavior", () => {
       expect(children).toHaveBeenCalledWith({
         checked: expect.any(Boolean),
         handleChange: expect.any(Function),
-        handleClick: expect.any(Function)
+        handleClick: expect.any(Function),
       });
     });
   });

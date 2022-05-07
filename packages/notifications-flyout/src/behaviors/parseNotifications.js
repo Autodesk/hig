@@ -59,7 +59,7 @@ function parseNotification(value, index) {
     key,
     content,
     unread,
-    ...props
+    ...props,
   };
 }
 

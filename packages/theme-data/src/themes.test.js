@@ -6,7 +6,7 @@ import densities from "./densities";
 import "../support/jest/matchers/toBeAValidTheme";
 
 describe("Theme", () => {
-  generateAllThemes(colorSchemes, densities).forEach(theme => {
+  generateAllThemes(colorSchemes, densities).forEach((theme) => {
     describe(theme.metadata.name, () => {
       it("implements the theme schema", () => {
         expect(theme.resolvedRoles).toBeAValidTheme(baseTheme.unresolvedRoles);

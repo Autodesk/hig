@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions";
 import { text, boolean, select } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
@@ -14,13 +14,13 @@ const knobLabels = {
   onBlur: "onBlur",
   onMouseEnter: "onMouseEnter",
   onMouseLeave: "onMouseLeave",
-  variant: "variant"
+  variant: "variant",
 };
 
 const variantOptions = {
   line: "Line",
   box: "Box",
-  plain: "Plain"
+  plain: "Plain",
 };
 
 export default function getKnobs(props) {
@@ -41,6 +41,6 @@ export default function getKnobs(props) {
       variant,
       knobGroupIds.basic
     ),
-    value: text(knobLabels.value, value, knobGroupIds.basic)
+    value: text(knobLabels.value, value, knobGroupIds.basic),
   };
 }

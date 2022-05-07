@@ -12,14 +12,14 @@ const onFocusHandler = () => {};
 const onBlurHandler = () => {};
 const onMouseEnterHandler = () => {};
 const onMouseLeaveHandler = () => {};
-const setInputRef = element => {
+const setInputRef = (element) => {
   inputRef = element;
 };
 
 describe("InputPresenter", () => {
   composesLikeControlBehavior({
     Subject: InputPresenter,
-    Receiver: "input"
+    Receiver: "input",
   });
 
   it("renders by default", () => {

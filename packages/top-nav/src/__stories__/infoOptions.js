@@ -8,7 +8,7 @@ import TopNav, {
   Interactions,
   Logo,
   ProfileAction,
-  NavAction
+  NavAction,
 } from "../index";
 
 export default {
@@ -19,8 +19,8 @@ export default {
     Interactions,
     Logo,
     ProfileAction,
-    NavAction
+    NavAction,
   ],
   source: true,
-  text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
+  text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />,
 };

@@ -25,8 +25,8 @@ export default function stylesheet(props, themeData) {
         ? { opacity: themeData["colorScheme.opacity.disabled"] }
         : null),
       "&:active": {
-        backgroundColor: themeData[`menu.item.pressed.backgroundColor`]
-      }
+        backgroundColor: themeData[`menu.item.pressed.backgroundColor`],
+      },
     },
     optionCheckWrapper: {
       height: themeData[`menu.item.minHeight`],
@@ -41,18 +41,18 @@ export default function stylesheet(props, themeData) {
           ? {
               opacity: 1,
               fill: themeData[`menu.item.checkmark.hover.iconColor`],
-              transition: `opacity 0.3s cubic-bezier(0.4,0,0.2,1)`
+              transition: `opacity 0.3s cubic-bezier(0.4,0,0.2,1)`,
             }
           : {}),
         ...(props.selected
           ? {
               opacity: 1,
               fill: themeData[`menu.item.checkmark.active.iconColor`],
-              transition: `opacity 0.3s cubic-bezier(0.4,0,0.2,1)`
+              transition: `opacity 0.3s cubic-bezier(0.4,0,0.2,1)`,
             }
-          : {})
-      }
-    }
+          : {}),
+      },
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

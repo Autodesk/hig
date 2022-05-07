@@ -34,6 +34,6 @@ export default function createButtonEventHandlers(handler, options = {}) {
       if (preventDefault) event.preventDefault();
 
       handler(event, ...args);
-    }
+    },
   };
 }

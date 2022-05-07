@@ -5,8 +5,8 @@ export default function stylesheet(props, themeData) {
   const styles = {
     fill: fillColor,
     "> *": {
-      fill: fillColor
-    }
+      fill: fillColor,
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

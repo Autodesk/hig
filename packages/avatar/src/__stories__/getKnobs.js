@@ -7,7 +7,7 @@ import { sizes } from "../sizes";
 const sizeOptions = makeSelectOptions(sizes);
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
@@ -16,7 +16,7 @@ const knobLabels = {
   lastName: "Last Name",
   size: "Size",
   image: "Image",
-  onImageError: "onImageError"
+  onImageError: "onImageError",
 };
 
 export default function getKnobs(props) {
@@ -29,6 +29,6 @@ export default function getKnobs(props) {
     lastName: text(knobLabels.lastName, lastName, knobGroupIds.basic),
     size: select(knobLabels.size, sizeOptions, size, knobGroupIds.basic),
     image: text(knobLabels.image, image, knobGroupIds.basic),
-    onImageError: action(knobLabels.onImageError)
+    onImageError: action(knobLabels.onImageError),
   };
 }

@@ -4,11 +4,11 @@ import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
 import {
   createCustomClassNames,
-  memoizeCreateButtonEventHandlers
+  memoizeCreateButtonEventHandlers,
 } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
-const ModuleCompact = props => {
+const ModuleCompact = (props) => {
   const createEventHandlers = memoizeCreateButtonEventHandlers();
 
   const {
@@ -77,7 +77,7 @@ ModuleCompact.propTypes = {
   /** Called when hovering over the icon */
   onMouseOver: PropTypes.func,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default ModuleCompact;

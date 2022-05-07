@@ -7,8 +7,8 @@ export default {
     value: "0.4",
     metadata: {
       deprecated: {
-        equivalent: "colorScheme.opacity.disabled"
-      }
-    }
-  }
+        equivalent: "colorScheme.opacity.disabled",
+      },
+    },
+  },
 };

@@ -8,7 +8,7 @@ import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 import { AVAILABLE_ROLES } from "../constants";
 
-const OptionPresenter = props => {
+const OptionPresenter = (props) => {
   const {
     asset,
     checkmark,
@@ -65,7 +65,7 @@ const OptionPresenter = props => {
             selected,
             shortcut,
             stylesheet: customStylesheet,
-            unselect
+            unselect,
           },
           resolvedRoles
         );
@@ -89,7 +89,7 @@ const OptionPresenter = props => {
               <div
                 className={cx([
                   checkmarkWrapperClassName,
-                  css(styles.checkmarkWrapper)
+                  css(styles.checkmarkWrapper),
                 ])}
               >
                 <Checkmark />
@@ -99,7 +99,7 @@ const OptionPresenter = props => {
               <div
                 className={cx([
                   assetWrapperClassName,
-                  css(styles.assetWrapper)
+                  css(styles.assetWrapper),
                 ])}
               >
                 {asset}
@@ -108,7 +108,7 @@ const OptionPresenter = props => {
             <div
               className={cx([
                 optionContentWrapperClassName,
-                css(styles.optionContentWrapper)
+                css(styles.optionContentWrapper),
               ])}
             >
               {children}
@@ -116,7 +116,7 @@ const OptionPresenter = props => {
                 <span
                   className={cx([
                     shortcutWrapperClassName,
-                    css(styles.shortcutWrapper)
+                    css(styles.shortcutWrapper),
                   ])}
                 >
                   {shortcut}
@@ -145,7 +145,7 @@ OptionPresenter.propTypes = {
   selected: PropTypes.bool,
   shortcut: PropTypes.node,
   stylesheet: PropTypes.func,
-  unselect: PropTypes.bool
+  unselect: PropTypes.bool,
 };
 
 export default OptionPresenter;

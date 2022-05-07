@@ -12,7 +12,7 @@ export default function Panel(props) {
     loading,
     onScroll,
     transitionStatus,
-    stylesheet
+    stylesheet,
   } = props;
 
   return (
@@ -41,5 +41,5 @@ Panel.propTypes = {
   loading: PropTypes.bool,
   onScroll: PropTypes.func,
   stylesheet: PropTypes.func,
-  transitionStatus: PropTypes.string
+  transitionStatus: PropTypes.string,
 };

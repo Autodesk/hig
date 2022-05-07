@@ -15,7 +15,7 @@ export default [
           <p>Any content can go in here.</p>
         </RichText>
       ),
-      children: <Button title="Open flyout" />
-    })
-  }
+      children: <Button title="Open flyout" />,
+    }),
+  },
 ];

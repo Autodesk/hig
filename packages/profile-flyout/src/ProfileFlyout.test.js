@@ -6,7 +6,7 @@ describe("profile-flyout/ProfileFlyout", () => {
   takeSnapshotsOf(ProfileFlyout, [
     {
       desc: "renders with no props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with all props",
@@ -14,8 +14,8 @@ describe("profile-flyout/ProfileFlyout", () => {
         email: "thelma@autodesk.com",
         image: "http://placekitten.com/g/32/32",
         name: "Thelma Dickinson",
-        open: true
-      }
-    }
+        open: true,
+      },
+    },
   ]);
 });

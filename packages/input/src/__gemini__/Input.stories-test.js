@@ -18,7 +18,7 @@ const themes = [
   { name: "Dark blue, medium density", theme: darkBlueMediumDensityTheme },
   { name: "Dark blue, high density", theme: darkBlueHighDensityTheme },
   { name: "Dark gray, medium density", theme: darkGrayMediumDensityTheme },
-  { name: "Dark gray, high density", theme: darkGrayHighDensityTheme }
+  { name: "Dark gray, high density", theme: darkGrayHighDensityTheme },
 ];
 
 function Example({ theme, name }) /* eslint-disable-line react/prop-types */ {
@@ -28,7 +28,7 @@ function Example({ theme, name }) /* eslint-disable-line react/prop-types */ {
         style={{
           backgroundColor: theme.resolvedRoles["colorScheme.surface.level100"],
           padding: theme.resolvedRoles["density.spacings.medium"],
-          width: "300px"
+          width: "300px",
         }}
       >
         <InputHaloPresenter type="line">

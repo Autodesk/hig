@@ -8,6 +8,6 @@ export default function stylesheet(
     color: color || undefined,
     fontFamily: fontFamily ? themeData[fontFamily] : undefined,
     lineHeight: lineHeight ? themeData[lineHeight] : undefined,
-    display: layout || "block"
+    display: layout || "block",
   };
 }

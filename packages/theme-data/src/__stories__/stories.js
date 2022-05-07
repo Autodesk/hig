@@ -16,171 +16,171 @@ export default [
   {
     description: "Basics - Border radii",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.borderRadii"),
-    readme: basicsReadme
+    readme: basicsReadme,
   },
   {
     description: "Basics - Border widths",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.borderWidths"),
-    readme: basicsReadme
+    readme: basicsReadme,
   },
   {
     description: "Basics - Colors",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.colors"),
-    readme: basicsReadme
+    readme: basicsReadme,
   },
   {
     description: "Basics - Font families",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.fontFamilies"),
-    readme: basicsReadme
+    readme: basicsReadme,
   },
   {
     description: "Basics - Font sizes",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.fontSizes"),
-    readme: basicsReadme
+    readme: basicsReadme,
   },
   {
     description: "Basics - Font weights",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.fontWeights"),
-    readme: basicsReadme
+    readme: basicsReadme,
   },
   {
     description: "Basics - Line heights",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.lineHeights"),
-    readme: basicsReadme
+    readme: basicsReadme,
   },
   {
     description: "Basics - Shadows",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.shadows"),
-    readme: basicsReadme
+    readme: basicsReadme,
   },
   {
     description: "Basics - Spacings",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, "basics.spacings"),
-    readme: basicsReadme
+    readme: basicsReadme,
   },
   {
     description: "Color scheme",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, "colorScheme"),
-    readme: colorSchemeReadme
+    readme: colorSchemeReadme,
   },
   {
     description: "Density",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, "density"),
-    readme: densityReadme
+    readme: densityReadme,
   },
   {
     description: "Component",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^component./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Accordion",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^accordion./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Avatar",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^avatar./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Banner",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^banner./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Button",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^button./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Checkbox",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^checkbox./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Divider",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^divider./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Flyout",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^flyout./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Form field",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^formField./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Input",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^input./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Label",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^label./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Menu",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^menu./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Modal",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^modal./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Progress bar",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^progressBar./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Progress ring",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^progressRing./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Skeleton item",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^skeletonItem./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Slider",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^slider./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Table",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^table./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Tabs",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^tabs./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Text area",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^textArea./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Text link",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^textLink./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Tooltip",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^tooltip./),
-    readme: undefined
+    readme: undefined,
   },
   {
     description: "Component - Typography",
     schema: filterMatchByKey(baseTheme.unresolvedRoles, /^typography./),
-    readme: undefined
-  }
+    readme: undefined,
+  },
 ];

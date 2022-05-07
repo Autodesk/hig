@@ -35,6 +35,7 @@ export default class NotificationFlyoutBehavior extends Component {
   /** @type {Props} */
   props;
 
+  // eslint-disable-next-line react/static-property-placement
   static propTypes = {
     /** Render prop */
     children: PropTypes.func.isRequired,
@@ -43,17 +44,18 @@ export default class NotificationFlyoutBehavior extends Component {
       PropTypes.node,
       PropTypes.arrayOf(
         PropTypes.oneOfType([PropTypes.node, PropTypes.shape({})])
-      )
+      ),
     ]),
     /** When provided, it overrides the derived unread notification count */
-    unreadCount: PropTypes.number
+    unreadCount: PropTypes.number,
   };
 
   /** @type {State} */
+  // eslint-disable-next-line react/state-in-constructor
   state = {
     dismissedNotifications: [],
     notifications: [],
-    readNotifications: []
+    readNotifications: [],
   };
 
   /**
@@ -62,7 +64,7 @@ export default class NotificationFlyoutBehavior extends Component {
    */
   static getDerivedStateFromProps(nextProps) {
     return {
-      notifications: parseNotifications(nextProps.notifications)
+      notifications: parseNotifications(nextProps.notifications),
     };
   }
 
@@ -70,16 +72,13 @@ export default class NotificationFlyoutBehavior extends Component {
    * @returns {ParsedNotification[]}
    */
   getNotifications() {
-    const {
-      dismissedNotifications,
-      notifications,
-      readNotifications
-    } = this.state;
+    const { dismissedNotifications, notifications, readNotifications } =
+      this.state;
 
     const updateReadStatus = ({ id, unread, ...otherProps }) => ({
       id,
       unread: unread && !readNotifications.includes(id),
-      ...otherProps
+      ...otherProps,
     });
     const isNotDismissed = ({ id }) => !dismissedNotifications.includes(id);
 
@@ -99,10 +98,10 @@ export default class NotificationFlyoutBehavior extends Component {
    * Action to dismiss a notification
    * @param {string} id
    */
-  dismissNotification = id => {
+  dismissNotification = (id) => {
     this.setState({
       // eslint-disable-next-line react/no-access-state-in-setstate
-      dismissedNotifications: this.state.dismissedNotifications.concat(id)
+      dismissedNotifications: this.state.dismissedNotifications.concat(id),
     });
   };
 
@@ -151,7 +150,7 @@ export default class NotificationFlyoutBehavior extends Component {
       handleClose,
       notifications,
       showUnreadCount,
-      unreadCount
+      unreadCount,
     });
   }
 }

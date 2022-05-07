@@ -3,7 +3,7 @@ import { boolean, select } from "@storybook/addon-knobs/react";
 import {
   controlledBool,
   controlledNumber,
-  makeSelectOptions
+  makeSelectOptions,
 } from "@hig/storybook/utils";
 
 import { anchorPoints } from "@hig/flyout";
@@ -11,7 +11,7 @@ import { anchorPoints } from "@hig/flyout";
 const anchorPointOptions = makeSelectOptions(anchorPoints);
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
@@ -20,7 +20,7 @@ const knobLabels = {
   onClickOutside: "onClickOutside",
   onScroll: "onScroll",
   open: "Open",
-  openOnHover: "openOnHover"
+  openOnHover: "openOnHover",
 };
 
 export default function getKnobs(props) {
@@ -52,6 +52,6 @@ export default function getKnobs(props) {
       knobLabels.openOnHover,
       openOnHover,
       knobGroupIds.basic
-    )
+    ),
   };
 }

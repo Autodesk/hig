@@ -28,7 +28,7 @@ function getButtonDefaultButtonRules(themeData) {
     userSelect: "none",
     whiteSpace: "nowrap",
     MozOsxFontSmoothing: "grayscale",
-    WebkitFontSmoothing: "antialiased"
+    WebkitFontSmoothing: "antialiased",
   };
 }
 
@@ -40,11 +40,11 @@ function getButtonRulesByType(type, themeData) {
         background: themeData["button.solid.default.backgroundColor"],
         color: themeData["button.solid.label.fontColor"],
         "&:visited": {
-          color: themeData["button.solid.label.fontColor"]
+          color: themeData["button.solid.label.fontColor"],
         },
         "svg *": {
-          fill: themeData["button.solid.iconColor"]
-        }
+          fill: themeData["button.solid.iconColor"],
+        },
       };
     }
     case types.OUTLINE:
@@ -54,11 +54,11 @@ function getButtonRulesByType(type, themeData) {
         borderColor: themeData["button.outline.default.borderColor"],
         color: themeData["button.outline.label.fontColor"],
         "&:visited": {
-          color: themeData["button.outline.label.fontColor"]
+          color: themeData["button.outline.label.fontColor"],
         },
         "svg *": {
-          fill: themeData["button.outline.iconColor"]
-        }
+          fill: themeData["button.outline.iconColor"],
+        },
       };
     }
     case types.FLAT: {
@@ -67,11 +67,11 @@ function getButtonRulesByType(type, themeData) {
         borderColor: themeData["button.flat.default.borderColor"],
         color: themeData["button.flat.label.fontColor"],
         "&:visited": {
-          color: themeData["button.flat.label.fontColor"]
+          color: themeData["button.flat.label.fontColor"],
         },
         "svg *": {
-          fill: themeData["button.flat.iconColor"]
-        }
+          fill: themeData["button.flat.iconColor"],
+        },
       };
     }
     default:
@@ -83,7 +83,7 @@ function getButtonRulesByDisabled(type, themeData) {
   return {
     opacity: themeData["colorScheme.opacity.disabled"],
     cursor: "default",
-    pointerEvents: "none"
+    pointerEvents: "none",
   };
 }
 
@@ -97,18 +97,18 @@ function getButtonHoverRulesByType(type, themeData) {
     case types.PRIMARY:
       return {
         background: themeData["button.solid.hover.backgroundColor"],
-        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${themeData["button.hover.haloColor"]}`
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${themeData["button.hover.haloColor"]}`,
       };
     case types.OUTLINE:
     case types.SECONDARY:
       return {
         borderColor: themeData["button.outline.hover.borderColor"],
-        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${themeData["button.hover.haloColor"]}`
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${themeData["button.hover.haloColor"]}`,
       };
     case types.FLAT:
       return {
         borderColor: themeData["button.flat.hover.borderColor"],
-        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${themeData["button.hover.haloColor"]}`
+        boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${themeData["button.hover.haloColor"]}`,
       };
     default:
       return {};
@@ -122,7 +122,7 @@ function getButtonFocusRulesByType(type, themeData) {
       return {
         background: themeData["button.solid.focus.backgroundColor"],
         boxShadow: `0 0 0 ${themeData["button.haloWidth"]} ${themeData["button.focus.haloColor"]}`,
-        outline: `none`
+        outline: `none`,
       };
     case types.OUTLINE:
     case types.SECONDARY:
@@ -133,8 +133,8 @@ function getButtonFocusRulesByType(type, themeData) {
         color: themeData["button.outline.label.fontColor"],
         outline: `none`,
         "svg *": {
-          fill: themeData["button.outline.iconColor"]
-        }
+          fill: themeData["button.outline.iconColor"],
+        },
       };
     case types.FLAT:
       return {
@@ -144,8 +144,8 @@ function getButtonFocusRulesByType(type, themeData) {
         color: themeData["button.flat.label.fontColor"],
         outline: `none`,
         "svg *": {
-          fill: themeData["button.flat.iconColor"]
-        }
+          fill: themeData["button.flat.iconColor"],
+        },
       };
     default:
       return {};
@@ -157,17 +157,17 @@ function getButtonPressedRulesByType(type, themeData) {
     case types.SOLID:
     case types.PRIMARY:
       return {
-        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${themeData["button.pressed.haloColor"]}`
+        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${themeData["button.pressed.haloColor"]}`,
       };
     case types.OUTLINE:
     case types.SECONDARY:
       return {
         borderColor: themeData["button.outline.pressed.borderColor"],
-        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${themeData["button.pressed.haloColor"]}`
+        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${themeData["button.pressed.haloColor"]}`,
       };
     case types.FLAT:
       return {
-        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${themeData["button.pressed.haloColor"]}`
+        boxShadow: `0 0 0 ${themeData["button.pressed.haloWidth"]} ${themeData["button.pressed.haloColor"]}`,
       };
     default:
       return {};
@@ -187,9 +187,9 @@ export default function stylesheet(props, themeData, theme) {
         : {
             ...(hasFocus ? getButtonFocusRulesByType(type, themeData) : {}),
             ...(hasHover ? getButtonHoverRulesByType(type, themeData) : {}),
-            ...(isPressed ? getButtonPressedRulesByType(type, themeData) : {})
+            ...(isPressed ? getButtonPressedRulesByType(type, themeData) : {}),
           }),
-      ...getButtonRulesByWidth(width)
+      ...getButtonRulesByWidth(width),
     },
     icon: {
       display: "inline-block",
@@ -197,10 +197,10 @@ export default function stylesheet(props, themeData, theme) {
       height: iconSize,
       marginRight: themeData["button.gutterWidth"],
       top: "50%",
-      transform: "translateY(-50%)"
+      transform: "translateY(-50%)",
     },
     iconText: {
-      marginLeft: `calc(${iconSize} + ${themeData["button.gutterWidth"]})`
-    }
+      marginLeft: `calc(${iconSize} + ${themeData["button.gutterWidth"]})`,
+    },
   };
 }

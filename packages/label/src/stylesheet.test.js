@@ -2,7 +2,7 @@ import stylesheet from "./stylesheet";
 
 describe("stylesheet", () => {
   const props = {
-    disabled: false
+    disabled: false,
   };
   const styles = stylesheet(props, {});
 
@@ -14,7 +14,7 @@ describe("stylesheet", () => {
   });
   it("returns the custom stylesheet", () => {
     expect(stylesheet({ stylesheet: () => ({ padding: 0 }) }, {})).toEqual({
-      padding: 0
+      padding: 0,
     });
   });
 });

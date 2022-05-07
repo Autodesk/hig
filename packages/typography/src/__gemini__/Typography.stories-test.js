@@ -14,7 +14,7 @@ import webLightMediumTheme from "@hig/theme-data/build/json/webLightMediumDensit
 import Typography, {
   AVAILABLE_ALIGNMENTS,
   AVAILABLE_FONT_WEIGHTS,
-  AVAILABLE_VARIANTS
+  AVAILABLE_VARIANTS,
 } from "../index";
 
 const themes = [
@@ -25,13 +25,13 @@ const themes = [
   darkBlueHighTheme,
   darkBlueMediumTheme,
   webLightHighTheme,
-  webLightMediumTheme
+  webLightMediumTheme,
 ];
 
 function ThemeRepeater({ children }) {
   return (
     <div style={{ display: "flex" }}>
-      {themes.map(theme => (
+      {themes.map((theme) => (
         <ThemeContext.Provider key={theme.metadata.id} value={theme}>
           <div>{children}</div>
         </ThemeContext.Provider>
@@ -46,7 +46,7 @@ function Surface({ children }) {
       {({ resolvedRoles }) => {
         const style = {
           backgroundColor: resolvedRoles["colorScheme.surface.level100"],
-          marginBottom: resolvedRoles["density.spacings.large"]
+          marginBottom: resolvedRoles["density.spacings.large"],
         };
 
         return <div style={style}>{children}</div>;
@@ -58,9 +58,9 @@ function Surface({ children }) {
 function TypographyVariantRepeater({ children }) {
   return (
     <div>
-      {AVAILABLE_VARIANTS.map(variant =>
-        AVAILABLE_FONT_WEIGHTS.map(fontWeight =>
-          AVAILABLE_ALIGNMENTS.map(alignment => (
+      {AVAILABLE_VARIANTS.map((variant) =>
+        AVAILABLE_FONT_WEIGHTS.map((fontWeight) =>
+          AVAILABLE_ALIGNMENTS.map((alignment) => (
             <Typography
               variant={variant}
               fontWeight={fontWeight}

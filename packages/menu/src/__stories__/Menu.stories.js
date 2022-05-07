@@ -13,7 +13,7 @@ stories.forEach(({ description, getProps }) => {
     description,
     withInfo({
       ...infoOptions,
-      propTablesExclude: [KnobbedThemeProvider, Surface]
+      propTablesExclude: [KnobbedThemeProvider, Surface],
     })(() => {
       const props = getProps();
       const storybookType = description === `default` ? `Menu` : `MenuGroup`;

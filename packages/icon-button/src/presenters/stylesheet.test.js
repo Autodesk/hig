@@ -13,7 +13,7 @@ describe("stylesheet", () => {
     "iconButton.dynamic.pressed.300To350BackgroundColor": "yellow",
     "iconButton.static.on.pressed.backgroundColor": "purple",
     "iconButton.dynamic.pressed.iconColor": "purple",
-    "colorScheme.opacity.disabled": 0.4
+    "colorScheme.opacity.disabled": 0.4,
   };
 
   it("returns an object", () => {
@@ -21,20 +21,20 @@ describe("stylesheet", () => {
       disabled: false,
       hasFocus: true,
       hasHover: true,
-      isPressed: false
+      isPressed: false,
     };
 
     expect(stylesheet(props, themeData)).toEqual(expect.any(Object));
   });
   it("returns the custom stylesheet", () => {
     const props = {
-      stylesheet: () => ({ padding: 0 })
+      stylesheet: () => ({ padding: 0 }),
     };
     expect(stylesheet(props, themeData)).toEqual({ padding: 0 });
   });
   describe("if the icon-button is at the default state", () => {
     const props = {
-      variant: "dynamic"
+      variant: "dynamic",
     };
 
     it("default styles match values in theme data", () => {
@@ -46,7 +46,7 @@ describe("stylesheet", () => {
   describe("if the icon-button has focus", () => {
     const props = {
       variant: "dynamic",
-      hasFocus: true
+      hasFocus: true,
     };
 
     it("focus styles match values in theme data", () => {
@@ -59,7 +59,7 @@ describe("stylesheet", () => {
   describe("if the icon-button has hover", () => {
     const props = {
       variant: "dynamic",
-      hasHover: true
+      hasHover: true,
     };
 
     it("hover styles match values in theme data", () => {
@@ -71,7 +71,7 @@ describe("stylesheet", () => {
   describe("if the icon-button is pressed", () => {
     const props = {
       variant: "dynamic",
-      isPressed: true
+      isPressed: true,
     };
     const staticPressed = stylesheet(
       { isPressed: true, surface: 300, variant: "static" },
@@ -88,7 +88,7 @@ describe("stylesheet", () => {
   });
   describe("if the icon-button is disabled", () => {
     const props = {
-      disabled: true
+      disabled: true,
     };
 
     it("disabled styles match values in theme data", () => {

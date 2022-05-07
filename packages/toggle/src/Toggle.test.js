@@ -20,12 +20,12 @@ describe("toggle/Toggle", () => {
     });
 
     it("renders correctly with a stylesheet function", () => {
-      const customStyles = styles => ({
+      const customStyles = (styles) => ({
         ...styles,
         toggleWrapper: {
           ...styles.toggleWrapper,
-          borderColor: "blue"
-        }
+          borderColor: "blue",
+        },
       });
       const tree = renderer
         .create(<Toggle stylesheet={customStyles} />)

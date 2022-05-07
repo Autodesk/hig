@@ -5,7 +5,7 @@ import { ControlBehavior } from "@hig/behaviors";
 import NotificationBehavior from "./behaviors/NotificationBehavior";
 import NotificationPresenter from "./presenters/NotificationPresenter";
 
-const Notification = props => {
+const Notification = (props) => {
   /**
    * @param {NotificationShape} shape
    * @returns {import("react").ReactElement}
@@ -48,7 +48,7 @@ const Notification = props => {
           {({
             hasHover,
             onMouseEnter: handleMouseEnter,
-            onMouseLeave: handleMouseLeave
+            onMouseLeave: handleMouseLeave,
           }) => (
             <NotificationPresenter
               className={className}
@@ -112,7 +112,7 @@ Notification.propTypes = {
   /** Determines notification variant */
   type: PropTypes.string,
   /** Determines whether notification has not been read */
-  unread: PropTypes.bool
+  unread: PropTypes.bool,
 };
 
 Notification.defaultProps = {
@@ -121,7 +121,7 @@ Notification.defaultProps = {
    * as a result a value must always be available.
    */
   hideFlyout: () => {},
-  onNotificationClick: () => {}
+  onNotificationClick: () => {},
 };
 
 export default Notification;

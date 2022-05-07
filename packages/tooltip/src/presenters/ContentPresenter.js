@@ -25,5 +25,5 @@ ContentPresenter.propTypes = {
   /** Content */
   children: PropTypes.node,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

@@ -11,9 +11,9 @@ describe("banner/BannerAction/BannerAction", () => {
     expect(tree).toMatchSnapshot();
   });
   it("renders with custom stylesheet", () => {
-    const customStylesheet = styles => ({
+    const customStylesheet = (styles) => ({
       ...styles,
-      display: "absolute"
+      display: "absolute",
     });
     const action = (
       <BannerAction stylesheet={customStylesheet}>Hello</BannerAction>

@@ -15,7 +15,7 @@ function renderExample(exampleProps) {
 
   return {
     renderPropSpy,
-    wrapper
+    wrapper,
   };
 }
 
@@ -45,7 +45,7 @@ describe("DelayedHoverBehavior", () => {
       const onMouseEnterSpy = jest.fn();
       const { wrapper } = renderExample({
         openOnHoverDelay: 500,
-        onMouseEnter: onMouseEnterSpy
+        onMouseEnter: onMouseEnterSpy,
       });
       wrapper.find("input").simulate("mouseenter");
 
@@ -70,7 +70,7 @@ describe("DelayedHoverBehavior", () => {
       const onMouseLeaveSpy = jest.fn();
       const { wrapper } = renderExample({
         openOnHoverDelay: 500,
-        onMouseLeave: onMouseLeaveSpy
+        onMouseLeave: onMouseLeaveSpy,
       });
       wrapper.find("input").simulate("mouseenter");
       wrapper.find("input").simulate("mouseleave");

@@ -10,32 +10,32 @@ describe("Button", () => {
   takeSnapshotsOf(Button, [
     {
       desc: "renders as default button",
-      props: { title: "Settings" }
+      props: { title: "Settings" },
     },
     {
       desc: "renders as button type solid",
-      props: { title: "Settings", type: "solid" }
+      props: { title: "Settings", type: "solid" },
     },
     {
       desc: "renders as button type outline",
-      props: { title: "Settings", type: "outline" }
+      props: { title: "Settings", type: "outline" },
     },
     {
       desc: "renders as button type flat",
-      props: { title: "Settings", type: "flat" }
+      props: { title: "Settings", type: "flat" },
     },
     {
       desc: "renders with an icon",
-      props: { icon: "<Icon />", title: "Settings" }
+      props: { icon: "<Icon />", title: "Settings" },
     },
     {
       desc: "renders with className prop",
-      props: { title: "Button Class", className: "custom-class" }
+      props: { title: "Button Class", className: "custom-class" },
     },
     {
       desc: "renders with a link",
-      props: { link: "https://hig.autodesk.com", title: "Settings" }
-    }
+      props: { link: "https://hig.autodesk.com", title: "Settings" },
+    },
   ]);
 
   describe("event handlers", () => {

@@ -23,7 +23,7 @@ const SCHEMA_TYPES = {
   LINE_HEIGHT: "lineHeight",
   SHADOW: "shadow",
   SPACING: "spacing",
-  OPACITY: "opacity"
+  OPACITY: "opacity",
 };
 
 const examplesBySchemaType = {
@@ -37,7 +37,7 @@ const examplesBySchemaType = {
   [SCHEMA_TYPES.LINE_HEIGHT]: GeneralExample,
   [SCHEMA_TYPES.OPACITY]: GeneralExample,
   [SCHEMA_TYPES.SHADOW]: ShadowExample,
-  [SCHEMA_TYPES.SPACING]: SpacingExample
+  [SCHEMA_TYPES.SPACING]: SpacingExample,
 };
 
 function TypeExample(props) {
@@ -54,8 +54,8 @@ TypeExample.propTypes = {
   theme: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   role: PropTypes.string,
   schema: PropTypes.shape({
-    type: PropTypes.string
-  })
+    type: PropTypes.string,
+  }),
 };
 
 function Example(props) {
@@ -78,7 +78,7 @@ function Example(props) {
 
 Example.propTypes = {
   themeConfig: PropTypes.object, // eslint-disable-line react/forbid-prop-types
-  role: PropTypes.string
+  role: PropTypes.string,
 };
 
 export default Example;

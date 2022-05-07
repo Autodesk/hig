@@ -9,7 +9,7 @@ import IconIndicatorPresenter from "../IconIndicatorPresenter";
 
 import stylesheet from "../stylesheet";
 
-const TreeObjectNestedSubTreeItem = props => {
+const TreeObjectNestedSubTreeItem = (props) => {
   const {
     treeItem,
     treeItem: {
@@ -24,7 +24,7 @@ const TreeObjectNestedSubTreeItem = props => {
         getCurrentItemClicked,
         guidelines,
         isControlled,
-        selected
+        selected,
       },
       onClick: userOnClick,
       onDoubleClick: userOnDoubleClick,
@@ -57,16 +57,17 @@ const TreeObjectNestedSubTreeItem = props => {
     getActiveTreeItemIndex,
     guidelines,
     highlighted: getActiveTreeItemId() === id,
-    selected: getActiveId() === id
+    selected: getActiveId() === id,
   };
   const higTreeItemSubTreeViewLabelWrapperClassName = createCustomClassNames(
     className,
     `hig-tree-item-sub-tree-view-label-wrapper`
   );
-  const higTreeItemSubTreeViewLabelContentWrapperClassName = createCustomClassNames(
-    className,
-    `hig-tree-item-sub-tree-view-label-content-wrapper`
-  );
+  const higTreeItemSubTreeViewLabelContentWrapperClassName =
+    createCustomClassNames(
+      className,
+      `hig-tree-item-sub-tree-view-label-content-wrapper`
+    );
   const higTreeItemIndicatorWrapperClassName = createCustomClassNames(
     className,
     `hig-tree-item-indicator-wrapper`
@@ -90,7 +91,7 @@ const TreeObjectNestedSubTreeItem = props => {
     const {
       // eslint-disable-next-line no-shadow
       treeItem: { id },
-      keyboardOpenId
+      keyboardOpenId,
     } = props;
 
     if (keyboardOpenId === id) {
@@ -106,7 +107,7 @@ const TreeObjectNestedSubTreeItem = props => {
       aria-expanded={!collapsed}
       className={cx([
         css(stylesheet(styleTreeItem, themeData).higTreeItem),
-        className
+        className,
       ])}
       id={id}
       role="treeitem"
@@ -116,16 +117,15 @@ const TreeObjectNestedSubTreeItem = props => {
         {({
           hasHover,
           onMouseEnter: handleMouseEnter,
-          onMouseLeave: handleMouseLeave
+          onMouseLeave: handleMouseLeave,
         }) => {
           const styleProps = { ...styleTreeItem, hasHover };
           const styles = stylesheet(styleProps, themeData);
-          const { handleClick, handleKeyDown } = createButtonEventHandlers(
-            onClick
-          );
+          const { handleClick, handleKeyDown } =
+            createButtonEventHandlers(onClick);
           const {
             handleClick: handleOperatorClick,
-            handleKeyDown: handleOperatorKeyDown
+            handleKeyDown: handleOperatorKeyDown,
           } = createButtonEventHandlers(onOperatorClick);
 
           return (
@@ -134,14 +134,14 @@ const TreeObjectNestedSubTreeItem = props => {
               {...htmlProps}
               className={cx([
                 css(styles.higTreeItemSubTreeViewLabelWrapper),
-                higTreeItemSubTreeViewLabelWrapperClassName
+                higTreeItemSubTreeViewLabelWrapperClassName,
               ])}
-              onClick={event => {
+              onClick={(event) => {
                 if (userOnClick) {
                   userOnClick(event);
                 }
               }}
-              onDoubleClick={event => {
+              onDoubleClick={(event) => {
                 if (userOnDoubleClick) {
                   userOnDoubleClick(event);
                 }
@@ -153,9 +153,9 @@ const TreeObjectNestedSubTreeItem = props => {
               <div
                 className={cx([
                   css(styles.higTreeItemSubTreeViewLabelContentWrapper),
-                  higTreeItemSubTreeViewLabelContentWrapperClassName
+                  higTreeItemSubTreeViewLabelContentWrapperClassName,
                 ])}
-                onClick={event => {
+                onClick={(event) => {
                   handleClick(event, treeItem);
                 }}
                 onKeyDown={handleKeyDown}
@@ -166,9 +166,9 @@ const TreeObjectNestedSubTreeItem = props => {
                 <div
                   className={cx([
                     css(styles.higTreeItemIndicatorWrapper),
-                    higTreeItemIndicatorWrapperClassName
+                    higTreeItemIndicatorWrapperClassName,
                   ])}
-                  onClick={event => handleOperatorClick(event, treeItem)}
+                  onClick={(event) => handleOperatorClick(event, treeItem)}
                   onKeyDown={handleOperatorKeyDown}
                   role="button"
                   tabIndex="-1"
@@ -184,7 +184,7 @@ const TreeObjectNestedSubTreeItem = props => {
                   <div
                     className={cx([
                       css(styles.higTreeItemIconWrapper),
-                      higTreeItemIconWrapperClassName
+                      higTreeItemIconWrapperClassName,
                     ])}
                   >
                     {icon}
@@ -193,7 +193,7 @@ const TreeObjectNestedSubTreeItem = props => {
                 <span
                   className={cx([
                     css(styles.higTreeItemLabelWrapper),
-                    higTreeItemLabelWrapperClassName
+                    higTreeItemLabelWrapperClassName,
                   ])}
                 >
                   {label}

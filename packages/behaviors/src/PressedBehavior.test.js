@@ -21,7 +21,7 @@ function renderExample(exampleProps) {
 
   return {
     renderPropSpy,
-    wrapper
+    wrapper,
   };
 }
 
@@ -49,7 +49,7 @@ describe("PressedBehavior", () => {
     it("calls onMouseDown callback", () => {
       const onMouseDownSpy = jest.fn();
       const { wrapper } = renderExample({
-        onMouseDown: onMouseDownSpy
+        onMouseDown: onMouseDownSpy,
       });
       wrapper.find("input").simulate("mousedown");
 
@@ -71,7 +71,7 @@ describe("PressedBehavior", () => {
     it("calls onMouseUp callback", () => {
       const onMouseUpSpy = jest.fn();
       const { wrapper } = renderExample({
-        onMouseUp: onMouseUpSpy
+        onMouseUp: onMouseUpSpy,
       });
       wrapper.find("input").simulate("mousedown");
       wrapper.find("input").simulate("mouseup");

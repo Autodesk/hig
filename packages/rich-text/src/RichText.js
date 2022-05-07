@@ -5,7 +5,7 @@ import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
 
-const RichText = props => (
+const RichText = (props) => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
       const { children, dangerouslySetInnerHTML, ...otherProps } = props;
@@ -34,12 +34,12 @@ RichText.propTypes = {
    * HTML string to be rendered and styled with HIG typography rules
    */
   dangerouslySetInnerHTML: PropTypes.shape({
-    __html: PropTypes.string
+    __html: PropTypes.string,
   }),
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default RichText;

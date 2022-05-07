@@ -13,5 +13,5 @@ export default function SpacingExample({ value }) {
 }
 
 SpacingExample.propTypes = {
-  value: PropTypes.string
+  value: PropTypes.string,
 };

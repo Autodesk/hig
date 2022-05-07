@@ -9,7 +9,7 @@ const sizeOptions = makeSelectOptions(sizes);
 const spacingOptions = makeSelectOptions(spacings);
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
@@ -17,7 +17,7 @@ const knobLabels = {
   spacing: "Spacing",
   border: "Border",
   showOverflow: "Show overflow number",
-  showBorder: "Add color border"
+  showBorder: "Add color border",
 };
 
 export default function getKnobs(props) {
@@ -36,7 +36,7 @@ export default function getKnobs(props) {
       knobLabels.showOverflow,
       true,
       knobGroupIds.basic
-    )
+    ),
   };
 
   const showBorder = boolean(knobLabels.showBorder, false, knobGroupIds.basic);

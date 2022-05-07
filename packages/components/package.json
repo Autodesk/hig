@@ -63,7 +63,6 @@
   },
   "devDependencies": {
     "@hig/babel-preset": "^0.1.1",
-    "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
@@ -74,7 +73,6 @@
   },
   "scripts": {
     "build": "node scripts/build.js",
-    "lint": "hig-scripts-lint",
     "test": "hig-scripts-test",
     "release": "hig-scripts-release"
   },

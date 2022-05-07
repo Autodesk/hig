@@ -11,7 +11,7 @@ function getProgressBarIndeterminateRules() {
   `;
 
   return {
-    animation: `2s linear infinite ${indeterminateCycle}`
+    animation: `2s linear infinite ${indeterminateCycle}`,
   };
 }
 
@@ -24,8 +24,8 @@ function getProgressBarFillIndeterminateRules(themeData) {
       width: `200px`,
       height: `4px`,
       backgroundImage: `linear-gradient(135deg, transparent, ${themeData["progress.bar.highlightColor"]} 100%)`,
-      backgroundSize: `200px 4px`
-    }
+      backgroundSize: `200px 4px`,
+    },
   };
 }
 
@@ -33,7 +33,7 @@ function getProgressBarFillIndeterminateRules(themeData) {
  * @param {Number} percent, an integer or float
  * @returns {Integer}
  */
-export const renderedBarWidth = percent => {
+export const renderedBarWidth = (percent) => {
   const percentageWidth = parseInt(percent, 10);
   if (!percentageWidth) {
     return null;
@@ -57,7 +57,7 @@ export default function stylesheet(props, themeData) {
       backgroundColor: themeData["progress.bar.backgroundColor"],
       overflow: `hidden`,
       width: `100%`,
-      height: themeData["progress.bar.minHeight"]
+      height: themeData["progress.bar.minHeight"],
     },
     progressBar: {
       position: `absolute`,
@@ -70,7 +70,7 @@ export default function stylesheet(props, themeData) {
       width: isIndeterminate
         ? `100%`
         : `${renderedBarWidth(props.percentComplete)}%`,
-      ...(isIndeterminate ? getProgressBarIndeterminateRules(themeData) : {})
+      ...(isIndeterminate ? getProgressBarIndeterminateRules(themeData) : {}),
     },
     progressBarFill: {
       backgroundColor: isIndeterminate
@@ -79,11 +79,11 @@ export default function stylesheet(props, themeData) {
       flex: `1 1 0`,
       ...(isIndeterminate
         ? getProgressBarFillIndeterminateRules(themeData)
-        : {})
+        : {}),
     },
     polygon: {
-      fill: themeData["progress.bar.highlightColor"]
-    }
+      fill: themeData["progress.bar.highlightColor"],
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

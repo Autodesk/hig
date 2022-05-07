@@ -7,7 +7,7 @@ import Slider from "../index";
 const defaultProps = {
   min: 21,
   max: 99,
-  step: 1
+  step: 1,
 };
 
 const defaultSliders = (

@@ -13,13 +13,13 @@ storiesOf("Notifications|Flyout", module)
     "default",
     withInfo({
       ...infoOptions,
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider],
     })(notificationsFlyoutDefault())
   )
   .add(
     "interactive",
     withInfo({
       ...infoOptions,
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider],
     })(notificationsFlyoutInteractive())
   );

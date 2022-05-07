@@ -9,7 +9,7 @@ export default function stylesheetOverride(stylesheet, props, themeData) {
     resize: `vertical`,
     padding: `${themeData["input.paddingVertical"]}
       ${themeData["input.box.paddingHorizontal"]}`,
-    height: `calc((${themeData["input.minHeight"]} - 2px) * 2)`
+    height: `calc((${themeData["input.minHeight"]} - 2px) * 2)`,
   };
   return {
     ...stylesheet,
@@ -18,14 +18,14 @@ export default function stylesheetOverride(stylesheet, props, themeData) {
       borderLeftColor: borderStyles,
       borderRightColor: borderStyles,
       borderTopColor: borderStyles,
-      position: `static`
+      position: `static`,
     },
     input: textArea,
     halo: {
       ...stylesheet.halo,
       width: `100%`,
       left: 0,
-      top: `100%`
-    }
+      top: `100%`,
+    },
   };
 }

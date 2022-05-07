@@ -10,12 +10,12 @@ function stylesheetOverride(stylesheet, props, themeData) {
     ...stylesheet,
     pointerBorder: {
       ...stylesheet.pointerBorder,
-      fill: themeData["tooltip.backgroundColor"]
+      fill: themeData["tooltip.backgroundColor"],
     },
     pointerBody: {
       ...stylesheet.pointerBody,
-      fill: themeData["tooltip.backgroundColor"]
-    }
+      fill: themeData["tooltip.backgroundColor"],
+    },
   };
 
   return props.tooltipStylesheet
@@ -35,5 +35,5 @@ export default function PointerPresenter(props) {
 
 PointerPresenter.propTypes = {
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

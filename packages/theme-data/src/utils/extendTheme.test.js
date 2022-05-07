@@ -5,15 +5,15 @@ describe("extendTheme", () => {
   it("overrides values in the original theme", () => {
     const existingTheme = {
       accentColor: { value: "#F00", type: COLOR },
-      textColor: { value: "#333", type: COLOR }
+      textColor: { value: "#333", type: COLOR },
     };
     expect(
       extendTheme(existingTheme, {
-        accentColor: { value: "#0FF" }
+        accentColor: { value: "#0FF" },
       })
     ).toEqual({
       accentColor: { value: "#0FF", type: COLOR },
-      textColor: { value: "#333", type: COLOR }
+      textColor: { value: "#333", type: COLOR },
     });
   });
 
@@ -21,15 +21,15 @@ describe("extendTheme", () => {
     it("preserves the reference", () => {
       const existingTheme = {
         accentColor: { value: "#F00", type: COLOR },
-        textColor: { value: { ref: "accentColor" } }
+        textColor: { value: { ref: "accentColor" } },
       };
       expect(
         extendTheme(existingTheme, {
-          accentColor: { value: "#0FF" }
+          accentColor: { value: "#0FF" },
         })
       ).toEqual({
         accentColor: { value: "#0FF", type: COLOR },
-        textColor: { value: { ref: "accentColor" } }
+        textColor: { value: { ref: "accentColor" } },
       });
     });
   });

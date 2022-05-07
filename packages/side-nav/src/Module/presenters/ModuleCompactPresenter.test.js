@@ -10,9 +10,9 @@ describe("side-nav/Module/presenters/ModuleCompactPresenter", () => {
       {
         desc: "renders with minimal props",
         props: {
-          icon: <Collaboration24 />
-        }
-      }
+          icon: <Collaboration24 />,
+        },
+      },
     ]);
   });
 });

@@ -1,4 +1,4 @@
 export default {
   dropdownLayer: 9996,
-  menuMaxHeight: "360px"
+  menuMaxHeight: "360px",
 };

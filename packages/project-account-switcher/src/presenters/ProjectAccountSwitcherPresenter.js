@@ -5,13 +5,13 @@ import { CaretDownMUI } from "@hig/icons";
 import Typography from "@hig/typography";
 import {
   createCustomClassNames,
-  memoizeCreateButtonEventHandlers
+  memoizeCreateButtonEventHandlers,
 } from "@hig/utils";
 
 import constructPlaceholder from "./constructPlaceholder";
 import stylesheet from "./stylesheet";
 
-const ProjectAccountSwitcherPresenter = props => {
+const ProjectAccountSwitcherPresenter = (props) => {
   // this method constructs the image placeholder for the combination of
   // the current activeAccountObj and/or activeProjectObj,
   // in lieu of an image for either
@@ -72,10 +72,8 @@ const ProjectAccountSwitcherPresenter = props => {
   const label = renderLabel();
   const { onTargetClick, ...otherProps } = props;
   const { className } = otherProps;
-  const {
-    handleClick: handleTargetClick,
-    handleKeyDown: handleTargetKeyDown
-  } = createTargetHandlers(onTargetClick);
+  const { handleClick: handleTargetClick, handleKeyDown: handleTargetKeyDown } =
+    createTargetHandlers(onTargetClick);
   const styles = stylesheet(props);
   const targetClassName = createCustomClassNames(className, "target");
   const targetItemClassName = createCustomClassNames(className, "target-item");
@@ -128,14 +126,14 @@ ProjectAccountSwitcherPresenter.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       image: PropTypes.string,
-      label: PropTypes.string
+      label: PropTypes.string,
     })
   ),
   /** Currently selected Account */
   activeAccountObj: PropTypes.shape({
     id: PropTypes.string,
     image: PropTypes.string,
-    label: PropTypes.string
+    label: PropTypes.string,
   }),
   /** Label for selected Accounts and Projects */
   activeLabel: PropTypes.string,
@@ -143,7 +141,7 @@ ProjectAccountSwitcherPresenter.propTypes = {
   activeProjectObj: PropTypes.shape({
     id: PropTypes.string,
     image: PropTypes.string,
-    label: PropTypes.string
+    label: PropTypes.string,
   }),
   /** Handles Flyout display, passed from Behavior */
   onTargetClick: PropTypes.func,
@@ -152,9 +150,9 @@ ProjectAccountSwitcherPresenter.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       image: PropTypes.string,
-      label: PropTypes.string
+      label: PropTypes.string,
     })
-  )
+  ),
 };
 
 export default ProjectAccountSwitcherPresenter;

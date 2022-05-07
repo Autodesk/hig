@@ -3,14 +3,14 @@ import { boolean } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
   basic: "Basic",
-  form: "Form Attributes"
+  form: "Form Attributes",
 };
 
 const knobLabels = {
   disabled: "Disabled",
   onBlur: "onBlur",
   onChange: "onChange",
-  onFocus: "onFocus"
+  onFocus: "onFocus",
 };
 
 export default function getKnobs(props) {
@@ -21,6 +21,6 @@ export default function getKnobs(props) {
     disabled: boolean(knobLabels.disabled, disabled, knobGroupIds.basic),
     onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
-    onFocus: action(knobLabels.onFocus)
+    onFocus: action(knobLabels.onFocus),
   };
 }

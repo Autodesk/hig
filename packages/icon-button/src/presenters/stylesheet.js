@@ -1,7 +1,7 @@
 function getDefaultIconTransitionProperties() {
   return {
     transitionDuration: `0.3s`,
-    transitionProperty: `fill`
+    transitionProperty: `fill`,
   };
 }
 
@@ -33,8 +33,8 @@ function getStylesByHover(themeData, surface, on, variant) {
     boxShadow: `none`,
     "& svg *": {
       ...getDefaultIconTransitionProperties(),
-      fill: hoverIconColor
-    }
+      fill: hoverIconColor,
+    },
   };
 }
 
@@ -55,8 +55,8 @@ function getStylesByFocus(themeData, on, variant) {
     transitionDuration: `0.3s, 0.3s`,
     "& svg *": {
       ...getDefaultIconTransitionProperties(),
-      fill: focusIconColor
-    }
+      fill: focusIconColor,
+    },
   };
 }
 
@@ -85,15 +85,15 @@ function getStylesByPressed(themeData, surface, on, variant) {
     transitionDuration: `0.3s, 0.3s`,
     "& svg *": {
       ...getDefaultIconTransitionProperties(),
-      fill: pressedIconColor
-    }
+      fill: pressedIconColor,
+    },
   };
 }
 
 function getStylesByDisabled(themeData) {
   return {
     opacity: themeData["colorScheme.opacity.disabled"],
-    pointerEvents: `none`
+    pointerEvents: `none`,
   };
 }
 
@@ -106,7 +106,7 @@ export default function stylesheet(props, themeData, density) {
     on,
     stylesheet: customStylesheet,
     surface,
-    variant
+    variant,
   } = props;
   const contentHeight = density === `medium-density` ? `20px` : `16px`;
   const isDynamic = variant === `dynamic`;
@@ -143,15 +143,15 @@ export default function stylesheet(props, themeData, density) {
       "& svg *": {
         fill: iconColor,
         transitionDuration: `0.3s`,
-        transitionProperty: `fill`
+        transitionProperty: `fill`,
       },
       ...(hasFocus ? getStylesByFocus(themeData, on, variant) : {}),
       ...(hasHover ? getStylesByHover(themeData, surface, on, variant) : {}),
       ...(isPressed ? getStylesByPressed(themeData, surface, on, variant) : {}),
-      ...(disabled ? getStylesByDisabled(themeData) : {})
+      ...(disabled ? getStylesByDisabled(themeData) : {}),
     },
     iconSpacer: {
-      width: `24px`
+      width: `24px`,
     },
     iconButtonIcon: {
       position: `absolute`,
@@ -160,8 +160,8 @@ export default function stylesheet(props, themeData, density) {
       margin: `0 auto`,
       top: `50%`,
       transform: `translateY(-50%)`,
-      pointerEvents: `none`
-    }
+      pointerEvents: `none`,
+    },
   };
 
   return customStylesheet

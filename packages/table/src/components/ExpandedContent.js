@@ -11,7 +11,7 @@ const ExpandedContent = ({ children, expandedContentStyles }) => (
 
 ExpandedContent.propTypes = {
   children: PropTypes.func,
-  expandedContentStyles: PropTypes.any
+  expandedContentStyles: PropTypes.any,
 };
 
 export default ExpandedContent;

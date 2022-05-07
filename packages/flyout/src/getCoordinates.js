@@ -36,7 +36,7 @@ const {
   BOTTOM_RIGHT,
   LEFT_TOP,
   LEFT_CENTER,
-  LEFT_BOTTOM
+  LEFT_BOTTOM,
 } = anchorPoints;
 
 /**
@@ -44,7 +44,7 @@ const {
  */
 export const DEFAULT_POSITION = Object.freeze({
   top: 0,
-  left: 0
+  left: 0,
 });
 
 /**
@@ -53,7 +53,7 @@ export const DEFAULT_POSITION = Object.freeze({
 export const DEFAULT_COORDINATES = Object.freeze({
   anchorPoint: anchorPoints.TOP_LEFT,
   containerPosition: DEFAULT_POSITION,
-  pointerPosition: DEFAULT_POSITION
+  pointerPosition: DEFAULT_POSITION,
 });
 
 /**
@@ -64,7 +64,7 @@ function calculatePointerTopOffset({
   anchorPoint,
   actionRect,
   panelRect,
-  pointerRect
+  pointerRect,
 }) {
   switch (anchorPoint) {
     case TOP_CENTER:
@@ -99,7 +99,7 @@ function calculatePointerLeftOffset({
   anchorPoint,
   actionRect,
   panelRect,
-  pointerRect
+  pointerRect,
 }) {
   switch (anchorPoint) {
     case LEFT_BOTTOM:
@@ -134,7 +134,7 @@ function calculatePanelContainerTopOffset({
   anchorPoint,
   actionRect,
   panelRect,
-  pointerRect
+  pointerRect,
 }) {
   switch (anchorPoint) {
     case TOP_LEFT:
@@ -167,7 +167,7 @@ function calculatePanelContainerLeftOffset({
   anchorPoint,
   actionRect,
   panelRect,
-  pointerRect
+  pointerRect,
 }) {
   switch (anchorPoint) {
     case LEFT_TOP:
@@ -199,7 +199,7 @@ function calculatePanelContainerLeftOffset({
 function calculatePointerPosition(props) {
   return {
     top: calculatePointerTopOffset(props),
-    left: calculatePointerLeftOffset(props)
+    left: calculatePointerLeftOffset(props),
   };
 }
 
@@ -210,7 +210,7 @@ function calculatePointerPosition(props) {
 function calculatePanelContainerPosition(props) {
   return {
     top: calculatePanelContainerTopOffset(props),
-    left: calculatePanelContainerLeftOffset(props)
+    left: calculatePanelContainerLeftOffset(props),
   };
 }
 
@@ -222,7 +222,7 @@ function calculateCoordinates(props) {
   return {
     anchorPoint: props.anchorPoint,
     containerPosition: calculatePanelContainerPosition(props),
-    pointerPosition: calculatePointerPosition(props)
+    pointerPosition: calculatePointerPosition(props),
   };
 }
 
@@ -257,7 +257,7 @@ function getFallbackCoordinates(payload) {
   const isInViewport = createViewportDeterminer(payload);
 
   return payload.fallbackAnchorPoints
-    .map(anchorPoint => calculateCoordinates({ ...payload, anchorPoint }))
+    .map((anchorPoint) => calculateCoordinates({ ...payload, anchorPoint }))
     .find(isInViewport);
 }
 

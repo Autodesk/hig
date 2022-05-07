@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { AVAILABLE_TARGETS } from "../targets";
 import ModulePresenter from "./presenters/ModulePresenter";
 
-const Module = props => {
+const Module = (props) => {
   const [minimized, setMinimized] = useState(props.minimized);
   const [callBackMinimized, setCallbackMinimized] = useState(null);
 
@@ -12,7 +12,7 @@ const Module = props => {
    * @param {Function} callback, function to call after minimize state has been toggled
    * @returns {Function}
    */
-  const createMinimizeToggler = callback => () => {
+  const createMinimizeToggler = (callback) => () => {
     setMinimized(!minimized);
     setCallbackMinimized(callback);
   };
@@ -23,13 +23,13 @@ const Module = props => {
   const createPresenterBag = () => ({
     minimized,
     onClickCollapseButton: createMinimizeToggler(props.onClickCollapseButton),
-    onClickTitle: createMinimizeToggler(props.onClickTitle)
+    onClickTitle: createMinimizeToggler(props.onClickTitle),
   });
 
   /**
    * @param {PresenterBag}
    */
-  const renderPresenter = presenterBag => {
+  const renderPresenter = (presenterBag) => {
     const presenterProps = { ...props, ...presenterBag };
     const { children, ...otherProps } = presenterProps;
 
@@ -77,11 +77,11 @@ Module.propTypes = {
   /** A label for rendering this Module */
   title: PropTypes.string.isRequired,
   /** Anchor target. Applicable only if link is provided */
-  target: PropTypes.oneOf(AVAILABLE_TARGETS)
+  target: PropTypes.oneOf(AVAILABLE_TARGETS),
 };
 
 Module.defaultProps = {
-  minimized: false
+  minimized: false,
 };
 
 export default Module;

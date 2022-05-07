@@ -1,11 +1,11 @@
 import { number } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
-  percentComplete: "Percentage Complete"
+  percentComplete: "Percentage Complete",
 };
 
 export default function getKnobs(props) {
@@ -17,6 +17,6 @@ export default function getKnobs(props) {
       knobLabels.percentComplete,
       percentComplete,
       knobGroupIds.basic
-    )
+    ),
   };
 }

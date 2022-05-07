@@ -8,5 +8,5 @@ import readme from "../../README.md";
 export default {
   propTables: [DefaultExport],
   propTablesExclude: [KnobbedThemeProvider],
-  text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
+  text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />,
 };

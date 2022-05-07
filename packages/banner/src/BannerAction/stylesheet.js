@@ -10,14 +10,14 @@ export default function stylesheet(props, themeData) {
     marginLeft: vars.bannerActionSpacingX,
 
     "&:first-of-type": {
-      marginLeft: 0
+      marginLeft: 0,
     },
 
     ...(props.isWrappedContent && {
       "&:last-of-type": {
-        borderRight: 0
-      }
-    })
+        borderRight: 0,
+      },
+    }),
   };
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

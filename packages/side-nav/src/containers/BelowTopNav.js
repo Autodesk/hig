@@ -4,12 +4,12 @@ import Surface from "@hig/surface";
 import ThemeContext from "@hig/theme-context";
 import stylesheet from "./stylesheet";
 
-const BelowTopNav = props => {
+const BelowTopNav = (props) => {
   const {
     children,
     onMouseLeave,
     onMouseEnter,
-    stylesheet: customStylesheet
+    stylesheet: customStylesheet,
   } = props;
 
   return (
@@ -42,7 +42,7 @@ BelowTopNav.propTypes = {
   /** Called when no longer hovering over the container */
   onMouseLeave: PropTypes.func,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default BelowTopNav;

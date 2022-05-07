@@ -8,64 +8,64 @@ describe("banner/BannerPresenter/BannerPresenter", () => {
   takeSnapshotsOf(BannerPresenter, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with a label",
       props: {
         type: types.URGENT,
         label: "HELLO",
-        children: "World"
-      }
+        children: "World",
+      },
     },
     {
       desc: "renders with a string as actions",
       props: {
-        actions: "foobar"
-      }
+        actions: "foobar",
+      },
     },
     {
       desc: "renders with a node as actions",
       props: {
         dismissButtonTitle: "boom",
-        actions: <span>foo</span>
-      }
+        actions: <span>foo</span>,
+      },
     },
     {
       desc: "renders with a fragment as actions",
       props: {
-        actions: [<span key="0">bar</span>, <div key="1">baz</div>]
-      }
+        actions: [<span key="0">bar</span>, <div key="1">baz</div>],
+      },
     },
     {
       desc: "renders with onDismiss function",
       props: {
-        onDismiss: () => {}
-      }
+        onDismiss: () => {},
+      },
     },
     {
       desc: "renders without onDismiss function",
       props: {
-        onDismiss: null
-      }
+        onDismiss: null,
+      },
     },
     {
       desc: "renders with custom stylesheet",
       props: {
-        stylesheet: styles => ({
+        stylesheet: (styles) => ({
           ...styles,
           banner: {
             ...styles.banner,
-            backgroundColor: "red"
-          }
-        })
-      }
+            backgroundColor: "red",
+          },
+        }),
+      },
     },
     {
       desc: "renders with custom className",
       props: {
-        className: "custom"
-      }
-    }
+        className: "custom",
+      },
+    },
   ]);
 });

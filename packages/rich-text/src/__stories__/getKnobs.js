@@ -1,11 +1,11 @@
 import { object } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
-  dangerouslySetInnerHTML: "Inner HTML"
+  dangerouslySetInnerHTML: "Inner HTML",
 };
 
 export default function getKnobs(props) {
@@ -17,6 +17,6 @@ export default function getKnobs(props) {
       knobLabels.dangerouslySetInnerHTML,
       dangerouslySetInnerHTML,
       knobGroupIds.basic
-    )
+    ),
   };
 }

@@ -18,5 +18,5 @@ export default function Value({ children }) {
 }
 
 Value.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };

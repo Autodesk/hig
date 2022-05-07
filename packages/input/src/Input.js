@@ -9,7 +9,7 @@ import {
   availableTagNames,
   availableVariants,
   tagNames,
-  variants
+  variants,
 } from "./constants";
 
 function Wrapper(props) {
@@ -23,7 +23,7 @@ function Wrapper(props) {
 Wrapper.propTypes = {
   children: PropTypes.node,
   tagName: PropTypes.oneOf(availableTagNames),
-  variant: PropTypes.oneOf(availableVariants)
+  variant: PropTypes.oneOf(availableVariants),
 };
 
 function Input(props) {
@@ -54,7 +54,7 @@ function Input(props) {
         onMouseLeave,
         hasFocus,
         onFocus,
-        onBlur
+        onBlur,
       }) => (
         <Wrapper
           isDisabled={disabledProp}
@@ -134,13 +134,13 @@ Input.propTypes = {
   /**
    * Specify if the value of the input is wrong
    */
-  error: PropTypes.bool
+  error: PropTypes.bool,
 };
 
 Input.defaultProps = {
   tagName: tagNames.INPUT,
   variant: variants.LINE,
-  error: false
+  error: false,
 };
 
 export default Input;

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
-const verticalScrollInViewport = cell => {
+const verticalScrollInViewport = (cell) => {
   const cellBounding = cell.getBoundingClientRect();
 
   if (
@@ -13,7 +13,7 @@ const verticalScrollInViewport = cell => {
       cell.scrollIntoView({
         behavior: "smooth",
         block: "nearest",
-        inline: "nearest"
+        inline: "nearest",
       });
     }
     // align to the bottom if the bottom of cell is out of the viewport
@@ -24,13 +24,13 @@ const verticalScrollInViewport = cell => {
       cell.scrollIntoView({
         behavior: "smooth",
         block: "nearest",
-        inline: "nearest"
+        inline: "nearest",
       });
     }
   }
 };
 
-const horizontalScrollInViewport = cell => {
+const horizontalScrollInViewport = (cell) => {
   const cellBounding = cell.getBoundingClientRect();
 
   if (
@@ -42,7 +42,7 @@ const horizontalScrollInViewport = cell => {
       cell.scrollIntoView({
         behavior: "smooth",
         block: "nearest",
-        inline: "nearest"
+        inline: "nearest",
       });
     }
     if (
@@ -52,7 +52,7 @@ const horizontalScrollInViewport = cell => {
       cell.scrollIntoView({
         behavior: "smooth",
         block: "nearest",
-        inline: "nearest"
+        inline: "nearest",
       });
     }
   }
@@ -99,12 +99,11 @@ const checkHorizontalScroll = (cellObject, table) => {
   horizontalScrollInContainer(cellObject, table);
 };
 
-const getCellObject = (activeColumnIndex, activeRowIndex) => {
-  return `[data-cell-coords="${activeColumnIndex}_${activeRowIndex}"]`;
-};
+const getCellObject = (activeColumnIndex, activeRowIndex) =>
+  `[data-cell-coords="${activeColumnIndex}_${activeRowIndex}"]`;
 
-const getHeaders = columns => {
-  const headers = columns.map(item => {
+const getHeaders = (columns) => {
+  const headers = columns.map((item) => {
     if (item.columns) {
       return getHeaders(item.columns);
     }
@@ -122,12 +121,10 @@ export default function TableBehavior(props) {
     getHeaders(tableObject.columns)
   );
   const [getActiveColumnIndex, setActiveColumnIndex] = useState(null);
-  const [getActiveMultiSelectColumn, setActiveMultiSelectColumn] = useState(
-    null
-  );
-  const [getActiveMultiSelectRowArray, setActiveMultiSelectRowArray] = useState(
-    null
-  );
+  const [getActiveMultiSelectColumn, setActiveMultiSelectColumn] =
+    useState(null);
+  const [getActiveMultiSelectRowArray, setActiveMultiSelectRowArray] =
+    useState(null);
   const [getAllMultiSelectedRows, setAllMultiSelectedRows] = useState(false);
   const [getActiveRowIndex, setActiveRowIndex] = useState(null);
   const [getInternalTableRef, setInternalTableRef] = useState(null);
@@ -135,19 +132,19 @@ export default function TableBehavior(props) {
   const [getGlobalColumns, setGlobalColumns] = useState(null);
   const [getGlobalResizeStyles, setGlobalResizeStyles] = useState(null);
 
-  const setTableRef = element => {
+  const setTableRef = (element) => {
     if (props.tableRef) {
       props.tableRef(element);
     }
     setInternalTableRef(element);
   };
 
-  const setHeaderRef = element => {
+  const setHeaderRef = (element) => {
     setInternalHeaderRef(element);
   };
 
   const handleKeyDown = useCallback(
-    event => {
+    (event) => {
       const { columnSelection, rowHeight, rowSelection } = props;
       const columnStart = rowSelection ? -1 : 0;
       const rowStart = columnSelection ? -1 : 0;
@@ -233,10 +230,10 @@ export default function TableBehavior(props) {
               getActiveRowIndex
             )
               ? getActiveMultiSelectRowArray.filter(
-                  item => item !== getActiveRowIndex
+                  (item) => item !== getActiveRowIndex
                 )
               : (getActiveMultiSelectRowArray && [
-                  ...getActiveMultiSelectRowArray
+                  ...getActiveMultiSelectRowArray,
                 ]) ||
                 [];
 
@@ -279,7 +276,7 @@ export default function TableBehavior(props) {
       getActiveRowIndex,
       getAllMultiSelectedRows,
       setActiveRowIndex,
-      setActiveColumnIndex
+      setActiveColumnIndex,
     ]
   );
 
@@ -306,6 +303,6 @@ export default function TableBehavior(props) {
     getGlobalColumns,
     setGlobalColumns,
     getGlobalResizeStyles,
-    setGlobalResizeStyles
+    setGlobalResizeStyles,
   });
 }

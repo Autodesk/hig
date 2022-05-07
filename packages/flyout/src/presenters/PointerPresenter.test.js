@@ -6,14 +6,14 @@ describe("flyout/presenters/PointerPresenter", () => {
   takeSnapshotsOf(PointerPresenter, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with all props",
       props: {
         borderWidth: 10,
-        size: 100
-      }
-    }
+        size: 100,
+      },
+    },
   ]);
 });

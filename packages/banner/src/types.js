@@ -7,7 +7,7 @@ export const types = Object.freeze({
   PRIMARY: "primary",
   COMPLETE: "complete",
   WARNING: "warning",
-  URGENT: "urgent"
+  URGENT: "urgent",
 });
 
 /** @type {string[]} */

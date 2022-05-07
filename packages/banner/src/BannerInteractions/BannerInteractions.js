@@ -25,12 +25,12 @@ export default function BannerInteractions(props) {
 }
 
 BannerInteractions.defaultProps = {
-  isWrappingActions: false
+  isWrappingActions: false,
 };
 
 BannerInteractions.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   isWrappingActions: PropTypes.bool,
   children: PropTypes.node,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

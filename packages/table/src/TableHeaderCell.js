@@ -22,7 +22,7 @@ export default function TableHeaderCell(props) {
             isPressed,
             onMouseDown: handleMouseDown,
             onMouseUp: handleMouseUp,
-            onPressedMouseLeave: handlePressedMouseLeave
+            onPressedMouseLeave: handlePressedMouseLeave,
           }) => (
             <TableHeaderCellPresenter
               hasHover={hasHover}
@@ -46,5 +46,5 @@ TableHeaderCell.propTypes = {
   onMouseLeave: PropTypes.func,
   onMouseDown: PropTypes.func,
   onMouseUp: PropTypes.func,
-  onSortClick: PropTypes.func
+  onSortClick: PropTypes.func,
 };

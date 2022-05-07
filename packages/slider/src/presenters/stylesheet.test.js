@@ -15,12 +15,12 @@ describe("stylesheet", () => {
     "slider.focus.haloWidth": "3px",
     "slider.pressed.haloColor": "orange",
     "slider.pressed.haloWidth": "5px",
-    "colorScheme.opacity.disabled": "0.4"
+    "colorScheme.opacity.disabled": "0.4",
   };
 
   it("returns an object", () => {
     const props = {
-      disabled: false
+      disabled: false,
     };
 
     expect(stylesheet(props, themeData)).toEqual(expect.any(Object));
@@ -56,7 +56,7 @@ describe("stylesheet", () => {
 
   it("returns the custom stylesheet", () => {
     expect(stylesheet({ stylesheet: () => ({ padding: 0 }) }, {})).toEqual({
-      padding: 0
+      padding: 0,
     });
   });
 
@@ -78,7 +78,7 @@ describe("stylesheet", () => {
     expect(styles).toEqual(
       expect.objectContaining({
         markRules: expect.anything(),
-        markContainer: expect.anything()
+        markContainer: expect.anything(),
       })
     );
   });
@@ -90,7 +90,7 @@ describe("stylesheet", () => {
     beforeEach(() => {
       props = {
         disabled: true,
-        hasFocus: true
+        hasFocus: true,
       };
 
       styles = stylesheet(props, themeData);
@@ -112,7 +112,7 @@ describe("stylesheet", () => {
   describe("when hasFocus", () => {
     it("sets the halo around the thumb to theme's focused halo width", () => {
       const props = {
-        hasFocus: true
+        hasFocus: true,
       };
 
       const styles = stylesheet(props, themeData);
@@ -126,7 +126,7 @@ describe("stylesheet", () => {
   describe("when hasHover", () => {
     it("sets the halo around the thumb to theme's hovered halo width", () => {
       const props = {
-        hasHover: true
+        hasHover: true,
       };
 
       const styles = stylesheet(props, themeData);
@@ -141,7 +141,7 @@ describe("stylesheet", () => {
     it("sets the halo around the thumb to theme's hover halo width", () => {
       const props = {
         hasFocus: true,
-        hasHover: true
+        hasHover: true,
       };
 
       const styles = stylesheet(props, themeData);
@@ -155,7 +155,7 @@ describe("stylesheet", () => {
   describe("when isPressed", () => {
     it("sets the halo around the thumb to theme's pressed halo width", () => {
       const props = {
-        isPressed: true
+        isPressed: true,
       };
 
       const styles = stylesheet(props, themeData);
@@ -176,7 +176,7 @@ describe("stylesheet", () => {
     });
 
     it("targets the track value elements for mozilla and microsoft browsers", () => {
-      ["::-moz-range-progress", "::-ms-fill-lower"].forEach(pseudoElement => {
+      ["::-moz-range-progress", "::-ms-fill-lower"].forEach((pseudoElement) => {
         expect(
           styles.slider[`&${pseudoElement}`].backgroundColor
         ).toBeDefined();

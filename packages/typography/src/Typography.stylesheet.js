@@ -11,8 +11,8 @@ export default function stylesheet(props, themeData) {
       fontWeight: fontWeight || themeData[`typography.${variant}.fontWeight`],
       lineHeight: themeData[`typography.${variant}.lineHeight`],
       margin: 0,
-      textAlign: align || "initial"
-    }
+      textAlign: align || "initial",
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

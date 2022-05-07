@@ -5,22 +5,22 @@ export default [
   {
     description: "default",
     getProps: () => ({
-      title: "Button Title"
-    })
+      title: "Button Title",
+    }),
   },
   {
     description: "as a link",
     getProps: () => ({
       link: "https://www.autodesk.com",
       target: "_blank",
-      title: "Button Title"
-    })
+      title: "Button Title",
+    }),
   },
   {
     description: "with icon",
     getProps: () => ({
       icon: <Settings24 />,
-      title: "Settings"
-    })
-  }
+      title: "Settings",
+    }),
+  },
 ];

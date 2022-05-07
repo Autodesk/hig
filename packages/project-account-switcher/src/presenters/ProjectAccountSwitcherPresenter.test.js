@@ -10,14 +10,14 @@ describe("project-account-switcher/presenters/ProjectAccountSwitcherPresenter", 
   takeSnapshotsOf(ProjectAccountSwitcherPresenter, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with all props",
       props: {
         accounts: [
           { id: "1", label: "Account 1" },
-          { id: "2", label: "Account 2" }
+          { id: "2", label: "Account 2" },
         ],
         activeAccountObj: { id: "1", label: "Account 1" },
         activeLabel: "Foo",
@@ -25,9 +25,9 @@ describe("project-account-switcher/presenters/ProjectAccountSwitcherPresenter", 
         onTargetClick: function handleTargetClick() {},
         projects: [
           { id: "1", label: "Project 1" },
-          { id: "2", label: "Project 2" }
-        ]
-      }
-    }
+          { id: "2", label: "Project 2" },
+        ],
+      },
+    },
   ]);
 });

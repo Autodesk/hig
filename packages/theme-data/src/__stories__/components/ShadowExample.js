@@ -8,7 +8,7 @@ import Value from "./Value";
 
 function getBoxShadowColor(boxShadowBlur, resolvedRoles) {
   const blurHeight = Object.keys(basics.shadows).find(
-    key => basics.shadows[key].value === boxShadowBlur
+    (key) => basics.shadows[key].value === boxShadowBlur
   );
 
   return blurHeight === "lowBlur"
@@ -35,5 +35,5 @@ export default function ShadowExample({ value }) {
 }
 
 ShadowExample.propTypes = {
-  value: PropTypes.string
+  value: PropTypes.string,
 };

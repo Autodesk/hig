@@ -6,7 +6,7 @@ import { transitionStatuses } from "../transitionStatuses";
 
 const TRANSITION_DURATION = 300;
 
-const ContainerTransition = props => {
+const ContainerTransition = (props) => {
   const { open } = props;
   const [inside, setInside] = useState(open);
   const [isVisible, setIsVisible] = useState(open);
@@ -15,7 +15,7 @@ const ContainerTransition = props => {
    * @param {string} transitionState
    * @returns {string}
    */
-  const getTransitionStatus = transitionState =>
+  const getTransitionStatus = (transitionState) =>
     !isVisible ? transitionStatuses.HIDDEN : transitionState;
 
   const beginExit = () => {
@@ -52,7 +52,9 @@ const ContainerTransition = props => {
 
   return (
     <Transition in={inside} onExited={handleExit} timeout={TRANSITION_DURATION}>
-      {transitionState => props.children(getTransitionStatus(transitionState))}
+      {(transitionState) =>
+        props.children(getTransitionStatus(transitionState))
+      }
     </Transition>
   );
 };
@@ -61,11 +63,11 @@ ContainerTransition.displayName = "ContainerTransition";
 
 ContainerTransition.propTypes = {
   children: PropTypes.func.isRequired,
-  open: PropTypes.bool
+  open: PropTypes.bool,
 };
 
 ContainerTransition.defaultProps = {
-  open: false
+  open: false,
 };
 
 export default ContainerTransition;

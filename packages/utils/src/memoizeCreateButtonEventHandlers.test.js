@@ -2,7 +2,7 @@ jest.mock("./createButtonEventHandlers", () => jest.fn(() => Math.random()));
 
 const createButtonEventHandlers = require("./createButtonEventHandlers");
 const {
-  default: memoizeCreateButtonEventHandlers
+  default: memoizeCreateButtonEventHandlers,
 } = require("./memoizeCreateButtonEventHandlers");
 
 describe("utils/memoizeCreateButtonEventHandlers", () => {

@@ -7,7 +7,7 @@ import customStylesheet from "./customStylesheet";
 
 const variantTypes = ["line", "box"];
 
-const TextArea = props => {
+const TextArea = (props) => {
   const { variant, stylesheet, textAreaRef, ...otherProps } = props;
   const { className } = otherProps;
   const textareaClassName =
@@ -64,11 +64,11 @@ TextArea.propTypes = {
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 TextArea.defaultProps = {
-  variant: "line"
+  variant: "line",
 };
 
 export default TextArea;

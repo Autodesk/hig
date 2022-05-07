@@ -7,7 +7,7 @@ import stylesheet from "./ModalPresenter.stylesheet";
 import ModalHeaderPresenter from "./ModalHeaderPresenter";
 import { types } from "../types";
 
-const ModalPresenter = props => {
+const ModalPresenter = (props) => {
   const titleId = generateId("modal-title");
   const {
     children,
@@ -162,11 +162,11 @@ ModalPresenter.propTypes = {
   /**
    * Style of the modal shell
    */
-  type: PropTypes.string
+  type: PropTypes.string,
 };
 
 ModalPresenter.defaultProps = {
-  type: types.STANDARD
+  type: types.STANDARD,
 };
 
 export default ModalPresenter;

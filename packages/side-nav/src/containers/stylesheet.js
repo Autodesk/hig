@@ -10,7 +10,7 @@ export default function stylesheet(props, themeData) {
       height: "calc(100vh - 56px)",
       width: constants.sideNavMaxWidth,
       zIndex: "2",
-      overflowX: "hidden"
+      overflowX: "hidden",
     }),
 
     belowTopCompact: reset({
@@ -20,7 +20,7 @@ export default function stylesheet(props, themeData) {
       height: "calc(100vh - 56px)",
       maxWidth: constants.sideNavMaxWidth,
       zIndex: "2",
-      overflowX: "hidden"
+      overflowX: "hidden",
     }),
 
     docked: reset({
@@ -34,8 +34,8 @@ export default function stylesheet(props, themeData) {
       width: constants.sideNavMaxWidth,
       paddingRight: "4px",
       zIndex: "2",
-      overflowX: "hidden"
-    })
+      overflowX: "hidden",
+    }),
   };
 
   if (customStylesheet) {

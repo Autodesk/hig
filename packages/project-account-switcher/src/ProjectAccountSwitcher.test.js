@@ -10,14 +10,14 @@ describe("project-account-switcher/ProjectAccountSwitcher", () => {
           <ProjectAccountSwitcher
             accounts={[
               { id: "1", label: "Account 1" },
-              { id: "2", label: "Account 2" }
+              { id: "2", label: "Account 2" },
             ]}
             accountTitle="Accounts"
             defaultAccount="1"
             defaultProject="2"
             projects={[
               { id: "1", label: "Project 1" },
-              { id: "2", label: "Project 2" }
+              { id: "2", label: "Project 2" },
             ]}
             projectTitle="Projects"
           />
@@ -32,7 +32,7 @@ describe("project-account-switcher/ProjectAccountSwitcher", () => {
           <ProjectAccountSwitcher
             accounts={[
               { id: "1", label: "Account 1" },
-              { id: "2", label: "Account 2" }
+              { id: "2", label: "Account 2" },
             ]}
             accountTitle="Accounts"
             activeAccount="2"
@@ -41,7 +41,7 @@ describe("project-account-switcher/ProjectAccountSwitcher", () => {
             defaultProject="2"
             projects={[
               { id: "1", label: "Project 1" },
-              { id: "2", label: "Project 2" }
+              { id: "2", label: "Project 2" },
             ]}
             projectTitle="Projects"
           />

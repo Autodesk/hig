@@ -8,8 +8,8 @@ function stylesheet(styles, props, themeData) {
     ...styles,
     input: {
       ...styles.input,
-      background: themeData[`basics.colors.secondary.green.100`]
-    }
+      background: themeData[`basics.colors.secondary.green.100`],
+    },
   };
 }
 

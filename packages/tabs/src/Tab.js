@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
 import TabPresenter from "./presenters/TabPresenter";
 
-const Tab = props => {
+const Tab = (props) => {
   const {
     active,
     closable,
@@ -25,7 +25,7 @@ const Tab = props => {
     handleClick,
     handleKeyDown,
     onClose,
-    render
+    render,
   } = otherProps;
 
   if (render) {
@@ -41,7 +41,7 @@ const Tab = props => {
         onBlur,
         onFocus,
         onMouseEnter: handleMouseEnter,
-        onMouseLeave: handleMouseLeave
+        onMouseLeave: handleMouseLeave,
       }) => (
         <TabPresenter
           active={active}
@@ -102,13 +102,13 @@ Tab.propTypes = {
   /**
    * Function to modify the component's styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 Tab.defaultProps = {
   active: false,
   disabled: false,
-  closable: false
+  closable: false,
 };
 
 export default Tab;
