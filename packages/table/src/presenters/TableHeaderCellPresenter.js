@@ -13,6 +13,7 @@ export default function TableHeaderCellPresenter(props) {
     isSelectableHeader,
     isSortPassed,
     onClick,
+    rowSelection,
     setActiveMultiSelectColumn,
     onSortClick,
     ...otherProps
@@ -42,8 +43,8 @@ export default function TableHeaderCellPresenter(props) {
     ]
   );
   const payload = { ...otherProps };
-  const resizeStyles =
-    (getGlobalResizeStyles && getGlobalResizeStyles[headerIndex + 1]) || {};
+  const rowOffset = rowSelection ? 1 : 0;
+  const resizeStyles = getGlobalResizeStyles?.[headerIndex + rowOffset] || {};
 
   delete payload.getActiveMultiSelectColumn;
   delete payload.getColumnHeaderArray;
@@ -94,5 +95,6 @@ TableHeaderCellPresenter.propTypes = {
   isSortPassed: PropTypes.func,
   onClick: PropTypes.func,
   setActiveMultiSelectColumn: PropTypes.func,
-  onSortClick: PropTypes.func
+  onSortClick: PropTypes.func,
+  rowSelection: PropTypes.bool
 };
