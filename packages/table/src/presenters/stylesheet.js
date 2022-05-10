@@ -18,6 +18,7 @@ export default function stylesheet(props, themeData, themeMeta) {
     multiSelectedRow,
     multiSelectedRowBottom,
     rowIndex,
+    rowSelection,
     selected,
     selectedBottom,
     selectedLeft,
@@ -90,7 +91,6 @@ export default function stylesheet(props, themeData, themeMeta) {
       boxSizing: `border-box`,
       display: `flex`,
       height: themeData["table.cell.minHeight"],
-      justifyContent: `center`,
       lineHeight: themeData["table.cell.minHeight"],
       padding: `0 ${themeData["table.cell.paddingHorizontal"]}`,
       transition: `background-color 0.1s ease-in-out`,
@@ -108,10 +108,14 @@ export default function stylesheet(props, themeData, themeMeta) {
         : {}),
       ...(headerIndex >= 0
         ? {
-            display: `block`,
             overflow: `hidden`,
             textOverflow: `ellipsis`,
             whiteSpace: `nowrap`
+          }
+        : {}),
+      ...(rowSelection && headerIndex < 0
+        ? {
+            justifyContent: `center`
           }
         : {})
     },

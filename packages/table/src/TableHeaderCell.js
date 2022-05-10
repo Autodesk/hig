@@ -6,6 +6,7 @@ import { HoverBehavior, PressedBehavior } from "@hig/behaviors";
 import TableHeaderCellPresenter from "./presenters/TableHeaderCellPresenter";
 
 export default function TableHeaderCell(props) {
+  const { onSortClick } = props;
   return (
     <HoverBehavior
       onMouseEnter={props.onMouseEnter}
@@ -30,6 +31,7 @@ export default function TableHeaderCell(props) {
               onMouseEnter={handleMouseEnter}
               onMouseUp={handleMouseUp}
               onMouseLeave={handlePressedMouseLeave}
+              onSortClick={onSortClick}
               {...props}
             />
           )}
@@ -43,5 +45,6 @@ TableHeaderCell.propTypes = {
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   onMouseDown: PropTypes.func,
-  onMouseUp: PropTypes.func
+  onMouseUp: PropTypes.func,
+  onSortClick: PropTypes.func
 };

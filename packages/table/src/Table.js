@@ -20,6 +20,7 @@ const Table = props => {
     tableSpreadProps,
     paginateDynamic,
     onTableCellClick,
+    onSortClick,
     stylesheet
   } = props;
 
@@ -83,6 +84,7 @@ const Table = props => {
               tableSpreadProps={tableSpreadProps}
               paginateDynamic={paginateDynamic}
               onTableCellClick={onTableCellClick}
+              onSortClick={onSortClick}
               stylesheet={stylesheet}
               getGlobalColumns={getGlobalColumns}
               setGlobalColumns={setGlobalColumns}
@@ -109,6 +111,7 @@ Table.propTypes = {
   tableSpreadProps: PropTypes.any,
   paginateDynamic: PropTypes.bool,
   onTableCellClick: PropTypes.func,
+  onSortClick: PropTypes.func,
   stylesheet: PropTypes.func
 };
 

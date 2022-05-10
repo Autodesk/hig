@@ -45,7 +45,8 @@ const TableDataContents = ({
   isGrouped,
   tableObject,
   getGlobalColumns,
-  getGlobalResizeStyles
+  getGlobalResizeStyles,
+  rowSelection
 }) => (
   <div {...getTableBodyProps()} className={css(styles.higTableBody)}>
     {rowTypeToMap.map((row, rowIndex) => {
@@ -126,6 +127,7 @@ const TableDataContents = ({
                   rowTypeToMap={paginateDynamic ? rows : page}
                   customStylesheet={customStylesheet}
                   getGlobalResizeStyles={getGlobalResizeStyles}
+                  rowSelection={rowSelection}
                 >
                   {/* eslint-disable */}
                   {cell.isGrouped ? (
@@ -182,7 +184,8 @@ TableDataContents.propTypes = {
   isGrouped: PropTypes.bool,
   tableObject: PropTypes.any,
   getGlobalColumns: PropTypes.any,
-  getGlobalResizeStyles: PropTypes.any
+  getGlobalResizeStyles: PropTypes.any,
+  rowSelection: PropTypes.bool
 };
 
 export default TableDataContents;
