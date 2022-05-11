@@ -1,33 +1,89 @@
 @font-face {
-    font-family: 'ArtifaktElement';
-    src:url('https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot'); /* IE9 Compat Modes */
-    src:url('https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Regular.woff2') format('woff2'), /* Super Modern Browsers */
-        url('https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Regular.woff') format('woff'), /* Pretty Modern Browsers */
-        url('https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-family: "ArtifaktElement";
+    src: local("Artifakt Element Regular"),
+    local("ArtifaktElement-Regular"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/WOFF2/Artifakt%20Element%20Regular.woff2") format("woff2"),
+    local("Artifakt Element Regular"),
+    local("ArtifaktElement-Regular"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/WOFF/Artifakt%20Element%20Regular.woff") format("woff"),
+    local("Artifakt Element Regular"),
+    local("ArtifaktElement-Regular"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/TTF/Artifakt%20Element%20Regular.ttf") format("truetype");
     font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+    font-style: normal
 }
+
 @font-face {
-    font-family: 'ArtifaktElement';
-    src:url('https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot'); /* IE9 Compat Modes */
-    src:url('https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Medium.woff2') format('woff2'), /* Super Modern Browsers */
-        url('https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Medium.woff') format('woff'), /* Pretty Modern Browsers */
-        url('https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Medium.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-family: "ArtifaktElement";
+    src: local("Artifakt Element Semi Bold"),
+    local("ArtifaktElement-SemiBold"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/WOFF2/Artifakt%20Element%20Semi%20Bold.woff2") format("woff2"),
+    local("Artifakt Element Semi Bold"),
+    local("ArtifaktElement-SemiBold"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/WOFF/Artifakt%20Element%20Semi%20Bold.woff") format("woff"),
+    local("Artifakt Element Semi Bold"),
+    local("ArtifaktElement-SemiBold"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/TTF/Artifakt%20Element%20Semi%20Bold.ttf") format("truetype");
     font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+    font-style: normal
 }
+
 @font-face {
-    font-family: 'ArtifaktElement';
-    src:url('https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot'); /* IE9 Compat Modes */
-    src:url('https://fonts.autodesk.com/ArtifaktElement/EOT/Artifakt%20Element%20Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-        url('https://fonts.autodesk.com/ArtifaktElement/WOFF2/Artifakt%20Element%20Bold.woff2') format('woff2'), /* Super Modern Browsers */
-        url('https://fonts.autodesk.com/ArtifaktElement/WOFF/Artifakt%20Element%20Bold.woff') format('woff'), /* Pretty Modern Browsers */
-        url('https://fonts.autodesk.com/ArtifaktElement/TTF/Artifakt%20Element%20Bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-family: "ArtifaktElement";
+    src: local("Artifakt Element Bold"),
+    local("ArtifaktElement-Bold"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/WOFF2/Artifakt%20Element%20Bold.woff2") format("woff2"),
+    local("Artifakt Element Bold"),
+    local("ArtifaktElement-Bold"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/WOFF/Artifakt%20Element%20Bold.woff") format("woff"),
+    local("Artifakt Element Bold"),
+    local("ArtifaktElement-Bold"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/TTF/Artifakt%20Element%20Bold.ttf") format("truetype");
     font-weight: 700;
-    font-style: normal;
-    font-display: swap;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "ArtifaktElement";
+    src: local("Artifakt Element Regular"),
+    local("ArtifaktElement-Regular"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/WOFF2/Artifakt%20Element%20Italic.woff2") format("woff2"),
+    local("Artifakt Element Regular"),
+    local("ArtifaktElement-Regular"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/WOFF/Artifakt%20Element%20Italic.woff") format("woff"),
+    local("Artifakt Element Regular"),
+    local("ArtifaktElement-Regular"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/TTF/Artifakt%20Element%20Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "ArtifaktElement";
+    src: local("Artifakt Element Semi Bold"),
+    local("ArtifaktElement-SemiBold"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/WOFF2/Artifakt%20Element%20Semi%20Bold%20Italic.woff2") format("woff2"),
+    local("Artifakt Element Semi Bold"),
+    local("ArtifaktElement-SemiBold"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/WOFF/Artifakt%20Element%20Semi%20Bold%20Italic.woff") format("woff"),
+    local("Artifakt Element Semi Bold"),
+    local("ArtifaktElement-SemiBold"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/TTF/Artifakt%20Element%20Semi%20Bold%20Italic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "ArtifaktElement";
+    src: local("Artifakt Element Bold"),
+    local("ArtifaktElement-Bold"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/WOFF2/Artifakt%20Element%20Bold%20Italic.woff2") format("woff2"),
+    local("Artifakt Element Bold"),
+    local("ArtifaktElement-Bold"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/WOFF/Artifakt%20Element%20Bold%20Italic.woff") format("woff"),
+    local("Artifakt Element Bold"),
+    local("ArtifaktElement-Bold"),
+    url("https://swc.autodesk.com/pharmacopeia/fonts/ArtifaktElement/v1.0/TTF/Artifakt%20Element%20Bold%20Italic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic
 }
