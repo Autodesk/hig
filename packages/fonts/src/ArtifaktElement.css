@@ -12,7 +12,6 @@
     font-weight: normal;
     font-style: normal
 }
-
 @font-face {
     font-family: "ArtifaktElement";
     src: local("Artifakt Element Semi Bold"),
@@ -27,7 +26,6 @@
     font-weight: 600;
     font-style: normal
 }
-
 @font-face {
     font-family: "ArtifaktElement";
     src: local("Artifakt Element Bold"),
@@ -42,7 +40,6 @@
     font-weight: 700;
     font-style: normal
 }
-
 @font-face {
     font-family: "ArtifaktElement";
     src: local("Artifakt Element Regular"),
@@ -57,7 +54,6 @@
     font-weight: normal;
     font-style: italic
 }
-
 @font-face {
     font-family: "ArtifaktElement";
     src: local("Artifakt Element Semi Bold"),
@@ -72,7 +68,6 @@
     font-weight: 600;
     font-style: italic
 }
-
 @font-face {
     font-family: "ArtifaktElement";
     src: local("Artifakt Element Bold"),
