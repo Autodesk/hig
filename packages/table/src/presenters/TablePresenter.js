@@ -239,6 +239,7 @@ const renderTable = params => {
     previousPage
   };
   const rowTypeToMap = paginateDynamic ? rows : page;
+  const [isSortedDesc, setIsSortedDesc] = useState(false);
 
   useEffect(() => {
     setTotalRows(rowTypeToMap.length);
@@ -362,6 +363,8 @@ const renderTable = params => {
                             getGlobalResizeStyles={getGlobalResizeStyles}
                             onSortClick={onSortClick}
                             rowSelection={rowSelection}
+                            setIsSortedDesc={setIsSortedDesc}
+                            isSortedDesc={isSortedDesc}
                           >
                             <div className={css(styles.headerHolder)}>
                               {column.canGroupBy && meta.groupElements ? (
@@ -389,7 +392,7 @@ const renderTable = params => {
                             {meta.sortColumns && column.id !== "selection" ? (
                               <SortColumns
                                 isSorted={column.isSorted}
-                                isSortedDesc={column.isSortedDesc}
+                                isSortedDesc={isSortedDesc}
                                 density={metadata.densityId}
                               >
                                 {meta.sortColumns}
