@@ -17,14 +17,14 @@ const timeObject = {
   day: "day",
   week: "week",
   month: "month",
-  year: "year"
+  year: "year",
 };
 
 storiesOf("Timestamp", module).add(
   "default",
   withInfo({
     ...infoOptions,
-    propTablesExclude: [KnobbedThemeProvider]
+    propTablesExclude: [KnobbedThemeProvider],
   })(() => (
     <KnobbedThemeProvider>
       <Timestamp

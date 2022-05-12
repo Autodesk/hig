@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import ModalPresenter from "./presenters/ModalPresenter";
 import ModalBehavior from "./behaviors/ModalBehavior";
 
-const Modal = props => {
+const Modal = (props) => {
   const {
     children,
     closeButtonAriaLabel,
@@ -84,11 +84,11 @@ Modal.propTypes = {
   /**
    * Style of the modal shell
    */
-  type: PropTypes.string
+  type: PropTypes.string,
 };
 
 Modal.defaultProps = {
-  closeButtonAriaLabel: "Close"
+  closeButtonAriaLabel: "Close",
 };
 
 export default Modal;

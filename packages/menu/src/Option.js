@@ -7,7 +7,7 @@ import OptionPresenter from "./presenters/OptionPresenter";
 
 import { roles, AVAILABLE_ROLES } from "./constants";
 
-const Option = props => {
+const Option = (props) => {
   const {
     asset,
     children,
@@ -19,13 +19,8 @@ const Option = props => {
     unselect,
     ...otherProps
   } = props;
-  const {
-    getHighlightIndex,
-    onFocus,
-    onMouseDown,
-    onMouseLeave,
-    onMouseUp
-  } = otherProps;
+  const { getHighlightIndex, onFocus, onMouseDown, onMouseLeave, onMouseUp } =
+    otherProps;
 
   return (
     <PressedBehavior
@@ -37,7 +32,7 @@ const Option = props => {
         isPressed,
         onMouseDown: handleMouseDown,
         onMouseUp: handleMouseUp,
-        onPressedMouseLeave: handlePressedMouseLeave
+        onPressedMouseLeave: handlePressedMouseLeave,
       }) => (
         <OptionBehavior
           {...otherProps}
@@ -52,7 +47,7 @@ const Option = props => {
             handleMouseEnter,
             handleMouseLeave,
             handleMouseOver,
-            isActive
+            isActive,
           }) => (
             <OptionPresenter
               {...otherProps}
@@ -124,11 +119,11 @@ Option.propTypes = {
   /**
    * Allows unselecting an Option
    */
-  unselect: PropTypes.bool
+  unselect: PropTypes.bool,
 };
 
 Option.defaultProps = {
-  role: roles.OPTION
+  role: roles.OPTION,
 };
 
 export default Option;

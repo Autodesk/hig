@@ -9,7 +9,7 @@ function createAggregateEventHandler(handlers) {
    * properly.
    */
   return function aggregateEventHandler(...args) {
-    handlers.forEach(handler => {
+    handlers.forEach((handler) => {
       if (handler) handler(...args);
     });
   };

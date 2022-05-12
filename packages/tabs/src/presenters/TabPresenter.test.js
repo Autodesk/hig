@@ -9,7 +9,7 @@ describe("tabs/TabPresenter", () => {
   const cases = [
     {
       description: "renders without props",
-      props: {}
+      props: {},
     },
     {
       description: "renders with all props",
@@ -26,9 +26,9 @@ describe("tabs/TabPresenter", () => {
         onFocus: function onFocus() {},
         onKeyDown: function handleKeyDown() {},
         onMouseEnter: function onMouseEnter() {},
-        onMouseLeave: function onMouseLeave() {}
-      }
-    }
+        onMouseLeave: function onMouseLeave() {},
+      },
+    },
   ];
 
   cases.forEach(({ description, props: { children, ...otherProps } }) => {

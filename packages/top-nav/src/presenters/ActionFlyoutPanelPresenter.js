@@ -9,7 +9,7 @@ export default function ActionFlyoutPanelPresenter({
   children,
   handleScroll,
   innerRef,
-  stylesheet: customStylesheet
+  stylesheet: customStylesheet,
 }) {
   const styles = stylesheet({ stylesheet: customStylesheet }, {});
   return (
@@ -28,7 +28,7 @@ ActionFlyoutPanelPresenter.propTypes = {
   children: PropTypes.node,
   handleScroll: PropTypes.func,
   innerRef: PropTypes.func,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 /* eslint-disable-next-line react/prop-types, prettier/prettier */

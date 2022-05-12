@@ -1,6 +1,6 @@
 export default [
   {
     description: "default",
-    getProps: () => ({})
-  }
+    getProps: () => ({}),
+  },
 ];

@@ -5,93 +5,93 @@ import {
   FONT_WEIGHT,
   LENGTH,
   LINE_HEIGHT,
-  SPACING
+  SPACING,
 } from "../../consts/types";
 
 export default {
   "treeView.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.default"
-    }
+      ref: "colorScheme.text.default",
+    },
   },
   "treeView.fontFamily": {
     type: FONT_FAMILY,
     value: {
-      ref: "basics.fontFamilies.main"
-    }
+      ref: "basics.fontFamilies.main",
+    },
   },
   "treeView.indicatorColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.icon.hover"
-    }
+      ref: "colorScheme.icon.hover",
+    },
   },
   "treeView.icon.marginRight": {
     type: SPACING,
     value: {
-      ref: "density.spacings.extraSmall"
-    }
+      ref: "density.spacings.extraSmall",
+    },
   },
   "treeView.row.height": {
     type: LENGTH,
-    value: "40px"
+    value: "40px",
   },
   "treeView.row.paddingHorizontal": {
     type: SPACING,
     value: {
-      ref: "density.spacings.small"
-    }
+      ref: "density.spacings.small",
+    },
   },
   "treeView.row.paddingVertical": {
     type: SPACING,
     value: {
-      ref: "density.spacings.extraSmall"
-    }
+      ref: "density.spacings.extraSmall",
+    },
   },
   "treeView.title.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "density.fontSizes.medium"
-    }
+      ref: "density.fontSizes.medium",
+    },
   },
   "treeView.title.fontWeight": {
     type: FONT_WEIGHT,
     value: {
-      ref: "basics.fontWeights.medium"
-    }
+      ref: "basics.fontWeights.medium",
+    },
   },
   "treeView.title.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.mediumExtraLarge"
-    }
+      ref: "basics.lineHeights.mediumExtraLarge",
+    },
   },
   "treeView.item.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "density.fontSizes.medium"
-    }
+      ref: "density.fontSizes.medium",
+    },
   },
   "treeView.item.fontWeight": {
     type: FONT_WEIGHT,
     value: {
-      ref: "basics.fontWeights.medium"
-    }
+      ref: "basics.fontWeights.medium",
+    },
   },
   "treeView.item.lineHeight": {
     type: LINE_HEIGHT,
     value: {
-      ref: "basics.lineHeights.mediumExtraLarge"
-    }
+      ref: "basics.lineHeights.mediumExtraLarge",
+    },
   },
   "treeView.guideLine.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.reference.base",
     },
     transform: {
-      alpha: 0.5
-    }
-  }
+      alpha: 0.5,
+    },
+  },
 };

@@ -21,7 +21,7 @@ function renderPanel({innerRef, content, stylesheet: customStylesheet, className
   );
 }
 
-const ProjectAccountSwitcher = props => {
+const ProjectAccountSwitcher = (props) => {
   const {
     accounts,
     accountTitle,
@@ -62,13 +62,14 @@ const ProjectAccountSwitcher = props => {
         activeAccountObj,
         activeProjectObj,
         handleAccountClick,
-        handleProjectClick
+        handleProjectClick,
       }) => (
         <Flyout
           alterCoordinates={alterCoordinates}
           anchorPoint={anchorPoint}
           open={open}
           panel={renderPanel}
+          // eslint-disable-next-line react/no-unstable-nested-components
           content={({ hideFlyout }) => (
             <ContentPresenter
               accounts={accounts}
@@ -121,7 +122,7 @@ ProjectAccountSwitcher.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       image: PropTypes.string,
-      label: PropTypes.string
+      label: PropTypes.string,
     })
   ),
   /** Currently selected Account - use this instead of defaultAccount for a controlled component */
@@ -155,13 +156,13 @@ ProjectAccountSwitcher.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       image: PropTypes.string,
-      label: PropTypes.string
+      label: PropTypes.string,
     })
   ),
   /** Heading title for the list of Projects */
   projectTitle: PropTypes.string,
   /** Adds custom/overriding styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default ProjectAccountSwitcher;

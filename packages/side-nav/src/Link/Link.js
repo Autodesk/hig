@@ -11,7 +11,8 @@ import ExternalLinkIcon from "../presenters/ExternalLinkIcon";
 import stylesheet from "./stylesheet";
 
 /** @todo Consider extending TextLink */
-const Link = props => {
+const Link = (props) => {
+  // eslint-disable-next-line react/no-unstable-nested-components
   const _renderExternalLinkIcon = (styles, size) =>
     props.target === "_blank" && (
       <div className={css(styles.externalIcon)}>
@@ -39,7 +40,7 @@ const Link = props => {
         const styles = stylesheet(
           {
             stylesheet: customStylesheet,
-            ...props
+            ...props,
           },
           resolvedRoles
         );
@@ -87,12 +88,12 @@ Link.propTypes = {
   /** Corresponds to the anchor tag's target */
   target: PropTypes.oneOf(AVAILABLE_TARGETS),
   /** Link text */
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 Link.defaultProps = {
   onClick: () => {},
-  onMouseOver: () => {}
+  onMouseOver: () => {},
 };
 
 export default Link;

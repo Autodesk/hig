@@ -6,15 +6,15 @@ describe("radio-button/presenters/ButtonPresenter", () => {
   [
     {
       description: "renders without props",
-      props: {}
+      props: {},
     },
     {
       description: "renders with all props",
       props: {
         checked: true,
-        disabled: true
-      }
-    }
+        disabled: true,
+      },
+    },
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {
       const presenter = (

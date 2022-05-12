@@ -49,7 +49,7 @@ describe("notification-flyout/behaviors/NotificationBehavior", () => {
         handleDismissButtonClick: expect.any(Function),
         height: "",
         innerRef: expect.any(Function),
-        transitionStatus: ENTERED
+        transitionStatus: ENTERED,
       });
     });
 

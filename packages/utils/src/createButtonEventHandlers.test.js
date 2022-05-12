@@ -45,7 +45,7 @@ describe("utils/createButtonEventHandlers", () => {
       it("doesn't call the handler for keys that aren't space or enter", () => {
         const result = createButtonEventHandlers(handler);
 
-        "abcdefghijklmnopqrstuvwxyz".split("").forEach(key => {
+        "abcdefghijklmnopqrstuvwxyz".split("").forEach((key) => {
           event.key = key;
           result.handleKeyDown(...args);
         });
@@ -53,7 +53,7 @@ describe("utils/createButtonEventHandlers", () => {
         expect(handler).not.toBeCalled();
       });
 
-      [" ", "Enter"].forEach(key => {
+      [" ", "Enter"].forEach((key) => {
         describe(`when the "${key}" key is pressed`, () => {
           beforeEach(() => {
             event.key = key;
@@ -76,7 +76,7 @@ describe("utils/createButtonEventHandlers", () => {
           describe("when the `preventDefault` option is disabled", () => {
             it("doesn't prevent default behavior", () => {
               const result = createButtonEventHandlers(handler, {
-                preventDefault: false
+                preventDefault: false,
               });
 
               result.handleKeyDown(...args);

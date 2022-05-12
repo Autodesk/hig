@@ -3,25 +3,25 @@ export default function stylesheetOverride(stylesheet) {
     ...stylesheet.input,
     // Safari chrome
     "::-webkit-inner-spin-button": {
-      display: `none`
+      display: `none`,
     },
     // IE
     "::-ms-clear": {
-      display: `none`
+      display: `none`,
     },
     // Firefox
     ":focus": {
-      MozAppearance: `textfield`
+      MozAppearance: `textfield`,
     },
     ":hover": {
-      MozAppearance: `textfield`
+      MozAppearance: `textfield`,
     },
-    MozAppearance: `textfield`
+    MozAppearance: `textfield`,
   };
   return {
     ...stylesheet,
     wrapper: {
-      ...stylesheet.wrapper
+      ...stylesheet.wrapper,
     },
     input: numericInput,
     halo: {
@@ -29,7 +29,7 @@ export default function stylesheetOverride(stylesheet) {
       width: "calc(100% + 2px)",
       left: -1,
       top: `calc(100% + 1px)`,
-      right: 0
-    }
+      right: 0,
+    },
   };
 }

@@ -5,12 +5,12 @@ describe("Dropdown/presenters/InputPresenter", () => {
   const rendererOptions = {
     createNodeMock(element) {
       return document.createElement(element.type);
-    }
+    },
   };
   const cases = [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with all props (that dropdown uses)",
@@ -23,9 +23,9 @@ describe("Dropdown/presenters/InputPresenter", () => {
         required: "this is required",
         onBlur: () => {},
         onFocus: () => {},
-        onClick: () => {}
-      }
-    }
+        onClick: () => {},
+      },
+    },
   ];
 
   takeSnapshotsOf(InputPresenter, cases, rendererOptions);

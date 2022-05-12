@@ -17,5 +17,5 @@ export default {
   mediumMedium: { value: "1.285714286", type: LINE_HEIGHT },
   mediumLarge: { value: "1.3", type: LINE_HEIGHT },
   mediumExtraLarge: { value: "1.428571429", type: LINE_HEIGHT },
-  mediumExtraExtraLarge: { value: "1.5", type: LINE_HEIGHT }
+  mediumExtraExtraLarge: { value: "1.5", type: LINE_HEIGHT },
 };

@@ -16,7 +16,7 @@ export default function PointerWrapperPresenter({
   const styles = stylesheet({
     transitionStatus: null,
     anchorPoint,
-    stylesheet: customStylesheet
+    stylesheet: customStylesheet,
   });
   const { className } = otherProps;
   const pointerWrapperClassName = createCustomClassNames(
@@ -43,5 +43,5 @@ PointerWrapperPresenter.propTypes = {
   /* eslint-disable-next-line react/forbid-prop-types */
   style: PropTypes.object,
   anchorPoint: PropTypes.oneOf(AVAILABLE_ANCHOR_POINTS),
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

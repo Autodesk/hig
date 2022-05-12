@@ -4,60 +4,60 @@ export default {
   "textLink.focus.haloColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.halo.focus"
-    }
+      ref: "colorScheme.halo.focus",
+    },
   },
   "textLink.focus.haloWidth": {
     type: LENGTH,
-    value: "2px"
+    value: "2px",
   },
   "textLink.primary.default.fontColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.textLink.primary.againstLight"
-    }
+      ref: "basics.colors.textLink.primary.againstLight",
+    },
   },
   "textLink.primary.hover.fontColor": {
     type: COLOR,
     value: {
-      ref: "textLink.primary.default.fontColor"
-    }
+      ref: "textLink.primary.default.fontColor",
+    },
   },
   "textLink.primary.focus.fontColor": {
     type: COLOR,
     value: {
-      ref: "textLink.primary.default.fontColor"
-    }
+      ref: "textLink.primary.default.fontColor",
+    },
   },
   "textLink.primary.hover.underlineColor": {
     type: COLOR,
     value: {
-      ref: "textLink.primary.default.fontColor"
-    }
+      ref: "textLink.primary.default.fontColor",
+    },
   },
   "textLink.secondary.default.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.default"
-    }
+      ref: "colorScheme.text.default",
+    },
   },
   "textLink.secondary.hover.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.default"
-    }
+      ref: "colorScheme.text.default",
+    },
   },
   "textLink.secondary.focus.fontColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.default"
-    }
+      ref: "colorScheme.text.default",
+    },
   },
   "textLink.secondary.hover.underlineColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.text.default"
-    }
+      ref: "colorScheme.text.default",
+    },
   },
   /**
    * ## Deprecated
@@ -67,67 +67,67 @@ export default {
   "textLink.textColor": {
     type: COLOR,
     value: {
-      ref: "textLink.primary.default.fontColor"
+      ref: "textLink.primary.default.fontColor",
     },
     metadata: {
       deprecated: {
-        equivalent: "textLink.primary.default.fontColor"
-      }
-    }
+        equivalent: "textLink.primary.default.fontColor",
+      },
+    },
   },
   "textLink.hover.textColor": {
     type: COLOR,
     value: {
-      ref: "textLink.primary.hover.fontColor"
+      ref: "textLink.primary.hover.fontColor",
     },
     metadata: {
       deprecated: {
-        equivalent: "textLink.primary.hover.fontColor"
-      }
-    }
+        equivalent: "textLink.primary.hover.fontColor",
+      },
+    },
   },
   "textLink.focus.textColor": {
     type: COLOR,
     value: {
-      ref: "textLink.primary.focus.fontColor"
+      ref: "textLink.primary.focus.fontColor",
     },
     metadata: {
       deprecated: {
-        equivalent: "textLink.primary.focus.fontColor"
-      }
-    }
+        equivalent: "textLink.primary.focus.fontColor",
+      },
+    },
   },
   "textLink.hover.underline.color": {
     type: COLOR,
     value: {
-      ref: "textLink.primary.hover.underlineColor"
+      ref: "textLink.primary.hover.underlineColor",
     },
     metadata: {
       deprecated: {
-        equivalent: "textLink.primary.hover.underlineColor"
-      }
-    }
+        equivalent: "textLink.primary.hover.underlineColor",
+      },
+    },
   },
   "textLink.focus.halo.color": {
     type: COLOR,
     value: {
-      ref: "textLink.focus.haloColor"
+      ref: "textLink.focus.haloColor",
     },
     metadata: {
       deprecated: {
-        equivalent: "textLink.focus.haloColor"
-      }
-    }
+        equivalent: "textLink.focus.haloColor",
+      },
+    },
   },
   "textLink.focus.halo.width": {
     type: LENGTH,
     value: {
-      ref: "textLink.focus.haloWidth"
+      ref: "textLink.focus.haloWidth",
     },
     metadata: {
       deprecated: {
-        equivalent: "textLink.focus.haloWidth"
-      }
-    }
-  }
+        equivalent: "textLink.focus.haloWidth",
+      },
+    },
+  },
 };

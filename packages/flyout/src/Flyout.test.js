@@ -17,7 +17,7 @@ describe("flyout/Flyout", () => {
       onClickOutside: function onClickOutside() {},
       onScroll: function onScroll() {},
       open: true,
-      openOnHover: false
+      openOnHover: false,
     };
     const MyCustomContainer = jest.fn(({ children, onScroll, maxHeight }) => (
       <div
@@ -46,38 +46,38 @@ describe("flyout/Flyout", () => {
     takeSnapshotsOf(Flyout, [
       {
         desc: "renders without props",
-        props: {}
+        props: {},
       },
       {
         desc: "renders open by default",
         props: {
-          defaultOpen: true
-        }
+          defaultOpen: true,
+        },
       },
       {
         desc: "renders with a basic set of props",
-        props: basicProps
+        props: basicProps,
       },
       {
         desc: "renders children from the given render function",
         props: {
           ...basicProps,
-          children: renderChildren
-        }
+          children: renderChildren,
+        },
       },
       {
         desc: "renders content from the given render function",
         props: {
           ...basicProps,
-          content: renderContent
-        }
+          content: renderContent,
+        },
       },
       {
         desc: "renders the panel from a basic render function",
         props: {
           ...basicProps,
-          panel: renderPanelBasic
-        }
+          panel: renderPanelBasic,
+        },
       },
       {
         desc: "renders the panel from a complex render function",
@@ -85,22 +85,22 @@ describe("flyout/Flyout", () => {
           ...basicProps,
           children: renderChildren,
           content: renderContent,
-          panel: renderPanelComplex
-        }
+          panel: renderPanelComplex,
+        },
       },
       {
         desc: "renders a custom pointer",
         props: {
           ...basicProps,
-          pointer: <span>my custom pointer</span>
-        }
+          pointer: <span>my custom pointer</span>,
+        },
       },
       {
         desc: "renders with className prop",
         props: {
           ...basicProps,
-          className: "my-class"
-        }
+          className: "my-class",
+        },
       },
       {
         desc: "renders with custom stylesheet function",
@@ -111,19 +111,19 @@ describe("flyout/Flyout", () => {
               ...styles,
               flyoutContainer: {
                 ...styles.flyoutContainer,
-                opacity: "0.3"
+                opacity: "0.3",
               },
               panel: {
                 ...styles.panel,
-                backgroundColor: "orange"
+                backgroundColor: "orange",
               },
               pointerBody: {
-                fill: "orange"
-              }
+                fill: "orange",
+              },
             };
-          }
-        }
-      }
+          },
+        },
+      },
     ]);
   });
 
@@ -180,7 +180,7 @@ describe("flyout/Flyout", () => {
     const alterCoordinates = jest.fn();
 
     beforeEach(() => {
-      alterCoordinates.mockImplementation(coordinates => coordinates);
+      alterCoordinates.mockImplementation((coordinates) => coordinates);
     });
 
     afterEach(() => {

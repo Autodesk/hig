@@ -8,6 +8,7 @@ import TableDataCell from "../TableDataCell";
 
 import stylesheet from "./stylesheet";
 
+// eslint-disable-next-line default-param-last
 const renderCellData = (formatDate = false, cell) => {
   if (!formatDate) return cell.render("Cell");
   return cell.column.Header === "Date"
@@ -46,7 +47,7 @@ const TableDataContents = ({
   tableObject,
   getGlobalColumns,
   getGlobalResizeStyles,
-  rowSelection
+  rowSelection,
 }) => (
   <div {...getTableBodyProps()} className={css(styles.higTableBody)}>
     {rowTypeToMap.map((row, rowIndex) => {
@@ -55,7 +56,7 @@ const TableDataContents = ({
           alternateBg,
           isCustomeContentExpanded: customContentArray[rowIndex],
           rowIndex,
-          customStylesheet
+          customStylesheet,
         },
         resolvedRoles,
         metadata

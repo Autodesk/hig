@@ -9,13 +9,13 @@ export default function SVGPresenter(props) {
   const { height, original, svgData, width } = props;
 
   const buildPolygons = (svgs, resolvedRoles) =>
-    svgs.map(item => {
+    svgs.map((item) => {
       // we need this if we don't want to manually edit
       // the svg files
       const map = {
         "hig__progress-ring__background": "background",
         "hig__progress-ring__mask": "mask",
-        "hig__progress-ring__segment": "segment"
+        "hig__progress-ring__segment": "segment",
       };
       const styles = stylesheet(props, resolvedRoles)[map[item.className]];
       return (
@@ -50,6 +50,7 @@ export default function SVGPresenter(props) {
 SVGPresenter.propTypes = {
   height: PropTypes.number,
   original: PropTypes.number,
+  // eslint-disable-next-line react/forbid-prop-types
   svgData: PropTypes.arrayOf(PropTypes.object),
-  width: PropTypes.number
+  width: PropTypes.number,
 };

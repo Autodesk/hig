@@ -1,7 +1,7 @@
 /** @type {Object.<string, string>} */
 export const placements = Object.freeze({
   TOP: "top",
-  BOTTOM: "bottom"
+  BOTTOM: "bottom",
 });
 
 /** @type {string[]} */

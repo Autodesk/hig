@@ -33,5 +33,5 @@ MenuPresenter.propTypes = {
   innerRef: PropTypes.func.isRequired,
   isOpen: PropTypes.bool,
   children: PropTypes.node,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

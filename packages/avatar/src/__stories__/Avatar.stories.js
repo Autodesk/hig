@@ -16,7 +16,7 @@ stories.forEach(({ description, getProps }) => {
     description,
     withInfo({
       ...infoOptions,
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider],
     })(() => {
       const props = getProps();
       return renderStory(props);
@@ -29,7 +29,7 @@ storybook.add(
   "all background colors",
   withInfo({
     ...infoOptions,
-    propTablesExclude: [KnobbedThemeProvider]
+    propTablesExclude: [KnobbedThemeProvider],
   })(() => {
     const avatarArray = [];
     for (let i = 0; i < COLOR_VARIANT_COUNT; i += 1) {
@@ -38,7 +38,7 @@ storybook.add(
           {renderStory({
             firstName: String.fromCharCode(105 + i), // calculates backgroundIdFromName() = 1 at start
             lastName: "",
-            size: sizes.LARGE_48
+            size: sizes.LARGE_48,
           })}
         </div>
       );

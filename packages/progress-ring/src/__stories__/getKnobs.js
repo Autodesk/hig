@@ -2,7 +2,7 @@ import { color, select } from "@storybook/addon-knobs/react";
 import { availableSizes, availableSurfaces } from "../constants";
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 export default function getKnobs(props) {
@@ -15,6 +15,6 @@ export default function getKnobs(props) {
       undefined,
       knobGroupIds.basic
     ),
-    mask: color("Mask", undefined, knobGroupIds.basic)
+    mask: color("Mask", undefined, knobGroupIds.basic),
   };
 }

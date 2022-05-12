@@ -16,10 +16,10 @@ storybook.add(
   "default",
   withInfo({
     ...infoOptions,
-    propTablesExclude: [KnobbedThemeProvider]
+    propTablesExclude: [KnobbedThemeProvider],
   })(() => {
     const props = {
-      children: "Email"
+      children: "Email",
     };
     const { children, theme, ...otherProps } = getKnobs(props);
 
@@ -31,10 +31,10 @@ storybook.add(
   "top label",
   withInfo({
     ...infoOptions,
-    propTablesExclude: [KnobbedThemeProvider, Input, Spacer]
+    propTablesExclude: [KnobbedThemeProvider, Input, Spacer],
   })(() => {
     const props = {
-      children: "Input Field"
+      children: "Input Field",
     };
     const { children, theme, ...otherProps } = getKnobs(props);
 
@@ -54,10 +54,10 @@ storybook.add(
   "side label",
   withInfo({
     ...infoOptions,
-    propTablesExclude: [KnobbedThemeProvider, Input, Spacer]
+    propTablesExclude: [KnobbedThemeProvider, Input, Spacer],
   })(() => {
     const props = {
-      children: "Input Field"
+      children: "Input Field",
     };
     const { children, theme, ...otherProps } = getKnobs(props);
 

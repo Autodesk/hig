@@ -7,7 +7,7 @@ import { createCustomClassNames, createButtonEventHandlers } from "@hig/utils";
 
 import stylesheet from "../stylesheet";
 
-const TreeObjectSubTreeItem = props => {
+const TreeObjectSubTreeItem = (props) => {
   const {
     treeItem,
     treeItem: {
@@ -22,7 +22,7 @@ const TreeObjectSubTreeItem = props => {
         guidelines,
         indicator,
         isControlled,
-        selected
+        selected,
       },
       onClick: userOnClick,
       ...otherTreeItemProps
@@ -50,7 +50,7 @@ const TreeObjectSubTreeItem = props => {
     getActiveTreeItemId,
     getActiveTreeItemIndex,
     guidelines,
-    selected: getActiveId() === id
+    selected: getActiveId() === id,
   };
   const { handleClick, handleKeyDown } = createButtonEventHandlers(onClick);
   const higTreeItemContentWrapperClassName = createCustomClassNames(
@@ -73,7 +73,7 @@ const TreeObjectSubTreeItem = props => {
       // eslint-disable-next-line no-shadow
       treeItem: { id },
       keyboardOpenId,
-      setIsCollapsed
+      setIsCollapsed,
     } = props;
 
     if (keyboardOpenId === id && setIsCollapsed) {
@@ -89,7 +89,7 @@ const TreeObjectSubTreeItem = props => {
       {({
         hasHover,
         onMouseEnter: handleMouseEnter,
-        onMouseLeave: handleMouseLeave
+        onMouseLeave: handleMouseLeave,
       }) => {
         const styleProps = { ...styleTreeItem, hasHover };
         const styles = stylesheet(styleProps, themeData);
@@ -99,7 +99,7 @@ const TreeObjectSubTreeItem = props => {
             className={cx([css(styles.higTreeItemSubTreeItem), className])}
             id={id}
             role="treeitem"
-            onClick={event => {
+            onClick={(event) => {
               if (userOnClick) {
                 userOnClick(event);
               }
@@ -113,14 +113,14 @@ const TreeObjectSubTreeItem = props => {
             <div
               className={cx([
                 css(styles.higTreeItemContentWrapper),
-                higTreeItemContentWrapperClassName
+                higTreeItemContentWrapperClassName,
               ])}
             >
               {icon && (
                 <div
                   className={cx([
                     css(styles.higTreeItemIconWrapper),
-                    higTreeItemIconWrapperClassName
+                    higTreeItemIconWrapperClassName,
                   ])}
                 >
                   {icon}
@@ -129,7 +129,7 @@ const TreeObjectSubTreeItem = props => {
               <span
                 className={cx([
                   css(styles.higTreeItemLabelWrapper),
-                  higTreeItemLabelWrapperClassName
+                  higTreeItemLabelWrapperClassName,
                 ])}
               >
                 {label}
@@ -152,17 +152,17 @@ TreeObjectSubTreeItem.propTypes = {
       collapsed: PropTypes.bool,
       expandByDoubleClick: PropTypes.bool,
       icon: PropTypes.node,
-      label: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
-    })
+      label: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+    }),
   }),
   keyboardOpenId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   level: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   themeData: PropTypes.shape({
-    fontColor: PropTypes.string
+    fontColor: PropTypes.string,
   }),
   onClick: PropTypes.func,
   setIsCollapsed: PropTypes.func,
-  setKeyboardOpenId: PropTypes.func
+  setKeyboardOpenId: PropTypes.func,
 };
 
 export default TreeObjectSubTreeItem;

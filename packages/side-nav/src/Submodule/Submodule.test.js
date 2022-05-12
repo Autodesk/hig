@@ -7,35 +7,35 @@ describe("side-nav/Submodule", () => {
     takeSnapshotsOf(Submodule, [
       {
         desc: "renders with no props",
-        props: {}
+        props: {},
       },
       {
         desc: "renders with minimal props",
         props: {
-          title: "Module"
-        }
+          title: "Module",
+        },
       },
       {
         desc: "renders an external link",
         props: {
           link: "http://example.com",
           target: "_blank",
-          title: "Module"
-        }
+          title: "Module",
+        },
       },
       {
         desc: "renders a link",
         props: {
           link: "http://example.com",
-          title: "Module"
-        }
+          title: "Module",
+        },
       },
       {
         desc: "renders with a click handler",
         props: {
-          onClick: function handleClick() {}
-        }
-      }
+          onClick: function handleClick() {},
+        },
+      },
     ]);
   });
 });

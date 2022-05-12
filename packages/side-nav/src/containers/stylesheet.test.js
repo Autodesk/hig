@@ -2,7 +2,7 @@ import stylesheet from "./stylesheet";
 
 describe("stylesheet", () => {
   const themeData = {
-    "colorScheme.lowShadowColor": "grey"
+    "colorScheme.lowShadowColor": "grey",
   };
   const props = {};
   const subject = () => stylesheet(props, themeData);

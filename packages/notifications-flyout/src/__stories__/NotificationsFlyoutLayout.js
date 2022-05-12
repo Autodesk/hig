@@ -7,7 +7,7 @@ export default function NotificationsFlyoutLayout({ children }) {
         display: "flex",
         paddingBottom: "450px",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
       }}
     >
       {children}

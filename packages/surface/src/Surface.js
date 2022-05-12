@@ -7,10 +7,10 @@ import {
   AVAILABLE_LEVELS,
   AVAILABLE_SPACINGS,
   AVAILABLE_SHADOWS,
-  AVAILABLE_BORDER_RADII
+  AVAILABLE_BORDER_RADII,
 } from "./constants";
 
-const Surface = props => {
+const Surface = (props) => {
   const {
     borderRadius,
     children,
@@ -33,7 +33,7 @@ const Surface = props => {
             horizontalPadding,
             verticalPadding,
             level,
-            shadow
+            shadow,
           },
           resolvedRoles
         );
@@ -87,12 +87,12 @@ Surface.propTypes = {
    * Enables specifying the semantic element to be rendered by the component
    * The default is "div"
    */
-  tagName: PropTypes.string
+  tagName: PropTypes.string,
 };
 
 Surface.defaultProps = {
   level: 100,
-  tagName: "div"
+  tagName: "div",
 };
 
 export default Surface;

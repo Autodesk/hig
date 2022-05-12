@@ -11,7 +11,7 @@ function Wrapper({ children }) {
         display: "flex",
         height: "300px",
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
       }}
     >
       {children}

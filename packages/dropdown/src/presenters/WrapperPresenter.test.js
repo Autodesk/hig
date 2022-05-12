@@ -7,20 +7,20 @@ describe("Dropdown/presenters/WrapperPresenter", () => {
   const rendererOptions = {
     createNodeMock(element) {
       return document.createElement(element.type);
-    }
+    },
   };
   const cases = [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with all props",
       props: {
         disabled: true,
-        children: <p key="p">hi</p>
-      }
-    }
+        children: <p key="p">hi</p>,
+      },
+    },
   ];
 
   takeSnapshotsOf(WrapperPresenter, cases, rendererOptions);

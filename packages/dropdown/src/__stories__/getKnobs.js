@@ -4,7 +4,7 @@ import { controlledObject } from "@hig/storybook/utils";
 
 const knobGroupIds = {
   basic: "Basic",
-  advanced: "Advanced"
+  advanced: "Advanced",
 };
 
 const knobLabels = {
@@ -18,12 +18,12 @@ const knobLabels = {
   onChange: "onChange",
   onFocus: "onFocus",
   options: "Options",
-  value: "Value"
+  value: "Value",
 };
 
 const variantOptions = {
   line: "Line",
-  box: "Box"
+  box: "Box",
 };
 
 export default function getKnobs(props) {
@@ -61,6 +61,6 @@ export default function getKnobs(props) {
     onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
     onFocus: action(knobLabels.onFocus),
-    options: object(knobLabels.options, options, knobGroupIds.basic)
+    options: object(knobLabels.options, options, knobGroupIds.basic),
   };
 }

@@ -5,6 +5,6 @@ export { default as ja } from "./ja.json";
 const languageOptions = {
   de: "Deutsche",
   en: "English",
-  ja: "日本語"
+  ja: "日本語",
 };
 export { languageOptions };

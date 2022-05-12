@@ -6,7 +6,7 @@ import stylesheet from "./stylesheet";
 
 export default function LogoTextPresenter({
   children,
-  stylesheet: customStylesheet
+  stylesheet: customStylesheet,
 }) {
   const styles = stylesheet({ stylesheet: customStylesheet }, {});
   return (
@@ -20,5 +20,5 @@ LogoTextPresenter.propTypes = {
   /** Logo content */
   children: PropTypes.node,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

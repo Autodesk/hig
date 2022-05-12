@@ -17,5 +17,5 @@ export default {
   fontWeights,
   lineHeights,
   shadows,
-  spacings
+  spacings,
 };

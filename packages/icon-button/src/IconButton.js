@@ -6,11 +6,11 @@ import {
   surfaces,
   variants,
   AVAILABLE_SURFACES,
-  AVAILABLE_VARIANTS
+  AVAILABLE_VARIANTS,
 } from "./constants";
 import IconButtonPresenter from "./presenters/IconButtonPresenter";
 
-const IconButton = props => {
+const IconButton = (props) => {
   const {
     disabled,
     onBlur,
@@ -41,7 +41,7 @@ const IconButton = props => {
         onMouseDown: handleMouseDown,
         onMouseEnter: handleMouseEnter,
         onMouseLeave: handleMouseLeave,
-        onMouseUp: handleMouseUp
+        onMouseUp: handleMouseUp,
       }) => (
         <IconButtonPresenter
           disabled={disabled}
@@ -124,12 +124,12 @@ IconButton.propTypes = {
   /**
    * The visual variant of the icon-button
    */
-  variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
+  variant: PropTypes.oneOf(AVAILABLE_VARIANTS),
 };
 
 IconButton.defaultProps = {
   surface: surfaces.SURFACELEVEL100,
-  variant: variants.DYNAMIC
+  variant: variants.DYNAMIC,
 };
 
 export default IconButton;

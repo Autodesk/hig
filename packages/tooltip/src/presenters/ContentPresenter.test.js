@@ -7,13 +7,13 @@ describe("tooltip/presenters/ContentPresenter", () => {
   takeSnapshotsOf(ContentPresenter, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with children",
       props: {
-        children: <span>Hello</span>
-      }
-    }
+        children: <span>Hello</span>,
+      },
+    },
   ]);
 });

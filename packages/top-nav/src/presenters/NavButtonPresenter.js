@@ -30,11 +30,11 @@ export default function NavButtonPresenter({
 }
 
 NavButtonPresenter.defaultProps = {
-  title: ""
+  title: "",
 };
 
 NavButtonPresenter.propTypes = {
   icon: PropTypes.element,
   onClick: PropTypes.func,
-  title: PropTypes.string
+  title: PropTypes.string,
 };

@@ -13,7 +13,7 @@ export default [
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque.
         </TextPresenter>
       ),
-      children: <Button title="Open Tooltip" />
-    })
-  }
+      children: <Button title="Open Tooltip" />,
+    }),
+  },
 ];

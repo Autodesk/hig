@@ -6,5 +6,5 @@ export default {
   medium: { value: "2px", type: BORDER_RADIUS },
   large: { value: "4px", type: BORDER_RADIUS },
   ellipse: { value: "50%", type: BORDER_RADIUS },
-  pill: { value: "1000em", type: BORDER_RADIUS }
+  pill: { value: "1000em", type: BORDER_RADIUS },
 };

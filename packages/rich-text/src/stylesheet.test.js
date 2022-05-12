@@ -16,7 +16,7 @@ describe("stylesheet", () => {
         h2: expect.any(Object),
         h3: expect.any(Object),
         p: expect.any(Object),
-        "ul, ol": expect.any(Object)
+        "ul, ol": expect.any(Object),
       })
     );
   });
@@ -30,7 +30,7 @@ describe("stylesheet", () => {
 
   it("returns the custom stylesheet", () => {
     expect(stylesheet({ stylesheet: () => ({ padding: 0 }) }, {})).toEqual({
-      padding: 0
+      padding: 0,
     });
   });
 });

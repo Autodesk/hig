@@ -7,12 +7,12 @@ import TreeItemBehavior from "../../behaviors/TreeItemBehavior";
 import TreeObjectNestedSubTreeItem from "./TreeObjectNestedSubTreeItem";
 import TreeObjectSubTreeItem from "./TreeObjectSubTreeItem";
 
-const TreeObjectView = props => {
+const TreeObjectView = (props) => {
   const {
     tree: {
       id,
       payload,
-      payload: { getActiveTreeItemId, getKeyboardOpenId, setKeyboardOpenId }
+      payload: { getActiveTreeItemId, getKeyboardOpenId, setKeyboardOpenId },
     },
     ...otherProps
   } = props;
@@ -23,7 +23,7 @@ const TreeObjectView = props => {
         getIsCollapsed,
         handleClick,
         handleOperatorClick,
-        setIsCollapsed
+        setIsCollapsed,
       }) => (
         <ThemeContext.Consumer>
           {({ resolvedRoles, metadata }) =>

@@ -13,20 +13,20 @@ import toggle from "./components/toggle";
 import treeView from "./components/treeView";
 import typography from "./components/typography";
 
-const highDensityThemeConfig = Object.assign(
-  { ...button },
-  checkbox,
-  input,
-  menu,
-  modal,
-  panel,
-  slider,
-  table,
-  tabs,
-  toggle,
-  treeView,
-  typography,
-  mapKeys(system.density, key => `density.${key}`)
-);
+const highDensityThemeConfig = {
+  ...button,
+  ...checkbox,
+  ...input,
+  ...menu,
+  ...modal,
+  ...panel,
+  ...slider,
+  ...table,
+  ...tabs,
+  ...toggle,
+  ...treeView,
+  ...typography,
+  ...mapKeys(system.density, (key) => `density.${key}`),
+};
 
 export default highDensityThemeConfig;

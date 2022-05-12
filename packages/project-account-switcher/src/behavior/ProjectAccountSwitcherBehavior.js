@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const ProjectAccountSwitcherBehavior = props => {
-  const getAccount = accountId => {
+const ProjectAccountSwitcherBehavior = (props) => {
+  const getAccount = (accountId) => {
     const { accounts = [], activeAccount } = props;
 
     if (activeAccount) {
@@ -13,7 +13,7 @@ const ProjectAccountSwitcherBehavior = props => {
     return accounts.find(({ id }) => id === accountId);
   };
 
-  const getProject = projectId => {
+  const getProject = (projectId) => {
     const { activeProject, projects = [] } = props;
 
     if (activeProject) {
@@ -42,7 +42,7 @@ const ProjectAccountSwitcherBehavior = props => {
     if (onChange) {
       onChange({
         account: activeAccountObj,
-        project: activeProjectObj
+        project: activeProjectObj,
       });
     }
 
@@ -63,7 +63,7 @@ const ProjectAccountSwitcherBehavior = props => {
     if (onChange) {
       onChange({
         account: activeAccountObj,
-        project: activeProjectObj
+        project: activeProjectObj,
       });
     }
 
@@ -72,12 +72,8 @@ const ProjectAccountSwitcherBehavior = props => {
     }
   };
 
-  const {
-    activeAccountId,
-    activeProjectId,
-    defaultAccount,
-    defaultProject
-  } = props;
+  const { activeAccountId, activeProjectId, defaultAccount, defaultProject } =
+    props;
   const uncontrolledAccount = defaultAccount || activeAccountId;
   const uncontrolledProject = defaultProject || activeProjectId;
 
@@ -85,7 +81,7 @@ const ProjectAccountSwitcherBehavior = props => {
     activeAccountObj: activeAccountHook || getAccount(uncontrolledAccount),
     activeProjectObj: activeProjectHook || getProject(uncontrolledProject),
     handleAccountClick,
-    handleProjectClick
+    handleProjectClick,
   });
 };
 
@@ -97,7 +93,7 @@ ProjectAccountSwitcherBehavior.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       image: PropTypes.string,
-      label: PropTypes.string
+      label: PropTypes.string,
     })
   ),
   /** Currently selected Account - use this instead of defaultAccount for a controlled component */
@@ -123,9 +119,9 @@ ProjectAccountSwitcherBehavior.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       image: PropTypes.string,
-      label: PropTypes.string
+      label: PropTypes.string,
     })
-  )
+  ),
 };
 
 export default ProjectAccountSwitcherBehavior;

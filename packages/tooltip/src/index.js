@@ -9,5 +9,5 @@ export { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
 export {
   ContentPresenter as Content,
   TextPresenter as Text,
-  Tooltip as default
+  Tooltip as default,
 };

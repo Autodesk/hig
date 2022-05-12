@@ -6,7 +6,7 @@ export default function stylesheet(props, themeData) {
     search: {
       display: "flex",
       alignItems: "center",
-      position: "relative"
+      position: "relative",
     },
 
     icon: {
@@ -16,12 +16,12 @@ export default function stylesheet(props, themeData) {
       height: "30px",
       display: "flex",
       alignItems: "center",
-      justifyContent: "center"
+      justifyContent: "center",
     },
 
     inputWrapper: {
       margin: "8px 10px",
-      width: "100%"
+      width: "100%",
     },
 
     input: reset({
@@ -34,20 +34,20 @@ export default function stylesheet(props, themeData) {
 
       "&:placeholder": {
         fontWeight: "normal",
-        color: themeData["basics.colors.tertiary.slate.700"]
+        color: themeData["basics.colors.tertiary.slate.700"],
       },
 
       "&:focus": {
-        outline: "none"
-      }
+        outline: "none",
+      },
     }),
 
     clear: {
       display: "flex",
       position: "absolute",
       right: "18px",
-      cursor: "pointer"
-    }
+      cursor: "pointer",
+    },
   };
 
   if (customStylesheet) {

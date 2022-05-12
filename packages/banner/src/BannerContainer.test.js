@@ -29,7 +29,7 @@ describe("banner/BannerContainer", () => {
       isWrappingContent: false,
       refContent: expect.any(Function),
       refInteractionsWrapper: expect.any(Function),
-      refNotification: expect.any(Function)
+      refNotification: expect.any(Function),
     });
   });
 
@@ -44,7 +44,7 @@ describe("banner/BannerContainer", () => {
 
     expect(actionsBag).toMatchObject({
       isWrappingActions: false,
-      isWrappingContent: false
+      isWrappingContent: false,
     });
   });
 });

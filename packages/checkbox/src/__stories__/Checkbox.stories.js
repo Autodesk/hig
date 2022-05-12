@@ -12,7 +12,7 @@ import Checkbox from "../Checkbox";
 
 const knobGroupIds = {
   basic: "Basic",
-  form: "Form Attributes"
+  form: "Form Attributes",
 };
 
 const knobLabels = {
@@ -21,7 +21,7 @@ const knobLabels = {
   onBlur: "onBlur",
   onChange: "onChange",
   onFocus: "onFocus",
-  onMouseDown: "onMouseDown"
+  onMouseDown: "onMouseDown",
 };
 
 function getKnobs(props) {
@@ -43,7 +43,7 @@ function getKnobs(props) {
     onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
     onFocus: action(knobLabels.onFocus),
-    onMouseDown: action(knobLabels.onMouseDown)
+    onMouseDown: action(knobLabels.onMouseDown),
   };
 }
 
@@ -54,7 +54,7 @@ stories.forEach(({ description, getProps }) => {
     description,
     withInfo({
       ...infoOptions,
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider],
     })(() => {
       const props = getProps();
       const { children, ...otherProps } = getKnobs(props);

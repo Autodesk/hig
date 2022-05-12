@@ -5,7 +5,7 @@ describe("project-account-switcher/presenters/ContentPresenter", () => {
   takeSnapshotsOf(ContentPresenter, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with all props",
@@ -16,8 +16,8 @@ describe("project-account-switcher/presenters/ContentPresenter", () => {
           {
             id: "2",
             label: "Account 2",
-            image: "http://placekitten.com/g/60/32"
-          }
+            image: "http://placekitten.com/g/60/32",
+          },
         ],
         activeAccountObj: { id: "1", label: "Account 1" },
         activeProjectObj: { id: "2", label: "Project 2" },
@@ -29,10 +29,10 @@ describe("project-account-switcher/presenters/ContentPresenter", () => {
           {
             id: "2",
             label: "Project 2",
-            image: "http://placekitten.com/g/32/32"
-          }
-        ]
-      }
-    }
+            image: "http://placekitten.com/g/32/32",
+          },
+        ],
+      },
+    },
   ]);
 });

@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const HoverBehavior = props => {
+const HoverBehavior = (props) => {
   const [hasHover, setHasHover] = useState(false);
 
-  const handleFocus = event => {
+  const handleFocus = (event) => {
     if (props.onMouseEnter) {
       props.onMouseEnter(event);
     }
@@ -15,7 +15,7 @@ const HoverBehavior = props => {
     }
   };
 
-  const handleBlur = event => {
+  const handleBlur = (event) => {
     if (props.onMouseLeave) {
       props.onMouseLeave(event);
     }
@@ -28,7 +28,7 @@ const HoverBehavior = props => {
   return props.children({
     hasHover,
     onMouseEnter: handleFocus,
-    onMouseLeave: handleBlur
+    onMouseLeave: handleBlur,
   });
 };
 
@@ -37,7 +37,7 @@ HoverBehavior.displayName = "HoverBehavior";
 HoverBehavior.propTypes = {
   children: PropTypes.func.isRequired,
   onMouseEnter: PropTypes.func,
-  onMouseLeave: PropTypes.func
+  onMouseLeave: PropTypes.func,
 };
 
 export default HoverBehavior;

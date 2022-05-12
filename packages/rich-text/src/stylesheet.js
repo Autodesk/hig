@@ -8,7 +8,7 @@ export default function stylesheet(props, themeData) {
       fontWeight: themeData[`typography.${variant}.fontWeight`],
       lineHeight: themeData[`typography.${variant}.lineHeight`],
       margin: margin || 0,
-      textAlign: "initial"
+      textAlign: "initial",
     };
   }
 
@@ -26,15 +26,15 @@ export default function stylesheet(props, themeData) {
         verticalAlign: "middle",
         fontSize: themeData["density.fontSizes.large"],
         paddingRight: themeData["density.spacings.small"],
-        marginLeft: "-14px"
-      }
-    }
+        marginLeft: "-14px",
+      },
+    },
   };
 
   const headerStyles = {
     h1: typographyStyle("h1"),
     h2: typographyStyle("h2"),
-    h3: typographyStyle("h3")
+    h3: typographyStyle("h3"),
   };
 
   const anchorStyles = {
@@ -47,18 +47,18 @@ export default function stylesheet(props, themeData) {
       "&:hover": {
         color: themeData["textLink.primary.hover.fontColor"],
         textDecoration: "underline",
-        textDecorationColor: themeData["textLink.primary.hover.underlineColor"]
+        textDecorationColor: themeData["textLink.primary.hover.underlineColor"],
       },
 
       "&:focus": {
         color: themeData["textLink.primary.focus.fontColor"],
-        outline: `solid ${themeData["textLink.focus.haloWidth"]} ${themeData["textLink.focus.haloColor"]}`
-      }
-    }
+        outline: `solid ${themeData["textLink.focus.haloWidth"]} ${themeData["textLink.focus.haloColor"]}`,
+      },
+    },
   };
 
   const boldStyles = {
-    "b, strong": { fontWeight: themeData["basics.fontWeights.bold"] }
+    "b, strong": { fontWeight: themeData["basics.fontWeights.bold"] },
   };
 
   const paragraphStyles = {
@@ -66,7 +66,7 @@ export default function stylesheet(props, themeData) {
     "h1 + p, h2 + p, h3 + p": typographyStyle(
       "body",
       `${themeData["density.spacings.medium"]} 0 ${themeData["density.spacings.small"]} 0`
-    )
+    ),
   };
 
   const styles = {
@@ -76,8 +76,8 @@ export default function stylesheet(props, themeData) {
       ...headerStyles,
       ...anchorStyles,
       ...paragraphStyles,
-      ...boldStyles
-    }
+      ...boldStyles,
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

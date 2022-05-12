@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const FocusBehavior = props => {
+const FocusBehavior = (props) => {
   const [hasFocus, setHasFocus] = useState(false);
 
-  const handleFocus = event => {
+  const handleFocus = (event) => {
     if (props.onFocus) {
       props.onFocus(event);
     }
@@ -15,7 +15,7 @@ const FocusBehavior = props => {
     }
   };
 
-  const handleBlur = event => {
+  const handleBlur = (event) => {
     if (props.onBlur) {
       props.onBlur(event);
     }
@@ -28,14 +28,14 @@ const FocusBehavior = props => {
   return props.children({
     hasFocus,
     onFocus: handleFocus,
-    onBlur: handleBlur
+    onBlur: handleBlur,
   });
 };
 
 FocusBehavior.propTypes = {
   children: PropTypes.func.isRequired,
   onFocus: PropTypes.func,
-  onBlur: PropTypes.func
+  onBlur: PropTypes.func,
 };
 
 export default FocusBehavior;

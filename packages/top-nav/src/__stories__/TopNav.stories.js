@@ -12,7 +12,7 @@ import TopNav, {
   NotificationsAction,
   ProfileAction,
   ProfileContent,
-  NavAction
+  NavAction,
 } from "../index";
 import AccountLogo from "./accounts-logo.svg";
 import infoOptions from "./infoOptions";
@@ -23,7 +23,7 @@ storybook.add(
   "accounts",
   withInfo({
     ...infoOptions,
-    propTablesExclude: [KnobbedThemeProvider]
+    propTablesExclude: [KnobbedThemeProvider],
   })(() => (
     <KnobbedThemeProvider>
       <TopNav
@@ -73,7 +73,7 @@ storybook.add(
   "with text logo",
   withInfo({
     ...infoOptions,
-    propTablesExclude: [KnobbedThemeProvider]
+    propTablesExclude: [KnobbedThemeProvider],
   })(() => (
     <KnobbedThemeProvider>
       <TopNav logo={<Logo link="https://autodesk.com">Autodesk HIG</Logo>} />
@@ -85,7 +85,7 @@ storybook.add(
   "using LogoText",
   withInfo({
     ...infoOptions,
-    propTablesExclude: [KnobbedThemeProvider]
+    propTablesExclude: [KnobbedThemeProvider],
   })(() => (
     <KnobbedThemeProvider>
       <TopNav
@@ -105,7 +105,7 @@ storybook.add(
   "using a custom NavAction",
   withInfo({
     ...infoOptions,
-    propTablesExclude: [KnobbedThemeProvider]
+    propTablesExclude: [KnobbedThemeProvider],
   })(() => (
     <KnobbedThemeProvider>
       <TopNav

@@ -23,7 +23,7 @@ export default [
     getProps: () => ({
       children: renderProfileContent(),
       avatarImage: avatarImagePath,
-      avatarName: "David Gonzalez"
-    })
-  }
+      avatarName: "David Gonzalez",
+    }),
+  },
 ];

@@ -7,7 +7,7 @@ import renderStory, { IconStory } from "./renderStory";
 import stories from "./stories";
 
 const knobLabels = {
-  color: "Color"
+  color: "Color",
 };
 
 function getKnobs(props) {
@@ -15,7 +15,7 @@ function getKnobs(props) {
 
   return {
     ...otherProps,
-    color: text(knobLabels.color, color)
+    color: text(knobLabels.color, color),
   };
 }
 
@@ -26,7 +26,7 @@ stories.forEach(({ description, getProps }) => {
     description,
     withInfo({
       ...infoOptions,
-      propTablesExclude: [KnobbedThemeProvider, IconStory]
+      propTablesExclude: [KnobbedThemeProvider, IconStory],
     })(() => {
       const props = getKnobs(getProps());
       return renderStory(props);

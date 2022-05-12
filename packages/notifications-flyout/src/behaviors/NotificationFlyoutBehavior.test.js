@@ -19,7 +19,7 @@ describe("notification-flyout/behaviors/NotificationFlyoutBehavior", () => {
           </Notification>,
           <Notification id="3" key="2">
             Bar
-          </Notification>
+          </Notification>,
         ]}
       >
         {children}
@@ -54,7 +54,7 @@ describe("notification-flyout/behaviors/NotificationFlyoutBehavior", () => {
         handleClose: expect.any(Function),
         notifications: expect.any(Array),
         showUnreadCount: true,
-        unreadCount: 3
+        unreadCount: 3,
       });
       expect(payload.notifications).toMatchSnapshot();
     });

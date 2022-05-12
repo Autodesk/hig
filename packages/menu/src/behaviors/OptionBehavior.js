@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 import selectOption from "./selectOption";
 
-const OptionBehavior = props => {
-  const getIndexFromId = id => {
+const OptionBehavior = (props) => {
+  const getIndexFromId = (id) => {
     const options = props.getOptionsInfo();
     const optionIds = [];
 
     if (options !== null) {
-      Object.keys(options).forEach(index => {
+      Object.keys(options).forEach((index) => {
         optionIds.push(options[index].id);
       });
     }
@@ -15,7 +15,7 @@ const OptionBehavior = props => {
     return optionIds.indexOf(id) > -1 ? optionIds.indexOf(id) : null;
   };
 
-  const handleClick = event => {
+  const handleClick = (event) => {
     const {
       disabled,
       getActiveOption,
@@ -24,7 +24,7 @@ const OptionBehavior = props => {
       onClick,
       role,
       selected,
-      setActiveOption
+      setActiveOption,
     } = props;
     const activeOptionsArray = [...getActiveOption()];
     const activeOptions = selectOption(id, activeOptionsArray, multiple);
@@ -45,7 +45,7 @@ const OptionBehavior = props => {
     setActiveOption(activeOptions);
   };
 
-  const handleMouseEnter = event => {
+  const handleMouseEnter = (event) => {
     if (props.onMouseEnter) {
       props.onMouseEnter(event);
     }
@@ -64,7 +64,7 @@ const OptionBehavior = props => {
     }
   };
 
-  const handleMouseLeave = event => {
+  const handleMouseLeave = (event) => {
     if (props.onMouseLeave) {
       props.onMouseLeave(event);
     }
@@ -94,7 +94,7 @@ const OptionBehavior = props => {
     handleClick,
     handleMouseEnter,
     handleMouseLeave,
-    isActive
+    isActive,
   });
 };
 
@@ -112,9 +112,10 @@ OptionBehavior.propTypes = {
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   role: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
   selected: PropTypes.arrayOf(PropTypes.any),
   setActiveOption: PropTypes.func,
-  setHighlightIndex: PropTypes.func
+  setHighlightIndex: PropTypes.func,
 };
 
 export default OptionBehavior;

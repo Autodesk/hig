@@ -9,10 +9,10 @@ import stylesheet from "./stylesheet";
 import {
   availableTargets,
   availableTypes,
-  availableWidths
+  availableWidths,
 } from "../constants";
 
-const ButtonPresenter = props => {
+const ButtonPresenter = (props) => {
   const {
     disabled,
     hasFocus,
@@ -114,7 +114,7 @@ ButtonPresenter.propTypes = {
   target: PropTypes.oneOf(availableTargets),
   title: PropTypes.string.isRequired,
   type: PropTypes.oneOf(availableTypes),
-  width: PropTypes.oneOf(availableWidths)
+  width: PropTypes.oneOf(availableWidths),
 };
 
 export default ButtonPresenter;

@@ -28,66 +28,66 @@ export default {
   "background.transparent": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.reference.base",
     },
     transform: {
-      alpha: 0
-    }
+      alpha: 0,
+    },
   },
   "border.base": {
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.reference.base",
     },
     transform: {
-      alpha: 0.5
+      alpha: 0.5,
     },
-    type: COLOR
+    type: COLOR,
   },
   "border.accent": { type: COLOR },
   "border.on": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.accent"
+      ref: "colorScheme.reference.accent",
     },
     transform: {
-      alpha: 0.5
-    }
+      alpha: 0.5,
+    },
   },
   "border.transparent": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.reference.base",
     },
     transform: {
-      alpha: 0
-    }
+      alpha: 0,
+    },
   },
   "halo.hover": {
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.reference.base",
     },
     transform: {
-      alpha: 0.15
+      alpha: 0.15,
     },
-    type: COLOR
+    type: COLOR,
   },
   "halo.focus": {
     value: {
-      ref: "colorScheme.reference.accent"
+      ref: "colorScheme.reference.accent",
     },
     transform: {
-      alpha: 0.35
+      alpha: 0.35,
     },
-    type: COLOR
+    type: COLOR,
   },
   "halo.pressed": {
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.reference.base",
     },
     transform: {
-      alpha: 0.25
+      alpha: 0.25,
     },
-    type: COLOR
+    type: COLOR,
   },
   "shadow.high": { type: COLOR },
   "shadow.low": { type: COLOR },
@@ -97,8 +97,8 @@ export default {
   "text.active": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.accent"
-    }
+      ref: "colorScheme.reference.accent",
+    },
   },
   "icon.default": { type: COLOR },
   "icon.hover": { type: COLOR },
@@ -114,54 +114,54 @@ export default {
   "indicator.pressed": { type: COLOR },
   "indicator.on": {
     value: {
-      ref: "colorScheme.reference.accent"
+      ref: "colorScheme.reference.accent",
     },
-    type: COLOR
+    type: COLOR,
   },
   "status.error": {
     value: {
-      ref: "basics.colors.secondary.red.600"
+      ref: "basics.colors.secondary.red.600",
     },
-    type: COLOR
+    type: COLOR,
   },
   "status.success": {
     value: {
-      ref: "basics.colors.secondary.green.600"
+      ref: "basics.colors.secondary.green.600",
     },
-    type: COLOR
+    type: COLOR,
   },
   "status.warning": {
     value: {
-      ref: "basics.colors.secondary.yellowOrange.500"
+      ref: "basics.colors.secondary.yellowOrange.500",
     },
-    type: COLOR
+    type: COLOR,
   },
   "status.info": {
     value: {
-      ref: "colorScheme.reference.accent"
+      ref: "colorScheme.reference.accent",
     },
-    type: COLOR
+    type: COLOR,
   },
   "status.read": {
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.reference.base",
     },
     transform: {
-      alpha: 0.4
+      alpha: 0.4,
     },
-    type: COLOR
+    type: COLOR,
   },
   "divider.lightweight": { type: COLOR },
   "divider.heavyweight": { type: COLOR },
   "opacity.mask": {
     type: COLOR,
     value: {
-      ref: "basics.colors.tertiary.pink.600"
-    }
+      ref: "basics.colors.tertiary.pink.600",
+    },
   },
   "opacity.disabled": {
     value: 0.4,
-    type: OPACITY
+    type: OPACITY,
   },
   /**
    *  ## Deprecated
@@ -171,123 +171,123 @@ export default {
   accentColor: {
     type: COLOR,
     metadata: {
-      deprecated: { equivalent: "colorScheme.reference.accent" }
-    }
+      deprecated: { equivalent: "colorScheme.reference.accent" },
+    },
   },
   baseColor: {
     type: COLOR,
     metadata: {
-      deprecated: { equivalent: "colorScheme.reference.base" }
-    }
+      deprecated: { equivalent: "colorScheme.reference.base" },
+    },
   },
   surfaceLevel100Color: {
     type: COLOR,
     metadata: {
-      deprecated: { equivalent: "colorScheme.surface.level100" }
-    }
+      deprecated: { equivalent: "colorScheme.surface.level100" },
+    },
   },
   surfaceLevel200Color: {
     type: COLOR,
     metadata: {
-      deprecated: { equivalent: "colorScheme.surface.level200" }
-    }
+      deprecated: { equivalent: "colorScheme.surface.level200" },
+    },
   },
   surfaceLevel250Color: {
     type: COLOR,
     metadata: {
-      deprecated: { equivalent: "colorScheme.surface.level250" }
-    }
+      deprecated: { equivalent: "colorScheme.surface.level250" },
+    },
   },
   surfaceLevel300Color: {
     type: COLOR,
     metadata: {
-      deprecated: { equivalent: "colorScheme.surface.level300" }
-    }
+      deprecated: { equivalent: "colorScheme.surface.level300" },
+    },
   },
   surfaceLevel350Color: {
     type: COLOR,
     metadata: {
-      deprecated: { equivalent: "colorScheme.surface.level350" }
-    }
+      deprecated: { equivalent: "colorScheme.surface.level350" },
+    },
   },
   highShadowColor: {
     type: COLOR,
     metadata: {
-      deprecated: { equivalent: "colorScheme.shadow.high" }
-    }
+      deprecated: { equivalent: "colorScheme.shadow.high" },
+    },
   },
   lowShadowColor: {
     type: COLOR,
     metadata: {
-      deprecated: { equivalent: "colorScheme.shadow.low" }
-    }
+      deprecated: { equivalent: "colorScheme.shadow.low" },
+    },
   },
   textColor: {
     type: COLOR,
     metadata: {
-      deprecated: { equivalent: "colorScheme.text.default" }
-    }
+      deprecated: { equivalent: "colorScheme.text.default" },
+    },
   },
   textColorDim: {
     type: COLOR,
     metadata: {
-      deprecated: { equivalent: "colorScheme.text.dim" }
-    }
+      deprecated: { equivalent: "colorScheme.text.dim" },
+    },
   },
   iconColor: {
     type: COLOR,
     metadata: {
-      deprecated: { equivalent: "colorScheme.icon.default" }
-    }
+      deprecated: { equivalent: "colorScheme.icon.default" },
+    },
   },
   errorColor: {
     value: {
-      ref: "colorScheme.status.error"
+      ref: "colorScheme.status.error",
     },
     metadata: {
       deprecated: {
-        equivalent: "colorScheme.status.error"
-      }
+        equivalent: "colorScheme.status.error",
+      },
     },
-    type: COLOR
+    type: COLOR,
   },
   successColor: {
     value: {
-      ref: "colorScheme.status.success"
+      ref: "colorScheme.status.success",
     },
     metadata: {
       deprecated: {
-        equivalent: "colorScheme.status.success"
-      }
+        equivalent: "colorScheme.status.success",
+      },
     },
-    type: COLOR
+    type: COLOR,
   },
   warningColor: {
     value: {
-      ref: "colorScheme.status.warning"
+      ref: "colorScheme.status.warning",
     },
     metadata: {
       deprecated: {
-        equivalent: "colorScheme.status.warning"
-      }
+        equivalent: "colorScheme.status.warning",
+      },
     },
-    type: COLOR
+    type: COLOR,
   },
   infoColor: {
     value: {
-      ref: "colorScheme.status.info"
+      ref: "colorScheme.status.info",
     },
     metadata: {
       deprecated: {
-        equivalent: "colorScheme.status.info"
-      }
+        equivalent: "colorScheme.status.info",
+      },
     },
-    type: COLOR
+    type: COLOR,
   },
   "component.backgroundColor": {
     type: COLOR,
     metadata: {
-      deprecated: { equivalent: "colorScheme.surface.level" }
-    }
-  }
+      deprecated: { equivalent: "colorScheme.surface.level" },
+    },
+  },
 };

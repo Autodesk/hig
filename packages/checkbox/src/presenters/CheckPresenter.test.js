@@ -6,16 +6,16 @@ describe("checkbox/presenters/CheckPresenter", () => {
   [
     {
       description: "renders without props",
-      props: {}
+      props: {},
     },
     {
       description: "renders with all props",
       props: {
         checked: true,
         disabled: true,
-        indeterminate: false
-      }
-    }
+        indeterminate: false,
+      },
+    },
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {
       const presenter = (

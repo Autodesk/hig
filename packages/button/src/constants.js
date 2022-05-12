@@ -2,7 +2,7 @@ export const targets = Object.freeze({
   SELF: "_self",
   BLANK: "_blank",
   PARENT: "_parent",
-  TOP: "_top"
+  TOP: "_top",
 });
 
 export const types = Object.freeze({
@@ -12,12 +12,12 @@ export const types = Object.freeze({
   /** @deprecated */
   PRIMARY: "primary",
   /** @deprecated */
-  SECONDARY: "secondary"
+  SECONDARY: "secondary",
 });
 
 export const widths = Object.freeze({
   SHRINK: "shrink",
-  GROW: "grow"
+  GROW: "grow",
 });
 
 export const availableTargets = Object.freeze(Object.values(targets));

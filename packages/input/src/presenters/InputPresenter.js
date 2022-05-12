@@ -9,10 +9,10 @@ import {
   availableTagNames,
   availableVariants,
   tagNames,
-  variants
+  variants,
 } from "../constants";
 
-const InputPresenter = props => {
+const InputPresenter = (props) => {
   const {
     disabled,
     hasFocus,
@@ -89,11 +89,11 @@ InputPresenter.propTypes = {
   onMouseLeave: PropTypes.func,
   stylesheet: PropTypes.func,
   tagName: PropTypes.oneOf(availableTagNames),
-  variant: PropTypes.oneOf(availableVariants)
+  variant: PropTypes.oneOf(availableVariants),
 };
 
 InputPresenter.defaultProps = {
-  tagName: tagNames.INPUT
+  tagName: tagNames.INPUT,
 };
 
 export default InputPresenter;

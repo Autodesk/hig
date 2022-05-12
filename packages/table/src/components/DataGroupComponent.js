@@ -8,7 +8,7 @@ const DataGroupComponent = ({
   groupNames,
   count,
   data,
-  dataGroup
+  dataGroup,
 }) => <div>{children({ styles, groupNames, count, data, dataGroup })}</div>;
 
 DataGroupComponent.propTypes = {
@@ -17,7 +17,7 @@ DataGroupComponent.propTypes = {
   groupNames: PropTypes.any,
   count: PropTypes.number,
   data: PropTypes.any,
-  dataGroup: PropTypes.any
+  dataGroup: PropTypes.any,
 };
 
 export default DataGroupComponent;

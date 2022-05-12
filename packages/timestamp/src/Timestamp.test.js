@@ -11,7 +11,7 @@ const timeObject = {
   day: "天",
   week: "週",
   month: "個月",
-  year: "年"
+  year: "年",
 };
 let mayFifth;
 

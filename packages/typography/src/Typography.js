@@ -6,12 +6,12 @@ import ThemeContext from "@hig/theme-context";
 import {
   AVAILABLE_ALIGNMENTS,
   AVAILABLE_FONT_WEIGHTS,
-  AVAILABLE_VARIANTS
+  AVAILABLE_VARIANTS,
 } from "./_constants";
 
 import stylesheet from "./Typography.stylesheet";
 
-const Typography = props => {
+const Typography = (props) => {
   const onElementType = () => {
     const { elementType, variant } = props;
 
@@ -44,7 +44,7 @@ const Typography = props => {
             align,
             fontWeight,
             variant,
-            ...props
+            ...props,
           },
           resolvedRoles
         );
@@ -99,7 +99,7 @@ Typography.propTypes = {
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default Typography;

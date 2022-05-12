@@ -6,7 +6,7 @@ describe("tooltip/presenters/PanelPresenter", () => {
   takeSnapshotsOf(PanelPresenter, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with all props",
@@ -14,8 +14,8 @@ describe("tooltip/presenters/PanelPresenter", () => {
         innerRef: function handleRef() {},
         children: "Hello",
         maxHeight: 42,
-        onScroll: function handleScroll() {}
-      }
-    }
+        onScroll: function handleScroll() {},
+      },
+    },
   ]);
 });

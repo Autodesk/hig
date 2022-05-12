@@ -4,179 +4,179 @@ import {
   FONT_FAMILY,
   FONT_SIZE,
   FONT_WEIGHT,
-  SPACING
+  SPACING,
 } from "../../consts/types";
 
 export default {
   "token.borderRadii": {
     value: {
-      ref: "basics.borderRadii.none"
+      ref: "basics.borderRadii.none",
     },
-    type: BORDER_RADIUS
+    type: BORDER_RADIUS,
   },
   "token.paddingLeft": {
     value: {
-      ref: "density.spacings.extraSmall"
+      ref: "density.spacings.extraSmall",
     },
-    type: SPACING
+    type: SPACING,
   },
   "token.paddingRight": {
     value: {
-      ref: "density.spacings.extraExtraSmall"
+      ref: "density.spacings.extraExtraSmall",
     },
-    type: SPACING
+    type: SPACING,
   },
   "token.paddingVertical": {
     value: {
-      ref: "density.spacings.extraExtraSmall"
+      ref: "density.spacings.extraExtraSmall",
     },
-    type: SPACING
+    type: SPACING,
   },
   "token.default.backgroundColor": {
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.reference.base",
     },
     transform: {
-      alpha: 0.15
+      alpha: 0.15,
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.hover.backgroundColor": {
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.reference.base",
     },
     transform: {
-      alpha: 0.25
+      alpha: 0.25,
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.pressed.backgroundColor": {
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.reference.base",
     },
     transform: {
-      alpha: 0.35
+      alpha: 0.35,
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.default.borderColor": {
     value: {
-      ref: "colorScheme.background.transparent"
+      ref: "colorScheme.background.transparent",
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.hover.borderColor": {
     value: {
-      ref: "colorScheme.background.transparent"
+      ref: "colorScheme.background.transparent",
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.pressed.borderColor": {
     value: {
-      ref: "colorScheme.background.transparent"
+      ref: "colorScheme.background.transparent",
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.selected.default.backgroundColor": {
     value: {
-      ref: "colorScheme.background.on.default"
+      ref: "colorScheme.background.on.default",
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.selected.hover.backgroundColor": {
     value: {
-      ref: "colorScheme.background.on.hover"
+      ref: "colorScheme.background.on.hover",
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.selected.pressed.backgroundColor": {
     value: {
-      ref: "colorScheme.background.empty.level100To250.pressed"
+      ref: "colorScheme.background.empty.level100To250.pressed",
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.selected.default.borderColor": {
     value: {
-      ref: "colorScheme.border.on"
+      ref: "colorScheme.border.on",
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.selected.hover.borderColor": {
     value: {
-      ref: "colorScheme.border.on"
+      ref: "colorScheme.border.on",
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.selected.pressed.borderColor": {
     value: {
-      ref: "colorScheme.border.on"
+      ref: "colorScheme.border.on",
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.warning.default.backgroundColor": {
     value: {
-      ref: "colorScheme.status.warning"
+      ref: "colorScheme.status.warning",
     },
     transform: {
-      alpha: 0.15
+      alpha: 0.15,
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.warning.hover.backgroundColor": {
     value: {
-      ref: "colorScheme.status.warning"
+      ref: "colorScheme.status.warning",
     },
     transform: {
-      alpha: 0.3
+      alpha: 0.3,
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.warning.iconColor": {
     value: {
-      ref: "colorScheme.status.warning"
+      ref: "colorScheme.status.warning",
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.icon.marginRight": {
     value: {
-      ref: "density.spacings.extraSmall"
+      ref: "density.spacings.extraSmall",
     },
-    type: SPACING
+    type: SPACING,
   },
   "token.label.fontColor": {
     value: {
-      ref: "colorScheme.text.default"
+      ref: "colorScheme.text.default",
     },
-    type: COLOR
+    type: COLOR,
   },
   "token.label.fontFamily": {
     value: {
-      ref: "basics.fontFamilies.main"
+      ref: "basics.fontFamilies.main",
     },
-    type: FONT_FAMILY
+    type: FONT_FAMILY,
   },
   "token.label.fontSize": {
     value: {
-      ref: "density.fontSizes.medium"
+      ref: "density.fontSizes.medium",
     },
-    type: FONT_SIZE
+    type: FONT_SIZE,
   },
   "token.label.fontWeight": {
     value: {
-      ref: "basics.fontWeights.medium"
+      ref: "basics.fontWeights.medium",
     },
-    type: FONT_WEIGHT
+    type: FONT_WEIGHT,
   },
   "token.label.marginRight": {
     value: {
-      ref: "density.spacings.extraExtraSmall"
+      ref: "density.spacings.extraExtraSmall",
     },
-    type: SPACING
+    type: SPACING,
   },
   "token.closeButton.iconColor": {
     value: {
-      ref: "basics.colors.icon.lightGray"
+      ref: "basics.colors.icon.lightGray",
     },
-    type: COLOR
-  }
+    type: COLOR,
+  },
 };

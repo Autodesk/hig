@@ -8,7 +8,7 @@ const fakeThemeData = {
   "avatarBundle.medium.border": "3px",
   "avatarBundle.extraLarge.border": "5px",
   "avatarBundle.medium.superCondensed.spacing.secondItem": "13px",
-  "avatarBundle.medium.superCondensed.spacing.thirdItem": "17px"
+  "avatarBundle.medium.superCondensed.spacing.thirdItem": "17px",
 };
 
 describe("stylesheet", () => {
@@ -92,7 +92,7 @@ describe("stylesheet", () => {
 
   it("returns the custom stylesheet if provided one", () => {
     expect(stylesheet({ stylesheet: () => ({ padding: 37 }) }, {})).toEqual({
-      padding: 37
+      padding: 37,
     });
   });
 });

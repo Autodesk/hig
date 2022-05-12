@@ -11,7 +11,7 @@ describe("radio-button/presenters/RadioButtonPresenter", () => {
   [
     {
       description: "renders without props",
-      props: {}
+      props: {},
     },
     {
       description: "renders with all props",
@@ -25,13 +25,13 @@ describe("radio-button/presenters/RadioButtonPresenter", () => {
         onChange: function onChange() {},
         onFocus: function onFocus() {},
         required: "required helper text",
-        value: "value"
-      }
+        value: "value",
+      },
     },
     {
       description: "renders with className prop",
-      props: { title: "Radio Button Class", className: "custom-class" }
-    }
+      props: { title: "Radio Button Class", className: "custom-class" },
+    },
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {
       const presenter = (

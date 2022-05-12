@@ -5,14 +5,14 @@ function borderStyles({ variant }, themeData) {
     borderStyle: "solid",
     borderColor: "transparent",
     borderWidth: themeData["input.borderWidth"],
-    borderBottomColor: themeData["input.line.default.borderBottomColor"]
+    borderBottomColor: themeData["input.line.default.borderBottomColor"],
   };
 
   return variant === variants.BOX
     ? {
         ...defaults,
         borderColor: themeData["input.box.default.borderColor"],
-        borderBottomColor: themeData["input.box.default.borderColor"]
+        borderBottomColor: themeData["input.box.default.borderColor"],
       }
     : defaults;
 }
@@ -23,13 +23,13 @@ function borderBottomStyles(
 ) {
   const defaults = {
     borderBottomStyle: "solid",
-    borderBottomWidth: themeData["input.borderBottomWidth"]
+    borderBottomWidth: themeData["input.borderBottomWidth"],
   };
 
   if (isDisabled) {
     return {
       ...defaults,
-      opacity: themeData["input.disabled.opacity"]
+      opacity: themeData["input.disabled.opacity"],
     };
   }
 
@@ -43,7 +43,7 @@ function borderBottomStyles(
       : {}),
     ...(hasHover
       ? { borderBottomColor: themeData["input.box.hover.borderBottomColor"] }
-      : {})
+      : {}),
   };
 }
 
@@ -51,17 +51,17 @@ function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   const defaults = {
     height: 0,
     transitionProperty: "height, color",
-    transitionDuration: "0.3s, 0.3s"
+    transitionDuration: "0.3s, 0.3s",
   };
   const focusStyles = {
     height: themeData["input.haloWidth"],
     backgroundColor: themeData["input.focus.haloColor"],
-    transitionDuration: "0.1s, 0.1s"
+    transitionDuration: "0.1s, 0.1s",
   };
   const hoverStyles = {
     backgroundColor: themeData["input.hover.haloColor"],
     height: themeData["input.haloWidth"],
-    transitionDuration: "0.1s, 0.1s"
+    transitionDuration: "0.1s, 0.1s",
   };
 
   if (isDisabled) {
@@ -71,17 +71,18 @@ function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
   return {
     ...defaults,
     ...(hasFocus ? focusStyles : {}),
-    ...(hasHover ? hoverStyles : {})
+    ...(hasHover ? hoverStyles : {}),
   };
 }
 
-export default function(props, themeData) {
+// eslint-disable-next-line func-names
+export default function (props, themeData) {
   return {
     wrapper: {
       flexGrow: 2,
       position: "relative",
       ...borderStyles(props, themeData),
-      ...borderBottomStyles(props, themeData)
+      ...borderBottomStyles(props, themeData),
     },
     halo: {
       position: "absolute",
@@ -89,7 +90,7 @@ export default function(props, themeData) {
       left: "-1px",
       right: 0,
       width: "calc(100% + 2px)",
-      ...haloStyles(props, themeData)
-    }
+      ...haloStyles(props, themeData),
+    },
   };
 }

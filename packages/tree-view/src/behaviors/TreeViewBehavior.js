@@ -48,10 +48,10 @@ function checkScroll(treeItemId, treeView) {
 }
 
 function buildTreeItemIdArray(list) {
-  return list.map(item => item.id);
+  return list.map((item) => item.id);
 }
 
-const TreeViewBehavior = props => {
+const TreeViewBehavior = (props) => {
   const isControlled = () => props.selected !== undefined;
   const [treeItemArray, setTreeItemArrayHook] = useState(null);
   const [activeTreeItemIndex, setActiveTreeItemIndexHook] = useState(null);
@@ -59,7 +59,7 @@ const TreeViewBehavior = props => {
   const [keyboardOpenId, setKeyboardOpenIdHook] = useState("");
   const treeViewRef = useRef(null);
 
-  const setTreeViewRef = element => {
+  const setTreeViewRef = (element) => {
     if (props.treeViewRef) {
       props.treeViewRef(element);
     }
@@ -67,7 +67,7 @@ const TreeViewBehavior = props => {
     treeViewRef.current = element;
   };
 
-  const setTreeItemArray = objectArray => {
+  const setTreeItemArray = (objectArray) => {
     setTreeItemArrayHook([...objectArray]);
   };
 
@@ -83,23 +83,23 @@ const TreeViewBehavior = props => {
     return treeItemArray && treeItemArray[getActiveTreeItemIndex()];
   };
 
-  const setActiveTreeItemId = currentItemclicked => {
+  const setActiveTreeItemId = (currentItemclicked) => {
     setCurrentItemClickedHook(currentItemclicked);
   };
 
   const getCurrentItemClicked = () => currentItemClicked;
 
-  const setActiveTreeItemIndex = index => {
+  const setActiveTreeItemIndex = (index) => {
     setActiveTreeItemIndexHook(index);
   };
 
   const getKeyboardOpenId = () => keyboardOpenId;
 
-  const setKeyboardOpenId = id => {
+  const setKeyboardOpenId = (id) => {
     setKeyboardOpenIdHook(id);
   };
 
-  const handleKeyDown = event => {
+  const handleKeyDown = (event) => {
     if (props.onKeyDown) {
       props.onKeyDown(event, {
         getActiveTreeItemId,
@@ -107,7 +107,7 @@ const TreeViewBehavior = props => {
         getTreeItemArray,
         setActiveTreeItemId,
         setActiveTreeItemIndex,
-        setKeyboardOpenId
+        setKeyboardOpenId,
       });
     }
 
@@ -190,7 +190,7 @@ const TreeViewBehavior = props => {
     setKeyboardOpenId,
     setTreeItemArray,
     setTreeViewRef,
-    treeViewRef: treeViewRef.current
+    treeViewRef: treeViewRef.current,
   });
 };
 
@@ -210,11 +210,11 @@ TreeViewBehavior.propTypes = {
         collapsed: PropTypes.bool,
         expandByDoubleClick: PropTypes.bool,
         icon: PropTypes.node,
-        label: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
-      })
+        label: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+      }),
     })
   ),
-  treeViewRef: PropTypes.func
+  treeViewRef: PropTypes.func,
 };
 
 TreeViewBehavior.defaultProps = {};

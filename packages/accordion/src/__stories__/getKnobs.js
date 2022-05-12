@@ -14,17 +14,12 @@ const knobLabels = {
   indicator: "Indicator",
   indicatorPosition: "Indicator position",
   collapsed: "Collapsed (controlled)",
-  onClick: "onClick"
+  onClick: "onClick",
 };
 
 export default function getKnobs(props) {
-  const {
-    label,
-    indicator,
-    indicatorPosition,
-    collapsed,
-    ...otherProps
-  } = props;
+  const { label, indicator, indicatorPosition, collapsed, ...otherProps } =
+    props;
 
   return {
     ...otherProps,
@@ -46,6 +41,6 @@ export default function getKnobs(props) {
       indicatorPosition,
       knobGroupIds.basic
     ),
-    onClick: action(knobLabels.onClick)
+    onClick: action(knobLabels.onClick),
   };
 }

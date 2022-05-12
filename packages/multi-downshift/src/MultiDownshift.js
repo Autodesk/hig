@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import PropTypes from "prop-types";
 import Downshift from "downshift";
@@ -26,15 +27,15 @@ export default class MultiDownshift extends React.Component {
     /** Controlled: the currently selected items */
     selectedItems: PropTypes.arrayOf(PropTypes.any),
     /** Items selected by default */
-    initialSelectedItems: PropTypes.arrayOf(PropTypes.any)
+    initialSelectedItems: PropTypes.arrayOf(PropTypes.any),
   };
 
   static defaultProps = {
-    initialSelectedItems: []
+    initialSelectedItems: [],
   };
 
   state = {
-    selectedItems: this.getDefaultSelectedItem()
+    selectedItems: this.getDefaultSelectedItem(),
   };
 
   getDefaultSelectedItem() {
@@ -66,7 +67,7 @@ export default class MultiDownshift extends React.Component {
     return {
       ...downshift,
       getRemoveButtonProps,
-      selectedItems
+      selectedItems,
     };
   }
 
@@ -87,7 +88,7 @@ export default class MultiDownshift extends React.Component {
 
     return {
       ...props,
-      onClick: handleClick
+      onClick: handleClick,
     };
   };
 
@@ -117,7 +118,7 @@ export default class MultiDownshift extends React.Component {
       case Downshift.stateChangeTypes.clickItem:
         return {
           ...changes,
-          isOpen: true
+          isOpen: true,
         };
       default:
         return changes;
@@ -173,7 +174,7 @@ export default class MultiDownshift extends React.Component {
   unselectItem(item, done) {
     const selectedItems = this.getSelectedItems();
     const nextSelectedItems = selectedItems.filter(
-      selectedItem => selectedItem !== item
+      (selectedItem) => selectedItem !== item
     );
 
     this.setState({ selectedItems: nextSelectedItems }, done);
@@ -193,7 +194,7 @@ export default class MultiDownshift extends React.Component {
   /**
    * @param {import("downshift").ControllerStateAndHelpers} downshift
    */
-  renderPresenter = downshift =>
+  renderPresenter = (downshift) =>
     this.props.children(this.getStateAndHelpers(downshift));
 
   render() {

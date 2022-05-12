@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { css } from "emotion";
 
 const styles = {
-  marginBottom: "20px"
+  marginBottom: "20px",
 };
 
 const GlobalFilter = ({ filter, setFilter, children }) => (
@@ -13,7 +13,7 @@ const GlobalFilter = ({ filter, setFilter, children }) => (
 GlobalFilter.propTypes = {
   children: PropTypes.func,
   filter: PropTypes.string,
-  setFilter: PropTypes.func
+  setFilter: PropTypes.func,
 };
 
 export default GlobalFilter;

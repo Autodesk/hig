@@ -8,8 +8,8 @@ describe("side-nav/Group", () => {
     const cases = [
       {
         description: "renders with no props",
-        props: {}
-      }
+        props: {},
+      },
     ];
 
     cases.forEach(({ description, props: { children, ...otherProps } }) => {

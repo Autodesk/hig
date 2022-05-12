@@ -5,7 +5,7 @@ import Flyout, {
   anchorPoints,
   AVAILABLE_ANCHOR_POINTS,
   offsetContainerVertical,
-  offsetPanelHorizontal
+  offsetPanelHorizontal,
 } from "@hig/flyout";
 
 import { renderActionFlyoutPanel } from "./presenters/ActionFlyoutPanelPresenter";
@@ -14,7 +14,7 @@ import NavButtonPresenter from "./presenters/NavButtonPresenter";
 
 /** @typedef {import("@hig/flyout").Coordinates} Coordinates */
 
-const NavAction = props => {
+const NavAction = (props) => {
   const {
     alterCoordinates,
     anchorPoint,
@@ -85,7 +85,7 @@ NavAction.propTypes = {
   /** Title text displayed in the tooltip on button hover */
   title: PropTypes.string,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 NavAction.defaultProps = {
@@ -97,7 +97,7 @@ NavAction.defaultProps = {
     return offsetPanelHorizontal(offsetContainerVertical(coordinates, 8), 57);
   },
   anchorPoint: anchorPoints.TOP_RIGHT,
-  fallbackAnchorPoints: []
+  fallbackAnchorPoints: [],
 };
 
 export default NavAction;

@@ -27,8 +27,8 @@ export default [
     description: "default",
     getProps: ({ language }) => ({
       children: getMessage(language),
-      dismissButtonTitle: "Close"
-    })
+      dismissButtonTitle: "Close",
+    }),
   },
   {
     description: "verbose, with interactions",
@@ -62,7 +62,7 @@ export default [
             />
           </Banner.Action>
         </Banner.Interactions>
-      )
-    })
-  }
+      ),
+    }),
+  },
 ];

@@ -17,7 +17,7 @@ import {
   AVAILABLE_ORIENTATIONS,
   alignments,
   variants,
-  orientations
+  orientations,
 } from "./constants";
 
 const FIRST_TAB_INDEX = 0;
@@ -86,7 +86,7 @@ function findInitialStateActiveTab(tabsProps) {
   return FIRST_TAB_INDEX;
 }
 
-const Tabs = props => {
+const Tabs = (props) => {
   const [activeTabIndex, setActiveTabIndex] = useState(
     findInitialStateActiveTab(props)
   );
@@ -139,7 +139,7 @@ const Tabs = props => {
   /**
    * @param {number} index
    */
-  const removeHoveredTab = index => {
+  const removeHoveredTab = (index) => {
     if (hoveredTabIndex === index) {
       setHoveredTabIndex(DEFAULT_HOVERED_TAB_INDEX);
     }
@@ -149,7 +149,7 @@ const Tabs = props => {
     ...createButtonEventHandlers(() => onTabSelection(index, { disabled })),
     onMouseEnter: () => setHoveredTab(index, { disabled }),
     onMouseLeave: () => removeHoveredTab(index),
-    onClose: () => props.onTabClose(index)
+    onClose: () => props.onTabClose(index),
   }));
 
   /**
@@ -185,7 +185,7 @@ const Tabs = props => {
       align: effectiveAlign,
       orientation: effectiveOrientation,
       active: activeTabIndex === index,
-      ...createTabEventHandlers(index, { disabled })
+      ...createTabEventHandlers(index, { disabled }),
     };
 
     return <Tab {...payload} />;
@@ -349,7 +349,7 @@ Tabs.propTypes = {
    * The visual variant of the tabs
    */
   // eslint-disable-next-line react/no-unused-prop-types
-  variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
+  variant: PropTypes.oneOf(AVAILABLE_VARIANTS),
 };
 
 Tabs.defaultProps = {
@@ -358,7 +358,7 @@ Tabs.defaultProps = {
   onTabClose: () => {},
   variant: variants.UNDERLINE,
   orientation: orientations.HORIZONTAL,
-  showTabDivider: true
+  showTabDivider: true,
 };
 
 export default Tabs;

@@ -4,12 +4,12 @@ describe("side-nav/Module/index", () => {
   [
     {
       name: "default",
-      value: expect.any(Function)
+      value: expect.any(Function),
     },
     {
       name: "ModuleCompact",
-      value: expect.any(Function)
-    }
+      value: expect.any(Function),
+    },
   ].forEach(({ name, value }) => {
     it(`exports ${name}`, () => {
       expect(index).toHaveProperty(name, value);

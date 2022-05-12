@@ -15,5 +15,5 @@ export default function renderStory(props) {
 }
 
 renderStory.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };

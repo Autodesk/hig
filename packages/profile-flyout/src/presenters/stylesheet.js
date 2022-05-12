@@ -13,13 +13,13 @@ export default function stylesheet(props, themeData) {
       border: 0,
       outline: 0,
       background: `none`,
-      cursor: `pointer`
+      cursor: `pointer`,
     },
     profileContent: {
       fontFamily: `ArtifaktElement`,
       lineHeight: 1.6,
       boxSizing: `border-box`,
-      padding: themeData ? themeData["density.spacings.small"] : 0
+      padding: themeData ? themeData["density.spacings.small"] : 0,
     },
     profileName: {
       display: `block`,
@@ -29,7 +29,7 @@ export default function stylesheet(props, themeData) {
       fontSize: `16px`,
       fontWeight: `bold`,
       lineHeight: `24px`,
-      ...(themeData ? { color: themeData["colorScheme.text.default"] } : {})
+      ...(themeData ? { color: themeData["colorScheme.text.default"] } : {}),
     },
     profileEmail: {
       display: `block`,
@@ -38,8 +38,8 @@ export default function stylesheet(props, themeData) {
       textOverflow: `ellipsis`,
       fontSize: `12px`,
       lineHeight: `16px`,
-      ...(themeData ? { color: themeData["colorScheme.text.dim"] } : {})
-    }
+      ...(themeData ? { color: themeData["colorScheme.text.dim"] } : {}),
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

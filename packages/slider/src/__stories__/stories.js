@@ -4,7 +4,7 @@ export default [
     getProps: () => ({
       min: 21,
       max: 99,
-      step: 1
-    })
-  }
+      step: 1,
+    }),
+  },
 ];

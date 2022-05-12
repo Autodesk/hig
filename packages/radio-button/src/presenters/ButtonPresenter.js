@@ -6,7 +6,7 @@ import { createCustomClassNames } from "@hig/utils";
 
 import stylesheet from "./stylesheet";
 
-const ButtonPresenter = props => {
+const ButtonPresenter = (props) => {
   const { stylesheet: customStylesheet, ...otherProps } = props;
   const { className } = otherProps;
   const radioButtonWrapperClassName = createCustomClassNames(
@@ -20,7 +20,7 @@ const ButtonPresenter = props => {
         const styles = stylesheet(
           {
             stylesheet: customStylesheet,
-            ...props
+            ...props,
           },
           resolvedRoles,
           metadata.colorSchemeId
@@ -44,7 +44,7 @@ ButtonPresenter.propTypes = {
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default ButtonPresenter;

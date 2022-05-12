@@ -24,6 +24,7 @@ describe("tabs/Tabs", () => {
         <Tab
           key="render"
           label="render"
+          // eslint-disable-next-line jsx-a11y/control-has-associated-label
           render={({ key }) => <button key={key} type="button" />}
         >
           render
@@ -155,9 +156,9 @@ describe("tabs/Tabs", () => {
       );
 
       const allTabs = tabs.find(Tab);
-      const fooTab = allTabs.findWhere(tab => tab.prop("label") === "foo");
-      const barTab = allTabs.findWhere(tab => tab.prop("label") === "bar");
-      const bazTab = allTabs.findWhere(tab => tab.prop("label") === "baz");
+      const fooTab = allTabs.findWhere((tab) => tab.prop("label") === "foo");
+      const barTab = allTabs.findWhere((tab) => tab.prop("label") === "bar");
+      const bazTab = allTabs.findWhere((tab) => tab.prop("label") === "baz");
 
       barTab.prop("handleClick")();
       expect(mockOnTabChange).toHaveBeenCalledTimes(1);
@@ -185,7 +186,7 @@ describe("tabs/Tabs", () => {
       </Tab>,
       <Tab key="baz" label="baz">
         baz
-      </Tab>
+      </Tab>,
     ];
 
     const checkActiveTab = (shallowTabs, expectedIndex) => {
@@ -193,7 +194,7 @@ describe("tabs/Tabs", () => {
       const expectedActiveTab = tabs[expectedIndex];
       const activeTab = shallowTabs
         .find(Tab)
-        .findWhere(tab => tab.prop("active"));
+        .findWhere((tab) => tab.prop("active"));
       expect(activeTab.prop("label")).toEqual(expectedActiveTab);
 
       const contentPresenter = shallowTabs.find(ContentPresenter);
@@ -207,7 +208,7 @@ describe("tabs/Tabs", () => {
             {[
               children[0],
               React.cloneElement(children[1], { active: true }),
-              children[2]
+              children[2],
             ]}
           </Tabs>
         );
@@ -220,7 +221,7 @@ describe("tabs/Tabs", () => {
             {[
               children[0],
               React.cloneElement(children[1], { active: true }),
-              children[2]
+              children[2],
             ]}
           </Tabs>
         );
@@ -233,7 +234,7 @@ describe("tabs/Tabs", () => {
             {[
               children[0],
               React.cloneElement(children[1], { active: true }),
-              children[2]
+              children[2],
             ]}
           </Tabs>
         );
@@ -262,7 +263,7 @@ describe("tabs/Tabs", () => {
             {[
               React.cloneElement(children[0], { active: true }),
               children[1],
-              children[2]
+              children[2],
             ]}
           </Tabs>
         );
@@ -304,7 +305,7 @@ describe("tabs/Tabs", () => {
             {[
               React.cloneElement(children[0], { active: true }),
               children[1],
-              children[2]
+              children[2],
             ]}
           </Tabs>
         );

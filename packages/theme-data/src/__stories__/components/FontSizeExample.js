@@ -13,5 +13,5 @@ export default function FontSizeExample({ value }) {
 }
 
 FontSizeExample.propTypes = {
-  value: PropTypes.string
+  value: PropTypes.string,
 };

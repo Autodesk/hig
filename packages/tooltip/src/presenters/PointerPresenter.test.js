@@ -6,7 +6,7 @@ describe("tooltip/presenters/PointerPresenter", () => {
   takeSnapshotsOf(PointerPresenter, [
     {
       desc: "renders",
-      props: {}
-    }
+      props: {},
+    },
   ]);
 });

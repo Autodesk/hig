@@ -1,10 +1,10 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const PressedBehavior = props => {
+const PressedBehavior = (props) => {
   const [isPressed, setIsPressed] = useState(false);
 
-  const handleMouseDown = event => {
+  const handleMouseDown = (event) => {
     if (props.onMouseDown) {
       props.onMouseDown(event);
     }
@@ -14,7 +14,7 @@ const PressedBehavior = props => {
     }
   };
 
-  const handleMouseLeave = event => {
+  const handleMouseLeave = (event) => {
     if (props.onMouseLeave) {
       props.onMouseLeave(event);
     }
@@ -24,7 +24,7 @@ const PressedBehavior = props => {
     }
   };
 
-  const handleMouseUp = event => {
+  const handleMouseUp = (event) => {
     if (props.onMouseUp) {
       props.onMouseUp(event);
     }
@@ -38,7 +38,7 @@ const PressedBehavior = props => {
     isPressed,
     onMouseDown: handleMouseDown,
     onMouseUp: handleMouseUp,
-    onPressedMouseLeave: handleMouseLeave
+    onPressedMouseLeave: handleMouseLeave,
   });
 };
 
@@ -48,7 +48,7 @@ PressedBehavior.propTypes = {
   children: PropTypes.func.isRequired,
   onMouseDown: PropTypes.func,
   onMouseLeave: PropTypes.func,
-  onMouseUp: PropTypes.func
+  onMouseUp: PropTypes.func,
 };
 
 export default PressedBehavior;

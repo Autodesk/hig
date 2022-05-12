@@ -3,16 +3,16 @@ import * as icons from "./index";
 
 describe("icons/index", () => {
   Object.keys(icons)
-    .filter(x => x.match(/(24|16)$/))
-    .forEach(x => {
+    .filter((x) => x.match(/(24|16)$/))
+    .forEach((x) => {
       const element = icons[x];
       takeSnapshotsOf(element, [
         {
           desc: "renders with no props",
           props: {
-            color: "white"
-          }
-        }
+            color: "white",
+          },
+        },
       ]);
     });
 });

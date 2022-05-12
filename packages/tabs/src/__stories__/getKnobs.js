@@ -9,7 +9,7 @@ const variantOptions = makeSelectOptions(variants);
 const orientationOptions = makeSelectOptions(orientations);
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
@@ -18,7 +18,7 @@ const knobLabels = {
   orientation: "Orientation",
   showTabDivider: "Show tab divider",
   onTabChange: "onTabChange",
-  onTabClose: "onTabClose"
+  onTabClose: "onTabClose",
 };
 
 export default function getKnobs(props) {
@@ -57,6 +57,6 @@ export default function getKnobs(props) {
       knobGroupIds.basic
     ),
     onTabChange: action(knobLabels.onTabChange),
-    onTabClose: action(knobLabels.onTabClose)
+    onTabClose: action(knobLabels.onTabClose),
   };
 }

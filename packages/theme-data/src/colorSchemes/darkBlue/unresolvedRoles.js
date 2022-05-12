@@ -29,38 +29,34 @@ import tooltip from "./components/tooltip";
 import topNav from "./components/topNav";
 import treeView from "./components/treeView";
 
-const darkBlueThemeConfig = extendTheme(
-  baseTheme.unresolvedRoles,
-  Object.assign(
-    {},
-    mediumDensityTheme.unresolvedRoles,
-    mapKeys(system.colorScheme, key => `colorScheme.${key}`),
-    accordion,
-    avatarBundle,
-    badge,
-    banner,
-    button,
-    checkbox,
-    iconButton,
-    illustration,
-    input,
-    label,
-    progressBar,
-    progressRing,
-    segmentedButton,
-    sideNav,
-    skeletonItem,
-    slider,
-    stepIndicator,
-    tabs,
-    tag,
-    textLink,
-    thumbnail,
-    token,
-    tooltip,
-    topNav,
-    treeView
-  )
-);
+const darkBlueThemeConfig = extendTheme(baseTheme.unresolvedRoles, {
+  ...mediumDensityTheme.unresolvedRoles,
+  ...mapKeys(system.colorScheme, (key) => `colorScheme.${key}`),
+  ...accordion,
+  ...avatarBundle,
+  ...badge,
+  ...banner,
+  ...button,
+  ...checkbox,
+  ...iconButton,
+  ...illustration,
+  ...input,
+  ...label,
+  ...progressBar,
+  ...progressRing,
+  ...segmentedButton,
+  ...sideNav,
+  ...skeletonItem,
+  ...slider,
+  ...stepIndicator,
+  ...tabs,
+  ...tag,
+  ...textLink,
+  ...thumbnail,
+  ...token,
+  ...tooltip,
+  ...topNav,
+  ...treeView,
+});
 
 export default darkBlueThemeConfig;

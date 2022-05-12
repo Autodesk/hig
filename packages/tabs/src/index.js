@@ -6,5 +6,5 @@ export {
   orientations,
   AVAILABLE_ALIGNMENTS,
   AVAILABLE_VARIANTS,
-  AVAILABLE_ORIENTATIONS
+  AVAILABLE_ORIENTATIONS,
 } from "./constants";

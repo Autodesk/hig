@@ -14,20 +14,20 @@ function stylesheet(props, themeData) {
   const thumbPseudoElements = {
     microsoft: "::-ms-thumb",
     mozilla: "::-moz-range-thumb",
-    webkit: "::-webkit-slider-thumb"
+    webkit: "::-webkit-slider-thumb",
   };
 
   const trackPseudoElements = {
     microsoft: "::-ms-track",
     mozilla: "::-moz-range-track",
-    webkit: "::-webkit-slider-runnable-track"
+    webkit: "::-webkit-slider-runnable-track",
   };
 
   const trackProgressPseudoElements = {
     // WebKit does not have a pseudo element to target this styling, so we achieve it with fancy styling on track
     // ::-webkit-slider-runnable-track
     microsoft: "::-ms-fill-lower",
-    mozilla: "::-moz-range-progress"
+    mozilla: "::-moz-range-progress",
   };
 
   function browserSpecificPseudoElementRules(
@@ -37,7 +37,7 @@ function stylesheet(props, themeData) {
   ) {
     const styles = {};
 
-    Object.entries(browserPseudoElements).forEach(browserPseudoElement => {
+    Object.entries(browserPseudoElements).forEach((browserPseudoElement) => {
       let pseudoElementRules = rules;
 
       const browser = browserPseudoElement[0];
@@ -46,7 +46,7 @@ function stylesheet(props, themeData) {
       if (singleBrowserInclusions && singleBrowserInclusions[browser]) {
         pseudoElementRules = {
           ...rules,
-          ...singleBrowserInclusions[browser]
+          ...singleBrowserInclusions[browser],
         };
       }
 
@@ -67,18 +67,18 @@ function stylesheet(props, themeData) {
     outline: "none",
 
     "&::-ms-tooltip": {
-      display: "none"
+      display: "none",
     },
 
     "&::-moz-focus-outer": {
-      border: 0
+      border: 0,
     },
-    opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "initial"
+    opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "initial",
   };
 
   const thumbStateRules = () => {
     const isInActiveState = Object.values(activeStates).every(
-      stateValue => !stateValue
+      (stateValue) => !stateValue
     );
 
     if (disabled || isInActiveState) {
@@ -95,7 +95,7 @@ function stylesheet(props, themeData) {
       backgroundColor: themeData[`slider.thumb.backgroundColor`],
       boxShadow: `0 0 0 ${themeData[`slider.${stateKey}.haloWidth`]} ${
         themeData[`slider.${stateKey}.haloColor`]
-      }`
+      }`,
     };
   };
 
@@ -115,21 +115,21 @@ function stylesheet(props, themeData) {
         transitionDuration: "0.3s",
         transitionProperty: "box-shadow",
         transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
-        WebkitAppearance: "none" /* Hides platform-native styling */
+        WebkitAppearance: "none" /* Hides platform-native styling */,
       },
 
-      ...thumbStateRules()
+      ...thumbStateRules(),
     },
     {
       webkit: {
-        transform: "translateY(-50%)"
-      }
+        transform: "translateY(-50%)",
+      },
     }
   );
 
   const trackDisabledRules = disabled
     ? {
-        opacity: themeData["colorScheme.opacity.disabled"]
+        opacity: themeData["colorScheme.opacity.disabled"],
       }
     : {};
 
@@ -144,7 +144,7 @@ function stylesheet(props, themeData) {
       border: "none",
       backgroundColor: themeData["slider.track.backgroundColor"],
       color: "transparent",
-      outline: "none"
+      outline: "none",
     },
     {
       // WebKit does not have a built-in way to target the progress/lower fill of a slider track.
@@ -154,8 +154,8 @@ function stylesheet(props, themeData) {
         backgroundImage: `linear-gradient(${themeData["slider.value.backgroundColor"]}, ${themeData["slider.value.backgroundColor"]})`,
         backgroundPosition: 0,
         backgroundSize: `${trackValueWidth} 100%`,
-        backgroundRepeat: "no-repeat"
-      }
+        backgroundRepeat: "no-repeat",
+      },
     }
   );
 
@@ -163,7 +163,7 @@ function stylesheet(props, themeData) {
     trackProgressPseudoElements,
     {
       border: "none",
-      backgroundColor: themeData["slider.value.backgroundColor"]
+      backgroundColor: themeData["slider.value.backgroundColor"],
     }
   );
 
@@ -174,16 +174,16 @@ function stylesheet(props, themeData) {
     position: "absolute",
     backgroundColor: themeData["slider.value.backgroundColor"],
 
-    ...trackDisabledRules
+    ...trackDisabledRules,
   };
 
   const markContainer = {
     position: "absolute",
-    width: "100%"
+    width: "100%",
   };
 
   const discrete = {
-    position: "relative"
+    position: "relative",
   };
 
   const styles = {
@@ -191,11 +191,11 @@ function stylesheet(props, themeData) {
       ...baseRules,
       ...thumbRules,
       ...trackRules,
-      ...trackProgressRules
+      ...trackProgressRules,
     },
     markRules,
     markContainer,
-    discrete
+    discrete,
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

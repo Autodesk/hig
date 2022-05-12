@@ -13,7 +13,7 @@ import {
   usePagination,
   useRowSelect,
   useSortBy,
-  useTable
+  useTable,
 } from "react-table";
 import { useSticky } from "react-table-sticky";
 
@@ -31,7 +31,7 @@ import TableDataContents from "./TableDataContents";
 
 import stylesheet from "./stylesheet";
 
-const renderTable = params => {
+const renderTable = (params) => {
   const {
     dataArray,
     isGrouped,
@@ -57,7 +57,7 @@ const renderTable = params => {
     onTableCellClick,
     onSortClick,
     customStylesheet,
-    otherProps
+    otherProps,
   } = params;
   const getOffset = () => {
     const newDataArray = dataArray || [];
@@ -77,7 +77,7 @@ const renderTable = params => {
   const defaultColumn = useMemo(() => ({
     minWidth: 30,
     width: 150,
-    maxWidth: 400
+    maxWidth: 400,
   }));
 
   const {
@@ -97,7 +97,7 @@ const renderTable = params => {
     getGlobalColumns,
     setGlobalColumns,
     getGlobalResizeStyles,
-    setGlobalResizeStyles
+    setGlobalResizeStyles,
   } = otherProps;
 
   const {
@@ -115,7 +115,7 @@ const renderTable = params => {
     state,
     setGlobalFilter,
     allColumns,
-    getToggleHideAllColumnsProps
+    getToggleHideAllColumnsProps,
   } = useTable(
     { columns, data, defaultColumn },
     useResizeColumns,
@@ -128,8 +128,8 @@ const renderTable = params => {
     useExpanded,
     usePagination,
     useRowSelect,
-    hooks => {
-      hooks.visibleColumns.push(defaultColumns => {
+    (hooks) => {
+      hooks.visibleColumns.push((defaultColumns) => {
         if (rowSelection) {
           return [
             {
@@ -147,7 +147,7 @@ const renderTable = params => {
                       !!getActiveMultiSelectRowArray?.length &&
                       !getAllMultiSelectedRows
                     }
-                    onClick={event => {
+                    onClick={(event) => {
                       event.stopPropagation();
                       const allArray = tableObject.data.map(
                         (row, index) => index
@@ -179,16 +179,16 @@ const renderTable = params => {
                 return (
                   <Checkbox
                     checked={getActiveMultiSelectRowArray?.includes(rowIndex)}
-                    onClick={event => {
+                    onClick={(event) => {
                       event.stopPropagation();
                       const newArray = getActiveMultiSelectRowArray?.includes(
                         rowIndex
                       )
                         ? getActiveMultiSelectRowArray.filter(
-                            item => item !== rowIndex
+                            (item) => item !== rowIndex
                           )
                         : (getActiveMultiSelectRowArray && [
-                            ...getActiveMultiSelectRowArray
+                            ...getActiveMultiSelectRowArray,
                           ]) ||
                           [];
 
@@ -205,9 +205,9 @@ const renderTable = params => {
                     tabIndex={-1}
                   />
                 );
-              }
+              },
             },
-            ...defaultColumns
+            ...defaultColumns,
           ];
         }
         return [...defaultColumns];
@@ -215,6 +215,7 @@ const renderTable = params => {
     }
   );
   const { globalFilter, pageIndex } = state;
+  // eslint-disable-next-line no-unsafe-optional-chaining
   const { isStickyHeader, isStickyColumns } = meta?.stickyItems;
   const handleStickyToggle = () => {
     const stickyObject = {};
@@ -236,7 +237,7 @@ const renderTable = params => {
     pageOptions,
     pageIndex,
     paginateDynamic,
-    previousPage
+    previousPage,
   };
   const rowTypeToMap = paginateDynamic ? rows : page;
   const [isSortedDesc, setIsSortedDesc] = useState(false);
@@ -252,9 +253,9 @@ const renderTable = params => {
   });
 
   useLayoutEffect(() => {
-    const currentHeaderStyles = headerGroups?.[0].headers.map(item => {
-      return item.getHeaderProps().style;
-    });
+    const currentHeaderStyles = headerGroups?.[0].headers.map(
+      (item) => item.getHeaderProps().style
+    );
 
     if (
       JSON.stringify(getGlobalResizeStyles) !==
@@ -274,7 +275,7 @@ const renderTable = params => {
             frozenHeaderCount,
             isStickyColumns,
             isStickyHeader,
-            customStylesheet
+            customStylesheet,
           },
           resolvedRoles,
           metadata
@@ -330,7 +331,7 @@ const renderTable = params => {
                                     column.isResizing ||
                                     getGlobalColumns?.[headerIndex + 1]
                                       ?.isResizing,
-                                  customStylesheet
+                                  customStylesheet,
                                 },
                                 resolvedRoles,
                                 metadata
@@ -387,7 +388,7 @@ const renderTable = params => {
                               className={css(
                                 resizingStyles?.higTableHeaderResizer
                               )}
-                              onClick={event => event.stopPropagation()}
+                              onClick={(event) => event.stopPropagation()}
                             />
                             {meta.sortColumns && column.id !== "selection" ? (
                               <SortColumns
@@ -532,10 +533,12 @@ const TablePresenter = ({
   stylesheet: customStylesheet,
   ...otherProps
 }) => {
-  const { columns, data: dataArray, meta, groupNames = [] } = useMemo(
-    () => tableObject,
-    [tableObject]
-  );
+  const {
+    columns,
+    data: dataArray,
+    meta,
+    groupNames = [],
+  } = useMemo(() => tableObject, [tableObject]);
   const isGrouped = Array.isArray(dataArray[0]);
   const passedParams = {
     dataArray,
@@ -560,18 +563,18 @@ const TablePresenter = ({
     onTableCellClick,
     onSortClick,
     customStylesheet,
-    otherProps
+    otherProps,
   };
   if (!isGrouped) {
     return renderTable(passedParams);
   }
-  const tableRender = dataArray?.map((data, count) => {
-    return renderTable({
+  const tableRender = dataArray?.map((data, count) =>
+    renderTable({
       ...passedParams,
       data,
-      count
-    });
-  });
+      count,
+    })
+  );
   return tableRender;
 };
 
@@ -592,7 +595,7 @@ TablePresenter.propTypes = {
   paginateDynamic: PropTypes.bool,
   onTableCellClick: PropTypes.func,
   onSortClick: PropTypes.func,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default TablePresenter;

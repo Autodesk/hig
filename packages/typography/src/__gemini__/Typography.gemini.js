@@ -1,5 +1,5 @@
 gemini.suite("Typography", () => {
-  gemini.suite("All Variations", suite => {
+  gemini.suite("All Variations", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=Typography&selectedStory=all%20variations"

@@ -1,5 +1,5 @@
 gemini.suite("RadioButtonPresenter", () => {
-  gemini.suite("default", suite => {
+  gemini.suite("default", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=RadioButtonPresenter&selectedStory=default"
@@ -8,19 +8,19 @@ gemini.suite("RadioButtonPresenter", () => {
       .capture("default - unfocused");
   });
 
-  gemini.suite("checked", suite => {
+  gemini.suite("checked", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=RadioButtonPresenter&selectedStory=checked"
       )
       .setCaptureElements(".storybook-component")
       .capture("checked - unfocused")
-      .capture("checked - focused", actions => {
+      .capture("checked - focused", (actions) => {
         actions.focus("input");
       });
   });
 
-  gemini.suite("disabled", suite => {
+  gemini.suite("disabled", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=RadioButtonPresenter&selectedStory=disabled"

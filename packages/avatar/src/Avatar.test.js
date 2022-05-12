@@ -8,19 +8,19 @@ describe("avatar/Avatar", () => {
   takeSnapshotsOf(Avatar, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with a name",
       props: {
-        name: "Jon Snow"
-      }
+        name: "Jon Snow",
+      },
     },
     {
       desc: "renders with an image",
       props: {
-        image: "http://placekitten.com/g/64/64"
-      }
+        image: "http://placekitten.com/g/64/64",
+      },
     },
     {
       desc: "renders with all props",
@@ -28,8 +28,8 @@ describe("avatar/Avatar", () => {
         name: "Jon Snow",
         image: "http://placekitten.com/g/64/64",
         onImageError: function handleImageError() {},
-        size: sizes.LARGE_48
-      }
+        size: sizes.LARGE_48,
+      },
     },
     {
       desc: "renders with className prop",
@@ -37,9 +37,9 @@ describe("avatar/Avatar", () => {
         name: "Jon Snow",
         image: "http://placekitten.com/g/64/64",
         className: "my-class-a my-class-b",
-        size: sizes.LARGE_48
-      }
-    }
+        size: sizes.LARGE_48,
+      },
+    },
   ]);
 
   describe("Creating initials from name", () => {
@@ -54,10 +54,10 @@ describe("avatar/Avatar", () => {
       { name: "Song Hye-gyo", expectedInitials: "SH" },
       { name: "송혜교", expectedInitials: "송" },
       { name: "高橋 留美子", expectedInitials: "高留" },
-      { name: "W--first W--last", expectedInitials: "WW" }
+      { name: "W--first W--last", expectedInitials: "WW" },
     ];
 
-    singleStringNames.forEach(nameData => {
+    singleStringNames.forEach((nameData) => {
       it(`renders initials based on the single string name "${nameData.name}"`, () => {
         const wrapper = mount(<Avatar name={nameData.name} />);
 
@@ -70,53 +70,53 @@ describe("avatar/Avatar", () => {
       {
         firstName: "maria",
         lastName: "bamford",
-        expectedInitials: "MB"
+        expectedInitials: "MB",
       },
       {
         firstName: "JustOneName",
-        expectedInitials: "J"
+        expectedInitials: "J",
       },
       {
         firstName: "Λεωνίδας",
         lastName: "ωή",
-        expectedInitials: "ΛΩ"
+        expectedInitials: "ΛΩ",
       },
       {
         firstName: "Иван",
         lastName: "Виктор",
-        expectedInitials: "ИВ"
+        expectedInitials: "ИВ",
       },
       {
         lastName: "安倍晋三",
-        expectedInitials: "安"
+        expectedInitials: "安",
       },
       {
         firstName: "Yu Jye",
         lastName: "Foo",
-        expectedInitials: "YF"
+        expectedInitials: "YF",
       },
       {
         firstName: "Song",
         lastName: "Hye-gyo",
-        expectedInitials: "SH"
+        expectedInitials: "SH",
       },
       {
         firstName: "송혜교",
-        expectedInitials: "송"
+        expectedInitials: "송",
       },
       {
         firstName: "高橋",
         lastName: "留美子",
-        expectedInitials: "高留"
+        expectedInitials: "高留",
       },
       {
         firstName: "W--first",
         lastName: "W--last",
-        expectedInitials: "WW"
-      }
+        expectedInitials: "WW",
+      },
     ];
 
-    firstLastNames.forEach(nameData => {
+    firstLastNames.forEach((nameData) => {
       it(`renders initials based on first and last names "${nameData.firstName}" "${nameData.lastName}"`, () => {
         const wrapper = mount(
           <Avatar firstName={nameData.firstName} lastName={nameData.lastName} />
@@ -132,24 +132,14 @@ describe("avatar/Avatar", () => {
       const wrapper = mount(<Avatar firstName="John" lastName="Snow" />);
       expect(
         window
-          .getComputedStyle(
-            wrapper
-              .find("span")
-              .first()
-              .getDOMNode()
-          )
+          .getComputedStyle(wrapper.find("span").first().getDOMNode())
           .getPropertyValue("background-color")
       ).toEqual("rgb(190, 41, 190)");
 
       const wrapper2 = mount(<Avatar firstName="John" lastName="Snoz" />);
       expect(
         window
-          .getComputedStyle(
-            wrapper2
-              .find("span")
-              .first()
-              .getDOMNode()
-          )
+          .getComputedStyle(wrapper2.find("span").first().getDOMNode())
           .getPropertyValue("background-color")
       ).toEqual("rgb(188, 43, 43)");
     });
@@ -159,12 +149,9 @@ describe("avatar/Avatar", () => {
     it("uses the default aria-label message", () => {
       const wrapper = mount(<Avatar firstName="John" lastName="Snow" />);
 
-      expect(
-        wrapper
-          .find("span")
-          .first()
-          .props()["aria-label"]
-      ).toEqual("Avatar for John Snow");
+      expect(wrapper.find("span").first().props()["aria-label"]).toEqual(
+        "Avatar for John Snow"
+      );
     });
   });
 
@@ -174,12 +161,9 @@ describe("avatar/Avatar", () => {
         <Avatar firstName="John" lastName="Snow" label="Avatar en Español" />
       );
 
-      expect(
-        wrapper
-          .find("span")
-          .first()
-          .props()["aria-label"]
-      ).toEqual("Avatar en Español");
+      expect(wrapper.find("span").first().props()["aria-label"]).toEqual(
+        "Avatar en Español"
+      );
     });
   });
 

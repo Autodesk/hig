@@ -14,8 +14,8 @@ export default function stylesheet(props) {
     toastListWrapper: {
       position: `fixed`,
       right: `10px`,
-      ...(placement ? getStylesByPlacement(placement) : {})
-    }
+      ...(placement ? getStylesByPlacement(placement) : {}),
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props) : styles;

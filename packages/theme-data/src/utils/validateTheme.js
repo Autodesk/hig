@@ -6,9 +6,10 @@ import {
   FONT_WEIGHT,
   LENGTH,
   FONT_SIZE,
-  SPACING
+  SPACING,
 } from "../consts/types";
 
+// eslint-disable-next-line prefer-regex-literals
 const cssLengthRegexp = new RegExp(
   /^(auto|0)$|^[+-]?[0-9]+.?([0-9]+)?(px|em|ex|%|in|cm|mm|pt|pc)$/
 );
@@ -16,7 +17,7 @@ const cssLengthRegexp = new RegExp(
 function extraKeys(o1, o2) {
   const o1Keys = Object.keys(o1);
   const o2Keys = Object.keys(o2);
-  return o2Keys.filter(key => !o1Keys.includes(key));
+  return o2Keys.filter((key) => !o1Keys.includes(key));
 }
 
 function validateColor(value) {
@@ -33,7 +34,7 @@ function validateFontWeight(value) {
 }
 
 function invalidRoles(types, validator, theme, schema) {
-  return Object.keys(schema).filter(role => {
+  return Object.keys(schema).filter((role) => {
     const schemaValue = schema[role];
     if (!types.includes(schemaValue.type)) {
       return false;
@@ -47,23 +48,23 @@ function invalidRoles(types, validator, theme, schema) {
 }
 
 function unknownRoleErrors(roles) {
-  return roles.map(role => ({
+  return roles.map((role) => ({
     role,
-    message: `Role ${role} is defined in the theme but not the schema`
+    message: `Role ${role} is defined in the theme but not the schema`,
   }));
 }
 
 function missingRoleErrors(roles) {
-  return roles.map(role => ({
+  return roles.map((role) => ({
     role,
-    message: `Role ${role} is in the schema but not the theme`
+    message: `Role ${role} is in the schema but not the theme`,
   }));
 }
 
 function typeErrors(roles, theme, schema) {
-  return roles.map(role => ({
+  return roles.map((role) => ({
     role,
-    message: `Role ${role}: ${theme[role]} is not a valid ${schema[role].type}`
+    message: `Role ${role}: ${theme[role]} is not a valid ${schema[role].type}`,
   }));
 }
 
@@ -95,6 +96,6 @@ export default function validateTheme(theme, schema) {
 
   return {
     valid: errors.length <= 0,
-    errors: errors.length ? errors : undefined
+    errors: errors.length ? errors : undefined,
   };
 }

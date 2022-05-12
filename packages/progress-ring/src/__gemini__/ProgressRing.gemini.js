@@ -1,5 +1,5 @@
 gemini.suite("ProgressRing", () => {
-  gemini.suite("determinate default", suite => {
+  gemini.suite("determinate default", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=ProgressRing&selectedStory=determinate%20default"
@@ -7,7 +7,7 @@ gemini.suite("ProgressRing", () => {
       .setCaptureElements(".storybook-component")
       .capture("default");
   });
-  gemini.suite("determinate extra small", suite => {
+  gemini.suite("determinate extra small", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=ProgressRing&selectedStory=determinate%20extra%20small"
@@ -15,7 +15,7 @@ gemini.suite("ProgressRing", () => {
       .setCaptureElements(".storybook-component")
       .capture("extra small");
   });
-  gemini.suite("determinate small", suite => {
+  gemini.suite("determinate small", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=ProgressRing&selectedStory=determinate%20small"
@@ -23,7 +23,7 @@ gemini.suite("ProgressRing", () => {
       .setCaptureElements(".storybook-component")
       .capture("small");
   });
-  gemini.suite("determinate medium", suite => {
+  gemini.suite("determinate medium", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=ProgressRing&selectedStory=determinate%20medium"
@@ -31,7 +31,7 @@ gemini.suite("ProgressRing", () => {
       .setCaptureElements(".storybook-component")
       .capture("medium");
   });
-  gemini.suite("determinate large", suite => {
+  gemini.suite("determinate large", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=ProgressRing&selectedStory=determinate%20large"
@@ -39,7 +39,7 @@ gemini.suite("ProgressRing", () => {
       .setCaptureElements(".storybook-component")
       .capture("large");
   });
-  gemini.suite("determinate extra large", suite => {
+  gemini.suite("determinate extra large", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=ProgressRing&selectedStory=determinate%20extra%20large"

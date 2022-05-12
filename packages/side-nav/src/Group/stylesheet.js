@@ -8,13 +8,13 @@ export default function stylesheet(props, themeData) {
       position: "relative",
 
       "&:empty:after": {
-        display: "none"
-      }
+        display: "none",
+      },
     }),
 
     intro: {
-      paddingLeft: themeData["density.spacings.medium"]
-    }
+      paddingLeft: themeData["density.spacings.medium"],
+    },
   };
 
   if (customStylesheet) {

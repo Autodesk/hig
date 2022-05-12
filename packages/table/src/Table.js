@@ -6,7 +6,7 @@ import { ThemeContext } from "@hig/theme-context";
 import TablePresenter from "./presenters/TablePresenter";
 import TableBehavior from "./behaviors/TableBehavior";
 
-const Table = props => {
+const Table = (props) => {
   const {
     alternateBg,
     headerBackgroundColor,
@@ -21,7 +21,7 @@ const Table = props => {
     paginateDynamic,
     onTableCellClick,
     onSortClick,
-    stylesheet
+    stylesheet,
   } = props;
 
   return (
@@ -54,7 +54,7 @@ const Table = props => {
             getGlobalColumns,
             setGlobalColumns,
             getGlobalResizeStyles,
-            setGlobalResizeStyles
+            setGlobalResizeStyles,
           }) => (
             <TablePresenter
               alternateBg={alternateBg}
@@ -112,7 +112,7 @@ Table.propTypes = {
   paginateDynamic: PropTypes.bool,
   onTableCellClick: PropTypes.func,
   onSortClick: PropTypes.func,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default Table;

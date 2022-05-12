@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
  * @property {boolean} on
  */
 
-const ToggleBehavior = props => {
+const ToggleBehavior = (props) => {
   const [onHook, setOnHook] = useState(props.defaultOn);
   const isControlled = () => props.on !== undefined;
   /**
@@ -23,7 +23,7 @@ const ToggleBehavior = props => {
   /**
    * @param {boolean} on
    */
-  const setChecked = onParam => {
+  const setChecked = (onParam) => {
     const { onChange, onKeyUp } = props;
 
     if (onChange) onChange(onParam);
@@ -37,11 +37,11 @@ const ToggleBehavior = props => {
   /**
    * @param {UIEvent} event
    */
-  const handleChange = event => {
+  const handleChange = (event) => {
     setChecked(event.target.checked);
   };
 
-  const handleKeyUp = event => {
+  const handleKeyUp = (event) => {
     if (event.keyCode === 13) {
       setChecked(!event.target.checked);
     }
@@ -52,7 +52,7 @@ const ToggleBehavior = props => {
   return props.children({
     on,
     handleChange,
-    handleKeyUp
+    handleKeyUp,
   });
 };
 
@@ -78,11 +78,11 @@ ToggleBehavior.propTypes = {
   /**
    * Render prop
    */
-  children: PropTypes.func
+  children: PropTypes.func,
 };
 
 ToggleBehavior.defaultProps = {
-  defaultOn: false
+  defaultOn: false,
 };
 
 export default ToggleBehavior;

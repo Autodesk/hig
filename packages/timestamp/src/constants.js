@@ -4,7 +4,7 @@ export const sequences = Object.freeze({
   BAC: "bac",
   BCA: "bca",
   CAB: "cab",
-  CBA: "cba"
+  CBA: "cba",
 });
 
 export const availableSequences = Object.freeze(Object.values(sequences));

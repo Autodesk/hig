@@ -21,8 +21,8 @@ function customStylesheet(inputStylesheet, props, themeData) {
       paddingRight:
         variant === `line`
           ? `calc(${themeData["density.spacings.large"]} + ${themeData["input.line.paddingHorizontal"]}px)`
-          : `calc(${themeData["density.spacings.large"]} + ${themeData["input.box.paddingHorizontal"]})`
-    }
+          : `calc(${themeData["density.spacings.large"]} + ${themeData["input.box.paddingHorizontal"]})`,
+    },
   };
 }
 
@@ -46,7 +46,7 @@ export default function InputPresenter(props) {
       ? userStylesheet(dropdownInputStyles, componentProps, themeData)
       : dropdownInputStyles;
   };
-  const handleChange = event => {
+  const handleChange = (event) => {
     onChange(event);
 
     if (onInputChange) {
@@ -89,5 +89,5 @@ InputPresenter.propTypes = {
   onChange: PropTypes.func,
   onInputChange: PropTypes.func,
   stylesheet: PropTypes.func,
-  typable: PropTypes.bool
+  typable: PropTypes.bool,
 };

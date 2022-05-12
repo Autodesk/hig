@@ -3,7 +3,7 @@ export const placements = Object.freeze({
   ABOVE: "above",
   ABOVE_OVERLAY: "above-overlay",
   BETWEEN: "between",
-  BELOW_OVERLAY: "below-overlay"
+  BELOW_OVERLAY: "below-overlay",
 });
 
 /** @type {string[]} */

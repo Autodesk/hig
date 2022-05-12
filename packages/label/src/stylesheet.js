@@ -10,8 +10,8 @@ export default function stylesheet(props, themeData) {
       fontWeight: themeData["label.fontWeight"],
       lineHeight: themeData["label.lineHeight"],
       color: themeData["label.fontColor"],
-      opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "1.0"
-    }
+      opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "1.0",
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

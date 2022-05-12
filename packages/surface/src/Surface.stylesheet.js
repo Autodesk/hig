@@ -17,7 +17,7 @@ export default function stylesheet(props, themeData) {
     verticalPadding,
     level,
     shadow,
-    stylesheet: customStylesheet
+    stylesheet: customStylesheet,
   } = props;
   const styles = {
     surface: {
@@ -30,9 +30,9 @@ export default function stylesheet(props, themeData) {
       ...(shadow && {
         boxShadow: `0 0 ${themeData[`basics.shadows.${shadow}Blur`]} 0 ${
           themeData[`colorScheme.shadow.${shadow}`]
-        }`
-      })
-    }
+        }`,
+      }),
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

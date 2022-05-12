@@ -13,24 +13,24 @@ import stylesheet from "./stylesheet";
 const sizes = {
   xs: {
     svg: ExtraSmall,
-    size: 20
+    size: 20,
   },
   s: {
     svg: Small,
-    size: 28
+    size: 28,
   },
   m: {
     svg: Medium,
-    size: 72
+    size: 72,
   },
   l: {
     svg: Medium,
-    size: 144
+    size: 144,
   },
   xl: {
     svg: Medium,
-    size: 242
-  }
+    size: 242,
+  },
 };
 
 export default function ProgressRingPresenter(props) {
@@ -81,6 +81,6 @@ ProgressRingPresenter.propTypes = {
   stylesheet: PropTypes.func,
   surface: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.oneOf(availableSurfaces)
-  ])
+    PropTypes.oneOf(availableSurfaces),
+  ]),
 };

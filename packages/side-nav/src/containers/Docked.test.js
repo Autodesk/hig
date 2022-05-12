@@ -8,8 +8,8 @@ describe("side-nav/containers/Docked", () => {
     const cases = [
       {
         description: "renders without props",
-        props: {}
-      }
+        props: {},
+      },
     ];
 
     cases.forEach(({ description, props: { children, ...otherProps } }) => {

@@ -21,7 +21,7 @@ storiesOf("Notifications|Toast", module)
     "default",
     withInfo({
       ...infoOptions,
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider],
     })(() => (
       <KnobbedThemeProvider>
         <NotificationsToast
@@ -40,7 +40,7 @@ storiesOf("Notifications|Toast", module)
     "with an avatar",
     withInfo({
       ...infoOptions,
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider],
     })(() => (
       <KnobbedThemeProvider>
         <NotificationsToast
@@ -65,7 +65,7 @@ storiesOf("Notifications|Toast", module)
     "with a thumbnail",
     withInfo({
       ...infoOptions,
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider],
     })(() => (
       <KnobbedThemeProvider>
         <NotificationsToast
@@ -93,7 +93,7 @@ storiesOf("Notifications|Toast", module)
     "international",
     withInfo({
       ...infoOptions,
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider],
     })(() => {
       const lang =
         intlExamples[

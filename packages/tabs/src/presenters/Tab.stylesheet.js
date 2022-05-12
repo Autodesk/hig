@@ -10,7 +10,7 @@ function getHaloStyles(
     height: 0,
     width: 0,
     transitionDuration: "0.3s",
-    transitionProperty: "height, width"
+    transitionProperty: "height, width",
   };
 
   if (variant && variant === variants.UNDERLINE) {
@@ -29,8 +29,8 @@ function getHaloStyles(
         width: "100%",
         height: !disabled && hasFocus ? themeData["tabs.focus.haloWidth"] : 0,
         transitionDuration: "0.3s",
-        transitionProperty: "height"
-      }
+        transitionProperty: "height",
+      },
     };
 
     if (!disabled && (hasHover || active || isPressed)) {
@@ -38,15 +38,15 @@ function getHaloStyles(
         ...styles,
         height: themeData["tabs.focus.haloWidth"],
         ...((active || isPressed) && {
-          backgroundColor: themeData["tabs.underline.active.haloColor"]
-        })
+          backgroundColor: themeData["tabs.underline.active.haloColor"],
+        }),
       };
     }
   } else if (variant && variant === variants.BOX) {
     styles = {
       ...styles,
       top: 0,
-      backgroundColor: themeData["tabs.focus.haloColor"]
+      backgroundColor: themeData["tabs.focus.haloColor"],
     };
 
     if (orientation && orientation === orientations.VERTICAL) {
@@ -107,7 +107,7 @@ export default function stylesheet(props, themeData) {
     orientation,
     disabled,
     closable,
-    stylesheet: customStylesheet
+    stylesheet: customStylesheet,
   } = props;
 
   const styles = {
@@ -120,9 +120,9 @@ export default function stylesheet(props, themeData) {
         variant === variants.UNDERLINE && {
           marginRight: themeData["tabs.underline.tab.gutter"],
           "&:last-of-type": {
-            marginRight: "0"
-          }
-        })
+            marginRight: "0",
+          },
+        }),
     },
     buttonWrapper: {
       position: "relative",
@@ -137,26 +137,26 @@ export default function stylesheet(props, themeData) {
       backgroundColor: getTabBackground(props, themeData),
 
       "&:focus": {
-        outline: "none"
+        outline: "none",
       },
 
       ...(variant &&
         variant === variants.UNDERLINE && {
           marginBottom: `-${themeData["tabs.underline.wrapper.borderBottomWidth"]}`,
-          padding: `0 0 ${themeData["tabs.underline.tab.paddingBottom"]} 0`
+          padding: `0 0 ${themeData["tabs.underline.tab.paddingBottom"]} 0`,
         }),
 
       ...(variant &&
         variant === variants.BOX && {
-          padding: `${themeData["tabs.box.tab.paddingVertical"]} ${themeData["tabs.box.tab.paddingHorizontal"]}`
+          padding: `${themeData["tabs.box.tab.paddingVertical"]} ${themeData["tabs.box.tab.paddingHorizontal"]}`,
         }),
 
       ...(variant &&
         variant === variants.CANVAS && {
           padding: `${themeData["tabs.canvas.tab.paddingVertical"]} ${themeData["tabs.canvas.tab.paddingHorizontal"]}`,
           transform: "skewX(-23deg)",
-          transformOrigin: "0 100%"
-        })
+          transformOrigin: "0 100%",
+        }),
     },
     contentWrapper: {
       position: "relative",
@@ -166,7 +166,7 @@ export default function stylesheet(props, themeData) {
       opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "1",
       width: getContentWrapperWidth(props, themeData),
       display:
-        orientation && orientation === orientations.VERTICAL ? "block" : "flex"
+        orientation && orientation === orientations.VERTICAL ? "block" : "flex",
     },
     label: {
       display: "inline-block",
@@ -202,8 +202,8 @@ export default function stylesheet(props, themeData) {
         height: "0",
         color: "transparent",
         overflow: "hidden",
-        visibility: "hidden"
-      }
+        visibility: "hidden",
+      },
     },
     halo: getHaloStyles(props, themeData),
     divider: {
@@ -215,8 +215,8 @@ export default function stylesheet(props, themeData) {
           transform: "translateY(-50%)",
           height: themeData[`tabs.${variant}.dividerHeight`],
           width: themeData[`tabs.${variant}.dividerWidth`],
-          backgroundColor: themeData[`tabs.${variant}.divider.borderColor`]
-        })
+          backgroundColor: themeData[`tabs.${variant}.divider.borderColor`],
+        }),
     },
     icon: {
       display: "inline-block",
@@ -226,13 +226,13 @@ export default function stylesheet(props, themeData) {
       transform: "translateY(-50%)",
       height: themeData["tabs.iconSize"],
       width: themeData["tabs.iconSize"],
-      overflow: "hidden"
+      overflow: "hidden",
     },
     closeButton: {
       position: "absolute",
       top: "50%",
       right: "0",
-      transform: "translateY(-50%)"
+      transform: "translateY(-50%)",
     },
     button: {
       boxShadow: "none",
@@ -248,13 +248,13 @@ export default function stylesheet(props, themeData) {
       "& svg *": {
         fill: getIconColor({ hasHover, isPressed }, themeData),
         transitionDuration: `0.3s`,
-        transitionProperty: `fill`
-      }
+        transitionProperty: `fill`,
+      },
     },
     content: {
       flexGrow: 1,
-      flexShrink: 1
-    }
+      flexShrink: 1,
+    },
   };
 
   if (customStylesheet) {

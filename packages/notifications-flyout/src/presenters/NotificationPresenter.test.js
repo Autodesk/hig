@@ -8,7 +8,7 @@ describe("notifications-flyout/presenters/NotificationPresenter", () => {
   takeSnapshotsOf(NotificationPresenter, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with all props",
@@ -23,8 +23,8 @@ describe("notifications-flyout/presenters/NotificationPresenter", () => {
         timestamp: "2018-08-17",
         transitionStatus: ENTERED,
         type: types.SUCCESS,
-        unread: true
-      }
-    }
+        unread: true,
+      },
+    },
   ]);
 });

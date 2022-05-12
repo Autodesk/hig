@@ -10,7 +10,7 @@ describe("flyout/FlyoutPresenter/FlyoutPresenter", () => {
   [
     {
       description: "renders without props",
-      props: {}
+      props: {},
     },
     {
       description: "renders with all props",
@@ -27,9 +27,9 @@ describe("flyout/FlyoutPresenter/FlyoutPresenter", () => {
         onScroll: function onScroll() {},
         transitionStatus: transitionStatuses.ENTERED,
         pointer: <div>I am a custom pointer</div>,
-        children: <Button title="Hello" />
-      }
-    }
+        children: <Button title="Hello" />,
+      },
+    },
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {
       const presenter = (

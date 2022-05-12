@@ -46,7 +46,7 @@ storiesOf("GlobalNav|SideNav/SideNavCompact", module)
     withInfo({
       ...infoOptions,
       propTables: [SideNav.ModuleCompact],
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider],
     })(() => <KnobbedThemeProvider>{compactSideNav()}</KnobbedThemeProvider>)
   )
 
@@ -56,7 +56,7 @@ storiesOf("GlobalNav|SideNav/SideNavCompact", module)
       ...infoOptions,
       inline: false,
       propTables: [SideNav.ModuleCompact],
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider],
     })(() => (
       <KnobbedThemeProvider>
         <BelowTopNavCompact

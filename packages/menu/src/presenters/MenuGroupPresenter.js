@@ -7,7 +7,7 @@ import Menu from "../Menu";
 import createChildren from "../behaviors/createChildren";
 import stylesheet from "./stylesheet";
 
-const MenuGroupPresenter = props => {
+const MenuGroupPresenter = (props) => {
   const mounted = useRef();
   const getMenus = () => createChildren(props.children, Menu);
 
@@ -28,7 +28,7 @@ const MenuGroupPresenter = props => {
       setHighlightIndex,
       setOptionsInfo,
       setPreviousEvent,
-      unselect
+      unselect,
     } = props;
     const payload = {
       ...propsOrigin,
@@ -50,7 +50,7 @@ const MenuGroupPresenter = props => {
       setHighlightIndex,
       setOptionsInfo,
       setPreviousEvent,
-      unselect
+      unselect,
     };
 
     return <Menu {...payload} />;
@@ -70,9 +70,9 @@ const MenuGroupPresenter = props => {
   const { className } = otherProps;
   const ariaPayload = {
     ...(getHighlightIndex() !== 0 && {
-      "aria-activedescendant": getOptionsInfo()[getHighlightIndex() - 1].id
+      "aria-activedescendant": getOptionsInfo()[getHighlightIndex() - 1].id,
     }),
-    ...(multiple && { "aria-multiselectable": multiple })
+    ...(multiple && { "aria-multiselectable": multiple }),
   };
   const payload = { ...otherProps };
   delete payload.defaultSelected;
@@ -91,10 +91,10 @@ const MenuGroupPresenter = props => {
         menusInfo[index] = child.props;
       });
 
-      Object.keys(menusInfo).forEach(index => {
+      Object.keys(menusInfo).forEach((index) => {
         if (menusInfo[index] === Menu) {
           if (Array.isArray(menusInfo[index].children)) {
-            menusInfo[index].children.forEach(child => {
+            menusInfo[index].children.forEach((child) => {
               mergedOptions.push(child.props);
             });
           } else {
@@ -121,9 +121,9 @@ const MenuGroupPresenter = props => {
       });
 
       // get current options
-      Object.keys(menusInfo).forEach(index => {
+      Object.keys(menusInfo).forEach((index) => {
         if (Array.isArray(menusInfo[index].children)) {
-          menusInfo[index].children.forEach(child => {
+          menusInfo[index].children.forEach((child) => {
             mergedOptions.push(child.props);
             currentIds.push(child.props.id);
           });
@@ -134,7 +134,7 @@ const MenuGroupPresenter = props => {
       });
 
       // get previous options
-      Object.keys(previousOptions).forEach(index => {
+      Object.keys(previousOptions).forEach((index) => {
         prevIds.push(previousOptions[index].id);
       });
 
@@ -174,6 +174,7 @@ MenuGroupPresenter.displayName = "MenuGroupPresenter";
 
 MenuGroupPresenter.propTypes = {
   children: PropTypes.node,
+  // eslint-disable-next-line react/forbid-prop-types
   defaultSelected: PropTypes.arrayOf(PropTypes.any),
   getActiveOption: PropTypes.func,
   getHighlightIndex: PropTypes.func,
@@ -191,7 +192,7 @@ MenuGroupPresenter.propTypes = {
   setOptionsInfo: PropTypes.func,
   setPreviousEvent: PropTypes.func,
   stylesheet: PropTypes.func,
-  unselect: PropTypes.bool
+  unselect: PropTypes.bool,
 };
 
 export default MenuGroupPresenter;

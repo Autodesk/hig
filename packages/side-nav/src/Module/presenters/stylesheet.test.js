@@ -43,8 +43,8 @@ describe("stylesheet", () => {
       "row",
       "icon",
       "externalIcon",
-      "title"
-    ].forEach(x => {
+      "title",
+    ].forEach((x) => {
       expect(subject).toHaveProperty(x);
     });
   });

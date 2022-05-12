@@ -44,7 +44,8 @@ function getAnchorPointTransformRotate(anchorPoint) {
   }
 }
 
-export default function(props, themeData) {
+// eslint-disable-next-line func-names
+export default function (props, themeData) {
   const { transitionStatus, anchorPoint, stylesheet } = props;
   const isExiting = transitionStatus === `exiting`;
   const isExited = transitionStatus === `exited`;
@@ -69,10 +70,10 @@ export default function(props, themeData) {
   const styles = {
     flyoutWrapper: {
       position: `relative`,
-      display: `inline-block`
+      display: `inline-block`,
     },
     flyoutAction: {
-      display: `flex`
+      display: `flex`,
     },
     flyoutContainer: {
       position: `absolute`,
@@ -89,35 +90,35 @@ export default function(props, themeData) {
       transform:
         isExiting || isExited
           ? getAnchorPointTransformTranslate(anchorPoint)
-          : `none`
+          : `none`,
     },
     panelContainer: {
       backgroundColor,
       borderRadius,
       border: `none`,
-      boxShadow: `0 0 ${shadowBlur} ${shadowColor}`
+      boxShadow: `0 0 ${shadowBlur} ${shadowColor}`,
     },
     panelContainerInner: {
-      position: `relative`
+      position: `relative`,
     },
     panel: {
       minWidth: `200px`,
       maxHeight: `360px`,
       padding: densitySmall,
       overflowY: `auto`,
-      msOverflowStyle: `-ms-autohiding-scrollbar`
+      msOverflowStyle: `-ms-autohiding-scrollbar`,
     },
     pointerWrapper: {
       display: `flex`,
       position: `absolute`,
-      transform: getAnchorPointTransformRotate(anchorPoint)
+      transform: getAnchorPointTransformRotate(anchorPoint),
     },
     pointerBorder: {
-      fill: borderColor
+      fill: borderColor,
     },
     pointerBody: {
-      fill: backgroundColor
-    }
+      fill: backgroundColor,
+    },
   };
 
   if (stylesheet) {

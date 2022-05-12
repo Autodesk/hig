@@ -5,23 +5,25 @@ import Button from "@hig/button";
 import NotificationsToast from "../NotificationsToast";
 import { AVAILABLE_STATUSES } from "../statuses";
 import NotificationsToastList, {
-  AVAILABLE_PLACEMENTS
+  AVAILABLE_PLACEMENTS,
 } from "../NotificationsToastList";
 
 export default class NotificationsToastListInteractions extends React.Component {
+  // eslint-disable-next-line react/static-property-placement
   static propTypes = {
     initialToasts: PropTypes.arrayOf(PropTypes.node),
-    placement: PropTypes.oneOf(AVAILABLE_PLACEMENTS)
+    placement: PropTypes.oneOf(AVAILABLE_PLACEMENTS),
   };
 
+  // eslint-disable-next-line react/static-property-placement
   static defaultProps = {
-    initialToasts: []
+    initialToasts: [],
   };
 
   constructor(props) {
     super(props);
     this.state = {
-      toasts: this.props.initialToasts
+      toasts: this.props.initialToasts,
     };
   }
 
@@ -34,7 +36,7 @@ export default class NotificationsToastListInteractions extends React.Component 
 
   removeToast = ({ key }) => {
     const childIndexToRemove = this.state.toasts.findIndex(
-      el => el.key === key
+      (el) => el.key === key
     );
 
     if (childIndexToRemove > -1) {
@@ -45,6 +47,7 @@ export default class NotificationsToastListInteractions extends React.Component 
     }
   };
 
+  // eslint-disable-next-line class-methods-use-this
   _generateToast = () => {
     const key = Math.random();
     return (
@@ -61,9 +64,9 @@ export default class NotificationsToastListInteractions extends React.Component 
         <Button onClick={this.addRandomToast} title="Add Random Toast" />
 
         <NotificationsToastList placement={this.props.placement}>
-          {this.state.toasts.map(toast =>
+          {this.state.toasts.map((toast) =>
             React.cloneElement(toast, {
-              onDismiss: this.removeToast.bind(this, toast)
+              onDismiss: this.removeToast.bind(this, toast),
             })
           )}
         </NotificationsToastList>

@@ -1,5 +1,5 @@
 gemini.suite("CheckboxPresenter", () => {
-  gemini.suite("default", suite => {
+  gemini.suite("default", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=CheckboxPresenter&selectedStory=default"
@@ -8,19 +8,19 @@ gemini.suite("CheckboxPresenter", () => {
       .capture("default - unfocused");
   });
 
-  gemini.suite("checked", suite => {
+  gemini.suite("checked", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=CheckboxPresenter&selectedStory=checked"
       )
       .setCaptureElements(".storybook-component")
       .capture("checked - unfocused")
-      .capture("checked - focused", actions => {
+      .capture("checked - focused", (actions) => {
         actions.focus("input");
       });
   });
 
-  gemini.suite("disabled", suite => {
+  gemini.suite("disabled", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=CheckboxPresenter&selectedStory=disabled"
@@ -29,7 +29,7 @@ gemini.suite("CheckboxPresenter", () => {
       .capture("disabled - unfocused");
   });
 
-  gemini.suite("indeterminate", suite => {
+  gemini.suite("indeterminate", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=CheckboxPresenter&selectedStory=indeterminate"

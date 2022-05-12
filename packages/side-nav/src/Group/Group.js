@@ -5,7 +5,7 @@ import ThemeContext from "@hig/theme-context";
 import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
-const Group = props => {
+const Group = (props) => {
   const {
     intro,
     children,
@@ -21,7 +21,7 @@ const Group = props => {
         const styles = stylesheet(
           {
             stylesheet: customStylesheet,
-            ...otherProps
+            ...otherProps,
           },
           resolvedRoles
         );
@@ -48,7 +48,7 @@ Group.propTypes = {
   /** One or more SideNav Modules */
   children: PropTypes.node,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default Group;

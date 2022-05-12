@@ -11,7 +11,7 @@ import {
   AVAILABLE_ORIENTATIONS,
   alignments,
   variants,
-  orientations
+  orientations,
 } from "../constants";
 
 export default function TabsPresenter({
@@ -48,11 +48,11 @@ TabsPresenter.propTypes = {
   variant: PropTypes.oneOf(AVAILABLE_VARIANTS),
   orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
   children: PropTypes.node,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 TabsPresenter.defaultProps = {
   align: alignments.LEFT,
   variant: variants.UNDERLINE,
-  orientation: orientations.HORIZONTAL
+  orientation: orientations.HORIZONTAL,
 };

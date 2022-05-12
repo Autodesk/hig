@@ -8,8 +8,8 @@ export default [
       name: "Maria Smith",
       firstName: "",
       lastName: "",
-      size: sizes.LARGE_48
-    })
+      size: sizes.LARGE_48,
+    }),
   },
   {
     description: "with picture",
@@ -18,7 +18,7 @@ export default [
       firstName: "Jonas",
       lastName: "James",
       image: avatarImagePath,
-      size: sizes.LARGE_48
-    })
-  }
+      size: sizes.LARGE_48,
+    }),
+  },
 ];

@@ -4,7 +4,7 @@ import {
   AddFolder24,
   CartFull24,
   Cloud24,
-  Checklist24
+  Checklist24,
 } from "@hig/icons";
 import Avatar from "@hig/avatar";
 import Menu, { Option } from "../index";
@@ -31,9 +31,9 @@ export default [
         </Option>,
         <Option id="option-5" key="option-5">
           Option 5
-        </Option>
-      ]
-    })
+        </Option>,
+      ],
+    }),
   },
   {
     description: "kitchen sink",
@@ -130,8 +130,8 @@ export default [
           >
             Stephanie Brown
           </Option>
-        </Menu>
-      ]
-    })
-  }
+        </Menu>,
+      ],
+    }),
+  },
 ];

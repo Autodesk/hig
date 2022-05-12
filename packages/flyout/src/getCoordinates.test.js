@@ -9,22 +9,22 @@ describe("flyout/getCoordinates", () => {
       top: 0,
       right: 1000,
       bottom: 1000,
-      left: 0
+      left: 0,
     },
     panelRect: {
       width: 200,
-      height: 200
+      height: 200,
     },
     actionRect: {
       width: 150,
       height: 150,
       top: 100,
-      left: 100
+      left: 100,
     },
     pointerRect: {
       width: 12,
-      height: 24
-    }
+      height: 24,
+    },
   };
 
   describe("calculations", () => {
@@ -42,8 +42,8 @@ describe("flyout/getCoordinates", () => {
           actionRect: {
             ...basicPayload.actionRect,
             top: 0,
-            left: 0
-          }
+            left: 0,
+          },
         });
 
         expect(result).toMatchSnapshot();
@@ -57,8 +57,8 @@ describe("flyout/getCoordinates", () => {
               top: 50,
               right: 51,
               bottom: 51,
-              left: 50
-            }
+              left: 50,
+            },
           });
 
           expect(result).toMatchSnapshot();

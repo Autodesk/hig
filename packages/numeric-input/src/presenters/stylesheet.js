@@ -2,13 +2,13 @@ function getWrapperRulesByVariant(variant, density) {
   switch (variant) {
     case "line":
       return {
-        right: "0px"
+        right: "0px",
       };
     case "box":
       return {
         width: density === "medium-density" ? "35px" : "24px",
         right: "0px",
-        height: "100%"
+        height: "100%",
       };
     default:
       return {};
@@ -29,13 +29,13 @@ function getBoxRules(themeData) {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    transform: "translateY(-1px)"
+    transform: "translateY(-1px)",
   };
 }
 
 function getDisabledBoxRules(themeData) {
   return {
-    opacity: themeData["input.disabled.opacity"]
+    opacity: themeData["input.disabled.opacity"],
   };
 }
 
@@ -44,7 +44,7 @@ export default function stylesheet(props, themeData, density) {
   const { stylesheet: customStylesheet } = props;
   const styles = {
     numericInputWrapper: {
-      position: "relative"
+      position: "relative",
     },
     spinnerWrapper: {
       boxSizing: "border-box",
@@ -52,12 +52,12 @@ export default function stylesheet(props, themeData, density) {
       zIndex: 1,
       lineHeight: density === "medium-density" ? "10px" : "4px",
       cursor: disabled ? "default" : "pointer",
-      ...getWrapperRulesByVariant(variant, density)
+      ...getWrapperRulesByVariant(variant, density),
     },
     boxWrapper: {
       height: `calc(${themeData["input.minHeight"]} - 2px)`,
       ...(variant === "box" ? getBoxRules(themeData) : {}),
-      ...(disabled ? getDisabledBoxRules(themeData) : {})
+      ...(disabled ? getDisabledBoxRules(themeData) : {}),
     },
     spinner: {
       display: "flex",
@@ -67,30 +67,30 @@ export default function stylesheet(props, themeData, density) {
       justifyContent: "center",
       width: "100%",
       "&:first-of-type": {
-        alignItems: "flex-end"
+        alignItems: "flex-end",
       },
       "svg *": {
-        fill: themeData["input.indicator.default"]
+        fill: themeData["input.indicator.default"],
       },
       "&:hover svg *": {
         fill: disabled
           ? themeData["input.indicator.default"]
-          : themeData["input.indicator.hover"]
+          : themeData["input.indicator.hover"],
       },
       "&:active svg *": {
         fill: disabled
           ? themeData["input.indicator.default"]
-          : themeData["input.indicator.pressed"]
-      }
+          : themeData["input.indicator.pressed"],
+      },
     },
     iconUp: {
       display: "flex",
-      paddingBottom: density === "high-density" ? "3px" : {}
+      paddingBottom: density === "high-density" ? "3px" : {},
     },
     iconDown: {
       display: "flex",
-      paddingTop: density === "high-density" ? "3px" : {}
-    }
+      paddingTop: density === "high-density" ? "3px" : {},
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

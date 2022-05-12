@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 
-const ModalBehavior = props => {
+const ModalBehavior = (props) => {
   /**
    * @param {MouseEvent} event
    */
-  const handleCloseClick = event => {
+  const handleCloseClick = (event) => {
     const { onCloseClick } = props;
 
     if (onCloseClick) {
@@ -15,7 +15,7 @@ const ModalBehavior = props => {
   /**
    * @param {MouseEvent} event
    */
-  const handleOverlayClick = event => {
+  const handleOverlayClick = (event) => {
     const { onOverlayClick } = props;
 
     if (onOverlayClick) {
@@ -26,14 +26,14 @@ const ModalBehavior = props => {
   /**
    * @param {MouseEvent} event
    */
-  const handleWindowClick = event => {
+  const handleWindowClick = (event) => {
     event.stopPropagation();
   };
 
   return props.children({
     handleCloseClick,
     handleOverlayClick,
-    handleWindowClick
+    handleWindowClick,
   });
 };
 
@@ -51,7 +51,7 @@ ModalBehavior.propTypes = {
   /**
    * A function to render content of the modal
    */
-  children: PropTypes.func
+  children: PropTypes.func,
 };
 
 export default ModalBehavior;

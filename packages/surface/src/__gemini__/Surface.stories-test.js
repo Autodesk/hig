@@ -16,9 +16,9 @@ function customizedSurfaces() {
     { horizontalPadding: "s", verticalPadding: "m" },
     { shadow: "high" },
     { borderRadius: "l" },
-    { tagName: "figure" }
+    { tagName: "figure" },
   ];
-  return <div>{surfacePropConfigs.map(props => surfaceStory(props))}</div>;
+  return <div>{surfacePropConfigs.map((props) => surfaceStory(props))}</div>;
 }
 
 storiesOf("Surface", module)

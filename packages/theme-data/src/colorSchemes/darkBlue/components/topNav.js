@@ -1,7 +1,7 @@
 export default {
   "topNav.productLockupColor": {
     value: {
-      ref: "colorScheme.text.default"
-    }
-  }
+      ref: "colorScheme.text.default",
+    },
+  },
 };

@@ -10,7 +10,7 @@ export function createNotificationInfoOptions() {
   return {
     propTables: [Notification],
     source: true,
-    text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
+    text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />,
   };
 }
 
@@ -19,6 +19,6 @@ export function createNotificationsFlyoutInfoOptions() {
     propTables: [NotificationsFlyout],
     propTablesExclude: [NotificationsFlyoutLayout],
     source: true,
-    text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
+    text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />,
   };
 }

@@ -3,18 +3,18 @@ import { select, text } from "@storybook/addon-knobs/react";
 import {
   AVAILABLE_ALIGNMENTS,
   AVAILABLE_FONT_WEIGHTS,
-  AVAILABLE_VARIANTS
+  AVAILABLE_VARIANTS,
 } from "../_constants";
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
   children: "Children",
   align: "Alignment",
   fontWeight: "Font Weight",
-  variant: "Variant"
+  variant: "Variant",
 };
 
 export default function getKnobs(props) {
@@ -40,6 +40,6 @@ export default function getKnobs(props) {
       AVAILABLE_VARIANTS,
       variant,
       knobGroupIds.basic
-    )
+    ),
   };
 }

@@ -5,19 +5,19 @@ import ThemeContext from "@hig/theme-context";
 import { Search24, CloseLUI } from "@hig/icons";
 import {
   createCustomClassNames,
-  memoizeCreateButtonEventHandlers
+  memoizeCreateButtonEventHandlers,
 } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
-const Search = props => {
+const Search = (props) => {
   const [value, setValue] = useState(props.value);
   const [onHandleChange, setOnHandleChange] = useState(false);
 
   const createEventHandlers = memoizeCreateButtonEventHandlers();
 
-  const callPropsOnChange = event => props.onChange && props.onChange(event);
+  const callPropsOnChange = (event) => props.onChange && props.onChange(event);
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     setValue(event.target.value);
     setOnHandleChange(event);
   };
@@ -132,11 +132,11 @@ Search.propTypes = {
   /**
    * Value of the input field. Can be changed after mount to update the input value.
    */
-  value: PropTypes.string
+  value: PropTypes.string,
 };
 
 Search.defaultProps = {
-  value: ""
+  value: "",
 };
 
 export default Search;

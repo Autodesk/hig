@@ -6,7 +6,7 @@ describe("tabs/TabCloseButtonPresenter", () => {
   const cases = [
     {
       description: "renders without props",
-      props: {}
+      props: {},
     },
     {
       description: "renders with all props",
@@ -18,9 +18,9 @@ describe("tabs/TabCloseButtonPresenter", () => {
         onMouseEnter: () => {},
         onMouseLeave: () => {},
         onMouseUp: () => {},
-        onClick: () => {}
-      }
-    }
+        onClick: () => {},
+      },
+    },
   ];
 
   cases.forEach(({ description, props: { children, ...otherProps } }) => {

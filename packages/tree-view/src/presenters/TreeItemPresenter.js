@@ -5,7 +5,7 @@ import { ThemeContext } from "@hig/theme-context";
 import SingleTreeNodePresenter from "./SingleTreeNodePresenter";
 import SingleTreeNodeFolderPresenter from "./SingleTreeNodeFolderPresenter";
 
-const TreeItemPresenter = props => {
+const TreeItemPresenter = (props) => {
   const renderTreeItem = () => {
     const { children } = props;
     useEffect(() => {
@@ -50,7 +50,7 @@ TreeItemPresenter.propTypes = {
    * other elements as children this prop will not render
    */
   label: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default TreeItemPresenter;

@@ -10,15 +10,8 @@ import IconIndicatorPresenter from "./IconIndicatorPresenter";
 import stylesheet from "./stylesheet";
 
 export default function SingleTreeNodeFolderPresenter(props) {
-  const {
-    collapsed,
-    icon,
-    id,
-    indicator,
-    itemRef,
-    label,
-    ...otherProps
-  } = props;
+  const { collapsed, icon, id, indicator, itemRef, label, ...otherProps } =
+    props;
   const {
     className,
     density,
@@ -26,21 +19,22 @@ export default function SingleTreeNodeFolderPresenter(props) {
     onMouseEnter,
     onMouseLeave,
     onOperatorClick,
-    themeData
+    themeData,
   } = otherProps;
   const { handleClick, handleKeyDown } = createButtonEventHandlers(onClick);
   const {
     handleClick: handleOperatorClick,
-    handleKeyDown: handleOperatorKeyDown
+    handleKeyDown: handleOperatorKeyDown,
   } = createButtonEventHandlers(onOperatorClick);
   const higTreeItemSubTreeViewLabelWrapperClassName = createCustomClassNames(
     className,
     `hig-tree-item-sub-tree-view-label-wrapper`
   );
-  const higTreeItemSubTreeViewLabelContentWrapperClassName = createCustomClassNames(
-    className,
-    `hig-tree-item-sub-tree-view-label-content-wrapper`
-  );
+  const higTreeItemSubTreeViewLabelContentWrapperClassName =
+    createCustomClassNames(
+      className,
+      `hig-tree-item-sub-tree-view-label-content-wrapper`
+    );
   const higTreeItemIndicatorWrapperClassName = createCustomClassNames(
     className,
     `hig-tree-item-indicator-wrapper`
@@ -98,7 +92,7 @@ export default function SingleTreeNodeFolderPresenter(props) {
         {({
           hasHover,
           onMouseEnter: handleMouseEnter,
-          onMouseLeave: handleMouseLeave
+          onMouseLeave: handleMouseLeave,
         }) => {
           const styleProps = { ...props, hasHover };
           const styles = stylesheet(styleProps, themeData);
@@ -107,7 +101,7 @@ export default function SingleTreeNodeFolderPresenter(props) {
               {...payload}
               className={cx([
                 css(styles.higTreeItemSubTreeViewLabelWrapper),
-                higTreeItemSubTreeViewLabelWrapperClassName
+                higTreeItemSubTreeViewLabelWrapperClassName,
               ])}
               onClick={handleClick}
               onKeyDown={handleKeyDown}
@@ -119,13 +113,13 @@ export default function SingleTreeNodeFolderPresenter(props) {
               <div
                 className={cx([
                   css(styles.higTreeItemSubTreeViewLabelContentWrapper),
-                  higTreeItemSubTreeViewLabelContentWrapperClassName
+                  higTreeItemSubTreeViewLabelContentWrapperClassName,
                 ])}
               >
                 <div
                   className={cx([
                     css(styles.higTreeItemIndicatorWrapper),
-                    higTreeItemIndicatorWrapperClassName
+                    higTreeItemIndicatorWrapperClassName,
                   ])}
                   onClick={handleOperatorClick}
                   onKeyDown={handleOperatorKeyDown}
@@ -143,7 +137,7 @@ export default function SingleTreeNodeFolderPresenter(props) {
                   <div
                     className={cx([
                       css(styles.higTreeItemIconWrapper),
-                      higTreeItemIconWrapperClassName
+                      higTreeItemIconWrapperClassName,
                     ])}
                   >
                     {icon}
@@ -152,7 +146,7 @@ export default function SingleTreeNodeFolderPresenter(props) {
                 <span
                   className={cx([
                     css(styles.higTreeItemLabelWrapper),
-                    higTreeItemLabelWrapperClassName
+                    higTreeItemLabelWrapperClassName,
                   ])}
                 >
                   {renderLabel()}
@@ -174,7 +168,8 @@ SingleTreeNodeFolderPresenter.propTypes = {
   indicator: PropTypes.string,
   itemRef: PropTypes.oneOfType([
     PropTypes.func,
-    PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.any) })
+    // eslint-disable-next-line react/forbid-prop-types
+    PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.any) }),
   ]),
-  label: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
+  label: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };

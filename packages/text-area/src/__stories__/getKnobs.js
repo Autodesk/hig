@@ -3,7 +3,7 @@ import { boolean, select } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
   basic: "Basic",
-  form: "Form Attributes"
+  form: "Form Attributes",
 };
 
 const knobLabels = {
@@ -11,12 +11,12 @@ const knobLabels = {
   variant: "variant",
   onBlur: "onBlur",
   onChange: "onChange",
-  onFocus: "onFocus"
+  onFocus: "onFocus",
 };
 
 const variantOptions = {
   line: "Line",
-  box: "Box"
+  box: "Box",
 };
 
 export default function getKnobs(props) {
@@ -33,6 +33,6 @@ export default function getKnobs(props) {
     ),
     onBlur: action(knobLabels.onBlur),
     onChange: action(knobLabels.onChange),
-    onFocus: action(knobLabels.onFocus)
+    onFocus: action(knobLabels.onFocus),
   };
 }

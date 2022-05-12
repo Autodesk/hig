@@ -15,17 +15,17 @@ const collapseStatus = {
   COLLAPSED: "collapsed",
   BEFORE_EXPAND: "before_expand",
   EXPANDING: "expanding",
-  EXPANDED: "expanded"
+  EXPANDED: "expanded",
 };
 
-const SubTreeViewCombined = props => {
+const SubTreeViewCombined = (props) => {
   const { collapsed } = props;
   const [status, setStatus] = useState(collapseStatus.COLLAPSED);
   const [mount, setMount] = useState(false);
   const subTreeWrapper = useRef(null);
   const previousCollapsed = useRef(collapsed);
 
-  const setSubTreeWrapperRef = element => {
+  const setSubTreeWrapperRef = (element) => {
     subTreeWrapper.current = element;
   };
 
@@ -46,11 +46,11 @@ const SubTreeViewCombined = props => {
   const getContentHeight = () =>
     `${subTreeWrapper.current && subTreeWrapper.current.scrollHeight}px`;
 
-  const getTransitionStyles = statusParams => {
+  const getTransitionStyles = (statusParams) => {
     const defaultCollapsedStyles = {
       height: "0",
       overflow: "hidden",
-      visibility: "hidden"
+      visibility: "hidden",
     };
 
     if (statusParams === collapseStatus.EXPANDING) {
@@ -58,7 +58,7 @@ const SubTreeViewCombined = props => {
         ...defaultCollapsedStyles,
         height: getContentHeight(),
         visibility: "visible",
-        overflow: "hidden"
+        overflow: "hidden",
       };
     }
     if (statusParams === collapseStatus.EXPANDED) {
@@ -66,7 +66,7 @@ const SubTreeViewCombined = props => {
         ...defaultCollapsedStyles,
         height: "auto",
         visibility: "visible",
-        overflow: "visible"
+        overflow: "visible",
       };
     }
     if (statusParams === collapseStatus.BEFORE_COLLAPSE) {
@@ -74,7 +74,7 @@ const SubTreeViewCombined = props => {
         ...defaultCollapsedStyles,
         height: getContentHeight(),
         visibility: "visible",
-        overflow: "visible"
+        overflow: "visible",
       };
     }
     if (statusParams === collapseStatus.COLLAPSING) {
@@ -82,7 +82,7 @@ const SubTreeViewCombined = props => {
         ...defaultCollapsedStyles,
         height: "0",
         visibility: "visible",
-        overflow: "hidden"
+        overflow: "hidden",
       };
     }
 
@@ -109,7 +109,7 @@ const SubTreeViewCombined = props => {
       treeItem: {
         children,
         meta: { className },
-        payload
+        payload,
       },
       // eslint-disable-next-line no-shadow
       collapsed,
@@ -119,7 +119,7 @@ const SubTreeViewCombined = props => {
       onFocus,
       getKeyboardOpenId,
       setKeyboardOpenId,
-      level
+      level,
     } = props;
     const styles = stylesheet(props, themeData);
 
@@ -138,7 +138,7 @@ const SubTreeViewCombined = props => {
         className={cx([
           css(styles.higTreeItemSubTreeViewWrapper),
           css(transitionStyles),
-          higTreeItemSubTreeViewWrapperClassName
+          higTreeItemSubTreeViewWrapperClassName,
         ])}
         onTransitionEnd={onTransitionEnd}
         ref={setSubTreeWrapperRef}
@@ -147,7 +147,7 @@ const SubTreeViewCombined = props => {
           <ul
             className={cx([
               css(styles.higTreeItemSubTreeView),
-              higTreeItemSubTreeViewClassName
+              higTreeItemSubTreeViewClassName,
             ])}
             role="group"
           >
@@ -164,7 +164,7 @@ const SubTreeViewCombined = props => {
                         getIsCollapsed,
                         handleClick,
                         handleOperatorClick,
-                        setIsCollapsed
+                        setIsCollapsed,
                       }) => (
                         <TreeObjectNestedSubTreeItem
                           treeItem={{ ...child, payload }}
@@ -246,7 +246,7 @@ const SubTreeViewCombined = props => {
     const { className } = otherProps;
     const styles = stylesheet(props, themeData);
     const clonedChildren = Array.isArray(children)
-      ? children.map(child =>
+      ? children.map((child) =>
           React.cloneElement(child, {
             defaultSelected,
             getActiveTreeItemId,
@@ -262,7 +262,7 @@ const SubTreeViewCombined = props => {
             selected,
             setActiveTreeItemId,
             setActiveTreeItemIndex,
-            setKeyboardOpenId
+            setKeyboardOpenId,
           })
         )
       : React.cloneElement(children, {
@@ -280,7 +280,7 @@ const SubTreeViewCombined = props => {
           selected,
           setActiveTreeItemId,
           setActiveTreeItemIndex,
-          setKeyboardOpenId
+          setKeyboardOpenId,
         });
     const transitionStyles = getTransitionStyles(status);
     const higTreeItemSubTreeViewWrapperClassName = createCustomClassNames(
@@ -297,7 +297,7 @@ const SubTreeViewCombined = props => {
         className={cx([
           css(styles.higTreeItemSubTreeViewWrapper),
           css(transitionStyles),
-          higTreeItemSubTreeViewWrapperClassName
+          higTreeItemSubTreeViewWrapperClassName,
         ])}
         onTransitionEnd={onTransitionEnd}
         ref={setSubTreeWrapperRef}
@@ -306,7 +306,7 @@ const SubTreeViewCombined = props => {
           <ul
             className={cx([
               css(styles.higTreeItemSubTreeView),
-              higTreeItemSubTreeViewClassName
+              higTreeItemSubTreeViewClassName,
             ])}
             role="group"
           >
@@ -333,7 +333,7 @@ const SubTreeViewCombined = props => {
           <ul
             className={cx([
               css(styles.higTreeItemSubTreeView),
-              higTreeItemSubTreeViewClassName
+              higTreeItemSubTreeViewClassName,
             ])}
             role="group"
           >

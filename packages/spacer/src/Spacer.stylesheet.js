@@ -8,8 +8,8 @@ export default function stylesheet(props, themeData) {
       height: size || themeData[`density.spacings.${sizes[spacing]}`],
       flex: size
         ? `0 0 ${size}`
-        : `0 0 ${themeData[`density.spacings.${sizes[spacing]}`]}`
-    }
+        : `0 0 ${themeData[`density.spacings.${sizes[spacing]}`]}`,
+    },
   };
 
   return customStylsheet ? customStylsheet(styles, props, themeData) : styles;

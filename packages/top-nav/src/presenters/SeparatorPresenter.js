@@ -26,5 +26,5 @@ export default function SeparatorPresenter({ stylesheet: customStylesheet }) {
 }
 
 SeparatorPresenter.propTypes = {
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

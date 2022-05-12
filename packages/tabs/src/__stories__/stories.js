@@ -34,9 +34,9 @@ export default [
         </Tab>,
         <Tab label="Inspector" key="inspector">
           <RichText>Inspector content</RichText>
-        </Tab>
-      ]
-    })
+        </Tab>,
+      ],
+    }),
   },
   {
     description: "complex tab",
@@ -68,9 +68,9 @@ export default [
             or &quot;canvas&quot;. Clicks the close button will trigger the
             &quot;onTabClose&quot; event.
           </RichText>
-        </Tab>
-      ]
-    })
+        </Tab>,
+      ],
+    }),
   },
   {
     description: "custom tab",
@@ -90,8 +90,8 @@ export default [
         </Tab>,
         <Tab label="Inspector" key="inspector" render={renderCustomTab}>
           <RichText>Inspector content</RichText>
-        </Tab>
-      ]
-    })
-  }
+        </Tab>,
+      ],
+    }),
+  },
 ];

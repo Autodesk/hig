@@ -17,7 +17,7 @@ const typeOptions = makeSelectOptions(types);
 
 const groups = {
   actions: "Actions",
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const labels = {
@@ -26,21 +26,21 @@ const labels = {
   onNotificationClick: "Notification clicked",
   showDismissButton: "Show dismiss button",
   type: "Variant",
-  unread: "Unread"
+  unread: "Unread",
 };
 
 const defaults = {
   featured: false,
   showDismissButton: undefined,
   type: types.PRIMARY,
-  unread: true
+  unread: true,
 };
 
 storiesOf("Notifications|Flyout/Notification", module).add(
   "default",
   withInfo({
     ...infoOptions,
-    propTablesExclude: [KnobbedThemeProvider, TextLink]
+    propTablesExclude: [KnobbedThemeProvider, TextLink],
   })(() => (
     <KnobbedThemeProvider>
       <Notification

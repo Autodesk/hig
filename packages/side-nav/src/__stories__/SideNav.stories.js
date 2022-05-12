@@ -17,8 +17,8 @@ storiesOf("GlobalNav|SideNav", module).add(
       SideNav.Group,
       SideNav.Link,
       SideNav.Module,
-      SideNav.Submodule
+      SideNav.Submodule,
     ],
-    propTablesExclude: [KnobbedThemeProvider]
+    propTablesExclude: [KnobbedThemeProvider],
   })(() => <KnobbedThemeProvider>{ExampleSideNav()}</KnobbedThemeProvider>)
 );

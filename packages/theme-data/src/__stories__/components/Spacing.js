@@ -15,7 +15,7 @@ export default function Swatch({ length }) {
             borderStyle: "dashed",
             borderWidth: resolvedRoles["basics.borderWidths.small"],
             borderRadius: resolvedRoles["basics.borderRadii.small"],
-            marginBottom: resolvedRoles["density.spacings.small"]
+            marginBottom: resolvedRoles["density.spacings.small"],
           }}
         />
       )}
@@ -24,5 +24,5 @@ export default function Swatch({ length }) {
 }
 
 Swatch.propTypes = {
-  length: PropTypes.string
+  length: PropTypes.string,
 };

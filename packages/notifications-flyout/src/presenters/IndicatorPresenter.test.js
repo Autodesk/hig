@@ -6,7 +6,7 @@ describe("notifications-flyout/presenters/IndicatorPresenter", () => {
   takeSnapshotsOf(IndicatorPresenter, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with all props",
@@ -14,8 +14,8 @@ describe("notifications-flyout/presenters/IndicatorPresenter", () => {
         count: 3,
         onClick: () => {},
         showCount: true,
-        title: "hello world"
-      }
-    }
+        title: "hello world",
+      },
+    },
   ]);
 });

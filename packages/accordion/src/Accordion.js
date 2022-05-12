@@ -8,13 +8,13 @@ import {
   indicators,
   indicatorPositions,
   AVAILABLE_INDICATORS,
-  AVAILABLE_INDICATOR_POSITIONS
+  AVAILABLE_INDICATOR_POSITIONS,
 } from "./constants";
 import stylesheet from "./stylesheet";
 import HeaderPresenter from "./presenters/HeaderPresenter";
 import ContentPresenter from "./presenters/ContentPresenter";
 
-const Accordion = props => {
+const Accordion = (props) => {
   const [collapsed, setCollapsed] = useState(props.defaultCollapsed);
 
   const isCollapsedControlled = () => props.collapsed !== undefined;
@@ -47,7 +47,7 @@ const Accordion = props => {
     onMouseEnter,
     onMouseLeave,
     onMouseUp,
-    onHover
+    onHover,
   } = otherProps;
 
   return (
@@ -58,7 +58,7 @@ const Accordion = props => {
             indicator,
             indicatorPosition,
             collapsed: isCollapsed(),
-            stylesheet: customStylesheet
+            stylesheet: customStylesheet,
           },
           resolvedRoles,
           metadata
@@ -83,7 +83,7 @@ const Accordion = props => {
                 onMouseDown: handleMouseDown,
                 onMouseEnter: handleMouseEnter,
                 onMouseLeave: handleMouseLeave,
-                onMouseUp: handleMouseUp
+                onMouseUp: handleMouseUp,
               }) => (
                 <HeaderPresenter
                   {...otherProps}
@@ -143,7 +143,7 @@ Accordion.propTypes = {
   /** Function called when clicks the accordion's header */
   onClick: PropTypes.func,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 Accordion.defaultProps = {
@@ -151,7 +151,7 @@ Accordion.defaultProps = {
   indicatorPosition: indicatorPositions.LEFT,
   defaultCollapsed: true,
   disabled: false,
-  onClick: () => {}
+  onClick: () => {},
 };
 
 export default Accordion;

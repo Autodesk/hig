@@ -10,17 +10,17 @@ describe("flyout/presenters/PanelContainerPresenter", () => {
     {
       description: "renders with only `innerRef`",
       props: {
-        innerRef
-      }
+        innerRef,
+      },
     },
     {
       description: "renders with all props",
       props: {
         innerRef,
         maxHeight: 150,
-        children: "Hello World"
-      }
-    }
+        children: "Hello World",
+      },
+    },
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {
       const presenter = (

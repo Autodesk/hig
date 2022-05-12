@@ -4,11 +4,11 @@ export default [
   {
     description: "determinate",
     getProps: () => ({
-      percentComplete: text("Percent Complete", "33")
-    })
+      percentComplete: text("Percent Complete", "33"),
+    }),
   },
   {
     description: "indeterminate",
-    getProps: () => {}
-  }
+    getProps: () => {},
+  },
 ];

@@ -6,23 +6,23 @@ import {
   FONT_WEIGHT,
   LENGTH,
   FONT_SIZE,
-  SPACING
+  SPACING,
 } from "../consts/types";
 
 const aBaseTheme = {
   FOO_COLOR: { type: COLOR },
-  BAR_LENGTH: { type: LENGTH }
+  BAR_LENGTH: { type: LENGTH },
 };
 
 function describeValuesForType({ types, validValues, invalidValues }) {
-  types.forEach(type => {
+  types.forEach((type) => {
     describe(`with a role of type ${type}`, () => {
       const myType = type;
       const myBaseTheme = {
-        MY_ROLE: { type: myType }
+        MY_ROLE: { type: myType },
       };
 
-      validValues.forEach(value => {
+      validValues.forEach((value) => {
         describe(value, () => {
           it("is valid", () => {
             const result = validateTheme({ MY_ROLE: value }, myBaseTheme);
@@ -31,7 +31,7 @@ function describeValuesForType({ types, validValues, invalidValues }) {
         });
       });
 
-      invalidValues.forEach(value => {
+      invalidValues.forEach((value) => {
         describe(value, () => {
           it("is invalid", () => {
             const result = validateTheme({ MY_ROLE: value }, myBaseTheme);
@@ -49,7 +49,7 @@ describe("validateTheme", () => {
   describe("with a valid theme", () => {
     const happyTheme = {
       FOO_COLOR: "#F00",
-      BAR_LENGTH: "12px"
+      BAR_LENGTH: "12px",
     };
 
     it("returns undefined", () => {
@@ -61,7 +61,7 @@ describe("validateTheme", () => {
 
   describe("with a missing role", () => {
     const missingRoleTheme = {
-      FOO_COLOR: "#F00"
+      FOO_COLOR: "#F00",
     };
 
     it("returns an error message", () => {
@@ -76,7 +76,7 @@ describe("validateTheme", () => {
     const extraRoleTheme = {
       FOO_COLOR: "#F00",
       BAR_LENGTH: "12px",
-      BAZ_COLOR: "#0F0"
+      BAZ_COLOR: "#0F0",
     };
 
     it("returns an error message", () => {
@@ -90,7 +90,7 @@ describe("validateTheme", () => {
   describeValuesForType({
     types: [COLOR],
     validValues: ["#F00", "#FF0000", "rgba(0, 0, 0, 0.5)", "purple"],
-    invalidValues: ["12px", "0", undefined]
+    invalidValues: ["12px", "0", undefined],
   });
 
   describeValuesForType({
@@ -101,13 +101,13 @@ describe("validateTheme", () => {
       "rgba(0, 0, 0, 0.5)",
       "14",
       "a long way off",
-      undefined
-    ]
+      undefined,
+    ],
   });
 
   describeValuesForType({
     types: [FONT_WEIGHT],
     validValues: [400, 500, 700, "400", "500", "700"],
-    invalidValues: ["400px", "bold", undefined]
+    invalidValues: ["400px", "bold", undefined],
   });
 });

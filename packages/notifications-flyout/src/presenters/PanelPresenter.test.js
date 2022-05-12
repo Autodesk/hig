@@ -8,8 +8,8 @@ describe("notifications-flyout/presenters/PanelPresenter", () => {
     {
       desc: "renders without props",
       props: {
-        innerRef: () => {}
-      }
+        innerRef: () => {},
+      },
     },
     {
       desc: "renders with all props",
@@ -20,8 +20,8 @@ describe("notifications-flyout/presenters/PanelPresenter", () => {
         listMaxHeight: "3000px",
         loadingTransitionState: ENTERED,
         onScroll: () => {},
-        refListWrapper: () => {}
-      }
-    }
+        refListWrapper: () => {},
+      },
+    },
   ]);
 });

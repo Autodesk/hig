@@ -11,23 +11,23 @@ describe("banner/BannerAnimator/BannerAnimator", () => {
       {
         description: "renders with only children",
         props: {
-          children: mockChildren
-        }
+          children: mockChildren,
+        },
       },
       {
         description: "renders hidden",
         props: {
           isVisible: false,
-          children: mockChildren
-        }
+          children: mockChildren,
+        },
       },
       {
         description: "renders in the bottom position",
         props: {
           position: positions.BOTTOM,
-          children: mockChildren
-        }
-      }
+          children: mockChildren,
+        },
+      },
     ];
 
     cases.forEach(({ description, props: { children, ...otherProps } }) => {

@@ -9,8 +9,8 @@ describe("notifications-flyout/Panel", () => {
     {
       desc: "renders without props",
       props: {
-        innerRef: handleRef
-      }
+        innerRef: handleRef,
+      },
     },
     {
       desc: "renders with all props",
@@ -19,8 +19,8 @@ describe("notifications-flyout/Panel", () => {
         heading: "hello",
         innerRef: handleRef,
         loading: true,
-        onScroll: function handleScroll() {}
-      }
-    }
+        onScroll: function handleScroll() {},
+      },
+    },
   ]);
 });

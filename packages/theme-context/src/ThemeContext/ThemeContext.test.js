@@ -9,9 +9,9 @@ import ThemeContext from "./index";
 const TestTheme = {
   metadata: {
     id: "test-theme",
-    className: "hig--test-theme"
+    className: "hig--test-theme",
   },
-  resolvedRoles: {}
+  resolvedRoles: {},
 };
 
 describe("ThemeContext", () => {

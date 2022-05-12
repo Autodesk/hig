@@ -29,23 +29,25 @@ function createNotification() {
           <TextLink type="secondary">Assign users</TextLink>
         </p>
       </div>
-    )
+    ),
   };
 }
 
 class App extends Component {
+  // eslint-disable-next-line react/static-property-placement
   static defaultProps = {
-    buttonText: "Add notification"
+    buttonText: "Add notification",
   };
 
+  // eslint-disable-next-line react/state-in-constructor
   state = {
-    notifications: []
+    notifications: [],
   };
 
   handleButtonClick = () => {
     this.setState({
       // eslint-disable-next-line react/no-access-state-in-setstate
-      notifications: [createNotification(), ...this.state.notifications]
+      notifications: [createNotification(), ...this.state.notifications],
     });
   };
 

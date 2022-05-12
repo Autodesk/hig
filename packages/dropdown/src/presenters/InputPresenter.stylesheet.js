@@ -1,11 +1,11 @@
 function getActiveStyles(isOpen) {
   if (isOpen) {
     return {
-      transform: "translateY(-50%) rotate(180deg)"
+      transform: "translateY(-50%) rotate(180deg)",
     };
   }
   return {
-    transform: "translateY(-50%)"
+    transform: "translateY(-50%)",
   };
 }
 
@@ -18,7 +18,7 @@ export default function stylesheet(props, themeData) {
 
   const styles = {
     inputWrapper: {
-      position: "relative"
+      position: "relative",
     },
     caret: {
       position: "absolute",
@@ -27,8 +27,8 @@ export default function stylesheet(props, themeData) {
       opacity: props.disabled ? themeData["colorScheme.opacity.disabled"] : 1,
       pointerEvents: "none",
       transition: "transform 0.3s, color 0.3s",
-      ...getActiveStyles(isOpen)
-    }
+      ...getActiveStyles(isOpen),
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

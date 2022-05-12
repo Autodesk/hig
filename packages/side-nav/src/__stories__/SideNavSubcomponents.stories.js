@@ -140,7 +140,7 @@ storiesOf("GlobalNav|SideNav.Group", module)
     "with icons",
     withInfo({
       ...infoOptions,
-      source: true
+      source: true,
     })(() => (
       <KnobbedThemeProvider>
         <SideNav.Group>
@@ -171,7 +171,7 @@ storiesOf("GlobalNav|SideNav.Group", module)
     "without icons",
     withInfo({
       ...infoOptions,
-      source: true
+      source: true,
     })(() => (
       <SideNav.Group>
         <SideNav.Module title="Module 1" activeChildren>

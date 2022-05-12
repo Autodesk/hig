@@ -25,11 +25,11 @@ import BannerPresenter from "./BannerPresenter";
  */
 
 /** @type {Component<BannerProps>} */
-const Banner = props => {
+const Banner = (props) => {
   /**
    * @param {import("./BannerContainer").PresenterBag} presenterBag
    */
-  const renderPresenter = presenterBag => {
+  const renderPresenter = (presenterBag) => {
     const presenterProps = { ...props, ...presenterBag };
     const {
       children,
@@ -103,7 +103,7 @@ Banner.propTypes = {
   /** The displayed message */
   children: PropTypes.node,
   /* Adds custom/overriding style */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default Banner;

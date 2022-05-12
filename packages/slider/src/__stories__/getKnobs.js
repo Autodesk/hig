@@ -8,7 +8,7 @@ const typeOptions = makeSelectOptions(sliderTypes);
 
 const knobGroupIds = {
   basic: "Basic",
-  form: "Form Attributes"
+  form: "Form Attributes",
 };
 
 const knobLabels = {
@@ -22,7 +22,7 @@ const knobLabels = {
   onInput: "onInput",
   step: "Step",
   value: "Value",
-  variant: "Variant"
+  variant: "Variant",
 };
 
 export default function getKnobs(props) {
@@ -58,6 +58,6 @@ export default function getKnobs(props) {
       typeOptions,
       variant,
       knobGroupIds.basic
-    )
+    ),
   };
 }

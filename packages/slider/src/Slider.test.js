@@ -7,7 +7,7 @@ import SliderPresenter from "./presenters/SliderPresenter";
 describe("slider/Slider", () => {
   takeSnapshotsOf(Slider, [{ desc: "renders", props: {} }]);
   takeSnapshotsOf(Slider, [
-    { desc: "renders disabled", props: { disabled: true } }
+    { desc: "renders disabled", props: { disabled: true } },
   ]);
 
   describe("when uncontrolled", () => {

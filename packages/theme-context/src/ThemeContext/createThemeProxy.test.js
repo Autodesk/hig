@@ -6,15 +6,15 @@ describe("ThemeContext/createThemeProxy", () => {
     metadata: {
       __deprecated__: {
         "colors.navyBlue": true,
-        "colors.icyBlue": { equivalent: "colors.aliceBlue" }
-      }
+        "colors.icyBlue": { equivalent: "colors.aliceBlue" },
+      },
     },
     resolvedRoles: {
       "colors.black": "#000000",
       "colors.navyBlue": "#000080",
-      "colors.icyBlue": "#f0f8ff"
+      "colors.icyBlue": "#f0f8ff",
     },
-    otherData: {}
+    otherData: {},
   };
 
   beforeEach(() => {
@@ -49,7 +49,7 @@ describe("ThemeContext/createThemeProxy", () => {
   describe("resolvedRoles", () => {
     describe("when roles is anything other than an object", () => {
       const otherTheme = {
-        resolvedRoles: ""
+        resolvedRoles: "",
       };
 
       it("returns as usual", () => {

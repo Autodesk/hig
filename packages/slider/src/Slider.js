@@ -13,7 +13,7 @@ import { AVAILABLE_SLIDER_TYPES } from "./constants";
  * @typedef {Object} State
  * @property {Value} value
  */
-const Slider = props => {
+const Slider = (props) => {
   const [valueHook, setValueHook] = useState(
     props.defaultValue || (props.max - props.min) / 2
   );
@@ -34,7 +34,7 @@ const Slider = props => {
   /**
    * @param {Value} value
    */
-  const setValue = valueParams => {
+  const setValue = (valueParams) => {
     const { onChange } = props;
 
     if (onChange) onChange(Number(valueParams));
@@ -47,7 +47,7 @@ const Slider = props => {
   /**
    * @param {event} Event
    */
-  const handleChange = event => {
+  const handleChange = (event) => {
     setValue(event.target.value);
   };
 
@@ -86,7 +86,7 @@ const Slider = props => {
         onMouseDown: handleMouseDown,
         onMouseEnter: handleMouseEnter,
         onMouseLeave: handleMouseLeave,
-        onMouseUp: handleMouseUp
+        onMouseUp: handleMouseUp,
       }) => (
         <SliderPresenter
           hasFocus={hasFocus}
@@ -187,7 +187,7 @@ Slider.propTypes = {
   /**
    * Type of the slider
    */
-  variant: PropTypes.oneOf(AVAILABLE_SLIDER_TYPES)
+  variant: PropTypes.oneOf(AVAILABLE_SLIDER_TYPES),
 };
 
 Slider.defaultProps = {
@@ -195,7 +195,7 @@ Slider.defaultProps = {
   variant: "continuous",
   max: "100",
   min: "0",
-  step: "1"
+  step: "1",
 };
 
 export default Slider;

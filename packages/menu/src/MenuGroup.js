@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import MenuBehavior from "./behaviors/MenuBehavior";
 import MenuGroupPresenter from "./presenters/MenuGroupPresenter";
 
-const MenuGroup = props => {
+const MenuGroup = (props) => {
   const {
     children,
     defaultSelected,
@@ -40,7 +40,7 @@ const MenuGroup = props => {
         setHighlightIndex,
         setMenuRef,
         setOptionsInfo,
-        setPreviousEvent
+        setPreviousEvent,
       }) => (
         <MenuGroupPresenter
           {...otherProps}
@@ -82,6 +82,7 @@ MenuGroup.propTypes = {
    * This will take precedent over the Menu prop
    * of the same name
    */
+  // eslint-disable-next-line react/forbid-prop-types
   defaultSelected: PropTypes.arrayOf(PropTypes.any),
   /**
    * A callback ref that gets passed to the HTML
@@ -105,6 +106,7 @@ MenuGroup.propTypes = {
    * This will take precedent over the Menu prop of the
    * same name
    */
+  // eslint-disable-next-line react/forbid-prop-types
   selected: PropTypes.arrayOf(PropTypes.any),
   /**
    * Adds custom/overriding styles
@@ -115,12 +117,12 @@ MenuGroup.propTypes = {
   /**
    * Shows a ability of checkmark to be unchecked if required
    */
-  unselect: PropTypes.bool
+  unselect: PropTypes.bool,
 };
 
 MenuGroup.defaultProps = {
   multiple: false,
-  unselect: true
+  unselect: true,
 };
 
 export default MenuGroup;

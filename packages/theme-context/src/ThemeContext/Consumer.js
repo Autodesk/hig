@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 import { Consumer as BaseConsumer } from "./BaseContext";
 import createThemeProxy from "./createThemeProxy";
 
-const Consumer = props => (
+const Consumer = (props) => (
   <BaseConsumer>
-    {theme => {
+    {(theme) => {
       const isDebugging = process.env.NODE_ENV !== "production";
       const result = isDebugging ? createThemeProxy(theme) : theme;
 
@@ -19,7 +19,7 @@ Consumer.displayName = "Consumer";
 
 Consumer.propTypes = {
   /** A theme provided to the consumer within */
-  children: PropTypes.func
+  children: PropTypes.func,
 };
 
 export default Consumer;

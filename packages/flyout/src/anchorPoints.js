@@ -10,7 +10,7 @@ export const anchorPoints = Object.freeze({
   BOTTOM_RIGHT: "bottom-right",
   LEFT_TOP: "left-top",
   LEFT_CENTER: "left-center",
-  LEFT_BOTTOM: "left-bottom"
+  LEFT_BOTTOM: "left-bottom",
 });
 
 export const AVAILABLE_ANCHOR_POINTS = Object.freeze(

@@ -7,12 +7,12 @@ describe("Dropdown/presenters/OptionPresenter", () => {
   const rendererOptions = {
     createNodeMock(element) {
       return document.createElement(element.type);
-    }
+    },
   };
   const cases = [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with all props",
@@ -22,9 +22,9 @@ describe("Dropdown/presenters/OptionPresenter", () => {
         onMouseDown: () => {},
         onMouseMove: () => {},
         selected: true,
-        children: <p key="p">hi</p>
-      }
-    }
+        children: <p key="p">hi</p>,
+      },
+    },
   ];
 
   takeSnapshotsOf(OptionPresenter, cases, rendererOptions);

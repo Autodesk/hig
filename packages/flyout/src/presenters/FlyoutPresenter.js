@@ -7,7 +7,7 @@ import { AVAILABLE_ANCHOR_POINTS } from "../anchorPoints";
 import { DEFAULT_COORDINATES } from "../getCoordinates";
 import {
   transitionStatuses,
-  AVAILABLE_TRANSITION_STATUSES
+  AVAILABLE_TRANSITION_STATUSES,
 } from "../transitionStatuses";
 import stylesheet from "./stylesheet";
 import PointerPresenter from "./PointerPresenter";
@@ -20,7 +20,7 @@ import PointerWrapperPresenter from "./PointerWrapperPresenter";
 function positionToStyle({ top, left }) {
   return {
     top: `${top}px`,
-    left: `${left}px`
+    left: `${left}px`,
   };
 }
 
@@ -99,7 +99,7 @@ FlyoutPresenter.defaultProps = {
   anchorPoint: DEFAULT_COORDINATES.anchorPoint,
   containerPosition: DEFAULT_COORDINATES.containerPosition,
   pointerPosition: DEFAULT_COORDINATES.pointerPosition,
-  transitionStatus: transitionStatuses.EXITED
+  transitionStatus: transitionStatuses.EXITED,
 };
 
 FlyoutPresenter.propTypes = {
@@ -112,12 +112,12 @@ FlyoutPresenter.propTypes = {
   /** Top/Left position of the container relative to the action */
   containerPosition: PropTypes.shape({
     top: PropTypes.number,
-    left: PropTypes.number
+    left: PropTypes.number,
   }),
   /** Top/Left position of the pointer relative to the action */
   pointerPosition: PropTypes.shape({
     top: PropTypes.number,
-    left: PropTypes.number
+    left: PropTypes.number,
   }),
   /** Reference the action element */
   refAction: PropTypes.func,
@@ -130,5 +130,5 @@ FlyoutPresenter.propTypes = {
   /** Target component to open the flyout */
   children: PropTypes.node,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

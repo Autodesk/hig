@@ -21,7 +21,7 @@ export default function Header({ title }) {
           <div
             style={{
               display: "flex",
-              marginBottom: resolvedRoles["density.spacings.medium"]
+              marginBottom: resolvedRoles["density.spacings.medium"],
             }}
           >
             <div style={{ flex: "1 1 0" }}>
@@ -54,5 +54,5 @@ export default function Header({ title }) {
 }
 
 Header.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
 };

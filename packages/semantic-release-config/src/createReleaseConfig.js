@@ -8,9 +8,9 @@ function createProductionReleaseConfig({ packageName }) {
       "@semantic-release/changelog",
       "@semantic-release/npm",
       "upgrade-dependents/semantic-release",
-      "@semantic-release/git"
+      "@semantic-release/git",
     ],
-    success: []
+    success: [],
   };
 }
 
@@ -22,7 +22,7 @@ function createDryRunReleaseConfig(payload) {
     branch: "development",
     verifyConditions: [],
     prepare: [],
-    publish: []
+    publish: [],
   };
 }
 

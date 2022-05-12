@@ -23,16 +23,16 @@ export default function stylesheet(props, themeData) {
           color: themeData["textLink.primary.hover.fontColor"],
           textDecoration: "underline",
           textDecorationColor:
-            themeData["textLink.primary.hover.underlineColor"]
+            themeData["textLink.primary.hover.underlineColor"],
         }
       : {}),
 
     ...(hasFocus
       ? {
           color: themeData["textLink.primary.focus.fontColor"],
-          outline: `solid ${themeData["textLink.focus.haloWidth"]} ${themeData["textLink.focus.haloColor"]}`
+          outline: `solid ${themeData["textLink.focus.haloWidth"]} ${themeData["textLink.focus.haloColor"]}`,
         }
-      : {})
+      : {}),
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

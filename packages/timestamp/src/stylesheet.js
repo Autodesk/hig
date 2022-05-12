@@ -7,8 +7,8 @@ export default function stylesheet(props, themeData) {
       fontSize: themeData["timestamp.fontSize"],
       fontWeight: themeData["timestamp.fontWeight"],
       lineHeight: themeData["timestamp.lineHeight"],
-      margin: 0
-    }
+      margin: 0,
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
