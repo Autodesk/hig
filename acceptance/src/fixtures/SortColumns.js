@@ -9,7 +9,7 @@ const styles = {
     left: "20px",
     opacity: 0,
     "&:hover": {
-        opacity: 0
+        opacity: 0.5
     }
 };
 

@@ -16,6 +16,8 @@ export default function TableHeaderCellPresenter(props) {
     rowSelection,
     setActiveMultiSelectColumn,
     onSortClick,
+    setIsSortedDesc,
+    isSortedDesc,
     ...otherProps
   } = props;
   const { getGlobalResizeStyles } = otherProps;
@@ -24,6 +26,7 @@ export default function TableHeaderCellPresenter(props) {
       if (isSortPassed && onClick && !columnSelection) {
         if (onSortClick) {
           onSortClick(event, props, headerIndex);
+          setIsSortedDesc(!isSortedDesc);
         }
         onClick(event);
       }
@@ -96,5 +99,7 @@ TableHeaderCellPresenter.propTypes = {
   onClick: PropTypes.func,
   setActiveMultiSelectColumn: PropTypes.func,
   onSortClick: PropTypes.func,
-  rowSelection: PropTypes.bool
+  rowSelection: PropTypes.bool,
+  setIsSortedDesc: PropTypes.func,
+  isSortedDesc: PropTypes.bool
 };
