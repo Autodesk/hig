@@ -1,3 +1,16 @@
+# [@hig/table-v1.4.0](https://github.com/Autodesk/hig/compare/@hig/table@1.3.1...@hig/table@1.4.0) (2022-05-12)
+
+
+### Bug Fixes
+
+* column widths off when rowSelection is set to false ([d420305](https://github.com/Autodesk/hig/commit/d420305))
+* sort icons ([fe3770f](https://github.com/Autodesk/hig/commit/fe3770f))
+
+
+### Features
+
+* add sort by group logic ([dad64de](https://github.com/Autodesk/hig/commit/dad64de))
+
 # [@hig/table-v1.3.1](https://github.com/Autodesk/hig/compare/@hig/table@1.3.0...@hig/table@1.3.1) (2022-04-26)
 
 
