@@ -24,9 +24,9 @@ export default function TableHeaderCellPresenter(props) {
   const handleClick = useCallback(
     (event) => {
       if (isSortPassed && onClick && !columnSelection) {
+        setIsSortedDesc(!isSortedDesc);
         if (onSortClick) {
           onSortClick(event, props, headerIndex);
-          setIsSortedDesc(!isSortedDesc);
         }
         onClick(event);
       }

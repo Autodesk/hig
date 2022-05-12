@@ -271,6 +271,7 @@ const renderTable = (params) => {
       {({ resolvedRoles, metadata }) => {
         const styles = stylesheet(
           {
+            isGrouped,
             frozenHeader,
             frozenHeaderCount,
             isStickyColumns,
