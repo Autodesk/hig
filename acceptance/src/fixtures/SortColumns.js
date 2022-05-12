@@ -5,7 +5,7 @@ import {CaretUp16, CaretUp24, CaretDown16, CaretDown24} from '@hig/icons';
 
 const styles = {
     position: "relative",
-    top: "3px",
+    top: "5px",
     left: "20px",
     opacity: 0,
     "&:hover": {

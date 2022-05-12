@@ -53,7 +53,7 @@ const TablePage = () => {
 	const [alternateBg, setAlternateBg] = useState(false);
 	const [headerBackgroundSelection, setHeaderBackgroundSelection] = useState('surface-levels');
 	const [headerBackgroundColor, setHeaderBackgroundColor] = useState(null)
-
+	const [isDescending, setIsDescending] = useState(true)
 	return (
 		<ThemeContext.Provider value={themes[theme]}>
 			<Surface
@@ -237,6 +237,21 @@ const TablePage = () => {
 								tableObject={customComponents}
 								tableSpreadProps={tableSpreadProps}
 								paginateDynamic={paginateDynamic}
+								onSortClick={(e, props, headerIndex, isSortedDesc) => {
+									setIsDescending(!isDescending)
+									const categoryToSort = customComponents.columns[headerIndex].accessor;
+									const sortedArray = customComponents.data.map(column => {
+										const copyColumn = [...column]
+
+										let seeColumn = copyColumn.sort((a, b) => (a[categoryToSort] < b[categoryToSort]) ? 1 : -1);
+										if (isDescending) {
+											seeColumn = copyColumn.sort((a, b) => (a[categoryToSort] > b[categoryToSort]) ? 1 : -1);
+										}
+								    return seeColumn;
+									})
+									
+									customComponents.data = sortedArray;
+								}}
 							/>
 						</div>
 					</div>

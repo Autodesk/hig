@@ -13,13 +13,21 @@ export default function TableHeaderCellPresenter(props) {
     isSelectableHeader,
     isSortPassed,
     onClick,
+    rowSelection,
     setActiveMultiSelectColumn,
+    onSortClick,
+    setIsSortedDesc,
+    isSortedDesc,
     ...otherProps
   } = props;
   const { getGlobalResizeStyles } = otherProps;
   const handleClick = useCallback(
     event => {
       if (isSortPassed && onClick && !columnSelection) {
+        if (onSortClick) {
+          onSortClick(event, props, headerIndex);
+          setIsSortedDesc(!isSortedDesc);
+        }
         onClick(event);
       }
       // no column selection for multirow selection checkboxes
@@ -33,12 +41,13 @@ export default function TableHeaderCellPresenter(props) {
       headerIndex,
       isSortPassed,
       onClick,
-      setActiveMultiSelectColumn
+      setActiveMultiSelectColumn,
+      onSortClick
     ]
   );
   const payload = { ...otherProps };
-  const resizeStyles =
-    (getGlobalResizeStyles && getGlobalResizeStyles[headerIndex + 1]) || {};
+  const rowOffset = rowSelection ? 1 : 0;
+  const resizeStyles = getGlobalResizeStyles?.[headerIndex + rowOffset] || {};
 
   delete payload.getActiveMultiSelectColumn;
   delete payload.getColumnHeaderArray;
@@ -88,5 +97,9 @@ TableHeaderCellPresenter.propTypes = {
   isSelectableHeader: PropTypes.bool,
   isSortPassed: PropTypes.func,
   onClick: PropTypes.func,
-  setActiveMultiSelectColumn: PropTypes.func
+  setActiveMultiSelectColumn: PropTypes.func,
+  onSortClick: PropTypes.func,
+  rowSelection: PropTypes.bool,
+  setIsSortedDesc: PropTypes.func,
+  isSortedDesc: PropTypes.bool
 };
