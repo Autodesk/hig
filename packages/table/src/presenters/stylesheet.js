@@ -60,7 +60,6 @@ export default function stylesheet(props, themeData, themeMeta) {
             zIndex: 10,
           }
         : {}),
-      borderBottom: `1px solid #ddd`,
     },
     higTableHeader: {
       backgroundColor:
