@@ -1,5 +1,5 @@
 import React from "react";
-import { ArgsTable, Primary,  } from "@storybook/addon-docs";
+import { ArgsTable, Primary } from "@storybook/addon-docs";
 
 import Button from "../index";
 import Readme from "../../README.md";
