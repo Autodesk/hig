@@ -1,5 +1,5 @@
 import React from "react";
-import { ArgsTable } from "@storybook/addon-docs";
+import { ArgsTable, Primary } from "@storybook/addon-docs";
 
 import Table from "../index";
 import SAMPLE_TABLE_OBJECT from "../__fixtures__/sampleTableObject";
@@ -13,6 +13,7 @@ export default {
     docs: {
       page: () => (
         <>
+          <Primary />
           <Readme />
           <ArgsTable />
         </>

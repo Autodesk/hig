@@ -1,5 +1,5 @@
 import React from "react";
-import { ArgsTable } from "@storybook/addon-docs";
+import { ArgsTable, Primary } from "@storybook/addon-docs";
 
 import Dropdown from "../index";
 import Readme from "../../README.md";
@@ -12,6 +12,7 @@ export default {
     docs: {
       page: () => (
         <>
+          <Primary />
           <Readme />
           <ArgsTable />
         </>

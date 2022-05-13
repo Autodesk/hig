@@ -22,9 +22,10 @@ const providerFn = ({ theme, children }) => {
       }
     }
   );
+
   return (
     <ThemeContext.Provider value={theme}>
-      <Surface stylesheet={surfaceStylesheet}>{children}</Surface>
+      <Surface level={200} stylesheet={surfaceStylesheet}>{children}</Surface>
     </ThemeContext.Provider>
   );
 };
