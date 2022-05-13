@@ -1,12 +1,12 @@
-import React from 'react';
-import { ArgsTable } from '@storybook/addon-docs';
+import React from "react";
+import { ArgsTable } from "@storybook/addon-docs";
 
-import Table from '../index';
-import SAMPLE_TABLE_OBJECT from '../__fixtures__/sampleTableObject';
+import Table from "../index";
+import SAMPLE_TABLE_OBJECT from "../__fixtures__/sampleTableObject";
 import Readme from "../../README.md";
 
 export default {
-  title: 'Components/Table',
+  title: "Components/Table",
   component: Table,
   argTypes: {},
   parameters: {
@@ -16,17 +16,15 @@ export default {
           <Readme />
           <ArgsTable />
         </>
-      )
-    }
-  }
+      ),
+    },
+  },
 };
 
-const Template = args => (
-  <Table {...args} />
-);
+const Template = (args) => <Table {...args} />;
 
 export const Default = Template.bind({});
 
 Default.args = {
-  tableObject: SAMPLE_TABLE_OBJECT
+  tableObject: SAMPLE_TABLE_OBJECT,
 };
