@@ -20,7 +20,7 @@ const themeConfigs = {
   "hig-light": webLightTheme,
   "hig-light-gray": lightGrayTheme,
   "hig-dark-blue": darkBlueTheme,
-  "hig-dark-gray": darkGrayTheme
+  "hig-dark-gray": darkGrayTheme,
 };
 
 const storybook = storiesOf("Theming|Theme data", module);
@@ -30,7 +30,7 @@ storybook.add(
   withInfo({
     propTables: [],
     source: false,
-    text: <RichText dangerouslySetInnerHTML={{ __html: overallReadme }} />
+    text: <RichText dangerouslySetInnerHTML={{ __html: overallReadme }} />,
   })(() => null)
 );
 
@@ -42,14 +42,14 @@ stories.forEach(({ description, schema, readme }) => {
       source: false,
       text: readme ? (
         <RichText dangerouslySetInnerHTML={{ __html: readme }} />
-      ) : null
+      ) : null,
     })(() => (
       <KnobbedThemeProvider>
         <ThemeContext.Consumer>
           {({ resolvedRoles, metadata }) => (
             <div>
               <Header title={description} />
-              {Object.keys(schema).map(role => (
+              {Object.keys(schema).map((role) => (
                 <Role
                   key={role}
                   role={role}

@@ -23,24 +23,24 @@ export default function stylesheet(props, themeData) {
       margin: 0,
       overflow: "hidden",
       borderRadius: "50%",
-      textAlign: "center"
+      textAlign: "center",
     },
     [StyleItems.avatarImageWrapper]: {
       position: "absolute",
       display: "flex",
       zIndex: "2",
-      fontSize
+      fontSize,
     },
     [StyleItems.avatarImage]: {
       borderRadius: "50%",
       width: diameter,
-      height: diameter
+      height: diameter,
     },
     [StyleItems.avatarInitials]: {
       width: diameter,
       height: diameter,
-      fontFamily
-    }
+      fontFamily,
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

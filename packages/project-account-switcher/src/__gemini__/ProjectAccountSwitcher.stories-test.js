@@ -16,7 +16,7 @@ function Capture({ children }) {
         width: "400px",
         height: "600px",
         alignItems: "center",
-        flexDirection: "column"
+        flexDirection: "column",
       }}
     >
       {children}
@@ -40,14 +40,14 @@ storiesOf("ProjectAccountSwitcher", module)
       <ProjectAccountSwitcher
         accounts={[
           { id: "1", label: "Account 1" },
-          { id: "2", label: "Account 2", image: accountImage }
+          { id: "2", label: "Account 2", image: accountImage },
         ]}
         activeAccountId="1"
         activeProjectId="1"
         open
         projects={[
           { id: "1", label: "Project 1" },
-          { id: "2", label: "Project 2", image: projectImage }
+          { id: "2", label: "Project 2", image: projectImage },
         ]}
       />
     </Capture>
@@ -57,7 +57,7 @@ storiesOf("ProjectAccountSwitcher", module)
       <ProjectAccountSwitcher
         accounts={[
           { id: "1", label: "Account 1" },
-          { id: "2", label: "Account 2", image: accountImage }
+          { id: "2", label: "Account 2", image: accountImage },
         ]}
         activeAccountId="1"
         open
@@ -71,7 +71,7 @@ storiesOf("ProjectAccountSwitcher", module)
         open
         projects={[
           { id: "1", label: "Project 1" },
-          { id: "2", label: "Project 2", image: projectImage }
+          { id: "2", label: "Project 2", image: projectImage },
         ]}
       />
     </Capture>

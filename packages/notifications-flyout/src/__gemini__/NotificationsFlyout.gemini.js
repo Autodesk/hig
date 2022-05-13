@@ -1,10 +1,10 @@
 const captureOptions = {
   // Small differences in placeholder text can easily generate false negatives
-  tolerance: 5
+  tolerance: 5,
 };
 
 gemini.suite("NotificationsFlyout", () => {
-  gemini.suite("default", suite => {
+  gemini.suite("default", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=NotificationsFlyout&selectedStory=default"
@@ -13,7 +13,7 @@ gemini.suite("NotificationsFlyout", () => {
       .capture("Default", captureOptions, () => {});
   });
 
-  gemini.suite("empty", suite => {
+  gemini.suite("empty", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=NotificationsFlyout&selectedStory=empty"

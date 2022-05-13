@@ -1,7 +1,7 @@
 export default function stylesheet(props, themeData) {
   const { stylesheet: customStylesheet } = props;
   const activeBorderLeft = `2px solid ${themeData["colorScheme.reference.accent"]}`;
-  const activeBorderBefore = active => ({
+  const activeBorderBefore = (active) => ({
     content: '""',
     position: "absolute",
     top: 0,
@@ -11,9 +11,9 @@ export default function stylesheet(props, themeData) {
     ...(active
       ? {
           color: themeData["colorScheme.reference.accent"],
-          borderLeft: activeBorderLeft
+          borderLeft: activeBorderLeft,
         }
-      : { borderLeft: "2px solid transparent" })
+      : { borderLeft: "2px solid transparent" }),
   });
   const styles = {
     wrapper: {
@@ -32,17 +32,17 @@ export default function stylesheet(props, themeData) {
         color: themeData["colorScheme.reference.accent"],
 
         "svg *": {
-          fill: themeData["colorScheme.reference.accent"]
-        }
+          fill: themeData["colorScheme.reference.accent"],
+        },
       },
 
       "&:focus:before, &:hover:before": activeBorderBefore(true),
 
       ...((props.active || props.activeChildren) && {
         "& svg *": {
-          fill: themeData["colorScheme.reference.accent"]
-        }
-      })
+          fill: themeData["colorScheme.reference.accent"],
+        },
+      }),
     },
 
     title: {
@@ -50,7 +50,7 @@ export default function stylesheet(props, themeData) {
       fontSize: "14px",
       paddingLeft: themeData["density.spacings.extraExtraSmall"],
       paddingTop: "5px",
-      lineHeight: "20px"
+      lineHeight: "20px",
     },
 
     icon: {
@@ -59,15 +59,15 @@ export default function stylesheet(props, themeData) {
       justifyContent: "center",
       width: "38px",
       "& svg": {
-        pointerEvents: "none"
-      }
+        pointerEvents: "none",
+      },
     },
 
     externalIcon: {
       display: "flex",
       alignItems: "center",
       marginLeft: "auto",
-      padding: "6px 10px"
+      padding: "6px 10px",
     },
 
     row: {
@@ -79,8 +79,8 @@ export default function stylesheet(props, themeData) {
 
       "&:hover svg *": {
         fill: themeData["colorScheme.reference.accent"],
-        pointerEvents: "none"
-      }
+        pointerEvents: "none",
+      },
     },
 
     module: {
@@ -91,11 +91,11 @@ export default function stylesheet(props, themeData) {
       lineHeight: themeData[`typography.body.lineHeight`],
       position: "relative",
       margin: `${themeData["density.spacings.extraSmall"]} 0`,
-      userSelect: "none"
+      userSelect: "none",
     },
 
     submodule: {
-      paddingLeft: props.icon ? "46px" : themeData["density.spacings.medium"]
+      paddingLeft: props.icon ? "46px" : themeData["density.spacings.medium"],
     },
 
     link: {
@@ -108,18 +108,18 @@ export default function stylesheet(props, themeData) {
       cursor: "pointer",
 
       "&:hover svg *": {
-        fill: themeData["colorScheme.reference.accent"]
+        fill: themeData["colorScheme.reference.accent"],
       },
 
       ...((props.active || props.activeChildren) && {
         "&:before": activeBorderBefore(true),
         "& svg *": {
-          fill: themeData["colorScheme.reference.accent"]
-        }
+          fill: themeData["colorScheme.reference.accent"],
+        },
       }),
 
-      "&:hover:before, &:focus:before": activeBorderBefore(true)
-    }
+      "&:hover:before, &:focus:before": activeBorderBefore(true),
+    },
   };
 
   if (customStylesheet) {

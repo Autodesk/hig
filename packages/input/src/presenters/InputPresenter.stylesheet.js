@@ -5,24 +5,24 @@ function inputStyles({ isDisabled, hasFocus, hasHover }, themeData) {
     color: themeData["input.value.fontColor"],
     height: `calc(${themeData["input.minHeight"]} - 2px)`,
     transitionProperty: "color",
-    transitionDuration: "0.3s"
+    transitionDuration: "0.3s",
   };
 
   if (isDisabled) {
     return {
-      ...defaults
+      ...defaults,
     };
   }
   if (hasFocus) {
     return {
       ...defaults,
-      transitionDuration: "0.1s"
+      transitionDuration: "0.1s",
     };
   }
   if (hasHover) {
     return {
       ...defaults,
-      transitionDuration: "0.1s"
+      transitionDuration: "0.1s",
     };
   }
   return defaults;
@@ -55,15 +55,15 @@ export default function stylesheet(props, themeData) {
       lineHeight: themeData["input.value.lineHeight"],
       width: "100%",
       "&::placeholder": {
-        color: themeData["input.value.placeholderFontColor"]
+        color: themeData["input.value.placeholderFontColor"],
       },
       "&::-ms-input-placeholder": {
-        color: themeData["input.value.placeholderFontColor"]
+        color: themeData["input.value.placeholderFontColor"],
       },
       "::selection": {
-        backgroundColor: themeData["input.value.highlightColor"]
+        backgroundColor: themeData["input.value.highlightColor"],
       },
-      ...inputStyles(props, themeData)
-    }
+      ...inputStyles(props, themeData),
+    },
   };
 }

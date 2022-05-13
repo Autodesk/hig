@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import TreeItemBehavior from "./behaviors/TreeItemBehavior";
 import TreeItemPresenter from "./presenters/TreeItemPresenter";
 
-const TreeItem = props => {
+const TreeItem = (props) => {
   const {
     children,
     collapsed,
@@ -24,7 +24,7 @@ const TreeItem = props => {
     isControlled,
     onFocus,
     selected,
-    setKeyboardOpenId
+    setKeyboardOpenId,
   } = otherProps;
   const getActiveId = () => {
     if (isControlled()) {
@@ -46,7 +46,7 @@ const TreeItem = props => {
         handleClick,
         handleDoubleClick,
         handleOperatorClick,
-        setIsCollapsed
+        setIsCollapsed,
       }) => (
         <TreeItemPresenter
           {...otherProps}
@@ -107,7 +107,8 @@ TreeItem.propTypes = {
    */
   itemRef: PropTypes.oneOfType([
     PropTypes.func,
-    PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.any) })
+    // eslint-disable-next-line react/forbid-prop-types
+    PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.any) }),
   ]),
   /**
    * Labels the TreeItem, this is rendered before all children
@@ -116,12 +117,12 @@ TreeItem.propTypes = {
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 TreeItem.defaultProps = {
   defaultCollapsed: true,
-  expandByDoubleClick: false
+  expandByDoubleClick: false,
 };
 
 export default TreeItem;

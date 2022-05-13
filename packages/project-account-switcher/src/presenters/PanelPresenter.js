@@ -27,5 +27,5 @@ export default function PanelPresenter({
 PanelPresenter.propTypes = {
   innerRef: PropTypes.func,
   children: PropTypes.node,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

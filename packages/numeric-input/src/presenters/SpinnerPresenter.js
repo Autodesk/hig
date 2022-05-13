@@ -6,11 +6,11 @@ import { CaretUpMUI, CaretUpSUI, CaretDownMUI, CaretDownSUI } from "@hig/icons";
 import { availableVariants } from "@hig/input";
 import {
   createCustomClassNames,
-  memoizeCreateButtonEventHandlers
+  memoizeCreateButtonEventHandlers,
 } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
-const SpinnerPresenter = props => {
+const SpinnerPresenter = (props) => {
   const createButtonHandlers = memoizeCreateButtonEventHandlers();
   const {
     disabled,
@@ -30,12 +30,12 @@ const SpinnerPresenter = props => {
 
   const {
     handleClick: handleIncrementClick,
-    handleKeyDown: handleIncrementKeyDown
+    handleKeyDown: handleIncrementKeyDown,
   } = createButtonHandlers(increment);
 
   const {
     handleClick: handleDecrementClick,
-    handleKeyDown: handleDecrementKeyDown
+    handleKeyDown: handleDecrementKeyDown,
   } = createButtonHandlers(decrement);
 
   const { className } = otherProps;
@@ -61,7 +61,7 @@ const SpinnerPresenter = props => {
           {
             disabled,
             variant,
-            stylesheet: customStylesheet
+            stylesheet: customStylesheet,
           },
           resolvedRoles,
           metadata.densityId
@@ -129,7 +129,7 @@ SpinnerPresenter.propTypes = {
   clearTimer: PropTypes.func,
   mouseDownIncrement: PropTypes.func,
   mouseDownDecrement: PropTypes.func,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default SpinnerPresenter;

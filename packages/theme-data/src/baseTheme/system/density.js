@@ -12,5 +12,5 @@ export default {
   "fontSizes.medium": { type: FONT_SIZE },
   "fontSizes.large": { type: FONT_SIZE },
   "fontSizes.extraLarge": { type: FONT_SIZE },
-  "fontSizes.extraExtraLarge": { type: FONT_SIZE }
+  "fontSizes.extraExtraLarge": { type: FONT_SIZE },
 };

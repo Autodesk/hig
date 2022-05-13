@@ -18,8 +18,8 @@ export default function stylesheet(props, themeData) {
       borderBottomLeftRadius: themeData["menu.borderRadius"],
       borderBottomRightRadius: themeData["menu.borderRadius"],
       backgroundColor: themeData["menu.backgroundColor"],
-      boxShadow: `0 1px ${themeData["basics.shadows.lowBlur"]} ${themeData["colorScheme.shadow.low"]}`
-    }
+      boxShadow: `0 1px ${themeData["basics.shadows.lowBlur"]} ${themeData["colorScheme.shadow.low"]}`,
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

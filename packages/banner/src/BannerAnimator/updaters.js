@@ -9,7 +9,7 @@ import {
   getWrapperCollapsedHeight,
   getWrapperExpandedHeight,
   getWrapperReset,
-  getWrapperTransition
+  getWrapperTransition,
 } from "./styles";
 
 /** @typedef {import("./BannerAnimator").BannerAnimatorState} BannerAnimatorState */
@@ -30,7 +30,7 @@ function getParams(prevState = {}, props = {}) {
     innerWrapper,
     hasBounce,
     hasPush,
-    position
+    position,
   };
 }
 
@@ -65,11 +65,11 @@ export function endCollapse(prevState, setState, props) {
   setWrapperStyle({
     transition: "",
     overflow: "hidden",
-    height: "0"
+    height: "0",
   });
   setInnerWrapperStyle({
     transition: "",
-    transform: getInnerWrapperCollapsedTransform(params)
+    transform: getInnerWrapperCollapsedTransform(params),
   });
 }
 
@@ -81,7 +81,7 @@ export function prepareCollapse(prevState, setState, props) {
   setWrapperStyle({
     transition: "",
     overflow: "hidden",
-    height: getWrapperExpandedHeight(params)
+    height: getWrapperExpandedHeight(params),
   });
   setInnerWrapperStyle(getInnerWrapperReset());
 }
@@ -94,11 +94,11 @@ export function animateCollapse(prevState, setState, props) {
   setWrapperStyle({
     transition: getWrapperTransition(params),
     overflow: "hidden",
-    height: getWrapperCollapsedHeight(params)
+    height: getWrapperCollapsedHeight(params),
   });
   setInnerWrapperStyle({
     transition: getInnerWrapperCollapsingTransition(params),
-    transform: getInnerWrapperCollapsedTransform(params)
+    transform: getInnerWrapperCollapsedTransform(params),
   });
 }
 
@@ -110,10 +110,10 @@ export function animateExpand(prevState, setState, props) {
   setWrapperStyle({
     transition: getWrapperTransition(params),
     overflow: "hidden",
-    height: getWrapperExpandedHeight(params)
+    height: getWrapperExpandedHeight(params),
   });
   setInnerWrapperStyle({
     transition: getInnerWrapperExpandingTransition(params),
-    transform: getInnerWrapperExpandingTransform(params)
+    transform: getInnerWrapperExpandingTransform(params),
   });
 }

@@ -4,7 +4,7 @@ import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
 import stylesheet from "./stylesheet";
 
-const Docked = props => {
+const Docked = (props) => {
   const {
     children,
     onMouseLeave,
@@ -24,12 +24,12 @@ const Docked = props => {
               stylesheet(
                 {
                   stylesheet: customStylesheet,
-                  ...props
+                  ...props,
                 },
                 resolvedRoles
               ).docked
             ),
-            className
+            className,
           ])}
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
@@ -51,12 +51,12 @@ Docked.propTypes = {
   /** Called when no longer hovering over the container */
   onMouseLeave: PropTypes.func,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 Docked.defaultProps = {
   onMouseLeave: () => {},
-  onMouseEnter: () => {}
+  onMouseEnter: () => {},
 };
 
 export default Docked;

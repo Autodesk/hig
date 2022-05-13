@@ -5,18 +5,18 @@ describe("resolveTheme", () => {
     it("flattens the reference", () => {
       const theme = {
         accentColor: { value: "#F00" },
-        textColor: { value: { ref: "accentColor" } }
+        textColor: { value: { ref: "accentColor" } },
       };
       expect(resolveTheme(theme)).toEqual({
         accentColor: "#F00",
-        textColor: "#F00"
+        textColor: "#F00",
       });
     });
 
     describe("to an unknown role", () => {
       it("throws an error", () => {
         const theme = {
-          accentColor: { value: { ref: "glitterBomb" } }
+          accentColor: { value: { ref: "glitterBomb" } },
         };
         expect(() => {
           resolveTheme(theme);
@@ -30,13 +30,13 @@ describe("resolveTheme", () => {
       const theme = {
         accentColor: { value: "#F00" },
         "input.focus.color": { value: { ref: "accentColor" } },
-        "textarea.focus.color": { value: { ref: "input.focus.color" } }
+        "textarea.focus.color": { value: { ref: "input.focus.color" } },
       };
 
       expect(resolveTheme(theme)).toEqual({
         accentColor: "#F00",
         "input.focus.color": "#F00",
-        "textarea.focus.color": "#F00"
+        "textarea.focus.color": "#F00",
       });
     });
 
@@ -45,15 +45,15 @@ describe("resolveTheme", () => {
         accentColor: { value: "#F00" },
         "input.focus.color": {
           value: { ref: "accentColor" },
-          transform: { alpha: 0.5 }
+          transform: { alpha: 0.5 },
         },
-        "textarea.focus.color": { value: { ref: "input.focus.color" } }
+        "textarea.focus.color": { value: { ref: "input.focus.color" } },
       };
 
       expect(resolveTheme(theme)).toEqual({
         accentColor: "#F00",
         "input.focus.color": "rgba(255, 0, 0, 0.5)",
-        "textarea.focus.color": "rgba(255, 0, 0, 0.5)"
+        "textarea.focus.color": "rgba(255, 0, 0, 0.5)",
       });
     });
   });
@@ -61,7 +61,7 @@ describe("resolveTheme", () => {
   describe("with an abstract value", () => {
     it("throws an error", () => {
       const theme = {
-        accentColor: { value: null }
+        accentColor: { value: null },
       };
       expect(() => {
         resolveTheme(theme);
@@ -76,8 +76,8 @@ describe("resolveTheme", () => {
           "basics.colorsRedAlert": { value: "#FF0000" },
           accentColor: {
             value: { ref: "basics.colorsRedAlert" },
-            transform: { alpha: 0.5 }
-          }
+            transform: { alpha: 0.5 },
+          },
         });
         expect(theme.accentColor).toEqual("rgba(255, 0, 0, 0.5)");
       });
@@ -86,13 +86,13 @@ describe("resolveTheme", () => {
         const theme = resolveTheme({
           "basics.colorsRedAlert": {
             value: "#FF0000",
-            transform: { alpha: 0.75 }
+            transform: { alpha: 0.75 },
           },
           accentColor: {
             value: { ref: "basics.colorsRedAlert" },
             // overriding the transform here
-            transform: { alpha: 0.5 }
-          }
+            transform: { alpha: 0.5 },
+          },
         });
         expect(theme.accentColor).toEqual("rgba(255, 0, 0, 0.5)");
       });
@@ -104,8 +104,8 @@ describe("resolveTheme", () => {
           "basics.spacingsM": { value: "16px" },
           accentColor: {
             value: { ref: "basics.spacingsMedium" },
-            transform: { alpha: 0.5 }
-          }
+            transform: { alpha: 0.5 },
+          },
         };
         expect(() => {
           resolveTheme(theme);

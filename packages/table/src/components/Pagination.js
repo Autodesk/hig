@@ -6,7 +6,7 @@ import { css } from "emotion";
 
 const styles = {
   padding: "20px",
-  width: "100%"
+  width: "100%",
 };
 
 const Pagination = ({ pageDetails, children }) => (
@@ -21,8 +21,8 @@ Pagination.propTypes = {
     previousPage: PropTypes.func,
     nextPage: PropTypes.func,
     canPreviousPage: PropTypes.bool,
-    canNextPage: PropTypes.bool
-  })
+    canNextPage: PropTypes.bool,
+  }),
 };
 
 export default Pagination;

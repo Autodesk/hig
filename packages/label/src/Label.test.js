@@ -6,16 +6,16 @@ describe("Label", () => {
   [
     {
       description: "renders without props",
-      props: {}
+      props: {},
     },
     {
       description: "renders with all props",
       props: {
         children: "I am a label",
         disabled: true,
-        variant: "side"
-      }
-    }
+        variant: "side",
+      },
+    },
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {
       const presenter = <Label {...otherProps}>{children}</Label>;

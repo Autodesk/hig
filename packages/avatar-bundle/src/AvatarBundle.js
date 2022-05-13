@@ -9,7 +9,7 @@ import ClipPaths from "./clip-paths";
 import stylesheet from "./AvatarBundle.stylesheet";
 import { spacings, AVAILABLE_SPACING } from "./spacings";
 
-const AvatarBundle = props => {
+const AvatarBundle = (props) => {
   const {
     size,
     spacing,
@@ -113,17 +113,17 @@ AvatarBundle.propTypes = {
       /** Optional alt message override for Avatar Image  */
       imageAlt: PropTypes.string,
       /** Function to modify the individual Avatar component's styles */
-      stylesheet: PropTypes.func
+      stylesheet: PropTypes.func,
     })
   ),
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 AvatarBundle.defaultProps = {
   size: sizes.MEDIUM_32,
   spacing: spacings.DEFAULT,
-  avatars: []
+  avatars: [],
 };
 
 export default AvatarBundle;

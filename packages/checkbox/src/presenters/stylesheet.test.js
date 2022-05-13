@@ -7,7 +7,7 @@ describe("stylesheet", () => {
     hasFocus: false,
     hasHover: false,
     indeterminate: false,
-    isPressed: false
+    isPressed: false,
   };
   const styles = stylesheet(props, {});
 
@@ -31,7 +31,7 @@ describe("stylesheet", () => {
   });
   it("returns the custom stylesheet", () => {
     expect(stylesheet({ stylesheet: () => ({ padding: 0 }) }, {})).toEqual({
-      padding: 0
+      padding: 0,
     });
   });
 });

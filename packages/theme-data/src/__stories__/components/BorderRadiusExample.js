@@ -13,7 +13,7 @@ function BorderRadiusExample({ value }) {
 }
 
 BorderRadiusExample.propTypes = {
-  value: PropTypes.string
+  value: PropTypes.string,
 };
 
 export default BorderRadiusExample;

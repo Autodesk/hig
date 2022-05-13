@@ -2,7 +2,7 @@ import {
   SizeMapping,
   StyleItems,
   stylesheet as avatarStylesheet,
-  sizes
+  sizes,
 } from "@hig/avatar";
 
 import { spacings } from "./spacings";
@@ -10,7 +10,7 @@ import { spacings } from "./spacings";
 export const SpacingMapping = {
   [spacings.DEFAULT]: "default",
   [spacings.CONDENSED]: "condensed",
-  [spacings.SUPER_CONDENSED]: "superCondensed"
+  [spacings.SUPER_CONDENSED]: "superCondensed",
 };
 
 export default function stylesheet(props, themeData) {
@@ -42,27 +42,27 @@ export default function stylesheet(props, themeData) {
 
   const styles = {
     avatarBundleContainer: {
-      display: "inline-grid"
+      display: "inline-grid",
     },
     avatarWrapper: {
       gridArea: "1 / 1 / 1",
       width: diameter,
       height: diameter,
       borderRadius: "50%",
-      boxShadow
+      boxShadow,
     },
     avatarWrapperFirstItem: {
-      zIndex: "3"
+      zIndex: "3",
     },
     avatarWrapperSecondItem: {
       marginLeft: avatarSpacingSecondItem,
       zIndex: "2",
-      clipPath
+      clipPath,
     },
     avatarWrapperThirdItem: {
       marginLeft: avatarSpacingThirdItem,
       zIndex: "1",
-      clipPath
+      clipPath,
     },
     avatarOverflowCount: {
       ...avatarStyle[StyleItems.avatarContainer],
@@ -71,8 +71,8 @@ export default function stylesheet(props, themeData) {
       clipPath,
       backgroundColor: overflowBackground,
       color: overflowFontColor,
-      fontFamily
-    }
+      fontFamily,
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

@@ -7,22 +7,22 @@ describe("avatar-bundle/AvatarBundle", () => {
   takeSnapshotsOf(AvatarBundle, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with one avatar",
       props: {
-        avatars: [{ name: "Jon Snow" }]
-      }
+        avatars: [{ name: "Jon Snow" }],
+      },
     },
     {
       desc: "renders with two avatars",
       props: {
         avatars: [
           { name: "Jon Snow" },
-          { image: "http://placekitten.com/g/64/64" }
-        ]
-      }
+          { image: "http://placekitten.com/g/64/64" },
+        ],
+      },
     },
     {
       desc: "renders with three avatars",
@@ -30,9 +30,9 @@ describe("avatar-bundle/AvatarBundle", () => {
         avatars: [
           { name: "Jon Snow" },
           { image: "http://placekitten.com/g/64/64" },
-          { name: "Jon Snow", image: "http://placekitten.com/g/64/64" }
-        ]
-      }
+          { name: "Jon Snow", image: "http://placekitten.com/g/64/64" },
+        ],
+      },
     },
     {
       desc: "renders with four avatars",
@@ -41,9 +41,9 @@ describe("avatar-bundle/AvatarBundle", () => {
           { name: "Jon Snow" },
           { image: "http://placekitten.com/g/64/64" },
           { name: "Jon Snow" },
-          { name: "Jon Snow", image: "http://placekitten.com/g/64/64" }
-        ]
-      }
+          { name: "Jon Snow", image: "http://placekitten.com/g/64/64" },
+        ],
+      },
     },
     {
       desc: "renders three avatars with overflow count",
@@ -53,12 +53,12 @@ describe("avatar-bundle/AvatarBundle", () => {
           {
             name: "Jon Snow",
             image: "http://placekitten.com/g/64/64",
-            onImageError: function handleImageError() {}
+            onImageError: function handleImageError() {},
           },
           { image: "http://placekitten.com/g/64/64" },
-          { name: "Jon Snow" }
-        ]
-      }
+          { name: "Jon Snow" },
+        ],
+      },
     },
     {
       desc: "renders four avatars with overflow count",
@@ -68,13 +68,13 @@ describe("avatar-bundle/AvatarBundle", () => {
           {
             name: "Jon Snow",
             image: "http://placekitten.com/g/64/64",
-            onImageError: function handleImageError() {}
+            onImageError: function handleImageError() {},
           },
           { image: "http://placekitten.com/g/64/64" },
           { image: "http://placekitten.com/g/64/64" },
-          { name: "Jon Snow" }
-        ]
-      }
+          { name: "Jon Snow" },
+        ],
+      },
     },
     {
       desc: "renders 102+ avatars with overflow count",
@@ -86,8 +86,8 @@ describe("avatar-bundle/AvatarBundle", () => {
             arr.push({ name: "Jon Snow" });
           }
           return arr;
-        })()
-      }
+        })(),
+      },
     },
     {
       desc: "renders with all props",
@@ -100,14 +100,14 @@ describe("avatar-bundle/AvatarBundle", () => {
           {
             name: "Jon Snow",
             image: "http://placekitten.com/g/64/64",
-            onImageError: function handleImageError() {}
+            onImageError: function handleImageError() {},
           },
           { image: "http://placekitten.com/g/64/64" },
           { name: "Jon Snow" },
-          { name: "Jon Snow", image: "http://placekitten.com/g/64/64" }
+          { name: "Jon Snow", image: "http://placekitten.com/g/64/64" },
         ],
-        className: "my-class-a my-class-b"
-      }
-    }
+        className: "my-class-a my-class-b",
+      },
+    },
   ]);
 });

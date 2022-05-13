@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 gemini.suite("ProjectAccountSwitcher", () => {
-  gemini.suite("default", suite => {
+  gemini.suite("default", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=ProjectAccountSwitcher&selectedStory=default"
@@ -9,7 +9,7 @@ gemini.suite("ProjectAccountSwitcher", () => {
       .capture("default");
   });
 
-  gemini.suite("open-accounts-projects", suite => {
+  gemini.suite("open-accounts-projects", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=ProjectAccountSwitcher&selectedStory=open-accounts-projects"
@@ -18,7 +18,7 @@ gemini.suite("ProjectAccountSwitcher", () => {
       .capture("open-accounts-projects");
   });
 
-  gemini.suite("open-accounts", suite => {
+  gemini.suite("open-accounts", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=ProjectAccountSwitcher&selectedStory=open-accounts"
@@ -27,7 +27,7 @@ gemini.suite("ProjectAccountSwitcher", () => {
       .capture("open-accounts");
   });
 
-  gemini.suite("open-projects", suite => {
+  gemini.suite("open-projects", (suite) => {
     suite
       .setUrl(
         "iframe.html?selectedKind=ProjectAccountSwitcher&selectedStory=open-projects"

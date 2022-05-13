@@ -13,7 +13,7 @@ function BorderWidthExample({ value }) {
 }
 
 BorderWidthExample.propTypes = {
-  value: PropTypes.string
+  value: PropTypes.string,
 };
 
 export default BorderWidthExample;

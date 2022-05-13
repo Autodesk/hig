@@ -22,7 +22,7 @@ function calculateListMaxHeight(listWrapper) {
   return `${height}px`;
 }
 
-const PanelBehavior = props => {
+const PanelBehavior = (props) => {
   const [listMaxHeight, setListMaxHeight] = useState("");
   const listWrapperRef = useRef(null);
 
@@ -45,7 +45,7 @@ const PanelBehavior = props => {
   /**
    * @param {HTMLDivElement} listWrapperRef
    */
-  const refListWrapper = value => {
+  const refListWrapper = (value) => {
     listWrapperRef.current = value;
   };
 
@@ -73,11 +73,11 @@ const PanelBehavior = props => {
 
   return (
     <Transition in={loading} timeout={TRANSITION_DURATION}>
-      {loadingTransitionState =>
+      {(loadingTransitionState) =>
         children({
           loadingTransitionState,
           listMaxHeight,
-          refListWrapper
+          refListWrapper,
         })
       }
     </Transition>
@@ -87,11 +87,11 @@ const PanelBehavior = props => {
 PanelBehavior.propTypes = {
   children: PropTypes.func.isRequired,
   loading: PropTypes.bool,
-  transitionStatus: PropTypes.oneOf(AVAILABLE_TRANSITION_STATUSES)
+  transitionStatus: PropTypes.oneOf(AVAILABLE_TRANSITION_STATUSES),
 };
 
 PanelBehavior.defaultProps = {
-  loading: false
+  loading: false,
 };
 
 export default PanelBehavior;

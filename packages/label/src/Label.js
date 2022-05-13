@@ -6,7 +6,7 @@ import { ThemeContext } from "@hig/theme-context";
 import { availableVariants, variants } from "./constants";
 import stylesheet from "./stylesheet";
 
-const Label = props => {
+const Label = (props) => {
   const {
     children,
     disabled,
@@ -23,7 +23,7 @@ const Label = props => {
           {
             disabled,
             stylesheet: customStylesheet,
-            variant
+            variant,
           },
           resolvedRoles
         );
@@ -57,11 +57,11 @@ Label.propTypes = {
   /**
    * The visual variant of the label
    */
-  variant: PropTypes.oneOf(availableVariants)
+  variant: PropTypes.oneOf(availableVariants),
 };
 
 Label.defaultProps = {
-  variant: variants.SIDE
+  variant: variants.SIDE,
 };
 
 export default Label;

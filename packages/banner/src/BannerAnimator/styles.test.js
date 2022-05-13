@@ -7,7 +7,7 @@ import {
   getWrapperExpandedHeight,
   getWrapperCollapsedHeight,
   getInnerWrapperCollapsedTransform,
-  getInnerWrapperExpandingTransform
+  getInnerWrapperExpandingTransform,
 } from "./styles";
 import { positions } from "./positions";
 
@@ -16,7 +16,7 @@ describe("banner/BannerAnimator/styles", () => {
     innerWrapper: undefined,
     hasBounce: true,
     hasPush: true,
-    position: positions.TOP
+    position: positions.TOP,
   };
 
   describe("getWrapperReset", () => {
@@ -26,7 +26,7 @@ describe("banner/BannerAnimator/styles", () => {
       expect(result).toMatchObject({
         height: "",
         overflow: "",
-        transition: ""
+        transition: "",
       });
     });
   });
@@ -37,7 +37,7 @@ describe("banner/BannerAnimator/styles", () => {
 
       expect(result).toMatchObject({
         transform: "",
-        transition: ""
+        transition: "",
       });
     });
   });

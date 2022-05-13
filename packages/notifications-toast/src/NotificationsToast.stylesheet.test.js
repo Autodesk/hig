@@ -5,7 +5,7 @@ describe("stylesheet", () => {
     "colorScheme.status.error": "red",
     "colorScheme.status.warning": "yellow",
     "colorScheme.status.success": "green",
-    "basics.colors.primary.autodeskBlue.500": "blue"
+    "basics.colors.primary.autodeskBlue.500": "blue",
   };
   it("returns an oject", () => {
     const status = "warning";

@@ -7,7 +7,7 @@ import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 import { AVAILABLE_SURFACES, AVAILABLE_VARIANTS } from "../constants";
 
-const IconButtonPresenter = props => {
+const IconButtonPresenter = (props) => {
   const {
     className,
     disabled,
@@ -37,7 +37,7 @@ const IconButtonPresenter = props => {
         const linkProps = link
           ? {
               tabIndex: disabled ? "-1" : "0",
-              href: link
+              href: link,
             }
           : {};
         const iconButtonIconClassName = createCustomClassNames(
@@ -47,7 +47,7 @@ const IconButtonPresenter = props => {
         const Element = props.link ? "a" : "button";
         const styles = stylesheet(props, resolvedRoles, metadata.densityId);
         const icon = React.cloneElement(higIcon, {
-          className: cx(css(styles.iconButtonIcon), iconButtonIconClassName)
+          className: cx(css(styles.iconButtonIcon), iconButtonIconClassName),
         });
         const tabIndex = disabled ? "-1" : "0";
         return (
@@ -95,7 +95,7 @@ IconButtonPresenter.propTypes = {
   stylesheet: PropTypes.func,
   surface: PropTypes.oneOf(AVAILABLE_SURFACES),
   title: PropTypes.string.isRequired,
-  variant: PropTypes.oneOf(AVAILABLE_VARIANTS)
+  variant: PropTypes.oneOf(AVAILABLE_VARIANTS),
 };
 
 export default IconButtonPresenter;

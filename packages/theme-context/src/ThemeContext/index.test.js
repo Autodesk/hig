@@ -8,16 +8,16 @@ describe("themes/ThemeContext/index", () => {
       name: "default",
       value: expect.objectContaining({
         Consumer: expect.any(Function),
-        Provider: expect.any(Object)
-      })
+        Provider: expect.any(Object),
+      }),
     },
     {
       name: "Consumer",
-      value: expect.any(Function)
+      value: expect.any(Function),
     },
     {
       name: "Provider",
-      value: expect.any(Object)
-    }
+      value: expect.any(Object),
+    },
   ]);
 });

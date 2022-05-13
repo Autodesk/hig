@@ -11,7 +11,7 @@ describe("checkbox/presenters/CheckboxPresenter", () => {
   [
     {
       description: "renders without props",
-      props: {}
+      props: {},
     },
     {
       description: "renders with all props",
@@ -25,9 +25,9 @@ describe("checkbox/presenters/CheckboxPresenter", () => {
         onClick: function onClick() {},
         onChange: function onChange() {},
         onFocus: function onFocus() {},
-        value: "value"
-      }
-    }
+        value: "value",
+      },
+    },
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {
       const presenter = (

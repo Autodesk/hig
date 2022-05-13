@@ -1,7 +1,7 @@
 /** @type {Object.<string, string>} */
 export const types = Object.freeze({
   PRIMARY: "primary",
-  SECONDARY: "secondary"
+  SECONDARY: "secondary",
 });
 
 /** @type {string[]} */

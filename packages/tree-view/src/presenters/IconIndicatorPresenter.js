@@ -7,7 +7,7 @@ import {
   OperatorMinusSUI,
   OperatorMinusXsUI,
   OperatorPlusSUI,
-  OperatorPlusXsUI
+  OperatorPlusXsUI,
 } from "@hig/icons";
 
 export default function IconIndicatorPresenter(props) {
@@ -21,13 +21,13 @@ export default function IconIndicatorPresenter(props) {
   const CaretDownIcon =
     density === "medium-density" ? CaretRightMUI : CaretRightSUI;
   const IconIndicator = indicator === "operator" ? OperatorIcon : CaretDownIcon;
-  const customStylesheet = styles => ({
+  const customStylesheet = (styles) => ({
     ...styles,
     ...(!collapsed && indicator === `caret`
       ? { transform: `rotate(90deg)` }
       : {}),
     cursor: `pointer`,
-    transition: `transform 0.3s ease-in-out`
+    transition: `transform 0.3s ease-in-out`,
   });
 
   return <IconIndicator stylesheet={customStylesheet} className={className} />;
@@ -35,5 +35,5 @@ export default function IconIndicatorPresenter(props) {
 
 IconIndicatorPresenter.propTypes = {
   collapsed: PropTypes.bool,
-  indicator: PropTypes.string
+  indicator: PropTypes.string,
 };

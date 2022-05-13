@@ -140,22 +140,22 @@ export default {
     value: "#1a1f26",
     type: COLOR,
     transform: {
-      alpha: 0.5
-    }
+      alpha: 0.5,
+    },
   },
   "shadow.darkGray": {
     value: "#000000",
     type: COLOR,
     transform: {
-      alpha: 0.3
-    }
+      alpha: 0.3,
+    },
   },
   "shadow.lightGray": {
     value: "#000000",
     type: COLOR,
     transform: {
-      alpha: 0.2
-    }
+      alpha: 0.2,
+    },
   },
 
   // Text colors
@@ -176,1163 +176,1163 @@ export default {
   // Deprecated
   black: {
     value: {
-      ref: "basics.colors.primary.black"
+      ref: "basics.colors.primary.black",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.black" }
+      deprecated: { equivalent: "basics.colors.primary.black" },
     },
-    type: COLOR
+    type: COLOR,
   },
   white: {
     value: {
-      ref: "basics.colors.primary.white"
+      ref: "basics.colors.primary.white",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.white" }
+      deprecated: { equivalent: "basics.colors.primary.white" },
     },
-    type: COLOR
+    type: COLOR,
   },
   autodeskBlue100: {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.100"
+      ref: "basics.colors.primary.autodeskBlue.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.100" }
+      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   autodeskBlue200: {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.200"
+      ref: "basics.colors.primary.autodeskBlue.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.200" }
+      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   autodeskBlue300: {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.300"
+      ref: "basics.colors.primary.autodeskBlue.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.300" }
+      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   autodeskBlue400: {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.400"
+      ref: "basics.colors.primary.autodeskBlue.400",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.400" }
+      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.400" },
     },
-    type: COLOR
+    type: COLOR,
   },
   autodeskBlue500: {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.500"
+      ref: "basics.colors.primary.autodeskBlue.500",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.500" }
+      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.500" },
     },
-    type: COLOR
+    type: COLOR,
   },
   autodeskBlue600: {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.600"
+      ref: "basics.colors.primary.autodeskBlue.600",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.600" }
+      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.600" },
     },
-    type: COLOR
+    type: COLOR,
   },
   autodeskBlue700: {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.700"
+      ref: "basics.colors.primary.autodeskBlue.700",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.700" }
+      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.700" },
     },
-    type: COLOR
+    type: COLOR,
   },
   autodeskBlue800: {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.800"
+      ref: "basics.colors.primary.autodeskBlue.800",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.800" }
+      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.800" },
     },
-    type: COLOR
+    type: COLOR,
   },
   autodeskBlue900: {
     value: {
-      ref: "basics.colors.primary.autodeskBlue.900"
+      ref: "basics.colors.primary.autodeskBlue.900",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.900" }
+      deprecated: { equivalent: "basics.colors.primary.autodeskBlue.900" },
     },
-    type: COLOR
+    type: COLOR,
   },
   charcoal100: {
     value: {
-      ref: "basics.colors.primary.charcoal.100"
+      ref: "basics.colors.primary.charcoal.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.charcoal.100" }
+      deprecated: { equivalent: "basics.colors.primary.charcoal.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   charcoal200: {
     value: {
-      ref: "basics.colors.primary.charcoal.200"
+      ref: "basics.colors.primary.charcoal.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.charcoal.200" }
+      deprecated: { equivalent: "basics.colors.primary.charcoal.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   charcoal300: {
     value: {
-      ref: "basics.colors.primary.charcoal.300"
+      ref: "basics.colors.primary.charcoal.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.charcoal.300" }
+      deprecated: { equivalent: "basics.colors.primary.charcoal.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   charcoal400: {
     value: {
-      ref: "basics.colors.primary.charcoal.400"
+      ref: "basics.colors.primary.charcoal.400",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.charcoal.400" }
+      deprecated: { equivalent: "basics.colors.primary.charcoal.400" },
     },
-    type: COLOR
+    type: COLOR,
   },
   charcoal500: {
     value: {
-      ref: "basics.colors.primary.charcoal.500"
+      ref: "basics.colors.primary.charcoal.500",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.charcoal.500" }
+      deprecated: { equivalent: "basics.colors.primary.charcoal.500" },
     },
-    type: COLOR
+    type: COLOR,
   },
   charcoal600: {
     value: {
-      ref: "basics.colors.primary.charcoal.600"
+      ref: "basics.colors.primary.charcoal.600",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.charcoal.600" }
+      deprecated: { equivalent: "basics.colors.primary.charcoal.600" },
     },
-    type: COLOR
+    type: COLOR,
   },
   charcoal700: {
     value: {
-      ref: "basics.colors.primary.charcoal.700"
+      ref: "basics.colors.primary.charcoal.700",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.charcoal.700" }
+      deprecated: { equivalent: "basics.colors.primary.charcoal.700" },
     },
-    type: COLOR
+    type: COLOR,
   },
   charcoal800: {
     value: {
-      ref: "basics.colors.primary.charcoal.800"
+      ref: "basics.colors.primary.charcoal.800",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.charcoal.800" }
+      deprecated: { equivalent: "basics.colors.primary.charcoal.800" },
     },
-    type: COLOR
+    type: COLOR,
   },
   charcoal900: {
     value: {
-      ref: "basics.colors.primary.charcoal.900"
+      ref: "basics.colors.primary.charcoal.900",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.primary.charcoal.900" }
+      deprecated: { equivalent: "basics.colors.primary.charcoal.900" },
     },
-    type: COLOR
+    type: COLOR,
   },
   darkBlue100: {
     value: {
-      ref: "basics.colors.secondary.darkBlue.100"
+      ref: "basics.colors.secondary.darkBlue.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.darkBlue.100" }
+      deprecated: { equivalent: "basics.colors.secondary.darkBlue.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   darkBlue200: {
     value: {
-      ref: "basics.colors.secondary.darkBlue.200"
+      ref: "basics.colors.secondary.darkBlue.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.darkBlue.200" }
+      deprecated: { equivalent: "basics.colors.secondary.darkBlue.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   darkBlue300: {
     value: {
-      ref: "basics.colors.secondary.darkBlue.300"
+      ref: "basics.colors.secondary.darkBlue.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.darkBlue.300" }
+      deprecated: { equivalent: "basics.colors.secondary.darkBlue.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   darkBlue400: {
     value: {
-      ref: "basics.colors.secondary.darkBlue.400"
+      ref: "basics.colors.secondary.darkBlue.400",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.darkBlue.400" }
+      deprecated: { equivalent: "basics.colors.secondary.darkBlue.400" },
     },
-    type: COLOR
+    type: COLOR,
   },
   darkBlue500: {
     value: {
-      ref: "basics.colors.secondary.darkBlue.500"
+      ref: "basics.colors.secondary.darkBlue.500",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.darkBlue.500" }
+      deprecated: { equivalent: "basics.colors.secondary.darkBlue.500" },
     },
-    type: COLOR
+    type: COLOR,
   },
   darkBlue600: {
     value: {
-      ref: "basics.colors.secondary.darkBlue.600"
+      ref: "basics.colors.secondary.darkBlue.600",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.darkBlue.600" }
+      deprecated: { equivalent: "basics.colors.secondary.darkBlue.600" },
     },
-    type: COLOR
+    type: COLOR,
   },
   darkBlue700: {
     value: {
-      ref: "basics.colors.secondary.darkBlue.700"
+      ref: "basics.colors.secondary.darkBlue.700",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.darkBlue.700" }
+      deprecated: { equivalent: "basics.colors.secondary.darkBlue.700" },
     },
-    type: COLOR
+    type: COLOR,
   },
   darkBlue800: {
     value: {
-      ref: "basics.colors.secondary.darkBlue.800"
+      ref: "basics.colors.secondary.darkBlue.800",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.darkBlue.800" }
+      deprecated: { equivalent: "basics.colors.secondary.darkBlue.800" },
     },
-    type: COLOR
+    type: COLOR,
   },
   darkBlue900: {
     value: {
-      ref: "basics.colors.secondary.darkBlue.900"
+      ref: "basics.colors.secondary.darkBlue.900",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.darkBlue.900" }
+      deprecated: { equivalent: "basics.colors.secondary.darkBlue.900" },
     },
-    type: COLOR
+    type: COLOR,
   },
   green100: {
     value: {
-      ref: "basics.colors.secondary.green.100"
+      ref: "basics.colors.secondary.green.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.green.100" }
+      deprecated: { equivalent: "basics.colors.secondary.green.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   green200: {
     value: {
-      ref: "basics.colors.secondary.green.200"
+      ref: "basics.colors.secondary.green.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.green.200" }
+      deprecated: { equivalent: "basics.colors.secondary.green.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   green300: {
     value: {
-      ref: "basics.colors.secondary.green.300"
+      ref: "basics.colors.secondary.green.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.green.300" }
+      deprecated: { equivalent: "basics.colors.secondary.green.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   green400: {
     value: {
-      ref: "basics.colors.secondary.green.400"
+      ref: "basics.colors.secondary.green.400",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.green.400" }
+      deprecated: { equivalent: "basics.colors.secondary.green.400" },
     },
-    type: COLOR
+    type: COLOR,
   },
   green500: {
     value: {
-      ref: "basics.colors.secondary.green.500"
+      ref: "basics.colors.secondary.green.500",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.green.500" }
+      deprecated: { equivalent: "basics.colors.secondary.green.500" },
     },
-    type: COLOR
+    type: COLOR,
   },
   green600: {
     value: {
-      ref: "basics.colors.secondary.green.600"
+      ref: "basics.colors.secondary.green.600",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.green.600" }
+      deprecated: { equivalent: "basics.colors.secondary.green.600" },
     },
-    type: COLOR
+    type: COLOR,
   },
   green700: {
     value: {
-      ref: "basics.colors.secondary.green.700"
+      ref: "basics.colors.secondary.green.700",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.green.700" }
+      deprecated: { equivalent: "basics.colors.secondary.green.700" },
     },
-    type: COLOR
+    type: COLOR,
   },
   green800: {
     value: {
-      ref: "basics.colors.secondary.green.800"
+      ref: "basics.colors.secondary.green.800",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.green.800" }
+      deprecated: { equivalent: "basics.colors.secondary.green.800" },
     },
-    type: COLOR
+    type: COLOR,
   },
   green900: {
     value: {
-      ref: "basics.colors.secondary.green.900"
+      ref: "basics.colors.secondary.green.900",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.green.900" }
+      deprecated: { equivalent: "basics.colors.secondary.green.900" },
     },
-    type: COLOR
+    type: COLOR,
   },
   red100: {
     value: {
-      ref: "basics.colors.secondary.red.100"
+      ref: "basics.colors.secondary.red.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.red.100" }
+      deprecated: { equivalent: "basics.colors.secondary.red.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   red200: {
     value: {
-      ref: "basics.colors.secondary.red.200"
+      ref: "basics.colors.secondary.red.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.red.200" }
+      deprecated: { equivalent: "basics.colors.secondary.red.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   red300: {
     value: {
-      ref: "basics.colors.secondary.red.300"
+      ref: "basics.colors.secondary.red.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.red.300" }
+      deprecated: { equivalent: "basics.colors.secondary.red.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   red400: {
     value: {
-      ref: "basics.colors.secondary.red.400"
+      ref: "basics.colors.secondary.red.400",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.red.400" }
+      deprecated: { equivalent: "basics.colors.secondary.red.400" },
     },
-    type: COLOR
+    type: COLOR,
   },
   red500: {
     value: {
-      ref: "basics.colors.secondary.red.500"
+      ref: "basics.colors.secondary.red.500",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.red.500" }
+      deprecated: { equivalent: "basics.colors.secondary.red.500" },
     },
-    type: COLOR
+    type: COLOR,
   },
   red600: {
     value: {
-      ref: "basics.colors.secondary.red.600"
+      ref: "basics.colors.secondary.red.600",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.red.600" }
+      deprecated: { equivalent: "basics.colors.secondary.red.600" },
     },
-    type: COLOR
+    type: COLOR,
   },
   red700: {
     value: {
-      ref: "basics.colors.secondary.red.700"
+      ref: "basics.colors.secondary.red.700",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.red.700" }
+      deprecated: { equivalent: "basics.colors.secondary.red.700" },
     },
-    type: COLOR
+    type: COLOR,
   },
   red800: {
     value: {
-      ref: "basics.colors.secondary.red.800"
+      ref: "basics.colors.secondary.red.800",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.red.800" }
+      deprecated: { equivalent: "basics.colors.secondary.red.800" },
     },
-    type: COLOR
+    type: COLOR,
   },
   red900: {
     value: {
-      ref: "basics.colors.secondary.red.900"
+      ref: "basics.colors.secondary.red.900",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.red.900" }
+      deprecated: { equivalent: "basics.colors.secondary.red.900" },
     },
-    type: COLOR
+    type: COLOR,
   },
   turquoise100: {
     value: {
-      ref: "basics.colors.secondary.turquoise.100"
+      ref: "basics.colors.secondary.turquoise.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.turquoise.100" }
+      deprecated: { equivalent: "basics.colors.secondary.turquoise.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   turquoise200: {
     value: {
-      ref: "basics.colors.secondary.turquoise.200"
+      ref: "basics.colors.secondary.turquoise.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.turquoise.200" }
+      deprecated: { equivalent: "basics.colors.secondary.turquoise.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   turquoise300: {
     value: {
-      ref: "basics.colors.secondary.turquoise.300"
+      ref: "basics.colors.secondary.turquoise.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.turquoise.300" }
+      deprecated: { equivalent: "basics.colors.secondary.turquoise.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   turquoise400: {
     value: {
-      ref: "basics.colors.secondary.turquoise.400"
+      ref: "basics.colors.secondary.turquoise.400",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.turquoise.400" }
+      deprecated: { equivalent: "basics.colors.secondary.turquoise.400" },
     },
-    type: COLOR
+    type: COLOR,
   },
   turquoise500: {
     value: {
-      ref: "basics.colors.secondary.turquoise.500"
+      ref: "basics.colors.secondary.turquoise.500",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.turquoise.500" }
+      deprecated: { equivalent: "basics.colors.secondary.turquoise.500" },
     },
-    type: COLOR
+    type: COLOR,
   },
   turquoise600: {
     value: {
-      ref: "basics.colors.secondary.turquoise.600"
+      ref: "basics.colors.secondary.turquoise.600",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.turquoise.600" }
+      deprecated: { equivalent: "basics.colors.secondary.turquoise.600" },
     },
-    type: COLOR
+    type: COLOR,
   },
   turquoise700: {
     value: {
-      ref: "basics.colors.secondary.turquoise.700"
+      ref: "basics.colors.secondary.turquoise.700",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.turquoise.700" }
+      deprecated: { equivalent: "basics.colors.secondary.turquoise.700" },
     },
-    type: COLOR
+    type: COLOR,
   },
   turquoise800: {
     value: {
-      ref: "basics.colors.secondary.turquoise.800"
+      ref: "basics.colors.secondary.turquoise.800",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.turquoise.800" }
+      deprecated: { equivalent: "basics.colors.secondary.turquoise.800" },
     },
-    type: COLOR
+    type: COLOR,
   },
   turquoise900: {
     value: {
-      ref: "basics.colors.secondary.turquoise.900"
+      ref: "basics.colors.secondary.turquoise.900",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.turquoise.900" }
+      deprecated: { equivalent: "basics.colors.secondary.turquoise.900" },
     },
-    type: COLOR
+    type: COLOR,
   },
   yellowOrange100: {
     value: {
-      ref: "basics.colors.secondary.yellowOrange.100"
+      ref: "basics.colors.secondary.yellowOrange.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.100" }
+      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   yellowOrange200: {
     value: {
-      ref: "basics.colors.secondary.yellowOrange.200"
+      ref: "basics.colors.secondary.yellowOrange.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.200" }
+      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   yellowOrange300: {
     value: {
-      ref: "basics.colors.secondary.yellowOrange.300"
+      ref: "basics.colors.secondary.yellowOrange.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.300" }
+      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   yellowOrange400: {
     value: {
-      ref: "basics.colors.secondary.yellowOrange.400"
+      ref: "basics.colors.secondary.yellowOrange.400",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.400" }
+      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.400" },
     },
-    type: COLOR
+    type: COLOR,
   },
   yellowOrange500: {
     value: {
-      ref: "basics.colors.secondary.yellowOrange.500"
+      ref: "basics.colors.secondary.yellowOrange.500",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.500" }
+      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.500" },
     },
-    type: COLOR
+    type: COLOR,
   },
   yellowOrange600: {
     value: {
-      ref: "basics.colors.secondary.yellowOrange.600"
+      ref: "basics.colors.secondary.yellowOrange.600",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.600" }
+      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.600" },
     },
-    type: COLOR
+    type: COLOR,
   },
   yellowOrange700: {
     value: {
-      ref: "basics.colors.secondary.yellowOrange.700"
+      ref: "basics.colors.secondary.yellowOrange.700",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.700" }
+      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.700" },
     },
-    type: COLOR
+    type: COLOR,
   },
   yellowOrange800: {
     value: {
-      ref: "basics.colors.secondary.yellowOrange.800"
+      ref: "basics.colors.secondary.yellowOrange.800",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.800" }
+      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.800" },
     },
-    type: COLOR
+    type: COLOR,
   },
   yellowOrange900: {
     value: {
-      ref: "basics.colors.secondary.yellowOrange.900"
+      ref: "basics.colors.secondary.yellowOrange.900",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.900" }
+      deprecated: { equivalent: "basics.colors.secondary.yellowOrange.900" },
     },
-    type: COLOR
+    type: COLOR,
   },
   pink100: {
     value: {
-      ref: "basics.colors.tertiary.pink.100"
+      ref: "basics.colors.tertiary.pink.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.pink.100" }
+      deprecated: { equivalent: "basics.colors.tertiary.pink.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   pink200: {
     value: {
-      ref: "basics.colors.tertiary.pink.200"
+      ref: "basics.colors.tertiary.pink.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.pink.200" }
+      deprecated: { equivalent: "basics.colors.tertiary.pink.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   pink300: {
     value: {
-      ref: "basics.colors.tertiary.pink.300"
+      ref: "basics.colors.tertiary.pink.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.pink.300" }
+      deprecated: { equivalent: "basics.colors.tertiary.pink.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   pink400: {
     value: {
-      ref: "basics.colors.tertiary.pink.400"
+      ref: "basics.colors.tertiary.pink.400",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.pink.400" }
+      deprecated: { equivalent: "basics.colors.tertiary.pink.400" },
     },
-    type: COLOR
+    type: COLOR,
   },
   pink500: {
     value: {
-      ref: "basics.colors.tertiary.pink.500"
+      ref: "basics.colors.tertiary.pink.500",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.pink.500" }
+      deprecated: { equivalent: "basics.colors.tertiary.pink.500" },
     },
-    type: COLOR
+    type: COLOR,
   },
   pink600: {
     value: {
-      ref: "basics.colors.tertiary.pink.600"
+      ref: "basics.colors.tertiary.pink.600",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.pink.600" }
+      deprecated: { equivalent: "basics.colors.tertiary.pink.600" },
     },
-    type: COLOR
+    type: COLOR,
   },
   pink700: {
     value: {
-      ref: "basics.colors.tertiary.pink.700"
+      ref: "basics.colors.tertiary.pink.700",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.pink.700" }
+      deprecated: { equivalent: "basics.colors.tertiary.pink.700" },
     },
-    type: COLOR
+    type: COLOR,
   },
   pink800: {
     value: {
-      ref: "basics.colors.tertiary.pink.800"
+      ref: "basics.colors.tertiary.pink.800",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.pink.800" }
+      deprecated: { equivalent: "basics.colors.tertiary.pink.800" },
     },
-    type: COLOR
+    type: COLOR,
   },
   pink900: {
     value: {
-      ref: "basics.colors.tertiary.pink.900"
+      ref: "basics.colors.tertiary.pink.900",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.pink.900" }
+      deprecated: { equivalent: "basics.colors.tertiary.pink.900" },
     },
-    type: COLOR
+    type: COLOR,
   },
   purple100: {
     value: {
-      ref: "basics.colors.tertiary.purple.100"
+      ref: "basics.colors.tertiary.purple.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.purple.100" }
+      deprecated: { equivalent: "basics.colors.tertiary.purple.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   purple200: {
     value: {
-      ref: "basics.colors.tertiary.purple.200"
+      ref: "basics.colors.tertiary.purple.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.purple.200" }
+      deprecated: { equivalent: "basics.colors.tertiary.purple.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   purple300: {
     value: {
-      ref: "basics.colors.tertiary.purple.300"
+      ref: "basics.colors.tertiary.purple.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.purple.300" }
+      deprecated: { equivalent: "basics.colors.tertiary.purple.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   purple400: {
     value: {
-      ref: "basics.colors.tertiary.purple.400"
+      ref: "basics.colors.tertiary.purple.400",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.purple.400" }
+      deprecated: { equivalent: "basics.colors.tertiary.purple.400" },
     },
-    type: COLOR
+    type: COLOR,
   },
   purple500: {
     value: {
-      ref: "basics.colors.tertiary.purple.500"
+      ref: "basics.colors.tertiary.purple.500",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.purple.500" }
+      deprecated: { equivalent: "basics.colors.tertiary.purple.500" },
     },
-    type: COLOR
+    type: COLOR,
   },
   purple600: {
     value: {
-      ref: "basics.colors.tertiary.purple.600"
+      ref: "basics.colors.tertiary.purple.600",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.purple.600" }
+      deprecated: { equivalent: "basics.colors.tertiary.purple.600" },
     },
-    type: COLOR
+    type: COLOR,
   },
   purple700: {
     value: {
-      ref: "basics.colors.tertiary.purple.700"
+      ref: "basics.colors.tertiary.purple.700",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.purple.700" }
+      deprecated: { equivalent: "basics.colors.tertiary.purple.700" },
     },
-    type: COLOR
+    type: COLOR,
   },
   purple800: {
     value: {
-      ref: "basics.colors.tertiary.purple.800"
+      ref: "basics.colors.tertiary.purple.800",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.purple.800" }
+      deprecated: { equivalent: "basics.colors.tertiary.purple.800" },
     },
-    type: COLOR
+    type: COLOR,
   },
   purple900: {
     value: {
-      ref: "basics.colors.tertiary.purple.900"
+      ref: "basics.colors.tertiary.purple.900",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.purple.900" }
+      deprecated: { equivalent: "basics.colors.tertiary.purple.900" },
     },
-    type: COLOR
+    type: COLOR,
   },
   salmon100: {
     value: {
-      ref: "basics.colors.tertiary.salmon.100"
+      ref: "basics.colors.tertiary.salmon.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.salmon.100" }
+      deprecated: { equivalent: "basics.colors.tertiary.salmon.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   salmon200: {
     value: {
-      ref: "basics.colors.tertiary.salmon.200"
+      ref: "basics.colors.tertiary.salmon.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.salmon.200" }
+      deprecated: { equivalent: "basics.colors.tertiary.salmon.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   salmon300: {
     value: {
-      ref: "basics.colors.tertiary.salmon.300"
+      ref: "basics.colors.tertiary.salmon.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.salmon.300" }
+      deprecated: { equivalent: "basics.colors.tertiary.salmon.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   salmon400: {
     value: {
-      ref: "basics.colors.tertiary.salmon.400"
+      ref: "basics.colors.tertiary.salmon.400",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.salmon.400" }
+      deprecated: { equivalent: "basics.colors.tertiary.salmon.400" },
     },
-    type: COLOR
+    type: COLOR,
   },
   salmon500: {
     value: {
-      ref: "basics.colors.tertiary.salmon.500"
+      ref: "basics.colors.tertiary.salmon.500",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.salmon.500" }
+      deprecated: { equivalent: "basics.colors.tertiary.salmon.500" },
     },
-    type: COLOR
+    type: COLOR,
   },
   salmon600: {
     value: {
-      ref: "basics.colors.tertiary.salmon.600"
+      ref: "basics.colors.tertiary.salmon.600",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.salmon.600" }
+      deprecated: { equivalent: "basics.colors.tertiary.salmon.600" },
     },
-    type: COLOR
+    type: COLOR,
   },
   salmon700: {
     value: {
-      ref: "basics.colors.tertiary.salmon.700"
+      ref: "basics.colors.tertiary.salmon.700",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.salmon.700" }
+      deprecated: { equivalent: "basics.colors.tertiary.salmon.700" },
     },
-    type: COLOR
+    type: COLOR,
   },
   salmon800: {
     value: {
-      ref: "basics.colors.tertiary.salmon.800"
+      ref: "basics.colors.tertiary.salmon.800",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.salmon.800" }
+      deprecated: { equivalent: "basics.colors.tertiary.salmon.800" },
     },
-    type: COLOR
+    type: COLOR,
   },
   salmon900: {
     value: {
-      ref: "basics.colors.tertiary.salmon.900"
+      ref: "basics.colors.tertiary.salmon.900",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.salmon.900" }
+      deprecated: { equivalent: "basics.colors.tertiary.salmon.900" },
     },
-    type: COLOR
+    type: COLOR,
   },
   slate100: {
     value: {
-      ref: "basics.colors.tertiary.slate.100"
+      ref: "basics.colors.tertiary.slate.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.slate.100" }
+      deprecated: { equivalent: "basics.colors.tertiary.slate.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   slate200: {
     value: {
-      ref: "basics.colors.tertiary.slate.200"
+      ref: "basics.colors.tertiary.slate.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.slate.200" }
+      deprecated: { equivalent: "basics.colors.tertiary.slate.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   slate300: {
     value: {
-      ref: "basics.colors.tertiary.slate.300"
+      ref: "basics.colors.tertiary.slate.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.slate.300" }
+      deprecated: { equivalent: "basics.colors.tertiary.slate.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   slate400: {
     value: {
-      ref: "basics.colors.tertiary.slate.400"
+      ref: "basics.colors.tertiary.slate.400",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.slate.400" }
+      deprecated: { equivalent: "basics.colors.tertiary.slate.400" },
     },
-    type: COLOR
+    type: COLOR,
   },
   slate500: {
     value: {
-      ref: "basics.colors.tertiary.slate.500"
+      ref: "basics.colors.tertiary.slate.500",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.slate.500" }
+      deprecated: { equivalent: "basics.colors.tertiary.slate.500" },
     },
-    type: COLOR
+    type: COLOR,
   },
   slate600: {
     value: {
-      ref: "basics.colors.tertiary.slate.600"
+      ref: "basics.colors.tertiary.slate.600",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.slate.600" }
+      deprecated: { equivalent: "basics.colors.tertiary.slate.600" },
     },
-    type: COLOR
+    type: COLOR,
   },
   slate700: {
     value: {
-      ref: "basics.colors.tertiary.slate.700"
+      ref: "basics.colors.tertiary.slate.700",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.slate.700" }
+      deprecated: { equivalent: "basics.colors.tertiary.slate.700" },
     },
-    type: COLOR
+    type: COLOR,
   },
   slate800: {
     value: {
-      ref: "basics.colors.tertiary.slate.800"
+      ref: "basics.colors.tertiary.slate.800",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.slate.800" }
+      deprecated: { equivalent: "basics.colors.tertiary.slate.800" },
     },
-    type: COLOR
+    type: COLOR,
   },
   slate900: {
     value: {
-      ref: "basics.colors.tertiary.slate.900"
+      ref: "basics.colors.tertiary.slate.900",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.tertiary.slate.900" }
+      deprecated: { equivalent: "basics.colors.tertiary.slate.900" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceLightGrayLevel100: {
     value: {
-      ref: "basics.colors.surface.lightGray.100"
+      ref: "basics.colors.surface.lightGray.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.lightGray.100" }
+      deprecated: { equivalent: "basics.colors.surface.lightGray.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceLightGrayLevel200: {
     value: {
-      ref: "basics.colors.surface.lightGray.200"
+      ref: "basics.colors.surface.lightGray.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.lightGray.200" }
+      deprecated: { equivalent: "basics.colors.surface.lightGray.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceLightGrayLevel250: {
     value: {
-      ref: "basics.colors.surface.lightGray.250"
+      ref: "basics.colors.surface.lightGray.250",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.lightGray.250" }
+      deprecated: { equivalent: "basics.colors.surface.lightGray.250" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceLightGrayLevel300: {
     value: {
-      ref: "basics.colors.surface.lightGray.300"
+      ref: "basics.colors.surface.lightGray.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.lightGray.300" }
+      deprecated: { equivalent: "basics.colors.surface.lightGray.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceLightGrayLevel350: {
     value: {
-      ref: "basics.colors.surface.lightGray.350"
+      ref: "basics.colors.surface.lightGray.350",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.lightGray.350" }
+      deprecated: { equivalent: "basics.colors.surface.lightGray.350" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceDarkBlueLevel100: {
     value: {
-      ref: "basics.colors.surface.darkBlue.100"
+      ref: "basics.colors.surface.darkBlue.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.darkBlue.100" }
+      deprecated: { equivalent: "basics.colors.surface.darkBlue.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceDarkBlueLevel200: {
     value: {
-      ref: "basics.colors.surface.darkBlue.200"
+      ref: "basics.colors.surface.darkBlue.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.darkBlue.200" }
+      deprecated: { equivalent: "basics.colors.surface.darkBlue.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceDarkBlueLevel250: {
     value: {
-      ref: "basics.colors.surface.darkBlue.250"
+      ref: "basics.colors.surface.darkBlue.250",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.darkBlue.250" }
+      deprecated: { equivalent: "basics.colors.surface.darkBlue.250" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceDarkBlueLevel300: {
     value: {
-      ref: "basics.colors.surface.darkBlue.300"
+      ref: "basics.colors.surface.darkBlue.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.darkBlue.300" }
+      deprecated: { equivalent: "basics.colors.surface.darkBlue.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceDarkBlueLevel350: {
     value: {
-      ref: "basics.colors.surface.darkBlue.350"
+      ref: "basics.colors.surface.darkBlue.350",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.darkBlue.350" }
+      deprecated: { equivalent: "basics.colors.surface.darkBlue.350" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceDarkGrayLevel100: {
     value: {
-      ref: "basics.colors.surface.darkGray.100"
+      ref: "basics.colors.surface.darkGray.100",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.darkGray.100" }
+      deprecated: { equivalent: "basics.colors.surface.darkGray.100" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceDarkGrayLevel200: {
     value: {
-      ref: "basics.colors.surface.darkGray.200"
+      ref: "basics.colors.surface.darkGray.200",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.darkGray.200" }
+      deprecated: { equivalent: "basics.colors.surface.darkGray.200" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceDarkGrayLevel250: {
     value: {
-      ref: "basics.colors.surface.darkGray.250"
+      ref: "basics.colors.surface.darkGray.250",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.darkGray.250" }
+      deprecated: { equivalent: "basics.colors.surface.darkGray.250" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceDarkGrayLevel300: {
     value: {
-      ref: "basics.colors.surface.darkGray.300"
+      ref: "basics.colors.surface.darkGray.300",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.darkGray.300" }
+      deprecated: { equivalent: "basics.colors.surface.darkGray.300" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceDarkGrayLevel350: {
     value: {
-      ref: "basics.colors.surface.darkGray.350"
+      ref: "basics.colors.surface.darkGray.350",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.surface.darkGray.350" }
+      deprecated: { equivalent: "basics.colors.surface.darkGray.350" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceDarkBlueShadow: {
     value: {
-      ref: "basics.colors.shadow.darkBlue"
+      ref: "basics.colors.shadow.darkBlue",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.shadow.darkBlue" }
+      deprecated: { equivalent: "basics.colors.shadow.darkBlue" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceDarkGrayShadow: {
     value: {
-      ref: "basics.colors.shadow.darkGray"
+      ref: "basics.colors.shadow.darkGray",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.shadow.darkGray" }
+      deprecated: { equivalent: "basics.colors.shadow.darkGray" },
     },
-    type: COLOR
+    type: COLOR,
   },
   surfaceLightGrayShadow: {
     value: {
-      ref: "basics.colors.shadow.lightGray"
+      ref: "basics.colors.shadow.lightGray",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.shadow.lightGray" }
+      deprecated: { equivalent: "basics.colors.shadow.lightGray" },
     },
-    type: COLOR
+    type: COLOR,
   },
   textAgainstDark: {
     value: {
-      ref: "basics.colors.text.againstDark"
+      ref: "basics.colors.text.againstDark",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.text.againstDark" }
+      deprecated: { equivalent: "basics.colors.text.againstDark" },
     },
-    type: COLOR
+    type: COLOR,
   },
   textAgainstLight: {
     value: {
-      ref: "basics.colors.text.againstLight"
+      ref: "basics.colors.text.againstLight",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.text.againstLight" }
+      deprecated: { equivalent: "basics.colors.text.againstLight" },
     },
-    type: COLOR
+    type: COLOR,
   },
   iconLightGrayColor: {
     value: {
-      ref: "basics.colors.icon.lightGray"
+      ref: "basics.colors.icon.lightGray",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.icon.lightGray" }
+      deprecated: { equivalent: "basics.colors.icon.lightGray" },
     },
-    type: COLOR
+    type: COLOR,
   },
   iconDarkBlueColor: {
     value: {
-      ref: "basics.colors.icon.darkBlue"
+      ref: "basics.colors.icon.darkBlue",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.icon.darkBlue" }
+      deprecated: { equivalent: "basics.colors.icon.darkBlue" },
     },
-    type: COLOR
+    type: COLOR,
   },
   iconDarkGrayColor: {
     value: {
-      ref: "basics.colors.icon.darkGray"
+      ref: "basics.colors.icon.darkGray",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.icon.darkGray" }
+      deprecated: { equivalent: "basics.colors.icon.darkGray" },
     },
-    type: COLOR
+    type: COLOR,
   },
   textLinkAgainstLight: {
     value: {
-      ref: "basics.colors.textLink.primary.againstLight"
+      ref: "basics.colors.textLink.primary.againstLight",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.textLink.primary.againstLight" }
+      deprecated: { equivalent: "basics.colors.textLink.primary.againstLight" },
     },
-    type: COLOR
+    type: COLOR,
   },
   textLinkAgainstDark: {
     value: {
-      ref: "basics.colors.textLink.primary.againstDark"
+      ref: "basics.colors.textLink.primary.againstDark",
     },
     metadata: {
-      deprecated: { equivalent: "basics.colors.textLink.primary.againstDark" }
+      deprecated: { equivalent: "basics.colors.textLink.primary.againstDark" },
     },
-    type: COLOR
+    type: COLOR,
   },
   error: {
     value: {
-      ref: "colorScheme.status.error"
+      ref: "colorScheme.status.error",
     },
     metadata: {
-      deprecated: { equivalent: "colorScheme.status.error" }
+      deprecated: { equivalent: "colorScheme.status.error" },
     },
-    type: COLOR
+    type: COLOR,
   },
   success: {
     value: {
-      ref: "colorScheme.status.success"
+      ref: "colorScheme.status.success",
     },
     metadata: {
-      deprecated: { equivalent: "colorScheme.status.success" }
+      deprecated: { equivalent: "colorScheme.status.success" },
     },
-    type: COLOR
+    type: COLOR,
   },
   warning: {
     value: {
-      ref: "colorScheme.status.warning"
+      ref: "colorScheme.status.warning",
     },
     metadata: {
-      deprecated: { equivalent: "colorScheme.status.warning" }
+      deprecated: { equivalent: "colorScheme.status.warning" },
     },
-    type: COLOR
-  }
+    type: COLOR,
+  },
 };

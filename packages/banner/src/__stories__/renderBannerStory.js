@@ -16,7 +16,7 @@ function getBannerWrapperStyle(placement) {
     position: "fixed",
     left: "0",
     right: "0",
-    [verticalPositionProperty]: "0"
+    [verticalPositionProperty]: "0",
   };
 }
 

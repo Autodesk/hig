@@ -21,16 +21,12 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("returns an OptionPresenter for each option", () => {
-      expect(
-        mount(result[0])
-          .find(OptionPresenter)
-          .exists()
-      );
+      expect(mount(result[0]).find(OptionPresenter).exists());
     });
 
     it("has options as children on OptionPresenter", () => {
-      expect(result.map(comp => comp.props.children)).toEqual(
-        options.map(opt => opt.toString())
+      expect(result.map((comp) => comp.props.children)).toEqual(
+        options.map((opt) => opt.toString())
       );
     });
   });
@@ -46,7 +42,7 @@ describe("Dropdown/presenters/renderOptions", () => {
       options = [1, 2, 3, 4];
       props = {
         options,
-        formatOption: formatOptionFunction
+        formatOption: formatOptionFunction,
       };
       result = renderOptions(props);
     });
@@ -64,11 +60,7 @@ describe("Dropdown/presenters/renderOptions", () => {
     });
 
     it("returns an OptionPresenter for each option", () => {
-      expect(
-        mount(result[0])
-          .find(OptionPresenter)
-          .exists()
-      );
+      expect(mount(result[0]).find(OptionPresenter).exists());
     });
   });
 
@@ -83,7 +75,7 @@ describe("Dropdown/presenters/renderOptions", () => {
       renderOptionFunction = jest.fn();
       props = {
         options,
-        renderOption: renderOptionFunction
+        renderOption: renderOptionFunction,
       };
       result = renderOptions(props);
     });
@@ -116,7 +108,7 @@ describe("Dropdown/presenters/renderOptions", () => {
       options = [
         { label: "Red", value: "#ff0000", render: renderFunction },
         { label: "Green", value: "#00ff00", render: renderFunction },
-        { label: "Blue", value: "#0000ff", render: renderFunction }
+        { label: "Blue", value: "#0000ff", render: renderFunction },
       ];
       props = { options };
       result = renderOptions(props);

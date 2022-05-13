@@ -6,5 +6,5 @@ import readme from "../../README.md";
 
 export default {
   propTables: [DefaultExport],
-  text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
+  text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />,
 };

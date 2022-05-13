@@ -16,7 +16,7 @@ export default function stylesheet(props, themeData) {
   const justifyContent = {
     [alignments.LEFT]: "flex-start",
     [alignments.CENTER]: "center",
-    [alignments.RIGHT]: "flex-end"
+    [alignments.RIGHT]: "flex-end",
   };
 
   const styles = {
@@ -25,7 +25,7 @@ export default function stylesheet(props, themeData) {
       flexWrap: "nowrap",
       justifyContent: "flex-start",
       alignItems: "stretch",
-      flexDirection: orientation === orientations.HORIZONTAL ? "column" : "row"
+      flexDirection: orientation === orientations.HORIZONTAL ? "column" : "row",
     },
     tabsWrapper: {
       boxSizing: "border-box",
@@ -44,9 +44,9 @@ export default function stylesheet(props, themeData) {
       ...(orientation === orientations.VERTICAL && {
         flexDirection: "column",
         justifyContent: "flex-start",
-        alignItems: "stretch"
-      })
-    }
+        alignItems: "stretch",
+      }),
+    },
   };
 
   if (customStylesheet) {

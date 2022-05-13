@@ -27,7 +27,7 @@ const exampleToasts = React.Children.toArray([
   </NotificationsToast>,
   <NotificationsToast>
     <strong>Object Name</strong> is last.
-  </NotificationsToast>
+  </NotificationsToast>,
 ]);
 
 storiesOf("Notifications|ToastList", module)
@@ -37,8 +37,8 @@ storiesOf("Notifications|ToastList", module)
       ...infoOptions,
       propTablesExclude: [
         NotificationsToastListInteractions,
-        KnobbedThemeProvider
-      ]
+        KnobbedThemeProvider,
+      ],
     })(() => (
       <KnobbedThemeProvider>
         <NotificationsToastList
@@ -55,8 +55,8 @@ storiesOf("Notifications|ToastList", module)
       ...infoOptions,
       propTablesExclude: [
         NotificationsToastListInteractions,
-        KnobbedThemeProvider
-      ]
+        KnobbedThemeProvider,
+      ],
     })(() => (
       <KnobbedThemeProvider>
         <NotificationsToastListInteractions

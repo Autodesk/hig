@@ -8,30 +8,30 @@ describe("tabs/TabsPresenter", () => {
   const cases = [
     {
       description: "renders without props",
-      props: {}
+      props: {},
     },
     {
       description: "renders horizontal box style tabs",
       props: {
         align: alignments.CENTER,
         variant: variants.BOX,
-        children: "Hello World"
-      }
+        children: "Hello World",
+      },
     },
     {
       description: "renders horizontal canvas style tabs",
       props: {
         variant: variants.CANVAS,
-        children: "Hello World"
-      }
+        children: "Hello World",
+      },
     },
     {
       description: "renders vertical box style tabs",
       props: {
         orientation: orientations.VERTICAL,
-        children: "Hello World"
-      }
-    }
+        children: "Hello World",
+      },
+    },
   ];
 
   cases.forEach(({ description, props: { children, ...otherProps } }) => {

@@ -22,9 +22,9 @@ export default function stylesheet(props, themeData, themeMeta) {
     selected,
     selectedBottom,
     selectedLeft,
-    customStylesheet
+    customStylesheet,
+    isGrouped,
   } = props;
-
   const alternateBgColor =
     rowIndex % 2 === 0
       ? themeData["table.row.backgroundColor"]
@@ -39,28 +39,28 @@ export default function stylesheet(props, themeData, themeMeta) {
       lineHeight: themeData["table.lineHeight"],
       outline: 0,
       position: `relative`,
-      ...(isStickyColumn || isStickyHeader ? { overflow: `auto` } : {})
+      ...(isStickyColumn || isStickyHeader ? { overflow: `auto` } : {}),
     },
     higTableRow: {
       boxSizing: `border-box`,
       width: `100%`,
       ...(alternateBg
         ? {
-            background: alternateBgColor
+            background: alternateBgColor,
           }
         : {
-            background: themeData["table.row.backgroundColor"]
-          })
+            background: themeData["table.row.backgroundColor"],
+          }),
     },
     higTableHeaderWrapper: {
       ...(isStickyColumn || isStickyHeader
         ? {
             position: `sticky`,
             top: 0,
-            zIndex: 10
+            zIndex: 10,
           }
         : {}),
-      borderBottom: `1px solid #ddd`
+      ...(isGrouped ? { borderBottom: `1px solid #ddd` } : {}),
     },
     higTableHeader: {
       backgroundColor:
@@ -73,15 +73,15 @@ export default function stylesheet(props, themeData, themeMeta) {
         ? {
             "&[data-cell-coords]": {
               backgroundColor:
-                themeData["table.header.unselected.hover.backgroundColor"]
-            }
+                themeData["table.header.unselected.hover.backgroundColor"],
+            },
           }
         : {}),
       "&:first-of-type": {
         "& > div": {
-          borderLeft: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`
-        }
-      }
+          borderLeft: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`,
+        },
+      },
     },
     higTableHeaderContentWrapper: {
       alignItems: `center`,
@@ -97,32 +97,32 @@ export default function stylesheet(props, themeData, themeMeta) {
       ...(columnSelection && hasHover
         ? {
             backgroundColor:
-              themeData["table.header.unselected.hover.backgroundColor"]
+              themeData["table.header.unselected.hover.backgroundColor"],
           }
         : {}),
       ...(columnSelection && isPressed
         ? {
             backgroundColor:
-              themeData["table.header.unselected.pressed.backgroundColor"]
+              themeData["table.header.unselected.pressed.backgroundColor"],
           }
         : {}),
       ...(headerIndex >= 0
         ? {
             overflow: `hidden`,
             textOverflow: `ellipsis`,
-            whiteSpace: `nowrap`
+            whiteSpace: `nowrap`,
           }
         : {}),
       ...(rowSelection && headerIndex < 0
         ? {
-            justifyContent: `center`
+            justifyContent: `center`,
           }
-        : {})
+        : {}),
     },
     higTableHeaderRow: {
       "&:not(:last-child)": {
-        pointerEvents: `none`
-      }
+        pointerEvents: `none`,
+      },
     },
     higTableHeaderResizer: {
       background: `transparent`,
@@ -142,20 +142,20 @@ export default function stylesheet(props, themeData, themeMeta) {
               content: `""`,
               borderRight: `1px solid ${
                 themeData[`table.resize.pressed.borderColor`]
-              }`
-            }
+              }`,
+            },
           }
-        : {})
+        : {}),
     },
     higTableBody: {
       position: `relative`,
       ...(frozenHeader
         ? {
-            maxHeight: `calc((${
-              themeData["table.cell.minHeight"]
-            } * ${frozenHeaderCount || 50}) + 1px)`
+            maxHeight: `calc((${themeData["table.cell.minHeight"]} * ${
+              frozenHeaderCount || 50
+            }) + 1px)`,
           }
-        : {})
+        : {}),
     },
     higTableCell: {
       alignItems: `center`,
@@ -171,115 +171,115 @@ export default function stylesheet(props, themeData, themeMeta) {
       transition: `background-color 0.1s ease-in-out`,
       ...(isResizing
         ? {
-            borderRight: `1px solid ${themeData["table.resize.pressed.borderColor"]}`
+            borderRight: `1px solid ${themeData["table.resize.pressed.borderColor"]}`,
           }
         : {}),
       ...(isLast
         ? {
-            borderBottom: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`
+            borderBottom: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`,
           }
         : {}),
       ...(cellColumnIndex === -1
         ? {
             display: "flex",
             justifyContent: "center",
-            alignItems: "center"
+            alignItems: "center",
           }
         : {}),
       ...(hasHover && cellColumnIndex !== -1
         ? {
             backgroundColor:
-              themeData["table.row.unselected.hover.backgroundColor"]
+              themeData["table.row.unselected.hover.backgroundColor"],
           }
         : {}),
       ...(isPressed && cellColumnIndex !== -1
         ? {
             backgroundColor:
-              themeData["table.cell.unselected.pressed.backgroundColor"]
+              themeData["table.cell.unselected.pressed.backgroundColor"],
           }
         : {}),
       ...(selected
         ? {
             backgroundColor: `transparent`,
             borderRight: `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
-            borderTop: `1px solid ${themeData["table.row.selected.default.borderColor"]}`
+            borderTop: `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
           }
         : {}),
       ...(selected && isLast
         ? {
-            borderBottom: `1px solid ${themeData["table.row.selected.default.borderColor"]}`
+            borderBottom: `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
           }
         : {}),
       ...(selectedBottom
         ? {
-            borderTop: `1px solid ${themeData["table.row.selected.default.borderColor"]}`
+            borderTop: `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
           }
         : {}),
       ...(selectedLeft
         ? {
-            borderRight: `1px solid ${themeData["table.row.selected.default.borderColor"]}`
+            borderRight: `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
           }
         : {}),
       ...(multiSelectedColumn
         ? {
             backgroundColor:
               themeData["table.cell.multiSelect.default.backgroundColor"],
-            borderRight: `1px solid ${themeData["table.cell.multiSelect.focus.borderColor"]}`
+            borderRight: `1px solid ${themeData["table.cell.multiSelect.focus.borderColor"]}`,
           }
         : {}),
       ...(multiSelectedColumn && isLast
         ? {
-            borderBottom: `1px solid ${themeData["table.cell.multiSelect.focus.borderColor"]}`
+            borderBottom: `1px solid ${themeData["table.cell.multiSelect.focus.borderColor"]}`,
           }
         : {}),
       ...(multiSelectedColumnLeft
         ? {
-            borderRight: `1px solid ${themeData["table.cell.multiSelect.focus.borderColor"]}`
+            borderRight: `1px solid ${themeData["table.cell.multiSelect.focus.borderColor"]}`,
           }
         : {}),
       ...(multiSelectedRow
         ? {
             backgroundColor:
               themeData["table.cell.multiSelect.default.backgroundColor"],
-            borderTopColor: `${themeData["table.cell.multiSelect.focus.borderColor"]}`
+            borderTopColor: `${themeData["table.cell.multiSelect.focus.borderColor"]}`,
           }
         : {}),
       ...(multiSelectedRowBottom
         ? {
-            borderTopColor: `${themeData["table.cell.multiSelect.focus.borderColor"]}`
+            borderTopColor: `${themeData["table.cell.multiSelect.focus.borderColor"]}`,
           }
         : {}),
       ...(multiSelectedRow && multiSelectedRowBottom
         ? {
-            borderTopColor: `none`
+            borderTopColor: `none`,
           }
         : {}),
       ...(multiSelectedRow && isLast
         ? {
-            borderBottomColor: `${themeData["table.cell.multiSelect.focus.borderColor"]}`
+            borderBottomColor: `${themeData["table.cell.multiSelect.focus.borderColor"]}`,
           }
         : {}),
       "&:first-of-type": {
         borderLeft: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`,
         ...(selected
           ? {
-              borderLeft: `${themeData["table.borderWidth"]} solid ${themeData["table.row.selected.default.borderColor"]}`
+              borderLeft: `${themeData["table.borderWidth"]} solid ${themeData["table.row.selected.default.borderColor"]}`,
             }
           : {}),
         ...(multiSelectedColumn
           ? {
-              borderLeft: `1px solid ${themeData["table.cell.multiSelect.focus.borderColor"]}`
+              borderLeft: `1px solid ${themeData["table.cell.multiSelect.focus.borderColor"]}`,
             }
-          : {})
+          : {}),
       },
       "&:last-of-type": {
         borderLeft: `none`,
         ...(multiSelectedColumn
           ? {
-              borderRight: `${themeData["table.borderWidth"]} solid ${themeData["table.cell.multiSelect.focus.borderColor"]}`
+              borderRight: `${themeData["table.borderWidth"]} solid ${themeData["table.cell.multiSelect.focus.borderColor"]}`,
             }
-          : {})
-      }
+          : {}),
+      },
     },
     higTableCellContentWrapper: {
       display: `flex`,
@@ -288,28 +288,28 @@ export default function stylesheet(props, themeData, themeMeta) {
             display: `block`,
             overflow: `hidden`,
             textOverflow: `ellipsis`,
-            whiteSpace: `nowrap`
+            whiteSpace: `nowrap`,
           }
-        : {})
+        : {}),
     },
     higTableCustomExpander: {
       display: `block`,
       borderLeft: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`,
-      borderRight: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`
+      borderRight: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`,
     },
     headerHolder: {
-      display: `flex`
+      display: `flex`,
     },
     groupHeaderElement: {
-      padding: `3px 3px 0 0`
+      padding: `3px 3px 0 0`,
     },
     higGroupedLabel: {
-      display: `flex`
+      display: `flex`,
     },
     higGroupedDataCount: {
       paddingLeft: `5px`,
-      fontWeight: `500`
-    }
+      fontWeight: `500`,
+    },
   };
 
   return customStylesheet

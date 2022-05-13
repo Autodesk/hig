@@ -2,7 +2,7 @@ import { action } from "@storybook/addon-actions";
 import { object, text } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
@@ -16,7 +16,7 @@ const knobLabels = {
   onClick: "List item clicked",
   onTargetClick: "Target clicked",
   projects: "Projects",
-  projectTitle: "Project List Label"
+  projectTitle: "Project List Label",
 };
 
 export default function getKnobs(props) {
@@ -71,6 +71,6 @@ export default function getKnobs(props) {
     ),
     onChange: action(knobLabels.onChange),
     onClick: action(knobLabels.onClick),
-    onTargetClick: action(knobLabels.onTargetClick)
+    onTargetClick: action(knobLabels.onTargetClick),
   };
 }

@@ -8,7 +8,7 @@ import stylesheet from "./stylesheet";
 
 export default function EmptyStatePresenter({
   message,
-  stylesheet: customStylesheet
+  stylesheet: customStylesheet,
 }) {
   const styles = stylesheet({ stylesheet: customStylesheet }, {});
   return (
@@ -20,10 +20,10 @@ export default function EmptyStatePresenter({
 }
 
 EmptyStatePresenter.defaultProps = {
-  message: "You currently have no notifications"
+  message: "You currently have no notifications",
 };
 
 EmptyStatePresenter.propTypes = {
   message: PropTypes.string,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

@@ -16,7 +16,7 @@ const knobGroupIds = {
   animation: "Animation",
   a11y: "Accessibility",
   actions: "Actions",
-  i18n: "i18n"
+  i18n: "i18n",
 };
 
 const knobLabels = {
@@ -27,7 +27,7 @@ const knobLabels = {
   label: "Label",
   dismissButtonTitle: "Dismiss title",
   onDismiss: "Banner dismissed",
-  language: "Language"
+  language: "Language",
 };
 
 /**
@@ -75,6 +75,6 @@ export default function getKnobs(props) {
       dismissButtonTitle,
       knobGroupIds.a11y
     ),
-    onDismiss: action(knobLabels.onDismiss, onDismiss, knobGroupIds.actions)
+    onDismiss: action(knobLabels.onDismiss, onDismiss, knobGroupIds.actions),
   };
 }

@@ -56,7 +56,7 @@ export default function createSampleNotifications() {
             </TextLink>
           </p>
         </div>
-      )
+      ),
     },
     {
       id: "0",
@@ -89,7 +89,7 @@ export default function createSampleNotifications() {
             </TextLink>
           </p>
         </div>
-      )
+      ),
     },
     {
       id: "2",
@@ -121,7 +121,7 @@ export default function createSampleNotifications() {
             </TextLink>
           </p>
         </div>
-      )
+      ),
     },
     {
       id: "3",
@@ -153,7 +153,7 @@ export default function createSampleNotifications() {
             </TextLink>
           </p>
         </div>
-      )
+      ),
     },
     {
       id: "4",
@@ -178,7 +178,7 @@ export default function createSampleNotifications() {
             </TextLink>
           </p>
         </div>
-      )
-    }
+      ),
+    },
   ];
 }

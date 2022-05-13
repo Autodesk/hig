@@ -6,7 +6,7 @@ import { ControlBehavior } from "@hig/behaviors";
 import { cx, css } from "emotion";
 import stylesheet from "./Tab.stylesheet";
 
-const TabCloseButtonPresenter = props => {
+const TabCloseButtonPresenter = (props) => {
   const {
     disabled,
     onBlur,
@@ -44,7 +44,7 @@ const TabCloseButtonPresenter = props => {
         onMouseDown: handleMouseDown,
         onMouseEnter: handleMouseEnter,
         onMouseLeave: handleMouseLeave,
-        onMouseUp: handleMouseUp
+        onMouseUp: handleMouseUp,
       }) => (
         <ThemeContext.Consumer>
           {({ resolvedRoles, metadata }) => {
@@ -120,7 +120,7 @@ TabCloseButtonPresenter.propTypes = {
   /**
    * Function to modify the component's styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default TabCloseButtonPresenter;

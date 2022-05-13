@@ -29,15 +29,15 @@ describe("TextLink", () => {
     takeSnapshotsOf(TextLink, [
       {
         desc: "renders with no props",
-        props: {}
+        props: {},
       },
       {
         desc: "renders with props",
         props: {
           link: "https://www.autodesk.com/",
           target: "_parent",
-          children: "This is a link"
-        }
+          children: "This is a link",
+        },
       },
       {
         desc: "renders with custom className",
@@ -45,9 +45,9 @@ describe("TextLink", () => {
           link: "https://www.autodesk.com/",
           target: "_parent",
           children: "This is a link",
-          className: "test-classname"
-        }
-      }
+          className: "test-classname",
+        },
+      },
     ]);
   });
 

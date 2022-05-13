@@ -6,7 +6,7 @@ describe("flyout/presenters/PointerWrapperPresenter", () => {
   takeSnapshotsOf(PointerWrapperPresenter, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with all props",
@@ -15,9 +15,9 @@ describe("flyout/presenters/PointerWrapperPresenter", () => {
         innerRef: function handleRef() {},
         style: {
           top: "1px",
-          left: "23px"
-        }
-      }
-    }
+          left: "23px",
+        },
+      },
+    },
   ]);
 });

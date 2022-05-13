@@ -4,7 +4,7 @@ export default function stylesheet(props, themeData) {
     hasFocus,
     hasHover,
     disabled,
-    stylesheet: customStylesheet
+    stylesheet: customStylesheet,
   } = props;
   const opacity = disabled ? themeData["colorScheme.opacity.disabled"] : "1.0";
   // because we don't have access to the checked status in react, we need to
@@ -32,7 +32,7 @@ export default function stylesheet(props, themeData) {
       position: "relative",
       display: "flex",
       flexDirection: "row",
-      alignItems: "center"
+      alignItems: "center",
     },
 
     radioButtonWrapper: {
@@ -51,7 +51,7 @@ export default function stylesheet(props, themeData) {
       transitionDuration: "0.3s, 0.3s",
       transitionProperty: "box-shadow, background-color",
       transitionTimingFunction:
-        "cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1)"
+        "cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1)",
     },
 
     // this maps to .radio-button__input
@@ -68,9 +68,9 @@ export default function stylesheet(props, themeData) {
       zIndex: "1",
 
       "&:checked + span": {
-        boxShadow: `${checkedInnerShadow},${outerShadow}`
-      }
-    }
+        boxShadow: `${checkedInnerShadow},${outerShadow}`,
+      },
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

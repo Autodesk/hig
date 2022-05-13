@@ -5,7 +5,7 @@ import { ControlBehavior } from "@hig/behaviors";
 import ToggleBehavior from "./behaviors/ToggleBehavior";
 import TogglePresenter from "./presenters/TogglePresenter";
 
-const Toggle = props => {
+const Toggle = (props) => {
   const {
     on: controlledOn,
     defaultOn,
@@ -21,7 +21,7 @@ const Toggle = props => {
     onMouseDown,
     onMouseEnter,
     onMouseLeave,
-    onMouseUp
+    onMouseUp,
   } = otherProps;
 
   return (
@@ -42,7 +42,7 @@ const Toggle = props => {
         onMouseDown: handleMouseDown,
         onMouseEnter: handleMouseEnter,
         onMouseLeave: handleMouseLeave,
-        onMouseUp: handleMouseUp
+        onMouseUp: handleMouseUp,
       }) => (
         <ToggleBehavior
           on={controlledOn}
@@ -89,7 +89,7 @@ Toggle.propTypes = {
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default Toggle;

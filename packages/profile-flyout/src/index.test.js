@@ -6,19 +6,19 @@ describe("profile-flyout/index", () => {
   hasExports(index, [
     {
       name: "default",
-      value: expect.any(Function)
+      value: expect.any(Function),
     },
     {
       name: "ProfileContent",
-      value: expect.any(Function)
+      value: expect.any(Function),
     },
     {
       name: "anchorPoints",
-      value: expect.any(Object)
+      value: expect.any(Object),
     },
     {
       name: "AVAILABLE_ANCHOR_POINTS",
-      value: expect.any(Array)
-    }
+      value: expect.any(Array),
+    },
   ]);
 });

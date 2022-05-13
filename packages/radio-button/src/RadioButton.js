@@ -34,7 +34,7 @@ export default function RadioButton(props) {
         onMouseDown: handleMouseDown,
         onMouseEnter: handleMouseEnter,
         onMouseLeave: handleMouseLeave,
-        onMouseUp: handleMouseUp
+        onMouseUp: handleMouseUp,
       }) => (
         <RadioButtonPresenter
           hasFocus={hasFocus}
@@ -82,5 +82,5 @@ RadioButton.propTypes = {
   /**
    *  Function to modify the component's styles
    * */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

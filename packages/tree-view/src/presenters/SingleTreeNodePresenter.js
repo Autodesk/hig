@@ -8,13 +8,8 @@ import stylesheet from "./stylesheet";
 
 export default function SingleTreeNodePresenter(props) {
   const { icon, id, itemRef, label, ...otherProps } = props;
-  const {
-    className,
-    onClick,
-    onMouseEnter,
-    onMouseLeave,
-    themeData
-  } = otherProps;
+  const { className, onClick, onMouseEnter, onMouseLeave, themeData } =
+    otherProps;
   const { handleClick, handleKeyDown } = createButtonEventHandlers(onClick);
   const higTreeItemContentWrapperClassName = createCustomClassNames(
     className,
@@ -64,7 +59,7 @@ export default function SingleTreeNodePresenter(props) {
       {({
         hasHover,
         onMouseEnter: handleMouseEnter,
-        onMouseLeave: handleMouseLeave
+        onMouseLeave: handleMouseLeave,
       }) => {
         const styleProps = { ...props, hasHover };
         const styles = stylesheet(styleProps, themeData);
@@ -73,10 +68,10 @@ export default function SingleTreeNodePresenter(props) {
             {...payload}
             className={cx([css(styles.higTreeItemSubTreeItem), className])}
             id={id}
-            onClick={event => {
+            onClick={(event) => {
               handleClick(event, props);
             }}
-            onKeyDown={event => {
+            onKeyDown={(event) => {
               handleKeyDown(event, props);
             }}
             onMouseEnter={handleMouseEnter}
@@ -87,14 +82,14 @@ export default function SingleTreeNodePresenter(props) {
             <div
               className={cx([
                 css(styles.higTreeItemContentWrapper),
-                higTreeItemContentWrapperClassName
+                higTreeItemContentWrapperClassName,
               ])}
             >
               {icon && (
                 <div
                   className={cx([
                     css(styles.higTreeItemIconWrapper),
-                    higTreeItemIconWrapperClassName
+                    higTreeItemIconWrapperClassName,
                   ])}
                 >
                   {icon}
@@ -103,7 +98,7 @@ export default function SingleTreeNodePresenter(props) {
               <span
                 className={cx([
                   css(styles.higTreeItemLabelWrapper),
-                  higTreeItemLabelWrapperClassName
+                  higTreeItemLabelWrapperClassName,
                 ])}
               >
                 {renderLabel()}
@@ -121,7 +116,8 @@ SingleTreeNodePresenter.propTypes = {
   id: PropTypes.string,
   itemRef: PropTypes.oneOfType([
     PropTypes.func,
-    PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.any) })
+    // eslint-disable-next-line react/forbid-prop-types
+    PropTypes.shape({ current: PropTypes.arrayOf(PropTypes.any) }),
   ]),
-  label: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
+  label: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
 };

@@ -22,7 +22,7 @@ export default function PanelPresenter({
           {
             transitionStatus: null,
             anchorPoint: null,
-            stylesheet: customStylesheet
+            stylesheet: customStylesheet,
           },
           resolvedRoles
         );
@@ -43,5 +43,5 @@ export default function PanelPresenter({
 PanelPresenter.propTypes = {
   children: PropTypes.node,
   onScroll: PropTypes.func,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

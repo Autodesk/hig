@@ -16,25 +16,21 @@ import toggle from "./components/toggle";
 import token from "./components/token";
 import tooltip from "./components/tooltip";
 
-const darkGrayThemeConfig = extendTheme(
-  darkBlueTheme.unresolvedRoles,
-  Object.assign(
-    {},
-    mapKeys(system.colorScheme, key => `colorScheme.${key}`),
-    accordion,
-    avatarBundle,
-    button,
-    checkbox,
-    illustration,
-    input,
-    segmentedButton,
-    slider,
-    tag,
-    thumbnail,
-    toggle,
-    token,
-    tooltip
-  )
-);
+const darkGrayThemeConfig = extendTheme(darkBlueTheme.unresolvedRoles, {
+  ...mapKeys(system.colorScheme, (key) => `colorScheme.${key}`),
+  ...accordion,
+  ...avatarBundle,
+  ...button,
+  ...checkbox,
+  ...illustration,
+  ...input,
+  ...segmentedButton,
+  ...slider,
+  ...tag,
+  ...thumbnail,
+  ...toggle,
+  ...token,
+  ...tooltip,
+});
 
 export default darkGrayThemeConfig;

@@ -1,24 +1,24 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-const HoverBehavior = props => {
+const HoverBehavior = (props) => {
   const { openOnHoverDelay, onMouseEnter } = props;
   const [hasHover, setHasHover] = useState(false);
 
-  const focusTimeout = event =>
+  const focusTimeout = (event) =>
     setTimeout(() => {
       setHasHover(true);
       onMouseEnter(event);
     }, openOnHoverDelay);
 
-  const handleFocus = event => {
+  const handleFocus = (event) => {
     if (onMouseEnter) {
       focusTimeout(event);
     }
     setHasHover(true);
   };
 
-  const handleBlur = event => {
+  const handleBlur = (event) => {
     clearTimeout(focusTimeout(event));
     setHasHover(false);
     if (props.onMouseLeave) {
@@ -29,7 +29,7 @@ const HoverBehavior = props => {
   return props.children({
     hasHover,
     onMouseEnter: handleFocus,
-    onMouseLeave: handleBlur
+    onMouseLeave: handleBlur,
   });
 };
 
@@ -54,7 +54,7 @@ HoverBehavior.propTypes = {
    * Function called when the user leaves the visual space
    * occupied by the component
    */
-  onMouseLeave: PropTypes.func
+  onMouseLeave: PropTypes.func,
 };
 
 export default HoverBehavior;

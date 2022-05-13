@@ -8,8 +8,8 @@ describe("top-nav/presenters/LogoTextPresenter", () => {
     {
       desc: "renders with children",
       props: {
-        children: <span>Autodesk HIG</span>
-      }
-    }
+        children: <span>Autodesk HIG</span>,
+      },
+    },
   ]);
 });

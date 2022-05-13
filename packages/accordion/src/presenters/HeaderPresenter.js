@@ -9,17 +9,17 @@ import {
   OperatorMinusSUI,
   OperatorMinusXsUI,
   OperatorPlusSUI,
-  OperatorPlusXsUI
+  OperatorPlusXsUI,
 } from "@hig/icons";
 
 import {
   indicators,
   AVAILABLE_INDICATORS,
-  AVAILABLE_INDICATOR_POSITIONS
+  AVAILABLE_INDICATOR_POSITIONS,
 } from "../constants";
 import stylesheet from "../stylesheet";
 
-const HeaderPresenter = props => {
+const HeaderPresenter = (props) => {
   const {
     hasFocus,
     hasHover,
@@ -62,7 +62,7 @@ const HeaderPresenter = props => {
             indicatorPosition,
             collapsed,
             disabled,
-            stylesheet: customStylesheet
+            stylesheet: customStylesheet,
           },
           resolvedRoles,
           metadata
@@ -121,7 +121,7 @@ HeaderPresenter.propTypes = {
   collapsed: PropTypes.bool,
   disabled: PropTypes.bool,
   stylesheet: PropTypes.func,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export default HeaderPresenter;

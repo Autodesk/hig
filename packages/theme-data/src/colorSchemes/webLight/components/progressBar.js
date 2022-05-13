@@ -4,10 +4,10 @@ export default {
   "progressBar.backgroundColor": {
     value: oldColors["hig-cool-gray-10"],
     transform: {
-      alpha: "1.0"
-    }
+      alpha: "1.0",
+    },
   },
   "progressBar.highlightColor": {
-    value: oldColors["hig-turquoise-50"]
-  }
+    value: oldColors["hig-turquoise-50"],
+  },
 };

@@ -9,5 +9,5 @@ export default {
   propTables: [DefaultExport],
   propTablesExclude: [KnobbedThemeProvider],
   source: true,
-  text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />
+  text: <RichText dangerouslySetInnerHTML={{ __html: readme }} />,
 };

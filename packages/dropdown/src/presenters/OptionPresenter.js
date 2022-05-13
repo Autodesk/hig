@@ -15,7 +15,7 @@ function OptionWrapper(props) {
     onMouseDown,
     onMouseMove,
     selected,
-    highlighted
+    highlighted,
   } = props;
 
   const { handleClick, handleKeyDown } = createButtonEventHandlers(onClick);
@@ -55,9 +55,9 @@ OptionWrapper.propTypes = {
   onClick: PropTypes.func,
   onMouseDown: PropTypes.func,
   onMouseMove: PropTypes.func,
-  selected: PropTypes.bool
+  selected: PropTypes.bool,
 };
-const OptionPresenter = props => {
+const OptionPresenter = (props) => {
   const { children, selected, ...otherProps } = props;
 
   return (
@@ -109,7 +109,7 @@ OptionPresenter.propTypes = {
   /**
    * Indicates the option is currently selected
    */
-  selected: PropTypes.bool
+  selected: PropTypes.bool,
 };
 
 export default OptionPresenter;

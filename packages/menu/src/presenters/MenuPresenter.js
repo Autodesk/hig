@@ -7,7 +7,7 @@ import Option from "../Option";
 import createChildren from "../behaviors/createChildren";
 import stylesheet from "./stylesheet";
 
-const MenuPresenter = props => {
+const MenuPresenter = (props) => {
   const {
     checkmark,
     children,
@@ -18,14 +18,8 @@ const MenuPresenter = props => {
     unselect,
     ...otherProps
   } = props;
-  const {
-    id,
-    className,
-    getHighlightIndex,
-    getOptionsInfo,
-    role,
-    tabIndex
-  } = otherProps;
+  const { id, className, getHighlightIndex, getOptionsInfo, role, tabIndex } =
+    otherProps;
   const mounted = useRef();
 
   const getOptions = () => createChildren(props.children, Option);
@@ -37,7 +31,7 @@ const MenuPresenter = props => {
       onFocus,
       selected,
       setActiveOption,
-      setHighlightIndex
+      setHighlightIndex,
     } = props;
     const payload = {
       ...propsOrigin,
@@ -52,7 +46,7 @@ const MenuPresenter = props => {
       selected,
       setActiveOption,
       setHighlightIndex,
-      unselect
+      unselect,
     };
 
     return <Option {...payload} />;
@@ -62,10 +56,10 @@ const MenuPresenter = props => {
     role !== `group`
       ? {
           ...(getHighlightIndex() !== 0 && {
-            "aria-activedescendant": getOptionsInfo()[getHighlightIndex() - 1]
-              .id
+            "aria-activedescendant":
+              getOptionsInfo()[getHighlightIndex() - 1].id,
           }),
-          ...(multiple && { "aria-multiselectable": multiple })
+          ...(multiple && { "aria-multiselectable": multiple }),
         }
       : {};
   const payload = { ...otherProps };
@@ -89,7 +83,7 @@ const MenuPresenter = props => {
     if (!mounted.current) {
       const optionsInfo = [];
       if (role !== `group`) {
-        React.Children.forEach(props.children, child => {
+        React.Children.forEach(props.children, (child) => {
           if (child.type === Option) {
             optionsInfo.push(child.props);
           }
@@ -102,14 +96,14 @@ const MenuPresenter = props => {
       const optionsInfo = [];
       const currentIds = [];
       const prevIds = [];
-      React.Children.forEach(props.children, child => {
+      React.Children.forEach(props.children, (child) => {
         if (child.type === Option) {
           optionsInfo.push(child.props);
           currentIds.push(child.props.id);
         }
       });
 
-      Object.keys(previousOptions).forEach(index => {
+      Object.keys(previousOptions).forEach((index) => {
         prevIds.push(previousOptions[index].id);
       });
 
@@ -126,7 +120,7 @@ const MenuPresenter = props => {
           {
             checkmark,
             divider,
-            stylesheet: customStylesheet
+            stylesheet: customStylesheet,
           },
           resolvedRoles
         );
@@ -166,7 +160,7 @@ MenuPresenter.propTypes = {
   setHighlightIndex: PropTypes.func,
   setOptionsInfo: PropTypes.func,
   stylesheet: PropTypes.func,
-  unselect: PropTypes.bool
+  unselect: PropTypes.bool,
 };
 
 export default MenuPresenter;

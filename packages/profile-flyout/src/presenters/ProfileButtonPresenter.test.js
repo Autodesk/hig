@@ -7,16 +7,16 @@ describe("profile-flyout/presenters/ProfileButtonPresenter", () => {
     {
       desc: "renders with avatarName",
       props: {
-        avatarName: "Wolfgang Pauli"
-      }
+        avatarName: "Wolfgang Pauli",
+      },
     },
     {
       desc: "renders with all props",
       props: {
         avatarName: "Richard Feynman",
         avatarImage: "richard_phillips_feynman.png",
-        onClick: function handleClick() {}
-      }
-    }
+        onClick: function handleClick() {},
+      },
+    },
   ]);
 });

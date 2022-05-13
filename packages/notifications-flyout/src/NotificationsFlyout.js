@@ -69,14 +69,14 @@ function createPanelRenderer({
   notifications,
   loading,
   heading,
-  stylesheet
+  stylesheet,
 }) {
   return function renderPanel({
     /* eslint-disable react/prop-types */
     hideFlyout,
     handleScroll,
     innerRef,
-    transitionStatus
+    transitionStatus,
   }) {
     const isEmpty = notifications.length === 0;
 
@@ -132,7 +132,7 @@ export default function NotificationsFlyout(props) {
         handleClose,
         notifications,
         showUnreadCount,
-        unreadCount
+        unreadCount,
       }) => (
         <Flyout
           alterCoordinates={alterCoordinates}
@@ -149,7 +149,7 @@ export default function NotificationsFlyout(props) {
             notifications,
             loading,
             heading,
-            stylesheet
+            stylesheet,
           })}
           stylesheet={stylesheet}
         >
@@ -170,7 +170,7 @@ export default function NotificationsFlyout(props) {
 }
 
 NotificationsFlyout.defaultProps = {
-  anchorPoint: anchorPoints.TOP_RIGHT
+  anchorPoint: anchorPoints.TOP_RIGHT,
 };
 
 NotificationsFlyout.propTypes = {
@@ -216,5 +216,5 @@ NotificationsFlyout.propTypes = {
   /** Function to modify the component's styles */
   stylesheet: PropTypes.func,
   /** When provided, it overrides the derived unread notification count */
-  unreadCount: PropTypes.number
+  unreadCount: PropTypes.number,
 };

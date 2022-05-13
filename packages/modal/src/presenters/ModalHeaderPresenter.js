@@ -7,7 +7,7 @@ import { CloseSUI, CloseMUI } from "@hig/icons";
 import { createCustomClassNames } from "@hig/utils";
 import { css, cx } from "emotion";
 
-const ModalHeaderPresenter = props => {
+const ModalHeaderPresenter = (props) => {
   const {
     children,
     closeButtonAriaLabel,
@@ -49,7 +49,7 @@ const ModalHeaderPresenter = props => {
                 style={{
                   fontSize: `inherit`,
                   fontWeight: `inherit`,
-                  lineHeight: `inherit`
+                  lineHeight: `inherit`,
                 }}
               >
                 {title}
@@ -91,15 +91,16 @@ ModalHeaderPresenter.propTypes = {
   /**
    * Styles for the modal header
    */
+  // eslint-disable-next-line react/forbid-prop-types
   styles: PropTypes.objectOf(PropTypes.any),
   /**
    * Title of the modal
    */
-  title: PropTypes.node
+  title: PropTypes.node,
 };
 
 ModalHeaderPresenter.defaultProps = {
-  closeButtonAriaLabel: "Close"
+  closeButtonAriaLabel: "Close",
 };
 
 export default ModalHeaderPresenter;

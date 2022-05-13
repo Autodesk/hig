@@ -6,13 +6,13 @@ import PropTypes from "prop-types";
 const ColumnShowHide = ({
   children,
   toggleHideAllColumnsProps,
-  allColumns
+  allColumns,
 }) => <div>{children({ toggleHideAllColumnsProps, allColumns })}</div>;
 
 ColumnShowHide.propTypes = {
   children: PropTypes.func,
   toggleHideAllColumnsProps: PropTypes.func,
-  allColumns: PropTypes.array
+  allColumns: PropTypes.array,
 };
 
 export default ColumnShowHide;

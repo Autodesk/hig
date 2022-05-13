@@ -9,7 +9,7 @@ SortColumns.propTypes = {
   children: PropTypes.func,
   isSorted: PropTypes.bool,
   isSortedDesc: PropTypes.bool,
-  density: PropTypes.string
+  density: PropTypes.string,
 };
 
 export default SortColumns;

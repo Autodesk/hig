@@ -9,7 +9,7 @@ import TitlePresenter from "./TitlePresenter";
 import { targets, AVAILABLE_TARGETS } from "../../targets";
 import stylesheet from "./stylesheet";
 
-const Module = props => {
+const Module = (props) => {
   const {
     active,
     activeChildren,
@@ -114,12 +114,12 @@ Module.propTypes = {
   /** A label for rendering this Module */
   title: PropTypes.string.isRequired,
   /** Anchor target. Applicable only if link is provided */
-  target: PropTypes.oneOf(AVAILABLE_TARGETS)
+  target: PropTypes.oneOf(AVAILABLE_TARGETS),
 };
 
 Module.defaultProps = {
   minimized: false,
-  target: targets.SELF
+  target: targets.SELF,
 };
 
 export default Module;

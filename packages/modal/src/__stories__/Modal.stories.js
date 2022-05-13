@@ -13,7 +13,7 @@ stories.forEach(({ description, getProps }) => {
     description,
     withInfo({
       ...infoOptions,
-      propTablesExclude: [KnobbedThemeProvider, Typography]
+      propTablesExclude: [KnobbedThemeProvider, Typography],
     })(() => {
       const props = getProps();
       return renderStory(props);

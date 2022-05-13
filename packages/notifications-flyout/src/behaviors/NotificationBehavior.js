@@ -10,7 +10,7 @@ const TRANSITION_DURATION = 300;
  * @property {function(MouseEvent): void} handleDismissButtonClick
  */
 
-const NotificationBehavior = props => {
+const NotificationBehavior = (props) => {
   const [height, setHeight] = useState("");
   const [isVisible, setIsVisible] = useState(true);
   const containerRef = useRef(null);
@@ -18,7 +18,7 @@ const NotificationBehavior = props => {
   /**
    * @param {HTMLDivElement} containerRef
    */
-  const refContainer = containerRefParams => {
+  const refContainer = (containerRefParams) => {
     containerRef.current = containerRefParams;
   };
 
@@ -33,7 +33,7 @@ const NotificationBehavior = props => {
    * so that the height transition can occur
    */
   const prepareHideTransition = () =>
-    new Promise(resolve => {
+    new Promise((resolve) => {
       setHeight(`${containerRef.current.clientHeight}px`);
       window.requestAnimationFrame(resolve);
     });
@@ -69,12 +69,12 @@ const NotificationBehavior = props => {
       onExited={handleExit}
       timeout={TRANSITION_DURATION}
     >
-      {transitionStatus =>
+      {(transitionStatus) =>
         children({
           handleDismissButtonClick,
           height,
           innerRef,
-          transitionStatus
+          transitionStatus,
         })
       }
     </Transition>
@@ -87,7 +87,7 @@ NotificationBehavior.propTypes = {
   /** Notification content */
   children: PropTypes.func.isRequired,
   /** A callback called when user dismisses a featured notification */
-  onDismiss: PropTypes.func
+  onDismiss: PropTypes.func,
 };
 
 export default NotificationBehavior;

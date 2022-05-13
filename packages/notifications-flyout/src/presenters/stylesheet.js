@@ -20,7 +20,7 @@ function getRulesByType(type, themeData) {
       return { borderLeftColor: themeData["colorScheme.status.success"] };
     default:
       return {
-        borderLeftColor: themeData["basics.colors.primary.autodeskBlue.500"]
+        borderLeftColor: themeData["basics.colors.primary.autodeskBlue.500"],
       };
   }
 }
@@ -33,7 +33,7 @@ export default function stylesheet(props, themeData) {
     stylesheet: customStylesheet,
     transitionStatus,
     type,
-    unread
+    unread,
   } = props;
   const isEntering =
     loadingTransitionState === `entering` ||
@@ -44,7 +44,7 @@ export default function stylesheet(props, themeData) {
       position: `absolute`,
       top: 0,
       right: 0,
-      ...(hasHover ? { display: `block` } : {})
+      ...(hasHover ? { display: `block` } : {}),
     },
     notification: {
       position: `relative`,
@@ -53,12 +53,12 @@ export default function stylesheet(props, themeData) {
       transitionDuration: `300ms`,
       transitionTimingFunction: `ease`,
       "&:last-child": {
-        borderBottom: `none`
+        borderBottom: `none`,
       },
       ...(transitionStatus ? getRulesByTransitionStatus(transitionStatus) : {}),
       ...(hasHover
         ? { backgroundColor: themeData["colorScheme.surface.level300"] }
-        : {})
+        : {}),
     },
     notificationContent: {
       display: `flex`,
@@ -66,25 +66,25 @@ export default function stylesheet(props, themeData) {
       borderLeft: `3px solid #bec8d2`,
       ...(unread
         ? getRulesByType(type, themeData)
-        : { borderLeftColor: `rgba(128, 128, 128, 0.4)` })
+        : { borderLeftColor: `rgba(128, 128, 128, 0.4)` }),
     },
     notificationContentImage: {
-      margin: `${themeData["density.spacings.small"]} 0 ${themeData["density.spacings.small"]} ${themeData["density.spacings.small"]}`
+      margin: `${themeData["density.spacings.small"]} 0 ${themeData["density.spacings.small"]} ${themeData["density.spacings.small"]}`,
     },
     notificationContentText: {
       margin: `${themeData["density.spacings.small"]}`,
       wordWrap: `break-word`,
-      overflow: `hidden`
+      overflow: `hidden`,
     },
     panelTitle: {
       padding: `${themeData["density.spacings.small"]}
         ${themeData["density.spacings.large"]}`,
-      borderBottom: `1px solid ${themeData["divider.heavyColor"]}`
+      borderBottom: `1px solid ${themeData["divider.heavyColor"]}`,
     },
     panelContainer: {
       width: `300px`,
       overflowY: `auto`,
-      overflowX: `hidden`
+      overflowX: `hidden`,
     },
     panelLoading: {
       display: `flex`,
@@ -99,11 +99,11 @@ export default function stylesheet(props, themeData) {
       transitionDuration: `300ms`,
       transitionTimingFunction: `ease`,
       pointerEvents: `none`,
-      ...(isEntering ? { height: `44px`, opacity: 1 } : {})
+      ...(isEntering ? { height: `44px`, opacity: 1 } : {}),
     },
     indicator: {
       display: `flex`,
-      position: `relative`
+      position: `relative`,
     },
     indicatorCount: {
       position: `absolute`,
@@ -121,25 +121,25 @@ export default function stylesheet(props, themeData) {
       fontWeight: 400,
       fontFamily: themeData["notifications.fontFamily"],
       margin: 0,
-      ...(showCount ? { display: `block` } : { display: `none` })
+      ...(showCount ? { display: `block` } : { display: `none` }),
     },
     image: {
       height: `48px`,
       width: `48px`,
       overflow: `hidden`,
-      borderRadius: `4px`
+      borderRadius: `4px`,
     },
     emptyState: {
       display: `flex`,
       flexDirection: `column`,
-      alignItems: `center`
+      alignItems: `center`,
     },
     emptyStateImage: {
-      marginTop: `20px`
+      marginTop: `20px`,
     },
     emptyStateMessage: {
-      margin: `20px 0 37px`
-    }
+      margin: `20px 0 37px`,
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

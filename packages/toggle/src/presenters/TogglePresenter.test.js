@@ -7,8 +7,8 @@ function customStylesheet(styles) {
     ...styles,
     toggleWrapper: {
       ...styles.toggleWrapper,
-      borderColor: "blue"
-    }
+      borderColor: "blue",
+    },
   };
 }
 
@@ -16,16 +16,16 @@ describe("toggle/presenters/TogglePresenter", () => {
   [
     {
       description: "renders without props",
-      props: {}
+      props: {},
     },
     {
       description: "renders with all props",
       props: {
         on: true,
         defaultOn: true,
-        stylesheet: customStylesheet
-      }
-    }
+        stylesheet: customStylesheet,
+      },
+    },
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {
       const presenter = <TogglePresenter {...otherProps} />;

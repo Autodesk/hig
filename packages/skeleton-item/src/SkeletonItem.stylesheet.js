@@ -3,7 +3,7 @@ export default function stylesheet(props, themeData) {
     height,
     marginBottom,
     maxWidth,
-    stylesheet: customStylesheet
+    stylesheet: customStylesheet,
   } = props;
   const styles = {
     skeletonItem: {
@@ -22,20 +22,20 @@ export default function stylesheet(props, themeData) {
         left: 0,
         position: "absolute",
         top: 0,
-        width: "300px"
+        width: "300px",
       },
       "@keyframes shine": {
         from: {
-          transform: "translateX(-100%)"
+          transform: "translateX(-100%)",
         },
         "60%": {
-          transform: "translateX(100%)"
+          transform: "translateX(100%)",
         },
         to: {
-          transform: "translateX(100%)"
-        }
-      }
-    }
+          transform: "translateX(100%)",
+        },
+      },
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

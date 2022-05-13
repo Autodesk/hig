@@ -14,15 +14,15 @@ describe("tree-view/TreeObjectNestedSubTreeItem", () => {
         collapsed: false,
         active: false,
         expandByDoubleClick: true,
-        icon: <Report24 />
+        icon: <Report24 />,
       },
       payload: {
         getActiveTreeItemId: () => {},
         getKeyboardOpenId: () => {},
         setKeyboardOpenId: () => {},
         getCurrentItemClicked: () => {},
-        isControlled: () => {}
-      }
+        isControlled: () => {},
+      },
     };
 
     const wrapper = <TreeObjectView tree={sampleTreeNodeObject} />;

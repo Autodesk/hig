@@ -12,7 +12,7 @@ import NotificationsFlyoutLayout from "./NotificationsFlyoutLayout";
 const groups = {
   animation: "Animation",
   basic: "Basic",
-  i18n: "i18n"
+  i18n: "i18n",
 };
 
 const labels = {
@@ -23,7 +23,7 @@ const labels = {
   onClickOutside: "Outside clicked",
   onScroll: "List scrolled",
   open: "Flyout open",
-  unreadCount: "Unread count"
+  unreadCount: "Unread count",
 };
 
 const defaults = {
@@ -31,7 +31,7 @@ const defaults = {
   indicatorTitle: "View notifications",
   loading: false,
   open: undefined,
-  unreadCount: undefined
+  unreadCount: undefined,
 };
 
 export default function notificationsFlyoutDefault() {

@@ -3,5 +3,5 @@ import unresolvedRoles from "./unresolvedRoles";
 
 export default {
   metadata,
-  unresolvedRoles
+  unresolvedRoles,
 };

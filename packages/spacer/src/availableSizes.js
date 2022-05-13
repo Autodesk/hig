@@ -5,7 +5,7 @@ export const sizes = Object.freeze({
   m: "medium",
   l: "large",
   xl: "extraLarge",
-  xxl: "extraExtraLarge"
+  xxl: "extraExtraLarge",
 });
 
 export const AVAILABLE_SIZES = Object.freeze(Object.keys(sizes));

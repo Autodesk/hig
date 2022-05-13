@@ -18,13 +18,13 @@ const themes = [
   darkGrayHighTheme,
   darkGrayMediumTheme,
   darkBlueHighTheme,
-  darkBlueMediumTheme
+  darkBlueMediumTheme,
 ];
 
 function ThemeRepeater({ children }) {
   return (
     <div style={{ display: "block" }}>
-      {themes.map(theme => (
+      {themes.map((theme) => (
         <ThemeContext.Provider key={theme.metadata.id} value={theme}>
           <div>{children}</div>
         </ThemeContext.Provider>
@@ -42,7 +42,7 @@ function Surface({ children }) {
           marginBottom: resolvedRoles["density.spacings.large"],
           paddingBottom: "10px",
           paddingTop: "10px",
-          display: "flex"
+          display: "flex",
         };
 
         return <div style={style}>{children}</div>;
@@ -54,7 +54,7 @@ function Surface({ children }) {
 function NumericInputVariantRepeater() {
   return (
     <div style={{ display: "flex" }}>
-      {availableVariants.map(variant => (
+      {availableVariants.map((variant) => (
         <div key={variant}>
           <div style={{ paddingBottom: "10px" }}>
             <NumericInput variant={variant} disabled={false} />

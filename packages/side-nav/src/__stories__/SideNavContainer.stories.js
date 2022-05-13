@@ -13,7 +13,7 @@ storiesOf("GlobalNav|SideNav/containers", module)
     withInfo({
       ...infoOptions,
       inline: false,
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider],
     })(() => (
       <KnobbedThemeProvider>
         <div style={{ minHeight: "100vh" }}>
@@ -33,7 +33,7 @@ storiesOf("GlobalNav|SideNav/containers", module)
     withInfo({
       ...infoOptions,
       inline: false,
-      propTablesExclude: [KnobbedThemeProvider]
+      propTablesExclude: [KnobbedThemeProvider],
     })(() => (
       <KnobbedThemeProvider>
         <BelowTopNav

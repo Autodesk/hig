@@ -5,7 +5,7 @@ export default [
   {
     description: "default",
     getProps: () => ({
-      children: <Typography>Happy little clouds</Typography>
-    })
-  }
+      children: <Typography>Happy little clouds</Typography>,
+    }),
+  },
 ];

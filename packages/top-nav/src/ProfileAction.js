@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { offsetPanelHorizontal, offsetContainerVertical } from "@hig/flyout";
 import ProfileFlyout, {
   anchorPoints,
-  AVAILABLE_ANCHOR_POINTS
+  AVAILABLE_ANCHOR_POINTS,
 } from "@hig/profile-flyout";
 import { createCustomClassNames } from "@hig/utils";
 
@@ -12,7 +12,7 @@ import ProfileActionPresenter from "./presenters/ProfileActionPresenter";
 
 /** @typedef {import("@hig/flyout").Coordinates} Coordinates */
 
-const ProfileAction = props => {
+const ProfileAction = (props) => {
   const {
     alterCoordinates,
     anchorPoint,
@@ -73,7 +73,7 @@ ProfileAction.propTypes = {
   /** Callback when the flyout is opened */
   onClick: PropTypes.func,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 ProfileAction.defaultProps = {
@@ -85,7 +85,7 @@ ProfileAction.defaultProps = {
     return offsetPanelHorizontal(offsetContainerVertical(coordinates, 10), 6);
   },
   anchorPoint: anchorPoints.TOP_RIGHT,
-  fallbackAnchorPoints: []
+  fallbackAnchorPoints: [],
 };
 
 export default ProfileAction;

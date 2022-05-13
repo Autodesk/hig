@@ -15,7 +15,7 @@ export default function extendTheme(theme, extension) {
       if (!acc[key]) {
         acc[key] = extension[key];
       } else {
-        acc[key] = Object.assign({}, acc[key], extension[key]);
+        acc[key] = { ...acc[key], ...extension[key] };
       }
       return acc;
     },

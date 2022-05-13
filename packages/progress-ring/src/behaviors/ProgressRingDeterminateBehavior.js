@@ -4,7 +4,7 @@ import { CSSTransition } from "react-transition-group";
 
 const MAX_INCREASE_PER_MS = 1 / 1000;
 
-const ProgressRingDeterminateBehavior = props => {
+const ProgressRingDeterminateBehavior = (props) => {
   const [cssTransitionState, setCSSTransitionState] = useState(null);
   const [transitionEnter, setTransitionEnter] = useState(true);
   const containerRef = useRef(null);
@@ -22,7 +22,7 @@ const ProgressRingDeterminateBehavior = props => {
   };
 
   const enter = () => {
-    segments.forEach(segment => {
+    segments.forEach((segment) => {
       const eachSegment = segment;
       eachSegment.style.opacity = 0;
     });
@@ -33,7 +33,7 @@ const ProgressRingDeterminateBehavior = props => {
    * @todo The exit function is associated with the final state of the animation.
    */
   const exit = () => {
-    segments.forEach(segment => {
+    segments.forEach((segment) => {
       const eachSegment = segment;
       eachSegment.style.opacity = null;
     });
@@ -46,7 +46,7 @@ const ProgressRingDeterminateBehavior = props => {
     return Math.max(0, (param - fadeStartValue) / FADE_DELAY_FACTOR);
   };
 
-  const setSegmentOpacities = param => {
+  const setSegmentOpacities = (param) => {
     segments.forEach((segment, i) => {
       const index = Math.abs(i - SEGMENT_COUNT) - 1;
       const eachSegment = segment;
@@ -54,7 +54,7 @@ const ProgressRingDeterminateBehavior = props => {
     });
   };
 
-  const progressTowardTarget = timestamp => {
+  const progressTowardTarget = (timestamp) => {
     const elapsed = timestamp - prevTimestamp;
     let valueDiff;
 
@@ -81,7 +81,7 @@ const ProgressRingDeterminateBehavior = props => {
     window.requestAnimationFrame(step);
   };
 
-  const step = timestamp => {
+  const step = (timestamp) => {
     if (cssTransitionState === "entering" || cssTransitionState === "exiting") {
       wait();
       return;
@@ -104,7 +104,7 @@ const ProgressRingDeterminateBehavior = props => {
     progressTowardTarget(timestamp);
   };
 
-  const setProgress = percent => {
+  const setProgress = (percent) => {
     targetValue = percent / 100;
     if (!prevTimestamp) {
       prevTimestamp = window.performance.now();
@@ -145,7 +145,7 @@ const ProgressRingDeterminateBehavior = props => {
   /**
    * @param {HTMLDivElement} containerRef
    */
-  const refContainer = param => {
+  const refContainer = (param) => {
     containerRef.current = param;
   };
 
@@ -167,11 +167,11 @@ const ProgressRingDeterminateBehavior = props => {
       onExiting={handleExiting}
       onExited={handleExited}
     >
-      {status =>
+      {(status) =>
         props.children({
           innerRef: refContainer,
           percentComplete: props.percentComplete,
-          cssTransitionState: status
+          cssTransitionState: status,
         })
       }
     </CSSTransition>
@@ -186,7 +186,7 @@ ProgressRingDeterminateBehavior.propTypes = {
    */
   percentComplete: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /** Render prop */
-  children: PropTypes.func.isRequired
+  children: PropTypes.func.isRequired,
 };
 
 export default ProgressRingDeterminateBehavior;

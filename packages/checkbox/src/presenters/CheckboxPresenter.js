@@ -6,7 +6,7 @@ import { createCustomClassNames } from "@hig/utils";
 import CheckPresenter from "./CheckPresenter";
 import stylesheet from "./stylesheet";
 
-const CheckboxPresenter = props => {
+const CheckboxPresenter = (props) => {
   const {
     checkboxRef,
     checked,
@@ -32,7 +32,7 @@ const CheckboxPresenter = props => {
     "checkbox-input"
   );
 
-  const setIndeterminate = input => {
+  const setIndeterminate = (input) => {
     if (input) {
       // Workaround for https://github.com/facebook/react/issues/1798
       // eslint-disable-next-line no-param-reassign
@@ -55,7 +55,7 @@ const CheckboxPresenter = props => {
             hasHover,
             indeterminate,
             isPressed,
-            stylesheet: customStylesheet
+            stylesheet: customStylesheet,
           },
           resolvedRoles
         );
@@ -67,7 +67,7 @@ const CheckboxPresenter = props => {
               checked={checked}
               className={cx([
                 checkboxInputClassName,
-                css(styles.checkboxInput)
+                css(styles.checkboxInput),
               ])}
               disabled={disabled}
               onBlur={onBlur}
@@ -173,7 +173,7 @@ CheckboxPresenter.propTypes = {
   /**
    * Value submitted with a form if checked
    */
-  value: PropTypes.string
+  value: PropTypes.string,
 };
 
 CheckboxPresenter.defaultProps = {
@@ -181,7 +181,7 @@ CheckboxPresenter.defaultProps = {
   disabled: false,
   indeterminate: false,
   name: "checkbox",
-  value: "value"
+  value: "value",
 };
 
 export default CheckboxPresenter;

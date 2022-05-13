@@ -11,7 +11,7 @@ import stylesheet from "./presenters/stylesheet";
 import SpinnerBehavior from "./behaviors/SpinnerBehavior";
 import SpinnerPresenter from "./presenters/SpinnerPresenter";
 
-const NumericInput = props => {
+const NumericInput = (props) => {
   const {
     defaultValue,
     error,
@@ -31,7 +31,7 @@ const NumericInput = props => {
     onMouseLeave,
     onMouseUp,
     step,
-    value
+    value,
   } = otherProps;
 
   const inputClassName = createCustomClassNames(className, "numeric_input");
@@ -60,7 +60,7 @@ const NumericInput = props => {
         onMouseDown: handleMouseDown,
         onMouseEnter: handleMouseEnter,
         onMouseLeave: handleMouseLeave,
-        onMouseUp: handleMouseUp
+        onMouseUp: handleMouseUp,
       }) => (
         <SpinnerBehavior
           value={value}
@@ -79,12 +79,12 @@ const NumericInput = props => {
             mouseDownIncrement,
             clearTimer,
             mouseLeaveClearTimer,
-            setInputRef
+            setInputRef,
           }) => (
             <div
               className={cx([
                 css(stylesheet({}, {}).numericInputWrapper),
-                className
+                className,
               ])}
             >
               <SpinnerPresenter
@@ -164,11 +164,11 @@ NumericInput.propTypes = {
   /**
    * The visual variant of the numeric input
    */
-  variant: PropTypes.oneOf(availableVariants)
+  variant: PropTypes.oneOf(availableVariants),
 };
 
 NumericInput.defaultProps = {
-  variant: "line"
+  variant: "line",
 };
 
 export default NumericInput;

@@ -10,7 +10,7 @@ storiesOf("GlobalNav|SideNav/SideNavSkeleton", module).add(
   withInfo({
     ...infoOptions,
     propTables: [SideNavSkeleton],
-    propTablesExclude: [KnobbedThemeProvider]
+    propTablesExclude: [KnobbedThemeProvider],
   })(() => (
     <KnobbedThemeProvider>
       <SideNavSkeleton />

@@ -1,6 +1,6 @@
 export const roles = Object.freeze({
   OPTION: "option",
-  PRESENTATION: "presentation"
+  PRESENTATION: "presentation",
 });
 
 export const AVAILABLE_ROLES = Object.freeze(Object.values(roles));

@@ -5,8 +5,8 @@ export default [
       children: "This should render nicely.",
       variant: "body",
       fontWeight: "normal",
-      align: "left"
-    })
+      align: "left",
+    }),
   },
   {
     description: "with elementType prop",
@@ -15,7 +15,7 @@ export default [
       variant: "body",
       fontWeight: "normal",
       align: "left",
-      elementType: "address"
-    })
-  }
+      elementType: "address",
+    }),
+  },
 ];

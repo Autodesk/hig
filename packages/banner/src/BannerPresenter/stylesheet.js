@@ -18,12 +18,12 @@ export default function stylesheet(props, themeData) {
         borderColor:
           themeData[`banner.${vars.colorMapping[props.type]}.borderColor`],
         backgroundColor:
-          themeData[`banner.${vars.colorMapping[props.type]}.backgroundColor`]
-      })
+          themeData[`banner.${vars.colorMapping[props.type]}.backgroundColor`],
+      }),
     },
 
     bannerBackground: {
-      backgroundColor: themeData["colorScheme.surface.level100"]
+      backgroundColor: themeData["colorScheme.surface.level100"],
     },
 
     // .hig__banner__content
@@ -38,8 +38,8 @@ export default function stylesheet(props, themeData) {
 
       ...(!props.isWrappingContent && {
         flexDirection: "column",
-        alignItems: "flex-start"
-      })
+        alignItems: "flex-start",
+      }),
     },
 
     // .hig__banner__message
@@ -51,12 +51,12 @@ export default function stylesheet(props, themeData) {
       textAlign: "left",
 
       ...(props.hasActions && {
-        marginRight: vars.bannerContentSpacingMin
+        marginRight: vars.bannerContentSpacingMin,
       }),
 
       ...(props.isWrappingContent && {
-        marginRight: 0
-      })
+        marginRight: 0,
+      }),
     },
 
     // .hig__banner__dismiss-button
@@ -68,32 +68,32 @@ export default function stylesheet(props, themeData) {
       paddingRight: vars.bannerDismissPaddingRight,
 
       ...(props.hasActions && {
-        paddingRight: vars.bannerDismissPaddingRightInteractive
+        paddingRight: vars.bannerDismissPaddingRightInteractive,
       }),
 
       ...(props.isWrappingContent && {
         alignItems: "flex-start",
-        paddingTop: vars.bannerDismissPaddingTopWrapping
+        paddingTop: vars.bannerDismissPaddingTopWrapping,
       }),
 
       "& svg": {
-        cursor: "pointer"
+        cursor: "pointer",
       },
 
       "& svg *": {
-        fill: themeData["colorScheme.icon.default"]
+        fill: themeData["colorScheme.icon.default"],
       },
 
       "&:hover svg *": {
-        fill: themeData["colorScheme.reference.accent"]
-      }
+        fill: themeData["colorScheme.reference.accent"],
+      },
     },
 
     // .hig__banner__interactions-wrapper
     interactionsWrapper: {
       flexShrink: "0",
       paddingRight: vars.bannerActionSpacingX,
-      paddingBottom: vars.bannerInteractionsWrapperPaddingY
+      paddingBottom: vars.bannerInteractionsWrapperPaddingY,
     },
 
     // .hig__banner__icon-background
@@ -111,12 +111,12 @@ export default function stylesheet(props, themeData) {
         backgroundColor:
           themeData[
             `banner.${vars.colorMapping[props.type]}.iconField.backgroundColor`
-          ]
+          ],
       }),
       "svg *": {
-        fill: "white"
-      }
-    }
+        fill: "white",
+      },
+    },
   };
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
 }

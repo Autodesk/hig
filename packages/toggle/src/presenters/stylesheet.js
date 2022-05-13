@@ -1,7 +1,7 @@
 function getToggleFocusRules(themeData) {
   return {
     borderColor: themeData["toggle.off.focus.borderColor"],
-    boxShadow: `0 0 0 ${themeData["toggle.focus.haloWidth"]} ${themeData["toggle.focus.haloColor"]}`
+    boxShadow: `0 0 0 ${themeData["toggle.focus.haloWidth"]} ${themeData["toggle.focus.haloColor"]}`,
   };
 }
 
@@ -10,7 +10,7 @@ function getToggleHoverRules(themeData, on) {
     borderColor: on
       ? themeData[`toggle.on.default.borderColor`]
       : themeData["toggle.off.hover.borderColor"],
-    boxShadow: `0 0 0 ${themeData["toggle.hover.haloWidth"]} ${themeData["toggle.hover.haloColor"]}`
+    boxShadow: `0 0 0 ${themeData["toggle.hover.haloWidth"]} ${themeData["toggle.hover.haloColor"]}`,
   };
 }
 
@@ -19,7 +19,7 @@ function getTogglePressedRules(themeData, on) {
     borderColor: on
       ? themeData[`toggle.on.default.borderColor`]
       : themeData["toggle.off.pressed.borderColor"],
-    boxShadow: `0 0 0 ${themeData["toggle.pressed.haloWidth"]} ${themeData["toggle.pressed.haloColor"]}`
+    boxShadow: `0 0 0 ${themeData["toggle.pressed.haloWidth"]} ${themeData["toggle.pressed.haloColor"]}`,
   };
 }
 
@@ -56,12 +56,12 @@ export default function stylesheet(props, themeData) {
       width: themeData[`toggle.minWidth`],
       ...(hasFocus ? getToggleFocusRules(themeData) : {}),
       ...(hasHover ? getToggleHoverRules(themeData, on) : {}),
-      ...(isPressed ? getTogglePressedRules(themeData, on) : {})
+      ...(isPressed ? getTogglePressedRules(themeData, on) : {}),
     },
     toggleInput: {
       opacity: 0,
       width: `100%`,
-      height: `100%`
+      height: `100%`,
     },
     toggleKnob: {
       backgroundColor: on
@@ -76,7 +76,7 @@ export default function stylesheet(props, themeData) {
       pointerEvents: `none`,
       transform: on ? `translateX(${slidePx}px)` : `translateX(0)`,
       transition: `transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)`,
-      width: themeData[`toggle.thumb.minDiameter`]
-    }
+      width: themeData[`toggle.thumb.minDiameter`],
+    },
   };
 }

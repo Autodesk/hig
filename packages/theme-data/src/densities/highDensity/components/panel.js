@@ -1,5 +1,5 @@
 export default {
   "panel.header.minHeight": {
-    value: "24px"
-  }
+    value: "24px",
+  },
 };

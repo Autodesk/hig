@@ -6,7 +6,7 @@ export default function stylesheet(props) {
     boxSizing: "border-box",
     paddingLeft: "24px",
     paddingTop: "48px",
-    width: constants.sideNavMaxWidth
+    width: constants.sideNavMaxWidth,
   };
 
   if (customStylesheet) {

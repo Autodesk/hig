@@ -3,15 +3,15 @@ import React from "react";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import Modal from "./Modal";
 
-const customStylesheet = styles => ({
+const customStylesheet = (styles) => ({
   ...styles,
   modal: {
     ...styles.modal,
     wrapper: {
       ...styles.modal.wrapper,
-      color: "aliceblue"
-    }
-  }
+      color: "aliceblue",
+    },
+  },
 });
 
 describe("modal/Modal", () => {
@@ -22,8 +22,8 @@ describe("modal/Modal", () => {
         props: {
           body: "Hi",
           open: true,
-          title: "HIG Modal"
-        }
+          title: "HIG Modal",
+        },
       },
       {
         desc: "renders with styles customized",
@@ -31,8 +31,8 @@ describe("modal/Modal", () => {
           body: "Hi",
           open: true,
           title: "HIG Modal",
-          stylesheet: customStylesheet
-        }
+          stylesheet: customStylesheet,
+        },
       },
       {
         desc: "renders with a custom css class name",
@@ -40,9 +40,9 @@ describe("modal/Modal", () => {
           body: "Hi",
           open: true,
           title: "HIG Modal",
-          className: "custom-class"
-        }
-      }
+          className: "custom-class",
+        },
+      },
     ]);
   });
 

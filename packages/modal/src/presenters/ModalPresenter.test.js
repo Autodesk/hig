@@ -1,13 +1,13 @@
 import React from "react";
 import { generateId } from "@hig/utils";
-import { takeSnapshotsOf } from "../../../jest-preset/helpers";
+import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import ModalHeaderPresenter from "./ModalHeaderPresenter";
 
 describe("modal/presenters/ModalPresenter", () => {
   const styles = {
     backgroundColor: "aliceblue",
     header: {},
-    headerContent: {}
+    headerContent: {},
   };
 
   afterEach(() => {
@@ -17,7 +17,7 @@ describe("modal/presenters/ModalPresenter", () => {
   [
     {
       desc: "renders without props",
-      props: { styles }
+      props: { styles },
     },
     {
       desc: "renders with header children",
@@ -25,8 +25,8 @@ describe("modal/presenters/ModalPresenter", () => {
         children: [<p key="p">Body</p>],
         headerChildren: [<h1 key="h1">Title</h1>],
         onCloseClick: function onCloseClick() {},
-        styles
-      }
+        styles,
+      },
     },
     {
       desc: "renders with all props",
@@ -35,9 +35,9 @@ describe("modal/presenters/ModalPresenter", () => {
         onCloseClick: function onCloseClick() {},
         styles,
         title: "Title",
-        type: "alternate"
-      }
-    }
+        type: "alternate",
+      },
+    },
   ].forEach(({ desc, props }) => {
     takeSnapshotsOf(ModalHeaderPresenter, [{ desc, props }]);
   });

@@ -8,15 +8,15 @@ describe("top-nav/presenters/ProfileButtonPresenter", () => {
     {
       desc: "renders with avatarName",
       props: {
-        avatarName: "Wolfgang Pauli"
-      }
+        avatarName: "Wolfgang Pauli",
+      },
     },
     {
       desc: "renders with children and avatarName",
       props: {
         avatarName: "Hans Hellmann",
-        children: <div className="logo" />
-      }
+        children: <div className="logo" />,
+      },
     },
     {
       desc: "renders with all props",
@@ -24,8 +24,8 @@ describe("top-nav/presenters/ProfileButtonPresenter", () => {
         avatarName: "Richard Feynman",
         avatarImage: "richard_phillips_feynman.png",
         children: <div className="logo" />,
-        onClick: () => {}
-      }
-    }
+        onClick: () => {},
+      },
+    },
   ]);
 });

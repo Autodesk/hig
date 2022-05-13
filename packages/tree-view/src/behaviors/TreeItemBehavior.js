@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const TreeItemBehavior = props => {
+const TreeItemBehavior = (props) => {
   const [isCollapsed, setIsCollapsedHook] = useState(props.defaultCollapsed);
 
-  const setIsCollapsed = value => {
+  const setIsCollapsed = (value) => {
     setIsCollapsedHook(value);
   };
 
@@ -33,8 +33,8 @@ const TreeItemBehavior = props => {
         payload: {
           getTreeItemArray,
           setActiveTreeItemId,
-          setActiveTreeItemIndex
-        }
+          setActiveTreeItemIndex,
+        },
       } = props;
       // eslint-disable-next-line no-param-reassign
       const treeItemArray = getTreeItemArray();
@@ -47,7 +47,7 @@ const TreeItemBehavior = props => {
         id,
         getTreeItemArray,
         setActiveTreeItemId,
-        setActiveTreeItemIndex
+        setActiveTreeItemIndex,
       } = props;
 
       const treeItemArray = getTreeItemArray();
@@ -65,7 +65,7 @@ const TreeItemBehavior = props => {
     }
   };
 
-  const handleDoubleClick = event => {
+  const handleDoubleClick = (event) => {
     if (props.onDoubleClick) {
       props.onDoubleClick(event);
     }
@@ -80,7 +80,7 @@ const TreeItemBehavior = props => {
     handleClick,
     handleDoubleClick,
     handleOperatorClick,
-    setIsCollapsed
+    setIsCollapsed,
   });
 };
 
@@ -100,8 +100,8 @@ TreeItemBehavior.propTypes = {
   payload: PropTypes.shape({
     getTreeItemArray: PropTypes.func,
     setActiveTreeItemId: PropTypes.func,
-    setActiveTreeItemIndex: PropTypes.func
-  })
+    setActiveTreeItemIndex: PropTypes.func,
+  }),
 };
 
 export default TreeItemBehavior;

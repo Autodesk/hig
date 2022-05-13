@@ -2,7 +2,7 @@ jest.mock("./combineEventHandlers", () => jest.fn(() => Math.random()));
 
 const combineEventHandlers = require("./combineEventHandlers");
 const {
-  default: memoizeCombineEventHandlers
+  default: memoizeCombineEventHandlers,
 } = require("./memoizeCombineEventHandlers");
 
 describe("utils/memoizeCombineEventHandlers", () => {

@@ -11,7 +11,7 @@ const captureStyle = {
   width: "700px",
   height: "300px",
   alignItems: "center",
-  flexDirection: "column"
+  flexDirection: "column",
 };
 
 storiesOf("Tooltip", module).add("default", () => (

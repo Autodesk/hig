@@ -7,12 +7,12 @@ import {
   availableTypes,
   availableWidths,
   types,
-  widths
+  widths,
 } from "./constants";
 
 import ButtonPresenter from "./presenters/ButtonPresenter";
 
-const Button = props => {
+const Button = (props) => {
   const {
     disabled,
     icon,
@@ -51,7 +51,7 @@ const Button = props => {
         onMouseDown: handleMouseDown,
         onMouseEnter: handleMouseEnter,
         onMouseLeave: handleMouseLeave,
-        onMouseUp: handleMouseUp
+        onMouseUp: handleMouseUp,
       }) => (
         <ButtonPresenter
           disabled={disabled}
@@ -85,7 +85,7 @@ Button.displayName = "Button";
 Button.defaultProps = {
   disabled: false,
   type: types.SOLID,
-  width: widths.SHRINK
+  width: widths.SHRINK,
 };
 
 Button.propTypes = {
@@ -152,7 +152,7 @@ Button.propTypes = {
   /**
    * Specifies width of button
    */
-  width: PropTypes.oneOf(availableWidths)
+  width: PropTypes.oneOf(availableWidths),
 };
 
 export default Button;

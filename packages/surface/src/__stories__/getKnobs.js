@@ -4,11 +4,11 @@ import {
   AVAILABLE_LEVELS,
   AVAILABLE_SPACINGS,
   AVAILABLE_SHADOWS,
-  AVAILABLE_BORDER_RADII
+  AVAILABLE_BORDER_RADII,
 } from "../constants";
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
@@ -17,7 +17,7 @@ const knobLabels = {
   verticalPadding: "Vertical padding",
   shadow: "Shadow",
   borderRadius: "Border radius",
-  tagName: "Tag name"
+  tagName: "Tag name",
 };
 
 export default function getKnobs(props) {
@@ -48,6 +48,6 @@ export default function getKnobs(props) {
       "l",
       knobGroupIds.basic
     ),
-    tagName: text(knobLabels.tagName, "div", knobGroupIds.basic)
+    tagName: text(knobLabels.tagName, "div", knobGroupIds.basic),
   };
 }

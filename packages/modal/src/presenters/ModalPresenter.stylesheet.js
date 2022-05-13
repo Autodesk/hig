@@ -23,7 +23,7 @@ export default function stylesheet(props, themeData) {
         opacity: open ? 1.0 : 0,
         pointerEvents: open ? "visible" : "none",
         transition: "all ease 0.2s",
-        transitionDelay: open ? "0s" : "0.2s"
+        transitionDelay: open ? "0s" : "0.2s",
       },
 
       overlay: {
@@ -33,7 +33,7 @@ export default function stylesheet(props, themeData) {
         position: "fixed",
         right: 0,
         top: 0,
-        zIndex: MODAL_LAYER
+        zIndex: MODAL_LAYER,
       },
 
       window: {
@@ -54,7 +54,7 @@ export default function stylesheet(props, themeData) {
 
         animation: open ? "none" : `${WindowClosing} 0.4s`,
         transition: "all ease 0.2s",
-        transitionDelay: "0.2s"
+        transitionDelay: "0.2s",
       },
 
       header: {
@@ -69,8 +69,8 @@ export default function stylesheet(props, themeData) {
         zIndex: MODAL_HEADER_LAYER,
 
         ...(type === types.ALTERNATE && {
-          backgroundColor: themeData["modal.header.backgroundColor"]
-        })
+          backgroundColor: themeData["modal.header.backgroundColor"],
+        }),
       },
 
       headerContent: {
@@ -78,16 +78,16 @@ export default function stylesheet(props, themeData) {
         display: "flex",
         justifyContent: "space-between",
         "svg *": {
-          fill: themeData["modal.fontColor"]
+          fill: themeData["modal.fontColor"],
         },
         "&:hover, &:focus": {
           "svg *": {
-            fill: themeData["modal.fontColor"]
-          }
+            fill: themeData["modal.fontColor"],
+          },
         },
         ...(type === types.ALTERNATE && {
-          backgroundColor: themeData["modal.header.backgroundColor"]
-        })
+          backgroundColor: themeData["modal.header.backgroundColor"],
+        }),
       },
 
       body: {
@@ -96,7 +96,7 @@ export default function stylesheet(props, themeData) {
         flexDirection: "column",
         overflow: "hidden",
         position: "relative",
-        minHeight: themeData["modal.body.minHeight"]
+        minHeight: themeData["modal.body.minHeight"],
       },
 
       bodyContent: {
@@ -104,8 +104,8 @@ export default function stylesheet(props, themeData) {
         flex: "1 1 auto",
         overflowX: "auto",
         overflowY: "auto",
-        padding: themeData["modal.paddingHorizontal"]
-      }
-    }
+        padding: themeData["modal.paddingHorizontal"],
+      },
+    },
   };
 }

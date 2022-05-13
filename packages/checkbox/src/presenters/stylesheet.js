@@ -2,21 +2,21 @@ function getCheckboxRulesByFocus(themeData) {
   return {
     borderColor: themeData["checkbox.unchecked.focus.borderColor"],
     boxShadow: `0 0 0 ${themeData["checkbox.focus.haloWidth"]}
-      ${themeData["checkbox.focus.haloColor"]}`
+      ${themeData["checkbox.focus.haloColor"]}`,
   };
 }
 
 function getCheckboxRulesByHover(themeData) {
   return {
     borderColor: themeData["checkbox.unchecked.default.borderColor"],
-    boxShadow: `0 0 0 ${themeData["checkbox.hover.haloWidth"]} ${themeData["checkbox.hover.haloColor"]}`
+    boxShadow: `0 0 0 ${themeData["checkbox.hover.haloWidth"]} ${themeData["checkbox.hover.haloColor"]}`,
   };
 }
 
 function getCheckboxRulesByPressed(themeData) {
   return {
     borderColor: themeData["checkbox.unchecked.default.borderColor"],
-    boxShadow: `0 0 0 ${themeData["checkbox.pressed.haloWidth"]} ${themeData["checkbox.pressed.haloColor"]}`
+    boxShadow: `0 0 0 ${themeData["checkbox.pressed.haloWidth"]} ${themeData["checkbox.pressed.haloColor"]}`,
   };
 }
 
@@ -24,21 +24,21 @@ function getCheckboxRulesByDisabled(themeData) {
   return {
     opacity: themeData["colorScheme.opacity.disabled"],
     boxShadow: `none`,
-    pointerEvents: `none`
+    pointerEvents: `none`,
   };
 }
 
 function getCheckboxRulesByChecked(themeData) {
   return {
     border: `none`,
-    backgroundColor: themeData["checkbox.checked.default.backgroundColor"]
+    backgroundColor: themeData["checkbox.checked.default.backgroundColor"],
   };
 }
 
 function getCheckboxRulesByIndeterminate(themeData) {
   return {
     border: `none`,
-    backgroundColor: themeData["checkbox.checked.default.backgroundColor"]
+    backgroundColor: themeData["checkbox.checked.default.backgroundColor"],
   };
 }
 
@@ -50,7 +50,7 @@ export default function stylesheet(props, themeData) {
     hasHover,
     indeterminate,
     isPressed,
-    stylesheet: customStylesheet
+    stylesheet: customStylesheet,
   } = props;
 
   const styles = {
@@ -59,7 +59,7 @@ export default function stylesheet(props, themeData) {
       display: `inline-block`,
       position: `relative`,
       height: themeData["checkbox.minHeight"],
-      width: themeData["checkbox.minWidth"]
+      width: themeData["checkbox.minWidth"],
     },
     checkboxCheckWrapper: {
       position: `relative`,
@@ -88,15 +88,15 @@ export default function stylesheet(props, themeData) {
         transform: `translateX(-50%) translateY(-50%)`,
         pointerEvents: `none`,
         "*": {
-          fill: themeData["checkbox.indicatorColor"]
-        }
+          fill: themeData["checkbox.indicatorColor"],
+        },
       },
       ...(hasFocus ? getCheckboxRulesByFocus(themeData) : {}),
       ...(hasHover ? getCheckboxRulesByHover(themeData) : {}),
       ...(isPressed ? getCheckboxRulesByPressed(themeData) : {}),
       ...(disabled ? getCheckboxRulesByDisabled(themeData) : {}),
       ...(checked ? getCheckboxRulesByChecked(themeData) : {}),
-      ...(indeterminate ? getCheckboxRulesByIndeterminate(themeData) : {})
+      ...(indeterminate ? getCheckboxRulesByIndeterminate(themeData) : {}),
     },
     checkboxInput: {
       opacity: 0,
@@ -107,14 +107,14 @@ export default function stylesheet(props, themeData) {
       left: 0,
       zIndex: 1,
       padding: 0,
-      margin: 0
+      margin: 0,
     },
     checkboxCheck: {
-      display: checked && !indeterminate ? `block` : `none`
+      display: checked && !indeterminate ? `block` : `none`,
     },
     checkboxIndeterminate: {
-      display: indeterminate ? `block` : `none`
-    }
+      display: indeterminate ? `block` : `none`,
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props, themeData) : styles;

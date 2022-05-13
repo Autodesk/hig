@@ -5,14 +5,14 @@ import { sizes as iconSizes } from "@hig/icons";
 import ThemeContext from "@hig/theme-context";
 import {
   createCustomClassNames,
-  memoizeCreateButtonEventHandlers
+  memoizeCreateButtonEventHandlers,
 } from "@hig/utils";
 
 import { AVAILABLE_TARGETS, targets } from "../targets";
 import ExternalLinkIcon from "../presenters/ExternalLinkIcon";
 import stylesheet from "./stylesheet";
 
-const Submodule = props => {
+const Submodule = (props) => {
   const createEventHandlers = memoizeCreateButtonEventHandlers();
   const {
     link,
@@ -27,7 +27,7 @@ const Submodule = props => {
   const { className } = otherProps;
   const { handleClick, handleKeyDown } = createEventHandlers(onClick, {
     // Allow default on hyperlinks to trigger navigation
-    preventDefault: !link
+    preventDefault: !link,
   });
   const Wrapper = link ? "a" : "div";
   const isExternalLink = link && target === targets.BLANK;
@@ -49,7 +49,7 @@ const Submodule = props => {
                 resolvedRoles
               ).wrapper
             ),
-            className
+            className,
           ])}
           href={link}
           onClick={handleClick}
@@ -65,7 +65,7 @@ const Submodule = props => {
             <div
               className={cx([
                 css(stylesheet(props, resolvedRoles).externalIcon),
-                externalIconClassName
+                externalIconClassName,
               ])}
             >
               <ExternalLinkIcon
@@ -101,7 +101,7 @@ Submodule.propTypes = {
   /** Anchor target. Applicable only if link is provided */
   target: PropTypes.oneOf(AVAILABLE_TARGETS),
   /** Text to render */
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 export default Submodule;

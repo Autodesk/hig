@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const themes = [
   {
     name: "Light gray medium density",

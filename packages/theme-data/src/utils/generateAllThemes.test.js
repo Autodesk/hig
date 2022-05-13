@@ -5,54 +5,54 @@ const colorSchemes = [
     metadata: {
       colorSchemeName: "Red",
       colorSchemeId: "hig-red-scheme",
-      className: "my-red-scheme"
+      className: "my-red-scheme",
     },
     unresolvedRoles: {
       "basics.colors.red": { value: "#ff0000", metadata: { deprecated: true } },
-      "colorScheme.accentColor": { value: { ref: "basics.colors.red" } }
-    }
+      "colorScheme.accentColor": { value: { ref: "basics.colors.red" } },
+    },
   },
   {
     metadata: {
       colorSchemeName: "Blue",
       colorSchemeId: "hig-blue-scheme",
-      className: "my-blue-scheme"
+      className: "my-blue-scheme",
     },
     unresolvedRoles: {
       "basics.colors.blue": { value: "#0000ff" },
-      "colorScheme.accentColor": { value: { ref: "basics.colors.blue" } }
-    }
-  }
+      "colorScheme.accentColor": { value: { ref: "basics.colors.blue" } },
+    },
+  },
 ];
 
 const densities = [
   {
     metadata: {
       densityId: "high-density",
-      densityName: "High density"
+      densityName: "High density",
     },
     unresolvedRoles: {
       "density.textSize": {
         value: "10px",
         metadata: {
           deprecated: {
-            equivalent: "density.base.textSize"
-          }
-        }
-      }
-    }
+            equivalent: "density.base.textSize",
+          },
+        },
+      },
+    },
   },
   {
     metadata: {
       densityId: "low-density",
-      densityName: "Low density"
+      densityName: "Low density",
     },
     unresolvedRoles: {
       "density.textSize": {
-        value: "16px"
-      }
-    }
-  }
+        value: "16px",
+      },
+    },
+  },
 ];
 
 describe("generateAllThemes", () => {
@@ -86,9 +86,9 @@ describe("generateAllThemes", () => {
           "__deprecated__",
           {
             "basics.colors.red": true,
-            "density.textSize": { equivalent: "density.base.textSize" }
-          }
-        ]
+            "density.textSize": { equivalent: "density.base.textSize" },
+          },
+        ],
       ].forEach(([property, value]) => {
         it(`includes ${property}`, () => {
           expect(redHighDensityTheme.metadata).toHaveProperty(property, value);

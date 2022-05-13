@@ -7,7 +7,7 @@ import TreeViewPresenter from "./presenters/TreeViewPresenter";
 
 import { AVAILABLE_INDICATORS, indicators } from "./constants";
 
-const TreeView = props => {
+const TreeView = (props) => {
   const {
     children,
     defaultSelected,
@@ -41,7 +41,7 @@ const TreeView = props => {
         setTreeItemArray,
         handleKeyDown,
         setTreeViewRef,
-        treeViewRef
+        treeViewRef,
       }) => (
         <TreeViewPresenter
           {...otherProps}
@@ -131,14 +131,14 @@ TreeView.propTypes = {
         collapsed: PropTypes.bool,
         expandByDoubleClick: PropTypes.bool,
         icon: PropTypes.node,
-        label: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
-      })
+        label: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+      }),
     })
-  )
+  ),
 };
 
 TreeView.defaultProps = {
-  indicator: indicators.CARET
+  indicator: indicators.CARET,
 };
 
 export default TreeView;

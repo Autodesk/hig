@@ -54,5 +54,5 @@ NotificationsToastList.propTypes = {
   /**
    * Function to modify the component's styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

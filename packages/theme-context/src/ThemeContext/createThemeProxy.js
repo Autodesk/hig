@@ -34,7 +34,7 @@ function resolvedRolesProxy(roles, theme) {
       }
 
       return obj[prop];
-    }
+    },
   });
 }
 
@@ -56,7 +56,7 @@ function createThemeProxy(theme) {
         return createThemeProxy(value);
 
       return value;
-    }
+    },
   });
 }
 

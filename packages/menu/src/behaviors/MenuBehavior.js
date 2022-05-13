@@ -49,7 +49,7 @@ function checkScroll(optionId, menu) {
   scrollInListbox(option, menu);
 }
 
-const MenuBehavior = props => {
+const MenuBehavior = (props) => {
   const isControlled = () => props.selected !== undefined;
   const [activeOptionHook, setActiveOptionHook] = useState(
     isControlled() ? props.selected : props.defaultSelected
@@ -59,20 +59,20 @@ const MenuBehavior = props => {
   const [previousEventHook, setPreviousEventHook] = useState(null);
   const menuRef = useRef(null);
 
-  const setMenuRef = element => {
+  const setMenuRef = (element) => {
     if (props.menuRef) {
       props.menuRef(element);
     }
     menuRef.current = element;
   };
 
-  const setOptionsInfo = optionInfo => {
+  const setOptionsInfo = (optionInfo) => {
     setOptionInfoHook(optionInfo);
   };
 
   const getOptionsInfo = () => optionInfoHook;
 
-  const setActiveOption = activeOption => {
+  const setActiveOption = (activeOption) => {
     const { onChange, unselect } = props;
     if (onChange) {
       if (unselect) {
@@ -97,7 +97,7 @@ const MenuBehavior = props => {
 
   const getActiveOption = () => activeOptionHook;
 
-  const setHighlightIndex = highlightIndex => {
+  const setHighlightIndex = (highlightIndex) => {
     setHighlightIndexHook(highlightIndex);
   };
 
@@ -105,14 +105,14 @@ const MenuBehavior = props => {
 
   const getPreviousEvent = () => previousEventHook;
 
-  const setPreviousEvent = previousEvent => {
+  const setPreviousEvent = (previousEvent) => {
     setPreviousEventHook(previousEvent);
   };
 
   // eslint-disable-next-line no-unused-vars
   const getTotalOptions = () => Object.keys(optionInfoHook).length;
 
-  const handleFocus = event => {
+  const handleFocus = (event) => {
     if (props.onFocus) {
       props.onFocus(event);
     }
@@ -120,7 +120,7 @@ const MenuBehavior = props => {
     event.stopPropagation();
   };
 
-  const handleBlur = event => {
+  const handleBlur = (event) => {
     if (props.onBlur) {
       props.onBlur(event);
     }
@@ -129,7 +129,7 @@ const MenuBehavior = props => {
     setHighlightIndex(0);
   };
 
-  const handleKeyDown = event => {
+  const handleKeyDown = (event) => {
     const { multiple, onKeyDown } = props;
     const options = optionInfoHook;
     const highlightableIndexes = [];
@@ -138,7 +138,7 @@ const MenuBehavior = props => {
       onKeyDown(event);
     }
 
-    Object.keys(options).forEach(index => {
+    Object.keys(options).forEach((index) => {
       if (!options[index].disabled && options[index].role !== `presentation`) {
         highlightableIndexes.push(Number(index) + 1);
       }
@@ -217,7 +217,7 @@ const MenuBehavior = props => {
     }
   };
 
-  const handleMouseMove = event => {
+  const handleMouseMove = (event) => {
     // don't let this bubble up from Menu to MenuGroup
     event.stopPropagation();
 
@@ -274,7 +274,7 @@ const MenuBehavior = props => {
     setHighlightIndex: setHighlightIndexMethod,
     setMenuRef,
     setOptionsInfo: setOptionsInfoMethod,
-    setPreviousEvent: setPreviousEventMethod
+    setPreviousEvent: setPreviousEventMethod,
   });
 };
 
@@ -282,6 +282,7 @@ MenuBehavior.displayName = "MenuBehavior";
 
 MenuBehavior.propTypes = {
   children: PropTypes.func,
+  // eslint-disable-next-line react/forbid-prop-types
   defaultSelected: PropTypes.arrayOf(PropTypes.any),
   getActiveOption: PropTypes.func,
   getHighlightIndex: PropTypes.func,
@@ -297,16 +298,17 @@ MenuBehavior.propTypes = {
   onChange: PropTypes.func,
   onFocus: PropTypes.func,
   onKeyDown: PropTypes.func,
+  // eslint-disable-next-line react/forbid-prop-types
   selected: PropTypes.arrayOf(PropTypes.any),
   setActiveOption: PropTypes.func,
   setHighlightIndex: PropTypes.func,
   setOptionsInfo: PropTypes.func,
   setPreviousEvent: PropTypes.func,
-  unselect: PropTypes.bool
+  unselect: PropTypes.bool,
 };
 
 MenuBehavior.defaultProps = {
-  defaultSelected: []
+  defaultSelected: [],
 };
 
 export default MenuBehavior;

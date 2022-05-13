@@ -41,7 +41,7 @@ export {
   ActionPresenter as Action,
   LogoPresenter as Logo,
   LogoTextPresenter as LogoText,
-  SeparatorPresenter as Separator
+  SeparatorPresenter as Separator,
 };
 
 export default TopNavPresenter;

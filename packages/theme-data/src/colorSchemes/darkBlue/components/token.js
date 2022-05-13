@@ -4,6 +4,6 @@ export default {
   "token.pressed.backgroundColor": { transform: { alpha: 0.3 } },
   "token.closeButton.iconColor": {
     value: { ref: "basics.colors.secondary.darkBlue.200" },
-    transform: { alpha: 0.9 }
-  }
+    transform: { alpha: 0.9 },
+  },
 };

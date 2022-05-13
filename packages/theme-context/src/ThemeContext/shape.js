@@ -16,10 +16,10 @@ export default {
     /** Data describing density level of the theme */
     density: PropTypes.string.isRequired,
     /** A human-readable label for the theme's density */
-    densityName: PropTypes.string.isRequired
+    densityName: PropTypes.string.isRequired,
   }),
   /** Data describing presentation of the theme */
   resolvedRoles: PropTypes.object.isRequired,
   /** Data describing configuration of the theme */
-  unresolvedRoles: PropTypes.object.isRequired
+  unresolvedRoles: PropTypes.object.isRequired,
 };

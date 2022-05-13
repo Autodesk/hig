@@ -1,13 +1,13 @@
 import { text } from "@storybook/addon-knobs/react";
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
   marginBottom: "Margin Bottom",
   maxWidth: "Max Width",
-  height: "Height"
+  height: "Height",
 };
 
 export default function getKnobs(props) {
@@ -21,6 +21,6 @@ export default function getKnobs(props) {
       knobGroupIds.basic
     ),
     maxWidth: text(knobLabels.maxWidth, maxWidth, knobGroupIds.basic),
-    height: text(knobLabels.height, height, knobGroupIds.basic)
+    height: text(knobLabels.height, height, knobGroupIds.basic),
   };
 }

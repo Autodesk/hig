@@ -7,7 +7,7 @@ import { availableSequences } from "./constants";
 import stylesheet from "./stylesheet";
 
 const pluralize = (word, count) => (count === 1 ? word : `${word}s`);
-const Timestamp = props => {
+const Timestamp = (props) => {
   const getTimestampSequence = (distance, ellapsedDescriptor) => {
     const { timeDescriptors, timestampSequence, wordSpace } = props;
     let userTimestamp;
@@ -147,7 +147,7 @@ Timestamp.propTypes = {
     week: PropTypes.string,
     month: PropTypes.string,
     year: PropTypes.string,
-    ago: PropTypes.string
+    ago: PropTypes.string,
   }),
   /**
    * ISO date string
@@ -161,7 +161,7 @@ Timestamp.propTypes = {
   /**
    * If you want a space between words
    */
-  wordSpace: PropTypes.bool
+  wordSpace: PropTypes.bool,
 };
 
 Timestamp.defaultProps = {
@@ -174,10 +174,10 @@ Timestamp.defaultProps = {
     week: "week",
     month: "month",
     year: "year",
-    ago: "ago"
+    ago: "ago",
   },
   timestampSequence: availableSequences.ABC,
-  wordSpace: true
+  wordSpace: true,
 };
 
 export default Timestamp;

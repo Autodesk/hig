@@ -7,7 +7,7 @@ import { createCustomClassNames } from "@hig/utils";
 import ButtonPresenter from "./ButtonPresenter";
 import stylesheet from "./stylesheet";
 
-const RadioButtonPresenter = props => {
+const RadioButtonPresenter = (props) => {
   const {
     disabled,
     hasFocus,
@@ -27,7 +27,7 @@ const RadioButtonPresenter = props => {
             hasHover,
             disabled,
             stylesheet: customStylesheet,
-            ...props
+            ...props,
           },
           resolvedRoles
         );
@@ -102,7 +102,7 @@ RadioButtonPresenter.propTypes = {
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default RadioButtonPresenter;

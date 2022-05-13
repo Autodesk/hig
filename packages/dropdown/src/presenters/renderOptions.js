@@ -15,7 +15,7 @@ import OptionPresenter from "./OptionPresenter";
 function createSelectedDeterminer(downshift) {
   const { multiple, selectedItem, selectedItems } = downshift;
 
-  return option =>
+  return (option) =>
     multiple ? selectedItems.includes(option) : option === selectedItem;
 }
 
@@ -37,7 +37,7 @@ function createOptionRenderer(downshift, renderOption, otherProps) {
       disabled: option && option.disabled ? option.disabled : false,
       selected:
         option && option.item ? isSelected(option.item) : isSelected(option),
-      highlighted: highlightedIndex === index
+      highlighted: highlightedIndex === index,
     });
     let result;
     if (option && option.render !== undefined) {
@@ -64,8 +64,8 @@ function createOptionRenderer(downshift, renderOption, otherProps) {
  */
 export default function renderOptions(props) {
   const {
-    formatOption = option => String(option),
-    getItemProps = itemProps => itemProps,
+    formatOption = (option) => String(option),
+    getItemProps = (itemProps) => itemProps,
     highlightedIndex,
     multiple = false,
     options = [],
@@ -80,7 +80,7 @@ export default function renderOptions(props) {
     highlightedIndex,
     multiple,
     selectedItem,
-    selectedItems
+    selectedItems,
   };
 
   const optionRenderer = createOptionRenderer(

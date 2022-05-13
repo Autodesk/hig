@@ -3,7 +3,7 @@ import { mount } from "enzyme";
 import {
   behavesLikeFocusBehavior,
   behavesLikeHoverBehavior,
-  composesLikeControlBehavior
+  composesLikeControlBehavior,
 } from "@hig/behaviors/test";
 
 import Input from "./Input";
@@ -12,7 +12,7 @@ import InputHaloPresenter from "./presenters/InputHaloPresenter";
 
 let inputRef;
 
-const setInputRef = element => {
+const setInputRef = (element) => {
   inputRef = element;
 };
 
@@ -21,7 +21,7 @@ describe("Input", () => {
   behavesLikeHoverBehavior(<Input />);
   composesLikeControlBehavior({
     Subject: Input,
-    Receiver: InputPresenter
+    Receiver: InputPresenter,
   });
 
   describe("rendering variants", () => {

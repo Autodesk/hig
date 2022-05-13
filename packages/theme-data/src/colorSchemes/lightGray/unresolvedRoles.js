@@ -4,13 +4,9 @@ import baseTheme from "../../baseTheme";
 import mediumDensityTheme from "../../densities/mediumDensity";
 import system from "./system";
 
-const lightGrayThemeConfig = extendTheme(
-  baseTheme.unresolvedRoles,
-  Object.assign(
-    {},
-    mediumDensityTheme.unresolvedRoles,
-    mapKeys(system.colorScheme, key => `colorScheme.${key}`)
-  )
-);
+const lightGrayThemeConfig = extendTheme(baseTheme.unresolvedRoles, {
+  ...mediumDensityTheme.unresolvedRoles,
+  ...mapKeys(system.colorScheme, (key) => `colorScheme.${key}`),
+});
 
 export default lightGrayThemeConfig;

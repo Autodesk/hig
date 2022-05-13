@@ -7,7 +7,7 @@ import ActionPresenter from "./presenters/ActionPresenter";
 
 /** @typedef {import("@hig/flyout").Coordinates} Coordinates */
 
-const NotificationsAction = props => {
+const NotificationsAction = (props) => {
   const { children, ...otherProps } = props;
   const { className, stylesheet } = otherProps;
   const topNavNotificationsFlyoutClassName = createCustomClassNames(
@@ -41,7 +41,7 @@ NotificationsAction.defaultProps = {
     return offsetPanelHorizontal(offsetContainerVertical(coordinates, 8), 93);
   },
   anchorPoint: anchorPoints.TOP_RIGHT,
-  fallbackAnchorPoints: []
+  fallbackAnchorPoints: [],
 };
 
 export default NotificationsAction;

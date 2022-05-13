@@ -11,7 +11,7 @@ export default function renderStory(props) {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: "5px"
+    marginBottom: "5px",
   };
 
   return (

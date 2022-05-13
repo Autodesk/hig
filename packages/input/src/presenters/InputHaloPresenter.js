@@ -7,7 +7,7 @@ import { ThemeContext } from "@hig/theme-context";
 import stylesheet from "./InputHaloPresenter.stylesheet";
 import { availableVariants } from "../constants";
 
-const InputHaloPresenter = props => {
+const InputHaloPresenter = (props) => {
   const {
     children,
     error,
@@ -65,7 +65,7 @@ InputHaloPresenter.propTypes = {
   isDisabled: PropTypes.bool,
   stylesheet: PropTypes.func,
   variant: PropTypes.oneOf(availableVariants),
-  error: PropTypes.bool
+  error: PropTypes.bool,
 };
 
 export default InputHaloPresenter;

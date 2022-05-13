@@ -3,8 +3,8 @@ import { storiesOf } from "@storybook/react";
 import { Settings24 } from "@hig/icons";
 import Button, { availableTypes, availableWidths } from "../index";
 
-const buttonVariations = props =>
-  availableTypes.map(type =>
+const buttonVariations = (props) =>
+  availableTypes.map((type) =>
     availableWidths.map((width, index) => {
       const identifier = `${type} ${width}`;
 

@@ -5,176 +5,176 @@ import {
   FONT_SIZE,
   FONT_WEIGHT,
   LENGTH,
-  SPACING
+  SPACING,
 } from "../../consts/types";
 
 export default {
   "segmentedButton.borderRadius": {
     value: {
-      ref: "button.borderRadius"
+      ref: "button.borderRadius",
     },
-    type: BORDER_RADIUS
+    type: BORDER_RADIUS,
   },
   "segmentedButton.borderWidth": {
     value: {
-      ref: "button.borderWidth"
+      ref: "button.borderWidth",
     },
-    type: BORDER_WIDTH
+    type: BORDER_WIDTH,
   },
   "segmentedButton.gutterWidth": {
     value: {
-      ref: "button.gutterWidth"
+      ref: "button.gutterWidth",
     },
-    type: LENGTH
+    type: LENGTH,
   },
   "segmentedButton.minWidth": {
     value: {
-      ref: "button.minWidth"
+      ref: "button.minWidth",
     },
-    type: LENGTH
+    type: LENGTH,
   },
   "segmentedButton.paddingHorizontal": {
     value: {
-      ref: "button.paddingHorizontal"
+      ref: "button.paddingHorizontal",
     },
-    type: SPACING
+    type: SPACING,
   },
   "segmentedButton.paddingVertical": {
     value: {
-      ref: "button.paddingVertical"
+      ref: "button.paddingVertical",
     },
-    type: SPACING
+    type: SPACING,
   },
   "segmentedButton.default.backgroundColor": {
     value: {
-      ref: "button.outline.default.backgroundColor"
+      ref: "button.outline.default.backgroundColor",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.hover.backgroundColor": {
     value: {
-      ref: "button.outline.hover.backgroundColor"
+      ref: "button.outline.hover.backgroundColor",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.focus.backgroundColor": {
     value: {
-      ref: "button.outline.focus.backgroundColor"
+      ref: "button.outline.focus.backgroundColor",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.pressed.backgroundColor": {
     value: {
-      ref: "button.outline.pressed.backgroundColor"
+      ref: "button.outline.pressed.backgroundColor",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.default.borderColor": {
     value: {
-      ref: "button.outline.default.borderColor"
+      ref: "button.outline.default.borderColor",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.hover.borderColor": {
     value: {
-      ref: "button.outline.hover.borderColor"
+      ref: "button.outline.hover.borderColor",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.focus.borderColor": {
     value: {
-      ref: "button.outline.focus.borderColor"
+      ref: "button.outline.focus.borderColor",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.pressed.borderColor": {
     value: {
-      ref: "button.outline.pressed.borderColor"
+      ref: "button.outline.pressed.borderColor",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.hover.haloWidth": {
     value: {
-      ref: "button.hover.haloWidth"
+      ref: "button.hover.haloWidth",
     },
-    type: BORDER_WIDTH
+    type: BORDER_WIDTH,
   },
   "segmentedButton.focus.haloWidth": {
     value: {
-      ref: "button.haloWidth"
+      ref: "button.haloWidth",
     },
-    type: BORDER_WIDTH
+    type: BORDER_WIDTH,
   },
   "segmentedButton.pressed.haloWidth": {
     value: {
-      ref: "button.pressed.haloWidth"
+      ref: "button.pressed.haloWidth",
     },
-    type: BORDER_WIDTH
+    type: BORDER_WIDTH,
   },
   "segmentedButton.hover.haloColor": {
     value: {
-      ref: "button.hover.haloColor"
+      ref: "button.hover.haloColor",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.focus.haloColor": {
     value: {
-      ref: "button.focus.haloColor"
+      ref: "button.focus.haloColor",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.pressed.haloColor": {
     value: {
-      ref: "button.pressed.haloColor"
+      ref: "button.pressed.haloColor",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.default.iconColor": {
     value: {
-      ref: "button.outline.iconColor"
+      ref: "button.outline.iconColor",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.active.iconColor": {
     value: {
-      ref: "colorScheme.surface.level250"
+      ref: "colorScheme.surface.level250",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.active.backgroundColor": {
     value: {
-      ref: "colorScheme.reference.base"
+      ref: "colorScheme.reference.base",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.label.fontSize": {
     value: {
-      ref: "button.label.fontSize"
+      ref: "button.label.fontSize",
     },
-    type: FONT_SIZE
+    type: FONT_SIZE,
   },
   "segmentedButton.label.default.fontColor": {
     value: {
-      ref: "button.outline.label.fontColor"
+      ref: "button.outline.label.fontColor",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.label.default.fontWeight": {
     value: {
-      ref: "button.label.fontWeight"
+      ref: "button.label.fontWeight",
     },
-    type: FONT_WEIGHT
+    type: FONT_WEIGHT,
   },
   "segmentedButton.label.active.fontColor": {
     value: {
-      ref: "basics.colors.text.againstDark"
+      ref: "basics.colors.text.againstDark",
     },
-    type: COLOR
+    type: COLOR,
   },
   "segmentedButton.label.active.fontWeight": {
     value: {
-      ref: "basics.fontWeights.bold"
+      ref: "basics.fontWeights.bold",
     },
-    type: FONT_WEIGHT
-  }
+    type: FONT_WEIGHT,
+  },
 };

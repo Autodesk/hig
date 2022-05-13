@@ -17,16 +17,16 @@ export default function stylesheet(props, themeData) {
       color: themeData["typography.body.color"],
 
       "&:first-of-type": {
-        marginTop: themeData["density.spacings.extraSmall"]
+        marginTop: themeData["density.spacings.extraSmall"],
       },
 
       "&:last-of-type": {
-        marginBottom: themeData["density.spacings.medium"]
+        marginBottom: themeData["density.spacings.medium"],
       },
 
       "&:focus, &:hover": {
         outline: "none",
-        color: themeData["colorScheme.reference.accent"]
+        color: themeData["colorScheme.reference.accent"],
       },
 
       externalIcon: {
@@ -36,14 +36,14 @@ export default function stylesheet(props, themeData) {
         padding: "6px 10px",
 
         "& svg": {
-          fill: themeData["typography.body.color"]
+          fill: themeData["typography.body.color"],
         },
 
         "&:hover svg *": {
-          fill: themeData["colorScheme.reference.accent"]
-        }
-      }
-    }
+          fill: themeData["colorScheme.reference.accent"],
+        },
+      },
+    },
   };
 
   if (customStylesheet) {

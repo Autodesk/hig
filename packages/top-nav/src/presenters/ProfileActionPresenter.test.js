@@ -7,8 +7,8 @@ describe("top-nav/presenters/ProfileActionPresenter", () => {
     {
       desc: "renders with children",
       props: {
-        children: "Peter Parker"
-      }
-    }
+        children: "Peter Parker",
+      },
+    },
   ]);
 });

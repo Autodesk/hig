@@ -11,29 +11,29 @@ const FONT_SIZES = {
   M: "density.fontSizes.medium",
   L: "density.fontSizes.large",
   XL: "density.fontSizes.extraLarge",
-  XXL: "density.fontSizes.extraExtraLarge"
+  XXL: "density.fontSizes.extraExtraLarge",
 };
 
 const FONT_WEIGHTS = {
   REGULAR: "basics.fontWeights.regular",
   MEDIUM: "basics.fontWeights.medium",
-  BOLD: "basics.fontWeights.bold"
+  BOLD: "basics.fontWeights.bold",
 };
 
 const FONT_FAMILIES = {
   MAIN: "basics.fontFamilies.main",
-  MONOSPACE: "basics.fontFamilies.monospace"
+  MONOSPACE: "basics.fontFamilies.monospace",
 };
 
 const LINE_HEIGHTS = {
   S: "basics.lineHeights.small",
   M: "basics.lineHeights.medium",
-  L: "basics.lineHeights.large"
+  L: "basics.lineHeights.large",
 };
 
 const LAYOUTS = {
   BLOCK: "block",
-  INLINE: "inline"
+  INLINE: "inline",
 };
 
 const DEFAULT_TEXT_COLOR = "DEFAULT_TEXT_COLOR";
@@ -45,7 +45,7 @@ function Text({
   color,
   fontFamily,
   lineHeight,
-  layout
+  layout,
 }) {
   return (
     <ThemeContext.Consumer>
@@ -60,7 +60,7 @@ function Text({
                 : color,
             fontFamily,
             lineHeight,
-            layout
+            layout,
           },
           resolvedRoles
         );
@@ -78,7 +78,7 @@ Text.propTypes = {
   fontFamily: PropTypes.oneOf(Object.values(FONT_FAMILIES)),
   fontWeight: PropTypes.oneOf(Object.values(FONT_WEIGHTS)),
   layout: PropTypes.oneOf(Object.values(LAYOUTS)),
-  lineHeight: PropTypes.oneOf(Object.values(LINE_HEIGHTS))
+  lineHeight: PropTypes.oneOf(Object.values(LINE_HEIGHTS)),
 };
 
 Text.FONT_SIZES = FONT_SIZES;

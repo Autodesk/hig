@@ -15,7 +15,7 @@ stories.forEach(({ description, getProps }) => {
     description,
     withInfo({
       ...infoOptions,
-      propTablesExclude: [Button, KnobbedThemeProvider]
+      propTablesExclude: [Button, KnobbedThemeProvider],
     })(() => {
       const props = getProps();
       return renderStory(props);

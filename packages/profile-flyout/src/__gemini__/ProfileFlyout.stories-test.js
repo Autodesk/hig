@@ -13,7 +13,7 @@ function Wrapper({ children }) {
         width: "400px",
         height: "400px",
         alignItems: "center",
-        flexDirection: "column"
+        flexDirection: "column",
       }}
     >
       {children}

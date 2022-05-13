@@ -16,7 +16,7 @@ import stylesheet from "./stylesheet";
  */
 export default function BannerAction({
   children,
-  stylesheet: customStylesheet
+  stylesheet: customStylesheet,
 }) {
   return (
     <ThemeContext.Consumer>
@@ -35,5 +35,5 @@ export default function BannerAction({
 
 BannerAction.propTypes = {
   children: PropTypes.node,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

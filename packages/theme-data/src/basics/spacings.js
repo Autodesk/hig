@@ -25,5 +25,5 @@ export default {
   lowMedium: { value: "24px", type: SPACING },
   lowLarge: { value: "32px", type: SPACING },
   lowExtraLarge: { value: "48px", type: SPACING },
-  lowExtraExtraLarge: { value: "64px", type: SPACING }
+  lowExtraExtraLarge: { value: "64px", type: SPACING },
 };

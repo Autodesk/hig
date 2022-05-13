@@ -6,35 +6,35 @@ describe("surface/Surface", () => {
   takeSnapshotsOf(Surface, [
     {
       desc: "renders with no props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with level",
-      props: { level: 200 }
+      props: { level: 200 },
     },
     {
       desc: "renders with horizontalPadding",
-      props: { horizontalPadding: "s" }
+      props: { horizontalPadding: "s" },
     },
     {
       desc: "renders with horizontalPadding",
-      props: { verticalPadding: "s" }
+      props: { verticalPadding: "s" },
     },
     {
       desc: "renders with shadow",
-      props: { shadow: "high" }
+      props: { shadow: "high" },
     },
     {
       desc: "renders with borderRadius",
-      props: { borderRadius: "s" }
+      props: { borderRadius: "s" },
     },
     {
       desc: "renders with tagName",
-      props: { tagName: "span" }
+      props: { tagName: "span" },
     },
     {
       desc: "renders with custom className",
-      props: { className: "test-classname" }
-    }
+      props: { className: "test-classname" },
+    },
   ]);
 });

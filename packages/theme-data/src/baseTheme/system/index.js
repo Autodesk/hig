@@ -3,5 +3,5 @@ import colorScheme from "./colorScheme";
 
 export default {
   density,
-  colorScheme
+  colorScheme,
 };

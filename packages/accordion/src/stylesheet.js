@@ -7,7 +7,7 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
     indicatorPosition,
     collapsed,
     disabled,
-    stylesheet: customStylesheet
+    stylesheet: customStylesheet,
   } = props;
 
   const transitionDuration = "0.3s";
@@ -18,12 +18,12 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
       width: "auto",
       display: "flex",
       flexDirection: "column",
-      alignItems: "stretch"
+      alignItems: "stretch",
     },
     contentTransitionWrapper: {
       transitionProperty: "height",
       transitionDuration: ".3s",
-      transitionTimingFunction: "ease-in-out"
+      transitionTimingFunction: "ease-in-out",
     },
     header: {
       display: "flex",
@@ -34,7 +34,7 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
       padding: `${themeData["accordion.header.paddingVertical"]} ${themeData["accordion.header.paddingHorizontal"]}`,
       ...(indicatorPosition === indicatorPositions.RIGHT && {
         paddingLeft: themeData["accordion.header.indicatorRight.paddingLeft"],
-        paddingRight: themeData["accordion.header.indicatorRight.paddingRight"]
+        paddingRight: themeData["accordion.header.indicatorRight.paddingRight"],
       }),
       fontFamily: themeData["accordion.header.fontFamily"],
       fontSize: themeData["accordion.header.fontSize"],
@@ -42,7 +42,7 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
       lineHeight: themeData["accordion.header.lineHeight"],
       color: themeData["accordion.header.fontColor"],
       width: "100%",
-      opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "1"
+      opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "1",
     },
     indicator: {
       order: indicatorPosition === indicatorPositions.LEFT ? -1 : 1,
@@ -54,7 +54,7 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
         fill:
           !disabled && hasHover
             ? themeData["accordion.header.hover.indicatorColor"]
-            : themeData["accordion.header.default.indicatorColor"]
+            : themeData["accordion.header.default.indicatorColor"],
       },
       marginRight:
         indicatorPosition === indicatorPositions.LEFT
@@ -66,7 +66,7 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
           : themeData["accordion.header.indicatorGutter"],
       transitionDuration,
       transform:
-        indicator === indicators.CARET && !collapsed ? "rotate(90deg)" : "none"
+        indicator === indicators.CARET && !collapsed ? "rotate(90deg)" : "none",
     },
     label: {
       order: 0,
@@ -74,8 +74,8 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
       textAlign: "left",
       whiteSpace: "nowrap",
       textOverflow: "ellipsis",
-      overflow: "hidden"
-    }
+      overflow: "hidden",
+    },
   };
 
   if (customStylesheet) {

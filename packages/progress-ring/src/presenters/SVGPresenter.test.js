@@ -10,9 +10,9 @@ describe("progress-ring/presenters/SVGPresenter", () => {
         width: 72,
         height: 72,
         original: 72,
-        svgData: []
-      }
-    }
+        svgData: [],
+      },
+    },
   ].forEach(({ description, props: { ...otherProps } }) => {
     it(description, () => {
       const presenter = <SVGPresenter {...otherProps} />;

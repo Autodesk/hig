@@ -2,7 +2,7 @@
 import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 
-const SpinnerBehavior = props => {
+const SpinnerBehavior = (props) => {
   const [valueHook, setValueHook] = useState(props.initialValue);
   const [timerSet, setTimerSet] = useState(false);
   const [timer, setTimer] = useState(null);
@@ -17,7 +17,7 @@ const SpinnerBehavior = props => {
     return valueHook;
   };
 
-  const setValue = valueRef => {
+  const setValue = (valueRef) => {
     props.onChange(valueRef);
 
     if (!isValueControlled()) {
@@ -25,7 +25,7 @@ const SpinnerBehavior = props => {
     }
   };
 
-  const updateValue = valueRef => {
+  const updateValue = (valueRef) => {
     // Do nothing if the input is currently disabled
     if (props.disabled) {
       return;
@@ -69,19 +69,19 @@ const SpinnerBehavior = props => {
     setTimerSet(false);
   };
 
-  const mouseLeaveClearTimer = event => {
+  const mouseLeaveClearTimer = (event) => {
     if (props.onMouseLeave) {
       props.onMouseLeave(event);
     }
     clearTimer();
   };
 
-  const onDirectChange = event => {
+  const onDirectChange = (event) => {
     const newValue = event.target.value;
     setValue(newValue);
   };
 
-  const setInputRef = element => {
+  const setInputRef = (element) => {
     inputRef.current = element;
   };
 
@@ -94,7 +94,7 @@ const SpinnerBehavior = props => {
     mouseDownIncrement,
     clearTimer,
     mouseLeaveClearTimer,
-    setInputRef
+    setInputRef,
   });
 };
 
@@ -107,13 +107,13 @@ SpinnerBehavior.propTypes = {
   value: PropTypes.number,
   initialValue: PropTypes.number,
   step: PropTypes.number,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 SpinnerBehavior.defaultProps = {
   step: 1,
   initialValue: 0,
   value: undefined,
-  onChange: () => {}
+  onChange: () => {},
 };
 
 export default SpinnerBehavior;

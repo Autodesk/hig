@@ -6,13 +6,13 @@ describe("tooltip/presenters/TextPresenter", () => {
   takeSnapshotsOf(TextPresenter, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with children",
       props: {
-        children: "hi"
-      }
-    }
+        children: "hi",
+      },
+    },
   ]);
 });

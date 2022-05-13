@@ -6,15 +6,9 @@ import ProgressRingIndeterminateBehavior from "./behaviors/ProgressRingIndetermi
 import ProgressRingPresenter from "./presenters/ProgressRingPresenter";
 import { availableSizes, availableSurfaces } from "./constants";
 
-const ProgressRing = props => {
-  const {
-    mask,
-    percentComplete,
-    size,
-    stylesheet,
-    surface,
-    ...otherProps
-  } = props;
+const ProgressRing = (props) => {
+  const { mask, percentComplete, size, stylesheet, surface, ...otherProps } =
+    props;
   const ProgressRingBehavior =
     percentComplete === undefined
       ? ProgressRingIndeterminateBehavior
@@ -64,13 +58,13 @@ ProgressRing.propTypes = {
    */
   surface: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.oneOf(availableSurfaces)
-  ])
+    PropTypes.oneOf(availableSurfaces),
+  ]),
 };
 
 ProgressRing.defaultProps = {
   size: "m",
-  surface: 100
+  surface: 100,
 };
 
 export default ProgressRing;

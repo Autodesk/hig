@@ -8,7 +8,7 @@ describe("tooltip/Tooltip", () => {
   takeSnapshotsOf(Tooltip, [
     {
       desc: "renders without props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with props",
@@ -20,8 +20,8 @@ describe("tooltip/Tooltip", () => {
         onClickOutside: function onClickOutside() {},
         onScroll: function onScroll() {},
         open: true,
-        openOnHover: false
-      }
-    }
+        openOnHover: false,
+      },
+    },
   ]);
 });

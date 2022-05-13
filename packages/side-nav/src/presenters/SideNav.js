@@ -10,7 +10,8 @@ import { createCustomClassNames } from "@hig/utils";
 
 import stylesheet from "./stylesheet";
 
-const SideNav = props => {
+const SideNav = (props) => {
+  // eslint-disable-next-line react/no-unstable-nested-components
   const _renderHeader = (link, label, styles, onClick, className) => {
     if (!label) {
       return null;
@@ -36,7 +37,8 @@ const SideNav = props => {
     );
   };
 
-  const _renderHeaders = resolvedRoles => {
+  // eslint-disable-next-line react/no-unstable-nested-components
+  const _renderHeaders = (resolvedRoles) => {
     const {
       headerLabel,
       headerLink,
@@ -62,7 +64,7 @@ const SideNav = props => {
             {
               isLink: superHeaderLink,
               stylesheet: customStylesheet,
-              ...props
+              ...props,
             },
             resolvedRoles
           ).headers.super,
@@ -191,12 +193,12 @@ SideNav.propTypes = {
   /** An href for the SideNav Title */
   superHeaderLink: PropTypes.string,
   /** Called when superHeaderLink is clicked */
-  onClickSuperHeader: PropTypes.func
+  onClickSuperHeader: PropTypes.func,
 };
 
 SideNav.defaultProps = {
   onMinimize: () => {},
-  showMinimizeButton: false
+  showMinimizeButton: false,
 };
 
 export default SideNav;

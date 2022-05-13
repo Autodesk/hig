@@ -14,5 +14,5 @@ export default function InlineCode({ children }) {
 }
 
 InlineCode.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };

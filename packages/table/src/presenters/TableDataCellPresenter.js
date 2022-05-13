@@ -25,10 +25,10 @@ export default function TableDataCellPresenter(props) {
   } = props;
   const { getGlobalResizeStyles } = otherProps;
   const handleCellClick = useCallback(
-    event => {
+    (event) => {
       if (onTableCellClick) {
         onTableCellClick(event, {
-          props
+          props,
         });
       }
       // don't select when multi-select row cell clicked
@@ -49,7 +49,7 @@ export default function TableDataCellPresenter(props) {
       getActiveMultiSelectRowArray,
       setAllMultiSelectedRows,
       setActiveMultiSelectRowArray,
-      rowTypeToMap
+      rowTypeToMap,
     ]
   );
   const payload = { ...otherProps };
@@ -78,7 +78,7 @@ export default function TableDataCellPresenter(props) {
         const styles = stylesheet(props, resolvedRoles, metadata);
         const mergedStyles = {
           ...styles.higTableCell,
-          ...resizeStyles
+          ...resizeStyles,
         };
 
         return (
@@ -112,6 +112,7 @@ TableDataCellPresenter.propTypes = {
   getActiveMultiSelectRowArray: PropTypes.arrayOf(PropTypes.number),
   setAllMultiSelectedRows: PropTypes.func,
   setActiveMultiSelectRowArray: PropTypes.func,
+  // eslint-disable-next-line react/forbid-prop-types
   rowTypeToMap: PropTypes.arrayOf(PropTypes.any),
-  rowSelection: PropTypes.bool
+  rowSelection: PropTypes.bool,
 };

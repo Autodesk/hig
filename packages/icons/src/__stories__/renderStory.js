@@ -7,7 +7,7 @@ function Wrapper({ children }) {
   const styles = {
     display: "flex",
     flexDirection: "row",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   };
   return <div style={styles}>{children}</div>;
 }
@@ -20,7 +20,7 @@ function InnerWrapper({ children }) {
         flexDirection: "row",
         alignItems: "center",
         width: "250px",
-        marginBottom: "8px"
+        marginBottom: "8px",
       }}
     >
       {children}
@@ -31,18 +31,18 @@ function Spacer() {
   return (
     <div
       style={{
-        width: "8px"
+        width: "8px",
       }}
     />
   );
 }
 
 export function IconStory({ size, color }) {
-  const set = Icons.sets.find(isonSet => isonSet.size === size);
+  const set = Icons.sets.find((isonSet) => isonSet.size === size);
 
   return (
     <Wrapper>
-      {set.iconNames.map(name => {
+      {set.iconNames.map((name) => {
         const Icon = Icons[`${name}${size}`];
         return (
           <InnerWrapper key={name}>

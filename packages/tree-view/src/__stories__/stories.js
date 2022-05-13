@@ -17,7 +17,7 @@ import {
   Report16,
   FileImage16,
   FileVideo16,
-  Hierarchy16
+  Hierarchy16,
 } from "@hig/icons";
 
 import { TreeItem } from "../index";
@@ -33,10 +33,10 @@ HighOrderComponentWrappedTreeItem.propTypes = {
   /**
    * Accepts other high order TreeItem components
    */
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
-export const FunctionComponentWrappedTreeItem = props => (
+export const FunctionComponentWrappedTreeItem = (props) => (
   <TreeItem {...props}>{props.children}</TreeItem>
 );
 FunctionComponentWrappedTreeItem.defaultName = "FuncTreeItem";
@@ -44,7 +44,7 @@ FunctionComponentWrappedTreeItem.propTypes = {
   /**
    * Accepts other Function TreeItem components
    */
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export default [
@@ -184,9 +184,9 @@ export default [
             key="tree-item-19"
             icon={<ProductsAndServices24 />}
           />
-        </TreeItem>
-      ]
-    })
+        </TreeItem>,
+      ],
+    }),
   },
   {
     description: "high density icons",
@@ -322,17 +322,17 @@ export default [
             key="tree-item-19"
             icon={<ProductsAndServices16 />}
           />
-        </TreeItem>
-      ]
-    })
+        </TreeItem>,
+      ],
+    }),
   },
   {
     description: "tree object",
     getProps: () => ({
       guidelines: false,
       indicator: "caret",
-      treeNode: sampleTreeNodeObject
-    })
+      treeNode: sampleTreeNodeObject,
+    }),
   },
   {
     description: "high order TreeItem",
@@ -407,9 +407,9 @@ export default [
             key="tree-item-10"
             icon={<ProductsAndServices24 />}
           />
-        </HighOrderComponentWrappedTreeItem>
-      ]
-    })
+        </HighOrderComponentWrappedTreeItem>,
+      ],
+    }),
   },
   {
     description: "expand tree by double click",
@@ -499,8 +499,8 @@ export default [
               />
             </TreeItem>
           </TreeItem>
-        </TreeItem>
-      ]
-    })
-  }
+        </TreeItem>,
+      ],
+    }),
+  },
 ];

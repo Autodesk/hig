@@ -29,7 +29,7 @@ export default function ProfileActionPresenter({
         <div
           className={cx([
             topNavProfileActionButtonWrapperClassName,
-            css(styles.topNavProfileActionButtonWrapper)
+            css(styles.topNavProfileActionButtonWrapper),
           ])}
         >
           {children}
@@ -41,5 +41,5 @@ export default function ProfileActionPresenter({
 
 ProfileActionPresenter.propTypes = {
   children: PropTypes.node,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

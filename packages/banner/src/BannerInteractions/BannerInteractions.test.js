@@ -7,29 +7,29 @@ describe("banner/BannerInteractions/BannerInteractions", () => {
   [
     {
       description: "renders without props",
-      props: {}
+      props: {},
     },
     {
       description: "renders with children",
       props: {
-        children: "foo"
-      }
+        children: "foo",
+      },
     },
     {
       description: "renders while wrapping actions",
       props: {
-        isWrappingActions: true
-      }
+        isWrappingActions: true,
+      },
     },
     {
       description: "renders with custom stylesheet",
       props: {
-        stylesheet: styles => ({
+        stylesheet: (styles) => ({
           ...styles,
-          display: "absolute"
-        })
-      }
-    }
+          display: "absolute",
+        }),
+      },
+    },
   ].forEach(({ description, props: { children, ...otherProps } }) => {
     it(description, () => {
       const presenter = (

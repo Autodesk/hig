@@ -7,27 +7,27 @@ describe("profile-flyout/presenters/ProfileContentPresenter", () => {
   takeSnapshotsOf(ProfileContentPresenter, [
     {
       desc: "renders with no props",
-      props: {}
+      props: {},
     },
     {
       desc: "renders with a name",
       props: {
-        profileName: "Pete Parker"
-      }
+        profileName: "Pete Parker",
+      },
     },
     {
       desc: "renders with an email",
       props: {
-        profileEmail: "spyder-man@autodesk.com"
-      }
+        profileEmail: "spyder-man@autodesk.com",
+      },
     },
     {
       desc: "renders with all props",
       props: {
         profileName: "Pete Parker",
         profileEmail: "spyder-man@autodesk.com",
-        children: <span />
-      }
-    }
+        children: <span />,
+      },
+    },
   ]);
 });

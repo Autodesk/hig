@@ -10,7 +10,7 @@ const collapseStatus = {
   COLLAPSED: "collapsed",
   BEFORE_EXPAND: "before_expand",
   EXPANDING: "expanding",
-  EXPANDED: "expanded"
+  EXPANDED: "expanded",
 };
 
 function ContentPresenter(props) {
@@ -23,7 +23,7 @@ function ContentPresenter(props) {
   const afterCollapsed = () => setStatus(collapseStatus.COLLAPSED);
   const afterExpanded = () => setStatus(collapseStatus.EXPANDED);
 
-  const setContentWrapperRef = element => {
+  const setContentWrapperRef = (element) => {
     contentWrapper.current = element;
   };
 
@@ -40,11 +40,11 @@ function ContentPresenter(props) {
   const getContentHeight = () =>
     `${contentWrapper.current && contentWrapper.current.scrollHeight}px`;
 
-  const getTransitionStyles = statusParam => {
+  const getTransitionStyles = (statusParam) => {
     const defaultCollapsedStyles = {
       height: "0",
       overflow: "hidden",
-      visibility: "hidden"
+      visibility: "hidden",
     };
 
     if (statusParam === collapseStatus.EXPANDING) {
@@ -52,7 +52,7 @@ function ContentPresenter(props) {
         ...defaultCollapsedStyles,
         height: getContentHeight(),
         visibility: "visible",
-        overflow: "hidden"
+        overflow: "hidden",
       };
     }
     if (statusParam === collapseStatus.EXPANDED) {
@@ -60,7 +60,7 @@ function ContentPresenter(props) {
         ...defaultCollapsedStyles,
         height: "auto",
         visibility: "visible",
-        overflow: "visible"
+        overflow: "visible",
       };
     }
     if (statusParam === collapseStatus.BEFORE_COLLAPSE) {
@@ -68,7 +68,7 @@ function ContentPresenter(props) {
         ...defaultCollapsedStyles,
         height: getContentHeight(),
         visibility: "visible",
-        overflow: "visible"
+        overflow: "visible",
       };
     }
     if (statusParam === collapseStatus.COLLAPSING) {
@@ -76,7 +76,7 @@ function ContentPresenter(props) {
         ...defaultCollapsedStyles,
         height: "0",
         visibility: "visible",
-        overflow: "hidden"
+        overflow: "hidden",
       };
     }
     return defaultCollapsedStyles;
@@ -135,11 +135,11 @@ ContentPresenter.displayName = "ContentPresenter";
 
 ContentPresenter.propTypes = {
   children: PropTypes.node.isRequired,
-  collapsed: PropTypes.bool
+  collapsed: PropTypes.bool,
 };
 
 ContentPresenter.defaultProps = {
-  collapsed: false
+  collapsed: false,
 };
 
 export default ContentPresenter;

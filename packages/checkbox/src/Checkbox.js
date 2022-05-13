@@ -5,7 +5,7 @@ import { ControlBehavior } from "@hig/behaviors";
 import CheckboxPresenter from "./presenters/CheckboxPresenter";
 import CheckboxBehavior from "./behaviors/CheckboxBehavior";
 
-const Checkbox = props => {
+const Checkbox = (props) => {
   const {
     checkboxRef,
     checked: controlledChecked,
@@ -42,7 +42,7 @@ const Checkbox = props => {
         onMouseDown: handleMouseDown,
         onMouseEnter: handleMouseEnter,
         onMouseLeave: handleMouseLeave,
-        onMouseUp: handleMouseUp
+        onMouseUp: handleMouseUp,
       }) => (
         <CheckboxBehavior
           checked={controlledChecked}
@@ -141,7 +141,7 @@ Checkbox.propTypes = {
   /**
    * Value submitted with a form if checked
    */
-  value: PropTypes.string
+  value: PropTypes.string,
 };
 
 export default Checkbox;

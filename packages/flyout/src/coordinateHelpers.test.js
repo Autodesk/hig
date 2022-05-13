@@ -2,7 +2,7 @@ import {
   dislocateContainer,
   offsetContainerHorizontal,
   offsetContainerVertical,
-  offsetPanelHorizontal
+  offsetPanelHorizontal,
 } from "./coordinateHelpers";
 import { AVAILABLE_ANCHOR_POINTS } from "./anchorPoints";
 import { DEFAULT_COORDINATES } from "./getCoordinates";
@@ -33,7 +33,7 @@ describe("flyout/coordinateHelpers", () => {
   });
 
   describe("dislocateContainer", () => {
-    AVAILABLE_ANCHOR_POINTS.forEach(anchorPoint => {
+    AVAILABLE_ANCHOR_POINTS.forEach((anchorPoint) => {
       describe(`when the anchorPoint is ${anchorPoint}`, () => {
         it("moves the container away from the target in the respective direction", () => {
           const coordinates = { ...DEFAULT_COORDINATES, anchorPoint };

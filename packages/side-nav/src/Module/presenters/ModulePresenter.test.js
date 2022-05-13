@@ -9,9 +9,9 @@ describe("side-nav/Module/presenters/ModulePresenter", () => {
       {
         description: "renders with minimal props",
         props: {
-          title: "ModulePresenter"
-        }
-      }
+          title: "ModulePresenter",
+        },
+      },
     ];
 
     cases.forEach(({ description, props: { children, ...otherProps } }) => {

@@ -31,7 +31,7 @@ import PanelPresenter from "./presenters/PanelPresenter";
  * @property {HTMLDivElement} [wrapperRef]
  */
 
-const Flyout = props => {
+const Flyout = (props) => {
   const [open, setOpen] = useState(props.defaultOpen);
   const [actionRef, setActionRef] = useState(undefined);
   const [panelRef, setPanelRef] = useState(undefined);
@@ -56,14 +56,15 @@ const Flyout = props => {
     const actionRect = actionRef.getBoundingClientRect();
     const panelRect = panelRef.getBoundingClientRect();
     const pointerRect = pointerRef.getBoundingClientRect();
-    const viewportRect = window.document.documentElement.getBoundingClientRect();
+    const viewportRect =
+      window.document.documentElement.getBoundingClientRect();
     const coordinates = getCoordinates({
       anchorPoint,
       actionRect,
       fallbackAnchorPoints,
       panelRect,
       pointerRect,
-      viewportRect
+      viewportRect,
     });
 
     if (alterCoordinates) {
@@ -71,7 +72,7 @@ const Flyout = props => {
         actionRect,
         panelRect,
         pointerRect,
-        viewportRect
+        viewportRect,
       };
       return alterCoordinates(coordinates, rects);
     }
@@ -82,7 +83,7 @@ const Flyout = props => {
   /**
    * @param {boolean} open
    */
-  const setOpenMethod = openRef => {
+  const setOpenMethod = (openRef) => {
     const { onClose, onOpen } = props;
     if (openRef && onOpen) {
       onOpen();
@@ -111,28 +112,28 @@ const Flyout = props => {
   /**
    * @param {HTMLElement} actionRef
    */
-  const refAction = actionRefParam => {
+  const refAction = (actionRefParam) => {
     setActionRef(actionRefParam);
   };
 
   /**
    * @param {SVGSVGElement} pointerRef
    */
-  const refPointer = pointerRefParam => {
+  const refPointer = (pointerRefParam) => {
     setPointerRef(pointerRefParam);
   };
 
   /**
    * @param {HTMLElement} panelRef
    */
-  const refPanel = panelRefParam => {
+  const refPanel = (panelRefParam) => {
     setPanelRef(panelRefParam);
   };
 
   /**
    * @param {HTMLDivElement} wrapperRef
    */
-  const refWrapper = wrapperRefParam => {
+  const refWrapper = (wrapperRefParam) => {
     setWrapperRef(wrapperRefParam);
   };
 
@@ -157,7 +158,7 @@ const Flyout = props => {
   /**
    * @param {MouseEvent} event
    */
-  const handleBodyClick = event => {
+  const handleBodyClick = (event) => {
     const { onClickOutside } = props;
     const flyoutClicked =
       event.target === wrapperRef || wrapperRef.contains(event.target);
@@ -187,7 +188,7 @@ const Flyout = props => {
       handleScroll: onScroll,
       innerRef: refPanel,
       className,
-      stylesheet
+      stylesheet,
     };
   };
 
@@ -197,7 +198,7 @@ const Flyout = props => {
     if (typeof panel === "function") {
       return panel({
         ...createPanelPayload(),
-        transitionStatus
+        transitionStatus,
       });
     }
 
@@ -214,22 +215,19 @@ const Flyout = props => {
       return React.cloneElement(children, {
         onClick: combineEventHandlers(handleChildClick, children.props.onClick),
         onMouseEnter,
-        onMouseLeave
+        onMouseLeave,
       });
     }
 
     return children;
   };
 
-  const renderPresenter = transitionStatus => {
+  const renderPresenter = (transitionStatus) => {
     const { openOnHoverDelay, pointer, stylesheet, ...otherProps } = props;
     const { className } = otherProps;
     const panel = renderPanel({ transitionStatus });
-    const {
-      anchorPoint,
-      containerPosition,
-      pointerPosition
-    } = getCoordinatesMethod();
+    const { anchorPoint, containerPosition, pointerPosition } =
+      getCoordinatesMethod();
     return (
       <DelayedHoverBehavior
         onMouseEnter={handleChildMouseEnter}
@@ -314,7 +312,7 @@ Flyout.propTypes = {
    */
   openOnHoverDelay: PropTypes.number,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 Flyout.defaultProps = {
@@ -344,7 +342,7 @@ Flyout.defaultProps = {
         </PanelPresenter>
       </PanelContainerPresenter>
     );
-  }
+  },
 };
 
 export default Flyout;

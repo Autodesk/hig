@@ -1,5 +1,5 @@
 export default {
   "button.label.lineHeight": {
-    value: "14px"
-  }
+    value: "14px",
+  },
 };

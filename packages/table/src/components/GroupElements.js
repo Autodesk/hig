@@ -7,7 +7,7 @@ const GroupElements = ({ children, isExpanded }) => (
 
 GroupElements.propTypes = {
   children: PropTypes.func,
-  isExpanded: PropTypes.bool
+  isExpanded: PropTypes.bool,
 };
 
 export default GroupElements;

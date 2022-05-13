@@ -5,7 +5,7 @@ import { combineEventHandlers } from "@hig/utils";
 
 import ProfileButtonPresenter from "./presenters/ProfileButtonPresenter";
 
-const ProfileFlyout = props => {
+const ProfileFlyout = (props) => {
   const {
     alterCoordinates,
     anchorPoint,
@@ -77,14 +77,14 @@ ProfileFlyout.propTypes = {
   /** Renders a custom flyout panel. Can be either a node or a render function */
   panel: PropTypes.func,
   /** Function to modify the component's styles */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 ProfileFlyout.defaultProps = {
   // eslint-disable-next-line react/prop-types
   panel: ({ content, innerRef }) => (
     <Flyout.Panel innerRef={innerRef}>{content}</Flyout.Panel>
-  )
+  ),
 };
 
 export default ProfileFlyout;

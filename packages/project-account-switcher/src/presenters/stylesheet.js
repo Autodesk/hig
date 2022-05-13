@@ -7,7 +7,7 @@ export default function stylesheet(props) {
       whiteSpace: `nowrap`,
       textOverflow: `ellipsis`,
       overflowX: `hidden`,
-      cursor: `pointer`
+      cursor: `pointer`,
     },
     imageWrapper: {
       display: `inline-block`,
@@ -20,7 +20,7 @@ export default function stylesheet(props) {
       border: `1px solid #bec8d2`,
       color: `#485366`,
       textAlign: `center`,
-      marginRight: `10px`
+      marginRight: `10px`,
     },
     image: {
       position: `absolute`,
@@ -30,12 +30,12 @@ export default function stylesheet(props) {
       cursor: `pointer`,
       color: `transparent`,
       "&[src='']": {
-        display: `none`
-      }
+        display: `none`,
+      },
     },
     panel: {
       margin: 0,
-      padding: `0 10px 10px 10px`
+      padding: `0 10px 10px 10px`,
     },
     switcherList: {
       marginTop: `30px`,
@@ -44,8 +44,8 @@ export default function stylesheet(props) {
       padding: 0,
       "&:first-of-type": {
         marginTop: `0`,
-        paddingTop: `10px`
-      }
+        paddingTop: `10px`,
+      },
     },
     switcherItem: {
       margin: `0`,
@@ -54,7 +54,7 @@ export default function stylesheet(props) {
       alignItems: `center`,
       width: `100%`,
       paddingTop: `8px`,
-      whiteSpace: `nowrap`
+      whiteSpace: `nowrap`,
     },
     switcherAccountImageWrapper: {
       display: `inline-block`,
@@ -67,12 +67,12 @@ export default function stylesheet(props) {
       border: `1px solid #bec8d2`,
       color: `#485366`,
       textAlign: `center`,
-      marginRight: `10px`
+      marginRight: `10px`,
     },
     target: {
       display: `flex`,
       alignItems: `center`,
-      cursor: `pointer`
+      cursor: `pointer`,
     },
     targetItem: {
       margin: `0`,
@@ -81,11 +81,11 @@ export default function stylesheet(props) {
       height: `34px`,
       lineHeight: `34px`,
       alignItems: `center`,
-      width: `100%`
+      width: `100%`,
     },
     targetCaret: {
-      margin: `0 12px`
-    }
+      margin: `0 12px`,
+    },
   };
 
   return customStylesheet ? customStylesheet(styles, props) : styles;

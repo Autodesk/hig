@@ -1,7 +1,7 @@
 export const SIZES = Object.freeze({
   s: "small",
   m: "medium",
-  l: "large"
+  l: "large",
 });
 
 export const AVAILABLE_BORDER_RADII = Object.freeze(Object.keys(SIZES));

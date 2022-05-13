@@ -5,7 +5,7 @@ import { ThemeContext } from "@hig/theme-context";
 import { createCustomClassNames } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
-const ProgressBar = props => {
+const ProgressBar = (props) => {
   const {
     percentComplete,
     stylesheet: customStylesheet,
@@ -72,7 +72,7 @@ ProgressBar.propTypes = {
   /**
    * Adds custom/overriding styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default ProgressBar;

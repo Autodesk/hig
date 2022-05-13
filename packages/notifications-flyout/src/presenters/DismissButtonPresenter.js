@@ -28,12 +28,12 @@ export default function DismissButtonPresenter({
 }
 
 DismissButtonPresenter.defaultProps = {
-  title: "Dismiss featured notification"
+  title: "Dismiss featured notification",
 };
 
 DismissButtonPresenter.propTypes = {
   hasHover: PropTypes.bool,
   onClick: PropTypes.func,
   stylesheet: PropTypes.func,
-  title: PropTypes.string
+  title: PropTypes.string,
 };

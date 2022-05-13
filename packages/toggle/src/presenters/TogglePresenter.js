@@ -5,7 +5,7 @@ import { ThemeContext } from "@hig/theme-context";
 import { createCustomClassNames, generateId } from "@hig/utils";
 import stylesheet from "./stylesheet";
 
-const TogglePresenter = props => {
+const TogglePresenter = (props) => {
   const {
     hasFocus,
     hasHover,
@@ -64,7 +64,7 @@ TogglePresenter.propTypes = {
   /**
    *  Function to modify the component's styles
    */
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };
 
 export default TogglePresenter;

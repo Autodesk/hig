@@ -9,8 +9,8 @@ describe("notifications-flyout/presenters/ImagePresenter", () => {
       props: {
         alt: "hello",
         src: "//example.com/random.png",
-        "data-something": "anything"
-      }
-    }
+        "data-something": "anything",
+      },
+    },
   ]);
 });

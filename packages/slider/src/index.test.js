@@ -4,16 +4,16 @@ describe("slider/index", () => {
   [
     {
       name: "default",
-      value: expect.any(Function)
+      value: expect.any(Function),
     },
     {
       name: "sliderTypes",
-      value: expect.any(Object)
+      value: expect.any(Object),
     },
     {
       name: "AVAILABLE_SLIDER_TYPES",
-      value: expect.any(Array)
-    }
+      value: expect.any(Array),
+    },
   ].forEach(({ name, value }) => {
     it(`exports ${name}`, () => {
       expect(index).toHaveProperty(name, value);

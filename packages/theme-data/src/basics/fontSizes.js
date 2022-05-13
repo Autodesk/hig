@@ -17,5 +17,5 @@ export default {
   lowMedium: { value: "16px", type: FONT_SIZE },
   lowLarge: { value: "22px", type: FONT_SIZE },
   lowExtraLarge: { value: "26px", type: FONT_SIZE },
-  lowExtraExtraLarge: { value: "30px", type: FONT_SIZE }
+  lowExtraExtraLarge: { value: "30px", type: FONT_SIZE },
 };

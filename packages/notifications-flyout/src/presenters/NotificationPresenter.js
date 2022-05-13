@@ -57,14 +57,14 @@ export default function NotificationPresenter(props) {
             <div
               className={cx([
                 notificationContentClassName,
-                css(styles.notificationContent)
+                css(styles.notificationContent),
               ])}
             >
               {image ? (
                 <div
                   className={cx([
                     notificationContentImageClassName,
-                    css(styles.notificationContentImage)
+                    css(styles.notificationContentImage),
                   ])}
                 >
                   {image}
@@ -73,7 +73,7 @@ export default function NotificationPresenter(props) {
               <div
                 className={cx([
                   notificationContentTextClassName,
-                  css(styles.notificationContentText)
+                  css(styles.notificationContentText),
                 ])}
               >
                 <RichText size="small">{children}</RichText>
@@ -110,5 +110,5 @@ NotificationPresenter.propTypes = {
   onMouseLeave: PropTypes.func,
   showDismissButton: PropTypes.bool,
   stylesheet: PropTypes.func,
-  timestamp: PropTypes.node
+  timestamp: PropTypes.node,
 };

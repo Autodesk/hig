@@ -8,7 +8,7 @@ export default [
       disabled: false,
       icon: <Settings24 />,
       on: false,
-      title: "Icon Button"
-    })
-  }
+      title: "Icon Button",
+    }),
+  },
 ];

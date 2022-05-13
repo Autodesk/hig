@@ -42,5 +42,5 @@ export default function WrapperPresenter(props) {
 WrapperPresenter.propTypes = {
   children: PropTypes.node,
   disabled: PropTypes.bool,
-  stylesheet: PropTypes.func
+  stylesheet: PropTypes.func,
 };

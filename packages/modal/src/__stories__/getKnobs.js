@@ -6,7 +6,7 @@ import { types } from "../types";
 const typeOptions = makeSelectOptions(types);
 
 const knobGroupIds = {
-  basic: "Basic"
+  basic: "Basic",
 };
 
 const knobLabels = {
@@ -14,7 +14,7 @@ const knobLabels = {
   onOverlayClick: "onOverlayClick",
   open: "Open",
   title: "Title",
-  type: "Type"
+  type: "Type",
 };
 
 export default function getKnobs(props) {
@@ -34,6 +34,6 @@ export default function getKnobs(props) {
     onOverlayClick: action(knobLabels.onOverlayClick),
     open: boolean(knobLabels.open, open, knobGroupIds.basic),
     type: select(knobLabels.type, typeOptions, type, knobGroupIds.basic),
-    title: text(knobLabels.title, title, knobGroupIds.basic)
+    title: text(knobLabels.title, title, knobGroupIds.basic),
   };
 }
