@@ -1,3 +1,11 @@
+# [@hig/table-v1.4.1](https://github.com/Autodesk/hig/compare/@hig/table@1.4.0...@hig/table@1.4.1) (2022-05-13)
+
+
+### Bug Fixes
+
+* isGrouped sort ([9201b1e](https://github.com/Autodesk/hig/commit/9201b1e))
+* remove bottom border from header ([cbcc74b](https://github.com/Autodesk/hig/commit/cbcc74b))
+
 # [@hig/table-v1.4.0](https://github.com/Autodesk/hig/compare/@hig/table@1.3.1...@hig/table@1.4.0) (2022-05-12)
 
 
