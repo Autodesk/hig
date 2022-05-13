@@ -23,8 +23,8 @@ export default function stylesheet(props, themeData, themeMeta) {
     selectedBottom,
     selectedLeft,
     customStylesheet,
+    isGrouped,
   } = props;
-
   const alternateBgColor =
     rowIndex % 2 === 0
       ? themeData["table.row.backgroundColor"]
@@ -60,7 +60,7 @@ export default function stylesheet(props, themeData, themeMeta) {
             zIndex: 10,
           }
         : {}),
-      borderBottom: `1px solid #ddd`,
+      ...(isGrouped ? { borderBottom: `1px solid #ddd` } : {}),
     },
     higTableHeader: {
       backgroundColor:
