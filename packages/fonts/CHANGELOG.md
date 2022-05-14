@@ -1,3 +1,20 @@
+# [@hig/fonts-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/fonts@1.1.0...@hig/fonts@2.0.0) (2022-05-14)
+
+
+### Documentation
+
+* update font imports ([3e047c1](https://github.com/Autodesk/hig/commit/3e047c1))
+
+
+### Features
+
+* point to new font cdn ([bb02fb0](https://github.com/Autodesk/hig/commit/bb02fb0))
+
+
+### BREAKING CHANGES
+
+* Fonts are pointing to a new cdn
+
 # [@hig/fonts-v1.1.0](https://github.com/Autodesk/hig/compare/@hig/fonts@1.0.3...@hig/fonts@1.1.0) (2022-01-24)
 
 
