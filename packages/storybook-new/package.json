@@ -52,6 +52,7 @@
     "chromatic": "npx chromatic --project-token=195703ddb59e"
   },
   "dependencies": {
+    "@hig/fonts": "^2.0.0",
     "@hig/surface": "^2.1.1",
     "@hig/theme-context": "^4.1.0",
     "@hig/theme-data": "^2.26.0"

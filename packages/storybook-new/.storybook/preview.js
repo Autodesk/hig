@@ -11,6 +11,8 @@ import lightGrayHighDensityTheme from "@hig/theme-data/build/json/lightGrayHighD
 import darkBlueHighDensityTheme from "@hig/theme-data/build/json/darkBlueHighDensityTheme/theme.json";
 import darkGrayHighDensityTheme from "@hig/theme-data/build/json/darkGrayHighDensityTheme/theme.json";
 
+import "@hig/fonts/build/ArtifaktElement.css";
+
 const providerFn = ({ theme, children }) => {
   const surfaceStylesheet = styles => (
     {
