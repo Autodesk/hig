@@ -1,15 +1,17 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import PropTypes from "prop-types";
 
 const HoverBehavior = (props) => {
   const { openOnHoverDelay, onMouseEnter } = props;
   const [hasHover, setHasHover] = useState(false);
+  const timerRef = useRef(null);
 
-  const focusTimeout = (event) =>
-    setTimeout(() => {
+  const focusTimeout = (event) => {
+    timerRef.current = setTimeout(() => {
       setHasHover(true);
       onMouseEnter(event);
     }, openOnHoverDelay);
+  };
 
   const handleFocus = (event) => {
     if (onMouseEnter) {
@@ -19,7 +21,7 @@ const HoverBehavior = (props) => {
   };
 
   const handleBlur = (event) => {
-    clearTimeout(focusTimeout(event));
+    clearTimeout(timerRef.current);
     setHasHover(false);
     if (props.onMouseLeave) {
       props.onMouseLeave(event);
