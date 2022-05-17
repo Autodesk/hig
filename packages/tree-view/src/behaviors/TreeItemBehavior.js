@@ -15,16 +15,8 @@ const TreeItemBehavior = props => {
     isCollapsedControlled() ? props.collapsed : isCollapsed;
 
   const handleClick = (event, treeItem) => {
-    const isLeftKey =
-      (event.which !== undefined && event.which === 1) ||
-      (event.button !== undefined && event.button === 0);
-    const isRightKey =
-      (event.which !== undefined && event.which === 3) ||
-      (event.button !== undefined && event.button === 2);
-    if (isLeftKey && props.onClick) {
+    if (props.onClick) {
       props.onClick(event);
-    } else if (isRightKey && props.onContextMenu) {
-      props.onContextMenu(event);
     }
     // do nothing if controlled and using treeNode
     if (props.payload && props.payload.isControlled()) {
