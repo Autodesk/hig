@@ -79,38 +79,48 @@ export const TABLE_OBJECT_BASIC = {
         width: 180
       },
   ],
-  groupNames: ['Revit Model', 'CAD Formats', 'Sample Empty', 'Coordination Model'],
-  data: [
-    tableContentThree.data.map((row, index) => {
-      return {
-        "id": row.id,
-        "adskid": generateId('ADSK'),
-        "admin": index % 2 === 0 ? "true" : "false",
-        "status": row.status,
-        "date": row.date,
-        "author": row.author,
-      };
-    }),
-    tableContentTwo.data.map((row, index) => {
-      return {
-        "id": row.id,
-        "adskid": generateId('ADSK'),
-        "admin": index % 2 === 0 ? "true" : "false",
-        "status": row.status,
-        "date": row.date,
-        "author": row.author,
-      };
-    }),
-    [],
-    tableContent.data.map((row, index) => {
-      return {
-        "id": row.id,
-        "adskid": generateId('ADSK'),
-        "admin": index % 2 === 0 ? "true" : "false",
-        "status": row.status,
-        "date": row.date,
-        "author": row.author,
-      };
-    })
-  ],
+  // groupNames: ['Revit Model', 'CAD Formats', 'Sample Empty', 'Coordination Model'],
+  // data: [
+  //   tableContentThree.data.map((row, index) => {
+  //     return {
+  //       "id": row.id,
+  //       "adskid": generateId('ADSK'),
+  //       "admin": index % 2 === 0 ? "true" : "false",
+  //       "status": row.status,
+  //       "date": row.date,
+  //       "author": row.author,
+  //     };
+  //   }),
+  //   tableContentTwo.data.map((row, index) => {
+  //     return {
+  //       "id": row.id,
+  //       "adskid": generateId('ADSK'),
+  //       "admin": index % 2 === 0 ? "true" : "false",
+  //       "status": row.status,
+  //       "date": row.date,
+  //       "author": row.author,
+  //     };
+  //   }),
+  //   [],
+  //   tableContent.data.map((row, index) => {
+  //     return {
+  //       "id": row.id,
+  //       "adskid": generateId('ADSK'),
+  //       "admin": index % 2 === 0 ? "true" : "false",
+  //       "status": row.status,
+  //       "date": row.date,
+  //       "author": row.author,
+  //     };
+  //   })
+  // ],
+  data: tableContent.data.map((row, index) => {
+    return {
+      "id": row.id,
+      "adskid": generateId('ADSK'),
+      "admin": index % 2 === 0 ? "true" : "false",
+      "status": row.status,
+      "date": row.date,
+      "author": row.author,
+    };
+  })
 };
