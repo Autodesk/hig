@@ -14,6 +14,7 @@ const TreeItem = (props) => {
     id,
     label,
     stylesheet,
+    itemSelected,
     ...otherProps
   } = props;
   const {
@@ -62,7 +63,7 @@ const TreeItem = (props) => {
           onDoubleClick={handleDoubleClick}
           onFocus={onFocus}
           onOperatorClick={handleOperatorClick}
-          selected={getActiveId() === id}
+          selected={(getActiveId() === id) || itemSelected}
           setIsCollapsed={setIsCollapsed}
           setKeyboardOpenId={setKeyboardOpenId}
           stylesheet={stylesheet}
@@ -114,6 +115,10 @@ TreeItem.propTypes = {
    * Labels the TreeItem, this is rendered before all children
    */
   label: PropTypes.oneOfType([PropTypes.node, PropTypes.func]),
+  /**
+   * Specifies whether the TreeItem is in selected status
+   */
+  itemSelected: PropTypes.bool,
   /**
    * Adds custom/overriding styles
    */
