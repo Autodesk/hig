@@ -17,6 +17,7 @@ const TreeView = props => {
     selected,
     stylesheet,
     treeNode,
+    selectedChild,
     ...otherProps
   } = props;
 
@@ -27,6 +28,7 @@ const TreeView = props => {
       onKeyDown={onKeyDown}
       selected={selected}
       treeNode={treeNode}
+      selectedChild={selectedChild}
     >
       {({
         getActiveTreeItemId,
@@ -134,7 +136,8 @@ TreeView.propTypes = {
         label: PropTypes.oneOfType([PropTypes.node, PropTypes.func])
       })
     })
-  )
+  ),
+  selectedChild: PropTypes.string
 };
 
 TreeView.defaultProps = {
