@@ -78,6 +78,7 @@ const TableDataContents = ({
                 ? rowIndex + getOffset()
                 : rowIndex;
               const totalRows = rowTypeToMap.length || tableObject.data.length;
+              const headerIndexOffset = rowSelection ? 1 : 0;
 
               return (
                 <TableDataCell
@@ -87,9 +88,8 @@ const TableDataContents = ({
                   getColumnHeaderArray={getColumnHeaderArray}
                   isLast={rowIndex + 1 === totalRows}
                   isResizing={
-                    getGlobalColumns &&
-                    getGlobalColumns[cellColumnIndex + 1] &&
-                    getGlobalColumns[cellColumnIndex + 1].isResizing
+                    getGlobalColumns?.[cellColumnIndex + headerIndexOffset]
+                      ?.isResizing
                   }
                   key={`table-data-cell-${cellIndex}`}
                   multiSelectedColumn={
