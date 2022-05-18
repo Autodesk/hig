@@ -219,18 +219,6 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   const { globalFilter, pageIndex } = state;
   // eslint-disable-next-line no-unsafe-optional-chaining
   const { isStickyHeader, isStickyColumns } = meta?.stickyItems;
-  const handleStickyToggle = () => {
-    const stickyObject = {};
-    if (isStickyColumns) {
-      stickyObject.width = "100%";
-    }
-
-    if (isStickyHeader) {
-      // stickyObject.height = windowHeight;
-    }
-
-    return stickyObject;
-  };
   const [customContentArray] = useState([]);
   const pageDetails = {
     canPreviousPage,
@@ -306,7 +294,6 @@ const RenderTable = ({ params, passedData, passedCount }) => {
               onKeyDown={handleKeyDown}
               ref={setTableRef}
               tabIndex={tableSpreadProps?.tabIndex || 0}
-              style={handleStickyToggle()}
               {...tableSpreadProps}
             >
               <div
@@ -325,15 +312,18 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                         const headerIndex = getColumnHeaderArray.indexOf(
                           column.Header
                         );
+                        const headerIndexOffset = rowSelection ? 1 : 0;
                         const resizingStyles =
                           column.canResize ||
-                          getGlobalColumns?.[headerIndex + 1]?.canResize
+                          getGlobalColumns?.[headerIndex + headerIndexOffset]
+                            ?.canResize
                             ? stylesheet(
                                 {
                                   isResizing:
                                     column.isResizing ||
-                                    getGlobalColumns?.[headerIndex + 1]
-                                      ?.isResizing,
+                                    getGlobalColumns?.[
+                                      headerIndex + headerIndexOffset
+                                    ]?.isResizing,
                                   customStylesheet,
                                 },
                                 resolvedRoles,
