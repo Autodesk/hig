@@ -306,7 +306,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
               onKeyDown={handleKeyDown}
               ref={setTableRef}
               tabIndex={tableSpreadProps?.tabIndex || 0}
-			  style={handleStickyToggle()}
+              style={handleStickyToggle()}
               {...tableSpreadProps}
             >
               <div
