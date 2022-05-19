@@ -50,7 +50,7 @@ const TreeObjectSubTreeItem = props => {
     getActiveTreeItemId,
     getActiveTreeItemIndex,
     guidelines,
-    selected: getActiveId() === id
+    selectedEffect: getActiveId() === id
   };
   const { handleClick, handleKeyDown } = createButtonEventHandlers(onClick);
   const higTreeItemContentWrapperClassName = createCustomClassNames(

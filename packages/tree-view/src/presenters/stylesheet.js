@@ -6,6 +6,7 @@ export default function stylesheet(props, themeData) {
     highlighted,
     level,
     selected,
+    selectedEffect,
     stylesheet: customStylesheet
   } = props;
   const levelOffset = Number(level) - 1;
@@ -146,13 +147,13 @@ export default function stylesheet(props, themeData) {
               themeData[`colorScheme.background.empty.level100To250.hover`]
           }
         : {}),
-      ...(selected
+      ...(selectedEffect
         ? {
             background: themeData[`colorScheme.background.on.default`],
             border: `1px solid ${themeData["colorScheme.border.on"]}`
           }
         : {}),
-      ...(selected && (hasHover || highlighted)
+      ...(selectedEffect && (hasHover || highlighted)
         ? {
             background: themeData[`colorScheme.background.on.hover`]
           }
@@ -184,13 +185,13 @@ export default function stylesheet(props, themeData) {
               themeData[`colorScheme.background.empty.level100To250.hover`]
           }
         : {}),
-      ...(selected
+      ...(selectedEffect
         ? {
             background: themeData[`colorScheme.background.on.default`],
             border: `1px solid ${themeData["colorScheme.border.on"]}`
           }
         : {}),
-      ...(selected && (hasHover || highlighted)
+      ...(selectedEffect && (hasHover || highlighted)
         ? {
             background: themeData[`colorScheme.background.on.hover`]
           }

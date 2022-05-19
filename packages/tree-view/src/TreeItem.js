@@ -62,7 +62,8 @@ const TreeItem = props => {
           onDoubleClick={handleDoubleClick}
           onFocus={onFocus}
           onOperatorClick={handleOperatorClick}
-          selected={getActiveId() === id}
+          selected={selected}
+          selectedEffect={getActiveId() === id}
           setIsCollapsed={setIsCollapsed}
           setKeyboardOpenId={setKeyboardOpenId}
           stylesheet={stylesheet}

@@ -57,7 +57,7 @@ const TreeObjectNestedSubTreeItem = props => {
     getActiveTreeItemIndex,
     guidelines,
     highlighted: getActiveTreeItemId() === id,
-    selected: getActiveId() === id
+    selectedEffect: getActiveId() === id
   };
   const higTreeItemSubTreeViewLabelWrapperClassName = createCustomClassNames(
     className,

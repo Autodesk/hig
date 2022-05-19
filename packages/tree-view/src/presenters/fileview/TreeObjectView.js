@@ -12,7 +12,7 @@ const TreeObjectView = props => {
     tree: {
       id,
       payload,
-      payload: { getActiveTreeItemId, getKeyboardOpenId, setKeyboardOpenId }
+      payload: { getActiveTreeItemId, getKeyboardOpenId, setKeyboardOpenId, selected}
     },
     ...otherProps
   } = props;
@@ -35,7 +35,7 @@ const TreeObjectView = props => {
                 themeData={resolvedRoles}
                 onClick={handleClick}
                 onOperatorClick={handleOperatorClick}
-                selected={getActiveTreeItemId() === id}
+                selected={selected}
                 collapsed={getIsCollapsed()}
                 getIsCollapsed={getIsCollapsed}
                 getKeyboardOpenId={getKeyboardOpenId}
@@ -51,7 +51,7 @@ const TreeObjectView = props => {
                 treeItem={{ ...props.tree, payload }}
                 themeData={resolvedRoles}
                 onClick={handleClick}
-                selected={getActiveTreeItemId() === id}
+                selected={selected}
                 collapsed={getIsCollapsed()}
                 getKeyboardOpenId={getKeyboardOpenId}
                 keyboardOpenId={getKeyboardOpenId()}

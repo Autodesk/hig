@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import PropTypes from "prop-types";
 
 function scrollInViewport(treeItem) {
@@ -177,14 +177,6 @@ const TreeViewBehavior = props => {
     }
   };
 
-  useEffect(() => {
-    if (props.selectedChild !== undefined) {
-      setActiveTreeItemId(props.selectedChild);
-      const index = treeItemArray !== null && treeItemArray.indexOf(props.selectedChild);
-      setActiveTreeItemIndex(index);
-    }
-  }, [props.selectedChild]);
-
   return props.children({
     getActiveTreeItemId,
     getActiveTreeItemIndex,
@@ -222,8 +214,7 @@ TreeViewBehavior.propTypes = {
       })
     })
   ),
-  treeViewRef: PropTypes.func,
-  selectedChild: PropTypes.string
+  treeViewRef: PropTypes.func
 };
 
 TreeViewBehavior.defaultProps = {};
