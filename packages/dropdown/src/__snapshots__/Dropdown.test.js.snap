@@ -697,7 +697,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  aria-labelledby="downshift-9-label"
+  aria-labelledby="downshift-8-label"
   aria-owns={null}
   className="emotion-15"
   role="combobox"
@@ -712,10 +712,10 @@ exports[`Dropdown renders with a controlled value 1`] = `
         aria-activedescendant={null}
         aria-autocomplete="list"
         aria-controls={null}
-        aria-labelledby="downshift-9-label"
+        aria-labelledby="downshift-8-label"
         autoComplete="off"
         className="emotion-0"
-        id="downshift-9"
+        id="downshift-8"
         onBlur={[Function]}
         onChange={[Function]}
         onClick={[Function]}
@@ -753,16 +753,16 @@ exports[`Dropdown renders with a controlled value 1`] = `
     </svg>
   </div>
   <div
-    aria-labelledby="downshift-9-label"
+    aria-labelledby="downshift-8-label"
     className="emotion-14"
-    id="downshift-9-menu"
+    id="downshift-8-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
       className="emotion-7"
       disabled={false}
-      id="downshift-9-item-0"
+      id="downshift-8-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
       onMouseDown={[Function]}
@@ -791,7 +791,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
       aria-selected={false}
       className="emotion-7"
       disabled={false}
-      id="downshift-9-item-1"
+      id="downshift-8-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
       onMouseDown={[Function]}
@@ -820,7 +820,7 @@ exports[`Dropdown renders with a controlled value 1`] = `
       aria-selected={true}
       className="emotion-7"
       disabled={false}
-      id="downshift-9-item-2"
+      id="downshift-8-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
       onMouseDown={[Function]}
@@ -1149,7 +1149,7 @@ exports[`Dropdown renders with className prop 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  aria-labelledby="downshift-11-label"
+  aria-labelledby="downshift-9-label"
   aria-owns={null}
   className="emotion-6 custom-class-1 custom-class-2"
   role="combobox"
@@ -1164,10 +1164,10 @@ exports[`Dropdown renders with className prop 1`] = `
         aria-activedescendant={null}
         aria-autocomplete="list"
         aria-controls={null}
-        aria-labelledby="downshift-11-label"
+        aria-labelledby="downshift-9-label"
         autoComplete="off"
         className="emotion-0 custom-class-1-input-wrapper__input custom-class-2-input-wrapper__input"
-        id="downshift-11"
+        id="downshift-9"
         onBlur={[Function]}
         onChange={[Function]}
         onClick={[Function]}
@@ -1205,9 +1205,9 @@ exports[`Dropdown renders with className prop 1`] = `
     </svg>
   </div>
   <div
-    aria-labelledby="downshift-11-label"
+    aria-labelledby="downshift-9-label"
     className="emotion-5 custom-class-1-menu-wrapper custom-class-2-menu-wrapper"
-    id="downshift-11-menu"
+    id="downshift-9-menu"
     role="listbox"
   />
 </div>
@@ -2273,7 +2273,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  aria-labelledby="downshift-8-label"
+  aria-labelledby="downshift-0-label"
   aria-owns={null}
   className="emotion-15"
   role="combobox"
@@ -2288,10 +2288,10 @@ exports[`Dropdown renders with multiple selection 1`] = `
         aria-activedescendant={null}
         aria-autocomplete="list"
         aria-controls={null}
-        aria-labelledby="downshift-8-label"
+        aria-labelledby="downshift-0-label"
         autoComplete="off"
         className="emotion-0"
-        id="downshift-8"
+        id="downshift-0"
         multiple={true}
         onBlur={[Function]}
         onChange={[Function]}
@@ -2330,16 +2330,16 @@ exports[`Dropdown renders with multiple selection 1`] = `
     </svg>
   </div>
   <div
-    aria-labelledby="downshift-8-label"
+    aria-labelledby="downshift-0-label"
     className="emotion-14"
-    id="downshift-8-menu"
+    id="downshift-0-menu"
     role="listbox"
   >
     <div
       aria-selected={false}
       className="emotion-7"
       disabled={false}
-      id="downshift-8-item-0"
+      id="downshift-0-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
       onMouseDown={[Function]}
@@ -2368,7 +2368,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
       aria-selected={false}
       className="emotion-7"
       disabled={false}
-      id="downshift-8-item-1"
+      id="downshift-0-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
       onMouseDown={[Function]}
@@ -2397,7 +2397,7 @@ exports[`Dropdown renders with multiple selection 1`] = `
       aria-selected={false}
       className="emotion-7"
       disabled={false}
-      id="downshift-8-item-2"
+      id="downshift-0-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
       onMouseDown={[Function]}
@@ -2627,7 +2627,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  aria-labelledby="downshift-10-label"
+  aria-labelledby="downshift-1-label"
   aria-owns={null}
   className="emotion-15"
   role="combobox"
@@ -2642,10 +2642,10 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
         aria-activedescendant={null}
         aria-autocomplete="list"
         aria-controls={null}
-        aria-labelledby="downshift-10-label"
+        aria-labelledby="downshift-1-label"
         autoComplete="off"
         className="emotion-0"
-        id="downshift-10"
+        id="downshift-1"
         multiple={true}
         onBlur={[Function]}
         onChange={[Function]}
@@ -2684,16 +2684,16 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
     </svg>
   </div>
   <div
-    aria-labelledby="downshift-10-label"
+    aria-labelledby="downshift-1-label"
     className="emotion-14"
-    id="downshift-10-menu"
+    id="downshift-1-menu"
     role="listbox"
   >
     <div
       aria-selected={true}
       className="emotion-7"
       disabled={false}
-      id="downshift-10-item-0"
+      id="downshift-1-item-0"
       onClick={[Function]}
       onKeyDown={[Function]}
       onMouseDown={[Function]}
@@ -2722,7 +2722,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       aria-selected={false}
       className="emotion-7"
       disabled={false}
-      id="downshift-10-item-1"
+      id="downshift-1-item-1"
       onClick={[Function]}
       onKeyDown={[Function]}
       onMouseDown={[Function]}
@@ -2751,7 +2751,7 @@ exports[`Dropdown renders with multiple selection and a controlled value 1`] = `
       aria-selected={true}
       className="emotion-7"
       disabled={false}
-      id="downshift-10-item-2"
+      id="downshift-1-item-2"
       onClick={[Function]}
       onKeyDown={[Function]}
       onMouseDown={[Function]}
