@@ -5,7 +5,7 @@ import Typography from "@hig/typography";
 import * as Icons from "../index";
 import { sizes } from "../sizes";
 import Readme from "../../README.md";
-console.log(Icons);
+
 const Wrapper = ({ children }) => {
   const styles = {
     display: "flex",
@@ -65,7 +65,14 @@ const IconStory = ({ size, color }) => {
 export default {
   title: "Basics/Icons",
   component: Icons,
-  argTypes: {},
+  argTypes: {
+    // foo is the property we want to remove from the UI
+    size: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   parameters: {
     docs: {
       page: () => (
@@ -75,6 +82,10 @@ export default {
           <ArgsTable />
         </>
       ),
+      source: {
+        code: `<IconName />`,
+        language: "js",
+      },
     },
   },
 };
@@ -86,7 +97,26 @@ const Template = (args) => {
 
 export const Default = Template.bind({});
 
+Default.storyName = "24";
 Default.args = {
-  color: "#000",
-  size: sizes.PX_16,
+  color: "",
+  size: sizes.PX_24,
 };
+
+export const Sixteen = Template.bind({});
+
+Sixteen.storyName = "16";
+Sixteen.args = {
+  color: "",
+  size: sizes.PX_16,
+}
+
+export const UI = Template.bind({});
+
+UI.storyName = "UI";
+UI.args = {
+  color: "",
+  size: sizes.PX_UI,
+}
+
+
