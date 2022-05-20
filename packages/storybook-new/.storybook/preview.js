@@ -49,7 +49,7 @@ export const globalTypes = {
     description: "Global color scheme for components",
     defaultValue: "Light Gray",
     toolbar: {
-      icon: "circlehollow",
+      icon: "paintbrush",
       // Array of plain string values or MenuItem shape (see below)
       items: ["Light Gray", "Dark Blue", "Dark Gray"],
       // Property that specifies if the name of the item will be displayed
@@ -63,7 +63,7 @@ export const globalTypes = {
     description: "Global density for components",
     defaultValue: "Medium",
     toolbar: {
-      icon: "circlehollow",
+      icon: "unfold",
       // Array of plain string values or MenuItem shape (see below)
       items: ["Medium", "High"],
       // Property that specifies if the name of the item will be displayed
