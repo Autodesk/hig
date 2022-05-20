@@ -1,3 +1,15 @@
+# [@hig/multi-downshift-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/multi-downshift@2.1.0...@hig/multi-downshift@2.2.0) (2022-05-20)
+
+
+### Bug Fixes
+
+* trigger onChange when same option clicked back to back ([f7f317d](https://github.com/Autodesk/hig/commit/f7f317d))
+
+
+### Features
+
+* update to Downshift 6.0.0 ([ff46de1](https://github.com/Autodesk/hig/commit/ff46de1))
+
 # [@hig/multi-downshift-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/multi-downshift@2.0.0...@hig/multi-downshift@2.1.0) (2022-01-24)
 
 
