@@ -2010,6 +2010,11 @@
     prop-types "^15.7.1"
     react-transition-group "^2.3.1"
 
+"@hig/fonts@^1.0.3":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/fonts/-/fonts-1.1.0.tgz#1fadd37e8571c9c71d91de976af6c4204ee9426f"
+  integrity sha512-hVKBYggIsLVA9JqKVpjvDK1hF3kxiemaLch88kPFl5zChbsU11Ln08kRaX4zqJTPTl3v+eyYAFOvvKjQWAQeeQ==
+
 "@hig/icon-button@^2.6.3":
   version "2.6.3"
   resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-2.6.3.tgz#8b965349426acd2f2b42d63882c4c20313b8c1c3"
@@ -9735,7 +9740,7 @@ downshift@^3.2.0:
     prop-types "^15.6.0"
     react-is "^16.5.2"
 
-downshift@^6.0.15:
+downshift@^6.0.0, downshift@^6.0.15:
   version "6.1.7"
   resolved "https://registry.yarnpkg.com/downshift/-/downshift-6.1.7.tgz#fdb4c4e4f1d11587985cd76e21e8b4b3fa72e44c"
   integrity sha512-cVprZg/9Lvj/uhYRxELzlu1aezRcgPWBjTvspiGTVEU64gF5pRdSRKFVLcxqsZC637cLAGMbL40JavEfWnqgNg==

@@ -48,10 +48,10 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy": "surge --domain hig-new-storybook.surge.sh",
-    "chromatic": "npx chromatic --project-token=195703ddb59e"
+    "deploy": "surge --domain hig-new-storybook.surge.sh"
   },
   "dependencies": {
+    "@hig/fonts": "^2.0.0",
     "@hig/surface": "^2.1.1",
     "@hig/theme-context": "^4.1.0",
     "@hig/theme-data": "^2.26.0"
