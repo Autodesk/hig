@@ -20,7 +20,7 @@
     "@hig/icons": "^4.1.0",
     "@hig/input": "^2.1.0",
     "@hig/multi-downshift": "^2.1.0",
-    "downshift": "^3.2.0",
+    "downshift": "^6.0.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
