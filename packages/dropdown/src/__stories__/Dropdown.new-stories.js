@@ -21,7 +21,10 @@ export default {
   },
 };
 
-const Template = (args) => <Dropdown {...args} />;
+const Template = (args, { globals: { colorScheme, density } }) => {
+  console.log(density);
+  return <Dropdown {...args} />;
+}
 
 export const Default = Template.bind({});
 

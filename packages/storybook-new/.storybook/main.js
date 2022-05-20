@@ -11,7 +11,6 @@ module.exports = {
       name: "@storybook/addon-docs",
       options: { transcludeMarkdown: true }
     },
-    "@react-theming/storybook-addon"
   ],
   "framework": "@storybook/react"
 }

@@ -30,7 +30,6 @@
     "@babel/plugin-transform-spread": "^7.16.7",
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-typescript": "^7.16.7",
-    "@react-theming/storybook-addon": "^1.1.5",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-docs": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
