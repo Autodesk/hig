@@ -162,9 +162,8 @@ export default function TableBehavior(props) {
       if (!getActiveRowIndex) {
         setActiveRowIndex(0);
       }
-      switch (event.keyCode) {
-        // Arrow Down
-        case 40:
+      switch (event.code) {
+        case "ArrowDown":
           if (getTotalRows !== getActiveRowIndex + 1) {
             setActiveRowIndex(getActiveRowIndex + 1);
             checkVerticalScroll(
@@ -177,8 +176,7 @@ export default function TableBehavior(props) {
           }
           event.preventDefault();
           break;
-        // Arrow Up
-        case 38:
+        case "ArrowUp":
           if (
             (getActiveRowIndex !== rowStart && getActiveColumnIndex !== -1) ||
             (getActiveColumnIndex === -1 && getActiveRowIndex >= 0)
@@ -194,8 +192,7 @@ export default function TableBehavior(props) {
           }
           event.preventDefault();
           break;
-        // Arrow Left
-        case 37:
+        case "ArrowLeft":
           if (getActiveColumnIndex !== columnStart) {
             setActiveColumnIndex(getActiveColumnIndex - 1);
             checkHorizontalScroll(
@@ -207,8 +204,7 @@ export default function TableBehavior(props) {
           }
           event.preventDefault();
           break;
-        // Arrow Right
-        case 39:
+        case "ArrowRight":
           if (getColumnHeaderArray.length !== getActiveColumnIndex + 1) {
             setActiveColumnIndex(getActiveColumnIndex + 1);
             checkHorizontalScroll(
@@ -220,8 +216,7 @@ export default function TableBehavior(props) {
           }
           event.preventDefault();
           break;
-        // Enter Key
-        case 13:
+        case "Enter":
           if (getActiveRowIndex > -1 && getActiveColumnIndex === -1) {
             /**
              * Look into consolidating this w/ the row select onClick
