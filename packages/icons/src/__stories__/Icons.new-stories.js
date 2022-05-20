@@ -66,7 +66,6 @@ export default {
   title: "Basics/Icons",
   component: Icons,
   argTypes: {
-    // foo is the property we want to remove from the UI
     size: {
       table: {
         disable: true,
