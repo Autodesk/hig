@@ -1,3 +1,10 @@
+# [@hig/dropdown-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@3.1.0...@hig/dropdown@3.2.0) (2022-05-20)
+
+
+### Features
+
+* update to Downshift 6.0.0 ([9157a4a](https://github.com/Autodesk/hig/commit/9157a4a))
+
 # [@hig/dropdown-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@3.0.0...@hig/dropdown@3.1.0) (2022-01-24)
 
 
