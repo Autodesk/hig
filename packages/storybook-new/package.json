@@ -49,7 +49,7 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy": "surge --domain hig-new-storybook.surge.sh"
+    "deploy": "surge --domain hig-new-storybook.surge.sh --project storybook-static"
   },
   "dependencies": {
     "@hig/fonts": "^2.0.0",

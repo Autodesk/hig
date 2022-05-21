@@ -72,7 +72,7 @@ export default {
         </>
       ),
       source: {
-        code: `<IconName />`,
+        code: `<IconName color={color} />`,
         language: "js",
       },
     },
