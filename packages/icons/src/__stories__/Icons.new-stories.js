@@ -100,6 +100,14 @@ Sixteen.args = {
   size: sizes.PX_16,
 };
 
+export const Twelve = Template.bind({});
+
+Twelve.storyName = "12";
+Twelve.args = {
+  color: "",
+  size: sizes.PX_12,
+};
+
 export const UI = Template.bind({});
 
 UI.storyName = "UI";
