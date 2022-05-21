@@ -23,7 +23,7 @@ export default {
 
 // eslint-disable-next-line no-unused-vars
 const Template = (args, { globals: { colorScheme, density } }) => {
-  // eslint-disable-next-line no-console;
+  // eslint-disable-next-line no-console
   console.log(density);
   return <Dropdown {...args} />;
 };

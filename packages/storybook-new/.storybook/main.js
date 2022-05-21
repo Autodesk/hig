@@ -12,6 +12,9 @@ module.exports = {
       options: { transcludeMarkdown: true }
     },
   ],
+  "core": {
+    builder: 'webpack5',
+  },
   "framework": "@storybook/react",
   "webpackFinal": async (config, { configType }) => { 
     // Default rule for images /\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani|pdf)(\?.*)?$/
