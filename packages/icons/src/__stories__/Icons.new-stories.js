@@ -15,33 +15,23 @@ const Wrapper = ({ children }) => {
   return <div style={styles}>{children}</div>;
 };
 
-const InnerWrapper = ({ children }) => {
-  return (
-    <div
-      style={{
-        paddingRight: "5px",
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        width: "250px",
-        marginBottom: "8px",
-      }}
-    >
-      {children}
-    </div>
-  );
-};
+const InnerWrapper = ({ children }) => (
+  <div
+    style={{
+      paddingRight: "5px",
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      width: "250px",
+      marginBottom: "8px",
+    }}
+  >
+    {children}
+  </div>
+);
 
-const Spacer = () => {
-  return (
-    <div
-      style={{
-        width: "8px",
-      }}
-    />
-  );
-};
-  
+const Spacer = () => <div style={{ width: "8px" }} />;
+
 const IconStory = ({ size, color }) => {
   const set = Icons.sets.find((isonSet) => isonSet.size === size);
 
@@ -49,7 +39,7 @@ const IconStory = ({ size, color }) => {
     <Wrapper>
       {set.iconNames.map((name) => {
         const Icon = Icons[`${name}${size}`];
-        console.log(Icon);
+
         return (
           <InnerWrapper key={name}>
             <Icon key={name} color={color} />
@@ -92,7 +82,7 @@ export default {
 const Template = (args) => {
   const { children } = args;
   return <IconStory {...args}>{children}</IconStory>;
-}
+};
 
 export const Default = Template.bind({});
 
@@ -108,7 +98,7 @@ Sixteen.storyName = "16";
 Sixteen.args = {
   color: "",
   size: sizes.PX_16,
-}
+};
 
 export const UI = Template.bind({});
 
@@ -116,6 +106,4 @@ UI.storyName = "UI";
 UI.args = {
   color: "",
   size: sizes.PX_UI,
-}
-
-
+};
