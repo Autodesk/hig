@@ -113,7 +113,7 @@ const TreeViewBehavior = (props) => {
 
     const domNodeList = treeViewRef.current.querySelectorAll("li");
     const treeItemArrayControl =
-      getTreeItemArray().length !== domNodeList.length || props.treeNode
+      getTreeItemArray()?.length !== domNodeList?.length || props.treeNode
         ? buildTreeItemIdArray(Array.prototype.slice.call(domNodeList))
         : getTreeItemArray();
 
@@ -126,11 +126,9 @@ const TreeViewBehavior = (props) => {
         event.preventDefault();
         if (getActiveTreeItemIndex() === upperLimit) {
           setActiveTreeItemIndex(lowerLimit);
-
           checkScroll(treeItemArrayControl[lowerLimit], treeViewRef);
         } else {
           setActiveTreeItemIndex(getActiveTreeItemIndex() + 1);
-
           checkScroll(
             treeItemArrayControl[getActiveTreeItemIndex() + 1],
             treeViewRef

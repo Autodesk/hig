@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import PropTypes from "prop-types";
 
 import TreeItemBehavior from "./behaviors/TreeItemBehavior";
@@ -18,8 +18,9 @@ const TreeItem = (props) => {
   } = props;
   const {
     defaultSelected,
-    getActiveTreeItemId,
+    getActiveTreeItemIndex,
     getCurrentItemClicked,
+    getTreeItemArray,
     getKeyboardOpenId,
     isControlled,
     onFocus,
@@ -32,6 +33,10 @@ const TreeItem = (props) => {
     }
     return getCurrentItemClicked() || defaultSelected;
   };
+  const isHighlighted = useMemo(
+    () => getActiveTreeItemIndex() === getTreeItemArray()?.indexOf(id),
+    [getActiveTreeItemIndex, getTreeItemArray]
+  );
 
   return (
     <TreeItemBehavior
@@ -53,7 +58,7 @@ const TreeItem = (props) => {
           collapsed={getIsCollapsed()}
           getIsCollapsed={getIsCollapsed}
           getKeyboardOpenId={getKeyboardOpenId}
-          highlighted={getActiveTreeItemId() === id}
+          highlighted={isHighlighted}
           icon={icon}
           id={id}
           keyboardOpenId={getKeyboardOpenId()}
