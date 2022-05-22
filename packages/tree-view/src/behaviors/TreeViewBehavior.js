@@ -120,9 +120,8 @@ const TreeViewBehavior = (props) => {
     const lowerLimit = 0;
     const upperLimit = treeItemArrayControl.length - 1;
 
-    switch (event.keyCode) {
-      // Arrow Down
-      case 40: {
+    switch (event.code) {
+      case "ArrowDown": {
         event.preventDefault();
         if (getActiveTreeItemIndex() === upperLimit) {
           setActiveTreeItemIndex(lowerLimit);
@@ -136,9 +135,7 @@ const TreeViewBehavior = (props) => {
         }
         break;
       }
-
-      // Arrow Up
-      case 38: {
+      case "ArrowUp": {
         event.preventDefault();
         if (getActiveTreeItemIndex() <= lowerLimit) {
           setActiveTreeItemIndex(upperLimit);
@@ -154,15 +151,12 @@ const TreeViewBehavior = (props) => {
         }
         break;
       }
-
-      // Enter
-      case 13: {
+      case "Enter": {
         event.preventDefault();
         setKeyboardOpenId(getActiveTreeItemId());
         break;
       }
-      // Space
-      case 32: {
+      case "Space": {
         event.preventDefault();
         if (isControlled()) {
           return;
@@ -170,7 +164,6 @@ const TreeViewBehavior = (props) => {
         setActiveTreeItemId(getActiveTreeItemId());
         break;
       }
-
       default:
     }
   };
