@@ -17,7 +17,9 @@ import TreeItemComponent from "./TreeItem";
 const mockFunctions = {
   isControlled: () => {},
   getActiveTreeItemId: () => {},
+  getActiveTreeItemIndex: () => {},
   getCurrentItemClicked: () => {},
+  getTreeItemArray: () => {},
   onFocus: () => {},
   getKeyboardOpenId: () => {},
 }
