@@ -21,6 +21,7 @@ exports[`badge/Badge renders dot variant 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-transform: uppercase;
   height: 12px;
   width: 12px;
 }
@@ -59,6 +60,7 @@ exports[`badge/Badge renders icon variant 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-transform: uppercase;
   height: 28px;
   width: 28px;
 }
@@ -115,8 +117,8 @@ exports[`badge/Badge renders text variant 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-transform: uppercase;
   height: 20px;
-  line-height: 1.25;
   padding: 0 8px;
   width: auto;
 }
@@ -157,6 +159,7 @@ exports[`badge/Badge renders with color prop 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-transform: uppercase;
   height: 12px;
   width: 12px;
 }
@@ -195,6 +198,7 @@ exports[`badge/Badge renders with custom className 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-transform: uppercase;
   height: 12px;
   width: 12px;
 }
@@ -233,6 +237,7 @@ exports[`badge/Badge renders with custom color prop 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-transform: uppercase;
   height: 12px;
   width: 12px;
 }
@@ -271,6 +276,7 @@ exports[`badge/Badge renders with no props 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-transform: uppercase;
   height: 12px;
   width: 12px;
 }
@@ -309,6 +315,7 @@ exports[`badge/Badge renders with size 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-transform: uppercase;
   height: 8px;
   width: 8px;
 }
