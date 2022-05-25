@@ -1,3 +1,10 @@
+# [@hig/tree-view-v2.6.1](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.6.0...@hig/tree-view@2.6.1) (2022-05-25)
+
+
+### Bug Fixes
+
+* controlled TreeItem styling ([defe6a6](https://github.com/Autodesk/hig/commit/defe6a6))
+
 # [@hig/tree-view-v2.6.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.5.1...@hig/tree-view@2.6.0) (2022-04-05)
 
 
