@@ -1,6 +1,7 @@
 export const sizes = Object.freeze({
   PX_24: "24",
   PX_16: "16",
+  PX_12: "12",
   PX_UI: "UI",
 });
 

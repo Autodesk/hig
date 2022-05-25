@@ -52,6 +52,7 @@ exports[`tree-view/TreeView renders default TreeView 1`] = `
   padding: 8px 12px 8px calc((24px + 8px) * NaN);
   -webkit-transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
   transition: background-color 0.3s cubic-bezier(0.4,0,0.2,1),border-color 0.3s cubic-bezier(0.4,0,0.2,1);
+  background: rgba(128,128,128,0.1);
 }
 
 .emotion-5 {
