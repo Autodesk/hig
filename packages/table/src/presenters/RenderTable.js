@@ -96,6 +96,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     setActiveMultiSelectRowArray,
     setActiveRowIndex,
     setAllMultiSelectedRows,
+    setColumnHeaderArray,
     getGlobalColumns,
     setGlobalColumns,
     getGlobalResizeStyles,
@@ -283,6 +284,8 @@ const RenderTable = ({ params, passedData, passedCount }) => {
               <ColumnShowHide
                 toggleHideAllColumnsProps={getToggleHideAllColumnsProps}
                 allColumns={allColumns}
+                getColumnHeaderArray={getColumnHeaderArray}
+                setColumnHeaderArray={setColumnHeaderArray}
               >
                 {meta.columnShowHideComponent}
               </ColumnShowHide>

@@ -292,6 +292,7 @@ export default function TableBehavior(props) {
     setActiveMultiSelectColumn,
     setActiveMultiSelectRowArray,
     setAllMultiSelectedRows,
+    setColumnHeaderArray,
     setHeaderRef,
     setTableRef,
     setTotalRows,

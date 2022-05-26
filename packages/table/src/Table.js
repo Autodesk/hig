@@ -49,6 +49,7 @@ const Table = (props) => {
             setActiveMultiSelectRowArray,
             setActiveRowIndex,
             setAllMultiSelectedRows,
+            setColumnHeaderArray,
             setHeaderRef,
             setTableRef,
             setTotalRows,
@@ -79,6 +80,7 @@ const Table = (props) => {
               setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
               setActiveRowIndex={setActiveRowIndex}
               setAllMultiSelectedRows={setAllMultiSelectedRows}
+              setColumnHeaderArray={setColumnHeaderArray}
               setHeaderRef={setHeaderRef}
               setTableRef={setTableRef}
               setTotalRows={setTotalRows}
