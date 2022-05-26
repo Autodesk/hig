@@ -191,7 +191,7 @@ TreeViewBehavior.propTypes = {
   children: PropTypes.func,
   defaultSelected: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   onKeyDown: PropTypes.func,
-  selected: PropTypes.string,
+  selected: PropTypes.array,
   treeNode: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,

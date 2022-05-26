@@ -111,7 +111,7 @@ TreeView.propTypes = {
   /**
    * Controls the selected TreeItem
    */
-  selected: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  selected: PropTypes.array,
   /**
    * Adds custom/overriding styles
    */

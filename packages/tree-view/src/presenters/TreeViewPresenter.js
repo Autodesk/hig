@@ -313,7 +313,7 @@ TreeViewPresenterObject.propTypes = {
   getActiveTreeItemIndex: PropTypes.func,
   guidelines: PropTypes.bool,
   indicator: PropTypes.string,
-  selected: PropTypes.string,
+  selected: PropTypes.array,
   setTreeViewRef: PropTypes.func,
   stylesheet: PropTypes.func,
 };

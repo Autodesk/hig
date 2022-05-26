@@ -33,24 +33,31 @@ const TreeObjectSubTreeItem = (props) => {
     ...otherProps
   } = props;
   const { onMouseEnter, onMouseLeave } = otherProps;
-  const getActiveId = () => {
+  const isSelected = (id) => {
     if (isControlled()) {
-      return selected;
+      return (selected && -1 !== selected.indexOf(id));
     }
-    return getCurrentItemClicked() || defaultSelected;
+    return (getCurrentItemClicked() === id || defaultSelected === id);
   };
+  const isHilighted = (id) => {
+    const activeId = getActiveTreeItemId();
+    if (isControlled()) {
+      return (activeId && -1 !== activeId.indexOf(id));
+    }
+    return activeId === id;
+  }
   const styleTreeItem = {
     children,
     id,
     label,
     level,
-    highlighted: getActiveTreeItemId() === id,
+    highlighted: isHilighted(id),
     indicator,
     themeData,
     getActiveTreeItemId,
     getActiveTreeItemIndex,
     guidelines,
-    selected: getActiveId() === id,
+    selected: isSelected(id),
   };
   const { handleClick, handleKeyDown } = createButtonEventHandlers(onClick);
   const higTreeItemContentWrapperClassName = createCustomClassNames(

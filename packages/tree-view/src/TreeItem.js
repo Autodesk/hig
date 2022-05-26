@@ -27,11 +27,11 @@ const TreeItem = (props) => {
     selected,
     setKeyboardOpenId,
   } = otherProps;
-  const getActiveId = () => {
+  const isSelected = (id) => {
     if (isControlled()) {
-      return selected;
+      return (selected && -1 !== selected.indexOf(id));
     }
-    return getCurrentItemClicked() || defaultSelected;
+    return (getCurrentItemClicked() === id || defaultSelected === id);
   };
   const isHighlighted = useMemo(
     () => getActiveTreeItemIndex() === getTreeItemArray()?.indexOf(id),
@@ -67,7 +67,7 @@ const TreeItem = (props) => {
           onDoubleClick={handleDoubleClick}
           onFocus={onFocus}
           onOperatorClick={handleOperatorClick}
-          selected={getActiveId() === id}
+          selected={isSelected(id)}
           setIsCollapsed={setIsCollapsed}
           setKeyboardOpenId={setKeyboardOpenId}
           stylesheet={stylesheet}
