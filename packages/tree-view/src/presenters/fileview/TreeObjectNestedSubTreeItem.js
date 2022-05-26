@@ -39,11 +39,18 @@ const TreeObjectNestedSubTreeItem = (props) => {
     ...otherProps
   } = props;
   const { onMouseEnter, onMouseLeave } = otherProps;
-  const getActiveId = () => {
+  const isSelected = (itemId) => {
     if (isControlled()) {
-      return selected;
+      return selected && selected.indexOf(itemId) !== -1;
     }
-    return getCurrentItemClicked() || defaultSelected;
+    return getCurrentItemClicked() === itemId || defaultSelected === itemId;
+  };
+  const isHilighted = (itemId) => {
+    const activeId = getActiveTreeItemId();
+    if (isControlled()) {
+      return activeId && activeId.indexOf(itemId) !== -1;
+    }
+    return activeId === itemId;
   };
 
   const styleTreeItem = {
@@ -56,8 +63,8 @@ const TreeObjectNestedSubTreeItem = (props) => {
     getActiveTreeItemId,
     getActiveTreeItemIndex,
     guidelines,
-    highlighted: getActiveTreeItemId() === id,
-    selected: getActiveId() === id,
+    highlighted: isHilighted(id),
+    selected: isSelected(id),
   };
   const higTreeItemSubTreeViewLabelWrapperClassName = createCustomClassNames(
     className,
