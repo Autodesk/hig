@@ -3,6 +3,7 @@ import Tile from '@hig/tile';
 import Spacer from "@hig/spacer";
 import Dropdown from "@hig/dropdown";
 import Label from "@hig/label";
+import Toggle from "@hig/toggle";
 
 import { Alert16, Complete16, Download16, Edit16, MoreVertical16, Archive16, Alert24, Complete24, Download24, Edit24, MoreVertical24, Archive24 } from "@hig/icons"
 
@@ -13,6 +14,7 @@ import "../TilePage.css";
 function TilePage() {
   const [orientation, setOrientation] = useState("vertical");
   const [background, setBackground] = useState("solid");
+  const [isSelected, setIsSelected] = useState(false);
   const [divider, setDivider] = useState(false);
   const getDivider = () => "#3C3C3C80";
   const [version, setVersion] = useState(false);
@@ -92,6 +94,12 @@ function TilePage() {
             'flat',
           ]}
         />
+        <Label variant="top" htmlFor="selected">Selected</Label>
+        <div style={{display: 'flex', width: '230px', justifyContent: 'space-between'}}>
+          <Label variant="side" htmlFor="selected">Not Selected</Label>
+          <Toggle id="selected" onChange={() => setIsSelected(!isSelected)} />
+          <Label variant="side" htmlFor="selected">Selected</Label>
+        </div>
         <Label variant="top">Divider</Label>
         <Dropdown
           defaultValue='false'
@@ -331,6 +339,7 @@ function TilePage() {
               onKeyDown={onKeyDown}
               onFocus={onFocus}
               onBlur={onBlur}
+              selected={isSelected}
             />
           </>
         )

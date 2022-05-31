@@ -36,12 +36,13 @@ const TilePresenter = props => {
     onMouseEnter,
     onMouseLeave,
     onMouseUp,
+    selected,
   } = props;
 
   const handleClickCTA = action => {
     action();
   };
-
+console.log('isPressed', isPressed);
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
