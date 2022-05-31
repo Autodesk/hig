@@ -11,6 +11,7 @@ export default function stylesheet(props, themeData, metadata) {
     isPressed,
     surface,
     disabled,
+    selected,
   } = props;
   const surfaceLevel = Number(surface) < 300 ? '100To250' : '300To350';
   const bgType = background === 'solid' ? 'filled' : 'empty';
@@ -25,25 +26,54 @@ export default function stylesheet(props, themeData, metadata) {
     return `1px solid ${color}`;
   }
 
-  const getStylesByFocus = () => {
+  const getStylesByFocus = (selected) => {
     if (isNoBg) return 'none';
-    const outlineThickness = hasHover ? themeData['tile.borderWidth'] : '10px';
+    // const outlineThickness = hasHover ? themeData['tile.borderWidth'] : '10px';
     const color = themeData[`tile.selected.hover.borderColor`];
+    if (selected) {
+      return {
+        backgroundColor: themeData['tile.selected.focus.backgroundColor'],
+        border: `1px solid ${themeData['tile.selected.focus.borderColor']}`,
+        boxShadow: `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}`,
+      }
+    }
     return {
-      backgroundColor: hasHover ? themeData['tile.selected.hover.backgroundColor'] : themeData[`tile.${bgType}.focus.level${surfaceLevel}.backgroundColor`],
-      outline: `${outlineThickness} solid ${color}`
+      backgroundColor: themeData[`tile.${bgType}.focus.level${surfaceLevel}.backgroundColor`],
+      border: `1px solid ${themeData['tile.focus.haloColor']}`,
+      boxShadow: `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}`,
+      // outline: `${outlineThickness} solid ${color}`
     }
   }
 
-  const getStylesByStatus = (status) => {
+  const getStylesByStatus = (status, selected) => {
     if (isNoBg) return 'none';
-    const color = themeData[`tile.${bgType}.${status}.level${surfaceLevel}.borderColor`];
+    const color = selected
+      ? themeData[`tile.selected.${status}.borderColor`]
+      : themeData[`tile.${bgType}.${status}.level${surfaceLevel}.borderColor`];
     const borderWidth = themeData['tile.borderWidth'];
+    if (selected) {
+      return {
+        background: themeData[`tile.selected.${status}.backgroundColor`],
+        border: `${borderWidth} solid ${color}`,
+        boxShadow: 'none',
+      };
+    }
     return {
       backgroundColor: themeData[`tile.${bgType}.${status}.level${surfaceLevel}.backgroundColor`],
-      outline: `${borderWidth} solid ${color}`
+      border: `${borderWidth} solid ${color}`,
+      boxShadow: 'none',
     }
   }
+
+  const getStylesBySelected = (selected) => {
+    if (selected) {
+      return {
+        backgroundColor: themeData['tile.selected.default.backgroundColor'],
+        border: `${themeData['tile.borderWidth']} solid ${themeData['tile.selected.default.borderColor']}`,
+      };
+    }
+    return {};
+  };
 
   const getStylesByDisabled = () => {
     return {
@@ -90,9 +120,10 @@ export default function stylesheet(props, themeData, metadata) {
     }
     return isMediumDensity ? '8px' : '4px';
   }
-
+console.log('selected', selected);
   return {
     higTileContainer: {
+      border: '1px solid transparent',
       position: 'relative',
       boxSizing: 'border-box',
       display: 'flex',
@@ -104,9 +135,10 @@ export default function stylesheet(props, themeData, metadata) {
       cursor: 'pointer',
       color: themeData["tile.fontColor"],
       fontFamily: themeData["tile.fontFamily"],
-      ...(hasHover ? getStylesByStatus('hover') : {}),
-      ...(isPressed ? getStylesByStatus('pressed') : {}),
-      ...(hasFocus ? getStylesByFocus() : {}),
+      ...(getStylesBySelected(selected)),
+      ...(hasFocus ? getStylesByFocus(selected) : {}),
+      ...(hasHover ? getStylesByStatus('hover', selected) : {}),
+      ...(isPressed ? getStylesByStatus('pressed', selected) : {}),
       ...(disabled ? getStylesByDisabled() : {})
     },
     higTileNotifications: {
@@ -142,6 +174,7 @@ export default function stylesheet(props, themeData, metadata) {
       ...(divider && background === 'solid' ? getDivider() : {})
     },
     higTileHeaderContainer: {
+      overflow: 'hidden',
       position: 'relative',
       maxHeight: isColumn ? '140px' : '108px',
       width: '100%',
