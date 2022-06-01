@@ -80,7 +80,11 @@ const TableDataContents = ({
               const totalRows = rowTypeToMap.length || tableObject.data.length;
               const headerIndexOffset = rowSelection ? 1 : 0;
 
-              if ((cellColumnIndex === -1 && typeof cell.column.Header === 'function') || cellColumnIndex > -1) {
+              if (
+                (cellColumnIndex === -1 &&
+                  typeof cell.column.Header === "function") ||
+                cellColumnIndex > -1
+              ) {
                 return (
                   <TableDataCell
                     {...cell.getCellProps()}

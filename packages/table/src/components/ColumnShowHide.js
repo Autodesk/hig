@@ -6,16 +6,25 @@ import PropTypes from "prop-types";
 const ColumnShowHide = ({
   allColumns,
   children,
-  getColumnHeaderArray, 
+  getColumnHeaderArray,
   setColumnHeaderArray,
   toggleHideAllColumnsProps,
-}) => <div>{children({ toggleHideAllColumnsProps, allColumns, getColumnHeaderArray, setColumnHeaderArray })}</div>;
+}) => (
+  <div>
+    {children({
+      allColumns,
+      getColumnHeaderArray,
+      setColumnHeaderArray,
+      toggleHideAllColumnsProps,
+    })}
+  </div>
+);
 
 ColumnShowHide.propTypes = {
   allColumns: PropTypes.array,
   children: PropTypes.func,
   getColumnHeaderArray: PropTypes.array,
-  setColumnHeaderArray: PropTypes.func, 
+  setColumnHeaderArray: PropTypes.func,
   toggleHideAllColumnsProps: PropTypes.func,
 };
 
