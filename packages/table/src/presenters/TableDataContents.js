@@ -80,73 +80,77 @@ const TableDataContents = ({
               const totalRows = rowTypeToMap.length || tableObject.data.length;
               const headerIndexOffset = rowSelection ? 1 : 0;
 
-              return (
-                <TableDataCell
-                  {...cell.getCellProps()}
-                  cellColumnIndex={cellColumnIndex}
-                  cellRowIndex={cellRowIndex}
-                  getColumnHeaderArray={getColumnHeaderArray}
-                  isLast={rowIndex + 1 === totalRows}
-                  isResizing={
-                    getGlobalColumns?.[cellColumnIndex + headerIndexOffset]
-                      ?.isResizing
-                  }
-                  key={`table-data-cell-${cellIndex}`}
-                  multiSelectedColumn={
-                    getActiveMultiSelectColumn === cellColumnIndex
-                  }
-                  multiSelectedColumnLeft={
-                    getActiveMultiSelectColumn !== null &&
-                    getActiveMultiSelectColumn - 1 === cellColumnIndex
-                  }
-                  multiSelectedRow={getActiveMultiSelectRowArray?.includes(
-                    cellRowIndex
-                  )}
-                  multiSelectedRowBottom={getActiveMultiSelectRowArray?.includes(
-                    cellRowIndex - 1
-                  )}
-                  selected={
-                    getActiveColumnIndex === cellColumnIndex &&
-                    getActiveRowIndex === cellRowIndex
-                  }
-                  selectedBottom={
-                    getActiveColumnIndex === cellColumnIndex &&
-                    getActiveRowIndex + 1 === cellRowIndex &&
-                    getActiveRowIndex !== -1
-                  }
-                  selectedLeft={
-                    getActiveColumnIndex - 1 === cellColumnIndex &&
-                    getActiveRowIndex === cellRowIndex
-                  }
-                  setActiveColumnIndex={setActiveColumnIndex}
-                  setActiveMultiSelectColumn={setActiveMultiSelectColumn}
-                  setActiveRowIndex={setActiveRowIndex}
-                  onTableCellClick={onTableCellClick}
-                  getActiveMultiSelectRowArray={getActiveMultiSelectRowArray}
-                  setAllMultiSelectedRows={setAllMultiSelectedRows}
-                  setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
-                  rowTypeToMap={paginateDynamic ? rows : page}
-                  customStylesheet={customStylesheet}
-                  getGlobalResizeStyles={getGlobalResizeStyles}
-                  rowSelection={rowSelection}
-                >
-                  {/* eslint-disable */}
-                  {cell.isGrouped ? (
-                    <>
-                      <span {...row.getToggleRowExpandedProps()}>
-                        <GroupElements isExpanded={row.isExpanded}>
-                          {meta.groupElements}
-                        </GroupElements>
-                      </span>{" "}
-                      {renderCellData(meta.formatDate, cell)} ({row.subRows.length})
-                    </>
-                  ) : cell.isAggregated ? (
-                    cell.render("Aggregated")
-                  ) : cell.isPlaceholder ? null : (
-                    renderCellData(meta.formatDate, cell)
-                  )}
-                </TableDataCell>
-              );
+              if ((cellColumnIndex === -1 && typeof cell.column.Header === 'function') || cellColumnIndex > -1) {
+                return (
+                  <TableDataCell
+                    {...cell.getCellProps()}
+                    cellColumnIndex={cellColumnIndex}
+                    cellRowIndex={cellRowIndex}
+                    getColumnHeaderArray={getColumnHeaderArray}
+                    isLast={rowIndex + 1 === totalRows}
+                    isResizing={
+                      getGlobalColumns?.[cellColumnIndex + headerIndexOffset]
+                        ?.isResizing
+                    }
+                    key={`table-data-cell-${cellIndex}`}
+                    multiSelectedColumn={
+                      getActiveMultiSelectColumn === cellColumnIndex
+                    }
+                    multiSelectedColumnLeft={
+                      getActiveMultiSelectColumn !== null &&
+                      getActiveMultiSelectColumn - 1 === cellColumnIndex
+                    }
+                    multiSelectedRow={getActiveMultiSelectRowArray?.includes(
+                      cellRowIndex
+                    )}
+                    multiSelectedRowBottom={getActiveMultiSelectRowArray?.includes(
+                      cellRowIndex - 1
+                    )}
+                    selected={
+                      getActiveColumnIndex === cellColumnIndex &&
+                      getActiveRowIndex === cellRowIndex
+                    }
+                    selectedBottom={
+                      getActiveColumnIndex === cellColumnIndex &&
+                      getActiveRowIndex + 1 === cellRowIndex &&
+                      getActiveRowIndex !== -1
+                    }
+                    selectedLeft={
+                      getActiveColumnIndex - 1 === cellColumnIndex &&
+                      getActiveRowIndex === cellRowIndex
+                    }
+                    setActiveColumnIndex={setActiveColumnIndex}
+                    setActiveMultiSelectColumn={setActiveMultiSelectColumn}
+                    setActiveRowIndex={setActiveRowIndex}
+                    onTableCellClick={onTableCellClick}
+                    getActiveMultiSelectRowArray={getActiveMultiSelectRowArray}
+                    setAllMultiSelectedRows={setAllMultiSelectedRows}
+                    setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
+                    rowTypeToMap={paginateDynamic ? rows : page}
+                    customStylesheet={customStylesheet}
+                    getGlobalResizeStyles={getGlobalResizeStyles}
+                    rowSelection={rowSelection}
+                  >
+                    {/* eslint-disable */}
+                    {cell.isGrouped ? (
+                      <>
+                        <span {...row.getToggleRowExpandedProps()}>
+                          <GroupElements isExpanded={row.isExpanded}>
+                            {meta.groupElements}
+                          </GroupElements>
+                        </span>{" "}
+                        {renderCellData(meta.formatDate, cell)} ({row.subRows.length})
+                      </>
+                    ) : cell.isAggregated ? (
+                      cell.render("Aggregated")
+                    ) : cell.isPlaceholder ? null : (
+                      renderCellData(meta.formatDate, cell)
+                    )}
+                  </TableDataCell>
+                );
+              } else {
+                return null;
+              }
             })}
           </div>
         </div>
