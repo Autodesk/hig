@@ -55,6 +55,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     onTableCellClick,
     onSortClick,
     customStylesheet,
+    tableGroupSelectAll: { checkboxToggle = [], setCheckboxToggle = () => {} },
     otherProps,
   } = params || {};
   const data = passedData || dataArray;
@@ -445,6 +446,13 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                       rowSelection={rowSelection}
                     />
                   }
+                  getActiveMultiSelectRowArray={getActiveMultiSelectRowArray}
+                  setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
+                  getAllMultiSelectedRows={getAllMultiSelectedRows}
+                  setAllMultiSelectedRows={setAllMultiSelectedRows}
+                  getOffset={getOffset}
+                  checkboxToggle={checkboxToggle}
+                  setCheckboxToggle={setCheckboxToggle}
                 >
                   {meta.dataGroupComponent}
                 </DataGroupComponent>

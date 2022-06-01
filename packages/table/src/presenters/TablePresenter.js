@@ -22,6 +22,7 @@ const TablePresenter = ({
   onTableCellClick,
   onSortClick,
   stylesheet: customStylesheet,
+  tableGroupSelectAll,
   ...otherProps
 }) => {
   const {
@@ -54,6 +55,7 @@ const TablePresenter = ({
     onTableCellClick,
     onSortClick,
     customStylesheet,
+    tableGroupSelectAll,
     otherProps,
   };
   if (!isGrouped) {
@@ -87,7 +89,13 @@ TablePresenter.propTypes = {
   paginateDynamic: PropTypes.bool,
   onTableCellClick: PropTypes.func,
   onSortClick: PropTypes.func,
+  checkboxToggle: PropTypes.func,
+  setCheckboxToggle: PropTypes.func,
   stylesheet: PropTypes.func,
+  tableGroupSelectAll: PropTypes.shape({
+    checkboxToggle: PropTypes.arrayOf(PropTypes.bool),
+    setCheckboxToggle: PropTypes.func,
+  }),
 };
 
 export default TablePresenter;

@@ -9,7 +9,31 @@ const DataGroupComponent = ({
   count,
   data,
   dataGroup,
-}) => <div>{children({ styles, groupNames, count, data, dataGroup })}</div>;
+  getAllMultiSelectedRows,
+  getActiveMultiSelectRowArray,
+  setActiveMultiSelectRowArray,
+  setAllMultiSelectedRows,
+  getOffset,
+  checkboxToggle,
+  setCheckboxToggle,
+}) => (
+  <div>
+    {children({
+      styles,
+      groupNames,
+      count,
+      data,
+      dataGroup,
+      getAllMultiSelectedRows,
+      getActiveMultiSelectRowArray,
+      setActiveMultiSelectRowArray,
+      setAllMultiSelectedRows,
+      getOffset,
+      checkboxToggle,
+      setCheckboxToggle,
+    })}
+  </div>
+);
 
 DataGroupComponent.propTypes = {
   children: PropTypes.func,
@@ -18,6 +42,13 @@ DataGroupComponent.propTypes = {
   count: PropTypes.number,
   data: PropTypes.any,
   dataGroup: PropTypes.any,
+  getAllMultiSelectedRows: PropTypes.func,
+  getActiveMultiSelectRowArray: PropTypes.func,
+  setActiveMultiSelectRowArray: PropTypes.func,
+  setAllMultiSelectedRows: PropTypes.func,
+  getOffset: PropTypes.func,
+  checkboxToggle: PropTypes.bool,
+  setCheckboxToggle: PropTypes.func,
 };
 
 export default DataGroupComponent;
