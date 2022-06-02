@@ -36,7 +36,6 @@ exports[`top-nav/presenters/TopNavPresenter renders with actions and logo 1`] = 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  line-height: 0;
 }
 
 .emotion-1 {
@@ -105,7 +104,6 @@ exports[`top-nav/presenters/TopNavPresenter renders with no props 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  line-height: 0;
 }
 
 .emotion-1 {
