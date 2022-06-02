@@ -54,6 +54,19 @@ const TablePage = () => {
 	const [headerBackgroundSelection, setHeaderBackgroundSelection] = useState('surface-levels');
 	const [headerBackgroundColor, setHeaderBackgroundColor] = useState(null)
 	const [isDescending, setIsDescending] = useState(true)
+
+	const [checkboxToggle, setCheckboxToggle] = useState(Array(TABLE_OBJECT_CUSTOM.data.length).fill(false));
+	const handleCheckboxToggle = (count, value) => {
+		const copyCheckboxArray = checkboxToggle.map((item, index) => {
+			if (index === count) {
+				item = value;
+			}
+			return item;
+		});
+
+		setCheckboxToggle(copyCheckboxArray);
+	}
+
 	return (
 		<ThemeContext.Provider value={themes[theme]}>
 			<Surface
@@ -237,7 +250,7 @@ const TablePage = () => {
 								tableObject={customComponents}
 								tableSpreadProps={tableSpreadProps}
 								paginateDynamic={paginateDynamic}
-								onSortClick={(e, props, headerIndex, isSortedDesc) => {
+								onSortClick={(e, props, headerIndex) => {
 									setIsDescending(!isDescending)
 									const categoryToSort = customComponents.columns[headerIndex].accessor;
 									const sortedArray = customComponents.data.map(column => {
@@ -252,13 +265,27 @@ const TablePage = () => {
 									
 									customComponents.data = sortedArray;
 								}}
+								tableGroupSelectAll={{checkboxToggle, setCheckboxToggle: handleCheckboxToggle}}
+								stylesheet={(styles, props, themeData) => {
+									return {
+										...styles,
+										higTableHeaderWrapper: {
+											...styles.higTableHeaderWrapper,
+											borderBottom: '2px solid #fff'
+										},
+										higTableCell: {
+											...styles.higTableCell,
+											borderTopColor: 'none',
+											borderBottomColor: 'none'
+										}
+									}
+								}}
 							/>
 						</div>
 					</div>
 				</div>
 			</Surface>
-		</ThemeContext.Provider>
-		
+		</ThemeContext.Provider>		
 	);
 }
 
