@@ -182,7 +182,6 @@ import Bookmark16SVG from "./icons/information-dense/bookmark.svg";
 import Billing16SVG from "./icons/information-dense/billing.svg";
 import BillStack16SVG from "./icons/information-dense/bill-stack.svg";
 import Back16SVG from "./icons/information-dense/back.svg";
-import Back1616SVG from "./icons/information-dense/back-16.svg";
 import Attachment16SVG from "./icons/information-dense/attachment.svg";
 import Attach16SVG from "./icons/information-dense/attach.svg";
 import AreaPost16SVG from "./icons/information-dense/area-post.svg";
@@ -2736,6 +2735,7 @@ export const TreeView24 = props => (
         height: "24px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <TreeView24SVG {...propsClone} />
       );
@@ -3074,21 +3074,6 @@ export const Attachment16 = props => (
       if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Attachment16SVG {...propsClone} />
-      );
-    }}
-  </ThemeContext.Consumer>
-)
-
-export const Back1616 = props => (
-  <ThemeContext.Consumer>
-    {({ resolvedRoles }) => {
-      let baseProps = {
-        width: "16px",
-        height: "16px"
-      }
-      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
-      return (
-        <Back1616SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -5326,6 +5311,7 @@ export const TreeView16 = props => (
         height: "16px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <TreeView16SVG {...propsClone} />
       );
@@ -5917,6 +5903,7 @@ export const Alert12 = props => (
         height: "12px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Alert12SVG {...propsClone} />
       );
@@ -5932,6 +5919,7 @@ export const Complete12 = props => (
         height: "12px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Complete12SVG {...propsClone} />
       );
@@ -5947,6 +5935,7 @@ export const Error12 = props => (
         height: "12px"
       }
       const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Error12SVG {...propsClone} />
       );

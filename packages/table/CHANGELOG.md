@@ -1,3 +1,18 @@
+# [@hig/table-v1.4.3](https://github.com/Autodesk/hig/compare/@hig/table@1.4.2...@hig/table@1.4.3) (2022-05-20)
+
+
+### Bug Fixes
+
+* resizing when rowSelection is false ([23d8105](https://github.com/Autodesk/hig/commit/23d8105))
+* show all rows by default ([9755260](https://github.com/Autodesk/hig/commit/9755260))
+
+# [@hig/table-v1.4.2](https://github.com/Autodesk/hig/compare/@hig/table@1.4.1...@hig/table@1.4.2) (2022-05-17)
+
+
+### Bug Fixes
+
+* table group render ([8461640](https://github.com/Autodesk/hig/commit/8461640))
+
 # [@hig/table-v1.4.1](https://github.com/Autodesk/hig/compare/@hig/table@1.4.0...@hig/table@1.4.1) (2022-05-13)
 
 

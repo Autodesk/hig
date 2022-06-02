@@ -1,8 +1,5 @@
-
 import ThemeContext from "@hig/theme-context";
 import Surface from "@hig/surface";
-import { addDecorator } from "@storybook/react";
-import { withThemes } from "@react-theming/storybook-addon";
 
 import lightGrayMediumDensityTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
 import darkBlueMediumDensityTheme from "@hig/theme-data/build/json/darkBlueMediumDensityTheme/theme.json";
@@ -11,54 +8,71 @@ import lightGrayHighDensityTheme from "@hig/theme-data/build/json/lightGrayHighD
 import darkBlueHighDensityTheme from "@hig/theme-data/build/json/darkBlueHighDensityTheme/theme.json";
 import darkGrayHighDensityTheme from "@hig/theme-data/build/json/darkGrayHighDensityTheme/theme.json";
 
-const providerFn = ({ theme, children }) => {
-  const surfaceStylesheet = styles => (
-    {
-      ...styles,
-      surface: {
-        ...styles.surface,
-        minHeight: "300px",
-        padding: "20px"
-      }
+import "@hig/fonts/build/ArtifaktElement.css";
+
+const themeData = {
+  "LightGrayMedium": lightGrayMediumDensityTheme,
+  "DarkBlueMedium": darkBlueMediumDensityTheme,
+  "DarkGrayMedium": darkGrayMediumDensityTheme,
+  "LightGrayHigh": lightGrayHighDensityTheme,
+  "DarkBlueHigh": darkBlueHighDensityTheme,
+  "DarkGrayHigh": darkGrayHighDensityTheme,
+}
+
+const surfaceStylesheet = styles => (
+  {
+    ...styles,
+    surface: {
+      ...styles.surface,
+      minHeight: "300px",
+      padding: "20px"
     }
-  );
+  }
+);
+
+const withThemeProvider=(Story, context)=>{
+  const colorScheme = context.globals.colorScheme.replace(' ', '');
 
   return (
-    <ThemeContext.Provider value={theme}>
-      <Surface level={200} stylesheet={surfaceStylesheet}>{children}</Surface>
+    <ThemeContext.Provider value={themeData[`${colorScheme}${context.globals.density}`]}>
+      <Surface level={200} stylesheet={surfaceStylesheet}>
+        <Story />
+      </Surface>
     </ThemeContext.Provider>
-  );
-};
+  )
+}
+export const decorators = [withThemeProvider];
 
-addDecorator(withThemes(
-  null,
-  [
-    { name: "light-gray-medium",
-      ...lightGrayMediumDensityTheme
+export const globalTypes = {
+  colorScheme: {
+    name: "Color Scheme",
+    description: "Global color scheme for components",
+    defaultValue: "Light Gray",
+    toolbar: {
+      icon: "paintbrush",
+      // Array of plain string values or MenuItem shape (see below)
+      items: ["Light Gray", "Dark Blue", "Dark Gray"],
+      // Property that specifies if the name of the item will be displayed
+      showName: true,
+      // Change title based on selected value
+      dynamicTitle: true,
     },
-    {
-      name: "dark-blue-medium",
-      ...darkBlueMediumDensityTheme
+  },
+  density: {
+    name: "Density",
+    description: "Global density for components",
+    defaultValue: "Medium",
+    toolbar: {
+      icon: "unfold",
+      // Array of plain string values or MenuItem shape (see below)
+      items: ["Medium", "High"],
+      // Property that specifies if the name of the item will be displayed
+      showName: true,
+      // Change title based on selected value
+      dynamicTitle: true,
     },
-    {
-      name: "dark-gray-medium",
-      ...darkGrayMediumDensityTheme
-    },
-    {
-      name: "light-gray-high",
-      ...lightGrayHighDensityTheme
-    },
-    {
-      name: "dark-blue-high",
-      ...darkBlueHighDensityTheme
-    },
-    {
-      name: "dark-gray-high",
-      ...darkGrayHighDensityTheme
-    }
-  ],
-  { providerFn }
-));
+  },
+};
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

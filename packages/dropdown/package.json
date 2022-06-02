@@ -1,6 +1,6 @@
 {
   "name": "@hig/dropdown",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "HIG Dropdown",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -19,8 +19,8 @@
   "dependencies": {
     "@hig/icons": "^4.1.0",
     "@hig/input": "^2.1.0",
-    "@hig/multi-downshift": "^2.1.0",
-    "downshift": "^3.2.0",
+    "@hig/multi-downshift": "^2.2.0",
+    "downshift": "^6.0.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },

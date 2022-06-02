@@ -1,3 +1,11 @@
+# [@hig/icons-v4.1.1](https://github.com/Autodesk/hig/compare/@hig/icons@4.1.0...@hig/icons@4.1.1) (2022-05-25)
+
+
+### Bug Fixes
+
+* include size 12 in size export ([75e491b](https://github.com/Autodesk/hig/commit/75e491b))
+* remove duplicate Back16 icon ([0a8a41c](https://github.com/Autodesk/hig/commit/0a8a41c))
+
 # [@hig/icons-v4.1.0](https://github.com/Autodesk/hig/compare/@hig/icons@4.0.0...@hig/icons@4.1.0) (2022-01-24)
 
 

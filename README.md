@@ -39,7 +39,6 @@ Theme data is a representation of the HIG visual design language in the form of 
 * Light gray
 * Dark gray
 * Dark blue
-* Web light (default) - though it is the default color scheme, it is on the road to being deprecated
 
 ...with two densities–high and low–for each scheme. See how to [provide a theme to components](./packages/theme-context#provide-a-theme-to-components). 
 
@@ -82,6 +81,7 @@ Each HIG pattern is implemented as a set of React components. Each pattern is pu
 - [`<Slider>`](./packages/slider/README.md) - A control for selecting a single numeric value from a range
 - [`<Spacer>`](./packages/spacer/README.md) - A square of empty space, meant to add space between other components
 - [`<Surface>`](./packages/surface/README.md) - A themable container with the appropriate background color for the current theme
+- [`<Table>`](./packages/table/README.md) - A collection of data in rows and columns
 - [`<Tabs>`](./packages/tabs/README.md) - Keeps related content in a single container
 - [`<TextArea>`](./packages/text-area/README.md) - A control to provide a large amount of freeform text
 - [`<TextLink>`](./packages/text-link/README.md) - Directs visitors to another location

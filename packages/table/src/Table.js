@@ -98,21 +98,74 @@ const Table = (props) => {
   );
 };
 
+Table.defaultProps = {
+  paginateDynamic: true,
+};
+
 Table.propTypes = {
+  /**
+   * Alternating background stripes
+   */
   alternateBg: PropTypes.bool,
-  headerBackgroundColor: PropTypes.string,
+  /**
+   * Turns on column selection
+   */
   columnSelection: PropTypes.bool,
+  /**
+   * Turns on a "sticky" header row for scrolling
+   */
   frozenHeader: PropTypes.bool,
+  /**
+   * Set how many rows to be visible when the header is frozen.
+   * Default is 50 rows.
+   */
   frozenHeaderCount: PropTypes.number,
+  /**
+   * The header background color has an opacity so the color should
+   * be dictated by the surface it is on. But for scrolling for columns
+   * to not show beneath the columns and opaque background is needed
+   * between the content and header, this prop allows you to set that
+   * background.
+   * Default is colorScheme.surface.level100
+   */
+  headerBackgroundColor: PropTypes.string,
+  /**
+   * Additional props that will be spread to each header row's root element
+   */
   headerRowSpreadProps: PropTypes.any,
-  rowSelection: PropTypes.bool,
-  rowSpreadProps: PropTypes.any,
-  tableObject: PropTypes.any.isRequired,
-  tableSpreadProps: PropTypes.any,
-  paginateDynamic: PropTypes.bool,
-  onTableCellClick: PropTypes.func,
+  /**
+   * Called when table sort is clicked
+   */
   onSortClick: PropTypes.func,
+  /**
+   * Called when a table cell is clicked
+   */
+  onTableCellClick: PropTypes.func,
+  /**
+   * Controls whether to show all table rows or allow for user to
+   * set up pagination
+   */
+  paginateDynamic: PropTypes.bool,
+  /**
+   * Turns on row selection
+   */
+  rowSelection: PropTypes.bool,
+  /**
+   * Additional props that will be spread to each row's root element
+   */
+  rowSpreadProps: PropTypes.any,
+  /**
+   * Adds custom/overriding styles
+   */
   stylesheet: PropTypes.func,
+  /**
+   * Data object for the table contents
+   */
+  tableObject: PropTypes.any.isRequired,
+  /**
+   * Additional props that will be spread to the table's root element
+   */
+  tableSpreadProps: PropTypes.any,
 };
 
 export default Table;

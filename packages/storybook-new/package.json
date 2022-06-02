@@ -30,28 +30,29 @@
     "@babel/plugin-transform-spread": "^7.16.7",
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-typescript": "^7.16.7",
-    "@react-theming/storybook-addon": "^1.1.5",
     "@storybook/addon-actions": "^6.4.22",
     "@storybook/addon-docs": "^6.4.22",
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.4.22",
     "@storybook/addon-links": "^6.4.22",
+    "@storybook/builder-webpack5": "^6.5.3",
+    "@storybook/manager-webpack5": "^6.5.3",
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "^0.0.11",
+    "@svgr/webpack": "^6.2.1",
     "babel-loader": "^8.2.5",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-polyfill-corejs3": "^0.5.2",
     "chromatic": "^6.5.4",
-    "core-js": "^3.22.4",
     "surge": "^0.23.1"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy": "surge --domain hig-new-storybook.surge.sh",
-    "chromatic": "npx chromatic --project-token=195703ddb59e"
+    "deploy": "surge --domain hig-new-storybook.surge.sh --project storybook-static"
   },
   "dependencies": {
+    "@hig/fonts": "^2.0.0",
     "@hig/surface": "^2.1.1",
     "@hig/theme-context": "^4.1.0",
     "@hig/theme-data": "^2.26.0"

@@ -36,6 +36,7 @@ export default class MultiDownshift extends React.Component {
 
   state = {
     selectedItems: this.getDefaultSelectedItem(),
+    lastClickedItem: "",
   };
 
   getDefaultSelectedItem() {
@@ -131,7 +132,7 @@ export default class MultiDownshift extends React.Component {
    */
   handleSelect = (selectedItem, downshift) => {
     const selectedItems = this.getSelectedItems();
-    const triggerChange = this.createChangeTrigger(downshift);
+    const triggerChange = this.createChangeTrigger(downshift, selectedItem);
 
     if (selectedItems.includes(selectedItem)) {
       this.unselectItem(selectedItem, triggerChange);
@@ -143,15 +144,22 @@ export default class MultiDownshift extends React.Component {
   /**
    * @param {import("downshift").ControllerStateAndHelpers} downshift
    */
-  createChangeTrigger(downshift) {
+  createChangeTrigger(downshift, selectedItem) {
     const multiDownshift = this.getStateAndHelpers(downshift);
 
     return () => {
       const { onChange } = this.props;
       const selectedItems = this.getSelectedItems();
 
+      if (this.state.lastClickedItem !== selectedItem) {
+        this.setState({lastClickedItem: selectedItem});
+      }
       if (onChange) {
         onChange(selectedItems, multiDownshift);
+
+        if (this.state.lastClickedItem === selectedItem) {
+          onChange(selectedItem, multiDownshift);
+        }
       }
     };
   }
