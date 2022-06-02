@@ -1,3 +1,10 @@
+# [@hig/table-v1.5.0](https://github.com/Autodesk/hig/compare/@hig/table@1.4.3...@hig/table@1.5.0) (2022-06-02)
+
+
+### Features
+
+* add table group select all ([7a687a0](https://github.com/Autodesk/hig/commit/7a687a0))
+
 # [@hig/table-v1.4.3](https://github.com/Autodesk/hig/compare/@hig/table@1.4.2...@hig/table@1.4.3) (2022-05-20)
 
 

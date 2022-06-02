@@ -1,3 +1,10 @@
+# [@hig/top-nav-v4.1.2](https://github.com/Autodesk/hig/compare/@hig/top-nav@4.1.1...@hig/top-nav@4.1.2) (2022-06-02)
+
+
+### Bug Fixes
+
+* remove lineHeight in topNavLogoWrapper ([122abc6](https://github.com/Autodesk/hig/commit/122abc6))
+
 # [@hig/top-nav-v4.1.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@4.1.0...@hig/top-nav@4.1.1) (2022-01-31)
 
 
