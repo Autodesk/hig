@@ -29,7 +29,6 @@ export default function stylesheet(props, themeData) {
       display: `flex`,
       padding: `0 12px 0 5px`,
       alignItems: `center`,
-      lineHeight: 0,
     },
     topNavSeparator: {
       width: 0,

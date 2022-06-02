@@ -25,6 +25,7 @@ export default function stylesheet(props, themeData, themeMeta) {
     customStylesheet,
     isGrouped,
   } = props;
+  const isHighDensity = themeMeta?.densityId === `high-density`;
   const alternateBgColor =
     rowIndex % 2 === 0
       ? themeData["table.row.backgroundColor"]
@@ -309,6 +310,11 @@ export default function stylesheet(props, themeData, themeMeta) {
     higGroupedDataCount: {
       paddingLeft: `5px`,
       fontWeight: `500`,
+    },
+    higGroupedCheckToggle: {
+      position: `absolute`,
+      left: isHighDensity ? `12px` : `10px`,
+      paddingTop: isHighDensity ? `2px` : `0`,
     },
   };
 
