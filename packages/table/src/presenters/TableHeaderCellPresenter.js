@@ -20,7 +20,7 @@ export default function TableHeaderCellPresenter(props) {
     isSortedDesc,
     ...otherProps
   } = props;
-  const { getGlobalResizeStyles } = otherProps;
+  const { globalResizeStyles } = otherProps;
   const handleClick = useCallback(
     (event) => {
       if (isSortPassed && onClick && !columnSelection) {
@@ -47,17 +47,17 @@ export default function TableHeaderCellPresenter(props) {
   );
   const payload = { ...otherProps };
   const rowOffset = rowSelection ? 1 : 0;
-  const resizeStyles = getGlobalResizeStyles?.[headerIndex + rowOffset] || {};
+  const resizeStyles = globalResizeStyles?.[headerIndex + rowOffset] || {};
 
-  delete payload.getActiveMultiSelectColumn;
-  delete payload.getColumnHeaderArray;
+  delete payload.activeMultiSelectColumn;
+  delete payload.columnHeaderArray;
   delete payload.hasHover;
   delete payload.headerBackgroundColor;
   delete payload.isPressed;
   delete payload.isSortPassed;
   delete payload.setActiveMultiSelectColumn;
   delete payload.customStylesheet;
-  delete payload.getGlobalResizeStyles;
+  delete payload.globalResizeStyles;
   // remove resize inline style and move to emotion styles
   delete payload.style;
 

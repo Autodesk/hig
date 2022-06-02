@@ -25,7 +25,7 @@ const ColumnShowHideComponent = (props) => {
                             <MultiCheckbox
                                 {...column.getToggleHiddenProps()} 
                                 setColumnHeaderArray={props.passedData?.setColumnHeaderArray}
-                                getColumnHeaderArray={props.passedData?.getColumnHeaderArray}
+                                columnHeaderArray={props.passedData?.columnHeaderArray}
                                 headerName={column?.Header}
                             />
                             {typeof column.Header === 'string' ?  column.Header : null}

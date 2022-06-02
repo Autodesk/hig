@@ -7,9 +7,9 @@ export const MultiCheckbox = forwardRef(({indeterminate, ...rest }, ref) => {
   useEffect(() => {
     resolvedRef.current.indeterminate = indeterminate;
   }, [resolvedRef, indeterminate]);
-  const { onChange, getColumnHeaderArray, headerName, setColumnHeaderArray, ...otherProps} = rest;
+  const { onChange, columnHeaderArray, headerName, setColumnHeaderArray, ...otherProps} = rest;
   const handleChange = (event) => {
-    const headerArray = [...getColumnHeaderArray];
+    const headerArray = [...columnHeaderArray];
 
     if (event.currentTarget.checked) {
       headerArray.push(headerName);
