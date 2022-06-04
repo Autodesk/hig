@@ -192,10 +192,3 @@ const Template = (args, context) => {
 }
 
 export const Default = Template.bind({});
-
-Default.args = {
-  defaultSelected: "test-21",
-//   title: "Button",
-//   type: types.SOLID,
-//   width: widths.SHRINK,
-};

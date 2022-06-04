@@ -1,7 +1,6 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
 import Typography from "@hig/typography";
-// import { Error12, Error16 } from "@hig/icons";
 
 import Accordion from "../index";
 import Readme from "../../README.md";
