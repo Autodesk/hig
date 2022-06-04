@@ -7,7 +7,7 @@ import Readme from "../../README.md";
 import { COLORS, SIZES, VARIANTS } from "../constants";
 
 export default {
-  title: "Beta/Badge",
+  title: "Components/Badge",
   component: Badge,
   argTypes: {
     color: {
