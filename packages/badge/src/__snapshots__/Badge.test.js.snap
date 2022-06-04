@@ -1,0 +1,334 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`badge/Badge renders dot variant 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #6a9728;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 12px;
+  width: 12px;
+}
+
+.emotion-0 > svg {
+  fill: #ffffff;
+}
+
+.emotion-0 > svg > * {
+  fill: #ffffff;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`badge/Badge renders icon variant 1`] = `
+.emotion-1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #6a9728;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 28px;
+  width: 28px;
+}
+
+.emotion-1 > svg {
+  fill: #ffffff;
+}
+
+.emotion-1 > svg > * {
+  fill: #ffffff;
+}
+
+.emotion-0 {
+  fill: #808080;
+}
+
+.emotion-0 > * {
+  fill: #808080;
+}
+
+<div
+  className="emotion-1"
+>
+  <svg
+    className="emotion-0"
+    height="16px"
+    width="16px"
+  >
+    <path
+      d="M.52 8.77L2.28 7l3.54 3.53 7.9-7.9 1.76 1.77-9.66 9.67-5.3-5.3z"
+    />
+  </svg>
+</div>
+`;
+
+exports[`badge/Badge renders text variant 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #6a9728;
+  border-radius: 1000em;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 20px;
+  padding: 0 8px;
+  width: auto;
+}
+
+.emotion-0 > svg {
+  fill: #ffffff;
+}
+
+.emotion-0 > svg > * {
+  fill: #ffffff;
+}
+
+<div
+  className="emotion-0"
+>
+  Test Label
+</div>
+`;
+
+exports[`badge/Badge renders with color prop 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #6a9728;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 12px;
+  width: 12px;
+}
+
+.emotion-0 > svg {
+  fill: #ffffff;
+}
+
+.emotion-0 > svg > * {
+  fill: #ffffff;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`badge/Badge renders with custom className 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #6a9728;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 12px;
+  width: 12px;
+}
+
+.emotion-0 > svg {
+  fill: #ffffff;
+}
+
+.emotion-0 > svg > * {
+  fill: #ffffff;
+}
+
+<div
+  className="emotion-0 test-classname"
+/>
+`;
+
+exports[`badge/Badge renders with custom color prop 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #000;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: blue;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 12px;
+  width: 12px;
+}
+
+.emotion-0 > svg {
+  fill: rgba(0,0,0,0.8);
+}
+
+.emotion-0 > svg > * {
+  fill: rgba(0,0,0,0.8);
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`badge/Badge renders with no props 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #6a9728;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 12px;
+  width: 12px;
+}
+
+.emotion-0 > svg {
+  fill: #ffffff;
+}
+
+.emotion-0 > svg > * {
+  fill: #ffffff;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`badge/Badge renders with size 1`] = `
+.emotion-0 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #6a9728;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: uppercase;
+  height: 8px;
+  width: 8px;
+}
+
+.emotion-0 > svg {
+  fill: #ffffff;
+}
+
+.emotion-0 > svg > * {
+  fill: #ffffff;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
