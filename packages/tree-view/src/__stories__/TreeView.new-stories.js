@@ -52,7 +52,7 @@ const Template = (args, context) => {
       return <MediumIcon />;
     }
     return <HighIcon />;
-  }
+  };
 
   return (
     <TreeView {...args}>
@@ -189,6 +189,6 @@ const Template = (args, context) => {
       </TreeItem>
     </TreeView>
   );
-}
+};
 
 export const Default = Template.bind({});
