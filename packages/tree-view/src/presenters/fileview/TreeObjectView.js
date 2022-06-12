@@ -12,11 +12,23 @@ const TreeObjectView = (props) => {
     tree: {
       id,
       payload,
-      payload: { getActiveTreeItemId, getKeyboardOpenId, setKeyboardOpenId },
+      payload: {
+        getActiveTreeItemId,
+        getKeyboardOpenId,
+        setKeyboardOpenId,
+        isControlled,
+      },
     },
     ...otherProps
   } = props;
 
+  const isSelectedOrHilighted = (itemId) => {
+    const activeId = getActiveTreeItemId();
+    if (isControlled()) {
+      return activeId && activeId.indexOf(itemId) !== -1;
+    }
+    return activeId === itemId;
+  };
   return (
     <TreeItemBehavior {...otherProps} id={id} payload={payload}>
       {({
@@ -30,12 +42,12 @@ const TreeObjectView = (props) => {
             props.tree.children ? (
               <TreeObjectNestedSubTreeItem
                 density={metadata.densityId}
-                highlighted={getActiveTreeItemId() === id}
+                highlighted={isSelectedOrHilighted(id)}
                 treeItem={props.tree}
                 themeData={resolvedRoles}
                 onClick={handleClick}
                 onOperatorClick={handleOperatorClick}
-                selected={getActiveTreeItemId() === id}
+                selected={isSelectedOrHilighted(id)}
                 collapsed={getIsCollapsed()}
                 getIsCollapsed={getIsCollapsed}
                 getKeyboardOpenId={getKeyboardOpenId}
@@ -47,11 +59,11 @@ const TreeObjectView = (props) => {
             ) : (
               <TreeObjectSubTreeItem
                 density={metadata.densityId}
-                highlighted={getActiveTreeItemId() === id}
+                highlighted={isSelectedOrHilighted(id)}
                 treeItem={{ ...props.tree, payload }}
                 themeData={resolvedRoles}
                 onClick={handleClick}
-                selected={getActiveTreeItemId() === id}
+                selected={isSelectedOrHilighted(id)}
                 collapsed={getIsCollapsed()}
                 getKeyboardOpenId={getKeyboardOpenId}
                 keyboardOpenId={getKeyboardOpenId()}
