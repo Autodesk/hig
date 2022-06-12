@@ -21,12 +21,7 @@ export default {
   },
 };
 
-// eslint-disable-next-line no-unused-vars
-const Template = (args, { globals: { colorScheme, density } }) => {
-  // eslint-disable-next-line no-console
-  console.log(density);
-  return <Dropdown {...args} />;
-};
+const Template = (args) => <Dropdown {...args} />;
 
 export const Default = Template.bind({});
 
