@@ -37,24 +37,25 @@ const Table = (props) => {
           tableObject={tableObject}
         >
           {({
-            getActiveColumnIndex,
-            getActiveMultiSelectColumn,
-            getActiveMultiSelectRowArray,
-            getActiveRowIndex,
-            getAllMultiSelectedRows,
-            getColumnHeaderArray,
+            activeColumnIndex,
+            activeMultiSelectColumn,
+            activeMultiSelectRowArray,
+            activeRowIndex,
+            allMultiSelectedRows,
+            columnHeaderArray,
             handleKeyDown,
             setActiveColumnIndex,
             setActiveMultiSelectColumn,
             setActiveMultiSelectRowArray,
             setActiveRowIndex,
             setAllMultiSelectedRows,
+            setColumnHeaderArray,
             setHeaderRef,
             setTableRef,
             setTotalRows,
-            getGlobalColumns,
+            globalColumns,
             setGlobalColumns,
-            getGlobalResizeStyles,
+            globalResizeStyles,
             setGlobalResizeStyles,
           }) => (
             <TablePresenter
@@ -67,18 +68,19 @@ const Table = (props) => {
               rowSpreadProps={rowSpreadProps}
               rowSelection={rowSelection}
               tableObject={tableObject}
-              getActiveColumnIndex={getActiveColumnIndex}
-              getActiveMultiSelectColumn={getActiveMultiSelectColumn}
-              getActiveMultiSelectRowArray={getActiveMultiSelectRowArray}
-              getActiveRowIndex={getActiveRowIndex}
-              getAllMultiSelectedRows={getAllMultiSelectedRows}
-              getColumnHeaderArray={getColumnHeaderArray}
+              activeColumnIndex={activeColumnIndex}
+              activeMultiSelectColumn={activeMultiSelectColumn}
+              activeMultiSelectRowArray={activeMultiSelectRowArray}
+              activeRowIndex={activeRowIndex}
+              allMultiSelectedRows={allMultiSelectedRows}
+              columnHeaderArray={columnHeaderArray}
               handleKeyDown={handleKeyDown}
               setActiveColumnIndex={setActiveColumnIndex}
               setActiveMultiSelectColumn={setActiveMultiSelectColumn}
               setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
               setActiveRowIndex={setActiveRowIndex}
               setAllMultiSelectedRows={setAllMultiSelectedRows}
+              setColumnHeaderArray={setColumnHeaderArray}
               setHeaderRef={setHeaderRef}
               setTableRef={setTableRef}
               setTotalRows={setTotalRows}
@@ -87,9 +89,9 @@ const Table = (props) => {
               onTableCellClick={onTableCellClick}
               onSortClick={onSortClick}
               stylesheet={stylesheet}
-              getGlobalColumns={getGlobalColumns}
+              globalColumns={globalColumns}
               setGlobalColumns={setGlobalColumns}
-              getGlobalResizeStyles={getGlobalResizeStyles}
+              globalResizeStyles={globalResizeStyles}
               setGlobalResizeStyles={setGlobalResizeStyles}
               tableGroupSelectAll={tableGroupSelectAll}
             />

@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import TreeItemBehavior from "./behaviors/TreeItemBehavior";
@@ -18,25 +18,27 @@ const TreeItem = (props) => {
   } = props;
   const {
     defaultSelected,
-    getActiveTreeItemIndex,
+    getActiveTreeItemId,
     getCurrentItemClicked,
-    getTreeItemArray,
     getKeyboardOpenId,
     isControlled,
     onFocus,
     selected,
     setKeyboardOpenId,
   } = otherProps;
-  const getActiveId = () => {
+  const isSelected = (itemId) => {
     if (isControlled()) {
-      return selected;
+      return selected && selected.indexOf(itemId) !== -1;
     }
-    return getCurrentItemClicked() || defaultSelected;
+    return getCurrentItemClicked() === itemId || defaultSelected === itemId;
   };
-  const isHighlighted = useMemo(
-    () => getActiveTreeItemIndex() === getTreeItemArray()?.indexOf(id),
-    [getActiveTreeItemIndex, getTreeItemArray]
-  );
+  const isHilighted = (itemId) => {
+    const activeId = getActiveTreeItemId();
+    if (isControlled()) {
+      return activeId && activeId.indexOf(itemId) !== -1;
+    }
+    return activeId === itemId;
+  };
 
   return (
     <TreeItemBehavior
@@ -58,7 +60,7 @@ const TreeItem = (props) => {
           collapsed={getIsCollapsed()}
           getIsCollapsed={getIsCollapsed}
           getKeyboardOpenId={getKeyboardOpenId}
-          highlighted={isHighlighted}
+          highlighted={isHilighted(id)}
           icon={icon}
           id={id}
           keyboardOpenId={getKeyboardOpenId()}
@@ -67,7 +69,7 @@ const TreeItem = (props) => {
           onDoubleClick={handleDoubleClick}
           onFocus={onFocus}
           onOperatorClick={handleOperatorClick}
-          selected={getActiveId() === id}
+          selected={isSelected(id)}
           setIsCollapsed={setIsCollapsed}
           setKeyboardOpenId={setKeyboardOpenId}
           stylesheet={stylesheet}

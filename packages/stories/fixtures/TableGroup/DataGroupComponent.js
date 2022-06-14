@@ -16,7 +16,7 @@ const DataGroupComponent = ({passedData}) => {
     setCheckboxToggle = () => {},
     setAllMultiSelectedRows = () => {},
     setActiveMultiSelectRowArray = () => {},
-    activeMultiSelectRowArray = () => {},
+    getActiveMultiSelectRowArray = () => {},
   } = passedData;
 
   const handleSelectAllGroup = (e) => {
@@ -28,8 +28,8 @@ const DataGroupComponent = ({passedData}) => {
 
     const groupSpecificDataArray = [...newArray];
 
-    if (activeMultiSelectRowArray) {
-      newArray = activeMultiSelectRowArray.concat(newArray);
+    if (getActiveMultiSelectRowArray) {
+      newArray = getActiveMultiSelectRowArray.concat(newArray);
     }
     if (checkboxToggle[count] === false) {
       setAllMultiSelectedRows(true);
@@ -47,7 +47,9 @@ const DataGroupComponent = ({passedData}) => {
       <Accordion
         label={
           <div className={css(styles.higGroupedLabel)}>
-            <Checkbox id={count} onClick={handleSelectAllGroup} checked={checkboxToggle[count]} className={css(styles.higGroupedCheckToggle)}/>
+            <div className={css(styles.higGroupToggleHolder)}>
+              <Checkbox id={count} onClick={handleSelectAllGroup} checked={checkboxToggle[count]} className={css(styles.higGroupedCheckToggle)}/>
+            </div>
             <div>{groupNames ? groupNames[count] : ""}</div>
             <div className={css(styles.higGroupedDataCount)}>
               {`(${data.length})`}

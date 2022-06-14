@@ -116,21 +116,20 @@ const getHeaders = (columns) => {
 export default function TableBehavior(props) {
   const { paginateDynamic, tableObject, ...otherProps } = props;
   const { onKeyDown } = otherProps;
-  const [getTotalRows, setTotalRows] = useState(tableObject.data.length);
-  const [getColumnHeaderArray, setColumnHeaderArray] = useState(
+  const [totalRows, setTotalRows] = useState(tableObject.data.length);
+  const [columnHeaderArray, setColumnHeaderArray] = useState(
     getHeaders(tableObject.columns)
   );
-  const [getActiveColumnIndex, setActiveColumnIndex] = useState(null);
-  const [getActiveMultiSelectColumn, setActiveMultiSelectColumn] =
+  const [activeColumnIndex, setActiveColumnIndex] = useState(null);
+  const [activeMultiSelectColumn, setActiveMultiSelectColumn] = useState(null);
+  const [activeMultiSelectRowArray, setActiveMultiSelectRowArray] =
     useState(null);
-  const [getActiveMultiSelectRowArray, setActiveMultiSelectRowArray] =
-    useState(null);
-  const [getAllMultiSelectedRows, setAllMultiSelectedRows] = useState(false);
-  const [getActiveRowIndex, setActiveRowIndex] = useState(null);
-  const [getInternalTableRef, setInternalTableRef] = useState(null);
-  const [getInternalHeaderRef, setInternalHeaderRef] = useState(null);
-  const [getGlobalColumns, setGlobalColumns] = useState(null);
-  const [getGlobalResizeStyles, setGlobalResizeStyles] = useState(null);
+  const [allMultiSelectedRows, setAllMultiSelectedRows] = useState(false);
+  const [activeRowIndex, setActiveRowIndex] = useState(null);
+  const [internalTableRef, setInternalTableRef] = useState(null);
+  const [internalHeaderRef, setInternalHeaderRef] = useState(null);
+  const [globalColumns, setGlobalColumns] = useState(null);
+  const [globalResizeStyles, setGlobalResizeStyles] = useState(null);
 
   const setTableRef = (element) => {
     if (props.tableRef) {
@@ -148,7 +147,7 @@ export default function TableBehavior(props) {
       const { columnSelection, rowHeight, rowSelection } = props;
       const columnStart = rowSelection ? -1 : 0;
       const rowStart = columnSelection ? -1 : 0;
-      const headerMultiplier = getInternalHeaderRef?.children?.length;
+      const headerMultiplier = internalHeaderRef?.children?.length;
       const height = Number(rowHeight.replace("px", ""));
       const scrollDownOffset = headerMultiplier * height + 1;
 
@@ -156,21 +155,21 @@ export default function TableBehavior(props) {
         onKeyDown(event);
       }
       setActiveMultiSelectColumn(null);
-      if (!getActiveColumnIndex) {
+      if (!activeColumnIndex) {
         setActiveColumnIndex(0);
       }
-      if (!getActiveRowIndex) {
+      if (!activeRowIndex) {
         setActiveRowIndex(0);
       }
       switch (event.code) {
         case "ArrowDown":
-          if (getTotalRows !== getActiveRowIndex + 1) {
-            setActiveRowIndex(getActiveRowIndex + 1);
+          if (totalRows !== activeRowIndex + 1) {
+            setActiveRowIndex(activeRowIndex + 1);
             checkVerticalScroll(
               document.querySelector(
-                getCellObject(getActiveColumnIndex, getActiveRowIndex + 1)
+                getCellObject(activeColumnIndex, activeRowIndex + 1)
               ),
-              getInternalTableRef,
+              internalTableRef,
               scrollDownOffset
             );
           }
@@ -178,78 +177,71 @@ export default function TableBehavior(props) {
           break;
         case "ArrowUp":
           if (
-            (getActiveRowIndex !== rowStart && getActiveColumnIndex !== -1) ||
-            (getActiveColumnIndex === -1 && getActiveRowIndex >= 0)
+            (activeRowIndex !== rowStart && activeColumnIndex !== -1) ||
+            (activeColumnIndex === -1 && activeRowIndex >= 0)
           ) {
-            setActiveRowIndex(getActiveRowIndex - 1);
+            setActiveRowIndex(activeRowIndex - 1);
             checkVerticalScroll(
               document.querySelector(
-                getCellObject(getActiveColumnIndex, getActiveRowIndex - 1)
+                getCellObject(activeColumnIndex, activeRowIndex - 1)
               ),
-              getInternalTableRef,
+              internalTableRef,
               scrollDownOffset
             );
           }
           event.preventDefault();
           break;
         case "ArrowLeft":
-          if (getActiveColumnIndex !== columnStart) {
-            setActiveColumnIndex(getActiveColumnIndex - 1);
+          if (activeColumnIndex !== columnStart) {
+            setActiveColumnIndex(activeColumnIndex - 1);
             checkHorizontalScroll(
               document.querySelector(
-                getCellObject(getActiveColumnIndex - 1, getActiveRowIndex)
+                getCellObject(activeColumnIndex - 1, activeRowIndex)
               ),
-              getInternalTableRef
+              internalTableRef
             );
           }
           event.preventDefault();
           break;
         case "ArrowRight":
-          if (getColumnHeaderArray.length !== getActiveColumnIndex + 1) {
-            setActiveColumnIndex(getActiveColumnIndex + 1);
+          if (columnHeaderArray.length !== activeColumnIndex + 1) {
+            setActiveColumnIndex(activeColumnIndex + 1);
             checkHorizontalScroll(
               document.querySelector(
-                getCellObject(getActiveColumnIndex + 1, getActiveRowIndex)
+                getCellObject(activeColumnIndex + 1, activeRowIndex)
               ),
-              getInternalTableRef
+              internalTableRef
             );
           }
           event.preventDefault();
           break;
         case "Enter":
-          if (getActiveRowIndex > -1 && getActiveColumnIndex === -1) {
+          if (activeRowIndex > -1 && activeColumnIndex === -1) {
             /**
              * Look into consolidating this w/ the row select onClick
              */
-            const newArray = getActiveMultiSelectRowArray?.includes(
-              getActiveRowIndex
-            )
-              ? getActiveMultiSelectRowArray.filter(
-                  (item) => item !== getActiveRowIndex
+            const newArray = activeMultiSelectRowArray?.includes(activeRowIndex)
+              ? activeMultiSelectRowArray.filter(
+                  (item) => item !== activeRowIndex
                 )
-              : (getActiveMultiSelectRowArray && [
-                  ...getActiveMultiSelectRowArray,
-                ]) ||
+              : (activeMultiSelectRowArray && [...activeMultiSelectRowArray]) ||
                 [];
 
-            if (!getActiveMultiSelectRowArray?.includes(getActiveRowIndex)) {
-              newArray.push(getActiveRowIndex);
+            if (!activeMultiSelectRowArray?.includes(activeRowIndex)) {
+              newArray.push(activeRowIndex);
             }
-            if (getTotalRows === newArray.length) {
+            if (totalRows === newArray.length) {
               setAllMultiSelectedRows(true);
             } else {
               setAllMultiSelectedRows(false);
             }
             setActiveMultiSelectRowArray(newArray);
           }
-          if (getActiveRowIndex === -1 && getActiveColumnIndex === -1) {
+          if (activeRowIndex === -1 && activeColumnIndex === -1) {
             const allArray = tableObject.data.map((row, index) => index);
             const emptyArray = [];
 
-            if (
-              getAllMultiSelectedRows ||
-              getActiveMultiSelectRowArray?.length > 0
-            ) {
+            if (allMultiSelectedRows || activeMultiSelectRowArray?.length > 0) {
               setActiveMultiSelectRowArray(emptyArray);
               setAllMultiSelectedRows(false);
             } else {
@@ -257,8 +249,8 @@ export default function TableBehavior(props) {
               setAllMultiSelectedRows(true);
             }
           }
-          if (columnSelection && getActiveColumnIndex > -1) {
-            setActiveMultiSelectColumn(getActiveColumnIndex);
+          if (columnSelection && activeColumnIndex > -1) {
+            setActiveMultiSelectColumn(activeColumnIndex);
           }
           break;
         default:
@@ -266,10 +258,10 @@ export default function TableBehavior(props) {
       }
     },
     [
-      getActiveColumnIndex,
-      getActiveMultiSelectRowArray,
-      getActiveRowIndex,
-      getAllMultiSelectedRows,
+      activeColumnIndex,
+      activeMultiSelectRowArray,
+      activeRowIndex,
+      allMultiSelectedRows,
       setActiveRowIndex,
       setActiveColumnIndex,
     ]
@@ -280,24 +272,25 @@ export default function TableBehavior(props) {
   }, [tableObject]);
 
   return props.children({
-    getActiveColumnIndex,
-    getActiveRowIndex,
-    getActiveMultiSelectColumn,
-    getActiveMultiSelectRowArray,
-    getAllMultiSelectedRows,
-    getColumnHeaderArray,
+    activeColumnIndex,
+    activeRowIndex,
+    activeMultiSelectColumn,
+    activeMultiSelectRowArray,
+    allMultiSelectedRows,
+    columnHeaderArray,
     handleKeyDown,
     setActiveColumnIndex,
     setActiveRowIndex,
     setActiveMultiSelectColumn,
     setActiveMultiSelectRowArray,
     setAllMultiSelectedRows,
+    setColumnHeaderArray,
     setHeaderRef,
     setTableRef,
     setTotalRows,
-    getGlobalColumns,
+    globalColumns,
     setGlobalColumns,
-    getGlobalResizeStyles,
+    globalResizeStyles,
     setGlobalResizeStyles,
   });
 }

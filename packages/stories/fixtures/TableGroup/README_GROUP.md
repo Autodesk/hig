@@ -1,3 +1,17 @@
+# Table Group
+To enable table grouping for `@hig/table` pass in your custom DataGroupComponent within your tableObject meta
+
+Set your desired `group names` by passing in the appropriate array
+```
+meta: {
+  ...
+  dataGroupComponent: props => <DataGroupComponent passedData={props} />,
+  },
+  groupNames: ['Revit Model', 'CAD Formats', 'Sample Empty', 'Coordination Model'],
+```
+
+## Example of implementation of DataGroupComponent
+```
 import React from 'react';
 import { css } from "emotion";
 
@@ -16,7 +30,7 @@ const DataGroupComponent = ({passedData}) => {
     setCheckboxToggle = () => {},
     setAllMultiSelectedRows = () => {},
     setActiveMultiSelectRowArray = () => {},
-    activeMultiSelectRowArray = () => {},
+    getActiveMultiSelectRowArray = () => {},
   } = passedData;
 
   const handleSelectAllGroup = (e) => {
@@ -28,8 +42,8 @@ const DataGroupComponent = ({passedData}) => {
 
     const groupSpecificDataArray = [...newArray];
 
-    if (activeMultiSelectRowArray) {
-      newArray = activeMultiSelectRowArray.concat(newArray);
+    if (getActiveMultiSelectRowArray) {
+      newArray = getActiveMultiSelectRowArray.concat(newArray);
     }
     if (checkboxToggle[count] === false) {
       setAllMultiSelectedRows(true);
@@ -47,7 +61,9 @@ const DataGroupComponent = ({passedData}) => {
       <Accordion
         label={
           <div className={css(styles.higGroupedLabel)}>
-            <Checkbox id={count} onClick={handleSelectAllGroup} checked={checkboxToggle[count]} className={css(styles.higGroupedCheckToggle)}/>
+            <div className={css(styles.higGroupToggleHolder)}>
+              <Checkbox id={count} onClick={handleSelectAllGroup} checked={checkboxToggle[count]} className={css(styles.higGroupedCheckToggle)}/>
+            </div>
             <div>{groupNames ? groupNames[count] : ""}</div>
             <div className={css(styles.higGroupedDataCount)}>
               {`(${data.length})`}
@@ -73,3 +89,29 @@ const DataGroupComponent = ({passedData}) => {
 }
 
 export default DataGroupComponent;
+```
+
+## Group Select All By Data Type
+Enable select all by group data type by passing in an object to the `tableGroupSelectAll` prop
+```
+<Table
+  ...
+  tableGroupSelectAll={{checkboxToggle: true/false, setCheckboxToggle: () => {}}}
+  />
+```
+
+## Example method to implement checkbox for select all within your component
+```
+const [checkboxToggle, setCheckboxToggle] = useState(Array(tableObject.data.length).fill(false));
+
+const handleCheckboxToggle = (count, value) => {
+  const copyCheckboxArray = checkboxToggle.map((item, index) => {
+    if (index === count) {
+      item = value;
+    }
+    return item;
+  });
+
+  setCheckboxToggle(copyCheckboxArray);
+}
+```
