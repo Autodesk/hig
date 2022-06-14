@@ -1,3 +1,10 @@
+# [@hig/table-v1.5.1](https://github.com/Autodesk/hig/compare/@hig/table@1.5.0...@hig/table@1.5.1) (2022-06-14)
+
+
+### Bug Fixes
+
+* column show/hide cell styles ([b8fb5be](https://github.com/Autodesk/hig/commit/b8fb5be))
+
 # [@hig/table-v1.5.0](https://github.com/Autodesk/hig/compare/@hig/table@1.4.3...@hig/table@1.5.0) (2022-06-02)
 
 

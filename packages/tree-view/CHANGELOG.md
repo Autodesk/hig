@@ -1,3 +1,10 @@
+# [@hig/tree-view-v2.7.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.6.1...@hig/tree-view@2.7.0) (2022-06-14)
+
+
+### Features
+
+* make selected to be Array ([54798c2](https://github.com/Autodesk/hig/commit/54798c2))
+
 # [@hig/tree-view-v2.6.1](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.6.0...@hig/tree-view@2.6.1) (2022-05-25)
 
 
