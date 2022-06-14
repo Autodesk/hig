@@ -83,12 +83,12 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   }));
 
   const {
-    getActiveColumnIndex,
-    getActiveMultiSelectColumn,
-    getActiveMultiSelectRowArray,
-    getActiveRowIndex,
-    getAllMultiSelectedRows,
-    getColumnHeaderArray,
+    activeColumnIndex,
+    activeMultiSelectColumn,
+    activeMultiSelectRowArray,
+    activeRowIndex,
+    allMultiSelectedRows,
+    columnHeaderArray,
     handleFocus,
     handleKeyDown,
     setActiveColumnIndex,
@@ -96,9 +96,10 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     setActiveMultiSelectRowArray,
     setActiveRowIndex,
     setAllMultiSelectedRows,
-    getGlobalColumns,
+    setColumnHeaderArray,
+    globalColumns,
     setGlobalColumns,
-    getGlobalResizeStyles,
+    globalResizeStyles,
     setGlobalResizeStyles,
   } = otherProps;
 
@@ -145,10 +146,10 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                 if (isGrouped) return null;
                 return (
                   <Checkbox
-                    checked={getAllMultiSelectedRows}
+                    checked={allMultiSelectedRows}
                     indeterminate={
-                      !!getActiveMultiSelectRowArray?.length &&
-                      !getAllMultiSelectedRows
+                      !!activeMultiSelectRowArray?.length &&
+                      !allMultiSelectedRows
                     }
                     onClick={(event) => {
                       event.stopPropagation();
@@ -158,8 +159,8 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                       const emptyArray = [];
 
                       if (
-                        getAllMultiSelectedRows ||
-                        getActiveMultiSelectRowArray?.length > 0
+                        allMultiSelectedRows ||
+                        activeMultiSelectRowArray?.length > 0
                       ) {
                         setActiveMultiSelectRowArray(emptyArray);
                         setAllMultiSelectedRows(false);
@@ -181,21 +182,21 @@ const RenderTable = ({ params, passedData, passedCount }) => {
 
                 return (
                   <Checkbox
-                    checked={getActiveMultiSelectRowArray?.includes(rowIndex)}
+                    checked={activeMultiSelectRowArray?.includes(rowIndex)}
                     onClick={(event) => {
                       event.stopPropagation();
-                      const newArray = getActiveMultiSelectRowArray?.includes(
+                      const newArray = activeMultiSelectRowArray?.includes(
                         rowIndex
                       )
-                        ? getActiveMultiSelectRowArray.filter(
+                        ? activeMultiSelectRowArray.filter(
                             (item) => item !== rowIndex
                           )
-                        : (getActiveMultiSelectRowArray && [
-                            ...getActiveMultiSelectRowArray,
+                        : (activeMultiSelectRowArray && [
+                            ...activeMultiSelectRowArray,
                           ]) ||
                           [];
 
-                      if (!getActiveMultiSelectRowArray?.includes(rowIndex)) {
+                      if (!activeMultiSelectRowArray?.includes(rowIndex)) {
                         newArray.push(rowIndex);
                       }
                       if (rowTypeToMap.length === newArray.length) {
@@ -238,7 +239,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   });
 
   useEffect(() => {
-    if (!getGlobalColumns && count === 0) {
+    if (!globalColumns && count === 0) {
       setGlobalColumns(headerGroups[0].headers);
     }
   });
@@ -249,7 +250,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     );
 
     if (
-      JSON.stringify(getGlobalResizeStyles) !==
+      JSON.stringify(globalResizeStyles) !==
         JSON.stringify(currentHeaderStyles) &&
       count === 0
     ) {
@@ -283,6 +284,8 @@ const RenderTable = ({ params, passedData, passedCount }) => {
               <ColumnShowHide
                 toggleHideAllColumnsProps={getToggleHideAllColumnsProps}
                 allColumns={allColumns}
+                columnHeaderArray={columnHeaderArray}
+                setColumnHeaderArray={setColumnHeaderArray}
               >
                 {meta.columnShowHideComponent}
               </ColumnShowHide>
@@ -310,19 +313,19 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                       key={`header-group-${headerGroupIndex}`}
                     >
                       {headerGroup.headers.map((column, columnIndex) => {
-                        const headerIndex = getColumnHeaderArray.indexOf(
+                        const headerIndex = columnHeaderArray.indexOf(
                           column.Header
                         );
                         const headerIndexOffset = rowSelection ? 1 : 0;
                         const resizingStyles =
                           column.canResize ||
-                          getGlobalColumns?.[headerIndex + headerIndexOffset]
+                          globalColumns?.[headerIndex + headerIndexOffset]
                             ?.canResize
                             ? stylesheet(
                                 {
                                   isResizing:
                                     column.isResizing ||
-                                    getGlobalColumns?.[
+                                    globalColumns?.[
                                       headerIndex + headerIndexOffset
                                     ]?.isResizing,
                                   customStylesheet,
@@ -338,24 +341,22 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                               column.getSortByToggleProps()
                             )}
                             columnSelection={columnSelection}
-                            getActiveMultiSelectColumn={
-                              getActiveMultiSelectColumn
-                            }
-                            getColumnHeaderArray={getColumnHeaderArray}
+                            activeMultiSelectColumn={activeMultiSelectColumn}
+                            columnHeaderArray={columnHeaderArray}
                             headerBackgroundColor={headerBackgroundColor}
                             headerIndex={headerIndex}
                             isSelectableHeader={!column.headers}
                             isSortPassed={meta.sortColumns}
                             key={`table-header-cell-${columnIndex}`}
                             selected={
-                              getActiveColumnIndex === headerIndex &&
-                              getActiveRowIndex === -1
+                              activeColumnIndex === headerIndex &&
+                              activeRowIndex === -1
                             }
                             setActiveMultiSelectColumn={
                               setActiveMultiSelectColumn
                             }
                             customStylesheet={customStylesheet}
-                            getGlobalResizeStyles={getGlobalResizeStyles}
+                            globalResizeStyles={globalResizeStyles}
                             onSortClick={onSortClick}
                             rowSelection={rowSelection}
                             setIsSortedDesc={setIsSortedDesc}
@@ -419,14 +420,12 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                       metadata={metadata}
                       prepareRow={prepareRow}
                       rowSpreadProps={rowSpreadProps}
-                      getColumnHeaderArray={getColumnHeaderArray}
+                      columnHeaderArray={columnHeaderArray}
                       getOffset={getOffset}
-                      getActiveMultiSelectColumn={getActiveMultiSelectColumn}
-                      getActiveMultiSelectRowArray={
-                        getActiveMultiSelectRowArray
-                      }
-                      getActiveColumnIndex={getActiveColumnIndex}
-                      getActiveRowIndex={getActiveRowIndex}
+                      activeMultiSelectColumn={activeMultiSelectColumn}
+                      activeMultiSelectRowArray={activeMultiSelectRowArray}
+                      activeColumnIndex={activeColumnIndex}
+                      activeRowIndex={activeRowIndex}
                       setActiveColumnIndex={setActiveColumnIndex}
                       setActiveMultiSelectColumn={setActiveMultiSelectColumn}
                       setActiveRowIndex={setActiveRowIndex}
@@ -441,14 +440,14 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                       page={page}
                       isGrouped={isGrouped}
                       tableObject={tableObject}
-                      getGlobalResizeStyles={getGlobalResizeStyles}
-                      getGlobalColumns={getGlobalColumns}
+                      globalResizeStyles={globalResizeStyles}
+                      globalColumns={globalColumns}
                       rowSelection={rowSelection}
                     />
                   }
-                  getActiveMultiSelectRowArray={getActiveMultiSelectRowArray}
+                  activeMultiSelectRowArray={activeMultiSelectRowArray}
                   setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
-                  getAllMultiSelectedRows={getAllMultiSelectedRows}
+                  allMultiSelectedRows={allMultiSelectedRows}
                   setAllMultiSelectedRows={setAllMultiSelectedRows}
                   getOffset={getOffset}
                   checkboxToggle={checkboxToggle}
@@ -469,12 +468,12 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                   metadata={metadata}
                   prepareRow={prepareRow}
                   rowSpreadProps={rowSpreadProps}
-                  getColumnHeaderArray={getColumnHeaderArray}
+                  columnHeaderArray={columnHeaderArray}
                   getOffset={getOffset}
-                  getActiveMultiSelectColumn={getActiveMultiSelectColumn}
-                  getActiveMultiSelectRowArray={getActiveMultiSelectRowArray}
-                  getActiveColumnIndex={getActiveColumnIndex}
-                  getActiveRowIndex={getActiveRowIndex}
+                  activeMultiSelectColumn={activeMultiSelectColumn}
+                  activeMultiSelectRowArray={activeMultiSelectRowArray}
+                  activeColumnIndex={activeColumnIndex}
+                  activeRowIndex={activeRowIndex}
                   setActiveColumnIndex={setActiveColumnIndex}
                   setActiveMultiSelectColumn={setActiveMultiSelectColumn}
                   setActiveRowIndex={setActiveRowIndex}
@@ -487,8 +486,8 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                   page={page}
                   isGrouped={isGrouped}
                   tableObject={tableObject}
-                  getGlobalResizeStyles={getGlobalResizeStyles}
-                  getGlobalColumns={getGlobalColumns}
+                  globalResizeStyles={globalResizeStyles}
+                  globalColumns={globalColumns}
                   rowSelection={rowSelection}
                 />
               )}

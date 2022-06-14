@@ -4,15 +4,28 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const ColumnShowHide = ({
-  children,
-  toggleHideAllColumnsProps,
   allColumns,
-}) => <div>{children({ toggleHideAllColumnsProps, allColumns })}</div>;
+  children,
+  columnHeaderArray,
+  setColumnHeaderArray,
+  toggleHideAllColumnsProps,
+}) => (
+  <div>
+    {children({
+      allColumns,
+      columnHeaderArray,
+      setColumnHeaderArray,
+      toggleHideAllColumnsProps,
+    })}
+  </div>
+);
 
 ColumnShowHide.propTypes = {
-  children: PropTypes.func,
-  toggleHideAllColumnsProps: PropTypes.func,
   allColumns: PropTypes.array,
+  children: PropTypes.func,
+  columnHeaderArray: PropTypes.array,
+  setColumnHeaderArray: PropTypes.func,
+  toggleHideAllColumnsProps: PropTypes.func,
 };
 
 export default ColumnShowHide;

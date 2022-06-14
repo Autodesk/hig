@@ -16,14 +16,14 @@ export default function TableDataCellPresenter(props) {
     setActiveMultiSelectColumn,
     setActiveRowIndex,
     onTableCellClick,
-    getActiveMultiSelectRowArray,
+    activeMultiSelectRowArray,
     setAllMultiSelectedRows,
     setActiveMultiSelectRowArray,
     rowSelection,
     rowTypeToMap,
     ...otherProps
   } = props;
-  const { getGlobalResizeStyles } = otherProps;
+  const { globalResizeStyles } = otherProps;
   const handleCellClick = useCallback(
     (event) => {
       if (onTableCellClick) {
@@ -46,7 +46,7 @@ export default function TableDataCellPresenter(props) {
       setActiveColumnIndex,
       setActiveRowIndex,
       setActiveMultiSelectColumn,
-      getActiveMultiSelectRowArray,
+      activeMultiSelectRowArray,
       setAllMultiSelectedRows,
       setActiveMultiSelectRowArray,
       rowTypeToMap,
@@ -54,10 +54,9 @@ export default function TableDataCellPresenter(props) {
   );
   const payload = { ...otherProps };
   const rowOffset = rowSelection ? 1 : 0;
-  const resizeStyles =
-    getGlobalResizeStyles?.[cellColumnIndex + rowOffset] || {};
+  const resizeStyles = globalResizeStyles?.[cellColumnIndex + rowOffset] || {};
 
-  delete payload.getColumnHeaderArray;
+  delete payload.columnHeaderArray;
   delete payload.hasHover;
   delete payload.isLast;
   delete payload.isPressed;
@@ -68,7 +67,7 @@ export default function TableDataCellPresenter(props) {
   delete payload.selectedBottom;
   delete payload.selectedLeft;
   delete payload.customStylesheet;
-  delete payload.getGlobalResizeStyles;
+  delete payload.globalResizeStyles;
   // remove resize inline style and move to emotion styles
   delete payload.style;
 
@@ -109,7 +108,7 @@ TableDataCellPresenter.propTypes = {
   setActiveMultiSelectColumn: PropTypes.func,
   setActiveRowIndex: PropTypes.func,
   onTableCellClick: PropTypes.func,
-  getActiveMultiSelectRowArray: PropTypes.arrayOf(PropTypes.number),
+  activeMultiSelectRowArray: PropTypes.arrayOf(PropTypes.number),
   setAllMultiSelectedRows: PropTypes.func,
   setActiveMultiSelectRowArray: PropTypes.func,
   // eslint-disable-next-line react/forbid-prop-types

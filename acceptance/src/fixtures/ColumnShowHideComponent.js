@@ -19,12 +19,19 @@ const ColumnShowHideComponent = (props) => {
             <MultiCheckbox {...props.passedData?.toggleHideAllColumnsProps()} /> Toggle All
             </div>
             {
-                props.passedData?.allColumns?.map(column => (
-                    <div key={column.id}>
-                        <MultiCheckbox {...column.getToggleHiddenProps()} />
-                        {typeof column.Header === 'string' ?  column.Header : null}
-                    </div>
-                    ))
+                props.passedData?.allColumns?.map(column => {
+                    return (
+                        <div key={column.id}>
+                            <MultiCheckbox
+                                {...column.getToggleHiddenProps()} 
+                                setColumnHeaderArray={props.passedData?.setColumnHeaderArray}
+                                columnHeaderArray={props.passedData?.columnHeaderArray}
+                                headerName={column?.Header}
+                            />
+                            {typeof column.Header === 'string' ?  column.Header : null}
+                        </div>
+                    );
+                })
             }
         </div>
     )

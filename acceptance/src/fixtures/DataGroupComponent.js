@@ -16,7 +16,7 @@ const DataGroupComponent = ({passedData}) => {
     setCheckboxToggle = () => {},
     setAllMultiSelectedRows = () => {},
     setActiveMultiSelectRowArray = () => {},
-    getActiveMultiSelectRowArray = () => {},
+    activeMultiSelectRowArray = () => {},
   } = passedData;
 
   const handleSelectAllGroup = (e) => {
@@ -28,8 +28,8 @@ const DataGroupComponent = ({passedData}) => {
 
     const groupSpecificDataArray = [...newArray];
 
-    if (getActiveMultiSelectRowArray) {
-      newArray = getActiveMultiSelectRowArray.concat(newArray);
+    if (activeMultiSelectRowArray) {
+      newArray = activeMultiSelectRowArray.concat(newArray);
     }
     if (checkboxToggle[count] === false) {
       setAllMultiSelectedRows(true);
