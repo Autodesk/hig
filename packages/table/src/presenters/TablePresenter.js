@@ -30,6 +30,7 @@ const TablePresenter = ({
     data: dataArray,
     meta,
     groupNames = [],
+    initialState,
   } = useMemo(() => tableObject, [tableObject]);
   const isGrouped = Array.isArray(dataArray[0]);
   const passedParams = {
@@ -57,6 +58,7 @@ const TablePresenter = ({
     customStylesheet,
     tableGroupSelectAll,
     otherProps,
+    initialState,
   };
   if (!isGrouped) {
     return <RenderTable params={passedParams} />;

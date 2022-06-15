@@ -189,38 +189,46 @@ export const TABLE_OBJECT_CUSTOM = {
     formatDate: false, 
   },
   columns: [
-      {
-        Header: "Autodesk ID",
-        accessor: "adskid",
-        disableFilters: true,
-        width: 180
-      },
-      {
-        Header: "Administrator",
-        accessor: "admin",
-        disableFilters: true,
-        width: 180
-      },
-      {
-        Header: "Status",
-        accessor: "status",
-        disableFilters: true,
-        width: 180
-      },
-      {
-        Header: "Date",
-        accessor: "date",
-        disableFilters: true,
-        width: 180
-      },
-      {
-        Header: "Author",
-        accessor: "author",
-        disableFilters: true,
-        width: 180
-      },
+    {
+      id: "Autodesk ID",
+      Header: "Autodesk ID",
+      accessor: "adskid",
+      disableFilters: true,
+      width: 180
+    },
+    {
+      id: "Administrator",
+      Header: "Administrator",
+      accessor: "admin",
+      disableFilters: true,
+      width: 180
+    },
+    {
+      id: "Status",
+      Header: "Status",
+      accessor: "status",
+      disableFilters: true,
+      width: 180
+    },
+    {
+      id: "Date",
+      Header: "Date",
+      accessor: "date",
+      disableFilters: true,
+      width: 180
+    },
+    {
+      id: "Author",
+      Header: "Author",
+      accessor: "author",
+      disableFilters: true,
+      width: 180
+    },
   ],
   groupNames: ['Revit Model', 'CAD Formats', 'Sample Empty', 'Coordination Model'],
+  initialState: {
+    hiddenColumns: ["Autodesk ID", "Administrator"]
+  },
   data: [
     tableContent.data.map((row, index) => {
       return {

@@ -268,7 +268,14 @@ export default function TableBehavior(props) {
   );
 
   useEffect(() => {
-    setColumnHeaderArray(getHeaders(tableObject.columns));
+    if (tableObject?.initialState?.hiddenColumns) {
+      const columnHeaderArrayCopy = columnHeaderArray.filter(
+        (val) => !tableObject?.initialState?.hiddenColumns.includes(val)
+      );
+      setColumnHeaderArray(columnHeaderArrayCopy);
+    } else {
+      setColumnHeaderArray(getHeaders(tableObject.columns));
+    }
   }, [tableObject]);
 
   return props.children({

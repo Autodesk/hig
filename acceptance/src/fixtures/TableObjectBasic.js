@@ -49,36 +49,44 @@ export const TABLE_OBJECT_BASIC = {
   },
   columns: [
       {
+        id: "Autodesk ID",
         Header: "Autodesk ID",
         accessor: "adskid",
         disableFilters: true,
         width: 180
       },
       {
+        id: "Administrator",
         Header: "Administrator",
         accessor: "admin",
         disableFilters: true,
         width: 180
       },
       {
+        id: "Status",
         Header: "Status",
         accessor: "status",
         disableFilters: true,
         width: 180
       },
       {
+        id: "Date",
         Header: "Date",
         accessor: "date",
         disableFilters: true,
         width: 180
       },
       {
+        id: "Author",
         Header: "Author",
         accessor: "author",
         disableFilters: true,
         width: 180
       },
   ],
+  initialState: {
+    hiddenColumns: ["Autodesk ID", "Administrator"]
+  },
   // groupNames: ['Revit Model', 'CAD Formats', 'Sample Empty', 'Coordination Model'],
   // data: [
   //   tableContentThree.data.map((row, index) => {
