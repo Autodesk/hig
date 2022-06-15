@@ -1,3 +1,10 @@
+# [@hig/table-v1.6.0](https://github.com/Autodesk/hig/compare/@hig/table@1.5.1...@hig/table@1.6.0) (2022-06-15)
+
+
+### Features
+
+* controlled show/hide columns ([a235916](https://github.com/Autodesk/hig/commit/a235916))
+
 # [@hig/table-v1.5.1](https://github.com/Autodesk/hig/compare/@hig/table@1.5.0...@hig/table@1.5.1) (2022-06-14)
 
 
