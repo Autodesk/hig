@@ -1,3 +1,10 @@
+# [@hig/flyout-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/flyout@2.1.3...@hig/flyout@2.2.0) (2022-06-15)
+
+
+### Features
+
+* update react-transition-group ([56b4f6c](https://github.com/Autodesk/hig/commit/56b4f6c))
+
 # [@hig/flyout-v2.1.3](https://github.com/Autodesk/hig/compare/@hig/flyout@2.1.2...@hig/flyout@2.1.3) (2022-04-20)
 
 
