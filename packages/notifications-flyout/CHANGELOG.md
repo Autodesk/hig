@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@3.1.1...@hig/notifications-flyout@3.2.0) (2022-06-15)
+
+
+### Features
+
+* update react-transition-group ([56b4f6c](https://github.com/Autodesk/hig/commit/56b4f6c))
+
 # [@hig/notifications-flyout-v3.1.1](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@3.1.0...@hig/notifications-flyout@3.1.1) (2022-03-28)
 
 
