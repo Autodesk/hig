@@ -1,3 +1,10 @@
+# [@hig/progress-ring-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/progress-ring@2.1.0...@hig/progress-ring@2.2.0) (2022-06-15)
+
+
+### Features
+
+* update react-transition-group ([56b4f6c](https://github.com/Autodesk/hig/commit/56b4f6c))
+
 # [@hig/progress-ring-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/progress-ring@2.0.0...@hig/progress-ring@2.1.0) (2022-01-24)
 
 
