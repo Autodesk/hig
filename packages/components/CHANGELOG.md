@@ -1,3 +1,10 @@
+# [@hig/components-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/components@3.1.0...@hig/components@3.2.0) (2022-06-15)
+
+
+### Features
+
+* add table and badge component ([91b3c1f](https://github.com/Autodesk/hig/commit/91b3c1f))
+
 # [@hig/components-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/components@3.0.0...@hig/components@3.1.0) (2022-01-24)
 
 
