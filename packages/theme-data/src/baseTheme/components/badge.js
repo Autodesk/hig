@@ -85,6 +85,12 @@ export default {
       ref: "basics.borderWidths.medium",
     },
   },
+  "badge.outline.borderColor": {
+    type: BORDER_WIDTH,
+    value: {
+      ref: "colorScheme.surface.level100",
+    },
+  },
   "badge.green.backgroundColor": {
     type: COLOR,
     value: {
