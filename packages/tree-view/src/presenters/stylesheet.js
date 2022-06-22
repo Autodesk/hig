@@ -173,6 +173,7 @@ export default function stylesheet(props, themeData) {
     higTreeItemSubTreeItem: {
       border: `1px solid transparent`,
       boxSizing: `border-box`,
+      display: `flex`,
       height: themeData[`treeView.row.height`],
       padding: `${themeData["treeView.row.paddingVertical"]} ${themeData["treeView.row.paddingHorizontal"]} ${themeData["treeView.row.paddingVertical"]}
         calc((${contentHeight} + ${themeData["treeView.icon.marginRight"]}) + ((${contentHeight} + ${themeData["treeView.icon.marginRight"]}) * ${level}))`,

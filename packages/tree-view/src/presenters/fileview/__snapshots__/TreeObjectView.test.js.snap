@@ -220,6 +220,10 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
 .emotion-18 {
   border: 1px solid transparent;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: 40px;
   padding: 8px 12px 8px calc((24px + 8px) + ((24px + 8px) * 2));
   position: relative;
@@ -333,6 +337,10 @@ exports[`tree-view/TreeObjectView takes a treeNodeObject 1`] = `
 .emotion-35 {
   border: 1px solid transparent;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: 40px;
   padding: 8px 12px 8px calc((24px + 8px) + ((24px + 8px) * 3));
   position: relative;
