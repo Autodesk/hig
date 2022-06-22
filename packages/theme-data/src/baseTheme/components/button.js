@@ -40,7 +40,9 @@ export default {
   },
   "button.gutterWidth": {
     type: LENGTH,
-    value: "4px",
+    value: {
+      ref: "density.spacings.extraSmall",
+    },
     comment: `
       The space between elements with the component.
       E.g. The space between an icon and label within a button.`,
