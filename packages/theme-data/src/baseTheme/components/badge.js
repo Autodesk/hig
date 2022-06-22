@@ -86,7 +86,7 @@ export default {
     },
   },
   "badge.outline.borderColor": {
-    type: BORDER_WIDTH,
+    type: COLOR,
     value: {
       ref: "colorScheme.surface.level100",
     },
