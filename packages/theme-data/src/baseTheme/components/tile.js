@@ -100,42 +100,6 @@ export default {
       ref: "basics.lineHeights.highMedium",
     },
   },
-  "tile.default.level300To350BackgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white",
-    },
-    transform: {
-      alpha: 0.5,
-    },
-  },
-  "tile.hover.level300To350BackgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white",
-    },
-    transform: {
-      alpha: 0.7,
-    },
-  },
-  "tile.focus.level300To350BackgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white",
-    },
-    transform: {
-      alpha: 0.5,
-    },
-  },
-  "tile.pressed.level300To350BackgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white",
-    },
-    transform: {
-      alpha: 0.9,
-    },
-  },
   "tile.selected.default.backgroundColor": {
     type: COLOR,
     value: {
@@ -376,4 +340,65 @@ export default {
       ref: "colorScheme.background.empty.level300To350.pressed",
     },
   },
+  /**
+   * ## Deprecated
+   *
+   *
+   */
+   "tile.default.level300To350BackgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+    transform: {
+      alpha: 0.5,
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "tile.filled.default.level300To350.backgroundColor"
+      }
+    }
+  },
+  "tile.hover.level300To350BackgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+    transform: {
+      alpha: 0.7,
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "tile.filled.hover.level300To350.backgroundColor"
+      }
+    }
+  },
+  "tile.pressed.level300To350BackgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+    transform: {
+      alpha: 0.9,
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "tile.filled.pressed.level300To350.backgroundColor"
+      }
+    }
+  },
+  "tile.focus.level300To350BackgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+    transform: {
+      alpha: 0.5,
+    },
+    metadata: {
+      deprecated: {
+        equivalent: "tile.filled.focus.level300To350.backgroundColor"
+      }
+    }
+  }
 };
