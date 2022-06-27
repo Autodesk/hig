@@ -6,7 +6,6 @@ import RichText from "@hig/rich-text";
 import Flyout from "../index";
 import { anchorPoints } from "../anchorPoints";
 import Readme from "../../README.md";
-// import { indicators, indicatorPositions } from "../constants";
 
 export default {
   title: "Components/Flyout",
@@ -43,7 +42,12 @@ export default {
   },
 };
 
-const Template = (args) => <Flyout {...args} />;
+const Template = (args, context) => (
+  <Flyout
+    {...args}
+    key={`${context.globals.colorScheme}-${context.globals.density}`}
+  />
+);
 
 export const Default = Template.bind({});
 
