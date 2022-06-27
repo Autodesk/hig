@@ -1,3 +1,10 @@
+# [@hig/theme-context-v4.2.0](https://github.com/Autodesk/hig/compare/@hig/theme-context@4.1.0...@hig/theme-context@4.2.0) (2022-06-27)
+
+
+### Features
+
+* use createContext from React ([8a283ef](https://github.com/Autodesk/hig/commit/8a283ef))
+
 # [@hig/theme-context-v4.1.0](https://github.com/Autodesk/hig/compare/@hig/theme-context@4.0.0...@hig/theme-context@4.1.0) (2022-01-24)
 
 
