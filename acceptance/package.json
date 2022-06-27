@@ -28,7 +28,7 @@
     "@hig/tabs": "^2.1.0",
     "@hig/text-area": "^2.1.0",
     "@hig/text-link": "^2.1.0",
-    "@hig/theme-context": "^4.1.0",
+    "@hig/theme-context": "^4.2.0",
     "@hig/theme-data": "^2.23.1",
     "@hig/toggle": "^2.1.0",
     "@hig/tooltip": "^2.1.0",
