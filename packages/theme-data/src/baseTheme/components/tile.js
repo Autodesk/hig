@@ -157,7 +157,7 @@ export default {
   "tile.selected.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.empty.level100To250.pressed",
+      ref: "colorScheme.background.on.pressed",
     },
   },
   "tile.selected.default.borderColor": {
