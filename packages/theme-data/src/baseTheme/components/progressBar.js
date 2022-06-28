@@ -13,7 +13,7 @@ export default {
   "progress.bar.highlightColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.autodeskBlue400",
+      ref: "basics.colors.primary.autodeskBlue.400",
     },
   },
   "progress.bar.borderRadius": {
