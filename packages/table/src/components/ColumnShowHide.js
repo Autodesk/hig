@@ -9,16 +9,26 @@ const ColumnShowHide = ({
   columnHeaderArray,
   setColumnHeaderArray,
   toggleHideAllColumnsProps,
-}) => (
-  <div>
-    {children({
-      allColumns,
-      columnHeaderArray,
-      setColumnHeaderArray,
-      toggleHideAllColumnsProps,
-    })}
-  </div>
-);
+}) => {
+  const filteredSetColumnHeaderArray = (headerArray) => {
+    const preOrderedArray = allColumns
+      ?.filter((column) => headerArray.indexOf(column.id) > -1)
+      .map((item) => item.id);
+
+    setColumnHeaderArray(preOrderedArray);
+  };
+
+  return (
+    <div>
+      {children({
+        allColumns,
+        columnHeaderArray,
+        setColumnHeaderArray: filteredSetColumnHeaderArray,
+        toggleHideAllColumnsProps,
+      })}
+    </div>
+  );
+};
 
 ColumnShowHide.propTypes = {
   allColumns: PropTypes.array,

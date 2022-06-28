@@ -117,6 +117,7 @@ export default function TableBehavior(props) {
   const { paginateDynamic, tableObject, ...otherProps } = props;
   const { onKeyDown } = otherProps;
   const [totalRows, setTotalRows] = useState(tableObject.data.length);
+  // An array of Header title strings
   const [columnHeaderArray, setColumnHeaderArray] = useState(
     getHeaders(tableObject.columns)
   );
@@ -128,6 +129,7 @@ export default function TableBehavior(props) {
   const [activeRowIndex, setActiveRowIndex] = useState(null);
   const [internalTableRef, setInternalTableRef] = useState(null);
   const [internalHeaderRef, setInternalHeaderRef] = useState(null);
+  // An array of the header objects from react-table
   const [globalColumns, setGlobalColumns] = useState(null);
   const [globalResizeStyles, setGlobalResizeStyles] = useState(null);
 
