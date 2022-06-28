@@ -345,7 +345,7 @@ export default {
    *
    *
    */
-   "tile.default.level300To350BackgroundColor": {
+  "tile.default.level300To350BackgroundColor": {
     type: COLOR,
     value: {
       ref: "basics.colors.primary.white",
@@ -355,9 +355,9 @@ export default {
     },
     metadata: {
       deprecated: {
-        equivalent: "tile.filled.default.level300To350.backgroundColor"
-      }
-    }
+        equivalent: "tile.filled.default.level300To350.backgroundColor",
+      },
+    },
   },
   "tile.hover.level300To350BackgroundColor": {
     type: COLOR,
@@ -369,9 +369,9 @@ export default {
     },
     metadata: {
       deprecated: {
-        equivalent: "tile.filled.hover.level300To350.backgroundColor"
-      }
-    }
+        equivalent: "tile.filled.hover.level300To350.backgroundColor",
+      },
+    },
   },
   "tile.pressed.level300To350BackgroundColor": {
     type: COLOR,
@@ -383,9 +383,9 @@ export default {
     },
     metadata: {
       deprecated: {
-        equivalent: "tile.filled.pressed.level300To350.backgroundColor"
-      }
-    }
+        equivalent: "tile.filled.pressed.level300To350.backgroundColor",
+      },
+    },
   },
   "tile.focus.level300To350BackgroundColor": {
     type: COLOR,
@@ -397,8 +397,8 @@ export default {
     },
     metadata: {
       deprecated: {
-        equivalent: "tile.filled.focus.level300To350.backgroundColor"
-      }
-    }
-  }
+        equivalent: "tile.filled.focus.level300To350.backgroundColor",
+      },
+    },
+  },
 };

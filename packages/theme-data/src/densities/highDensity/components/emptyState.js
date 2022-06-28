@@ -1,5 +1,4 @@
 export default {
-
   "emptyState.text.headline.fontSize": {
     value: {
       ref: "basics.fontSizes.highExtraExtraLarge",
