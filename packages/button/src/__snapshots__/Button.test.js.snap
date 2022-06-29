@@ -376,7 +376,7 @@ exports[`Button renders with an icon 1`] = `
   display: inline-block;
   position: absolute;
   height: 24px;
-  margin-right: 4px;
+  margin-right: 8px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -384,7 +384,7 @@ exports[`Button renders with an icon 1`] = `
 }
 
 .emotion-1 {
-  margin-left: calc(24px + 4px);
+  margin-left: calc(24px + 8px);
 }
 
 <button

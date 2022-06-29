@@ -22,7 +22,7 @@ export default {
   "label.fontColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.charcoal900",
+      ref: "basics.colors.primary.charcoal.900",
     },
     transform: {
       alpha: 0.9,
@@ -31,7 +31,7 @@ export default {
   "label.hover.fontColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.charcoal900",
+      ref: "basics.colors.primary.charcoal.900",
     },
     transform: {
       alpha: 0.9,

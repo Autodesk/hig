@@ -15,7 +15,6 @@ import input from "./components/input";
 import label from "./components/label";
 import progressBar from "./components/progressBar";
 import progressRing from "./components/progressRing";
-import segmentedButton from "./components/segmentedButton";
 import sideNav from "./components/sideNav";
 import skeletonItem from "./components/skeletonItem";
 import slider from "./components/slider";
@@ -44,7 +43,6 @@ const darkBlueThemeConfig = extendTheme(baseTheme.unresolvedRoles, {
   ...label,
   ...progressBar,
   ...progressRing,
-  ...segmentedButton,
   ...sideNav,
   ...skeletonItem,
   ...slider,

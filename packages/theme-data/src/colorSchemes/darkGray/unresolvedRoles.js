@@ -8,7 +8,6 @@ import button from "./components/button";
 import checkbox from "./components/checkbox";
 import illustration from "./components/illustration";
 import input from "./components/input";
-import segmentedButton from "./components/segmentedButton";
 import slider from "./components/slider";
 import tag from "./components/tag";
 import thumbnail from "./components/thumbnail";
@@ -24,7 +23,6 @@ const darkGrayThemeConfig = extendTheme(darkBlueTheme.unresolvedRoles, {
   ...checkbox,
   ...illustration,
   ...input,
-  ...segmentedButton,
   ...slider,
   ...tag,
   ...thumbnail,

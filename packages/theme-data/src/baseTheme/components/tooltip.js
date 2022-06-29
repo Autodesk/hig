@@ -92,31 +92,4 @@ export default {
       alpha: 0.1,
     },
   },
-  /**
-   * ## Deprecated
-   *
-   *
-   */
-  "tooltip.textColor": {
-    type: COLOR,
-    value: {
-      ref: "tooltip.title.fontColor",
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "tooltip.title.fontColor",
-      },
-    },
-  },
-  "tooltip.borderColor": {
-    type: COLOR,
-    value: {
-      ref: "tooltip.backgroundColor",
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "tooltip.backgroundColor",
-      },
-    },
-  },
 };

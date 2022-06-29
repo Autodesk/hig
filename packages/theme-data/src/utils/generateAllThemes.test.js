@@ -9,7 +9,7 @@ const colorSchemes = [
     },
     unresolvedRoles: {
       "basics.colors.red": { value: "#ff0000", metadata: { deprecated: true } },
-      "colorScheme.accentColor": { value: { ref: "basics.colors.red" } },
+      "colorScheme.reference.accent": { value: { ref: "basics.colors.red" } },
     },
   },
   {
@@ -20,7 +20,7 @@ const colorSchemes = [
     },
     unresolvedRoles: {
       "basics.colors.blue": { value: "#0000ff" },
-      "colorScheme.accentColor": { value: { ref: "basics.colors.blue" } },
+      "colorScheme.reference.accent": { value: { ref: "basics.colors.blue" } },
     },
   },
 ];
@@ -99,14 +99,14 @@ describe("generateAllThemes", () => {
     it("has unresolvedRoles", () => {
       expect(redHighDensityTheme.unresolvedRoles).toBeDefined();
       expect(
-        redHighDensityTheme.unresolvedRoles["colorScheme.accentColor"]
+        redHighDensityTheme.unresolvedRoles["colorScheme.reference.accent"]
       ).toHaveProperty("value", { ref: "basics.colors.red" });
     });
 
     it("has resolvedRoles", () => {
       expect(redHighDensityTheme.resolvedRoles).toBeDefined();
       expect(
-        redHighDensityTheme.resolvedRoles["colorScheme.accentColor"]
+        redHighDensityTheme.resolvedRoles["colorScheme.reference.accent"]
       ).toEqual("#ff0000");
     });
   });

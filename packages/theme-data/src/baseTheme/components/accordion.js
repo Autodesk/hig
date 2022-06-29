@@ -65,18 +65,4 @@ export default {
     type: LENGTH,
     value: { ref: "density.spacings.small" },
   },
-  /**
-   *  ## Deprecated
-   *
-   *
-   */
-  "accordion.header.indicatorColor": {
-    type: COLOR,
-    value: { ref: "accordion.header.default.indicatorColor" },
-    metadata: {
-      deprecated: {
-        equivalent: "accordion.header.default.indicatorColor",
-      },
-    },
-  },
 };

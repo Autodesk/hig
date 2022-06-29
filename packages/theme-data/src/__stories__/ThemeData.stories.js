@@ -13,11 +13,9 @@ import Header from "./components/Header";
 import lightGrayTheme from "../colorSchemes/lightGray/unresolvedRoles";
 import darkBlueTheme from "../colorSchemes/darkBlue/unresolvedRoles";
 import darkGrayTheme from "../colorSchemes/darkGray/unresolvedRoles";
-import webLightTheme from "../colorSchemes/webLight/unresolvedRoles";
 import basics from "../basics";
 
 const themeConfigs = {
-  "hig-light": webLightTheme,
   "hig-light-gray": lightGrayTheme,
   "hig-dark-blue": darkBlueTheme,
   "hig-dark-gray": darkGrayTheme,
