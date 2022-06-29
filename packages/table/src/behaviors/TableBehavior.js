@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const verticalScrollInViewport = (cell) => {
   const cellBounding = cell.getBoundingClientRect();
@@ -268,6 +268,10 @@ export default function TableBehavior(props) {
       setActiveColumnIndex,
     ]
   );
+
+  useEffect(() => {
+    setColumnHeaderArray(getHeaders(tableObject.columns));
+  }, [tableObject]);
 
   return props.children({
     activeColumnIndex,
