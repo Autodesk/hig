@@ -249,6 +249,14 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   useEffect(() => {
     if (!globalColumns && count === 0) {
       setGlobalColumns(headerGroups[0].headers);
+      return;
+    }
+
+    if (
+      globalColumns?.length !== headerGroups?.[0]?.headers?.length &&
+      count === 0
+    ) {
+      setGlobalColumns(headerGroups[0].headers);
     }
   });
 
