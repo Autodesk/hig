@@ -16,37 +16,12 @@ export default function stylesheet(props, themeData, metadata) {
   const surfaceLevel = Number(surface) < 300 ? '100To250' : '300To350';
   const bgType = background === 'solid' ? 'filled' : 'empty';
   const isColumn = orientation === 'vertical';
-  const isNoBg = background === 'flat' && !hasFocus;
   const isHorizontal = orientation === 'horizontal';
   
   const isMediumDensity = metadata.densityId === `medium-density`;
 
-  const getDefaultOutline = () => {
-    const color = themeData[`tile.${bgType}.default.level${surfaceLevel}.borderColor`];
-    return `1px solid ${color}`;
-  }
-
-  const getStylesByFocus = (selected) => {
-    if (isNoBg) return 'none';
-    // const outlineThickness = hasHover ? themeData['tile.borderWidth'] : '10px';
-    const color = themeData[`tile.selected.hover.borderColor`];
-    if (selected) {
-      return {
-        backgroundColor: themeData['tile.selected.focus.backgroundColor'],
-        border: `1px solid ${themeData['tile.selected.focus.borderColor']}`,
-        boxShadow: `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}`,
-      }
-    }
-    return {
-      backgroundColor: themeData[`tile.${bgType}.focus.level${surfaceLevel}.backgroundColor`],
-      border: `1px solid ${themeData['tile.focus.haloColor']}`,
-      boxShadow: `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}`,
-      // outline: `${outlineThickness} solid ${color}`
-    }
-  }
-
   const getStylesByStatus = (status, selected) => {
-    if (isNoBg) return 'none';
+    const isFocus = status === 'focus';
     const color = selected
       ? themeData[`tile.selected.${status}.borderColor`]
       : themeData[`tile.${bgType}.${status}.level${surfaceLevel}.borderColor`];
@@ -54,14 +29,15 @@ export default function stylesheet(props, themeData, metadata) {
     if (selected) {
       return {
         background: themeData[`tile.selected.${status}.backgroundColor`],
-        border: `${borderWidth} solid ${color}`,
-        boxShadow: 'none',
+        outline: `${borderWidth} solid ${color}`,
+        boxShadow: isFocus ? `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}` : 'none',
       };
     }
+    console.log(status);
+    console.log(`tile.${bgType}.${status}.level${surfaceLevel}.backgroundColor`, themeData[`tile.${bgType}.${status}.level${surfaceLevel}.backgroundColor`]);
     return {
       backgroundColor: themeData[`tile.${bgType}.${status}.level${surfaceLevel}.backgroundColor`],
-      border: `${borderWidth} solid ${color}`,
-      boxShadow: 'none',
+      boxShadow: isFocus ? `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}` : 'none',
     }
   }
 
@@ -69,7 +45,7 @@ export default function stylesheet(props, themeData, metadata) {
     if (selected) {
       return {
         backgroundColor: themeData['tile.selected.default.backgroundColor'],
-        border: `${themeData['tile.borderWidth']} solid ${themeData['tile.selected.default.borderColor']}`,
+        outline: `${themeData['tile.borderWidth']} solid ${themeData['tile.selected.default.borderColor']}`,
       };
     }
     return {};
@@ -95,12 +71,11 @@ export default function stylesheet(props, themeData, metadata) {
   }
 
   const getIdentifierHorizontal = () => {
-    const topPlacement = isMediumDensity ? '16px' : '12px';
+    const topPlacement = themeData['density.spacings.medium'];
     return { top: `${topPlacement}`, left: '-18px' };
   }
   const getNotificationHorizontal = () => ({ left: '-5px' });
   const getSelectionOptionsHorizontal = () => ({ top: '22px' });
-  const getActionClarifierHorizontal = () => ({ paddingTop: `${isMediumDensity ? '4rem' : '2rem'}`});
   const getTileContentPadding = () => {
     if (identifier) {
       return isHorizontal ? '12px 12px 12px 36px' : '12px 12px 12px 8px';
@@ -110,33 +85,24 @@ export default function stylesheet(props, themeData, metadata) {
     }
     return '12px';
   }
-  const getTileHeaderFlatPadding = () => {
-    return isMediumDensity ? '12px' : '8px';
-  }
+  const getTileHeaderFlatPadding = () => themeData['density.spacings.small'];
 
-  const getTitleMarginTop = () => {
-    if (isHorizontal) {
-      return '0';
-    }
-    return isMediumDensity ? '8px' : '4px';
-  }
-console.log('selected', selected);
   return {
     higTileContainer: {
-      border: '1px solid transparent',
       position: 'relative',
       boxSizing: 'border-box',
       display: 'flex',
       flexDirection: isColumn ? 'column' : 'row',
-      backgroundColor: isNoBg ? 'none' : themeData[`tile.${bgType}.default.level${surfaceLevel}.backgroundColor`],
       width: '100%',
       minWidth: isColumn ? 'none' : '233px',
-      outline: getDefaultOutline(),
       cursor: 'pointer',
       color: themeData["tile.fontColor"],
       fontFamily: themeData["tile.fontFamily"],
+      transitionProperty: "background-color, box-shadow, opacity, outline",
+      transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+      transitionDuration: "0.3s",
       ...(getStylesBySelected(selected)),
-      ...(hasFocus ? getStylesByFocus(selected) : {}),
+      ...(hasFocus ? getStylesByStatus('focus', selected) : {}),
       ...(hasHover ? getStylesByStatus('hover', selected) : {}),
       ...(isPressed ? getStylesByStatus('pressed', selected) : {}),
       ...(disabled ? getStylesByDisabled() : {})
@@ -161,7 +127,7 @@ console.log('selected', selected);
       ...(isHorizontal ? getSelectionOptionsHorizontal() : {})
     },
     higTileSelectionOptionCheckbox: {
-      padding: `0 ${isMediumDensity ? '4px' : '2px'} 0 0`
+      padding: `0 ${themeData['density.spacings.extraExtraSmall']} 0 0`,
     },
     higTileSelectionOptionPin: {
 
@@ -193,15 +159,14 @@ console.log('selected', selected);
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      padding: `${isMediumDensity ? '48px' : '32px'} 0`,
-      ...(isHorizontal ? getActionClarifierHorizontal() : {})
+      padding: `${themeData['density.spacings.extraExtraLarge']} 0`,
     },
     higTileIdentifierContainer: {
       position: 'absolute',
       zIndex: '3',
       backgroundColor: 'white',
       padding: '1px',
-      width: `${isMediumDensity ? '30px' : '30px'}`,
+      width: '30px',
       top: `${isMediumDensity ? '-25px' : '-20px'}`,
       left: '0px',
       ...(isHorizontal ? getIdentifierHorizontal() : {})
@@ -221,12 +186,12 @@ console.log('selected', selected);
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      marginTop: getTitleMarginTop(),
-      marginBottom: isMediumDensity ? '4px' : '2px',
+      marginTop: isHorizontal ? 0 : themeData['density.spacings.extraSmall'],
+      marginBottom: themeData["density.spacings.extraExtraSmall"],
     },
     higTileTitle: {
       fontSize: themeData["tile.title.fontSize"],
-      fontWeight: '700',
+      fontWeight: themeData["tile.title.fontWeight"],
       lineHeight: themeData["tile.title.lineHeight"],
     },
     higTileSubTitle: {
@@ -235,15 +200,15 @@ console.log('selected', selected);
       lineHeight: themeData["tile.subTitle.lineHeight"],
     },
     higTileOverflowMenu: {
-      paddingRight: isMediumDensity ? '12px' : '8px',
+      paddingRight: themeData["density.spacings.small"],
     },
     higTileAdditionalContent: {
-      padding: `${isMediumDensity ? '4px' : '2px'} 0`,
+      padding: `${themeData["density.spacings.extraExtraSmall"]}`,
     },
     higGroupIcons: {
       display: 'flex',
       alignItems: 'center',
-      paddingTop: isMediumDensity ? '12px' : '8px',
+      paddingTop: themeData["density.spacings.small"],
       "> div": {
         alignItems: "center",
         display: "flex",
@@ -255,12 +220,12 @@ console.log('selected', selected);
       // paddingRight: themeData['tile.padding'],
     },
     higVersionHolder: {
-      marginTop: isMediumDensity ? '8px' : '4px',
+      marginTop: themeData["density.spacings.extraSmall"],
     },
     higTileCTAHolder: {
       zIndex: '10',
-      marginTop: isMediumDensity ? '8px' : '4px',
-      marginBottom: isMediumDensity ? '8px' : '4px',
+      marginTop: themeData["density.spacings.extraSmall"],
+      marginBottom: themeData["density.spacings.extraSmall"],
     }
   }
 }
