@@ -1,3 +1,10 @@
+# [@hig/table-v1.6.2](https://github.com/Autodesk/hig/compare/@hig/table@1.6.1...@hig/table@1.6.2) (2022-06-29)
+
+
+### Bug Fixes
+
+* set columnArray on load ([dbf2a60](https://github.com/Autodesk/hig/commit/dbf2a60))
+
 # [@hig/table-v1.6.1](https://github.com/Autodesk/hig/compare/@hig/table@1.6.0...@hig/table@1.6.1) (2022-06-29)
 
 
