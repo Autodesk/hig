@@ -1,3 +1,10 @@
+# [@hig/table-v1.6.1](https://github.com/Autodesk/hig/compare/@hig/table@1.6.0...@hig/table@1.6.1) (2022-06-29)
+
+
+### Bug Fixes
+
+* column show/hide resize issues ([9033cf6](https://github.com/Autodesk/hig/commit/9033cf6))
+
 # [@hig/table-v1.6.0](https://github.com/Autodesk/hig/compare/@hig/table@1.5.1...@hig/table@1.6.0) (2022-06-15)
 
 
