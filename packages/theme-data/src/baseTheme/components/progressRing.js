@@ -22,42 +22,4 @@ export default {
       ref: "basics.colors.primary.autodeskBlue.400",
     },
   },
-  /**
-   *  ## Deprecated
-   *
-   *
-   */
-  "progressRing.backgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "progress.ring.backgroundColor",
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "progress.ring.backgroundColor",
-      },
-    },
-  },
-  "progressRing.highlightColor1": {
-    type: COLOR,
-    value: {
-      ref: "progress.ring.highlightColor1",
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "progress.ring.highlightColor1",
-      },
-    },
-  },
-  "progressRing.highlightColor2": {
-    type: COLOR,
-    value: {
-      ref: "progress.ring.highlightColor2",
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "progress.ring.highlightColor2",
-      },
-    },
-  },
 };

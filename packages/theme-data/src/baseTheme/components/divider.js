@@ -17,20 +17,4 @@ export default {
       ref: "colorScheme.divider.heavyweight",
     },
   },
-  /**
-   * ## Deprecated
-   *
-   *
-   */
-  "divider.width": {
-    type: LENGTH,
-    value: {
-      ref: "divider.borderWidth",
-    },
-    metadata: {
-      deprecated: {
-        equivalent: "divider.borderWidth",
-      },
-    },
-  },
 };

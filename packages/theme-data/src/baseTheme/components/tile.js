@@ -100,42 +100,6 @@ export default {
       ref: "basics.lineHeights.highMedium",
     },
   },
-  "tile.default.level300To350BackgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white",
-    },
-    transform: {
-      alpha: 0.5,
-    },
-  },
-  "tile.hover.level300To350BackgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white",
-    },
-    transform: {
-      alpha: 0.7,
-    },
-  },
-  "tile.focus.level300To350BackgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white",
-    },
-    transform: {
-      alpha: 0.5,
-    },
-  },
-  "tile.pressed.level300To350BackgroundColor": {
-    type: COLOR,
-    value: {
-      ref: "basics.colors.primary.white",
-    },
-    transform: {
-      alpha: 0.9,
-    },
-  },
   "tile.selected.default.backgroundColor": {
     type: COLOR,
     value: {
@@ -157,7 +121,7 @@ export default {
   "tile.selected.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.empty.level100To250.pressed",
+      ref: "colorScheme.background.on.pressed",
     },
   },
   "tile.selected.default.borderColor": {
