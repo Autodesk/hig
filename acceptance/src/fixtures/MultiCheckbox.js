@@ -1,4 +1,4 @@
-import React, {forwardRef, useRef, useEffect} from 'react';
+import React, {forwardRef, useRef, useEffect, useLayoutEffect} from 'react';
 
 export const MultiCheckbox = forwardRef(({indeterminate, ...rest }, ref) => {
   const defaultRef = useRef();
@@ -19,6 +19,15 @@ export const MultiCheckbox = forwardRef(({indeterminate, ...rest }, ref) => {
     }
     onChange(event);
   }
+
+  useLayoutEffect(() => {
+    const hiddenColumns = ["Date", "Administrator"];
+    if (hiddenColumns.indexOf(headerName) > -1)  {
+      setTimeout(() => {
+        resolvedRef.current.click();
+      });
+    }
+  }, []);
 
   return (
     <>

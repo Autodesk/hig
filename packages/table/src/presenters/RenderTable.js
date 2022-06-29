@@ -57,7 +57,6 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     customStylesheet,
     tableGroupSelectAll: { checkboxToggle = [], setCheckboxToggle = () => {} },
     otherProps,
-    initialState,
   } = params || {};
   const data = passedData || dataArray;
   const count = passedCount || 0;
@@ -120,7 +119,6 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     setGlobalFilter,
     allColumns,
     getToggleHideAllColumnsProps,
-    setHiddenColumns,
   } = useTable(
     { columns, data, defaultColumn },
     useResizeColumns,
@@ -241,13 +239,15 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   });
 
   useEffect(() => {
-    if (initialState?.hiddenColumns) {
-      setHiddenColumns(initialState?.hiddenColumns);
-    }
-  }, [initialState?.hiddenColumns]);
-
-  useEffect(() => {
     if (!globalColumns && count === 0) {
+      setGlobalColumns(headerGroups[0].headers);
+      return;
+    }
+
+    if (
+      globalColumns?.length !== headerGroups?.[0]?.headers?.length &&
+      count === 0
+    ) {
       setGlobalColumns(headerGroups[0].headers);
     }
   });
