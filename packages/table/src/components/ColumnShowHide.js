@@ -2,6 +2,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
+import { convertToUpperCase } from "../util/StringMethods";
 
 const ColumnShowHide = ({
   allColumns,
@@ -12,8 +13,10 @@ const ColumnShowHide = ({
 }) => {
   const filteredSetColumnHeaderArray = (headerArray) => {
     const preOrderedArray = allColumns
-      ?.filter((column) => headerArray.indexOf(column.id) > -1)
-      .map((item) => item.id);
+      ?.filter(
+        (column) => headerArray.indexOf(convertToUpperCase(column.id)) > -1
+      )
+      .map((item) => convertToUpperCase(item.id));
 
     setColumnHeaderArray(preOrderedArray);
   };
