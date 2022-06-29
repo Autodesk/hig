@@ -49,7 +49,7 @@ const TablePage = () => {
 	const [paginateDynamic, setPaginateDynamic] = useState(false);
 	const [columnSelection, setColumnSelection] = useState(false);
 	const [rowSelection, setRowSelection] = useState(true);
-	const [customComponents, setCustomComponents] = useState(TABLE_OBJECT_BASIC);
+	const [customComponents, setCustomComponents] = useState(TABLE_OBJECT_CUSTOM);
 	const [alternateBg, setAlternateBg] = useState(false);
 	const [headerBackgroundSelection, setHeaderBackgroundSelection] = useState('surface-levels');
 	const [headerBackgroundColor, setHeaderBackgroundColor] = useState(null)

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 
 const verticalScrollInViewport = (cell) => {
   const cellBounding = cell.getBoundingClientRect();
@@ -268,17 +268,6 @@ export default function TableBehavior(props) {
       setActiveColumnIndex,
     ]
   );
-
-  useEffect(() => {
-    if (tableObject?.initialState?.hiddenColumns) {
-      const columnHeaderArrayCopy = columnHeaderArray.filter(
-        (val) => !tableObject?.initialState?.hiddenColumns.includes(val)
-      );
-      setColumnHeaderArray(columnHeaderArrayCopy);
-    } else {
-      setColumnHeaderArray(getHeaders(tableObject.columns));
-    }
-  }, [tableObject]);
 
   return props.children({
     activeColumnIndex,
