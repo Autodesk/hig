@@ -1,3 +1,25 @@
+# [@hig/theme-data-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.26.0...@hig/theme-data@3.0.0) (2022-06-29)
+
+
+### Bug Fixes
+
+* selected tile background color now using correct ref ([392c543](https://github.com/Autodesk/hig/commit/392c543))
+
+
+### Features
+
+* added borderColor role for badge outline ([98d9fca](https://github.com/Autodesk/hig/commit/98d9fca))
+* added theme data for empty state ([1cb823a](https://github.com/Autodesk/hig/commit/1cb823a))
+* deprecated old segmented button theme data ([f35e811](https://github.com/Autodesk/hig/commit/f35e811))
+* remove deprecated roles ([287ad29](https://github.com/Autodesk/hig/commit/287ad29))
+
+
+### BREAKING CHANGES
+
+* all previously deprecated roles have been removed
+- you will have to point to the equivalent that console warning showed
+- Web Light theme has been removed
+
 # [@hig/theme-data-v2.26.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.25.0...@hig/theme-data@2.26.0) (2022-04-24)
 
 
