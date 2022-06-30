@@ -1,3 +1,10 @@
+# [@hig/table-v1.6.3](https://github.com/Autodesk/hig/compare/@hig/table@1.6.2...@hig/table@1.6.3) (2022-06-30)
+
+
+### Bug Fixes
+
+* column show hide filter ([c0c9357](https://github.com/Autodesk/hig/commit/c0c9357))
+
 # [@hig/table-v1.6.2](https://github.com/Autodesk/hig/compare/@hig/table@1.6.1...@hig/table@1.6.2) (2022-06-29)
 
 
