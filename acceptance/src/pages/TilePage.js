@@ -16,7 +16,7 @@ function TilePage() {
   const [background, setBackground] = useState("solid");
   const [isSelected, setIsSelected] = useState(false);
   const [divider, setDivider] = useState(false);
-  const getDivider = () => "#3C3C3C80";
+  // const getDivider = () => "#3C3C3C80";
   const [version, setVersion] = useState(false);
   const getVersion = isMediumDensity => isMediumDensity ? <Complete24 /> : <Complete16 />;
   const [identifier, setIdentifier] = useState(false);
@@ -320,7 +320,7 @@ function TilePage() {
             <Tile 
               headerContainer={ImageHolder}
               background={background}
-              divider={divider ? getDivider(theme?.metadata?.colorSchemeId) : null}
+              divider={divider}
               title="Tile Title"
               subtitle="Tile SubTitle"
               orientation={orientation}

@@ -29,7 +29,7 @@ export default function stylesheet(props, themeData, metadata) {
     if (selected) {
       return {
         background: themeData[`tile.selected.${status}.backgroundColor`],
-        outline: `${borderWidth} solid ${color}`,
+        outlineColor: themeData["tile.selected.default.borderColor"],
         boxShadow: isFocus ? `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}` : 'none',
       };
     }
@@ -45,7 +45,7 @@ export default function stylesheet(props, themeData, metadata) {
     if (selected) {
       return {
         backgroundColor: themeData['tile.selected.default.backgroundColor'],
-        outline: `${themeData['tile.borderWidth']} solid ${themeData['tile.selected.default.borderColor']}`,
+        outlineColor: themeData["tile.selected.default.borderColor"],
       };
     }
     return {};
@@ -59,7 +59,7 @@ export default function stylesheet(props, themeData, metadata) {
   }
 
   const getDivider = () => {
-    const dividerStyle = `${themeData['tile.borderWidth']} solid ${divider}`;
+    const dividerStyle = `${themeData["divider.borderWidth"]} solid ${themeData["divider.lightColor"]}`;
     if (isHorizontal) {
       return {
         borderRight: dividerStyle
@@ -78,23 +78,27 @@ export default function stylesheet(props, themeData, metadata) {
   const getSelectionOptionsHorizontal = () => ({ top: '22px' });
   const getTileContentPadding = () => {
     if (identifier) {
-      return isHorizontal ? '12px 12px 12px 36px' : '12px 12px 12px 8px';
+      return isHorizontal ? '12px 12px 12px 24px' : '12px 12px 12px 8px';
     }
     if (!isMediumDensity) {
-      return isHorizontal ? '5px 12px 12px 12px' : '12px 12px 12px 8px';
+      return isHorizontal ? '5px 12px 12px 0' : '12px 12px 12px 8px';
     }
     return '12px';
   }
-  const getTileHeaderFlatPadding = () => themeData['density.spacings.small'];
+  const getTileHeaderFlatPadding = () => isHorizontal
+    ? `${themeData["tile.padding"]} ${themeData["tile.thumbnail.marginRight"]} ${themeData["tile.padding"]} ${themeData["tile.padding"]}`
+    : themeData["tile.padding"];
 
   return {
     higTileContainer: {
+      backgroundColor: themeData[`tile.${bgType}.default.level${surfaceLevel}.backgroundColor`],
       position: 'relative',
       boxSizing: 'border-box',
       display: 'flex',
       flexDirection: isColumn ? 'column' : 'row',
       width: '100%',
       minWidth: isColumn ? 'none' : '233px',
+      outline: `${themeData["tile.borderWidth"]} solid transparent`,
       cursor: 'pointer',
       color: themeData["tile.fontColor"],
       fontFamily: themeData["tile.fontFamily"],
@@ -187,7 +191,7 @@ export default function stylesheet(props, themeData, metadata) {
       justifyContent: 'space-between',
       alignItems: 'center',
       marginTop: isHorizontal ? 0 : themeData['density.spacings.extraSmall'],
-      marginBottom: themeData["density.spacings.extraExtraSmall"],
+      marginBottom: themeData["tile.title.marginBottom"],
     },
     higTileTitle: {
       fontSize: themeData["tile.title.fontSize"],
