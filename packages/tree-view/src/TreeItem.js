@@ -10,6 +10,7 @@ const TreeItem = (props) => {
     collapsed,
     defaultCollapsed,
     expandByDoubleClick,
+    onOperatorClick,
     icon,
     id,
     label,
@@ -46,6 +47,7 @@ const TreeItem = (props) => {
       collapsed={collapsed}
       defaultCollapsed={defaultCollapsed}
       expandByDoubleClick={expandByDoubleClick}
+      onOperatorClick={onOperatorClick}
       id={id}
     >
       {({
@@ -101,6 +103,10 @@ TreeItem.propTypes = {
    * Double click to expand or collapse tree item
    */
   expandByDoubleClick: PropTypes.bool,
+  /**
+   * Triggers when operator clicked to expand/collapse item
+   */
+  onOperatorClick: PropTypes.func,
   /**
    * Presentational icon
    */
