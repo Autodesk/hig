@@ -72,7 +72,7 @@ export default {
   "toggle.off.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.transparent",
+      ref: "colorScheme.surface.level100",
     },
   },
   "toggle.off.default.borderColor": {
@@ -84,19 +84,19 @@ export default {
   "toggle.off.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.transparent",
+      ref: "colorScheme.surface.level100",
     },
   },
   "toggle.off.focus.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.transparent",
+      ref: "colorScheme.surface.level100",
     },
   },
   "toggle.off.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.transparent",
+      ref: "colorScheme.surface.level100",
     },
   },
   "toggle.off.hover.borderColor": {
