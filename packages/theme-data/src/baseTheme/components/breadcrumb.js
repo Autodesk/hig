@@ -28,7 +28,7 @@ export default {
   "breadcrumb.label.selected.fontWeight": {
     type: FONT_WEIGHT,
     value: {
-      ref: "basics.fontWeights.medium",
+      ref: "basics.fontWeights.bold",
     },
   },
   "breadcrumb.default.indicatorColor": {
