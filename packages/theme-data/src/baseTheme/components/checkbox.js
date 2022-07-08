@@ -30,7 +30,7 @@ export default {
   "checkbox.unchecked.default.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.transparent",
+      ref: "colorScheme.surface.level100",
     },
   },
   "checkbox.unchecked.default.borderColor": {
@@ -108,19 +108,19 @@ export default {
   "checkbox.unchecked.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.transparent",
+      ref: "colorScheme.surface.level100",
     },
   },
   "checkbox.unchecked.focus.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.transparent",
+      ref: "colorScheme.surface.level100",
     },
   },
   "checkbox.unchecked.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.transparent",
+      ref: "colorScheme.surface.level100",
     },
   },
   "checkbox.checked.hover.backgroundColor": {
