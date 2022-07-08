@@ -24,7 +24,7 @@ export default {
   },
   "modal.header.minHeight": {
     type: LENGTH,
-    value: "60px",
+    value: "58px",
   },
   "modal.body.minHeight": {
     type: LENGTH,
