@@ -1,5 +1,4 @@
-// eslint-disable-next-line func-names
-export default function (props, themeData) {
+export default function stylesheet(props, themeData) {
   const { stylesheet: customStylesheet } = props;
   const styles = {
     transform: props.minimized ? "rotate(-90deg)" : "rotate(0deg)",
