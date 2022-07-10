@@ -195,7 +195,7 @@ export default function stylesheet(props, themeData, metadata) {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      marginTop: isHorizontal ? 0 : themeData['density.spacings.extraSmall'],
+      marginTop: 0,
       marginBottom: themeData["tile.title.marginBottom"],
     },
     higTileTitle: {
