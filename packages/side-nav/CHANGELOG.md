@@ -1,3 +1,10 @@
+# [@hig/side-nav-v3.1.1](https://github.com/Autodesk/hig/compare/@hig/side-nav@3.1.0...@hig/side-nav@3.1.1) (2022-07-10)
+
+
+### Bug Fixes
+
+* various uncaught React17 regression errors ([54dce8a](https://github.com/Autodesk/hig/commit/54dce8a))
+
 # [@hig/side-nav-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/side-nav@3.0.1...@hig/side-nav@3.1.0) (2022-01-24)
 
 

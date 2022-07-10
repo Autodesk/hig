@@ -1,3 +1,10 @@
+# [@hig/tree-view-v2.8.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.7.0...@hig/tree-view@2.8.0) (2022-07-10)
+
+
+### Features
+
+* Expose onOperatorClick for expand/collapse ([8417cad](https://github.com/Autodesk/hig/commit/8417cad))
+
 # [@hig/tree-view-v2.7.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.6.1...@hig/tree-view@2.7.0) (2022-06-14)
 
 
