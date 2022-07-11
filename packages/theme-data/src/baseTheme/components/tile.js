@@ -67,7 +67,7 @@ export default {
   "tile.title.fontWeight": {
     type: FONT_WEIGHT,
     value: {
-      ref: "basics.fontWeights.medium",
+      ref: "basics.fontWeights.bold",
     },
   },
   "tile.title.lineHeight": {
