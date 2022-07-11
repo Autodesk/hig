@@ -1,3 +1,11 @@
+# [@hig/table-v1.6.4](https://github.com/Autodesk/hig/compare/@hig/table@1.6.3...@hig/table@1.6.4) (2022-07-11)
+
+
+### Bug Fixes
+
+* add truncation and ellipsis to header column ([a83105f](https://github.com/Autodesk/hig/commit/a83105f))
+* show hide filter label id ([5e30529](https://github.com/Autodesk/hig/commit/5e30529))
+
 # [@hig/table-v1.6.3](https://github.com/Autodesk/hig/compare/@hig/table@1.6.2...@hig/table@1.6.3) (2022-06-30)
 
 
