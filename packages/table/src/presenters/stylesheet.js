@@ -299,6 +299,12 @@ export default function stylesheet(props, themeData, themeMeta) {
       borderRight: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`,
     },
     headerHolder: {
+      whiteSpace: `nowrap`,
+      overflow: `hidden`,
+      textOverflow: `ellipsis`,
+      minWidth: `10px`,
+    },
+    headerHolderSelection: {
       display: `flex`,
     },
     groupHeaderElement: {
