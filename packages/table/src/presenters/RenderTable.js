@@ -370,7 +370,13 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                             setIsSortedDesc={setIsSortedDesc}
                             isSortedDesc={isSortedDesc}
                           >
-                            <div className={css(styles.headerHolder)}>
+                            <div
+                              className={css(
+                                column.id !== "selection"
+                                  ? styles.headerHolder
+                                  : styles.headerHolderSelection
+                              )}
+                            >
                               {column.canGroupBy && meta.groupElements ? (
                                 <span {...column.getGroupByToggleProps()}>
                                   <GroupHeaderElements
