@@ -195,7 +195,7 @@ export default function stylesheet(props, themeData, metadata) {
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
-      marginTop: 0,
+      marginTop: themeData["density.spacings.extraSmall"],
       marginBottom: themeData["tile.title.marginBottom"],
     },
     higTileTitle: {
@@ -207,6 +207,8 @@ export default function stylesheet(props, themeData, metadata) {
       fontSize: themeData["tile.subTitle.fontSize"],
       fontWeight: themeData["tile.subTitle.fontWeight"],
       lineHeight: themeData["tile.subTitle.lineHeight"],
+      // this should be conditional in the complex version, as bottom padding should be w/ last element
+      marginBottom: themeData["density.spacings.extraSmall"],
     },
     higTileOverflowMenu: {
       paddingRight: themeData["density.spacings.small"],
