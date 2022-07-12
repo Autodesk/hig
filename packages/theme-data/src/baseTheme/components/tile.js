@@ -340,4 +340,102 @@ export default {
       ref: "colorScheme.background.empty.level300To350.pressed",
     },
   },
+  "tile.actions.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.surface.level300",
+    },
+    transform: {
+      alpha: 0.95
+    },
+  },
+  "tile.actions.vertical.paddingVertical": {
+    type: LENGTH,
+    value: {
+      ref: "density.spacings.small",
+    },
+  },
+  "tile.actions.vertical.paddingHorizontal": {
+    type: LENGTH,
+    value: {
+      ref: "density.spacings.extraExtraSmall",
+    },
+  },
+  "tile.actions.horizontal.paddingVertical": {
+    type: LENGTH,
+    value: {
+      ref: "density.spacings.extraExtraSmall",
+    },
+  },
+  "tile.actions.horizontal.paddingHorizontal": {
+    type: LENGTH,
+    value: {
+      ref: "density.spacings.small",
+    },
+  },
+  "tile.divider.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.divider.lightweight",
+    },
+  },
+  "tile.divider.borderWidth": {
+    type: BORDER_WIDTH,
+    value: {
+      ref: "basics.borderWidths.small",
+    },
+  },
+  "tile.checkbox.padding": {
+    type: LENGTH,
+    value: {
+      ref: "density.spacings.small",
+    },
+  },
+  "tile.title.paddingTop": {
+    type: LENGTH,
+    value: {
+      ref: "density.spacings.extraSmall",
+    },
+  },
+  "tile.subtitle.paddingBottom": {
+    type: LENGTH,
+    value: {
+      ref: "density.spacings.small",
+    },
+  },
+  "tile.children.spaceBetween": {
+    type: LENGTH,
+    value: {
+      ref: "density.spacings.small",
+    },
+  },
+  "tile.children.paddingBottom": {
+    type: LENGTH,
+    value: {
+      ref: "density.spacings.small",
+    },
+  },
+  "tile.gradient.height": {
+    type: LENGTH,
+    value: "60px",
+  },
+  "tile.gradient.start.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.300",
+    },
+  },
+  "tile.gradient.end.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.300",
+    },
+    transform: {
+      alpha: 0.0
+    },
+  },
+  "tile.gradient.opacity": {
+    type: OPACITY,
+    value: "0.85",
+  },
 };
