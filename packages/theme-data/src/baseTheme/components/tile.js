@@ -385,7 +385,7 @@ export default {
       ref: "basics.borderWidths.small",
     },
   },
-  "tile.checkbox.padding": {
+  "tile.checkboxContainer.padding": {
     type: LENGTH,
     value: {
       ref: "density.spacings.small",
