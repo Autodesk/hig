@@ -196,7 +196,9 @@ export default function stylesheet(props, themeData, metadata) {
       justifyContent: 'space-between',
       alignItems: 'center',
       marginTop: themeData["density.spacings.extraSmall"],
-      marginBottom: themeData["tile.title.marginBottom"],
+      marginBottom: themeData["density.spacings.extraExtraSmall"],
+      // uncomment this when theme-data has been updated
+      // marginBottom: themeData["tile.title.marginBottom"],
     },
     higTileTitle: {
       fontSize: themeData["tile.title.fontSize"],

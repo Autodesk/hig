@@ -111,7 +111,7 @@ console.log('isPressed', isPressed);
               </div>
               <div className={css(styles.higTileSubTitle)}>{subtitle}</div>
 
-              <div className={css(styles.higTileAdditionalContent)}>
+              {/* <div className={css(styles.higTileAdditionalContent)}>
                 {version && <div className={css(styles.higVersionHolder)}>{version}</div>}
                 {statusAndActionIcons && 
                   <div className={css(styles.higGroupIcons)}>
@@ -130,7 +130,7 @@ console.log('isPressed', isPressed);
                     })}
                   </div>
                 }
-              </div>
+              </div> */}
               {cta && 
                 <div className={css(styles.higTileCTAHolder)}>
                   <div className={css(styles.higTileCTA)} >
