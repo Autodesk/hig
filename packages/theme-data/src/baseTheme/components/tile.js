@@ -391,6 +391,132 @@ export default {
       ref: "density.spacings.small",
     },
   },
+  "tile.checkbox.unchecked.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.surface.darkGray.100",
+    },
+  },
+  "tile.checkbox.checked.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+  },
+  "tile.checkbox.indicatorColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.900",
+    },
+  },
+  "tile.checkbox.borderWidth": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.surface.darkGray.100",
+    },
+  },
+  "tile.checkbox.unchecked.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.900",
+    },
+    transform: {
+      alpha: 0.5
+    },
+  },
+  "tile.checkbox.unchecked.hover.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.900",
+    },
+    transform: {
+      alpha: 0.5
+    },
+  },
+  "tile.checkbox.unchecked.focus.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.400",
+    },
+  },
+  "tile.checkbox.unchecked.pressed.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.900",
+    },
+    transform: {
+      alpha: 0.5
+    },
+  },
+  "tile.checkbox.checked.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+  },
+  "tile.checkbox.checked.hover.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+  },
+  "tile.checkbox.checked.focus.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+  },
+  "tile.checkbox.checked.pressed.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+  },
+  "tile.checkbox.hover.haloWidth": {
+    type: COLOR,
+    value: {
+      ref: "basics.borderWidths.medium",
+    },
+  },
+  "tile.checkbox.focus.haloWidth": {
+    type: COLOR,
+    value: {
+      ref: "basics.borderWidths.medium",
+    },
+  },
+  "tile.checkbox.pressed.haloWidth": {
+    type: COLOR,
+    value: {
+      ref: "basics.borderWidths.large",
+    },
+  },
+  "tile.checkbox.hover.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.900",
+    },
+    transform: {
+      alpha: 0.15
+    },
+  },
+  "tile.checkbox.focus.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.400",
+    },
+    transform: {
+      alpha: 0.35
+    },
+  },
+  "tile.checkbox.pressed.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.900",
+    },
+    transform: {
+      alpha: 0.25
+    },
+  },
   "tile.title.paddingTop": {
     type: LENGTH,
     value: {
