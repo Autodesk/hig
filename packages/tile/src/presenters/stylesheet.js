@@ -85,10 +85,7 @@ export default function stylesheet(props, themeData, metadata) {
     if (identifier) {
       return isHorizontal ? `12px 12px 12px calc(24px - ${marginLeft}px)` : verticalPadding;
     }
-    if (!isMediumDensity) {
-      return isHorizontal ? `5px 12px 12px ${marginLeft}` : verticalPadding;
-    }
-    return '12px';
+    return isHorizontal ? `5px 12px 12px ${marginLeft}` : verticalPadding;
   }
   const getTileHeaderFlatPadding = () => isHorizontal
     ? `${themeData["tile.padding"]} ${themeData["tile.thumbnail.marginRight"]} ${themeData["tile.padding"]} ${themeData["tile.padding"]}`
