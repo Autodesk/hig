@@ -427,10 +427,7 @@ export default {
   "tile.checkbox.unchecked.hover.borderColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.charcoal.900",
-    },
-    transform: {
-      alpha: 0.5
+      ref: "tile.checkbox.unchecked.default.borderColor",
     },
   },
   "tile.checkbox.unchecked.focus.borderColor": {
@@ -442,10 +439,7 @@ export default {
   "tile.checkbox.unchecked.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.charcoal.900",
-    },
-    transform: {
-      alpha: 0.5
+      ref: "tile.checkbox.unchecked.default.borderColor",
     },
   },
   "tile.checkbox.checked.default.borderColor": {
@@ -457,19 +451,19 @@ export default {
   "tile.checkbox.checked.hover.borderColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.white",
+      ref: "tile.checkbox.checked.default.borderColor",
     },
   },
   "tile.checkbox.checked.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.white",
+      ref: "tile.checkbox.checked.default.borderColor",
     },
   },
   "tile.checkbox.checked.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.white",
+      ref: "tile.checkbox.checked.default.borderColor",
     },
   },
   "tile.checkbox.hover.haloWidth": {

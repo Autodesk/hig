@@ -17,22 +17,6 @@ export default {
       alpha: 0.5,
     },
   },
-  "tile.checkbox.unchecked.hover.borderColor": {
-    ref: {
-      value: "basics.colors.secondary.darkBlue.200",
-    },
-    transform: {
-      alpha: 0.5,
-    },
-  },
-  "tile.checkbox.unchecked.pressed.borderColor": {
-    ref: {
-      value: "basics.colors.secondary.darkBlue.200",
-    },
-    transform: {
-      alpha: 0.5,
-    },
-  },
   "tile.checkbox.hover.haloColor": {
     ref: {
       value: "basics.colors.secondary.darkBlue.200",
