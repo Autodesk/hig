@@ -6,6 +6,8 @@ import {
   FONT_SIZE,
   FONT_WEIGHT,
   LINE_HEIGHT,
+  LENGTH,
+  OPACITY,
   SPACING,
 } from "../../consts/types";
 
@@ -350,25 +352,25 @@ export default {
     },
   },
   "tile.actions.vertical.paddingVertical": {
-    type: LENGTH,
+    type: SPACING,
     value: {
       ref: "density.spacings.small",
     },
   },
   "tile.actions.vertical.paddingHorizontal": {
-    type: LENGTH,
+    type: SPACING,
     value: {
       ref: "density.spacings.extraExtraSmall",
     },
   },
   "tile.actions.horizontal.paddingVertical": {
-    type: LENGTH,
+    type: SPACING,
     value: {
       ref: "density.spacings.extraExtraSmall",
     },
   },
   "tile.actions.horizontal.paddingHorizontal": {
-    type: LENGTH,
+    type: SPACING,
     value: {
       ref: "density.spacings.small",
     },
@@ -386,7 +388,7 @@ export default {
     },
   },
   "tile.checkboxContainer.padding": {
-    type: LENGTH,
+    type: SPACING,
     value: {
       ref: "density.spacings.small",
     },
@@ -512,19 +514,19 @@ export default {
     },
   },
   "tile.title.paddingTop": {
-    type: LENGTH,
+    type: SPACING,
     value: {
       ref: "density.spacings.extraSmall",
     },
   },
   "tile.subtitle.paddingBottom": {
-    type: LENGTH,
+    type: SPACING,
     value: {
       ref: "density.spacings.small",
     },
   },
   "tile.children.spaceBetween": {
-    type: LENGTH,
+    type: SPACING,
     value: {
       ref: "density.spacings.small",
     },
@@ -542,7 +544,7 @@ export default {
   "tile.gradient.start.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.charcoal.300",
+      ref: "basics.colors.primary.black",
     },
   },
   "tile.gradient.end.backgroundColor": {
