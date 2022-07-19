@@ -1,3 +1,10 @@
+# [@hig/flyout-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/flyout@2.2.0...@hig/flyout@2.2.1) (2022-07-19)
+
+
+### Bug Fixes
+
+* various uncaught React17 regression errors ([4b3c0aa](https://github.com/Autodesk/hig/commit/4b3c0aa))
+
 # [@hig/flyout-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/flyout@2.1.3...@hig/flyout@2.2.0) (2022-06-15)
 
 
