@@ -1,6 +1,6 @@
 {
   "name": "@hig/theme-context",
-  "version": "4.2.0",
+  "version": "4.3.0",
   "description": "ThemeContext components to ease adoption of theme data from React components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",

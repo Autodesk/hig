@@ -32,7 +32,7 @@
     "@hig/button": "^3.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
-    "@hig/rich-text": "2.1.1",
+    "@hig/rich-text": "^2.1.1",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0"
   },
