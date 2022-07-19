@@ -1,6 +1,6 @@
 {
   "name": "@hig/flyout",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "HIG Flyout",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -23,7 +23,7 @@
     "react-transition-group": "^4.4.2"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.2.0",
+    "@hig/theme-context": "^4.3.0",
     "@hig/theme-data": "^3.0.0",
     "react": "^17.0.0"
   },
