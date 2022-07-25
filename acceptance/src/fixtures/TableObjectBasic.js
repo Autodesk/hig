@@ -84,9 +84,7 @@ export const TABLE_OBJECT_BASIC = {
         width: 180
       },
   ],
-  initialState: {
-    hiddenColumns: ["Autodesk ID", "Administrator"]
-  },
+  hiddenColumns: "true",
   // groupNames: ['Revit Model', 'CAD Formats', 'Sample Empty', 'Coordination Model'],
   // data: [
   //   tableContentThree.data.map((row, index) => {
