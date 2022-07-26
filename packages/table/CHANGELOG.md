@@ -1,3 +1,10 @@
+# [@hig/table-v1.6.5](https://github.com/Autodesk/hig/compare/@hig/table@1.6.4...@hig/table@1.6.5) (2022-07-26)
+
+
+### Bug Fixes
+
+* edit table wrapper layout ([4326363](https://github.com/Autodesk/hig/commit/4326363))
+
 # [@hig/table-v1.6.4](https://github.com/Autodesk/hig/compare/@hig/table@1.6.3...@hig/table@1.6.4) (2022-07-11)
 
 
