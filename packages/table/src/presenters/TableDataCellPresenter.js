@@ -76,8 +76,8 @@ export default function TableDataCellPresenter(props) {
       {({ resolvedRoles, metadata }) => {
         const styles = stylesheet(props, resolvedRoles, metadata);
         const mergedStyles = {
-          ...styles.higTableCell,
           ...resizeStyles,
+          ...styles.higTableCell,
         };
 
         return (
