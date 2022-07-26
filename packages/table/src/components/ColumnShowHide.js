@@ -19,7 +19,7 @@ const ColumnShowHide = ({
         (column) =>
           lowerCaseHeaderCopy.indexOf(
             column.id.split(" ").join("").toLowerCase()
-          ) > -1
+          ) > -1 || column?.Header === ""
       )
       .map((item) => item.Header);
 

@@ -30,6 +30,7 @@ const TablePresenter = ({
     data: dataArray,
     meta,
     groupNames = [],
+    hiddenColumns,
   } = useMemo(() => tableObject, [tableObject]);
   const isGrouped = Array.isArray(dataArray[0]);
   const passedParams = {
@@ -38,6 +39,7 @@ const TablePresenter = ({
     columns,
     meta,
     groupNames,
+    hiddenColumns,
     alternateBg,
     columnSelection,
     frozenHeader,

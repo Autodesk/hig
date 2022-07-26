@@ -226,9 +226,7 @@ export const TABLE_OBJECT_CUSTOM = {
     },
   ],
   groupNames: ['Revit Model', 'CAD Formats', 'Sample Empty', 'Coordination Model'],
-  initialState: {
-    hiddenColumns: ["Autodesk ID", "Administrator"]
-  },
+  hiddenColumns: "true",
   data: [
     tableContent.data.map((row, index) => {
       return {
