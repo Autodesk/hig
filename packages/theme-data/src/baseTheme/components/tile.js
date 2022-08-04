@@ -420,7 +420,7 @@ export default {
   "tile.checkbox.unchecked.default.borderColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.charcoal.900",
+      ref: "basics.colors.primary.white",
     },
     transform: {
       alpha: 0.5
@@ -489,7 +489,7 @@ export default {
   "tile.checkbox.hover.haloColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.charcoal.900",
+      ref: "basics.colors.primary.white",
     },
     transform: {
       alpha: 0.15
@@ -507,7 +507,7 @@ export default {
   "tile.checkbox.pressed.haloColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.charcoal.900",
+      ref: "basics.colors.primary.white",
     },
     transform: {
       alpha: 0.25
