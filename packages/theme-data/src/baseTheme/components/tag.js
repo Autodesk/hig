@@ -126,7 +126,7 @@ export default {
   "tag.on.hover.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.empty.level100To250.hover",
+      ref: "colorScheme.background.on.hover",
     },
   },
   "tag.on.focus.backgroundColor": {
@@ -138,7 +138,7 @@ export default {
   "tag.on.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.empty.level100To250.pressed",
+      ref: "colorScheme.background.on.default",
     },
     transform: {
       alpha: 0.7,
