@@ -40,7 +40,7 @@ export default {
   "breadcrumb.selected.indicatorColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.indicator.pressed",
+      ref: "colorScheme.indicator.on",
     },
   },
   "breadcrumb.divider.fontColor": {
