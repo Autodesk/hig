@@ -36,7 +36,7 @@ export default {
   "menu.container.paddingVertical": {
     type: SPACING,
     value: {
-      ref: "density.spacings.small",
+      ref: "density.spacings.extraSmall",
     },
   },
   "menu.divider.backgroundColor": {
