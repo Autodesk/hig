@@ -396,7 +396,7 @@ export default {
   "tile.checkbox.unchecked.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.surface.darkGray.100",
+      ref: "colorScheme.background.transparent",
     },
   },
   "tile.checkbox.checked.backgroundColor": {
