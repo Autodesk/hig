@@ -3,24 +3,21 @@ import { ArgsTable, Primary } from "@storybook/addon-docs";
 
 import Banner from "../index";
 import Readme from "../../README.md";
-// import { targets, types, widths } from "../constants";
+import { AVAILABLE_TYPES } from "../types";
+import { AVAILABLE_PLACEMENTS } from "../placements";
 
 export default {
   title: "Components/Banner",
   component: Banner,
   argTypes: {
-    // target: {
-    //   options: [targets.SELF, targets.BLANK, targets.PARENT, targets.TOP],
-    //   control: { type: "select" },
-    // },
-    // type: {
-    //   options: [types.SOLID, types.OUTLINE, types.FLAT],
-    //   control: { type: "select" },
-    // },
-    // width: {
-    //   options: [widths.GROW, widths.SHRINK],
-    //   control: { type: "select" },
-    // },
+    type: {
+      options: AVAILABLE_TYPES,
+      control: { type: "select" },
+    },
+    placement: {
+      options: AVAILABLE_PLACEMENTS,
+      control: { type: "select" },
+    },
   },
   parameters: {
     docs: {
@@ -38,10 +35,3 @@ export default {
 const Template = (args) => <Banner {...args} />;
 
 export const Default = Template.bind({});
-
-Default.args = {
-  // children: 'Test',
-  // title: "Button",
-  // type: types.SOLID,
-  // width: widths.SHRINK,
-};
