@@ -28,7 +28,7 @@ import token from "./components/token";
 import tooltip from "./components/tooltip";
 import topNav from "./components/topNav";
 import treeView from "./components/treeView";
-console.log(tile);
+
 const darkBlueThemeConfig = extendTheme(baseTheme.unresolvedRoles, {
   ...mediumDensityTheme.unresolvedRoles,
   ...mapKeys(system.colorScheme, (key) => `colorScheme.${key}`),
