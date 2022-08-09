@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import { positions, AVAILABLE_POSITIONS } from "./positions";
@@ -33,168 +33,161 @@ import {
  */
 
 /** @type {Component<BannerAnimatorProps, BannerAnimatorState>} */
-const BannerAnimator = (props) => {
+export default class BannerAnimator extends Component {
+  // eslint-disable-next-line react/static-property-placement
+  static propTypes = {
+    /* eslint-disable react/no-unused-prop-types */
+    /** Determines the visibility of the banner */
+    isVisible: PropTypes.bool,
+    /** Determines the type of animation used */
+    hasBounce: PropTypes.bool,
+    /** Determines the type of animation used */
+    hasPush: PropTypes.bool,
+    /** Determines the direction of the animation */
+    position: PropTypes.oneOf(AVAILABLE_POSITIONS),
+    /* eslint-enable react/no-unused-prop-types */
+    /** A render prop, that renders the component to be animated */
+    children: PropTypes.func.isRequired,
+  };
+
+  // eslint-disable-next-line react/static-property-placement
+  static defaultProps = {
+    isVisible: true,
+    hasBounce: true,
+    hasPush: true,
+    position: positions.TOP,
+  };
+
   /** @type {BannerAnimatorState} */
-  const [status, setStatus] = useState(null);
-  const [innerWrapper, setInnerWrapper] = useState(null);
-  const [innerWrapperStyle, setInnerWrapperStyle] = useState(null);
-  const [wrapper, setWrapper] = useState(null);
-  const [wrapperStyle, setWrapperStyle] = useState(null);
-  const prevState = {
-    status,
-    innerWrapper,
-    innerWrapperStyle,
-    wrapper,
-    wrapperStyle,
-  };
-  const setState = {
-    setStatus,
-    setInnerWrapper,
-    setInnerWrapperStyle,
-    setWrapper,
-    setWrapperStyle,
-  };
-  const expand = () => {
-    window.requestAnimationFrame(() => {
-      animateExpand(prevState, setState, props);
-    });
-  };
+  // eslint-disable-next-line react/state-in-constructor
+  state = {};
 
-  const collapse = () => {
-    window.requestAnimationFrame(() => {
-      animateCollapse(prevState, setState, props);
-    });
-  };
+  /** @type {BannerAnimatorProps} */
+  props;
 
-  const collapseFromExpanded = () => {
-    window.requestAnimationFrame(() => {
-      prepareCollapse(prevState, setState, props);
-      collapse();
-    });
-  };
-
-  const handleReady = () => {
-    if (status === statuses.EXPANDING) {
-      expand();
-    }
-  };
-
-  /** @param {TransitionEvent} event */
-  const handleTransitionEnd = (event) => {
-    if (event.target !== innerWrapper) return;
-
-    if (status === statuses.COLLAPSING) {
-      window.requestAnimationFrame(() => {
-        endCollapse(prevState, setState, props);
-      });
-      return;
-    }
-
-    if (status === statuses.EXPANDING) {
-      window.requestAnimationFrame(() => {
-        endExpand(setState);
-      });
-    }
-  };
-
-  /** @param {HTMLDivElement} innerWrapperParams */
-  const refInnerWrapper = (innerWrapperParams) => {
-    setInnerWrapper(innerWrapperParams);
-  };
-
-  useEffect(() => {
-    const { isVisible } = props;
+  /**
+   * @param {BannerAnimatorProps} nextProps
+   * @param {BannerAnimatorState} prevState
+   * @returns {BannerAnimatorState | null}
+   */
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { isVisible } = nextProps;
+    const { status } = prevState;
 
     if (!status) {
-      return isVisible
-        ? endExpand(setState)
-        : endCollapse(prevState, setState, props);
+      return isVisible ? endExpand() : endCollapse();
     }
 
     switch (status) {
       case statuses.COLLAPSED:
       case statuses.COLLAPSING:
-        return isVisible ? startExpand(setState) : null;
+        return isVisible ? startExpand() : null;
       case statuses.EXPANDED:
       case statuses.EXPANDING:
-        return isVisible ? null : startCollapse(setState);
+        return isVisible ? null : startCollapse();
       default:
         // eslint-disable-next-line no-console
         console.warn("Invalid status", { status });
         return null;
     }
-  }, [props]);
-
-  function usePreviousStatus(value) {
-    const ref = useRef(null);
-    useEffect(() => {
-      ref.current = value;
-    });
-    return ref.current;
   }
 
-  const prevStatus = usePreviousStatus(status);
-
-  useEffect(() => {
-    const expandStatuses =
-      (prevStatus === statuses.COLLAPSED && status === statuses.EXPANDING) ||
-      (prevStatus === statuses.COLLAPSING && status === statuses.EXPANDING);
+  /**
+   * @param {BannerAnimatorProps} prevProps
+   * @param {BannerAnimatorState} prevState
+   */
+  componentDidUpdate(prevProps, prevState) {
+    const { status: prevStatus } = prevState;
+    const { status } = this.state;
 
     if (prevStatus === statuses.EXPANDED && status === statuses.COLLAPSING) {
-      collapseFromExpanded();
+      this.collapseFromExpanded();
       return;
     }
-    if (expandStatuses) {
-      expand();
+    if (prevStatus === statuses.COLLAPSING && status === statuses.EXPANDING) {
+      this.expand();
       return;
     }
     if (prevStatus === statuses.EXPANDING && status === statuses.COLLAPSING) {
-      collapse();
+      this.collapse();
     }
-  }, [props, prevStatus, status]);
+  }
 
-  const { children: renderChildren } = props;
-  const children =
-    status === statuses.COLLAPSED ? null : renderChildren({ handleReady });
-  const isBusy =
-    status === statuses.EXPANDING || status === statuses.COLLAPSING;
+  handleReady = () => {
+    const { status } = this.state;
 
-  return (
-    <div
-      aria-busy={isBusy}
-      aria-expanded={status === statuses.EXPANDED}
-      style={wrapperStyle}
-      onTransitionEnd={handleTransitionEnd}
-    >
-      <div style={innerWrapperStyle} ref={refInnerWrapper}>
-        {children}
+    if (status === statuses.EXPANDING) {
+      this.expand();
+    }
+  };
+
+  /** @param {TransitionEvent} event */
+  handleTransitionEnd = (event) => {
+    const { innerWrapper } = this.state;
+
+    if (event.target !== innerWrapper) return;
+
+    const { status } = this.state;
+
+    if (status === statuses.COLLAPSING) {
+      window.requestAnimationFrame(() => {
+        this.setState(endCollapse);
+      });
+      return;
+    }
+
+    if (status === statuses.EXPANDING) {
+      window.requestAnimationFrame(() => {
+        this.setState(endExpand);
+      });
+    }
+  };
+
+  /** @param {HTMLDivElement} innerWrapper */
+  refInnerWrapper = (innerWrapper) => {
+    this.setState({ innerWrapper });
+  };
+
+  collapse() {
+    window.requestAnimationFrame(() => {
+      this.setState(animateCollapse);
+    });
+  }
+
+  collapseFromExpanded() {
+    window.requestAnimationFrame(() => {
+      this.setState(prepareCollapse, () => {
+        this.collapse();
+      });
+    });
+  }
+
+  expand() {
+    window.requestAnimationFrame(() => {
+      this.setState(animateExpand);
+    });
+  }
+
+  render() {
+    const { children: renderChildren } = this.props;
+    const { status, wrapperStyle, innerWrapperStyle } = this.state;
+    const { handleReady, handleTransitionEnd, refInnerWrapper } = this;
+    const children =
+      status === statuses.COLLAPSED ? null : renderChildren({ handleReady });
+    const isBusy =
+      status === statuses.EXPANDING || status === statuses.COLLAPSING;
+
+    return (
+      <div
+        aria-busy={isBusy}
+        aria-expanded={status === statuses.EXPANDED}
+        style={wrapperStyle}
+        onTransitionEnd={handleTransitionEnd}
+      >
+        <div style={innerWrapperStyle} ref={refInnerWrapper}>
+          {children}
+        </div>
       </div>
-    </div>
-  );
-};
-
-BannerAnimator.displayName = "BannerAnimator";
-
-BannerAnimator.propTypes = {
-  /* eslint-disable react/no-unused-prop-types */
-  /** Determines the visibility of the banner */
-  isVisible: PropTypes.bool,
-  /** Determines the type of animation used */
-  hasBounce: PropTypes.bool,
-  /** Determines the type of animation used */
-  hasPush: PropTypes.bool,
-  /** Determines the direction of the animation */
-  position: PropTypes.oneOf(AVAILABLE_POSITIONS),
-  /* eslint-enable react/no-unused-prop-types */
-  /** A render prop, that renders the component to be animated */
-  children: PropTypes.func.isRequired,
-};
-
-BannerAnimator.defaultProps = {
-  isVisible: true,
-  hasBounce: true,
-  hasPush: true,
-  position: positions.TOP,
-};
-
-export default BannerAnimator;
+    );
+  }
+}
