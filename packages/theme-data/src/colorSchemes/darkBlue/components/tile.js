@@ -1,7 +1,7 @@
 export default {
   "tile.checkbox.unchecked.backgroundColor": {
     value: {
-      ref: "basics.colors.tertiary.pink.500",
+      ref: "colorScheme.background.transparent",
     },
   },
   "tile.checkbox.indicatorColor": {
