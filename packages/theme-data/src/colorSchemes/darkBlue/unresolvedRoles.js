@@ -23,11 +23,12 @@ import tabs from "./components/tabs";
 import tag from "./components/tag";
 import textLink from "./components/textLink";
 import thumbnail from "./components/thumbnail";
+import tile from "./components/tile";
 import token from "./components/token";
 import tooltip from "./components/tooltip";
 import topNav from "./components/topNav";
 import treeView from "./components/treeView";
-
+console.log(tile);
 const darkBlueThemeConfig = extendTheme(baseTheme.unresolvedRoles, {
   ...mediumDensityTheme.unresolvedRoles,
   ...mapKeys(system.colorScheme, (key) => `colorScheme.${key}`),
@@ -51,6 +52,7 @@ const darkBlueThemeConfig = extendTheme(baseTheme.unresolvedRoles, {
   ...tag,
   ...textLink,
   ...thumbnail,
+  ...tile,
   ...token,
   ...tooltip,
   ...topNav,
