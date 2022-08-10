@@ -16,6 +16,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 .emotion-17 {
   position: absolute;
   display: none;
+  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -219,7 +220,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
   font-size: 14px;
   font-weight: 400;
   line-height: 1.428571429;
-  margin: 0;
+  margin: 0 0 12px 0;
   text-align: initial;
 }
 
@@ -487,6 +488,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 .emotion-17 {
   position: absolute;
   display: none;
+  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -690,7 +692,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
   font-size: 14px;
   font-weight: 400;
   line-height: 1.428571429;
-  margin: 0;
+  margin: 0 0 12px 0;
   text-align: initial;
 }
 
@@ -1115,7 +1117,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
   font-size: 14px;
   font-weight: 400;
   line-height: 1.428571429;
-  margin: 0;
+  margin: 0 0 12px 0;
   text-align: initial;
 }
 
@@ -1222,6 +1224,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
 .emotion-21 {
   position: absolute;
   display: table;
+  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;
@@ -1454,6 +1457,7 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
 .emotion-16 {
   position: absolute;
   display: none;
+  width: 100%;
   z-index: 9999;
   -webkit-transition-property: opacity,-webkit-transform;
   -webkit-transition-property: opacity,transform;

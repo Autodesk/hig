@@ -469,19 +469,19 @@ export default {
     },
   },
   "tile.checkbox.hover.haloWidth": {
-    type: COLOR,
+    type: BORDER_WIDTH,
     value: {
       ref: "basics.borderWidths.medium",
     },
   },
   "tile.checkbox.focus.haloWidth": {
-    type: COLOR,
+    type: BORDER_WIDTH,
     value: {
       ref: "basics.borderWidths.medium",
     },
   },
   "tile.checkbox.pressed.haloWidth": {
-    type: COLOR,
+    type: BORDER_WIDTH,
     value: {
       ref: "basics.borderWidths.large",
     },

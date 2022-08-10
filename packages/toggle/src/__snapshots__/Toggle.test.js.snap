@@ -6,7 +6,7 @@ exports[`toggle/Toggle integration renders correctly 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: rgba(128,128,128,0);
+  background-color: #ffffff;
   border-color: rgba(128,128,128,0.5);
   border-radius: 1000em;
   border-style: solid;
@@ -79,7 +79,7 @@ exports[`toggle/Toggle integration renders correctly with a custom className 1`]
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: rgba(128,128,128,0);
+  background-color: #ffffff;
   border-color: rgba(128,128,128,0.5);
   border-radius: 1000em;
   border-style: solid;
@@ -176,7 +176,7 @@ exports[`toggle/Toggle integration renders correctly with a stylesheet function 
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: rgba(128,128,128,0);
+  background-color: #ffffff;
   border-color: blue;
   border-radius: 1000em;
   border-style: solid;
