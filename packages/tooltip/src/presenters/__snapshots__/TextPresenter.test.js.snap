@@ -33,7 +33,7 @@ exports[`tooltip/presenters/TextPresenter renders with children 1`] = `
       style={
         Object {
           "color": "#f5f5f5",
-          "fontSize": "12px",
+          "fontSize": "11px",
         }
       }
     >
@@ -76,7 +76,7 @@ exports[`tooltip/presenters/TextPresenter renders without props 1`] = `
       style={
         Object {
           "color": "#f5f5f5",
-          "fontSize": "12px",
+          "fontSize": "11px",
         }
       }
     >
