@@ -1,3 +1,10 @@
+# [@hig/theme-context-v4.3.0](https://github.com/Autodesk/hig/compare/@hig/theme-context@4.2.0...@hig/theme-context@4.3.0) (2022-07-19)
+
+
+### Features
+
+* update theme-data peerDep ([f35fce7](https://github.com/Autodesk/hig/commit/f35fce7))
+
 # [@hig/theme-context-v4.2.0](https://github.com/Autodesk/hig/compare/@hig/theme-context@4.1.0...@hig/theme-context@4.2.0) (2022-06-27)
 
 

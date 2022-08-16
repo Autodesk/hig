@@ -1,3 +1,18 @@
+# [@hig/table-v1.6.5](https://github.com/Autodesk/hig/compare/@hig/table@1.6.4...@hig/table@1.6.5) (2022-07-26)
+
+
+### Bug Fixes
+
+* edit table wrapper layout ([4326363](https://github.com/Autodesk/hig/commit/4326363))
+
+# [@hig/table-v1.6.4](https://github.com/Autodesk/hig/compare/@hig/table@1.6.3...@hig/table@1.6.4) (2022-07-11)
+
+
+### Bug Fixes
+
+* add truncation and ellipsis to header column ([a83105f](https://github.com/Autodesk/hig/commit/a83105f))
+* show hide filter label id ([5e30529](https://github.com/Autodesk/hig/commit/5e30529))
+
 # [@hig/table-v1.6.3](https://github.com/Autodesk/hig/compare/@hig/table@1.6.2...@hig/table@1.6.3) (2022-06-30)
 
 

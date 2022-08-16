@@ -6,7 +6,6 @@ describe("side-nav/Search", () => {
   it.skip("allows value to be changed only by onChange", () => {
     const wrapper = mount(<Search value="foo" />);
     const input = wrapper.find("input");
-
     expect(input.prop("value")).toEqual("foo");
     input.simulate("change", { target: { value: "bar" } });
     const inputAfter = wrapper.find("input");
@@ -20,11 +19,9 @@ describe("side-nav/Search", () => {
   it("renders a button to clear input", () => {
     const wrapper = mount(<Search />);
     const input = wrapper.find("input");
-
     expect(wrapper.find("CloseLUI").parent()).toHaveLength(0);
     input.simulate("change", { target: { value: "bar" } });
     expect(wrapper.find("CloseLUI").parent()).toHaveLength(1);
-
     wrapper.find("CloseLUI").parents().first().simulate("click");
     expect(input.prop("value")).toEqual("");
     expect(wrapper.find("CloseLUI").parent()).toHaveLength(0);

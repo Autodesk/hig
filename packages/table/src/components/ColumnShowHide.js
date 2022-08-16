@@ -2,7 +2,6 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { convertToUpperCase } from "../util/StringMethods";
 
 const ColumnShowHide = ({
   allColumns,
@@ -12,11 +11,17 @@ const ColumnShowHide = ({
   toggleHideAllColumnsProps,
 }) => {
   const filteredSetColumnHeaderArray = (headerArray) => {
+    const lowerCaseHeaderCopy = headerArray.map((item) =>
+      item.split(" ").join("").toLowerCase()
+    );
     const preOrderedArray = allColumns
       ?.filter(
-        (column) => headerArray.indexOf(convertToUpperCase(column.id)) > -1
+        (column) =>
+          lowerCaseHeaderCopy.indexOf(
+            column.id.split(" ").join("").toLowerCase()
+          ) > -1 || column?.Header === ""
       )
-      .map((item) => convertToUpperCase(item.id));
+      .map((item) => item.Header);
 
     setColumnHeaderArray(preOrderedArray);
   };

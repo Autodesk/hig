@@ -8,6 +8,7 @@ import {
   useExpanded,
   useFilters,
   useFlexLayout,
+  useBlockLayout,
   useGlobalFilter,
   useGroupBy,
   usePagination,
@@ -38,6 +39,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     columns,
     meta,
     groupNames,
+    hiddenColumns,
     alternateBg,
     columnSelection,
     frozenHeader,
@@ -103,6 +105,8 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     setGlobalResizeStyles,
   } = otherProps;
 
+  const layoutTypeWrap = isGrouped ? useFlexLayout : useBlockLayout;
+
   const {
     getTableProps,
     getTableBodyProps,
@@ -122,7 +126,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   } = useTable(
     { columns, data, defaultColumn },
     useResizeColumns,
-    useFlexLayout,
+    layoutTypeWrap,
     useSticky,
     useFilters,
     useGlobalFilter,
@@ -233,6 +237,13 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   };
   const rowTypeToMap = paginateDynamic ? rows : page;
   const [isSortedDesc, setIsSortedDesc] = useState(false);
+  const [holdTableRender, setHoldTableRender] = useState(!!hiddenColumns);
+
+  if (hiddenColumns) {
+    setTimeout(() => {
+      setHoldTableRender(false);
+    }, 1000);
+  }
 
   useEffect(() => {
     setTotalRows(rowTypeToMap.length);
@@ -301,7 +312,9 @@ const RenderTable = ({ params, passedData, passedCount }) => {
             {/* eslint-disable-next-line */}
             <div
               {...getTableProps()}
-              className={css(styles.higTable)}
+              className={css(
+                holdTableRender ? styles.higTableHold : styles.higTable
+              )}
               onFocus={handleFocus}
               onKeyDown={handleKeyDown}
               ref={setTableRef}
@@ -370,7 +383,13 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                             setIsSortedDesc={setIsSortedDesc}
                             isSortedDesc={isSortedDesc}
                           >
-                            <div className={css(styles.headerHolder)}>
+                            <div
+                              className={css(
+                                column.id !== "selection"
+                                  ? styles.headerHolder
+                                  : styles.headerHolderSelection
+                              )}
+                            >
                               {column.canGroupBy && meta.groupElements ? (
                                 <span {...column.getGroupByToggleProps()}>
                                   <GroupHeaderElements

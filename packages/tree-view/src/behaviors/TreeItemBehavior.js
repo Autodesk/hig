@@ -57,7 +57,11 @@ const TreeItemBehavior = (props) => {
     }
   };
 
-  const handleOperatorClick = () => {
+  const handleOperatorClick = (event) => {
+    if (props.onOperatorClick) {
+      props.onOperatorClick(event);
+    }
+
     if (props.payload) {
       setIsCollapsedHook(!getIsCollapsed());
     } else {

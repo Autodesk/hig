@@ -34,6 +34,7 @@ export default function stylesheet(props, themeData, themeMeta) {
   const styles = {
     higTable: {
       color: themeData["table.fontColor"],
+      display: isGrouped ? "block" : "inline-block",
       fontFamily: themeData["table.fontFamily"],
       fontSize: themeData["table.fontSize"],
       fontWeight: themeData["table.cell.fontWeight"],
@@ -41,6 +42,9 @@ export default function stylesheet(props, themeData, themeMeta) {
       outline: 0,
       position: `relative`,
       ...(isStickyColumn || isStickyHeader ? { overflow: `auto` } : {}),
+    },
+    higTableHold: {
+      display: "none",
     },
     higTableRow: {
       boxSizing: `border-box`,
@@ -299,6 +303,12 @@ export default function stylesheet(props, themeData, themeMeta) {
       borderRight: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`,
     },
     headerHolder: {
+      whiteSpace: `nowrap`,
+      overflow: `hidden`,
+      textOverflow: `ellipsis`,
+      minWidth: `10px`,
+    },
+    headerHolderSelection: {
       display: `flex`,
     },
     groupHeaderElement: {

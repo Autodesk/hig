@@ -149,6 +149,16 @@ describe("flyout/Flyout", () => {
       handleClose.mockReset();
     });
 
+    it("toggles the flyout between open and closed", () => {
+      const { handleChildClick, wrapper } = getHandler();
+
+      expect(wrapper.state()).toHaveProperty("open", false);
+      handleChildClick();
+      expect(wrapper.state()).toHaveProperty("open", true);
+      handleChildClick();
+      expect(wrapper.state()).toHaveProperty("open", false);
+    });
+
     it("calls the `onOpen` handler when the flyout is opened", () => {
       const { handleChildClick } = getHandler();
 
@@ -164,7 +174,7 @@ describe("flyout/Flyout", () => {
       handleChildClick();
       expect(handleClose).not.toHaveBeenCalled();
       handleChildClick();
-      expect(handleClose).not.toHaveBeenCalled();
+      expect(handleClose).toHaveBeenCalled();
     });
 
     it("calls the `onClose` handler when the flyout open by default", () => {
@@ -190,7 +200,7 @@ describe("flyout/Flyout", () => {
     it("is called when rendering", () => {
       mount(<Flyout alterCoordinates={alterCoordinates} />);
 
-      // expect(alterCoordinates).toMatchSnapshot();
+      expect(alterCoordinates).toMatchSnapshot();
     });
   });
 });
