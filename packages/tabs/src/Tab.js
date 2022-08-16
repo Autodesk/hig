@@ -98,7 +98,7 @@ Tab.propTypes = {
   /**
    * Sets the label of a tab
    */
-  label: PropTypes.string,
+  label: PropTypes.node,
   /**
    * Function to modify the component's styles
    */
