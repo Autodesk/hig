@@ -348,7 +348,7 @@ export default {
       ref: "colorScheme.surface.level300",
     },
     transform: {
-      alpha: 0.95
+      alpha: 0.95,
     },
   },
   "tile.actions.vertical.paddingVertical": {
@@ -423,7 +423,7 @@ export default {
       ref: "basics.colors.primary.white",
     },
     transform: {
-      alpha: 0.5
+      alpha: 0.5,
     },
   },
   "tile.checkbox.unchecked.hover.borderColor": {
@@ -492,7 +492,7 @@ export default {
       ref: "basics.colors.primary.white",
     },
     transform: {
-      alpha: 0.15
+      alpha: 0.15,
     },
   },
   "tile.checkbox.focus.haloColor": {
@@ -501,7 +501,7 @@ export default {
       ref: "basics.colors.primary.autodeskBlue.400",
     },
     transform: {
-      alpha: 0.35
+      alpha: 0.35,
     },
   },
   "tile.checkbox.pressed.haloColor": {
@@ -510,7 +510,7 @@ export default {
       ref: "basics.colors.primary.white",
     },
     transform: {
-      alpha: 0.25
+      alpha: 0.25,
     },
   },
   "tile.title.paddingTop": {
@@ -553,7 +553,7 @@ export default {
       ref: "basics.colors.primary.charcoal.300",
     },
     transform: {
-      alpha: 0.0
+      alpha: 0.0,
     },
   },
   "tile.gradient.opacity": {

@@ -1,4 +1,12 @@
-import { BORDER_RADIUS, COLOR, FONT_FAMILY, FONT_SIZE, FONT_WEIGHT, LENGTH, SPACING } from "../../consts/types";
+import {
+  BORDER_RADIUS,
+  COLOR,
+  FONT_FAMILY,
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LENGTH,
+  SPACING,
+} from "../../consts/types";
 
 export default {
   "modal.fontColor": {
