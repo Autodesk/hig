@@ -1,3 +1,10 @@
+# [@hig/icons-v4.1.2](https://github.com/Autodesk/hig/compare/@hig/icons@4.1.1...@hig/icons@4.1.2) (2022-08-17)
+
+
+### Bug Fixes
+
+* removed fill from icon svgs ([7f89027](https://github.com/Autodesk/hig/commit/7f89027))
+
 # [@hig/icons-v4.1.1](https://github.com/Autodesk/hig/compare/@hig/icons@4.1.0...@hig/icons@4.1.1) (2022-05-25)
 
 
