@@ -6,6 +6,8 @@ import {
   FONT_SIZE,
   FONT_WEIGHT,
   LINE_HEIGHT,
+  LENGTH,
+  OPACITY,
   SPACING,
 } from "../../consts/types";
 
@@ -67,7 +69,7 @@ export default {
   "tile.title.fontWeight": {
     type: FONT_WEIGHT,
     value: {
-      ref: "basics.fontWeights.medium",
+      ref: "basics.fontWeights.bold",
     },
   },
   "tile.title.lineHeight": {
@@ -339,5 +341,223 @@ export default {
     value: {
       ref: "colorScheme.background.empty.level300To350.pressed",
     },
+  },
+  "tile.actions.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.surface.level300",
+    },
+    transform: {
+      alpha: 0.95,
+    },
+  },
+  "tile.actions.vertical.paddingVertical": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.small",
+    },
+  },
+  "tile.actions.vertical.paddingHorizontal": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.extraExtraSmall",
+    },
+  },
+  "tile.actions.horizontal.paddingVertical": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.extraExtraSmall",
+    },
+  },
+  "tile.actions.horizontal.paddingHorizontal": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.small",
+    },
+  },
+  "tile.divider.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.divider.lightweight",
+    },
+  },
+  "tile.divider.borderWidth": {
+    type: BORDER_WIDTH,
+    value: {
+      ref: "basics.borderWidths.small",
+    },
+  },
+  "tile.checkboxContainer.padding": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.small",
+    },
+  },
+  "tile.checkbox.unchecked.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.background.transparent",
+    },
+  },
+  "tile.checkbox.checked.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+  },
+  "tile.checkbox.indicatorColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.900",
+    },
+  },
+  "tile.checkbox.borderWidth": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.surface.darkGray.100",
+    },
+  },
+  "tile.checkbox.unchecked.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+    transform: {
+      alpha: 0.5,
+    },
+  },
+  "tile.checkbox.unchecked.hover.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "tile.checkbox.unchecked.default.borderColor",
+    },
+  },
+  "tile.checkbox.unchecked.focus.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.400",
+    },
+  },
+  "tile.checkbox.unchecked.pressed.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "tile.checkbox.unchecked.default.borderColor",
+    },
+  },
+  "tile.checkbox.checked.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+  },
+  "tile.checkbox.checked.hover.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "tile.checkbox.checked.default.borderColor",
+    },
+  },
+  "tile.checkbox.checked.focus.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "tile.checkbox.checked.default.borderColor",
+    },
+  },
+  "tile.checkbox.checked.pressed.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "tile.checkbox.checked.default.borderColor",
+    },
+  },
+  "tile.checkbox.hover.haloWidth": {
+    type: BORDER_WIDTH,
+    value: {
+      ref: "basics.borderWidths.medium",
+    },
+  },
+  "tile.checkbox.focus.haloWidth": {
+    type: BORDER_WIDTH,
+    value: {
+      ref: "basics.borderWidths.medium",
+    },
+  },
+  "tile.checkbox.pressed.haloWidth": {
+    type: BORDER_WIDTH,
+    value: {
+      ref: "basics.borderWidths.large",
+    },
+  },
+  "tile.checkbox.hover.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+    transform: {
+      alpha: 0.15,
+    },
+  },
+  "tile.checkbox.focus.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.400",
+    },
+    transform: {
+      alpha: 0.35,
+    },
+  },
+  "tile.checkbox.pressed.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+    transform: {
+      alpha: 0.25,
+    },
+  },
+  "tile.title.paddingTop": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.extraSmall",
+    },
+  },
+  "tile.subtitle.paddingBottom": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.small",
+    },
+  },
+  "tile.children.spaceBetween": {
+    type: SPACING,
+    value: {
+      ref: "density.spacings.small",
+    },
+  },
+  "tile.children.paddingBottom": {
+    type: LENGTH,
+    value: {
+      ref: "density.spacings.small",
+    },
+  },
+  "tile.gradient.height": {
+    type: LENGTH,
+    value: "60px",
+  },
+  "tile.gradient.start.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.black",
+    },
+  },
+  "tile.gradient.end.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.300",
+    },
+    transform: {
+      alpha: 0.0,
+    },
+  },
+  "tile.gradient.opacity": {
+    type: OPACITY,
+    value: "0.85",
   },
 };

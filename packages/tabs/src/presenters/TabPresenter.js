@@ -142,7 +142,7 @@ export default function TabPresenter({
 
 TabPresenter.propTypes = {
   active: PropTypes.bool,
-  label: PropTypes.string,
+  label: PropTypes.node,
   icon: PropTypes.node,
   disabled: PropTypes.bool,
   closable: PropTypes.bool,

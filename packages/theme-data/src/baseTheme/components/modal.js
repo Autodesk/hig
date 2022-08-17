@@ -1,4 +1,12 @@
-import { BORDER_RADIUS, COLOR, LENGTH, SPACING } from "../../consts/types";
+import {
+  BORDER_RADIUS,
+  COLOR,
+  FONT_FAMILY,
+  FONT_SIZE,
+  FONT_WEIGHT,
+  LENGTH,
+  SPACING,
+} from "../../consts/types";
 
 export default {
   "modal.fontColor": {
@@ -24,7 +32,7 @@ export default {
   },
   "modal.header.minHeight": {
     type: LENGTH,
-    value: "60px",
+    value: "58px",
   },
   "modal.body.minHeight": {
     type: LENGTH,
@@ -49,5 +57,29 @@ export default {
   "modal.shell.shadowColor": {
     type: COLOR,
     value: { ref: "colorScheme.shadow.high" },
+  },
+  "modal.header.fontSize": {
+    type: FONT_SIZE,
+    value: { ref: "density.fontSizes.large" },
+  },
+  "modal.header.fontWeight": {
+    type: FONT_WEIGHT,
+    value: { ref: "basics.fontWeights.medium" },
+  },
+  "modal.header.paddingBottom": {
+    type: SPACING,
+    value: { ref: "density.spacings.extraSmall" },
+  },
+  "modal.subhead.fontSize": {
+    type: FONT_SIZE,
+    value: { ref: "density.fontSizes.medium" },
+  },
+  "modal.subhead.fontWeight": {
+    type: FONT_WEIGHT,
+    value: { ref: "basics.fontWeights.regular" },
+  },
+  "modal.fontFamily": {
+    type: FONT_FAMILY,
+    value: { ref: "basics.fontFamilies.main" },
   },
 };

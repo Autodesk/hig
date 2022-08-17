@@ -47,7 +47,9 @@ export default {
   },
   "tooltip.title.fontSize": {
     type: FONT_SIZE,
-    value: "12px",
+    value: {
+      ref: "basics.fontSizes.highSmall",
+    },
   },
   "tooltip.title.fontWeight": {
     type: FONT_WEIGHT,
@@ -73,7 +75,9 @@ export default {
   },
   "tooltip.description.fontSize": {
     type: FONT_SIZE,
-    value: "12px",
+    value: {
+      ref: "basics.fontSizes.highSmall",
+    },
   },
   "tooltip.description.fontWeight": {
     type: FONT_WEIGHT,
