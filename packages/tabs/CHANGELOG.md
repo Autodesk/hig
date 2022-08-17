@@ -1,3 +1,10 @@
+# [@hig/tabs-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/tabs@2.1.0...@hig/tabs@2.2.0) (2022-08-17)
+
+
+### Features
+
+* Tab label to accept a node ([b4c62e6](https://github.com/Autodesk/hig/commit/b4c62e6))
+
 # [@hig/tabs-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/tabs@2.0.0...@hig/tabs@2.1.0) (2022-01-24)
 
 
