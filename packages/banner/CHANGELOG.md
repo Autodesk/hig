@@ -1,3 +1,10 @@
+# [@hig/banner-v3.1.1](https://github.com/Autodesk/hig/compare/@hig/banner@3.1.0...@hig/banner@3.1.1) (2022-08-17)
+
+
+### Bug Fixes
+
+* revert to class components ([25e4cfd](https://github.com/Autodesk/hig/commit/25e4cfd))
+
 # [@hig/banner-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/banner@3.0.0...@hig/banner@3.1.0) (2022-01-24)
 
 
