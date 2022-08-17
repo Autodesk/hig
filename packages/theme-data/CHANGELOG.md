@@ -1,3 +1,28 @@
+# [@hig/theme-data-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@3.0.0...@hig/theme-data@3.1.0) (2022-08-17)
+
+
+### Bug Fixes
+
+* revert menu padding change ([aa451a7](https://github.com/Autodesk/hig/commit/aa451a7))
+* selected breadcrumb label set to correct weight ([e3d246c](https://github.com/Autodesk/hig/commit/e3d246c))
+* set tag on background color refs to correct value ([94ada1e](https://github.com/Autodesk/hig/commit/94ada1e))
+* set tile title to correct font weight ([c25abba](https://github.com/Autodesk/hig/commit/c25abba))
+* updated breadcrumb selected indicator ref ([6aba2fb](https://github.com/Autodesk/hig/commit/6aba2fb))
+* updated menu container padding to match design on Weave website ([6967efc](https://github.com/Autodesk/hig/commit/6967efc))
+* updated tooltip fontSize refs ([c3ce87c](https://github.com/Autodesk/hig/commit/c3ce87c))
+
+
+### Features
+
+* added additional roles for modal fonts and spacing ([37444bf](https://github.com/Autodesk/hig/commit/37444bf))
+* added checkbox roles to tile ([9dae78c](https://github.com/Autodesk/hig/commit/9dae78c))
+* added tile to dark blue unresolved roles ([7c87704](https://github.com/Autodesk/hig/commit/7c87704))
+* added tile to dark gray components ([bb472dc](https://github.com/Autodesk/hig/commit/bb472dc))
+* checkbox background color updated ([5102e9f](https://github.com/Autodesk/hig/commit/5102e9f))
+* new roles added to tile ([d6170be](https://github.com/Autodesk/hig/commit/d6170be))
+* toggle background color updated ([1915771](https://github.com/Autodesk/hig/commit/1915771))
+* updated modal header min height ([406479a](https://github.com/Autodesk/hig/commit/406479a))
+
 # [@hig/theme-data-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@2.26.0...@hig/theme-data@3.0.0) (2022-06-29)
 
 

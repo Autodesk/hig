@@ -1,6 +1,6 @@
 {
   "name": "@hig/tabs",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "HIG Tabs",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "@hig/behaviors": "^2.1.0",
-    "@hig/icons": "^4.1.0",
+    "@hig/icons": "^4.1.2",
     "@hig/typography": "^2.1.0",
     "@hig/utils": "^0.4.1",
     "emotion": "^10.0.0",
@@ -27,7 +27,7 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.0.0",
+    "@hig/theme-data": "^3.1.0",
     "react": "^17.0.0"
   },
   "devDependencies": {
