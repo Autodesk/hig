@@ -144,7 +144,7 @@ Button.propTypes = {
   /**
    * Sets the title of a button
    */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   /**
    * Specifies type of button
    */
@@ -153,6 +153,10 @@ Button.propTypes = {
    * Specifies width of button
    */
   width: PropTypes.oneOf(availableWidths),
+  /**
+   * Contains content of button
+   */
+  children: PropTypes.node,
 };
 
 export default Button;
