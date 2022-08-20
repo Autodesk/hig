@@ -102,16 +102,6 @@ const ProgressRingIndeterminateBehavior = (props) => {
     setcssTransitionState("exited");
   };
 
-  /** @type {HTMLDivElement} */
-  // eslint-disable-next-line no-unused-expressions
-  containerRef;
-  /**
-   * @param {HTMLDivElement} containerRef
-   */
-  const refContainer = (value) => {
-    containerRef.current = value;
-  };
-
   useEffect(() => {
     initSegments();
     step(1);
@@ -123,6 +113,7 @@ const ProgressRingIndeterminateBehavior = (props) => {
       timeout={{ enter: 650, exit: 466 }}
       appear
       classNames="hig__progress-ring--"
+      nodeRef={containerRef}
       onEntering={handleEntering}
       onEntered={handleEntered}
       onExiting={handleExiting}
@@ -130,7 +121,7 @@ const ProgressRingIndeterminateBehavior = (props) => {
     >
       {(status) =>
         props.children({
-          innerRef: refContainer,
+          innerRef: containerRef,
           cssTransitionState: status,
         })
       }
