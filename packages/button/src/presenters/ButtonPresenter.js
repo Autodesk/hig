@@ -33,6 +33,7 @@ const ButtonPresenter = (props) => {
     title,
     type,
     width,
+    children,
     ...otherProps
   } = props;
 
@@ -84,7 +85,7 @@ const ButtonPresenter = (props) => {
                 icon ? cx(css(cssStyles.iconText), iconTextClassName) : ""
               }
             >
-              {title}
+              {children || title}
             </span>
           </Wrapper>
         );
@@ -112,9 +113,10 @@ ButtonPresenter.propTypes = {
   onMouseUp: PropTypes.func,
   stylesheet: PropTypes.func,
   target: PropTypes.oneOf(availableTargets),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   type: PropTypes.oneOf(availableTypes),
   width: PropTypes.oneOf(availableWidths),
+  children: PropTypes.node,
 };
 
 export default ButtonPresenter;
