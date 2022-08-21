@@ -1,3 +1,10 @@
+# [@hig/button-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/button@3.1.1...@hig/button@3.2.0) (2022-08-21)
+
+
+### Features
+
+* button to accept children prop ([0302451](https://github.com/Autodesk/hig/commit/0302451))
+
 # [@hig/button-v3.1.1](https://github.com/Autodesk/hig/compare/@hig/button@3.1.0...@hig/button@3.1.1) (2022-03-17)
 
 
