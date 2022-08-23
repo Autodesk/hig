@@ -1,3 +1,10 @@
+# [@hig/progress-ring-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/progress-ring@2.2.0...@hig/progress-ring@2.2.1) (2022-08-23)
+
+
+### Bug Fixes
+
+* use nodeRef for CSSTransition ([9d1e8b5](https://github.com/Autodesk/hig/commit/9d1e8b5)), closes [/github.com/reactjs/react-transition-group/issues/668#issuecomment-695162879](https://github.com//github.com/reactjs/react-transition-group/issues/668/issues/issuecomment-695162879)
+
 # [@hig/progress-ring-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/progress-ring@2.1.0...@hig/progress-ring@2.2.0) (2022-06-15)
 
 
