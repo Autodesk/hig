@@ -35,3 +35,7 @@ export default {
 const Template = (args) => <Banner {...args} />;
 
 export const Default = Template.bind({});
+
+Default.args = {
+  children: "Banner text",
+};

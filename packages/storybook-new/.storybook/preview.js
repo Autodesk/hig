@@ -82,6 +82,7 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+    sort: "requiredFirst",
   },
   options: {
     storySort: (a, b) =>
