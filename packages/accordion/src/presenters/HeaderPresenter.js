@@ -92,9 +92,11 @@ const HeaderPresenter = (props) => {
             tabIndex={disabled ? "-1" : "0"}
             type="button"
           >
-            <Indicator
-              className={cx(css(styles.indicator), indicatorClassName)}
-            />
+            <div className={css(styles.indicatorWrapper)}>
+              <Indicator
+                className={cx(css(styles.indicator), indicatorClassName)}
+              />
+            </div>
             <div className={cx(css(styles.label), labelClassName)}>{label}</div>
           </button>
         );
