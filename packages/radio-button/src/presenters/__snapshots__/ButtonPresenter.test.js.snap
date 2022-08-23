@@ -6,7 +6,7 @@ exports[`radio-button/presenters/ButtonPresenter renders with all props 1`] = `
   position: relative;
   color: transparent;
   border: none;
-  background-color: transparent;
+  background-color: #ffffff;
   text-align: center;
   font-size: 25px;
   line-height: 14px;
@@ -33,7 +33,7 @@ exports[`radio-button/presenters/ButtonPresenter renders without props 1`] = `
   position: relative;
   color: transparent;
   border: none;
-  background-color: transparent;
+  background-color: #ffffff;
   text-align: center;
   font-size: 25px;
   line-height: 14px;
