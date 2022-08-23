@@ -55,6 +55,7 @@ export default function stylesheet(props, themeData) {
 
   const styles = {
     checkboxWrapper: {
+      background: themeData["checkbox.unchecked.default.backgroundColor"],
       boxSizing: `border-box`,
       display: `inline-block`,
       position: `relative`,

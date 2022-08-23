@@ -2,6 +2,7 @@
 
 exports[`checkbox/Checkbox integration renders correctly 1`] = `
 .emotion-6 {
+  background: #ffffff;
   box-sizing: border-box;
   display: inline-block;
   position: relative;

@@ -74,7 +74,7 @@ ProgressRingPresenter.defaultProps = { size: "m", surface: 100 };
 
 ProgressRingPresenter.propTypes = {
   cssTransitionState: PropTypes.string,
-  innerRef: PropTypes.func,
+  innerRef: PropTypes.shape({ current: PropTypes.shape([PropTypes.any]) }),
   mask: PropTypes.string,
   percentComplete: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   size: PropTypes.oneOf(availableSizes),

@@ -2,6 +2,7 @@
 
 exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
 .emotion-6 {
+  background: #ffffff;
   box-sizing: border-box;
   display: inline-block;
   position: relative;
@@ -127,6 +128,7 @@ exports[`checkbox/presenters/CheckboxPresenter renders with all props 1`] = `
 
 exports[`checkbox/presenters/CheckboxPresenter renders without props 1`] = `
 .emotion-6 {
+  background: #ffffff;
   box-sizing: border-box;
   display: inline-block;
   position: relative;
