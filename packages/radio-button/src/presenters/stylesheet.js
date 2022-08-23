@@ -40,7 +40,7 @@ export default function stylesheet(props, themeData) {
       position: "relative",
       color: "transparent",
       border: "none",
-      backgroundColor: "transparent",
+      backgroundColor: themeData["checkbox.unchecked.default.backgroundColor"],
       textAlign: "center",
       fontSize: "25px",
       lineHeight: "14px",
