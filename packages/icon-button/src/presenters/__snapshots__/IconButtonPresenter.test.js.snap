@@ -31,6 +31,18 @@ exports[`IconButtonPresenter renders correctly 1`] = `
   transition-property: fill;
 }
 
+.emotion-1 > svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
 .emotion-0 {
   fill: #808080;
   position: absolute;
@@ -97,6 +109,18 @@ exports[`IconButtonPresenter renders correctly when a custom className is passed
   transition-duration: 0.3s;
   -webkit-transition-property: fill;
   transition-property: fill;
+}
+
+.emotion-1 > svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .emotion-0 {
@@ -186,6 +210,18 @@ exports[`IconButtonPresenter renders correctly when disabled 1`] = `
   transition-property: fill;
 }
 
+.emotion-1 > svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
 <a
   className="emotion-1"
   disabled={true}
@@ -237,6 +273,18 @@ exports[`IconButtonPresenter renders correctly with a link 1`] = `
   transition-duration: 0.3s;
   -webkit-transition-property: fill;
   transition-property: fill;
+}
+
+.emotion-1 > svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .emotion-0 {

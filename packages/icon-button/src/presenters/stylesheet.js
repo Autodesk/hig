@@ -114,6 +114,15 @@ export default function stylesheet(props, themeData, density) {
     ? themeData["iconButton.dynamic.on.default.iconColor"]
     : themeData["iconButton.dynamic.default.iconColor"];
   const iconColor = isDynamic ? dynamicIconColor : ``;
+  const iconStyles = {
+    position: `absolute`,
+    left: 0,
+    right: 0,
+    margin: `0 auto`,
+    top: `50%`,
+    transform: `translateY(-50%)`,
+    pointerEvents: `none`,
+  };
 
   const styles = {
     iconButton: {
@@ -145,6 +154,7 @@ export default function stylesheet(props, themeData, density) {
         transitionDuration: `0.3s`,
         transitionProperty: `fill`,
       },
+      ...(!isDynamic ? { "& > svg": iconStyles } : {}),
       ...(hasFocus ? getStylesByFocus(themeData, on, variant) : {}),
       ...(hasHover ? getStylesByHover(themeData, surface, on, variant) : {}),
       ...(isPressed ? getStylesByPressed(themeData, surface, on, variant) : {}),
@@ -153,15 +163,7 @@ export default function stylesheet(props, themeData, density) {
     iconSpacer: {
       width: `24px`,
     },
-    iconButtonIcon: {
-      position: `absolute`,
-      left: 0,
-      right: 0,
-      margin: `0 auto`,
-      top: `50%`,
-      transform: `translateY(-50%)`,
-      pointerEvents: `none`,
-    },
+    iconButtonIcon: iconStyles,
   };
 
   return customStylesheet
