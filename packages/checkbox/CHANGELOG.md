@@ -1,3 +1,10 @@
+# [@hig/checkbox-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/checkbox@3.1.0...@hig/checkbox@3.2.0) (2022-08-23)
+
+
+### Features
+
+* update background color ([9073811](https://github.com/Autodesk/hig/commit/9073811))
+
 # [@hig/checkbox-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/checkbox@3.0.0...@hig/checkbox@3.1.0) (2022-01-24)
 
 
