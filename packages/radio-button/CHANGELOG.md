@@ -1,3 +1,10 @@
+# [@hig/radio-button-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/radio-button@2.1.0...@hig/radio-button@2.2.0) (2022-08-23)
+
+
+### Features
+
+* update background color ([0955678](https://github.com/Autodesk/hig/commit/0955678))
+
 # [@hig/radio-button-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/radio-button@2.0.0...@hig/radio-button@2.1.0) (2022-01-24)
 
 
