@@ -1,3 +1,10 @@
+# [@hig/table-v1.7.0](https://github.com/Autodesk/hig/compare/@hig/table@1.6.5...@hig/table@1.7.0) (2022-08-24)
+
+
+### Features
+
+* add ability to pre select row(s) ([68b1123](https://github.com/Autodesk/hig/commit/68b1123))
+
 # [@hig/table-v1.6.5](https://github.com/Autodesk/hig/compare/@hig/table@1.6.4...@hig/table@1.6.5) (2022-07-26)
 
 
