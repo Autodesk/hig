@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Accordion/HeaderPresenter renders defaut collapsed header 1`] = `
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -24,6 +24,25 @@ exports[`Accordion/HeaderPresenter renders defaut collapsed header 1`] = `
 }
 
 .emotion-1 {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  position: relative;
+  text-align: center;
+  width: 16px;
+  min-height: 16px;
+}
+
+.emotion-2 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -39,25 +58,16 @@ exports[`Accordion/HeaderPresenter renders defaut collapsed header 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 16px;
-  text-align: center;
-  margin-right: 0;
-  margin-left: 8px;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .emotion-0 > * {
@@ -69,21 +79,25 @@ exports[`Accordion/HeaderPresenter renders defaut collapsed header 1`] = `
 }
 
 <button
-  className="emotion-2"
+  className="emotion-3"
   tabIndex="0"
   type="button"
 >
-  <svg
-    className="emotion-0"
-    height="10px"
-    width="10px"
-  >
-    <path
-      d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
-    />
-  </svg>
   <div
     className="emotion-1"
+  >
+    <svg
+      className="emotion-0"
+      height="10px"
+      width="10px"
+    >
+      <path
+        d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
+      />
+    </svg>
+  </div>
+  <div
+    className="emotion-2"
   >
     foo
   </div>
@@ -91,7 +105,7 @@ exports[`Accordion/HeaderPresenter renders defaut collapsed header 1`] = `
 `;
 
 exports[`Accordion/HeaderPresenter renders expanded header 1`] = `
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -114,6 +128,25 @@ exports[`Accordion/HeaderPresenter renders expanded header 1`] = `
 }
 
 .emotion-1 {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  position: relative;
+  text-align: center;
+  width: 16px;
+  min-height: 16px;
+}
+
+.emotion-2 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -129,25 +162,16 @@ exports[`Accordion/HeaderPresenter renders expanded header 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 16px;
-  text-align: center;
-  margin-right: 0;
-  margin-left: 8px;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .emotion-0 > * {
@@ -159,21 +183,25 @@ exports[`Accordion/HeaderPresenter renders expanded header 1`] = `
 }
 
 <button
-  className="emotion-2"
+  className="emotion-3"
   tabIndex="0"
   type="button"
 >
-  <svg
-    className="emotion-0"
-    height="10px"
-    width="10px"
-  >
-    <path
-      d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
-    />
-  </svg>
   <div
     className="emotion-1"
+  >
+    <svg
+      className="emotion-0"
+      height="10px"
+      width="10px"
+    >
+      <path
+        d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
+      />
+    </svg>
+  </div>
+  <div
+    className="emotion-2"
   >
     foo
   </div>
@@ -182,6 +210,25 @@ exports[`Accordion/HeaderPresenter renders expanded header 1`] = `
 
 exports[`Accordion/HeaderPresenter renders indicator in the right 1`] = `
 .emotion-1 {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  position: relative;
+  text-align: center;
+  width: 16px;
+  min-height: 16px;
+}
+
+.emotion-2 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -197,25 +244,16 @@ exports[`Accordion/HeaderPresenter renders indicator in the right 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 16px;
-  text-align: center;
-  margin-right: 0;
-  margin-left: 8px;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .emotion-0 > * {
@@ -226,7 +264,7 @@ exports[`Accordion/HeaderPresenter renders indicator in the right 1`] = `
   fill: rgba(102,102,102,0.7);
 }
 
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -251,21 +289,25 @@ exports[`Accordion/HeaderPresenter renders indicator in the right 1`] = `
 }
 
 <button
-  className="emotion-2"
+  className="emotion-3"
   tabIndex="0"
   type="button"
 >
-  <svg
-    className="emotion-0"
-    height="10px"
-    width="10px"
-  >
-    <path
-      d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
-    />
-  </svg>
   <div
     className="emotion-1"
+  >
+    <svg
+      className="emotion-0"
+      height="10px"
+      width="10px"
+    >
+      <path
+        d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
+      />
+    </svg>
+  </div>
+  <div
+    className="emotion-2"
   >
     foo
   </div>
@@ -273,7 +315,7 @@ exports[`Accordion/HeaderPresenter renders indicator in the right 1`] = `
 `;
 
 exports[`Accordion/HeaderPresenter renders using operator as indicator 1`] = `
-.emotion-2 {
+.emotion-3 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -296,6 +338,25 @@ exports[`Accordion/HeaderPresenter renders using operator as indicator 1`] = `
 }
 
 .emotion-1 {
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0;
+  margin-left: 8px;
+  position: relative;
+  text-align: center;
+  width: 16px;
+  min-height: 16px;
+}
+
+.emotion-2 {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -311,25 +372,16 @@ exports[`Accordion/HeaderPresenter renders using operator as indicator 1`] = `
 
 .emotion-0 {
   fill: #808080;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
-  order: 1;
-  -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
-  -ms-flex-positive: 0;
-  flex-grow: 0;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 16px;
-  text-align: center;
-  margin-right: 0;
-  margin-left: 8px;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .emotion-0 > * {
@@ -341,21 +393,25 @@ exports[`Accordion/HeaderPresenter renders using operator as indicator 1`] = `
 }
 
 <button
-  className="emotion-2"
+  className="emotion-3"
   tabIndex="0"
   type="button"
 >
-  <svg
-    className="emotion-0"
-    height="10px"
-    width="10px"
-  >
-    <path
-      d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
-    />
-  </svg>
   <div
     className="emotion-1"
+  >
+    <svg
+      className="emotion-0"
+      height="10px"
+      width="10px"
+    >
+      <path
+        d="M3.22 1.29a.75.75 0 000 1.06L5.87 5 3.22 7.65a.75.75 0 000 1.06.74.74 0 001.06 0l3.36-3.36a.5.5 0 000-.7L4.28 1.29a.74.74 0 00-1.06 0z"
+      />
+    </svg>
+  </div>
+  <div
+    className="emotion-2"
   >
     foo
   </div>

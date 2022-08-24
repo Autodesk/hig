@@ -11,11 +11,17 @@ export default {
   argTypes: {
     surface: {
       options: availableSurfaces,
-      control: { type: "select" },
+      control: "select",
     },
     size: {
       options: availableSizes,
-      control: { type: "select" },
+      control: "select",
+    },
+    percentComplete: {
+      control: {
+        type: "number",
+      },
+      if: { arg: "percentComplete" },
     },
   },
   parameters: {
@@ -34,3 +40,11 @@ export default {
 const Template = (args) => <ProgressRing {...args} />;
 
 export const Default = Template.bind({});
+
+Default.storyName = "Indeterminate";
+
+export const Determinate = Template.bind({});
+
+Determinate.args = {
+  percentComplete: 33,
+};

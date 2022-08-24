@@ -45,7 +45,7 @@ export const TABLE_OBJECT_BASIC = {
     sortColumns: props => <SortColumns passedData={props} />,
     genericApplication: props => <GenericApplication passedData={props} />,
     dataGroupComponent: props => <DataGroupComponent passedData={props} />,
-    formatDate: false, 
+    formatDate: false,
   },
   columns: [
       {
@@ -85,6 +85,7 @@ export const TABLE_OBJECT_BASIC = {
       },
   ],
   hiddenColumns: "true",
+  defaultSelectedRows: [0, 4],
   // groupNames: ['Revit Model', 'CAD Formats', 'Sample Empty', 'Coordination Model'],
   // data: [
   //   tableContentThree.data.map((row, index) => {
