@@ -22,6 +22,10 @@ describe("accordion/stylesheet", () => {
     expect(styles).toHaveProperty("header", expect.any(Object));
   });
 
+  it("returned object contains property of indicatorWrapper", () => {
+    expect(styles).toHaveProperty("indicatorWrapper", expect.any(Object));
+  });
+
   it("returned object contains property of indicator", () => {
     expect(styles).toHaveProperty("indicator", expect.any(Object));
   });

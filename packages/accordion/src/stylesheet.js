@@ -44,18 +44,10 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
       width: "100%",
       opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "1",
     },
-    indicator: {
+    indicatorWrapper: {
       order: indicatorPosition === indicatorPositions.LEFT ? -1 : 1,
       flexGrow: 0,
       flexShrink: 0,
-      width: themeData["accordion.header.indicatorSize"],
-      textAlign: "center",
-      "> path": {
-        fill:
-          !disabled && hasHover
-            ? themeData["accordion.header.hover.indicatorColor"]
-            : themeData["accordion.header.default.indicatorColor"],
-      },
       marginRight:
         indicatorPosition === indicatorPositions.LEFT
           ? themeData["accordion.header.indicatorGutter"]
@@ -64,9 +56,28 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
         indicatorPosition === indicatorPositions.LEFT
           ? 0
           : themeData["accordion.header.indicatorGutter"],
+      position: "relative",
+      textAlign: "center",
+      width: "16px",
+      minHeight: "16px",
+    },
+    indicator: {
+      "> path": {
+        fill:
+          !disabled && hasHover
+            ? themeData["accordion.header.hover.indicatorColor"]
+            : themeData["accordion.header.default.indicatorColor"],
+      },
       transitionDuration,
       transform:
-        indicator === indicators.CARET && !collapsed ? "rotate(90deg)" : "none",
+        indicator === indicators.CARET && !collapsed
+          ? "translateY(-50%) rotate(90deg)"
+          : "translateY(-50%)",
+      position: "absolute",
+      top: "50%",
+      left: 0,
+      right: 0,
+      margin: "0 auto",
     },
     label: {
       order: 0,
