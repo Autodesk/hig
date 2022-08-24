@@ -40,6 +40,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     meta,
     groupNames,
     hiddenColumns,
+    defaultSelectedRows,
     alternateBg,
     columnSelection,
     frozenHeader,
@@ -248,6 +249,22 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   useEffect(() => {
     setTotalRows(rowTypeToMap.length);
   });
+
+  useEffect(() => {
+    if (defaultSelectedRows && defaultSelectedRows?.length > 0) {
+      const rowLimit = tableObject.data.length - 1;
+      const allArray = tableObject.data
+        ?.map((row, index) => {
+          if (defaultSelectedRows.includes(index) && index <= rowLimit) {
+            return index;
+          }
+          return null;
+        })
+        .filter((element) => element !== null);
+
+      setActiveMultiSelectRowArray(allArray);
+    }
+  }, []);
 
   useEffect(() => {
     if (!globalColumns && count === 0) {
