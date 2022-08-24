@@ -1,3 +1,10 @@
+# [@hig/icon-button-v3.1.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@3.1.0...@hig/icon-button@3.1.1) (2022-08-24)
+
+
+### Bug Fixes
+
+* static icon positioning to match dynamic ([4afc1e9](https://github.com/Autodesk/hig/commit/4afc1e9))
+
 # [@hig/icon-button-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/icon-button@3.0.0...@hig/icon-button@3.1.0) (2022-01-24)
 
 
