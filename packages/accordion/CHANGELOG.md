@@ -1,3 +1,10 @@
+# [@hig/accordion-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/accordion@2.1.0...@hig/accordion@2.1.1) (2022-08-24)
+
+
+### Bug Fixes
+
+* indicator icon spacing ([3c94b5f](https://github.com/Autodesk/hig/commit/3c94b5f))
+
 # [@hig/accordion-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/accordion@2.0.0...@hig/accordion@2.1.0) (2022-01-24)
 
 
