@@ -15,15 +15,15 @@ export default {
   argTypes: {
     variant: {
       options: AVAILABLE_VARIANTS,
-      control: { type: "select" },
+      control: "select",
     },
     align: {
       options: AVAILABLE_ALIGNMENTS,
-      control: { type: "select" },
+      control: "select",
     },
     fontWeight: {
       options: AVAILABLE_FONT_WEIGHTS,
-      control: { type: "select" },
+      control: "select",
     },
   },
   parameters: {
