@@ -6,6 +6,7 @@ import {
   FONT_WEIGHT,
   LENGTH,
   LINE_HEIGHT,
+  SPACING,
 } from "../../consts/types";
 
 export default {
@@ -48,7 +49,7 @@ export default {
   "tooltip.title.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "basics.fontSizes.highSmall",
+      ref: "basics.fontSizes.highMedium",
     },
   },
   "tooltip.title.fontWeight": {
@@ -65,7 +66,9 @@ export default {
   },
   "tooltip.description.fontColor": {
     type: COLOR,
-    value: "#F5F5F5",
+    value: {
+      ref: "colorScheme.surface.level200",
+    },
   },
   "tooltip.description.fontFamily": {
     type: FONT_FAMILY,
@@ -76,7 +79,7 @@ export default {
   "tooltip.description.fontSize": {
     type: FONT_SIZE,
     value: {
-      ref: "basics.fontSizes.highSmall",
+      ref: "basics.fontSizes.highMedium",
     },
   },
   "tooltip.description.fontWeight": {
@@ -95,5 +98,125 @@ export default {
     transform: {
       alpha: 0.1,
     },
+  },
+  "tooltip.link.fontColor": {
+    type: COLOR,
+    value: {
+      ref: "textLink.primary.againstDark",
+    },
+  },
+  "tooltip.link.paddingTop": { 
+    type: SPACING,
+    value: {
+      ref: "basics.spacings.highMedium",
+    },
+  },
+  "tooltip.paddingHorizontal": { 
+    type: SPACING,
+    value: {
+      ref: "basics.spacings.highMedium",
+    },
+  },
+  "tooltip.small.paddingVertical": { 
+    type: SPACING,
+    value: {
+      ref: "basics.spacings.highSmall",
+    },
+  },
+  "tooltip.medium.paddingVertical": { 
+    type: SPACING,
+    value: {
+      ref: "basics.spacings.highMedium",
+    },
+  },
+  "tooltip.medium.spaceBetween": { 
+    type: SPACING,
+    value: {
+      ref: "basics.spacings.highSmall",
+    },
+  },
+  "tooltip.large.paddingVertical": { 
+    type: SPACING,
+    value: {
+      ref: "basics.spacings.highMedium",
+    },
+  },
+  "tooltip.large.spaceBetween": { 
+    type: SPACING,
+    value: {
+      ref: "basics.spacings.highMedium",
+    },
+  },
+  "tooltip.maxWidth": { 
+    type: LENGTH,
+    value: "240px",
+  },
+  "tooltip.nub.width": {
+    type: LENGTH,
+    value: "8px",
+  },
+  "tooltip.nub.height": {
+    type: LENGTH,
+    value: "4px",
+  },
+  "tooltip.nub.padding": {
+    type: SPACING,
+    value: {
+      ref: "basics.spacings.highSmall",
+    },
+  },
+  "tooltip.nub.spaceBetween": {
+    type: SPACING,
+    value: {
+      ref: "basics.spacings.highExtraSmall",
+    },
+  },
+  "tooltip.shortcut.paddingHorizontal": { 
+    type: SPACING,
+    value: {
+      ref: "basics.spacings.highExtraSmall",
+    },
+  },
+  "tooltip.shortcut.height": {
+    type: LENGTH,
+    value: "16px",
+  },
+  "tooltip.shortcut.borderRadius": {
+    type: BORDER_RADIUS,
+    value: {
+      ref: "basics.borderRadii.medium",
+    },
+  },
+  "tooltip.shortcut.backgroundColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.charcoal.700",
+    },
+  },
+  "tooltip.shortcut.fontColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.surface.level200",
+    },
+  },
+  "tooltip.shortcut.fontFamily": {
+    type: FONT_FAMILY,
+    value: {
+      ref: "basics.fontFamilies.main",
+    },
+  },
+  "tooltip.shortcut.fontSize": {
+    type: FONT_SIZE,
+    value: {
+      ref: "basics.fontSizes.highMedium",
+    },
+  },
+  "tooltip.shortcut.fontWeight": {
+    type: FONT_WEIGHT,
+    value: 400,
+  },
+  "tooltip.shortcut.lineHeight": {
+    type: LINE_HEIGHT,
+    value: 1.333333333,
   },
 };

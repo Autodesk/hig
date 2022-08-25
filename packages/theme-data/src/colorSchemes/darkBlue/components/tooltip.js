@@ -1,7 +1,7 @@
 export default {
   "tooltip.backgroundColor": {
     value: {
-      ref: "basics.colors.secondary.darkBlue.200",
+      ref: "basics.colors.secondary.darkBlue.100",
     },
   },
   "tooltip.title.fontColor": {
@@ -18,6 +18,21 @@ export default {
     },
     transform: {
       alpha: 0.25,
+    },
+  },
+  "tooltip.link.fontColor": {
+    value: {
+      ref: "textLink.primary.againstLight",
+    },
+  },
+  "tooltip.shortcut.fontColor": {
+    value: {
+      ref: "tooltip.title.fontColor",
+    },
+  },
+  "tooltip.shortcut.backgroundColor": {
+    value: {
+      ref: "basics.colors.secondary.darkBlue.200",
     },
   },
 };
