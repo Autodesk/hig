@@ -7,7 +7,12 @@ import Readme from "../../README.md";
 export default {
   title: "Components/Dropdown",
   component: Dropdown,
-  argTypes: {},
+  argTypes: {
+    variant: {
+      control: "select",
+      options: ["line", "box"],
+    },
+  },
   parameters: {
     docs: {
       page: () => (
