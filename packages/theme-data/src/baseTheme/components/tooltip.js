@@ -102,7 +102,7 @@ export default {
   "tooltip.link.fontColor": {
     type: COLOR,
     value: {
-      ref: "basics.textLink.primary.againstDark",
+      ref: "basics.colors.textLink.primary.againstDark",
     },
   },
   "tooltip.link.paddingTop": { 

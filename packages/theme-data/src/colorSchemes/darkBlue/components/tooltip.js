@@ -22,7 +22,7 @@ export default {
   },
   "tooltip.link.fontColor": {
     value: {
-      ref: "basics.textLink.primary.againstLight",
+      ref: "basics.colors.textLink.primary.againstLight",
     },
   },
   "tooltip.shortcut.fontColor": {
