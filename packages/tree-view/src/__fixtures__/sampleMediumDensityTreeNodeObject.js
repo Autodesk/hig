@@ -9,15 +9,14 @@ import {
   FileVideo24,
 } from "@hig/icons";
 
-const sampleTreeNodeObject = [
+const sampleMediumDensityTreeNodeObject = [
   {
     id: 1,
     parentId: null,
     meta: {
-      label: "dbl click to expand/collapse",
+      label: "Tree Item 1",
       collapsed: false,
       active: false,
-      expandByDoubleClick: true,
       icon: <Report24 />,
     },
     draggable: true,
@@ -752,4 +751,4 @@ const sampleTreeNodeObject = [
   },
 ];
 
-export { sampleTreeNodeObject as default };
+export { sampleMediumDensityTreeNodeObject as default };

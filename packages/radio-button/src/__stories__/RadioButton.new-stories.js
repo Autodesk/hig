@@ -23,6 +23,30 @@ export default {
         },
       },
     },
+    name: {
+      control: false,
+      description: "HTML name attribute",
+      type: {
+        name: "string",
+      },
+      table: {
+        type: {
+          summary: "string",
+        },
+      },
+    },
+    id: {
+      control: false,
+      description: "HTML id attribute",
+      type: {
+        name: "string",
+      },
+      table: {
+        type: {
+          summary: "string",
+        },
+      },
+    },
   },
   parameters: {
     docs: {
