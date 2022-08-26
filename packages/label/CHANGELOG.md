@@ -1,3 +1,10 @@
+# [@hig/label-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/label@2.1.0...@hig/label@2.2.0) (2022-08-26)
+
+
+### Features
+
+* use latest theme-data ([daa1b5f](https://github.com/Autodesk/hig/commit/daa1b5f))
+
 # [@hig/label-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/label@2.0.0...@hig/label@2.1.0) (2022-01-24)
 
 
