@@ -1,3 +1,10 @@
+# [@hig/dropdown-v3.3.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@3.2.0...@hig/dropdown@3.3.0) (2022-08-26)
+
+
+### Features
+
+* use latest theme-data ([815e718](https://github.com/Autodesk/hig/commit/815e718))
+
 # [@hig/dropdown-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/dropdown@3.1.0...@hig/dropdown@3.2.0) (2022-05-20)
 
 

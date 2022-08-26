@@ -1,3 +1,10 @@
+# [@hig/typography-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/typography@2.1.0...@hig/typography@2.2.0) (2022-08-26)
+
+
+### Features
+
+* use latest theme-data ([ca88bb6](https://github.com/Autodesk/hig/commit/ca88bb6))
+
 # [@hig/typography-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/typography@2.0.0...@hig/typography@2.1.0) (2022-01-24)
 
 

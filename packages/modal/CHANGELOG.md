@@ -1,3 +1,10 @@
+# [@hig/modal-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/modal@3.1.0...@hig/modal@3.2.0) (2022-08-26)
+
+
+### Features
+
+* use latest theme-data ([bb2cca9](https://github.com/Autodesk/hig/commit/bb2cca9))
+
 # [@hig/modal-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/modal@3.0.0...@hig/modal@3.1.0) (2022-01-24)
 
 
