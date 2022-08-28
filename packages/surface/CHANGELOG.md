@@ -1,3 +1,10 @@
+# [@hig/surface-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/surface@2.1.1...@hig/surface@2.2.0) (2022-08-28)
+
+
+### Features
+
+* use latest theme-data ([fe551af](https://github.com/Autodesk/hig/commit/fe551af))
+
 # [@hig/surface-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/surface@2.1.0...@hig/surface@2.1.1) (2022-03-17)
 
 
