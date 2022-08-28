@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v3.3.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@3.2.0...@hig/notifications-flyout@3.3.0) (2022-08-28)
+
+
+### Features
+
+* use latest theme-data ([7b566fd](https://github.com/Autodesk/hig/commit/7b566fd))
+
 # [@hig/notifications-flyout-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@3.1.1...@hig/notifications-flyout@3.2.0) (2022-06-15)
 
 

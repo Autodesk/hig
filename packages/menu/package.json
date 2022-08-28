@@ -1,6 +1,6 @@
 {
   "name": "@hig/menu",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "HIG Menu",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -28,7 +28,7 @@
     "react": "^17.0.0"
   },
   "devDependencies": {
-    "@hig/avatar": "^2.1.0",
+    "@hig/avatar": "^2.2.0",
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",

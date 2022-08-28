@@ -1,3 +1,10 @@
+# [@hig/spacer-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/spacer@2.1.0...@hig/spacer@2.2.0) (2022-08-28)
+
+
+### Features
+
+* use latest theme-data ([d93ccda](https://github.com/Autodesk/hig/commit/d93ccda))
+
 # [@hig/spacer-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/spacer@2.0.0...@hig/spacer@2.1.0) (2022-01-24)
 
 

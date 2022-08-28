@@ -1,3 +1,10 @@
+# [@hig/tooltip-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@2.1.0...@hig/tooltip@2.2.0) (2022-08-28)
+
+
+### Features
+
+* use latest theme-data ([5ed7a40](https://github.com/Autodesk/hig/commit/5ed7a40))
+
 # [@hig/tooltip-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@2.0.0...@hig/tooltip@2.1.0) (2022-01-24)
 
 

@@ -1,3 +1,10 @@
+# [@hig/input-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/input@2.1.0...@hig/input@2.2.0) (2022-08-28)
+
+
+### Features
+
+* use latest theme-data ([475437c](https://github.com/Autodesk/hig/commit/475437c))
+
 # [@hig/input-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/input@2.0.0...@hig/input@2.1.0) (2022-01-24)
 
 

@@ -1,3 +1,10 @@
+# [@hig/toggle-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/toggle@2.1.0...@hig/toggle@2.2.0) (2022-08-28)
+
+
+### Features
+
+* use latest theme-data ([d13fb64](https://github.com/Autodesk/hig/commit/d13fb64))
+
 # [@hig/toggle-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/toggle@2.0.0...@hig/toggle@2.1.0) (2022-01-24)
 
 

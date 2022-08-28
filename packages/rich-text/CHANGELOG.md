@@ -1,3 +1,10 @@
+# [@hig/rich-text-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/rich-text@2.1.1...@hig/rich-text@2.2.0) (2022-08-28)
+
+
+### Features
+
+* use latest theme-data ([8e24328](https://github.com/Autodesk/hig/commit/8e24328))
+
 # [@hig/rich-text-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/rich-text@2.1.0...@hig/rich-text@2.1.1) (2022-04-10)
 
 

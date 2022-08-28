@@ -1,3 +1,10 @@
+# [@hig/avatar-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/avatar@2.1.0...@hig/avatar@2.2.0) (2022-08-28)
+
+
+### Features
+
+* use latest theme-data ([6214278](https://github.com/Autodesk/hig/commit/6214278))
+
 # [@hig/avatar-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/avatar@2.0.0...@hig/avatar@2.1.0) (2022-01-24)
 
 
