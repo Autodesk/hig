@@ -1,6 +1,6 @@
 {
   "name": "@hig/notifications-flyout",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "HIG NotificationsFlyout",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -23,7 +23,7 @@
     "@hig/icon-button": "^3.1.0",
     "@hig/icons": "^4.1.0",
     "@hig/progress-ring": "^2.2.0",
-    "@hig/rich-text": "^2.1.0",
+    "@hig/rich-text": "^2.2.0",
     "@hig/typography": "^2.1.0",
     "@hig/utils": "^0.4.1",
     "emotion": "^10.0.0",
@@ -31,13 +31,13 @@
     "react-transition-group": "^4.4.2"
   },
   "devDependencies": {
-    "@hig/avatar": "^2.1.0",
+    "@hig/avatar": "^2.2.0",
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/text-link": "^2.1.0"
+    "@hig/text-link": "^2.2.0"
   },
   "peerDependencies": {
     "@hig/theme-context": "^4.2.0",
