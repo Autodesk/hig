@@ -1,3 +1,10 @@
+# [@hig/text-area-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/text-area@2.1.1...@hig/text-area@2.2.0) (2022-08-28)
+
+
+### Features
+
+* use latest theme-data ([11ac74e](https://github.com/Autodesk/hig/commit/11ac74e))
+
 # [@hig/text-area-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/text-area@2.1.0...@hig/text-area@2.1.1) (2022-04-24)
 
 
