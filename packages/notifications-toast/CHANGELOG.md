@@ -1,3 +1,10 @@
+# [@hig/notifications-toast-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@3.1.0...@hig/notifications-toast@3.2.0) (2022-08-28)
+
+
+### Features
+
+* use latest theme-data ([aa3ff71](https://github.com/Autodesk/hig/commit/aa3ff71))
+
 # [@hig/notifications-toast-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@3.0.0...@hig/notifications-toast@3.1.0) (2022-01-24)
 
 
