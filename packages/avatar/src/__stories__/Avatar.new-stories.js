@@ -19,7 +19,7 @@ export default {
         sizes.LARGE_48,
         sizes.XLARGE_64,
       ],
-      control: { type: "select" },
+      control: "select",
     },
   },
   parameters: {
