@@ -1,3 +1,10 @@
+# [@hig/menu-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/menu@2.1.1...@hig/menu@2.2.0) (2022-08-28)
+
+
+### Features
+
+* use latest theme-data ([fa39347](https://github.com/Autodesk/hig/commit/fa39347))
+
 # [@hig/menu-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/menu@2.1.0...@hig/menu@2.1.1) (2022-02-07)
 
 
