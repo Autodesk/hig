@@ -1,6 +1,6 @@
 {
   "name": "@hig/rich-text",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "HIG RichText",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -28,7 +28,7 @@
     "@hig/progress-bar": "^2.1.0",
     "@hig/scripts": "^0.1.2",
     "@hig/semantic-release-config": "^0.1.0",
-    "@hig/text-link": "^2.1.0"
+    "@hig/text-link": "^2.2.0"
   },
   "peerDependencies": {
     "@hig/theme-context": "^4.2.0",
