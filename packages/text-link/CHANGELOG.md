@@ -1,3 +1,10 @@
+# [@hig/text-link-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/text-link@2.1.1...@hig/text-link@2.2.0) (2022-08-28)
+
+
+### Features
+
+* use latest theme-data ([220b66a](https://github.com/Autodesk/hig/commit/220b66a))
+
 # [@hig/text-link-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/text-link@2.1.0...@hig/text-link@2.1.1) (2022-04-13)
 
 
