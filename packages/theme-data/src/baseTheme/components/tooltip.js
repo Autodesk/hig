@@ -219,4 +219,104 @@ export default {
     type: LINE_HEIGHT,
     value: 1.333333333,
   },
+
+
+
+
+
+
+
+
+  "tooltip.button.paddingHorizontal": {
+    type: LENGTH,
+    value: {
+      ref: "basics.spacings.highMedium",
+    },
+  },
+  "tooltip.button.paddingVertical": {
+    type: LENGTH,
+    value: {
+      ref: "basics.spacings.highExtraSmall",
+    },
+  },
+  "tooltip.button.label.fontSize": {
+    type: FONT_SIZE,
+    value: {
+      ref: "basics.fontSizes.highMedium",
+    },
+  },
+  "tooltip.button.label.fontWeight": {
+    type: FONT_WEIGHT,
+    value: {
+      ref: "basics.fontWeights.medium",
+    },
+  },
+  "tooltip.button.label.lineHeight": {
+    type: LINE_HEIGHT,
+    value: "basics.lineHeights.highMedium",
+  },
+  "tooltip.button.label.fontColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.text.againstDark",
+    },
+  },
+  "tooltip.button.hover.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+    transform: {
+      alpha: 0.15,
+    },
+  },
+  "tooltip.button.focus.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.400",
+    },
+    transform: {
+      alpha: 0.35,
+    },
+  },
+  "tooltip.button.pressed.haloColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+    transform: {
+      alpha: 0.25,
+    },
+  },
+  "tooltip.button.default.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+    transform: {
+      alpha: 0.5,
+    },
+  },
+  "tooltip.button.hover.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "tooltip.button.default.borderColor",
+    },
+  },
+  "tooltip.button.focus.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.autodeskBlue.400",
+    },
+  },
+  "tooltip.button.pressed.borderColor": {
+    type: COLOR,
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+    transform: {
+      alpha: 0.75,
+    },
+  },
+
 };
