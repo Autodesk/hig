@@ -37,9 +37,6 @@ export default {
       ref: "basics.colors.secondary.darkBlue.200",
     },
   },
-
-
-
   "tooltip.button.label.fontColor": {
     value: {
       ref: "basics.colors.text.againstLight",
