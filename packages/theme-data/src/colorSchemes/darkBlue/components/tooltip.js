@@ -11,7 +11,7 @@ export default {
   },
   "tooltip.description.fontColor": {
     value: {
-      ref: "basics.colors.textLink.primary.againstLight",
+      ref: "basics.colors.text.againstLight",
     },
   },
   "tooltip.divider.borderBottomColor": {
