@@ -71,10 +71,10 @@ export default {
   },
   "tooltip.button.default.borderColor": {
     value: {
-      ref: "basics.colors.primary.charcoal.600",
+      ref: "colorScheme.surface.level100",
     },
     transform: {
-      alpha: 0.5,
+      alpha: 0.4,
     },
   },
   "tooltip.button.hover.borderColor": {
@@ -89,10 +89,10 @@ export default {
   },
   "tooltip.button.pressed.borderColor": {
     value: {
-      ref: "basics.colors.primary.charcoal.600",
+      ref: "colorScheme.surface.level100",
     },
     transform: {
-      alpha: 0.85,
+      alpha: 0.6,
     },
   },
 
