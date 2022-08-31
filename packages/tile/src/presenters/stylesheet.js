@@ -77,15 +77,18 @@ export default function stylesheet(props, themeData, metadata) {
   const getNotificationHorizontal = () => ({ left: '-5px' });
   const getSelectionOptionsHorizontal = () => ({ top: '22px' });
   const getTileContentPadding = () => {
-    const marginLeft = bgType === "filled" ? themeData["tile.thumbnail.marginRight"] : 0;
+    // const marginLeft = bgType === "filled" ? themeData["tile.thumbnail.marginRight"] : 0;
     const verticalPadding = bgType === "empty"
       ? `0 ${themeData["tile.padding"]} ${themeData["tile.padding"]}`
       : themeData["tile.padding"];
   
-    if (identifier) {
-      return isHorizontal ? `12px 12px 12px calc(24px - ${marginLeft}px)` : verticalPadding;
-    }
-    return isHorizontal ? `5px 12px 12px ${marginLeft}` : verticalPadding;
+    // if (identifier) {
+    //   return isHorizontal ? `12px 12px 12px calc(24px - ${marginLeft}px)` : verticalPadding;
+    // }
+    // return isHorizontal ? `5px 12px 12px ${marginLeft}` : verticalPadding;
+    return isHorizontal
+      ? `${themeData["tile.padding"]} ${themeData["tile.padding"]} ${themeData["tile.padding"]} ${themeData["tile.thumbnail.marginRight"]}`
+      : verticalPadding;
   }
   const getTileHeaderFlatPadding = () => isHorizontal
     ? `${themeData["tile.padding"]} ${themeData["tile.thumbnail.marginRight"]} ${themeData["tile.padding"]} ${themeData["tile.padding"]}`
