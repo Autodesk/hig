@@ -1,3 +1,10 @@
+# [@hig/accordion-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/accordion@2.1.1...@hig/accordion@2.1.2) (2022-09-01)
+
+
+### Bug Fixes
+
+* revert to class components ([c0bdde4](https://github.com/Autodesk/hig/commit/c0bdde4))
+
 # [@hig/accordion-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/accordion@2.1.0...@hig/accordion@2.1.1) (2022-08-24)
 
 
