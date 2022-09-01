@@ -55,6 +55,6 @@
     "@hig/fonts": "^2.0.0",
     "@hig/surface": "^2.1.1",
     "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.1.0"
+    "@hig/theme-data": "^3.2.0"
   }
 }
