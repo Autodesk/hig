@@ -15,6 +15,7 @@ import checkbox from "./components/checkbox";
 import dataVis from "./components/dataVis";
 import datePicker from "./components/datePicker";
 import divider from "./components/divider";
+import emptyState from "./components/emptyState";
 import flyout from "./components/flyout";
 import iconButton from "./components/iconButton";
 import illustration from "./components/illustration";
@@ -72,6 +73,7 @@ const baseThemeConfig = extendTheme(
     ...dataVis,
     ...datePicker,
     ...divider,
+    ...emptyState,
     ...flyout,
     ...illustration,
     ...iconButton,
