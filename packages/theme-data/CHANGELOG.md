@@ -1,3 +1,10 @@
+# [@hig/theme-data-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@3.1.0...@hig/theme-data@3.2.0) (2022-09-01)
+
+
+### Features
+
+* add emptyState theme-data roles ([24318b9](https://github.com/Autodesk/hig/commit/24318b9))
+
 # [@hig/theme-data-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@3.0.0...@hig/theme-data@3.1.0) (2022-08-17)
 
 
