@@ -1,3 +1,10 @@
+# [@hig/slider-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/slider@2.1.1...@hig/slider@2.2.0) (2022-09-05)
+
+
+### Features
+
+* update theme-data dependency ([2c04016](https://github.com/Autodesk/hig/commit/2c04016))
+
 # [@hig/slider-v2.1.1](https://github.com/Autodesk/hig/compare/@hig/slider@2.1.0...@hig/slider@2.1.1) (2022-04-10)
 
 
