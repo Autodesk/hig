@@ -1,3 +1,10 @@
+# [@hig/progress-bar-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/progress-bar@2.1.0...@hig/progress-bar@2.2.0) (2022-09-05)
+
+
+### Features
+
+* update theme-data dependency ([5d038e2](https://github.com/Autodesk/hig/commit/5d038e2))
+
 # [@hig/progress-bar-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/progress-bar@2.0.0...@hig/progress-bar@2.1.0) (2022-01-24)
 
 

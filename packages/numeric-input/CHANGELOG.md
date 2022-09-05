@@ -1,3 +1,10 @@
+# [@hig/numeric-input-v2.1.3](https://github.com/Autodesk/hig/compare/@hig/numeric-input@2.1.2...@hig/numeric-input@2.1.3) (2022-09-05)
+
+
+### Bug Fixes
+
+* revert to class components ([1d023bc](https://github.com/Autodesk/hig/commit/1d023bc))
+
 # [@hig/numeric-input-v2.1.2](https://github.com/Autodesk/hig/compare/@hig/numeric-input@2.1.1...@hig/numeric-input@2.1.2) (2022-03-09)
 
 

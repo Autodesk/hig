@@ -1,3 +1,10 @@
+# [@hig/timestamp-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/timestamp@2.1.0...@hig/timestamp@2.2.0) (2022-09-05)
+
+
+### Features
+
+* update theme-data dependency ([c46edd2](https://github.com/Autodesk/hig/commit/c46edd2))
+
 # [@hig/timestamp-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/timestamp@2.0.0...@hig/timestamp@2.1.0) (2022-01-24)
 
 

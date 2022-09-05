@@ -1,3 +1,10 @@
+# [@hig/profile-flyout-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@3.1.0...@hig/profile-flyout@3.2.0) (2022-09-05)
+
+
+### Features
+
+* update theme-data dependency ([81ddb17](https://github.com/Autodesk/hig/commit/81ddb17))
+
 # [@hig/profile-flyout-v3.1.0](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@3.0.0...@hig/profile-flyout@3.1.0) (2022-01-24)
 
 

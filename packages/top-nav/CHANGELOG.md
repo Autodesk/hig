@@ -1,3 +1,10 @@
+# [@hig/top-nav-v4.2.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@4.1.2...@hig/top-nav@4.2.0) (2022-09-05)
+
+
+### Features
+
+* update theme-data dependency ([7365f34](https://github.com/Autodesk/hig/commit/7365f34))
+
 # [@hig/top-nav-v4.1.2](https://github.com/Autodesk/hig/compare/@hig/top-nav@4.1.1...@hig/top-nav@4.1.2) (2022-06-02)
 
 
