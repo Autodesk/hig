@@ -1,3 +1,10 @@
+# [@hig/skeleton-item-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@2.1.0...@hig/skeleton-item@2.2.0) (2022-09-05)
+
+
+### Features
+
+* update theme-data dependency ([999502d](https://github.com/Autodesk/hig/commit/999502d))
+
 # [@hig/skeleton-item-v2.1.0](https://github.com/Autodesk/hig/compare/@hig/skeleton-item@2.0.0...@hig/skeleton-item@2.1.0) (2022-01-24)
 
 
