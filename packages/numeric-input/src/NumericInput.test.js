@@ -50,6 +50,10 @@ describe("numeric-input/NumericInput", () => {
   ]);
 });
 
+// these was turned off during the React17 updates
+// https://github.com/Autodesk/hig/commit/29a1a1b0bbb721505d29610f902574e2af813bda
+// make this test work again when we upgrade to testing library
+
 describe("event handlers", () => {
   let onChangeMock;
   let wrapper;
@@ -68,17 +72,19 @@ describe("event handlers", () => {
   it.skip("increments value", () => {
     const spinnerWrapper = wrapper.find(SpinnerPresenter);
     spinnerWrapper.props().increment();
-    expect(onChangeMock).toHaveBeenCalledTimes(1);
-    expect(onChangeMock).toHaveBeenCalledWith(24);
 
-    expect(interactiveElement.props().value).toEqual("24");
+    expect(onChangeMock).toHaveBeenCalledTimes(1);
+    expect(onChangeMock).toHaveBeenCalledWith("24");
+
+    expect(interactiveElement).toHaveProp("value", "24");
   });
 
   it.skip("decrements value", () => {
     const spinnerWrapper = wrapper.find(SpinnerPresenter);
     spinnerWrapper.props().decrement();
+
     expect(onChangeMock).toHaveBeenCalledTimes(1);
-    expect(onChangeMock).toHaveBeenCalledWith(22);
+    expect(onChangeMock).toHaveBeenCalledWith("22");
 
     expect(interactiveElement).toHaveProp("value", "22");
   });
