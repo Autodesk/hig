@@ -1,12 +1,16 @@
 export default {
   "input.box.default.backgroundColor": {
-    value: "#212121",
+    value: {
+      ref: "basics.colors.surface.darkGray.350",
+    },
     transform: {
       alpha: 0.6,
     },
   },
   "input.box.default.borderColor": {
-    value: "#212121",
+    value: {
+      ref: "basics.colors.surface.darkGray.350",
+    },
     transform: {
       alpha: 0.6,
     },

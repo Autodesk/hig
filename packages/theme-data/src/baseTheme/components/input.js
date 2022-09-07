@@ -237,7 +237,7 @@ export default {
   "input.box.default.borderColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.charcoal.600",
+      ref: "colorScheme.reference.base",
     },
     transform: {
       alpha: 0.2,
@@ -246,28 +246,19 @@ export default {
   "input.box.hover.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.base",
-    },
-    transform: {
-      alpha: 0.2,
+      ref: "input.box.default.borderColor",
     },
   },
   "input.box.focus.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.base",
-    },
-    transform: {
-      alpha: 0.2,
+      ref: "input.box.default.borderColor",
     },
   },
   "input.box.pressed.borderColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.base",
-    },
-    transform: {
-      alpha: 0.2,
+      ref: "input.box.default.borderColor",
     },
   },
   "input.box.default.borderBottomColor": {
