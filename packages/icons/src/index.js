@@ -56,6 +56,7 @@ import SocialLinkedin16SVG from "./icons/information-dense/social-linkedin.svg";
 import SocialInstagram16SVG from "./icons/information-dense/social-instagram.svg";
 import SocialFacebook16SVG from "./icons/information-dense/social-facebook.svg";
 import SocialBlog16SVG from "./icons/information-dense/social-blog.svg";
+import SignOut16SVG from "./icons/information-dense/sign-out.svg";
 import Share16SVG from "./icons/information-dense/share.svg";
 import Settings16SVG from "./icons/information-dense/settings.svg";
 import Service16SVG from "./icons/information-dense/service.svg";
@@ -108,6 +109,7 @@ import Lock16SVG from "./icons/information-dense/lock.svg";
 import Location16SVG from "./icons/information-dense/location.svg";
 import List16SVG from "./icons/information-dense/list.svg";
 import Link16SVG from "./icons/information-dense/link.svg";
+import Library16SVG from "./icons/information-dense/library.svg";
 import Item16SVG from "./icons/information-dense/item.svg";
 import Info16SVG from "./icons/information-dense/info.svg";
 import Inbox16SVG from "./icons/information-dense/inbox.svg";
@@ -217,6 +219,7 @@ import SocialLinkedin24SVG from "./icons/regular/social-linkedin.svg";
 import SocialInstagram24SVG from "./icons/regular/social-instagram.svg";
 import SocialFacebook24SVG from "./icons/regular/social-facebook.svg";
 import SocialBlog24SVG from "./icons/regular/social-blog.svg";
+import SignOut24SVG from "./icons/regular/sign-out.svg";
 import Share24SVG from "./icons/regular/share.svg";
 import Settings24SVG from "./icons/regular/settings.svg";
 import Service24SVG from "./icons/regular/service.svg";
@@ -269,6 +272,7 @@ import Lock24SVG from "./icons/regular/lock.svg";
 import Location24SVG from "./icons/regular/location.svg";
 import List24SVG from "./icons/regular/list.svg";
 import Link24SVG from "./icons/regular/link.svg";
+import Library24SVG from "./icons/regular/library.svg";
 import Item24SVG from "./icons/regular/item.svg";
 import Info24SVG from "./icons/regular/info.svg";
 import Inbox24SVG from "./icons/regular/inbox.svg";
@@ -1687,6 +1691,22 @@ export const Item24 = props => (
   </ThemeContext.Consumer>
 )
 
+export const Library24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <Library24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const Link24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -2514,6 +2534,22 @@ export const Share24 = props => (
       if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Share24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const SignOut24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <SignOut24SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -4263,6 +4299,22 @@ export const Item16 = props => (
   </ThemeContext.Consumer>
 )
 
+export const Library16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <Library16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const Link16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -5090,6 +5142,22 @@ export const Share16 = props => (
       if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Share16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const SignOut16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <SignOut16SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
