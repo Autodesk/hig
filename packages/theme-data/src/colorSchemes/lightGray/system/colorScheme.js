@@ -68,14 +68,6 @@ export default {
       alpha: 0.4,
     },
   },
-  "background.transparent": {
-    value: {
-      ref: "basics.colors.primary.white",
-    },
-    transform: {
-      alpha: 0.01,
-    },
-  },
   "background.empty.level100To250.hover": {
     value: {
       ref: "basics.colors.primary.charcoal.600",
