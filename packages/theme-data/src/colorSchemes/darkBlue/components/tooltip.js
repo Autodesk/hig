@@ -37,7 +37,7 @@ export default {
       ref: "basics.colors.secondary.darkBlue.200",
     },
     transform: {
-      alpha: 0.70,
+      alpha: 0.7,
     },
   },
   "tooltip.button.label.fontColor": {
@@ -95,5 +95,4 @@ export default {
       alpha: 0.6,
     },
   },
-
 };

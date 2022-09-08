@@ -105,49 +105,49 @@ export default {
       ref: "basics.colors.textLink.primary.againstDark",
     },
   },
-  "tooltip.link.paddingTop": { 
+  "tooltip.link.paddingTop": {
     type: SPACING,
     value: {
       ref: "basics.spacings.highMedium",
     },
   },
-  "tooltip.paddingHorizontal": { 
+  "tooltip.paddingHorizontal": {
     type: SPACING,
     value: {
       ref: "basics.spacings.highMedium",
     },
   },
-  "tooltip.small.paddingVertical": { 
+  "tooltip.small.paddingVertical": {
     type: SPACING,
     value: {
       ref: "basics.spacings.highSmall",
     },
   },
-  "tooltip.medium.paddingVertical": { 
+  "tooltip.medium.paddingVertical": {
     type: SPACING,
     value: {
       ref: "basics.spacings.highMedium",
     },
   },
-  "tooltip.medium.spaceBetween": { 
+  "tooltip.medium.spaceBetween": {
     type: SPACING,
     value: {
       ref: "basics.spacings.highSmall",
     },
   },
-  "tooltip.large.paddingVertical": { 
+  "tooltip.large.paddingVertical": {
     type: SPACING,
     value: {
       ref: "basics.spacings.highMedium",
     },
   },
-  "tooltip.large.spaceBetween": { 
+  "tooltip.large.spaceBetween": {
     type: SPACING,
     value: {
       ref: "basics.spacings.highMedium",
     },
   },
-  "tooltip.maxWidth": { 
+  "tooltip.maxWidth": {
     type: LENGTH,
     value: "240px",
   },
@@ -171,7 +171,7 @@ export default {
       ref: "basics.spacings.highExtraSmall",
     },
   },
-  "tooltip.shortcut.paddingHorizontal": { 
+  "tooltip.shortcut.paddingHorizontal": {
     type: SPACING,
     value: {
       ref: "basics.spacings.highExtraSmall",
@@ -219,13 +219,6 @@ export default {
     type: LINE_HEIGHT,
     value: 1.333333333,
   },
-
-
-
-
-
-
-
 
   "tooltip.button.paddingHorizontal": {
     type: LENGTH,
@@ -318,5 +311,4 @@ export default {
       alpha: 0.75,
     },
   },
-
 };
