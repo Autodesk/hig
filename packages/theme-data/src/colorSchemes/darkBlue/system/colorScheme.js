@@ -226,6 +226,14 @@ export default {
       alpha: 0.25,
     },
   },
+  "background.transparent": {
+    value: {
+      ref: "basics.colors.primary.white",
+    },
+    transform: {
+      alpha: 0.01,
+    },
+  },
   "border.accent": {
     value: {
       ref: "basics.colors.primary.autodeskBlue.400",
