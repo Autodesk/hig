@@ -25,15 +25,7 @@ export default {
   "background.filled.level300To350.hover": { type: COLOR },
   "background.filled.level300To350.focus": { type: COLOR },
   "background.filled.level300To350.pressed": { type: COLOR },
-  "background.transparent": {
-    type: COLOR,
-    value: {
-      ref: "colorScheme.reference.base",
-    },
-    transform: {
-      alpha: 0,
-    },
-  },
+  "background.transparent": { type: COLOR },
   "border.base": {
     value: {
       ref: "colorScheme.reference.base",

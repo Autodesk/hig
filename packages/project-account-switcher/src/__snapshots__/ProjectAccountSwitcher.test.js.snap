@@ -124,7 +124,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 }
 
 .emotion-9 {
-  fill: rgba(128,128,128,0);
+  fill: rgba(255,255,255,0.01);
 }
 
 .emotion-10 {
@@ -613,7 +613,7 @@ exports[`project-account-switcher/ProjectAccountSwitcher integration renders wit
 }
 
 .emotion-9 {
-  fill: rgba(128,128,128,0);
+  fill: rgba(255,255,255,0.01);
 }
 
 .emotion-10 {

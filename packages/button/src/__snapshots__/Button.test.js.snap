@@ -4,7 +4,7 @@ exports[`Button renders as button type flat 1`] = `
 .emotion-0 {
   border-width: 1px;
   border-style: solid;
-  border-color: rgba(128,128,128,0);
+  border-color: rgba(255,255,255,0.01);
   border-radius: 2px;
   box-sizing: border-box;
   color: #006eaf;
