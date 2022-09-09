@@ -28,10 +28,10 @@ export default {
   "background.transparent": {
     type: COLOR,
     value: {
-      ref: "colorScheme.reference.base",
+      ref: "basics.colors.primary.white",
     },
     transform: {
-      alpha: 0,
+      alpha: 0.01,
     },
   },
   "border.base": {

@@ -2,7 +2,7 @@
 
 exports[`flyout/presenters/PointerPresenter renders with all props 1`] = `
 .emotion-0 {
-  fill: rgba(128,128,128,0);
+  fill: rgba(255,255,255,0.01);
 }
 
 .emotion-1 {
@@ -27,7 +27,7 @@ exports[`flyout/presenters/PointerPresenter renders with all props 1`] = `
 
 exports[`flyout/presenters/PointerPresenter renders without props 1`] = `
 .emotion-0 {
-  fill: rgba(128,128,128,0);
+  fill: rgba(255,255,255,0.01);
 }
 
 .emotion-1 {
