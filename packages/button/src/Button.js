@@ -142,6 +142,7 @@ Button.propTypes = {
    */
   target: PropTypes.oneOf(availableTargets),
   /**
+   * DEPRECATED: use children instead
    * Sets the title of a button
    */
   title: PropTypes.string,

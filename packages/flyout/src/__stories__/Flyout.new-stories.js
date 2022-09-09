@@ -3,8 +3,9 @@ import { ArgsTable, Primary } from "@storybook/addon-docs";
 import Button from "@hig/button";
 import RichText from "@hig/rich-text";
 
+import { css } from "emotion";
 import Flyout from "../index";
-import { anchorPoints } from "../anchorPoints";
+import { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "../anchorPoints";
 import Readme from "../../README.md";
 
 export default {
@@ -12,21 +13,8 @@ export default {
   component: Flyout,
   argTypes: {
     anchorPoint: {
-      options: [
-        anchorPoints.TOP_LEFT,
-        anchorPoints.TOP_CENTER,
-        anchorPoints.TOP_RIGHT,
-        anchorPoints.RIGHT_TOP,
-        anchorPoints.RIGHT_CENTER,
-        anchorPoints.RIGHT_BOTTOM,
-        anchorPoints.BOTTOM_LEFT,
-        anchorPoints.BOTTOM_CENTER,
-        anchorPoints.BOTTOM_RIGHT,
-        anchorPoints.LEFT_TOP,
-        anchorPoints.LEFT_CENTER,
-        anchorPoints.LEFT_BOTTOM,
-      ],
-      control: { type: "select" },
+      options: AVAILABLE_ANCHOR_POINTS,
+      control: "select",
     },
   },
   parameters: {
@@ -43,10 +31,19 @@ export default {
 };
 
 const Template = (args, context) => (
-  <Flyout
-    {...args}
-    key={`${context.globals.colorScheme}-${context.globals.density}`}
-  />
+  <div
+    className={css({
+      alignItems: "center",
+      display: "flex",
+      height: "300px",
+      justifyContent: "center",
+    })}
+  >
+    <Flyout
+      {...args}
+      key={`${context.globals.colorScheme}-${context.globals.density}`}
+    />
+  </div>
 );
 
 export const Default = Template.bind({});
@@ -59,5 +56,5 @@ Default.args = {
       <p>Any content can go in here.</p>
     </RichText>
   ),
-  children: <Button title="Open flyout" />,
+  children: <Button>Open Flyout</Button>,
 };
