@@ -11,7 +11,7 @@ const Tile = (props) => {
     subtitle,
     orientation,
     version,
-    identifier,
+    // identifier,
     statusAndActionIcons,
     notification,
     tooltip,
@@ -63,7 +63,7 @@ const Tile = (props) => {
             subtitle={subtitle}
             orientation={orientation}
             version={version}
-            identifier={identifier}
+            // identifier={identifier}
             statusAndActionIcons={statusAndActionIcons}
             notification={notification}
             tooltip={tooltip}

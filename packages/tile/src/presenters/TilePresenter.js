@@ -16,7 +16,7 @@ const TilePresenter = props => {
     title,
     subtitle,
     version,
-    identifier,
+    // identifier,
     statusAndActionIcons,
     notification,
     overflowMenu,
@@ -100,18 +100,18 @@ console.log('isPressed', isPressed);
             </div>
 
             <div className={css(styles.higTileContent)}>
-              {identifier && 
+              {/*identifier && 
                 <div className={css(styles.higTileIdentifierContainer)}>
                   <div className={css(styles.higTileIdentifierIcon)}>{identifier}</div>
                 </div>
-              }
+              */}
               <div className={css(styles.higTileTitleContainer)}>
                 <div className={css(styles.higTileTitle)}>{title}</div>
                 {overflowMenu && <div className={css(styles.higTileOverflowMenu)}>{overflowMenu}</div>}
               </div>
               <div className={css(styles.higTileSubTitle)}>{subtitle}</div>
 
-              <div className={css(styles.higTileAdditionalContent)}>
+              {/* <div className={css(styles.higTileAdditionalContent)}>
                 {version && <div className={css(styles.higVersionHolder)}>{version}</div>}
                 {statusAndActionIcons && 
                   <div className={css(styles.higGroupIcons)}>
@@ -130,7 +130,7 @@ console.log('isPressed', isPressed);
                     })}
                   </div>
                 }
-              </div>
+              </div> */}
               {cta && 
                 <div className={css(styles.higTileCTAHolder)}>
                   <div className={css(styles.higTileCTA)} >
