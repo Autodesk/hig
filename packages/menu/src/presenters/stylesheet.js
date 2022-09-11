@@ -73,7 +73,7 @@ export default function stylesheet(props, themeData) {
       ...(disabled
         ? {
             opacity: themeData[`colorScheme.opacity.disabled`],
-            cursor: `not-allowed`,
+            pointerEvents: `none`,
           }
         : {}),
       ...(role === `presentation` ? getRulesByPresentation(themeData) : {}),

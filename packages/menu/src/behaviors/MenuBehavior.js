@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import selectOption from "./selectOption";
 
@@ -133,10 +133,14 @@ const MenuBehavior = (props) => {
     const { multiple, onKeyDown } = props;
     const options = optionInfoHook;
     const highlightableIndexes = [];
-
-    if (onKeyDown) {
-      onKeyDown(event);
-    }
+    const { id } =
+      optionInfoHook?.[getHighlightIndex() - 1] ||
+      menuRef.current.children[0].id;
+    const callKeyDown = (currentHighlightedId) => {
+      if (onKeyDown) {
+        onKeyDown(event, { currentHighlightedId });
+      }
+    };
 
     Object.keys(options).forEach((index) => {
       if (!options[index].disabled && options[index].role !== `presentation`) {
@@ -146,22 +150,23 @@ const MenuBehavior = (props) => {
 
     setPreviousEvent(event.type);
 
-    switch (event.keyCode) {
-      // Arrow Down
-      case 40: {
+    switch (event.code) {
+      case "ArrowDown": {
         const currentIndex = highlightableIndexes.indexOf(getHighlightIndex());
         const lastIndex = highlightableIndexes.length - 1;
 
         if (currentIndex === lastIndex) {
           setHighlightIndex(highlightableIndexes[0]);
-
+          callKeyDown(getOptionsInfo()[highlightableIndexes[0] - 1].id);
           checkScroll(
             getOptionsInfo()[highlightableIndexes[0] - 1].id,
             menuRef.current
           );
         } else {
           setHighlightIndex(highlightableIndexes[currentIndex + 1]);
-
+          callKeyDown(
+            getOptionsInfo()[highlightableIndexes[currentIndex + 1] - 1].id
+          );
           checkScroll(
             getOptionsInfo()[highlightableIndexes[currentIndex + 1] - 1].id,
             menuRef.current
@@ -171,21 +176,22 @@ const MenuBehavior = (props) => {
         break;
       }
 
-      // Arrow Up
-      case 38: {
+      case "ArrowUp": {
         const currentIndex = highlightableIndexes.indexOf(getHighlightIndex());
         const lastIndex = highlightableIndexes.length - 1;
 
         if (currentIndex <= 0) {
           setHighlightIndex(highlightableIndexes[lastIndex]);
-
+          callKeyDown(getOptionsInfo()[highlightableIndexes[lastIndex] - 1].id);
           checkScroll(
             getOptionsInfo()[highlightableIndexes[lastIndex] - 1].id,
             menuRef.current
           );
         } else {
           setHighlightIndex(highlightableIndexes[currentIndex - 1]);
-
+          callKeyDown(
+            getOptionsInfo()[highlightableIndexes[currentIndex - 1] - 1].id
+          );
           checkScroll(
             getOptionsInfo()[highlightableIndexes[currentIndex - 1] - 1].id,
             menuRef.current
@@ -195,14 +201,12 @@ const MenuBehavior = (props) => {
         break;
       }
 
-      // Enter
-      // Space
-      case 13:
-      case 32: {
+      case "Enter":
+      case "Space": {
         const activeOptionsArray = [...activeOptionHook];
-        const { id } = optionInfoHook[getHighlightIndex() - 1];
         const activeOptions = selectOption(id, activeOptionsArray, multiple);
 
+        callKeyDown(id);
         if (isControlled()) {
           return;
         }
@@ -214,6 +218,7 @@ const MenuBehavior = (props) => {
       }
 
       default:
+        callKeyDown(id);
     }
   };
 
@@ -260,6 +265,15 @@ const MenuBehavior = (props) => {
   const setPreviousEventMethod = props.setPreviousEvent
     ? props.setPreviousEvent
     : setPreviousEvent;
+
+  useEffect(() => {
+    if (props.selected) {
+      setActiveOptionHook(props.selected);
+      if (props.onChange) {
+        props.onChange(props.selected);
+      }
+    }
+  }, [props.selected]);
 
   return props.children({
     getActiveOption: getActiveOptionMethod,
