@@ -45,10 +45,11 @@ const Template = (args) => {
 
 export const Default = Template.bind({});
 
-Default.storyName = "Spacing Prop";
+Default.storyName = "Spacing prop";
 
 export const SizeProp = Template.bind({});
 
+SizeProp.storyName = "Size prop";
 SizeProp.args = {
   size: "53px",
 };

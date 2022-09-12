@@ -1556,13 +1556,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={
-      Array [
-        "option-3",
-        "option-6",
-        "option-9",
-      ]
-    }
     tabIndex="-1"
   >
     <li
@@ -1672,13 +1665,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={
-      Array [
-        "option-3",
-        "option-6",
-        "option-9",
-      ]
-    }
     tabIndex="-1"
   >
     <li
@@ -1749,13 +1735,6 @@ exports[`menu/MenuGroup renders multiple and controlled Menu and Options 1`] = `
     onKeyDown={[Function]}
     onMouseMove={[Function]}
     role="group"
-    selected={
-      Array [
-        "option-3",
-        "option-6",
-        "option-9",
-      ]
-    }
     tabIndex="-1"
   >
     <li

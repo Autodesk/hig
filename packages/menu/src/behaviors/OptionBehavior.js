@@ -86,7 +86,7 @@ const OptionBehavior = (props) => {
       return getActiveOption().indexOf(id) > -1;
     }
 
-    return id === getActiveOption()[0];
+    return id === getActiveOption()?.[0];
   };
 
   return props.children({

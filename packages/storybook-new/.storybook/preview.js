@@ -24,9 +24,11 @@ const surfaceStylesheet = styles => (
     ...styles,
     surface: {
       ...styles.surface,
+      display: "table",
       minHeight: "300px",
-      padding: "20px"
-    }
+      padding: "20px",
+      width: "calc(100% - 40px)",
+    },
   }
 );
 
@@ -85,7 +87,28 @@ export const parameters = {
     sort: "requiredFirst",
   },
   options: {
-    storySort: (a, b) =>
-      a[1].kind === b[1].kind ? 0 : a[1].id.localeCompare(b[1].id, undefined, { numeric: true }),
+    storySort: {
+      order: [
+        // This is for ordering and uncomment below
+        // in the event we decide to use Storybook as 
+        // a public Weave page.
+        // "Welcome to Weave",
+        "ThemeData",
+        [
+          "Introduction",
+          "Tokens",
+          [
+            "Basics",
+            "System",
+            "Components",
+          ],
+          "ThemeContext",
+        ],
+        "Basics",
+        "Components",
+        "Dev Lab",
+        "Legacy Components",
+      ],
+    },
   },
 }

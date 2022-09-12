@@ -35,7 +35,7 @@
     "@hig/semantic-release-config": "^0.1.0",
     "@hig/typography": "^2.1.0",
     "camelcase": "^5.0.0",
-    "style-dictionary": "^2.6.2"
+    "style-dictionary": "^3.7.1"
   },
   "dependencies": {
     "tinycolor2": "^1.4.1"

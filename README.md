@@ -58,6 +58,8 @@ Each HIG pattern is implemented as a set of React components. Each pattern is pu
 
 - [`<Accordion>`](./packages/accordion/README.md) - Make content-heavy pages appear less so by vertically stacking items in lists that users can expand or contract
 - [`<Avatar>`](./packages/avatar/README.md) - A visual representation of a customer's identity
+- [`<AvatarBundle>`](./packages/avatar-bundle/README.md) - Indicate a group of people who are associated with a task or information.
+- [`<Badge>`](./packages/badge/README.md) - Visual indicators that communicate status and draw attention to an object.
 - [`<Banner>`](./packages/banner/README.md) - An alert that requires a user action
 - [`<Button>`](./packages/button/README.md) - Trigger actions or changes
 - [`<Checkbox>`](./packages/checkbox/README.md) - A control to select from non-exclusive options
@@ -65,6 +67,7 @@ Each HIG pattern is implemented as a set of React components. Each pattern is pu
 - [`<Flyout>`](./packages/flyout/README.md) - A lightweight popup container
 - [`<Icons>`](./packages/icons/README.md) - Represents a concept in graphical form
 - [`<IconButton>`](./packages/icon-button/README.md) - Action buttons that include an icon only
+- [`<Label>`](./packages/label/README.md) - A caption for an item in a user interface
 - [`<Menu>`](./packages/menu/README.md) - Display a list of choices through interaction with a button, icon or other controls
 - [`<Modal>`](./packages/modal/README.md) - An overlay that focuses the customer's attention
 - [`<NotificationsFlyout>`](./packages/notifications-flyout/README.md) - A less intrusive way of announcing an event of potential interest to the user

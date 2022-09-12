@@ -116,6 +116,13 @@ Menu.propTypes = {
    */
   onChange: PropTypes.func,
   /**
+   * Triggers when a key is pressed
+   * In addition to passing back the event you get the
+   * following in an object:
+   *  - currentHighlightedId: string
+   */
+  onKeyDown: PropTypes.func,
+  /**
    * Controls the selected Option(s)
    * This will not work if this is the child
    * of a MenuGroup component

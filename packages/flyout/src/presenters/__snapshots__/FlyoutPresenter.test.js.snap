@@ -184,7 +184,7 @@ exports[`flyout/FlyoutPresenter/FlyoutPresenter renders without props 1`] = `
 }
 
 .emotion-1 {
-  fill: rgba(128,128,128,0);
+  fill: rgba(255,255,255,0.01);
 }
 
 .emotion-2 {

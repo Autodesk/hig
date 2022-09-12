@@ -100,7 +100,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 }
 
 .emotion-5 {
-  fill: rgba(128,128,128,0);
+  fill: rgba(255,255,255,0.01);
 }
 
 .emotion-6 {
@@ -571,7 +571,7 @@ exports[`notifications-flyout/NotificationsFlyout renders a notification with th
 }
 
 .emotion-5 {
-  fill: rgba(128,128,128,0);
+  fill: rgba(255,255,255,0.01);
 }
 
 .emotion-6 {
@@ -1023,7 +1023,7 @@ exports[`notifications-flyout/NotificationsFlyout renders with all props 1`] = `
 }
 
 .emotion-5 {
-  fill: rgba(128,128,128,0);
+  fill: rgba(255,255,255,0.01);
 }
 
 .emotion-6 {
@@ -1557,7 +1557,7 @@ exports[`notifications-flyout/NotificationsFlyout renders without props 1`] = `
 }
 
 .emotion-5 {
-  fill: rgba(128,128,128,0);
+  fill: rgba(255,255,255,0.01);
 }
 
 .emotion-6 {

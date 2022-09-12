@@ -1,9 +1,14 @@
 {
   "private": true,
-  "name": "storybook-new",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "name": "@hig/storybook-new",
+  "description": "Autodesk design system",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "homepage": "https://hig.autodesk.com",
+  "version": "2.0.0",
+  "files": [
+    "*"
+  ],
   "devDependencies": {
     "@babel/core": "^7.17.10",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
@@ -35,10 +40,12 @@
     "@storybook/addon-essentials": "^6.4.22",
     "@storybook/addon-interactions": "^6.4.22",
     "@storybook/addon-links": "^6.4.22",
+    "@storybook/addons": "^6.5.10",
     "@storybook/builder-webpack5": "^6.5.3",
     "@storybook/manager-webpack5": "^6.5.3",
-    "@storybook/react": "^6.4.22",
+    "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.11",
+    "@storybook/theming": "^6.5.10",
     "@svgr/webpack": "^6.2.1",
     "babel-loader": "^8.2.5",
     "babel-plugin-macros": "^3.1.0",
@@ -53,8 +60,12 @@
   },
   "dependencies": {
     "@hig/fonts": "^2.0.0",
+    "@hig/input": "^2.2.0",
     "@hig/surface": "^2.1.1",
+    "@hig/table": "^1.7.0",
+    "@hig/text-link": "^2.2.0",
     "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.2.0"
+    "@hig/theme-data": "^3.2.0",
+    "@hig/typography": "^2.2.0"
   }
 }

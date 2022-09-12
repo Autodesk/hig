@@ -1,18 +1,20 @@
-import { addons } from '@storybook/addons';
+import { addons } from "@storybook/addons";
+
+import weaveTheme from "./weaveTheme";
 
 addons.setConfig({
   isFullscreen: false,
   showNav: true,
   showPanel: true,
-  panelPosition: 'bottom',
+  panelPosition: "bottom",
   enableShortcuts: true,
   showToolbar: true,
   theme: undefined,
   selectedPanel: undefined,
-  initialActive: 'sidebar',
+  initialActive: "sidebar",
   sidebar: {
     showRoots: false,
-    collapsedRoots: ['other'],
+    collapsedRoots: ["other"],
   },
   toolbar: {
     title: { hidden: false },
@@ -20,6 +22,7 @@ addons.setConfig({
     eject: { hidden: false },
     copy: { hidden: false },
     fullscreen: { hidden: true },
-    'storybook/background': { hidden: true },
+    "storybook/background": { hidden: true },
   },
+  theme: weaveTheme,
 });

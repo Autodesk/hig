@@ -186,7 +186,8 @@ MenuGroupPresenter.propTypes = {
   onFocus: PropTypes.func,
   onKeyDown: PropTypes.func,
   onMouseMove: PropTypes.func,
-  selected: PropTypes.bool,
+  // eslint-disable-next-line react/forbid-prop-types
+  selected: PropTypes.arrayOf(PropTypes.any),
   setActiveOption: PropTypes.func,
   setHighlightIndex: PropTypes.func,
   setOptionsInfo: PropTypes.func,

@@ -21,7 +21,7 @@ import {
 } from "@hig/icons";
 
 import { TreeItem } from "../index";
-import sampleTreeNodeObject from "../__fixtures__/sampleTreeNodeObject";
+import sampleTreeNodeObject from "../__fixtures__/sampleMediumDensityTreeNodeObject";
 
 // test that the TreeView can render a high-order TreeItem component or a function TreeItem component
 export class HighOrderComponentWrappedTreeItem extends React.Component {

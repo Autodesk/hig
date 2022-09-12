@@ -50,9 +50,13 @@ const Template = (args, context) => {
 
   return (
     <MenuGroup {...args}>
-      <Menu divider>{[...shortcutWithTitle]}</Menu>
-      <Menu divider>{[...avatarWithTitle]}</Menu>
-      <Menu>{[...iconWithTitle]}</Menu>
+      <Menu divider key="a">
+        {[...shortcutWithTitle]}
+      </Menu>
+      <Menu divider key="b">
+        {[...avatarWithTitle]}
+      </Menu>
+      <Menu key="c">{[...iconWithTitle]}</Menu>
     </MenuGroup>
   );
 };

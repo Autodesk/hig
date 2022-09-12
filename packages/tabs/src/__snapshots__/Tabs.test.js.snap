@@ -42,7 +42,7 @@ exports[`tabs/Tabs renders canvas style tabs 1`] = `
   -ms-flex-pack: start;
   justify-content: flex-start;
   border-bottom: 0;
-  background-color: rgba(128,128,128,0);
+  background-color: rgba(255,255,255,0.01);
 }
 
 .emotion-3 {
@@ -734,7 +734,7 @@ exports[`tabs/Tabs renders horizontal box style tabs 1`] = `
   -ms-flex-pack: start;
   justify-content: flex-start;
   border-bottom: 0;
-  background-color: rgba(128,128,128,0);
+  background-color: rgba(255,255,255,0.01);
 }
 
 .emotion-4 {
@@ -2264,7 +2264,7 @@ exports[`tabs/Tabs renders vertical box style tabs 1`] = `
   -ms-flex-pack: end;
   justify-content: flex-end;
   border-bottom: 0;
-  background-color: rgba(128,128,128,0);
+  background-color: rgba(255,255,255,0.01);
 }
 
 <div

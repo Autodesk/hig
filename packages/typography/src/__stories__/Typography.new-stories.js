@@ -1,5 +1,5 @@
 import React from "react";
-import { ArgsTable, Primary } from "@storybook/addon-docs";
+import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
 
 import Typography from "../index";
 import Readme from "../../README.md";
@@ -31,6 +31,7 @@ export default {
       page: () => (
         <>
           <Primary />
+          <Stories />
           <Readme />
           <ArgsTable />
         </>
@@ -45,4 +46,15 @@ export const Default = Template.bind({});
 
 Default.args = {
   children: "Typography component",
+};
+
+export const ElementTypeProp = Template.bind({});
+
+ElementTypeProp.storyName = "With elementType prop";
+ElementTypeProp.args = {
+  children: "111 McInnis Parkway, San Rafael, CA 94903, USA",
+  variant: "body",
+  fontWeight: "normal",
+  align: "left",
+  elementType: "address",
 };
