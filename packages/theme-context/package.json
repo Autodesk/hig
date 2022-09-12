@@ -28,7 +28,7 @@
     "@hig/semantic-release-config": "^0.1.0"
   },
   "peerDependencies": {
-    "@hig/theme-data": "^3.2.0",
+    "@hig/theme-data": "^3.3.0",
     "react": "^17.0.0"
   },
   "scripts": {

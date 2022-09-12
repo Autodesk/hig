@@ -1,3 +1,11 @@
+# [@hig/theme-data-v3.3.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@3.2.0...@hig/theme-data@3.3.0) (2022-09-12)
+
+
+### Features
+
+* added background.transparent to colorScheme ([aa88ef5](https://github.com/Autodesk/hig/commit/aa88ef5))
+* updated tooltip background colors and spacing ([5bcb97b](https://github.com/Autodesk/hig/commit/5bcb97b))
+
 # [@hig/theme-data-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@3.1.0...@hig/theme-data@3.2.0) (2022-09-01)
 
 
