@@ -1,3 +1,10 @@
+# [@hig/menu-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/menu@2.2.0...@hig/menu@2.2.1) (2022-09-12)
+
+
+### Bug Fixes
+
+* update when selected prop is changed ([5308acc](https://github.com/Autodesk/hig/commit/5308acc))
+
 # [@hig/menu-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/menu@2.1.1...@hig/menu@2.2.0) (2022-08-28)
 
 
