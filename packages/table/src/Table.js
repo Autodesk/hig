@@ -21,6 +21,8 @@ const Table = (props) => {
     paginateDynamic,
     onTableCellClick,
     onSortClick,
+    onApplication,
+    enableBlockLayout,
     stylesheet,
     tableGroupSelectAll = {},
   } = props;
@@ -88,6 +90,8 @@ const Table = (props) => {
               paginateDynamic={paginateDynamic}
               onTableCellClick={onTableCellClick}
               onSortClick={onSortClick}
+              onApplication={onApplication}
+              enableBlockLayout={enableBlockLayout}
               stylesheet={stylesheet}
               globalColumns={globalColumns}
               setGlobalColumns={setGlobalColumns}
@@ -184,6 +188,15 @@ Table.propTypes = {
      */
     setCheckboxToggle: PropTypes.func,
   }),
+  /**
+   * Optional prop for external Menu
+   * if present will pass back group data
+   */
+  onApplication: PropTypes.func,
+  /**
+   * Optional prop to set table layout
+   */
+  enableBlockLayout: PropTypes.bool,
 };
 
 export default Table;

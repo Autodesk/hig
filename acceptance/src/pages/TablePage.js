@@ -266,6 +266,10 @@ const TablePage = () => {
 									customComponents.data = sortedArray;
 								}}
 								tableGroupSelectAll={{checkboxToggle, setCheckboxToggle: handleCheckboxToggle}}
+								onApplication={(props) => {
+									console.log('props', props);
+								}}
+								enableBlockLayout={true}
 								stylesheet={(styles, props, themeData) => {
 									return {
 										...styles,
