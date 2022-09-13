@@ -1,3 +1,10 @@
+# [@hig/table-v1.8.0](https://github.com/Autodesk/hig/compare/@hig/table@1.7.0...@hig/table@1.8.0) (2022-09-13)
+
+
+### Features
+
+* add onApplication property ([4636183](https://github.com/Autodesk/hig/commit/4636183))
+
 # [@hig/table-v1.7.0](https://github.com/Autodesk/hig/compare/@hig/table@1.6.5...@hig/table@1.7.0) (2022-08-24)
 
 
