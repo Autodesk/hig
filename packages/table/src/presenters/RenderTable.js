@@ -57,6 +57,8 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     tableSpreadProps,
     onTableCellClick,
     onSortClick,
+    onApplication,
+    enableBlockLayout,
     customStylesheet,
     tableGroupSelectAll: { checkboxToggle = [], setCheckboxToggle = () => {} },
     otherProps,
@@ -105,8 +107,9 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     globalResizeStyles,
     setGlobalResizeStyles,
   } = otherProps;
-
-  const layoutTypeWrap = isGrouped ? useFlexLayout : useBlockLayout;
+  const checkEnableBlockLayout = () =>
+    enableBlockLayout ? useBlockLayout : useFlexLayout;
+  const layoutTypeWrap = isGrouped ? useFlexLayout : checkEnableBlockLayout();
 
   const {
     getTableProps,
@@ -210,6 +213,9 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                         setAllMultiSelectedRows(false);
                       }
                       setActiveMultiSelectRowArray(newArray);
+                      onApplication({
+                        externalMenu: { rowIndex, newArray, count },
+                      });
                     }}
                     tabIndex={-1}
                   />
@@ -487,6 +493,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                       globalResizeStyles={globalResizeStyles}
                       globalColumns={globalColumns}
                       rowSelection={rowSelection}
+                      count={count}
                     />
                   }
                   activeMultiSelectRowArray={activeMultiSelectRowArray}
@@ -533,6 +540,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                   globalResizeStyles={globalResizeStyles}
                   globalColumns={globalColumns}
                   rowSelection={rowSelection}
+                  count={count}
                 />
               )}
             </div>

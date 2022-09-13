@@ -48,6 +48,7 @@ const TableDataContents = ({
   globalColumns,
   globalResizeStyles,
   rowSelection,
+  count,
 }) => (
   <div {...getTableBodyProps()} className={css(styles.higTableBody)}>
     {rowTypeToMap.map((row, rowIndex) => {
@@ -134,6 +135,7 @@ const TableDataContents = ({
                     customStylesheet={customStylesheet}
                     globalResizeStyles={globalResizeStyles}
                     rowSelection={rowSelection}
+                    count={count}
                   >
                     {/* eslint-disable */}
                     {cell.isGrouped ? (
@@ -194,7 +196,8 @@ TableDataContents.propTypes = {
   tableObject: PropTypes.any,
   globalColumns: PropTypes.any,
   globalResizeStyles: PropTypes.any,
-  rowSelection: PropTypes.bool
+  rowSelection: PropTypes.bool,
+  count: PropTypes.number,
 };
 
 export default TableDataContents;
