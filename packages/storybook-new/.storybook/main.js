@@ -5,12 +5,12 @@ module.exports = {
   ],
   "addons": [
     "@storybook/addon-essentials",
-    "@storybook/addon-links",
-    "@storybook/addon-interactions",
     {
       name: "@storybook/addon-docs",
       options: { transcludeMarkdown: true }
     },
+    "@storybook/addon-links",
+    "@storybook/addon-interactions",
   ],
   "core": {
     builder: 'webpack5',
