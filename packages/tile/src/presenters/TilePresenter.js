@@ -86,18 +86,18 @@ console.log('isPressed', isPressed);
                 </div>
               )}
             </div>
-            <div className={css(styles.higTileHeader)}>
-              <div className={css(styles.higTileHeaderContainer)}>
+            {/* <div className={css(styles.higTileHeader)}>
+              <div className={css(styles.higTileHeaderContainer)}> */}
                 <HeaderContainer />
-                {actionClarifier && (
+                {/* {actionClarifier && (
                   <div className={css(styles.higTileActionClarifier)}>
                     <div className={css(styles.higTileActionClarifierButton)}>
                       <Button title={actionClarifier} />
                     </div>
                   </div>
-                )}
-              </div>
-            </div>
+                )} */}
+              {/* </div>
+            </div> */}
 
             <div className={css(styles.higTileContent)}>
               {/*identifier && 
