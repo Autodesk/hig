@@ -2,11 +2,14 @@ import React from 'react';
 import { css } from "emotion";
 
 const styles = {
-  width: '200px',
-  height: '300px',
+  width: '100px',
+  height: '100px',
   backgroundColor: 'red',
   img: {
-    objectFit: 'cover'
+    display: 'block',
+    height: '100%',
+    objectFit: 'cover',
+    width: '100%',
   }
 };
 const ImageHolder = () => <div className={css(styles)}><img src="https://picsum.photos/id/53/200/300" alt="" /></div>
