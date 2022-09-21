@@ -102,7 +102,7 @@ export default function stylesheet(props, themeData, metadata) {
       display: 'flex',
       flexDirection: isColumn ? 'column' : 'row',
       width: '100%',
-      minWidth: isColumn ? 'none' : '233px',
+      // minWidth: isColumn ? 'none' : '233px',
       outline: `${themeData["tile.borderWidth"]} solid transparent`,
       cursor: 'pointer',
       color: themeData["tile.fontColor"],
@@ -142,20 +142,21 @@ export default function stylesheet(props, themeData, metadata) {
 
     },
     higTileHeader: {
+      flex: '0 0 auto',
       position: 'relative',
       margin: '0',
       padding: background === 'solid' ? '0' : getTileHeaderFlatPadding(),
       overflow: 'hidden',
       ...(divider && background === 'solid' ? getDivider() : {})
     },
-    higTileHeaderContainer: {
-      overflow: 'hidden',
-      position: 'relative',
-      maxHeight: isColumn ? '140px' : '108px',
-      width: '100%',
-      height: '100%',
-      backgroundColor: hasHover ? 'rgba(0, 0, 0, 0.5)' : 'none',
-    },
+    // higTileHeaderContainer: {
+    //   overflow: 'hidden',
+    //   position: 'relative',
+    //   // maxHeight: isColumn ? '140px' : '108px',
+    //   width: '100%',
+    //   height: '100%',
+    //   // backgroundColor: hasHover ? 'rgba(0, 0, 0, 0.5)' : 'none',
+    // },
     higTileActionClarifier: {
       zIndex: '10',
       display: hasHover ? 'block' : 'none',

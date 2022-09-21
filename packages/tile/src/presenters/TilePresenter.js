@@ -86,8 +86,8 @@ console.log('isPressed', isPressed);
                 </div>
               )}
             </div>
-            {/* <div className={css(styles.higTileHeader)}>
-              <div className={css(styles.higTileHeaderContainer)}> */}
+            <div className={css(styles.higTileHeader)}>
+              {/* <div className={css(styles.higTileHeaderContainer)}> */}
                 <HeaderContainer />
                 {/* {actionClarifier && (
                   <div className={css(styles.higTileActionClarifier)}>
@@ -96,8 +96,8 @@ console.log('isPressed', isPressed);
                     </div>
                   </div>
                 )} */}
-              {/* </div>
-            </div> */}
+              {/* </div> */}
+            </div>
 
             <div className={css(styles.higTileContent)}>
               {/*identifier && 
