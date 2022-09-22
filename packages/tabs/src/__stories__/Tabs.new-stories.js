@@ -2,7 +2,7 @@ import React from "react";
 import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
 import Button, { types } from "@hig/button";
 import RichText from "@hig/rich-text";
-import { Dashboard24, Settings24 } from "@hig/icons";
+import { Dashboard16, Dashboard24, Settings16, Settings24 } from "@hig/icons";
 
 import Tabs, { Tab } from "../index";
 import {
@@ -68,30 +68,7 @@ const defaultChildren = [
     <RichText>Inspector content</RichText>
   </Tab>,
 ];
-const complexTabsChildren = [
-  <Tab label="Complex" key="complex" icon={<Settings24 />} closable>
-    <RichText>
-      Complex tab can have an icon and a close button, complex tab only works
-      when variant is set to &quot;box&quot; or &quot;canvas&quot;
-    </RichText>
-  </Tab>,
-  <Tab key="icon" icon={<Dashboard24 />}>
-    <RichText>
-      Icon only tab. Icon will not be displayed when variant is set to
-      &quot;underline&quot;
-    </RichText>
-  </Tab>,
-  <Tab label="Disabled" key="disabled" disabled>
-    <RichText>Disabled</RichText>
-  </Tab>,
-  <Tab label="Closable" key="closable" closable>
-    <RichText>
-      Closable tab will only works when variant is set to &quot;box&quot; or
-      &quot;canvas&quot;. Clicks the close button will trigger the
-      &quot;onTabClose&quot; event.
-    </RichText>
-  </Tab>,
-];
+
 const customTabsChildren = [
   <Tab label="Details" key="details" render={renderCustomTab}>
     <RichText>Details content</RichText>
@@ -104,7 +81,42 @@ const customTabsChildren = [
   </Tab>,
 ];
 
-const Template = (args) => <Tabs {...args} />;
+const Template = (args, context) => {
+  const Settings =
+    context.globals.density === "Medium" ? Settings24 : Settings16;
+  const Dashboard =
+    context.globals.density === "Medium" ? Dashboard24 : Dashboard16;
+  const complexTabsChildren = [
+    <Tab label="Complex" key="complex" icon={<Settings />} closable>
+      <RichText>
+        Complex tab can have an icon and a close button, complex tab only works
+        when variant is set to &quot;box&quot; or &quot;canvas&quot;
+      </RichText>
+    </Tab>,
+    <Tab key="icon" icon={<Dashboard />}>
+      <RichText>
+        Icon only tab. Icon will not be displayed when variant is set to
+        &quot;underline&quot;
+      </RichText>
+    </Tab>,
+    <Tab label="Disabled" key="disabled" disabled>
+      <RichText>Disabled</RichText>
+    </Tab>,
+    <Tab label="Closable" key="closable" closable>
+      <RichText>
+        Closable tab will only works when variant is set to &quot;box&quot; or
+        &quot;canvas&quot;. Clicks the close button will trigger the
+        &quot;onTabClose&quot; event.
+      </RichText>
+    </Tab>,
+  ];
+
+  if (context.story === "Complex Tabs") {
+    return <Tabs {...args}>{complexTabsChildren}</Tabs>;
+  }
+
+  return <Tabs {...args} />;
+};
 
 export const Default = Template.bind({});
 
@@ -124,7 +136,6 @@ ComplexTabs.args = {
   orientation: orientations.HORIZONTAL,
   showDivider: true,
   defaultActiveTabIndex: 1,
-  children: complexTabsChildren,
 };
 
 export const CustomTabs = Template.bind({});
