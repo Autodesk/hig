@@ -246,7 +246,9 @@ export default {
   },
   "tooltip.button.label.lineHeight": {
     type: LINE_HEIGHT,
-    value: "basics.lineHeights.highMedium",
+    value: {
+      ref: "basics.lineHeights.highMedium",
+    },
   },
   "tooltip.button.label.fontColor": {
     type: COLOR,
