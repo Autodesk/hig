@@ -1,4 +1,4 @@
-import { COLOR } from "../../consts/types";
+import { BORDER_RADIUS, COLOR, LENGTH } from "../../consts/types";
 
 export default {
   "thumbnail.backgroundColor": {
@@ -14,6 +14,36 @@ export default {
     },
     transform: {
       alpha: 0.5,
+    },
+  },
+  "thumbnail.extraExtraSmall.height": {
+    type: LENGTH,
+    value: "24px",
+  },
+  "thumbnail.extraSmall.height": {
+    type: LENGTH,
+    value: "32px",
+  },
+  "thumbnail.small.height": {
+    type: LENGTH,
+    value: "48px",
+  },
+  "thumbnail.medium.height": {
+    type: LENGTH,
+    value: "64px",
+  },
+  "thumbnail.large.height": {
+    type: LENGTH,
+    value: "96px",
+  },
+  "thumbnail.extraLarge.height": {
+    type: LENGTH,
+    value: "128px",
+  },
+  "thumbnail.borderRadius": {
+    type: BORDER_RADIUS,
+    value: {
+      ref: "basics.borderRadii.medium",
     },
   },
 };
