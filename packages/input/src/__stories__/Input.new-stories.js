@@ -1,16 +1,16 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
 
-import TextArea from "../index";
+import Input, { variants } from "../index";
 import Readme from "../../README.md";
 
 export default {
-  title: "Components/TextArea",
-  component: TextArea,
+  title: "Components/Input",
+  component: Input,
   argTypes: {
     variant: {
-      control: false,
-      table: { disable: true },
+      options: [variants.LINE, variants.BOX],
+      control: { type: "select" },
     },
   },
   parameters: {
@@ -26,6 +26,6 @@ export default {
   },
 };
 
-const Template = (args) => <TextArea {...args} variant="box" />;
+const Template = (args) => <Input {...args} />;
 
 export const Default = Template.bind({});
