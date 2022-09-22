@@ -1,3 +1,15 @@
+# [@hig/theme-data-v3.4.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@3.3.0...@hig/theme-data@3.4.0) (2022-09-22)
+
+
+### Bug Fixes
+
+* tooltip.button.label.lineHeight showing unresolved role ([4323ed9](https://github.com/Autodesk/hig/commit/4323ed9))
+
+
+### Features
+
+* add additional thumbnail roles ([0fc09eb](https://github.com/Autodesk/hig/commit/0fc09eb))
+
 # [@hig/theme-data-v3.3.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@3.2.0...@hig/theme-data@3.3.0) (2022-09-12)
 
 
