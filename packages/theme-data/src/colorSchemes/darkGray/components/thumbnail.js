@@ -9,7 +9,7 @@ export default {
       ref: "basics.colors.primary.black",
     },
     transform: {
-      alpha: 0.2,
+      alpha: 0.35,
     },
   },
 };
