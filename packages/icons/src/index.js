@@ -10,6 +10,8 @@ import OperatorPlusXsUISVG from "./icons/ui-controls/operator-plus-xs.svg";
 import OperatorPlusSUISVG from "./icons/ui-controls/operator-plus-s.svg";
 import OperatorMinusXsUISVG from "./icons/ui-controls/operator-minus-xs.svg";
 import OperatorMinusSUISVG from "./icons/ui-controls/operator-minus-s.svg";
+import HoldXsUISVG from "./icons/ui-controls/hold-xs.svg";
+import HoldSUISVG from "./icons/ui-controls/hold-s.svg";
 import HamburgerDefaultUISVG from "./icons/ui-controls/hamburger-default.svg";
 import HamburgerCloseUISVG from "./icons/ui-controls/hamburger-close.svg";
 import CloseXsUISVG from "./icons/ui-controls/close-xs.svg";
@@ -5894,6 +5896,38 @@ export const HamburgerDefaultUI = props => (
       if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <HamburgerDefaultUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const HoldSUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "5px",
+        height: "5px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <HoldSUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const HoldXsUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "3px",
+        height: "3px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <HoldXsUISVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
