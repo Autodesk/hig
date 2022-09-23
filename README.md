@@ -1,8 +1,8 @@
-# Human Interface Guidelines
+# Weave
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/Autodesk/hig.svg)](https://greenkeeper.io/)
 
-HIG is Autodesk's unified design system, so we can build better products faster.
+Weave is Autodesk's unified design system, so we can build better products faster.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -34,7 +34,7 @@ function MyComponent() {
 ```
 
 ## Theme data and theming components
-Theme data is a representation of the HIG visual design language in the form of data. With [`@hig/theme-data`](./packages/theme-data/README.md), we publish the data in ECMAScript module, JSON, and SCSS formats. This data includes 8 themes that can be used on any platform. There are four color schemes including...
+Theme data is a representation of the Weave visual design language in the form of data. With [`@hig/theme-data`](./packages/theme-data/README.md), we publish the data in ECMAScript module, JSON, and SCSS formats. This data includes 8 themes that can be used on any platform. There are four color schemes including...
 
 * Light gray
 * Dark gray
@@ -42,7 +42,7 @@ Theme data is a representation of the HIG visual design language in the form of 
 
 ...with two densities–high and low–for each scheme. See how to [provide a theme to components](./packages/theme-context#provide-a-theme-to-components). 
 
-- [`@hig/theme-data`](./packages/theme-data/README.md) - HIG design spec as data
+- [`@hig/theme-data`](./packages/theme-data/README.md) - Weave design spec as data
 - [`<ThemeContext>`](./packages/theme-context/README.md) - A component to ease consumption of theme data from within React components.
 
 ## React components
@@ -54,7 +54,7 @@ Theme data is a representation of the HIG visual design language in the form of 
 
 ### Components
 
-Each HIG pattern is implemented as a set of React components. Each pattern is published to NPM individually under the @hig namespace.
+Each Weave pattern is implemented as a set of React components. Each pattern is published to NPM individually under the @hig namespace.
 
 - [`<Accordion>`](./packages/accordion/README.md) - Make content-heavy pages appear less so by vertically stacking items in lists that users can expand or contract
 - [`<Avatar>`](./packages/avatar/README.md) - A visual representation of a customer's identity
@@ -88,6 +88,7 @@ Each HIG pattern is implemented as a set of React components. Each pattern is pu
 - [`<Tabs>`](./packages/tabs/README.md) - Keeps related content in a single container
 - [`<TextArea>`](./packages/text-area/README.md) - A control to provide a large amount of freeform text
 - [`<TextLink>`](./packages/text-link/README.md) - Directs visitors to another location
+- [`<Thumbnail>`](./packages/thumbnail/README.md) - Visual anchors and identifiers for objects
 - [`<Timestamp>`](./packages/timestamp/README.md) - Presents a date with humanized phrasing
 - [`<Toggle>`](./packages/toggle/README.md) - A control for a single action with a clear on/off or start/stop.
 - [`<Tooltip>`](./packages/tooltip/README.md) - Provides context in a small popup container
