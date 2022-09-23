@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import TilePresenter from './presenters/TilePresenter';
 import { ControlBehavior } from "@hig/behaviors";
+import TilePresenter from "./presenters/TilePresenter";
 
 const Tile = (props) => {
   const {
@@ -44,60 +44,61 @@ const Tile = (props) => {
       onMouseLeave={onMouseLeave}
       onMouseUp={onMouseUp}
     >
-      {
-        ({
-          hasFocus,
-          hasHover,
-          isPressed,
-          onBlur: handleBlur,
-          onFocus: handleFocus,
-          onMouseDown: handleMouseDown,
-          onMouseEnter: handleMouseEnter,
-          onMouseLeave: handleMouseLeave,
-          onMouseUp: handleMouseUp
-        }) => (
-          <TilePresenter 
-            media={media}
-            background={background}
-            divider={divider}
-            title={title}
-            subtitle={subtitle}
-            orientation={orientation}
-            version={version}
-            // identifier={identifier}
-            statusAndActionIcons={statusAndActionIcons}
-            notification={notification}
-            tooltip={tooltip}
-            overflowMenu={overflowMenu}
-            cta={cta}
-            actionClarifier={actionClarifier}
-            checkbox={checkbox}
-            showCheckbox={showCheckbox}
-            pinIcon={pinIcon}
-            showPin={showPin}
-            surface={surface}
-            disabled={disabled}
-            hasFocus={hasFocus}
-            hasHover={hasHover}
-            isPressed={isPressed}
-            onBlur={handleBlur}
-            onClick={onClick}
-            onFocus={handleFocus}
-            onHover={onHover}
-            onMouseDown={handleMouseDown}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onMouseUp={handleMouseUp}
-            selected={selected}
-          />
-        )
-      }
+      {({
+        hasFocus,
+        hasHover,
+        isPressed,
+        onBlur: handleBlur,
+        onFocus: handleFocus,
+        onMouseDown: handleMouseDown,
+        onMouseEnter: handleMouseEnter,
+        onMouseLeave: handleMouseLeave,
+        onMouseUp: handleMouseUp,
+      }) => (
+        <TilePresenter
+          media={media}
+          background={background}
+          divider={divider}
+          title={title}
+          subtitle={subtitle}
+          orientation={orientation}
+          version={version}
+          // identifier={identifier}
+          statusAndActionIcons={statusAndActionIcons}
+          notification={notification}
+          tooltip={tooltip}
+          overflowMenu={overflowMenu}
+          cta={cta}
+          actionClarifier={actionClarifier}
+          checkbox={checkbox}
+          showCheckbox={showCheckbox}
+          pinIcon={pinIcon}
+          showPin={showPin}
+          surface={surface}
+          disabled={disabled}
+          hasFocus={hasFocus}
+          hasHover={hasHover}
+          isPressed={isPressed}
+          onBlur={handleBlur}
+          onClick={onClick}
+          onFocus={handleFocus}
+          onHover={onHover}
+          onMouseDown={handleMouseDown}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          selected={selected}
+        />
+      )}
     </ControlBehavior>
   );
 };
 
-Tile.PropTypes = {
-
+Tile.propTypes = {
+  /** divider */
+  divider: PropTypes.bool,
+  /** selected */
+  selected: PropTypes.bool,
 };
 
 export default Tile;

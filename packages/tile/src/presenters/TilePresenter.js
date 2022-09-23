@@ -39,9 +39,9 @@ const TilePresenter = props => {
     selected,
   } = props;
 
-  const handleClickCTA = action => {
-    action();
-  };
+  // const handleClickCTA = action => {
+  //   action();
+  // };
 
   return (
     <ThemeContext.Consumer>
@@ -57,9 +57,10 @@ const TilePresenter = props => {
             onMouseLeave={onMouseLeave}
             onMouseDown={onMouseDown}
             onMouseUp={onMouseUp}
-            onClick={cta ? () => handleClickCTA(cta?.action) : onClick}
+            onClick={onClick}
+            // onClick={cta ? () => handleClickCTA(cta?.action) : onClick}
           >
-            {notification && 
+            {/* {notification && 
               <div className={css(styles.higTileNotifications)}>
                 <div className={css(styles.higTileNotificationBadge)}>{notification?.component}</div>
               </div>
@@ -85,7 +86,7 @@ const TilePresenter = props => {
                   />
                 </div>
               )}
-            </div>
+            </div> */}
             <div className={css(styles.higTileHeader)}>
               {/* <div className={css(styles.higTileHeaderContainer)}> */}
                 {media}
@@ -107,7 +108,7 @@ const TilePresenter = props => {
               */}
               <div className={css(styles.higTileTitleContainer)}>
                 <div className={css(styles.higTileTitle)}>{title}</div>
-                {overflowMenu && <div className={css(styles.higTileOverflowMenu)}>{overflowMenu}</div>}
+                {/* {overflowMenu && <div className={css(styles.higTileOverflowMenu)}>{overflowMenu}</div>} */}
               </div>
               <div className={css(styles.higTileSubTitle)}>{subtitle}</div>
 
@@ -131,7 +132,7 @@ const TilePresenter = props => {
                   </div>
                 }
               </div> */}
-              {cta && 
+              {/* {cta && 
                 <div className={css(styles.higTileCTAHolder)}>
                   <div className={css(styles.higTileCTA)} >
                     {cta?.type === 'button' 
@@ -140,7 +141,7 @@ const TilePresenter = props => {
                     }
                   </div>
                 </div>
-              }
+              } */}
             </div> 
           </div>
         )

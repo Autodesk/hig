@@ -33,8 +33,6 @@ export default function stylesheet(props, themeData, metadata) {
         boxShadow: isFocus ? `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}` : 'none',
       };
     }
-    console.log(status);
-    console.log(`tile.${background}.${status}.level${surfaceLevel}.backgroundColor`, themeData[`tile.${background}.${status}.level${surfaceLevel}.backgroundColor`]);
     return {
       backgroundColor: themeData[`tile.${background}.${status}.level${surfaceLevel}.backgroundColor`],
       boxShadow: isFocus ? `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}` : 'none',
@@ -142,12 +140,13 @@ export default function stylesheet(props, themeData, metadata) {
 
     },
     higTileHeader: {
+      boxSizing: "border-box",
       flex: '0 0 auto',
       position: 'relative',
       margin: '0',
-      padding: background === 'solid' ? '0' : getTileHeaderFlatPadding(),
+      padding: background === 'filled' ? '0' : getTileHeaderFlatPadding(),
       overflow: 'hidden',
-      ...(divider && background === 'solid' ? getDivider() : {})
+      ...(divider && background === 'filled' ? getDivider() : {})
     },
     // higTileHeaderContainer: {
     //   overflow: 'hidden',

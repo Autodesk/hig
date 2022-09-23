@@ -8,22 +8,18 @@ import Tile from "../index";
 import Readme from "../../README.md";
 
 const Media = ({ orientation }) => {
-  const aspectRatio = orientation === "vertical"
-    ? "widescreen"
-    : "square";
-  const customStylesheet = (styles) => {
-    return {
-      ...styles,
-      thumbnail: {
-        ...styles.thumbnail,
-        wrapper: {
-          ...styles.thumbnail.wrapper,
-          borderRadius: 0,
-        },
+  const aspectRatio = orientation === "vertical" ? "widescreen" : "square";
+  const customStylesheet = (styles) => ({
+    ...styles,
+    thumbnail: {
+      ...styles.thumbnail,
+      wrapper: {
+        ...styles.thumbnail.wrapper,
+        borderRadius: 0,
       },
-    };
-  };
-console.log('media');
+    },
+  });
+  console.log("media");
   return (
     <Thumbnail
       aspectRatio={aspectRatio}
