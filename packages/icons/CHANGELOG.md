@@ -1,3 +1,10 @@
+# [@hig/icons-v4.2.0](https://github.com/Autodesk/hig/compare/@hig/icons@4.1.2...@hig/icons@4.2.0) (2022-09-12)
+
+
+### Features
+
+* added library and sign-out icons ([057b6db](https://github.com/Autodesk/hig/commit/057b6db))
+
 # [@hig/icons-v4.1.2](https://github.com/Autodesk/hig/compare/@hig/icons@4.1.1...@hig/icons@4.1.2) (2022-08-17)
 
 

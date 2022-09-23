@@ -14,6 +14,7 @@ const MenuPresenter = (props) => {
     divider,
     menuRef,
     multiple,
+    selected,
     stylesheet: customStylesheet,
     unselect,
     ...otherProps
@@ -29,7 +30,6 @@ const MenuPresenter = (props) => {
       getActiveOption,
       getPreviousEvent,
       onFocus,
-      selected,
       setActiveOption,
       setHighlightIndex,
     } = props;
@@ -155,7 +155,8 @@ MenuPresenter.propTypes = {
   multiple: PropTypes.bool,
   onFocus: PropTypes.func,
   role: PropTypes.string,
-  selected: PropTypes.func,
+  // eslint-disable-next-line react/forbid-prop-types
+  selected: PropTypes.arrayOf(PropTypes.any),
   setActiveOption: PropTypes.func,
   setHighlightIndex: PropTypes.func,
   setOptionsInfo: PropTypes.func,

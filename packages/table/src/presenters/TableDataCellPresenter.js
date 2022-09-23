@@ -21,6 +21,7 @@ export default function TableDataCellPresenter(props) {
     setActiveMultiSelectRowArray,
     rowSelection,
     rowTypeToMap,
+    count,
     ...otherProps
   } = props;
   const { globalResizeStyles } = otherProps;
@@ -114,4 +115,5 @@ TableDataCellPresenter.propTypes = {
   // eslint-disable-next-line react/forbid-prop-types
   rowTypeToMap: PropTypes.arrayOf(PropTypes.any),
   rowSelection: PropTypes.bool,
+  count: PropTypes.number,
 };

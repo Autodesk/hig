@@ -1,6 +1,5 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
-import { availableVariants } from "@hig/input";
 
 import TextArea from "../index";
 import Readme from "../../README.md";
@@ -10,8 +9,8 @@ export default {
   component: TextArea,
   argTypes: {
     variant: {
-      options: availableVariants,
-      control: { type: "select" },
+      control: false,
+      table: { disable: true },
     },
   },
   parameters: {
@@ -27,6 +26,6 @@ export default {
   },
 };
 
-const Template = (args) => <TextArea {...args} />;
+const Template = (args) => <TextArea {...args} variant="box" />;
 
 export const Default = Template.bind({});

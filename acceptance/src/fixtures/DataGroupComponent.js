@@ -58,6 +58,9 @@ const DataGroupComponent = ({passedData}) => {
         stylesheet={(styles, props, themeData) => {
           return {
             ...styles,
+            label: {
+              marginLeft: '20px'
+            },
             indicator: {
               ...styles.indicator,
               marginLeft: '30px'

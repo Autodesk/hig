@@ -1,6 +1,6 @@
 {
   "name": "@hig/table",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "HIG Table",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -27,7 +27,7 @@
   },
   "peerDependencies": {
     "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.2.0",
+    "@hig/theme-data": "^3.4.0",
     "react": "^17.0.0"
   },
   "devDependencies": {
