@@ -12,7 +12,7 @@ import stylesheet from "./stylesheet";
 
 const TilePresenter = props => {
   const {
-    headerContainer: HeaderContainer,
+    media,
     title,
     subtitle,
     version,
@@ -42,7 +42,7 @@ const TilePresenter = props => {
   const handleClickCTA = action => {
     action();
   };
-console.log('isPressed', isPressed);
+
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
@@ -88,7 +88,7 @@ console.log('isPressed', isPressed);
             </div>
             <div className={css(styles.higTileHeader)}>
               {/* <div className={css(styles.higTileHeaderContainer)}> */}
-                <HeaderContainer />
+                {media}
                 {/* {actionClarifier && (
                   <div className={css(styles.higTileActionClarifier)}>
                     <div className={css(styles.higTileActionClarifierButton)}>

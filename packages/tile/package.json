@@ -1,7 +1,7 @@
 {
   "name": "@hig/tile",
   "version": "1.0.0-alpha",
-  "description": "HIG Tile",
+  "description": "Weave Tile component",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "repository": {

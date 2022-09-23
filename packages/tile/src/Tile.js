@@ -1,10 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 import TilePresenter from './presenters/TilePresenter';
 import { ControlBehavior } from "@hig/behaviors";
 
 const Tile = (props) => {
   const {
-    headerContainer,
+    media,
     background,
     divider,
     title,
@@ -56,7 +57,7 @@ const Tile = (props) => {
           onMouseUp: handleMouseUp
         }) => (
           <TilePresenter 
-            headerContainer={headerContainer}
+            media={media}
             background={background}
             divider={divider}
             title={title}
@@ -93,6 +94,10 @@ const Tile = (props) => {
       }
     </ControlBehavior>
   );
-}
+};
+
+Tile.PropTypes = {
+
+};
 
 export default Tile;

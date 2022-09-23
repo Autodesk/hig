@@ -14,7 +14,7 @@ export default function stylesheet(props, themeData, metadata) {
     selected,
   } = props;
   const surfaceLevel = Number(surface) < 300 ? '100To250' : '300To350';
-  const bgType = background === 'solid' ? 'filled' : 'empty';
+  // const background = background === 'solid' ? 'filled' : 'empty';
   const isColumn = orientation === 'vertical';
   const isHorizontal = orientation === 'horizontal';
   
@@ -24,7 +24,7 @@ export default function stylesheet(props, themeData, metadata) {
     const isFocus = status === 'focus';
     const color = selected
       ? themeData[`tile.selected.${status}.borderColor`]
-      : themeData[`tile.${bgType}.${status}.level${surfaceLevel}.borderColor`];
+      : themeData[`tile.${background}.${status}.level${surfaceLevel}.borderColor`];
     const borderWidth = themeData['tile.borderWidth'];
     if (selected) {
       return {
@@ -34,9 +34,9 @@ export default function stylesheet(props, themeData, metadata) {
       };
     }
     console.log(status);
-    console.log(`tile.${bgType}.${status}.level${surfaceLevel}.backgroundColor`, themeData[`tile.${bgType}.${status}.level${surfaceLevel}.backgroundColor`]);
+    console.log(`tile.${background}.${status}.level${surfaceLevel}.backgroundColor`, themeData[`tile.${background}.${status}.level${surfaceLevel}.backgroundColor`]);
     return {
-      backgroundColor: themeData[`tile.${bgType}.${status}.level${surfaceLevel}.backgroundColor`],
+      backgroundColor: themeData[`tile.${background}.${status}.level${surfaceLevel}.backgroundColor`],
       boxShadow: isFocus ? `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}` : 'none',
     }
   }
@@ -77,8 +77,8 @@ export default function stylesheet(props, themeData, metadata) {
   const getNotificationHorizontal = () => ({ left: '-5px' });
   const getSelectionOptionsHorizontal = () => ({ top: '22px' });
   const getTileContentPadding = () => {
-    // const marginLeft = bgType === "filled" ? themeData["tile.thumbnail.marginRight"] : 0;
-    const verticalPadding = bgType === "empty"
+    // const marginLeft = background === "filled" ? themeData["tile.thumbnail.marginRight"] : 0;
+    const verticalPadding = background === "empty"
       ? `0 ${themeData["tile.padding"]} ${themeData["tile.padding"]}`
       : themeData["tile.padding"];
   
@@ -96,12 +96,12 @@ export default function stylesheet(props, themeData, metadata) {
 
   return {
     higTileContainer: {
-      backgroundColor: themeData[`tile.${bgType}.default.level${surfaceLevel}.backgroundColor`],
+      backgroundColor: themeData[`tile.${background}.default.level${surfaceLevel}.backgroundColor`],
       position: 'relative',
       boxSizing: 'border-box',
-      display: 'flex',
+      display: 'inline-flex',
       flexDirection: isColumn ? 'column' : 'row',
-      width: '100%',
+      // width: '100%',
       // minWidth: isColumn ? 'none' : '233px',
       outline: `${themeData["tile.borderWidth"]} solid transparent`,
       cursor: 'pointer',
@@ -190,7 +190,7 @@ export default function stylesheet(props, themeData, metadata) {
       boxSizing: 'border-box',
       position: 'relative',
       padding: getTileContentPadding(),
-      width: '100%',
+      // width: '100%',
     },
     higTileTitleContainer: {
       display: 'flex',
