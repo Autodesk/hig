@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import accountImage from "@hig/storybook/storybook-support/fixtures/account/dam.png";
-import projectImage from "@hig/storybook/storybook-support/fixtures/project/architecture.png";
+import accountImage from "@weave-design/storybook/storybook-support/fixtures/account/dam.png";
+import projectImage from "@weave-design/storybook/storybook-support/fixtures/project/architecture.png";
 
 import ProjectAccountSwitcher from "../ProjectAccountSwitcher";
 

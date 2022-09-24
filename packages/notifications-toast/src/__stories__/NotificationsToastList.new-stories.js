@@ -1,7 +1,7 @@
 import React from "react";
 import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
 import Avatar from "@hig/avatar";
-import avatar from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
+import avatar from "@weave-design/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 
 import NotificationsToast, { NotificationsToastList } from "../index";
 import { AVAILABLE_PLACEMENTS } from "../NotificationsToastList/index";

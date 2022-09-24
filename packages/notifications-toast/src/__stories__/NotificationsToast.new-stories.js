@@ -1,8 +1,8 @@
 import React from "react";
 import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
 import Avatar from "@hig/avatar";
-import avatar from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
-import greenhouseThumbnail from "@hig/storybook/storybook-support/fixtures/thumbnail/greenhouse.png";
+import avatar from "@weave-design/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
+import greenhouseThumbnail from "@weave-design/storybook/storybook-support/fixtures/thumbnail/greenhouse.png";
 
 import { css } from "emotion";
 import NotificationsToast from "../index";

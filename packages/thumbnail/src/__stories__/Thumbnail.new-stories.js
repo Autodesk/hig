@@ -1,6 +1,6 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
-import thumbnailImagePath from "@hig/storybook/storybook-support/fixtures/thumbnail/thumbnail-placeholder-02.jpg";
+import thumbnailImagePath from "@weave-design/storybook/storybook-support/fixtures/thumbnail/thumbnail-placeholder-02.jpg";
 
 import Thumbnail from "../index";
 import Readme from "../../README.md";

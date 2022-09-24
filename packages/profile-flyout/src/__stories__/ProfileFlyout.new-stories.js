@@ -1,6 +1,6 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
-import avatarImagePath from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
+import avatarImagePath from "@weave-design/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 
 import ProfileFlyout, { ProfileContent } from "../index";
 import Readme from "../../README.md";

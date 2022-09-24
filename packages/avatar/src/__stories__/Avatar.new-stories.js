@@ -1,7 +1,7 @@
 import React from "react";
 import { css } from "emotion";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
-import avatarImagePath from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
+import avatarImagePath from "@weave-design/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 
 import Avatar from "../index";
 import { sizes } from "../sizes";

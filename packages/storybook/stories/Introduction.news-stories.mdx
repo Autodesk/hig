@@ -1,0 +1,224 @@
+import { Meta } from '@storybook/addon-docs';
+import Typography from '@hig/typography';
+import Button from '@hig/button';
+import Surface from '@hig/surface';
+import TextLink from '@hig/text-link';
+import HThreeTextLink from './components/HThreeTextLink';
+import DarkSurface from './components/DarkSurface';
+import Hero from './static/hero_image.png';
+import DesignersImg from './static/designers.svg';
+import DevelopersImg from './static/developers.svg';
+import SampleApp from './static/sample-app-in-motion.png';
+import Contribute from './static/contribute.png';
+
+<Meta
+  title="Welcome to Weave"
+  parameters={{
+    previewTabs: { 
+      canvas: { hidden: true },
+      'storybook/docs/panel': { hidden: true }
+    },
+  }}
+/>
+
+<style>{`
+  .hero-wrapper {
+    position: relative;
+  }
+  .headline-wrapper {
+    left: 66px;
+    position: absolute;
+    top: 107px;
+    width: 582px;
+  }
+  .headline-wrapper * {
+    color: #fff;
+    font-size: 30px;
+  }
+  .headline-wrapper span {
+    font-weight: 700
+  }
+  .audience-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 58px 0 0;
+    padding: 0;
+  }
+  .audience-wrapper > li {
+    flex: 0 0 275px;
+    text-align: center;
+  }
+  .audience-wrapper img {
+    border: 1px solid blue;
+  }
+  .audience-wrapper h2 {
+    margin: 25px 0 16px;
+    text-align: center;
+  }
+  .audience-wrapper p {
+    margin: 0 0 20px;
+    text-align: center;
+  }
+  .audience-info-wrapper h3 {
+    margin: 60px 0;
+    text-align: center;
+  }
+  .news-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 66px;
+  }
+  .news-wrapper > * {
+    flex: 0 0 246px;
+  }
+  .news-wrapper h2 {
+    margin: 0 0 16px;
+  }
+  .news-wrapper h3 {
+    padding: 5px 0 0;
+  }
+  .body-heading {
+    font-weight: 700;
+    margin: 20px 0 0;
+  }
+  .news-wrapper button {
+    margin: 20px 0 0;
+  }
+  .sample-app-section-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    padding: 56px 66px;
+  }
+  .sample-app-section-wrapper button {
+    margin: 0 0 10px;
+    width: 210px;
+  }
+  .sample-app-info-wrapper {
+    box-sizing: border-box;
+    padding: 34px 0 0 50px;
+  }
+  .sample-app-info-wrapper p {
+    margin: 16px 0;
+  }
+  .contribute-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 66px;
+  }
+  .contribute-wrapper p {
+    box-sizing: border-box;
+    margin: 16px 0;
+    padding: 0 60px 0 0;
+  }
+  .weave-footer h3 {
+    font-weight: 400;
+  }
+  .weave-footer-content-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 44px 66px;
+  }
+  .weave-footer-content-wrapper li {
+    height: 40px;
+  }
+`}</style>
+
+<iframe src="http://hig-sample-layouts.surge.sh/"></iframe>
+<div className="hero-wrapper">
+  <img src={Hero} />
+  <div className="headline-wrapper">
+    <Typography><Typography elementType="span">Weave is Autodesk’s design system,</Typography> providing the tools teams need to create and build cohesive product experiences.</Typography>
+  </div>
+</div>
+<div className="audience-info-wrapper">
+  <ul className="audience-wrapper">
+    <li>
+      <DesignersImg />
+      <Typography variant="h1" elementType="h2">Designers</Typography>
+      <Typography>Aenean ultrices, enim id condimentum gravida, felis lacus dapibus arcu, nec eleifend dolor lacus eget massa.</Typography>
+      <Button>Figma toolkit</Button>
+    </li>
+    <li>
+      <DevelopersImg />
+      <Typography variant="h1" elementType="h2">Developers</Typography>
+      <Typography>Duis nec tempor sem. Ut justo purus, feugiat in vulputate nec, ultricies euismod ex.</Typography>
+      <Button>React components</Button>
+    </li>
+  </ul>
+  <Typography variant="h3">New to Weave? Not sure where to begin?{' '}
+    <HThreeTextLink link="https://github.com/Autodesk/hig">Start Here!</HThreeTextLink>
+  </Typography>
+</div>
+<Surface level={200}>
+  <div className="news-wrapper">
+    <div>
+      <Typography variant="h1" elementType="h2">What we’re up to</Typography>
+      <Typography>The Weave team is constantly making updates to the system. And, we always have more ahead! Here’s what we’ve been working on and what’s on the horizon.</Typography>
+    </div>
+    <div>
+      <Typography variant="h3">What's new</Typography>
+      <Typography className="body-heading">Annotations & Diagrams</Typography>
+      <TextLink link="https://github.com/Autodesk/hig">See design guidelines</TextLink><br />
+      <TextLink link="https://github.com/Autodesk/hig">Use the Figma components</TextLink>
+      <Typography className="body-heading">Search</Typography>
+      <TextLink link="https://github.com/Autodesk/hig">See design guidelines</TextLink><br />
+      <TextLink link="https://github.com/Autodesk/hig">Use the Figma components</TextLink>
+      <Button type="secondary">See more</Button>
+    </div>
+    <div>
+      <Typography variant="h3">Coming soon</Typography>
+      <Typography className="body-heading">Refreshed tooltips</Typography>
+      <Typography>Target date: mid Q3</Typography>
+      <Typography className="body-heading">Tiles: Complex variants</Typography>
+      <Typography>Target date: mid Q3</Typography>
+      <Typography className="body-heading">Global header</Typography>
+      <Typography>Target date: end of Q3 (phase 1)</Typography>
+      <Button type="secondary">See more</Button>
+    </div>
+  </div>
+</Surface>
+<div className="sample-app-section-wrapper">
+  <img src={SampleApp} />
+  <div className="sample-app-info-wrapper">
+    <Typography variant="h1" elementType="h2">Weave in action</Typography>
+    <Typography>Aenean ultrices, enim id condimentum gravida, felis lacus dapibus arcu, nec eleifend dolor lacus eget massa.</Typography>
+    <Button type="secondary">Check out the sample app</Button>
+    <Button type="secondary">Explore the Showcase</Button>
+  </div>
+</div>
+<Surface level={200}>
+  <div className="contribute-wrapper">
+    <div>
+      <Typography variant="h1" elementType="h2">Contribute to Weave</Typography>
+      <Typography>Help us evolve and grow the design system so it’s the best that it can be. Find out what it takes to contribute to Weave, from the smallest update to a full-blown experience. Get started below, or reach out to us with questions -- we’d love to hear from you!</Typography>
+    </div>
+    <img src={Contribute} />
+  </div>
+</Surface>
+<footer className="weave-footer">
+  <DarkSurface level={250}>
+    <ul className="weave-footer-content-wrapper">
+      <li>
+        <Typography variant="h3">Get in touch!</Typography>
+      </li>
+      <li>
+        <Typography className="body-heading">General questions?</Typography>
+        <TextLink link="https://github.com/Autodesk/hig">#weave</TextLink>
+      </li>
+      <li>
+        <Typography className="body-heading">Code questions?</Typography>
+        <TextLink link="https://github.com/Autodesk/hig">#weave-dev</TextLink>
+      </li>
+      <li>
+        <Typography className="body-heading">Fancy a longer chat?</Typography>
+        <TextLink link="https://github.com/Autodesk/hig">weave@autodesk.com</TextLink>
+      </li>
+    </ul>
+  </DarkSurface>
+</footer>

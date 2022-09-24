@@ -3,8 +3,8 @@ import React from "react";
 import Avatar, { sizes } from "@hig/avatar";
 import TextLink from "@hig/text-link";
 import Timestamp from "@hig/timestamp";
-import avatarImagePath from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
-import thumbnailImagePath from "@hig/storybook/storybook-support/fixtures/thumbnail/greenhouse.png";
+import avatarImagePath from "@weave-design/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
+import thumbnailImagePath from "@weave-design/storybook/storybook-support/fixtures/thumbnail/greenhouse.png";
 
 import ImagePresenter from "../presenters/ImagePresenter";
 
