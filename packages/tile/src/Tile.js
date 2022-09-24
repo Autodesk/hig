@@ -1,16 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ControlBehavior } from "@hig/behaviors";
+
 import TilePresenter from "./presenters/TilePresenter";
+import {
+  AVAILABLE_BACKGROUNDS,
+  AVAILABLE_LEVELS,
+  AVAILABLE_ORIENTATIONS,
+} from "./constants";
 
 const Tile = (props) => {
   const {
-    media,
     background,
+    contentWidth,
+    disabled,
     divider,
-    title,
-    subtitle,
+    media,
     orientation,
+    selected,
+    stylesheet: customStylesheet,
+    subtitle,
+    surface,
+    title,
     // version,
     // identifier,
     // statusAndActionIcons,
@@ -23,18 +34,18 @@ const Tile = (props) => {
     // showCheckbox,
     // pinIcon,
     // showPin,
-    surface,
-    disabled,
+    ...otherProps
+  } = props;
+  const {
     onBlur,
     onClick,
     onFocus,
-    onHover,
     onMouseDown,
     onMouseEnter,
     onMouseLeave,
     onMouseUp,
-    selected,
-  } = props;
+  } = otherProps;
+
   return (
     <ControlBehavior
       onBlur={onBlur}
@@ -56,12 +67,20 @@ const Tile = (props) => {
         onMouseUp: handleMouseUp,
       }) => (
         <TilePresenter
-          media={media}
           background={background}
+          contentWidth={contentWidth}
+          disabled={disabled}
           divider={divider}
-          title={title}
-          subtitle={subtitle}
+          hasFocus={hasFocus}
+          hasHover={hasHover}
+          isPressed={isPressed}
+          media={media}
           orientation={orientation}
+          selected={selected}
+          stylesheet={customStylesheet}
+          subtitle={subtitle}
+          surface={surface}
+          title={title}
           // version={version}
           // identifier={identifier}
           // statusAndActionIcons={statusAndActionIcons}
@@ -74,20 +93,13 @@ const Tile = (props) => {
           // showCheckbox={showCheckbox}
           // pinIcon={pinIcon}
           // showPin={showPin}
-          surface={surface}
-          disabled={disabled}
-          hasFocus={hasFocus}
-          hasHover={hasHover}
-          isPressed={isPressed}
           onBlur={handleBlur}
           onClick={onClick}
           onFocus={handleFocus}
-          onHover={onHover}
           onMouseDown={handleMouseDown}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
           onMouseUp={handleMouseUp}
-          selected={selected}
         />
       )}
     </ControlBehavior>
@@ -95,12 +107,28 @@ const Tile = (props) => {
 };
 
 Tile.propTypes = {
+  /** background */
+  background: PropTypes.oneOf(AVAILABLE_BACKGROUNDS),
+  /** contentWidth */
+  contentWidth: PropTypes.string,
   /** disabled */
   disabled: PropTypes.bool,
   /** divider */
   divider: PropTypes.bool,
+  /** media */
+  media: PropTypes.node,
+  /** orientation */
+  orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
   /** selected */
   selected: PropTypes.bool,
+  /** stylesheet */
+  stylesheet: PropTypes.func,
+  /** subtitle */
+  subtitle: PropTypes.string,
+  /** surface */
+  surface: PropTypes.oneOf(AVAILABLE_LEVELS),
+  /** title */
+  title: PropTypes.string,
 };
 
 export default Tile;

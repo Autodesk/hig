@@ -3,8 +3,11 @@ import { ArgsTable, Primary } from "@storybook/addon-docs";
 import Surface from "@hig/surface";
 import Thumbnail from "@hig/thumbnail";
 
-import Tile from "../index";
-// import { availableTargets } from "../targets";
+import Tile, {
+  AVAILABLE_BACKGROUNDS,
+  AVAILABLE_LEVELS,
+  AVAILABLE_ORIENTATIONS,
+} from "../index";
 import Readme from "../../README.md";
 
 const Media = ({ orientation }) => {
@@ -19,7 +22,7 @@ const Media = ({ orientation }) => {
       },
     },
   });
-  console.log("media");
+
   return (
     <Thumbnail
       aspectRatio={aspectRatio}
@@ -36,20 +39,20 @@ export default {
   component: Tile,
   argTypes: {
     orientation: {
-      options: ["horizontal", "vertical"],
+      options: AVAILABLE_ORIENTATIONS,
       control: "select",
     },
     background: {
-      options: ["empty", "filled"],
+      options: AVAILABLE_BACKGROUNDS,
       control: "select",
     },
     surface: {
-      options: [100, 200, 250, 300, 350],
+      options: AVAILABLE_LEVELS,
       control: "select",
     },
-    // children: {
-    //   control: "text",
-    // },
+    media: {
+      control: false,
+    },
   },
   parameters: {
     docs: {
@@ -64,7 +67,7 @@ export default {
   },
 };
 
-const Template = (args, context) => {
+const Template = (args) => {
   const surfaceStylesheet = (styles) => ({
     ...styles,
     surface: {
@@ -88,6 +91,4 @@ Default.args = {
   subtitle: "Subtitle",
   surface: 100,
   title: "Title",
-  // children: "This is a primary text link",
-  // link: "https://github.com/Autodesk/hig",
 };

@@ -1,14 +1,19 @@
-/* eslint-disable */
-
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
+import {
+  AVAILABLE_BACKGROUNDS,
+  AVAILABLE_LEVELS,
+  AVAILABLE_ORIENTATIONS,
+} from "../constants";
 import stylesheet from "./stylesheet";
 
-const TilePresenter = props => {
+const TilePresenter = (props) => {
   const {
     background,
+    contentWidth,
     disabled,
     divider,
     hasFocus,
@@ -17,6 +22,7 @@ const TilePresenter = props => {
     media,
     orientation,
     selected,
+    stylesheet: customStylesheet,
     surface,
     title,
     subtitle,
@@ -30,6 +36,9 @@ const TilePresenter = props => {
     // showCheckbox,
     // showPin,
     // surface,
+    ...otherProps
+  } = props;
+  const {
     onBlur,
     onClick,
     onFocus,
@@ -37,7 +46,7 @@ const TilePresenter = props => {
     onMouseEnter,
     onMouseLeave,
     onMouseUp,
-  } = props;
+  } = otherProps;
 
   // const handleClickCTA = action => {
   //   action();
@@ -49,6 +58,7 @@ const TilePresenter = props => {
         const styles = stylesheet(
           {
             background,
+            contentWidth,
             disabled,
             divider,
             hasFocus,
@@ -56,22 +66,29 @@ const TilePresenter = props => {
             isPressed,
             orientation,
             selected,
+            stylesheet: customStylesheet,
             surface,
           },
           resolvedRoles,
           metadata
         );
+
         return (
+          // there is not a suitable interactive role for this component
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
           <div
+            {...otherProps}
             className={css(styles.higTileContainer)}
-            tabIndex={0}
-            onFocus={onFocus}
             onBlur={onBlur}
+            onClick={onClick}
+            onFocus={onFocus}
+            onMouseDown={onMouseDown}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            onMouseDown={onMouseDown}
             onMouseUp={onMouseUp}
-            onClick={onClick}
+            role="listitem"
+            // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+            tabIndex={0}
             // onClick={cta ? () => handleClickCTA(cta?.action) : onClick}
           >
             {/* {notification && 
@@ -103,8 +120,8 @@ const TilePresenter = props => {
             </div> */}
             <div className={css(styles.higMediaContainer)}>
               {/* <div className={css(styles.higTileHeaderContainer)}> */}
-                {media}
-                {/* {actionClarifier && (
+              {media}
+              {/* {actionClarifier && (
                   <div className={css(styles.higTileActionClarifier)}>
                     <div className={css(styles.higTileActionClarifierButton)}>
                       <Button title={actionClarifier} />
@@ -115,7 +132,7 @@ const TilePresenter = props => {
             </div>
 
             <div className={css(styles.higTileContentContainer)}>
-              {/*identifier && 
+              {/* identifier && 
                 <div className={css(styles.higTileIdentifierContainer)}>
                   <div className={css(styles.higTileIdentifierIcon)}>{identifier}</div>
                 </div>
@@ -156,12 +173,29 @@ const TilePresenter = props => {
                   </div>
                 </div>
               } */}
-            </div> 
+            </div>
           </div>
-        )
+        );
       }}
     </ThemeContext.Consumer>
-  )
-}
+  );
+};
+
+TilePresenter.propTypes = {
+  background: PropTypes.oneOf(AVAILABLE_BACKGROUNDS),
+  contentWidth: PropTypes.string,
+  disabled: PropTypes.bool,
+  divider: PropTypes.bool,
+  hasFocus: PropTypes.bool,
+  hasHover: PropTypes.bool,
+  isPressed: PropTypes.bool,
+  media: PropTypes.node,
+  orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
+  selected: PropTypes.bool,
+  stylesheet: PropTypes.func,
+  subtitle: PropTypes.string,
+  surface: PropTypes.oneOf(AVAILABLE_LEVELS),
+  title: PropTypes.string,
+};
 
 export default TilePresenter;

@@ -1,85 +1,91 @@
-/* eslint-disable */
-
-export default function stylesheet(props, themeData, metadata) {
+export default function stylesheet(props, themeData, themeMeta) {
   const {
-    orientation,
     background,
+    contentWidth,
+    disabled,
     divider,
+    orientation,
     // identifier,
     hasFocus,
     hasHover,
     isPressed,
-    surface,
-    disabled,
     selected,
+    stylesheet: customStylesheet,
+    surface,
   } = props;
-  const surfaceLevel = Number(surface) < 300 ? '100To250' : '300To350';
+  const surfaceLevel = Number(surface) < 300 ? "100To250" : "300To350";
   // const background = background === 'solid' ? 'filled' : 'empty';
-  const isColumn = orientation === 'vertical';
-  const isHorizontal = orientation === 'horizontal';
-  
-  const isMediumDensity = metadata.densityId === `medium-density`;
+  const isColumn = orientation === "vertical";
+  const isHorizontal = orientation === "horizontal";
 
-  const getStylesByStatus = (status, selected) => {
-    const isFocus = status === 'focus';
-    const color = selected
-      ? themeData[`tile.selected.${status}.borderColor`]
-      : themeData[`tile.${background}.${status}.level${surfaceLevel}.borderColor`];
-    const borderWidth = themeData['tile.borderWidth'];
+  // const isMediumDensity = themeMeta.densityId === `medium-density`;
+
+  const getStylesByStatus = (status) => {
+    const isFocus = status === "focus";
+    // const color = selected
+    //   ? themeData[`tile.selected.${status}.borderColor`]
+    //   : themeData[`tile.${background}.${status}.level${surfaceLevel}.borderColor`];
+    // const borderWidth = themeData['tile.borderWidth'];
     if (selected) {
       return {
         background: themeData[`tile.selected.${status}.backgroundColor`],
         outlineColor: themeData["tile.selected.default.borderColor"],
-        boxShadow: isFocus ? `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}` : 'none',
+        boxShadow: isFocus
+          ? `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}`
+          : "none",
       };
     }
     return {
-      backgroundColor: themeData[`tile.${background}.${status}.level${surfaceLevel}.backgroundColor`],
-      boxShadow: isFocus ? `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}` : 'none',
-    }
-  }
+      backgroundColor:
+        themeData[
+          `tile.${background}.${status}.level${surfaceLevel}.backgroundColor`
+        ],
+      boxShadow: isFocus
+        ? `0 0 0 ${themeData["tile.haloWidth"]} ${themeData["tile.focus.haloColor"]}`
+        : "none",
+    };
+  };
 
-  const getStylesBySelected = (selected) => {
+  const getStylesBySelected = () => {
     if (selected) {
       return {
-        backgroundColor: themeData['tile.selected.default.backgroundColor'],
+        backgroundColor: themeData["tile.selected.default.backgroundColor"],
         outlineColor: themeData["tile.selected.default.borderColor"],
       };
     }
     return {};
   };
 
-  const getStylesByDisabled = () => {
-    return {
-      opacity: themeData["colorScheme.opacity.disabled"],
-      pointerEvents: 'none',
-    }
-  }
+  const getStylesByDisabled = () => ({
+    opacity: themeData["colorScheme.opacity.disabled"],
+    pointerEvents: "none",
+  });
 
   const getDivider = () => {
     const dividerStyle = `${themeData["divider.borderWidth"]} solid ${themeData["divider.lightColor"]}`;
     if (isHorizontal) {
       return {
-        borderRight: dividerStyle
-      }
+        borderRight: dividerStyle,
+      };
     }
     return {
-      borderBottom: dividerStyle
-    }
-  }
+      borderBottom: dividerStyle,
+    };
+  };
 
-  const getIdentifierHorizontal = () => {
-    const topPlacement = themeData['density.spacings.medium'];
-    return { top: `${topPlacement}`, left: '-18px' };
-  }
-  const getNotificationHorizontal = () => ({ left: '-5px' });
-  const getSelectionOptionsHorizontal = () => ({ top: '22px' });
+  // const getIdentifierHorizontal = () => {
+  //   const topPlacement = themeData['density.spacings.medium'];
+  //   return { top: `${topPlacement}`, left: '-18px' };
+  // }
+  // const getNotificationHorizontal = () => ({ left: '-5px' });
+  // const getSelectionOptionsHorizontal = () => ({ top: '22px' });
   const getTileContentPadding = () => {
     // const marginLeft = background === "filled" ? themeData["tile.thumbnail.marginRight"] : 0;
-    const verticalPadding = background === "empty"
-      ? `0 ${themeData["tile.padding"]} ${themeData["tile.padding"]}`
-      : themeData["tile.padding"];
-  
+    const verticalPadding =
+      background === "empty"
+        ? `0 ${themeData["tile.padding"]} ${themeData["tile.padding"]}`
+        : themeData["tile.padding"];
+
     // if (identifier) {
     //   return isHorizontal ? `12px 12px 12px calc(24px - ${marginLeft}px)` : verticalPadding;
     // }
@@ -87,32 +93,36 @@ export default function stylesheet(props, themeData, metadata) {
     return isHorizontal
       ? `${themeData["tile.padding"]} ${themeData["tile.padding"]} ${themeData["tile.padding"]} ${themeData["tile.thumbnail.marginRight"]}`
       : verticalPadding;
-  }
-  const getTileHeaderFlatPadding = () => isHorizontal
-    ? `${themeData["tile.padding"]} ${themeData["tile.thumbnail.marginRight"]} ${themeData["tile.padding"]} ${themeData["tile.padding"]}`
-    : themeData["tile.padding"];
+  };
+  const getTileHeaderFlatPadding = () =>
+    isHorizontal
+      ? `${themeData["tile.padding"]} ${themeData["tile.thumbnail.marginRight"]} ${themeData["tile.padding"]} ${themeData["tile.padding"]}`
+      : themeData["tile.padding"];
 
-  return {
+  const styles = {
     higTileContainer: {
-      backgroundColor: themeData[`tile.${background}.default.level${surfaceLevel}.backgroundColor`],
-      position: 'relative',
-      boxSizing: 'border-box',
-      display: 'inline-flex',
-      flexDirection: isColumn ? 'column' : 'row',
+      backgroundColor:
+        themeData[
+          `tile.${background}.default.level${surfaceLevel}.backgroundColor`
+        ],
+      position: "relative",
+      boxSizing: "border-box",
+      display: "inline-flex",
+      flexDirection: isColumn ? "column" : "row",
       // width: '100%',
       // minWidth: isColumn ? 'none' : '233px',
       outline: `${themeData["tile.borderWidth"]} solid transparent`,
-      cursor: 'pointer',
+      cursor: "pointer",
       color: themeData["tile.fontColor"],
       fontFamily: themeData["tile.fontFamily"],
       transitionProperty: "background-color, box-shadow, opacity, outline",
       transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
       transitionDuration: "0.3s",
-      ...(getStylesBySelected(selected)),
-      ...(hasFocus ? getStylesByStatus('focus', selected) : {}),
-      ...(hasHover ? getStylesByStatus('hover', selected) : {}),
-      ...(isPressed ? getStylesByStatus('pressed', selected) : {}),
-      ...(disabled ? getStylesByDisabled() : {})
+      ...getStylesBySelected(),
+      ...(hasFocus ? getStylesByStatus("focus") : {}),
+      ...(hasHover ? getStylesByStatus("hover") : {}),
+      ...(isPressed ? getStylesByStatus("pressed") : {}),
+      ...(disabled ? getStylesByDisabled() : {}),
     },
     // higTileNotifications: {
     //   position: 'absolute',
@@ -141,12 +151,12 @@ export default function stylesheet(props, themeData, metadata) {
     // },
     higMediaContainer: {
       boxSizing: "border-box",
-      flex: '0 0 auto',
-      position: 'relative',
-      margin: '0',
-      padding: background === 'filled' ? '0' : getTileHeaderFlatPadding(),
-      overflow: 'hidden',
-      ...(divider && background === 'filled' ? getDivider() : {})
+      flex: "0 0 auto",
+      position: "relative",
+      margin: "0",
+      padding: background === "filled" ? "0" : getTileHeaderFlatPadding(),
+      overflow: "hidden",
+      ...(divider && background === "filled" ? getDivider() : {}),
     },
     // higTileHeaderContainer: {
     //   overflow: 'hidden',
@@ -186,15 +196,16 @@ export default function stylesheet(props, themeData, metadata) {
     //   padding: isMediumDensity ? '2px 4px 0px 4px' : '4px 8px 0px 8px',
     // },
     higTileContentContainer: {
-      boxSizing: 'border-box',
-      position: 'relative',
+      boxSizing: "border-box",
+      position: "relative",
       padding: getTileContentPadding(),
+      ...(contentWidth ? { width: contentWidth } : {}),
       // width: '100%',
     },
     higTileTitleContainer: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
       marginTop: themeData["density.spacings.extraSmall"],
       marginBottom: themeData["tile.title.marginBottom"],
     },
@@ -202,6 +213,9 @@ export default function stylesheet(props, themeData, metadata) {
       fontSize: themeData["tile.title.fontSize"],
       fontWeight: themeData["tile.title.fontWeight"],
       lineHeight: themeData["tile.title.lineHeight"],
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
     },
     higTileSubTitle: {
       fontSize: themeData["tile.subTitle.fontSize"],
@@ -209,6 +223,9 @@ export default function stylesheet(props, themeData, metadata) {
       lineHeight: themeData["tile.subTitle.lineHeight"],
       // this should be conditional in the complex version, as bottom padding should be w/ last element
       marginBottom: themeData["density.spacings.extraSmall"],
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
     },
     // higTileOverflowMenu: {
     //   paddingRight: themeData["density.spacings.small"],
@@ -238,5 +255,9 @@ export default function stylesheet(props, themeData, metadata) {
     //   marginTop: themeData["density.spacings.extraSmall"],
     //   marginBottom: themeData["density.spacings.extraSmall"],
     // }
-  }
+  };
+
+  return customStylesheet
+    ? customStylesheet(styles, props, themeData, themeMeta)
+    : styles;
 }
