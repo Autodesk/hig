@@ -11,18 +11,18 @@ const Tile = (props) => {
     title,
     subtitle,
     orientation,
-    version,
+    // version,
     // identifier,
-    statusAndActionIcons,
-    notification,
-    tooltip,
-    overflowMenu,
-    cta,
-    actionClarifier,
-    checkbox,
-    showCheckbox,
-    pinIcon,
-    showPin,
+    // statusAndActionIcons,
+    // notification,
+    // tooltip,
+    // overflowMenu,
+    // cta,
+    // actionClarifier,
+    // checkbox,
+    // showCheckbox,
+    // pinIcon,
+    // showPin,
     surface,
     disabled,
     onBlur,
@@ -62,18 +62,18 @@ const Tile = (props) => {
           title={title}
           subtitle={subtitle}
           orientation={orientation}
-          version={version}
+          // version={version}
           // identifier={identifier}
-          statusAndActionIcons={statusAndActionIcons}
-          notification={notification}
-          tooltip={tooltip}
-          overflowMenu={overflowMenu}
-          cta={cta}
-          actionClarifier={actionClarifier}
-          checkbox={checkbox}
-          showCheckbox={showCheckbox}
-          pinIcon={pinIcon}
-          showPin={showPin}
+          // statusAndActionIcons={statusAndActionIcons}
+          // notification={notification}
+          // tooltip={tooltip}
+          // overflowMenu={overflowMenu}
+          // cta={cta}
+          // actionClarifier={actionClarifier}
+          // checkbox={checkbox}
+          // showCheckbox={showCheckbox}
+          // pinIcon={pinIcon}
+          // showPin={showPin}
           surface={surface}
           disabled={disabled}
           hasFocus={hasFocus}
@@ -95,6 +95,8 @@ const Tile = (props) => {
 };
 
 Tile.propTypes = {
+  /** disabled */
+  disabled: PropTypes.bool,
   /** divider */
   divider: PropTypes.bool,
   /** selected */

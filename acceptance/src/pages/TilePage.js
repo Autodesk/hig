@@ -318,7 +318,7 @@ function TilePage() {
         return (
           <>
             <Tile 
-              headerContainer={ImageHolder}
+              media={<ImageHolder />}
               background={background}
               divider={divider}
               title="Tile Title"

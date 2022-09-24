@@ -3,40 +3,40 @@
 import React from 'react';
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
-import Button from "@hig/button";
-import TextLink from "@hig/text-link";
-import IconButton from '@hig/icon-button';
-import Checkbox from '@hig/checkbox';
 
 import stylesheet from "./stylesheet";
 
 const TilePresenter = props => {
   const {
-    media,
-    title,
-    subtitle,
-    version,
-    // identifier,
-    statusAndActionIcons,
-    notification,
-    overflowMenu,
-    cta,
-    actionClarifier,
-    showCheckbox,
-    showPin,
-    surface,
+    background,
+    disabled,
+    divider,
     hasFocus,
     hasHover,
     isPressed,
+    media,
+    orientation,
+    selected,
+    surface,
+    title,
+    subtitle,
+    // version,
+    // identifier,
+    // statusAndActionIcons,
+    // notification,
+    // overflowMenu,
+    // cta,
+    // actionClarifier,
+    // showCheckbox,
+    // showPin,
+    // surface,
     onBlur,
     onClick,
     onFocus,
-    onHover,
     onMouseDown,
     onMouseEnter,
     onMouseLeave,
     onMouseUp,
-    selected,
   } = props;
 
   // const handleClickCTA = action => {
@@ -46,7 +46,21 @@ const TilePresenter = props => {
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
-        const styles = stylesheet(props, resolvedRoles, metadata);
+        const styles = stylesheet(
+          {
+            background,
+            disabled,
+            divider,
+            hasFocus,
+            hasHover,
+            isPressed,
+            orientation,
+            selected,
+            surface,
+          },
+          resolvedRoles,
+          metadata
+        );
         return (
           <div
             className={css(styles.higTileContainer)}
@@ -87,7 +101,7 @@ const TilePresenter = props => {
                 </div>
               )}
             </div> */}
-            <div className={css(styles.higTileHeader)}>
+            <div className={css(styles.higMediaContainer)}>
               {/* <div className={css(styles.higTileHeaderContainer)}> */}
                 {media}
                 {/* {actionClarifier && (
@@ -100,7 +114,7 @@ const TilePresenter = props => {
               {/* </div> */}
             </div>
 
-            <div className={css(styles.higTileContent)}>
+            <div className={css(styles.higTileContentContainer)}>
               {/*identifier && 
                 <div className={css(styles.higTileIdentifierContainer)}>
                   <div className={css(styles.higTileIdentifierIcon)}>{identifier}</div>

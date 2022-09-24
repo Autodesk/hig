@@ -5,7 +5,7 @@ export default function stylesheet(props, themeData, metadata) {
     orientation,
     background,
     divider,
-    identifier,
+    // identifier,
     hasFocus,
     hasHover,
     isPressed,
@@ -114,32 +114,32 @@ export default function stylesheet(props, themeData, metadata) {
       ...(isPressed ? getStylesByStatus('pressed', selected) : {}),
       ...(disabled ? getStylesByDisabled() : {})
     },
-    higTileNotifications: {
-      position: 'absolute',
-      zIndex: '3',
-      top: '-10px',
-      right: '-5px',
-      ...(isHorizontal ? getNotificationHorizontal() : {})
-    },
-    higTileNotificationBadge: {
+    // higTileNotifications: {
+    //   position: 'absolute',
+    //   zIndex: '3',
+    //   top: '-10px',
+    //   right: '-5px',
+    //   ...(isHorizontal ? getNotificationHorizontal() : {})
+    // },
+    // higTileNotificationBadge: {
 
-    },
-    higTileSelectionOptions: {
-      display: 'flex',
-      justifyContent: 'space-evenly',
-      position: 'absolute',
-      zIndex: '3',
-      top: '10px',
-      left: '10px',
-      ...(isHorizontal ? getSelectionOptionsHorizontal() : {})
-    },
-    higTileSelectionOptionCheckbox: {
-      padding: `0 ${themeData['density.spacings.extraExtraSmall']} 0 0`,
-    },
-    higTileSelectionOptionPin: {
+    // },
+    // higTileSelectionOptions: {
+    //   display: 'flex',
+    //   justifyContent: 'space-evenly',
+    //   position: 'absolute',
+    //   zIndex: '3',
+    //   top: '10px',
+    //   left: '10px',
+    //   ...(isHorizontal ? getSelectionOptionsHorizontal() : {})
+    // },
+    // higTileSelectionOptionCheckbox: {
+    //   padding: `0 ${themeData['density.spacings.extraExtraSmall']} 0 0`,
+    // },
+    // higTileSelectionOptionPin: {
 
-    },
-    higTileHeader: {
+    // },
+    higMediaContainer: {
       boxSizing: "border-box",
       flex: '0 0 auto',
       position: 'relative',
@@ -156,36 +156,36 @@ export default function stylesheet(props, themeData, metadata) {
     //   height: '100%',
     //   // backgroundColor: hasHover ? 'rgba(0, 0, 0, 0.5)' : 'none',
     // },
-    higTileActionClarifier: {
-      zIndex: '10',
-      display: hasHover ? 'block' : 'none',
-      position: 'absolute',
-      top: '50%',
-      left: '50%',
-      transform: 'translate(-50%, -50%)',
-    },
-    higTileActionClarifierButton: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      padding: `${themeData['density.spacings.extraExtraLarge']} 0`,
-    },
-    higTileIdentifierContainer: {
-      position: 'absolute',
-      zIndex: '3',
-      backgroundColor: 'white',
-      padding: '1px',
-      width: '30px',
-      top: `${isMediumDensity ? '-25px' : '-20px'}`,
-      left: '0px',
-      ...(isHorizontal ? getIdentifierHorizontal() : {})
-    },
-    higTileIdentifierIcon: {
-      width: '50px',
-      color: '#000',
-      padding: isMediumDensity ? '2px 4px 0px 4px' : '4px 8px 0px 8px',
-    },
-    higTileContent: {
+    // higTileActionClarifier: {
+    //   zIndex: '10',
+    //   display: hasHover ? 'block' : 'none',
+    //   position: 'absolute',
+    //   top: '50%',
+    //   left: '50%',
+    //   transform: 'translate(-50%, -50%)',
+    // },
+    // higTileActionClarifierButton: {
+    //   display: 'flex',
+    //   justifyContent: 'center',
+    //   alignItems: 'center',
+    //   padding: `${themeData['density.spacings.extraExtraLarge']} 0`,
+    // },
+    // higTileIdentifierContainer: {
+    //   position: 'absolute',
+    //   zIndex: '3',
+    //   backgroundColor: 'white',
+    //   padding: '1px',
+    //   width: '30px',
+    //   top: `${isMediumDensity ? '-25px' : '-20px'}`,
+    //   left: '0px',
+    //   ...(isHorizontal ? getIdentifierHorizontal() : {})
+    // },
+    // higTileIdentifierIcon: {
+    //   width: '50px',
+    //   color: '#000',
+    //   padding: isMediumDensity ? '2px 4px 0px 4px' : '4px 8px 0px 8px',
+    // },
+    higTileContentContainer: {
       boxSizing: 'border-box',
       position: 'relative',
       padding: getTileContentPadding(),
@@ -196,9 +196,7 @@ export default function stylesheet(props, themeData, metadata) {
       justifyContent: 'space-between',
       alignItems: 'center',
       marginTop: themeData["density.spacings.extraSmall"],
-      marginBottom: themeData["density.spacings.extraExtraSmall"],
-      // uncomment this when theme-data has been updated
-      // marginBottom: themeData["tile.title.marginBottom"],
+      marginBottom: themeData["tile.title.marginBottom"],
     },
     higTileTitle: {
       fontSize: themeData["tile.title.fontSize"],
@@ -212,33 +210,33 @@ export default function stylesheet(props, themeData, metadata) {
       // this should be conditional in the complex version, as bottom padding should be w/ last element
       marginBottom: themeData["density.spacings.extraSmall"],
     },
-    higTileOverflowMenu: {
-      paddingRight: themeData["density.spacings.small"],
-    },
-    higTileAdditionalContent: {
-      padding: `${themeData["density.spacings.extraExtraSmall"]}`,
-    },
-    higGroupIcons: {
-      display: 'flex',
-      alignItems: 'center',
-      paddingTop: themeData["density.spacings.small"],
-      "> div": {
-        alignItems: "center",
-        display: "flex",
-        minHeight: isMediumDensity ? '36px' : '24px',
-        minWidth: isMediumDensity ? '36px' : '24px',
-      }
-    },
-    higGroupIconItem: {
-      // paddingRight: themeData['tile.padding'],
-    },
-    higVersionHolder: {
-      marginTop: themeData["density.spacings.extraSmall"],
-    },
-    higTileCTAHolder: {
-      zIndex: '10',
-      marginTop: themeData["density.spacings.extraSmall"],
-      marginBottom: themeData["density.spacings.extraSmall"],
-    }
+    // higTileOverflowMenu: {
+    //   paddingRight: themeData["density.spacings.small"],
+    // },
+    // higTileAdditionalContent: {
+    //   padding: `${themeData["density.spacings.extraExtraSmall"]}`,
+    // },
+    // higGroupIcons: {
+    //   display: 'flex',
+    //   alignItems: 'center',
+    //   paddingTop: themeData["density.spacings.small"],
+    //   "> div": {
+    //     alignItems: "center",
+    //     display: "flex",
+    //     minHeight: isMediumDensity ? '36px' : '24px',
+    //     minWidth: isMediumDensity ? '36px' : '24px',
+    //   }
+    // },
+    // higGroupIconItem: {
+    //   // paddingRight: themeData['tile.padding'],
+    // },
+    // higVersionHolder: {
+    //   marginTop: themeData["density.spacings.extraSmall"],
+    // },
+    // higTileCTAHolder: {
+    //   zIndex: '10',
+    //   marginTop: themeData["density.spacings.extraSmall"],
+    //   marginBottom: themeData["density.spacings.extraSmall"],
+    // }
   }
 }
