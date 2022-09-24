@@ -117,7 +117,7 @@ Tile.propTypes = {
   /** Shows a divider between the image and content */
   divider: PropTypes.bool,
   /** The media associated with the Tile */
-  media: PropTypes.node,
+  media: PropTypes.node.isRequired,
   /** Sets the orientation of the Tile */
   orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
   /** Sets the selected state of the Tile */
@@ -129,7 +129,7 @@ Tile.propTypes = {
   /** The surface level that the Tile sits on top of */
   surface: PropTypes.oneOf(AVAILABLE_LEVELS),
   /** The title in the content section */
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
 };
 
 export default Tile;

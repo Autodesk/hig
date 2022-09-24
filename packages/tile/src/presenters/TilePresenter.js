@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { css } from "emotion";
+import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
+import { createCustomClassNames } from "@hig/utils";
 
 import {
   AVAILABLE_BACKGROUNDS,
@@ -39,6 +40,7 @@ const TilePresenter = (props) => {
     ...otherProps
   } = props;
   const {
+    className,
     onBlur,
     // onClick,
     onFocus,
@@ -51,6 +53,20 @@ const TilePresenter = (props) => {
   // const handleClickCTA = action => {
   //   action();
   // };
+  const mediaContainerClassName = createCustomClassNames(
+    className,
+    "media-container"
+  );
+  const contentContainerClassName = createCustomClassNames(
+    className,
+    "content-container"
+  );
+  const titleContainerClassName = createCustomClassNames(
+    className,
+    "title-container"
+  );
+  const titleClassName = createCustomClassNames(className, "title");
+  const subtitleClassName = createCustomClassNames(className, "subtitle");
 
   return (
     <ThemeContext.Consumer>
@@ -78,7 +94,7 @@ const TilePresenter = (props) => {
           // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
           <div
             {...otherProps}
-            className={css(styles.higTileContainer)}
+            className={cx([className, css(styles.higTileContainer)])}
             onBlur={onBlur}
             // onClick={onClick}
             onFocus={onFocus}
@@ -118,7 +134,12 @@ const TilePresenter = (props) => {
                 </div>
               )}
             </div> */}
-            <div className={css(styles.higMediaContainer)}>
+            <div
+              className={cx([
+                mediaContainerClassName,
+                css(styles.higMediaContainer),
+              ])}
+            >
               {/* <div className={css(styles.higTileHeaderContainer)}> */}
               {media}
               {/* {actionClarifier && (
@@ -131,17 +152,33 @@ const TilePresenter = (props) => {
               {/* </div> */}
             </div>
 
-            <div className={css(styles.higTileContentContainer)}>
+            <div
+              className={cx([
+                contentContainerClassName,
+                css(styles.higTileContentContainer),
+              ])}
+            >
               {/* identifier && 
                 <div className={css(styles.higTileIdentifierContainer)}>
                   <div className={css(styles.higTileIdentifierIcon)}>{identifier}</div>
                 </div>
               */}
-              <div className={css(styles.higTileTitleContainer)}>
-                <div className={css(styles.higTileTitle)}>{title}</div>
+              <div
+                className={cx([
+                  titleContainerClassName,
+                  css(styles.higTileTitleContainer),
+                ])}
+              >
+                <div className={cx([titleClassName, css(styles.higTileTitle)])}>
+                  {title}
+                </div>
                 {/* {overflowMenu && <div className={css(styles.higTileOverflowMenu)}>{overflowMenu}</div>} */}
               </div>
-              <div className={css(styles.higTileSubTitle)}>{subtitle}</div>
+              <div
+                className={cx([subtitleClassName, css(styles.higTileSubTitle)])}
+              >
+                {subtitle}
+              </div>
 
               {/* <div className={css(styles.higTileAdditionalContent)}>
                 {version && <div className={css(styles.higVersionHolder)}>{version}</div>}
