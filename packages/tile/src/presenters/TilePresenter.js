@@ -40,7 +40,7 @@ const TilePresenter = (props) => {
   } = props;
   const {
     onBlur,
-    onClick,
+    // onClick,
     onFocus,
     onMouseDown,
     onMouseEnter,
@@ -80,7 +80,7 @@ const TilePresenter = (props) => {
             {...otherProps}
             className={css(styles.higTileContainer)}
             onBlur={onBlur}
-            onClick={onClick}
+            // onClick={onClick}
             onFocus={onFocus}
             onMouseDown={onMouseDown}
             onMouseEnter={onMouseEnter}

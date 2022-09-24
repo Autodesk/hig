@@ -38,7 +38,7 @@ const Tile = (props) => {
   } = props;
   const {
     onBlur,
-    onClick,
+    // onClick,
     onFocus,
     onMouseDown,
     onMouseEnter,
@@ -67,6 +67,7 @@ const Tile = (props) => {
         onMouseUp: handleMouseUp,
       }) => (
         <TilePresenter
+          {...otherProps}
           background={background}
           contentWidth={contentWidth}
           disabled={disabled}
@@ -94,7 +95,7 @@ const Tile = (props) => {
           // pinIcon={pinIcon}
           // showPin={showPin}
           onBlur={handleBlur}
-          onClick={onClick}
+          // onClick={onClick}
           onFocus={handleFocus}
           onMouseDown={handleMouseDown}
           onMouseEnter={handleMouseEnter}
@@ -107,27 +108,27 @@ const Tile = (props) => {
 };
 
 Tile.propTypes = {
-  /** background */
+  /** Sets whether or not the Tile has a background */
   background: PropTypes.oneOf(AVAILABLE_BACKGROUNDS),
-  /** contentWidth */
+  /** Set a width for the content section, passes value directly to CSS width property */
   contentWidth: PropTypes.string,
-  /** disabled */
+  /** Disables the tile */
   disabled: PropTypes.bool,
-  /** divider */
+  /** Shows a divider between the image and content */
   divider: PropTypes.bool,
-  /** media */
+  /** The media associated with the Tile */
   media: PropTypes.node,
-  /** orientation */
+  /** Sets the orientation of the Tile */
   orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
-  /** selected */
+  /** Sets the selected state of the Tile */
   selected: PropTypes.bool,
-  /** stylesheet */
+  /** Adds custom/overriding styles */
   stylesheet: PropTypes.func,
-  /** subtitle */
+  /** The subtitle in the content section */
   subtitle: PropTypes.string,
-  /** surface */
+  /** The surface level that the Tile sits on top of */
   surface: PropTypes.oneOf(AVAILABLE_LEVELS),
-  /** title */
+  /** The title in the content section */
   title: PropTypes.string,
 };
 
