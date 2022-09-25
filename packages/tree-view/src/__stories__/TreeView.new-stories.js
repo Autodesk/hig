@@ -56,7 +56,7 @@ const defaultTreeView = (args, getIcon) => (
       key="tree-item-0"
       label="Tree Item 0"
       icon={getIcon(Hierarchy16, Hierarchy24)}
-      draggable="true"
+      draggable
     >
       <TreeItem
         label="Tree Item 1"
@@ -127,7 +127,7 @@ const defaultTreeView = (args, getIcon) => (
       key="tree-item-2"
       label="Tree Item 12"
       icon={getIcon(FileImage16, FileImage24)}
-      draggable="true"
+      draggable
     />
     <TreeItem
       id="tree-item-13"
@@ -196,21 +196,21 @@ const hocTreeItems = (args, getIcon) => (
       key="tree-item-1"
       label="Func Tree Item"
       icon={getIcon(ProductsAndServices16, ProductsAndServices24)}
-      expandByDoubleClick="true"
+      expandByDoubleClick
     >
       <FunctionComponentWrappedTreeItem
         id="tree-item-2"
         key="tree-item-2"
         label="Func Tree Item"
         icon={getIcon(ProductsAndServices16, ProductsAndServices24)}
-        expandByDoubleClick="true"
+        expandByDoubleClick
       >
         <FunctionComponentWrappedTreeItem
           label="Func Tree Item 3"
           id="tree-item-3"
           key="tree-item-3"
           icon={getIcon(ProductsAndServices16, ProductsAndServices24)}
-          expandByDoubleClick="true"
+          expandByDoubleClick
         >
           <FunctionComponentWrappedTreeItem
             label="Func Tree Item 4"
@@ -238,7 +238,7 @@ const hocTreeItems = (args, getIcon) => (
       id="tree-item-7"
       key="tree-item-7"
       icon={getIcon(ProductsAndServices16, ProductsAndServices24)}
-      expandByDoubleClick="true"
+      expandByDoubleClick
     >
       <HighOrderComponentWrappedTreeItem
         label="Hoc Tree Item 8"

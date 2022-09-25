@@ -97,6 +97,10 @@ TreeView.propTypes = {
    */
   indicator: PropTypes.oneOf(AVAILABLE_INDICATORS),
   /**
+   * Called when active TreeItem changes
+   */
+  onChange: PropTypes.func,
+  /**
    * Triggers when a key is pressed
    * In addition to passing back the event you get the
    * following internal methods in an object:
