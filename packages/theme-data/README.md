@@ -1,6 +1,6 @@
-# HIG theme data
+# Weave theme data
 
-HIG theme data is a representation of the HIG visual design language in the form of data.
+Weave theme data is a representation of the Weave visual design language in the form of data.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -185,9 +185,9 @@ console.log(redAccentedTheme);
 ## Goals
 - Enable teams across Autodesk to share UI components
 - Shared components are highly visually flexible
-- HIG developers are not a bottleneck to collaboration
+- Weave developers are not a bottleneck to collaboration
 
 ## Strategy
-- Deliver HIG design as data for consumption by any product regardless of tech stack
+- Deliver Weave design as data for consumption by any product regardless of tech stack
 - Enable product teams to customize theme values in order to meet their needs as they see fit
 - Enable product teams to extend the schema to incorporate new or product-specific components

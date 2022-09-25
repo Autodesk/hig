@@ -40,6 +40,10 @@ const TreeItemBehavior = (props) => {
       const treeItemArray = getTreeItemArray();
       const index =
         treeItemArray !== null && treeItemArray.indexOf(treeItem.id);
+
+      if (props.onChange) {
+        props.onChange(treeItem.id);
+      }
       setActiveTreeItemId(treeItem.id);
       setActiveTreeItemIndex(index);
     } else {
@@ -52,6 +56,9 @@ const TreeItemBehavior = (props) => {
 
       const treeItemArray = getTreeItemArray();
       const index = treeItemArray !== null && treeItemArray.indexOf(id);
+      if (props.onChange) {
+        props.onChange(id);
+      }
       setActiveTreeItemId(id);
       setActiveTreeItemIndex(index);
     }

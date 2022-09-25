@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useLayoutEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
@@ -8,6 +8,8 @@ import stylesheet from "./stylesheet";
 export default function TableHeaderCellPresenter(props) {
   const {
     children,
+    columnInfo,
+    onColumnWidthChanged,
     columnSelection,
     headerIndex,
     isSelectableHeader,
@@ -21,6 +23,20 @@ export default function TableHeaderCellPresenter(props) {
     ...otherProps
   } = props;
   const { globalResizeStyles } = otherProps;
+
+  const lastWidthRef = useRef(columnInfo?.width);
+
+  const IsResizingEventAllowed = () =>
+    onColumnWidthChanged &&
+    !columnInfo?.isResizing &&
+    lastWidthRef.current !== columnInfo?.width;
+
+  useLayoutEffect(() => {
+    if (IsResizingEventAllowed()) {
+      onColumnWidthChanged(columnInfo);
+    }
+  }, [columnInfo?.isResizing]);
+
   const handleClick = useCallback(
     (event) => {
       if (isSortPassed && onClick && !columnSelection) {
@@ -92,6 +108,14 @@ export default function TableHeaderCellPresenter(props) {
 
 TableHeaderCellPresenter.propTypes = {
   children: PropTypes.node,
+  columnInfo: PropTypes.shape({
+    id: PropTypes.string,
+    Header: PropTypes.string,
+    width: PropTypes.number,
+    isVisible: PropTypes.bool,
+    isResizing: PropTypes.bool,
+  }),
+  onColumnWidthChanged: PropTypes.func,
   columnSelection: PropTypes.bool,
   headerIndex: PropTypes.number,
   isSelectableHeader: PropTypes.bool,
