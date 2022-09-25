@@ -52,7 +52,7 @@
     "@hig/text-area": "^2.1.1",
     "@hig/text-link": "^2.1.1",
     "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.4.0",
+    "@hig/theme-data": "^3.4.1",
     "@hig/timestamp": "^2.1.0",
     "@hig/toggle": "^2.1.0",
     "@hig/tooltip": "^2.1.0",
