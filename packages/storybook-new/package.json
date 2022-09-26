@@ -55,7 +55,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "storybook-build": "build-storybook",
     "deploy": "surge --domain hig-new-storybook.surge.sh --project storybook-static"
   },
   "dependencies": {
