@@ -15,6 +15,7 @@ const TreeObjectView = (props) => {
       payload: {
         getActiveTreeItemId,
         getKeyboardOpenId,
+        onChange,
         setKeyboardOpenId,
         isControlled,
       },
@@ -30,7 +31,12 @@ const TreeObjectView = (props) => {
     return activeId === itemId;
   };
   return (
-    <TreeItemBehavior {...otherProps} id={id} payload={payload}>
+    <TreeItemBehavior
+      {...otherProps}
+      id={id}
+      payload={payload}
+      onChange={onChange}
+    >
       {({
         getIsCollapsed,
         handleClick,
