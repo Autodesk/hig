@@ -1,3 +1,10 @@
+# [@hig/tree-view-v2.9.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.8.0...@hig/tree-view@2.9.0) (2022-09-29)
+
+
+### Features
+
+* add an onChange prop ([3c38939](https://github.com/Autodesk/hig/commit/3c38939))
+
 # [@hig/tree-view-v2.8.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.7.0...@hig/tree-view@2.8.0) (2022-07-10)
 
 
