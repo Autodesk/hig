@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useLayoutEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 
 function scrollInViewport(treeItem) {
@@ -161,12 +161,28 @@ const TreeViewBehavior = (props) => {
         if (isControlled()) {
           return;
         }
+        if (props.onChange) {
+          props.onChange(getActiveTreeItemId());
+        }
         setActiveTreeItemId(getActiveTreeItemId());
         break;
       }
       default:
     }
   };
+  const firstUpdate = useRef(true);
+
+  useLayoutEffect(() => {
+    if (firstUpdate.current) {
+      firstUpdate.current = false;
+      return;
+    }
+    if (props.selected) {
+      if (props.onChange) {
+        props.onChange(props.selected);
+      }
+    }
+  }, [props.selected]);
 
   return props.children({
     getActiveTreeItemId,
