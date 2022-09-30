@@ -113,7 +113,13 @@ export default function TableHeaderCellPresenter(props) {
 
 TableHeaderCellPresenter.propTypes = {
   children: PropTypes.node,
-  column: PropTypes.objectOf(PropTypes.object()),
+  column: PropTypes.shape({
+    id: PropTypes.string,
+    Header: PropTypes.string,
+    width: PropTypes.number,
+    isVisible: PropTypes.bool,
+    isResizing: PropTypes.bool,
+  }),
   onColumnsWidthChanged: PropTypes.func,
   columnSelection: PropTypes.bool,
   headerIndex: PropTypes.number,

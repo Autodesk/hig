@@ -270,7 +270,7 @@ const TablePage = () => {
 									console.log('props', props);
 								}}
 								onColumnsWidthChanged={(column => {
-									console.log(`{id: ${column.id}, width: ${column.width}}`)
+									console.log(`{id: ${column.id}, width: ${column.width}}`);
 								})}
 								enableBlockLayout={true}
 								stylesheet={(styles, props, themeData) => {

@@ -44,7 +44,13 @@ export default function TableHeaderCell(props) {
 }
 
 TableHeaderCell.propTypes = {
-  column: PropTypes.objectOf(PropTypes.object()),
+  column: PropTypes.shape({
+    id: PropTypes.string,
+    Header: PropTypes.string,
+    width: PropTypes.number,
+    isVisible: PropTypes.bool,
+    isResizing: PropTypes.bool,
+  }),
   onColumnsWidthChanged: PropTypes.func,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
