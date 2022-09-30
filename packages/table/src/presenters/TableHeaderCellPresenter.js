@@ -11,7 +11,7 @@ export default function TableHeaderCellPresenter(props) {
   const {
     children,
     column,
-    onColumnsWidthChanged,
+    onColumnWidthChanged,
     columnSelection,
     headerIndex,
     isSelectableHeader,
@@ -28,7 +28,7 @@ export default function TableHeaderCellPresenter(props) {
 
   const timeoutIdRef = useRef(null);
   useEffect(() => {
-    if (onColumnsWidthChanged) {
+    if (onColumnWidthChanged) {
       if (!column?.isResizing) {
         return;
       }
@@ -37,7 +37,7 @@ export default function TableHeaderCellPresenter(props) {
         timeoutIdRef.current = null;
       }
       timeoutIdRef.current = setTimeout(() => {
-        onColumnsWidthChanged(column);
+        onColumnWidthChanged(column);
       }, WAIT_TIME);
     }
   }, [column?.width]);
@@ -120,7 +120,7 @@ TableHeaderCellPresenter.propTypes = {
     isVisible: PropTypes.bool,
     isResizing: PropTypes.bool,
   }),
-  onColumnsWidthChanged: PropTypes.func,
+  onColumnWidthChanged: PropTypes.func,
   columnSelection: PropTypes.bool,
   headerIndex: PropTypes.number,
   isSelectableHeader: PropTypes.bool,

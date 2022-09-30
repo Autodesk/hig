@@ -269,7 +269,7 @@ const TablePage = () => {
 								onApplication={(props) => {
 									console.log('props', props);
 								}}
-								onColumnsWidthChanged={(column => {
+								onColumnWidthChanged={(column => {
 									console.log(`{id: ${column.id}, width: ${column.width}}`);
 								})}
 								enableBlockLayout={true}

@@ -58,7 +58,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     onTableCellClick,
     onSortClick,
     onApplication,
-    onColumnsWidthChanged,
+    onColumnWidthChanged,
     enableBlockLayout,
     customStylesheet,
     tableGroupSelectAll: { checkboxToggle = [], setCheckboxToggle = () => {} },
@@ -404,7 +404,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                             customStylesheet={customStylesheet}
                             globalResizeStyles={globalResizeStyles}
                             onSortClick={onSortClick}
-                            onColumnsWidthChanged={onColumnsWidthChanged}
+                            onColumnWidthChanged={onColumnWidthChanged}
                             rowSelection={rowSelection}
                             setIsSortedDesc={setIsSortedDesc}
                             isSortedDesc={isSortedDesc}
