@@ -12,10 +12,6 @@ addons.setConfig({
   theme: undefined,
   selectedPanel: undefined,
   initialActive: "sidebar",
-  sidebar: {
-    showRoots: false,
-    collapsedRoots: ["other"],
-  },
   toolbar: {
     title: { hidden: false },
     zoom: { hidden: true },

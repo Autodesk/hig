@@ -15,7 +15,7 @@ const themeConfigs = {
 };
 
 export default {
-  title: "ThemeData/Tokens/System",
+  title: "Theme data/Tokens/System",
   argTypes: {
     schema: {
       table: {

@@ -93,7 +93,7 @@ export const parameters = {
         // in the event we decide to use Storybook as 
         // a public Weave page.
         // "Welcome to Weave",
-        "ThemeData",
+        "Theme data",
         [
           "Introduction",
           "Tokens",
