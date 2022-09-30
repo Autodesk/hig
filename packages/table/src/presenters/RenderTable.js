@@ -58,6 +58,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     onTableCellClick,
     onSortClick,
     onApplication,
+    onColumnsWidthChanged,
     enableBlockLayout,
     customStylesheet,
     tableGroupSelectAll: { checkboxToggle = [], setCheckboxToggle = () => {} },
@@ -384,6 +385,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                             {...column.getHeaderProps(
                               column.getSortByToggleProps()
                             )}
+                            column={column}
                             columnSelection={columnSelection}
                             activeMultiSelectColumn={activeMultiSelectColumn}
                             columnHeaderArray={columnHeaderArray}
@@ -402,6 +404,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                             customStylesheet={customStylesheet}
                             globalResizeStyles={globalResizeStyles}
                             onSortClick={onSortClick}
+                            onColumnsWidthChanged={onColumnsWidthChanged}
                             rowSelection={rowSelection}
                             setIsSortedDesc={setIsSortedDesc}
                             isSortedDesc={isSortedDesc}

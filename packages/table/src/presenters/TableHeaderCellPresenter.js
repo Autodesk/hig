@@ -1,13 +1,17 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
 
+const WAIT_TIME = 1000;
+
 export default function TableHeaderCellPresenter(props) {
   const {
     children,
+    column,
+    onColumnsWidthChanged,
     columnSelection,
     headerIndex,
     isSelectableHeader,
@@ -21,6 +25,26 @@ export default function TableHeaderCellPresenter(props) {
     ...otherProps
   } = props;
   const { globalResizeStyles } = otherProps;
+
+  const timeoutIdRef = useRef(null);
+
+  useEffect(() => {
+    if (onColumnsWidthChanged) {
+
+      if (!column?.isResizing)
+        return;
+
+      if (timeoutIdRef.current) {
+        clearTimeout(timeoutIdRef.current)
+        timeoutIdRef.current = null
+      }
+
+      timeoutIdRef.current = setTimeout(() => {
+        onColumnsWidthChanged(column);
+      }, WAIT_TIME)
+    }
+  }, [column?.width])
+
   const handleClick = useCallback(
     (event) => {
       if (isSortPassed && onClick && !columnSelection) {
@@ -92,6 +116,8 @@ export default function TableHeaderCellPresenter(props) {
 
 TableHeaderCellPresenter.propTypes = {
   children: PropTypes.node,
+  column: PropTypes.object,
+  onColumnsWidthChanged: PropTypes.func,
   columnSelection: PropTypes.bool,
   headerIndex: PropTypes.number,
   isSelectableHeader: PropTypes.bool,
