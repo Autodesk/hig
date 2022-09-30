@@ -24,18 +24,18 @@ export default function TableHeaderCell(props) {
             onMouseUp: handleMouseUp,
             onPressedMouseLeave: handlePressedMouseLeave,
           }) => (
-              <TableHeaderCellPresenter
-                column={column}
-                onColumnsWidthChanged={onColumnsWidthChanged}
-                hasHover={hasHover}
-                isPressed={isPressed}
-                onMouseDown={handleMouseDown}
-                onMouseEnter={handleMouseEnter}
-                onMouseUp={handleMouseUp}
-                onMouseLeave={handlePressedMouseLeave}
-                onSortClick={onSortClick}
-                {...props}
-              />
+            <TableHeaderCellPresenter
+              column={column}
+              onColumnsWidthChanged={onColumnsWidthChanged}
+              hasHover={hasHover}
+              isPressed={isPressed}
+              onMouseDown={handleMouseDown}
+              onMouseEnter={handleMouseEnter}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handlePressedMouseLeave}
+              onSortClick={onSortClick}
+              {...props}
+            />
           )}
         </PressedBehavior>
       )}
@@ -44,6 +44,8 @@ export default function TableHeaderCell(props) {
 }
 
 TableHeaderCell.propTypes = {
+  column: PropTypes.objectOf(PropTypes.object()),
+  onColumnsWidthChanged: PropTypes.func,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   onMouseDown: PropTypes.func,

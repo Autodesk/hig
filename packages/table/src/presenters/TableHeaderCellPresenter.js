@@ -27,23 +27,20 @@ export default function TableHeaderCellPresenter(props) {
   const { globalResizeStyles } = otherProps;
 
   const timeoutIdRef = useRef(null);
-
   useEffect(() => {
     if (onColumnsWidthChanged) {
-
-      if (!column?.isResizing)
+      if (!column?.isResizing) {
         return;
-
-      if (timeoutIdRef.current) {
-        clearTimeout(timeoutIdRef.current)
-        timeoutIdRef.current = null
       }
-
+      if (timeoutIdRef.current) {
+        clearTimeout(timeoutIdRef.current);
+        timeoutIdRef.current = null;
+      }
       timeoutIdRef.current = setTimeout(() => {
         onColumnsWidthChanged(column);
-      }, WAIT_TIME)
+      }, WAIT_TIME);
     }
-  }, [column?.width])
+  }, [column?.width]);
 
   const handleClick = useCallback(
     (event) => {
@@ -116,7 +113,7 @@ export default function TableHeaderCellPresenter(props) {
 
 TableHeaderCellPresenter.propTypes = {
   children: PropTypes.node,
-  column: PropTypes.object,
+  column: PropTypes.objectOf(PropTypes.object()),
   onColumnsWidthChanged: PropTypes.func,
   columnSelection: PropTypes.bool,
   headerIndex: PropTypes.number,
