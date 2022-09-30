@@ -13,6 +13,9 @@ describe("stylesheet", () => {
     expect(styles.thumbnail).toHaveProperty("wrapper", expect.any(Object));
   });
   it("returned object contains property of thumbnail", () => {
+    expect(styles.thumbnail).toHaveProperty("border", expect.any(Object));
+  });
+  it("returned object contains property of thumbnail", () => {
     expect(styles.thumbnail).toHaveProperty("image", expect.any(Object));
   });
   it("returns the custom stylesheet", () => {

@@ -39,6 +39,10 @@ function YourComponent() {
         ...styles.thumbnail.wrapper,
         color: themeData["colorScheme.status.error"],
       },
+      border: {
+        ...styles.thumbnail.border,
+        color: themeData["colorScheme.status.error"],
+      },
       image: {
         ...styles.thumbnail.image,
         color: themeData["colorScheme.status.error"],
