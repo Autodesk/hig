@@ -2,6 +2,9 @@ import { addons } from "@storybook/addons";
 
 import weaveTheme from "./weaveTheme";
 
+const storybookRoots = [
+];
+
 addons.setConfig({
   isFullscreen: false,
   showNav: true,
@@ -13,8 +16,7 @@ addons.setConfig({
   selectedPanel: undefined,
   initialActive: "sidebar",
   sidebar: {
-    showRoots: false,
-    collapsedRoots: ["other"],
+    collapsedRoots: ["basics", "components", "dev-lab", "legacy-components"],
   },
   toolbar: {
     title: { hidden: false },
