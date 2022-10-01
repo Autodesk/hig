@@ -82,10 +82,7 @@ const Template = (args) => {
   });
   return (
     <Surface level={args.surface} stylesheet={surfaceStylesheet}>
-      <Tile
-        {...args}
-        media={<Media orientation={args.orientation} />}
-      />
+      <Tile {...args} media={<Media orientation={args.orientation} />} />
     </Surface>
   );
 };

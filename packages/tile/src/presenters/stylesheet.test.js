@@ -13,7 +13,10 @@ describe("stylesheet", () => {
     expect(styles).toHaveProperty("higMediaContainer", expect.any(Object));
   });
   it("returned object contains property of higTileContentContainer", () => {
-    expect(styles).toHaveProperty("higTileContentContainer", expect.any(Object));
+    expect(styles).toHaveProperty(
+      "higTileContentContainer",
+      expect.any(Object)
+    );
   });
   it("returned object contains property of higTileTitleContainer", () => {
     expect(styles).toHaveProperty("higTileTitleContainer", expect.any(Object));

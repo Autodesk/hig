@@ -6,7 +6,11 @@ import Tile from "./Tile";
 describe("tile/Tile", () => {
   const imgSrc = "https://d95xa459ljwvg.cloudfront.net/theme/weave-logo.svg";
   const props = {
-    media: <div><img src={imgSrc} /></div>,
+    media: (
+      <div>
+        <img src={imgSrc} alt="alt text" />
+      </div>
+    ),
     title: "Tile title",
   };
   takeSnapshotsOf(Tile, [
