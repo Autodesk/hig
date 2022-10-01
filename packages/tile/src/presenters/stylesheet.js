@@ -5,7 +5,6 @@ export default function stylesheet(props, themeData, themeMeta) {
     disabled,
     divider,
     orientation,
-    // identifier,
     hasFocus,
     hasHover,
     isPressed,
@@ -14,18 +13,10 @@ export default function stylesheet(props, themeData, themeMeta) {
     surface,
   } = props;
   const surfaceLevel = Number(surface) < 300 ? "100To250" : "300To350";
-  // const background = background === 'solid' ? 'filled' : 'empty';
   const isColumn = orientation === "vertical";
   const isHorizontal = orientation === "horizontal";
-
-  // const isMediumDensity = themeMeta.densityId === `medium-density`;
-
   const getStylesByStatus = (status) => {
     const isFocus = status === "focus";
-    // const color = selected
-    //   ? themeData[`tile.selected.${status}.borderColor`]
-    //   : themeData[`tile.${background}.${status}.level${surfaceLevel}.borderColor`];
-    // const borderWidth = themeData['tile.borderWidth'];
     if (selected) {
       return {
         background: themeData[`tile.selected.${status}.backgroundColor`],
@@ -45,7 +36,6 @@ export default function stylesheet(props, themeData, themeMeta) {
         : "none",
     };
   };
-
   const getStylesBySelected = () => {
     if (selected) {
       return {
@@ -55,12 +45,10 @@ export default function stylesheet(props, themeData, themeMeta) {
     }
     return {};
   };
-
   const getStylesByDisabled = () => ({
     opacity: themeData["colorScheme.opacity.disabled"],
     pointerEvents: "none",
   });
-
   const getDivider = () => {
     const dividerStyle = `${themeData["divider.borderWidth"]} solid ${themeData["divider.lightColor"]}`;
     if (isHorizontal) {
@@ -72,24 +60,12 @@ export default function stylesheet(props, themeData, themeMeta) {
       borderBottom: dividerStyle,
     };
   };
-
-  // const getIdentifierHorizontal = () => {
-  //   const topPlacement = themeData['density.spacings.medium'];
-  //   return { top: `${topPlacement}`, left: '-18px' };
-  // }
-  // const getNotificationHorizontal = () => ({ left: '-5px' });
-  // const getSelectionOptionsHorizontal = () => ({ top: '22px' });
   const getTileContentPadding = () => {
-    // const marginLeft = background === "filled" ? themeData["tile.thumbnail.marginRight"] : 0;
     const verticalPadding =
       background === "empty"
         ? `0 ${themeData["tile.padding"]} ${themeData["tile.padding"]}`
         : themeData["tile.padding"];
 
-    // if (identifier) {
-    //   return isHorizontal ? `12px 12px 12px calc(24px - ${marginLeft}px)` : verticalPadding;
-    // }
-    // return isHorizontal ? `5px 12px 12px ${marginLeft}` : verticalPadding;
     return isHorizontal
       ? `${themeData["tile.padding"]} ${themeData["tile.padding"]} ${themeData["tile.padding"]} ${themeData["tile.thumbnail.marginRight"]}`
       : verticalPadding;
@@ -109,8 +85,6 @@ export default function stylesheet(props, themeData, themeMeta) {
       boxSizing: "border-box",
       display: "inline-flex",
       flexDirection: isColumn ? "column" : "row",
-      // width: '100%',
-      // minWidth: isColumn ? 'none' : '233px',
       outline: `${themeData["tile.borderWidth"]} solid transparent`,
       cursor: "pointer",
       color: themeData["tile.fontColor"],
@@ -124,31 +98,6 @@ export default function stylesheet(props, themeData, themeMeta) {
       ...(isPressed ? getStylesByStatus("pressed") : {}),
       ...(disabled ? getStylesByDisabled() : {}),
     },
-    // higTileNotifications: {
-    //   position: 'absolute',
-    //   zIndex: '3',
-    //   top: '-10px',
-    //   right: '-5px',
-    //   ...(isHorizontal ? getNotificationHorizontal() : {})
-    // },
-    // higTileNotificationBadge: {
-
-    // },
-    // higTileSelectionOptions: {
-    //   display: 'flex',
-    //   justifyContent: 'space-evenly',
-    //   position: 'absolute',
-    //   zIndex: '3',
-    //   top: '10px',
-    //   left: '10px',
-    //   ...(isHorizontal ? getSelectionOptionsHorizontal() : {})
-    // },
-    // higTileSelectionOptionCheckbox: {
-    //   padding: `0 ${themeData['density.spacings.extraExtraSmall']} 0 0`,
-    // },
-    // higTileSelectionOptionPin: {
-
-    // },
     higMediaContainer: {
       boxSizing: "border-box",
       flex: "0 0 auto",
@@ -159,49 +108,11 @@ export default function stylesheet(props, themeData, themeMeta) {
       overflow: "hidden",
       ...(divider && background === "filled" ? getDivider() : {}),
     },
-    // higTileHeaderContainer: {
-    //   overflow: 'hidden',
-    //   position: 'relative',
-    //   // maxHeight: isColumn ? '140px' : '108px',
-    //   width: '100%',
-    //   height: '100%',
-    //   // backgroundColor: hasHover ? 'rgba(0, 0, 0, 0.5)' : 'none',
-    // },
-    // higTileActionClarifier: {
-    //   zIndex: '10',
-    //   display: hasHover ? 'block' : 'none',
-    //   position: 'absolute',
-    //   top: '50%',
-    //   left: '50%',
-    //   transform: 'translate(-50%, -50%)',
-    // },
-    // higTileActionClarifierButton: {
-    //   display: 'flex',
-    //   justifyContent: 'center',
-    //   alignItems: 'center',
-    //   padding: `${themeData['density.spacings.extraExtraLarge']} 0`,
-    // },
-    // higTileIdentifierContainer: {
-    //   position: 'absolute',
-    //   zIndex: '3',
-    //   backgroundColor: 'white',
-    //   padding: '1px',
-    //   width: '30px',
-    //   top: `${isMediumDensity ? '-25px' : '-20px'}`,
-    //   left: '0px',
-    //   ...(isHorizontal ? getIdentifierHorizontal() : {})
-    // },
-    // higTileIdentifierIcon: {
-    //   width: '50px',
-    //   color: '#000',
-    //   padding: isMediumDensity ? '2px 4px 0px 4px' : '4px 8px 0px 8px',
-    // },
     higTileContentContainer: {
       boxSizing: "border-box",
       position: "relative",
       padding: getTileContentPadding(),
       ...(contentWidth ? { width: contentWidth } : {}),
-      // width: '100%',
     },
     higTileTitleContainer: {
       display: "flex",
@@ -228,34 +139,6 @@ export default function stylesheet(props, themeData, themeMeta) {
       textOverflow: "ellipsis",
       whiteSpace: "nowrap",
     },
-    // higTileOverflowMenu: {
-    //   paddingRight: themeData["density.spacings.small"],
-    // },
-    // higTileAdditionalContent: {
-    //   padding: `${themeData["density.spacings.extraExtraSmall"]}`,
-    // },
-    // higGroupIcons: {
-    //   display: 'flex',
-    //   alignItems: 'center',
-    //   paddingTop: themeData["density.spacings.small"],
-    //   "> div": {
-    //     alignItems: "center",
-    //     display: "flex",
-    //     minHeight: isMediumDensity ? '36px' : '24px',
-    //     minWidth: isMediumDensity ? '36px' : '24px',
-    //   }
-    // },
-    // higGroupIconItem: {
-    //   // paddingRight: themeData['tile.padding'],
-    // },
-    // higVersionHolder: {
-    //   marginTop: themeData["density.spacings.extraSmall"],
-    // },
-    // higTileCTAHolder: {
-    //   zIndex: '10',
-    //   marginTop: themeData["density.spacings.extraSmall"],
-    //   marginBottom: themeData["density.spacings.extraSmall"],
-    // }
   };
 
   return customStylesheet

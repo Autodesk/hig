@@ -22,23 +22,10 @@ const Tile = (props) => {
     subtitle,
     surface = 100,
     title,
-    // version,
-    // identifier,
-    // statusAndActionIcons,
-    // notification,
-    // tooltip,
-    // overflowMenu,
-    // cta,
-    // actionClarifier,
-    // checkbox,
-    // showCheckbox,
-    // pinIcon,
-    // showPin,
     ...otherProps
   } = props;
   const {
     onBlur,
-    // onClick,
     onFocus,
     onMouseDown,
     onMouseEnter,
@@ -82,20 +69,7 @@ const Tile = (props) => {
           subtitle={subtitle}
           surface={surface}
           title={title}
-          // version={version}
-          // identifier={identifier}
-          // statusAndActionIcons={statusAndActionIcons}
-          // notification={notification}
-          // tooltip={tooltip}
-          // overflowMenu={overflowMenu}
-          // cta={cta}
-          // actionClarifier={actionClarifier}
-          // checkbox={checkbox}
-          // showCheckbox={showCheckbox}
-          // pinIcon={pinIcon}
-          // showPin={showPin}
           onBlur={handleBlur}
-          // onClick={onClick}
           onFocus={handleFocus}
           onMouseDown={handleMouseDown}
           onMouseEnter={handleMouseEnter}
