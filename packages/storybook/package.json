@@ -4,7 +4,7 @@
   "description": "Autodesk design system",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
-  "homepage": "https://hig.autodesk.com",
+  "homepage": "https://weave.autodesk.com",
   "version": "2.0.0",
   "files": [
     "*"
@@ -58,8 +58,7 @@
     "storybook": "start-storybook -p 9001",
     "storybook-build": "build-storybook",
     "storybook-deploy": "build-storybook && surge --project storybook-static",
-    "storybook-deploy-ci": "yarn storybook-deploy --domain `bash ./scripts/storybookDomain.sh`",
-    "deploy": "surge --domain hig-new-storybook.surge.sh --project storybook-static"
+    "storybook-deploy-ci": "yarn storybook-deploy --domain `bash ./scripts/storybookDomain.sh`"
   },
   "dependencies": {
     "@hig/fonts": "^2.0.0",
