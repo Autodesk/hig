@@ -61,6 +61,18 @@ export default {
         disable: true,
       },
     },
+    color: {
+      control: "color",
+      description: "The icon color",
+      type: {
+        name: "string",
+      },
+      table: {
+        type: {
+          summary: "string",
+        },
+      },
+    },
   },
   parameters: {
     docs: {
