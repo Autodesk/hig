@@ -1,15 +1,15 @@
 import * as constants from "./constants";
 
 describe("tile/constants", () => {
-  it("has constants for indicators", () => {
+  it("has constants for available backgrounds", () => {
     expect(constants).toHavePropertyOfConstants("AVAILABLE_BACKGROUNDS");
   });
 
-  it("has constants for indicator positions", () => {
+  it("has constants for available levels", () => {
     expect(constants).toHavePropertyOfConstants("AVAILABLE_LEVELS");
   });
 
-  it("has an array of available indicators", () => {
+  it("has constants of available orientations", () => {
     expect(constants).toHavePropertyOfConstants("AVAILABLE_ORIENTATIONS");
   });
 });
