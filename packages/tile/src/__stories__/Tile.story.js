@@ -2,7 +2,7 @@ import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
 import Surface from "@hig/surface";
 import Thumbnail from "@hig/thumbnail";
-import thumbnailImagePath from "@hig/storybook/storybook-support/fixtures/thumbnail/thumbnail-placeholder-02.jpg";
+import thumbnailImagePath from "@weave-design/storybook/storybook-support/fixtures/thumbnail/thumbnail-placeholder-02.jpg";
 
 import Tile, {
   AVAILABLE_BACKGROUNDS,
