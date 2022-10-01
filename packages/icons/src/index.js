@@ -71,6 +71,7 @@ import SaveAs16SVG from "./icons/information-dense/save-as.svg";
 import Report16SVG from "./icons/information-dense/report.svg";
 import Redo16SVG from "./icons/information-dense/redo.svg";
 import Recommend16SVG from "./icons/information-dense/recommend.svg";
+import RecentFile16SVG from "./icons/information-dense/recent-file.svg";
 import Quantities16SVG from "./icons/information-dense/quantities.svg";
 import Publish16SVG from "./icons/information-dense/publish.svg";
 import Properties16SVG from "./icons/information-dense/properties.svg";
@@ -234,6 +235,7 @@ import SaveAs24SVG from "./icons/regular/save-as.svg";
 import Report24SVG from "./icons/regular/report.svg";
 import Redo24SVG from "./icons/regular/redo.svg";
 import Recommend24SVG from "./icons/regular/recommend.svg";
+import RecentFile24SVG from "./icons/regular/recent-file.svg";
 import Quantities24SVG from "./icons/regular/quantities.svg";
 import Publish24SVG from "./icons/regular/publish.svg";
 import Properties24SVG from "./icons/regular/properties.svg";
@@ -2344,6 +2346,22 @@ export const Quantities24 = props => (
       if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Quantities24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const RecentFile24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <RecentFile24SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -4952,6 +4970,22 @@ export const Quantities16 = props => (
       if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Quantities16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const RecentFile16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <RecentFile16SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
