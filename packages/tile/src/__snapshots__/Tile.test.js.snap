@@ -1,0 +1,1088 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tile/Tile renders when disabled 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  padding: 12px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.333333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.272727273;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-5 {
+  background-color: rgba(128,128,128,0.15);
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 1px solid transparent;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  -webkit-transition-property: background-color,box-shadow,opacity,outline;
+  transition-property: background-color,box-shadow,opacity,outline;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+<div
+  className="emotion-5"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="listitem"
+  tabIndex={0}
+>
+  <div
+    className="emotion-0"
+  >
+    <div>
+      <img
+        src="https://d95xa459ljwvg.cloudfront.net/theme/weave-logo.svg"
+      />
+    </div>
+  </div>
+  <div
+    className="emotion-4"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        className="emotion-1"
+      >
+        Tile title
+      </div>
+    </div>
+    <div
+      className="emotion-3"
+    />
+  </div>
+</div>
+`;
+
+exports[`tile/Tile renders when selected 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  padding: 12px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.333333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.272727273;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-5 {
+  background-color: rgba(205,234,247,0.6);
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 1px solid transparent;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  -webkit-transition-property: background-color,box-shadow,opacity,outline;
+  transition-property: background-color,box-shadow,opacity,outline;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  outline-color: rgba(6,150,215,0.5);
+}
+
+<div
+  className="emotion-5"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="listitem"
+  tabIndex={0}
+>
+  <div
+    className="emotion-0"
+  >
+    <div>
+      <img
+        src="https://d95xa459ljwvg.cloudfront.net/theme/weave-logo.svg"
+      />
+    </div>
+  </div>
+  <div
+    className="emotion-4"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        className="emotion-1"
+      >
+        Tile title
+      </div>
+    </div>
+    <div
+      className="emotion-3"
+    />
+  </div>
+</div>
+`;
+
+exports[`tile/Tile renders with a divider 1`] = `
+.emotion-5 {
+  background-color: rgba(128,128,128,0.15);
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 1px solid transparent;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  -webkit-transition-property: background-color,box-shadow,opacity,outline;
+  transition-property: background-color,box-shadow,opacity,outline;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  padding: 12px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.333333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.272727273;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(60,60,60,0.1);
+}
+
+<div
+  className="emotion-5"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="listitem"
+  tabIndex={0}
+>
+  <div
+    className="emotion-0"
+  >
+    <div>
+      <img
+        src="https://d95xa459ljwvg.cloudfront.net/theme/weave-logo.svg"
+      />
+    </div>
+  </div>
+  <div
+    className="emotion-4"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        className="emotion-1"
+      >
+        Tile title
+      </div>
+    </div>
+    <div
+      className="emotion-3"
+    />
+  </div>
+</div>
+`;
+
+exports[`tile/Tile renders with a horizontal orientation 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.333333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.272727273;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-5 {
+  background-color: rgba(128,128,128,0.15);
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  outline: 1px solid transparent;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  -webkit-transition-property: background-color,box-shadow,opacity,outline;
+  transition-property: background-color,box-shadow,opacity,outline;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  padding: 12px 12px 12px 12px;
+}
+
+<div
+  className="emotion-5"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="listitem"
+  tabIndex={0}
+>
+  <div
+    className="emotion-0"
+  >
+    <div>
+      <img
+        src="https://d95xa459ljwvg.cloudfront.net/theme/weave-logo.svg"
+      />
+    </div>
+  </div>
+  <div
+    className="emotion-4"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        className="emotion-1"
+      >
+        Tile title
+      </div>
+    </div>
+    <div
+      className="emotion-3"
+    />
+  </div>
+</div>
+`;
+
+exports[`tile/Tile renders with a set content width 1`] = `
+.emotion-5 {
+  background-color: rgba(128,128,128,0.15);
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 1px solid transparent;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  -webkit-transition-property: background-color,box-shadow,opacity,outline;
+  transition-property: background-color,box-shadow,opacity,outline;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.333333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.272727273;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  padding: 12px;
+  width: 300px;
+}
+
+<div
+  className="emotion-5"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="listitem"
+  tabIndex={0}
+>
+  <div
+    className="emotion-0"
+  >
+    <div>
+      <img
+        src="https://d95xa459ljwvg.cloudfront.net/theme/weave-logo.svg"
+      />
+    </div>
+  </div>
+  <div
+    className="emotion-4"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        className="emotion-1"
+      >
+        Tile title
+      </div>
+    </div>
+    <div
+      className="emotion-3"
+    />
+  </div>
+</div>
+`;
+
+exports[`tile/Tile renders with a subtitle 1`] = `
+.emotion-5 {
+  background-color: rgba(128,128,128,0.15);
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 1px solid transparent;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  -webkit-transition-property: background-color,box-shadow,opacity,outline;
+  transition-property: background-color,box-shadow,opacity,outline;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  padding: 12px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.333333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.272727273;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+<div
+  className="emotion-5"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="listitem"
+  tabIndex={0}
+>
+  <div
+    className="emotion-0"
+  >
+    <div>
+      <img
+        src="https://d95xa459ljwvg.cloudfront.net/theme/weave-logo.svg"
+      />
+    </div>
+  </div>
+  <div
+    className="emotion-4"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        className="emotion-1"
+      >
+        Tile title
+      </div>
+    </div>
+    <div
+      className="emotion-3"
+    >
+      Subtitle text
+    </div>
+  </div>
+</div>
+`;
+
+exports[`tile/Tile renders with an empty background 1`] = `
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.333333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.272727273;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-5 {
+  background-color: rgba(255,255,255,0.01);
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 1px solid transparent;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  -webkit-transition-property: background-color,box-shadow,opacity,outline;
+  transition-property: background-color,box-shadow,opacity,outline;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 12px 12px;
+}
+
+<div
+  className="emotion-5"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="listitem"
+  tabIndex={0}
+>
+  <div
+    className="emotion-0"
+  >
+    <div>
+      <img
+        src="https://d95xa459ljwvg.cloudfront.net/theme/weave-logo.svg"
+      />
+    </div>
+  </div>
+  <div
+    className="emotion-4"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        className="emotion-1"
+      >
+        Tile title
+      </div>
+    </div>
+    <div
+      className="emotion-3"
+    />
+  </div>
+</div>
+`;
+
+exports[`tile/Tile renders with minimum required props 1`] = `
+.emotion-5 {
+  background-color: rgba(128,128,128,0.15);
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 1px solid transparent;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  -webkit-transition-property: background-color,box-shadow,opacity,outline;
+  transition-property: background-color,box-shadow,opacity,outline;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.emotion-0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  padding: 12px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.333333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.272727273;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+<div
+  className="emotion-5"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="listitem"
+  tabIndex={0}
+>
+  <div
+    className="emotion-0"
+  >
+    <div>
+      <img
+        src="https://d95xa459ljwvg.cloudfront.net/theme/weave-logo.svg"
+      />
+    </div>
+  </div>
+  <div
+    className="emotion-4"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        className="emotion-1"
+      >
+        Tile title
+      </div>
+    </div>
+    <div
+      className="emotion-3"
+    />
+  </div>
+</div>
+`;
+
+exports[`tile/Tile renders with surface leve >= 300 1`] = `
+.emotion-0 {
+  box-sizing: border-box;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.emotion-4 {
+  box-sizing: border-box;
+  position: relative;
+  padding: 12px;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.emotion-1 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.333333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-3 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.272727273;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emotion-5 {
+  background-color: rgba(255,255,255,0.5);
+  position: relative;
+  box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  outline: 1px solid transparent;
+  cursor: pointer;
+  color: #3c3c3c;
+  font-family: ArtifaktElement,sans-serif;
+  -webkit-transition-property: background-color,box-shadow,opacity,outline;
+  transition-property: background-color,box-shadow,opacity,outline;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+<div
+  className="emotion-5"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="listitem"
+  tabIndex={0}
+>
+  <div
+    className="emotion-0"
+  >
+    <div>
+      <img
+        src="https://d95xa459ljwvg.cloudfront.net/theme/weave-logo.svg"
+      />
+    </div>
+  </div>
+  <div
+    className="emotion-4"
+  >
+    <div
+      className="emotion-2"
+    >
+      <div
+        className="emotion-1"
+      >
+        Tile title
+      </div>
+    </div>
+    <div
+      className="emotion-3"
+    />
+  </div>
+</div>
+`;

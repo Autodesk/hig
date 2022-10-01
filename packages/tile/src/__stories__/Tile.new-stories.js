@@ -2,6 +2,7 @@ import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
 import Surface from "@hig/surface";
 import Thumbnail from "@hig/thumbnail";
+import thumbnailImagePath from "@hig/storybook/storybook-support/fixtures/thumbnail/thumbnail-placeholder-02.jpg";
 
 import Tile, {
   AVAILABLE_BACKGROUNDS,
@@ -20,6 +21,9 @@ const Media = ({ orientation }) => {
         ...styles.thumbnail.wrapper,
         borderRadius: 0,
       },
+      border: {
+        boxShadow: "none",
+      },
     },
   });
 
@@ -28,7 +32,7 @@ const Media = ({ orientation }) => {
       aspectRatio={aspectRatio}
       fit="cover"
       size="l"
-      src="https://2v7smn27y3922e05obea523d-wpengine.netdna-ssl.com/wp-content/uploads/2021/11/champion-spider-ham.jpg"
+      src={thumbnailImagePath}
       stylesheet={customStylesheet}
     />
   );
@@ -81,7 +85,6 @@ const Template = (args) => {
       <Tile
         {...args}
         media={<Media orientation={args.orientation} />}
-        className="blah test"
       />
     </Surface>
   );

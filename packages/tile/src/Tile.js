@@ -11,16 +11,16 @@ import {
 
 const Tile = (props) => {
   const {
-    background,
+    background = "filled",
     contentWidth,
     disabled,
     divider,
     media,
-    orientation,
+    orientation = "vertical",
     selected,
     stylesheet: customStylesheet,
     subtitle,
-    surface,
+    surface = 100,
     title,
     // version,
     // identifier,
@@ -105,6 +105,12 @@ const Tile = (props) => {
       )}
     </ControlBehavior>
   );
+};
+
+Tile.defaultProps = {
+  background: "filled",
+  orientation: "vertical",
+  surface: 100,
 };
 
 Tile.propTypes = {

@@ -152,6 +152,7 @@ export default function stylesheet(props, themeData, themeMeta) {
     higMediaContainer: {
       boxSizing: "border-box",
       flex: "0 0 auto",
+      display: "flex",
       position: "relative",
       margin: "0",
       padding: background === "filled" ? "0" : getTileHeaderFlatPadding(),
