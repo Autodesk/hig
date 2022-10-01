@@ -54,11 +54,12 @@ const Template = (args) => (
 export const Default = Template.bind({});
 
 Default.args = { schema: "borderRadii" };
-Default.storyName = "Border Radii";
+Default.storyName = "Border radii";
 
 export const BorderWidths = Template.bind({});
 
 BorderWidths.args = { schema: "borderWidths" };
+BorderWidths.storyName = "Border widths";
 
 export const Colors = Template.bind({});
 
@@ -67,18 +68,22 @@ Colors.args = { schema: "colors" };
 export const FontFamilies = Template.bind({});
 
 FontFamilies.args = { schema: "fontFamilies" };
+FontFamilies.storyName = "Font families";
 
 export const FontSizes = Template.bind({});
 
 FontSizes.args = { schema: "fontSizes" };
+FontSizes.storyName = "Font sizes";
 
 export const FontWeights = Template.bind({});
 
 FontWeights.args = { schema: "fontWeights" };
+FontWeights.storyName = "Font weights";
 
 export const LineHeights = Template.bind({});
 
 LineHeights.args = { schema: "lineHeights" };
+LineHeights.storyName = "Line heights";
 
 export const Shadows = Template.bind({});
 

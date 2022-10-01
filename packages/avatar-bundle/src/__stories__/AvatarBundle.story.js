@@ -59,7 +59,7 @@ Default.args = {
   size: sizes.LARGE_48,
 };
 
-Default.storyName = "Two Avatars";
+Default.storyName = "Two avatars";
 
 export const ThreeAvatars = Template.bind({});
 
@@ -68,7 +68,7 @@ ThreeAvatars.args = {
   avatars: getAvatars(3),
 };
 
-ThreeAvatars.storyName = "Three Avatars";
+ThreeAvatars.storyName = "Three avatars";
 
 export const MoreAvatars = Template.bind({});
 
@@ -78,7 +78,7 @@ MoreAvatars.args = {
   showOverflowCount: true,
 };
 
-MoreAvatars.storyName = "65 Avatars";
+MoreAvatars.storyName = "65 avatars";
 
 export const MaxAvatars = Template.bind({});
 
@@ -87,4 +87,4 @@ MaxAvatars.args = {
   avatars: getAvatars(110),
 };
 
-MaxAvatars.storyName = "110 Avatars";
+MaxAvatars.storyName = "110 avatars";

@@ -102,7 +102,7 @@ Default.args = {
   variant: "dynamic",
 };
 
-Default.storyName = "Dynamic Icon";
+Default.storyName = "Dynamic icon";
 
 export const StaticIcon = Template.bind({});
 
@@ -110,3 +110,4 @@ StaticIcon.args = {
   ...Default.args,
   variant: "static",
 };
+StaticIcon.storyName = "Static icon";

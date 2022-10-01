@@ -63,6 +63,7 @@ Avatar.args = { schema: "avatar" };
 export const AvatarBundle = Template.bind({});
 
 AvatarBundle.args = { schema: "avatarBundle" };
+AvatarBundle.storyName = "Avatar bundle";
 
 export const Badge = Template.bind({});
 
@@ -83,6 +84,7 @@ Button.args = { schema: "button" };
 export const CanvasFrame = Template.bind({});
 
 CanvasFrame.args = { schema: "canvasFrame" };
+CanvasFrame.storyName = "Canvas frame";
 
 export const Checkbox = Template.bind({});
 
@@ -91,10 +93,12 @@ Checkbox.args = { schema: "checkbox" };
 export const DataVisualization = Template.bind({});
 
 DataVisualization.args = { schema: "dataVis" };
+DataVisualization.storyName = "Data visualization";
 
 export const DatePicker = Template.bind({});
 
 DatePicker.args = { schema: "datePicker" };
+DatePicker.storyName = "Date picker";
 
 export const Divider = Template.bind({});
 
@@ -103,6 +107,7 @@ Divider.args = { schema: "divider" };
 export const EmptyState = Template.bind({});
 
 EmptyState.args = { schema: "emptyState" };
+EmptyState.storyName = "Empty state";
 
 export const Flyout = Template.bind({});
 
@@ -111,6 +116,7 @@ Flyout.args = { schema: "flyout" };
 export const IconButton = Template.bind({});
 
 IconButton.args = { schema: "iconButton" };
+IconButton.storyName = "Icon button";
 
 export const Input = Template.bind({});
 
@@ -143,10 +149,12 @@ Panel.args = { schema: "panel" };
 export const ProgressBar = Template.bind({});
 
 ProgressBar.args = { schema: "progressBar" };
+ProgressBar.storyName = "Progress bar";
 
 export const ProgressRing = Template.bind({});
 
 ProgressRing.args = { schema: "progressRing" };
+ProgressRing.storyName = "Progress ring";
 
 export const Scrollbar = Template.bind({});
 
@@ -159,6 +167,7 @@ SideNav.args = { schema: "sideNav" };
 export const SkeletonItem = Template.bind({});
 
 SkeletonItem.args = { schema: "skeletonItem" };
+SkeletonItem.storyName = "Skeleton item";
 
 export const Slider = Template.bind({});
 
@@ -167,6 +176,7 @@ Slider.args = { schema: "slider" };
 export const StepIndicator = Template.bind({});
 
 StepIndicator.args = { schema: "stepIndicator" };
+StepIndicator.storyName = "Step indicator";
 
 export const Table = Template.bind({});
 
@@ -183,10 +193,12 @@ Tag.args = { schema: "tag" };
 export const TextArea = Template.bind({});
 
 TextArea.args = { schema: "textArea" };
+TextArea.storyName = "Text area";
 
 export const TextLink = Template.bind({});
 
 TextLink.args = { schema: "textLink" };
+TextLink.storyName = "Text link";
 
 export const Thumbnail = Template.bind({});
 
@@ -215,10 +227,12 @@ Tooltip.args = { schema: "tooltip" };
 export const TopNav = Template.bind({});
 
 TopNav.args = { schema: "topNav" };
+TopNav.storyName = "Top nav";
 
 export const TreeView = Template.bind({});
 
 TreeView.args = { schema: "treeView" };
+TreeView.storyName = "Tree view";
 
 export const Typography = Template.bind({});
 

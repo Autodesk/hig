@@ -116,7 +116,7 @@ Scrolling.args = {
 
 export const CustomHeaderChildren = Template.bind({});
 
-CustomHeaderChildren.storyName = "Custom header chilren";
+CustomHeaderChildren.storyName = "Custom header children";
 CustomHeaderChildren.args = {
   headerChildren: [<p key="p1">HI</p>],
   type: "alternate",

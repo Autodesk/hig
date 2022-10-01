@@ -23,7 +23,7 @@ const customRootStyles = (styles, props, themeData) => ({
     letterSpacing: "normal",
     lineHeight: themeData["basics.lineHeights.mediumExtraLarge"],
     textTransform: "initial",
-    transform: "translateY(-5px)",
+    transform: "translateY(-3px)",
   },
 });
 

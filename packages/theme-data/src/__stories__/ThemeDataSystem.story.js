@@ -54,7 +54,7 @@ const Template = (args) => (
 export const Default = Template.bind({});
 
 Default.args = { schema: "colorScheme" };
-Default.storyName = "Color Scheme";
+Default.storyName = "Color scheme";
 
 export const Density = Template.bind({});
 
