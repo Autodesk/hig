@@ -12,7 +12,7 @@ phases:
         commands:
             - docker build --progress plain -t latest -f .codebuild-storybook/Dockerfile .
             - docker create --name latest latest
-            - docker cp latest:/usr/src/hig/packages/storybook/storybook-static packages/storybook/storybook-static
+            - docker cp latest:/usr/src/hig/packages/storybook-new/storybook-static packages/storybook-new/storybook-static
     post_build:
         commands:
-            - aws s3 cp --recursive --acl public-read packages/storybook/storybook-static s3://adsk-hig-storybook-prod/
+            - aws s3 cp --recursive --acl public-read packages/storybook-new/storybook-static s3://adsk-hig-storybook-prod/

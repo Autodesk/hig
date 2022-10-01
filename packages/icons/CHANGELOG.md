@@ -1,3 +1,17 @@
+# [@hig/icons-v4.4.0](https://github.com/Autodesk/hig/compare/@hig/icons@4.3.0...@hig/icons@4.4.0) (2022-09-29)
+
+
+### Features
+
+* add recent-file icon ([fdcab11](https://github.com/Autodesk/hig/commit/fdcab11))
+
+# [@hig/icons-v4.3.0](https://github.com/Autodesk/hig/compare/@hig/icons@4.2.0...@hig/icons@4.3.0) (2022-09-25)
+
+
+### Features
+
+* added hold icons to ui-controls ([90067be](https://github.com/Autodesk/hig/commit/90067be))
+
 # [@hig/icons-v4.2.0](https://github.com/Autodesk/hig/compare/@hig/icons@4.1.2...@hig/icons@4.2.0) (2022-09-12)
 
 

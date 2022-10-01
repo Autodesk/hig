@@ -1,3 +1,10 @@
+# [@hig/theme-data-v3.4.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@3.4.0...@hig/theme-data@3.4.1) (2022-09-25)
+
+
+### Bug Fixes
+
+* dark gray thumbnail border alpha ([b305f82](https://github.com/Autodesk/hig/commit/b305f82))
+
 # [@hig/theme-data-v3.4.0](https://github.com/Autodesk/hig/compare/@hig/theme-data@3.3.0...@hig/theme-data@3.4.0) (2022-09-22)
 
 
