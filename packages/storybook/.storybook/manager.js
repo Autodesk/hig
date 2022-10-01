@@ -2,7 +2,11 @@ import { addons } from "@storybook/addons";
 
 import weaveTheme from "./weaveTheme";
 
-const storybookRoots = [
+const storybookRootIds = [
+  "basics",
+  "components",
+  "dev-lab",
+  "legacy-components",
 ];
 
 addons.setConfig({

@@ -115,7 +115,7 @@ const InlineEditor = (props) => {
 }
 
 export default {
-  title: "Dev Lab/Inline Editor",
+  title: "Dev lab/Inline editor",
   component: InlineEditor,
   argTypes: {
     inputVariant: {

@@ -69,7 +69,7 @@ const TableGroup = (props) => {
 }
 
 export default {
-  title: "Dev Lab/TableGroup",
+  title: "Dev lab/Table group",
   component: TableGroup,
   parameters: {
     docs: {
@@ -97,6 +97,7 @@ Default.args = {
 
 export const GroupSort = Template.bind({});
 
+GroupSort.storyName = "Group sort";
 GroupSort.args = {
   tableObject: TABLE_OBJECT_GROUP_SORT,
   rowSelection: true,

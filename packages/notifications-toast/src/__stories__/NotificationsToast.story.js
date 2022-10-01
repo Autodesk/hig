@@ -55,7 +55,7 @@ Default.args = {
 
 export const WithAvatar = Template.bind({});
 
-WithAvatar.storyName = "With avatar"
+WithAvatar.storyName = "With avatar";
 WithAvatar.args = {
   ...Default.args,
   image: <Avatar name="Jon Snow" size="large" image={avatar} />,
@@ -73,7 +73,7 @@ const Image = () => (
   </div>
 );
 
-WithImage.storyName = "With image"
+WithImage.storyName = "With image";
 WithImage.args = {
   ...Default.args,
   image: <Image />,
