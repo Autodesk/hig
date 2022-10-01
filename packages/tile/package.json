@@ -1,6 +1,6 @@
 {
   "name": "@hig/tile",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0",
   "description": "Weave Tile component",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -23,8 +23,8 @@
     "prop-types": "^15.7.1"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.1.0",
-    "@hig/theme-data": "^3.4.0",
+    "@hig/theme-context": "^4.2.0",
+    "@hig/theme-data": "^3.4.1",
     "react": "^17.0.0"
   },
   "devDependencies": {
