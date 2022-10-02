@@ -1,4 +1,4 @@
-import avatarImagePath from "@hig/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
+import avatarImagePath from "@weave-design/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 
 export const SAMPLE_AVATARS = [
   {
