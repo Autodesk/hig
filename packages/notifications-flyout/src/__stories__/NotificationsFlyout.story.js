@@ -82,7 +82,7 @@ const Template = (args, context) => {
   const handleButtonClick = () =>
     setNotifications([createNotification(), ...notifications]);
 
-  if (context.story === "Dynamically add Notifications") {
+  if (context.story === "Dynamically add notifications") {
     return (
       <NotificationsFlyoutLayout>
         <Button onClick={handleButtonClick}>Add notification</Button>

@@ -54,7 +54,7 @@ const exampleToasts = React.Children.toArray([
 ]);
 
 const Template = (args, context) => {
-  if (context.story === "Dynamically add NotificationToasts") {
+  if (context.story === "Dynamically add notification toasts") {
     return <NotificationsToastListInteractions {...args} />;
   }
   return (

@@ -56,7 +56,7 @@ export default {
 const Template = (args, context) => {
   const Icon = context.globals.density === "Medium" ? Settings24 : Settings16;
   const iconProp =
-    context.story === "Button with Icon" ? { icon: <Icon /> } : {};
+    context.story === "Button with icon" ? { icon: <Icon /> } : {};
   return <Button {...args} {...iconProp} />;
 };
 
@@ -79,7 +79,7 @@ ButtonLink.args = {
 
 export const ButtonWithIcon = Template.bind({});
 
-ButtonWithIcon.storyName = "Button with Icon";
+ButtonWithIcon.storyName = "Button with icon";
 ButtonWithIcon.args = {
   ...Default.args,
   children: "Settings",

@@ -73,7 +73,7 @@ Default.args = {
 
 export const VerboseWithInteractions = Template.bind({});
 
-VerboseWithInteractions.storyName = "Verbose with Interactions";
+VerboseWithInteractions.storyName = "Verbose with interactions";
 VerboseWithInteractions.args = {
   type: types.WARNING,
   children:
