@@ -13,7 +13,7 @@ const Menu = (props) => {
     divider,
     menuRef,
     multiple,
-    onChange,
+    onChange = () => {},
     selected,
     stylesheet,
     unselect,
