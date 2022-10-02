@@ -63,6 +63,7 @@
   "dependencies": {
     "@hig/fonts": "^2.0.0",
     "@hig/input": "^2.2.0",
+    "@hig/menu": "^2.2.1",
     "@hig/surface": "^2.1.1",
     "@hig/table": "^1.7.0",
     "@hig/text-link": "^2.2.0",

@@ -1,7 +1,7 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
 import Button from "@hig/button";
-import RichText from "@hig/rich-text";
+import Menu, { Option } from "@hig/menu";
 
 import { css } from "emotion";
 import Flyout from "../index";
@@ -49,12 +49,12 @@ const Template = (args, context) => (
 export const Default = Template.bind({});
 
 Default.args = {
-  anchorPoint: anchorPoints.RIGHT_TOP,
+  anchorPoint: anchorPoints.TOP_CENTER,
   content: (
-    <RichText>
-      <h3>Important flyout information</h3>
-      <p>Any content can go in here.</p>
-    </RichText>
+    <Menu>
+      <Option id="option-1">Account Details</Option>
+      <Option id="option-2">Sign Out</Option>
+    </Menu>
   ),
   children: <Button>Open Flyout</Button>,
 };
