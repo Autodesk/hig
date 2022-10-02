@@ -63,8 +63,10 @@ const TablePresenter = ({
     onApplication,
     customStylesheet,
     tableGroupSelectAll,
+    enableBlockLayout,
     otherProps,
   };
+
   if (!isGrouped) {
     return <RenderTable params={passedParams} />;
   }
