@@ -1,3 +1,10 @@
+# [@hig/table-v1.8.1](https://github.com/Autodesk/hig/compare/@hig/table@1.8.0...@hig/table@1.8.1) (2022-10-02)
+
+
+### Bug Fixes
+
+* pass down enableBlockLayout ([2b25347](https://github.com/Autodesk/hig/commit/2b25347))
+
 # [@hig/table-v1.8.0](https://github.com/Autodesk/hig/compare/@hig/table@1.7.0...@hig/table@1.8.0) (2022-09-13)
 
 
