@@ -138,7 +138,7 @@ export default {
   "tag.on.pressed.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "colorScheme.background.on.default",
+      ref: "colorScheme.background.on.pressed",
     },
     transform: {
       alpha: 0.7,
