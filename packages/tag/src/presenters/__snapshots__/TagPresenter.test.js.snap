@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tag/TagPresenter renders when focused 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.emotion-1 {
+  border-radius: 1000em;
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.35);
+  color: #3c3c3c;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: 0;
+  padding: 8px  8px 8px 12px;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  background: rgba(128,128,128,0.15);
+  border: 1px solid rgba(255,255,255,0.01);
+  border-color: rgba(255,255,255,0.01);
+}
+
+<div
+  className="emotion-1"
+  role="button"
+  tabIndex={0}
+>
+  <span
+    className="emotion-0"
+  >
+    Tag Presenter
+  </span>
+</div>
+`;
+
+exports[`tag/TagPresenter renders when hovered 1`] = `
+.emotion-1 {
+  border-radius: 1000em;
+  box-shadow: 0 0 0 2px transparent;
+  color: #3c3c3c;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: 0;
+  padding: 8px  8px 8px 12px;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  background: rgba(128,128,128,0.25);
+  border: 1px solid rgba(255,255,255,0.01);
+  border-color: rgba(255,255,255,0.01);
+  cursor: pointer;
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+<div
+  className="emotion-1"
+  role="button"
+  tabIndex={0}
+>
+  <span
+    className="emotion-0"
+  >
+    Tag Presenter
+  </span>
+</div>
+`;
+
+exports[`tag/TagPresenter renders when pressed 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.emotion-1 {
+  border-radius: 1000em;
+  box-shadow: 0 0 0 2px transparent;
+  color: #3c3c3c;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: 0;
+  padding: 8px  8px 8px 12px;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  background: rgba(128,128,128,0.35);
+  border: 1px solid rgba(255,255,255,0.01);
+  border-color: rgba(255,255,255,0.01);
+}
+
+<div
+  className="emotion-1"
+  role="button"
+  tabIndex={0}
+>
+  <span
+    className="emotion-0"
+  >
+    Tag Presenter
+  </span>
+</div>
+`;
+
+exports[`tag/TagPresenter renders when selected and focused 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.emotion-1 {
+  border-radius: 1000em;
+  box-shadow: 0 0 0 4px rgba(6,150,215,0.35);
+  color: #3c3c3c;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: 0;
+  padding: 8px  8px 8px 12px;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  background: rgba(205,234,247,0.6);
+  border: 1px solid rgba(6,150,215,0.5);
+  border-color: #0696d7;
+}
+
+<div
+  className="emotion-1"
+  role="button"
+  tabIndex={0}
+>
+  <span
+    className="emotion-0"
+  >
+    Tag Presenter
+  </span>
+</div>
+`;
+
+exports[`tag/TagPresenter renders when selected and hovered 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.emotion-1 {
+  border-radius: 1000em;
+  box-shadow: 0 0 0 2px transparent;
+  color: #3c3c3c;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: 0;
+  padding: 8px  8px 8px 12px;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  background: rgba(155,213,239,0.7);
+  border: 1px solid rgba(6,150,215,0.5);
+  border-color: rgba(6,150,215,0.5);
+  cursor: pointer;
+}
+
+<div
+  className="emotion-1"
+  role="button"
+  tabIndex={0}
+>
+  <span
+    className="emotion-0"
+  >
+    Tag Presenter
+  </span>
+</div>
+`;
+
+exports[`tag/TagPresenter renders when selected and pressed 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.emotion-1 {
+  border-radius: 1000em;
+  box-shadow: 0 0 0 2px transparent;
+  color: #3c3c3c;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: 0;
+  padding: 8px  8px 8px 12px;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  background: rgba(106,192,231,0.7);
+  border: 1px solid rgba(6,150,215,0.5);
+  border-color: rgba(6,150,215,0.5);
+}
+
+<div
+  className="emotion-1"
+  role="button"
+  tabIndex={0}
+>
+  <span
+    className="emotion-0"
+  >
+    Tag Presenter
+  </span>
+</div>
+`;
