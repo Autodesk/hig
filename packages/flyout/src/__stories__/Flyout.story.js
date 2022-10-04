@@ -8,6 +8,14 @@ import Flyout from "../index";
 import { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "../anchorPoints";
 import Readme from "../../README.md";
 
+const customFlyoutStyles = (styles) => ({
+  ...styles,
+  panel: {
+    ...styles.panel,
+    padding: 0,
+  },
+});
+
 export default {
   title: "Components/Flyout",
   component: Flyout,
@@ -42,6 +50,7 @@ const Template = (args, context) => (
     <Flyout
       {...args}
       key={`${context.globals.colorScheme}-${context.globals.density}`}
+      stylesheet={customFlyoutStyles}
     />
   </div>
 );
