@@ -68,7 +68,7 @@
     "@hig/table": "^1.7.0",
     "@hig/text-link": "^2.2.0",
     "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.4.1",
+    "@hig/theme-data": "^3.4.2",
     "@hig/typography": "^2.2.0"
   },
   "eslintConfig": {

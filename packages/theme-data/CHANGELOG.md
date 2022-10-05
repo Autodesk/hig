@@ -1,3 +1,10 @@
+# [@hig/theme-data-v3.4.2](https://github.com/Autodesk/hig/compare/@hig/theme-data@3.4.1...@hig/theme-data@3.4.2) (2022-10-05)
+
+
+### Bug Fixes
+
+* tag.on.pressed.backgroundColor value ([30b0624](https://github.com/Autodesk/hig/commit/30b0624))
+
 # [@hig/theme-data-v3.4.1](https://github.com/Autodesk/hig/compare/@hig/theme-data@3.4.0...@hig/theme-data@3.4.1) (2022-09-25)
 
 
