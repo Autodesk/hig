@@ -11,7 +11,7 @@ import {
 } from "../constants";
 
 export default {
-  title: "Components/Thumbnail",
+  title: "Basics/Thumbnail",
   component: Thumbnail,
   argTypes: {
     size: {
