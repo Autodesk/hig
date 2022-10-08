@@ -5,6 +5,8 @@ import ThemeContext from "@hig/theme-context";
 import { ControlBehavior } from "@hig/behaviors";
 
 import { availableTargets } from "./targets";
+import { availableVariants } from "./variants";
+
 import stylesheet from "./stylesheet";
 
 const TextLink = (props) => {
@@ -20,6 +22,7 @@ const TextLink = (props) => {
     onMouseLeave,
     onMouseEnter,
     stylesheet: customStylesheet,
+    variant = "primary",
     ...otherProps
   } = props;
   const { className } = otherProps;
@@ -33,7 +36,7 @@ const TextLink = (props) => {
 
   return (
     <ThemeContext.Consumer>
-      {({ resolvedRoles }) => (
+      {({ resolvedRoles, metadata }) => (
         <ControlBehavior
           onBlur={onBlur}
           onFocus={onFocus}
@@ -59,9 +62,11 @@ const TextLink = (props) => {
                 hasFocus,
                 hasHover,
                 isPressed,
+                variant,
                 ...props,
               },
-              resolvedRoles
+              resolvedRoles,
+              metadata
             );
             return (
               <Element
@@ -87,6 +92,10 @@ const TextLink = (props) => {
 };
 
 TextLink.displayName = "TextLink";
+
+TextLink.defaultProps = {
+  variant: "primary",
+};
 
 TextLink.propTypes = {
   /** Text content of the link */
@@ -130,6 +139,10 @@ TextLink.propTypes = {
   stylesheet: PropTypes.func,
   /** Specify the anchor tag's target */
   target: PropTypes.oneOf(availableTargets),
+  /**
+   * Choose between primary or secondary
+   */
+  variant: PropTypes.oneOf(availableVariants),
 };
 
 export default TextLink;
