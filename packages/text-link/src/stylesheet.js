@@ -1,5 +1,5 @@
-export default function stylesheet(props, themeData) {
-  const { stylesheet: customStylesheet, hasHover, hasFocus } = props;
+export default function stylesheet(props, themeData, themeMeta) {
+  const { stylesheet: customStylesheet, hasHover, hasFocus, variant } = props;
 
   const styles = {
     // from base typography-medium
@@ -15,25 +15,27 @@ export default function stylesheet(props, themeData) {
     textDecoration: "none",
     cursor: "pointer",
 
-    color: themeData["textLink.primary.default.fontColor"],
+    color: themeData[`textLink.${variant}.default.fontColor`],
     outline: "none",
 
     ...(hasHover
       ? {
-          color: themeData["textLink.primary.hover.fontColor"],
+          color: themeData[`textLink.${variant}.hover.fontColor`],
           textDecoration: "underline",
           textDecorationColor:
-            themeData["textLink.primary.hover.underlineColor"],
+            themeData[`textLink.${variant}.hover.underlineColor`],
         }
       : {}),
 
     ...(hasFocus
       ? {
-          color: themeData["textLink.primary.focus.fontColor"],
+          color: themeData[`textLink.${variant}.focus.fontColor`],
           outline: `solid ${themeData["textLink.focus.haloWidth"]} ${themeData["textLink.focus.haloColor"]}`,
         }
       : {}),
   };
 
-  return customStylesheet ? customStylesheet(styles, props, themeData) : styles;
+  return customStylesheet
+    ? customStylesheet(styles, props, themeData, themeMeta)
+    : styles;
 }
