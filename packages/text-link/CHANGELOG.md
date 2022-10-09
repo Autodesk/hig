@@ -1,3 +1,10 @@
+# [@hig/text-link-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/text-link@2.2.0...@hig/text-link@2.3.0) (2022-10-09)
+
+
+### Features
+
+* add secondary variant ([0bf5f1a](https://github.com/Autodesk/hig/commit/0bf5f1a))
+
 # [@hig/text-link-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/text-link@2.1.1...@hig/text-link@2.2.0) (2022-08-28)
 
 
