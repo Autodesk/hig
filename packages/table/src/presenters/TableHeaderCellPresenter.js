@@ -1,16 +1,14 @@
-import React, { useCallback, useEffect, useRef } from "react";
+import React, { useCallback, useLayoutEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 import ThemeContext from "@hig/theme-context";
 
 import stylesheet from "./stylesheet";
 
-const WAIT_TIME = 1000;
-
 export default function TableHeaderCellPresenter(props) {
   const {
     children,
-    column,
+    columnInfo,
     onColumnWidthChanged,
     columnSelection,
     headerIndex,
@@ -26,21 +24,18 @@ export default function TableHeaderCellPresenter(props) {
   } = props;
   const { globalResizeStyles } = otherProps;
 
-  const timeoutIdRef = useRef(null);
-  useEffect(() => {
-    if (onColumnWidthChanged) {
-      if (!column?.isResizing) {
-        return;
-      }
-      if (timeoutIdRef.current) {
-        clearTimeout(timeoutIdRef.current);
-        timeoutIdRef.current = null;
-      }
-      timeoutIdRef.current = setTimeout(() => {
-        onColumnWidthChanged(column);
-      }, WAIT_TIME);
+  const lastWidthRef = useRef(columnInfo?.width);
+
+  const IsResizingEventAllowed = () =>
+    onColumnWidthChanged &&
+    !columnInfo?.isResizing &&
+    lastWidthRef.current !== columnInfo?.width;
+
+  useLayoutEffect(() => {
+    if (IsResizingEventAllowed()) {
+      onColumnWidthChanged(columnInfo);
     }
-  }, [column?.width]);
+  }, [columnInfo?.isResizing]);
 
   const handleClick = useCallback(
     (event) => {
@@ -113,7 +108,7 @@ export default function TableHeaderCellPresenter(props) {
 
 TableHeaderCellPresenter.propTypes = {
   children: PropTypes.node,
-  column: PropTypes.shape({
+  columnInfo: PropTypes.shape({
     id: PropTypes.string,
     Header: PropTypes.string,
     width: PropTypes.number,
