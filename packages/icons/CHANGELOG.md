@@ -1,3 +1,10 @@
+# [@hig/icons-v4.5.0](https://github.com/Autodesk/hig/compare/@hig/icons@4.4.0...@hig/icons@4.5.0) (2022-10-21)
+
+
+### Features
+
+* add rename icon ([11e966c](https://github.com/Autodesk/hig/commit/11e966c))
+
 # [@hig/icons-v4.4.0](https://github.com/Autodesk/hig/compare/@hig/icons@4.3.0...@hig/icons@4.4.0) (2022-09-29)
 
 
