@@ -22,6 +22,7 @@ const TablePresenter = ({
   onTableCellClick,
   onSortClick,
   onApplication,
+  onColumnWidthChanged,
   enableBlockLayout,
   stylesheet: customStylesheet,
   tableGroupSelectAll,
@@ -61,6 +62,7 @@ const TablePresenter = ({
     onTableCellClick,
     onSortClick,
     onApplication,
+    onColumnWidthChanged,
     customStylesheet,
     tableGroupSelectAll,
     otherProps,
@@ -104,6 +106,7 @@ TablePresenter.propTypes = {
     setCheckboxToggle: PropTypes.func,
   }),
   onApplication: PropTypes.func,
+  onColumnWidthChanged: PropTypes.func,
   enableBlockLayout: PropTypes.bool,
 };
 
