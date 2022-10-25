@@ -260,7 +260,7 @@ exports[`tag/TagPresenter renders when selected and pressed 1`] = `
   transition-property: box-shadow,background-color;
   -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
   transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
-  background: rgba(106,192,231,0.7);
+  background: rgba(205,234,247,0.7);
   border: 1px solid rgba(6,150,215,0.5);
   border-color: rgba(6,150,215,0.5);
 }
