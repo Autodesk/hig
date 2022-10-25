@@ -1,6 +1,6 @@
 defaults: &defaults
   docker:
-    - image: circleci/node:12.22-stretch
+    - image: cimg/node:16.0.0
 
 version: 2
 jobs:
@@ -100,35 +100,6 @@ jobs:
           command: yarn test-ci
       - store_artifacts:
           path: packages/storybook/coverage
-#   visual-test:
-#     <<: *defaults
-#     steps:
-#       - checkout
-#       - run:
-#           name: Create dependency hash
-#           command: yarn run create-dependency-hash
-#       - restore_cache:
-#           key: v3-dependencies-{{ .Revision }}-{{ checksum ".dependency-hash" }}
-#       - restore_cache:
-#           key: v1-package-builds-{{ .Revision }}
-#       - run:
-#           name: Extract dependencies and builds
-#           command: yarn run extract
-#       - run:
-#           name: Build Test Storybook Server
-#           command: yarn storybook-test-build
-#           working_directory: packages/storybook
-#       - run:
-#           name: Serve Test Storybook
-#           command: yarn storybook-test-serve
-#           background: true
-#           working_directory: packages/storybook
-#       - run:
-#           name: Run Visual Regression Tests
-#           command: yarn gemini-ci
-#           working_directory: packages/storybook
-#       - store_artifacts:
-#           path: packages/storybook/gemini-report
   canary-packages-deploy:
     <<: *defaults
     steps:
@@ -149,24 +120,25 @@ jobs:
       - run:
           name: Deploy pre-release versions of packages
           command: yarn publish-canary
-  # storybook-branch-deploy:
-  #   <<: *defaults
-  #   steps:
-  #     - checkout
-  #     - run:
-  #         name: Create dependency hash
-  #         command: yarn run create-dependency-hash
-  #     - restore_cache:
-  #         key: v3-dependencies-{{ .Revision }}-{{ checksum ".dependency-hash" }}
-  #     - restore_cache:
-  #         key: v1-package-builds-{{ .Revision }}
-  #     - run:
-  #         name: Extract dependencies and builds
-  #         command: yarn run extract
-  #     - run:
-  #         name: Deploy Storybook
-  #         command: yarn storybook-deploy-ci
-  #         working_directory: packages/storybook
+  storybook-branch-deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Create dependency hash
+          command: yarn run create-dependency-hash
+      - restore_cache:
+          key: v3-dependencies-{{ .Revision }}-{{ checksum ".dependency-hash" }}
+      - restore_cache:
+          key: v1-package-builds-{{ .Revision }}
+      - run:
+          name: Extract dependencies and builds
+          command: yarn run extract
+      - run:
+          name: Deploy Storybook
+          command: yarn storybook-deploy-ci
+          no_output_timeout: 20m
+          working_directory: packages/storybook
   packages-deploy:
     <<: *defaults
     steps:
@@ -208,13 +180,9 @@ workflows:
       - react-test:
           requires:
             - package-build
-    #   - visual-test:
-    #       requires:
-    #         - package-build
       - lockfile-upload:
           requires:
             - react-test
-            # - visual-test
       - canary-packages-deploy:
           filters:
             branches:
@@ -222,20 +190,17 @@ workflows:
                 - /canary-.*/
           requires:
             - react-test
-            # - visual-test
-      # - storybook-branch-deploy:
-      #     filters:
-      #       branches:
-      #         ignore:
-      #           - development
-      #           - master
-      #     requires:
-      #       - react-test
-      #       # - visual-test
+      - storybook-branch-deploy:
+          filters:
+            branches:
+              ignore:
+                - development
+                - master
+          requires:
+            - react-test
       - packages-deploy:
           requires:
             - react-test
-            # - visual-test
           filters:
             branches:
               only: master

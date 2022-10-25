@@ -65,8 +65,10 @@ const TablePresenter = ({
     onColumnWidthChanged,
     customStylesheet,
     tableGroupSelectAll,
+    enableBlockLayout,
     otherProps,
   };
+
   if (!isGrouped) {
     return <RenderTable params={passedParams} />;
   }
