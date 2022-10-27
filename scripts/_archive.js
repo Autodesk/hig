@@ -1,14 +1,11 @@
 const fs = require("fs");
 const path = require("path");
-const util = require("util");
 
 const archiver = require("archiver");
-const mkdirpFn = require("mkdirp");
+const mkdirp = require("mkdirp");
 
 const BASE_PATH = path.resolve(__dirname, "..");
 const ARCHIVES_DIR = path.join(BASE_PATH, ".archives");
-
-const mkdirp = util.promisify(mkdirpFn);
 
 function getArchivePath(archiveFilename) {
   return path.join(ARCHIVES_DIR, archiveFilename);

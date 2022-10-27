@@ -1,0 +1,393 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tag/Tag renders when disabled 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.emotion-1 {
+  border-radius: 1000em;
+  box-shadow: 0 0 0 0 transparent;
+  color: #3c3c3c;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: 0;
+  padding: 8px  8px 8px 12px;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  background: rgba(128,128,128,0.15);
+  border: 1px solid rgba(255,255,255,0.01);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+<div
+  className="emotion-1"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <span
+    className="emotion-0"
+  >
+    Tag Test
+  </span>
+</div>
+`;
+
+exports[`tag/Tag renders when selected 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.emotion-1 {
+  border-radius: 1000em;
+  box-shadow: 0 0 0 0 transparent;
+  color: #3c3c3c;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: 0;
+  padding: 8px  8px 8px 12px;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  background: rgba(205,234,247,0.6);
+  border: 1px solid rgba(6,150,215,0.5);
+}
+
+<div
+  className="emotion-1"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <span
+    className="emotion-0"
+  >
+    Tag Test
+  </span>
+</div>
+`;
+
+exports[`tag/Tag renders when selected and disabled 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.emotion-1 {
+  border-radius: 1000em;
+  box-shadow: 0 0 0 0 transparent;
+  color: #3c3c3c;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: 0;
+  padding: 8px  8px 8px 12px;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  background: rgba(205,234,247,0.6);
+  border: 1px solid rgba(6,150,215,0.5);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+<div
+  className="emotion-1"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <span
+    className="emotion-0"
+  >
+    Tag Test
+  </span>
+</div>
+`;
+
+exports[`tag/Tag renders when selected, disabled and with close button 1`] = `
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-2 > svg > * {
+  fill: #808080;
+}
+
+.emotion-1 {
+  fill: #808080;
+}
+
+.emotion-1 > * {
+  fill: #808080;
+}
+
+.emotion-3 {
+  border-radius: 1000em;
+  box-shadow: 0 0 0 0 transparent;
+  color: #3c3c3c;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: 0;
+  padding: 8px  8px 8px 12px;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  background: rgba(205,234,247,0.6);
+  border: 1px solid rgba(6,150,215,0.5);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+<div
+  className="emotion-3"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <span
+    className="emotion-0"
+  >
+    Tag Test
+  </span>
+  <span
+    className="emotion-2"
+    onClick={[Function]}
+  >
+    <svg
+      className="emotion-1"
+      height="16px"
+      width="16px"
+    >
+      <path
+        d="M13.4 3.4l-.8-.8L8 7.3 3.4 2.6l-.8.8L7.3 8l-4.7 4.6.8.8L8 8.7l4.6 4.7.8-.8L8.7 8l4.7-4.6z"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`tag/Tag renders with close button 1`] = `
+.emotion-3 {
+  border-radius: 1000em;
+  box-shadow: 0 0 0 0 transparent;
+  color: #3c3c3c;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: 0;
+  padding: 8px  8px 8px 12px;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  background: rgba(128,128,128,0.15);
+  border: 1px solid rgba(255,255,255,0.01);
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+.emotion-2 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.emotion-2 > svg > * {
+  fill: #808080;
+}
+
+.emotion-1 {
+  fill: #808080;
+}
+
+.emotion-1 > * {
+  fill: #808080;
+}
+
+<div
+  className="emotion-3"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <span
+    className="emotion-0"
+  >
+    Tag Test
+  </span>
+  <span
+    className="emotion-2"
+    onClick={[Function]}
+  >
+    <svg
+      className="emotion-1"
+      height="16px"
+      width="16px"
+    >
+      <path
+        d="M13.4 3.4l-.8-.8L8 7.3 3.4 2.6l-.8.8L7.3 8l-4.7 4.6.8.8L8 8.7l4.6 4.7.8-.8L8.7 8l4.7-4.6z"
+      />
+    </svg>
+  </span>
+</div>
+`;
+
+exports[`tag/Tag renders with required props 1`] = `
+.emotion-1 {
+  border-radius: 1000em;
+  box-shadow: 0 0 0 0 transparent;
+  color: #3c3c3c;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: ArtifaktElement,sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  outline: 0;
+  padding: 8px  8px 8px 12px;
+  -webkit-transition-duration: 0.3s,0.3s;
+  transition-duration: 0.3s,0.3s;
+  -webkit-transition-property: box-shadow,background-color;
+  transition-property: box-shadow,background-color;
+  -webkit-transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  transition-timing-function: cubic-bezier(0.4,0,0.2,1),cubic-bezier(0.4,0,0.2,1);
+  background: rgba(128,128,128,0.15);
+  border: 1px solid rgba(255,255,255,0.01);
+}
+
+.emotion-0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 8px;
+}
+
+<div
+  className="emotion-1"
+  onBlur={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseDown={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <span
+    className="emotion-0"
+  >
+    Tag Test
+  </span>
+</div>
+`;

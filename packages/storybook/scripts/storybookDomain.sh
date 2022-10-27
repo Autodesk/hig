@@ -7,4 +7,4 @@ storybookSubDomainSuffix() {
   echo $CIRCLE_BRANCH | awk '{ gsub(/[^a-zA-Z0-9-.\/]/, ""); gsub(/[\/.]/, "-"); $0=tolower($0); print }'
 }
 
-echo "hig-$(storybookSubDomainSuffix).surge.sh"
+echo "weave-$(storybookSubDomainSuffix).surge.sh"

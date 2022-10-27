@@ -7,4 +7,4 @@ COPY . .
 
 RUN yarn
 RUN yarn build
-RUN cd packages/storybook-new && yarn storybook-build
+RUN cd packages/storybook && yarn storybook-build

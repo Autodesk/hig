@@ -69,6 +69,7 @@ import Search16SVG from "./icons/information-dense/search.svg";
 import Save16SVG from "./icons/information-dense/save.svg";
 import SaveAs16SVG from "./icons/information-dense/save-as.svg";
 import Report16SVG from "./icons/information-dense/report.svg";
+import Rename16SVG from "./icons/information-dense/rename.svg";
 import Redo16SVG from "./icons/information-dense/redo.svg";
 import Recommend16SVG from "./icons/information-dense/recommend.svg";
 import RecentFile16SVG from "./icons/information-dense/recent-file.svg";
@@ -233,6 +234,7 @@ import Search24SVG from "./icons/regular/search.svg";
 import Save24SVG from "./icons/regular/save.svg";
 import SaveAs24SVG from "./icons/regular/save-as.svg";
 import Report24SVG from "./icons/regular/report.svg";
+import Rename24SVG from "./icons/regular/rename.svg";
 import Redo24SVG from "./icons/regular/redo.svg";
 import Recommend24SVG from "./icons/regular/recommend.svg";
 import RecentFile24SVG from "./icons/regular/recent-file.svg";
@@ -2394,6 +2396,22 @@ export const Redo24 = props => (
       if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Redo24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const Rename24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <Rename24SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -5018,6 +5036,22 @@ export const Redo16 = props => (
       if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Redo16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const Rename16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <Rename16SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>

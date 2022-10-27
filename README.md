@@ -89,6 +89,7 @@ Each Weave pattern is implemented as a set of React components. Each pattern is 
 - [`<TextArea>`](./packages/text-area/README.md) - A control to provide a large amount of freeform text
 - [`<TextLink>`](./packages/text-link/README.md) - Directs visitors to another location
 - [`<Thumbnail>`](./packages/thumbnail/README.md) - Visual anchors and identifiers for objects
+- [`<Tile>`](./packages/tile/README.md) - A themable container that display information related to a single subject or destination
 - [`<Timestamp>`](./packages/timestamp/README.md) - Presents a date with humanized phrasing
 - [`<Toggle>`](./packages/toggle/README.md) - A control for a single action with a clear on/off or start/stop.
 - [`<Tooltip>`](./packages/tooltip/README.md) - Provides context in a small popup container

@@ -1,3 +1,10 @@
+# [@hig/menu-v2.2.2](https://github.com/Autodesk/hig/compare/@hig/menu@2.2.1...@hig/menu@2.2.2) (2022-10-02)
+
+
+### Bug Fixes
+
+* uncontrolled selection ([b0ebc60](https://github.com/Autodesk/hig/commit/b0ebc60))
+
 # [@hig/menu-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/menu@2.2.0...@hig/menu@2.2.1) (2022-09-12)
 
 
