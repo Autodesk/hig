@@ -59,6 +59,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     onSortClick,
     onApplication,
     enableBlockLayout,
+    controlRowPreSelect,
     customStylesheet,
     tableGroupSelectAll: { checkboxToggle = [], setCheckboxToggle = () => {} },
     otherProps,
@@ -256,6 +257,10 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     setTotalRows(rowTypeToMap.length);
   });
 
+  const defaultSelectedRowsDeps = controlRowPreSelect
+    ? defaultSelectedRows
+    : "";
+
   useEffect(() => {
     if (defaultSelectedRows && defaultSelectedRows?.length > 0) {
       const rowLimit = tableObject.data.length - 1;
@@ -270,7 +275,13 @@ const RenderTable = ({ params, passedData, passedCount }) => {
 
       setActiveMultiSelectRowArray(allArray);
     }
-  }, []);
+  }, [defaultSelectedRowsDeps]);
+
+  useEffect(() => {
+    if (controlRowPreSelect) {
+      controlRowPreSelect(activeMultiSelectRowArray);
+    }
+  }, [activeMultiSelectRowArray]);
 
   useEffect(() => {
     if (!globalColumns && count === 0) {

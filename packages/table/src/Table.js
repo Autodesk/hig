@@ -23,6 +23,7 @@ const Table = (props) => {
     onSortClick,
     onApplication,
     enableBlockLayout,
+    controlRowPreSelect,
     stylesheet,
     tableGroupSelectAll = {},
   } = props;
@@ -92,6 +93,7 @@ const Table = (props) => {
               onSortClick={onSortClick}
               onApplication={onApplication}
               enableBlockLayout={enableBlockLayout}
+              controlRowPreSelect={controlRowPreSelect}
               stylesheet={stylesheet}
               globalColumns={globalColumns}
               setGlobalColumns={setGlobalColumns}
@@ -197,6 +199,10 @@ Table.propTypes = {
    * Optional prop to set table layout
    */
   enableBlockLayout: PropTypes.bool,
+  /**
+   * Optional prop to control preselected rows
+   */
+  controlRowPreSelect: PropTypes.func,
 };
 
 export default Table;
