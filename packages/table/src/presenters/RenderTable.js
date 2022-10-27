@@ -32,6 +32,17 @@ import TableDataContents from "./TableDataContents";
 
 import stylesheet from "./stylesheet";
 
+const getColumnInfo = (column) => {
+  const { id, Header, width, isVisible, isResizing } = column;
+  return {
+    id,
+    Header,
+    width,
+    isVisible,
+    isResizing,
+  };
+};
+
 const RenderTable = ({ params, passedData, passedCount }) => {
   const {
     dataArray,
@@ -58,6 +69,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     onTableCellClick,
     onSortClick,
     onApplication,
+    onColumnWidthChanged,
     enableBlockLayout,
     controlRowPreSelect,
     customStylesheet,
@@ -395,6 +407,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                             {...column.getHeaderProps(
                               column.getSortByToggleProps()
                             )}
+                            columnInfo={getColumnInfo(column)}
                             columnSelection={columnSelection}
                             activeMultiSelectColumn={activeMultiSelectColumn}
                             columnHeaderArray={columnHeaderArray}
@@ -413,6 +426,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                             customStylesheet={customStylesheet}
                             globalResizeStyles={globalResizeStyles}
                             onSortClick={onSortClick}
+                            onColumnWidthChanged={onColumnWidthChanged}
                             rowSelection={rowSelection}
                             setIsSortedDesc={setIsSortedDesc}
                             isSortedDesc={isSortedDesc}
