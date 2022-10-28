@@ -1,3 +1,11 @@
+# [@hig/table-v1.9.0](https://github.com/Autodesk/hig/compare/@hig/table@1.8.1...@hig/table@1.9.0) (2022-10-28)
+
+
+### Features
+
+* add control for row pre select ([45e66b0](https://github.com/Autodesk/hig/commit/45e66b0))
+* add the onColumnWidthChanged prop to table ([#2892](https://github.com/Autodesk/hig/issues/2892)) ([a583ed2](https://github.com/Autodesk/hig/commit/a583ed2))
+
 # [@hig/table-v1.8.1](https://github.com/Autodesk/hig/compare/@hig/table@1.8.0...@hig/table@1.8.1) (2022-10-02)
 
 
