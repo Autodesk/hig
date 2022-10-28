@@ -24,6 +24,7 @@ const TablePresenter = ({
   onApplication,
   onColumnWidthChanged,
   enableBlockLayout,
+  controlRowPreSelect,
   stylesheet: customStylesheet,
   tableGroupSelectAll,
   ...otherProps
@@ -66,6 +67,7 @@ const TablePresenter = ({
     customStylesheet,
     tableGroupSelectAll,
     enableBlockLayout,
+    controlRowPreSelect,
     otherProps,
   };
 
@@ -110,6 +112,7 @@ TablePresenter.propTypes = {
   onApplication: PropTypes.func,
   onColumnWidthChanged: PropTypes.func,
   enableBlockLayout: PropTypes.bool,
+  controlRowPreSelect: PropTypes.func,
 };
 
 export default TablePresenter;
