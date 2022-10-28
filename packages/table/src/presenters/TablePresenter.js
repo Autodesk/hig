@@ -22,7 +22,9 @@ const TablePresenter = ({
   onTableCellClick,
   onSortClick,
   onApplication,
+  onColumnWidthChanged,
   enableBlockLayout,
+  controlRowPreSelect,
   stylesheet: customStylesheet,
   tableGroupSelectAll,
   ...otherProps
@@ -61,9 +63,11 @@ const TablePresenter = ({
     onTableCellClick,
     onSortClick,
     onApplication,
+    onColumnWidthChanged,
     customStylesheet,
     tableGroupSelectAll,
     enableBlockLayout,
+    controlRowPreSelect,
     otherProps,
   };
 
@@ -106,7 +110,9 @@ TablePresenter.propTypes = {
     setCheckboxToggle: PropTypes.func,
   }),
   onApplication: PropTypes.func,
+  onColumnWidthChanged: PropTypes.func,
   enableBlockLayout: PropTypes.bool,
+  controlRowPreSelect: PropTypes.func,
 };
 
 export default TablePresenter;

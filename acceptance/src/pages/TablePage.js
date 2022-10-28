@@ -269,6 +269,9 @@ const TablePage = () => {
 								onApplication={(props) => {
 									console.log('props', props);
 								}}
+								onColumnWidthChanged={(column => {
+									console.log(`{id: ${column.id}, Header: ${column.Header}, width: ${column.width}, isVisible: ${column.isVisible}}`);
+								})}
 								enableBlockLayout={true}
 								stylesheet={(styles, props, themeData) => {
 									return {
