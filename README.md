@@ -49,7 +49,7 @@ Theme data is a representation of the Weave visual design language in the form o
 
 ### Basics
 - Typography - See [`<Typography>`](./packages/typography/README.md) and [`<RichText>`](./packages/rich-text/README.md)
-- Layout - See [`<Spacer>`](./packages/spacer/README.md)
+- Layout - See [`<Spacer>`](./packages/spacer/README.md) and [`<Surface>`](./packages/surface/README.md)
 - Icons - See [`<Icons>`](./packages/icons/README.md) to easily render icons in React and the [`@hig/icons`](./packages/icons/README.md) package for svg data
 
 ### Components
@@ -86,6 +86,7 @@ Each Weave pattern is implemented as a set of React components. Each pattern is 
 - [`<Surface>`](./packages/surface/README.md) - A themable container with the appropriate background color for the current theme
 - [`<Table>`](./packages/table/README.md) - A collection of data in rows and columns
 - [`<Tabs>`](./packages/tabs/README.md) - Keeps related content in a single container
+- [`<Tag>`](./packages/tag/README.md) - Compact elements that can be used to represent small blocks of information
 - [`<TextArea>`](./packages/text-area/README.md) - A control to provide a large amount of freeform text
 - [`<TextLink>`](./packages/text-link/README.md) - Directs visitors to another location
 - [`<Thumbnail>`](./packages/thumbnail/README.md) - Visual anchors and identifiers for objects
