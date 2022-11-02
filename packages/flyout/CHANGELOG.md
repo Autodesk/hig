@@ -1,3 +1,10 @@
+# [@hig/flyout-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/flyout@2.2.1...@hig/flyout@2.3.0) (2022-11-02)
+
+
+### Features
+
+* set useCapture to true for onClickOutside ([1025577](https://github.com/Autodesk/hig/commit/1025577))
+
 # [@hig/flyout-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/flyout@2.2.0...@hig/flyout@2.2.1) (2022-07-19)
 
 
