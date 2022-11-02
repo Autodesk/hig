@@ -430,6 +430,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                             rowSelection={rowSelection}
                             setIsSortedDesc={setIsSortedDesc}
                             isSortedDesc={isSortedDesc}
+                            title={null}
                           >
                             <div
                               className={css(
@@ -439,7 +440,10 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                               )}
                             >
                               {column.canGroupBy && meta.groupElements ? (
-                                <span {...column.getGroupByToggleProps()}>
+                                <span
+                                  {...column.getGroupByToggleProps()}
+                                  title={null}
+                                >
                                   <GroupHeaderElements
                                     groupHeaderElementStyles={
                                       styles.groupHeaderElement
