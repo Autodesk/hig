@@ -1,3 +1,10 @@
+# [@hig/table-v1.9.1](https://github.com/Autodesk/hig/compare/@hig/table@1.9.0...@hig/table@1.9.1) (2022-11-02)
+
+
+### Bug Fixes
+
+* remove react-table column tooltip ([f9ce87c](https://github.com/Autodesk/hig/commit/f9ce87c))
+
 # [@hig/table-v1.9.0](https://github.com/Autodesk/hig/compare/@hig/table@1.8.1...@hig/table@1.9.0) (2022-10-28)
 
 
