@@ -1,3 +1,10 @@
+# [@hig/components-v3.3.0](https://github.com/Autodesk/hig/compare/@hig/components@3.2.0...@hig/components@3.3.0) (2022-11-08)
+
+
+### Features
+
+* add tag, tile, and thumbnail components ([ac54324](https://github.com/Autodesk/hig/commit/ac54324))
+
 # [@hig/components-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/components@3.1.0...@hig/components@3.2.0) (2022-06-15)
 
 
