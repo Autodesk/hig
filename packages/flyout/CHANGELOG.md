@@ -1,3 +1,10 @@
+# [@hig/flyout-v2.3.1](https://github.com/Autodesk/hig/compare/@hig/flyout@2.3.0...@hig/flyout@2.3.1) (2022-11-10)
+
+
+### Bug Fixes
+
+* properly remove handleBodyClick listener ([e9af55d](https://github.com/Autodesk/hig/commit/e9af55d))
+
 # [@hig/flyout-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/flyout@2.2.1...@hig/flyout@2.3.0) (2022-11-02)
 
 
