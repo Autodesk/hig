@@ -128,7 +128,11 @@ export default class Flyout extends Component {
   }
 
   componentWillUnmount() {
-    window.document.body.removeEventListener("click", this.handleBodyClick);
+    window.document.body.removeEventListener(
+      "click",
+      this.handleBodyClick,
+      true
+    );
   }
 
   /**

@@ -11,12 +11,12 @@ import darkGrayHighDensityTheme from "@hig/theme-data/build/json/darkGrayHighDen
 import "@hig/fonts/build/ArtifaktElement.css";
 
 const themeData = {
-  "LightGrayMedium": lightGrayMediumDensityTheme,
-  "DarkBlueMedium": darkBlueMediumDensityTheme,
-  "DarkGrayMedium": darkGrayMediumDensityTheme,
-  "LightGrayHigh": lightGrayHighDensityTheme,
-  "DarkBlueHigh": darkBlueHighDensityTheme,
-  "DarkGrayHigh": darkGrayHighDensityTheme,
+  "Light gray Medium density": lightGrayMediumDensityTheme,
+  "Dark blue Medium density": darkBlueMediumDensityTheme,
+  "Dark gray Medium density": darkGrayMediumDensityTheme,
+  "Light gray High density": lightGrayHighDensityTheme,
+  "Dark blue High density": darkBlueHighDensityTheme,
+  "Dark gray High density": darkGrayHighDensityTheme,
 }
 
 const surfaceStylesheet = styles => (
@@ -32,45 +32,36 @@ const surfaceStylesheet = styles => (
   }
 );
 
-const withThemeProvider=(Story, context)=>{
-  const colorScheme = context.globals.colorScheme.replace(' ', '');
+const withThemeProvider=(Story, context)=> (
+  <ThemeContext.Provider value={themeData[`${context.globals.colorScheme} ${context.globals.density}`]}>
+    <Surface level={200} stylesheet={surfaceStylesheet}>
+      <Story />
+    </Surface>
+  </ThemeContext.Provider>
+);
 
-  return (
-    <ThemeContext.Provider value={themeData[`${colorScheme}${context.globals.density}`]}>
-      <Surface level={200} stylesheet={surfaceStylesheet}>
-        <Story />
-      </Surface>
-    </ThemeContext.Provider>
-  )
-}
 export const decorators = [withThemeProvider];
 
 export const globalTypes = {
   colorScheme: {
-    name: "Color Scheme",
+    name: "Color scheme",
     description: "Global color scheme for components",
-    defaultValue: "Light Gray",
+    defaultValue: "Light gray",
     toolbar: {
       icon: "paintbrush",
-      // Array of plain string values or MenuItem shape (see below)
-      items: ["Light Gray", "Dark Blue", "Dark Gray"],
-      // Property that specifies if the name of the item will be displayed
-      showName: true,
-      // Change title based on selected value
+      items: ["Light gray", "Dark blue", "Dark gray"],
+      title: "Color scheme",
       dynamicTitle: true,
     },
   },
   density: {
     name: "Density",
     description: "Global density for components",
-    defaultValue: "Medium",
+    defaultValue: "Medium density",
     toolbar: {
       icon: "unfold",
-      // Array of plain string values or MenuItem shape (see below)
-      items: ["Medium", "High"],
-      // Property that specifies if the name of the item will be displayed
-      showName: true,
-      // Change title based on selected value
+      items: ["Medium density", "High density"],
+      title: "Density",
       dynamicTitle: true,
     },
   },
