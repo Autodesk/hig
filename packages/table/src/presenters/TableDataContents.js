@@ -3,6 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 
+import { CaretRightMUI, CaretDownMUI } from "@hig/icons";
 import DateFormatter from "../util/DateFormatter";
 import TableDataCell from "../TableDataCell";
 
@@ -15,6 +16,15 @@ const renderCellData = (formatDate = false, cell) => {
     ? DateFormatter(cell)
     : cell.render("Cell");
 };
+
+const renderSubRowControls = (row, styles) =>
+  row?.canExpand ? (
+    <span
+      {...row.getToggleRowExpandedProps({ style: styles.higSubRowControls })}
+    >
+      {row?.isExpanded ? <CaretDownMUI /> : <CaretRightMUI />}
+    </span>
+  ) : null;
 
 const TableDataContents = ({
   getTableBodyProps,
@@ -136,7 +146,9 @@ const TableDataContents = ({
                     globalResizeStyles={globalResizeStyles}
                     rowSelection={rowSelection}
                     count={count}
+                    isSubRows={row?.subRows?.length}
                   >
+                    {cellColumnIndex === 0 && renderSubRowControls(row, styles)}
                     {/* eslint-disable */}
                     {cell.isGrouped ? (
                       <>
