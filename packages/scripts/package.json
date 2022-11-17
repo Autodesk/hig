@@ -38,7 +38,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.0.0",
-    "babel-loader": "^8.0.0",
+    "babel-loader": "^9.1.0",
     "babel-polyfill": "^6.26.0",
     "eslint": "^8.15.0",
     "eslint-plugin-prettier": "^4.0.0",
