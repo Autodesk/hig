@@ -326,6 +326,13 @@ export default function stylesheet(props, themeData, themeMeta) {
       left: isHighDensity ? `12px` : `10px`,
       paddingTop: isHighDensity ? `2px` : `0`,
     },
+    higSubRowWrap: {
+      display: `flex`,
+    },
+    higSubRowControls: {
+      display: `inline-block`,
+      width: `20px`,
+    },
   };
 
   return customStylesheet

@@ -38,7 +38,7 @@ const Badge = ({
         );
 
         return (
-          <div className={cx(css(styles.badge), className)}>
+          <div {...otherProps} className={cx(css(styles.badge), className)}>
             {variant === "icon" && icon}
             {variant === "text" && label}
           </div>

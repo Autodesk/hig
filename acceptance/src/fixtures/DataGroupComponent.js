@@ -21,8 +21,14 @@ const DataGroupComponent = ({passedData}) => {
 
   const handleSelectAllGroup = (e) => {
     e.stopPropagation();
+    const dataWithSubRows = [...data];
+    data.forEach((row) => {
+      row?.subRows?.forEach(subRow => {
+        dataWithSubRows.push(subRow);
+      })
+    });
 
-    let newArray = data.map(
+    let newArray = dataWithSubRows.map(
       (row, index) => index + getOffset()
     );
 

@@ -90,7 +90,15 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     }
     // eslint-disable-next-line no-plusplus
     for (let i = 0; i < count; i++) {
-      totalArray.push(newDataArray[i].length);
+      const totalSubRowsArray = newDataArray[i].map(
+        (row) => row.subRows?.length
+      );
+      let totalSubRows = 0;
+      totalSubRowsArray.forEach((subRowTotal) => {
+        totalSubRows += subRowTotal;
+      });
+      totalSubRows = Number.isNaN(totalSubRows) ? 0 : totalSubRows;
+      totalArray.push(newDataArray[i].length + totalSubRows);
     }
     return totalArray.reduce((a, b) => a + b, 0);
   };
@@ -206,7 +214,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                     checked={activeMultiSelectRowArray?.includes(rowIndex)}
                     onClick={(event) => {
                       event.stopPropagation();
-                      const newArray = activeMultiSelectRowArray?.includes(
+                      let newArray = activeMultiSelectRowArray?.includes(
                         rowIndex
                       )
                         ? activeMultiSelectRowArray.filter(
@@ -216,7 +224,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                             ...activeMultiSelectRowArray,
                           ]) ||
                           [];
-
+                      newArray = [...new Set(newArray)];
                       if (!activeMultiSelectRowArray?.includes(rowIndex)) {
                         newArray.push(rowIndex);
                       }
@@ -225,6 +233,22 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                       } else {
                         setAllMultiSelectedRows(false);
                       }
+
+                      if (
+                        activeMultiSelectRowArray?.includes(rowIndex) &&
+                        row.isExpanded
+                      ) {
+                        row?.subRows?.forEach((subRow, index) => {
+                          const nextIndex = rowIndex + (index + 1);
+                          newArray.pop(nextIndex);
+                        });
+                      } else if (row.isExpanded) {
+                        row?.subRows?.forEach((subRow, index) => {
+                          const nextIndex = rowIndex + (index + 1);
+                          newArray.push(nextIndex);
+                        });
+                      }
+
                       setActiveMultiSelectRowArray(newArray);
                       onApplication({
                         externalMenu: { rowIndex, newArray, count },
@@ -266,7 +290,13 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   }
 
   useEffect(() => {
-    setTotalRows(rowTypeToMap.length);
+    const totalSubRowsArray = rowTypeToMap.map((row) => row.subRows?.length);
+    let totalSubRows = 0;
+    totalSubRowsArray.forEach((subRowTotal) => {
+      totalSubRows += subRowTotal;
+    });
+    totalSubRows = Number.isNaN(totalSubRows) ? 0 : totalSubRows;
+    setTotalRows(rowTypeToMap.length + totalSubRows);
   });
 
   const defaultSelectedRowsDeps = controlRowPreSelect
@@ -598,6 +628,7 @@ RenderTable.propTypes = {
   params: PropTypes.any,
   passedData: PropTypes.any,
   passedCount: PropTypes.any,
+  row: PropTypes.any,
 };
 
 export default RenderTable;
