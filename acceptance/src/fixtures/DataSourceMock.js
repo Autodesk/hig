@@ -1,3 +1,5 @@
+import { generateId } from "@hig/utils"
+
 export const tableContent = {
     total: 60,
     page: 1,
@@ -228,6 +230,69 @@ export const tableContentThree = {
             active: false,
             date: "2019-03-07T14:48:00Z",
             author: "SET TWO AUTHOR 3",
+        },
+    ]
+}
+
+export const tableContentFour = {
+    total: 3,
+    page: 4,
+    prevPage: "tableContent",
+    nextPage: null,
+    data: [
+        {
+            id: 1,
+            name: "--",
+            status: "--",
+            version: "--",
+            active: "--",
+            date: "--",
+            author: "--",
+            subRows: [
+            {
+                "id": 1,
+                "adskid": generateId('ADSK'),
+                "admin": "false",
+                "status": "Status",
+                "date": "Date",
+                "author": "author",
+            },
+            {
+                "id": 2,
+                "adskid": generateId('ADSK'),
+                "admin": "true",
+                "status": "Status",
+                "date": "Date",
+                "author": "author",
+            }
+            ]
+        },
+    ]
+}
+
+export const tableContentTree = {
+    total: 1,
+    page: 1,
+    prevPage: "tableContent",
+    nextPage: null,
+    data: [
+        {
+            id: 1,
+            name: "SET TWO 1",
+            status: "locked",
+            version: 1,
+            active: true,
+            date: "2020-01-05T14:48:00Z",
+            author: "SET TWO AUTHOR 1",
+        },
+        {
+            id: 2,
+            name: "SET TWO 2",
+            status: "locked",
+            version: 2,
+            active: false,
+            date: "2022-01-05T14:48:00Z",
+            author: "SET TWO AUTHOR 2",
         },
     ]
 }

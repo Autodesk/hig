@@ -22,6 +22,7 @@ export default function TableDataCellPresenter(props) {
     rowSelection,
     rowTypeToMap,
     count,
+    isSubRows,
     ...otherProps
   } = props;
   const { globalResizeStyles } = otherProps;
@@ -80,6 +81,10 @@ export default function TableDataCellPresenter(props) {
           ...resizeStyles,
           ...styles.higTableCell,
         };
+        const mergedTableCellContentWrapperStyles = {
+          ...styles.higTableCellContentWrapper,
+          ...(isSubRows ? styles.higSubRowWrap : ""),
+        };
 
         return (
           /* eslint-disable-next-line */
@@ -89,7 +94,7 @@ export default function TableDataCellPresenter(props) {
             data-cell-coords={`${cellColumnIndex}_${cellRowIndex}`}
             onClick={handleCellClick}
           >
-            <div className={css(styles.higTableCellContentWrapper)}>
+            <div className={css(mergedTableCellContentWrapperStyles)}>
               {children}
             </div>
           </div>
@@ -116,4 +121,5 @@ TableDataCellPresenter.propTypes = {
   rowTypeToMap: PropTypes.arrayOf(PropTypes.any),
   rowSelection: PropTypes.bool,
   count: PropTypes.number,
+  isSubRows: PropTypes.bool,
 };

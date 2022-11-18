@@ -148,7 +148,7 @@ import ColumnShowHideComponent from "./ColumnShowHideComponent";
 import SortColumns from "./SortColumns";
 import GenericApplication from "./GenericApplication";
 import DataGroupComponent from "./DataGroupComponent";
-import {tableContent, tableContentTwo, tableContentThree} from "./DataSourceMock";
+import {tableContent, tableContentTwo, tableContentThree, tableContentFour} from "./DataSourceMock";
 
 /*
 meta: {
@@ -226,7 +226,7 @@ export const TABLE_OBJECT_CUSTOM = {
     },
   ],
   groupNames: ['Revit Model', 'CAD Formats', 'Sample Empty', 'Coordination Model'],
-  hiddenColumns: "true",
+  // hiddenColumns: "true",
   data: [
     tableContent.data.map((row, index) => {
       return {
@@ -249,6 +249,17 @@ export const TABLE_OBJECT_CUSTOM = {
       };
     }),
     [],
+    tableContentFour.data.map((row, index) => {
+      return {
+          "id": row.id,
+          "adskid": "F3.23-1-48X36.rvt",
+          "admin": "--",
+          "status": row.status,
+          "date": row.date,
+          "author": row.author,
+          "subRows": row.subRows,
+        };
+    }),
     tableContentTwo.data.map((row, index) => {
       return {
         "id": row.id,
@@ -260,15 +271,5 @@ export const TABLE_OBJECT_CUSTOM = {
       };
     })
   ],
-  // data: tableContent.data.map((row, index) => {
-  //   return {
-  //     "id": row.id,
-  //     "adskid": generateId('ADSK'),
-  //     "admin": index % 2 === 0 ? "true" : "false",
-  //     "status": row.status,
-  //     "date": row.date,
-  //     "author": row.author,
-  //   };
-  // })
 };
 
