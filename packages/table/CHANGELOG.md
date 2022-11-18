@@ -1,3 +1,10 @@
+# [@hig/table-v1.10.0](https://github.com/Autodesk/hig/compare/@hig/table@1.9.1...@hig/table@1.10.0) (2022-11-18)
+
+
+### Features
+
+* add tree grid structure ([04ef73e](https://github.com/Autodesk/hig/commit/04ef73e))
+
 # [@hig/table-v1.9.1](https://github.com/Autodesk/hig/compare/@hig/table@1.9.0...@hig/table@1.9.1) (2022-11-02)
 
 
