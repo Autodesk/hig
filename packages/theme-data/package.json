@@ -32,7 +32,7 @@
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
-    "@weave-design/semantic-release-config": "^1.0.0",
+    "@hig/semantic-release-config": "^0.1.0",
     "@hig/typography": "^2.1.0",
     "camelcase": "^5.0.0",
     "style-dictionary": "^3.7.1"

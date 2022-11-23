@@ -9,7 +9,6 @@ const ProgressRingIndeterminateBehavior = (props) => {
   const [cssTransitionState, setcssTransitionState] = useState(null);
   const [playing, setPlaying] = useState(null);
   const containerRef = useRef(null);
-  const animationFrameIdRef = useRef(null);
   let startTime;
   let segments;
   let SEGMENT_COUNT;
@@ -64,13 +63,11 @@ const ProgressRingIndeterminateBehavior = (props) => {
   };
 
   const step = (timestamp) => {
-    animationFrameIdRef.current = undefined;
     if (!playing) {
       return;
     }
-
-    if (cssTransitionState !== "entered" && !animationFrameIdRef.current) {
-      animationFrameIdRef.current = window.requestAnimationFrame(step);
+    if (cssTransitionState !== "entered") {
+      window.requestAnimationFrame(step);
       return;
     }
 
@@ -79,17 +76,13 @@ const ProgressRingIndeterminateBehavior = (props) => {
     const elapsedThisCycle = elapsed % CYCLE_DURATION;
     setSegmentOpacities(elapsedThisCycle);
 
-    if (!animationFrameIdRef.current) {
-      animationFrameIdRef.current = window.requestAnimationFrame(step);
-    }
+    window.requestAnimationFrame(step);
   };
 
   const start = () => {
     setPlaying(true);
     startTime = undefined;
-    if (!animationFrameIdRef.current) {
-      animationFrameIdRef.current = window.requestAnimationFrame(step);
-    }
+    window.requestAnimationFrame(step);
   };
 
   const handleEntering = () => {
@@ -113,15 +106,6 @@ const ProgressRingIndeterminateBehavior = (props) => {
     initSegments();
     step(1);
   });
-  useEffect(
-    () => () => {
-      if (animationFrameIdRef.current) {
-        window.cancelAnimationFrame(animationFrameIdRef.current);
-        animationFrameIdRef.current = undefined;
-      }
-    },
-    []
-  );
 
   return (
     <CSSTransition
