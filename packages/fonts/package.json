@@ -24,6 +24,6 @@
     "release": "hig-scripts-release"
   },
   "release": {
-    "extends": "@hig/semantic-release-config"
+    "extends": "@weave-design/semantic-release-config"
   }
 }
