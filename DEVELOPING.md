@@ -266,7 +266,7 @@ A package must have the following properties defined in its `package.json` file 
     "@hig/semantic-release-config": "^x.x.x",
   },
   "release": {
-    "extends": "@hig/semantic-release-config"
+    "extends": "@weave-design/semantic-release-config"
   },
   "scripts": {
     "release": "hig-scripts-release"
