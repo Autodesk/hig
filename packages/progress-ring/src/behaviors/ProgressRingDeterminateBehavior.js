@@ -8,6 +8,7 @@ const ProgressRingDeterminateBehavior = (props) => {
   const [cssTransitionState, setCSSTransitionState] = useState(null);
   const [transitionEnter, setTransitionEnter] = useState(true);
   const containerRef = useRef(null);
+  const animationFrameIdRef = useRef(null);
   let value = 0;
   let prevTimestamp = 0;
   let targetValue;
@@ -17,8 +18,10 @@ const ProgressRingDeterminateBehavior = (props) => {
 
   const wait = () => {
     prevTimestamp = window.performance.now();
-    // eslint-disable-next-line no-use-before-define
-    window.requestAnimationFrame(step);
+    if (!animationFrameIdRef.current) {
+      // eslint-disable-next-line no-use-before-define
+      animationFrameIdRef.current = window.requestAnimationFrame(step);
+    }
   };
 
   const enter = () => {
@@ -76,12 +79,14 @@ const ProgressRingDeterminateBehavior = (props) => {
 
     prevTimestamp = timestamp;
     value = interrumValue;
-
-    // eslint-disable-next-line no-use-before-define
-    window.requestAnimationFrame(step);
+    if (!animationFrameIdRef.current) {
+      // eslint-disable-next-line no-use-before-define
+      animationFrameIdRef.current = window.requestAnimationFrame(step);
+    }
   };
 
   const step = (timestamp) => {
+    animationFrameIdRef.current = undefined;
     if (cssTransitionState === "entering" || cssTransitionState === "exiting") {
       wait();
       return;
@@ -109,7 +114,7 @@ const ProgressRingDeterminateBehavior = (props) => {
     if (!prevTimestamp) {
       prevTimestamp = window.performance.now();
     }
-    window.requestAnimationFrame(step);
+    animationFrameIdRef.current = window.requestAnimationFrame(step);
   };
 
   const initSegments = () => {
@@ -145,6 +150,16 @@ const ProgressRingDeterminateBehavior = (props) => {
       setProgress(props.percentComplete);
     }
   });
+
+  useEffect(
+    () => () => {
+      if (animationFrameIdRef.current) {
+        window.cancelAnimationFrame(animationFrameIdRef.current);
+        animationFrameIdRef.current = undefined;
+      }
+    },
+    []
+  );
 
   return (
     <CSSTransition

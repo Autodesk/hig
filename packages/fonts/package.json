@@ -16,7 +16,7 @@
   ],
   "devDependencies": {
     "@hig/scripts": "^0.1.2",
-    "@hig/semantic-release-config": "^0.1.0",
+    "@weave-design/semantic-release-config": "^1.0.0",
     "mkdirp": "^0.5.1"
   },
   "scripts": {
