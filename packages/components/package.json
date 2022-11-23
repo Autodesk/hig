@@ -70,7 +70,7 @@
     "@hig/babel-preset": "^0.1.1",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
-    "@weave-design/semantic-release-config": "^1.0.0",
+    "@hig/semantic-release-config": "^0.1.0",
     "clean-css": "^4.1.11",
     "esprima": "^4.0.0",
     "mkdirp": "^0.5.1",
@@ -88,7 +88,7 @@
     "preset": "@hig/jest-preset"
   },
   "release": {
-    "extends": "@weave-design/semantic-release-config"
+    "extends": "@hig/semantic-release-config"
   },
   "babel": {
     "env": {

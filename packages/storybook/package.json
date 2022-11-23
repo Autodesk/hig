@@ -47,7 +47,7 @@
     "@storybook/testing-library": "^0.0.13",
     "@storybook/theming": "^6.5.13",
     "@svgr/webpack": "^6.2.1",
-    "babel-loader": "^9.1.0",
+    "babel-loader": "^8.2.5",
     "babel-plugin-macros": "^3.1.0",
     "babel-plugin-polyfill-corejs3": "^0.5.2",
     "babel-plugin-react-docgen": "^1.8.1",
