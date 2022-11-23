@@ -47,7 +47,7 @@
     "preset": "@hig/jest-preset"
   },
   "release": {
-    "extends": "@hig/semantic-release-config"
+    "extends": "@weave-design/semantic-release-config"
   },
   "babel": {
     "env": {
