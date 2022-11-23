@@ -3,4 +3,4 @@ import createReleaseConfig from './src/index';
 
 const packageName = readPackage.sync().name;
 
-export default createReleaseConfig({ packageName });
+module.exports = createReleaseConfig({ packageName });
