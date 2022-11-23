@@ -1,8 +1,8 @@
 # Semantic Release Configuration
 
-> Semantic Release configuration for Weave packages
+> Semantic Release configuration for HIG packages
 
-This package extends [semantic-release-monorepo][] to publish Weave packages via [semantic-release][].
+This package extends [semantic-release-monorepo][] to publish HIG packages via [semantic-release][].
 
 Changes from `semantic-release-monorepo` include:
 

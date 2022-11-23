@@ -1,6 +1,6 @@
-import {readPackage} from 'read-pkg';
-import createReleaseConfig from './src/index';
+const readPkg = require("read-pkg");
+const createReleaseConfig = require("./build/index").default;
 
-const packageName = readPackage.sync().name;
+const packageName = readPkg.sync().name;
 
 module.exports = createReleaseConfig({ packageName });
