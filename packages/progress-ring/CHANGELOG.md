@@ -1,3 +1,11 @@
+# [@hig/progress-ring-v2.2.2](https://github.com/Autodesk/hig/compare/@hig/progress-ring@2.2.1...@hig/progress-ring@2.2.2) (2022-11-23)
+
+
+### Bug Fixes
+
+* utilize cancelAnimationFrame API properly remove requestAnimationFrame listener on Determinate behavior ([8cdb6e0](https://github.com/Autodesk/hig/commit/8cdb6e0))
+* utilize cancelAnimationFrame API properly remove requestAnimationFrame listener on Indeterminate behavior ([a5790bd](https://github.com/Autodesk/hig/commit/a5790bd))
+
 # [@hig/progress-ring-v2.2.1](https://github.com/Autodesk/hig/compare/@hig/progress-ring@2.2.0...@hig/progress-ring@2.2.1) (2022-08-23)
 
 
