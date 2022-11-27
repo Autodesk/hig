@@ -19,7 +19,7 @@ function createDryRunReleaseConfig(payload) {
     ...createProductionReleaseConfig(payload),
     dryRun: true,
     ci: false,
-    branches: "development",
+    branches: ["development"],
     verifyConditions: [],
     prepare: [],
     publish: [],

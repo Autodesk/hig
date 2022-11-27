@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "@hig/semantic-release-config",
-  "version": "0.1.0",
+  "name": "@weave-design/semantic-release-config",
+  "version": "1.0.0",
   "description": "Semantic Release configuration for HIG packages",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
