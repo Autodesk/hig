@@ -9,7 +9,7 @@ module.exports = {
     builder: 'webpack5'
   },
   framework: "@storybook/react",
-  stories: ["../../../packages/**/*.story.mdx", "../../../packages/**/*.story.[tj]s"],
+  stories: ["../../../packages/**/*.stories.mdx", "../../../packages/**/*.stories.[tj]s"],
   staticDirs: ["../public"],
   webpackFinal: async (config, {
     configType
