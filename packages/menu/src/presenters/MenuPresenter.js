@@ -57,7 +57,7 @@ const MenuPresenter = (props) => {
       ? {
           ...(getHighlightIndex() !== 0 && {
             "aria-activedescendant":
-              getOptionsInfo()[getHighlightIndex() - 1].id,
+              getOptionsInfo()?.[getHighlightIndex() - 1]?.id,
           }),
           ...(multiple && { "aria-multiselectable": multiple }),
         }
