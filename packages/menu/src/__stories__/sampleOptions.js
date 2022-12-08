@@ -33,7 +33,7 @@ const defaultOptions = [
   </Option>,
 ];
 const getAvatarOptions = (density) => {
-  const size = density === "Medium" ? "medium" : "small";
+  const size = density === "Medium density" ? "medium" : "small";
   return [
     <Option
       id="peter-parker"
@@ -75,7 +75,7 @@ const getAvatarOptions = (density) => {
 
 const getIconOptions = (density) => {
   const getIcon = (HighIcon, MediumIcon) => {
-    if (density === "Medium") {
+    if (density === "Medium density") {
       return <MediumIcon />;
     }
     return <HighIcon />;

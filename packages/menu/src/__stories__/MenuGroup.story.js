@@ -30,19 +30,19 @@ export default {
 const Template = (args, context) => {
   const { density } = context.globals;
   const shortcutWithTitle = [
-    <Option id="shortcut-header" role="presentation">
+    <Option id="shortcut-header" role="presentation" key="shortcut-header">
       Shortcut Option Header
     </Option>,
     ...SAMPLE_OPTIONS.shortcutOptions,
   ];
   const avatarWithTitle = [
-    <Option id="avatar-header" role="presentation">
+    <Option id="avatar-header" role="presentation" key="avatar-header">
       Avatar Option Header
     </Option>,
     ...SAMPLE_OPTIONS.getAvatarOptions(density),
   ];
   const iconWithTitle = [
-    <Option id="icon-header" role="presentation">
+    <Option id="icon-header" role="presentation" key="icon-header">
       Icon Option Header
     </Option>,
     ...SAMPLE_OPTIONS.getIconOptions(density),
