@@ -108,6 +108,17 @@ const MenuPresenter = (props) => {
       });
 
       if (JSON.stringify(currentIds) !== JSON.stringify(prevIds)) {
+        const currHighlightIndex = getHighlightIndex();
+
+        if (currHighlightIndex !== 0) {
+          const selectedOptionId = prevIds[currHighlightIndex - 1];
+          const newHighlightIndex = currentIds.findIndex(id => id === selectedOptionId);
+          
+          if (newHighlightIndex !== -1) {
+            props.setHighlightIndex(newHighlightIndex);
+          }
+        }
+
         props.setOptionsInfo(optionsInfo);
       }
     }
