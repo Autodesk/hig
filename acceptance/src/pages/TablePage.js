@@ -49,13 +49,13 @@ const TablePage = () => {
 	const [paginateDynamic, setPaginateDynamic] = useState(false);
 	const [columnSelection, setColumnSelection] = useState(false);
 	const [rowSelection, setRowSelection] = useState(true);
-	const [customComponents, setCustomComponents] = useState(TABLE_OBJECT_CUSTOM);
+	const [customComponents, setCustomComponents] = useState(TABLE_OBJECT_BASIC);
 	const [alternateBg, setAlternateBg] = useState(false);
 	const [headerBackgroundSelection, setHeaderBackgroundSelection] = useState('surface-levels');
 	const [headerBackgroundColor, setHeaderBackgroundColor] = useState(null)
 	const [isDescending, setIsDescending] = useState(true)
 
-	const [checkboxToggle, setCheckboxToggle] = useState(Array(TABLE_OBJECT_CUSTOM.data.length).fill(false));
+	const [checkboxToggle, setCheckboxToggle] = useState(Array(TABLE_OBJECT_BASIC.data.length).fill(false));
 	const handleCheckboxToggle = (count, value) => {
 		const copyCheckboxArray = checkboxToggle.map((item, index) => {
 			if (index === count) {
@@ -76,13 +76,13 @@ const TablePage = () => {
 						...styles,
 						surface: {
 							...styles.surface,
-							width: `90%`
+							width: `100%`
 						}
 					}
 				}}
 			>
 				<div className="wrapper">
-					<div
+					{/* <div
 						className="left-nav"
 						style={{
 							background: themes[theme]?.resolvedRoles['colorScheme.surface.level200'],
@@ -235,9 +235,9 @@ const TablePage = () => {
 								</div>
 							</div>
 						</div>
-					</div>
-					<div>
-						<div>
+					</div> */}
+					{/* <div> */}
+						{/* <div> */}
 							<Table
 								alternateBg={alternateBg}
 								columnSelection={columnSelection}
@@ -272,7 +272,7 @@ const TablePage = () => {
 								onColumnWidthChanged={(column => {
 									console.log(`{id: ${column.id}, Header: ${column.Header}, width: ${column.width}, isVisible: ${column.isVisible}}`);
 								})}
-								enableBlockLayout={true}
+								enableBlockLayout={false}
 								stylesheet={(styles, props, themeData) => {
 									return {
 										...styles,
@@ -287,9 +287,12 @@ const TablePage = () => {
 										}
 									}
 								}}
+								onTableCellClick={(e, {children}) => {
+									console.log('props cell contents', children[1].props.cell.value)
+								}}
 							/>
-						</div>
-					</div>
+						{/* </div> */}
+					{/* </div> */}
 				</div>
 			</Surface>
 		</ThemeContext.Provider>		

@@ -23,14 +23,17 @@ export default function TableDataCellPresenter(props) {
     rowTypeToMap,
     count,
     isSubRows,
+    isTreeGrid,
     ...otherProps
   } = props;
   const { globalResizeStyles } = otherProps;
   const handleCellClick = useCallback(
     (event) => {
+      console.log('here at onTableCellClick', onTableCellClick)
       if (onTableCellClick) {
         onTableCellClick(event, {
           props,
+          children
         });
       }
       // don't select when multi-select row cell clicked
@@ -93,6 +96,7 @@ export default function TableDataCellPresenter(props) {
             className={css(mergedStyles)}
             data-cell-coords={`${cellColumnIndex}_${cellRowIndex}`}
             onClick={handleCellClick}
+            // onClick={() => {}}
           >
             <div className={css(mergedTableCellContentWrapperStyles)}>
               {children}
@@ -122,4 +126,5 @@ TableDataCellPresenter.propTypes = {
   rowSelection: PropTypes.bool,
   count: PropTypes.number,
   isSubRows: PropTypes.bool,
+  isTreeGrid: PropTypes.bool,
 };

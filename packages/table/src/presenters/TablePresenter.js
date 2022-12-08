@@ -70,19 +70,7 @@ const TablePresenter = ({
     controlRowPreSelect,
     otherProps,
   };
-
-  if (!isGrouped) {
-    return <RenderTable params={passedParams} />;
-  }
-  const tableRender = dataArray?.map((data, count) => (
-    <RenderTable
-      params={passedParams}
-      passedData={data}
-      passedCount={count}
-      key={count}
-    />
-  ));
-  return tableRender;
+  return <RenderTable params={passedParams} />;
 };
 
 TablePresenter.propTypes = {

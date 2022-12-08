@@ -1,7 +1,10 @@
 .wrapper {
-    display: flex;
+    /* display: flex;
     overflow: scroll;
-    padding: 20px;
+    padding: 20px; */
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .left-nav {

@@ -1,4 +1,5 @@
 import { generateId } from "@hig/utils"
+import TreeGridContent from './TreeGridContent';
 
 export const tableContent = {
     total: 60,
@@ -242,30 +243,101 @@ export const tableContentFour = {
     data: [
         {
             id: 1,
-            name: "--",
-            status: "--",
-            version: "--",
-            active: "--",
-            date: "--",
-            author: "--",
+            name: "",
+            status: "",
+            version: "",
+            active: "",
+            date: "",
+            author: "",
             subRows: [
             {
                 "id": 1,
                 "adskid": generateId('ADSK'),
                 "admin": "false",
-                "status": "Status",
-                "date": "Date",
-                "author": "author",
+                "status": "edit",
+                "date": "2021-10-06T14:48:00Z",
+                "author": "SET FOUR AUTHOR 1",
+                "parent": 1,
             },
             {
                 "id": 2,
                 "adskid": generateId('ADSK'),
                 "admin": "true",
-                "status": "Status",
-                "date": "Date",
-                "author": "author",
+                "status": "review",
+                "date": "2021-10-06T14:48:00Z",
+                "author": "SET FOUR AUTHOR 2",
+                "parent": 1,
+            },
+            {
+                "id": 3,
+                "adskid": generateId('ADSK'),
+                "admin": "false",
+                "status": "edit",
+                "date": "2021-10-06T14:48:00Z",
+                "author": "SET FOUR AUTHOR 3",
+                "parent": 1,
+            },
+            {
+                "id": 4,
+                "adskid": generateId('ADSK'),
+                "admin": "false",
+                "status": "edit",
+                "date": "2021-10-06T14:48:00Z",
+                "author": "SET FOUR AUTHOR 4",
+                "parent": 1,
             }
-            ]
+            ],
+            parent: null,
+        },
+        {
+            id: 2,
+            name: "",
+            status: "",
+            version: "",
+            active: "",
+            date: "",
+            author: "",
+            subRows: [
+            {
+                "id": 1,
+                "adskid": "F3.23-1-48X36.rvt",
+                "admin": "--",
+                "status": "--",
+                "date": "--",
+                "author": "--",
+                subRows: [
+                    {
+                        "id": 1,
+                        "adskid": <TreeGridContent value={generateId('ADSK')} last={false} />,
+                        "admin": "false",
+                        "status": "edit",
+                        "date": "2019-03-07T14:48:00Z",
+                        "author": "SET TWO AUTHOR 1",
+                        "parent": 1,
+                    },
+                    {
+                        "id": 2,
+                        "adskid": <TreeGridContent value={generateId('ADSK')} last={true} />,
+                        "admin": "true",
+                        "status": "edit",
+                        "date": "2019-03-07T14:48:00Z",
+                        "author": "SET TWO AUTHOR 2",
+                        "parent": 1,
+                    }
+                ],
+                "parent": 2,
+            },
+            {
+                "id": 2,
+                "adskid": generateId('ADSK'),
+                "admin": "true",
+                "status": "review",
+                "date": "2021-10-06T14:48:00Z",
+                "author": "SET ONE AUTHOR 1",
+                "parent": 2,
+            }
+            ],
+            parent: null,
         },
     ]
 }

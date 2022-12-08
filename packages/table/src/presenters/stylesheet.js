@@ -24,6 +24,8 @@ export default function stylesheet(props, themeData, themeMeta) {
     selectedLeft,
     customStylesheet,
     isGrouped,
+    isSubRows,
+    isTreeGrid,
   } = props;
   const isHighDensity = themeMeta?.densityId === `high-density`;
   const alternateBgColor =
@@ -34,7 +36,11 @@ export default function stylesheet(props, themeData, themeMeta) {
   const styles = {
     higTable: {
       color: themeData["table.fontColor"],
-      display: isGrouped ? "block" : "inline-block",
+      // display: isGrouped ? "block" : "inline-block",
+      display: "block",
+      maxWidth: "100%",
+      overflowX: "hidden",
+      overflowY: "hidden",
       fontFamily: themeData["table.fontFamily"],
       fontSize: themeData["table.fontSize"],
       fontWeight: themeData["table.cell.fontWeight"],
@@ -42,7 +48,7 @@ export default function stylesheet(props, themeData, themeMeta) {
       outline: 0,
       position: `relative`,
       ...(isStickyColumn || isStickyHeader ? { overflow: `auto` } : {}),
-    },
+    }, 
     higTableHold: {
       display: "none",
     },
@@ -164,8 +170,11 @@ export default function stylesheet(props, themeData, themeMeta) {
     },
     higTableCell: {
       alignItems: `center`,
-      borderRight: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`,
-      borderTop: `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`,
+      // borderRight: isSubRows || isTreeGrid ? `none` : `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`,
+      // borderTop: isSubRows ? `1px solid rgba(60,60,60,.1)` : `${themeData["table.borderWidth"]} solid ${themeData["colorScheme.divider.lightweight"]}`,
+      borderRight: isSubRows || isTreeGrid ? `none` : `none`,
+      borderTop: isSubRows ? `1px solid rgba(60,60,60,.1)` : `none`,
+      backgroundColor: isSubRows ? `#ebebeb` : '',
       boxSizing: `border-box`,
       display: `flex`,
       height: themeData["table.cell.minHeight"],
@@ -194,20 +203,20 @@ export default function stylesheet(props, themeData, themeMeta) {
       ...(hasHover && cellColumnIndex !== -1
         ? {
             backgroundColor:
-              themeData["table.row.unselected.hover.backgroundColor"],
+              isTreeGrid ? `none` : themeData["table.row.unselected.hover.backgroundColor"],
           }
         : {}),
       ...(isPressed && cellColumnIndex !== -1
         ? {
             backgroundColor:
-              themeData["table.cell.unselected.pressed.backgroundColor"],
+              isSubRows ? `#ebebeb` : isTreeGrid ? `none` : themeData["table.cell.unselected.pressed.backgroundColor"],
           }
         : {}),
       ...(selected
         ? {
-            backgroundColor: `transparent`,
-            borderRight: `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
-            borderTop: `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
+            backgroundColor: isSubRows ? `#ebebeb` : `transparent`,
+            borderRight: isSubRows || isTreeGrid ? `none` : `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
+            borderTop: isSubRows || isTreeGrid ? `1px solid rgba(60,60,60,.1)` : `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
           }
         : {}),
       ...(selected && isLast
@@ -215,14 +224,15 @@ export default function stylesheet(props, themeData, themeMeta) {
             borderBottom: `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
           }
         : {}),
-      ...(selectedBottom
+      ...(selectedBottom && !isSubRows && !isTreeGrid
         ? {
-            borderTop: `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
+            // borderTop: `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
+            borderTop: `1px solid transparent`,
           }
         : {}),
       ...(selectedLeft
         ? {
-            borderRight: `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
+            borderRight: isSubRows || isTreeGrid ? `none` : `1px solid ${themeData["table.row.selected.default.borderColor"]}`,
           }
         : {}),
       ...(multiSelectedColumn
@@ -245,7 +255,7 @@ export default function stylesheet(props, themeData, themeMeta) {
       ...(multiSelectedRow
         ? {
             backgroundColor:
-              themeData["table.cell.multiSelect.default.backgroundColor"],
+            themeData["table.cell.multiSelect.default.backgroundColor"],
             borderTopColor: `${themeData["table.cell.multiSelect.focus.borderColor"]}`,
           }
         : {}),
@@ -256,7 +266,7 @@ export default function stylesheet(props, themeData, themeMeta) {
         : {}),
       ...(multiSelectedRow && multiSelectedRowBottom
         ? {
-            borderTopColor: `none`,
+            borderTopColor: `${themeData["table.cell.multiSelect.focus.borderColor"]}`,
           }
         : {}),
       ...(multiSelectedRow && isLast
@@ -328,6 +338,11 @@ export default function stylesheet(props, themeData, themeMeta) {
     },
     higSubRowWrap: {
       display: `flex`,
+      fontWeight: `900`,
+    },
+    higTreeGridWrap: {
+      display: `flex`,
+      paddingLeft: `10px`,
     },
     higSubRowControls: {
       display: `inline-block`,

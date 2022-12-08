@@ -26,6 +26,11 @@ const renderSubRowControls = (row, styles) =>
     </span>
   ) : null;
 
+const checkSubRowsOfSubRows = (subRows) => {
+  console.log('SUBROWS', subRows)
+  return true;
+}
+
 const TableDataContents = ({
   getTableBodyProps,
   styles,
@@ -73,7 +78,6 @@ const TableDataContents = ({
         metadata
       );
       prepareRow(row);
-
       return (
         <div key={`table-body-row-${rowIndex}`}>
           <div
@@ -90,7 +94,6 @@ const TableDataContents = ({
                 : rowIndex;
               const totalRows = rowTypeToMap.length || tableObject.data.length;
               const headerIndexOffset = rowSelection ? 1 : 0;
-
               if (
                 (cellColumnIndex === -1 &&
                   typeof cell.column.Header === "function") ||
@@ -146,7 +149,8 @@ const TableDataContents = ({
                     globalResizeStyles={globalResizeStyles}
                     rowSelection={rowSelection}
                     count={count}
-                    isSubRows={row?.subRows?.length}
+                    isSubRows={row?.subRows?.length && row?.original?.parent === null}
+                    isTreeGrid={row?.subRows?.length && row?.original?.parent !== null}
                   >
                     {cellColumnIndex === 0 && renderSubRowControls(row, styles)}
                     {/* eslint-disable */}

@@ -7,7 +7,7 @@ import ColumnShowHideComponent from "./ColumnShowHideComponent";
 import SortColumns from "./SortColumns";
 import GenericApplication from "./GenericApplication";
 import DataGroupComponent from "./DataGroupComponent";
-import {tableContent, tableContentTwo, tableContentThree} from "./DataSourceMock";
+import {tableContent, tableContentTwo, tableContentThree, tableContentFour} from "./DataSourceMock";
 
 /*
 meta: {
@@ -30,9 +30,11 @@ data: {
 }
 */
 
+const groupNames = ['Revit Model', 'CAD Formats', 'Coord Model'];
+
 export const TABLE_OBJECT_BASIC = {
   meta: {
-    globalFilter: props => <SearchInput passedData={props} />,
+    // globalFilter: props => <SearchInput passedData={props} />,
     paginationComponent: props => <PaginationInput passedData={props} />,
     paginationDynamic: props => <PaginationDynamic passedData={props} />,
     stickyItems: {
@@ -40,7 +42,7 @@ export const TABLE_OBJECT_BASIC = {
       isStickyColumns: true,
     },
     expandedComponent: props => <ExpandedComponent passedData={props} />,
-    columnShowHideComponent: props => <ColumnShowHideComponent passedData={props} />,
+    // columnShowHideComponent: props => <ColumnShowHideComponent passedData={props} />,
     columnShowHide: true,
     sortColumns: props => <SortColumns passedData={props} />,
     genericApplication: props => <GenericApplication passedData={props} />,
@@ -85,8 +87,8 @@ export const TABLE_OBJECT_BASIC = {
       },
   ],
   hiddenColumns: "true",
-  defaultSelectedRows: [0, 4],
-  // groupNames: ['Revit Model', 'CAD Formats', 'Sample Empty', 'Coordination Model'],
+  // defaultSelectedRows: [0, 4],
+  // groupNames: ['Revit Model', 'CAD Formats', 'Coordination Model'],
   // data: [
   //   tableContentThree.data.map((row, index) => {
   //     return {
@@ -120,14 +122,26 @@ export const TABLE_OBJECT_BASIC = {
   //     };
   //   })
   // ],
-  data: tableContent.data.map((row, index) => {
+  // data: tableContent.data.map((row, index) => {
+  //   return {
+  //     "id": row.id,
+  //     "adskid": generateId('ADSK'),
+  //     "admin": index % 2 === 0 ? "true" : "false",
+  //     "status": row.status,
+  //     "date": row.date,
+  //     "author": row.author,
+  //   };
+  // })
+  data: tableContentFour.data.map((row, index) => {
     return {
-      "id": row.id,
-      "adskid": generateId('ADSK'),
-      "admin": index % 2 === 0 ? "true" : "false",
-      "status": row.status,
-      "date": row.date,
-      "author": row.author,
-    };
-  })
+        "id": row.id,
+        "adskid": <div>{groupNames[index]}&nbsp;({row.subRows.length})</div>,
+        "admin": "",
+        "status": row.status,
+        "date": row.date,
+        "author": row.author,
+        "subRows": row.subRows,
+        "parent": row.parent,
+      };
+  }),
 };
