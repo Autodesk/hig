@@ -115,7 +115,7 @@ const MenuPresenter = (props) => {
           const currHighlightIndex = currentIds.findIndex(id => id === selectedOptionId);
 
           if (currHighlightIndex !== -1) {
-            props.setHighlightIndex(currHighlightIndex);
+            props.setHighlightIndex(currHighlightIndex + 1);
           }
         }
 
