@@ -108,14 +108,14 @@ const MenuPresenter = (props) => {
       });
 
       if (JSON.stringify(currentIds) !== JSON.stringify(prevIds)) {
-        const currHighlightIndex = getHighlightIndex();
+        const prevHighlightIndex = getHighlightIndex();
 
-        if (currHighlightIndex !== 0) {
-          const selectedOptionId = prevIds[currHighlightIndex - 1];
-          const newHighlightIndex = currentIds.findIndex(id => id === selectedOptionId);
-          
-          if (newHighlightIndex !== -1) {
-            props.setHighlightIndex(newHighlightIndex);
+        if (prevHighlightIndex !== 0) {
+          const selectedOptionId = prevIds[prevHighlightIndex - 1];
+          const currHighlightIndex = currentIds.findIndex(id => id === selectedOptionId);
+
+          if (currHighlightIndex !== -1) {
+            props.setHighlightIndex(currHighlightIndex);
           }
         }
 
