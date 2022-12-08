@@ -3,6 +3,10 @@ import { shallow } from "enzyme";
 import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
 import Typography from "./Typography";
 
+// Getting Typography › encountered a declaration exception
+// This is workaround for it
+const TypographyComponent = Typography;
+
 describe("Typography", () => {
   function props({ ...args }) {
     const { align, elementType, fontWeight, variant } = args;
@@ -22,11 +26,13 @@ describe("Typography", () => {
 
   it("renders", () => {
     expect(
-      shallow(<Typography>It should render nicely</Typography>)
+      shallow(
+        <TypographyComponent>It should render nicely</TypographyComponent>
+      )
     ).toMatchObject(/It should render nicely/);
   });
 
-  takeSnapshotsOf(Typography, [
+  takeSnapshotsOf(TypographyComponent, [
     // new API tests
     { desc: "renders default Typography", props: props() },
     {

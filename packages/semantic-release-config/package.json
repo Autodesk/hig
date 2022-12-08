@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "@hig/semantic-release-config",
-  "version": "0.1.0",
+  "name": "@weave-design/semantic-release-config",
+  "version": "1.0.0",
   "description": "Semantic Release configuration for HIG packages",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -13,11 +13,11 @@
     "build/*"
   ],
   "dependencies": {
-    "@semantic-release/changelog": "2.1.2",
-    "@semantic-release/git": "6.0.0",
-    "@semantic-release/github": "4.4.2",
-    "@semantic-release/npm": "3.4.1",
-    "read-pkg": "^3.0.0",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/github": "8.0.6",
+    "@semantic-release/npm": "9.0.1",
+    "read-pkg": "^5.2.0",
     "semantic-release-monorepo": "7.0.0",
     "upgrade-dependents": "^1.0.0"
   },
