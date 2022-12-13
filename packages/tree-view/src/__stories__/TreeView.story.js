@@ -264,13 +264,13 @@ const hocTreeItems = (args, getIcon) => (
 
 const Template = (args, context) => {
   const getIcon = (HighIcon, MediumIcon) => {
-    if (context.globals.density === "Medium") {
+    if (context.globals.density === "Medium density") {
       return <MediumIcon />;
     }
     return <HighIcon />;
   };
   const treeNode =
-    context.globals.density === "Medium"
+    context.globals.density === "Medium density"
       ? sampleMediumDensityTreeNodeObject
       : sampleHighDensityTreeNodeObject;
 

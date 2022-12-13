@@ -73,7 +73,9 @@ const Static24 = () => (
 
 const Template = (args, context) => {
   const getIconByDensity = (highDensityIcon, mediumDensity) =>
-    context.globals.density === "High" ? highDensityIcon : mediumDensity;
+    context.globals.density === "High density"
+      ? highDensityIcon
+      : mediumDensity;
 
   const Icon =
     args.variant === "dynamic"
