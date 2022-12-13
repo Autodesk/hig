@@ -83,9 +83,9 @@ const customTabsChildren = [
 
 const Template = (args, context) => {
   const Settings =
-    context.globals.density === "Medium" ? Settings24 : Settings16;
+    context.globals.density === "Medium density" ? Settings24 : Settings16;
   const Dashboard =
-    context.globals.density === "Medium" ? Dashboard24 : Dashboard16;
+    context.globals.density === "Medium density" ? Dashboard24 : Dashboard16;
   const complexTabsChildren = [
     <Tab label="Complex" key="complex" icon={<Settings />} closable>
       <RichText>
