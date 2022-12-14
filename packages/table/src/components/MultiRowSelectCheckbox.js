@@ -3,18 +3,23 @@ import React, {forwardRef, useRef, useEffect, useLayoutEffect} from 'react';
 export const MultiRowSelectCheckbox = forwardRef(({indeterminate, ...rest }, ref) => {
   const defaultRef = useRef();
   const resolvedRef = ref || defaultRef;
+  const { onChange, rowIndex, selectArray, setActiveMultiSelectRowArray, ...otherProps } = rest;
 
   useEffect(() => {
     resolvedRef.current.indeterminate = indeterminate;
   }, [resolvedRef, indeterminate]);
-    const { onChange, selectArray, setActiveMultiSelectRowArray, ...otherProps } = rest;
-  console.log('selectArrayMulti', selectArray)
+
   const handleChange = (event) => {
+    console.log(rowIndex);
     onChange(event);
-    const selectedArray = [...selectArray];
-    console.log('selectedArray Inside', selectedArray)
+    const selectedArray = selectArray?.length ? [...selectArray] : [];
+    if (!selectedArray.includes(rowIndex)) {
+      selectedArray.push(rowIndex);
+    } else {
+      
+    }
+    // setActiveMultiSelectRowArray(selectedArray);
     setActiveMultiSelectRowArray(selectedArray);
-    // setActiveMultiSelectRowArray((prevState) => {console.log('previous state', prevState)} );
   }
 
   return (
