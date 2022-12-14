@@ -216,12 +216,32 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                   selectArray.push(rowObjectTrack[key])
                 }) 
 
+                const test = rows.map((item, index) => {
+                  if (item.id === row.id) {
+                    return index;
+                  } else {
+                    return null;
+                  }
+                });
+
+                const indexes = test.filter((item) => item);
+
+                // const test = flatRows.filter((item, index) => item.id === row.id);
+                console.log(indexes);
+
                 // console.log('selectArray outisde', selectArray)
-       
+      // console.log('rendertable');
+      // console.log(state);
+      // console.log(props);
+      // console.log(flatRows);
+      // console.log(selectArray);
+      // console.log(row.id);
+      // console.log(selectedRowIds);
                 return (
                   <div>
                     <MultiRowSelectCheckbox
                       {...row.getToggleRowSelectedProps()}
+                      rowIndex={indexes[0]}
                       rowIndex={rowIndex}
                       selectArray={selectArray}
                       setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
@@ -254,7 +274,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   const rowTypeToMap = paginateDynamic ? rows : page;
   const [isSortedDesc, setIsSortedDesc] = useState(false);
   const [holdTableRender, setHoldTableRender] = useState(!!hiddenColumns);
-
+  
   if (hiddenColumns) {
     setTimeout(() => {
       setHoldTableRender(false);
@@ -268,6 +288,13 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   const defaultSelectedRowsDeps = controlRowPreSelect
     ? defaultSelectedRows
     : "";
+
+  useEffect(() => {
+    // console.log('render table use effect');
+    // console.log('getTableProps', getTableProps());
+    // console.log('getTableBodyProps', getTableBodyProps());
+    // console.log(state);
+  });
 
   useEffect(() => {
     if (defaultSelectedRows && defaultSelectedRows?.length > 0) {
@@ -510,6 +537,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                 globalColumns={globalColumns}
                 rowSelection={rowSelection}
                 count={count}
+                interalSelectedRows={state?.selectedRowIds}
               />
             </div>
             <pre>

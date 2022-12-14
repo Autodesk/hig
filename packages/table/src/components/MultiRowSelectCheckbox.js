@@ -15,11 +15,12 @@ export const MultiRowSelectCheckbox = forwardRef(({indeterminate, ...rest }, ref
     const selectedArray = selectArray?.length ? [...selectArray] : [];
     if (!selectedArray.includes(rowIndex)) {
       selectedArray.push(rowIndex);
+      setActiveMultiSelectRowArray(selectedArray);
     } else {
-      
+      setActiveMultiSelectRowArray(selectArray.filter((row) => row !== rowIndex));
     }
     // setActiveMultiSelectRowArray(selectedArray);
-    setActiveMultiSelectRowArray(selectedArray);
+    // setActiveMultiSelectRowArray(selectedArray);
   }
 
   return (
