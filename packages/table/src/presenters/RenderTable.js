@@ -216,13 +216,31 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                   selectArray.push(rowObjectTrack[key])
                 }) 
 
+                const test = flatRows.map((item, index) => {
+                  if (item.id === row.id) {
+                    return index;
+                  } else {
+                    return null;
+                  }
+                });
+
+                const indexes = test.filter((item) => item);
+
+                // const test = flatRows.filter((item, index) => item.id === row.id);
+                console.log(indexes);
+
                 // console.log('selectArray outisde', selectArray)
-       
+      console.log('rendertable');
+      console.log(flatRows);
+      console.log(props);
+      console.log(selectedRowIds);
+      console.log(row.id);
+      console.log(state);
                 return (
                   <div>
                     <MultiRowSelectCheckbox
                       {...row.getToggleRowSelectedProps()}
-                      rowIndex={rowIndex}
+                      rowIndex={indexes[0]}
                       selectArray={selectArray}
                       setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
                     />
