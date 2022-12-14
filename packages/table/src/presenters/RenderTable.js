@@ -539,17 +539,6 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                 interalSelectedRows={state?.selectedRowIds}
               />
             </div>
-            <pre>
-              <code>
-                {JSON.stringify(
-                  {
-                    selectedFlatRows: selectedFlatRows.map((row) => row.original),
-                  },
-                  null,
-                  2,
-                )}
-              </code>
-            </pre>
             {!paginateDynamic &&
               meta.paginationComponent &&
               count === dataArray.length - 1 && (
