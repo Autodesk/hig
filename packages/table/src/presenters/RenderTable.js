@@ -30,6 +30,8 @@ import Pagination from "../components/Pagination";
 import DataGroupComponent from "../components/DataGroupComponent";
 import TableDataContents from "./TableDataContents";
 
+import { MultiRowSelectCheckbox } from '../components/MultiRowSelectCheckbox';
+
 import stylesheet from "./stylesheet";
 
 const getColumnInfo = (column) => {
@@ -131,7 +133,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   const checkEnableBlockLayout = () =>
     enableBlockLayout ? useBlockLayout : useFlexLayout;
   const layoutTypeWrap = isGrouped ? useFlexLayout : checkEnableBlockLayout();
-
+  
   const {
     getTableProps,
     getTableBodyProps,
@@ -148,6 +150,8 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     setGlobalFilter,
     allColumns,
     getToggleHideAllColumnsProps,
+    selectedFlatRows,
+    flatRows,
   } = useTable(
     { columns, data, defaultColumn },
     useResizeColumns,
@@ -171,92 +175,58 @@ const RenderTable = ({ params, passedData, passedCount }) => {
               width: 35,
               maxWidth: 35,
               // eslint-disable-next-line
-              Header: () => {
-                return null;
-                return (
-                  <Checkbox
-                    checked={allMultiSelectedRows}
-                    indeterminate={
-                      !!activeMultiSelectRowArray?.length &&
-                      !allMultiSelectedRows
-                    }
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      const allArray = tableObject.data.map(
-                        (row, index) => index
-                      );
-                      const emptyArray = [];
+              Header: ({ state: {selectedRowIds}, getToggleAllRowsSelectedProps }) => {
+                const selectedRowKeys = Object.keys(selectedRowIds).map(key => key);
 
-                      if (
-                        allMultiSelectedRows ||
-                        activeMultiSelectRowArray?.length > 0
-                      ) {
-                        setActiveMultiSelectRowArray(emptyArray);
-                        setAllMultiSelectedRows(false);
-                      } else {
-                        setActiveMultiSelectRowArray(allArray);
-                        setAllMultiSelectedRows(true);
-                      }
-                    }}
-                    tabIndex={-1}
-                  />
+                let rowObjectTrack = {};
+                flatRows.map((row, index) => {
+                  rowObjectTrack = {...rowObjectTrack, [row.id]: index}
+                }) 
+                const selectArray = [];
+
+                selectedRowKeys.forEach(key => {
+                  selectArray.push(rowObjectTrack[key])
+                }) 
+                return (
+                  <div>
+                    <MultiRowSelectCheckbox 
+                      {...getToggleAllRowsSelectedProps()} 
+                      selectArray={selectArray}
+                      setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
+                    />
+                  </div>
                 );
               },
               // eslint-disable-next-line
-              Cell: ({ row }) => {
+              Cell: (props) => {
+                const {row, state: {selectedRowIds}, ...rest} = props;
+
                 const rowTypeToMap = paginateDynamic ? rows : page;
-                const rowIndex = isGrouped
-                  ? rowTypeToMap.indexOf(row) + getOffset()
-                  : rowTypeToMap.indexOf(row);
+                const rowIndex = rowTypeToMap.indexOf(row);
 
+                const selectedRowKeys = Object.keys(selectedRowIds).map(key => key);
+
+                let rowObjectTrack = {};
+                flatRows.map((row, index) => {
+                  rowObjectTrack = {...rowObjectTrack, [row.id]: index}
+                }) 
+                const selectArray = [];
+
+                selectedRowKeys.forEach(key => {
+                  selectArray.push(rowObjectTrack[key])
+                }) 
+
+                console.log('selectArray outisde', selectArray)
+       
                 return (
-                  <Checkbox
-                    checked={activeMultiSelectRowArray?.includes(rowIndex)}
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      let newArray = activeMultiSelectRowArray?.includes(
-                        rowIndex
-                      )
-                        ? activeMultiSelectRowArray.filter(
-                            (item) => item !== rowIndex
-                          )
-                        : (activeMultiSelectRowArray && [
-                            ...activeMultiSelectRowArray,
-                          ]) ||
-                          [];
-                      newArray = [...new Set(newArray)];
-                      if (!activeMultiSelectRowArray?.includes(rowIndex)) {
-                        newArray.push(rowIndex);
-                      }
-                      if (rowTypeToMap.length === newArray.length) {
-                        setAllMultiSelectedRows(true);
-                      } else {
-                        setAllMultiSelectedRows(false);
-                      }
-
-                      if (
-                        activeMultiSelectRowArray?.includes(rowIndex) &&
-                        row.isExpanded
-                      ) {
-                        row?.subRows?.forEach((subRow, index) => {
-                          const nextIndex = rowIndex + (index + 1);
-                          newArray.pop(nextIndex);
-                        });
-                      } else if (row.isExpanded) {
-                        row?.subRows?.forEach((subRow, index) => {
-                          const nextIndex = rowIndex + (index + 1);
-                          newArray.push(nextIndex);
-                        });
-                      }
-
-                      setActiveMultiSelectRowArray(newArray);
-                      onApplication({
-                        externalMenu: { rowIndex, newArray, count },
-                      });
-                    }}
-                    tabIndex={-1}
-                  />
-                );
+                  <div>
+                    <MultiRowSelectCheckbox
+                      {...row.getToggleRowSelectedProps()}
+                      selectArray={selectArray}
+                      setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
+                    />
+                  </div>
+                )
               },
             },
             ...defaultColumns,
@@ -266,6 +236,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
       });
     }
   );
+
   const { globalFilter, pageIndex } = state;
   // eslint-disable-next-line no-unsafe-optional-chaining
   const { isStickyHeader, isStickyColumns } = meta?.stickyItems;
@@ -290,14 +261,8 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   }
 
   useEffect(() => {
-    const totalSubRowsArray = rowTypeToMap.map((row) => row.subRows?.length);
-    let totalSubRows = 0;
-    totalSubRowsArray.forEach((subRowTotal) => {
-      totalSubRows += subRowTotal;
-    });
-    totalSubRows = Number.isNaN(totalSubRows) ? 0 : totalSubRows;
-    setTotalRows(rowTypeToMap.length + totalSubRows);
-  });
+    setTotalRows(flatRows?.length);
+  }, []);
 
   const defaultSelectedRowsDeps = controlRowPreSelect
     ? defaultSelectedRows
@@ -546,6 +511,17 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                 count={count}
               />
             </div>
+            <pre>
+              <code>
+                {JSON.stringify(
+                  {
+                    selectedFlatRows: selectedFlatRows.map((row) => row.original),
+                  },
+                  null,
+                  2,
+                )}
+              </code>
+            </pre>
             {!paginateDynamic &&
               meta.paginationComponent &&
               count === dataArray.length - 1 && (
