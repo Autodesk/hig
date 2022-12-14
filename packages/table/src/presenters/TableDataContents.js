@@ -64,6 +64,7 @@ const TableDataContents = ({
   globalResizeStyles,
   rowSelection,
   count,
+  interalSelectedRows,
 }) => (
   <div {...getTableBodyProps()} className={css(styles.higTableBody)}>
     {rowTypeToMap.map((row, rowIndex) => {
@@ -78,6 +79,10 @@ const TableDataContents = ({
         metadata
       );
       prepareRow(row);
+      console.log('table data contents');
+      console.log(row?.id);
+      console.log(interalSelectedRows);
+      console.log(interalSelectedRows?.[row?.id]);
       return (
         <div key={`table-body-row-${rowIndex}`}>
           <div
@@ -118,9 +123,7 @@ const TableDataContents = ({
                       activeMultiSelectColumn !== null &&
                       activeMultiSelectColumn - 1 === cellColumnIndex
                     }
-                    multiSelectedRow={activeMultiSelectRowArray?.includes(
-                      cellRowIndex
-                    )}
+                    multiSelectedRow={interalSelectedRows?.[row?.id]}
                     multiSelectedRowBottom={activeMultiSelectRowArray?.includes(
                       cellRowIndex - 1
                     )}
