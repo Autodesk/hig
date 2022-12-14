@@ -10,7 +10,6 @@ export const MultiRowSelectCheckbox = forwardRef(({indeterminate, ...rest }, ref
   }, [resolvedRef, indeterminate]);
 
   const handleChange = (event) => {
-    console.log(rowIndex);
     onChange(event);
     const selectedArray = selectArray?.length ? [...selectArray] : [];
     if (!selectedArray.includes(rowIndex)) {
@@ -19,8 +18,6 @@ export const MultiRowSelectCheckbox = forwardRef(({indeterminate, ...rest }, ref
     } else {
       setActiveMultiSelectRowArray(selectArray.filter((row) => row !== rowIndex));
     }
-    // setActiveMultiSelectRowArray(selectedArray);
-    // setActiveMultiSelectRowArray(selectedArray);
   }
 
   return (

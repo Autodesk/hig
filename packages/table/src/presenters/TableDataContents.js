@@ -79,10 +79,6 @@ const TableDataContents = ({
         metadata
       );
       prepareRow(row);
-      console.log('table data contents');
-      console.log(row?.id);
-      console.log(interalSelectedRows);
-      console.log(interalSelectedRows?.[row?.id]);
       return (
         <div key={`table-body-row-${rowIndex}`}>
           <div

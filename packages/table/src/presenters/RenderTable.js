@@ -225,17 +225,6 @@ const RenderTable = ({ params, passedData, passedCount }) => {
 
                 const indexes = test.filter((item) => item);
 
-                // const test = flatRows.filter((item, index) => item.id === row.id);
-                console.log(indexes);
-
-                // console.log('selectArray outisde', selectArray)
-      // console.log('rendertable');
-      // console.log(state);
-      // console.log(props);
-      // console.log(flatRows);
-      // console.log(selectArray);
-      // console.log(row.id);
-      // console.log(selectedRowIds);
                 return (
                   <div>
                     <MultiRowSelectCheckbox
@@ -286,13 +275,6 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   const defaultSelectedRowsDeps = controlRowPreSelect
     ? defaultSelectedRows
     : "";
-
-  useEffect(() => {
-    // console.log('render table use effect');
-    // console.log('getTableProps', getTableProps());
-    // console.log('getTableBodyProps', getTableBodyProps());
-    // console.log(state);
-  });
 
   useEffect(() => {
     if (defaultSelectedRows && defaultSelectedRows?.length > 0) {
