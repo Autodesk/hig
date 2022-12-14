@@ -250,21 +250,6 @@ const TablePage = () => {
 								tableObject={customComponents}
 								tableSpreadProps={tableSpreadProps}
 								paginateDynamic={paginateDynamic}
-								onSortClick={(e, props, headerIndex) => {
-									setIsDescending(!isDescending)
-									const categoryToSort = customComponents.columns[headerIndex].accessor;
-									const sortedArray = customComponents.data.map(column => {
-										const copyColumn = [...column]
-
-										let seeColumn = copyColumn.sort((a, b) => (a[categoryToSort] < b[categoryToSort]) ? 1 : -1);
-										if (isDescending) {
-											seeColumn = copyColumn.sort((a, b) => (a[categoryToSort] > b[categoryToSort]) ? 1 : -1);
-										}
-								    return seeColumn;
-									})
-									
-									customComponents.data = sortedArray;
-								}}
 								tableGroupSelectAll={{checkboxToggle, setCheckboxToggle: handleCheckboxToggle}}
 								onApplication={(props) => {
 									console.log('props', props);
@@ -288,7 +273,7 @@ const TablePage = () => {
 									}
 								}}
 								onTableCellClick={(e, {children}) => {
-									console.log('props cell contents', children[1].props.cell.value)
+									// console.log('props cell contents', children[1].props.cell.value)
 								}}
 							/>
 						{/* </div> */}

@@ -29,7 +29,6 @@ export default function TableDataCellPresenter(props) {
   const { globalResizeStyles } = otherProps;
   const handleCellClick = useCallback(
     (event) => {
-      console.log('here at onTableCellClick', onTableCellClick)
       if (onTableCellClick) {
         onTableCellClick(event, {
           props,
@@ -87,6 +86,7 @@ export default function TableDataCellPresenter(props) {
         const mergedTableCellContentWrapperStyles = {
           ...styles.higTableCellContentWrapper,
           ...(isSubRows ? styles.higSubRowWrap : ""),
+          ...(isTreeGrid ? styles.higSubRowGridWrap : ""),
         };
 
         return (
@@ -96,7 +96,6 @@ export default function TableDataCellPresenter(props) {
             className={css(mergedStyles)}
             data-cell-coords={`${cellColumnIndex}_${cellRowIndex}`}
             onClick={handleCellClick}
-            // onClick={() => {}}
           >
             <div className={css(mergedTableCellContentWrapperStyles)}>
               {children}
