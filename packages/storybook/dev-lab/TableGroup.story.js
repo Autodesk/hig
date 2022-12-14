@@ -43,7 +43,6 @@ const TableGroup = (props) => {
       tableObject={tableObject}
       rowSelection={rowSelection}
       onSortClick={onSortClick ? handleOnSortClick : () => {}}
-      tableGroupSelectAll={{checkboxToggle, setCheckboxToggle: handleCheckboxToggle}}
       stylesheet={(styles, props, themeData) => {
         return {
           ...styles,
@@ -92,7 +91,6 @@ export const Default = Template.bind({});
 Default.args = {
   tableObject: TABLE_OBJECT_GROUP,
   rowSelection: true,
-  tableGroupSelectAll: {checkboxToggle: false, setCheckboxToggle: () => {}}
 };
 
 export const GroupSort = Template.bind({});
@@ -101,6 +99,5 @@ GroupSort.storyName = "Group sort";
 GroupSort.args = {
   tableObject: TABLE_OBJECT_GROUP_SORT,
   rowSelection: true,
-  tableGroupSelectAll: {checkboxToggle: false, setCheckboxToggle: () => {}},
   onSortClick: () => {},
 }

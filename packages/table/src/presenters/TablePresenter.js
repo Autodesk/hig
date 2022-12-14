@@ -26,7 +26,6 @@ const TablePresenter = ({
   enableBlockLayout,
   controlRowPreSelect,
   stylesheet: customStylesheet,
-  tableGroupSelectAll,
   ...otherProps
 }) => {
   const {
@@ -65,7 +64,6 @@ const TablePresenter = ({
     onApplication,
     onColumnWidthChanged,
     customStylesheet,
-    tableGroupSelectAll,
     enableBlockLayout,
     controlRowPreSelect,
     otherProps,
@@ -93,10 +91,6 @@ TablePresenter.propTypes = {
   checkboxToggle: PropTypes.func,
   setCheckboxToggle: PropTypes.func,
   stylesheet: PropTypes.func,
-  tableGroupSelectAll: PropTypes.shape({
-    checkboxToggle: PropTypes.arrayOf(PropTypes.bool),
-    setCheckboxToggle: PropTypes.func,
-  }),
   onApplication: PropTypes.func,
   onColumnWidthChanged: PropTypes.func,
   enableBlockLayout: PropTypes.bool,

@@ -75,7 +75,6 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     enableBlockLayout,
     controlRowPreSelect,
     customStylesheet,
-    tableGroupSelectAll: { checkboxToggle = [], setCheckboxToggle = () => {} },
     otherProps,
   } = params || {};
   const data = passedData || dataArray;

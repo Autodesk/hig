@@ -26,7 +26,6 @@ const Table = (props) => {
     enableBlockLayout,
     controlRowPreSelect,
     stylesheet,
-    tableGroupSelectAll = {},
   } = props;
 
   return (
@@ -101,7 +100,6 @@ const Table = (props) => {
               setGlobalColumns={setGlobalColumns}
               globalResizeStyles={globalResizeStyles}
               setGlobalResizeStyles={setGlobalResizeStyles}
-              tableGroupSelectAll={tableGroupSelectAll}
             />
           )}
         </TableBehavior>
@@ -178,20 +176,6 @@ Table.propTypes = {
    * Additional props that will be spread to the table's root element
    */
   tableSpreadProps: PropTypes.any,
-  /**
-   * Optional prop for grouped data, if present will
-   * add functionality to select all by data type group
-   */
-  tableGroupSelectAll: PropTypes.shape({
-    /**
-     * Array that tracks toggle state for each group checkbox
-     */
-    checkboxToggle: PropTypes.arrayOf(PropTypes.bool),
-    /**
-     * Method that sets toggle value on/off for group
-     */
-    setCheckboxToggle: PropTypes.func,
-  }),
   /**
    * Optional prop for external Menu
    * if present will pass back group data

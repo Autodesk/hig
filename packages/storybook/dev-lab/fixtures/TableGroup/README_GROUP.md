@@ -91,15 +91,6 @@ const DataGroupComponent = ({passedData}) => {
 export default DataGroupComponent;
 ```
 
-## Group Select All By Data Type
-Enable select all by group data type by passing in an object to the `tableGroupSelectAll` prop
-```
-<Table
-  ...
-  tableGroupSelectAll={{checkboxToggle: true/false, setCheckboxToggle: () => {}}}
-  />
-```
-
 ## Example method to implement checkbox for select all within your component
 ```
 const [checkboxToggle, setCheckboxToggle] = useState(Array(tableObject.data.length).fill(false));

@@ -250,7 +250,6 @@ const TablePage = () => {
 								tableObject={customComponents}
 								tableSpreadProps={tableSpreadProps}
 								paginateDynamic={paginateDynamic}
-								tableGroupSelectAll={{checkboxToggle, setCheckboxToggle: handleCheckboxToggle}}
 								onApplication={(props) => {
 									console.log('props', props);
 								}}
