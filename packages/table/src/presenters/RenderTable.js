@@ -242,7 +242,6 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                     <MultiRowSelectCheckbox
                       {...row.getToggleRowSelectedProps()}
                       rowIndex={indexes[0]}
-                      rowIndex={rowIndex}
                       selectArray={selectArray}
                       setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
                     />

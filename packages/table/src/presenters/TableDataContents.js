@@ -152,7 +152,7 @@ const TableDataContents = ({
                     globalResizeStyles={globalResizeStyles}
                     rowSelection={rowSelection}
                     count={count}
-                    isSubRows={row?.subRows?.length && row?.original?.parent === null}
+                    isSubRows={row?.subRows?.length >= 0 && row?.original?.parent === null}
                     isTreeGrid={row?.subRows?.length && row?.original?.parent !== null}
                   >
                     {cellColumnIndex === 0 && renderSubRowControls(row, styles)}

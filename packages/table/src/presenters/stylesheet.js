@@ -340,9 +340,8 @@ export default function stylesheet(props, themeData, themeMeta) {
       display: `flex`,
       fontWeight: `900`,
     },
-    higTreeGridWrap: {
+    higSubRowGridWrap: {
       display: `flex`,
-      paddingLeft: `10px`,
     },
     higSubRowControls: {
       display: `inline-block`,
