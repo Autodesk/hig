@@ -216,12 +216,13 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                   selectArray.push(rowObjectTrack[key])
                 }) 
 
-                console.log('selectArray outisde', selectArray)
+                // console.log('selectArray outisde', selectArray)
        
                 return (
                   <div>
                     <MultiRowSelectCheckbox
                       {...row.getToggleRowSelectedProps()}
+                      rowIndex={rowIndex}
                       selectArray={selectArray}
                       setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
                     />
