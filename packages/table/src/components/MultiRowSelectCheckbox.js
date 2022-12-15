@@ -12,6 +12,7 @@ export const MultiRowSelectCheckbox = forwardRef(
       rowIndex,
       selectArray,
       setActiveMultiSelectRowArray,
+      onApplication,
       ...otherProps
     } = rest;
 
@@ -25,10 +26,16 @@ export const MultiRowSelectCheckbox = forwardRef(
       if (!selectedArray.includes(rowIndex)) {
         selectedArray.push(rowIndex);
         setActiveMultiSelectRowArray(selectedArray);
+        onApplication({
+          externalMenu: { selectedArray, count: rowIndex },
+        });
       } else {
         setActiveMultiSelectRowArray(
           selectArray.filter((row) => row !== rowIndex)
         );
+        onApplication({
+          externalMenu: { selectedArray: selectArray.filter((row) => row !== rowIndex), count: rowIndex },
+        });
       }
     };
 

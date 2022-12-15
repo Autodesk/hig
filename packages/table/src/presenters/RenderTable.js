@@ -67,6 +67,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     tableSpreadProps,
     onTableCellClick,
     onSortClick,
+    onApplication,
     onColumnWidthChanged,
     enableBlockLayout,
     controlRowPreSelect,
@@ -226,7 +227,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                 });
 
                 const indexes = test.filter((item) => item);
-
+ 
                 return (
                   <div>
                     <MultiRowSelectCheckbox
@@ -236,6 +237,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                       setActiveMultiSelectRowArray={
                         setActiveMultiSelectRowArray
                       }
+                      onApplication={onApplication}
                     />
                   </div>
                 );
