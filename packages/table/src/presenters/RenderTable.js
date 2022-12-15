@@ -19,7 +19,6 @@ import {
 import { useSticky } from "react-table-sticky";
 
 import { ThemeContext } from "@hig/theme-context";
-import Checkbox from "@hig/checkbox";
 
 import TableHeaderCell from "../TableHeaderCell";
 import GlobalFilter from "../components/GlobalFilter";
@@ -27,10 +26,9 @@ import ColumnShowHide from "../components/ColumnShowHide";
 import SortColumns from "../components/SortColumns";
 import GroupHeaderElements from "../components/GroupHeaderElements";
 import Pagination from "../components/Pagination";
-import DataGroupComponent from "../components/DataGroupComponent";
 import TableDataContents from "./TableDataContents";
 
-import { MultiRowSelectCheckbox } from '../components/MultiRowSelectCheckbox';
+import { MultiRowSelectCheckbox } from "../components/MultiRowSelectCheckbox";
 
 import stylesheet from "./stylesheet";
 
@@ -51,7 +49,6 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     isGrouped,
     columns,
     meta,
-    groupNames,
     hiddenColumns,
     defaultSelectedRows,
     alternateBg,
@@ -70,7 +67,6 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     tableSpreadProps,
     onTableCellClick,
     onSortClick,
-    onApplication,
     onColumnWidthChanged,
     enableBlockLayout,
     controlRowPreSelect,
@@ -114,7 +110,6 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     activeMultiSelectColumn,
     activeMultiSelectRowArray,
     activeRowIndex,
-    allMultiSelectedRows,
     columnHeaderArray,
     handleFocus,
     handleKeyDown,
@@ -132,7 +127,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   const checkEnableBlockLayout = () =>
     enableBlockLayout ? useBlockLayout : useFlexLayout;
   const layoutTypeWrap = isGrouped ? useFlexLayout : checkEnableBlockLayout();
-  
+
   const {
     getTableProps,
     getTableBodyProps,
@@ -149,7 +144,6 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     setGlobalFilter,
     allColumns,
     getToggleHideAllColumnsProps,
-    selectedFlatRows,
     flatRows,
   } = useTable(
     { columns, data, defaultColumn },
@@ -175,52 +169,60 @@ const RenderTable = ({ params, passedData, passedCount }) => {
               maxWidth: 35,
               // eslint-disable-next-line
               Header: ({ state: {selectedRowIds}, getToggleAllRowsSelectedProps }) => {
-                const selectedRowKeys = Object.keys(selectedRowIds).map(key => key);
+                const selectedRowKeys = Object.keys(selectedRowIds).map(
+                  (key) => key
+                );
 
                 let rowObjectTrack = {};
+                // eslint-disable-next-line
                 flatRows.map((row, index) => {
-                  rowObjectTrack = {...rowObjectTrack, [row.id]: index}
-                }) 
+                  rowObjectTrack = { ...rowObjectTrack, [row.id]: index };
+                });
                 const selectArray = [];
 
-                selectedRowKeys.forEach(key => {
-                  selectArray.push(rowObjectTrack[key])
-                }) 
+                selectedRowKeys.forEach((key) => {
+                  selectArray.push(rowObjectTrack[key]);
+                });
                 return (
                   <div>
-                    <MultiRowSelectCheckbox 
-                      {...getToggleAllRowsSelectedProps()} 
+                    <MultiRowSelectCheckbox
+                      {...getToggleAllRowsSelectedProps()}
                       selectArray={selectArray}
-                      setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
+                      setActiveMultiSelectRowArray={
+                        setActiveMultiSelectRowArray
+                      }
                     />
                   </div>
                 );
               },
               // eslint-disable-next-line
               Cell: (props) => {
-                const {row, state: {selectedRowIds}, ...rest} = props;
+                const {
+                  row,
+                  // eslint-disable-next-line
+                  state: { selectedRowIds },
+                } = props;
 
-                const rowTypeToMap = paginateDynamic ? rows : page;
-                const rowIndex = rowTypeToMap.indexOf(row);
-
-                const selectedRowKeys = Object.keys(selectedRowIds).map(key => key);
+                const selectedRowKeys = Object.keys(selectedRowIds).map(
+                  (key) => key
+                );
 
                 let rowObjectTrack = {};
+                // eslint-disable-next-line
                 flatRows.map((row, index) => {
-                  rowObjectTrack = {...rowObjectTrack, [row.id]: index}
-                }) 
+                  rowObjectTrack = { ...rowObjectTrack, [row.id]: index };
+                });
                 const selectArray = [];
 
-                selectedRowKeys.forEach(key => {
-                  selectArray.push(rowObjectTrack[key])
-                }) 
+                selectedRowKeys.forEach((key) => {
+                  selectArray.push(rowObjectTrack[key]);
+                });
 
                 const test = rows.map((item, index) => {
                   if (item.id === row.id) {
                     return index;
-                  } else {
-                    return null;
                   }
+                  return null;
                 });
 
                 const indexes = test.filter((item) => item);
@@ -231,10 +233,12 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                       {...row.getToggleRowSelectedProps()}
                       rowIndex={indexes[0]}
                       selectArray={selectArray}
-                      setActiveMultiSelectRowArray={setActiveMultiSelectRowArray}
+                      setActiveMultiSelectRowArray={
+                        setActiveMultiSelectRowArray
+                      }
                     />
                   </div>
-                )
+                );
               },
             },
             ...defaultColumns,
@@ -261,7 +265,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
   const rowTypeToMap = paginateDynamic ? rows : page;
   const [isSortedDesc, setIsSortedDesc] = useState(false);
   const [holdTableRender, setHoldTableRender] = useState(!!hiddenColumns);
-  
+
   if (hiddenColumns) {
     setTimeout(() => {
       setHoldTableRender(false);

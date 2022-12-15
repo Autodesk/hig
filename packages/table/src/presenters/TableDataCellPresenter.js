@@ -32,7 +32,7 @@ export default function TableDataCellPresenter(props) {
       if (onTableCellClick) {
         onTableCellClick(event, {
           props,
-          children
+          children,
         });
       }
       // don't select when multi-select row cell clicked

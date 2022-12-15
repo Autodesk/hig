@@ -26,11 +26,6 @@ const renderSubRowControls = (row, styles) =>
     </span>
   ) : null;
 
-const checkSubRowsOfSubRows = (subRows) => {
-  console.log('SUBROWS', subRows)
-  return true;
-}
-
 const TableDataContents = ({
   getTableBodyProps,
   styles,
@@ -148,8 +143,13 @@ const TableDataContents = ({
                     globalResizeStyles={globalResizeStyles}
                     rowSelection={rowSelection}
                     count={count}
-                    isSubRows={row?.subRows?.length >= 0 && row?.original?.parent === null}
-                    isTreeGrid={row?.subRows?.length && row?.original?.parent !== null}
+                    isSubRows={
+                      row?.subRows?.length >= 0 &&
+                      row?.original?.parent === null
+                    }
+                    isTreeGrid={
+                      row?.subRows?.length && row?.original?.parent !== null
+                    }
                   >
                     {cellColumnIndex === 0 && renderSubRowControls(row, styles)}
                     {/* eslint-disable */}
@@ -213,6 +213,7 @@ TableDataContents.propTypes = {
   globalResizeStyles: PropTypes.any,
   rowSelection: PropTypes.bool,
   count: PropTypes.number,
+  interalSelectedRows: PropTypes.any,
 };
 
 export default TableDataContents;
