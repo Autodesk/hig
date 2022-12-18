@@ -1,54 +1,46 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable react/forbid-prop-types */
-import React, { forwardRef, useRef, useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
+import Checkbox from "@hig/checkbox";
 
-export const MultiRowSelectCheckbox = forwardRef(
-  ({ indeterminate, ...rest }, ref) => {
-    const defaultRef = useRef();
-    const resolvedRef = ref || defaultRef;
-    const {
-      onChange,
-      rowIndex,
-      selectArray,
-      setActiveMultiSelectRowArray,
-      onApplication,
-      ...otherProps
-    } = rest;
+export const MultiRowSelectCheckbox = ({ indeterminate, ...rest }) => {
+  const {
+    onChange,
+    rowIndex,
+    selectArray,
+    setActiveMultiSelectRowArray,
+    onApplication,
+    ...otherProps
+  } = rest;
 
-    useEffect(() => {
-      resolvedRef.current.indeterminate = indeterminate;
-    }, [resolvedRef, indeterminate]);
+  const handleChange = (event) => {
+    onChange(event);
+    const selectedArray = selectArray?.length ? [...selectArray] : [];
+    if (!selectedArray.includes(rowIndex)) {
+      selectedArray.push(rowIndex);
+      setActiveMultiSelectRowArray(selectedArray);
+      onApplication({
+        externalMenu: { selectedArray, count: rowIndex },
+      });
+    } else {
+      setActiveMultiSelectRowArray(
+        selectArray.filter((row) => row !== rowIndex)
+      );
+      onApplication({
+        externalMenu: { selectedArray: selectArray.filter((row) => row !== rowIndex), count: rowIndex },
+      });
+    }
+  };
 
-    const handleChange = (event) => {
-      onChange(event);
-      const selectedArray = selectArray?.length ? [...selectArray] : [];
-      if (!selectedArray.includes(rowIndex)) {
-        selectedArray.push(rowIndex);
-        setActiveMultiSelectRowArray(selectedArray);
-        onApplication({
-          externalMenu: { selectedArray, count: rowIndex },
-        });
-      } else {
-        setActiveMultiSelectRowArray(
-          selectArray.filter((row) => row !== rowIndex)
-        );
-        onApplication({
-          externalMenu: { selectedArray: selectArray.filter((row) => row !== rowIndex), count: rowIndex },
-        });
-      }
-    };
-
-    return (
-      <input
-        type="checkbox"
-        ref={resolvedRef}
-        {...otherProps}
-        onChange={handleChange}
-      />
-    );
-  }
-);
+  return (
+    <Checkbox
+      {...otherProps}
+      indeterminate={indeterminate}
+      onClick={handleChange}
+    />
+  );
+};
 
 MultiRowSelectCheckbox.propTypes = {
   indeterminate: PropTypes.any,
