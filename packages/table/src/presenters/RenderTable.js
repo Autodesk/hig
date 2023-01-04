@@ -129,6 +129,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     enableBlockLayout ? useBlockLayout : useFlexLayout;
   const layoutTypeWrap = isGrouped ? useFlexLayout : checkEnableBlockLayout();
 
+  const defaultExpandedRows = data.map(() => ({ index: true }));
   const {
     getTableProps,
     getTableBodyProps,
@@ -147,7 +148,12 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     getToggleHideAllColumnsProps,
     flatRows,
   } = useTable(
-    { columns, data, defaultColumn },
+    {
+      columns,
+      data,
+      defaultColumn,
+      initialState: { expanded: defaultExpandedRows },
+    },
     useResizeColumns,
     layoutTypeWrap,
     useSticky,
@@ -227,7 +233,7 @@ const RenderTable = ({ params, passedData, passedCount }) => {
                 });
 
                 const indexes = test.filter((item) => item);
- 
+
                 return (
                   <div>
                     <MultiRowSelectCheckbox
