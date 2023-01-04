@@ -135,7 +135,7 @@ export const TABLE_OBJECT_BASIC = {
   data: tableContentFour.data.map((row, index) => {
     return {
         "id": row.id,
-        "adskid": <div>{groupNames[index]}&nbsp;({row.subRows.length})</div>,
+        "adskid": <div>{groupNames[index]}&nbsp;{row.subRows?.length ? `(${row.subRows?.length})` : ''}</div>,
         "admin": "",
         "status": row.status,
         "date": row.date,
