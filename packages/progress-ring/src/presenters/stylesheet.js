@@ -16,23 +16,6 @@ const BackgroundEntering = keyframes`
   }
 `;
 
-const MaskEntering = keyframes`
-  from {
-    opacity: 0;
-    transform: scale(2);
-  }
-
-  55% {
-    opacity: 0;
-    transform: scale(1.6);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-`;
-
 const BackgroundExiting = (color) => keyframes`
     from {
       opacity: 1;
@@ -54,26 +37,6 @@ const BackgroundExiting = (color) => keyframes`
     }
   `;
 
-const MaskExiting = keyframes`
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  10% {
-    transform: scale(1.2);
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    transform: scale(0);
-  }
-`;
-
 const SegmentsExiting = keyframes`
   from {
     opacity: 1;
@@ -85,12 +48,7 @@ const SegmentsExiting = keyframes`
 `;
 
 export default function stylesheet(props, themeData) {
-  const {
-    cssTransitionState,
-    mask,
-    stylesheet: customStylesheet,
-    surface,
-  } = props;
+  const { cssTransitionState, stylesheet: customStylesheet } = props;
 
   const styles = {
     ring: {
@@ -108,11 +66,6 @@ export default function stylesheet(props, themeData) {
       fill: themeData["progress.ring.backgroundColor"],
     },
 
-    mask: {
-      transformOrigin: "center",
-      fill: mask || themeData[`colorScheme.surface.level${surface}`],
-    },
-
     segment: {
       opacity: 0,
       "&:nth-of-type(even)": {
@@ -126,16 +79,12 @@ export default function stylesheet(props, themeData) {
 
   if (cssTransitionState === "entering") {
     styles.background.animation = `${BackgroundEntering} 0.65s ease-in-out`;
-    styles.mask.animation = `${MaskEntering} 0.65s ease-out`;
   } else if (cssTransitionState === "exiting") {
     styles.background.animation = `${BackgroundExiting(
       themeData["progress.ring.highlightColor1"]
     )} 0.466s ease-in forwards`;
-    styles.mask.animation = `${MaskExiting} 0.466s ease-in forwards`;
     styles.segment.animation = `${SegmentsExiting} 0.466s linear`;
   } else if (cssTransitionState === "exited") {
-    styles.mask.opacity = 0;
-    styles.mask.transform = "scale(2)";
     styles.background.opacity = 0;
     styles.background.transform = "scale(0)";
   }
