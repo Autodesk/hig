@@ -129,7 +129,13 @@ const RenderTable = ({ params, passedData, passedCount }) => {
     enableBlockLayout ? useBlockLayout : useFlexLayout;
   const layoutTypeWrap = isGrouped ? useFlexLayout : checkEnableBlockLayout();
 
-  const defaultExpandedRows = data.map(() => ({ index: true }));
+  // eslint-disable-next-line no-unused-vars
+  const defaultExpandedRows = data.map((element, index) =>
+    element?.subRows?.length === 1 &&
+    Object.keys(element?.subRows?.[0])?.length === 0
+      ? null
+      : { index: true }
+  );
   const {
     getTableProps,
     getTableBodyProps,
