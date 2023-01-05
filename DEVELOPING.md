@@ -263,10 +263,10 @@ A package must have the following properties defined in its `package.json` file 
 ```json
   "devDependencies": {
     "@hig/scripts": "^x.x.x",
-    "@hig/semantic-release-config": "^x.x.x",
+    "@weave-design/semantic-release-config": "^x.x.x",
   },
   "release": {
-    "extends": "@hig/semantic-release-config"
+    "extends": "@weave-design/semantic-release-config"
   },
   "scripts": {
     "release": "hig-scripts-release"

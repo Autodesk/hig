@@ -36,7 +36,7 @@
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/scripts": "^0.1.2",
-    "@hig/semantic-release-config": "^0.1.0",
+    "@weave-design/semantic-release-config": "^1.0.0",
     "@hig/text-link": "^2.2.0"
   },
   "peerDependencies": {
@@ -57,7 +57,7 @@
     "preset": "@hig/jest-preset"
   },
   "release": {
-    "extends": "@hig/semantic-release-config"
+    "extends": "@weave-design/semantic-release-config"
   },
   "babel": {
     "env": {

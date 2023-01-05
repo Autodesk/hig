@@ -54,7 +54,8 @@ export default {
 };
 
 const Template = (args, context) => {
-  const Icon = context.globals.density === "Medium" ? Settings24 : Settings16;
+  const Icon =
+    context.globals.density === "Medium density" ? Settings24 : Settings16;
   const iconProp =
     context.story === "Button with icon" ? { icon: <Icon /> } : {};
   return <Button {...args} {...iconProp} />;

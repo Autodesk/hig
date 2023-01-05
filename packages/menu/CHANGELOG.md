@@ -1,3 +1,10 @@
+# [@hig/menu-v2.2.3](https://github.com/Autodesk/hig/compare/@hig/menu@2.2.2...@hig/menu@2.2.3) (2022-12-08)
+
+
+### Bug Fixes
+
+* Re-rendering with fewer Options ([46253e3](https://github.com/Autodesk/hig/commit/46253e3))
+
 # [@hig/menu-v2.2.2](https://github.com/Autodesk/hig/compare/@hig/menu@2.2.1...@hig/menu@2.2.2) (2022-10-02)
 
 
