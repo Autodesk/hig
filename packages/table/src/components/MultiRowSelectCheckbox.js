@@ -28,7 +28,10 @@ export const MultiRowSelectCheckbox = ({ indeterminate, ...rest }) => {
         selectArray.filter((row) => row !== rowIndex)
       );
       onApplication({
-        externalMenu: { selectedArray: selectArray.filter((row) => row !== rowIndex), count: rowIndex },
+        externalMenu: {
+          selectedArray: selectArray.filter((row) => row !== rowIndex),
+          count: rowIndex,
+        },
       });
     }
   };
