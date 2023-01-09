@@ -125,5 +125,6 @@ TableDataCellPresenter.propTypes = {
   rowSelection: PropTypes.bool,
   count: PropTypes.number,
   isSubRows: PropTypes.bool,
-  isTreeGrid: PropTypes.bool,
+  // eslint-disable-next-line react/forbid-prop-types
+  isTreeGrid: PropTypes.any,
 };
