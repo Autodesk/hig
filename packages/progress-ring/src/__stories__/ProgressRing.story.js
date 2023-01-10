@@ -3,23 +3,19 @@ import { ArgsTable, Primary } from "@storybook/addon-docs";
 
 import ProgressRing from "../index";
 import Readme from "../../README.md";
-import { availableSizes, availableSurfaces } from "../constants";
+import { availableSizes } from "../constants";
 
 export default {
   title: "Components/Progress ring",
   component: ProgressRing,
   argTypes: {
-    surface: {
-      options: availableSurfaces,
-      control: "select",
-    },
     size: {
       options: availableSizes,
       control: "select",
     },
     percentComplete: {
       control: {
-        type: "number",
+        type: "range",
       },
       if: { arg: "percentComplete" },
     },
