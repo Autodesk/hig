@@ -1,137 +1,89 @@
 const mediumSVG = [
   {
-    className: "hig__progress-ring__background",
-    points:
+    d:
       /* eslint-disable-next-line max-len */
-      "54.81 10.11 36 4 17.19 10.11 5.57 26.11 5.57 45.89 17.19 61.89 36 68 54.81 61.89 66.43 45.89 66.43 26.11",
+      "M54.81 10.11 L36 4 L17.19 10.11 L5.57 26.11 L5.57 45.89 L17.19 61.89 L36 68 L54.81 61.89 L66.43 45.89 L66.43 26.11 ZM60.43 43.94 L51.1 56.78 L36 61.69 L20.9 56.78 L11.57 43.94 L11.57 28.06 L20.9 15.22 L36 10.31 L51.1 15.22 L60.43 28.07",
+  },
+  {
+    fillRule: "nonzero",
+    d: "M36 10.31 L36 4 L17.19 10.11",
+  },
+  {
+    fillRule: "nonzero",
+    d: "M36 10.31 L17.19 10.11 L20.9 15.215",
+  },
+  {
+    fillRule: "nonzero",
+    d: "M20.9 15.215 L17.19 10.11 L5.565 26.11",
+  },
+  {
+    fillRule: "nonzero",
+    d: "M20.9 15.215 L5.565 26.11 L11.565 28.06",
+  },
+  {
+    fillRule: "nonzero",
+    d: "M11.565 28.06 L5.565 26.11 L5.565 45.89",
+  },
+  {
+    fillRule: "nonzero",
+    d: "M11.565 28.06 L5.565 45.89 L11.565 43.94",
+  },
+  {
+    fillRule: "nonzero",
+    d: "M11.565 43.94 L5.565 45.89 L17.19 61.89",
+  },
+  {
+    fillRule: "nonzero",
+    d: "M11.565 43.94 L17.19 61.89 L20.9 56.785",
+  },
+  {
+    fillRule: "nonzero",
+    d: "M20.9 56.785 L17.19 61.89 L36 68",
+  },
+  {
+    fillRule: "nonzero",
+    d: "M20.9 56.785 L36 68 L36 61.69",
   },
   {
     className: "hig__progress-ring__segment",
-    fill: "#0ED3BE",
     fillRule: "nonzero",
-    points: "36 10.31 36 4 17.19 10.11",
+    d: "M36 61.69 L36 68 L54.81 61.89",
   },
   {
-    className: "hig__progress-ring__segment",
-    fill: "#0CA899",
     fillRule: "nonzero",
-    points: "36 10.31 17.19 10.11 20.9 15.215",
+    d: "M36 61.69 L54.81 61.89 L51.1 56.785",
   },
   {
-    className: "hig__progress-ring__segment",
-    fill: "#0ED3BE",
     fillRule: "nonzero",
-    points: "20.9 15.215 17.19 10.11 5.565 26.11",
+    d: "M51.1 56.785 L54.81 61.89 L66.435 45.89",
   },
   {
-    className: "hig__progress-ring__segment",
-    fill: "#0CA899",
     fillRule: "nonzero",
-    points: "20.9 15.215 5.565 26.11 11.565 28.06",
+    d: "M51.1 56.785 L66.435 45.89 L60.435 43.94",
   },
   {
-    className: "hig__progress-ring__segment",
-    fill: "#0ED3BE",
     fillRule: "nonzero",
-    points: "11.565 28.06 5.565 26.11 5.565 45.89",
+    d: "M60.435 43.94 L66.435 45.89 L66.435 26.11",
   },
   {
-    className: "hig__progress-ring__segment",
-    fill: "#0CA899",
     fillRule: "nonzero",
-    points: "11.565 28.06 5.565 45.89 11.565 43.94",
+    d: "M60.435 43.94 L66.435 26.11 L60.435 28.06",
   },
   {
-    className: "hig__progress-ring__segment",
-    fill: "#0ED3BE",
     fillRule: "nonzero",
-    points: "11.565 43.94 5.565 45.89 17.19 61.89",
+    d: "M60.435 28.06 L66.435 26.11 L54.81 10.11",
   },
   {
-    className: "hig__progress-ring__segment",
-    fill: "#0CA899",
     fillRule: "nonzero",
-    points: "11.565 43.94 17.19 61.89 20.9 56.785",
+    d: "M60.435 28.06 L54.81 10.11 L51.1 15.215",
   },
   {
-    className: "hig__progress-ring__segment",
-    fill: "#0ED3BE",
     fillRule: "nonzero",
-    points: "20.9 56.785 17.19 61.89 36 68",
+    d: "M51.1 15.215 L54.81 10.11 L36 4",
   },
   {
-    className: "hig__progress-ring__segment",
-    fill: "#0CA899",
     fillRule: "nonzero",
-    points: "20.9 56.785 36 68 36 61.69",
-  },
-  {
-    className: "hig__progress-ring__segment",
-    fill: "#0ED3BE",
-    fillRule: "nonzero",
-    points: "36 61.69 36 68 54.81 61.89",
-  },
-  {
-    className: "hig__progress-ring__segment",
-    fill: "#0CA899",
-    fillRule: "nonzero",
-    points: "36 61.69 54.81 61.89 51.1 56.785",
-  },
-  {
-    className: "hig__progress-ring__segment",
-    fill: "#0ED3BE",
-    fillRule: "nonzero",
-    points: "51.1 56.785 54.81 61.89 66.435 45.89",
-  },
-  {
-    className: "hig__progress-ring__segment",
-    fill: "#0CA899",
-    fillRule: "nonzero",
-    points: "51.1 56.785 66.435 45.89 60.435 43.94",
-  },
-  {
-    className: "hig__progress-ring__segment",
-    fill: "#0ED3BE",
-    fillRule: "nonzero",
-    points: "60.435 43.94 66.435 45.89 66.435 26.11",
-  },
-  {
-    className: "hig__progress-ring__segment",
-    fill: "#0CA899",
-    fillRule: "nonzero",
-    points: "60.435 43.94 66.435 26.11 60.435 28.06",
-  },
-  {
-    className: "hig__progress-ring__segment",
-    fill: "#0ED3BE",
-    fillRule: "nonzero",
-    points: "60.435 28.06 66.435 26.11 54.81 10.11",
-  },
-  {
-    className: "hig__progress-ring__segment",
-    fill: "#0CA899",
-    fillRule: "nonzero",
-    points: "60.435 28.06 54.81 10.11 51.1 15.215",
-  },
-  {
-    className: "hig__progress-ring__segment",
-    fill: "#0ED3BE",
-    fillRule: "nonzero",
-    points: "51.1 15.215 54.81 10.11 36 4",
-  },
-  {
-    className: "hig__progress-ring__segment",
-    fill: "#0CA899",
-    fillRule: "nonzero",
-    points: "51.1 15.215 36 4 36 10.31",
-  },
-  {
-    className: "hig__progress-ring__mask",
-    fill: "#FFFFFF",
-    fillRule: "nonzero",
-    points:
-      /* eslint-disable-next-line max-len */
-      "60.43 43.94 51.1 56.78 36 61.69 20.9 56.78 11.57 43.94 11.57 28.06 20.9 15.22 36 10.31 51.1 15.22 60.43 28.07",
+    d: "M51.1 15.215 L36 4 L36 10.31",
   },
 ];
 

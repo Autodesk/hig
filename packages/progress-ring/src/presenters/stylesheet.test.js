@@ -12,9 +12,6 @@ describe("stylesheet", () => {
   it("returned object contains property of background", () => {
     expect(styles).toHaveProperty("background", expect.any(Object));
   });
-  it("returned object contains property of mask", () => {
-    expect(styles).toHaveProperty("mask", expect.any(Object));
-  });
   it("returned object contains property of segment", () => {
     expect(styles).toHaveProperty("segment", expect.any(Object));
   });

@@ -55,10 +55,12 @@ const ProgressRingIndeterminateBehavior = (props) => {
 
   const initSegments = () => {
     const { current } = containerRef;
-    segments = Array.from(
-      current.querySelectorAll(".hig__progress-ring__segment")
+    const allSVGPathElements = Array.from(
+      current.querySelectorAll("svg > path")
     );
-    current.querySelector(".hig__progress-ring__mask").style.opacity = null;
+    // remove the first svg path as that is the background
+    segments = allSVGPathElements.filter((path, index) => index !== 0);
+
     SEGMENT_COUNT = segments.length;
     SEGMENT_DELAY_FACTOR = CYCLE_DURATION / SEGMENT_COUNT;
   };
@@ -128,7 +130,6 @@ const ProgressRingIndeterminateBehavior = (props) => {
       in
       timeout={{ enter: 650, exit: 466 }}
       appear
-      classNames="hig__progress-ring--"
       nodeRef={containerRef}
       onEntering={handleEntering}
       onEntered={handleEntered}

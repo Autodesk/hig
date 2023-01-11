@@ -8,23 +8,19 @@ import stylesheet from "./stylesheet";
 export default function SVGPresenter(props) {
   const { height, original, svgData, width } = props;
 
-  const buildPolygons = (svgs, resolvedRoles) =>
-    svgs.map((item) => {
-      // we need this if we don't want to manually edit
-      // the svg files
-      const map = {
-        "hig__progress-ring__background": "background",
-        "hig__progress-ring__mask": "mask",
-        "hig__progress-ring__segment": "segment",
-      };
-      const styles = stylesheet(props, resolvedRoles)[map[item.className]];
+  const buildPaths = (svgs, resolvedRoles) =>
+    svgs.map((item, index) => {
+      // the background is always the first svg path
+      const styleKey = index === 0 ? "background" : "segment";
+
+      const styles = stylesheet(props, resolvedRoles);
       return (
-        <polygon
-          key={item.points}
-          className={cx(item.className, css(styles))}
+        <path
+          key={item.d}
+          className={cx(item.className, css(styles[styleKey]))}
           fill={item.fill}
           fillRule={item.fillRule}
-          points={item.points}
+          d={item.d}
         />
       );
     });
@@ -40,7 +36,7 @@ export default function SVGPresenter(props) {
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
         >
-          {buildPolygons(svgData, resolvedRoles)}
+          {buildPaths(svgData, resolvedRoles)}
         </svg>
       )}
     </ThemeContext.Consumer>
