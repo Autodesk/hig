@@ -16,7 +16,7 @@
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/git": "10.0.1",
     "@semantic-release/github": "8.0.6",
-    "@semantic-release/npm": "9.0.1",
+    "@semantic-release/npm": "7.0.0",
     "read-pkg": "^5.2.0",
     "semantic-release-monorepo": "7.0.0",
     "upgrade-dependents": "^1.0.0"
