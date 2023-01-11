@@ -1,3 +1,18 @@
+# [@hig/progress-ring-v3.0.0](https://github.com/Autodesk/hig/compare/@hig/progress-ring@2.2.2...@hig/progress-ring@3.0.0) (2023-01-11)
+
+
+### Bug Fixes
+
+* update svgs ([af6e7e9](https://github.com/Autodesk/hig/commit/af6e7e9))
+
+
+### BREAKING CHANGES
+
+* all svgs no longer have a mask
+- surface prop is no longer used since the background is now transparent
+- mask prop is no longer used since the background is now transparent
+- classNames are no longer used for the SVG children elements
+
 # [@hig/progress-ring-v2.2.2](https://github.com/Autodesk/hig/compare/@hig/progress-ring@2.2.1...@hig/progress-ring@2.2.2) (2022-11-23)
 
 
