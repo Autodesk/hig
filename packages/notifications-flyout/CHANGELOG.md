@@ -1,3 +1,10 @@
+# [@hig/notifications-flyout-v3.4.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@3.3.0...@hig/notifications-flyout@3.4.0) (2023-01-12)
+
+
+### Features
+
+* use [@hig](https://github.com/hig)/progress-ring v3.0.0 ([1cdc118](https://github.com/Autodesk/hig/commit/1cdc118))
+
 # [@hig/notifications-flyout-v3.3.0](https://github.com/Autodesk/hig/compare/@hig/notifications-flyout@3.2.0...@hig/notifications-flyout@3.3.0) (2022-08-28)
 
 
