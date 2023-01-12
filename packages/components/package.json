@@ -1,6 +1,6 @@
 {
   "name": "@hig/components",
-  "version": "3.3.0",
+  "version": "3.4.0",
   "description": "HIG Components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -33,7 +33,7 @@
     "@hig/label": "^2.2.0",
     "@hig/menu": "^2.2.3",
     "@hig/modal": "^3.2.0",
-    "@hig/notifications-flyout": "^3.3.0",
+    "@hig/notifications-flyout": "^3.4.0",
     "@hig/notifications-toast": "^3.2.0",
     "@hig/numeric-input": "^2.1.3",
     "@hig/profile-flyout": "^3.2.0",

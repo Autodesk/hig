@@ -1,3 +1,11 @@
+# [@hig/components-v3.4.0](https://github.com/Autodesk/hig/compare/@hig/components@3.3.0...@hig/components@3.4.0) (2023-01-12)
+
+
+### Features
+
+* update [@hig](https://github.com/hig)/menu, [@hig](https://github.com/hig)/table to latest patch and minor versions ([20ebe80](https://github.com/Autodesk/hig/commit/20ebe80))
+* use [@hig](https://github.com/hig)/progress-ring v3.0.0 ([1cdc118](https://github.com/Autodesk/hig/commit/1cdc118))
+
 # [@hig/components-v3.3.0](https://github.com/Autodesk/hig/compare/@hig/components@3.2.0...@hig/components@3.3.0) (2022-11-08)
 
 
