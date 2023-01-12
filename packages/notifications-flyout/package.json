@@ -22,7 +22,7 @@
     "@hig/flyout": "^2.2.0",
     "@hig/icon-button": "^3.1.0",
     "@hig/icons": "^4.1.0",
-    "@hig/progress-ring": "^2.2.0",
+    "@hig/progress-ring": "^3.0.0",
     "@hig/rich-text": "^2.2.0",
     "@hig/typography": "^2.1.0",
     "@hig/utils": "^0.4.1",
