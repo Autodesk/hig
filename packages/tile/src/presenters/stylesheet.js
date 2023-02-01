@@ -139,6 +139,13 @@ export default function stylesheet(props, themeData, themeMeta) {
       textOverflow: "ellipsis",
       whiteSpace: "nowrap",
     },
+    higTileStatusContainer: {
+      display: "inline-flex",
+      position: "absolute",
+      right: `-${themeData["tile.haloWidth"]}`,
+      top: `-${themeData["tile.haloWidth"]}`,
+      zIndex: 2,
+    },
   };
 
   return customStylesheet

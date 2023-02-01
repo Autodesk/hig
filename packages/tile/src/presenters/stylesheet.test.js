@@ -27,6 +27,9 @@ describe("stylesheet", () => {
   it("returned object contains property of higTileSubTitle", () => {
     expect(styles).toHaveProperty("higTileSubTitle", expect.any(Object));
   });
+  it("returned object contains property of higTileStatusContainer", () => {
+    expect(styles).toHaveProperty("higTileStatusContainer", expect.any(Object));
+  });
   it("returns the custom stylesheet", () => {
     expect(stylesheet({ stylesheet: () => ({ padding: 0 }) }, {})).toEqual({
       padding: 0,

@@ -18,6 +18,7 @@ const Tile = (props) => {
     media,
     orientation = "vertical",
     selected,
+    statusBadge,
     stylesheet: customStylesheet,
     subtitle,
     surface = 100,
@@ -65,6 +66,7 @@ const Tile = (props) => {
           media={media}
           orientation={orientation}
           selected={selected}
+          statusBadge={statusBadge}
           stylesheet={customStylesheet}
           subtitle={subtitle}
           surface={surface}
@@ -102,6 +104,8 @@ Tile.propTypes = {
   orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
   /** Sets the selected state of the Tile */
   selected: PropTypes.bool,
+  /** Pass in an optional Weave Badge component */
+  statusBadge: PropTypes.node,
   /** Adds custom/overriding styles */
   stylesheet: PropTypes.func,
   /** The subtitle in the content section */
