@@ -269,7 +269,7 @@ A package must have the following properties defined in its `package.json` file 
     "extends": "@weave-design/semantic-release-config"
   },
   "scripts": {
-    "release": "hig-scripts-release"
+    "release": "weave-scripts-release"
   },
 ```
 

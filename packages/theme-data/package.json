@@ -17,13 +17,13 @@
     "access": "public"
   },
   "scripts": {
-    "test": "hig-scripts-test",
+    "test": "weave-scripts-test",
     "build": "yarn run build:core && yarn run build:themes && yarn run build:theme-artifacts",
-    "build:core": "hig-scripts-build",
+    "build:core": "weave-scripts-build",
     "build:themes": "babel-node scripts/buildThemes",
     "build:theme-artifacts": "node scripts/buildThemeArtifacts.js",
-    "lint": "hig-scripts-lint",
-    "release": "hig-scripts-release"
+    "lint": "weave-scripts-lint",
+    "release": "weave-scripts-release"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -31,7 +31,7 @@
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
-    "@hig/scripts": "^0.1.2",
+    "@weave-design/scripts": "^1.0.0",
     "@weave-design/semantic-release-config": "^1.0.0",
     "@hig/typography": "^2.1.0",
     "camelcase": "^5.0.0",

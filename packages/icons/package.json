@@ -22,7 +22,7 @@
     "@hig/babel-preset": "^0.1.1",
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
-    "@hig/scripts": "^0.1.2",
+    "@weave-design/scripts": "^1.0.0",
     "@weave-design/semantic-release-config": "^1.0.0",
     "@hig/typography": "^2.1.0",
     "svgo": "^1.0.5"
@@ -34,12 +34,12 @@
   },
   "scripts": {
     "build": "yarn build:core && yarn dist:icons",
-    "build:core": "hig-scripts-build",
+    "build:core": "weave-scripts-build",
     "build-icons": "node scripts/build-icons/index.js",
     "dist:icons": "mkdir -p build/svg && cp -r src/icons/* build/svg",
-    "lint": "hig-scripts-lint",
-    "test": "hig-scripts-test",
-    "release": "hig-scripts-release"
+    "lint": "weave-scripts-lint",
+    "test": "weave-scripts-test",
+    "release": "weave-scripts-release"
   },
   "eslintConfig": {
     "extends": "@hig"

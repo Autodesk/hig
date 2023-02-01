@@ -31,15 +31,15 @@
     "@hig/eslint-config": "^0.1.0",
     "@hig/jest-preset": "^0.1.0",
     "@hig/label": "^2.1.0",
-    "@hig/scripts": "^0.1.2",
+    "@weave-design/scripts": "^1.0.0",
     "@weave-design/semantic-release-config": "^1.0.0",
     "@hig/spacer": "^2.1.0"
   },
   "scripts": {
-    "build": "hig-scripts-build",
-    "lint": "hig-scripts-lint",
-    "test": "hig-scripts-test",
-    "release": "hig-scripts-release"
+    "build": "weave-scripts-build",
+    "lint": "weave-scripts-lint",
+    "test": "weave-scripts-test",
+    "release": "weave-scripts-release"
   },
   "eslintConfig": {
     "extends": "@hig"

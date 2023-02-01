@@ -1,17 +1,17 @@
 {
   "private": true,
-  "name": "@hig/scripts",
-  "version": "0.1.2",
-  "description": "Scripts for HIG React components",
+  "name": "@weave-design/scripts",
+  "version": "1.0.0",
+  "description": "Scripts for Weave React components",
   "main": "index.js",
   "repository": "https://github.com/Autodesk/hig",
   "license": "Apache-2.0",
   "bin": {
-    "hig-scripts-build": "bin/build.js",
-    "hig-scripts-lint": "bin/lint.sh",
-    "hig-scripts-test": "bin/test.sh",
-    "hig-scripts-release": "bin/release.sh",
-    "hig-scripts-is-stable-package": "bin/is-stable-package.js"
+    "weave-scripts-build": "bin/build.js",
+    "weave-scripts-lint": "bin/lint.sh",
+    "weave-scripts-test": "bin/test.sh",
+    "weave-scripts-release": "bin/release.sh",
+    "weave-scripts-is-stable-package": "bin/is-stable-package.js"
   },
   "dependencies": {
     "@babel/core": "^7.0.0",
