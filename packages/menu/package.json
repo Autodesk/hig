@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@hig/avatar": "^2.2.0",
-    "@hig/babel-preset": "^0.1.1",
+    "@weave-design/babel-preset": "^1.0.0",
     "@weave-design/eslint-config": "^1.0.0",
     "@hig/jest-preset": "^0.1.0",
     "@weave-design/scripts": "^1.0.0",
@@ -54,7 +54,7 @@
     "env": {
       "test": {
         "presets": [
-          "@hig/babel-preset/test"
+          "@weave-design/babel-preset/test"
         ]
       }
     }

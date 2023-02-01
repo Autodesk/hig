@@ -28,7 +28,7 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/node": "^7.0.0",
-    "@hig/babel-preset": "^0.1.1",
+    "@weave-design/babel-preset": "^1.0.0",
     "@weave-design/eslint-config": "^1.0.0",
     "@hig/jest-preset": "^0.1.0",
     "@weave-design/scripts": "^1.0.0",
@@ -51,12 +51,12 @@
   },
   "babel": {
     "presets": [
-      "@hig/babel-preset"
+      "@weave-design/babel-preset"
     ],
     "env": {
       "test": {
         "presets": [
-          "@hig/babel-preset/test"
+          "@weave-design/babel-preset/test"
         ]
       }
     }

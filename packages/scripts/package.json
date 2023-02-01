@@ -29,7 +29,7 @@
     "@babel/plugin-transform-react-jsx": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
-    "@hig/babel-preset": "^0.1.1",
+    "@weave-design/babel-preset": "^1.0.0",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-json": "^4.1.0",
@@ -57,7 +57,7 @@
     "env": {
       "test": {
         "presets": [
-          "@hig/babel-preset/test"
+          "@weave-design/babel-preset/test"
         ]
       }
     }
