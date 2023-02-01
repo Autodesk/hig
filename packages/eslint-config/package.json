@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "@hig/eslint-config",
-  "description": "HIG ESLint config",
+  "name": "@weave-design/eslint-config",
+  "description": "Weave ESLint config",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "homepage": "https://hig.autodesk.com",
@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/Autodesk/hig"
   },
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "index.js",
   "peerDependencies": {},
   "dependencies": {

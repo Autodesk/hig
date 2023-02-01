@@ -73,6 +73,6 @@
     "@hig/typography": "^2.2.0"
   },
   "eslintConfig": {
-    "extends": "@hig"
+    "extends": "@weave-design"
   }
 }

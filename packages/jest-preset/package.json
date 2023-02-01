@@ -15,6 +15,6 @@
     "react-test-renderer": "^16.0.0"
   },
   "eslintConfig": {
-    "extends": "@hig"
+    "extends": "@weave-design"
   }
 }

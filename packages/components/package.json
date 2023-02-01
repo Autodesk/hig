@@ -82,7 +82,7 @@
     "release": "weave-scripts-release"
   },
   "eslintConfig": {
-    "extends": "@hig"
+    "extends": "@weave-design"
   },
   "jest": {
     "preset": "@hig/jest-preset"
