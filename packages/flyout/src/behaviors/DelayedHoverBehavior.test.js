@@ -1,4 +1,4 @@
-import { lastCallOfMock } from "@hig/jest-preset/helpers";
+import { lastCallOfMock } from "@weave-design/jest-preset/helpers";
 import { mount } from "enzyme";
 import React from "react";
 import DelayedHoverBehavior from "./DelayedHoverBehavior";

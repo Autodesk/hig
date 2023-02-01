@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "@hig/jest-preset",
-  "version": "0.1.0",
+  "name": "@weave-design/jest-preset",
+  "version": "1.0.0",
   "dependencies": {
     "@babel/core": "^7.0.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",

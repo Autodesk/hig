@@ -1,4 +1,4 @@
-import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 
 import Thumbnail from "./Thumbnail";
 

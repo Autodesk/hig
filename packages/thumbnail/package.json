@@ -24,7 +24,7 @@
   "devDependencies": {
     "@weave-design/babel-preset": "^1.0.0",
     "@weave-design/eslint-config": "^1.0.0",
-    "@hig/jest-preset": "^0.1.0",
+    "@weave-design/jest-preset": "^1.0.0",
     "@weave-design/scripts": "^1.0.0",
     "@weave-design/semantic-release-config": "^1.0.0"
   },
@@ -43,7 +43,7 @@
     "extends": "@weave-design"
   },
   "jest": {
-    "preset": "@hig/jest-preset"
+    "preset": "@weave-design/jest-preset"
   },
   "release": {
     "extends": "@weave-design/semantic-release-config"

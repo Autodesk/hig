@@ -1,4 +1,4 @@
-import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 import PanelPresenter from "./PanelPresenter";
 
 describe("project-account-switcher/presenters/PanelPresenter", () => {

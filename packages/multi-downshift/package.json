@@ -40,7 +40,7 @@
     "extends": "@weave-design"
   },
   "jest": {
-    "preset": "@hig/jest-preset"
+    "preset": "@weave-design/jest-preset"
   },
   "release": {
     "extends": "@weave-design/semantic-release-config"

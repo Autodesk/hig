@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 import { anchorPoints } from "@hig/flyout";
-import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 
 import Notification from "./Notification";
 import NotificationsFlyout from "./NotificationsFlyout";

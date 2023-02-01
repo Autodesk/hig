@@ -1,4 +1,4 @@
-import { hasExports } from "@hig/jest-preset/helpers";
+import { hasExports } from "@weave-design/jest-preset/helpers";
 
 import * as index from "./index";
 
