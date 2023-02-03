@@ -38,7 +38,7 @@ const DataGroupComponent = ({passedData}) => {
     } else {
       setAllMultiSelectedRows(false);
       setCheckboxToggle(count, false);
-      newArray = newArray.filter( (el) => !groupSpecificDataArray.includes( el ) );
+      newArray = newArray.filter((el) => !groupSpecificDataArray.includes(el));
       setActiveMultiSelectRowArray(newArray);
     }
   }
@@ -63,8 +63,11 @@ const DataGroupComponent = ({passedData}) => {
             indicator: {
               ...styles.indicator,
               marginLeft: '30px'
-            }
-            
+            },
+            indicatorWrapper: {
+              ...styles.indicatorWrapper,
+              marginRight: themeData["density.spacings.extraLarge"],
+            },
           }
         }}
       >
