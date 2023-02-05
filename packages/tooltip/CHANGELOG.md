@@ -1,3 +1,10 @@
+# [@hig/tooltip-v2.3.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@2.2.0...@hig/tooltip@2.3.0) (2023-02-05)
+
+
+### Features
+
+* text component accepts node for children ([ce6575e](https://github.com/Autodesk/hig/commit/ce6575e))
+
 # [@hig/tooltip-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/tooltip@2.1.0...@hig/tooltip@2.2.0) (2022-08-28)
 
 
