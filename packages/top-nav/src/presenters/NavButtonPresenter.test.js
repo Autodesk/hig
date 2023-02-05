@@ -1,5 +1,5 @@
 import React from "react";
-import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 
 import { List24 } from "@hig/icons";
 import NavButtonPresenter from "./NavButtonPresenter";

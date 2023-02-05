@@ -21,23 +21,23 @@
     "lodash.memoize": "^4.1.2"
   },
   "devDependencies": {
-    "@hig/babel-preset": "^0.1.1",
-    "@hig/eslint-config": "^0.1.0",
-    "@hig/jest-preset": "^0.1.0",
-    "@hig/scripts": "^0.1.2",
+    "@weave-design/babel-preset": "^1.0.0",
+    "@weave-design/eslint-config": "^1.0.0",
+    "@weave-design/jest-preset": "^1.0.0",
+    "@weave-design/scripts": "^1.0.0",
     "@weave-design/semantic-release-config": "^1.0.0"
   },
   "scripts": {
-    "build": "hig-scripts-build",
-    "lint": "hig-scripts-lint",
-    "test": "hig-scripts-test",
-    "release": "hig-scripts-release"
+    "build": "weave-scripts-build",
+    "lint": "weave-scripts-lint",
+    "test": "weave-scripts-test",
+    "release": "weave-scripts-release"
   },
   "eslintConfig": {
-    "extends": "@hig"
+    "extends": "@weave-design"
   },
   "jest": {
-    "preset": "@hig/jest-preset"
+    "preset": "@weave-design/jest-preset"
   },
   "release": {
     "extends": "@weave-design/semantic-release-config"
@@ -46,7 +46,7 @@
     "env": {
       "test": {
         "presets": [
-          "@hig/babel-preset/test"
+          "@weave-design/babel-preset/test"
         ]
       }
     }

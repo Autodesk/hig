@@ -23,6 +23,7 @@ const TilePresenter = (props) => {
     media,
     orientation,
     selected,
+    statusBadge,
     stylesheet: customStylesheet,
     surface,
     title,
@@ -39,6 +40,10 @@ const TilePresenter = (props) => {
     onMouseUp,
   } = otherProps;
 
+  const statusContainerClassName = createCustomClassNames(
+    className,
+    "status-container"
+  );
   const mediaContainerClassName = createCustomClassNames(
     className,
     "media-container"
@@ -91,6 +96,16 @@ const TilePresenter = (props) => {
             // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
             tabIndex={0}
           >
+            {statusBadge && (
+              <div
+                className={cx([
+                  statusContainerClassName,
+                  css(styles.higTileStatusContainer),
+                ])}
+              >
+                {statusBadge}
+              </div>
+            )}
             <div
               className={cx([
                 mediaContainerClassName,
@@ -139,6 +154,7 @@ TilePresenter.propTypes = {
   media: PropTypes.node,
   orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
   selected: PropTypes.bool,
+  statusBadge: PropTypes.node,
   stylesheet: PropTypes.func,
   subtitle: PropTypes.string,
   surface: PropTypes.oneOf(AVAILABLE_LEVELS),

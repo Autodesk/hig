@@ -67,9 +67,9 @@
     "react": "^17.0.0"
   },
   "devDependencies": {
-    "@hig/babel-preset": "^0.1.1",
-    "@hig/jest-preset": "^0.1.0",
-    "@hig/scripts": "^0.1.2",
+    "@weave-design/babel-preset": "^1.0.0",
+    "@weave-design/jest-preset": "^1.0.0",
+    "@weave-design/scripts": "^1.0.0",
     "@weave-design/semantic-release-config": "^1.0.0",
     "clean-css": "^4.1.11",
     "esprima": "^4.0.0",
@@ -78,14 +78,14 @@
   },
   "scripts": {
     "build": "node scripts/build.js",
-    "test": "hig-scripts-test",
-    "release": "hig-scripts-release"
+    "test": "weave-scripts-test",
+    "release": "weave-scripts-release"
   },
   "eslintConfig": {
-    "extends": "@hig"
+    "extends": "@weave-design"
   },
   "jest": {
-    "preset": "@hig/jest-preset"
+    "preset": "@weave-design/jest-preset"
   },
   "release": {
     "extends": "@weave-design/semantic-release-config"
@@ -94,7 +94,7 @@
     "env": {
       "test": {
         "presets": [
-          "@hig/babel-preset/test"
+          "@weave-design/babel-preset/test"
         ]
       }
     }

@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 
-import { lastCallOfMock } from "@hig/jest-preset/helpers";
+import { lastCallOfMock } from "@weave-design/jest-preset/helpers";
 
 import HoverBehavior from "./HoverBehavior";
 

@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "@hig/babel-preset",
-  "version": "0.1.1",
-  "description": "HIG Babel preset",
+  "name": "@weave-design/babel-preset",
+  "version": "1.0.0",
+  "description": "Weave Babel preset",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "homepage": "https://hig.autodesk.com",

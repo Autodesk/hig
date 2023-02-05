@@ -1,4 +1,4 @@
-# @hig/jest-preset
+# @weave-design/jest-preset
 
 Jest preset for HIG packages.
 
@@ -9,7 +9,7 @@ _Example `package.json`:_
 ```json
 {
   "jest": {
-    "preset": "@hig/jest-preset"
+    "preset": "@weave-design/jest-preset"
   }
 }
 ```

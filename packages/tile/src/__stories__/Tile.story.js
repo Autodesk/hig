@@ -1,5 +1,6 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
+import Badge from "@hig/badge";
 import Surface from "@hig/surface";
 import Thumbnail from "@hig/thumbnail";
 import thumbnailImagePath from "@weave-design/storybook/storybook-support/fixtures/thumbnail/thumbnail-placeholder-02.jpg";
@@ -96,3 +97,13 @@ Default.args = {
   surface: 100,
   title: "Title",
 };
+Default.storyName = "Basic";
+
+export const ComplexWithStatusBadge = Template.bind({});
+
+ComplexWithStatusBadge.args = {
+  ...Default.args,
+  contentWidth: "100px",
+  statusBadge: <Badge variant="text" color="green" label="status" />,
+};
+ComplexWithStatusBadge.storyName = "Complex with status badge";

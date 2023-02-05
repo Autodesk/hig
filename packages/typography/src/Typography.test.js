@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 import Typography from "./Typography";
 
 // Getting Typography › encountered a declaration exception

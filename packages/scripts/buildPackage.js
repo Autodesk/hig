@@ -7,7 +7,7 @@ const commonjs = require("@rollup/plugin-commonjs");
 const { nodeResolve } = require("@rollup/plugin-node-resolve");
 const json = require("@rollup/plugin-json");
 const svgr = require("@svgr/rollup");
-const createBuildPreset = require("@hig/babel-preset/build");
+const createBuildPreset = require("@weave-design/babel-preset/build");
 
 const createExternalDeterminer = require("./createExternalDeterminer");
 

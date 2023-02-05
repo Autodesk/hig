@@ -1,5 +1,5 @@
 import { ENTERED } from "react-transition-group/Transition";
-import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 
 const PanelPresenter = require("./PanelPresenter").default;
 

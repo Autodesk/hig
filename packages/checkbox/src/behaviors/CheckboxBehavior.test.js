@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { lastCallOfMock } from "@hig/jest-preset/helpers";
+import { lastCallOfMock } from "@weave-design/jest-preset/helpers";
 
 import CheckboxBehavior from "./CheckboxBehavior";
 

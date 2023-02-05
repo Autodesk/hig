@@ -43,7 +43,7 @@
     ]
   },
   "jest": {
-    "preset": "@hig/jest-preset",
+    "preset": "@weave-design/jest-preset",
     "transform": {
       "^.+\\.(js|jsx)$": "babel-jest"
     }
