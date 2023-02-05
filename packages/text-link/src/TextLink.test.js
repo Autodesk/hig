@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 import TextLink from "./TextLink";
 
 describe("TextLink", () => {

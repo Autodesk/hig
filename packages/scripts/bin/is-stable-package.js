@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
 const readPkg = require("read-pkg");
-const isStableVersion = require("@hig/scripts/isStableVersion");
+const isStableVersion = require("@weave-design/scripts/isStableVersion");
 
 async function start() {
   const { name: packageName, version } = await readPkg();

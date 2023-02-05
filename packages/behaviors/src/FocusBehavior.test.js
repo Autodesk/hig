@@ -2,7 +2,7 @@ import React from "react";
 import { mount } from "enzyme";
 
 import { behavesLikeFocusBehavior } from "@hig/behaviors/test";
-import { lastCallOfMock } from "@hig/jest-preset/helpers";
+import { lastCallOfMock } from "@weave-design/jest-preset/helpers";
 
 import FocusBehavior from "./FocusBehavior";
 

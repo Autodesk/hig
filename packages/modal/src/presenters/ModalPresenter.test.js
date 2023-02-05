@@ -1,6 +1,6 @@
 import React from "react";
 import { generateId } from "@hig/utils";
-import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 import ModalHeaderPresenter from "./ModalHeaderPresenter";
 
 describe("modal/presenters/ModalPresenter", () => {

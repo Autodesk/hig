@@ -1,5 +1,5 @@
 import React from "react";
-import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 import { Checkmark16 } from "@hig/icons";
 import Badge from "./Badge";
 

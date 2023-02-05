@@ -18,12 +18,12 @@
     }
   },
   "moduleNameMapper": {
-    "\\.(css|scss|svg)$": "@hig/jest-preset/fileMock.js"
+    "\\.(css|scss|svg)$": "@weave-design/jest-preset/fileMock.js"
   },
   "modulePaths": ["node_modules"],
   "moduleFileExtensions": ["js", "jsx", "json"],
   "setupFiles": ["raf/polyfill"],
-  "setupFilesAfterEnv": ["@hig/jest-preset/setupTests.js"],
+  "setupFilesAfterEnv": ["@weave-design/jest-preset/setupTests.js"],
   "testPathIgnorePatterns": [
     "docs",
     "packages/babel-preset",

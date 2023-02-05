@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 import Input from "@hig/input";
 import NumericInput from "./NumericInput";
 import SpinnerPresenter from "./presenters/SpinnerPresenter";

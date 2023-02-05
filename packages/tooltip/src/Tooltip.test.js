@@ -1,7 +1,7 @@
 import { anchorPoints } from "@hig/flyout";
 import Button from "@hig/button";
 import React from "react";
-import { takeSnapshotsOf } from "@hig/jest-preset/helpers";
+import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 import Tooltip from "./Tooltip";
 
 describe("tooltip/Tooltip", () => {
