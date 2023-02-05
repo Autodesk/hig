@@ -51,7 +51,7 @@ TextPresenter.defaultProps = {
 
 TextPresenter.propTypes = {
   /** Text content */
-  children: PropTypes.string,
+  children: PropTypes.node,
   /** Function to modify the component's styles */
   stylesheet: PropTypes.func,
 };
