@@ -65,6 +65,8 @@ const TreeItemBehavior = (props) => {
   };
 
   const handleOperatorClick = (event) => {
+    event.stopPropagation();
+
     if (props.onOperatorClick) {
       props.onOperatorClick(event);
     }
