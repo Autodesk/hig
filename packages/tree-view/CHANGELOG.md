@@ -1,3 +1,10 @@
+# [@hig/tree-view-v2.9.1](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.9.0...@hig/tree-view@2.9.1) (2023-02-18)
+
+
+### Bug Fixes
+
+* do not trigger onChange during onOperatorClick ([bd760be](https://github.com/Autodesk/hig/commit/bd760be))
+
 # [@hig/tree-view-v2.9.0](https://github.com/Autodesk/hig/compare/@hig/tree-view@2.8.0...@hig/tree-view@2.9.0) (2022-09-29)
 
 
