@@ -32,12 +32,12 @@ Weave theme data is a representation of the Weave visual design language in the 
 
 ## Getting started
 ```bash
-yarn add @hig/theme-data
+yarn add @weave-design/theme-data
 ```
 
 ### Access theme data as ECMAScript module
 ```js
-import lightGrayMediumDensityTheme from '@hig/theme-data/build/esm/lightGrayMediumDensityTheme';
+import lightGrayMediumDensityTheme from '@weave-design/theme-data/build/esm/lightGrayMediumDensityTheme';
 
 console.log(lightGrayMediumDensityTheme);
 // {
@@ -51,7 +51,7 @@ console.log(lightGrayMediumDensityTheme);
 
 ### Access theme data as JSON
 ```js
-import lightGrayMediumDensityTheme from '@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json';
+import lightGrayMediumDensityTheme from '@weave-design/theme-data/build/json/lightGrayMediumDensityTheme/theme.json';
 
 console.log(lightGrayMediumDensityTheme);
 // {
@@ -64,7 +64,7 @@ console.log(lightGrayMediumDensityTheme);
 
 ### Access theme data as SCSS variables
 ```scss
-@import "@hig/theme-data/build/scss/variables/_lightGrayMediumDensityTheme.scss";
+@import "@weave-design/theme-data/build/scss/variables/_lightGrayMediumDensityTheme.scss";
 
 .my-component {
     background-color: $colorScheme-surfaceLevel10Color;
@@ -74,7 +74,7 @@ console.log(lightGrayMediumDensityTheme);
 
 ### Access theme data as LESS variables
 ```less
-@import "@hig/theme-data/build/less/variables/_lightGrayMediumDensityTheme.less";
+@import "@weave-design/theme-data/build/less/variables/_lightGrayMediumDensityTheme.less";
 
 .my-component {
     background-color: @colorScheme-surfaceLevel10Color;
@@ -161,8 +161,8 @@ Here are the two previous roles after being resolved:
 
 ## Extend a theme to make a new variation
 ```js
-import unresolvedTheme from '@hig/theme-data/build/esm/unresolved/lightGrayMediumDensityTheme';
-import { extendTheme, resolveTheme } from '@hig/theme-data';
+import unresolvedTheme from '@weave-design/theme-data/build/esm/unresolved/lightGrayMediumDensityTheme';
+import { extendTheme, resolveTheme } from '@weave-design/theme-data';
 
 const redAccentedUnresolvedTheme = extendTheme(unresolvedTheme.unresolvedRoles, {
     "colorScheme.accentColor": { value: "#F00" }
