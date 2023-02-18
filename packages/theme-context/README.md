@@ -1,6 +1,6 @@
 # ThemeContext component
 
-Themable HIG components within a `ThemeContext.Provider` will have access to the provided theme.
+Themable Weave components within a `ThemeContext.Provider` will have access to the provided theme.
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -15,17 +15,17 @@ Themable HIG components within a `ThemeContext.Provider` will have access to the
 ## Getting started
 
 ```bash
-yarn add @hig/theme-context @hig/theme-data
+yarn add @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Provide a theme to components
 
 ```jsx
-import HIGDarkBlueTheme from '@hig/theme-data/build/esm/darkBlueMediumDensityTheme';
-import ThemeContext from '@hig/theme-context';
+import WeaveDarkBlueTheme from '@weave-design/theme-data/build/esm/darkBlueMediumDensityTheme';
+import ThemeContext from '@weave-design/theme-context';
 
 function MyApp() {
-  <ThemeContext.Provider value={HIGDarkBlueTheme}>
+  <ThemeContext.Provider value={WeaveDarkBlueTheme}>
     <TheRestOfMyApp />
   </ThemeContext.Provider>
 }
@@ -35,7 +35,7 @@ For information on customizing a theme or importing theme data in different form
 
 ## Consume theme values in a component
 ```jsx
-import ThemeContext from '@hig/theme-context';
+import ThemeContext from '@weave-design/theme-context';
 
 function MyThemedComponent() {
   <ThemeContext.Consumer>{({ resolvedRoles, metadata }) => (
