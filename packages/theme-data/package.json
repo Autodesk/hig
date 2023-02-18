@@ -1,7 +1,7 @@
 {
-  "name": "@hig/theme-data",
-  "version": "3.4.2",
-  "description": "HIG Theme Data",
+  "name": "@weave-design/theme-data",
+  "version": "4.0.0",
+  "description": "Weave Theme Data",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "repository": {
