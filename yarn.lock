@@ -2413,6 +2413,13 @@
   dependencies:
     prop-types "^15.6.1"
 
+"@hig/theme-context@^4.2.0", "@hig/theme-context@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@hig/theme-context/-/theme-context-4.3.0.tgz#f0a4886e0f0a5897b3f9ef10aed55c8cddef6e26"
+  integrity sha512-ks8/C4I+M13sIAFOSTlbl8t3MJfcxtzhOzokSf0IKVjCarOul9F2B90C7Jcrhws72dG7qF/NsGnD8tZFgvS+/g==
+  dependencies:
+    prop-types "^15.6.1"
+
 "@hig/theme-data@^3.4.2":
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-3.4.2.tgz#2726efe5aa64376565ebcc593a72a2a52cd2736a"
