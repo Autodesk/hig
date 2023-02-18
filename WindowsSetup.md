@@ -4,7 +4,7 @@ In addition to the general dependencies listed on the DEVELOPING documentation, 
 
 Once it is installed, you need to install a few more required components. To get the versions you need, use the following commands from a Linux prompt.
 
-## Node ^9.7.1
+## Node ^16.0.0
     curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash –
     sudo apt-get update
     sudo apt-get install nodejs
