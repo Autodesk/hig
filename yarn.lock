@@ -2413,6 +2413,13 @@
   dependencies:
     prop-types "^15.6.1"
 
+"@hig/theme-data@^3.4.2":
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-3.4.2.tgz#2726efe5aa64376565ebcc593a72a2a52cd2736a"
+  integrity sha512-SqP9P6O4100xLA202HFdeU5T2XpXHc3Vqp6TqLDVNw5CKCGwKLPEfD1bWWfd57jSxqFdSNNOAUsdx4L9YcMqfQ==
+  dependencies:
+    tinycolor2 "^1.4.1"
+
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.9.5.tgz#2cbaf9a89460da24b5ca6531b8bbfc23e1df50c7"
