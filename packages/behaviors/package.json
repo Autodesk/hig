@@ -1,6 +1,6 @@
 {
-  "name": "@hig/behaviors",
-  "version": "2.1.0",
+  "name": "@weave-design/behaviors",
+  "version": "1.0.0",
   "description": "Shared component behaviors",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { cx, css } from "emotion";
 import { ThemeContext } from "@hig/theme-context";
-import { ControlBehavior } from "@hig/behaviors";
+import { ControlBehavior } from "@weave-design/behaviors";
 
 import {
   indicators,

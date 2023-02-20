@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { HoverBehavior, PressedBehavior } from "@hig/behaviors";
+import { HoverBehavior, PressedBehavior } from "@weave-design/behaviors";
 
 import TableHeaderCellPresenter from "./presenters/TableHeaderCellPresenter";
 

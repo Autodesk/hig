@@ -4,7 +4,7 @@ import {
   behavesLikeFocusBehavior,
   behavesLikeHoverBehavior,
   composesLikeControlBehavior,
-} from "@hig/behaviors/test";
+} from "@weave-design/behaviors/test";
 
 import Input from "./Input";
 import InputPresenter from "./presenters/InputPresenter";
