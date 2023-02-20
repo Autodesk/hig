@@ -5,7 +5,7 @@
 ## Getting started
 
 ```bash
-yarn add @hig/behaviors
+yarn add @weave-design/behaviors
 ```
 
 ## Import the component and CSS
