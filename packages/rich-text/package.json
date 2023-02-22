@@ -1,7 +1,7 @@
 {
-  "name": "@hig/rich-text",
-  "version": "2.2.0",
-  "description": "HIG RichText",
+  "name": "@weave-design/rich-text",
+  "version": "1.0.0",
+  "description": "Weave RichText",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "homepage": "https://hig.autodesk.com",
@@ -25,15 +25,13 @@
     "@weave-design/babel-preset": "^1.0.0",
     "@weave-design/eslint-config": "^1.0.0",
     "@weave-design/jest-preset": "^1.0.0",
-    "@hig/progress-bar": "^2.1.0",
     "@weave-design/scripts": "^1.0.0",
-    "@weave-design/semantic-release-config": "^1.0.0",
-    "@hig/text-link": "^2.2.0"
+    "@weave-design/semantic-release-config": "^1.0.0"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.4.2",
-    "react": "^17.0.0"
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-design/theme-data": "^1.0.0",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "build": "weave-scripts-build",
