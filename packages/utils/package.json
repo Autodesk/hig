@@ -1,7 +1,7 @@
 {
-  "name": "@hig/utils",
-  "version": "0.4.1",
-  "description": "Non-component specific utility functions for HIG components",
+  "name": "@weave-design/utils",
+  "version": "1.0.0",
+  "description": "Non-component specific utility functions for Weave components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "repository": {
