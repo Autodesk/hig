@@ -1,10 +1,10 @@
 {
-  "name": "@hig/theme-context",
-  "version": "4.3.0",
+  "name": "@weave-design/theme-context",
+  "version": "1.0.0",
   "description": "ThemeContext components to ease adoption of theme data from React components",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
-  "homepage": "https://hig.autodesk.com",
+  "homepage": "https://storybook.weave.autodesk.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/Autodesk/hig.git"
@@ -28,8 +28,8 @@
     "@weave-design/semantic-release-config": "^1.0.0"
   },
   "peerDependencies": {
-    "@hig/theme-data": "^3.4.2",
-    "react": "^17.0.0"
+    "@weave-design/theme-data": "^1.0.0",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "build": "weave-scripts-build",

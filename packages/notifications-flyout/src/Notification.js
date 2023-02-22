@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import { ControlBehavior } from "@hig/behaviors";
+import { ControlBehavior } from "@weave-design/behaviors";
 
 import NotificationBehavior from "./behaviors/NotificationBehavior";
 import NotificationPresenter from "./presenters/NotificationPresenter";

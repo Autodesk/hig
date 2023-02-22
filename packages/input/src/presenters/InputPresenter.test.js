@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import { mount } from "enzyme";
-import { composesLikeControlBehavior } from "@hig/behaviors/test";
+import { composesLikeControlBehavior } from "@weave-design/behaviors/test";
 
 import InputPresenter from "./InputPresenter";
 

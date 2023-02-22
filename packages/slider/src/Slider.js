@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { ControlBehavior } from "@hig/behaviors";
+import { ControlBehavior } from "@weave-design/behaviors";
 
 import SliderPresenter from "./presenters/SliderPresenter";
 import { AVAILABLE_SLIDER_TYPES } from "./constants";

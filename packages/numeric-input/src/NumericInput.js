@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 
 import { createCustomClassNames } from "@hig/utils";
-import { ControlBehavior } from "@hig/behaviors";
+import { ControlBehavior } from "@weave-design/behaviors";
 import Input, { availableVariants } from "@hig/input";
 
 import customStylesheet from "./customStylesheet";

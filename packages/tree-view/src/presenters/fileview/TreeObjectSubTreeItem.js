@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
-import { HoverBehavior } from "@hig/behaviors";
+import { HoverBehavior } from "@weave-design/behaviors";
 import { createCustomClassNames, createButtonEventHandlers } from "@hig/utils";
 
 import stylesheet from "../stylesheet";

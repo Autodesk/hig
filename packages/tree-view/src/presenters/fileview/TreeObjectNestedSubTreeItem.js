@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect } from "react";
 import { css, cx } from "emotion";
-import { HoverBehavior } from "@hig/behaviors";
+import { HoverBehavior } from "@weave-design/behaviors";
 import { createCustomClassNames, createButtonEventHandlers } from "@hig/utils";
 // eslint-disable-next-line import/no-cycle
 import SubTreeViewCombined from "../SubTreeViewCombined";
