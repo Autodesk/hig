@@ -2420,6 +2420,14 @@
   dependencies:
     tinycolor2 "^1.4.1"
 
+"@hig/typography@^2.1.0", "@hig/typography@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-2.2.0.tgz#49481bf64b0da7a827538540c1a08921a6d69566"
+  integrity sha512-Ca/9rG1qnY26JO1AIo2NxMFOqcxQWz+fgWQq44145ODk4spxDZ7TBVw2XnmGWmEGaNEgUpVm0/OQM8Qb9voNRA==
+  dependencies:
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
 "@hig/utils@^0.4.1":
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/@hig/utils/-/utils-0.4.1.tgz#fd510c7467e7b89a3b3dc97aed4def5d08492805"
