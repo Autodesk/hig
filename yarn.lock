@@ -2411,6 +2411,14 @@
   resolved "https://registry.yarnpkg.com/@hig/fonts/-/fonts-2.0.0.tgz#6e397a56b0a95b2a1680d1533f2691b82d1345eb"
   integrity sha512-CMx2/ZYAj4Sbz5EvnVexpiUhtBjCTZWmZ0MZ+N24bOR0Q/yaooyDialtZOSxoq3S1NH+cZ5x/ayNs7ky7gUi1A==
 
+"@hig/rich-text@^2.1.1", "@hig/rich-text@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/rich-text/-/rich-text-2.2.0.tgz#8a1db3fd8aeb4a7a12b6e3a9a506c989da1abfc3"
+  integrity sha512-q224jnssaUat14Es+tLWlo3cIcew4GlTQ4YL4KcLy8tQby8dx5oVt4luCWg/PYukwz/ECXozsxN+PqRoaOXx2Q==
+  dependencies:
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
 "@hig/theme-context@^4.2.0", "@hig/theme-context@^4.3.0":
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/@hig/theme-context/-/theme-context-4.3.0.tgz#f0a4886e0f0a5897b3f9ef10aed55c8cddef6e26"
