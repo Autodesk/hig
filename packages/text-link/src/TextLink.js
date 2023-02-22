@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 import ThemeContext from "@hig/theme-context";
-import { ControlBehavior } from "@hig/behaviors";
+import { ControlBehavior } from "@weave-design/behaviors";
 
 import { availableTargets } from "./targets";
 import { availableVariants } from "./variants";

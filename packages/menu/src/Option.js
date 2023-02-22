@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { PressedBehavior } from "@hig/behaviors";
+import { PressedBehavior } from "@weave-design/behaviors";
 
 import OptionBehavior from "./behaviors/OptionBehavior";
 import OptionPresenter from "./presenters/OptionPresenter";

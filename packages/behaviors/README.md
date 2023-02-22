@@ -5,13 +5,13 @@
 ## Getting started
 
 ```bash
-yarn add @hig/behaviors
+yarn add @weave-design/behaviors
 ```
 
 ## Import the component and CSS
 
 ```js
-import { HoverBehavior } from "@hig/behaviors";
+import { HoverBehavior } from "@weave-design/behaviors";
 ```
 
 ## Basic usage

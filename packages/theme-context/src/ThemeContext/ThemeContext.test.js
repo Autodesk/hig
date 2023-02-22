@@ -1,7 +1,7 @@
 import { mount } from "enzyme";
 import React from "react";
 
-import LightGrayTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
+import LightGrayTheme from "@weave-design/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
 
 import * as createThemeProxy from "./createThemeProxy";
 import ThemeContext from "./index";

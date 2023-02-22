@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FocusBehavior } from "@hig/behaviors";
+import { FocusBehavior } from "@weave-design/behaviors";
 
 import MenuBehavior from "./behaviors/MenuBehavior";
 import MenuPresenter from "./presenters/MenuPresenter";

@@ -17,7 +17,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/behaviors": "^2.1.0",
+    "@weave-design/behaviors": "^1.0.0-alpha",
     "@hig/utils": "^0.4.1",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
