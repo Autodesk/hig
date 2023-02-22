@@ -2420,6 +2420,14 @@
   dependencies:
     tinycolor2 "^1.4.1"
 
+"@hig/utils@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@hig/utils/-/utils-0.4.1.tgz#fd510c7467e7b89a3b3dc97aed4def5d08492805"
+  integrity sha512-yx8HF5dLNo/WwwF5dR9P1pZu0tKhCuItrqbGbg52HpLUsptODBs/1ATT76cBaAJ7dSBCeNOKKiE4WKSrsA8bdQ==
+  dependencies:
+    emotion "^10.0.0"
+    lodash.memoize "^4.1.2"
+
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.9.5.tgz#2cbaf9a89460da24b5ca6531b8bbfc23e1df50c7"
