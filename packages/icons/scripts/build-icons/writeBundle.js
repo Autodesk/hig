@@ -44,7 +44,7 @@ function writeBundle(svgs, filePath) {
     '/* eslint-disable */',
     'import { cx, css } from "emotion";',
     'import React from "react";',
-    'import { ThemeContext } from "@hig/theme-context";',
+    'import { ThemeContext } from "@weave-design/theme-context";',
     'import stylesheet from "./icon.stylesheet";',
   ];
   fs.writeFileSync(filePath, imports.join("\n") + "\n");

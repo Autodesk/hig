@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { cx, css } from "emotion";
 import React from "react";
-import { ThemeContext } from "@hig/theme-context";
+import { ThemeContext } from "@weave-design/theme-context";
 import stylesheet from "./icon.stylesheet";
 import Error12SVG from "./icons/size12/error.svg";
 import Complete12SVG from "./icons/size12/complete.svg";

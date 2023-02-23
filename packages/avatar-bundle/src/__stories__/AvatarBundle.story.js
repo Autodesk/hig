@@ -1,6 +1,6 @@
 import React from "react";
 import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
-import { sizes } from "@hig/avatar/src/sizes";
+import { sizes } from "@weave-design/avatar/src/sizes";
 
 import AvatarBundle from "../index";
 import { SAMPLE_AVATARS } from "../__fixtures__/SAMPLE_AVATARS";

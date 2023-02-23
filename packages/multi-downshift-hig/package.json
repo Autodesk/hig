@@ -1,0 +1,57 @@
+{
+  "name": "@hig/multi-downshift",
+  "version": "2.2.0",
+  "description": "Multi-selection support for Downshift",
+  "author": "Autodesk Inc.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Autodesk/hig.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "files": [
+    "build/*"
+  ],
+  "dependencies": {
+    "@weave-design/utils": "^1.0.0",
+    "prop-types": "^15.7.1"
+  },
+  "devDependencies": {
+    "@weave-design/babel-preset": "^1.0.0",
+    "@weave-design/eslint-config": "^1.0.0",
+    "@weave-design/scripts": "^1.0.0",
+    "@weave-design/semantic-release-config": "^1.0.0"
+  },
+  "peerDependencies": {
+    "downshift": "^6.0.0",
+    "react": "^17.0.0"
+  },
+  "scripts": {
+    "build": "weave-scripts-build",
+    "lint": "weave-scripts-lint",
+    "test": "weave-scripts-test",
+    "release": "weave-scripts-release"
+  },
+  "eslintConfig": {
+    "extends": "@weave-design"
+  },
+  "jest": {
+    "preset": "@weave-design/jest-preset"
+  },
+  "release": {
+    "extends": "@weave-design/semantic-release-config"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "@weave-design/babel-preset/test"
+        ]
+      }
+    }
+  }
+}
