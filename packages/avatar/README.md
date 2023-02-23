@@ -4,20 +4,18 @@ Avatars are a visual representation of a customer's identity. These may be small
 
 Initials are dynamically generated from the provided name and always rendered. This allows the initials to serve as a placeholder while the image is loading.
 
-Read more about when and how to use the Avatar component [on the hig website](https://hig.autodesk.com/web/components/avatars).
-
 ## Getting started
 
 ### Install the package
 
 ```bash
-yarn add @hig/avatar @hig/theme-context @hig/theme-data
+yarn add @weave-design/avatar @weave-design/theme-context @weave-design/theme-data
 ```
 
 ### Import the component
 
 ```js
-import Avatar, { sizes } from '@hig/avatar';
+import Avatar, { sizes } from '@weave-design/avatar';
 ```
 
 ## Basic usage
@@ -36,7 +34,7 @@ Use the `className` prop to pass in a css class name to the outermost container 
 Avatar also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
 
 ```jsx
-import Avatar from '@hig/avatar';
+import Avatar from '@weave-design/avatar';
 
 function YourComponent() {
   // ...
