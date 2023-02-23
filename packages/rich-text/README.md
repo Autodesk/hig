@@ -1,20 +1,18 @@
 # Rich Text
 
-The Rich Text component applies the HIG typography styles to whatever is passed to it, whether that be React children or regular HTML. This is particularly useful for styling markdown content.
-
-Read more about when and how to use the Typography components [on the HIG website](https://hig.autodesk.com/web/basics/typography).
+The Rich Text component applies the Weave typography styles to whatever is passed to it, whether that be React children or regular HTML. This is particularly useful for styling markdown content.
 
 ## Getting started
 
 ```
-yarn add @hig/rich-text @hig/theme-context @hig/theme-data
+yarn add @weave-design/rich-text @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Import the component and font CSS
 
 ```
-import RichText from '@hig/rich-text';
-import "@hig/fonts/build/ArtifaktElement.css";
+import RichText from '@weave-design/rich-text';
+import "@weave-design/fonts/build/ArtifaktElement.css";
 ```
 
 ## Basic usage
@@ -33,7 +31,7 @@ Use the `className` prop to pass in a css class name to the outermost container 
 RichText also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
 
 ```jsx
-import RichText from '@hig/rich-text';
+import RichText from '@weave-design/rich-text';
 
 function YourComponent() {
   // ...
