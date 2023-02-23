@@ -62,7 +62,6 @@
     "storybook-deploy-ci": "yarn storybook-deploy --domain `bash ./scripts/storybookDomain.sh`"
   },
   "dependencies": {
-    "@hig/avatar": "^2.1.0",
     "@hig/fonts": "^2.0.0",
     "@hig/input": "^2.2.0",
     "@hig/menu": "^2.2.1",
