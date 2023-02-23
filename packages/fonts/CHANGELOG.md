@@ -1,3 +1,29 @@
+# @weave-design/fonts-v1.0.0 (2023-02-23)
+
+
+### Bug Fixes
+
+* 700 font-weight fix for css file ([c791143](https://github.com/Autodesk/hig/commit/c791143))
+* ArtifaktElement.css surface wrong font weight ([80cbcd4](https://github.com/Autodesk/hig/commit/80cbcd4))
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+
+
+### Documentation
+
+* update font imports ([3e047c1](https://github.com/Autodesk/hig/commit/3e047c1))
+
+
+### Features
+
+* add fonts package ([ae0d25b](https://github.com/Autodesk/hig/commit/ae0d25b))
+* point to new font cdn ([bb02fb0](https://github.com/Autodesk/hig/commit/bb02fb0))
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
+
+### BREAKING CHANGES
+
+* Fonts are pointing to a new cdn
+
 # [@hig/fonts-v2.0.0](https://github.com/Autodesk/hig/compare/@hig/fonts@1.1.0...@hig/fonts@2.0.0) (2022-05-14)
 
 
