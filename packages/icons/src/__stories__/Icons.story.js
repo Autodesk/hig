@@ -1,6 +1,6 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
-import Typography from "@hig/typography";
+import Typography from "@weave-design/typography";
 
 import * as Icons from "../index";
 import { sizes } from "../sizes";
