@@ -2,7 +2,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Downshift from "downshift";
-import { combineEventHandlers } from "@hig/utils";
+import { combineEventHandlers } from "@weave-design/utils";
 
 /**
  * @typedef {import("downshift").DownshiftProps<any>} Props
