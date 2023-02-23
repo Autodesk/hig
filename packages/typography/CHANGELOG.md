@@ -1,3 +1,94 @@
+# @weave-design/typography-v1.0.0 (2023-02-23)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* add 600 to valid typography font weights ([5552838](https://github.com/Autodesk/hig/commit/5552838))
+* Add back missing classnames dependencies ([0dcb77a](https://github.com/Autodesk/hig/commit/0dcb77a))
+* break out className from otherProps ([7a38584](https://github.com/Autodesk/hig/commit/7a38584))
+* bump up theme-context dependency ([b068dab](https://github.com/Autodesk/hig/commit/b068dab))
+* **bundle:** Fix package bundles ([a1b479d](https://github.com/Autodesk/hig/commit/a1b479d))
+* **bundle:** include dependency CSS ([f5a4a62](https://github.com/Autodesk/hig/commit/f5a4a62))
+* enable passing className prop ([25cd959](https://github.com/Autodesk/hig/commit/25cd959))
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+* headers can have colors ([f49276f](https://github.com/Autodesk/hig/commit/f49276f))
+* **package:** update [@hig](https://github.com/hig)/theme-context to version 2.0.0 ([3057713](https://github.com/Autodesk/hig/commit/3057713))
+* theme-context and theme-data as peer dependencies ([966edc1](https://github.com/Autodesk/hig/commit/966edc1))
+
+
+### Code Refactoring
+
+* Major Release - React 17 Upgrade ([2523711](https://github.com/Autodesk/hig/commit/2523711))
+
+
+### Features
+
+* a new API for Typography ([a589155](https://github.com/Autodesk/hig/commit/a589155)), closes [#222934](https://github.com/Autodesk/hig/issues/222934)
+* Add stylesheet prop ([85dfd86](https://github.com/Autodesk/hig/commit/85dfd86))
+* allow Typography to accept arbitrary props ([0b5617a](https://github.com/Autodesk/hig/commit/0b5617a))
+* enable passing elementType to Typography ([6025d97](https://github.com/Autodesk/hig/commit/6025d97))
+* Mark package compatibility with React 16 ([6eaeb27](https://github.com/Autodesk/hig/commit/6eaeb27))
+* pass down a callback ref to root element ([1746795](https://github.com/Autodesk/hig/commit/1746795))
+* **typography:** Export base Typography component ([c971cfd](https://github.com/Autodesk/hig/commit/c971cfd))
+* **typography:** Render Typography span as inline-block ([d529004](https://github.com/Autodesk/hig/commit/d529004))
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+* use latest theme-data ([ca88bb6](https://github.com/Autodesk/hig/commit/ca88bb6))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
+
+### BREAKING CHANGES
+
+* This release includes upgrading to React 17 and all associated libraries. The components have also had structural changes, utilizing stateless components and hooks. There should be no change in look or behavior of components. The code usage is the same so if you’re already on react 17 you can bump the version directly. If you’re on an old version of react you’ll need to upgrade your project’s react first to 17 and then the HIG components. This upgrade also means no more fixes for the react 15 version but it will still be available for download from NPM. You can fork the repo and make fixes with the older version if there is something critical past this release date.
+* Typography 0.1.4 to 1.0.0 Migration
+
+This update contains significant breaking changes to the Typography API.
+Most notably, the helper Typography components `Bold`, `Body`,
+`Caption`, `Disabled`, `H1`, `H2`, `H3`, `Sub1`, `Sub2`, or `Text` no
+longer exist. You can achieve the same behavior with...
+
+* `<Bold text="hi" />`
+  ->
+  `<Typography fontWeight="bold">hi</Typography>`
+
+* `<Body text="hi" />`
+   ->
+  `<Typography>hi</Typography>` or
+  `<Typography variant="body">hi</Typography>`
+
+* `<Caption text="hi" />`
+  ->
+  `<Typography variant="caption">hi</Typography>`
+
+* `<Disabled text="hi" />`
+  ->
+  `<Typography disabled={true}>hi</Typography>`
+
+* `<H1 text="hi" />`
+  ->
+  `<Typography variant="h1">hi</Typography>`
+
+* `<H2 text="hi" />`
+  ->
+  `<Typography variant="h2">hi</Typography>`
+
+* `<H3 text="hi" />`
+  ->
+  `<Typography variant="h3">hi</Typography>`
+
+* `<Text text="hi"/>`
+  ->
+  `<Typography>hi</Typography>` or
+  `<Typography variant="body">hi</Typography>`
+
+`<Sub1 />` and `<Sub2 />` can be achieved by using the style prop with
+any styles needed. For instance to get the old `<Sub1 />` look, use...
+```
+
 # [@hig/typography-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/typography@2.1.0...@hig/typography@2.2.0) (2022-08-26)
 
 
