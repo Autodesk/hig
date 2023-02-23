@@ -22,6 +22,8 @@
     "prop-types": "^15.7.1"
   },
   "devDependencies": {
+    "@hig/text-link": "^2.2.0",
+    "@hig/progress-bar": "^2.1.0",
     "@weave-design/babel-preset": "^1.0.0",
     "@weave-design/eslint-config": "^1.0.0",
     "@weave-design/jest-preset": "^1.0.0",
