@@ -1,6 +1,6 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
-import Typography from "@hig/typography";
+import Typography from "@weave-design/typography";
 
 import Surface from "../index";
 import Readme from "../../README.md";
