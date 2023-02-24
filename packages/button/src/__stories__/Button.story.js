@@ -1,5 +1,5 @@
 import React from "react";
-import { ArgsTable, Primary } from "@storybook/addon-docs";
+import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
 import { Settings16, Settings24 } from "@hig/icons";
 
 import Button from "../index";
@@ -45,6 +45,7 @@ export default {
       page: () => (
         <>
           <Primary />
+          <Stories />
           <Readme />
           <ArgsTable />
         </>
