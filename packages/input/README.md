@@ -2,20 +2,18 @@
 
 Inputs allow the user to input a small amount of freeform text (100 characters or less).
 
-Read more about when and how to use the Input component [on the website](https://hig.autodesk.com/web/components/form-elements).
-
 ## Getting started
 
 ### Install the package
 
 ```bash
-yarn add @hig/input @hig/theme-context @hig/theme-data
+yarn add @weave-design/input @weave-design/theme-context @weave-design/theme-data
 ```
 
 ### Import the component
 
 ```js
-import Input from '@hig/input';
+import Input from '@weave-design/input';
 ```
 
 ## Basic usage

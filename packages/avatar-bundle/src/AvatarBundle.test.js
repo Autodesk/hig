@@ -1,4 +1,4 @@
-import { sizes } from "@hig/avatar";
+import { sizes } from "@weave-design/avatar";
 import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 
 import AvatarBundle, { spacings } from "./index";

@@ -1,17 +1,17 @@
 # Surface
 
-The Surface component renders a themable container with the appropriate background color for the current theme. It is intended to wrap other HIG components, however may also be used independently. 
+The Surface component renders a themable container with the appropriate background color for the current theme. It is intended to wrap other Weave components, however may also be used independently. 
 
 ## Getting started
 
 ```
-yarn add @hig/surface @hig/theme-context @hig/theme-data
+yarn add @weave-design/surface @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Import the component
 
 ```
-import Surface from '@hig/surface';
+import Surface from '@weave-design/surface';
 ```
 
 ## Basic usage
@@ -32,7 +32,7 @@ Use the `className` prop to pass in a css class name to the outermost container 
 Surface also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
 
 ```jsx
-import Surface from '@hig/surface';
+import Surface from '@weave-design/surface';
 
 function YourComponent() {
   // ...
