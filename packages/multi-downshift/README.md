@@ -7,13 +7,13 @@
 ## Getting started
 
 ```bash
-yarn add @hig/multi-downshift
+yarn add @weave-design/multi-downshift
 ```
 
 ## Import the component
 
 ```js
-import MultiDownshift from '@hig/multi-downshift';
+import MultiDownshift from '@weave-design/multi-downshift';
 ```
 
 ## Basic usage

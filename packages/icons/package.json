@@ -1,10 +1,10 @@
 {
-  "name": "@hig/icons",
-  "version": "4.5.0",
-  "description": "HIG icon assets",
+  "name": "@weave-design/icons",
+  "version": "1.0.0",
+  "description": "Weave icon assets",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
-  "homepage": "https://hig.autodesk.com",
+  "homepage": "https://storybook.weave.autodesk.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/Autodesk/hig.git"
@@ -28,9 +28,9 @@
     "svgo": "^1.0.5"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.4.2",
-    "react": "^17.0.0"
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-design/theme-data": "^1.0.0",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "build": "yarn build:core && yarn dist:icons",

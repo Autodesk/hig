@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { cx, css } from "emotion";
 
-import { ThemeContext } from "@hig/theme-context";
-import { createCustomClassNames } from "@hig/utils";
+import { ThemeContext } from "@weave-design/theme-context";
+import { createCustomClassNames } from "@weave-design/utils";
 
 import stylesheet from "./Avatar.stylesheet";
 import { sizes, AVAILABLE_SIZES } from "./sizes";

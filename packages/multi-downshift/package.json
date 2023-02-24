@@ -1,6 +1,6 @@
 {
-  "name": "@hig/multi-downshift",
-  "version": "2.2.0",
+  "name": "@weave-design/multi-downshift",
+  "version": "1.0.0",
   "description": "Multi-selection support for Downshift",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -17,7 +17,7 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/utils": "^0.4.1",
+    "@weave-design/utils": "^1.0.0",
     "prop-types": "^15.7.1"
   },
   "devDependencies": {
@@ -28,7 +28,7 @@
   },
   "peerDependencies": {
     "downshift": "^6.0.0",
-    "react": "^17.0.0"
+    "react": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "build": "weave-scripts-build",

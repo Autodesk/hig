@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`multi-downshift/MultiDownshift calls the \`children\` render prop with state and helpers 1`] = `
+Object {
+  "clearItems": [Function],
+  "clearSelection": [Function],
+  "closeMenu": [Function],
+  "getInputProps": [Function],
+  "getItemProps": [Function],
+  "getLabelProps": [Function],
+  "getMenuProps": [Function],
+  "getRemoveButtonProps": [Function],
+  "getRootProps": [Function],
+  "getToggleButtonProps": [Function],
+  "highlightedIndex": null,
+  "id": "downshift-0",
+  "inputValue": "",
+  "isOpen": false,
+  "itemToString": [Function],
+  "openMenu": [Function],
+  "reset": [Function],
+  "selectHighlightedItem": [Function],
+  "selectItem": [Function],
+  "selectItemAtIndex": [Function],
+  "selectedItem": null,
+  "selectedItems": Array [],
+  "setHighlightedIndex": [Function],
+  "setItemCount": [Function],
+  "setState": [Function],
+  "toggleMenu": [Function],
+  "unsetItemCount": [Function],
+}
+`;

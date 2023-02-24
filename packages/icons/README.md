@@ -1,10 +1,10 @@
 # Icons
 
-This package retains the source of the library of HIG icons.
+This package retains the source of the library of Weave icons.
 You can import individual icons to render on your app.
 
 ```jsx
-import { Assets24 } from "@hig/icons";
+import { Assets24 } from "@weave-design/icons";
 
 const MyComponent = () => (
     <div className="my-class">
@@ -15,14 +15,12 @@ const MyComponent = () => (
 export default MyComponent
 ```
 
-Read more about where and how to use icons on [the website](https://hig.autodesk.com/web/basics/icons).
-
 ## Getting started
 
 ### Install the package
 
 ```bash
-yarn add @hig/icons @hig/theme-context @hig/theme-data
+yarn add @weave-design/icons @weave-design/theme-context @weave-design/theme-data
 ```
 
 # Developing
@@ -41,7 +39,7 @@ This will use SVGO to optimize the new icon, and update our release files. Remem
 
 ## Accessing SVG source files
 
-SVG source files for all icons are available in the `build/svg` subdirectory of the `@hig/icons` package (e.g. `./node_modules/@hig/icons/build/svg`).
+SVG source files for all icons are available in the `build/svg` subdirectory of the `@weave-design/icons` package (e.g. `./node_modules/@weave-design/icons/build/svg`).
 
 ## Styling
 
