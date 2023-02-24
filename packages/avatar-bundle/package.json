@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "@weave-design/avatar": "^1.0.0",
-    "@weave-design/utils": "^1.0.1",
+    "@weave-design/utils": "^1.0.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
