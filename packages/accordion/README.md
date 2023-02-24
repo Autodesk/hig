@@ -2,20 +2,18 @@
 
 Accordions can make content-heavy pages appear less so by vertically stacking items in lists that users can expand or contract.
 
-Read more about when and how to use the Accordion component [on the internal wiki](https://wiki.autodesk.com/display/HIG/accordion).
-
 ## Getting started
 
 ### Install the package
 
 ```bash
-yarn add @hig/accordion @hig/theme-context @hig/theme-data
+yarn add @weave-design/accordion @weave-design/theme-context @weave-design/theme-data
 ```
 
 ### Import the component
 
 ```js
-import Accordion from "@hig/accordion";
+import Accordion from "@weave-design/accordion";
 ```
 
 ## Basic usage
@@ -37,7 +35,7 @@ import {
   indicatorPositions,
   AVAILABLE_INDICATORS,
   AVAILABLE_INDICATOR_POSITIONS
-} from "@hig/accordion";
+} from "@weave-design/accordion";
 ```
 
 ### Styling
