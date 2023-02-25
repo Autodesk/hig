@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ControlBehavior } from "@weave-design/behaviors";
+import { ControlBehavior } from "@weave-design-design/behaviors";
 
 import {
   surfaces,

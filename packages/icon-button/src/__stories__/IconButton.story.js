@@ -1,7 +1,7 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
-import { Settings16, Settings24 } from "@hig/icons";
-import Surface from "@hig/surface";
+import { Settings16, Settings24 } from "@weave-design/icons";
+import Surface from "@weave-design/surface";
 
 import IconButton from "../index";
 import Readme from "../../README.md";

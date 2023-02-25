@@ -1,7 +1,7 @@
 import renderer from "react-test-renderer";
 import React from "react";
 
-import { Settings24 } from "@hig/icons";
+import { Settings24 } from "@weave-design/icons";
 import IconButton from "./IconButton";
 
 describe("IconButton", () => {
