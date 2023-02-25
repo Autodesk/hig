@@ -7,13 +7,13 @@ Label represents a caption for an item in a user interface
 ### Install the package
 
 ```bash
-yarn add @hig/label @hig/theme-context @hig/theme-data
+yarn add @weave-design/label @weave-design/theme-context @weave-design/theme-data
 ```
 
 ### Import the component
 
 ```js
-import Label from '@hig/label';
+import Label from '@weave-design/label';
 ```
 
 ## Basic usage
@@ -29,7 +29,7 @@ Use the `className` prop to pass in a css class name to the outermost container 
 Label also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
 
 ```jsx
-import Label from '@hig/label';
+import Label from '@weave-design/label';
 
 function YourComponent() {
   // ...

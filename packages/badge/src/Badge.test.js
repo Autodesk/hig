@@ -1,6 +1,6 @@
 import React from "react";
 import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
-import { Checkmark16 } from "@hig/icons";
+import { Checkmark16 } from "@weave-design/icons";
 import Badge from "./Badge";
 
 describe("badge/Badge", () => {

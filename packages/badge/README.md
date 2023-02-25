@@ -5,13 +5,13 @@ Badges are visual indicators that communicate status and draw attention to an ob
 ## Getting started
 
 ```
-yarn add @hig/badge @hig/theme-context @hig/theme-data
+yarn add @weave-design/badge @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Import the component
 
 ```
-import Badge from '@hig/badge';
+import Badge from '@weave-design/badge';
 ```
 
 ## Basic usage
@@ -26,7 +26,7 @@ Use the `className` prop to pass in a css class name to the outermost container 
 Badge also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
 
 ```jsx
-import Badge from '@hig/badge';
+import Badge from '@weave-design/badge';
 
 function YourComponent() {
   const customStylesheet = (styles, props, themeData) => ({

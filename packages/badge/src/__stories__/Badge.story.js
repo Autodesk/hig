@@ -1,6 +1,6 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
-import { Error12, Error16 } from "@hig/icons";
+import { Error12, Error16 } from "@weave-design/icons";
 
 import Badge from "../index";
 import Readme from "../../README.md";

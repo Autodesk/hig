@@ -2,18 +2,16 @@
 
 Action buttons that include an icon only, with no background. Useful for compact displays or toolbars with a number of related controls.
 
-Read more about where and how to use IconButton on [the website](https://hig.autodesk.com/web/components/buttons).
-
 ## Getting started
 
 ```
-yarn add @hig/icon-button @hig/theme-context @hig/theme-data
+yarn add @weave-design/icon-button @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Import the component
 
 ```
-import IconButton from '@hig/icon-button';
+import IconButton from '@weave-design/icon-button';
 ```
 
 ## Typical usage
@@ -21,7 +19,7 @@ import IconButton from '@hig/icon-button';
 Use the `name` prop to render a provided icon by name.
 
 ```jsx
-import { Assets24 } from "@hig/icons"
+import { Assets24 } from "@weave-design/icons"
 
 function MyComponent() {
   return (
