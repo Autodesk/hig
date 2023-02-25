@@ -1,7 +1,7 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
 import { css } from "emotion";
-import Input from "@hig/input";
+import Input from "@weave-design/input";
 
 import Label from "../index";
 import Readme from "../../README.md";

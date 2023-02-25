@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
-import { ThemeContext } from "@hig/theme-context";
-import { CheckmarkSUI, CheckmarkXsUI } from "@hig/icons";
-import { createButtonEventHandlers } from "@hig/utils";
+import { ThemeContext } from "@weave-design/theme-context";
+import { CheckmarkSUI, CheckmarkXsUI } from "@weave-design/icons";
+import { createButtonEventHandlers } from "@weave-design/utils";
 import stylesheet from "./OptionPresenter.stylesheet";
 
 function OptionWrapper(props) {

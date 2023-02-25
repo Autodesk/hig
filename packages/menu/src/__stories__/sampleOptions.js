@@ -10,8 +10,8 @@ import {
   CartFull24,
   Cloud24,
   Checklist24,
-} from "@hig/icons";
-import Avatar from "@hig/avatar";
+} from "@weave-design/icons";
+import Avatar from "@weave-design/avatar";
 
 import { Option } from "../index";
 

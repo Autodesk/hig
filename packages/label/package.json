@@ -1,7 +1,7 @@
 {
-  "name": "@hig/label",
-  "version": "2.2.0",
-  "description": "HIG Label",
+  "name": "@weave-design/label",
+  "version": "1.0.0",
+  "description": "Weave Label",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "repository": {
@@ -21,9 +21,9 @@
     "prop-types": "^15.7.1"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.0.0",
-    "@hig/theme-data": "^3.4.2",
-    "react": "^17.0.0"
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-design/theme-data": "^1.0.0",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@weave-design/babel-preset": "^1.0.0",

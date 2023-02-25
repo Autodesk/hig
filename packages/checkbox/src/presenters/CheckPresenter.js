@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
-import { ThemeContext } from "@hig/theme-context";
-import { createCustomClassNames } from "@hig/utils";
-import { CheckmarkXsUI, OperatorMinusXsUI } from "@hig/icons";
+import { ThemeContext } from "@weave-design/theme-context";
+import { createCustomClassNames } from "@weave-design/utils";
+import { CheckmarkXsUI, OperatorMinusXsUI } from "@weave-design/icons";
 
 import stylesheet from "./stylesheet";
 

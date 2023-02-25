@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
-import { CaretDownMUI, CaretDownSUI } from "@hig/icons";
-import Input from "@hig/input";
-import ThemeContext from "@hig/theme-context";
+import { CaretDownMUI, CaretDownSUI } from "@weave-design/icons";
+import Input from "@weave-design/input";
+import ThemeContext from "@weave-design/theme-context";
 
 import stylesheet from "./InputPresenter.stylesheet";
 

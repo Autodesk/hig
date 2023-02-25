@@ -1,8 +1,8 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import { mount } from "enzyme";
-import { Settings24 } from "@hig/icons";
-import Avatar from "@hig/avatar";
+import { Settings24 } from "@weave-design/icons";
+import Avatar from "@weave-design/avatar";
 import Menu from "./Menu";
 import Option from "./Option";
 

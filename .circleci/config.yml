@@ -1,4 +1,5 @@
-defaults: &defaults
+defaults:
+  &defaults
   docker:
     - image: cimg/node:16.0.0
 
@@ -30,7 +31,8 @@ jobs:
           command: 'sudo yarn global add greenkeeper-lockfile@2'
       - run:
           name: SSH Avoid hosts unknown
-          command: 'mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config'
+          command: 'mkdir -p ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking
+            no\n" > ~/.ssh/config'
       - run:
           name: Upload lockfile changes
           command: 'greenkeeper-lockfile-upload'
@@ -78,6 +80,8 @@ jobs:
           key: v1-package-builds-{{ .Revision }}
           paths:
             - .archives/builds.tgz
+    # The resource_class feature allows configuring CPU and RAM resources for each job. Different resource classes are available for different executors. https://circleci.com/docs/2.0/configuration-reference/#resourceclass
+    resource_class: large
   react-test:
     <<: *defaults
     steps:
