@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Downshift from "downshift";
 import { cx } from "emotion";
-import MultiDownshift from "@hig/multi-downshift";
+import MultiDownshift from "@weave-design/multi-downshift";
 
 import InputPresenter from "./presenters/InputPresenter";
 import MenuPresenter from "./presenters/MenuPresenter";
