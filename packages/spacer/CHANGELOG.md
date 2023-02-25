@@ -1,3 +1,43 @@
+# @weave-design/spacer-v1.0.0 (2023-02-25)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* account for flex containers ([0a88907](https://github.com/Autodesk/hig/commit/0a88907))
+* bump up theme-context dependency ([b068dab](https://github.com/Autodesk/hig/commit/b068dab))
+* combined greenkeeper prs for version updates see pr 1392 ([d0a017a](https://github.com/Autodesk/hig/commit/d0a017a))
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+* **package:** update [@hig](https://github.com/hig)/theme-context to version 2.0.0 ([44a4aee](https://github.com/Autodesk/hig/commit/44a4aee))
+* **package:** update emotion to version 10.0.0 ([01e0587](https://github.com/Autodesk/hig/commit/01e0587))
+* point spacer to alpha version of theme-context ([9024f1b](https://github.com/Autodesk/hig/commit/9024f1b))
+* remove spacer classname ([e44dfd3](https://github.com/Autodesk/hig/commit/e44dfd3))
+* theme-context and theme-data as peer dependencies ([d16a2e7](https://github.com/Autodesk/hig/commit/d16a2e7))
+* Update theme data package ([dc5178a](https://github.com/Autodesk/hig/commit/dc5178a))
+
+
+### Code Refactoring
+
+* Major Release - React 17 Upgrade ([2523711](https://github.com/Autodesk/hig/commit/2523711))
+
+
+### Features
+
+* add stylesheet prop, pass down className ([cdaaad3](https://github.com/Autodesk/hig/commit/cdaaad3))
+* Themeable Spacer ([4497865](https://github.com/Autodesk/hig/commit/4497865))
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+* use latest theme-data ([d93ccda](https://github.com/Autodesk/hig/commit/d93ccda))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
+
+### BREAKING CHANGES
+
+* This release includes upgrading to React 17 and all associated libraries. The components have also had structural changes, utilizing stateless components and hooks. There should be no change in look or behavior of components. The code usage is the same so if you’re already on react 17 you can bump the version directly. If you’re on an old version of react you’ll need to upgrade your project’s react first to 17 and then the HIG components. This upgrade also means no more fixes for the react 15 version but it will still be available for download from NPM. You can fork the repo and make fixes with the older version if there is something critical past this release date.
+
 # [@hig/spacer-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/spacer@2.1.0...@hig/spacer@2.2.0) (2022-08-28)
 
 

@@ -1,3 +1,91 @@
+# @weave-design/icon-button-v1.0.0 (2023-02-25)
+
+
+### BREAKING
+
+* **icon/icon-button:** Removes [@hig](https://github.com/hig)/icon and refactor [@hig](https://github.com/hig)/icon-button to use [@hig](https://github.com/hig)/icons ([49d78f4](https://github.com/Autodesk/hig/commit/49d78f4))
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* Add back missing classnames dependencies ([0dcb77a](https://github.com/Autodesk/hig/commit/0dcb77a))
+* add icon css to icon-button ([89810fc](https://github.com/Autodesk/hig/commit/89810fc))
+* allow tabindex to be passed down to root ([8784d15](https://github.com/Autodesk/hig/commit/8784d15))
+* **bundle:** Fix package bundles ([a1b479d](https://github.com/Autodesk/hig/commit/a1b479d))
+* **bundle:** include dependency CSS ([f5a4a62](https://github.com/Autodesk/hig/commit/f5a4a62))
+* combined greenkeeper prs for version updates see pr 1392 ([d0a017a](https://github.com/Autodesk/hig/commit/d0a017a))
+* console errors for invalid props ([608c207](https://github.com/Autodesk/hig/commit/608c207))
+* do not trigger focus/hover/pressed states when disabled ([19ab026](https://github.com/Autodesk/hig/commit/19ab026))
+* don't show icon tooltip ([d8d3a3f](https://github.com/Autodesk/hig/commit/d8d3a3f))
+* export surfaces, AVAILABLE_SURFACES, variants, AVAILABLE_VARIANTS ([b81c7cb](https://github.com/Autodesk/hig/commit/b81c7cb))
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+* halo transitions ([66b1301](https://github.com/Autodesk/hig/commit/66b1301))
+* **icon-button:** Adds cursor: pointer style to IconButton ([411960e](https://github.com/Autodesk/hig/commit/411960e))
+* **icon-button:** Fix IconButton rendering when link is absent ([1f2e292](https://github.com/Autodesk/hig/commit/1f2e292))
+* **icon-button:** Fix missing test dependency ([612e108](https://github.com/Autodesk/hig/commit/612e108))
+* include static on pressed states ([969c415](https://github.com/Autodesk/hig/commit/969c415))
+* need correct surface level values ([500dffc](https://github.com/Autodesk/hig/commit/500dffc))
+* pass down disabled attribute to root element ([3f57c24](https://github.com/Autodesk/hig/commit/3f57c24))
+* prevent disabled IconButton gaining tab focus ([f548f9c](https://github.com/Autodesk/hig/commit/f548f9c))
+* remove non-existant theme-data role from stylesheet ([ee42999](https://github.com/Autodesk/hig/commit/ee42999))
+* remove static variant's fill color ([8c71b7a](https://github.com/Autodesk/hig/commit/8c71b7a))
+* static icon positioning to match dynamic ([4afc1e9](https://github.com/Autodesk/hig/commit/4afc1e9))
+* stop using deprecated theme-data roles ([1409974](https://github.com/Autodesk/hig/commit/1409974))
+* **storybook:** Add back Icon stories ([f38f2d4](https://github.com/Autodesk/hig/commit/f38f2d4))
+* update dependencies ([70fb27c](https://github.com/Autodesk/hig/commit/70fb27c))
+
+
+### Code Refactoring
+
+* Major Release - React 17 Upgrade ([2523711](https://github.com/Autodesk/hig/commit/2523711))
+
+
+### Features
+
+* add on prop and styles for it ([89be8db](https://github.com/Autodesk/hig/commit/89be8db))
+* add static variant ([d8ace9d](https://github.com/Autodesk/hig/commit/d8ace9d))
+* add stylesheet prop ([bdebb11](https://github.com/Autodesk/hig/commit/bdebb11))
+* add surface prop and styles for it ([db4ae52](https://github.com/Autodesk/hig/commit/db4ae52))
+* allow passing down of css className ([ef3d19d](https://github.com/Autodesk/hig/commit/ef3d19d))
+* make icon-button themable ([9f829d2](https://github.com/Autodesk/hig/commit/9f829d2))
+* Mark package compatibility with React 16 ([6eaeb27](https://github.com/Autodesk/hig/commit/6eaeb27))
+* pass ...otherProps to the root element ([980fc5c](https://github.com/Autodesk/hig/commit/980fc5c))
+* title prop is no longer required ([e3240eb](https://github.com/Autodesk/hig/commit/e3240eb))
+* update icon set ([80bf8c6](https://github.com/Autodesk/hig/commit/80bf8c6))
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
+
+### BREAKING CHANGES
+
+* This release includes upgrading to React 17 and all associated libraries. The components have also had structural changes, utilizing stateless components and hooks. There should be no change in look or behavior of components. The code usage is the same so if you’re already on react 17 you can bump the version directly. If you’re on an old version of react you’ll need to upgrade your project’s react first to 17 and then the HIG components. This upgrade also means no more fixes for the react 15 version but it will still be available for download from NPM. You can fork the repo and make fixes with the older version if there is something critical past this release date.
+* * deprecated props are now removed (name, svg)
+* also removed and deprecated type prop - there are no longer different types with the new design
+* removed all css classnames
+* removed css stylesheets
+* **icon/icon-button:** Removes @hig/icon
+* **icon/icon-button:** Use icon prop instead of name or svg in @hig/icon-button to render Icon/svg
+* **icon/icon-button:** No longer export `names` from @hig/icon-button
+
+Usage:
+```
+import { Assets24 } from "@hig/icons"
+
+function MyComponent() {
+  return (
+    <IconButton
+      icon={<Assets24 />}
+      onClick={() => console.log('Clicked it.')}
+    />
+  );
+}
+```
+
 # [@hig/icon-button-v3.1.1](https://github.com/Autodesk/hig/compare/@hig/icon-button@3.1.0...@hig/icon-button@3.1.1) (2022-08-24)
 
 
