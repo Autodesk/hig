@@ -2,20 +2,18 @@
 
 A menu is a mechanism to display a list of choices through interaction with a button, icon or other controls.
 
-Read more about when and how to use the Menu component [on the internal wiki](https://hig.autodesk.com/web/components/menus).
-
 ## Getting started
 
 ### Install the package
 
 ```bash
-yarn add @hig/menu @hig/theme-context @hig/theme-data
+yarn add @weave-design/menu @weave-design/theme-context @weave-design/theme-data
 ```
 
 ### Import the component
 
 ```js
-import Menu from "@hig/menu";
+import Menu, {Option} from "@weave-design/menu";
 ```
 
 ## Basic usage
