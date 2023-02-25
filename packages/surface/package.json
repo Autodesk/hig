@@ -1,7 +1,7 @@
 {
-  "name": "@hig/surface",
-  "version": "2.2.0",
-  "description": "HIG Surface component",
+  "name": "@weave-design/surface",
+  "version": "1.0.0",
+  "description": "Weave Surface component",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "repository": {
@@ -26,12 +26,12 @@
     "@weave-design/jest-preset": "^1.0.0",
     "@weave-design/scripts": "^1.0.0",
     "@weave-design/semantic-release-config": "^1.0.0",
-    "@hig/typography": "^2.1.0"
+    "@weave-design/typography": "^1.0.0"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.4.2",
-    "react": "^17.0.0"
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-design/theme-data": "^1.0.0",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "build": "weave-scripts-build",

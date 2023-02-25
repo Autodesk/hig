@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { cx, css } from "emotion";
 
-import Avatar, { sizes, AVAILABLE_SIZES } from "@hig/avatar";
-import { ThemeContext } from "@hig/theme-context";
+import Avatar, { sizes, AVAILABLE_SIZES } from "@weave-design/avatar";
+import { ThemeContext } from "@weave-design/theme-context";
 
 import ClipPaths from "./clip-paths";
 import stylesheet from "./AvatarBundle.stylesheet";
