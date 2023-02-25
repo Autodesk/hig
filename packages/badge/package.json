@@ -1,7 +1,7 @@
 {
-  "name": "@hig/badge",
-  "version": "1.1.0",
-  "description": "HIG Badge component",
+  "name": "@weave-design/badge",
+  "version": "1.0.0",
+  "description": "Weave Badge component",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "repository": {
@@ -23,15 +23,15 @@
   "devDependencies": {
     "@weave-design/babel-preset": "^1.0.0",
     "@weave-design/eslint-config": "^1.0.0",
-    "@hig/icons": "^4.1.0",
+    "@weave-design/icons": "^1.0.0",
     "@weave-design/jest-preset": "^1.0.0",
     "@weave-design/scripts": "^1.0.0",
     "@weave-design/semantic-release-config": "^1.0.0"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.4.2",
-    "react": "^17.0.0"
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-design/theme-data": "^1.0.0",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "build": "weave-scripts-build",
