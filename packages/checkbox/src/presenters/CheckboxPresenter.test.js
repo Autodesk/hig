@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { generateId } from "@hig/utils";
+import { generateId } from "@weave-design/utils";
 import CheckboxPresenter from "./CheckboxPresenter";
 
 describe("checkbox/presenters/CheckboxPresenter", () => {
