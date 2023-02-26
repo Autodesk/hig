@@ -1,7 +1,7 @@
 {
-  "name": "@hig/radio-button",
-  "version": "2.2.0",
-  "description": "HIG Radio Button",
+  "name": "@weave-design/radio-button",
+  "version": "1.0.0",
+  "description": "Weave Radio Button",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "repository": {
@@ -17,23 +17,23 @@
     "build/*"
   ],
   "dependencies": {
-    "@weave-design/behaviors": "^1.0.0-alpha",
+    "@weave-design/behaviors": "^1.0.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.4.2",
-    "react": "^17.0.0"
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-design/theme-data": "^1.0.0",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@weave-design/babel-preset": "^1.0.0",
     "@weave-design/eslint-config": "^1.0.0",
     "@weave-design/jest-preset": "^1.0.0",
-    "@hig/label": "^2.1.0",
+    "@weave-design/label": "^1.0.0",
     "@weave-design/scripts": "^1.0.0",
     "@weave-design/semantic-release-config": "^1.0.0",
-    "@hig/spacer": "^2.1.0"
+    "@weave-design/spacer": "^1.0.0"
   },
   "scripts": {
     "build": "weave-scripts-build",

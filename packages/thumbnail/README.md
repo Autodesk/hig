@@ -5,13 +5,13 @@ Thumbnails are used as visual anchors and identifiers for objects.
 ## Getting started
 
 ```
-yarn add @hig/thumbnail @hig/theme-context @hig/theme-data
+yarn add @weave-design/thumbnail @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Import the component
 
 ```
-import Thumbnail from '@hig/thumbnail';
+import Thumbnail from '@weave-design/thumbnail';
 ```
 
 ## Basic usage
@@ -27,7 +27,7 @@ Use the `className` prop to pass in a css class name to the outermost container 
 Spacer also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
 
 ```jsx
-import Thumbnail from '@hig/thumbnail';
+import Thumbnail from '@weave-design/thumbnail';
 
 function YourComponent() {
   // ...

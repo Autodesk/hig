@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { cx, css } from "emotion";
-import { ThemeContext } from "@hig/theme-context";
-import { CaretUpMUI, CaretUpSUI, CaretDownMUI, CaretDownSUI } from "@hig/icons";
-import { availableVariants } from "@hig/input";
+import { ThemeContext } from "@weave-design/theme-context";
+import {
+  CaretUpMUI,
+  CaretUpSUI,
+  CaretDownMUI,
+  CaretDownSUI,
+} from "@weave-design/icons";
+import { availableVariants } from "@weave-design/input";
 import {
   createCustomClassNames,
   memoizeCreateButtonEventHandlers,

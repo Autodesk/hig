@@ -5,13 +5,13 @@ Tags are compact elements that can be used to represent small blocks of informat
 ## Getting started
 
 ```
-yarn add @hig/tag @hig/theme-context @hig/theme-data
+yarn add @weave-design/tag @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Import the component
 
 ```
-import Tag from '@hig/tag';
+import Tag from '@weave-design/tag';
 ```
 
 ## Basic usage
@@ -27,7 +27,7 @@ Use the `className` prop to pass in a css class name to the outermost container 
 Spacer also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
 
 ```jsx
-import Thumbnail from '@hig/Tag';
+import Tag from '@weave-design/Tag';
 
 function YourComponent() {
   // ...
