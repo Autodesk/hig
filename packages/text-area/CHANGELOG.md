@@ -1,3 +1,57 @@
+# @weave-design/text-area-v1.0.0 (2023-02-26)
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* allow className to be passed down in TextArea ([fc8928a](https://github.com/Autodesk/hig/commit/fc8928a))
+* **behavior:** bump [@hig](https://github.com/hig)/utils dependents to v0.2.1 ([48b74d0](https://github.com/Autodesk/hig/commit/48b74d0))
+* **bundle:** Fix package bundles ([a1b479d](https://github.com/Autodesk/hig/commit/a1b479d))
+* **bundle:** include dependency CSS ([f5a4a62](https://github.com/Autodesk/hig/commit/f5a4a62))
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+* generate one ID per component instance instead of upon render ([0fbc554](https://github.com/Autodesk/hig/commit/0fbc554))
+* margins around textarea addressed for Chrome ([4c89e09](https://github.com/Autodesk/hig/commit/4c89e09))
+* **presentation:** add missing colors mixin ([895a3b5](https://github.com/Autodesk/hig/commit/895a3b5))
+* remove gap between halo and textarea ([190cf36](https://github.com/Autodesk/hig/commit/190cf36))
+* restore focus/hover halos ([fcf06a2](https://github.com/Autodesk/hig/commit/fcf06a2))
+* Sending correct parameters in the textareaStylesheet callback function ([a143d9c](https://github.com/Autodesk/hig/commit/a143d9c))
+* stop using deprecated theme-data roles ([099946d](https://github.com/Autodesk/hig/commit/099946d))
+* theme-context and theme-data as peer dependencies ([fe9267f](https://github.com/Autodesk/hig/commit/fe9267f))
+
+
+### Code Refactoring
+
+* Major Release - React 17 Upgrade ([2523711](https://github.com/Autodesk/hig/commit/2523711))
+
+
+### Features
+
+* add `maxLength`, `minLenght`, and `readOnly` props to text inputs ([084ca94](https://github.com/Autodesk/hig/commit/084ca94))
+* add stylesheet prop to TextArea ([0f14579](https://github.com/Autodesk/hig/commit/0f14579))
+* adds markup and styles to TextAreaPresenter ([8174d84](https://github.com/Autodesk/hig/commit/8174d84))
+* allow ref forwarding to HTML textarea ([635c19f](https://github.com/Autodesk/hig/commit/635c19f))
+* introduces state for accurate behavior around instructions, label, required, and value ([c42bd91](https://github.com/Autodesk/hig/commit/c42bd91))
+* make text-area themeable ([65ea3bb](https://github.com/Autodesk/hig/commit/65ea3bb))
+* resizeable text-area ([a1f406f](https://github.com/Autodesk/hig/commit/a1f406f))
+* scaffolds TextArea and TextAreaPresenter component ([c513a5c](https://github.com/Autodesk/hig/commit/c513a5c))
+* **text-area:** Initial commit for text-area ([83924cc](https://github.com/Autodesk/hig/commit/83924cc))
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+* use latest theme-data ([11ac74e](https://github.com/Autodesk/hig/commit/11ac74e))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
+
+### BREAKING CHANGES
+
+* This release includes upgrading to React 17 and all associated libraries. The components have also had structural changes, utilizing stateless components and hooks. There should be no change in look or behavior of components. The code usage is the same so if you’re already on react 17 you can bump the version directly. If you’re on an old version of react you’ll need to upgrade your project’s react first to 17 and then the HIG components. This upgrade also means no more fixes for the react 15 version but it will still be available for download from NPM. You can fork the repo and make fixes with the older version if there is something critical past this release date.
+* * Removed the following props: instructions, label, defaultValue
+* Allow all native text-area html attributes to pass down
+* The web light default look now looks like the updated designs but with the legacy colors
+* The text-area component is now composed from an input component
+
 # [@hig/text-area-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/text-area@2.1.1...@hig/text-area@2.2.0) (2022-08-28)
 
 
