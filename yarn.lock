@@ -2608,6 +2608,17 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
+"@hig/tag@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@hig/tag/-/tag-1.0.0.tgz#922da815cec9e49367cb4833504e24e5b552ad24"
+  integrity sha512-R2zQ2xOR3neaE/uXycVQc+4ipuKshZGvLf9Nzw5hHyG+B4fbgvE5VP95gIVW1L7hfz/r2GX1sn049B49xGs9Sg==
+  dependencies:
+    "@hig/behaviors" "^2.1.0"
+    "@hig/icons" "^4.4.0"
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
 "@hig/text-area@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@hig/text-area/-/text-area-2.2.0.tgz#1ca073e7d162370b9ae0e3fa8d9982f36616b83d"
@@ -2637,6 +2648,15 @@
   integrity sha512-SqP9P6O4100xLA202HFdeU5T2XpXHc3Vqp6TqLDVNw5CKCGwKLPEfD1bWWfd57jSxqFdSNNOAUsdx4L9YcMqfQ==
   dependencies:
     tinycolor2 "^1.4.1"
+
+"@hig/thumbnail@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@hig/thumbnail/-/thumbnail-1.0.0.tgz#6c2272c0bfa063b69a8e3268b022640e3d44903a"
+  integrity sha512-hGg9FgBJH2nfOINdorj3RlzFLims7OP6mH1CZJR9fXIMyF3BnVqX2sMdC/prkOwsb3x43lYyCL5VZEDvl28SkQ==
+  dependencies:
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
 
 "@hig/typography@^2.1.0", "@hig/typography@^2.2.0":
   version "2.2.0"
