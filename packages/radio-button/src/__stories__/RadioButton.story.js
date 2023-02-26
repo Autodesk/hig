@@ -1,8 +1,8 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
 import { css } from "emotion";
-import Label from "@hig/label";
-import Spacer from "@hig/spacer";
+import Label from "@weave-design/label";
+import Spacer from "@weave-design/spacer";
 
 import RadioButton from "../index";
 import Readme from "../../README.md";
