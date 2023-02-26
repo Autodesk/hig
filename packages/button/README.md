@@ -1,19 +1,17 @@
 # Button
 
-HIG buttons trigger actions or changes within the interface. They come in a number of varieties.
-
-Read more about when and how to use the Button components [on the HIG website](https://hig.autodesk.com/web/components/buttons).
+Weave buttons trigger actions or changes within the interface. They come in a number of varieties.
 
 ## Getting started
 
 ```
-yarn add @hig/button @hig/theme-context @hig/theme-data
+yarn add @weave-design/button @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Import the component
 
 ```
-import Button from '@hig/button';
+import Button from '@weave-design/button';
 ```
 
 ## Basic usage
