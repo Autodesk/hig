@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import IconButton from "@hig/icon-button";
+import IconButton from "@weave-design/icon-button";
 import NotificationsToast from "./index";
 
 describe("NotificationsToast", () => {

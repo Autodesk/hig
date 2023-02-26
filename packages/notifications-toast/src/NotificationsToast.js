@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
-import IconButton from "@hig/icon-button";
-import { CloseSUI, CloseXsUI } from "@hig/icons";
-import RichText from "@hig/rich-text";
-import ThemeContext from "@hig/theme-context";
-import Typography from "@hig/typography";
-import { createCustomClassNames } from "@hig/utils";
+import IconButton from "@weave-design/icon-button";
+import { CloseSUI, CloseXsUI } from "@weave-design/icons";
+import RichText from "@weave-design/rich-text";
+import ThemeContext from "@weave-design/theme-context";
+import Typography from "@weave-design/typography";
+import { createCustomClassNames } from "@weave-design/utils";
 
 import { STATUS_ICONS, AVAILABLE_STATUSES } from "./statuses";
 

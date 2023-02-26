@@ -2580,6 +2580,20 @@
     "@hig/utils" "^0.4.1"
     prop-types "^15.7.1"
 
+"@hig/notifications-toast@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/notifications-toast/-/notifications-toast-3.2.0.tgz#290d06e36ddec064e1c60cef709277b6b68c4dce"
+  integrity sha512-s8q7gLroobfm8wfl7I2a8KWgmgklm/p2jl6qtk6ZqKiFumjYqaCPUxHZA4OB/5vfVKe4pjlfYqpbUtII/AVlxw==
+  dependencies:
+    "@hig/icon-button" "^3.1.0"
+    "@hig/icons" "^4.1.0"
+    "@hig/rich-text" "^2.2.0"
+    "@hig/typography" "^2.1.0"
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+    react-flip-move "^3.0.1"
+
 "@hig/numeric-input@^2.1.3":
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/@hig/numeric-input/-/numeric-input-2.1.3.tgz#2ea476512e8233ed1c15a46d1429b714c5d1e5d4"

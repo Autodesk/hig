@@ -2,20 +2,18 @@
 
 Toasts are floating message boxes that appear up to a maximum of three at a time (similar events may be grouped). These are primarily informational they report a system occurrence that typically does not require much user action.
 
-Read more about when and how to use the Toast component [on the internal wiki](https://wiki.autodesk.com/display/HIG/Toasts).
-
 ## Getting started
 
 ### Install the package
 
 ```bash
-yarn add @hig/notifications-toast @hig/theme-context @hig/theme-data
+yarn add @weave-design/notifications-toast @weave-design/theme-context @weave-design/theme-data
 ```
 
 ### Import the component
 
 ```js
-import NotificationsToast from '@hig/notifications-toast';
+import NotificationsToast from '@weave-design/notifications-toast';
 ```
 
 ### Styling

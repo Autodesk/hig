@@ -7,7 +7,7 @@ import {
   Error24,
   Alert16,
   Alert24,
-} from "@hig/icons";
+} from "@weave-design/icons";
 
 export const STATUS_ICONS = Object.freeze({
   primary: {
