@@ -2,20 +2,18 @@
 
 Numeric inputs allow the user to input a number of their choosing and use the up and down keys to increase/decrease the number.
 
-Read more about when and how to use the Numeric Input component [on the website](https://hig.autodesk.com/web/components/form-elements).
-
 ## Getting started
 
 ### Install the package
 
 ```bash
-yarn add @hig/numeric-input @hig/theme-context @hig/theme-data
+yarn add @weave-design/numeric-input @weave-design/theme-context @weave-design/theme-data
 ```
 
 ### Import the component
 
 ```js
-import NumericInput from '@hig/numeric-input';
+import NumericInput from '@weave-design/numeric-input';
 ```
 
 ## Basic usage

@@ -1,6 +1,6 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
-import { variants } from "@hig/input";
+import { variants } from "@weave-design/input";
 
 import NumericInput from "../index";
 import Readme from "../../README.md";

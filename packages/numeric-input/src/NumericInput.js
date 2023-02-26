@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
 
-import { createCustomClassNames } from "@hig/utils";
+import { createCustomClassNames } from "@weave-design/utils";
 import { ControlBehavior } from "@weave-design/behaviors";
-import Input, { availableVariants } from "@hig/input";
+import Input, { availableVariants } from "@weave-design/input";
 
 import customStylesheet from "./customStylesheet";
 import stylesheet from "./presenters/stylesheet";
