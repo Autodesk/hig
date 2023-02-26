@@ -2468,7 +2468,7 @@
   dependencies:
     prop-types "^15.6.1"
 
-"@hig/button@^3.1.1", "@hig/button@^3.2.0":
+"@hig/button@^3.2.0":
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/@hig/button/-/button-3.2.0.tgz#e5a69c2dd9072c81add7b49a0a821e4a02dfc217"
   integrity sha512-GXIQ+B4bXD8dQFkzoW7ApPAc52bZhZUr9+9cOdZXF9HGETcQWiU7zbUkfxwXFdM+1w2XfOKRm9/C1YZU8svxPg==
@@ -2500,6 +2500,16 @@
     downshift "^6.0.0"
     emotion "^10.0.0"
     prop-types "^15.7.1"
+
+"@hig/flyout@^2.1.0", "@hig/flyout@^2.2.0", "@hig/flyout@^2.3.0":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-2.3.1.tgz#476b6cd18fbe8cb126ec7013af5bf013721c56df"
+  integrity sha512-JHww9ZmkKrTNDzi2FvYJAeHvbT7RmFytVGageZSnvqIY2RlcSM+lZAzZAVpMZzbtNAsWOGDFuVZ2FOXjquUZlQ==
+  dependencies:
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+    react-transition-group "^4.4.2"
 
 "@hig/fonts@^2.0.0":
   version "2.0.0"
@@ -2596,7 +2606,7 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
-"@hig/rich-text@^2.1.1", "@hig/rich-text@^2.2.0":
+"@hig/rich-text@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@hig/rich-text/-/rich-text-2.2.0.tgz#8a1db3fd8aeb4a7a12b6e3a9a506c989da1abfc3"
   integrity sha512-q224jnssaUat14Es+tLWlo3cIcew4GlTQ4YL4KcLy8tQby8dx5oVt4luCWg/PYukwz/ECXozsxN+PqRoaOXx2Q==

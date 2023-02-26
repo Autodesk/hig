@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-import { combineEventHandlers } from "@hig/utils";
+import { combineEventHandlers } from "@weave-design/utils";
 
 import { AVAILABLE_ANCHOR_POINTS } from "./anchorPoints";
 import ContainerTransition from "./behaviors/ContainerTransition";

@@ -1,7 +1,7 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
-import Button from "@hig/button";
-import Menu, { Option } from "@hig/menu";
+import Button from "@weave-design/button";
+import Menu, { Option } from "@weave-design/menu";
 
 import { css } from "emotion";
 import Flyout from "../index";

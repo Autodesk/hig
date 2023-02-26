@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Button from "@hig/button";
+import Button from "@weave-design/button";
 
 import { transitionStatuses } from "../transitionStatuses";
 import { anchorPoints } from "../anchorPoints";

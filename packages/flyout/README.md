@@ -2,20 +2,18 @@
 
 A flyout is a lightweight popup container, typically styled as a small box with a nub (pointer). Flyouts provide a container for navigation, actions, and menu options.
 
-Read more about when and how to use the Flyout component [on the website](https://hig.autodesk.com/web/components/flyouts).
-
 ## Getting started
 
 ### Install the package
 
 ```bash
-yarn add @hig/flyout @hig/theme-context @hig/theme-data
+yarn add @weave-design/flyout @weave-design/theme-context @weave-design/theme-data
 ```
 
 ### Import the component
 
 ```js
-import Flyout, { anchorPoints } from "@hig/flyout";
+import Flyout, { anchorPoints } from "@weave-design/flyout";
 ```
 
 ## Basic usage
