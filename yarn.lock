@@ -2560,6 +2560,18 @@
     "@hig/utils" "^0.4.1"
     prop-types "^15.7.1"
 
+"@hig/modal@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/modal/-/modal-3.2.0.tgz#5df62467452c97a04f4df2228287b96ae9427315"
+  integrity sha512-G7ptxT+aHCyKaP/G7vNMcm6lv2aim401kxTPPP4JY5jvR00OQyCaxKGEq+SittWM7g3BQ0Z0x0cbneozsCbD4A==
+  dependencies:
+    "@hig/icon-button" "^3.1.0"
+    "@hig/icons" "^4.1.0"
+    "@hig/typography" "^2.2.0"
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
 "@hig/multi-downshift@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@hig/multi-downshift/-/multi-downshift-2.2.0.tgz#b80b4913208caf87833f2fd774424c049136dbe2"

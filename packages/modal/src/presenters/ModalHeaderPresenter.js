@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import IconButton from "@hig/icon-button";
-import ThemeContext from "@hig/theme-context";
-import Typography from "@hig/typography";
-import { CloseSUI, CloseMUI } from "@hig/icons";
-import { createCustomClassNames } from "@hig/utils";
+import IconButton from "@weave-design/icon-button";
+import ThemeContext from "@weave-design/theme-context";
+import Typography from "@weave-design/typography";
+import { CloseSUI, CloseMUI } from "@weave-design/icons";
+import { createCustomClassNames } from "@weave-design/utils";
 import { css, cx } from "emotion";
 
 const ModalHeaderPresenter = (props) => {
