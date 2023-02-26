@@ -1,4 +1,4 @@
-import lightGrayTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/resolvedRoles.json";
+import lightGrayTheme from "@weave-design/theme-data/build/json/lightGrayMediumDensityTheme/resolvedRoles.json";
 import stylesheet from "./stylesheet";
 
 describe("stylesheet", () => {

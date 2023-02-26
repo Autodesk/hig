@@ -1,6 +1,6 @@
 import React from "react";
 import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
-import { Settings16, Settings24 } from "@hig/icons";
+import { Settings16, Settings24 } from "@weave-design/icons";
 
 import Button from "../index";
 import Readme from "../../README.md";

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { cx } from "emotion";
-import Input from "@hig/input";
+import Input from "@weave-design/input";
 
 import customStylesheet from "./customStylesheet";
 
