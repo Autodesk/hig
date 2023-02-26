@@ -5,13 +5,13 @@ The Spacer component renders a square of empty space, meant to add space around 
 ## Getting started
 
 ```
-yarn add @hig/spacer @hig/theme-context @hig/theme-data
+yarn add @weave-design/spacer @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Import the component
 
 ```
-import Spacer from '@hig/spacer';
+import Spacer from '@weave-design/spacer';
 ```
 
 ## Basic usage
@@ -27,7 +27,7 @@ Use the `className` prop to pass in a css class name to the outermost container 
 Spacer also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
 
 ```jsx
-import Spacer from '@hig/spacer';
+import Spacer from '@weave-design/spacer';
 
 function YourComponent() {
   // ...
