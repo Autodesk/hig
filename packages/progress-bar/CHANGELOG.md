@@ -1,3 +1,50 @@
+# @weave-design/progress-bar-v1.0.0 (2023-02-26)
+
+
+### BREAKING
+
+* make progress bar themeable ([1c144cd](https://github.com/Autodesk/hig/commit/1c144cd))
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* blend end of gradient into background ([f953e13](https://github.com/Autodesk/hig/commit/f953e13))
+* bump up theme-context dependency ([b068dab](https://github.com/Autodesk/hig/commit/b068dab))
+* **bundle:** Fix package bundles ([a1b479d](https://github.com/Autodesk/hig/commit/a1b479d))
+* **bundle:** include dependency CSS ([f5a4a62](https://github.com/Autodesk/hig/commit/f5a4a62))
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+* **package:** update [@hig](https://github.com/hig)/theme-context to version 2.0.0 ([60f71af](https://github.com/Autodesk/hig/commit/60f71af))
+* stop using deprecated theme-data roles ([e5b22db](https://github.com/Autodesk/hig/commit/e5b22db))
+* theme-context and theme-data as peer dependencies ([ce3c3c3](https://github.com/Autodesk/hig/commit/ce3c3c3))
+
+
+### Code Refactoring
+
+* Major Release - React 17 Upgrade ([2523711](https://github.com/Autodesk/hig/commit/2523711))
+
+
+### Features
+
+* add stylesheet prop for ProgressBar ([2ab671f](https://github.com/Autodesk/hig/commit/2ab671f))
+* allow className to be passed down to ProgressBar ([f79ed07](https://github.com/Autodesk/hig/commit/f79ed07))
+* Initialize remaining components to be migrated into packages ([3b654ce](https://github.com/Autodesk/hig/commit/3b654ce))
+* **progress-bar:** Add ProgressBar placeholders ([2fc2572](https://github.com/Autodesk/hig/commit/2fc2572))
+* **progress-bar:** Rewrite ProgressBar component ([#971](https://github.com/Autodesk/hig/issues/971)) ([8ccba0c](https://github.com/Autodesk/hig/commit/8ccba0c))
+* update theme-data dependency ([5d038e2](https://github.com/Autodesk/hig/commit/5d038e2))
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
+
+### BREAKING CHANGES
+
+* This release includes upgrading to React 17 and all associated libraries. The components have also had structural changes, utilizing stateless components and hooks. There should be no change in look or behavior of components. The code usage is the same so if you’re already on react 17 you can bump the version directly. If you’re on an old version of react you’ll need to upgrade your project’s react first to 17 and then the HIG components. This upgrade also means no more fixes for the react 15 version but it will still be available for download from NPM. You can fork the repo and make fixes with the older version if there is something critical past this release date.
+* With the addition of theme-data, all css classes in the elements have been removed.
+
 # [@hig/progress-bar-v2.2.0](https://github.com/Autodesk/hig/compare/@hig/progress-bar@2.1.0...@hig/progress-bar@2.2.0) (2022-09-05)
 
 
