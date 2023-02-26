@@ -2608,6 +2608,22 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
+"@hig/text-area@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/text-area/-/text-area-2.2.0.tgz#1ca073e7d162370b9ae0e3fa8d9982f36616b83d"
+  integrity sha512-E9N7Au6BwNV2jePSrN7IZB7dHRJEMeX3oBRoYZOIxllZc1DAprIBVc0faosIHTJlt49DidRggLGuOY1pF7Tl8g==
+  dependencies:
+    "@hig/input" "^2.2.0"
+    prop-types "^15.7.1"
+
+"@hig/text-link@^2.1.0", "@hig/text-link@^2.2.0", "@hig/text-link@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@hig/text-link/-/text-link-2.3.0.tgz#92288377a8606ba9a0e5c6d1aead032494be9713"
+  integrity sha512-/sU5K4fsGCMLJejH4pfJgXUtfaNQhS9naCbiGJ9y7PXlUTEahzXRtDvCyTysyiOMTYMPiOIVug72Oy+smnYTyg==
+  dependencies:
+    "@hig/behaviors" "^2.1.0"
+    prop-types "^15.7.1"
+
 "@hig/theme-context@^4.2.0", "@hig/theme-context@^4.3.0":
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/@hig/theme-context/-/theme-context-4.3.0.tgz#f0a4886e0f0a5897b3f9ef10aed55c8cddef6e26"
