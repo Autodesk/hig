@@ -2,18 +2,16 @@
 
 Banners are notifications alerting an event that requires a user action. They are similar toasts except banners are not sparked by the user’s action, therefore they require a different design.  Banners are primarily used for global messages about the system that can be simply informational (blue) or color coded to signal success (green), warning (yellow) and error (red).
 
-Read more about when and how to use the Banner component [on the internal wiki](https://wiki.autodesk.com/display/HIG/Banners).
-
 ## Getting started
 
 ```
-yarn add @hig/banner @hig/theme-context @hig/theme-data
+yarn add @weave-design/banner @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Import the component
 
 ```
-import Banner from '@hig/banner';
+import Banner from '@weave-design/banner';
 ```
 
 ## Basic usage

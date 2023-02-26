@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 
 import React from "react";
-import ThemeContext from "@hig/theme-context";
-import IconButton from "@hig/icon-button";
-import Typography from "@hig/typography";
 import { cx, css } from "emotion";
-import { createCustomClassNames } from "@hig/utils";
+import ThemeContext from "@weave-design/theme-context";
+import IconButton from "@weave-design/icon-button";
+import Typography from "@weave-design/typography";
+import { createCustomClassNames } from "@weave-design/utils";
 import {
   CloseSUI,
   CloseMUI,
@@ -17,7 +17,7 @@ import {
   Info24,
   Alert16,
   Alert24,
-} from "@hig/icons";
+} from "@weave-design/icons";
 
 import { types } from "../types";
 import stylesheet from "./stylesheet";
