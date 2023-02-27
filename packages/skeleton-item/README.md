@@ -5,13 +5,13 @@ The Skeleton Item component renders a rectangular loading indicator, meant to se
 ## Getting started
 
 ```
-yarn add @hig/skeleton-item @hig/theme-context @hig/theme-data
+yarn add @weave-designer/skeleton-item @weave-designer/theme-context @weave-designer/theme-data
 ```
 
 ## Import the component
 
 ```
-import SkeletonItem from '@hig/skeleton-item';
+import SkeletonItem from '@weave-designer/skeleton-item';
 ```
 
 ## Basic usage
@@ -26,7 +26,7 @@ Use the `className` prop to pass in a css class name to the outermost container 
 SkeletonItem also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
 
 ```jsx
-import SkeletonItem from '@hig/skeleton-item';
+import SkeletonItem from '@weave-designer/skeleton-item';
 
 function YourComponent() {
   // ...
