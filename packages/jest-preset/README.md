@@ -1,6 +1,6 @@
 # @weave-design/jest-preset
 
-Jest preset for HIG packages.
+Jest preset for Weave packages.
 
 ## Usage
 
