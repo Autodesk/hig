@@ -1,7 +1,7 @@
 import React from "react";
 import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 import { mount } from "enzyme";
-import Button from "@hig/button";
+import Button from "@weave-design/button";
 
 import { anchorPoints } from "./anchorPoints";
 import Flyout from "./Flyout";

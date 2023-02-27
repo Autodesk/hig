@@ -1,8 +1,13 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import { generateId } from "@weave-design/utils";
 import CheckboxPresenter from "./CheckboxPresenter";
 
 describe("checkbox/presenters/CheckboxPresenter", () => {
+  afterEach(() => {
+    generateId.mockReset();
+  });
+
   [
     {
       description: "renders without props",

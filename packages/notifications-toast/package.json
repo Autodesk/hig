@@ -1,7 +1,7 @@
 {
-  "name": "@hig/notifications-toast",
-  "version": "3.2.0",
-  "description": "HIG Toast",
+  "name": "@weave-design/notifications-toast",
+  "version": "1.0.0",
+  "description": "Weave Toast",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "repository": {
@@ -17,19 +17,19 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/icon-button": "^3.1.0",
-    "@hig/icons": "^4.1.0",
-    "@hig/rich-text": "^2.2.0",
-    "@hig/typography": "^2.1.0",
-    "@hig/utils": "^0.4.1",
+    "@weave-design/icon-button": "^1.0.0",
+    "@weave-design/icons": "^1.0.0",
+    "@weave-design/rich-text": "^1.0.0",
+    "@weave-design/typography": "^1.0.0",
+    "@weave-design/utils": "^1.0.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
     "react-flip-move": "^3.0.1"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.4.2",
-    "react": "^17.0.0"
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-design/theme-data": "^1.0.0",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@weave-design/babel-preset": "^1.0.0",

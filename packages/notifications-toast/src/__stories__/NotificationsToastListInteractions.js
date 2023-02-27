@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { sample } from "lodash";
-import Button from "@hig/button";
+import Button from "@weave-design/button";
 import NotificationsToast from "../NotificationsToast";
 import { AVAILABLE_STATUSES } from "../statuses";
 import NotificationsToastList, {

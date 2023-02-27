@@ -1,7 +1,7 @@
 {
-  "name": "@hig/flyout",
-  "version": "2.3.1",
-  "description": "HIG Flyout",
+  "name": "@weave-design/flyout",
+  "version": "1.0.0",
+  "description": "Weave Flyout",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "repository": {
@@ -17,22 +17,22 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/utils": "^0.4.1",
+    "@weave-design/utils": "^1.0.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
     "react-transition-group": "^4.4.2"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.3.0",
-    "@hig/theme-data": "^3.4.2",
-    "react": "^17.0.0"
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-design/theme-data": "^1.0.0",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@weave-design/babel-preset": "^1.0.0",
-    "@hig/button": "^3.1.1",
+    "@weave-design/button": "^1.0.0",
     "@weave-design/eslint-config": "^1.0.0",
     "@weave-design/jest-preset": "^1.0.0",
-    "@hig/rich-text": "^2.1.1",
+    "@weave-design/rich-text": "^1.0.0",
     "@weave-design/scripts": "^1.0.0",
     "@weave-design/semantic-release-config": "^1.0.0"
   },

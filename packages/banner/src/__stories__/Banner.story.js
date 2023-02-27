@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
 import { css } from "emotion";
-import Button from "@hig/button";
+import Button from "@weave-design/button";
 
 import Banner from "../index";
 import Readme from "../../README.md";
