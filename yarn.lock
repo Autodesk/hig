@@ -2714,6 +2714,16 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
+"@hig/toggle@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/toggle/-/toggle-2.2.0.tgz#d6441897782196dbe6916ef05921b3931fdc49fd"
+  integrity sha512-8ROX5QR40qp3a8x5AkAl2NK6s1QMO9ATR/S00Os2lRwTb+ElG8ZjP3PaS4rxMroPYP6Xh73uKZL4nbP50PEWtQ==
+  dependencies:
+    "@hig/behaviors" "^2.1.0"
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
 "@hig/typography@^2.1.0", "@hig/typography@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-2.2.0.tgz#49481bf64b0da7a827538540c1a08921a6d69566"
