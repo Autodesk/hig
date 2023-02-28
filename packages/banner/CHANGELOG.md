@@ -1,3 +1,86 @@
+# @weave-design/banner-v1.0.0 (2023-02-28)
+
+
+### BREAKING
+
+* **icon/icon-button:** Removes [@hig](https://github.com/hig)/icon and refactor [@hig](https://github.com/hig)/icon-button to use [@hig](https://github.com/hig)/icons ([49d78f4](https://github.com/Autodesk/hig/commit/49d78f4))
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* Add back missing classnames dependencies ([0dcb77a](https://github.com/Autodesk/hig/commit/0dcb77a))
+* Added animation support for visible prop ([3956cba](https://github.com/Autodesk/hig/commit/3956cba))
+* **banner:** Correct spacing between text and actions ([c52cb33](https://github.com/Autodesk/hig/commit/c52cb33))
+* **banner:** Provide default height ([8e49922](https://github.com/Autodesk/hig/commit/8e49922))
+* **bundle:** Fix package bundles ([a1b479d](https://github.com/Autodesk/hig/commit/a1b479d))
+* **bundle:** include dependency CSS ([f5a4a62](https://github.com/Autodesk/hig/commit/f5a4a62))
+* change functions enzyme ([99b2ff5](https://github.com/Autodesk/hig/commit/99b2ff5))
+* combined greenkeeper prs for version updates see pr 1392 ([d0a017a](https://github.com/Autodesk/hig/commit/d0a017a))
+* dismissButtonTitle prop was not working ([e2e222d](https://github.com/Autodesk/hig/commit/e2e222d))
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+* **icon-button:** Fix IconButton rendering when link is absent ([1f2e292](https://github.com/Autodesk/hig/commit/1f2e292))
+* in verbose dividers should not be included ([5f7da9a](https://github.com/Autodesk/hig/commit/5f7da9a))
+* **package:** update [@hig](https://github.com/hig)/icons to version 2.0.0 ([8bd33c8](https://github.com/Autodesk/hig/commit/8bd33c8))
+* removed blue background from alert and error icons ([#2525](https://github.com/Autodesk/hig/issues/2525)) ([e85ba49](https://github.com/Autodesk/hig/commit/e85ba49))
+* revert to class components ([25e4cfd](https://github.com/Autodesk/hig/commit/25e4cfd))
+* should use icon-button for dismiss instead of icon ([9c72ac5](https://github.com/Autodesk/hig/commit/9c72ac5))
+* stop using deprecated theme-data roles ([3de065c](https://github.com/Autodesk/hig/commit/3de065c))
+* **storybook:** Add back Icon stories ([f38f2d4](https://github.com/Autodesk/hig/commit/f38f2d4))
+* swap icons based on density ([0c45e4c](https://github.com/Autodesk/hig/commit/0c45e4c))
+* theme-context and theme-data as peer dependencies ([75d3573](https://github.com/Autodesk/hig/commit/75d3573))
+* update Banner to the newest Icons version ([e91c6cd](https://github.com/Autodesk/hig/commit/e91c6cd))
+* update dependencies ([70fb27c](https://github.com/Autodesk/hig/commit/70fb27c))
+* update icon sets ([9281451](https://github.com/Autodesk/hig/commit/9281451))
+
+
+### Code Refactoring
+
+* Major Release - React 17 Upgrade ([2523711](https://github.com/Autodesk/hig/commit/2523711))
+
+
+### Features
+
+* add className to banner ([5c023f6](https://github.com/Autodesk/hig/commit/5c023f6))
+* add stylesheet prop to banner ([8b813c5](https://github.com/Autodesk/hig/commit/8b813c5))
+* allow children to be node ([30343a7](https://github.com/Autodesk/hig/commit/30343a7))
+* **banner:** Implement banner animation ([077dad3](https://github.com/Autodesk/hig/commit/077dad3))
+* **banner:** themable banners ([42b6d60](https://github.com/Autodesk/hig/commit/42b6d60))
+* **banner:** Tweak Banner design and API ([#835](https://github.com/Autodesk/hig/issues/835)) ([82b3f5d](https://github.com/Autodesk/hig/commit/82b3f5d))
+* dismiss button when there is no onDismiss function passed ([2371299](https://github.com/Autodesk/hig/commit/2371299))
+* Mark package compatibility with React 16 ([6eaeb27](https://github.com/Autodesk/hig/commit/6eaeb27))
+* update snaps ([d50a8e5](https://github.com/Autodesk/hig/commit/d50a8e5))
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
+
+### BREAKING CHANGES
+
+* This release includes upgrading to React 17 and all associated libraries. The components have also had structural changes, utilizing stateless components and hooks. There should be no change in look or behavior of components. The code usage is the same so if you’re already on react 17 you can bump the version directly. If you’re on an old version of react you’ll need to upgrade your project’s react first to 17 and then the HIG components. This upgrade also means no more fixes for the react 15 version but it will still be available for download from NPM. You can fork the repo and make fixes with the older version if there is something critical past this release date.
+* **banner:** * CSS class names have been removed
+* `label` and `labeledBy` props are no longer supported
+* **icon/icon-button:** Removes @hig/icon
+* **icon/icon-button:** Use icon prop instead of name or svg in @hig/icon-button to render Icon/svg
+* **icon/icon-button:** No longer export `names` from @hig/icon-button
+
+Usage:
+```
+import { Assets24 } from "@hig/icons"
+
+function MyComponent() {
+  return (
+    <IconButton
+      icon={<Assets24 />}
+      onClick={() => console.log('Clicked it.')}
+    />
+  );
+}
+```
+
 # [@hig/banner-v3.1.1](https://github.com/Autodesk/hig/compare/@hig/banner@3.1.0...@hig/banner@3.1.1) (2022-08-17)
 
 
