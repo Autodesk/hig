@@ -1,5 +1,5 @@
 import React from "react";
-import { generateId } from "@hig/utils";
+import { generateId } from "@weave-design/utils";
 import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 import ModalHeaderPresenter from "./ModalHeaderPresenter";
 

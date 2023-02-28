@@ -2,20 +2,18 @@
 
 Toggle switches provide a control for a single action with a clear on/off or start/stop.
 
-Read more about when and how to use the Toggle component [on the website](https://hig.autodesk.com/web/components/toggle-switches).
-
 ## Getting started
 
 ### Install the package
 
 ```bash
-yarn add @hig/toggle @hig/theme-context @hig/theme-data
+yarn add @weave-design/toggle @weave-design/theme-context @weave-design/theme-data
 ```
 
 ### Import the component
 
 ```js
-import Toggle from '@hig/toggle';
+import Toggle from '@weave-design/toggle';
 ```
 
 ## Basic usage

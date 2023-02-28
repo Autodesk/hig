@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
-import Typography from "@hig/typography";
-import Button from "@hig/button";
+import Typography from "@weave-design/typography";
+import Button from "@weave-design/button";
 
 import Modal from "../index";
 import Readme from "../../README.md";

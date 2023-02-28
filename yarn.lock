@@ -2442,6 +2442,18 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
+"@hig/banner@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@hig/banner/-/banner-3.1.1.tgz#f4c645671071242d240e0ea51de9e46a811b05cc"
+  integrity sha512-Yvz6cDG9o9ugKQ+lr69wzRHr3LsUiF7Zv9qgIG8tbjrnNVZgIdilT+qsz7GDnrf1kzCEcu7L04ihA0ZeK6EGLQ==
+  dependencies:
+    "@hig/icon-button" "^3.1.0"
+    "@hig/icons" "^4.1.2"
+    "@hig/typography" "^2.1.0"
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
 "@hig/behaviors@2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@hig/behaviors/-/behaviors-2.0.0.tgz#a34a1e30cba1e223d6c22950daced7b66984207d"
@@ -2456,7 +2468,7 @@
   dependencies:
     prop-types "^15.6.1"
 
-"@hig/button@^3.1.1", "@hig/button@^3.2.0":
+"@hig/button@^3.2.0":
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/@hig/button/-/button-3.2.0.tgz#e5a69c2dd9072c81add7b49a0a821e4a02dfc217"
   integrity sha512-GXIQ+B4bXD8dQFkzoW7ApPAc52bZhZUr9+9cOdZXF9HGETcQWiU7zbUkfxwXFdM+1w2XfOKRm9/C1YZU8svxPg==
@@ -2488,6 +2500,16 @@
     downshift "^6.0.0"
     emotion "^10.0.0"
     prop-types "^15.7.1"
+
+"@hig/flyout@^2.1.0", "@hig/flyout@^2.2.0", "@hig/flyout@^2.3.0":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@hig/flyout/-/flyout-2.3.1.tgz#476b6cd18fbe8cb126ec7013af5bf013721c56df"
+  integrity sha512-JHww9ZmkKrTNDzi2FvYJAeHvbT7RmFytVGageZSnvqIY2RlcSM+lZAzZAVpMZzbtNAsWOGDFuVZ2FOXjquUZlQ==
+  dependencies:
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+    react-transition-group "^4.4.2"
 
 "@hig/fonts@^2.0.0":
   version "2.0.0"
@@ -2538,6 +2560,18 @@
     "@hig/utils" "^0.4.1"
     prop-types "^15.7.1"
 
+"@hig/modal@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/modal/-/modal-3.2.0.tgz#5df62467452c97a04f4df2228287b96ae9427315"
+  integrity sha512-G7ptxT+aHCyKaP/G7vNMcm6lv2aim401kxTPPP4JY5jvR00OQyCaxKGEq+SittWM7g3BQ0Z0x0cbneozsCbD4A==
+  dependencies:
+    "@hig/icon-button" "^3.1.0"
+    "@hig/icons" "^4.1.0"
+    "@hig/typography" "^2.2.0"
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
 "@hig/multi-downshift@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@hig/multi-downshift/-/multi-downshift-2.2.0.tgz#b80b4913208caf87833f2fd774424c049136dbe2"
@@ -2545,6 +2579,20 @@
   dependencies:
     "@hig/utils" "^0.4.1"
     prop-types "^15.7.1"
+
+"@hig/notifications-toast@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/notifications-toast/-/notifications-toast-3.2.0.tgz#290d06e36ddec064e1c60cef709277b6b68c4dce"
+  integrity sha512-s8q7gLroobfm8wfl7I2a8KWgmgklm/p2jl6qtk6ZqKiFumjYqaCPUxHZA4OB/5vfVKe4pjlfYqpbUtII/AVlxw==
+  dependencies:
+    "@hig/icon-button" "^3.1.0"
+    "@hig/icons" "^4.1.0"
+    "@hig/rich-text" "^2.2.0"
+    "@hig/typography" "^2.1.0"
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+    react-flip-move "^3.0.1"
 
 "@hig/numeric-input@^2.1.3":
   version "2.1.3"
@@ -2584,10 +2632,18 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
-"@hig/rich-text@^2.1.1", "@hig/rich-text@^2.2.0":
+"@hig/rich-text@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@hig/rich-text/-/rich-text-2.2.0.tgz#8a1db3fd8aeb4a7a12b6e3a9a506c989da1abfc3"
   integrity sha512-q224jnssaUat14Es+tLWlo3cIcew4GlTQ4YL4KcLy8tQby8dx5oVt4luCWg/PYukwz/ECXozsxN+PqRoaOXx2Q==
+  dependencies:
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
+"@hig/skeleton-item@^2.1.0", "@hig/skeleton-item@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/skeleton-item/-/skeleton-item-2.2.0.tgz#c733440c135781b1914f9fab87d40c28724992e5"
+  integrity sha512-dmaB69nFSGeU/OuNMufYE11JjXURaVqKcS2Ld447krFaIOyCZEykEAFjEyToiKSXMXV0aeCY0vdEnOmrjmNIMw==
   dependencies:
     emotion "^10.0.0"
     prop-types "^15.7.1"
@@ -2654,6 +2710,16 @@
   resolved "https://registry.yarnpkg.com/@hig/thumbnail/-/thumbnail-1.0.0.tgz#6c2272c0bfa063b69a8e3268b022640e3d44903a"
   integrity sha512-hGg9FgBJH2nfOINdorj3RlzFLims7OP6mH1CZJR9fXIMyF3BnVqX2sMdC/prkOwsb3x43lYyCL5VZEDvl28SkQ==
   dependencies:
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
+"@hig/toggle@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/toggle/-/toggle-2.2.0.tgz#d6441897782196dbe6916ef05921b3931fdc49fd"
+  integrity sha512-8ROX5QR40qp3a8x5AkAl2NK6s1QMO9ATR/S00Os2lRwTb+ElG8ZjP3PaS4rxMroPYP6Xh73uKZL4nbP50PEWtQ==
+  dependencies:
+    "@hig/behaviors" "^2.1.0"
     "@hig/utils" "^0.4.1"
     emotion "^10.0.0"
     prop-types "^15.7.1"
