@@ -1,3 +1,81 @@
+# @weave-design/notifications-toast-v1.0.0 (2023-02-28)
+
+
+### BREAKING
+
+* **icon/icon-button:** Removes [@hig](https://github.com/hig)/icon and refactor [@hig](https://github.com/hig)/icon-button to use [@hig](https://github.com/hig)/icons ([49d78f4](https://github.com/Autodesk/hig/commit/49d78f4))
+
+
+### Bug Fixes
+
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* **avatar:** add theme knobs in avatar storybook, use only one letter for avatar when size is small, fix js warnings ([4057b51](https://github.com/Autodesk/hig/commit/4057b51))
+* **bundle:** Fix package bundles ([a1b479d](https://github.com/Autodesk/hig/commit/a1b479d))
+* **bundle:** include dependency CSS ([f5a4a62](https://github.com/Autodesk/hig/commit/f5a4a62))
+* change notifications to wrap long words properly ([174b4ad](https://github.com/Autodesk/hig/commit/174b4ad))
+* combined greenkeeper prs for version updates see pr 1392 ([d0a017a](https://github.com/Autodesk/hig/commit/d0a017a))
+* design tweaks ([0d18c68](https://github.com/Autodesk/hig/commit/0d18c68))
+* disapperance of x-button due to long text overflow ([98e2396](https://github.com/Autodesk/hig/commit/98e2396))
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+* import missing dependency styles ([e806451](https://github.com/Autodesk/hig/commit/e806451))
+* **notifications-toast:** Fix alignment of dismiss button relative to Toast content ([5e30feb](https://github.com/Autodesk/hig/commit/5e30feb))
+* **package:** update [@hig](https://github.com/hig)/icons to version 2.0.0 ([699e99d](https://github.com/Autodesk/hig/commit/699e99d))
+* **presentation:** correct typography font ([6cadf3a](https://github.com/Autodesk/hig/commit/6cadf3a))
+* **presentation:** update hack due to `RichText` changes ([4e13ae4](https://github.com/Autodesk/hig/commit/4e13ae4))
+* remove leftover icon css dependencies ([2af5d0b](https://github.com/Autodesk/hig/commit/2af5d0b))
+* restore notification toast components to class ([2837f55](https://github.com/Autodesk/hig/commit/2837f55))
+* stop using deprecated theme-data roles ([bd7adff](https://github.com/Autodesk/hig/commit/bd7adff))
+* theme-context and theme-data as peer dependencies ([6e9e3d8](https://github.com/Autodesk/hig/commit/6e9e3d8))
+* update dependencies ([70fb27c](https://github.com/Autodesk/hig/commit/70fb27c))
+* update icon sets ([9281451](https://github.com/Autodesk/hig/commit/9281451))
+* update icon-button dependency ([cf5518b](https://github.com/Autodesk/hig/commit/cf5518b))
+* update NotificationToast to newest Icons ([fa2e4fe](https://github.com/Autodesk/hig/commit/fa2e4fe))
+
+
+### Code Refactoring
+
+* Major Release - React 17 Upgrade ([2523711](https://github.com/Autodesk/hig/commit/2523711))
+
+
+### Features
+
+* add onDissmissTitle prop to allow text for close icon tooltip ([20ddc80](https://github.com/Autodesk/hig/commit/20ddc80))
+* add stylesheet prop ([1390d9c](https://github.com/Autodesk/hig/commit/1390d9c))
+* allow className to be passed down ([89c0e1b](https://github.com/Autodesk/hig/commit/89c0e1b))
+* make notifications-toast themeable ([6c24f27](https://github.com/Autodesk/hig/commit/6c24f27))
+* **notifications-toast:** Move and rename ToastList out of hig-react ([7e4f602](https://github.com/Autodesk/hig/commit/7e4f602))
+* **notifications-toast:** Rename and pull NotificationsToast out of hig-react ([af6d044](https://github.com/Autodesk/hig/commit/af6d044))
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+* use latest theme-data ([aa3ff71](https://github.com/Autodesk/hig/commit/aa3ff71))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
+
+### BREAKING CHANGES
+
+* This release includes upgrading to React 17 and all associated libraries. The components have also had structural changes, utilizing stateless components and hooks. There should be no change in look or behavior of components. The code usage is the same so if you’re already on react 17 you can bump the version directly. If you’re on an old version of react you’ll need to upgrade your project’s react first to 17 and then the HIG components. This upgrade also means no more fixes for the react 15 version but it will still be available for download from NPM. You can fork the repo and make fixes with the older version if there is something critical past this release date.
+* * Remove all CSS classnames
+* **icon/icon-button:** Removes @hig/icon
+* **icon/icon-button:** Use icon prop instead of name or svg in @hig/icon-button to render Icon/svg
+* **icon/icon-button:** No longer export `names` from @hig/icon-button
+
+Usage:
+```
+import { Assets24 } from "@hig/icons"
+
+function MyComponent() {
+  return (
+    <IconButton
+      icon={<Assets24 />}
+      onClick={() => console.log('Clicked it.')}
+    />
+  );
+}
+```
+
 # [@hig/notifications-toast-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/notifications-toast@3.1.0...@hig/notifications-toast@3.2.0) (2022-08-28)
 
 
