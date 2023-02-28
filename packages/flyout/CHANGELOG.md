@@ -1,3 +1,84 @@
+# @weave-design/flyout-v1.0.0 (2023-02-28)
+
+
+### Bug Fixes
+
+*  max-height calc on notifications-flyout ([4581856](https://github.com/Autodesk/hig/commit/4581856))
+*  react v. in peerDependencies instead of dependencies ([4701332](https://github.com/Autodesk/hig/commit/4701332))
+* bump up theme-context dependency ([b068dab](https://github.com/Autodesk/hig/commit/b068dab))
+* **bundle:** Fix package bundles ([a1b479d](https://github.com/Autodesk/hig/commit/a1b479d))
+* **bundle:** include dependency CSS ([f5a4a62](https://github.com/Autodesk/hig/commit/f5a4a62))
+* children's onClick prop is discarded in Flyout ([b538364](https://github.com/Autodesk/hig/commit/b538364))
+* control errors , space lines ([1367496](https://github.com/Autodesk/hig/commit/1367496))
+* correct default anchor points ([5d44e45](https://github.com/Autodesk/hig/commit/5d44e45))
+* Fixing flyout component bug, extra space on the right ([6faaf2a](https://github.com/Autodesk/hig/commit/6faaf2a))
+* flyout action alignment ([b7f242d](https://github.com/Autodesk/hig/commit/b7f242d))
+* flyout position design tweak ([3875d8e](https://github.com/Autodesk/hig/commit/3875d8e))
+* flyout throwing console errors ([6cba99d](https://github.com/Autodesk/hig/commit/6cba99d))
+* Forcing semantic release by editing readmes ([d39b61f](https://github.com/Autodesk/hig/commit/d39b61f))
+* hide flyout container box model when fully exited ([6bbcd59](https://github.com/Autodesk/hig/commit/6bbcd59))
+* improve useEffect manage state ([0deebd0](https://github.com/Autodesk/hig/commit/0deebd0))
+* move refs inside state to trigger render updates ([a1cc220](https://github.com/Autodesk/hig/commit/a1cc220))
+* onmouseover not working flyout ([cecb453](https://github.com/Autodesk/hig/commit/cecb453))
+* **package:** update [@hig](https://github.com/hig)/theme-context to version 2.0.0 ([cef1d61](https://github.com/Autodesk/hig/commit/cef1d61))
+* **package:** update [@hig](https://github.com/hig)/utils to version 0.4.0 ([b45496c](https://github.com/Autodesk/hig/commit/b45496c))
+* pass all props into stylesheet ([c49a4d2](https://github.com/Autodesk/hig/commit/c49a4d2))
+* properly remove handleBodyClick listener ([e9af55d](https://github.com/Autodesk/hig/commit/e9af55d))
+* provide anchorPoint to presenter when no refs are available ([afa9ef6](https://github.com/Autodesk/hig/commit/afa9ef6))
+* remove fixed width ([fa753fb](https://github.com/Autodesk/hig/commit/fa753fb))
+* remove padding based on density spacing ([335dc63](https://github.com/Autodesk/hig/commit/335dc63))
+* remove transparent border ([5a01bd9](https://github.com/Autodesk/hig/commit/5a01bd9))
+* remove unused dependency ([ae8058c](https://github.com/Autodesk/hig/commit/ae8058c))
+* stop using deprecated theme-data roles ([f068af3](https://github.com/Autodesk/hig/commit/f068af3))
+* theme-context and theme-data as peer dependencies ([3b606be](https://github.com/Autodesk/hig/commit/3b606be))
+* Updating the Flyout refs after rendering to show tooltip ([0a54812](https://github.com/Autodesk/hig/commit/0a54812))
+* Updating the Flyout refs in the callbacks sent as props to the child component ([0791e86](https://github.com/Autodesk/hig/commit/0791e86))
+* various uncaught React17 regression errors ([4b3c0aa](https://github.com/Autodesk/hig/commit/4b3c0aa))
+
+
+### Code Refactoring
+
+* Major Release - React 17 Upgrade ([2523711](https://github.com/Autodesk/hig/commit/2523711))
+
+
+### Features
+
+* Add onMouseEnter and onMouseLeave events to Button for more control of custom hover events ([a2b2cc1](https://github.com/Autodesk/hig/commit/a2b2cc1))
+* Add prop openOnHover to Flyout.  When enabled, flyout will open when target is hovered over for .5s ([65893f3](https://github.com/Autodesk/hig/commit/65893f3))
+* add props for positioning ([e50a0fd](https://github.com/Autodesk/hig/commit/e50a0fd))
+* add stylesheet override for flyout pointer ([947651f](https://github.com/Autodesk/hig/commit/947651f))
+* add stylesheet prop to Flyout ([517a121](https://github.com/Autodesk/hig/commit/517a121))
+* **behavior:** add `defaultOpen` prop to support uncontrolled flyout's that are open by default ([7a4e91c](https://github.com/Autodesk/hig/commit/7a4e91c))
+* **behavior:** add `dislocateContainer` and `offsetContainerHorizontal` helpers ([97afdc2](https://github.com/Autodesk/hig/commit/97afdc2))
+* **behavior:** add support for customization via render props ([c0cd151](https://github.com/Autodesk/hig/commit/c0cd151))
+* **behavior:** correct controlled behavior ([b2bc76a](https://github.com/Autodesk/hig/commit/b2bc76a))
+* **BREAKING DESIGN CHANGE:** Increased padding of the flyout panel from 10px to 12px to standardize spacing ([2d13db2](https://github.com/Autodesk/hig/commit/2d13db2))
+* fix lint errors ([2b94e12](https://github.com/Autodesk/hig/commit/2b94e12))
+* **flyout:** Add Flyout placeholders ([7b32552](https://github.com/Autodesk/hig/commit/7b32552))
+* **flyout:** Rewrite Flyout component ([f036408](https://github.com/Autodesk/hig/commit/f036408))
+* gives buttons intended height ([9358562](https://github.com/Autodesk/hig/commit/9358562))
+* Initialize remaining components to be migrated into packages ([3b654ce](https://github.com/Autodesk/hig/commit/3b654ce))
+* make flyout themeable ([d900626](https://github.com/Autodesk/hig/commit/d900626))
+* pass down css className to all emotion styled elements ([a8b4181](https://github.com/Autodesk/hig/commit/a8b4181))
+* **presentation:** add support for rendering custom pointers ([d6e6c92](https://github.com/Autodesk/hig/commit/d6e6c92))
+* set useCapture to true for onClickOutside ([1025577](https://github.com/Autodesk/hig/commit/1025577))
+* timeout should be cleared no matter whether on mouse leave event exists ([7b3a300](https://github.com/Autodesk/hig/commit/7b3a300))
+* update Flyout test ([24d8a58](https://github.com/Autodesk/hig/commit/24d8a58))
+* update react-transition-group ([56b4f6c](https://github.com/Autodesk/hig/commit/56b4f6c))
+* updating peer dependencies release ([0a8a2b6](https://github.com/Autodesk/hig/commit/0a8a2b6))
+* use theme date for flyout border color ([acfca0d](https://github.com/Autodesk/hig/commit/acfca0d))
+
+
+### Reverts
+
+* "Revert "Revert "feat : Migrate all repository to React v17.0 """ ([bf78986](https://github.com/Autodesk/hig/commit/bf78986))
+
+
+### BREAKING CHANGES
+
+* This release includes upgrading to React 17 and all associated libraries. The components have also had structural changes, utilizing stateless components and hooks. There should be no change in look or behavior of components. The code usage is the same so if you’re already on react 17 you can bump the version directly. If you’re on an old version of react you’ll need to upgrade your project’s react first to 17 and then the HIG components. This upgrade also means no more fixes for the react 15 version but it will still be available for download from NPM. You can fork the repo and make fixes with the older version if there is something critical past this release date.
+* The padding of the flyout container is 12px across all densities
+
 # [@hig/flyout-v2.3.1](https://github.com/Autodesk/hig/compare/@hig/flyout@2.3.0...@hig/flyout@2.3.1) (2022-11-10)
 
 
