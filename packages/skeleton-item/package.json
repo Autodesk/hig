@@ -1,5 +1,5 @@
 {
-  "name": "@weave-designer/skeleton-item",
+  "name": "@weave-design/skeleton-item",
   "version": "1.0.0",
   "description": "Weave SkeletonItem component",
   "author": "Autodesk Inc.",
@@ -29,8 +29,8 @@
     "@weave-design/semantic-release-config": "^1.0.0"
   },
   "peerDependencies": {
-    "@weave-designer/theme-context": "^1.0.0",
-    "@weave-designer/theme-data": "^1.0.0",
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-design/theme-data": "^1.0.0",
     "react": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
