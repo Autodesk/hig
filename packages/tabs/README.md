@@ -2,20 +2,18 @@
 
 Tabs keep related content in a single container that is shown and hidden through navigation.
 
-Read more about when and how to use the Tabs component [on the website](https://hig.autodesk.com/web/components/form-elements).
-
 ## Getting started
 
 ### Install the package
 
 ```bash
-yarn add @hig/tabs @hig/theme-context @hig/theme-data
+yarn add @weave-design/tabs @weave-design/theme-context @weave-design/theme-data
 ```
 
 ### Import the component
 
 ```js
-import Tabs, { Tab } from "@hig/tabs";
+import Tabs, { Tab } from "@weave-design/tabs";
 ```
 
 ## Basic usage
@@ -39,12 +37,12 @@ import {
   alignments,
   variants,
   orientations
-} from "@hig/tabs";
+} from "@weave-design/tabs";
 ```
 
 ### Complex Tabs
 
-Complex tabs are composed of an interactive container, text label, divider and optional close icon. Complex tabs only works when `varient` is set to `box` or `canvas`.
+Complex tabs are composed of an interactive container, text label, divider and optional close icon. Complex tabs only works when `variant` is set to `box` or `canvas`.
 
 ### Custom CSS
 

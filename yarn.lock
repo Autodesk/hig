@@ -2691,6 +2691,19 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
+"@hig/tabs@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/tabs/-/tabs-2.2.0.tgz#f602f558a0e8b5c7fa6d6bcc030110088b5ea221"
+  integrity sha512-saQsIqUBdunl4AW4Xv3VNwEz8aErPdKdPDYxT0fcbu6NavfX9ACUJPuHOuzXzPzjgVkMDc9kq2l1uVNJXxJyHw==
+  dependencies:
+    "@hig/behaviors" "^2.1.0"
+    "@hig/icons" "^4.1.2"
+    "@hig/typography" "^2.1.0"
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    lodash.memoize "^4.1.2"
+    prop-types "^15.7.1"
+
 "@hig/tag@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@hig/tag/-/tag-1.0.0.tgz#922da815cec9e49367cb4833504e24e5b552ad24"

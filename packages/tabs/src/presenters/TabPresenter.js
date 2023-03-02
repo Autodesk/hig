@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Typography from "@hig/typography";
-import ThemeContext from "@hig/theme-context";
-import { createCustomClassNames } from "@hig/utils";
+import Typography from "@weave-design/typography";
+import ThemeContext from "@weave-design/theme-context";
+import { createCustomClassNames } from "@weave-design/utils";
 import { cx, css } from "emotion";
 import stylesheet from "./Tab.stylesheet";
 import TabCloseButtonPresenter from "./TabCloseButtonPresenter";

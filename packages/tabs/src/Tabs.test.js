@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { Settings24 } from "@hig/icons";
+import { Settings24 } from "@weave-design/icons";
 import { shallow } from "enzyme";
 import Tab from "./Tab";
 import Tabs from "./Tabs";
