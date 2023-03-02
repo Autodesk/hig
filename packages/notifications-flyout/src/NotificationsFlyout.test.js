@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import { anchorPoints } from "@hig/flyout";
+import { anchorPoints } from "@weave-design/flyout";
 import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 
 import Notification from "./Notification";

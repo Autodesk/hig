@@ -2580,6 +2580,23 @@
     "@hig/utils" "^0.4.1"
     prop-types "^15.7.1"
 
+"@hig/notifications-flyout@^3.1.0", "@hig/notifications-flyout@^3.4.0":
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/@hig/notifications-flyout/-/notifications-flyout-3.4.0.tgz#66cf7aa5acef8630bc2052a149225e9baf6d7887"
+  integrity sha512-tG2vNNtsRQ82bdVfUcLoYiw9TorDe+ydv8bOeSTuEWdpkor2po1qz4pcRtBZnbAst1ARcpoIFaaxZkwGYejaAg==
+  dependencies:
+    "@hig/behaviors" "^2.1.0"
+    "@hig/flyout" "^2.2.0"
+    "@hig/icon-button" "^3.1.0"
+    "@hig/icons" "^4.1.0"
+    "@hig/progress-ring" "^3.0.0"
+    "@hig/rich-text" "^2.2.0"
+    "@hig/typography" "^2.1.0"
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+    react-transition-group "^4.4.2"
+
 "@hig/notifications-toast@^3.2.0":
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/@hig/notifications-toast/-/notifications-toast-3.2.0.tgz#290d06e36ddec064e1c60cef709277b6b68c4dce"
