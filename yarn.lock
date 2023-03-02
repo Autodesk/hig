@@ -2665,6 +2665,16 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
+"@hig/slider@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@hig/slider/-/slider-2.2.0.tgz#98a2f9e523a8b87987c3626e4dfc746f3fbfd9ba"
+  integrity sha512-lxDRuA81Pwea9cQNgcgK3T0EZQZ29LsWxUQ3lruumgpvzZQad9nSzBe0alCcK6xFRIU0sTqgHKCuPfj651f++g==
+  dependencies:
+    "@hig/behaviors" "^2.1.0"
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
 "@hig/spacer@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@hig/spacer/-/spacer-2.2.0.tgz#044557ccacbeca4654394d58b33669246b29e1d8"

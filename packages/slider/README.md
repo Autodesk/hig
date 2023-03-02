@@ -2,20 +2,18 @@
 
 A slider allows selecting a single numeric value from a range using a small sliding selector.
 
-Read more about when and how to use the Slider component [on the website](https://hig.autodesk.com/web/components/form-elements).
-
 ## Getting started
 
 ### Install the package
 
 ```bash
-yarn add @hig/slider @hig/theme-context @hig/theme-data
+yarn add @weave-design/slider @weave-design/theme-context @weave-design/theme-data
 ```
 
 ### Import the component
 
 ```js
-import Slider from '@hig/slider';
+import Slider from '@weave-design/slider';
 ```
 
 ## Basic usage
@@ -34,7 +32,7 @@ Use the `className` prop to pass in a css class name to the outermost container 
 Slider also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
 
 ```jsx
-import Slider from '@hig/slider';
+import Slider from '@weave-design/slider';
 
 function YourComponent() {
   // ...
