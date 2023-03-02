@@ -1,8 +1,8 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
-import Badge from "@hig/badge";
-import Surface from "@hig/surface";
-import Thumbnail from "@hig/thumbnail";
+import Badge from "@weave-design/badge";
+import Surface from "@weave-design/surface";
+import Thumbnail from "@weave-design/thumbnail";
 import thumbnailImagePath from "@weave-design/storybook/storybook-support/fixtures/thumbnail/thumbnail-placeholder-02.jpg";
 
 import Tile, {

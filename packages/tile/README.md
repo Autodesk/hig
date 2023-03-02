@@ -5,13 +5,13 @@ The Tile component renders a themable container that display information related
 ## Getting started
 
 ```
-yarn add @hig/tile @hig/theme-context @hig/theme-data
+yarn add @weave-design/tile @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Import the component
 
 ```
-import Tile from '@hig/tile';
+import Tile from '@weave-design/tile';
 ```
 
 ## Basic usage
@@ -26,7 +26,7 @@ Use the `className` prop to pass in a css class name to the outermost container 
 Surface also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
 
 ```jsx
-import Tile from '@hig/tile';
+import Tile from '@weave-design/tile';
 
 function YourComponent() {
   // ...

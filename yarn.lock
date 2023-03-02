@@ -2754,6 +2754,16 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
+"@hig/tile@^1.0.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@hig/tile/-/tile-1.1.0.tgz#054816bdd0f357e1d1435393fd1b0fb72c33d2ce"
+  integrity sha512-gLPJu4cbxRJJJpD9UY3b9JPmujhvjQ6TTzov5NhVzJRIduTNSQ0cdFEhV8JjIJCpV7PgmZp1vOJgcfSKHKW8gQ==
+  dependencies:
+    "@hig/behaviors" "^2.1.0"
+    "@hig/utils" "^0.4.1"
+    emotion "^10.0.0"
+    prop-types "^15.7.1"
+
 "@hig/toggle@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@hig/toggle/-/toggle-2.2.0.tgz#d6441897782196dbe6916ef05921b3931fdc49fd"
