@@ -2782,6 +2782,16 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
+"@hig/tooltip@^2.2.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@hig/tooltip/-/tooltip-2.3.0.tgz#60a8afef09ef9ee1c70e380513f4418a9d26a87b"
+  integrity sha512-s/ieCPrrpnH6MjxMnVxjbz0FquIR98JHUaY8hFVXeXZyRPOBV5TpNz/i9/Q9dS8N6RR0znfSK1l+Q7lrDaTa8Q==
+  dependencies:
+    "@hig/flyout" "^2.1.0"
+    "@hig/typography" "^2.1.0"
+    "@hig/utils" "^0.4.1"
+    prop-types "^15.7.1"
+
 "@hig/typography@^2.1.0", "@hig/typography@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-2.2.0.tgz#49481bf64b0da7a827538540c1a08921a6d69566"

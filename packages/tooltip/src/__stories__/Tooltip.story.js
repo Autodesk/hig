@@ -1,7 +1,7 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
-import Button from "@hig/button";
-import { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
+import Button from "@weave-design/button";
+import { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@weave-design/flyout";
 
 import { css } from "emotion";
 import Tooltip, { Text } from "../index";

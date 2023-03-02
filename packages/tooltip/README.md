@@ -2,20 +2,18 @@
 
 Tooltips generally describe what a tool or feature does, or when or how to use it.
 
-Read more about when and how to use the Tooltip component [on the internal wiki](https://hig.autodesk.com/web/components/tooltips).
-
 ## Getting started
 
 ### Install the package
 
 ```bash
-yarn add @hig/tooltip @hig/theme-context @hig/theme-data
+yarn add @weave-design/tooltip @weave-design/theme-context @weave-design/theme-data
 ```
 
 ### Import the component
 
 ```js
-import Tooltip from '@hig/tooltip';
+import Tooltip from '@weave-design/tooltip';
 ```
 
 ## Basic usage
@@ -32,7 +30,7 @@ Use the `className` prop to pass in a css class name to the outermost container 
 Toolt also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
 
 ```jsx
-import Tooltip from '@hig/tooltip';
+import Tooltip from '@weave-design/tooltip';
 
 function YourComponent() {
   // ...

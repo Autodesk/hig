@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Flyout, {
   dislocateContainer,
   AVAILABLE_ANCHOR_POINTS,
-} from "@hig/flyout";
+} from "@weave-design/flyout";
 
 import PanelPresenter from "./presenters/PanelPresenter";
 import PointerPresenter from "./presenters/PointerPresenter";

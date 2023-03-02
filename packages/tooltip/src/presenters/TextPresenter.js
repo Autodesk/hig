@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
-import { ThemeContext } from "@hig/theme-context";
-import Typography from "@hig/typography";
-import { createCustomClassNames } from "@hig/utils";
+import { ThemeContext } from "@weave-design/theme-context";
+import Typography from "@weave-design/typography";
+import { createCustomClassNames } from "@weave-design/utils";
 import ContentPresenter from "./ContentPresenter";
 import stylesheet from "./stylesheet";
 

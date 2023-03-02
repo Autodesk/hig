@@ -1,5 +1,5 @@
-import { anchorPoints } from "@hig/flyout";
-import Button from "@hig/button";
+import { anchorPoints } from "@weave-design/flyout";
+import Button from "@weave-design/button";
 import React from "react";
 import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 import Tooltip from "./Tooltip";
