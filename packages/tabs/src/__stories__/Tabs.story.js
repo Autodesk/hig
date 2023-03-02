@@ -2,7 +2,12 @@ import React from "react";
 import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
 import Button, { types } from "@weave-design/button";
 import RichText from "@weave-design/rich-text";
-import { Dashboard16, Dashboard24, Settings16, Settings24 } from "@weave-design/icons";
+import {
+  Dashboard16,
+  Dashboard24,
+  Settings16,
+  Settings24,
+} from "@weave-design/icons";
 
 import Tabs, { Tab } from "../index";
 import {
