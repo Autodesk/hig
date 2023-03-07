@@ -2792,6 +2792,16 @@
     "@hig/utils" "^0.4.1"
     prop-types "^15.7.1"
 
+"@hig/tree-view@^2.9.0":
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/@hig/tree-view/-/tree-view-2.9.1.tgz#8e258dfcc5519a51af70ebf57e13cf5cb7754cd1"
+  integrity sha512-XjeIaQpazglctGQSAN6OvEtSK/+vKFYmNyTAnnrmwTmbnUXOZpxQovmorcWnqdSHJkPlQMVoTeq+lydkJCm5Lw==
+  dependencies:
+    "@hig/behaviors" "^2.1.0"
+    "@hig/icons" "^4.4.0"
+    "@hig/utils" "^0.4.1"
+    prop-types "^15.7.1"
+
 "@hig/typography@^2.1.0", "@hig/typography@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-2.2.0.tgz#49481bf64b0da7a827538540c1a08921a6d69566"

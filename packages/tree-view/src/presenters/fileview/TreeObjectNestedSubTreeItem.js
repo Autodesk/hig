@@ -2,7 +2,10 @@
 import React, { useEffect } from "react";
 import { css, cx } from "emotion";
 import { HoverBehavior } from "@weave-design/behaviors";
-import { createCustomClassNames, createButtonEventHandlers } from "@hig/utils";
+import {
+  createCustomClassNames,
+  createButtonEventHandlers,
+} from "@weave-design/utils";
 // eslint-disable-next-line import/no-cycle
 import SubTreeViewCombined from "../SubTreeViewCombined";
 import IconIndicatorPresenter from "../IconIndicatorPresenter";

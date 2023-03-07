@@ -10,7 +10,7 @@ import {
   FileImage24,
   FileVideo24,
   Hierarchy24
-} from "@hig/icons";
+} from "@weave-design/icons";
 
 import TreeItemComponent from "./TreeItem";
 

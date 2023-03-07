@@ -17,7 +17,7 @@ import {
   ProductsAndServices24,
   Report16,
   Report24,
-} from "@hig/icons";
+} from "@weave-design/icons";
 
 import TreeView, { TreeItem } from "../index";
 import { indicators } from "../constants";

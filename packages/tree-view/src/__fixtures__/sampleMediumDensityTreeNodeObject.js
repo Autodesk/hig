@@ -7,7 +7,7 @@ import {
   Report24,
   FileImage24,
   FileVideo24,
-} from "@hig/icons";
+} from "@weave-design/icons";
 
 const sampleMediumDensityTreeNodeObject = [
   {

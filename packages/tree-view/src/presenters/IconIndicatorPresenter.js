@@ -8,7 +8,7 @@ import {
   OperatorMinusXsUI,
   OperatorPlusSUI,
   OperatorPlusXsUI,
-} from "@hig/icons";
+} from "@weave-design/icons";
 
 export default function IconIndicatorPresenter(props) {
   const { collapsed, indicator, ...otherProps } = props;
