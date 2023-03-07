@@ -13,7 +13,7 @@ import {
   ProductsAndServices16,
   Report16,
   Hierarchy16,
-} from "@hig/icons";
+} from "@weave-design/icons";
 
 import TreeView, { TreeItem } from "../index";
 import Readme from "../../README.md";

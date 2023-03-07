@@ -2,20 +2,18 @@
 
 The tree view component provides a way to view and manipulate a list of data, often with complex nested structures.
 
-Read more about when and how to use the TreeView component [on the internal wiki](https://hig.autodesk.com/web/components/tree-view).
-
 ## Getting started
 
 ### Install the package
 
 ```bash
-yarn add @hig/tree-view @hig/theme-context @hig/theme-data
+yarn add @weave-design/tree-view @weave-design/theme-context @weave-design/theme-data
 ```
 
 ### Import the component
 
 ```js
-import TreeView, { TreeItem } from "@hig/tree-view";
+import TreeView, { TreeItem } from "@weave-design/tree-view";
 ```
 
 ## Basic usage

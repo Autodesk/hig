@@ -2,18 +2,16 @@
 
 The notifications flyout provides information and warnings that products may recover from without user involvement. It is meant to be included in the navigation bar on the top of the page.
 
-Read more about when and how to use the Notifications Flyout [on the internal wiki](https://wiki.autodesk.com/display/HIG/Notifications+Flyout).
-
 ## Getting started
 
 ```bash
-yarn add @hig/notifications-flyout @hig/theme-context @hig/theme-data
+yarn add @weave-design/notifications-flyout @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Import the component
 
 ```js
-import NotificationsFlyout, { Notification } from "@hig/notifications-flyout";
+import NotificationsFlyout, { Notification } from "@weave-design/notifications-flyout";
 ```
 
 ## Basic usage
@@ -29,8 +27,8 @@ import NotificationsFlyout, { Notification } from "@hig/notifications-flyout";
 ## Advanced usage
 
 ```jsx
-import NotificationsFlyout, { anchorPoints } from "@hig/notifications-flyout";
-import Timestamp from "@hig/timestamp";
+import NotificationsFlyout, { anchorPoints } from "@weave-design/notifications-flyout";
+import Timestamp from "@weave-design/timestamp";
 
 <NotificationsFlyout
   open

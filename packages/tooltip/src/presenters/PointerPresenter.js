@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Pointer } from "@hig/flyout";
+import { Pointer } from "@weave-design/flyout";
 
 const SIZE = 12;
 

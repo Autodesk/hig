@@ -7,7 +7,7 @@ import {
   Report16,
   FileImage16,
   FileVideo16,
-} from "@hig/icons";
+} from "@weave-design/icons";
 
 const sampleHighDensityTreeNodeObject = [
   {

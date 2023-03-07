@@ -1,7 +1,7 @@
 {
-  "name": "@hig/timestamp",
-  "version": "2.2.0",
-  "description": "HIG Timestamp",
+  "name": "@weave-design/timestamp",
+  "version": "1.0.0",
+  "description": "Weave Timestamp",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "homepage": "https://hig.autodesk.com",
@@ -30,9 +30,9 @@
     "mockdate": "^2.0.2"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.4.2",
-    "react": "^17.0.0"
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-design/theme-data": "^1.0.0",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "build": "weave-scripts-build",

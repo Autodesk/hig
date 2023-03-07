@@ -1,7 +1,7 @@
 {
-  "name": "@hig/tooltip",
-  "version": "2.3.0",
-  "description": "HIG Tooltip",
+  "name": "@weave-design/tooltip",
+  "version": "1.0.0",
+  "description": "Weave Tooltip",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "repository": {
@@ -17,15 +17,15 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/flyout": "^2.1.0",
-    "@hig/typography": "^2.1.0",
-    "@hig/utils": "^0.4.1",
+    "@weave-design/flyout": "^1.0.0",
+    "@weave-design/typography": "^1.0.0",
+    "@weave-design/utils": "^1.0.0",
     "prop-types": "^15.7.1"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.4.2",
-    "react": "^17.0.0"
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-design/theme-data": "^1.0.0",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@weave-design/babel-preset": "^1.0.0",

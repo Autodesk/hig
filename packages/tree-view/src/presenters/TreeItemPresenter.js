@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { ThemeContext } from "@hig/theme-context";
+import { ThemeContext } from "@weave-design/theme-context";
 
 import SingleTreeNodePresenter from "./SingleTreeNodePresenter";
 import SingleTreeNodeFolderPresenter from "./SingleTreeNodeFolderPresenter";

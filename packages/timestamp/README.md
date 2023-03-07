@@ -5,13 +5,13 @@ The timestamp component presents a date in the past with humanized phrasing in E
 ## Getting started
 
 ```
-yarn add @hig/timestamp @hig/theme-context @hig/theme-data
+yarn add @weave-design/timestamp @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Import the component
 
 ```
-import Timestamp from '@hig/timestamp';
+import Timestamp from '@weave-design/timestamp';
 ```
 
 ## Basic usage
@@ -27,7 +27,7 @@ Use the `className` prop to pass in a css class name to the outermost container 
 Timestamp also has a `stylesheet` prop that accepts a function wherein you can modify its styles. For instance
 
 ```jsx
-import Timestamp from '@hig/timestamp';
+import Timestamp from '@weave-design/timestamp';
 
 function YourComponent() {
   // ...

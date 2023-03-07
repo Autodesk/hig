@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { Settings24 } from "@hig/icons";
+import { Settings24 } from "@weave-design/icons";
 
 import TabPresenter from "./TabPresenter";
 import { variants, orientations } from "../constants";
