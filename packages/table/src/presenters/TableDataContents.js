@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
 
-import { CaretRightMUI, CaretDownMUI } from "@hig/icons";
+import { CaretRightMUI, CaretDownMUI } from "@weave-design/icons";
 import DateFormatter from "../util/DateFormatter";
 import TableDataCell from "../TableDataCell";
 

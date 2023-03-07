@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { Report24 } from "@hig/icons";
+import { Report24 } from "@weave-design/icons";
 
 import TreeObjectView from "./TreeObjectView";
 

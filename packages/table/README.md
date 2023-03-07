@@ -5,11 +5,11 @@ A table displays a collection of data in rows and columns. Tables not only offer
 ## Getting started
 
 ```
-yarn add @hig/table @hig/theme-context @hig/theme-data
+yarn add @weave-design/table @weave-design/theme-context @weave-design/theme-data
 ```
 
 ## Import the component
 
 ```
-import Table from '@hig/table';
+import Table from '@weave-design/table';
 ```

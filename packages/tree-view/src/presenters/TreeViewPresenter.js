@@ -1,8 +1,8 @@
 import React, { Children, useEffect } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
-import { ThemeContext } from "@hig/theme-context";
-import { createCustomClassNames } from "@hig/utils";
+import { ThemeContext } from "@weave-design/theme-context";
+import { createCustomClassNames } from "@weave-design/utils";
 
 import TreeObjectView from "./fileview/TreeObjectView";
 

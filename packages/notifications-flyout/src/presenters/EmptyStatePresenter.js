@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
-import Typography from "@hig/typography";
+import Typography from "@weave-design/typography";
 
 import Bell from "./Bell.svg";
 import stylesheet from "./stylesheet";

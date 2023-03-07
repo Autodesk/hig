@@ -1,7 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { combineEventHandlers } from "@hig/utils";
-import Flyout, { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
+import { combineEventHandlers } from "@weave-design/utils";
+import Flyout, {
+  anchorPoints,
+  AVAILABLE_ANCHOR_POINTS,
+} from "@weave-design/flyout";
 
 import EmptyStatePresenter from "./presenters/EmptyStatePresenter";
 import IndicatorPresenter from "./presenters/IndicatorPresenter";

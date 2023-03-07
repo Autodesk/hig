@@ -1,7 +1,7 @@
 import React from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
-import TextLink from "@hig/text-link";
-import Timestamp from "@hig/timestamp";
+import TextLink from "@weave-design/text-link";
+import Timestamp from "@weave-design/timestamp";
 
 import { Notification, types, AVAILABLE_TYPES } from "../index";
 import Readme from "../../README.md";

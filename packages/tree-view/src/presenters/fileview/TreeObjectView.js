@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 
-import { ThemeContext } from "@hig/theme-context";
+import { ThemeContext } from "@weave-design/theme-context";
 import TreeItemBehavior from "../../behaviors/TreeItemBehavior";
 
 import TreeObjectNestedSubTreeItem from "./TreeObjectNestedSubTreeItem";

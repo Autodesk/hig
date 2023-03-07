@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { ArgsTable, Primary } from "@storybook/addon-docs";
 import { css } from "emotion";
-import { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
-import { generateId } from "@hig/utils";
-import Button from "@hig/button";
-import TextLink from "@hig/text-link";
-import Typography from "@hig/typography";
+import { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@weave-design/flyout";
+import { generateId } from "@weave-design/utils";
+import Button from "@weave-design/button";
+import TextLink from "@weave-design/text-link";
+import Typography from "@weave-design/typography";
 
 import NotificationsFlyout, { Notification } from "../index";
 import Readme from "../../README.md";

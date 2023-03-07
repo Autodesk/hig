@@ -1,8 +1,13 @@
 import React from "react";
 import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
-import Button, { types } from "@hig/button";
-import RichText from "@hig/rich-text";
-import { Dashboard16, Dashboard24, Settings16, Settings24 } from "@hig/icons";
+import Button, { types } from "@weave-design/button";
+import RichText from "@weave-design/rich-text";
+import {
+  Dashboard16,
+  Dashboard24,
+  Settings16,
+  Settings24,
+} from "@weave-design/icons";
 
 import Tabs, { Tab } from "../index";
 import {

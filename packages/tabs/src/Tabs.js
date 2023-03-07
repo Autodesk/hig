@@ -4,7 +4,10 @@ import React, { useState, useEffect, Children } from "react";
 import PropTypes from "prop-types";
 import { cx, css } from "emotion";
 import memoize from "lodash.memoize";
-import { createButtonEventHandlers, createCustomClassNames } from "@hig/utils";
+import {
+  createButtonEventHandlers,
+  createCustomClassNames,
+} from "@weave-design/utils";
 
 import Tab from "./Tab";
 import stylesheet from "./presenters/Tabs.stylesheet";

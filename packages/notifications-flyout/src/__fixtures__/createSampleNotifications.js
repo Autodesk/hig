@@ -1,8 +1,8 @@
 /* eslint-disable no-console */
 import React from "react";
-import Avatar, { sizes } from "@hig/avatar";
-import TextLink from "@hig/text-link";
-import Timestamp from "@hig/timestamp";
+import Avatar, { sizes } from "@weave-design/avatar";
+import TextLink from "@weave-design/text-link";
+import Timestamp from "@weave-design/timestamp";
 import avatarImagePath from "@weave-design/storybook/storybook-support/fixtures/avatar/chris-reynolds.png";
 import thumbnailImagePath from "@weave-design/storybook/storybook-support/fixtures/thumbnail/greenhouse.png";
 

@@ -1,7 +1,7 @@
 {
-  "name": "@hig/notifications-flyout",
-  "version": "3.4.0",
-  "description": "HIG NotificationsFlyout",
+  "name": "@weave-design/notifications-flyout",
+  "version": "1.0.0",
+  "description": "Weave NotificationsFlyout",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "homepage": "https://hig.autodesk.com",
@@ -18,31 +18,31 @@
     "build/*"
   ],
   "dependencies": {
-    "@weave-design/behaviors": "^1.0.0-alpha",
-    "@hig/flyout": "^2.2.0",
-    "@hig/icon-button": "^3.1.0",
-    "@hig/icons": "^4.1.0",
-    "@hig/progress-ring": "^3.0.0",
-    "@hig/rich-text": "^2.2.0",
-    "@hig/typography": "^2.1.0",
-    "@hig/utils": "^0.4.1",
+    "@weave-design/behaviors": "^1.0.0",
+    "@weave-design/flyout": "^1.0.0",
+    "@weave-design/icon-button": "^1.0.0",
+    "@weave-design/icons": "^1.0.0",
+    "@weave-design/progress-ring": "^1.0.0",
+    "@weave-design/rich-text": "^1.0.0",
+    "@weave-design/typography": "^1.0.0",
+    "@weave-design/utils": "^1.0.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1",
     "react-transition-group": "^4.4.2"
   },
   "devDependencies": {
-    "@hig/avatar": "^2.2.0",
+    "@weave-design/avatar": "^1.0.0",
     "@weave-design/babel-preset": "^1.0.0",
     "@weave-design/eslint-config": "^1.0.0",
     "@weave-design/jest-preset": "^1.0.0",
     "@weave-design/scripts": "^1.0.0",
     "@weave-design/semantic-release-config": "^1.0.0",
-    "@hig/text-link": "^2.2.0"
+    "@weave-design/text-link": "^1.0.0"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.4.2",
-    "react": "^17.0.0"
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-design/theme-data": "^1.0.0",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "build": "weave-scripts-build",

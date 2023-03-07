@@ -1,7 +1,7 @@
 import React from "react";
 import { cx, css } from "emotion";
 import PropTypes from "prop-types";
-import { createCustomClassNames } from "@hig/utils";
+import { createCustomClassNames } from "@weave-design/utils";
 import stylesheet from "./Tab.stylesheet";
 
 export default function ContentPresenter({

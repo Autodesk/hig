@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
-import IconButton from "@hig/icon-button";
-import { CloseSUI } from "@hig/icons";
-import { createCustomClassNames } from "@hig/utils";
+import IconButton from "@weave-design/icon-button";
+import { CloseSUI } from "@weave-design/icons";
+import { createCustomClassNames } from "@weave-design/utils";
 
 import stylesheet from "./stylesheet";
 

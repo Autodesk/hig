@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
-import { Panel } from "@hig/flyout";
-import ProgressRing from "@hig/progress-ring";
-import ThemeContext from "@hig/theme-context";
-import Typography from "@hig/typography";
+import { Panel } from "@weave-design/flyout";
+import ProgressRing from "@weave-design/progress-ring";
+import ThemeContext from "@weave-design/theme-context";
+import Typography from "@weave-design/typography";
 import {
   UNMOUNTED,
   EXITED,

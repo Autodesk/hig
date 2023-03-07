@@ -1,7 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 import React from "react";
 import PropTypes from "prop-types";
-import { ThemeContext } from "@hig/theme-context";
+import { ThemeContext } from "@weave-design/theme-context";
 
 import TablePresenter from "./presenters/TablePresenter";
 import TableBehavior from "./behaviors/TableBehavior";

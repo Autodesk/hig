@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 import { css, cx } from "emotion";
-import { createCustomClassNames } from "@hig/utils";
+import { createCustomClassNames } from "@weave-design/utils";
 // eslint-disable-next-line import/no-cycle
 import TreeObjectNestedSubTreeItem from "./fileview/TreeObjectNestedSubTreeItem";
 import TreeObjectSubTreeItem from "./fileview/TreeObjectSubTreeItem";
