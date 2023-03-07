@@ -1,3 +1,61 @@
+# @weave-design/table-v1.0.0 (2023-03-07)
+
+
+### Bug Fixes
+
+* add truncation and ellipsis to header column ([a83105f](https://github.com/Autodesk/hig/commit/a83105f))
+* **bundle:** Fix package bundles ([a1b479d](https://github.com/Autodesk/hig/commit/a1b479d))
+* **bundle:** include dependency CSS ([f5a4a62](https://github.com/Autodesk/hig/commit/f5a4a62))
+* column show hide filter ([c0c9357](https://github.com/Autodesk/hig/commit/c0c9357))
+* column show/hide cell styles ([b8fb5be](https://github.com/Autodesk/hig/commit/b8fb5be))
+* column show/hide resize issues ([9033cf6](https://github.com/Autodesk/hig/commit/9033cf6))
+* column widths off when rowSelection is set to false ([d420305](https://github.com/Autodesk/hig/commit/d420305))
+* edit table wrapper layout ([4326363](https://github.com/Autodesk/hig/commit/4326363))
+* Fix the customStylesheet not overridable issue in application level ([095e43a](https://github.com/Autodesk/hig/commit/095e43a))
+* isGrouped sort ([9201b1e](https://github.com/Autodesk/hig/commit/9201b1e))
+* pass down enableBlockLayout ([2b25347](https://github.com/Autodesk/hig/commit/2b25347))
+* **presentation:** add missing typography styles ([0790b31](https://github.com/Autodesk/hig/commit/0790b31))
+* remove bottom border from header ([cbcc74b](https://github.com/Autodesk/hig/commit/cbcc74b))
+* remove react-table column tooltip ([f9ce87c](https://github.com/Autodesk/hig/commit/f9ce87c))
+* resize when grouping is used ([4c70b40](https://github.com/Autodesk/hig/commit/4c70b40))
+* resizing when rowSelection is false ([23d8105](https://github.com/Autodesk/hig/commit/23d8105))
+* set columnArray on load ([dbf2a60](https://github.com/Autodesk/hig/commit/dbf2a60))
+* show all rows by default ([9755260](https://github.com/Autodesk/hig/commit/9755260))
+* show hide filter label id ([5e30529](https://github.com/Autodesk/hig/commit/5e30529))
+* sort icons ([fe3770f](https://github.com/Autodesk/hig/commit/fe3770f))
+* table group render ([8461640](https://github.com/Autodesk/hig/commit/8461640))
+* **table:** upgrade react-virtualized to use public methods for getSize ([f9de178](https://github.com/Autodesk/hig/commit/f9de178))
+
+
+### Documentation
+
+* update package.json and readme ([5dfdf4f](https://github.com/Autodesk/hig/commit/5dfdf4f))
+
+
+### Features
+
+* add ability to pre select row(s) ([68b1123](https://github.com/Autodesk/hig/commit/68b1123))
+* add control for row pre select ([45e66b0](https://github.com/Autodesk/hig/commit/45e66b0))
+* add multi select functionality ([84bb347](https://github.com/Autodesk/hig/commit/84bb347))
+* add new hig table component ([6bd24d7](https://github.com/Autodesk/hig/commit/6bd24d7))
+* add onApplication property ([4636183](https://github.com/Autodesk/hig/commit/4636183))
+* add sort by group logic ([dad64de](https://github.com/Autodesk/hig/commit/dad64de))
+* add table group select all ([7a687a0](https://github.com/Autodesk/hig/commit/7a687a0))
+* add table grouping logic ([83b49d8](https://github.com/Autodesk/hig/commit/83b49d8))
+* add table row select option ([b4190bf](https://github.com/Autodesk/hig/commit/b4190bf))
+* add the onColumnWidthChanged prop to table ([#2892](https://github.com/Autodesk/hig/issues/2892)) ([a583ed2](https://github.com/Autodesk/hig/commit/a583ed2))
+* add tree grid structure ([04ef73e](https://github.com/Autodesk/hig/commit/04ef73e))
+* controlled show/hide columns ([a235916](https://github.com/Autodesk/hig/commit/a235916))
+* **table:** Add [@hig](https://github.com/hig)/table package based on the bim360-base-table ([936dc04](https://github.com/Autodesk/hig/commit/936dc04))
+* **table:** Add [@hig](https://github.com/hig)/themes dependency ([7dd05b0](https://github.com/Autodesk/hig/commit/7dd05b0))
+* **table:** add a complex example & fixed some style issues ([f703a53](https://github.com/Autodesk/hig/commit/f703a53))
+* **table:** Add theming support ([ca24188](https://github.com/Autodesk/hig/commit/ca24188))
+
+
+### BREAKING CHANGES
+
+* This a new version of the @hig/table that uses React 17 and React Table
+
 # [@hig/table-v1.10.0](https://github.com/Autodesk/hig/compare/@hig/table@1.9.1...@hig/table@1.10.0) (2022-11-18)
 
 
