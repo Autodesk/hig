@@ -18,8 +18,8 @@ import {
 } from "react-table";
 import { useSticky } from "react-table-sticky";
 
-import { ThemeContext } from "@hig/theme-context";
-import Checkbox from "@hig/checkbox";
+import { ThemeContext } from "@weave-design/theme-context";
+import Checkbox from "@weave-design/checkbox";
 
 import TableHeaderCell from "../TableHeaderCell";
 import GlobalFilter from "../components/GlobalFilter";
