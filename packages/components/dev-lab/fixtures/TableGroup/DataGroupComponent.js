@@ -1,8 +1,8 @@
 import React from 'react';
 import { css } from "emotion";
 
-import Accordion from '@hig/accordion';
-import Checkbox from '@hig/checkbox';
+import Accordion from '@weave-design/accordion';
+import Checkbox from '@weave-design/checkbox';
 
 const DataGroupComponent = ({passedData}) => {
   const {

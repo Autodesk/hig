@@ -40,8 +40,7 @@ function isScopedComponentPackage(packageName) {
   if (!packageMeta) return false;
 
   const { name } = packageMeta;
-
-  return name.startsWith("@hig");
+  return name.startsWith("@weave-design");
 }
 
 /**
@@ -106,7 +105,7 @@ function capitalize(word) {
  * @param {string} packageName
  */
 function createModuleName(packageName) {
-  return packageName.slice(5);
+  return packageName.slice(14);
 }
 
 /**
@@ -114,7 +113,7 @@ function createModuleName(packageName) {
  */
 function createComponentName(packageName) {
   return packageName
-    .slice(5)
+    .slice(14)
     .split("-")
     .map(capitalize)
     .join("");
@@ -201,7 +200,7 @@ async function transformModule(srcPath) {
   const destPath = srcPath.replace(".es.js", ".js");
   const bundle = await rollup.rollup({
     input: srcPath,
-    external: moduleName => moduleName.startsWith("@hig")
+    external: moduleName => moduleName.startsWith("@weave-design")
   });
 
   return bundle.write({
@@ -271,7 +270,7 @@ async function copyComponentStylesheets(scopedPackages) {
 async function start() {
   const { version } = componentsPackageMeta;
 
-  console.log(`Building @hig/components v${version}`);
+  console.log(`Building @weave-design/components v${version}`);
 
   const scopedPackages = getScopedPackages();
 

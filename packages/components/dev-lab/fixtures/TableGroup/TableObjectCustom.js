@@ -1,5 +1,5 @@
 import React from 'react';
-import { generateId } from "@hig/utils"
+import { generateId } from "@weave-design/utils"
 import SortColumns from "./SortColumns";
 import DataGroupComponent from "./DataGroupComponent";
 import {tableContent, tableContentTwo, tableContentThree} from "./DataSourceMock";

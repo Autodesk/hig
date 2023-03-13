@@ -1,5 +1,5 @@
 # Table Group
-To enable table grouping for `@hig/table` pass in your custom DataGroupComponent within your tableObject meta
+To enable table grouping for `@weave-design/table` pass in your custom DataGroupComponent within your tableObject meta
 
 Set your desired `group names` by passing in the appropriate array
 ```
@@ -15,8 +15,8 @@ meta: {
 import React from 'react';
 import { css } from "emotion";
 
-import Accordion from '@hig/accordion';
-import Checkbox from '@hig/checkbox';
+import Accordion from '@weave-design/accordion';
+import Checkbox from '@weave-design/checkbox';
 
 const DataGroupComponent = ({passedData}) => {
   const {
