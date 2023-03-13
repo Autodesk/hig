@@ -5,7 +5,7 @@
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "homepage": "https://hig.autodesk.com",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "scripts": {
     "build": "lerna run build --stream",
     "create-dependency-hash": "cat yarn.lock > .dependency-hash && ls ./packages >> .dependency-hash",
