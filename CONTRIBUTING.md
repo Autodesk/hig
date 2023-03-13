@@ -97,7 +97,7 @@ A core committer will review your pull request and provide feedback or merge it 
 
 ### Open source governance
 
-The HIG project's chief and primary concern is with the development of HIG Interface and platform specific implementations, an open source library of components which increase developer efficiency and provide a consistent look and feel to web applications across Autodesk. The look and feel of components is based on Autodesk Human Interface guidelines designs and the various product teams that contribute to HIG. The HIG project's governance model thus reflects only the need to steer the engineering direction of the components and not any other activities which are out of scope.
+The Weave project's chief and primary concern is with the development of Weave and platform specific implementations, an open source library of components which increase developer efficiency and provide a consistent look and feel to web applications across Autodesk. The look and feel of components is based on Autodesk Human Interface guidelines designs and the various product teams that contribute to Weave. The Weave project's governance model thus reflects only the need to steer the engineering direction of the components and not any other activities which are out of scope.
 
 Our governance model is as follows:
 
@@ -106,8 +106,6 @@ The Tech Lead directs the Core Committers, whose members include the Tech Lead a
 In the event the Tech Lead is unable to perform his or her duties, or abdicates, the Core Committers can select a new Tech Lead from amongst themselves.
 In the event there are no Core Committers, Autodesk Inc. will appoint one.
 Core Committers:
-
-- Tech Lead: Stacey Shkuratoff (@staceyshk)
 
 ### See Also
 

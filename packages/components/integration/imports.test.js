@@ -1,13 +1,13 @@
 /* eslint-disable import/no-duplicates */
-import * as HIG from "@hig/components";
-import { Button as NamedButton } from "@hig/components";
+import * as WeaveDesign from "@weave-design/components";
+import { Button as NamedButton } from "@weave-design/components";
 import DefaultButton, {
   types as buttonTypes
-} from "@hig/components/build/button";
+} from "@weave-design/components/build/button";
 
 describe("components", () => {
   it("exports components as named exports", () => {
-    expect(HIG).toHaveProperty("Button");
+    expect(WeaveDesign).toHaveProperty("Button");
   });
 
   it("exports components as a module defaults", () => {

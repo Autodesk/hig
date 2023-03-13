@@ -1,10 +1,10 @@
-# HIG Architecture
+# Weave Architecture
 
 React is a flexible system, and there are many options for the architecture of components. When implementing new HIG React components it is required to create components which follow these architecture guidelines. 
 
 ## React Version
 
-HIG React supports React 15.4.1 and above. This means we cannot use features from more recent versions, such as the Hook system added in version 16.8. We need to support existing applications which use older versions of React. 
+Weave React supports React 18.0.0 and above. 
 
 ## Stateless React Components
 
@@ -17,7 +17,7 @@ We require stateless components when possible. All data needed to render a compo
 
 ### Class components vs Functional components
 
-Although most current components in HIG React are class-based, we prefer functional components for future contributions. However, even the class-based components are stateless, since they don't declare a _state_ member. Some older legacy code, like _Slider_ is a stateful component, but that is the exception. The [Input](packages/input/src/Input.js) component is a great example of a stateless, functional component that handles user input.
+Although most current components in Weave React are class-based, we prefer functional components for future contributions. However, even the class-based components are stateless, since they don't declare a _state_ member. Some older legacy code, like _Slider_ is a stateful component, but that is the exception. The [Input](packages/input/src/Input.js) component is a great example of a stateless, functional component that handles user input.
 
 ### Attaching state
 
@@ -31,11 +31,11 @@ The _Behavior_ classes mentioned above use [Render Props](https://reactjs.org/do
 
 ### Theme data
 
-All HIG React components are required to support [theme data](packages/theme-data/README.md). If new theme data is required for a component, adding that data should be coordinated with Bryan Young on the HIG team.
+All Weave React components are required to support [theme data](packages/theme-data/README.md). If new theme data is required for a component, adding that data should be coordinated with Bryan Young on the Weave team.
 
 To implement theme support, components are required to use the [_ThemeContext_](packages/theme-context/README.md) class.
 
 ### CSS Stylesheets
 
-Every HIG React component should support passing in custom style overrides as a prop. The "stylesheet" prop is a function that returns a JSON style object. [TextArea](packages/text-area/src/customStylesheet.js) has a good example of a stylesheet function. HIG components use [emotion](https://github.com/emotion-js/emotion) as their css JavaScript library: .
+Every Weave React component should support passing in custom style overrides as a prop. The "stylesheet" prop is a function that returns a JSON style object. [TextArea](packages/text-area/src/customStylesheet.js) has a good example of a stylesheet function. HIG components use [emotion](https://github.com/emotion-js/emotion) as their css JavaScript library: .
 

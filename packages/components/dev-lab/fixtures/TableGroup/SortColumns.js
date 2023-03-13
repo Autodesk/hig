@@ -1,6 +1,6 @@
 import React from 'react';
 import { css, cx } from "emotion";
-import {CaretUp16, CaretUp24, CaretDown16, CaretDown24} from '@hig/icons';
+import {CaretUp16, CaretUp24, CaretDown16, CaretDown24} from '@weave-design/icons';
 
 
 const styles = {

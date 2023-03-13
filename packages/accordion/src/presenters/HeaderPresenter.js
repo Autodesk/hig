@@ -10,7 +10,7 @@ import {
   OperatorMinusXsUI,
   OperatorPlusSUI,
   OperatorPlusXsUI,
-} from "@hig/icons";
+} from "@weave-design/icons";
 
 import {
   indicators,
