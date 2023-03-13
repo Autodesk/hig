@@ -2414,30 +2414,12 @@
     "@hig/utils" "^0.4.1"
     prop-types "^15.7.1"
 
-"@hig/behaviors@2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@hig/behaviors/-/behaviors-2.0.0.tgz#a34a1e30cba1e223d6c22950daced7b66984207d"
-  integrity sha512-r6pt/sBRs5FzADZDgjvPxmPRSMVaxJDA9VeGYo7I/6bfgQkSDzd19plCTTPICiKcOHCa/XXGd+/kRTgflBf+nA==
-  dependencies:
-    prop-types "^15.6.1"
-
 "@hig/behaviors@^2.1.0":
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/@hig/behaviors/-/behaviors-2.1.0.tgz#103676abc0602258e74448ce85f22f45984f406b"
   integrity sha512-k9mnX+K+waQUXLiIZZ75wrH7R4L/C5GMbbWeX4mLxQqX0HkTTk5pRXyoM2GMNhQxi/2wlXLantr4TQkyNZnqkQ==
   dependencies:
     prop-types "^15.6.1"
-
-"@hig/checkbox@^3.1.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@hig/checkbox/-/checkbox-3.2.0.tgz#d942050906e64cd3fe0669a67174378fc756ba04"
-  integrity sha512-5hgZ8RdqgCJb0fjjIxv5kn7LdB0xg9ksS5nRRS7yVXPJnuaqnTZO0GUg+B0Ws8QyCFAKvem6etkfov/XWOQaYA==
-  dependencies:
-    "@hig/behaviors" "^2.1.0"
-    "@hig/icons" "^4.1.0"
-    "@hig/utils" "^0.4.1"
-    emotion "^10.0.0"
-    prop-types "^15.7.1"
 
 "@hig/flyout@^2.1.0", "@hig/flyout@^2.2.0":
   version "2.3.1"
@@ -2449,11 +2431,6 @@
     prop-types "^15.7.1"
     react-transition-group "^4.4.2"
 
-"@hig/fonts@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@hig/fonts/-/fonts-2.0.0.tgz#6e397a56b0a95b2a1680d1533f2691b82d1345eb"
-  integrity sha512-CMx2/ZYAj4Sbz5EvnVexpiUhtBjCTZWmZ0MZ+N24bOR0Q/yaooyDialtZOSxoq3S1NH+cZ5x/ayNs7ky7gUi1A==
-
 "@hig/icon-button@^3.1.0":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@hig/icon-button/-/icon-button-3.1.1.tgz#3413439d22f557a4d8b0666b05a124a78d6c68b7"
@@ -2464,31 +2441,12 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
-"@hig/icons@^4.1.0", "@hig/icons@^4.2.0":
+"@hig/icons@^4.1.0":
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/@hig/icons/-/icons-4.5.0.tgz#4431aed12074fa5d1218f90a477c73b6aea79f1f"
   integrity sha512-AQoxdw5VQSz/ohmDKmHei7JoOuQj8jItFHcdrBRC+26/V3WrwFKFqdrs8B3vWwSZ+jFSfqna5rnkx/ecnswelg==
   dependencies:
     emotion "^10.0.0"
-
-"@hig/input@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@hig/input/-/input-2.2.0.tgz#57bedcb045208df36064bb040046e5ef32b6eac8"
-  integrity sha512-BxnmDpQHOeOIG86pYQGc3OscdxlHaMBKCPt9mbntap+8U2UBygcMUDZDxiGExfhRfJAbGP6uEFb4tQc9ptujAw==
-  dependencies:
-    "@hig/behaviors" "2.0.0"
-    emotion "^10.0.0"
-    prop-types "^15.7.1"
-
-"@hig/menu@^2.2.1":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@hig/menu/-/menu-2.2.3.tgz#b51668dcea87a705718907193b4d19c3095d09ec"
-  integrity sha512-+C1SevJz5xXM2trM8kJDmg6+mpjkQMPQDdVJnqhIdtT3O82PqBDQ+1CQLGO6KfSQ0I3S8MpJnmk2y7gDaX4clw==
-  dependencies:
-    "@hig/behaviors" "^2.1.0"
-    "@hig/icons" "^4.2.0"
-    "@hig/utils" "^0.4.1"
-    prop-types "^15.7.1"
 
 "@hig/notifications-flyout@^3.1.0":
   version "3.4.0"
@@ -2541,26 +2499,13 @@
     emotion "^10.0.0"
     prop-types "^15.7.1"
 
-"@hig/surface@^2.1.0", "@hig/surface@^2.1.1":
+"@hig/surface@^2.1.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@hig/surface/-/surface-2.2.0.tgz#2ea8f2f023ee2ea05cefc4f908199d558ccd2c4d"
   integrity sha512-U3ByMauPGHnsKAMtKjYdq87DVWCl4pdfTr2nyNGAhKQ0zK8RgAblgPyYj/1c+sJW7ysB9DWQRBgamGD33JnTBQ==
   dependencies:
     emotion "^10.0.0"
     prop-types "^15.7.1"
-
-"@hig/table@^1.7.0":
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/@hig/table/-/table-1.10.0.tgz#eff010d0070659d236d20c1018dc1dc761ad3fac"
-  integrity sha512-CW0h5OY4XxYR+4kPdZhrW6s/WFxF1FJJ8akOa8qjDyPqmWD7UMEZTh9fyTEf+/uh+rJokB+mAtuduhtUD25Z4A==
-  dependencies:
-    "@hig/behaviors" "^2.1.0"
-    "@hig/checkbox" "^3.1.0"
-    date-fns "^2.29.3"
-    emotion "^10.0.0"
-    prop-types "^15.7.1"
-    react-table "^7.8.0"
-    react-table-sticky "^1.1.3"
 
 "@hig/text-link@^2.1.0", "@hig/text-link@^2.2.0":
   version "2.3.0"
@@ -2570,21 +2515,7 @@
     "@hig/behaviors" "^2.1.0"
     prop-types "^15.7.1"
 
-"@hig/theme-context@^4.2.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@hig/theme-context/-/theme-context-4.3.0.tgz#f0a4886e0f0a5897b3f9ef10aed55c8cddef6e26"
-  integrity sha512-ks8/C4I+M13sIAFOSTlbl8t3MJfcxtzhOzokSf0IKVjCarOul9F2B90C7Jcrhws72dG7qF/NsGnD8tZFgvS+/g==
-  dependencies:
-    prop-types "^15.6.1"
-
-"@hig/theme-data@^3.4.2":
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/@hig/theme-data/-/theme-data-3.4.2.tgz#2726efe5aa64376565ebcc593a72a2a52cd2736a"
-  integrity sha512-SqP9P6O4100xLA202HFdeU5T2XpXHc3Vqp6TqLDVNw5CKCGwKLPEfD1bWWfd57jSxqFdSNNOAUsdx4L9YcMqfQ==
-  dependencies:
-    tinycolor2 "^1.4.1"
-
-"@hig/typography@^2.1.0", "@hig/typography@^2.2.0":
+"@hig/typography@^2.1.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@hig/typography/-/typography-2.2.0.tgz#49481bf64b0da7a827538540c1a08921a6d69566"
   integrity sha512-Ca/9rG1qnY26JO1AIo2NxMFOqcxQWz+fgWQq44145ODk4spxDZ7TBVw2XnmGWmEGaNEgUpVm0/OQM8Qb9voNRA==
