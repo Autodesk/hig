@@ -1,5 +1,5 @@
 import React from "react";
-import TextLink from "@hig/text-link";
+import TextLink from "@weave-design/text-link";
 
 export default function HThreeTextLink(props) {
   const customStyles = (styles) => {

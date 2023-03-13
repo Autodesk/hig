@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Primary, Stories } from "@storybook/addon-docs";
-import Table from '@hig/table';
+import Table from '@weave-design/table';
 
 import ReadmeGroup from './fixtures/TableGroup/README_GROUP.md'
 import ReadmeGroupSort from './fixtures/TableGroup/README_GROUP_SORT.md'
