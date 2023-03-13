@@ -7,7 +7,7 @@ import DefaultButton, {
 
 describe("components", () => {
   it("exports components as named exports", () => {
-    expect(HIG).toHaveProperty("Button");
+    expect(WeaveDesign).toHaveProperty("Button");
   });
 
   it("exports components as a module defaults", () => {
