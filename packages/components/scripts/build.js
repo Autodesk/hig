@@ -40,6 +40,7 @@ function isScopedComponentPackage(packageName) {
   if (!packageMeta) return false;
 
   const { name } = packageMeta;
+
   return name.startsWith("@weave-design");
 }
 
