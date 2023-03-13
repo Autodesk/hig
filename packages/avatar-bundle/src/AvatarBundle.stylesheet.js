@@ -3,7 +3,7 @@ import {
   StyleItems,
   stylesheet as avatarStylesheet,
   sizes,
-} from "@hig/avatar";
+} from "@weave-design/avatar";
 
 import { spacings } from "./spacings";
 
