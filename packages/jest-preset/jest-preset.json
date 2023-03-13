@@ -27,7 +27,8 @@
   "testPathIgnorePatterns": [
     "docs",
     "packages/babel-preset",
-    "packages/jest-preset"
+    "packages/jest-preset",
+    "<rootDir>/deprecated"
   ],
   "unmockedModulePathPatterns": ["node_modules"],
   "testURL": "http://localhost/"
