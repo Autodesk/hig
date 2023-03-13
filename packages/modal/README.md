@@ -39,9 +39,9 @@ Use the `className` prop to pass in a css class name to the outermost container 
 Modal also has a `stylesheet` prop that accepts a function wherein you can modify Modal's styles. For instance
 
 ```js
-import Modal from "@hig/modal";
-import Typography from "@hig/typography";
-import Button from "@hig/button";
+import Modal from "@weave-design/modal";
+import Typography from "@weave-design/typography";
+import Button from "@weave-design/button";
 
 function YourComponent() {
   const modalStyles = styles => ({
