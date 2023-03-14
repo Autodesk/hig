@@ -1,6 +1,6 @@
 import React from "react";
 import { addons } from "@storybook/addons";
-import Typography from "@hig/typography";
+import Typography from "@weave-design/typography";
 
 import weaveTheme from "./weaveTheme";
 

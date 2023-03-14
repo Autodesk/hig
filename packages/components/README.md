@@ -1,6 +1,6 @@
 # Components
 
-The Components package exports all of the available HIG components for easy access.
+The Components package exports all of the available Weave components for easy access.
 
 Please view the individual components packages for component specific documentation.
 
@@ -9,7 +9,7 @@ Please view the individual components packages for component specific documentat
 ### Install the package
 
 ```bash
-yarn add @hig/components
+yarn add @weave-design/components
 ```
 
 ## Basic usage
@@ -17,7 +17,7 @@ yarn add @hig/components
 ### Import all components
 
 ```jsx
-import * as HIG from "@hig/components";
+import * as WeaveDesign from "@weave-design/components";
 
 <HIG.Button title="Click Me" />;
 ```
@@ -25,7 +25,7 @@ import * as HIG from "@hig/components";
 ### Import a single component
 
 ```jsx
-import { Button } from "@hig/components";
+import { Button } from "@weave-design/components";
 
 <Button title="Click Me" />;
 ```
@@ -33,7 +33,7 @@ import { Button } from "@hig/components";
 ### Import a component with component-specific exports
 
 ```jsx
-import Button, { types } from "@hig/components/build/button";
+import Button, { types } from "@weave-design/components/build/button";
 
 <Button type={types.PRIMARY} title="Click Me" />;
 ```

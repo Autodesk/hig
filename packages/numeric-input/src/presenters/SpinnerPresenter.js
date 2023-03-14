@@ -12,7 +12,7 @@ import { availableVariants } from "@weave-design/input";
 import {
   createCustomClassNames,
   memoizeCreateButtonEventHandlers,
-} from "@hig/utils";
+} from "@weave-design/utils";
 import stylesheet from "./stylesheet";
 
 export default class SpinnerPresenter extends Component {

@@ -7,4 +7,4 @@ NotificationsFlyout.Notification = Notification;
 
 export { NotificationsFlyout as default, Image, Notification };
 export { types, AVAILABLE_TYPES } from "./types";
-export { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@hig/flyout";
+export { anchorPoints, AVAILABLE_ANCHOR_POINTS } from "@weave-design/flyout";

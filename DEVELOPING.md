@@ -44,7 +44,7 @@ The following dependencies must be available to be begin project development.
 
 * [Unix-like][] operating system _— [Windows Subsystem for Linux][] also works_
 * [Git][]
-* [Node][] `^12` (higher versions are not yet supported)
+* [Node][] `^16` (higher versions are not yet supported)
 * [Yarn][] `>=1.5.1`
 * [Python][] `^2.7` _— Some dependencies require `node-gyp` which uses Python_
 * [Additional instruction for Windows](WindowsSetup.md)
@@ -172,7 +172,7 @@ Combined with Semantic Release and Greenkeeper, this ensures that non-breaking (
 * In the commit that contains the breaking changes for a package–and any commit should only contain changes for one package–manually change the package version in `package.json` to the next major version and append "-alpha". For example, if the `package.json` looked like this
     ```json
     {
-      "name": "@hig/sample-component",
+      "name": "@weave-design/sample-component",
       "version": "1.0.0",
       "description": "",
       "author": "Autodesk Inc.",
@@ -187,7 +187,7 @@ Combined with Semantic Release and Greenkeeper, this ensures that non-breaking (
 * When you're ready to release your package, manually remove "-alpha" from the version. For example, if the `package.json` looked like this
     ```json
     {
-      "name": "@hig/sample-component",
+      "name": "@weave-design/sample-component",
       "version": "2.0.0-alpha",
       "description": "",
       "author": "Autodesk Inc.",
@@ -197,7 +197,7 @@ Combined with Semantic Release and Greenkeeper, this ensures that non-breaking (
     Manually change the version to `2.0.0`.
     
 * `yarn && yarn build` at the project root. Expect that `yarn.lock` will be unchanged, indicating that none of your dependent packages pulled in the breaking, major-version-bump changes. If a dependent package did pull in the breaking change, this might indicate that your package is not explicitly listed as a dependency or that the version compatibility listed in the dependent's `package.json` is not pinned to restrict updates to only minor and patch levels (e.g. `^1.0.0`). Our convention is to list dependencies allowing only minor and patch updates with `^`. 
-* On your development branch locally, run `yarn release:dry-run`. Assuming your breaking change commit message follows [Angular Git Commit Guidelines][], expect that Semantic Release will output something like `Create tag @hig/sample-component@2.0.0`. This indicates that it would bump the version to `2.0.0` and publish it to NPM if this were not a dry run. If you don't see that, double check your previous steps.
+* On your development branch locally, run `yarn release:dry-run`. Assuming your breaking change commit message follows [Angular Git Commit Guidelines][], expect that Semantic Release will output something like `Create tag @weave-design/sample-component@2.0.0`. This indicates that it would bump the version to `2.0.0` and publish it to NPM if this were not a dry run. If you don't see that, double check your previous steps.
 * Proceed with posting a PR and merging your work into the development branch.
 * Your breaking changes under the new major version should not impact other packages without explicitly updating their `package.json` files.
 * Once your changes make it to master and CI, Semantic Release should properly bump the version to `2.0.0` and publish to NPM.
@@ -206,8 +206,8 @@ Combined with Semantic Release and Greenkeeper, this ensures that non-breaking (
 
 Packages that have already been published can have pre-releases as well.
 
-For example, `@hig/button@1.0.0` can have a pre-release package by changing the version to `@hig/button@1.1.0-alpha`.
-Subsequent pre-releases can be made by further changing the package version, e.g. `@hig/button@1.1.0-alpha.2`.
+For example, `@hig/button@1.0.0` can have a pre-release package by changing the version to `@weave-design/button@1.1.0-alpha`.
+Subsequent pre-releases can be made by further changing the package version, e.g. `@weave-design/button@1.1.0-alpha.2`.
 
 > A larger set of pre-release fields has a higher precedence than a smaller set, if all of the preceding identifiers are equal. Example: 1.0.0-alpha < 1.0.0-alpha.1 < 1.0.0-alpha.beta < 1.0.0-beta < 1.0.0-beta.2 < 1.0.0-beta.11 < 1.0.0-rc.1 < 1.0.0.
 > - https://semver.org/#spec-item-11
@@ -262,7 +262,7 @@ A package must have the following properties defined in its `package.json` file 
 
 ```json
   "devDependencies": {
-    "@hig/scripts": "^x.x.x",
+    "@weave-design/scripts": "^x.x.x",
     "@weave-design/semantic-release-config": "^x.x.x",
   },
   "release": {
@@ -289,16 +289,16 @@ yarn docs
 
 ## How to fix an old release
 
-Scenario: a consumer reports a critical bug for `@hig/button@0.1.0`, but the current package version is `@hig/button@1.0.0`. Additionally, upgrading to `@hig/button@1.0.0` isn't an option for the consumer.
+Scenario: a consumer reports a critical bug for `@weave-design/button@0.1.0`, but the current package version is `@weave-design/button@1.0.0`. Additionally, upgrading to `@weave-design/button@1.0.0` isn't an option for the consumer.
 
-We need to patch `@hig/button@0.1.0`, by releasing `@hig/button@0.1.1` with the fix.
+We need to patch `@weave-design/button@0.1.0`, by releasing `@weave-design/button@0.1.1` with the fix.
 
 ### Steps
 
 1. Checkout a new branch based on the tag for the respective version
 
 ```bash
-git checkout @hig/button@0.1.0
+git checkout @weave-design/button@0.1.0
 git checkout -b fix/button
 ```
 
@@ -317,7 +317,7 @@ _`packages/button/package.json`_
 
 ```diff
 {
-  "name": "@hig/button",
+  "name": "@weave-design/button",
 - "version": "0.1.0",
 + "version": "0.1.1"
 }
@@ -330,7 +330,7 @@ _`packages/button/package.json`_
 ```bash
 git add packages/button/package.json
 git add packages/button/CHANGELOG.md
-git commit -m "chore(release): bump version to `@hig/button@0.1.1`"
+git commit -m "chore(release): bump version to `@weave-design/button@0.1.1`"
 ```
 8. Merge development branch and resolve conflicts
 

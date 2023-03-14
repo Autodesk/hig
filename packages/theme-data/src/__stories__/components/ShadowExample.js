@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ThemeContext } from "@hig/theme-context";
+import { ThemeContext } from "@weave-design/theme-context";
 import basics from "../../basics";
 
 import Swatch from "./Swatch";

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Primary } from "@storybook/addon-docs";
-import Typography from "@hig/typography";
-import Input, { variants } from "@hig/input";
+import Typography from "@weave-design/typography";
+import Input, { variants } from "@weave-design/input";
 
-const code =`import Typography from "@hig/typography";
-import Input, { variants } from "@hig/input";
+const code =`import Typography from "@weave-design/typography";
+import Input, { variants } from "@weave-design/input";
 
 const InlineEditor = (props) => {
   const {

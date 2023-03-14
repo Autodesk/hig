@@ -9,7 +9,7 @@ import {AddFolder24,
     Calendar24,
     ProductsAndServices24,
     Report24,
-    FileImage24} from "@hig/icons";
+    FileImage24} from "@weave-design/icons";
   
 describe("tree-view/TreeObjectView", () => {
   it("takes a treeNodeObject", () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import ThemeContext from "@hig/theme-context";
+import ThemeContext from "@weave-design/theme-context";
 
 import stories from "./storiesSchema";
 import Role from "./components/Role";

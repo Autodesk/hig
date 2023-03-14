@@ -1,14 +1,14 @@
-import ThemeContext from "@hig/theme-context";
-import Surface from "@hig/surface";
+import ThemeContext from "@weave-design/theme-context";
+import Surface from "@weave-design/surface";
 
-import lightGrayMediumDensityTheme from "@hig/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
-import darkBlueMediumDensityTheme from "@hig/theme-data/build/json/darkBlueMediumDensityTheme/theme.json";
-import darkGrayMediumDensityTheme from "@hig/theme-data/build/json/darkGrayMediumDensityTheme/theme.json";
-import lightGrayHighDensityTheme from "@hig/theme-data/build/json/lightGrayHighDensityTheme/theme.json";
-import darkBlueHighDensityTheme from "@hig/theme-data/build/json/darkBlueHighDensityTheme/theme.json";
-import darkGrayHighDensityTheme from "@hig/theme-data/build/json/darkGrayHighDensityTheme/theme.json";
+import lightGrayMediumDensityTheme from "@weave-design/theme-data/build/json/lightGrayMediumDensityTheme/theme.json";
+import darkBlueMediumDensityTheme from "@weave-design/theme-data/build/json/darkBlueMediumDensityTheme/theme.json";
+import darkGrayMediumDensityTheme from "@weave-design/theme-data/build/json/darkGrayMediumDensityTheme/theme.json";
+import lightGrayHighDensityTheme from "@weave-design/theme-data/build/json/lightGrayHighDensityTheme/theme.json";
+import darkBlueHighDensityTheme from "@weave-design/theme-data/build/json/darkBlueHighDensityTheme/theme.json";
+import darkGrayHighDensityTheme from "@weave-design/theme-data/build/json/darkGrayHighDensityTheme/theme.json";
 
-import "@hig/fonts/build/ArtifaktElement.css";
+import "@weave-design/fonts/build/ArtifaktElement.css";
 
 const themeData = {
   "Light gray Medium density": lightGrayMediumDensityTheme,

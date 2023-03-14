@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import { css } from "emotion";
 import { Primary } from "@storybook/addon-docs";
-import Input from "@hig/input";
-import Button from "@hig/button";
+import Input from "@weave-design/input";
+import Button from "@weave-design/button";
 import {
   CloseMUI,
   CloseSUI,
   Search16,
   Search24,
-} from "@hig/icons";
+} from "@weave-design/icons";
 
-const code =`import Button from "@hig/button";
-import Input from "@hig/input";
+const code =`import Button from "@weave-design/button";
+import Input from "@weave-design/input";
 import {
   CloseMUI,
   CloseSUI,
   Search16,
   Search24,
-} from "@hig/icons";
+} from "@weave-design/icons";
 
 const inputCustomStylesheet = (styles) => ({
   ...styles,
