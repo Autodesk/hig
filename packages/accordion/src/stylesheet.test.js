@@ -11,13 +11,6 @@ describe("accordion/stylesheet", () => {
     expect(styles).toHaveProperty("wrapper", expect.any(Object));
   });
 
-  it("returned object contains property of contentTransitionWrapper", () => {
-    expect(styles).toHaveProperty(
-      "contentTransitionWrapper",
-      expect.any(Object)
-    );
-  });
-
   it("returned object contains property of header", () => {
     expect(styles).toHaveProperty("header", expect.any(Object));
   });
