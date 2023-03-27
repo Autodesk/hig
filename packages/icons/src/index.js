@@ -3,6 +3,7 @@ import { cx, css } from "emotion";
 import React from "react";
 import { ThemeContext } from "@weave-design/theme-context";
 import stylesheet from "./icon.stylesheet";
+import Help12SVG from "./icons/size12/help.svg";
 import Error12SVG from "./icons/size12/error.svg";
 import Complete12SVG from "./icons/size12/complete.svg";
 import Alert12SVG from "./icons/size12/alert.svg";
@@ -14,6 +15,9 @@ import HoldXsUISVG from "./icons/ui-controls/hold-xs.svg";
 import HoldSUISVG from "./icons/ui-controls/hold-s.svg";
 import HamburgerDefaultUISVG from "./icons/ui-controls/hamburger-default.svg";
 import HamburgerCloseUISVG from "./icons/ui-controls/hamburger-close.svg";
+import EllipsisXsUISVG from "./icons/ui-controls/ellipsis-xs.svg";
+import EllipsisSUISVG from "./icons/ui-controls/ellipsis-s.svg";
+import EllipsisMUISVG from "./icons/ui-controls/ellipsis-m.svg";
 import CloseXsUISVG from "./icons/ui-controls/close-xs.svg";
 import CloseSUISVG from "./icons/ui-controls/close-s.svg";
 import CloseMUISVG from "./icons/ui-controls/close-m.svg";
@@ -70,6 +74,7 @@ import Save16SVG from "./icons/information-dense/save.svg";
 import SaveAs16SVG from "./icons/information-dense/save-as.svg";
 import Report16SVG from "./icons/information-dense/report.svg";
 import Rename16SVG from "./icons/information-dense/rename.svg";
+import Remove16SVG from "./icons/information-dense/remove.svg";
 import Redo16SVG from "./icons/information-dense/redo.svg";
 import Recommend16SVG from "./icons/information-dense/recommend.svg";
 import RecentFile16SVG from "./icons/information-dense/recent-file.svg";
@@ -162,6 +167,7 @@ import Devices16SVG from "./icons/information-dense/devices.svg";
 import DeviceTablet16SVG from "./icons/information-dense/device-tablet.svg";
 import DeviceMobile16SVG from "./icons/information-dense/device-mobile.svg";
 import DeviceDesktop16SVG from "./icons/information-dense/device-desktop.svg";
+import DataRefresh16SVG from "./icons/information-dense/data-refresh.svg";
 import Dashboard16SVG from "./icons/information-dense/dashboard.svg";
 import CtaArrowRight16SVG from "./icons/information-dense/cta-arrow-right.svg";
 import Copy16SVG from "./icons/information-dense/copy.svg";
@@ -235,6 +241,7 @@ import Save24SVG from "./icons/regular/save.svg";
 import SaveAs24SVG from "./icons/regular/save-as.svg";
 import Report24SVG from "./icons/regular/report.svg";
 import Rename24SVG from "./icons/regular/rename.svg";
+import Remove24SVG from "./icons/regular/remove.svg";
 import Redo24SVG from "./icons/regular/redo.svg";
 import Recommend24SVG from "./icons/regular/recommend.svg";
 import RecentFile24SVG from "./icons/regular/recent-file.svg";
@@ -327,6 +334,7 @@ import Devices24SVG from "./icons/regular/devices.svg";
 import DeviceTablet24SVG from "./icons/regular/device-tablet.svg";
 import DeviceMobile24SVG from "./icons/regular/device-mobile.svg";
 import DeviceDesktop24SVG from "./icons/regular/device-desktop.svg";
+import DataRefresh24SVG from "./icons/regular/data-refresh.svg";
 import Dashboard24SVG from "./icons/regular/dashboard.svg";
 import CtaArrowRight24SVG from "./icons/regular/cta-arrow-right.svg";
 import Copy24SVG from "./icons/regular/copy.svg";
@@ -924,6 +932,22 @@ export const Dashboard24 = props => (
       if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Dashboard24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const DataRefresh24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <DataRefresh24SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -2401,6 +2425,22 @@ export const Redo24 = props => (
   </ThemeContext.Consumer>
 )
 
+export const Remove24 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <Remove24SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const Rename24 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -3564,6 +3604,22 @@ export const Dashboard16 = props => (
       if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Dashboard16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const DataRefresh16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "17px",
+        height: "18px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <DataRefresh16SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
@@ -5041,6 +5097,22 @@ export const Redo16 = props => (
   </ThemeContext.Consumer>
 )
 
+export const Remove16 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <Remove16SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const Rename16 = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -5937,6 +6009,54 @@ export const CloseXsUI = props => (
   </ThemeContext.Consumer>
 )
 
+export const EllipsisMUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "24px",
+        height: "24px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <EllipsisMUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const EllipsisSUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "16px",
+        height: "16px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <EllipsisSUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const EllipsisXsUI = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "12px",
+        height: "12px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <EllipsisXsUISVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
 export const HamburgerCloseUI = props => (
   <ThemeContext.Consumer>
     {({ resolvedRoles }) => {
@@ -6108,6 +6228,22 @@ export const Error12 = props => (
       if (props.stylesheet) delete propsClone.stylesheet;
       return (
         <Error12SVG {...propsClone} />
+      );
+    }}
+  </ThemeContext.Consumer>
+)
+
+export const Help12 = props => (
+  <ThemeContext.Consumer>
+    {({ resolvedRoles }) => {
+      let baseProps = {
+        width: "12px",
+        height: "12px"
+      }
+      const propsClone = Object.assign(baseProps, props, { className: cx(css(stylesheet(props, resolvedRoles)), props.className) });
+      if (props.stylesheet) delete propsClone.stylesheet;
+      return (
+        <Help12SVG {...propsClone} />
       );
     }}
   </ThemeContext.Consumer>
