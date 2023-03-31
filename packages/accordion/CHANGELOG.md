@@ -1,3 +1,10 @@
+# [@weave-design/accordion-v1.0.1](https://github.com/Autodesk/hig/compare/@weave-design/accordion@1.0.0...@weave-design/accordion@1.0.1) (2023-03-31)
+
+
+### Bug Fixes
+
+* fix bugs improve the behavior and refactor of accordion ([e8695c9](https://github.com/Autodesk/hig/commit/e8695c9))
+
 # @weave-design/accordion-v1.0.0 (2023-02-25)
 
 

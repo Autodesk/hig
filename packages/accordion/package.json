@@ -1,6 +1,6 @@
 {
   "name": "@weave-design/accordion",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Weave Accordion",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
@@ -25,7 +25,7 @@
   },
   "peerDependencies": {
     "@weave-design/theme-context": "^1.0.0",
-    "@weave-design/theme-data": "^1.0.0",
+    "@weave-design/theme-data": "^1.1.0",
     "react": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
