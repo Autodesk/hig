@@ -1,3 +1,10 @@
+# [@weave-design/theme-data-v1.1.0](https://github.com/Autodesk/hig/compare/@weave-design/theme-data@1.0.0...@weave-design/theme-data@1.1.0) (2023-03-31)
+
+
+### Features
+
+* **theme-data:** Add low density ([252fa35](https://github.com/Autodesk/hig/commit/252fa35))
+
 # @weave-design/theme-data-v1.0.0 (2023-02-18)
 
 
