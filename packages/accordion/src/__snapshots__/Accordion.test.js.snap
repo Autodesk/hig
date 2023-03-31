@@ -95,15 +95,13 @@ exports[`Accordion/Accordion renders default collapsed accordion 1`] = `
 }
 
 .emotion-4 {
-  -webkit-transition-property: height;
-  transition-property: height;
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  height: 0;
+  -webkit-transition: max-height 0ms ease-in-out,opacity 0ms ease-in-out;
+  transition: max-height 0ms ease-in-out,opacity 0ms ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  max-height: 0;
+  opacity: 0;
   overflow: hidden;
-  visibility: hidden;
 }
 
 <div
@@ -143,7 +141,6 @@ exports[`Accordion/Accordion renders default collapsed accordion 1`] = `
   </button>
   <div
     className="emotion-4"
-    onTransitionEnd={[Function]}
   >
     bar
   </div>
@@ -222,18 +219,6 @@ exports[`Accordion/Accordion renders default expanded accordion 1`] = `
   overflow: hidden;
 }
 
-.emotion-4 {
-  -webkit-transition-property: height;
-  transition-property: height;
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
-}
-
 .emotion-0 {
   fill: #808080;
   -webkit-transition-duration: 0.3s;
@@ -254,6 +239,16 @@ exports[`Accordion/Accordion renders default expanded accordion 1`] = `
 
 .emotion-0 > path {
   fill: rgba(102,102,102,0.7);
+}
+
+.emotion-4 {
+  -webkit-transition: max-height 0ms ease-in-out,opacity 0ms ease-in-out;
+  transition: max-height 0ms ease-in-out,opacity 0ms ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  max-height: 0px;
+  opacity: 1;
+  overflow: hidden;
 }
 
 <div
@@ -293,7 +288,6 @@ exports[`Accordion/Accordion renders default expanded accordion 1`] = `
   </button>
   <div
     className="emotion-4"
-    onTransitionEnd={[Function]}
   >
     bar
   </div>
@@ -354,15 +348,13 @@ exports[`Accordion/Accordion renders indicator in the right 1`] = `
 }
 
 .emotion-4 {
-  -webkit-transition-property: height;
-  transition-property: height;
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  height: 0;
+  -webkit-transition: max-height 0ms ease-in-out,opacity 0ms ease-in-out;
+  transition: max-height 0ms ease-in-out,opacity 0ms ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  max-height: 0;
+  opacity: 0;
   overflow: hidden;
-  visibility: hidden;
 }
 
 .emotion-3 {
@@ -445,7 +437,6 @@ exports[`Accordion/Accordion renders indicator in the right 1`] = `
   </button>
   <div
     className="emotion-4"
-    onTransitionEnd={[Function]}
   >
     bar
   </div>
@@ -547,15 +538,13 @@ exports[`Accordion/Accordion renders using operator as indicator 1`] = `
 }
 
 .emotion-4 {
-  -webkit-transition-property: height;
-  transition-property: height;
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  height: 0;
+  -webkit-transition: max-height 0ms ease-in-out,opacity 0ms ease-in-out;
+  transition: max-height 0ms ease-in-out,opacity 0ms ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  max-height: 0;
+  opacity: 0;
   overflow: hidden;
-  visibility: hidden;
 }
 
 <div
@@ -595,7 +584,6 @@ exports[`Accordion/Accordion renders using operator as indicator 1`] = `
   </button>
   <div
     className="emotion-4"
-    onTransitionEnd={[Function]}
   >
     bar
   </div>

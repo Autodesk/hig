@@ -12,6 +12,45 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
 
   const transitionDuration = "0.3s";
 
+  const createTransitionStyles = (args) => {
+    const transitionStyles = {
+      entering: {
+        maxHeight: 0,
+        opacity: 0,
+        overflow: "hidden",
+      },
+      entered: {
+        maxHeight: `${args.contentHeight}px`,
+        opacity: 1,
+        overflow: args.contentOverflow,
+      },
+      exiting: {
+        maxHeight: `${args.contentHeight}px`,
+        opacity: 1,
+        overflow: "hidden",
+      },
+      exited: {
+        maxHeight: 0,
+        opacity: 0,
+        overflow: "hidden",
+      },
+    };
+
+    const duration = args.isAnimationAllowed ? 300 : 0;
+
+    const defaultStyle = {
+      transition: `max-height ${duration}ms ease-in-out, opacity ${duration}ms ease-in-out`,
+      maxHeight: 0,
+      opacity: 0,
+    };
+
+    return {
+      transitionStyles,
+      defaultStyle,
+      duration,
+    };
+  };
+
   const styles = {
     wrapper: {
       height: "auto",
@@ -20,11 +59,7 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
       flexDirection: "column",
       alignItems: "stretch",
     },
-    contentTransitionWrapper: {
-      transitionProperty: "height",
-      transitionDuration: ".3s",
-      transitionTimingFunction: "ease-in-out",
-    },
+    createTransitionStyles,
     header: {
       display: "flex",
       alignItems: "center",
