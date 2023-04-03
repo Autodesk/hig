@@ -26,7 +26,7 @@ exports[`Accordion/ContentPresenter renders expanded content 1`] = `
   opacity: 0;
   max-height: 0px;
   opacity: 1;
-  overflow: hidden;
+  overflow: visible;
 }
 
 <div

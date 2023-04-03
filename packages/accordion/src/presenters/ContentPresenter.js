@@ -10,7 +10,9 @@ const ContentPresenter = (props) => {
 
   const contentContainerRef = useRef(null);
 
-  const [contentOverflow, setContentOverflow] = useState("hidden");
+  const [contentOverflow, setContentOverflow] = useState(
+    collapsed ? "hidden" : "visible"
+  );
   const [contentHeight, setContentHeight] = useState(0);
   const [isAnimationAllowed, setIsAnimationAllowed] = useState(false);
 
