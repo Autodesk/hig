@@ -1,3 +1,10 @@
+# [@weave-design/accordion-v1.0.2](https://github.com/Autodesk/hig/compare/@weave-design/accordion@1.0.1...@weave-design/accordion@1.0.2) (2023-04-03)
+
+
+### Bug Fixes
+
+* resolve overflow hidden issue in ContentPresenter component ([edd7cbf](https://github.com/Autodesk/hig/commit/edd7cbf))
+
 # [@weave-design/accordion-v1.0.1](https://github.com/Autodesk/hig/compare/@weave-design/accordion@1.0.0...@weave-design/accordion@1.0.1) (2023-03-31)
 
 
