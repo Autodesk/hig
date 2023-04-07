@@ -66,8 +66,10 @@ export default {
     value: { ref: "density.spacings.small" },
   },
   "accordion.header.focus.haloWidth": {
-    type: LENGTH, 
-    value: "2px",
+    type: BORDER_WIDTH,
+    value: {
+      ref: "basics.borderWidths.large",
+    },
   },
   "accordion.header.focus.haloColor": {
     type: COLOR,
