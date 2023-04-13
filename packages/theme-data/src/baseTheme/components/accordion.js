@@ -67,11 +67,11 @@ export default {
   },
   "accordion.header.focus.haloWidth": {
     type: LENGTH,
-    value: { ref: "basics.borderWidths.large"},
+    value: { ref: "basics.borderWidths.large" },
   },
   "accordion.header.focus.haloColor": {
     type: COLOR,
-    value: { ref: "colorScheme.reference.accent"},
-    transform: {alpha: 0.35},
-  }
+    value: { ref: "colorScheme.reference.accent" },
+    transform: { alpha: 0.35 },
+  },
 };
