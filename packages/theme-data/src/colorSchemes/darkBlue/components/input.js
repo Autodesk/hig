@@ -35,4 +35,9 @@ export default {
       ref: "basics.colors.secondary.darkBlue.200",
     },
   },
+  "input.value.error.highlightColor": {
+    transform: {
+      alpha: 0.35,
+    },
+  },
 };
