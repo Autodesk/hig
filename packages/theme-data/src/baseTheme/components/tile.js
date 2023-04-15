@@ -550,7 +550,7 @@ export default {
   "tile.gradient.end.backgroundColor": {
     type: COLOR,
     value: {
-      ref: "basics.colors.primary.charcoal.300",
+      ref: "basics.colors.primary.black",
     },
     transform: {
       alpha: 0.0,

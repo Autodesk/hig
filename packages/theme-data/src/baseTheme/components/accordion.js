@@ -65,4 +65,13 @@ export default {
     type: LENGTH,
     value: { ref: "density.spacings.small" },
   },
+  "accordion.header.focus.haloWidth": {
+    type: LENGTH,
+    value: { ref: "basics.borderWidths.large" },
+  },
+  "accordion.header.focus.haloColor": {
+    type: COLOR,
+    value: { ref: "colorScheme.reference.accent" },
+    transform: { alpha: 0.35 },
+  },
 };
