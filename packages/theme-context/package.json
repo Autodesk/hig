@@ -28,7 +28,7 @@
     "@weave-design/semantic-release-config": "^1.0.0"
   },
   "peerDependencies": {
-    "@weave-design/theme-data": "^1.1.0",
+    "@weave-design/theme-data": "^1.2.0",
     "react": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
