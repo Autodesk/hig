@@ -69,7 +69,7 @@
     "@weave-design/table": "^1.0.0",
     "@weave-design/text-link": "^1.0.0",
     "@weave-design/theme-context": "^1.0.0",
-    "@weave-design/theme-data": "^1.1.0",
+    "@weave-design/theme-data": "^1.2.0",
     "@weave-design/typography": "^1.0.0"
   },
   "eslintConfig": {
