@@ -2,20 +2,17 @@
 
 exports[`Accordion/ContentPresenter renders collapsed content 1`] = `
 .emotion-0 {
-  -webkit-transition-property: height;
-  transition-property: height;
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  height: 0;
+  -webkit-transition: max-height 0ms ease-in-out,opacity 0ms ease-in-out;
+  transition: max-height 0ms ease-in-out,opacity 0ms ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  max-height: 0;
+  opacity: 0;
   overflow: hidden;
-  visibility: hidden;
 }
 
 <div
   className="emotion-0"
-  onTransitionEnd={[Function]}
 >
   test
 </div>
@@ -23,20 +20,17 @@ exports[`Accordion/ContentPresenter renders collapsed content 1`] = `
 
 exports[`Accordion/ContentPresenter renders expanded content 1`] = `
 .emotion-0 {
-  -webkit-transition-property: height;
-  transition-property: height;
-  -webkit-transition-duration: .3s;
-  transition-duration: .3s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
+  -webkit-transition: max-height 0ms ease-in-out,opacity 0ms ease-in-out;
+  transition: max-height 0ms ease-in-out,opacity 0ms ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  max-height: 0px;
+  opacity: 1;
+  overflow: visible;
 }
 
 <div
   className="emotion-0"
-  onTransitionEnd={[Function]}
 >
   test
 </div>
