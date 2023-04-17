@@ -1202,8 +1202,8 @@ exports[`icons/index renders with no props 71`] = `
 <test-file-stub
   className="emotion-0"
   color="white"
-  height="16px"
-  width="16px"
+  height="18px"
+  width="17px"
 />
 `;
 
@@ -5594,6 +5594,74 @@ exports[`icons/index renders with no props 329`] = `
 `;
 
 exports[`icons/index renders with no props 330`] = `
+.emotion-0 {
+  fill: white;
+}
+
+.emotion-0 > * {
+  fill: white;
+}
+
+<test-file-stub
+  className="emotion-0"
+  color="white"
+  height="24px"
+  width="24px"
+/>
+`;
+
+exports[`icons/index renders with no props 331`] = `
+.emotion-0 {
+  fill: white;
+}
+
+.emotion-0 > * {
+  fill: white;
+}
+
+<test-file-stub
+  className="emotion-0"
+  color="white"
+  height="16px"
+  width="16px"
+/>
+`;
+
+exports[`icons/index renders with no props 332`] = `
+.emotion-0 {
+  fill: white;
+}
+
+.emotion-0 > * {
+  fill: white;
+}
+
+<test-file-stub
+  className="emotion-0"
+  color="white"
+  height="24px"
+  width="24px"
+/>
+`;
+
+exports[`icons/index renders with no props 333`] = `
+.emotion-0 {
+  fill: white;
+}
+
+.emotion-0 > * {
+  fill: white;
+}
+
+<test-file-stub
+  className="emotion-0"
+  color="white"
+  height="16px"
+  width="16px"
+/>
+`;
+
+exports[`icons/index renders with no props 334`] = `
 .emotion-0 {
   fill: white;
 }
