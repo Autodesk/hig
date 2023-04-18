@@ -258,6 +258,11 @@ export default {
       alpha: 0.25,
     },
   },
+  "halo.error": {
+    transform: {
+      alpha: 0.35,
+    },
+  },
   "indicator.default": {
     value: {
       ref: "colorScheme.reference.base",

@@ -71,6 +71,15 @@ export default {
     },
     type: COLOR,
   },
+  "halo.error": {
+    value: {
+      ref: "colorScheme.status.error",
+    },
+    transform: {
+      alpha: 0.25,
+    },
+    type: COLOR,
+  },
   "halo.focus": {
     value: {
       ref: "colorScheme.reference.accent",

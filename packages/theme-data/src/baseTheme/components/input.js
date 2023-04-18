@@ -124,6 +124,15 @@ export default {
       alpha: 0.2,
     },
   },
+  "input.value.error.highlightColor": {
+    type: COLOR,
+    value: {
+      ref: "colorScheme.status.error",
+    },
+    transform: {
+      alpha: 0.25,
+    },
+  },
   "input.value.lineHeight": {
     type: LINE_HEIGHT,
     value: {
