@@ -50,7 +50,7 @@ Theme data is a representation of the Weave visual design language in the form o
 ### Basics
 - Typography - See [`<Typography>`](./packages/typography/README.md) and [`<RichText>`](./packages/rich-text/README.md)
 - Layout - See [`<Spacer>`](./packages/spacer/README.md) and [`<Surface>`](./packages/surface/README.md)
-- Icons - See [`<Icons>`](./packages/icons/README.md) to easily render icons in React and the [`@hig/icons`](./packages/icons/README.md) package for svg data
+- Icons - See [`<Icons>`](./packages/icons/README.md) to easily render icons in React and the [`@weave-design/icons`](./packages/icons/README.md) package for svg data
 
 ### Components
 
