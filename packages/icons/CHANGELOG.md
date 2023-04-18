@@ -1,3 +1,10 @@
+# [@weave-design/icons-v1.1.0](https://github.com/Autodesk/hig/compare/@weave-design/icons@1.0.0...@weave-design/icons@1.1.0) (2023-04-18)
+
+
+### Features
+
+* add new icons ([7056315](https://github.com/Autodesk/hig/commit/7056315))
+
 # @weave-design/icons-v1.0.0 (2023-02-24)
 
 
