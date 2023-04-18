@@ -1,3 +1,10 @@
+# [@weave-design/theme-data-v1.3.0](https://github.com/Autodesk/hig/compare/@weave-design/theme-data@1.2.0...@weave-design/theme-data@1.3.0) (2023-04-18)
+
+
+### Features
+
+* added roles for louder errors ([d89db3d](https://github.com/Autodesk/hig/commit/d89db3d))
+
 # [@weave-design/theme-data-v1.2.0](https://github.com/Autodesk/hig/compare/@weave-design/theme-data@1.1.0...@weave-design/theme-data@1.2.0) (2023-04-15)
 
 
