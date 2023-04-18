@@ -1,7 +1,7 @@
 # Icons
 
 This package retains the source of the library of Weave icons.
-You can import individual icons to render on your app.
+You can import individual icons to render in your app.
 
 ```jsx
 import { Assets24 } from "@weave-design/icons";
