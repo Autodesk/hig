@@ -54,6 +54,11 @@ exports[`tree-view/TreeObjectNestedSubTreeItem renders tree with tree node 1`] =
   display: -ms-flexbox;
   display: flex;
   padding: 0 12px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   width: calc(100% - 12px);
 }
 

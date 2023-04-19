@@ -112,6 +112,9 @@ export default function stylesheet(props, themeData) {
       alignItems: `center`,
       display: `flex`,
       padding: `0 ${themeData["treeView.row.paddingHorizontal"]}`,
+      position: `absolute`,
+      top: `50%`,
+      transform: `translateY(-50%)`,
       width: `calc(100% - ${themeData["treeView.row.paddingHorizontal"]})`,
       "& > svg": {
         marginRight: themeData[`treeView.icon.marginRight`],
