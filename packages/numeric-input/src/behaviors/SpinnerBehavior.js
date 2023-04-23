@@ -123,6 +123,16 @@ export default class SpinnerBehavior extends Component {
       this.decrement();
     }
 
+    /**
+     * backspace/delete
+     * setting this here to ensure that backspace/delete will always register
+     */
+    if (event.keyCode === 8) {
+      this.setState({
+        isNum: true,
+      });
+    }
+
     return false;
   };
 
