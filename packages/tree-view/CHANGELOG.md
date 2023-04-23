@@ -1,3 +1,10 @@
+# [@weave-design/tree-view-v1.0.1](https://github.com/Autodesk/hig/compare/@weave-design/tree-view@1.0.0...@weave-design/tree-view@1.0.1) (2023-04-23)
+
+
+### Bug Fixes
+
+* center content wrapper vertically ([ddf1632](https://github.com/Autodesk/hig/commit/ddf1632))
+
 # @weave-design/tree-view-v1.0.0 (2023-03-07)
 
 
