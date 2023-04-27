@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
-import { sizes as iconSizes } from "@hig/icons";
-import ThemeContext from "@hig/theme-context";
+import { sizes as iconSizes } from "@weave-design/icons";
+import ThemeContext from "@weave-design/theme-context";
 import {
   createCustomClassNames,
   memoizeCreateButtonEventHandlers,
-} from "@hig/utils";
+} from "@weave-design/utils";
 
 import { AVAILABLE_TARGETS, targets } from "../targets";
 import ExternalLinkIcon from "../presenters/ExternalLinkIcon";

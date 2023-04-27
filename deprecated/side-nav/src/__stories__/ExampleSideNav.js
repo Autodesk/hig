@@ -1,6 +1,6 @@
 import React from "react";
-import { Graph24, ProductsAndServices24, Collaboration24 } from "@hig/icons";
-import Typography from "@hig/typography";
+import { Graph24, ProductsAndServices24, Collaboration24 } from "@weave-design/icons";
+import Typography from "@weave-design/typography";
 
 import SideNav from "../index";
 

@@ -1,6 +1,6 @@
 import { shallow } from "enzyme";
 import React from "react";
-import { ExternalLink16, ExternalLink24, sizes as iconSizes } from "@hig/icons";
+import { ExternalLink16, ExternalLink24, sizes as iconSizes } from "@weave-design/icons";
 
 import ExternalLinkIcon from "./ExternalLinkIcon";
 
