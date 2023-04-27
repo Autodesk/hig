@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { ExternalLink16, ExternalLink24, sizes as iconSizes } from "@hig/icons";
+import { ExternalLink16, ExternalLink24, sizes as iconSizes } from "@weave-design/icons";
 
 export default class ExternalLinkIcon extends Component {
   // eslint-disable-next-line react/static-property-placement

@@ -1,6 +1,6 @@
 import React from "react";
 import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
-import { Collaboration24, Graph24, ProductsAndServices24 } from "@hig/icons";
+import { Collaboration24, Graph24, ProductsAndServices24 } from "@weave-design/icons";
 
 import SideNav from "../index";
 import Readme from "../../README.md";

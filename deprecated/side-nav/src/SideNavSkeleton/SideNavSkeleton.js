@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
-import SkeletonItem from "@hig/skeleton-item";
+import SkeletonItem from "@weave-design/skeleton-item";
 import stylesheet from "./stylesheet";
 
 const skeletonItemStyles = Object.freeze([
