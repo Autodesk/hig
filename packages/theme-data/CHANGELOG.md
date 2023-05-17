@@ -1,3 +1,10 @@
+# [@weave-design/theme-data-v1.3.1](https://github.com/Autodesk/hig/compare/@weave-design/theme-data@1.3.0...@weave-design/theme-data@1.3.1) (2023-05-17)
+
+
+### Bug Fixes
+
+* accordion focus halo width value fix ([c5031e7](https://github.com/Autodesk/hig/commit/c5031e7))
+
 # [@weave-design/theme-data-v1.3.0](https://github.com/Autodesk/hig/compare/@weave-design/theme-data@1.2.0...@weave-design/theme-data@1.3.0) (2023-04-18)
 
 

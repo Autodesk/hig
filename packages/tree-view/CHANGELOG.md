@@ -1,3 +1,10 @@
+# [@weave-design/tree-view-v1.0.2](https://github.com/Autodesk/hig/compare/@weave-design/tree-view@1.0.1...@weave-design/tree-view@1.0.2) (2023-05-17)
+
+
+### Bug Fixes
+
+* tree-item content width should not exceed container ([e7eb70f](https://github.com/Autodesk/hig/commit/e7eb70f))
+
 # [@weave-design/tree-view-v1.0.1](https://github.com/Autodesk/hig/compare/@weave-design/tree-view@1.0.0...@weave-design/tree-view@1.0.1) (2023-04-23)
 
 
