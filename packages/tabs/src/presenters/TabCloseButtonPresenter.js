@@ -8,6 +8,7 @@ import stylesheet from "./Tab.stylesheet";
 
 const TabCloseButtonPresenter = (props) => {
   const {
+    closeTitle = "close",
     disabled,
     onBlur,
     onFocus,
@@ -69,7 +70,7 @@ const TabCloseButtonPresenter = (props) => {
                 onMouseLeave={handleMouseLeave}
                 onMouseUp={handleMouseUp}
                 tabIndex="-1"
-                title="close"
+                title={closeTitle}
                 type="button"
               >
                 <CloseIcon />
@@ -85,6 +86,10 @@ const TabCloseButtonPresenter = (props) => {
 TabCloseButtonPresenter.displayName = "TabCloseButtonPresenter";
 
 TabCloseButtonPresenter.propTypes = {
+  /**
+   * The title attribute for the close button
+   */
+  closeTitle: PropTypes.string,
   /**
    * Prevents user actions on the button
    */
