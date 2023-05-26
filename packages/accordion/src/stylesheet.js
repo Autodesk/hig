@@ -2,6 +2,7 @@ import { indicators, indicatorPositions } from "./constants";
 
 export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
   const {
+    hasFocus,
     hasHover,
     indicator,
     indicatorPosition,
@@ -78,6 +79,11 @@ export default function stylesheet(props = {}, themeData = {}, themeMeta = {}) {
       color: themeData["accordion.header.fontColor"],
       width: "100%",
       opacity: disabled ? themeData["colorScheme.opacity.disabled"] : "1",
+      ...(hasFocus
+        ? {
+            outline: `${themeData["accordion.header.focus.haloWidth"]} solid ${themeData["accordion.header.focus.haloColor"]}`,
+          }
+        : {}),
     },
     indicatorWrapper: {
       order: indicatorPosition === indicatorPositions.LEFT ? -1 : 1,
