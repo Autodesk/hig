@@ -1,3 +1,10 @@
+# [@weave-design/accordion-v1.1.0](https://github.com/Autodesk/hig/compare/@weave-design/accordion@1.0.2...@weave-design/accordion@1.1.0) (2023-05-28)
+
+
+### Features
+
+* add focus state ([9b538c0](https://github.com/Autodesk/hig/commit/9b538c0))
+
 # [@weave-design/accordion-v1.0.2](https://github.com/Autodesk/hig/compare/@weave-design/accordion@1.0.1...@weave-design/accordion@1.0.2) (2023-04-03)
 
 
