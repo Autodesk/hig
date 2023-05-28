@@ -1,3 +1,10 @@
+# [@weave-design/tabs-v1.1.0](https://github.com/Autodesk/hig/compare/@weave-design/tabs@1.0.0...@weave-design/tabs@1.1.0) (2023-05-28)
+
+
+### Features
+
+* add closeTitle prop to close button on Tabs ([3dfd85c](https://github.com/Autodesk/hig/commit/3dfd85c))
+
 # @weave-design/tabs-v1.0.0 (2023-03-07)
 
 
