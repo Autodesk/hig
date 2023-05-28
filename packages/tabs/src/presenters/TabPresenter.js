@@ -15,6 +15,7 @@ import {
 
 export default function TabPresenter({
   active,
+  closeTitle,
   hasFocus,
   hasHover,
   isPressed,
@@ -121,6 +122,7 @@ export default function TabPresenter({
                       css(styles.closeButton),
                       closeButtonClassName
                     )}
+                    closeTitle={closeTitle}
                     onClick={onClose}
                     stylesheet={customStylesheet}
                   />
@@ -142,16 +144,14 @@ export default function TabPresenter({
 
 TabPresenter.propTypes = {
   active: PropTypes.bool,
-  label: PropTypes.node,
-  icon: PropTypes.node,
-  disabled: PropTypes.bool,
   closable: PropTypes.bool,
-  variant: PropTypes.oneOf(AVAILABLE_VARIANTS),
-  orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
-  showDivider: PropTypes.bool,
+  closeTitle: PropTypes.bool,
+  disabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
+  icon: PropTypes.node,
   isPressed: PropTypes.bool,
+  label: PropTypes.node,
   onBlur: PropTypes.func,
   onFocus: PropTypes.func,
   onClick: PropTypes.func,
@@ -159,7 +159,10 @@ TabPresenter.propTypes = {
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
   onClose: PropTypes.func,
+  orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
+  showDivider: PropTypes.bool,
   stylesheet: PropTypes.func,
+  variant: PropTypes.oneOf(AVAILABLE_VARIANTS),
 };
 
 TabPresenter.defaultProps = {

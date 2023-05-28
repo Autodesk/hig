@@ -7,6 +7,7 @@ const Tab = (props) => {
   const {
     active,
     closable,
+    closeTitle,
     disabled,
     icon,
     label,
@@ -47,6 +48,7 @@ const Tab = (props) => {
           active={active}
           disabled={disabled}
           closable={closable}
+          closeTitle={closeTitle}
           hasFocus={hasFocus}
           hasHover={hasHover}
           isPressed={isPressed}
@@ -87,6 +89,10 @@ Tab.propTypes = {
    */
   closable: PropTypes.bool,
   /**
+   * The title attribute for the close button
+   */
+  closeTitle: PropTypes.string,
+  /**
    * Specify if the tab is disabled
    */
   disabled: PropTypes.bool,
@@ -109,6 +115,7 @@ Tab.defaultProps = {
   active: false,
   disabled: false,
   closable: false,
+  closeTitle: "close",
 };
 
 export default Tab;

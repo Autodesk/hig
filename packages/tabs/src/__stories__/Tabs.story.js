@@ -92,7 +92,13 @@ const Template = (args, context) => {
   const Dashboard =
     context.globals.density === "Medium density" ? Dashboard24 : Dashboard16;
   const complexTabsChildren = [
-    <Tab label="Complex" key="complex" icon={<Settings />} closable>
+    <Tab
+      label="Complex"
+      key="complex"
+      icon={<Settings />}
+      closable
+      closeTitle="close settings"
+    >
       <RichText>
         Complex tab can have an icon and a close button, complex tab only works
         when variant is set to &quot;box&quot; or &quot;canvas&quot;
@@ -107,7 +113,7 @@ const Template = (args, context) => {
     <Tab label="Disabled" key="disabled" disabled>
       <RichText>Disabled</RichText>
     </Tab>,
-    <Tab label="Closable" key="closable" closable>
+    <Tab label="Closable" key="closable" closable closeTitle="close this tab">
       <RichText>
         Closable tab will only works when variant is set to &quot;box&quot; or
         &quot;canvas&quot;. Clicks the close button will trigger the
