@@ -21,6 +21,7 @@ const TilePresenter = (props) => {
     hasHover,
     isPressed,
     media,
+    optionalContent,
     orientation,
     selected,
     statusBadge,
@@ -58,6 +59,10 @@ const TilePresenter = (props) => {
   );
   const titleClassName = createCustomClassNames(className, "title");
   const subtitleClassName = createCustomClassNames(className, "subtitle");
+  const optionalContentClassName = createCustomClassNames(
+    className,
+    "optional-content-container"
+  );
 
   return (
     <ThemeContext.Consumer>
@@ -135,6 +140,16 @@ const TilePresenter = (props) => {
               >
                 {subtitle}
               </div>
+              {optionalContent && (
+                <div
+                  className={cx([
+                    optionalContentClassName,
+                    css(styles.higTileOptionContentContainer),
+                  ])}
+                >
+                  {optionalContent}
+                </div>
+              )}
             </div>
           </div>
         );
@@ -152,6 +167,7 @@ TilePresenter.propTypes = {
   hasHover: PropTypes.bool,
   isPressed: PropTypes.bool,
   media: PropTypes.node,
+  optionalContent: PropTypes.node,
   orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
   selected: PropTypes.bool,
   statusBadge: PropTypes.node,
