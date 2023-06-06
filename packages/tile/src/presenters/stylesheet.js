@@ -146,6 +146,10 @@ export default function stylesheet(props, themeData, themeMeta) {
       top: `-${themeData["tile.haloWidth"]}`,
       zIndex: 2,
     },
+    higTileOptionContentContainer: {
+      fontSize: themeData["density.fontSizes.small"],
+      marginBottom: themeData["density.spacings.extraSmall"],
+    },
   };
 
   return customStylesheet

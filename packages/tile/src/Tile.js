@@ -16,6 +16,7 @@ const Tile = (props) => {
     disabled,
     divider,
     media,
+    optionalContent,
     orientation = "vertical",
     selected,
     statusBadge,
@@ -64,6 +65,7 @@ const Tile = (props) => {
           hasHover={hasHover}
           isPressed={isPressed}
           media={media}
+          optionalContent={optionalContent}
           orientation={orientation}
           selected={selected}
           statusBadge={statusBadge}
@@ -100,6 +102,8 @@ Tile.propTypes = {
   divider: PropTypes.bool,
   /** The media associated with the Tile */
   media: PropTypes.node.isRequired,
+  /** Pass in the additional components for the complex variation */
+  optionalContent: PropTypes.node,
   /** Sets the orientation of the Tile */
   orientation: PropTypes.oneOf(AVAILABLE_ORIENTATIONS),
   /** Sets the selected state of the Tile */
