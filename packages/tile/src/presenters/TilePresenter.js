@@ -172,9 +172,9 @@ TilePresenter.propTypes = {
   selected: PropTypes.bool,
   statusBadge: PropTypes.node,
   stylesheet: PropTypes.func,
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.node,
   surface: PropTypes.oneOf(AVAILABLE_LEVELS),
-  title: PropTypes.string,
+  title: PropTypes.node,
 };
 
 export default TilePresenter;
