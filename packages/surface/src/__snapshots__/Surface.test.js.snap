@@ -20,7 +20,7 @@ exports[`surface/Surface renders with custom className 1`] = `
 }
 
 <div
-  className="emotion-0 test-classname"
+  className="test-classname emotion-0"
 />
 `;
 
@@ -77,7 +77,7 @@ exports[`surface/Surface renders with shadow 1`] = `
   background-color: #ffffff;
   padding: 0 0;
   border-radius: 0;
-  box-shadow: 0 0 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 <div
