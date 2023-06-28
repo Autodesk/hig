@@ -1,3 +1,10 @@
+# [@weave-design/tile-v1.2.0](https://github.com/Autodesk/hig/compare/@weave-design/tile@1.1.0...@weave-design/tile@1.2.0) (2023-06-28)
+
+
+### Features
+
+* subtitle and title prop to accept nodes ([350781e](https://github.com/Autodesk/hig/commit/350781e))
+
 # [@weave-design/tile-v1.1.0](https://github.com/Autodesk/hig/compare/@weave-design/tile@1.0.0...@weave-design/tile@1.1.0) (2023-06-06)
 
 
