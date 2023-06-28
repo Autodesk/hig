@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ThemeContext } from "@weave-design/theme-context";
-import { css, cx } from "emotion";
+
 import stylesheet from "./Surface.stylesheet";
 import {
   AVAILABLE_LEVELS,
@@ -23,6 +23,7 @@ const Surface = (props) => {
     ...otherProps
   } = props;
   const { className } = otherProps;
+
   return (
     <ThemeContext.Consumer>
       {({ resolvedRoles }) => {
@@ -42,7 +43,7 @@ const Surface = (props) => {
 
         return (
           Element && (
-            <Element className={cx(css(styles.surface), className)}>
+            <Element className={className} css={styles.surface}>
               {children}
             </Element>
           )
