@@ -23,7 +23,7 @@
   "modulePaths": ["node_modules"],
   "moduleFileExtensions": ["js", "jsx", "json"],
   "setupFiles": ["raf/polyfill"],
-  "setupFilesAfterEnv": ["@weave-design/jest-preset/setupTests.js"],
+  "setupFilesAfterEnv": ["@weave-design/jest-preset/setupTestsEmotion11.js"],
   "testPathIgnorePatterns": [
     "docs",
     "packages/babel-preset",
