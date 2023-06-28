@@ -11,7 +11,8 @@ module.exports = function createBuildPreset() {
           targets: ">1%"
         }
       ],
-      "@babel/preset-react"
+      "@babel/preset-react",
+      "@emotion/babel-preset-css-prop"
     ],
     plugins: [
       "react-docgen",
@@ -30,7 +31,8 @@ module.exports = function createBuildPreset() {
       "@babel/plugin-proposal-export-namespace-from",
       "@babel/plugin-proposal-numeric-separator",
       "@babel/plugin-proposal-throw-expressions",
-      "@babel/plugin-proposal-export-default-from"
+      "@babel/plugin-proposal-export-default-from",
+      "@emotion/babel-plugin"
     ]
   };
 };
