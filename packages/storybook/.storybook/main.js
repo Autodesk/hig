@@ -9,6 +9,10 @@ module.exports = {
     builder: 'webpack5'
   },
   framework: "@storybook/react",
+  babel: async (options) => {
+    options.presets.push('@emotion/babel-preset-css-prop');
+    return options;
+  },
   stories: ["../../../packages/**/*.story.mdx", "../../../packages/**/*.story.[tj]s"],
   staticDirs: ["../public"],
   webpackFinal: async (config, {

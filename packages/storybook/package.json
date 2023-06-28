@@ -35,6 +35,7 @@
     "@babel/plugin-transform-spread": "^7.16.7",
     "@babel/preset-env": "^7.17.10",
     "@babel/preset-typescript": "^7.16.7",
+    "@emotion/babel-preset-css-prop": "^11.11.0",
     "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-docs": "^6.5.13",
     "@storybook/addon-essentials": "^6.5.13",
