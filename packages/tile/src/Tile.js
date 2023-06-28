@@ -113,11 +113,11 @@ Tile.propTypes = {
   /** Adds custom/overriding styles */
   stylesheet: PropTypes.func,
   /** The subtitle in the content section */
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.node,
   /** The surface level that the Tile sits on top of */
   surface: PropTypes.oneOf(AVAILABLE_LEVELS),
   /** The title in the content section */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.node.isRequired,
 };
 
 export default Tile;
