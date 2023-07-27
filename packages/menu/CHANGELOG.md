@@ -1,3 +1,10 @@
+# [@weave-design/menu-v1.0.1](https://github.com/Autodesk/hig/compare/@weave-design/menu@1.0.0...@weave-design/menu@1.0.1) (2023-07-27)
+
+
+### Bug Fixes
+
+* have fallback object for React18 StrictMode ([b1f5b0a](https://github.com/Autodesk/hig/commit/b1f5b0a))
+
 # @weave-design/menu-v1.0.0 (2023-02-25)
 
 
