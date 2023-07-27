@@ -92,7 +92,7 @@ const MenuPresenter = (props) => {
       }
       mounted.current = true;
     } else if (props.role !== `group`) {
-      const previousOptions = props.getOptionsInfo();
+      const previousOptions = props.getOptionsInfo() || {};
       const optionsInfo = [];
       const currentIds = [];
       const prevIds = [];
