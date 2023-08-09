@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Surface from "@hig/surface";
-import ThemeContext from "@hig/theme-context";
+import Surface from "@weave-design/surface";
+import ThemeContext from "@weave-design/theme-context";
 import stylesheet from "./stylesheet";
 
 export default class BelowTopNavCompact extends Component {

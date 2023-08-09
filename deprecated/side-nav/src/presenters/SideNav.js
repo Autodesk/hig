@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
-import { ThemeContext } from "@hig/theme-context";
-import { Back24, Back16 } from "@hig/icons";
-import Typography from "@hig/typography";
-import TextLink from "@hig/text-link";
-import IconButton from "@hig/icon-button";
-import { createCustomClassNames } from "@hig/utils";
+import { ThemeContext } from "@weave-design/theme-context";
+import { Back24, Back16 } from "@weave-design/icons";
+import Typography from "@weave-design/typography";
+import TextLink from "@weave-design/text-link";
+import IconButton from "@weave-design/icon-button";
+import { createCustomClassNames } from "@weave-design/utils";
 
 import stylesheet from "./stylesheet";
 
