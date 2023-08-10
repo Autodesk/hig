@@ -1,3 +1,15 @@
+# @hig/side-nav-v4.0.1
+
+### Features
+
+* Updated all @hig dependencies to point to new namepace, @weave-design. ([192b1b2](https://github.com/Autodesk/hig/pull/3020/commits/192b1b2b75beb3b67caaec72b2dcff824964e5df))
+* This was a manual release on April 26, 2023
+
+### BREAKING CHANGES
+
+- update deps from @hig namespace to @weave-design
+- add react18 support
+
 # [@hig/side-nav-v3.1.1](https://github.com/Autodesk/hig/compare/@hig/side-nav@3.1.0...@hig/side-nav@3.1.1) (2022-07-10)
 
 
