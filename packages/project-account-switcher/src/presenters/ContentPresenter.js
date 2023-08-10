@@ -4,7 +4,10 @@ import { css, cx } from "emotion";
 import memoize from "lodash.memoize";
 import TextLink from "@weave-design/text-link";
 import Typography from "@weave-design/typography";
-import { createButtonEventHandlers, createCustomClassNames } from "@weave-design/utils";
+import {
+  createButtonEventHandlers,
+  createCustomClassNames,
+} from "@weave-design/utils";
 
 import constructPlaceholder from "./constructPlaceholder";
 import stylesheet from "./stylesheet";
