@@ -1,6 +1,6 @@
 import React from "react";
 import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
-import Surface from "@hig/surface";
+import Surface from "@weave-design/surface";
 
 import SideNav, { BelowTopNavCompact, Docked } from "../index";
 import ExampleSideNav from "./ExampleSideNav";

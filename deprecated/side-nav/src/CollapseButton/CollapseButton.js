@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
-import { CaretDownMUI, CaretDownSUI } from "@hig/icons";
-import ThemeContext from "@hig/theme-context";
-import { memoizeCreateButtonEventHandlers } from "@hig/utils";
+import { CaretDownMUI, CaretDownSUI } from "@weave-design/icons";
+import ThemeContext from "@weave-design/theme-context";
+import { memoizeCreateButtonEventHandlers } from "@weave-design/utils";
 import stylesheet from "./stylesheet";
 
 /**

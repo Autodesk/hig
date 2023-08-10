@@ -17,11 +17,11 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/flyout": "^2.1.0",
-    "@hig/icons": "^4.1.0",
-    "@hig/text-link": "^2.1.0",
-    "@hig/typography": "^2.1.0",
-    "@hig/utils": "^0.4.1",
+    "@weave-design/flyout": "^1.0.0",
+    "@weave-design/icons": "^1.1.0",
+    "@weave-design/text-link": "^1.0.0",
+    "@weave-design/typography": "^1.0.0",
+    "@weave-design/utils": "^1.0.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },

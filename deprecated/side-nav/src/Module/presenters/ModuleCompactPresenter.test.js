@@ -1,5 +1,5 @@
 import React from "react";
-import { Collaboration24 } from "@hig/icons";
+import { Collaboration24 } from "@weave-design/icons";
 import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 
 import ModuleCompactPresenter from "./ModuleCompactPresenter";

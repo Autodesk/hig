@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { css, cx } from "emotion";
-import ThemeContext from "@hig/theme-context";
-import { Search24, CloseLUI } from "@hig/icons";
+import ThemeContext from "@weave-design/theme-context";
+import { Search24, CloseLUI } from "@weave-design/icons";
 import {
   createCustomClassNames,
   memoizeCreateButtonEventHandlers,
-} from "@hig/utils";
+} from "@weave-design/utils";
 import stylesheet from "./stylesheet";
 
 const Search = (props) => {
