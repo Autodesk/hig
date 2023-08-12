@@ -1,18 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { combineEventHandlers, createCustomClassNames } from "@hig/utils";
+import {
+  combineEventHandlers,
+  createCustomClassNames,
+} from "@weave-design/utils";
 import Flyout, {
   anchorPoints,
   AVAILABLE_ANCHOR_POINTS,
   offsetContainerVertical,
   offsetPanelHorizontal,
-} from "@hig/flyout";
+} from "@weave-design/flyout";
 
 import { renderActionFlyoutPanel } from "./presenters/ActionFlyoutPanelPresenter";
 import ActionPresenter from "./presenters/ActionPresenter";
 import NavButtonPresenter from "./presenters/NavButtonPresenter";
 
-/** @typedef {import("@hig/flyout").Coordinates} Coordinates */
+/** @typedef {import("@weave-design/flyout").Coordinates} Coordinates */
 
 const NavAction = (props) => {
   const {

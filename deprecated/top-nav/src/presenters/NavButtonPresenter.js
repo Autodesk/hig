@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import IconButton from "@hig/icon-button";
-import { List16, List24 } from "@hig/icons";
-import ThemeContext from "@hig/theme-context";
+import IconButton from "@weave-design/icon-button";
+import { List16, List24 } from "@weave-design/icons";
+import ThemeContext from "@weave-design/theme-context";
 
 export default function NavButtonPresenter({
   icon,

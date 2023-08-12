@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { offsetPanelHorizontal, offsetContainerVertical } from "@hig/flyout";
 import ProfileFlyout, {
   anchorPoints,
   AVAILABLE_ANCHOR_POINTS,
 } from "@hig/profile-flyout";
-import { createCustomClassNames } from "@hig/utils";
+import { offsetPanelHorizontal, offsetContainerVertical } from "@weave-design/flyout";
+import { createCustomClassNames } from "@weave-design/utils";
 
 import { renderActionFlyoutPanel } from "./presenters/ActionFlyoutPanelPresenter";
 import ProfileActionPresenter from "./presenters/ProfileActionPresenter";

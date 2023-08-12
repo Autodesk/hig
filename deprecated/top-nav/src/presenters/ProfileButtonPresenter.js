@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Avatar, { sizes } from "@hig/avatar";
+import Avatar, { sizes } from "@weave-design/avatar";
 
 export default function ProfileButtonPresenter({
   avatarImage,

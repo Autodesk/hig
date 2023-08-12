@@ -1,4 +1,4 @@
-import { ProfileContent } from "@hig/profile-flyout";
+import { ProfileContent } from "@weave-design/profile-flyout";
 
 import ActionPresenter from "./presenters/ActionPresenter";
 import HelpAction from "./HelpAction";

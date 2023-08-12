@@ -5,9 +5,9 @@ import {
   AVAILABLE_ANCHOR_POINTS,
   offsetContainerVertical,
   offsetPanelHorizontal,
-} from "@hig/flyout";
-import { Help16, Help24 } from "@hig/icons";
-import ThemeContext from "@hig/theme-context";
+} from "@weave-design/flyout";
+import { Help16, Help24 } from "@weave-design/icons";
+import ThemeContext from "@weave-design/theme-context";
 
 import NavAction from "./NavAction";
 

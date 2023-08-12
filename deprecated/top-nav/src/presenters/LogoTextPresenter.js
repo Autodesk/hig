@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Typography from "@hig/typography";
+import Typography from "@weave-design/typography";
 
 import stylesheet from "./stylesheet";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { css } from "emotion";
-import { Panel } from "@hig/flyout";
+import { Panel } from "@weave-design/flyout";
 
 import stylesheet from "./stylesheet";
 

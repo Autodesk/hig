@@ -1,11 +1,11 @@
 import React from "react";
-import { offsetContainerVertical, offsetPanelHorizontal } from "@hig/flyout";
-import NotificationsFlyout, { anchorPoints } from "@hig/notifications-flyout";
-import { createCustomClassNames } from "@hig/utils";
+import { offsetContainerVertical, offsetPanelHorizontal } from "@weave-design/flyout";
+import NotificationsFlyout, { anchorPoints } from "@weave-design/notifications-flyout";
+import { createCustomClassNames } from "@weave-design/utils";
 
 import ActionPresenter from "./presenters/ActionPresenter";
 
-/** @typedef {import("@hig/flyout").Coordinates} Coordinates */
+/** @typedef {import("@weave-design/flyout").Coordinates} Coordinates */
 
 const NotificationsAction = (props) => {
   const { children, ...otherProps } = props;
