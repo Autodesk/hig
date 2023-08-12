@@ -22,13 +22,13 @@
     "prop-types": "^15.7.1"
   },
   "devDependencies": {
-    "@hig/text-link": "^2.2.0",
-    "@hig/progress-bar": "^2.1.0",
     "@weave-design/babel-preset": "^1.0.0",
     "@weave-design/eslint-config": "^1.0.0",
     "@weave-design/jest-preset": "^1.0.0",
+    "@weave-design/progress-bar": "^1.0.0",
     "@weave-design/scripts": "^1.0.0",
-    "@weave-design/semantic-release-config": "^1.0.0"
+    "@weave-design/semantic-release-config": "^1.0.0",
+    "@weave-design/text-link": "^1.0.0"
   },
   "peerDependencies": {
     "@weave-design/theme-context": "^1.0.0",

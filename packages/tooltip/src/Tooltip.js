@@ -19,14 +19,14 @@ Tooltip.displayName = "Tooltip";
 
 Tooltip.defaultProps = {
   /**
-   * @param {import("@hig/flyout").Coordinates} coordinates
-   * @returns {import("@hig/flyout").Coordinates}
+   * @param {import("@weave-design/flyout").Coordinates} coordinates
+   * @returns {import("@weave-design/flyout").Coordinates}
    */
   alterCoordinates(coordinates) {
     return dislocateContainer(coordinates, 5);
   },
   /**
-   * @param {import("@hig/flyout").PanelRendererPayload} payload
+   * @param {import("@weave-design/flyout").PanelRendererPayload} payload
    */
   /* eslint-disable-next-line react/prop-types */
   panel({ innerRef, content, handleScroll, maxHeight, className, stylesheet }) {
