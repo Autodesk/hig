@@ -1,3 +1,16 @@
+# [@hig/profile-flyout-v4.0.0](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@3.2.0...@hig/profile-flyout@4.0.0) (2023-08-12)
+
+
+### Features
+
+* update dependencies ([086d8d0](https://github.com/Autodesk/hig/commit/086d8d0))
+
+
+### BREAKING CHANGES
+
+* - update deps from @hig namespace to @weave-design
+- add react18 support
+
 # [@hig/profile-flyout-v3.2.0](https://github.com/Autodesk/hig/compare/@hig/profile-flyout@3.1.0...@hig/profile-flyout@3.2.0) (2022-09-05)
 
 
