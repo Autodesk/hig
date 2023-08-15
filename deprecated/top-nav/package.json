@@ -17,14 +17,14 @@
     "build/*"
   ],
   "dependencies": {
-    "@hig/avatar": "^2.1.0",
-    "@hig/flyout": "^2.1.0",
-    "@hig/icon-button": "^3.1.0",
-    "@hig/icons": "^4.1.0",
-    "@hig/notifications-flyout": "^3.1.0",
-    "@hig/profile-flyout": "^3.2.0",
-    "@hig/typography": "^2.1.0",
-    "@hig/utils": "^0.4.1",
+    "@hig/profile-flyout": "^4.0.0",
+    "@weave-design/avatar": "^1.0.0",
+    "@weave-design/flyout": "^1.0.0",
+    "@weave-design/icon-button": "^1.0.0",
+    "@weave-design/icons": "^1.1.0",
+    "@weave-design/notifications-flyout": "^1.0.0",
+    "@weave-design/typography": "^1.0.0",
+    "@weave-design/utils": "^1.0.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
   },
@@ -36,9 +36,9 @@
     "@weave-design/semantic-release-config": "^1.0.0"
   },
   "peerDependencies": {
-    "@hig/theme-context": "^4.2.0",
-    "@hig/theme-data": "^3.4.2",
-    "react": "^17.0.0"
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-designv/theme-data": "^1.3.1",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "build": "weave-scripts-build",

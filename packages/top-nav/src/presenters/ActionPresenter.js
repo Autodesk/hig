@@ -1,23 +1,23 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Typography from "@weave-design/typography";
+import { css, cx } from "emotion";
 
 import stylesheet from "./stylesheet";
 
-export default function LogoTextPresenter({
+export default function ActionPresenter({
   children,
   stylesheet: customStylesheet,
+  ...otherProps
 }) {
+  const { className } = otherProps;
   const styles = stylesheet({ stylesheet: customStylesheet }, {});
   return (
-    <Typography variant="h1" style={styles.topNavLogoTextPresenter}>
-      {children}
-    </Typography>
+    <div className={cx([className, css(styles.topNavAction)])}>{children}</div>
   );
 }
 
-LogoTextPresenter.propTypes = {
-  /** Logo content */
+ActionPresenter.propTypes = {
+  /** Content to render inside an action */
   children: PropTypes.node,
   /** Function to modify the component's styles */
   stylesheet: PropTypes.func,
