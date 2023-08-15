@@ -1,6 +1,11 @@
 import React from "react";
-import { offsetContainerVertical, offsetPanelHorizontal } from "@weave-design/flyout";
-import NotificationsFlyout, { anchorPoints } from "@weave-design/notifications-flyout";
+import {
+  offsetContainerVertical,
+  offsetPanelHorizontal,
+} from "@weave-design/flyout";
+import NotificationsFlyout, {
+  anchorPoints,
+} from "@weave-design/notifications-flyout";
 import { createCustomClassNames } from "@weave-design/utils";
 
 import ActionPresenter from "./presenters/ActionPresenter";

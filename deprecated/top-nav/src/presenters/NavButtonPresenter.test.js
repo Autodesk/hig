@@ -1,7 +1,7 @@
 import React from "react";
 import { takeSnapshotsOf } from "@weave-design/jest-preset/helpers";
 
-import { List24 } from "@hig/icons";
+import { List24 } from "@weave-design/icons";
 import NavButtonPresenter from "./NavButtonPresenter";
 
 describe("top-nav/presenters/NavActionButtonPresenter", () => {

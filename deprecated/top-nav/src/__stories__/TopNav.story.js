@@ -1,6 +1,6 @@
 import React from "react";
 import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
-import { Notification } from "@hig/notifications-flyout";
+import { Notification } from "@weave-design/notifications-flyout";
 import { css } from "emotion";
 
 import TopNav, {
