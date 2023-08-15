@@ -1,6 +1,6 @@
 # TopNav <sup><sub>(Top Navigation)</sub></sup>
 
-The primary navigation across the top of the screen. This piece contains the product name/icon, search bar, project/account switcher, and avatar.
+The primary navigation across the top of the screen. This piece contains the product name/icon, search bar, project/account switcher, and avatar/profile-flyout.
 
 ## Getting started
 
