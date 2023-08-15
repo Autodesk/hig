@@ -1,3 +1,16 @@
+# [@hig/top-nav-v5.0.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@4.2.0...@hig/top-nav@5.0.0) (2023-08-15)
+
+
+### Features
+
+* update dependencies ([6094856](https://github.com/Autodesk/hig/commit/6094856))
+
+
+### BREAKING CHANGES
+
+* - update deps from @hig namespace to @weave-design
+- add react18 support
+
 # [@hig/top-nav-v4.2.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@4.1.2...@hig/top-nav@4.2.0) (2022-09-05)
 
 
