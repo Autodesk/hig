@@ -1,3 +1,10 @@
+# [@hig/top-nav-v5.0.1](https://github.com/Autodesk/hig/compare/@hig/top-nav@5.0.0...@hig/top-nav@5.0.1) (2023-08-15)
+
+
+### Bug Fixes
+
+* update to correct peer dependency ([9453282](https://github.com/Autodesk/hig/commit/9453282))
+
 # [@hig/top-nav-v5.0.0](https://github.com/Autodesk/hig/compare/@hig/top-nav@4.2.0...@hig/top-nav@5.0.0) (2023-08-15)
 
 
