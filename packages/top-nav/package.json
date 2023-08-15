@@ -1,7 +1,7 @@
 {
-  "name": "@hig/profile-flyout",
-  "version": "3.2.0",
-  "description": "HIG Profile Flyout",
+  "name": "@hig/top-nav",
+  "version": "4.2.0",
+  "description": "HIG Top Navigation",
   "author": "Autodesk Inc.",
   "license": "Apache-2.0",
   "repository": {
@@ -17,16 +17,16 @@
     "build/*"
   ],
   "dependencies": {
+    "@hig/profile-flyout": "^4.0.0",
     "@weave-design/avatar": "^1.0.0",
     "@weave-design/flyout": "^1.0.0",
+    "@weave-design/icon-button": "^1.0.0",
+    "@weave-design/icons": "^1.1.0",
+    "@weave-design/notifications-flyout": "^1.0.0",
+    "@weave-design/typography": "^1.0.0",
     "@weave-design/utils": "^1.0.0",
     "emotion": "^10.0.0",
     "prop-types": "^15.7.1"
-  },
-  "peerDependencies": {
-    "@weave-design/theme-context": "^1.0.0",
-    "@weave-design/theme-data": "^1.3.1",
-    "react": "^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@weave-design/babel-preset": "^1.0.0",
@@ -34,6 +34,11 @@
     "@weave-design/jest-preset": "^1.0.0",
     "@weave-design/scripts": "^1.0.0",
     "@weave-design/semantic-release-config": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@weave-design/theme-context": "^1.0.0",
+    "@weave-designv/theme-data": "^1.3.1",
+    "react": "^17.0.0 || ^18.0.0"
   },
   "scripts": {
     "build": "weave-scripts-build",
