@@ -1,3 +1,10 @@
+# [@weave-design/button-v1.1.0](https://github.com/Autodesk/hig/compare/@weave-design/button@1.0.0...@weave-design/button@1.1.0) (2023-08-24)
+
+
+### Features
+
+* add buttonRef prop ([92ce3a4](https://github.com/Autodesk/hig/commit/92ce3a4))
+
 # @weave-design/button-v1.0.0 (2023-02-26)
 
 
