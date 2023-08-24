@@ -14,6 +14,7 @@ import ButtonPresenter from "./presenters/ButtonPresenter";
 
 const Button = (props) => {
   const {
+    buttonRef,
     disabled,
     icon,
     link,
@@ -54,6 +55,7 @@ const Button = (props) => {
         onMouseUp: handleMouseUp,
       }) => (
         <ButtonPresenter
+          buttonRef={buttonRef}
           disabled={disabled}
           hasFocus={hasFocus}
           hasHover={hasHover}
@@ -90,11 +92,15 @@ Button.defaultProps = {
 
 Button.propTypes = {
   /**
+   * A callback ref that gets passed to the HTML button
+   */
+  buttonRef: PropTypes.func,
+  /**
    * Prevents user interaction with the button
    */
   disabled: PropTypes.bool,
   /**
-   * A @hig/icon element
+   * A @weave-design/icon element
    */
   icon: PropTypes.node,
   /**
