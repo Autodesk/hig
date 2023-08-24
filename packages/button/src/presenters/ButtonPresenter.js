@@ -14,6 +14,7 @@ import {
 
 const ButtonPresenter = (props) => {
   const {
+    buttonRef,
     disabled,
     hasFocus,
     hasHover,
@@ -61,6 +62,7 @@ const ButtonPresenter = (props) => {
         return (
           <Wrapper
             {...otherProps}
+            ref={buttonRef}
             className={cx(css(cssStyles.button), className)}
             href={href}
             tabIndex={tabIndex}
@@ -97,6 +99,7 @@ const ButtonPresenter = (props) => {
 ButtonPresenter.displayName = "ButtonPresenter";
 
 ButtonPresenter.propTypes = {
+  buttonRef: PropTypes.func,
   disabled: PropTypes.bool,
   hasFocus: PropTypes.bool,
   hasHover: PropTypes.bool,
