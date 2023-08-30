@@ -1,3 +1,10 @@
+# [@weave-design/input-v1.0.1](https://github.com/Autodesk/hig/compare/@weave-design/input@1.0.0...@weave-design/input@1.0.1) (2023-08-30)
+
+
+### Bug Fixes
+
+* focus styles take precedent over hover styles ([4943f79](https://github.com/Autodesk/hig/commit/4943f79))
+
 # @weave-design/input-v1.0.0 (2023-02-25)
 
 
