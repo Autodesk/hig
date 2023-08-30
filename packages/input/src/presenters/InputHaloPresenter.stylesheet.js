@@ -38,11 +38,11 @@ function borderBottomStyles(
     ...(error
       ? { borderBottomColor: themeData["input.error.borderBottomColor"] }
       : {}),
-    ...(hasFocus
-      ? { borderBottomColor: themeData["input.line.focus.borderBottomColor"] }
-      : {}),
     ...(hasHover
       ? { borderBottomColor: themeData["input.box.hover.borderBottomColor"] }
+      : {}),
+    ...(hasFocus
+      ? { borderBottomColor: themeData["input.line.focus.borderBottomColor"] }
       : {}),
   };
 }
@@ -70,8 +70,8 @@ function haloStyles({ isDisabled, hasFocus, hasHover }, themeData) {
 
   return {
     ...defaults,
-    ...(hasFocus ? focusStyles : {}),
     ...(hasHover ? hoverStyles : {}),
+    ...(hasFocus ? focusStyles : {}),
   };
 }
 
