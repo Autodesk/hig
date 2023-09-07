@@ -2,6 +2,7 @@ import React from "react";
 import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
 import { Settings16, Settings24 } from "@weave-design/icons";
 
+import { useThemeContext } from "@weave-design/theme-context";
 import Button from "../index";
 import Readme from "../../README.md";
 import { targets, types, widths } from "../constants";
@@ -59,6 +60,11 @@ const Template = (args, context) => {
     context.globals.density === "Medium density" ? Settings24 : Settings16;
   const iconProp =
     context.story === "Button with icon" ? { icon: <Icon /> } : {};
+  // eslint-disable-next-line no-console
+  console.log(useThemeContext);
+  const test = useThemeContext();
+  // eslint-disable-next-line no-console
+  console.log("useThemeContext", test);
   return <Button {...args} {...iconProp} />;
 };
 
