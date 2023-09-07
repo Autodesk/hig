@@ -19,9 +19,5 @@ describe("themes/ThemeContext/index", () => {
       name: "Provider",
       value: expect.any(Object),
     },
-    {
-      name: "useThemeContext",
-      value: expect.any(Function),
-    },
   ]);
 });
