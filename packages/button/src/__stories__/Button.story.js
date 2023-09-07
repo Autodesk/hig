@@ -6,6 +6,8 @@ import Button from "../index";
 import Readme from "../../README.md";
 import { targets, types, widths } from "../constants";
 
+import { ThemeContext, useThemeContext } from "@weave-design/theme-context";
+
 export default {
   title: "Components/Button",
   component: Button,
@@ -59,6 +61,9 @@ const Template = (args, context) => {
     context.globals.density === "Medium density" ? Settings24 : Settings16;
   const iconProp =
     context.story === "Button with icon" ? { icon: <Icon /> } : {};
+  console.log(useThemeContext);
+  const test = useThemeContext();
+  console.log('useThemeContext', test);
   return <Button {...args} {...iconProp} />;
 };
 
