@@ -10,7 +10,7 @@ const Consumer = (props) => (
       const isDebugging = process.env.NODE_ENV !== "production";
       const result = isDebugging ? createThemeProxy(theme) : theme;
       // eslint-disable-next-line no-console
-      console.log('isDebugging', isDebugging);
+      console.log("isDebugging", isDebugging);
       return props.children(result);
     }}
   </BaseConsumer>
