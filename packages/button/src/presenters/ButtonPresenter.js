@@ -15,6 +15,7 @@ import {
 const ButtonPresenter = (props) => {
   const {
     buttonRef,
+    children,
     disabled,
     hasFocus,
     hasHover,
@@ -34,7 +35,6 @@ const ButtonPresenter = (props) => {
     title,
     type,
     width,
-    children,
     ...otherProps
   } = props;
 
@@ -51,7 +51,14 @@ const ButtonPresenter = (props) => {
     <ThemeContext.Consumer>
       {({ resolvedRoles, metadata }) => {
         const styles = stylesheet(
-          { disabled, hasFocus, hasHover, isPressed, type, width },
+          {
+            disabled,
+            hasFocus,
+            hasHover,
+            isPressed,
+            type,
+            width,
+          },
           resolvedRoles,
           metadata
         );
