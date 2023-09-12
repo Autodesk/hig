@@ -1,3 +1,10 @@
+# [@weave-design/button-v1.2.0](https://github.com/Autodesk/hig/compare/@weave-design/button@1.1.0...@weave-design/button@1.2.0) (2023-09-12)
+
+
+### Features
+
+* add icon only button custom stylesheet export ([82f4bb7](https://github.com/Autodesk/hig/commit/82f4bb7))
+
 # [@weave-design/button-v1.1.0](https://github.com/Autodesk/hig/compare/@weave-design/button@1.0.0...@weave-design/button@1.1.0) (2023-08-24)
 
 
