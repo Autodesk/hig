@@ -32,7 +32,7 @@ function buildTreeItemIdArray(list, isTreeNode) {
 }
 
 function renderFileTree(tree, payload) {
-  return tree.map((treeNode) => {
+  return tree?.map((treeNode) => {
     const appendPayload = {
       ...treeNode,
       payload,
@@ -273,14 +273,14 @@ const TreeViewPresenterObject = (props) => {
         const domNodeList = props.treeViewRef.querySelectorAll("li");
 
         const treeItemArrayControl =
-          props.getTreeItemArray().length !== domNodeList.length
+          props.getTreeItemArray()?.length !== domNodeList?.length
             ? buildTreeItemIdArray(
                 Array.prototype.slice.call(domNodeList),
                 true
               )
             : props.getTreeItemArray();
 
-        if (props.getTreeItemArray().length !== domNodeList.length) {
+        if (props.getTreeItemArray()?.length !== domNodeList?.length) {
           props.setTreeItemArray(treeItemArrayControl);
         }
       } else {

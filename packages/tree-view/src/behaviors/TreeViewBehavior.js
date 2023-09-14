@@ -125,11 +125,11 @@ const TreeViewBehavior = (props) => {
         event.preventDefault();
         if (getActiveTreeItemIndex() === upperLimit) {
           setActiveTreeItemIndex(lowerLimit);
-          checkScroll(treeItemArrayControl[lowerLimit], treeViewRef);
+          checkScroll(treeItemArrayControl?.[lowerLimit], treeViewRef);
         } else {
           setActiveTreeItemIndex(getActiveTreeItemIndex() + 1);
           checkScroll(
-            treeItemArrayControl[getActiveTreeItemIndex() + 1],
+            treeItemArrayControl?.[getActiveTreeItemIndex() + 1],
             treeViewRef
           );
         }
