@@ -1,3 +1,10 @@
+# [@weave-design/tree-view-v1.0.3](https://github.com/Autodesk/hig/compare/@weave-design/tree-view@1.0.2...@weave-design/tree-view@1.0.3) (2023-09-14)
+
+
+### Bug Fixes
+
+* add null checks for re-renders ([9a9fcaa](https://github.com/Autodesk/hig/commit/9a9fcaa))
+
 # [@weave-design/tree-view-v1.0.2](https://github.com/Autodesk/hig/compare/@weave-design/tree-view@1.0.1...@weave-design/tree-view@1.0.2) (2023-05-17)
 
 
