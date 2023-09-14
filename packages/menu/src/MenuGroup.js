@@ -8,6 +8,7 @@ const MenuGroup = (props) => {
   const {
     children,
     defaultSelected,
+    highlighted,
     menuRef,
     multiple,
     onChange,
@@ -21,6 +22,7 @@ const MenuGroup = (props) => {
     <MenuBehavior
       {...otherProps}
       defaultSelected={defaultSelected}
+      highlighted={highlighted}
       menuRef={menuRef}
       multiple={multiple}
       onChange={onChange}
@@ -84,6 +86,13 @@ MenuGroup.propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   defaultSelected: PropTypes.arrayOf(PropTypes.any),
+  /**
+   * Semi-controlled way of having Options highlighted
+   * Takes the index of the option you want highlighted
+   * This will take precedent over the Menu prop of the
+   * same name
+   */
+  highlighted: PropTypes.number,
   /**
    * A callback ref that gets passed to the HTML
    * element with `role="listbox"`
