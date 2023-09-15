@@ -312,7 +312,7 @@ MenuBehavior.propTypes = {
   handleFocus: PropTypes.func,
   handleKeyDown: PropTypes.func,
   handleMouseMove: PropTypes.func,
-  highlighted: PropTypes.func,
+  highlighted: PropTypes.number,
   menuRef: PropTypes.func,
   multiple: PropTypes.bool,
   onBlur: PropTypes.func,
