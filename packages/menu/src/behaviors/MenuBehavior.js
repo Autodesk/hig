@@ -275,6 +275,12 @@ const MenuBehavior = (props) => {
     }
   }, [props.selected]);
 
+  useEffect(() => {
+    if (props.highlighted >= 0) {
+      setHighlightIndexHook(props.highlighted + 1);
+    }
+  }, [props.highlighted]);
+
   return props.children({
     getActiveOption: getActiveOptionMethod,
     getHighlightIndex: getHighlightIndexMethod,
@@ -306,6 +312,7 @@ MenuBehavior.propTypes = {
   handleFocus: PropTypes.func,
   handleKeyDown: PropTypes.func,
   handleMouseMove: PropTypes.func,
+  highlighted: PropTypes.func,
   menuRef: PropTypes.func,
   multiple: PropTypes.bool,
   onBlur: PropTypes.func,

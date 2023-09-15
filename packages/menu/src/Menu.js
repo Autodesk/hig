@@ -11,6 +11,7 @@ const Menu = (props) => {
     children,
     defaultSelected,
     divider,
+    highlighted,
     menuRef,
     multiple,
     onChange = () => {},
@@ -27,6 +28,7 @@ const Menu = (props) => {
           {...otherProps}
           defaultSelected={defaultSelected}
           hasFocus={hasFocus}
+          highlighted={highlighted}
           menuRef={menuRef}
           multiple={multiple}
           onBlur={handleBlur}
@@ -102,6 +104,11 @@ Menu.propTypes = {
    * Shows a divider at the bottom of the menu
    */
   divider: PropTypes.bool,
+  /**
+   * Semi-controlled way of having Options highlighted
+   * Takes the index of the option you want highlighted
+   */
+  highlighted: PropTypes.number,
   /**
    * A callback ref that gets passed to the HTML
    * element with `role="listbox"`

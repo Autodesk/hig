@@ -71,6 +71,7 @@ const MenuPresenter = (props) => {
   delete payload.handleFocus;
   delete payload.handleKeyDown;
   delete payload.handleMouseMove;
+  delete payload.highlighted;
   delete payload.setActiveOption;
   delete payload.setHighlightIndex;
   delete payload.setOptionsInfo;
