@@ -1,3 +1,10 @@
+# [@weave-design/menu-v1.1.0](https://github.com/Autodesk/hig/compare/@weave-design/menu@1.0.2...@weave-design/menu@1.1.0) (2023-09-15)
+
+
+### Features
+
+* add highlighted prop ([fb216ef](https://github.com/Autodesk/hig/commit/fb216ef))
+
 # [@weave-design/menu-v1.0.2](https://github.com/Autodesk/hig/compare/@weave-design/menu@1.0.1...@weave-design/menu@1.0.2) (2023-08-15)
 
 
