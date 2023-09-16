@@ -1,3 +1,10 @@
+# [@weave-design/menu-v1.1.1](https://github.com/Autodesk/hig/compare/@weave-design/menu@1.1.0...@weave-design/menu@1.1.1) (2023-09-16)
+
+
+### Bug Fixes
+
+* highlighted should have a proptype of number ([a29b0d9](https://github.com/Autodesk/hig/commit/a29b0d9))
+
 # [@weave-design/menu-v1.1.0](https://github.com/Autodesk/hig/compare/@weave-design/menu@1.0.2...@weave-design/menu@1.1.0) (2023-09-15)
 
 
