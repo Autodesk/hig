@@ -63,6 +63,7 @@ Each Weave pattern is implemented as a set of React components. Each pattern is 
 - [`<Banner>`](./packages/banner/README.md) - An alert that requires a user action
 - [`<Button>`](./packages/button/README.md) - Trigger actions or changes
 - [`<Checkbox>`](./packages/checkbox/README.md) - A control to select from non-exclusive options
+- [`<Divider>`](./packages/divider/README.md) - Separate content inline or in a stack. 
 - [`<Dropdown>`](./packages/dropdown/README.md) - A menu to select one or many from a list
 - [`<Flyout>`](./packages/flyout/README.md) - A lightweight popup container
 - [`<Icons>`](./packages/icons/README.md) - Represents a concept in graphical form

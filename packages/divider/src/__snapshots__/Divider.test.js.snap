@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`divider/Divider renders with custom className 1`] = `
+.emotion-0 {
+  border-bottom: 1px solid rgba(60,60,60,0.1);
+  display: inline-block;
+  height: 1px;
+  width: 500px;
+}
+
+<div
+  className="emotion-0 test-classname"
+/>
+`;
+
+exports[`divider/Divider renders with display 1`] = `
+.emotion-0 {
+  border-bottom: 1px solid rgba(60,60,60,0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 1px;
+  width: 500px;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`divider/Divider renders with length 1`] = `
+.emotion-0 {
+  border-bottom: 1px solid rgba(60,60,60,0.1);
+  display: inline-block;
+  height: 1px;
+  width: 500px;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`divider/Divider renders with orientation 1`] = `
+.emotion-0 {
+  border-left: 1px solid rgba(60,60,60,0.1);
+  display: inline-block;
+  height: 500px;
+  width: 1px;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
+
+exports[`divider/Divider renders with variant 1`] = `
+.emotion-0 {
+  border-bottom: 1px solid rgba(60,60,60,0.1);
+  display: inline-block;
+  height: 1px;
+  width: 500px;
+}
+
+<div
+  className="emotion-0"
+/>
+`;
