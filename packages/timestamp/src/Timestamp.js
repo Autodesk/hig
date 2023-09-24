@@ -48,9 +48,14 @@ const Timestamp = (props) => {
   };
 
   const humanizeTimestamp = () => {
-    const { plural, timeDescriptors, timestamp } = props;
+    const { plural, relativeTimeFormatOptions, timeDescriptors, timestamp } =
+      props;
     const asSeconds = Date.parse(timestamp) / 1000; // TODO: handle future timestamps, or bad input?
     const nowAsSeconds = new Date().valueOf() / 1000;
+    const rtf = new Intl.RelativeTimeFormat(
+      relativeTimeFormatOptions?.locales,
+      relativeTimeFormatOptions?.options
+    );
 
     const timeDifference = nowAsSeconds - asSeconds;
     let distance;
@@ -99,7 +104,9 @@ const Timestamp = (props) => {
         : timeDescriptors.year;
     }
 
-    return getTimestampSequence(distance, ellapsedDescriptor);
+    return relativeTimeFormatOptions
+      ? rtf.format(-distance, ellapsedDescriptor)
+      : getTimestampSequence(distance, ellapsedDescriptor);
   };
 
   return (
@@ -126,15 +133,33 @@ Timestamp.displayName = "Timestamp";
 
 Timestamp.propTypes = {
   /**
+   * DEPRECATED - use relativeTimeFormatOptions prop
    * If you want to pluralize the elapsed time unit
    * If "true" then it adds an "s" to the end of the time unit
    */
   plural: PropTypes.bool,
   /**
+   * These are the options passed to the
+   * Intl.RelativeTimeFormat() constructor
+   * If this prop is used then the following props
+   * will be ignored: plural, timestampSequence,
+   * timeDescriptors, wordspace
+   */
+  relativeTimeFormatOptions: PropTypes.shape({
+    locales: PropTypes.string,
+    options: PropTypes.shape({
+      localeMatcher: PropTypes.string,
+      numberingSystem: PropTypes.string,
+      style: PropTypes.string,
+      numeric: PropTypes.string,
+    }),
+  }),
+  /**
    * Adds custom/overriding styles
    */
   stylesheet: PropTypes.func,
   /**
+   * DEPRECATED - use relativeTimeFormatOptions prop
    * An object that allows for localization of all the time words used
    * By default the object property name is the same as the property value
    * Property names: second, minute, hour, day, week, month, year, ago
@@ -154,11 +179,13 @@ Timestamp.propTypes = {
    */
   timestamp: PropTypes.string,
   /**
+   * DEPRECATED - use relativeTimeFormatOptions prop
    * The sequence in which the timestamp is displayed
    * ie. 4 seconds ago (abc)
    */
   timestampSequence: PropTypes.oneOf(availableSequences),
   /**
+   * DEPRECATED - use relativeTimeFormatOptions prop
    * If you want a space between words
    */
   wordSpace: PropTypes.bool,
