@@ -39,3 +39,12 @@ const Template = (args) => {
 };
 
 export const Default = Template.bind({});
+
+export const RelativeTimeFormat = Template.bind({});
+
+RelativeTimeFormat.args = {
+  relativeTimeFormatOptions: {
+    locales: "es",
+  },
+};
+RelativeTimeFormat.storyName = "Relative time format";

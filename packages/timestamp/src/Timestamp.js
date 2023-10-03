@@ -48,9 +48,14 @@ const Timestamp = (props) => {
   };
 
   const humanizeTimestamp = () => {
-    const { plural, timeDescriptors, timestamp } = props;
+    const { plural, relativeTimeFormatOptions, timeDescriptors, timestamp } =
+      props;
     const asSeconds = Date.parse(timestamp) / 1000; // TODO: handle future timestamps, or bad input?
     const nowAsSeconds = new Date().valueOf() / 1000;
+    const rtf = new Intl.RelativeTimeFormat(
+      relativeTimeFormatOptions?.locales,
+      relativeTimeFormatOptions?.options
+    );
 
     const timeDifference = nowAsSeconds - asSeconds;
     let distance;
@@ -99,7 +104,9 @@ const Timestamp = (props) => {
         : timeDescriptors.year;
     }
 
-    return getTimestampSequence(distance, ellapsedDescriptor);
+    return relativeTimeFormatOptions
+      ? rtf.format(-distance, ellapsedDescriptor)
+      : getTimestampSequence(distance, ellapsedDescriptor);
   };
 
   return (
@@ -130,6 +137,22 @@ Timestamp.propTypes = {
    * If "true" then it adds an "s" to the end of the time unit
    */
   plural: PropTypes.bool,
+  /**
+   * These are the options passed to the
+   * Intl.RelativeTimeFormat() constructor
+   * If this prop is used then the following props
+   * will be ignored: plural, timestampSequence,
+   * timeDescriptors, wordspace
+   */
+  relativeTimeFormatOptions: PropTypes.shape({
+    locales: PropTypes.string,
+    options: PropTypes.shape({
+      localeMatcher: PropTypes.string,
+      numberingSystem: PropTypes.string,
+      style: PropTypes.string,
+      numeric: PropTypes.string,
+    }),
+  }),
   /**
    * Adds custom/overriding styles
    */
