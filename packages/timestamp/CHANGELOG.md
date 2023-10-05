@@ -1,3 +1,10 @@
+# [@weave-design/timestamp-v1.1.0](https://github.com/Autodesk/hig/compare/@weave-design/timestamp@1.0.0...@weave-design/timestamp@1.1.0) (2023-10-05)
+
+
+### Features
+
+* use Intl.RelativeTimeFormat() constructor ([1ef514e](https://github.com/Autodesk/hig/commit/1ef514e))
+
 # [@hig/timestamp-v2.3.0](https://github.com/Autodesk/hig/compare/%40hig/timestamp%402.2.0...feat/update-hig-tooltip) (2023-10-02)
 
 
