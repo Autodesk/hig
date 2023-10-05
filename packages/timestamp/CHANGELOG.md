@@ -1,3 +1,10 @@
+# [@hig/timestamp-v2.3.0](https://github.com/Autodesk/hig/compare/%40hig/timestamp%402.2.0...feat/update-hig-tooltip) (2023-10-02)
+
+
+### Features
+
+* use Intl.RelativeTimeFormat for legacy namespace ([ae09168](https://github.com/Autodesk/hig/commit/ae09168))
+
 # @weave-design/timestamp-v1.0.0 (2023-03-07)
 
 

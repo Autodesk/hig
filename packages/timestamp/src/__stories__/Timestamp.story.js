@@ -1,5 +1,5 @@
 import React from "react";
-import { ArgsTable, Primary } from "@storybook/addon-docs";
+import { ArgsTable, Primary, Stories } from "@storybook/addon-docs";
 
 import Timestamp from "../index";
 import Readme from "../../README.md";
@@ -19,6 +19,7 @@ export default {
       page: () => (
         <>
           <Primary />
+          <Stories />
           <Readme />
           <ArgsTable />
         </>
@@ -39,3 +40,12 @@ const Template = (args) => {
 };
 
 export const Default = Template.bind({});
+
+export const RelativeTimeFormat = Template.bind({});
+
+RelativeTimeFormat.args = {
+  relativeTimeFormatOptions: {
+    locales: "es",
+  },
+};
+RelativeTimeFormat.storyName = "Relative time format";
