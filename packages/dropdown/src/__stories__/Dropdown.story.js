@@ -26,7 +26,17 @@ export default {
   },
 };
 
-const Template = (args) => <Dropdown {...args} />;
+const Template = (args) => (
+  <Dropdown
+    {...args}
+    stylesheet={
+      (styles, props, themeData) => {
+        console.log('themeData', themeData);
+        return styles;
+      }
+    }
+  />
+);
 
 export const Default = Template.bind({});
 
