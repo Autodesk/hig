@@ -31,6 +31,7 @@ const Template = (args) => (
     {...args}
     stylesheet={
       (styles, props, themeData) => {
+        // eslint-disable-next-line no-console
         console.log('themeData', themeData);
         return styles;
       }
