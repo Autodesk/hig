@@ -1,3 +1,10 @@
+# [@weave-design/menu-v1.1.2](https://github.com/Autodesk/hig/compare/@weave-design/menu@1.1.1...@weave-design/menu@1.1.2) (2024-01-12)
+
+
+### Bug Fixes
+
+* check for null in presenters ([e5570b9](https://github.com/Autodesk/hig/commit/e5570b9))
+
 # [@weave-design/menu-v1.1.1](https://github.com/Autodesk/hig/compare/@weave-design/menu@1.1.0...@weave-design/menu@1.1.1) (2023-09-16)
 
 
