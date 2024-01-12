@@ -109,7 +109,7 @@ const MenuGroupPresenter = (props) => {
       mounted.current = true;
     } else {
       // update options if they change
-      const previousOptions = props.getOptionsInfo();
+      const previousOptions = props.getOptionsInfo() || {};
       const menusInfo = {};
       const mergedOptions = [];
       const currentIds = [];
